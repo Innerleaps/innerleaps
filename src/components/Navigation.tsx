@@ -31,7 +31,8 @@ const Navigation = () => {
     },
     {
       label: 'Programma',
-      href: 'programma'
+      href: '/programma',
+      isLink: true
     },
     {
       label: 'Voor Wie',
