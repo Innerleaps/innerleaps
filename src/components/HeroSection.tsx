@@ -1,10 +1,7 @@
-
 import { Button } from '@/components/ui/button';
 import { ArrowDown } from 'lucide-react';
-
 const HeroSection = () => {
-  return (
-    <section id="home" className="bg-gradient-to-br from-brand-blue to-brand-blue-dark text-white section-padding overflow-hidden">
+  return <section id="home" className="bg-gradient-to-br from-brand-blue to-brand-blue-dark text-white section-padding overflow-hidden">
       <div className="container-custom">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-8 animate-fade-in">
@@ -19,18 +16,10 @@ const HeroSection = () => {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button 
-                size="lg" 
-                className="bg-brand-green hover:bg-brand-green-light text-white font-semibold py-4 px-8 rounded-lg text-lg transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:-translate-y-1"
-              >
+              <Button size="lg" className="bg-brand-green hover:bg-brand-green-light text-white font-semibold py-4 px-8 rounded-lg text-lg transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:-translate-y-1">
                 Bereken mijn besparing
               </Button>
-              <Button 
-                variant="outline" 
-                size="lg"
-                className="border-2 border-white text-white hover:bg-white hover:text-brand-blue font-semibold py-4 px-8 rounded-lg text-lg transition-all duration-300"
-                onClick={() => window.open('https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1wwDnoAHyFrV0M1FxwmbcMa9ewkDxTDdwQObwPKF-WX-wZV9DssZKtb1haoeP5qXDLenQlZt_R', '_blank')}
-              >
+              <Button variant="outline" size="lg" onClick={() => window.open('https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1wwDnoAHyFrV0M1FxwmbcMa9ewkDxTDdwQObwPKF-WX-wZV9DssZKtb1haoeP5qXDLenQlZt_R', '_blank')} className="border-2 border-white hover:bg-white font-semibold py-4 px-8 rounded-lg text-lg transition-all duration-300 text-slate-950">
                 Vrijblijvend gesprek plannen
               </Button>
             </div>
@@ -78,8 +67,6 @@ const HeroSection = () => {
           <ArrowDown className="h-8 w-8 text-brand-green-light animate-bounce" />
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default HeroSection;
