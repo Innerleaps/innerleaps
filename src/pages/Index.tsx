@@ -10,20 +10,28 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-white">
       <Navigation />
-      <HeroSection />
-      <ImpactSection />
-      <ProgramSection />
-      <ProcessSection />
+      <div id="home">
+        <HeroSection />
+      </div>
+      <div id="wetenschap">
+        <ImpactSection />
+      </div>
+      <div id="programma">
+        <ProgramSection />
+      </div>
+      <div id="voor-wie">
+        <ProcessSection />
+      </div>
       
       {/* Calculator Section */}
-      <section className="bg-white section-padding">
+      <section id="calculator" className="bg-white section-padding">
         <div className="container-custom">
           <Calculator />
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="bg-brand-gray-dark text-white py-12">
+      <footer id="contact" className="bg-brand-gray-dark text-white py-12">
         <div className="container-custom">
           <div className="grid md:grid-cols-3 gap-8">
             <div>
@@ -43,10 +51,10 @@ const Index = () => {
             <div>
               <h3 className="text-lg font-semibold mb-4">Snel naar</h3>
               <div className="space-y-2">
-                <a href="#home" className="block text-gray-300 hover:text-white transition-colors">Home</a>
-                <a href="#wetenschap" className="block text-gray-300 hover:text-white transition-colors">De Wetenschap</a>
-                <a href="#programma" className="block text-gray-300 hover:text-white transition-colors">Programma</a>
-                <a href="#contact" className="block text-gray-300 hover:text-white transition-colors">Contact</a>
+                <button onClick={() => document.getElementById('home')?.scrollIntoView({ behavior: 'smooth' })} className="block text-gray-300 hover:text-white transition-colors text-left">Home</button>
+                <button onClick={() => document.getElementById('wetenschap')?.scrollIntoView({ behavior: 'smooth' })} className="block text-gray-300 hover:text-white transition-colors text-left">De Wetenschap</button>
+                <button onClick={() => document.getElementById('programma')?.scrollIntoView({ behavior: 'smooth' })} className="block text-gray-300 hover:text-white transition-colors text-left">Programma</button>
+                <button onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })} className="block text-gray-300 hover:text-white transition-colors text-left">Contact</button>
               </div>
             </div>
           </div>

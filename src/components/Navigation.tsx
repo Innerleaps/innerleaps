@@ -6,13 +6,21 @@ import { Button } from '@/components/ui/button';
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+    setIsMenuOpen(false);
+  };
+
   const navItems = [
-    { label: 'Home', href: '#home' },
-    { label: 'De Wetenschap', href: '#wetenschap' },
-    { label: 'Programma', href: '#programma' },
-    { label: 'Voor Wie', href: '#voor-wie' },
-    { label: 'Over Ons', href: '#over-ons' },
-    { label: 'Contact', href: '#contact' }
+    { label: 'Home', href: 'home' },
+    { label: 'De Wetenschap', href: 'wetenschap' },
+    { label: 'Programma', href: 'programma' },
+    { label: 'Voor Wie', href: 'voor-wie' },
+    { label: 'Over Ons', href: 'over-ons' },
+    { label: 'Contact', href: 'contact' }
   ];
 
   return (
@@ -29,13 +37,13 @@ const Navigation = () => {
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             {navItems.map((item) => (
-              <a
+              <button
                 key={item.label}
-                href={item.href}
-                className="text-brand-gray-dark hover:text-brand-blue transition-colors duration-300 font-medium"
+                onClick={() => scrollToSection(item.href)}
+                className="text-brand-gray-dark hover:text-brand-blue transition-colors duration-300 font-medium cursor-pointer"
               >
                 {item.label}
-              </a>
+              </button>
             ))}
           </div>
 
@@ -48,7 +56,10 @@ const Navigation = () => {
             >
               Vrijblijvend gesprek
             </Button>
-            <Button className="btn-primary">
+            <Button 
+              className="btn-primary"
+              onClick={() => scrollToSection('calculator')}
+            >
               Bereken besparing
             </Button>
           </div>
@@ -70,14 +81,13 @@ const Navigation = () => {
           <div className="md:hidden pb-4">
             <div className="flex flex-col space-y-4">
               {navItems.map((item) => (
-                <a
+                <button
                   key={item.label}
-                  href={item.href}
-                  className="text-brand-gray-dark hover:text-brand-blue transition-colors duration-300 font-medium py-2"
-                  onClick={() => setIsMenuOpen(false)}
+                  onClick={() => scrollToSection(item.href)}
+                  className="text-brand-gray-dark hover:text-brand-blue transition-colors duration-300 font-medium py-2 text-left cursor-pointer"
                 >
                   {item.label}
-                </a>
+                </button>
               ))}
               <div className="flex flex-col space-y-3 pt-4">
                 <Button 
@@ -90,7 +100,10 @@ const Navigation = () => {
                 >
                   Vrijblijvend gesprek
                 </Button>
-                <Button className="btn-primary w-full">
+                <Button 
+                  className="btn-primary w-full"
+                  onClick={() => scrollToSection('calculator')}
+                >
                   Bereken besparing
                 </Button>
               </div>
