@@ -20,14 +20,14 @@ const ProgramSection = () => {
       description: "Concrete tools voor het omgaan met werkdruk en uitdagingen"
     },
     {
-      weeks: "7-8",
-      title: "Implementatie in werk en dagelijks leven",
-      description: "Integratie van geleerde technieken in de dagelijkse werkroutine"
-    },
-    {
       weeks: "Oefendag",
       title: "Praktische integratie en verdieping",
       description: "Intensieve dag voor het versterken en toepassen van alle technieken"
+    },
+    {
+      weeks: "7-8",
+      title: "Implementatie in werk en dagelijks leven",
+      description: "Integratie van geleerde technieken in de dagelijkse werkroutine"
     }
   ];
 
@@ -113,11 +113,8 @@ const ProgramSection = () => {
 
         <div className="text-center mt-12 space-y-4">
           <div className="space-x-4">
-            <Button className="bg-brand-blue hover:bg-brand-blue-dark text-white font-semibold py-3 px-8 rounded-lg text-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
+            <Button className="bg-brand-blue hover:bg-brand-blue-dark text-white font-semibold py-3 px-8 rounded-lg text-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
               Programma Details Bekijken
-            </Button>
-            <Button variant="outline" className="border-2 border-brand-blue text-brand-blue hover:bg-brand-blue hover:text-white font-semibold py-3 px-8 rounded-lg text-lg transition-all duration-300" onClick={() => window.open('https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1wwDnoAHyFrV0M1FxwmbcMa9ewkDxTDdwQObwPKF-WX-wZV9DssZKtb1haoeP5qXDLenQlZt_R', '_blank')}>
-              Vrijblijvend gesprek plannen
             </Button>
           </div>
         </div>
