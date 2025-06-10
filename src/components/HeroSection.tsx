@@ -26,7 +26,7 @@ const HeroSection = () => {
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button 
                   size="lg" 
-                  className="bg-brand-green hover:bg-brand-green-light text-white font-semibold py-4 px-8 rounded-lg text-lg transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:-translate-y-1"
+                  className="bg-brand-green hover:bg-brand-green text-brand-green-light font-semibold py-4 px-8 rounded-lg text-lg transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:-translate-y-1"
                   onClick={() => setIsCalculatorOpen(true)}
                 >
                   Bereken mijn besparing
@@ -35,9 +35,9 @@ const HeroSection = () => {
                   variant="outline" 
                   size="lg" 
                   onClick={() => window.open('https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1wwDnoAHyFrV0M1FxwmbcMa9ewkDxTDdwQObwPKF-WX-wZV9DssZKtb1haoeP5qXDLenQlZt_R', '_blank')} 
-                  className="border-2 border-white hover:bg-white hover:text-brand-green font-semibold py-4 px-8 rounded-lg text-lg transition-all duration-300"
+                  className="border-2 border-white hover:bg-white text-white hover:text-brand-green font-semibold py-4 px-8 rounded-lg text-lg transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:-translate-y-1"
                 >
-                  Vrijblijvend gesprek plannen
+                  Kennis maken
                 </Button>
               </div>
 
