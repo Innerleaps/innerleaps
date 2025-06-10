@@ -1,10 +1,11 @@
+
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Card } from '@/components/ui/card';
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
-import { Calculator as CalculatorIcon, TrendingUp, X, CheckCircle } from 'lucide-react';
+import { Calculator as CalculatorIcon, TrendingUp, X } from 'lucide-react';
 
 interface CalculatorModalProps {
   isOpen: boolean;
@@ -23,7 +24,6 @@ const CalculatorModal = ({ isOpen, onClose }: CalculatorModalProps) => {
   });
   
   const [showResults, setShowResults] = useState(false);
-  const [showThankYou, setShowThankYou] = useState(false);
   const [results, setResults] = useState({
     absenteeismSaving: 0,
     turnoverSaving: 0,
@@ -77,57 +77,12 @@ const CalculatorModal = ({ isOpen, onClose }: CalculatorModalProps) => {
       currentTurnover: ''
     });
     setShowResults(false);
-    setShowThankYou(false);
   };
 
   const handleClose = () => {
     resetCalculator();
     onClose();
   };
-
-  const handleComplete = () => {
-    setShowThankYou(true);
-  };
-
-  if (showThankYou) {
-    return (
-      <Dialog open={isOpen} onOpenChange={handleClose}>
-        <DialogContent className="max-w-2xl">
-          <DialogHeader>
-            <DialogTitle className="flex items-center justify-between">
-              <span>Bedankt voor uw interesse!</span>
-              <Button variant="ghost" size="sm" onClick={handleClose}>
-                <X className="h-4 w-4" />
-              </Button>
-            </DialogTitle>
-          </DialogHeader>
-          
-          <Card className="p-8 bg-gradient-to-br from-brand-green to-brand-green-light text-white">
-            <div className="text-center space-y-6">
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-white/20 rounded-full mb-4">
-                <CheckCircle className="h-8 w-8" />
-              </div>
-              
-              <h3 className="text-2xl font-bold">Bedankt voor uw berekening!</h3>
-              
-              <p className="text-lg opacity-90">
-                We nemen zo snel mogelijk contact met u op om uw resultaten te bespreken en een vrijblijvend adviesgesprek in te plannen.
-              </p>
-              
-              <div className="space-y-4">
-                <Button 
-                  className="bg-white text-brand-green hover:bg-gray-100"
-                  onClick={handleClose}
-                >
-                  Sluiten
-                </Button>
-              </div>
-            </div>
-          </Card>
-        </DialogContent>
-      </Dialog>
-    );
-  }
 
   if (showResults) {
     return (
@@ -188,12 +143,6 @@ const CalculatorModal = ({ isOpen, onClose }: CalculatorModalProps) => {
                   >
                     Nieuwe berekening
                   </Button>
-                  <Button 
-                    className="bg-white text-brand-green hover:bg-gray-100"
-                    onClick={handleComplete}
-                  >
-                    Voltooien
-                  </Button>
                 </div>
               </div>
             </div>
@@ -238,7 +187,7 @@ const CalculatorModal = ({ isOpen, onClose }: CalculatorModalProps) => {
                   value={formData.name}
                   onChange={(e) => handleInputChange('name', e.target.value)}
                   className="mt-1"
-                  placeholder="Jan Janssen"
+                  placeholder="bijv. Jan de Vries"
                   required
                 />
               </div>
@@ -251,7 +200,7 @@ const CalculatorModal = ({ isOpen, onClose }: CalculatorModalProps) => {
                   value={formData.phone}
                   onChange={(e) => handleInputChange('phone', e.target.value)}
                   className="mt-1"
-                  placeholder="06 12345678"
+                  placeholder="bijv. 06 12345678"
                   required
                 />
               </div>
@@ -264,7 +213,7 @@ const CalculatorModal = ({ isOpen, onClose }: CalculatorModalProps) => {
                   value={formData.company}
                   onChange={(e) => handleInputChange('company', e.target.value)}
                   className="mt-1"
-                  placeholder="Uw Bedrijf B.V."
+                  placeholder="bijv. Uw Bedrijf B.V."
                   required
                 />
               </div>
@@ -277,7 +226,7 @@ const CalculatorModal = ({ isOpen, onClose }: CalculatorModalProps) => {
                   value={formData.employees}
                   onChange={(e) => handleInputChange('employees', e.target.value)}
                   className="mt-1"
-                  placeholder="50"
+                  placeholder="bijv. 50"
                   required
                 />
               </div>
@@ -292,7 +241,7 @@ const CalculatorModal = ({ isOpen, onClose }: CalculatorModalProps) => {
                   value={formData.yearlyCosts}
                   onChange={(e) => handleInputChange('yearlyCosts', e.target.value)}
                   className="mt-1"
-                  placeholder="2500000"
+                  placeholder="bijv. 2500000"
                   required
                 />
               </div>
@@ -306,7 +255,7 @@ const CalculatorModal = ({ isOpen, onClose }: CalculatorModalProps) => {
                   value={formData.currentAbsenteeism}
                   onChange={(e) => handleInputChange('currentAbsenteeism', e.target.value)}
                   className="mt-1"
-                  placeholder="4.2"
+                  placeholder="bijv. 4.2"
                   required
                 />
               </div>
@@ -320,7 +269,7 @@ const CalculatorModal = ({ isOpen, onClose }: CalculatorModalProps) => {
                   value={formData.currentTurnover}
                   onChange={(e) => handleInputChange('currentTurnover', e.target.value)}
                   className="mt-1"
-                  placeholder="12.5"
+                  placeholder="bijv. 12.5"
                   required
                 />
               </div>

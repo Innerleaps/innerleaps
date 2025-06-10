@@ -313,3 +313,5 @@ const Wetenschap = () => {
 };
 
 export default Wetenschap;
+
+</edits_to_apply>
