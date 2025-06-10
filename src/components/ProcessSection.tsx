@@ -48,7 +48,7 @@ const ProcessSection = () => {
           </p>
         </div>
 
-        <div className="relative">
+        <div className="relative max-w-4xl mx-auto">
           {/* Process Steps */}
           <div className="space-y-8 relative">
             {steps.map((step, index) => {
@@ -59,7 +59,7 @@ const ProcessSection = () => {
                     <div className={`w-12 h-12 ${step.color} text-white rounded-lg flex items-center justify-center mr-6 flex-shrink-0`}>
                       <IconComponent className="h-6 w-6" />
                     </div>
-                    <div className="flex-1">
+                    <div className="flex-1 max-w-lg">
                       <h3 className="text-lg font-semibold text-brand-gray-dark mb-3">
                         {step.title}
                       </h3>
@@ -83,7 +83,7 @@ const ProcessSection = () => {
 
         <div className="text-center mt-12">
           <Button 
-            className="bg-brand-blue hover:bg-brand-blue-dark text-white font-semibold py-3 px-8 rounded-lg text-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+            className="bg-brand-blue hover:bg-brand-blue-dark text-white font-semibold py-3 px-8 rounded-lg text-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
             onClick={() => window.open('https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1wwDnoAHyFrV0M1FxwmbcMa9ewkDxTDdwQObwPKF-WX-wZV9DssZKtb1haoeP5qXDLenQlZt_R', '_blank')}
           >
             Start vandaag nog

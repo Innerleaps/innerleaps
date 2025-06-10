@@ -1,10 +1,14 @@
+
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { ArrowDown } from 'lucide-react';
 import CalculatorModal from './CalculatorModal';
+
 const HeroSection = () => {
   const [isCalculatorOpen, setIsCalculatorOpen] = useState(false);
-  return <>
+
+  return (
+    <>
       <section id="home" className="bg-gradient-to-br from-brand-blue to-brand-blue-dark text-white section-padding overflow-hidden">
         <div className="container-custom">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -20,11 +24,20 @@ const HeroSection = () => {
               </div>
 
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button size="lg" className="bg-brand-green hover:bg-brand-green-light text-white font-semibold py-4 px-8 rounded-lg text-lg transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:-translate-y-1" onClick={() => setIsCalculatorOpen(true)}>
+                <Button 
+                  size="lg" 
+                  className="bg-brand-green hover:bg-brand-green-light text-white font-semibold py-4 px-8 rounded-lg text-lg transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:-translate-y-1" 
+                  onClick={() => setIsCalculatorOpen(true)}
+                >
                   Bereken mijn besparing
                 </Button>
-                <Button variant="outline" size="lg" onClick={() => window.open('https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1wwDnoAHyFrV0M1FxwmbcMa9ewkDxTDdwQObwPKF-WX-wZV9DssZKtb1haoeP5qXDLenQlZt_R', '_blank')} className="border-2 border-white hover:bg-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 text-[\u2022_Op_maat_gemaakte_aanpak] text-[#253b92]">
-                  Vrijblijvend gesprek plannen
+                <Button 
+                  variant="outline" 
+                  size="lg" 
+                  onClick={() => window.open('https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1wwDnoAHyFrV0M1FxwmbcMa9ewkDxTDdwQObwPKF-WX-wZV9DssZKtb1haoeP5qXDLenQlZt_R', '_blank')} 
+                  className="border-2 border-white text-white hover:bg-white hover:text-brand-blue font-semibold py-4 px-8 rounded-lg transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:-translate-y-1"
+                >
+                  Kennis maken
                 </Button>
               </div>
 
@@ -44,22 +57,22 @@ const HeroSection = () => {
               <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 shadow-2xl">
                 <div className="space-y-6">
                   <h3 className="text-2xl font-semibold mb-6">Direct meetbare resultaten:</h3>
-                  <div className="space-y-4">
+                  <div className="space-y-4 max-w-sm mx-auto">
                     <div className="flex items-center justify-between p-3 bg-white/20 rounded-lg">
-                      <span className="font-medium">Ziekteverzuim reductie</span>
-                      <span className="text-brand-green-light font-bold">30%</span>
+                      <span className="font-medium text-sm">Ziekteverzuim reductie</span>
+                      <span className="text-white font-bold text-lg">30%</span>
                     </div>
                     <div className="flex items-center justify-between p-3 bg-white/20 rounded-lg">
-                      <span className="font-medium">Medewerkerretentie</span>
-                      <span className="text-brand-green-light font-bold">+31%</span>
+                      <span className="font-medium text-sm">Medewerkerretentie</span>
+                      <span className="text-white font-bold text-lg">+31%</span>
                     </div>
                     <div className="flex items-center justify-between p-3 bg-white/20 rounded-lg">
-                      <span className="font-medium">Werkstress reductie</span>
-                      <span className="text-brand-green-light font-bold">40-58%</span>
+                      <span className="font-medium text-sm">Werkstress reductie</span>
+                      <span className="text-white font-bold text-lg">40-58%</span>
                     </div>
                     <div className="flex items-center justify-between p-3 bg-white/20 rounded-lg">
-                      <span className="font-medium">Werktevredenheid</span>
-                      <span className="text-brand-green-light font-bold">+26%</span>
+                      <span className="font-medium text-sm">Werktevredenheid</span>
+                      <span className="text-white font-bold text-lg">+26%</span>
                     </div>
                   </div>
                 </div>
@@ -74,6 +87,8 @@ const HeroSection = () => {
       </section>
 
       <CalculatorModal isOpen={isCalculatorOpen} onClose={() => setIsCalculatorOpen(false)} />
-    </>;
+    </>
+  );
 };
+
 export default HeroSection;

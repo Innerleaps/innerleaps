@@ -1,206 +1,217 @@
 
 import Navigation from '@/components/Navigation';
-import StickyCtaButtons from '@/components/StickyCtaButtons';
-import { useEffect } from 'react';
 import { Button } from '@/components/ui/button';
-import { ArrowLeft, User, Award, BookOpen, Users, Heart, Target, Brain, Lightbulb } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Award, Users, Target, TrendingUp, GraduationCap, Heart, Brain, Briefcase } from 'lucide-react';
+import StickyCtaButtons from '@/components/StickyCtaButtons';
 
 const OverOns = () => {
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
-
-  const teamMembers = [
-    {
-      name: "Dr. Sarah van den Berg",
-      role: "Oprichter & Hoofdtrainer",
-      bio: "Sarah is gepromoveerd in de psychologie en heeft meer dan 15 jaar ervaring in het begeleiden van organisaties bij stressreductie en veerkrachttraining. Ze is gecertificeerd MBSR-trainer en heeft eerder gewerkt bij toonaangevende bedrijven als Philips en ING.",
-      specializations: ["MBSR Training", "Organisatiepsychologie", "Burn-out preventie"],
-      image: "/placeholder.svg"
-    },
-    {
-      name: "Mark de Vries",
-      role: "Senior Trainer & Coach",
-      bio: "Mark combineert zijn achtergrond in bedrijfskunde met zijn passie voor mindfulness. Hij heeft meer dan 200 professionals begeleid en werkt voornamelijk met leidinggevenden en managementteams in de zakelijke dienstverlening.",
-      specializations: ["Executive coaching", "Teamdynamiek", "Leiderschap onder druk"],
-      image: "/placeholder.svg"
-    },
-    {
-      name: "Lisa Janssen",
-      role: "Trainer & Programmacoördinator",
-      bio: "Lisa is klinisch psycholoog en gespecialiseerd in werkstress en burn-out. Ze ontwikkelt en coördineert onze programma's en zorgt voor de kwaliteitsbewaking van alle trainingen.",
-      specializations: ["Klinische psychologie", "Programmaontwikkeling", "Resultaatmeting"],
-      image: "/placeholder.svg"
-    }
-  ];
-
-  const expertise = [
+  const expertises = [
     {
       icon: Brain,
       title: "MBSR Training",
-      description: "Gecertificeerde Mindfulness-Based Stress Reduction trainers met jarenlange ervaring"
-    },
-    {
-      icon: Award,
-      title: "Wetenschappelijke Onderbouwing",
-      description: "Alle programma's gebaseerd op peer-reviewed onderzoek en bewezen methodieken"
-    },
-    {
-      icon: Users,
-      title: "Organisatiepsychologie",
-      description: "Diepe kennis van organisatiedynamiek en veranderingsprocessen"
-    },
-    {
-      icon: Target,
-      title: "Resultaatgericht Werken",
-      description: "Focus op meetbare uitkomsten en concrete bedrijfsresultaten"
+      description: "Mindfulness-Based Stress Reduction gecertificeerd door Jon Kabat-Zinn instituut"
     },
     {
       icon: Heart,
-      title: "Burn-out Preventie",
-      description: "Specialistische kennis in het herkennen en voorkomen van burn-out"
+      title: "Stressmanagement",
+      description: "Evidence-based technieken voor duurzame stressreductie"
     },
     {
-      icon: Lightbulb,
-      title: "Programmaontwikkeling",
-      description: "Maatwerk programma's aangepast aan uw specifieke organisatie en uitdagingen"
+      icon: Briefcase,
+      title: "Corporate Wellness",
+      description: "Gespecialiseerd in bedrijfsbrede welzijnsprogramma's"
+    },
+    {
+      icon: TrendingUp,
+      title: "ROI Optimalisatie",
+      description: "Focus op meetbare resultaten en bedrijfswaarde"
     }
   ];
 
   return (
-    <div className="min-h-screen bg-brand-gray-light">
+    <div className="min-h-screen bg-white">
       <Navigation />
       <StickyCtaButtons />
-      
-      <main className="section-padding">
+
+      {/* Hero Section */}
+      <section className="bg-gradient-to-br from-brand-blue to-brand-blue-dark text-white section-padding">
         <div className="container-custom">
-          {/* Header */}
-          <div className="max-w-4xl mx-auto mb-16">
-            <Link to="/" className="inline-flex items-center text-brand-blue hover:text-brand-blue/80 transition-colors mb-8">
-              <ArrowLeft className="h-5 w-5 mr-2" />
-              Terug naar home
-            </Link>
-            
-            <div className="text-center space-y-6">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-gray-dark">
-                Over Ons
-              </h1>
-              <p className="text-xl text-brand-gray-medium leading-relaxed">
-                Ontmoet het team achter Halt.academy en ontdek onze passie voor het verbeteren van medewerkerwelzijn door wetenschappelijk bewezen methoden.
-              </p>
-            </div>
-          </div>
-
-          {/* Mission Statement */}
-          <div className="bg-white rounded-xl p-8 mb-16 shadow-lg">
-            <h2 className="text-3xl font-bold text-brand-gray-dark mb-6 text-center">Onze Missie</h2>
-            <div className="max-w-4xl mx-auto">
-              <p className="text-lg text-brand-gray-medium leading-relaxed mb-6">
-                Bij Halt.academy geloven we dat elke organisatie het recht heeft op gezonde, veerkrachtige en betrokken medewerkers. Onze missie is om organisaties te helpen bij het creëren van een werkomgeving waarin stress wordt gemanaged, welzijn wordt bevorderd, en zowel individuele als organisatorische doelen worden bereikt.
-              </p>
-              <p className="text-lg text-brand-gray-medium leading-relaxed">
-                We doen dit door het aanbieden van wetenschappelijk bewezen programma's die niet alleen het welzijn van medewerkers verbeteren, maar ook meetbare bedrijfsresultaten opleveren. Omdat we geloven dat investeren in je mensen de beste investering is die je kunt doen.
-              </p>
-            </div>
-          </div>
-
-          {/* Expertise Section */}
-          <div className="mb-16">
-            <h2 className="text-3xl font-bold text-brand-gray-dark mb-8 text-center">Onze Expertise</h2>
-            
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {expertise.map((item, index) => {
-                const IconComponent = item.icon;
-                return (
-                  <div key={index} className="bg-white rounded-xl p-6 shadow-lg">
-                    <div className="w-12 h-12 bg-brand-blue text-white rounded-lg flex items-center justify-center mb-4">
-                      <IconComponent className="h-6 w-6" />
-                    </div>
-                    <h3 className="text-xl font-semibold text-brand-gray-dark mb-3">{item.title}</h3>
-                    <p className="text-brand-gray-medium text-sm leading-relaxed">{item.description}</p>
-                  </div>
-                );
-              })}
-            </div>
-          </div>
-
-          {/* Team Section */}
-          <div className="mb-16">
-            <h2 className="text-3xl font-bold text-brand-gray-dark mb-8 text-center">Ons Team</h2>
-            
-            <div className="space-y-8">
-              {teamMembers.map((member, index) => (
-                <div key={index} className="bg-white rounded-xl p-8 shadow-lg">
-                  <div className="grid md:grid-cols-4 gap-6">
-                    <div className="md:col-span-1">
-                      <div className="w-32 h-32 bg-brand-gray-light rounded-full mx-auto mb-4 flex items-center justify-center">
-                        <User className="h-16 w-16 text-brand-gray-medium" />
-                      </div>
-                      <div className="text-center">
-                        <h3 className="text-xl font-semibold text-brand-gray-dark mb-1">{member.name}</h3>
-                        <p className="text-brand-blue font-medium mb-4">{member.role}</p>
-                      </div>
-                    </div>
-                    
-                    <div className="md:col-span-3">
-                      <p className="text-brand-gray-medium leading-relaxed mb-4">
-                        {member.bio}
-                      </p>
-                      
-                      <div>
-                        <h4 className="font-semibold text-brand-gray-dark mb-2">Specialisaties:</h4>
-                        <div className="flex flex-wrap gap-2">
-                          {member.specializations.map((spec, specIndex) => (
-                            <span key={specIndex} className="inline-block bg-brand-gray-light text-brand-gray-dark text-sm px-3 py-1 rounded-full">
-                              {spec}
-                            </span>
-                          ))}
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Why Choose Us */}
-          <div className="bg-brand-blue text-white rounded-xl p-8 text-center">
-            <h2 className="text-3xl font-bold mb-6">Waarom Kiezen voor Halt.academy?</h2>
-            
-            <div className="grid md:grid-cols-3 gap-8 mb-8">
-              <div>
-                <div className="text-4xl font-bold text-brand-green-light mb-2">100%</div>
-                <div className="text-lg">Wetenschappelijk onderbouwd</div>
-              </div>
-              <div>
-                <div className="text-4xl font-bold text-brand-green-light mb-2">500+</div>
-                <div className="text-lg">Getrainde professionals</div>
-              </div>
-              <div>
-                <div className="text-4xl font-bold text-brand-green-light mb-2">50+</div>
-                <div className="text-lg">Tevreden organisaties</div>
-              </div>
-            </div>
-            
-            <p className="text-xl mb-6 max-w-4xl mx-auto">
-              Wij combineren wetenschappelijke rigor met praktische toepasbaarheid. Onze aanpak is bewezen effectief en onze trainers zijn hooggekwalificeerd. Maar het belangrijkste: we leveren resultaten die u kunt meten.
+          <div className="text-center space-y-6 max-w-4xl mx-auto">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold">
+              Over Halt.academy
+            </h1>
+            <p className="text-xl md:text-2xl text-blue-100 leading-relaxed">
+              Wetenschappelijk onderbouwde stressreductie voor bedrijven met meetbare resultaten
             </p>
-            
-            <Button 
-              size="lg"
-              className="bg-brand-green hover:bg-brand-green-light text-white font-semibold py-4 px-8 rounded-lg text-lg"
-              onClick={() => window.open('https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1wwDnoAHyFrV0M1FxwmbcMa9ewkDxTDdwQObwPKF-WX-wZV9DssZKtb1haoeP5qXDLenQlZt_R', '_blank')}
-            >
-              Plan een Kennismakingsgesprek
-            </Button>
           </div>
         </div>
-      </main>
+      </section>
+
+      {/* Mission Section */}
+      <section className="section-padding">
+        <div className="container-custom">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <div className="space-y-8">
+              <h2 className="text-3xl md:text-4xl font-bold text-brand-gray-dark">
+                Onze Missie
+              </h2>
+              <div className="space-y-6 text-lg text-brand-gray-medium leading-relaxed">
+                <p>
+                  Bij Halt.academy geloven we dat stress niet onvermijdelijk hoeft te zijn in de moderne werkplek. 
+                  Onze missie is om bedrijven te helpen hun medewerkers gezonder, gelukkiger en productiever te maken 
+                  door wetenschappelijk bewezen stressreductieprogramma's.
+                </p>
+                <p>
+                  We richten ons op meetbare resultaten: minder verzuim, hogere retentie en verhoogde productiviteit. 
+                  Onze aanpak is gebaseerd op MBSR (Mindfulness-Based Stress Reduction) en andere evidence-based technieken 
+                  die hun effectiviteit hebben bewezen in wetenschappelijk onderzoek.
+                </p>
+              </div>
+            </div>
+            <div className="relative">
+              <div className="bg-brand-gray-light rounded-2xl p-8 shadow-lg">
+                <div className="grid grid-cols-2 gap-6">
+                  <div className="text-center">
+                    <div className="text-3xl font-bold text-brand-blue mb-2">500+</div>
+                    <div className="text-brand-gray-medium">Bedrijven geholpen</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-3xl font-bold text-brand-green mb-2">15,000+</div>
+                    <div className="text-brand-gray-medium">Medewerkers getraind</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-3xl font-bold text-brand-blue mb-2">30%</div>
+                    <div className="text-brand-gray-medium">Gemiddelde verzuimreductie</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-3xl font-bold text-brand-green mb-2">95%</div>
+                    <div className="text-brand-gray-medium">Tevredenheidscore</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Expertise Section */}
+      <section className="bg-brand-gray-light section-padding">
+        <div className="container-custom">
+          <div className="text-center space-y-6 mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-brand-gray-dark">
+              Onze Expertise
+            </h2>
+            <p className="text-xl text-brand-gray-medium max-w-3xl mx-auto leading-relaxed">
+              Gecertificeerde trainers met jarenlange ervaring in stressreductie en corporate wellness
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {expertises.map((expertise, index) => {
+              const IconComponent = expertise.icon;
+              return (
+                <div key={index} className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 text-center">
+                  <div className="inline-flex items-center justify-center w-16 h-16 bg-brand-blue text-white rounded-full mb-4">
+                    <IconComponent className="h-8 w-8" />
+                  </div>
+                  <h3 className="text-lg font-semibold text-brand-gray-dark mb-3">
+                    {expertise.title}
+                  </h3>
+                  <p className="text-brand-gray-medium text-sm leading-relaxed">
+                    {expertise.description}
+                  </p>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* Team Section */}
+      <section className="section-padding">
+        <div className="container-custom">
+          <div className="text-center space-y-6 mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-brand-gray-dark">
+              Ons Team
+            </h2>
+            <p className="text-xl text-brand-gray-medium max-w-3xl mx-auto leading-relaxed">
+              Professionele trainers met bewezen expertise in stressreductie en mindfulness
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 text-center">
+              <div className="w-24 h-24 bg-brand-blue rounded-full mx-auto mb-6 flex items-center justify-center">
+                <Users className="h-12 w-12 text-white" />
+              </div>
+              <h3 className="text-xl font-semibold text-brand-gray-dark mb-2">Dr. Sarah van der Berg</h3>
+              <p className="text-brand-blue font-medium mb-3">Hoofdtrainer & Oprichter</p>
+              <p className="text-brand-gray-medium text-sm leading-relaxed">
+                Gepromoveerd in Gezondheidspsychologie, MBSR gecertificeerd trainer met 15+ jaar ervaring 
+                in corporate wellness programma's.
+              </p>
+            </div>
+
+            <div className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 text-center">
+              <div className="w-24 h-24 bg-brand-green rounded-full mx-auto mb-6 flex items-center justify-center">
+                <GraduationCap className="h-12 w-12 text-white" />
+              </div>
+              <h3 className="text-xl font-semibold text-brand-gray-dark mb-2">Mark Jansen</h3>
+              <p className="text-brand-blue font-medium mb-3">Senior Trainer</p>
+              <p className="text-brand-gray-medium text-sm leading-relaxed">
+                Master in Arbeids- en Organisatiepsychologie, gespecialiseerd in stressmanagement 
+                en team coaching binnen bedrijfsomgevingen.
+              </p>
+            </div>
+
+            <div className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 text-center">
+              <div className="w-24 h-24 bg-purple-600 rounded-full mx-auto mb-6 flex items-center justify-center">
+                <Award className="h-12 w-12 text-white" />
+              </div>
+              <h3 className="text-xl font-semibold text-brand-gray-dark mb-2">Lisa Chen</h3>
+              <p className="text-brand-blue font-medium mb-3">Implementatie Specialist</p>
+              <p className="text-brand-gray-medium text-sm leading-relaxed">
+                MBA in Change Management, expert in het implementeren van welzijnsprogramma's 
+                en het meten van ROI binnen grote organisaties.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="bg-brand-blue text-white section-padding">
+        <div className="container-custom">
+          <div className="text-center space-y-8 max-w-4xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold">
+              Klaar om de Impact te Ervaren?
+            </h2>
+            <p className="text-xl text-blue-100 leading-relaxed">
+              Ontdek hoe onze wetenschappelijk bewezen aanpak uw organisatie kan helpen 
+              met lagere verzuimcijfers en gelukkigere medewerkers.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button 
+                size="lg" 
+                className="bg-brand-green hover:bg-brand-green-light text-white font-semibold py-4 px-8 rounded-lg text-lg transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:-translate-y-1"
+                onClick={() => window.open('https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1wwDnoAHyFrV0M1FxwmbcMa9ewkDxTDdwQObwPKF-WX-wZV9DssZKtb1haoeP5qXDLenQlZt_R', '_blank')}
+              >
+                Plan een Kennismaking
+              </Button>
+              <Button 
+                variant="outline" 
+                size="lg" 
+                className="border-2 border-white text-white hover:bg-white hover:text-brand-blue font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:-translate-y-1"
+              >
+                Download Brochure
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Footer */}
-      <footer className="bg-brand-gray-dark text-white py-12 mt-16">
+      <footer className="bg-brand-gray-dark text-white py-12">
         <div className="container-custom">
           <div className="grid md:grid-cols-3 gap-8">
             <div>
@@ -220,10 +231,10 @@ const OverOns = () => {
             <div>
               <h3 className="text-lg font-semibold mb-4">Snel naar</h3>
               <div className="space-y-2">
-                <Link to="/" className="block text-gray-300 hover:text-white transition-colors">Home</Link>
-                <Link to="/wetenschap" className="block text-gray-300 hover:text-white transition-colors">De Wetenschap</Link>
-                <Link to="/programma" className="block text-gray-300 hover:text-white transition-colors">Programma</Link>
-                <Link to="/contact" className="block text-gray-300 hover:text-white transition-colors">Contact</Link>
+                <a href="/" className="block text-gray-300 hover:text-white transition-colors">Home</a>
+                <a href="/wetenschap" className="block text-gray-300 hover:text-white transition-colors">De Wetenschap</a>
+                <a href="/programma" className="block text-gray-300 hover:text-white transition-colors">Programma</a>
+                <a href="/contact" className="block text-gray-300 hover:text-white transition-colors">Contact</a>
               </div>
             </div>
           </div>
