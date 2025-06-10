@@ -3,8 +3,14 @@ import Navigation from '@/components/Navigation';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { CheckCircle, Clock, Users, MapPin, Calendar, Brain, Target, Lightbulb } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import StickyCtaButtons from '@/components/StickyCtaButtons';
+import { useEffect } from 'react';
 
 const Programma = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const weeks = [
     {
       week: "Week 1",
@@ -186,6 +192,7 @@ const Programma = () => {
   return (
     <div className="min-h-screen bg-brand-gray-light">
       <Navigation />
+      <StickyCtaButtons />
       
       <main className="pt-8">
         {/* Hero Section */}
@@ -390,7 +397,7 @@ const Programma = () => {
               </p>
               
               <div className="grid md:grid-cols-2 gap-8 mb-12">
-                <div className="bg-brand-gray-light p-6 rounded-xl">
+                <div className="bg-brand-gray-light p-6 rounded-xl text-left">
                   <h3 className="text-xl font-semibold text-brand-gray-dark mb-4">Het programma integreert elementen uit:</h3>
                   <ul className="space-y-2 text-brand-gray-medium">
                     <li>• Cognitieve gedragsbenaderingen</li>
@@ -400,7 +407,7 @@ const Programma = () => {
                   </ul>
                 </div>
                 
-                <div className="bg-brand-gray-light p-6 rounded-xl">
+                <div className="bg-brand-gray-light p-6 rounded-xl text-left">
                   <h3 className="text-xl font-semibold text-brand-gray-dark mb-4">Na Afloop van het Programma</h3>
                   <ul className="space-y-2 text-brand-gray-medium">
                     <li>• Certificaat van voltooiing</li>
@@ -409,13 +416,6 @@ const Programma = () => {
                     <li>• Ondersteuning voor continue ontwikkeling</li>
                   </ul>
                 </div>
-              </div>
-              
-              <div className="bg-gradient-to-r from-brand-blue to-brand-green text-white p-8 rounded-xl">
-                <h3 className="text-2xl font-bold mb-4">Investering en Commitment</h3>
-                <p className="text-lg leading-relaxed">
-                  De investering in dit programma omvat niet alleen de wekelijkse sessies en materialen, maar ook de commitment van deelnemers aan de dagelijkse oefenpraktijk. Deze tijdsinvestering is essentieel voor het behalen van de wetenschappelijk bewezen resultaten die leiden tot verminderd verzuim en verbeterde retentie.
-                </p>
               </div>
             </div>
           </div>
@@ -432,14 +432,14 @@ const Programma = () => {
             </p>
             <div className="space-y-4 md:space-y-0 md:space-x-4 md:flex md:justify-center">
               <Button 
-                className="btn-primary text-lg px-8 py-3 bg-brand-blue hover:bg-brand-blue/90"
+                className="bg-brand-blue hover:bg-brand-blue-dark text-white font-semibold py-3 px-8 rounded-lg text-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
                 onClick={() => window.open('https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1wwDnoAHyFrV0M1FxwmbcMa9ewkDxTDdwQObwPKF-WX-wZV9DssZKtb1haoeP5qXDLenQlZt_R', '_blank')}
               >
                 Vrijblijvend gesprek plannen
               </Button>
               <Button 
                 variant="outline" 
-                className="btn-secondary text-lg px-8 py-3"
+                className="border-2 border-brand-blue text-brand-blue hover:bg-brand-blue hover:text-white font-semibold py-3 px-8 rounded-lg text-lg transition-all duration-300"
                 onClick={() => window.location.href = '/#calculator'}
               >
                 Bereken uw besparing

@@ -6,14 +6,8 @@ import { Link } from 'react-router-dom';
 const ImpactSection = () => {
   const impacts = [
     {
-      icon: Shield,
-      title: "40-58% minder werkstress",
-      description: "Effectieve stressreductie op de werkplek",
-      color: "text-brand-blue"
-    },
-    {
       icon: Heart,
-      title: "32% minder angst- en depressiesymptomen",
+      title: "32% minder angst- en depressie",
       description: "Verbeterde mentale gezondheid van medewerkers",
       color: "text-purple-600"
     },
@@ -52,6 +46,12 @@ const ImpactSection = () => {
       title: "27% verbeterde werk-privébalans",
       description: "Betere balans tussen werk en privéleven",
       color: "text-teal-600"
+    },
+    {
+      icon: Shield,
+      title: "40-58% minder werkstress",
+      description: "Effectieve stressreductie op de werkplek",
+      color: "text-brand-blue"
     }
   ];
 
@@ -97,12 +97,12 @@ const ImpactSection = () => {
         <div className="text-center mt-12 space-y-4">
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link to="/wetenschap">
-              <Button variant="outline" className="btn-secondary text-lg px-8 py-3">
+              <Button variant="outline" className="border-2 border-brand-blue text-brand-blue hover:bg-brand-blue hover:text-white font-semibold py-3 px-8 rounded-lg text-lg transition-all duration-300">
                 Lees meer over de wetenschap
               </Button>
             </Link>
             <Button 
-              className="btn-primary text-lg px-8 py-3 bg-zinc-950 hover:bg-zinc-800"
+              className="bg-brand-blue hover:bg-brand-blue-dark text-white font-semibold py-3 px-8 rounded-lg text-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
               onClick={() => window.open('https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1wwDnoAHyFrV0M1FxwmbcMa9ewkDxTDdwQObwPKF-WX-wZV9DssZKtb1haoeP5qXDLenQlZt_R', '_blank')}
             >
               Plan een vrijblijvend gesprek

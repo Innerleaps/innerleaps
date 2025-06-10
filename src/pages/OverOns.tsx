@@ -1,10 +1,16 @@
-
 import Navigation from '@/components/Navigation';
+import StickyCtaButtons from '@/components/StickyCtaButtons';
+import { useEffect } from 'react';
 
 const OverOns = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-brand-gray-light">
       <Navigation />
+      <StickyCtaButtons />
       
       <main className="section-padding">
         <div className="container-custom">

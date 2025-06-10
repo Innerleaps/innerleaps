@@ -1,10 +1,15 @@
-
 import Navigation from '@/components/Navigation';
+import StickyCtaButtons from '@/components/StickyCtaButtons';
+import { useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { ArrowLeft, BookOpen, BarChart3, Brain, Heart, Users, Shield, TrendingUp } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const Wetenschap = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const keyFindings = [
     {
       icon: TrendingUp,
@@ -88,8 +93,9 @@ const Wetenschap = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-brand-gray-light">
       <Navigation />
+      <StickyCtaButtons />
       
       {/* Hero Section */}
       <section className="bg-brand-gray-light section-padding">
@@ -244,7 +250,7 @@ const Wetenschap = () => {
               </p>
               
               <p className="text-lg leading-relaxed font-semibold text-brand-gray-dark">
-                De significante percentages voor verzuimreductie (19-30%) en retentieverbetering (17-31%), ondersteund door de verbeteringen in de onderliggende factoren, vormen de solide wetenschappelijke basis voor de positieve Return on Investment (ROI) die bedrijven kunnen verwachten van een investering in het Halt.academy programma.
+                De significante percentages voor verzuimreductie (19-30%) en retentieverbetering (17-31%), ondersteunde door de verbeteringen in de onderliggende factoren, vormen de solide wetenschappelijke basis voor de positieve Return on Investment (ROI) die bedrijven kunnen verwachten van een investering in het Halt.academy programma.
               </p>
             </div>
 
@@ -307,3 +313,5 @@ const Wetenschap = () => {
 };
 
 export default Wetenschap;
+
+</edits_to_apply>

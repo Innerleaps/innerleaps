@@ -44,8 +44,8 @@ const ProgramSection = () => {
     },
     {
       icon: Users,
-      title: "Groepstraining",
-      description: "15 deelnemers per groep"
+      title: "15 deelnemers per groep",
+      description: "Optimale groepsgrootte"
     },
     {
       icon: Calendar,
@@ -94,14 +94,12 @@ const ProgramSection = () => {
           
           <div className="grid gap-6">
             {programSteps.map((step, index) => (
-              <div key={index} className="flex items-start space-x-6 p-6 bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-md transition-all duration-300">
-                <div className="flex-shrink-0">
-                  <div className="w-12 h-12 bg-brand-blue text-white rounded-full flex items-center justify-center font-bold text-xs">
+              <div key={index} className="bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 p-6">
+                <div className="mb-4">
+                  <div className="text-sm text-brand-blue font-medium mb-2">
                     Week {step.weeks}
                   </div>
-                </div>
-                <div className="flex-1">
-                  <h4 className="text-xl font-semibold text-brand-gray-dark mb-2">
+                  <h4 className="text-xl font-semibold text-brand-gray-dark mb-3">
                     {step.title}
                   </h4>
                   <p className="text-brand-gray-medium leading-relaxed">
@@ -115,10 +113,10 @@ const ProgramSection = () => {
 
         <div className="text-center mt-12 space-y-4">
           <div className="space-x-4">
-            <Button className="btn-primary text-lg px-8 py-3 bg-zinc-950 hover:bg-zinc-800">
+            <Button className="bg-brand-blue hover:bg-brand-blue-dark text-white font-semibold py-3 px-8 rounded-lg text-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
               Programma Details Bekijken
             </Button>
-            <Button variant="outline" className="btn-secondary text-lg px-8 py-3" onClick={() => window.open('https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1wwDnoAHyFrV0M1FxwmbcMa9ewkDxTDdwQObwPKF-WX-wZV9DssZKtb1haoeP5qXDLenQlZt_R', '_blank')}>
+            <Button variant="outline" className="border-2 border-brand-blue text-brand-blue hover:bg-brand-blue hover:text-white font-semibold py-3 px-8 rounded-lg text-lg transition-all duration-300" onClick={() => window.open('https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1wwDnoAHyFrV0M1FxwmbcMa9ewkDxTDdwQObwPKF-WX-wZV9DssZKtb1haoeP5qXDLenQlZt_R', '_blank')}>
               Vrijblijvend gesprek plannen
             </Button>
           </div>

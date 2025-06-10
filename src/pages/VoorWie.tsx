@@ -1,8 +1,12 @@
-
 import Navigation from '@/components/Navigation';
-import { Button } from '@/components/ui/button';
+import StickyCtaButtons from '@/components/StickyCtaButtons';
+import { useEffect } from 'react';
 
 const VoorWie = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const sectors = [
     {
       title: "Zakelijke Dienstverlening",
@@ -81,8 +85,9 @@ const VoorWie = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-brand-gray-light">
       <Navigation />
+      <StickyCtaButtons />
       
       <main className="section-padding">
         <div className="container-custom">

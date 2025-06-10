@@ -4,11 +4,13 @@ import HeroSection from '@/components/HeroSection';
 import ImpactSection from '@/components/ImpactSection';
 import ProgramSection from '@/components/ProgramSection';
 import ProcessSection from '@/components/ProcessSection';
+import StickyCtaButtons from '@/components/StickyCtaButtons';
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-white">
       <Navigation />
+      <StickyCtaButtons />
       <div id="home">
         <HeroSection />
       </div>
