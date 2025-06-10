@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -12,7 +11,7 @@ interface CalculatorModalProps {
   onClose: () => void;
 }
 
-const CalculatorModal = ({ isCalculatorOpen, onClose }: CalculatorModalProps) => {
+const CalculatorModal = ({ isOpen, onClose }: CalculatorModalProps) => {
   const [formData, setFormData] = useState({
     name: '',
     phone: '',
@@ -92,7 +91,7 @@ const CalculatorModal = ({ isCalculatorOpen, onClose }: CalculatorModalProps) =>
 
   if (showThankYou) {
     return (
-      <Dialog open={isCalculatorOpen} onOpenChange={handleClose}>
+      <Dialog open={isOpen} onOpenChange={handleClose}>
         <DialogContent className="max-w-2xl">
           <DialogHeader>
             <DialogTitle className="flex items-center justify-between">
@@ -132,7 +131,7 @@ const CalculatorModal = ({ isCalculatorOpen, onClose }: CalculatorModalProps) =>
 
   if (showResults) {
     return (
-      <Dialog open={isCalculatorOpen} onOpenChange={handleClose}>
+      <Dialog open={isOpen} onOpenChange={handleClose}>
         <DialogContent className="max-w-4xl">
           <DialogHeader>
             <DialogTitle className="flex items-center justify-between">
@@ -205,7 +204,7 @@ const CalculatorModal = ({ isCalculatorOpen, onClose }: CalculatorModalProps) =>
   }
 
   return (
-    <Dialog open={isCalculatorOpen} onOpenChange={handleClose}>
+    <Dialog open={isOpen} onOpenChange={handleClose}>
       <DialogContent className="max-w-4xl">
         <DialogHeader>
           <DialogTitle className="flex items-center justify-between">
