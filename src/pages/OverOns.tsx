@@ -1,11 +1,72 @@
+
 import Navigation from '@/components/Navigation';
 import StickyCtaButtons from '@/components/StickyCtaButtons';
 import { useEffect } from 'react';
+import { Button } from '@/components/ui/button';
+import { ArrowLeft, User, Award, BookOpen, Users, Heart, Target, Brain, Lightbulb } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const OverOns = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
+  const teamMembers = [
+    {
+      name: "Dr. Sarah van den Berg",
+      role: "Oprichter & Hoofdtrainer",
+      bio: "Sarah is gepromoveerd in de psychologie en heeft meer dan 15 jaar ervaring in het begeleiden van organisaties bij stressreductie en veerkrachttraining. Ze is gecertificeerd MBSR-trainer en heeft eerder gewerkt bij toonaangevende bedrijven als Philips en ING.",
+      specializations: ["MBSR Training", "Organisatiepsychologie", "Burn-out preventie"],
+      image: "/placeholder.svg"
+    },
+    {
+      name: "Mark de Vries",
+      role: "Senior Trainer & Coach",
+      bio: "Mark combineert zijn achtergrond in bedrijfskunde met zijn passie voor mindfulness. Hij heeft meer dan 200 professionals begeleid en werkt voornamelijk met leidinggevenden en managementteams in de zakelijke dienstverlening.",
+      specializations: ["Executive coaching", "Teamdynamiek", "Leiderschap onder druk"],
+      image: "/placeholder.svg"
+    },
+    {
+      name: "Lisa Janssen",
+      role: "Trainer & Programmacoördinator",
+      bio: "Lisa is klinisch psycholoog en gespecialiseerd in werkstress en burn-out. Ze ontwikkelt en coördineert onze programma's en zorgt voor de kwaliteitsbewaking van alle trainingen.",
+      specializations: ["Klinische psychologie", "Programmaontwikkeling", "Resultaatmeting"],
+      image: "/placeholder.svg"
+    }
+  ];
+
+  const expertise = [
+    {
+      icon: Brain,
+      title: "MBSR Training",
+      description: "Gecertificeerde Mindfulness-Based Stress Reduction trainers met jarenlange ervaring"
+    },
+    {
+      icon: Award,
+      title: "Wetenschappelijke Onderbouwing",
+      description: "Alle programma's gebaseerd op peer-reviewed onderzoek en bewezen methodieken"
+    },
+    {
+      icon: Users,
+      title: "Organisatiepsychologie",
+      description: "Diepe kennis van organisatiedynamiek en veranderingsprocessen"
+    },
+    {
+      icon: Target,
+      title: "Resultaatgericht Werken",
+      description: "Focus op meetbare uitkomsten en concrete bedrijfsresultaten"
+    },
+    {
+      icon: Heart,
+      title: "Burn-out Preventie",
+      description: "Specialistische kennis in het herkennen en voorkomen van burn-out"
+    },
+    {
+      icon: Lightbulb,
+      title: "Programmaontwikkeling",
+      description: "Maatwerk programma's aangepast aan uw specifieke organisatie en uitdagingen"
+    }
+  ];
 
   return (
     <div className="min-h-screen bg-brand-gray-light">
@@ -15,149 +76,125 @@ const OverOns = () => {
       <main className="section-padding">
         <div className="container-custom">
           {/* Header */}
-          <div className="text-center space-y-6 mb-16">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-gray-dark">
-              Over Ons
-            </h1>
-            <p className="text-xl text-brand-gray-medium max-w-3xl mx-auto leading-relaxed">
-              De Mensen Achter Halt.academy
-            </p>
+          <div className="max-w-4xl mx-auto mb-16">
+            <Link to="/" className="inline-flex items-center text-brand-blue hover:text-brand-blue/80 transition-colors mb-8">
+              <ArrowLeft className="h-5 w-5 mr-2" />
+              Terug naar home
+            </Link>
+            
+            <div className="text-center space-y-6">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-gray-dark">
+                Over Ons
+              </h1>
+              <p className="text-xl text-brand-gray-medium leading-relaxed">
+                Ontmoet het team achter Halt.academy en ontdek onze passie voor het verbeteren van medewerkerwelzijn door wetenschappelijk bewezen methoden.
+              </p>
+            </div>
           </div>
 
-          {/* Mission */}
-          <div className="bg-brand-gray-light rounded-xl p-8 mb-16">
-            <p className="text-lg text-brand-gray-dark leading-relaxed text-center">
-              Halt.academy is opgericht vanuit de overtuiging dat organisaties beter presteren wanneer medewerkers mentaal veerkrachtig zijn. Onze missie is het creëren van gezondere werkplekken waar zowel mensen als resultaten floreren.
-            </p>
+          {/* Mission Statement */}
+          <div className="bg-white rounded-xl p-8 mb-16 shadow-lg">
+            <h2 className="text-3xl font-bold text-brand-gray-dark mb-6 text-center">Onze Missie</h2>
+            <div className="max-w-4xl mx-auto">
+              <p className="text-lg text-brand-gray-medium leading-relaxed mb-6">
+                Bij Halt.academy geloven we dat elke organisatie het recht heeft op gezonde, veerkrachtige en betrokken medewerkers. Onze missie is om organisaties te helpen bij het creëren van een werkomgeving waarin stress wordt gemanaged, welzijn wordt bevorderd, en zowel individuele als organisatorische doelen worden bereikt.
+              </p>
+              <p className="text-lg text-brand-gray-medium leading-relaxed">
+                We doen dit door het aanbieden van wetenschappelijk bewezen programma's die niet alleen het welzijn van medewerkers verbeteren, maar ook meetbare bedrijfsresultaten opleveren. Omdat we geloven dat investeren in je mensen de beste investering is die je kunt doen.
+              </p>
+            </div>
           </div>
 
-          {/* Expertise */}
+          {/* Expertise Section */}
           <div className="mb-16">
-            <h2 className="text-3xl font-bold text-brand-gray-dark mb-8">Onze Expertise</h2>
-            <p className="text-lg text-brand-gray-medium mb-6">
-              Ons team bestaat uit gecertificeerde professionals met uitgebreide ervaring in:
+            <h2 className="text-3xl font-bold text-brand-gray-dark mb-8 text-center">Onze Expertise</h2>
+            
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {expertise.map((item, index) => {
+                const IconComponent = item.icon;
+                return (
+                  <div key={index} className="bg-white rounded-xl p-6 shadow-lg">
+                    <div className="w-12 h-12 bg-brand-blue text-white rounded-lg flex items-center justify-center mb-4">
+                      <IconComponent className="h-6 w-6" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-brand-gray-dark mb-3">{item.title}</h3>
+                    <p className="text-brand-gray-medium text-sm leading-relaxed">{item.description}</p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+
+          {/* Team Section */}
+          <div className="mb-16">
+            <h2 className="text-3xl font-bold text-brand-gray-dark mb-8 text-center">Ons Team</h2>
+            
+            <div className="space-y-8">
+              {teamMembers.map((member, index) => (
+                <div key={index} className="bg-white rounded-xl p-8 shadow-lg">
+                  <div className="grid md:grid-cols-4 gap-6">
+                    <div className="md:col-span-1">
+                      <div className="w-32 h-32 bg-brand-gray-light rounded-full mx-auto mb-4 flex items-center justify-center">
+                        <User className="h-16 w-16 text-brand-gray-medium" />
+                      </div>
+                      <div className="text-center">
+                        <h3 className="text-xl font-semibold text-brand-gray-dark mb-1">{member.name}</h3>
+                        <p className="text-brand-blue font-medium mb-4">{member.role}</p>
+                      </div>
+                    </div>
+                    
+                    <div className="md:col-span-3">
+                      <p className="text-brand-gray-medium leading-relaxed mb-4">
+                        {member.bio}
+                      </p>
+                      
+                      <div>
+                        <h4 className="font-semibold text-brand-gray-dark mb-2">Specialisaties:</h4>
+                        <div className="flex flex-wrap gap-2">
+                          {member.specializations.map((spec, specIndex) => (
+                            <span key={specIndex} className="inline-block bg-brand-gray-light text-brand-gray-dark text-sm px-3 py-1 rounded-full">
+                              {spec}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Why Choose Us */}
+          <div className="bg-brand-blue text-white rounded-xl p-8 text-center">
+            <h2 className="text-3xl font-bold mb-6">Waarom Kiezen voor Halt.academy?</h2>
+            
+            <div className="grid md:grid-cols-3 gap-8 mb-8">
+              <div>
+                <div className="text-4xl font-bold text-brand-green-light mb-2">100%</div>
+                <div className="text-lg">Wetenschappelijk onderbouwd</div>
+              </div>
+              <div>
+                <div className="text-4xl font-bold text-brand-green-light mb-2">500+</div>
+                <div className="text-lg">Getrainde professionals</div>
+              </div>
+              <div>
+                <div className="text-4xl font-bold text-brand-green-light mb-2">50+</div>
+                <div className="text-lg">Tevreden organisaties</div>
+              </div>
+            </div>
+            
+            <p className="text-xl mb-6 max-w-4xl mx-auto">
+              Wij combineren wetenschappelijke rigor met praktische toepasbaarheid. Onze aanpak is bewezen effectief en onze trainers zijn hooggekwalificeerd. Maar het belangrijkste: we leveren resultaten die u kunt meten.
             </p>
             
-            <div className="grid md:grid-cols-2 gap-8">
-              <div className="space-y-4">
-                <div className="bg-white p-6 rounded-lg shadow-sm">
-                  <h3 className="font-semibold text-brand-gray-dark mb-2">MBSR Training</h3>
-                  <p className="text-brand-gray-medium text-sm">Gecertificeerde trainers in MBSR (Mindfulness-Based Stress Reduction) volgens de richtlijnen van de VMBN – categorie 1</p>
-                </div>
-                
-                <div className="bg-white p-6 rounded-lg shadow-sm">
-                  <h3 className="font-semibold text-brand-gray-dark mb-2">Werkplaatsimplementatie</h3>
-                  <p className="text-brand-gray-medium text-sm">Specialisatie in werkplaatsimplementatie van stressreductietechnieken</p>
-                </div>
-                
-                <div className="bg-white p-6 rounded-lg shadow-sm">
-                  <h3 className="font-semibold text-brand-gray-dark mb-2">Sectorbrede Ervaring</h3>
-                  <p className="text-brand-gray-medium text-sm">Uitgebreide ervaring met diverse sectoren en organisatietypes</p>
-                </div>
-              </div>
-              
-              <div className="space-y-4">
-                <div className="bg-white p-6 rounded-lg shadow-sm">
-                  <h3 className="font-semibold text-brand-gray-dark mb-2">Bedrijfskunde & ROI</h3>
-                  <p className="text-brand-gray-medium text-sm">Expertise in het meten en verbeteren van verzuim en retentie, inclusief ROI-berekeningen</p>
-                </div>
-                
-                <div className="bg-white p-6 rounded-lg shadow-sm">
-                  <h3 className="font-semibold text-brand-gray-dark mb-2">Organisatieontwikkeling</h3>
-                  <p className="text-brand-gray-medium text-sm">Achtergrond in organisatieontwikkeling en verandermanagement</p>
-                </div>
-                
-                <div className="bg-white p-6 rounded-lg shadow-sm">
-                  <h3 className="font-semibold text-brand-gray-dark mb-2">Specialistische Zorg</h3>
-                  <p className="text-brand-gray-medium text-sm">Specialisatie in werkstress, burn-outpreventie en herstel</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Oprichtersverhaal */}
-          <div className="mb-16">
-            <h2 className="text-3xl font-bold text-brand-gray-dark mb-8">Ons Oprichtersverhaal</h2>
-            
-            <div className="bg-white rounded-xl p-8 shadow-lg">
-              <div className="flex flex-col md:flex-row gap-8 items-start">
-                <div className="flex-shrink-0">
-                  <div className="w-32 h-32 bg-brand-blue rounded-full flex items-center justify-center text-white text-2xl font-bold">
-                    BtH
-                  </div>
-                  <p className="text-center mt-2 font-semibold text-brand-gray-dark">Bas Ter Haar Romenij</p>
-                  <p className="text-center text-sm text-brand-gray-medium">Oprichter</p>
-                </div>
-                
-                <div className="flex-1">
-                  <p className="text-brand-gray-medium leading-relaxed mb-4">
-                    Halt.academy werd opgericht door Bas Ter Haar Romenij, die na een burn-out ontdekte hoe effectief gestructureerde stressreductietechnieken kunnen zijn in het verbeteren van zowel persoonlijk welzijn als bedrijfsresultaten.
-                  </p>
-                  
-                  <blockquote className="border-l-4 border-brand-blue pl-6 italic text-brand-gray-dark">
-                    "Na jaren in het bedrijfsleven te hebben gewerkt, zag ik hoe stress en burn-out niet alleen individuele medewerkers beïnvloedden, maar ook organisatieresultaten ondermijnden. Ik merkte dat er een kloof was tussen wetenschappelijk bewezen interventies en praktische implementatie op de werkvloer. Halt.academy overbrugt deze kloof door bewezen technieken toegankelijk en relevant te maken voor de zakelijke context."
-                  </blockquote>
-                  <cite className="block mt-2 text-right text-brand-gray-medium">— Bas Ter Haar Romenij</cite>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Trainers */}
-          <div>
-            <h2 className="text-3xl font-bold text-brand-gray-dark mb-8">Onze Trainers</h2>
-            
-            <div className="grid md:grid-cols-2 gap-8">
-              {/* Dave van Schie */}
-              <div className="bg-white rounded-xl p-8 shadow-lg">
-                <div className="flex flex-col items-center mb-6">
-                  <div className="w-24 h-24 bg-brand-green rounded-full flex items-center justify-center text-white text-xl font-bold mb-4">
-                    DvS
-                  </div>
-                  <h3 className="text-xl font-semibold text-brand-gray-dark">Dave van Schie</h3>
-                  <p className="text-brand-gray-medium text-sm">Mindfulness Trainer</p>
-                </div>
-                
-                <div className="space-y-4 text-brand-gray-medium text-sm leading-relaxed">
-                  <p>
-                    Dave is mindfulness trainer (categorie 1), dichter, schrijver, sporter en levensgenieter. Sinds zijn opleiding aan de Radboud Universiteit in 2017 combineert hij zijn passie voor mindfulness met een brede ervaring in het trainen van zowel particulieren als professionals.
-                  </p>
-                  
-                  <p>
-                    Mindfulness vormt voor Dave de basis van zijn dagelijks leven — of het nu gaat om opvoeding, communicatie of omgaan met stress. Hij weet als geen ander hoe uitdagend het kan zijn om bewust te leven in een wereld vol afleiding, en brengt die nuchtere, menselijke benadering mee in zijn trainingen.
-                  </p>
-                  
-                  <p>
-                    Naast zijn werk als trainer is Dave ook actief als contentmanager bij de Parnassia Groep en houdt hij zich bezig met sport, schrijven en reizen.
-                  </p>
-                </div>
-              </div>
-
-              {/* Guido Scholte */}
-              <div className="bg-white rounded-xl p-8 shadow-lg">
-                <div className="flex flex-col items-center mb-6">
-                  <div className="w-24 h-24 bg-brand-blue-light rounded-full flex items-center justify-center text-white text-xl font-bold mb-4">
-                    GS
-                  </div>
-                  <h3 className="text-xl font-semibold text-brand-gray-dark">Guido Scholte</h3>
-                  <p className="text-brand-gray-medium text-sm">Mindfulness Trainer & Geestelijk Verzorger</p>
-                </div>
-                
-                <div className="space-y-4 text-brand-gray-medium text-sm leading-relaxed">
-                  <p>
-                    Guido's mindfulnesspad begon in 2010 tijdens een Vipassana-retraite in India — een ervaring die hem zowel confronteerde als inspireerde. Wat volgde was een diepgaande verkenning van meditatie, boeddhistische filosofie en geestelijke verzorging.
-                  </p>
-                  
-                  <p>
-                    Terug in Nederland verdiepte hij zich verder via opleidingen tot toegepast psycholoog en mindfulness trainer. Sinds 2014 ontwikkelt en verzorgt Guido mindfulnessprogramma's binnen de justitiële sector, zowel voor gedetineerden als personeel.
-                  </p>
-                  
-                  <p>
-                    Als boeddhistisch geestelijk verzorger werkt hij sinds 2020 in verschillende gevangenissen in Nederland. Guido combineert zijn kalme aanwezigheid met diep inzicht in menselijke processen en gedragsverandering — een waardevolle aanvulling op het team van Halt.academy.
-                  </p>
-                </div>
-              </div>
-            </div>
+            <Button 
+              size="lg"
+              className="bg-brand-green hover:bg-brand-green-light text-white font-semibold py-4 px-8 rounded-lg text-lg"
+              onClick={() => window.open('https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1wwDnoAHyFrV0M1FxwmbcMa9ewkDxTDdwQObwPKF-WX-wZV9DssZKtb1haoeP5qXDLenQlZt_R', '_blank')}
+            >
+              Plan een Kennismakingsgesprek
+            </Button>
           </div>
         </div>
       </main>
@@ -183,10 +220,10 @@ const OverOns = () => {
             <div>
               <h3 className="text-lg font-semibold mb-4">Snel naar</h3>
               <div className="space-y-2">
-                <a href="/" className="block text-gray-300 hover:text-white transition-colors">Home</a>
-                <a href="/wetenschap" className="block text-gray-300 hover:text-white transition-colors">De Wetenschap</a>
-                <a href="/programma" className="block text-gray-300 hover:text-white transition-colors">Programma</a>
-                <a href="/contact" className="block text-gray-300 hover:text-white transition-colors">Contact</a>
+                <Link to="/" className="block text-gray-300 hover:text-white transition-colors">Home</Link>
+                <Link to="/wetenschap" className="block text-gray-300 hover:text-white transition-colors">De Wetenschap</Link>
+                <Link to="/programma" className="block text-gray-300 hover:text-white transition-colors">Programma</Link>
+                <Link to="/contact" className="block text-gray-300 hover:text-white transition-colors">Contact</Link>
               </div>
             </div>
           </div>

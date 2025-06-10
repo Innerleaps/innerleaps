@@ -31,7 +31,12 @@ const HeroSection = () => {
                 >
                   Bereken mijn besparing
                 </Button>
-                <Button variant="outline" size="lg" onClick={() => window.open('https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1wwDnoAHyFrV0M1FxwmbcMa9ewkDxTDdwQObwPKF-WX-wZV9DssZKtb1haoeP5qXDLenQlZt_R', '_blank')} className="border-2 border-white hover:bg-white font-semibold py-4 px-8 rounded-lg text-lg transition-all duration-300 text-slate-950">
+                <Button 
+                  variant="outline" 
+                  size="lg" 
+                  onClick={() => window.open('https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1wwDnoAHyFrV0M1FxwmbcMa9ewkDxTDdwQObwPKF-WX-wZV9DssZKtb1haoeP5qXDLenQlZt_R', '_blank')} 
+                  className="border-2 border-white hover:bg-white hover:text-brand-green font-semibold py-4 px-8 rounded-lg text-lg transition-all duration-300"
+                >
                   Vrijblijvend gesprek plannen
                 </Button>
               </div>
@@ -55,19 +60,19 @@ const HeroSection = () => {
                   <div className="space-y-4">
                     <div className="flex items-center justify-between p-3 bg-white/20 rounded-lg">
                       <span className="font-medium">Ziekteverzuim reductie</span>
-                      <span className="text-brand-green-light font-bold">30%</span>
+                      <span className="text-white font-bold text-lg ml-2">30%</span>
                     </div>
                     <div className="flex items-center justify-between p-3 bg-white/20 rounded-lg">
                       <span className="font-medium">Medewerkerretentie</span>
-                      <span className="text-brand-green-light font-bold">+31%</span>
+                      <span className="text-white font-bold text-lg ml-2">+31%</span>
                     </div>
                     <div className="flex items-center justify-between p-3 bg-white/20 rounded-lg">
                       <span className="font-medium">Werkstress reductie</span>
-                      <span className="text-brand-green-light font-bold">40-58%</span>
+                      <span className="text-white font-bold text-lg ml-2">40-58%</span>
                     </div>
                     <div className="flex items-center justify-between p-3 bg-white/20 rounded-lg">
                       <span className="font-medium">Werktevredenheid</span>
-                      <span className="text-brand-green-light font-bold">+26%</span>
+                      <span className="text-white font-bold text-lg ml-2">+26%</span>
                     </div>
                   </div>
                 </div>
