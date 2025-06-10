@@ -86,6 +86,12 @@ const ProgramSection = () => {
           })}
         </div>
 
+        <div className="text-center mb-12">
+          <Button className="bg-brand-blue hover:bg-brand-blue-dark text-white font-semibold py-3 px-8 rounded-lg text-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+            Programma Details Bekijken
+          </Button>
+        </div>
+
         {/* Program Steps */}
         <div className="space-y-8">
           <h3 className="text-2xl md:text-3xl font-bold text-brand-gray-dark text-center mb-12">
@@ -108,14 +114,6 @@ const ProgramSection = () => {
                 </div>
               </div>
             ))}
-          </div>
-        </div>
-
-        <div className="text-center mt-12 space-y-4">
-          <div className="space-x-4">
-            <Button className="bg-brand-blue hover:bg-brand-blue-dark text-white font-semibold py-3 px-8 rounded-lg text-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
-              Programma Details Bekijken
-            </Button>
           </div>
         </div>
       </div>

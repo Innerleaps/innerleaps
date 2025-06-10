@@ -1,6 +1,6 @@
 
 import { Button } from '@/components/ui/button';
-import { Calendar, CheckCircle, Target, TrendingUp, ArrowRight, Handshake, Presentation } from 'lucide-react';
+import { Calendar, CheckCircle, Target, TrendingUp, ArrowRight, Handshake, Presentation, UserPlus } from 'lucide-react';
 
 const ProcessSection = () => {
   const steps = [{
@@ -11,21 +11,26 @@ const ProcessSection = () => {
   }, {
     icon: Handshake,
     title: "Stap 2: Opdrachtakkoord",
-    description: "Vastleggen van praktische zaken: Startdata en planning Locatie (in-company of externe locatie). Investering.",
+    description: "Vastleggen van praktische zaken: Startdata, Locatie en Investering.",
     color: "bg-brand-green"
   }, {
     icon: Presentation,
     title: "Stap 3: Introductiesessie voor Medewerkers",
-    description: "Korte introductiesessie op uw locatie, bijvoorbeeld tijdens lunch of tijdens algemeen presentatie moment. Medewerkers maken kennis met de trainer en de aanpak Uitleg over de voordelen en tijdsinvestering.",
+    description: "Korte introductiesessie op uw locatie, bijvoorbeeld tijdens lunch of tijdens algemeen presentatie moment. Medewerkers maken kennis met de trainer en de aanpak.",
     color: "bg-purple-600"
   }, {
+    icon: UserPlus,
+    title: "Stap 4: Inschrijving Medewerkers",
+    description: "Medewerkers kunnen zich vrijblijvend inschrijven voor deelname aan het 8-weekse programma.",
+    color: "bg-teal-600"
+  }, {
     icon: CheckCircle,
-    title: "Stap 4: Implementatie & Begeleiding",
-    description: "Start van het 8-weekse programma met volledige ondersteuning en monitoring van voortgang",
+    title: "Stap 5: Start Programma",
+    description: "Start van het 8-weekse programma met alle ingeschreven medewerkers, volledige ondersteuning en monitoring van voortgang",
     color: "bg-orange-600"
   }, {
     icon: TrendingUp,
-    title: "Stap 5: Resultaatmeting & Evaluatie",
+    title: "Stap 6: Resultaatmeting & Evaluatie",
     description: "Continue monitoring van resultaten en evaluatie van impact op verzuim en retentie na afloop",
     color: "bg-red-600"
   }];
@@ -79,7 +84,7 @@ const ProcessSection = () => {
 
         <div className="text-center mt-12">
           <p className="text-2xl font-semibold text-brand-gray-dark">
-            Kennismaken
+            Onze besparing berekenen
           </p>
         </div>
       </div>
