@@ -1,6 +1,5 @@
-
 import { Button } from '@/components/ui/button';
-import { Calendar, CheckCircle, Target, TrendingUp, ArrowRight, Handshake } from 'lucide-react';
+import { Calendar, CheckCircle, Target, TrendingUp, ArrowRight, Handshake, Presentation } from 'lucide-react';
 
 const ProcessSection = () => {
   const steps = [
