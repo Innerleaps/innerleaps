@@ -1,11 +1,10 @@
-
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Card } from '@/components/ui/card';
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
-import { Calculator as CalculatorIcon, TrendingUp, X, CheckCircle, Quote } from 'lucide-react';
+import { Calculator as CalculatorIcon, TrendingUp, X, CheckCircle } from 'lucide-react';
 
 interface CalculatorModalProps {
   isOpen: boolean;
@@ -177,20 +176,20 @@ const CalculatorModal = ({ isOpen, onClose }: CalculatorModalProps) => {
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Button 
-                    className="bg-white text-brand-green hover:bg-gray-100 transform hover:-translate-y-1 transition-all duration-300"
+                    className="bg-white text-brand-green hover:bg-gray-100"
                     onClick={() => window.open('https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1wwDnoAHyFrV0M1FxwmbcMa9ewkDxTDdwQObwPKF-WX-wZV9DssZKtb1haoeP5qXDLenQlZt_R', '_blank')}
                   >
                     Plan een gesprek over deze resultaten
                   </Button>
                   <Button 
                     variant="outline" 
-                    className="border-white text-white hover:bg-white hover:text-brand-green transform hover:-translate-y-1 transition-all duration-300"
+                    className="border-white text-white hover:bg-white hover:text-brand-green"
                     onClick={() => setShowResults(false)}
                   >
                     Nieuwe berekening
                   </Button>
                   <Button 
-                    className="bg-white text-brand-green hover:bg-gray-100 transform hover:-translate-y-1 transition-all duration-300"
+                    className="bg-white text-brand-green hover:bg-gray-100"
                     onClick={handleComplete}
                   >
                     Voltooien
@@ -227,19 +226,6 @@ const CalculatorModal = ({ isOpen, onClose }: CalculatorModalProps) => {
             <p className="text-brand-gray-medium">
               Vul uw gegevens in voor een persoonlijke berekening van de ROI
             </p>
-            
-            {/* Trust quote */}
-            <div className="bg-brand-gray-light p-4 rounded-lg mt-6 flex items-start space-x-3">
-              <Quote className="h-6 w-6 text-brand-blue mt-1 flex-shrink-0" />
-              <div className="text-left">
-                <p className="text-sm text-brand-gray-dark italic">
-                  "Door het programma van Halt.academy hebben we ons ziekteverzuim met 35% kunnen reduceren en onze medewerkerretentie is met 40% gestegen. De ROI was binnen 6 maanden zichtbaar."
-                </p>
-                <p className="text-xs text-brand-gray-medium mt-2 font-medium">
-                  - HR Director, Fortune 500 bedrijf
-                </p>
-              </div>
-            </div>
           </div>
 
           <div className="grid md:grid-cols-2 gap-6">
@@ -278,7 +264,7 @@ const CalculatorModal = ({ isOpen, onClose }: CalculatorModalProps) => {
                   value={formData.company}
                   onChange={(e) => handleInputChange('company', e.target.value)}
                   className="mt-1"
-                  placeholder="ABC Bedrijf B.V."
+                  placeholder="Uw Bedrijf B.V."
                   required
                 />
               </div>
@@ -342,7 +328,7 @@ const CalculatorModal = ({ isOpen, onClose }: CalculatorModalProps) => {
               <div className="pt-4">
                 <Button 
                   onClick={calculateSavings}
-                  className="w-full btn-primary transform hover:-translate-y-1 transition-all duration-300"
+                  className="w-full btn-primary"
                   disabled={!formData.name || !formData.phone || !formData.company || !formData.employees || !formData.yearlyCosts || !formData.currentAbsenteeism || !formData.currentTurnover}
                 >
                   Bereken Mijn Besparing
