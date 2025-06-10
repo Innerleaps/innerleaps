@@ -1,11 +1,12 @@
+
 import { Button } from '@/components/ui/button';
 import { Calendar, CheckCircle, Target, TrendingUp, ArrowRight, Handshake, Presentation } from 'lucide-react';
+
 const ProcessSection = () => {
   const steps = [{
     icon: Calendar,
     title: "Stap 1: Kennismaking & Besparingsinventarisatie",
     description: "Vrijblijvend gesprek waarin we uw huidige situatie analyseren en potentiële besparingen berekenen",
-    cta: "Plan een kennismakingsgesprek",
     color: "bg-brand-blue"
   }, {
     icon: Handshake,
@@ -28,7 +29,9 @@ const ProcessSection = () => {
     description: "Continue monitoring van resultaten en evaluatie van impact op verzuim en retentie na afloop",
     color: "bg-red-600"
   }];
-  return <section className="bg-brand-gray-light section-padding">
+
+  return (
+    <section className="bg-brand-gray-light section-padding">
       <div className="container-custom">
         <div className="text-center space-y-6 mb-16">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-brand-gray-dark">
@@ -39,40 +42,49 @@ const ProcessSection = () => {
           </p>
         </div>
 
-        <div className="relative">
+        <div className="relative max-w-2xl mx-auto">
           {/* Process Steps */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-6 relative">
+          <div className="space-y-6">
             {steps.map((step, index) => {
-            const IconComponent = step.icon;
-            return <div key={index} className="relative">
-                  <div className="bg-white rounded-xl p-4 shadow-lg hover:shadow-xl transition-all duration-300 h-full">
-                    <div className={`w-12 h-12 ${step.color} text-white rounded-lg flex items-center justify-center mb-4`}>
-                      <IconComponent className="h-6 w-6" />
+              const IconComponent = step.icon;
+              return (
+                <div key={index} className="relative">
+                  <div className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300">
+                    <div className="flex items-start space-x-4">
+                      <div className={`w-12 h-12 ${step.color} text-white rounded-lg flex items-center justify-center flex-shrink-0`}>
+                        <IconComponent className="h-6 w-6" />
+                      </div>
+                      <div className="flex-1">
+                        <h3 className="text-lg font-semibold text-brand-gray-dark mb-3 leading-tight">
+                          {step.title}
+                        </h3>
+                        <p className="text-brand-gray-medium text-base leading-relaxed">
+                          {step.description}
+                        </p>
+                      </div>
                     </div>
-                    <h3 className="text-sm font-semibold text-brand-gray-dark mb-3 leading-tight">
-                      {step.title}
-                    </h3>
-                    <p className="text-brand-gray-medium text-xs leading-relaxed mb-4">
-                      {step.description}
-                    </p>
-                    {step.cta}
                   </div>
                   
                   {/* Arrow between steps */}
-                  {index < steps.length - 1 && <div className="hidden lg:block absolute top-1/2 -right-3 transform -translate-y-1/2 z-10">
-                      <ArrowRight className="h-6 w-6 text-brand-blue" />
-                    </div>}
-                </div>;
-          })}
+                  {index < steps.length - 1 && (
+                    <div className="flex justify-center my-4">
+                      <ArrowRight className="h-6 w-6 text-brand-blue transform rotate-90" />
+                    </div>
+                  )}
+                </div>
+              );
+            })}
           </div>
         </div>
 
         <div className="text-center mt-12">
-          <Button className="bg-brand-blue hover:bg-brand-blue-dark text-white font-semibold py-3 px-8 rounded-lg text-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1" onClick={() => window.open('https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1wwDnoAHyFrV0M1FxwmbcMa9ewkDxTDdwQObwPKF-WX-wZV9DssZKtb1haoeP5qXDLenQlZt_R', '_blank')}>
-            Start vandaag nog
-          </Button>
+          <p className="text-2xl font-semibold text-brand-gray-dark">
+            Kennismaken
+          </p>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
+
 export default ProcessSection;
