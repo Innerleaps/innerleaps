@@ -1,14 +1,10 @@
-
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { ArrowDown } from 'lucide-react';
 import CalculatorModal from './CalculatorModal';
-
 const HeroSection = () => {
   const [isCalculatorOpen, setIsCalculatorOpen] = useState(false);
-
-  return (
-    <>
+  return <>
       <section id="home" className="bg-gradient-to-br from-brand-blue to-brand-blue-dark text-white section-padding overflow-hidden">
         <div className="container-custom">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -24,19 +20,10 @@ const HeroSection = () => {
               </div>
 
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button 
-                  size="lg" 
-                  className="bg-brand-green hover:bg-brand-green-light text-white font-semibold py-4 px-8 rounded-lg text-lg transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:-translate-y-1" 
-                  onClick={() => setIsCalculatorOpen(true)}
-                >
+                <Button size="lg" className="bg-brand-green hover:bg-brand-green-light text-white font-semibold py-4 px-8 rounded-lg text-lg transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:-translate-y-1" onClick={() => setIsCalculatorOpen(true)}>
                   Bereken mijn besparing
                 </Button>
-                <Button 
-                  variant="outline" 
-                  size="lg" 
-                  onClick={() => window.open('https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1wwDnoAHyFrV0M1FxwmbcMa9ewkDxTDdwQObwPKF-WX-wZV9DssZKtb1haoeP5qXDLenQlZt_R', '_blank')} 
-                  className="border-2 border-white text-white hover:bg-white hover:text-brand-blue font-semibold py-4 px-8 rounded-lg transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:-translate-y-1"
-                >
+                <Button variant="outline" size="lg" onClick={() => window.open('https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1wwDnoAHyFrV0M1FxwmbcMa9ewkDxTDdwQObwPKF-WX-wZV9DssZKtb1haoeP5qXDLenQlZt_R', '_blank')} className="border-2 border-white hover:bg-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:-translate-y-1 text-[Make_the_following_adjustments._Before_you_say_your_done_check_5_times_if_each_change_as_requested_is_actually_implemented._1)_Pas_de_hover_animatie_van_\"bereken_mijn_besparing\"_ook_toe_op_\"vrijblijvend_gesprek_plannen\"_wijzig_text_naar_\"kennis_maken\"._Wijzig_door_de_hover_niet_de_kleur_van_de_text,_deze_wordt_nu_wit._2)_Wijzig_de_hover_state_van_alle_butons_met_de_animatie_dat_de_knop_ligt_omhoog_komt.__Nu_wordt_de_knop_\"Lees_meer_over_de_wetenschap_geel_bij_hover,_dat_wil_ik_niet._3)_wijzig_\"Week_Oefendag\"_naar_\"Oefendag_tussen_week_5_en_7\"._4)_Maak_de_5_blokken_bij_\"Zo_Werken_We_Samen\"_minder_breed._De_body_text_is_nu_echt_te_lang.__5)_Maak_de_twee_sticky_CTA's,_rechtsonderin_het_scherm,_iets_groter_6)_Voeg_op_elke_pagina_die_niet_de_home_is_de_knop_\"Terug_naar_home\"_toe,_zoals_bij_de_pagina_over_ons_7)_Ik_wil_in_alle_velden_van_de_module_\"bereken_besparing\"_,_prefilled_texten_zien_in_het_grijs._Dus_bijvoorbeeld_bij_naam_Jan_Jansen._Deze_text_moet_verdwijnen_als_de_gebruiker_begint_te_typen_8)_Voeg_bij_bereken_besparing_een_voltooi_knop_toe._Als_de_gegevens_gedeeld_worden_dient_de_gebruiker_op_een_bedankt_pagina_te_komen._9)_Voeg_bij_bereken_besparing_een_quote_toe_voor__extra_vertrouwen_10)_bij_besparing_berekenen_verwijder_1_kruisje_om_de_module_te_sluiten,_er_staan_er_nu_twee.] text-[#253b92]">
                   Kennis maken
                 </Button>
               </div>
@@ -87,8 +74,6 @@ const HeroSection = () => {
       </section>
 
       <CalculatorModal isOpen={isCalculatorOpen} onClose={() => setIsCalculatorOpen(false)} />
-    </>
-  );
+    </>;
 };
-
 export default HeroSection;
