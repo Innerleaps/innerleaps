@@ -227,7 +227,7 @@ const Programma = () => {
                       <h3 className="text-lg font-semibold text-brand-gray-dark mb-2">
                         {feature.title}
                       </h3>
-                      <p className="text-brand-gray-medium text-sm">
+                      <p className="text-brand-gray-medium text-base">
                         {feature.description}
                       </p>
                     </div>
@@ -239,7 +239,7 @@ const Programma = () => {
                 <div className="grid md:grid-cols-2 gap-8">
                   <div>
                     <h3 className="text-xl font-semibold text-brand-gray-dark mb-4">Dagelijkse Oefening</h3>
-                    <ul className="text-brand-gray-medium space-y-2 text-left">
+                    <ul className="text-brand-gray-medium space-y-2 text-left text-base">
                       <li>• 45 minuten formele oefening, 6 dagen per week</li>
                       <li>• Informele oefeningen in dagelijkse activiteiten</li>
                       <li>• Werkboek en audio-instructies</li>
@@ -248,7 +248,7 @@ const Programma = () => {
                   </div>
                   <div>
                     <h3 className="text-xl font-semibold text-brand-gray-dark mb-4">Wetenschappelijke Basis</h3>
-                    <p className="text-brand-gray-medium text-left">
+                    <p className="text-brand-gray-medium text-left text-base">
                       De wetenschappelijke studies die de effectiviteit van het programma aantonen, zijn allemaal gebaseerd op deelnemers die consistent dagelijks oefenen. Onderzoek toont aan dat neurologische veranderingen optreden na 8 weken van dagelijkse oefening.
                     </p>
                   </div>
@@ -276,13 +276,13 @@ const Programma = () => {
                   <CardContent className="p-6">
                     <div className="grid md:grid-cols-3 gap-6">
                       <div>
-                        <h4 className="font-semibold text-brand-gray-dark mb-3 flex items-center">
+                        <h4 className="font-semibold text-brand-gray-dark mb-3 flex items-center text-base">
                           <Target className="h-5 w-5 mr-2 text-brand-blue" />
                           Leerdoelen
                         </h4>
                         <ul className="space-y-2">
                           {week.goals.map((goal, goalIndex) => (
-                            <li key={goalIndex} className="text-sm text-brand-gray-medium flex items-start">
+                            <li key={goalIndex} className="text-base text-brand-gray-medium flex items-start">
                               <CheckCircle className="h-4 w-4 mr-2 text-brand-green mt-0.5 flex-shrink-0" />
                               {goal}
                             </li>
@@ -291,13 +291,13 @@ const Programma = () => {
                       </div>
                       
                       <div>
-                        <h4 className="font-semibold text-brand-gray-dark mb-3 flex items-center">
+                        <h4 className="font-semibold text-brand-gray-dark mb-3 flex items-center text-base">
                           <Brain className="h-5 w-5 mr-2 text-brand-blue" />
                           Technieken
                         </h4>
                         <ul className="space-y-2">
                           {week.techniques.map((technique, techIndex) => (
-                            <li key={techIndex} className="text-sm text-brand-gray-medium flex items-start">
+                            <li key={techIndex} className="text-base text-brand-gray-medium flex items-start">
                               <CheckCircle className="h-4 w-4 mr-2 text-brand-green mt-0.5 flex-shrink-0" />
                               {technique}
                             </li>
@@ -306,13 +306,13 @@ const Programma = () => {
                       </div>
                       
                       <div>
-                        <h4 className="font-semibold text-brand-gray-dark mb-3 flex items-center">
+                        <h4 className="font-semibold text-brand-gray-dark mb-3 flex items-center text-base">
                           <Lightbulb className="h-5 w-5 mr-2 text-brand-blue" />
                           Praktische Toepassingen
                         </h4>
                         <ul className="space-y-2">
                           {week.applications.map((application, appIndex) => (
-                            <li key={appIndex} className="text-sm text-brand-gray-medium flex items-start">
+                            <li key={appIndex} className="text-base text-brand-gray-medium flex items-start">
                               <CheckCircle className="h-4 w-4 mr-2 text-brand-green mt-0.5 flex-shrink-0" />
                               {application}
                             </li>
@@ -338,7 +338,7 @@ const Programma = () => {
                   </CardTitle>
                 </CardHeader>
                 <CardContent className="p-8">
-                  <p className="text-brand-gray-medium mb-6 text-center">
+                  <p className="text-brand-gray-medium mb-6 text-center text-base">
                     De oefendag vindt plaats tussen week 5 en 7 en biedt deelnemers de gelegenheid om de geleerde technieken te verdiepen en te integreren. Deze dag (6 uur) bestaat uit:
                   </p>
                   
@@ -346,35 +346,35 @@ const Programma = () => {
                     <ul className="space-y-3">
                       <li className="flex items-start">
                         <CheckCircle className="h-5 w-5 mr-3 text-brand-green mt-0.5 flex-shrink-0" />
-                        <span className="text-brand-gray-medium">Uitgebreide oefensessies in stilte</span>
+                        <span className="text-brand-gray-medium text-base">Uitgebreide oefensessies in stilte</span>
                       </li>
                       <li className="flex items-start">
                         <CheckCircle className="h-5 w-5 mr-3 text-brand-green mt-0.5 flex-shrink-0" />
-                        <span className="text-brand-gray-medium">Afwisseling tussen formele oefeningen</span>
+                        <span className="text-brand-gray-medium text-base">Afwisseling tussen formele oefeningen</span>
                       </li>
                       <li className="flex items-start">
                         <CheckCircle className="h-5 w-5 mr-3 text-brand-green mt-0.5 flex-shrink-0" />
-                        <span className="text-brand-gray-medium">Bewust eten en bewust communiceren</span>
+                        <span className="text-brand-gray-medium text-base">Bewust eten en bewust communiceren</span>
                       </li>
                     </ul>
                     
                     <ul className="space-y-3">
                       <li className="flex items-start">
                         <CheckCircle className="h-5 w-5 mr-3 text-brand-green mt-0.5 flex-shrink-0" />
-                        <span className="text-brand-gray-medium">Persoonlijke reflectie op voortgang en uitdagingen</span>
+                        <span className="text-brand-gray-medium text-base">Persoonlijke reflectie op voortgang en uitdagingen</span>
                       </li>
                       <li className="flex items-start">
                         <CheckCircle className="h-5 w-5 mr-3 text-brand-green mt-0.5 flex-shrink-0" />
-                        <span className="text-brand-gray-medium">Strategieën voor het overwinnen van barrières</span>
+                        <span className="text-brand-gray-medium text-base">Strategieën voor het overwinnen van barrières</span>
                       </li>
                       <li className="flex items-start">
                         <CheckCircle className="h-5 w-5 mr-3 text-brand-green mt-0.5 flex-shrink-0" />
-                        <span className="text-brand-gray-medium">Consolideren van geleerde vaardigheden</span>
+                        <span className="text-brand-gray-medium text-base">Consolideren van geleerde vaardigheden</span>
                       </li>
                     </ul>
                   </div>
                   
-                  <p className="text-brand-gray-medium mt-6 text-center italic">
+                  <p className="text-brand-gray-medium mt-6 text-center italic text-base">
                     De oefendag is cruciaal voor het consolideren van de geleerde vaardigheden en het versterken van de commitment aan dagelijkse toepassing.
                   </p>
                 </CardContent>
@@ -398,7 +398,7 @@ const Programma = () => {
               <div className="grid md:grid-cols-2 gap-8 mb-12">
                 <div className="bg-brand-gray-light p-6 rounded-xl text-left">
                   <h3 className="text-xl font-semibold text-brand-gray-dark mb-4">Het programma integreert elementen uit:</h3>
-                  <ul className="space-y-2 text-brand-gray-medium">
+                  <ul className="space-y-2 text-brand-gray-medium text-base">
                     <li>• Cognitieve gedragsbenaderingen</li>
                     <li>• Aandachtsregulatie-training</li>
                     <li>• Emotieregulatie-strategieën</li>
@@ -408,7 +408,7 @@ const Programma = () => {
                 
                 <div className="bg-brand-gray-light p-6 rounded-xl text-left">
                   <h3 className="text-xl font-semibold text-brand-gray-dark mb-4">Na Afloop van het Programma</h3>
-                  <ul className="space-y-2 text-brand-gray-medium">
+                  <ul className="space-y-2 text-brand-gray-medium text-base">
                     <li>• Certificaat van voltooiing</li>
                     <li>• Persoonlijk actieplan voor voortgezette toepassing</li>
                     <li>• Toegang tot alle oefenmaterialen</li>
