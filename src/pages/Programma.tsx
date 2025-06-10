@@ -1,4 +1,3 @@
-
 import Navigation from '@/components/Navigation';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { CheckCircle, Clock, Users, MapPin, Calendar, Brain, Target, Lightbulb } from 'lucide-react';
@@ -180,7 +179,7 @@ const Programma = () => {
     {
       icon: MapPin,
       title: "Op locatie",
-      description: "Training bij u op kantoor"
+      description: "Training bij u op kantoor of externe locatie"
     },
     {
       icon: Calendar,
@@ -240,7 +239,7 @@ const Programma = () => {
                 <div className="grid md:grid-cols-2 gap-8">
                   <div>
                     <h3 className="text-xl font-semibold text-brand-gray-dark mb-4">Dagelijkse Oefening</h3>
-                    <ul className="text-brand-gray-medium space-y-2">
+                    <ul className="text-brand-gray-medium space-y-2 text-left">
                       <li>• 45 minuten formele oefening, 6 dagen per week</li>
                       <li>• Informele oefeningen in dagelijkse activiteiten</li>
                       <li>• Werkboek en audio-instructies</li>
@@ -249,7 +248,7 @@ const Programma = () => {
                   </div>
                   <div>
                     <h3 className="text-xl font-semibold text-brand-gray-dark mb-4">Wetenschappelijke Basis</h3>
-                    <p className="text-brand-gray-medium">
+                    <p className="text-brand-gray-medium text-left">
                       De wetenschappelijke studies die de effectiviteit van het programma aantonen, zijn allemaal gebaseerd op deelnemers die consistent dagelijks oefenen. Onderzoek toont aan dat neurologische veranderingen optreden na 8 weken van dagelijkse oefening.
                     </p>
                   </div>
@@ -413,7 +412,6 @@ const Programma = () => {
                     <li>• Certificaat van voltooiing</li>
                     <li>• Persoonlijk actieplan voor voortgezette toepassing</li>
                     <li>• Toegang tot alle oefenmaterialen</li>
-                    <li>• Ondersteuning voor continue ontwikkeling</li>
                   </ul>
                 </div>
               </div>

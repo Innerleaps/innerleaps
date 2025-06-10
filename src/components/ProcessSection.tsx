@@ -1,8 +1,12 @@
 
 import { Button } from '@/components/ui/button';
 import { Calendar, CheckCircle, Target, TrendingUp, ArrowRight, Handshake, Presentation, UserPlus } from 'lucide-react';
+import { useState } from 'react';
+import CalculatorModal from './CalculatorModal';
 
 const ProcessSection = () => {
+  const [isCalculatorOpen, setIsCalculatorOpen] = useState(false);
+
   const steps = [{
     icon: Calendar,
     title: "Stap 1: Kennismaking & Besparingsinventarisatie",
@@ -36,59 +40,69 @@ const ProcessSection = () => {
   }];
 
   return (
-    <section className="bg-brand-gray-light section-padding">
-      <div className="container-custom">
-        <div className="text-center space-y-6 mb-16">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-brand-gray-dark">
-            Zo Werken We Samen
-          </h2>
-          <p className="text-xl text-brand-gray-medium max-w-3xl mx-auto leading-relaxed">
-            Van kennismaking tot meetbare resultaten: ontdek hoe we uw organisatie helpen bij het reduceren van verzuim en het verbeteren van retentie
-          </p>
-        </div>
+    <>
+      <section className="bg-brand-gray-light section-padding">
+        <div className="container-custom">
+          <div className="text-center space-y-6 mb-16">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-brand-gray-dark">
+              Zo Werken We Samen
+            </h2>
+            <p className="text-xl text-brand-gray-medium max-w-3xl mx-auto leading-relaxed">
+              Van kennismaking tot meetbare resultaten: ontdek hoe we uw organisatie helpen bij het reduceren van verzuim en het verbeteren van retentie
+            </p>
+          </div>
 
-        <div className="relative max-w-2xl mx-auto">
-          {/* Process Steps */}
-          <div className="space-y-6">
-            {steps.map((step, index) => {
-              const IconComponent = step.icon;
-              return (
-                <div key={index} className="relative">
-                  <div className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300">
-                    <div className="flex items-start space-x-4">
-                      <div className={`w-12 h-12 ${step.color} text-white rounded-lg flex items-center justify-center flex-shrink-0`}>
-                        <IconComponent className="h-6 w-6" />
-                      </div>
-                      <div className="flex-1">
-                        <h3 className="text-lg font-semibold text-brand-gray-dark mb-3 leading-tight">
-                          {step.title}
-                        </h3>
-                        <p className="text-brand-gray-medium text-base leading-relaxed">
-                          {step.description}
-                        </p>
+          <div className="relative max-w-2xl mx-auto">
+            {/* Process Steps */}
+            <div className="space-y-6">
+              {steps.map((step, index) => {
+                const IconComponent = step.icon;
+                return (
+                  <div key={index} className="relative">
+                    <div className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300">
+                      <div className="flex items-start space-x-4">
+                        <div className={`w-12 h-12 ${step.color} text-white rounded-lg flex items-center justify-center flex-shrink-0`}>
+                          <IconComponent className="h-6 w-6" />
+                        </div>
+                        <div className="flex-1">
+                          <h3 className="text-lg font-semibold text-brand-gray-dark mb-3 leading-tight">
+                            {step.title}
+                          </h3>
+                          <p className="text-brand-gray-medium text-base leading-relaxed">
+                            {step.description}
+                          </p>
+                        </div>
                       </div>
                     </div>
+                    
+                    {/* Arrow between steps */}
+                    {index < steps.length - 1 && (
+                      <div className="flex justify-center my-4">
+                        <ArrowRight className="h-6 w-6 text-brand-blue transform rotate-90" />
+                      </div>
+                    )}
                   </div>
-                  
-                  {/* Arrow between steps */}
-                  {index < steps.length - 1 && (
-                    <div className="flex justify-center my-4">
-                      <ArrowRight className="h-6 w-6 text-brand-blue transform rotate-90" />
-                    </div>
-                  )}
-                </div>
-              );
-            })}
+                );
+              })}
+            </div>
+          </div>
+
+          <div className="text-center mt-12">
+            <Button 
+              onClick={() => setIsCalculatorOpen(true)}
+              className="bg-brand-blue hover:bg-brand-blue-dark text-white font-semibold py-3 px-8 rounded-lg text-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+            >
+              Onze besparing berekenen
+            </Button>
           </div>
         </div>
+      </section>
 
-        <div className="text-center mt-12">
-          <p className="text-2xl font-semibold text-brand-gray-dark">
-            Onze besparing berekenen
-          </p>
-        </div>
-      </div>
-    </section>
+      <CalculatorModal 
+        isOpen={isCalculatorOpen} 
+        onClose={() => setIsCalculatorOpen(false)} 
+      />
+    </>
   );
 };
 
