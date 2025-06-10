@@ -1,3 +1,4 @@
+
 import Navigation from '@/components/Navigation';
 import StickyCtaButtons from '@/components/StickyCtaButtons';
 import { useEffect } from 'react';
@@ -313,5 +314,3 @@ const Wetenschap = () => {
 };
 
 export default Wetenschap;
-
-</edits_to_apply>
