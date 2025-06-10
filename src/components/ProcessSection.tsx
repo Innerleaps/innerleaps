@@ -59,7 +59,7 @@ const ProcessSection = () => {
                     <div className={`w-12 h-12 ${step.color} text-white rounded-lg flex items-center justify-center mr-6 flex-shrink-0`}>
                       <IconComponent className="h-6 w-6" />
                     </div>
-                    <div className="flex-1 max-w-lg">
+                    <div className="flex-1">
                       <h3 className="text-lg font-semibold text-brand-gray-dark mb-3">
                         {step.title}
                       </h3>

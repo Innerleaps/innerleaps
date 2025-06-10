@@ -1,207 +1,305 @@
 
-import Navigation from '@/components/Navigation';
-import StickyCtaButtons from '@/components/StickyCtaButtons';
-import { useEffect } from 'react';
 import { Button } from '@/components/ui/button';
-import { ArrowLeft, Phone, Mail, MapPin, Clock } from 'lucide-react';
+import { Card } from '@/components/ui/card';
+import { Input } from '@/components/ui/input';
+import { Label } from '@/components/ui/label';
+import { Textarea } from '@/components/ui/textarea';
+import { ArrowLeft, Phone, Mail, MapPin, Clock, Send, CheckCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { useState } from 'react';
 
 const Contact = () => {
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    company: '',
+    phone: '',
+    message: ''
+  });
+
+  const handleInputChange = (field: string, value: string) => {
+    setFormData(prev => ({ ...prev, [field]: value }));
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    // Handle form submission here
+    console.log('Form submitted:', formData);
+    // You would typically send this to your backend
+  };
+
+  const contactInfo = [
+    {
+      icon: Phone,
+      title: "Telefoon",
+      details: ["+31 (0)20 123 4567", "Ma-Vr: 09:00 - 17:00"]
+    },
+    {
+      icon: Mail,
+      title: "Email", 
+      details: ["info@halt.academy", "Reactie binnen 24 uur"]
+    },
+    {
+      icon: MapPin,
+      title: "Locatie",
+      details: ["Amsterdam, Nederland", "Landelijk werkzaam"]
+    },
+    {
+      icon: Clock,
+      title: "Beschikbaarheid",
+      details: ["Maandag - Vrijdag", "09:00 - 17:00"]
+    }
+  ];
+
+  const faqs = [
+    {
+      question: "Hoe snel kunnen we starten?",
+      answer: "Na onze kennismaking kunnen we meestal binnen 2-4 weken starten, afhankelijk van uw planning en groepsgrootte."
+    },
+    {
+      question: "Wat zijn de kosten?",
+      answer: "Onze programma's starten vanaf €800 per deelnemer voor het volledige 8-weekse programma. We bieden ook groepskortingen."
+    },
+    {
+      question: "Kunnen jullie op locatie komen?",
+      answer: "Ja, we verzorgen trainingen zowel op uw locatie als in onze eigen trainingsfaciliteiten, wat voor u het beste uitkomt."
+    },
+    {
+      question: "Hoe meten jullie de resultaten?",
+      answer: "We gebruiken voor- en nametingen, verzuimdata en tevredenheidsenquêtes om de impact van het programma te monitoren."
+    }
+  ];
 
   return (
-    <div className="min-h-screen bg-brand-gray-light">
-      <Navigation />
-      <StickyCtaButtons />
-      
-      <main className="section-padding">
+    <div className="min-h-screen bg-white">
+      {/* Back to home button */}
+      <div className="container-custom pt-8">
+        <Link to="/">
+          <Button variant="outline" className="mb-8 transform hover:-translate-y-1 transition-all duration-300">
+            <ArrowLeft className="h-4 w-4 mr-2" />
+            Terug naar home
+          </Button>
+        </Link>
+      </div>
+
+      {/* Hero Section */}
+      <section className="bg-gradient-to-br from-brand-blue to-brand-blue-dark text-white section-padding">
         <div className="container-custom">
-          {/* Header */}
-          <div className="max-w-4xl mx-auto mb-16">
-            <Link to="/" className="inline-flex items-center text-brand-blue hover:text-brand-blue/80 transition-colors mb-8">
-              <ArrowLeft className="h-5 w-5 mr-2" />
-              Terug naar home
-            </Link>
+          <div className="max-w-4xl mx-auto text-center space-y-8">
+            <div className="inline-flex items-center justify-center w-20 h-20 bg-white/10 rounded-full mb-6">
+              <Mail className="h-10 w-10" />
+            </div>
             
-            <div className="text-center space-y-6">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-gray-dark">
-                Contact
-              </h1>
-              <p className="text-xl text-brand-gray-medium leading-relaxed">
-                Klaar om de volgende stap te zetten? Neem contact met ons op voor een vrijblijvend gesprek over hoe we uw organisatie kunnen helpen.
-              </p>
-            </div>
-          </div>
-
-          {/* Contact Information */}
-          <div className="grid lg:grid-cols-2 gap-12 mb-16">
-            <div className="space-y-8">
-              <div>
-                <h2 className="text-3xl font-bold text-brand-gray-dark mb-6">Neem Contact Op</h2>
-                <p className="text-lg text-brand-gray-medium leading-relaxed mb-8">
-                  We staan klaar om uw vragen te beantwoorden en u te helpen bij het verbeteren van het welzijn van uw medewerkers. Plan een vrijblijvend gesprek of neem direct contact met ons op.
-                </p>
-              </div>
-
-              <div className="space-y-6">
-                <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-brand-blue text-white rounded-lg flex items-center justify-center flex-shrink-0">
-                    <Phone className="h-6 w-6" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-brand-gray-dark mb-1">Telefoon</h3>
-                    <p className="text-brand-gray-medium">+31 (0)20 123 4567</p>
-                    <p className="text-sm text-brand-gray-medium">Bereikbaar van maandag t/m vrijdag, 9:00 - 17:00</p>
-                  </div>
-                </div>
-
-                <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-brand-green text-white rounded-lg flex items-center justify-center flex-shrink-0">
-                    <Mail className="h-6 w-6" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-brand-gray-dark mb-1">Email</h3>
-                    <p className="text-brand-gray-medium">info@halt.academy</p>
-                    <p className="text-sm text-brand-gray-medium">We reageren binnen 24 uur</p>
-                  </div>
-                </div>
-
-                <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-purple-600 text-white rounded-lg flex items-center justify-center flex-shrink-0">
-                    <MapPin className="h-6 w-6" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-brand-gray-dark mb-1">Adres</h3>
-                    <p className="text-brand-gray-medium">
-                      Herengracht 123<br />
-                      1015 BH Amsterdam<br />
-                      Nederland
-                    </p>
-                  </div>
-                </div>
-
-                <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-orange-600 text-white rounded-lg flex items-center justify-center flex-shrink-0">
-                    <Clock className="h-6 w-6" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-brand-gray-dark mb-1">Openingstijden</h3>
-                    <p className="text-brand-gray-medium">
-                      Maandag - Vrijdag: 9:00 - 17:00<br />
-                      Weekend: Op afspraak
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="bg-white rounded-xl p-8 shadow-lg">
-              <h3 className="text-2xl font-bold text-brand-gray-dark mb-6">Plan een Vrijblijvend Gesprek</h3>
-              <p className="text-brand-gray-medium mb-6">
-                Klik op de knop hieronder om direct een afspraak in te plannen in onze agenda. We bespreken uw huidige situatie en tonen u hoe ons programma kan bijdragen aan het welzijn van uw medewerkers en de resultaten van uw organisatie.
-              </p>
-              
-              <div className="space-y-4">
-                <div className="bg-brand-gray-light p-4 rounded-lg">
-                  <h4 className="font-semibold text-brand-gray-dark mb-2">Wat kunnen we bespreken:</h4>
-                  <ul className="space-y-1 text-sm text-brand-gray-medium">
-                    <li>• Uw huidige uitdagingen op het gebied van verzuim en retentie</li>
-                    <li>• Hoe ons programma kan helpen bij uw specifieke situatie</li>
-                    <li>• Een persoonlijke berekening van potentiële besparingen</li>
-                    <li>• Praktische implementatie en planning</li>
-                    <li>• Antwoorden op al uw vragen</li>
-                  </ul>
-                </div>
-
-                <Button 
-                  size="lg"
-                  className="w-full bg-brand-blue hover:bg-brand-blue-dark text-white font-semibold py-4 px-8 rounded-lg text-lg"
-                  onClick={() => window.open('https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1wwDnoAHyFrV0M1FxwmbcMa9ewkDxTDdwQObwPKF-WX-wZV9DssZKtb1haoeP5qXDLenQlZt_R', '_blank')}
-                >
-                  Plan Vrijblijvend Gesprek
-                </Button>
-              </div>
-            </div>
-          </div>
-
-          {/* FAQ Section */}
-          <div className="bg-white rounded-xl p-8 shadow-lg mb-16">
-            <h2 className="text-3xl font-bold text-brand-gray-dark mb-8 text-center">Veelgestelde Vragen</h2>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
+              Neem <span className="text-brand-green-light">Contact</span> Op
+            </h1>
             
-            <div className="grid md:grid-cols-2 gap-8">
-              <div className="space-y-6">
-                <div>
-                  <h3 className="font-semibold text-brand-gray-dark mb-2">Hoe lang duurt een kennismakingsgesprek?</h3>
-                  <p className="text-brand-gray-medium text-sm">Een kennismakingsgesprek duurt meestal 30-45 minuten. We nemen de tijd om uw situatie goed te begrijpen en alle vragen te beantwoorden.</p>
-                </div>
-                
-                <div>
-                  <h3 className="font-semibold text-brand-gray-dark mb-2">Kunnen jullie bij ons op locatie komen?</h3>
-                  <p className="text-brand-gray-medium text-sm">Ja, we kunnen zowel online als op uw locatie een kennismakingsgesprek voeren. De training zelf kan ook in-company worden gegeven.</p>
-                </div>
-                
-                <div>
-                  <h3 className="font-semibold text-brand-gray-dark mb-2">Wat zijn de kosten van het programma?</h3>
-                  <p className="text-brand-gray-medium text-sm">De kosten variëren afhankelijk van de groepsgrootte en specifieke behoeften. We bespreken dit graag tijdens het kennismakingsgesprek en maken een passend voorstel.</p>
-                </div>
-              </div>
-              
-              <div className="space-y-6">
-                <div>
-                  <h3 className="font-semibold text-brand-gray-dark mb-2">Hoe snel kunnen we starten?</h3>
-                  <p className="text-brand-gray-medium text-sm">Na het akkoord kunnen we meestal binnen 2-4 weken starten, afhankelijk van de planning en beschikbaarheid van deelnemers.</p>
-                </div>
-                
-                <div>
-                  <h3 className="font-semibold text-brand-gray-dark mb-2">Bieden jullie ook vervolgtrajecten aan?</h3>
-                  <p className="text-brand-gray-medium text-sm">Ja, we bieden diverse vervolgmodules en opfriscursussen aan om de geleerde vaardigheden te behouden en verder te ontwikkelen.</p>
-                </div>
-                
-                <div>
-                  <h3 className="font-semibold text-brand-gray-dark mb-2">Hoe meten jullie de resultaten?</h3>
-                  <p className="text-brand-gray-medium text-sm">We gebruiken voor- en nametingen op gebied van stress, welzijn en verzuim. Ook monitoren we de ROI door verzuim- en retentiecijfers te volgen.</p>
-                </div>
-              </div>
-            </div>
+            <p className="text-xl md:text-2xl text-blue-100 leading-relaxed max-w-3xl mx-auto">
+              Klaar om uw organisatie te transformeren? We helpen u graag bij het vinden van de juiste 
+              mindfulness oplossing voor uw team.
+            </p>
           </div>
         </div>
-      </main>
+      </section>
 
-      {/* Footer */}
-      <footer className="bg-brand-gray-dark text-white py-12">
+      {/* Contact Information */}
+      <section className="section-padding bg-brand-gray-light">
         <div className="container-custom">
-          <div className="grid md:grid-cols-3 gap-8">
-            <div>
-              <div className="text-2xl font-bold mb-4">Halt.academy</div>
-              <p className="text-gray-300 leading-relaxed">
-                Wetenschappelijk bewezen stressreductieprogramma's voor meetbare bedrijfsresultaten.
-              </p>
-            </div>
-            <div>
-              <h3 className="text-lg font-semibold mb-4">Contact</h3>
-              <div className="space-y-2 text-gray-300">
-                <p>Email: info@halt.academy</p>
-                <p>Telefoon: +31 (0)20 123 4567</p>
-                <p>KvK: 12345678</p>
-              </div>
-            </div>
-            <div>
-              <h3 className="text-lg font-semibold mb-4">Snel naar</h3>
-              <div className="space-y-2">
-                <Link to="/" className="block text-gray-300 hover:text-white transition-colors">Home</Link>
-                <Link to="/wetenschap" className="block text-gray-300 hover:text-white transition-colors">De Wetenschap</Link>
-                <Link to="/programma" className="block text-gray-300 hover:text-white transition-colors">Programma</Link>
-                <Link to="/voor-wie" className="block text-gray-300 hover:text-white transition-colors">Voor Wie</Link>
-              </div>
-            </div>
+          <div className="text-center space-y-6 mb-16">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-brand-gray-dark">
+              Meerdere Manieren om Contact op te Nemen
+            </h2>
+            <p className="text-xl text-brand-gray-medium max-w-3xl mx-auto">
+              Kies de manier die het beste bij u past
+            </p>
           </div>
-          <div className="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
-            <p>&copy; 2024 Halt.academy. Alle rechten voorbehouden.</p>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {contactInfo.map((info, index) => {
+              const IconComponent = info.icon;
+              return (
+                <Card key={index} className="p-8 text-center hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                  <div className="space-y-4">
+                    <div className="inline-flex items-center justify-center w-16 h-16 bg-brand-blue text-white rounded-full">
+                      <IconComponent className="h-8 w-8" />
+                    </div>
+                    <div className="space-y-2">
+                      <h3 className="text-lg font-bold text-brand-gray-dark">
+                        {info.title}
+                      </h3>
+                      {info.details.map((detail, detailIndex) => (
+                        <p key={detailIndex} className="text-brand-gray-medium text-sm">
+                          {detail}
+                        </p>
+                      ))}
+                    </div>
+                  </div>
+                </Card>
+              );
+            })}
           </div>
         </div>
-      </footer>
+      </section>
+
+      {/* Contact Form */}
+      <section className="section-padding">
+        <div className="container-custom">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center space-y-6 mb-16">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-brand-gray-dark">
+                Stuur ons een Bericht
+              </h2>
+              <p className="text-xl text-brand-gray-medium">
+                Vertel ons over uw uitdagingen en we nemen zo snel mogelijk contact met u op
+              </p>
+            </div>
+
+            <Card className="p-12">
+              <form onSubmit={handleSubmit} className="space-y-8">
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div className="space-y-4">
+                    <div>
+                      <Label htmlFor="name" className="text-brand-gray-dark font-medium">Naam *</Label>
+                      <Input
+                        id="name"
+                        type="text"
+                        value={formData.name}
+                        onChange={(e) => handleInputChange('name', e.target.value)}
+                        className="mt-1"
+                        placeholder="Uw volledige naam"
+                        required
+                      />
+                    </div>
+                    
+                    <div>
+                      <Label htmlFor="email" className="text-brand-gray-dark font-medium">Email *</Label>
+                      <Input
+                        id="email"
+                        type="email"
+                        value={formData.email}
+                        onChange={(e) => handleInputChange('email', e.target.value)}
+                        className="mt-1"
+                        placeholder="uw.email@bedrijf.nl"
+                        required
+                      />
+                    </div>
+                  </div>
+
+                  <div className="space-y-4">
+                    <div>
+                      <Label htmlFor="company" className="text-brand-gray-dark font-medium">Bedrijf *</Label>
+                      <Input
+                        id="company"
+                        type="text"
+                        value={formData.company}
+                        onChange={(e) => handleInputChange('company', e.target.value)}
+                        className="mt-1"
+                        placeholder="Uw bedrijfsnaam"
+                        required
+                      />
+                    </div>
+                    
+                    <div>
+                      <Label htmlFor="phone" className="text-brand-gray-dark font-medium">Telefoon</Label>
+                      <Input
+                        id="phone"
+                        type="tel"
+                        value={formData.phone}
+                        onChange={(e) => handleInputChange('phone', e.target.value)}
+                        className="mt-1"
+                        placeholder="06 12345678"
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                <div>
+                  <Label htmlFor="message" className="text-brand-gray-dark font-medium">Bericht *</Label>
+                  <Textarea
+                    id="message"
+                    value={formData.message}
+                    onChange={(e) => handleInputChange('message', e.target.value)}
+                    className="mt-1 min-h-[120px]"
+                    placeholder="Vertel ons over uw uitdagingen, aantal medewerkers, en wat u hoopt te bereiken met mindfulness training..."
+                    required
+                  />
+                </div>
+
+                <div className="text-center">
+                  <Button 
+                    type="submit"
+                    className="bg-brand-blue hover:bg-brand-blue-dark text-white font-semibold py-4 px-8 text-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+                    disabled={!formData.name || !formData.email || !formData.company || !formData.message}
+                  >
+                    <Send className="h-5 w-5 mr-2" />
+                    Verstuur Bericht
+                  </Button>
+                  <p className="text-xs text-brand-gray-medium mt-4">
+                    * Verplichte velden. We nemen binnen 24 uur contact met u op.
+                  </p>
+                </div>
+              </form>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Quick Scheduling CTA */}
+      <section className="section-padding bg-brand-green text-white">
+        <div className="container-custom">
+          <Card className="bg-white/10 backdrop-blur-sm p-12 text-center border-0">
+            <div className="max-w-3xl mx-auto space-y-8">
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-white/20 rounded-full mb-6">
+                <CheckCircle className="h-8 w-8" />
+              </div>
+              
+              <h2 className="text-3xl md:text-4xl font-bold">
+                Liever Direct een Afspraak?
+              </h2>
+              
+              <p className="text-xl opacity-90 leading-relaxed">
+                Plan direct een vrijblijvend kennismakingsgesprek van 30 minuten
+              </p>
+              
+              <Button 
+                className="bg-white text-brand-green hover:bg-gray-100 font-semibold py-4 px-8 text-lg transform hover:-translate-y-1 transition-all duration-300"
+                onClick={() => window.open('https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1wwDnoAHyFrV0M1FxwmbcMa9ewkDxTDdwQObwPKF-WX-wZV9DssZKtb1haoeP5qXDLenQlZt_R', '_blank')}
+              >
+                Plan Kennismakingsgesprek
+              </Button>
+            </div>
+          </Card>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="section-padding bg-brand-gray-light">
+        <div className="container-custom">
+          <div className="text-center space-y-6 mb-16">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-brand-gray-dark">
+              Veelgestelde Vragen
+            </h2>
+            <p className="text-xl text-brand-gray-medium max-w-3xl mx-auto">
+              Antwoorden op de meest gestelde vragen over onze programma's
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+            {faqs.map((faq, index) => (
+              <Card key={index} className="p-8 hover:shadow-lg transition-all duration-300">
+                <div className="space-y-4">
+                  <h3 className="text-lg font-bold text-brand-gray-dark">
+                    {faq.question}
+                  </h3>
+                  <p className="text-brand-gray-medium leading-relaxed">
+                    {faq.answer}
+                  </p>
+                </div>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
     </div>
   );
 };

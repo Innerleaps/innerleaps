@@ -117,7 +117,7 @@ const CalculatorModal = ({ isOpen, onClose }: CalculatorModalProps) => {
               
               <div className="space-y-4">
                 <Button 
-                  className="bg-white text-brand-green hover:bg-gray-100 transform hover:-translate-y-1"
+                  className="bg-white text-brand-green hover:bg-gray-100"
                   onClick={handleClose}
                 >
                   Sluiten
@@ -137,6 +137,9 @@ const CalculatorModal = ({ isOpen, onClose }: CalculatorModalProps) => {
           <DialogHeader>
             <DialogTitle className="flex items-center justify-between">
               <span>Uw Potentiële Besparing</span>
+              <Button variant="ghost" size="sm" onClick={handleClose}>
+                <X className="h-4 w-4" />
+              </Button>
             </DialogTitle>
           </DialogHeader>
           
@@ -174,20 +177,20 @@ const CalculatorModal = ({ isOpen, onClose }: CalculatorModalProps) => {
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Button 
-                    className="bg-white text-brand-green hover:bg-gray-100 transform hover:-translate-y-1"
+                    className="bg-white text-brand-green hover:bg-gray-100 transform hover:-translate-y-1 transition-all duration-300"
                     onClick={() => window.open('https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1wwDnoAHyFrV0M1FxwmbcMa9ewkDxTDdwQObwPKF-WX-wZV9DssZKtb1haoeP5qXDLenQlZt_R', '_blank')}
                   >
                     Plan een gesprek over deze resultaten
                   </Button>
                   <Button 
                     variant="outline" 
-                    className="border-white text-white hover:bg-white hover:text-brand-green transform hover:-translate-y-1"
+                    className="border-white text-white hover:bg-white hover:text-brand-green transform hover:-translate-y-1 transition-all duration-300"
                     onClick={() => setShowResults(false)}
                   >
                     Nieuwe berekening
                   </Button>
                   <Button 
-                    className="bg-white text-brand-green hover:bg-gray-100 transform hover:-translate-y-1"
+                    className="bg-white text-brand-green hover:bg-gray-100 transform hover:-translate-y-1 transition-all duration-300"
                     onClick={handleComplete}
                   >
                     Voltooien
@@ -207,6 +210,9 @@ const CalculatorModal = ({ isOpen, onClose }: CalculatorModalProps) => {
         <DialogHeader>
           <DialogTitle className="flex items-center justify-between">
             <span>Bereken Uw Potentiële Besparing</span>
+            <Button variant="ghost" size="sm" onClick={handleClose}>
+              <X className="h-4 w-4" />
+            </Button>
           </DialogTitle>
         </DialogHeader>
 
@@ -221,18 +227,16 @@ const CalculatorModal = ({ isOpen, onClose }: CalculatorModalProps) => {
             <p className="text-brand-gray-medium">
               Vul uw gegevens in voor een persoonlijke berekening van de ROI
             </p>
-          </div>
-
-          {/* Trust Quote */}
-          <div className="bg-brand-gray-light p-6 rounded-lg mb-8 border-l-4 border-brand-blue">
-            <div className="flex items-start space-x-4">
-              <Quote className="h-6 w-6 text-brand-blue flex-shrink-0 mt-1" />
-              <div>
-                <p className="text-brand-gray-dark italic font-medium mb-2">
-                  "Na 8 weken zagen we een merkbare verbetering in ons verzuimpercentage en de werksfeer. Een investering die zichzelf direct terugverdiende."
+            
+            {/* Trust quote */}
+            <div className="bg-brand-gray-light p-4 rounded-lg mt-6 flex items-start space-x-3">
+              <Quote className="h-6 w-6 text-brand-blue mt-1 flex-shrink-0" />
+              <div className="text-left">
+                <p className="text-sm text-brand-gray-dark italic">
+                  "Door het programma van Halt.academy hebben we ons ziekteverzuim met 35% kunnen reduceren en onze medewerkerretentie is met 40% gestegen. De ROI was binnen 6 maanden zichtbaar."
                 </p>
-                <p className="text-brand-gray-medium text-sm">
-                  — HR Manager, Fortune 500 bedrijf
+                <p className="text-xs text-brand-gray-medium mt-2 font-medium">
+                  - HR Director, Fortune 500 bedrijf
                 </p>
               </div>
             </div>
@@ -274,7 +278,7 @@ const CalculatorModal = ({ isOpen, onClose }: CalculatorModalProps) => {
                   value={formData.company}
                   onChange={(e) => handleInputChange('company', e.target.value)}
                   className="mt-1"
-                  placeholder="Uw Bedrijf B.V."
+                  placeholder="ABC Bedrijf B.V."
                   required
                 />
               </div>
@@ -338,7 +342,7 @@ const CalculatorModal = ({ isOpen, onClose }: CalculatorModalProps) => {
               <div className="pt-4">
                 <Button 
                   onClick={calculateSavings}
-                  className="w-full bg-brand-blue hover:bg-brand-blue-dark text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+                  className="w-full btn-primary transform hover:-translate-y-1 transition-all duration-300"
                   disabled={!formData.name || !formData.phone || !formData.company || !formData.employees || !formData.yearlyCosts || !formData.currentAbsenteeism || !formData.currentTurnover}
                 >
                   Bereken Mijn Besparing
