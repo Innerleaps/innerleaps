@@ -23,7 +23,7 @@ const HeroSection = () => {
                 <Button size="lg" onClick={() => setIsCalculatorOpen(true)} className="bg-brand-green hover:bg-brand-green text-brand-green-light font-semibold py-4 px-8 rounded-lg text-lg transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:-translate-y-1 text-slate-100">
                   Bereken mijn besparing
                 </Button>
-                <Button variant="outline" size="lg" onClick={() => window.open('https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1wwDnoAHyFrV0M1FxwmbcMa9ewkDxTDdwQObwPKF-WX-wZV9DssZKtb1haoeP5qXDLenQlZt_R', '_blank')} className="border-2 border-white hover:bg-white text-white hover:text-brand-green font-semibold py-4 px-8 rounded-lg text-lg transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:-translate-y-1">
+                <Button variant="outline" size="lg" onClick={() => window.open('https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1wwDnoAHyFrV0M1FxwmbcMa9ewkDxTDdwQObwPKF-WX-wZV9DssZKtb1haoeP5qXDLenQlZt_R', '_blank')} className="border-2 border-white text-white hover:text-brand-green font-semibold py-4 px-8 rounded-lg text-lg transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:-translate-y-1 bg-neutral-50">
                   Kennis maken
                 </Button>
               </div>
