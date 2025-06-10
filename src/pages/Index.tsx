@@ -4,7 +4,6 @@ import HeroSection from '@/components/HeroSection';
 import ImpactSection from '@/components/ImpactSection';
 import ProgramSection from '@/components/ProgramSection';
 import ProcessSection from '@/components/ProcessSection';
-import Calculator from '@/components/Calculator';
 
 const Index = () => {
   return (
@@ -22,13 +21,6 @@ const Index = () => {
       <div id="voor-wie">
         <ProcessSection />
       </div>
-      
-      {/* Calculator Section */}
-      <section id="calculator" className="bg-white section-padding">
-        <div className="container-custom">
-          <Calculator />
-        </div>
-      </section>
 
       {/* Footer */}
       <footer id="contact" className="bg-brand-gray-dark text-white py-12">

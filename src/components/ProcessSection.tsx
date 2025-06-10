@@ -14,7 +14,7 @@ const ProcessSection = () => {
         "Berekening van uw potentiële besparing", 
         "Bepalen of MBSR aansluit bij uw organisatiedoelen"
       ],
-      cta: "Plan een kennismakingsgesprek"
+      cta: "Plan kennismakingsgesprek"
     },
     {
       icon: FileText,
@@ -78,41 +78,41 @@ const ProcessSection = () => {
         </div>
 
         {/* Timeline */}
-        <div className="relative">
+        <div className="relative max-w-6xl mx-auto">
           {/* Desktop Timeline Line */}
-          <div className="hidden lg:block absolute top-24 left-0 w-full h-0.5 bg-brand-blue-light"></div>
+          <div className="hidden lg:block absolute top-16 left-0 w-full h-0.5 bg-brand-blue-light z-0"></div>
           
-          <div className="grid lg:grid-cols-5 gap-8">
+          <div className="grid lg:grid-cols-5 gap-6 relative z-10">
             {steps.map((step, index) => {
               const IconComponent = step.icon;
               return (
                 <div key={index} className="relative">
                   {/* Timeline Circle */}
                   <div className="flex justify-center mb-6">
-                    <div className="w-16 h-16 bg-brand-blue text-white rounded-full flex items-center justify-center font-bold text-lg shadow-lg z-10 relative">
+                    <div className="w-12 h-12 bg-brand-blue text-white rounded-full flex items-center justify-center font-bold text-sm shadow-lg z-10 relative">
                       {step.step}
                     </div>
                   </div>
                   
                   {/* Content Card */}
-                  <div className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                  <div className="bg-white rounded-xl p-4 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 min-h-[400px] flex flex-col">
                     <div className="text-center mb-4">
-                      <div className="inline-flex items-center justify-center w-12 h-12 bg-brand-blue-light text-white rounded-lg mb-3">
-                        <IconComponent className="h-6 w-6" />
+                      <div className="inline-flex items-center justify-center w-10 h-10 bg-brand-blue-light text-white rounded-lg mb-3">
+                        <IconComponent className="h-5 w-5" />
                       </div>
-                      <h3 className="text-lg font-semibold text-brand-gray-dark mb-2">
+                      <h3 className="text-base font-semibold text-brand-gray-dark mb-2 leading-tight">
                         {step.title}
                       </h3>
-                      <p className="text-brand-gray-medium text-sm font-medium mb-4">
+                      <p className="text-brand-gray-medium text-xs font-medium mb-4">
                         {step.description}
                       </p>
                     </div>
                     
-                    <ul className="space-y-2 text-sm text-brand-gray-medium">
+                    <ul className="space-y-2 text-xs text-brand-gray-medium flex-grow">
                       {step.details.map((detail, detailIndex) => (
                         <li key={detailIndex} className="flex items-start">
-                          <div className="w-1.5 h-1.5 bg-brand-green rounded-full mt-2 mr-2 flex-shrink-0"></div>
-                          {detail}
+                          <div className="w-1 h-1 bg-brand-green rounded-full mt-1.5 mr-2 flex-shrink-0"></div>
+                          <span className="leading-relaxed">{detail}</span>
                         </li>
                       ))}
                     </ul>
@@ -122,7 +122,7 @@ const ProcessSection = () => {
                         <Button 
                           variant="outline" 
                           size="sm"
-                          className="w-full text-brand-blue border-brand-blue hover:bg-brand-blue hover:text-white"
+                          className="w-full text-xs text-brand-blue border-brand-blue hover:bg-brand-blue hover:text-white"
                           onClick={() => window.open('https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1wwDnoAHyFrV0M1FxwmbcMa9ewkDxTDdwQObwPKF-WX-wZV9DssZKtb1haoeP5qXDLenQlZt_R', '_blank')}
                         >
                           {step.cta}

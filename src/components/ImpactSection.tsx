@@ -1,22 +1,10 @@
 
 import { Button } from '@/components/ui/button';
-import { TrendingDown, TrendingUp, Shield, Heart, Moon, Users, Target, BarChart3 } from 'lucide-react';
+import { Shield, Heart, Moon, Users, Target, BarChart3 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const ImpactSection = () => {
   const impacts = [
-    {
-      icon: TrendingDown,
-      title: "19-30% minder ziekteverzuim",
-      description: "Significant minder verzuimdagen door betere stresshantering",
-      color: "text-red-600"
-    },
-    {
-      icon: TrendingUp,
-      title: "17-31% verbetering in medewerkerretentie",
-      description: "Hogere loyaliteit en minder personeelsverloop",
-      color: "text-brand-green"
-    },
     {
       icon: Shield,
       title: "40-58% minder werkstress",
@@ -60,7 +48,7 @@ const ImpactSection = () => {
       color: "text-brand-blue"
     },
     {
-      icon: TrendingUp,
+      icon: Target,
       title: "27% verbeterde werk-privébalans",
       description: "Betere balans tussen werk en privéleven",
       color: "text-teal-600"
@@ -75,11 +63,11 @@ const ImpactSection = () => {
             De impact op uw organisatie
           </h2>
           <p className="text-xl text-brand-gray-medium max-w-3xl mx-auto leading-relaxed">
-            Ons wetenschappelijk bewezen stressreductieprogramma levert concrete, meetbare resultaten op voor uw bedrijf
+            Ons wetenschappelijk bewezen stressreductieprogramma realiseert 30% minder verzuim en 31% verbetering in medewerkerretentie door de volgende factoren positief te beïnvloeden
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {impacts.map((impact, index) => {
             const IconComponent = impact.icon;
             return (
@@ -106,12 +94,20 @@ const ImpactSection = () => {
           })}
         </div>
 
-        <div className="text-center mt-12">
-          <Link to="/wetenschap">
-            <Button variant="outline" className="btn-secondary text-lg px-8 py-3">
-              Lees meer over de wetenschap
+        <div className="text-center mt-12 space-y-4">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link to="/wetenschap">
+              <Button variant="outline" className="btn-secondary text-lg px-8 py-3">
+                Lees meer over de wetenschap
+              </Button>
+            </Link>
+            <Button 
+              className="btn-primary text-lg px-8 py-3 bg-zinc-950 hover:bg-zinc-800"
+              onClick={() => window.open('https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1wwDnoAHyFrV0M1FxwmbcMa9ewkDxTDdwQObwPKF-WX-wZV9DssZKtb1haoeP5qXDLenQlZt_R', '_blank')}
+            >
+              Plan een vrijblijvend gesprek
             </Button>
-          </Link>
+          </div>
         </div>
       </div>
     </section>
