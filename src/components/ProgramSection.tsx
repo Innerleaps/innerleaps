@@ -63,7 +63,7 @@ const ProgramSection = () => {
             Ons Programma
           </h2>
           <p className="text-xl text-brand-gray-medium max-w-4xl mx-auto leading-relaxed">
-            Een gestructureerd 8-weekse programma gericht op stressreductie en het verbeteren van werkprestaties. Gebaseerd op Mindfulness-Based Stress Reduction (MBSR) met focus op praktische bedrijfstoepassingen.
+            Een gestructureerd 8-weekse programma gericht op stressreductie en het verbeteren van werkprestaties. Gebaseerd op het MBSR-programma (Mindfulness-Based Stress Reduction) ontwikkeld door Jon Kabat-Zinn in 1979 aan de University of Massachusetts Medical Center, met focus op praktische bedrijfstoepassingen.
           </p>
         </div>
 

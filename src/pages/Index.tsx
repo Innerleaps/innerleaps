@@ -31,7 +31,7 @@ const Index = () => {
             <div>
               <div className="text-2xl font-bold mb-4">Halt.academy</div>
               <p className="text-gray-300 leading-relaxed">
-                Wetenschappelijk bewezen stressreductieprogramma's voor meetbare bedrijfsresultaten.
+                MBSR-gebaseerde stressreductieprogramma's voor meetbare bedrijfsresultaten. Gebaseerd op het baanbrekende werk van Jon Kabat-Zinn.
               </p>
             </div>
             <div>

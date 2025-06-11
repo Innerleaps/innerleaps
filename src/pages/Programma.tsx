@@ -1,3 +1,4 @@
+
 import Navigation from '@/components/Navigation';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { CheckCircle, Clock, Users, MapPin, Calendar, Brain, Target, Lightbulb } from 'lucide-react';
@@ -199,10 +200,10 @@ const Programma = () => {
           <div className="container-custom">
             <div className="text-center space-y-6 mb-16">
               <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-brand-gray-dark">
-                Het 8-Weekse Stressreductie & Veerkrachtprogramma
+                Het 8-Weekse MBSR Stressreductie & Veerkrachtprogramma
               </h1>
               <p className="text-xl text-brand-gray-medium max-w-4xl mx-auto leading-relaxed">
-                Ons programma is gebaseerd op wetenschappelijk bewezen technieken die medewerkers helpen om stress effectief te herkennen en te managen. Gedurende 8 weken ontwikkelen deelnemers praktische vaardigheden die direct toepasbaar zijn in de werkomgeving, resulterend in meetbare verbeteringen in verzuim en retentie.
+                Ons programma is gebaseerd op het baanbrekende MBSR-programma (Mindfulness-Based Stress Reduction) ontwikkeld door Jon Kabat-Zinn in 1979 aan de University of Massachusetts Medical Center. Gedurende 8 weken ontwikkelen deelnemers wetenschappelijk bewezen vaardigheden die direct toepasbaar zijn in de werkomgeving, resulterend in meetbare verbeteringen in verzuim en retentie.
               </p>
             </div>
           </div>
@@ -247,9 +248,9 @@ const Programma = () => {
                     </ul>
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold text-brand-gray-dark mb-4">Wetenschappelijke Basis</h3>
+                    <h3 className="text-xl font-semibold text-brand-gray-dark mb-4">MBSR Methodiek</h3>
                     <p className="text-brand-gray-medium text-left text-base">
-                      De wetenschappelijke studies die de effectiviteit van het programma aantonen, zijn allemaal gebaseerd op deelnemers die consistent dagelijks oefenen. Onderzoek toont aan dat neurologische veranderingen optreden na 8 weken van dagelijkse oefening.
+                      Het oorspronkelijke MBSR-programma van Jon Kabat-Zinn heeft meer dan 40 jaar aan wetenschappelijk onderzoek achter zich. Onze bedrijfstoepassing behoudt de kernprincipes die neurologische veranderingen bewerkstelligen na 8 weken van dagelijkse oefening.
                     </p>
                   </div>
                 </div>
@@ -339,7 +340,7 @@ const Programma = () => {
                 </CardHeader>
                 <CardContent className="p-8">
                   <p className="text-brand-gray-medium mb-6 text-center text-base">
-                    De oefendag vindt plaats tussen week 5 en 7 en biedt deelnemers de gelegenheid om de geleerde technieken te verdiepen en te integreren. Deze dag (6 uur) bestaat uit:
+                    De oefendag vindt plaats tussen week 5 en 7 en biedt deelnemers de gelegenheid om de geleerde MBSR-technieken te verdiepen en te integreren. Deze dag (6 uur) bestaat uit:
                   </p>
                   
                   <div className="grid md:grid-cols-2 gap-6">
@@ -375,7 +376,7 @@ const Programma = () => {
                   </div>
                   
                   <p className="text-brand-gray-medium mt-6 text-center italic text-base">
-                    De oefendag is cruciaal voor het consolideren van de geleerde vaardigheden en het versterken van de commitment aan dagelijkse toepassing.
+                    De oefendag is cruciaal voor het consolideren van de geleerde vaardigheden en het versterken van de commitment aan dagelijkse toepassing, conform de oorspronkelijke MBSR-methodiek.
                   </p>
                 </CardContent>
               </Card>
@@ -392,7 +393,7 @@ const Programma = () => {
               </h2>
               
               <p className="text-xl text-brand-gray-medium mb-8">
-                Elke techniek en oefening in het programma is gebaseerd op wetenschappelijk onderzoek naar stressreductie en prestatieverbetering.
+                Sinds 1979 heeft het MBSR-programma van Jon Kabat-Zinn aan de University of Massachusetts Medical Center een uitgebreide wetenschappelijke basis opgebouwd. Onze bedrijfstoepassing behoudt deze bewezen effectiviteit.
               </p>
               
               <div className="grid md:grid-cols-2 gap-8 mb-12">
@@ -407,7 +408,10 @@ const Programma = () => {
                 </div>
                 
                 <div className="bg-brand-gray-light p-6 rounded-xl text-left">
-                  <h3 className="text-xl font-semibold text-brand-gray-dark mb-4">Na Afloop van het Programma</h3>
+                  <h3 className="text-xl font-semibold text-brand-gray-dark mb-4">40+ Jaar Onderzoek</h3>
+                  <p className="text-brand-gray-medium text-base mb-4">
+                    Het oorspronkelijke MBSR-programma heeft duizenden studies voortgebracht die de effectiviteit bewijzen voor stressreductie, veerkracht en algehele welzijn.
+                  </p>
                   <ul className="space-y-2 text-brand-gray-medium text-base">
                     <li>• Certificaat van voltooiing</li>
                     <li>• Persoonlijk actieplan voor voortgezette toepassing</li>
@@ -426,7 +430,7 @@ const Programma = () => {
               Klaar om te beginnen?
             </h2>
             <p className="text-xl text-brand-gray-medium mb-8 max-w-2xl mx-auto">
-              Ontdek hoe ons wetenschappelijk bewezen programma uw organisatie kan helpen bij het verlagen van verzuim en het verbeteren van retentie.
+              Ontdek hoe het bewezen MBSR-programma uw organisatie kan helpen bij het verlagen van verzuim en het verbeteren van retentie.
             </p>
             <div className="space-y-4 md:space-y-0 md:space-x-4 md:flex md:justify-center">
               <Button 
