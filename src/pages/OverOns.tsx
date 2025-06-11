@@ -156,9 +156,7 @@ const OverOns = () => {
                 </div>
                 
                 <div className="space-y-4 text-brand-gray-medium text-sm leading-relaxed">
-                  <p>
-                    Guido is gecertificeerd psycholoog en trainer in bewuste aandacht. Hij specialiseert zich in interventies voor stressreductie en het ontwikkelen van mentale veerkracht in professionele omgevingen.
-                  </p>
+                  <p>Guido is gecertificeerd psycholoog en MBSR trainer in bewuste aandacht. Hij specialiseert zich in interventies voor stressreductie en het ontwikkelen van mentale veerkracht in professionele omgevingen.</p>
                   
                   <p>
                     Sinds 2014 ontwikkelt en verzorgt Guido programma's binnen de justitiële sector, zowel voor medewerkers als management. Zijn expertise ligt in het vertalen van academische kennis naar praktische toepassingen in uitdagende werkomgevingen.
