@@ -3,9 +3,11 @@ import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
+import { Checkbox } from '@/components/ui/checkbox';
 import { Card } from '@/components/ui/card';
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
-import { Calculator as CalculatorIcon, TrendingUp, X } from 'lucide-react';
+import { Calculator as CalculatorIcon } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 interface CalculatorModalProps {
   isOpen: boolean;
@@ -13,53 +15,57 @@ interface CalculatorModalProps {
 }
 
 const CalculatorModal = ({ isOpen, onClose }: CalculatorModalProps) => {
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     name: '',
     phone: '',
+    functie: '',
     company: '',
     employees: '',
-    yearlyCosts: '',
     currentAbsenteeism: '',
     currentTurnover: ''
   });
   
-  const [showResults, setShowResults] = useState(false);
-  const [results, setResults] = useState({
-    absenteeismSaving: 0,
-    turnoverSaving: 0,
-    totalSaving: 0,
-    roi: 0
-  });
+  const [dataConfirmed, setDataConfirmed] = useState(false);
 
   const calculateSavings = () => {
     const employees = parseInt(formData.employees) || 0;
-    const yearlyCosts = parseInt(formData.yearlyCosts) || 0;
     const currentAbsenteeism = parseFloat(formData.currentAbsenteeism) || 0;
     const currentTurnover = parseFloat(formData.currentTurnover) || 0;
     
-    // Calculate average cost per employee
-    const costPerEmployee = yearlyCosts / employees;
+    // Convert percentages to decimals
+    const vVerzuim = currentAbsenteeism / 100;
+    const vVerloop = currentTurnover / 100;
     
-    // Calculate absenteeism savings (using conservative 30% reduction)
-    const absenteeismSaving = (currentAbsenteeism / 100) * yearlyCosts * 0.30;
+    // Calculate total savings using new formula
+    // Totale Besparing: 0.24 × 65000 × n × (2 × Vverzuim + Vverloop)
+    const totalSaving = 0.24 * 65000 * employees * (2 * vVerzuim + vVerloop);
     
-    // Calculate turnover savings (using conservative 31% improvement)
-    const turnoverSaving = (currentTurnover / 100) * employees * costPerEmployee * 0.31;
+    // Calculate investment (number of groups × €8,250 per group)
+    // Investering: 8250 × Math.ceil(n/15)
+    const numberOfGroups = Math.ceil(employees / 15);
+    const investment = 8250 * numberOfGroups;
     
-    const totalSaving = absenteeismSaving + turnoverSaving;
+    // Calculate ROI: (Totale Besparing - Investering) / Investering × 100
+    const roi = investment > 0 ? ((totalSaving - investment) / investment) * 100 : 0;
     
-    // Estimate program cost (€800 per employee for 8-week program)
-    const programCost = employees * 800;
-    const roi = ((totalSaving - programCost) / programCost) * 100;
-    
-    setResults({
-      absenteeismSaving: Math.round(absenteeismSaving),
-      turnoverSaving: Math.round(turnoverSaving),
+    const results = {
       totalSaving: Math.round(totalSaving),
-      roi: Math.round(roi)
+      investment: investment,
+      roi: Math.round(roi),
+      numberOfGroups: numberOfGroups
+    };
+    
+    // Navigate to bedankt page with results
+    navigate('/bedankt', { 
+      state: { 
+        results: results,
+        formData: formData 
+      } 
     });
     
-    setShowResults(true);
+    // Close the modal
+    onClose();
   };
 
   const handleInputChange = (field: string, value: string) => {
@@ -70,13 +76,13 @@ const CalculatorModal = ({ isOpen, onClose }: CalculatorModalProps) => {
     setFormData({
       name: '',
       phone: '',
+      functie: '',
       company: '',
       employees: '',
-      yearlyCosts: '',
       currentAbsenteeism: '',
       currentTurnover: ''
     });
-    setShowResults(false);
+    setDataConfirmed(false);
   };
 
   const handleClose = () => {
@@ -84,84 +90,15 @@ const CalculatorModal = ({ isOpen, onClose }: CalculatorModalProps) => {
     onClose();
   };
 
-  if (showResults) {
-    return (
-      <Dialog open={isOpen} onOpenChange={handleClose}>
-        <DialogContent className="max-w-4xl">
-          <DialogHeader>
-            <DialogTitle className="flex items-center justify-between">
-              <span>Uw Potentiële Besparing</span>
-              <Button variant="ghost" size="sm" onClick={handleClose}>
-                <X className="h-4 w-4" />
-              </Button>
-            </DialogTitle>
-          </DialogHeader>
-          
-          <Card className="p-8 bg-gradient-to-br from-brand-green to-brand-green-light text-white">
-            <div className="text-center space-y-6">
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-white/20 rounded-full mb-4">
-                <TrendingUp className="h-8 w-8" />
-              </div>
-              
-              <h3 className="text-2xl font-bold">Uw Potentiële Besparing</h3>
-              
-              <div className="grid md:grid-cols-3 gap-6">
-                <div className="text-center p-4 bg-white/20 rounded-lg">
-                  <div className="text-3xl font-bold mb-2">€{results.absenteeismSaving.toLocaleString()}</div>
-                  <div className="text-sm opacity-90">Verzuim reductie</div>
-                </div>
-                <div className="text-center p-4 bg-white/20 rounded-lg">
-                  <div className="text-3xl font-bold mb-2">€{results.turnoverSaving.toLocaleString()}</div>
-                  <div className="text-sm opacity-90">Retentie verbetering</div>
-                </div>
-                <div className="text-center p-4 bg-white/20 rounded-lg">
-                  <div className="text-3xl font-bold mb-2">{results.roi}%</div>
-                  <div className="text-sm opacity-90">ROI binnen 1 jaar</div>
-                </div>
-              </div>
-              
-              <div className="text-center p-6 bg-white/10 rounded-lg">
-                <div className="text-4xl font-bold mb-2">€{results.totalSaving.toLocaleString()}</div>
-                <div className="text-lg">Totale jaarlijkse besparing</div>
-              </div>
-              
-              <div className="space-y-4">
-                <p className="text-sm opacity-90">
-                  *Berekening gebaseerd op wetenschappelijk bewezen resultaten: 30% verzuimreductie en 31% retentieverbetering
-                </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Button 
-                    className="bg-white text-brand-green hover:bg-gray-100"
-                    onClick={() => window.open('https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1wwDnoAHyFrV0M1FxwmbcMa9ewkDxTDdwQObwPKF-WX-wZV9DssZKtb1haoeP5qXDLenQlZt_R', '_blank')}
-                  >
-                    Plan een gesprek over deze resultaten
-                  </Button>
-                  <Button 
-                    variant="outline" 
-                    className="border-white text-white hover:bg-white hover:text-brand-green"
-                    onClick={() => setShowResults(false)}
-                  >
-                    Nieuwe berekening
-                  </Button>
-                </div>
-              </div>
-            </div>
-          </Card>
-        </DialogContent>
-      </Dialog>
-    );
-  }
+  const isFormValid = formData.name && formData.functie && formData.company && 
+                     formData.employees && formData.currentAbsenteeism && 
+                     formData.currentTurnover && dataConfirmed;
 
   return (
     <Dialog open={isOpen} onOpenChange={handleClose}>
       <DialogContent className="max-w-4xl">
         <DialogHeader>
-          <DialogTitle className="flex items-center justify-between">
-            <span>Bereken Uw Potentiële Besparing</span>
-            <Button variant="ghost" size="sm" onClick={handleClose}>
-              <X className="h-4 w-4" />
-            </Button>
-          </DialogTitle>
+          <DialogTitle>Bereken Uw Potentiële Besparing</DialogTitle>
         </DialogHeader>
 
         <Card className="p-8">
@@ -177,117 +114,136 @@ const CalculatorModal = ({ isOpen, onClose }: CalculatorModalProps) => {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-6">
-            <div className="space-y-4">
-              <div>
-                <Label htmlFor="name" className="text-brand-gray-dark font-medium">Naam *</Label>
-                <Input
-                  id="name"
-                  type="text"
-                  value={formData.name}
-                  onChange={(e) => handleInputChange('name', e.target.value)}
-                  className="mt-1"
-                  placeholder="bijv. Jan de Vries"
-                  required
-                />
-              </div>
-              
-              <div>
-                <Label htmlFor="phone" className="text-brand-gray-dark font-medium">Telefoonnummer *</Label>
-                <Input
-                  id="phone"
-                  type="tel"
-                  value={formData.phone}
-                  onChange={(e) => handleInputChange('phone', e.target.value)}
-                  className="mt-1"
-                  placeholder="bijv. 06 12345678"
-                  required
-                />
-              </div>
-              
-              <div>
-                <Label htmlFor="company" className="text-brand-gray-dark font-medium">Bedrijfsnaam *</Label>
-                <Input
-                  id="company"
-                  type="text"
-                  value={formData.company}
-                  onChange={(e) => handleInputChange('company', e.target.value)}
-                  className="mt-1"
-                  placeholder="bijv. Uw Bedrijf B.V."
-                  required
-                />
-              </div>
-              
-              <div>
-                <Label htmlFor="employees" className="text-brand-gray-dark font-medium">Aantal medewerkers *</Label>
-                <Input
-                  id="employees"
-                  type="number"
-                  value={formData.employees}
-                  onChange={(e) => handleInputChange('employees', e.target.value)}
-                  className="mt-1"
-                  placeholder="bijv. 50"
-                  required
-                />
+          <div className="space-y-8">
+            {/* Persoonsinformatie section */}
+            <div>
+              <h4 className="text-lg font-semibold text-brand-gray-dark mb-4">Persoonsinformatie:</h4>
+              <div className="grid md:grid-cols-2 gap-4">
+                <div>
+                  <Label htmlFor="name" className="text-brand-gray-dark font-medium">Naam *</Label>
+                  <Input
+                    id="name"
+                    type="text"
+                    value={formData.name}
+                    onChange={(e) => handleInputChange('name', e.target.value)}
+                    className="mt-1"
+                    placeholder="Jan Janssen"
+                    required
+                  />
+                </div>
+                
+                <div>
+                  <Label htmlFor="phone" className="text-brand-gray-dark font-medium">Telefoonnummer</Label>
+                  <Input
+                    id="phone"
+                    type="tel"
+                    value={formData.phone}
+                    onChange={(e) => handleInputChange('phone', e.target.value)}
+                    className="mt-1"
+                    placeholder="06 12345678"
+                  />
+                </div>
+                
+                <div className="md:col-span-2">
+                  <Label htmlFor="functie" className="text-brand-gray-dark font-medium">Functie *</Label>
+                  <Input
+                    id="functie"
+                    type="text"
+                    value={formData.functie}
+                    onChange={(e) => handleInputChange('functie', e.target.value)}
+                    className="mt-1"
+                    placeholder="HR Manager"
+                    required
+                  />
+                </div>
               </div>
             </div>
 
-            <div className="space-y-4">
-              <div>
-                <Label htmlFor="yearlyCosts" className="text-brand-gray-dark font-medium">Totale jaarlijkse loonkosten (€) *</Label>
-                <Input
-                  id="yearlyCosts"
-                  type="number"
-                  value={formData.yearlyCosts}
-                  onChange={(e) => handleInputChange('yearlyCosts', e.target.value)}
-                  className="mt-1"
-                  placeholder="bijv. 2500000"
-                  required
-                />
+            {/* Bedrijfsgegevens section */}
+            <div>
+              <h4 className="text-lg font-semibold text-brand-gray-dark mb-4">Bedrijfsgegevens:</h4>
+              <div className="grid md:grid-cols-2 gap-4">
+                <div>
+                  <Label htmlFor="company" className="text-brand-gray-dark font-medium">Bedrijfsnaam *</Label>
+                  <Input
+                    id="company"
+                    type="text"
+                    value={formData.company}
+                    onChange={(e) => handleInputChange('company', e.target.value)}
+                    className="mt-1"
+                    placeholder="Uw Bedrijf B.V."
+                    required
+                  />
+                </div>
+                
+                <div>
+                  <Label htmlFor="employees" className="text-brand-gray-dark font-medium">Aantal medewerkers *</Label>
+                  <Input
+                    id="employees"
+                    type="number"
+                    value={formData.employees}
+                    onChange={(e) => handleInputChange('employees', e.target.value)}
+                    className="mt-1"
+                    placeholder="50"
+                    required
+                  />
+                </div>
+                
+                <div>
+                  <Label htmlFor="currentAbsenteeism" className="text-brand-gray-dark font-medium">Huidig verzuimpercentage (%) *</Label>
+                  <Input
+                    id="currentAbsenteeism"
+                    type="number"
+                    step="0.1"
+                    value={formData.currentAbsenteeism}
+                    onChange={(e) => handleInputChange('currentAbsenteeism', e.target.value)}
+                    className="mt-1"
+                    placeholder="4.2"
+                    required
+                  />
+                </div>
+                
+                <div>
+                  <Label htmlFor="currentTurnover" className="text-brand-gray-dark font-medium">Huidig verlooppercentage (%) *</Label>
+                  <Input
+                    id="currentTurnover"
+                    type="number"
+                    step="0.1"
+                    value={formData.currentTurnover}
+                    onChange={(e) => handleInputChange('currentTurnover', e.target.value)}
+                    className="mt-1"
+                    placeholder="12.5"
+                    required
+                  />
+                </div>
               </div>
-              
-              <div>
-                <Label htmlFor="currentAbsenteeism" className="text-brand-gray-dark font-medium">Huidig verzuimpercentage (%) *</Label>
-                <Input
-                  id="currentAbsenteeism"
-                  type="number"
-                  step="0.1"
-                  value={formData.currentAbsenteeism}
-                  onChange={(e) => handleInputChange('currentAbsenteeism', e.target.value)}
-                  className="mt-1"
-                  placeholder="bijv. 4.2"
-                  required
-                />
-              </div>
-              
-              <div>
-                <Label htmlFor="currentTurnover" className="text-brand-gray-dark font-medium">Huidig verlooppercentage (%) *</Label>
-                <Input
-                  id="currentTurnover"
-                  type="number"
-                  step="0.1"
-                  value={formData.currentTurnover}
-                  onChange={(e) => handleInputChange('currentTurnover', e.target.value)}
-                  className="mt-1"
-                  placeholder="bijv. 12.5"
-                  required
-                />
-              </div>
-              
-              <div className="pt-4">
-                <Button 
-                  onClick={calculateSavings}
-                  className="w-full btn-primary"
-                  disabled={!formData.name || !formData.phone || !formData.company || !formData.employees || !formData.yearlyCosts || !formData.currentAbsenteeism || !formData.currentTurnover}
-                >
-                  Bereken Mijn Besparing
-                </Button>
-              </div>
+            </div>
+
+            {/* Data confirmation checkbox */}
+            <div className="flex items-start space-x-3">
+              <Checkbox 
+                id="dataConfirmed"
+                checked={dataConfirmed}
+                onCheckedChange={(checked) => setDataConfirmed(checked === true)}
+              />
+              <Label htmlFor="dataConfirmed" className="text-sm text-brand-gray-dark leading-relaxed">
+                Ik bevestig dat ik akkoord ga met het delen van deze gegevens en wil mijn potentiële besparing berekenen
+              </Label>
+            </div>
+            
+            <div className="pt-4">
+              <Button 
+                onClick={calculateSavings}
+                className="w-full btn-primary"
+                disabled={!isFormValid}
+              >
+                Ontvang Mijn Besparing
+              </Button>
             </div>
           </div>
           
           <div className="mt-6 text-xs text-brand-gray-medium">
-            * Alle velden zijn verplicht. Uw gegevens worden vertrouwelijk behandeld conform onze privacyverklaring.
+            * Verplichte velden. Uw gegevens worden vertrouwelijk behandeld conform onze privacyverklaring.
           </div>
         </Card>
       </DialogContent>
