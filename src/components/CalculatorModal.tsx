@@ -22,6 +22,7 @@ const CalculatorModal = ({ isOpen, onClose }: CalculatorModalProps) => {
     functie: '',
     company: '',
     employees: '',
+    yearlyCosts: '',
     currentAbsenteeism: '',
     currentTurnover: ''
   });
@@ -30,28 +31,30 @@ const CalculatorModal = ({ isOpen, onClose }: CalculatorModalProps) => {
 
   const calculateSavings = () => {
     const employees = parseInt(formData.employees) || 0;
+    const yearlyCosts = parseInt(formData.yearlyCosts) || 0;
     const currentAbsenteeism = parseFloat(formData.currentAbsenteeism) || 0;
     const currentTurnover = parseFloat(formData.currentTurnover) || 0;
     
-    // Convert percentages to decimals
-    const vVerzuim = currentAbsenteeism / 100;
-    const vVerloop = currentTurnover / 100;
+    // Calculate cost per employee
+    const costPerEmployee = yearlyCosts / employees;
     
-    // Calculate total savings using new formula
-    // Totale Besparing: 0.24 × 65000 × n × (2 × Vverzuim + Vverloop)
-    const totalSaving = 0.24 * 65000 * employees * (2 * vVerzuim + vVerloop);
+    // Calculate savings using old formula
+    const absenteeismSaving = (currentAbsenteeism / 100) * yearlyCosts * 0.30;
+    const turnoverSaving = (currentTurnover / 100) * employees * costPerEmployee * 0.31;
+    const totalSaving = absenteeismSaving + turnoverSaving;
     
-    // Calculate investment (number of groups × €8,250 per group)
-    // Investering: 8250 × Math.ceil(n/15)
+    // Calculate program cost (€800 per employee)
+    const programCost = employees * 800;
+    
+    // Calculate ROI
+    const roi = programCost > 0 ? ((totalSaving - programCost) / programCost) * 100 : 0;
+    
+    // Calculate number of groups (for display purposes, max 15 per group)
     const numberOfGroups = Math.ceil(employees / 15);
-    const investment = 8250 * numberOfGroups;
-    
-    // Calculate ROI: (Totale Besparing - Investering) / Investering × 100
-    const roi = investment > 0 ? ((totalSaving - investment) / investment) * 100 : 0;
     
     const results = {
       totalSaving: Math.round(totalSaving),
-      investment: investment,
+      investment: programCost,
       roi: Math.round(roi),
       numberOfGroups: numberOfGroups
     };
@@ -79,6 +82,7 @@ const CalculatorModal = ({ isOpen, onClose }: CalculatorModalProps) => {
       functie: '',
       company: '',
       employees: '',
+      yearlyCosts: '',
       currentAbsenteeism: '',
       currentTurnover: ''
     });
@@ -91,7 +95,7 @@ const CalculatorModal = ({ isOpen, onClose }: CalculatorModalProps) => {
   };
 
   const isFormValid = formData.name && formData.functie && formData.company && 
-                     formData.employees && formData.currentAbsenteeism && 
+                     formData.employees && formData.yearlyCosts && formData.currentAbsenteeism && 
                      formData.currentTurnover && dataConfirmed;
 
   return (
@@ -185,6 +189,19 @@ const CalculatorModal = ({ isOpen, onClose }: CalculatorModalProps) => {
                     onChange={(e) => handleInputChange('employees', e.target.value)}
                     className="mt-1"
                     placeholder="50"
+                    required
+                  />
+                </div>
+                
+                <div>
+                  <Label htmlFor="yearlyCosts" className="text-brand-gray-dark font-medium">Totale jaarlijkse loonkosten (€) *</Label>
+                  <Input
+                    id="yearlyCosts"
+                    type="number"
+                    value={formData.yearlyCosts}
+                    onChange={(e) => handleInputChange('yearlyCosts', e.target.value)}
+                    className="mt-1"
+                    placeholder="2500000"
                     required
                   />
                 </div>
