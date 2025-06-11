@@ -133,9 +133,7 @@ const OverOns = () => {
                 </div>
                 
                 <div className="space-y-4 text-brand-gray-medium text-sm leading-relaxed">
-                  <p>
-                    Dave is gecertificeerd trainer in bewuste aandacht (categorie 1). Hij voltooide zijn opleiding aan de Radboud Universiteit in 2017 en combineert sindsdien zijn expertise met praktijkervaring in het trainen van zowel particulieren als professionals.
-                  </p>
+                  <p>Dave is gecertificeerd MBSR trainer. Hij voltooide zijn opleiding aan de Radboud Universiteit in 2017 en combineert sindsdien zijn expertise met praktijkervaring in het trainen van zowel particulieren als professionals.</p>
                   
                   <p>
                     Met een achtergrond in psychologie en toegepaste interventies, brengt Dave een wetenschappelijk gefundeerde en praktische benadering naar zijn trainingen. Hij specialiseert zich in werkplaatsinterventies en heeft uitgebreide ervaring in het begeleiden van teams bij stressreductie.
