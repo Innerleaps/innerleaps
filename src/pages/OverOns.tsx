@@ -156,7 +156,7 @@ const OverOns = () => {
                     GS
                   </div>
                   <h3 className="text-xl font-semibold text-brand-gray-dark">Guido Scholte</h3>
-                  <p className="text-brand-gray-medium text-sm">Mindfulness Trainer & Geestelijk Verzorger</p>
+                  <p className="text-brand-gray-medium text-sm">Medeoprichter & Trainer</p>
                 </div>
                 
                 <div className="space-y-4 text-brand-gray-medium text-sm leading-relaxed">
