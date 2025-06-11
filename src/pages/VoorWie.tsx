@@ -1,3 +1,4 @@
+
 import Navigation from '@/components/Navigation';
 import StickyCtaButtons from '@/components/StickyCtaButtons';
 import { Button } from '@/components/ui/button';
@@ -45,7 +46,7 @@ const VoorWie = () => {
     {
       title: "Voor Teams",
       description: "Ideaal voor afdelingen met hoge werkdruk of veranderingsprocessen",
-      details: ["Bevordert teamcohesie en communicatie", "Creëert gedeelde taal en technieken voor stressmanagement", "Groepsgrootte: 8-15 deelnemers uit hetzelfde team"]
+      details: ["Bevordert teamcohesie en communicatie", "Creëert gedeelde taal en technieken voor stressmanagement", "1 groep met het hele team"]
     },
     {
       title: "Voor Leidinggevenden",
@@ -210,7 +211,7 @@ const VoorWie = () => {
               <ul className="space-y-3">
                 <li className="flex items-start">
                   <div className="w-2 h-2 bg-brand-green-light rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                  Een verzuimpercentage hebben boven het branchegemiddelde
+                  Het verzuimpercentage willen verlagen
                 </li>
                 <li className="flex items-start">
                   <div className="w-2 h-2 bg-brand-green-light rounded-full mt-2 mr-3 flex-shrink-0"></div>

@@ -1,5 +1,7 @@
+
 import Navigation from '@/components/Navigation';
 import StickyCtaButtons from '@/components/StickyCtaButtons';
+import { Brain, Building, Globe, TrendingUp, Users, Heart } from 'lucide-react';
 import { useEffect } from 'react';
 
 const OverOns = () => {
@@ -41,34 +43,52 @@ const OverOns = () => {
             <div className="grid md:grid-cols-2 gap-8">
               <div className="space-y-4">
                 <div className="bg-white p-6 rounded-lg shadow-sm">
-                  <h3 className="font-semibold text-brand-gray-dark mb-2">MBSR Training</h3>
+                  <div className="flex items-center mb-3">
+                    <Brain className="h-6 w-6 text-brand-blue mr-3" />
+                    <h3 className="font-semibold text-brand-gray-dark">MBSR Training</h3>
+                  </div>
                   <p className="text-brand-gray-medium text-sm">Gecertificeerde trainers in MBSR (Mindfulness-Based Stress Reduction) volgens de richtlijnen van de VMBN – categorie 1</p>
                 </div>
                 
                 <div className="bg-white p-6 rounded-lg shadow-sm">
-                  <h3 className="font-semibold text-brand-gray-dark mb-2">Werkplaatsimplementatie</h3>
+                  <div className="flex items-center mb-3">
+                    <Building className="h-6 w-6 text-brand-blue mr-3" />
+                    <h3 className="font-semibold text-brand-gray-dark">Werkplaatsimplementatie</h3>
+                  </div>
                   <p className="text-brand-gray-medium text-sm">Specialisatie in werkplaatsimplementatie van stressreductietechnieken</p>
                 </div>
                 
                 <div className="bg-white p-6 rounded-lg shadow-sm">
-                  <h3 className="font-semibold text-brand-gray-dark mb-2">Sectorbrede Ervaring</h3>
+                  <div className="flex items-center mb-3">
+                    <Globe className="h-6 w-6 text-brand-blue mr-3" />
+                    <h3 className="font-semibold text-brand-gray-dark">Sectorbrede Ervaring</h3>
+                  </div>
                   <p className="text-brand-gray-medium text-sm">Uitgebreide ervaring met diverse sectoren en organisatietypes</p>
                 </div>
               </div>
               
               <div className="space-y-4">
                 <div className="bg-white p-6 rounded-lg shadow-sm">
-                  <h3 className="font-semibold text-brand-gray-dark mb-2">Bedrijfskunde & ROI</h3>
+                  <div className="flex items-center mb-3">
+                    <TrendingUp className="h-6 w-6 text-brand-blue mr-3" />
+                    <h3 className="font-semibold text-brand-gray-dark">Bedrijfskunde & ROI</h3>
+                  </div>
                   <p className="text-brand-gray-medium text-sm">Expertise in het meten en verbeteren van verzuim en retentie, inclusief ROI-berekeningen</p>
                 </div>
                 
                 <div className="bg-white p-6 rounded-lg shadow-sm">
-                  <h3 className="font-semibold text-brand-gray-dark mb-2">Organisatieontwikkeling</h3>
+                  <div className="flex items-center mb-3">
+                    <Users className="h-6 w-6 text-brand-blue mr-3" />
+                    <h3 className="font-semibold text-brand-gray-dark">Organisatieontwikkeling</h3>
+                  </div>
                   <p className="text-brand-gray-medium text-sm">Achtergrond in organisatieontwikkeling en verandermanagement</p>
                 </div>
                 
                 <div className="bg-white p-6 rounded-lg shadow-sm">
-                  <h3 className="font-semibold text-brand-gray-dark mb-2">Specialistische Zorg</h3>
+                  <div className="flex items-center mb-3">
+                    <Heart className="h-6 w-6 text-brand-blue mr-3" />
+                    <h3 className="font-semibold text-brand-gray-dark">Specialistische Zorg</h3>
+                  </div>
                   <p className="text-brand-gray-medium text-sm">Specialisatie in werkstress, burn-outpreventie en herstel</p>
                 </div>
               </div>
@@ -86,16 +106,16 @@ const OverOns = () => {
                     BtH
                   </div>
                   <p className="text-center mt-2 font-semibold text-brand-gray-dark">Bas Ter Haar Romenij</p>
-                  <p className="text-center text-sm text-brand-gray-medium">Oprichter</p>
+                  <p className="text-center text-sm text-brand-gray-medium">Medeoprichter & Marketing/Sales</p>
                 </div>
                 
                 <div className="flex-1">
                   <p className="text-brand-gray-medium leading-relaxed mb-4">
-                    Halt.academy werd opgericht door Bas Ter Haar Romenij, die na een burn-out ontdekte hoe effectief gestructureerde stressreductietechnieken kunnen zijn in het verbeteren van zowel persoonlijk welzijn als bedrijfsresultaten.
+                    Halt.academy werd opgericht door Bas Ter Haar Romenij samen met Dave van Schie en Guido Scholte. Na een burn-out ontdekte Bas hoe effectief gestructureerde stressreductietechnieken kunnen zijn in het verbeteren van zowel persoonlijk welzijn als bedrijfsresultaten. Samen met Dave en Guido, beide ervaren mindfulness trainers, besloot hij een organisatie op te richten die deze technieken toegankelijk maakt voor bedrijven.
                   </p>
                   
                   <blockquote className="border-l-4 border-brand-blue pl-6 italic text-brand-gray-dark">
-                    "Na jaren in het bedrijfsleven te hebben gewerkt, zag ik hoe stress en burn-out niet alleen individuele medewerkers beïnvloedden, maar ook organisatieresultaten ondermijnden. Ik merkte dat er een kloof was tussen wetenschappelijk bewezen interventies en praktische implementatie op de werkvloer. Halt.academy overbrugt deze kloof door bewezen technieken toegankelijk en relevant te maken voor de zakelijke context."
+                    "Na jaren in het bedrijfsleven te hebben gewerkt, zag ik hoe stress en burn-out niet alleen individuele medewerkers beïnvloedden, maar ook organisatieresultaten ondermijnden. Ik merkte dat er een kloof was tussen wetenschappelijk bewezen interventies en praktische implementatie op de werkvloer. Halt.academy overbrugt deze kloof door bewezen technieken toegankelijk en relevant te maken voor de zakelijke context. Samen met Dave en Guido hebben we de perfecte combinatie: zij zorgen voor de hoogwaardige training, ik voor de vertaalslag naar bedrijfsresultaten."
                   </blockquote>
                   <cite className="block mt-2 text-right text-brand-gray-medium">— Bas Ter Haar Romenij</cite>
                 </div>
