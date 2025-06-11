@@ -2,14 +2,11 @@ import Navigation from '@/components/Navigation';
 import StickyCtaButtons from '@/components/StickyCtaButtons';
 import { Brain, Building, Globe, TrendingUp, Users, Heart } from 'lucide-react';
 import { useEffect } from 'react';
-
 const OverOns = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-
-  return (
-    <div className="min-h-screen bg-brand-gray-light">
+  return <div className="min-h-screen bg-brand-gray-light">
       <Navigation />
       <StickyCtaButtons />
       
@@ -46,7 +43,7 @@ const OverOns = () => {
                     <Brain className="h-6 w-6 text-brand-blue mr-3" />
                     <h3 className="font-semibold text-brand-gray-dark">MBSR Training</h3>
                   </div>
-                  <p className="text-brand-gray-medium text-sm">Gecertificeerde trainers in MBSR (Mindfulness-Based Stress Reduction) volgens de richtlijnen van de VMBN – categorie 1</p>
+                  <p className="text-brand-gray-medium text-sm">Gecertificeerde trainers in MBSR (Mindfulness-Based Stress Reduction) volgens de richtlijnen van de VMBN.</p>
                 </div>
                 
                 <div className="bg-white p-6 rounded-lg shadow-sm">
@@ -212,8 +209,6 @@ const OverOns = () => {
           </div>
         </div>
       </footer>
-    </div>
-  );
+    </div>;
 };
-
 export default OverOns;
