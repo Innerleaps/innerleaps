@@ -2,11 +2,14 @@ import Navigation from '@/components/Navigation';
 import StickyCtaButtons from '@/components/StickyCtaButtons';
 import { Brain, Building, Globe, TrendingUp, Users, Heart } from 'lucide-react';
 import { useEffect } from 'react';
+
 const OverOns = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-  return <div className="min-h-screen bg-brand-gray-light">
+
+  return (
+    <div className="min-h-screen bg-brand-gray-light">
       <Navigation />
       <StickyCtaButtons />
       
@@ -107,7 +110,7 @@ const OverOns = () => {
                 
                 <div className="flex-1">
                   <p className="text-brand-gray-medium leading-relaxed mb-4">
-                    Halt.academy werd opgericht door Bas Ter Haar Romenij samen met Dave van Schie en Guido Scholte. Na een burn-out ontdekte Bas hoe effectief gestructureerde stressreductietechnieken kunnen zijn in het verbeteren van zowel persoonlijk welzijn als bedrijfsresultaten. Samen met Dave en Guido, beide ervaren mindfulness trainers, besloot hij een organisatie op te richten die deze technieken toegankelijk maakt voor bedrijven.
+                    Halt.academy werd opgericht door Bas Ter Haar Romenij samen met Dave van Schie en Guido Scholte. Na een burn-out ontdekte Bas hoe effectief gestructureerde stressreductietechnieken kunnen zijn in het verbeteren van zowel persoonlijk welzijn als bedrijfsresultaten. Samen met Dave en Guido, beide ervaren trainers in bewuste aandacht, besloot hij een organisatie op te richten die deze technieken toegankelijk maakt voor bedrijven.
                   </p>
                   
                   <blockquote className="border-l-4 border-brand-blue pl-6 italic text-brand-gray-dark">
@@ -121,8 +124,6 @@ const OverOns = () => {
 
           {/* Trainers */}
           <div>
-            
-            
             <div className="grid md:grid-cols-2 gap-8">
               {/* Dave van Schie */}
               <div className="bg-white rounded-xl p-8 shadow-lg">
@@ -136,15 +137,15 @@ const OverOns = () => {
                 
                 <div className="space-y-4 text-brand-gray-medium text-sm leading-relaxed">
                   <p>
-                    Dave is mindfulness trainer (categorie 1), dichter, schrijver, sporter en levensgenieter. Sinds zijn opleiding aan de Radboud Universiteit in 2017 combineert hij zijn passie voor mindfulness met een brede ervaring in het trainen van zowel particulieren als professionals.
+                    Dave is gecertificeerd trainer in bewuste aandacht (categorie 1). Hij voltooide zijn opleiding aan de Radboud Universiteit in 2017 en combineert sindsdien zijn expertise met praktijkervaring in het trainen van zowel particulieren als professionals.
                   </p>
                   
                   <p>
-                    Mindfulness vormt voor Dave de basis van zijn dagelijks leven — of het nu gaat om opvoeding, communicatie of omgaan met stress. Hij weet als geen ander hoe uitdagend het kan zijn om bewust te leven in een wereld vol afleiding, en brengt die nuchtere, menselijke benadering mee in zijn trainingen.
+                    Met een achtergrond in psychologie en toegepaste interventies, brengt Dave een wetenschappelijk gefundeerde en praktische benadering naar zijn trainingen. Hij specialiseert zich in werkplaatsinterventies en heeft uitgebreide ervaring in het begeleiden van teams bij stressreductie.
                   </p>
                   
                   <p>
-                    Naast zijn werk als trainer is Dave ook actief als contentmanager bij de Parnassia Groep en houdt hij zich bezig met sport, schrijven en reizen.
+                    Daarnaast werkt Dave als contentmanager bij de Parnassia Groep, waar hij zijn kennis van mentale gezondheid in de praktijk brengt binnen een professionele organisatiecontext.
                   </p>
                 </div>
               </div>
@@ -161,15 +162,15 @@ const OverOns = () => {
                 
                 <div className="space-y-4 text-brand-gray-medium text-sm leading-relaxed">
                   <p>
-                    Guido's mindfulnesspad begon in 2010 tijdens een Vipassana-retraite in India — een ervaring die hem zowel confronteerde als inspireerde. Wat volgde was een diepgaande verkenning van meditatie, boeddhistische filosofie en geestelijke verzorging.
+                    Guido is gecertificeerd psycholoog en trainer in bewuste aandacht. Hij specialiseert zich in interventies voor stressreductie en het ontwikkelen van mentale veerkracht in professionele omgevingen.
                   </p>
                   
                   <p>
-                    Terug in Nederland verdiepte hij zich verder via opleidingen tot toegepast psycholoog en mindfulness trainer. Sinds 2014 ontwikkelt en verzorgt Guido mindfulnessprogramma's binnen de justitiële sector, zowel voor gedetineerden als personeel.
+                    Sinds 2014 ontwikkelt en verzorgt Guido programma's binnen de justitiële sector, zowel voor medewerkers als management. Zijn expertise ligt in het vertalen van academische kennis naar praktische toepassingen in uitdagende werkomgevingen.
                   </p>
                   
                   <p>
-                    Als boeddhistisch geestelijk verzorger werkt hij sinds 2020 in verschillende gevangenissen in Nederland. Guido combineert zijn kalme aanwezigheid met diep inzicht in menselijke processen en gedragsverandering — een waardevolle aanvulling op het team van Halt.academy.
+                    Als geestelijk verzorger werkt hij sinds 2020 in verschillende instellingen. Guido combineert zijn rustige professionele aanwezigheid met diepgaand inzicht in menselijke processen en gedragsverandering — waardevolle competenties voor organisatieontwikkeling.
                   </p>
                 </div>
               </div>
@@ -211,6 +212,8 @@ const OverOns = () => {
           </div>
         </div>
       </footer>
-    </div>;
+    </div>
+  );
 };
+
 export default OverOns;
