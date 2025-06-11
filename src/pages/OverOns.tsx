@@ -1,16 +1,12 @@
-
 import Navigation from '@/components/Navigation';
 import StickyCtaButtons from '@/components/StickyCtaButtons';
 import { Brain, Building, Globe, TrendingUp, Users, Heart } from 'lucide-react';
 import { useEffect } from 'react';
-
 const OverOns = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-
-  return (
-    <div className="min-h-screen bg-brand-gray-light">
+  return <div className="min-h-screen bg-brand-gray-light">
       <Navigation />
       <StickyCtaButtons />
       
@@ -125,7 +121,7 @@ const OverOns = () => {
 
           {/* Trainers */}
           <div>
-            <h2 className="text-3xl font-bold text-brand-gray-dark mb-8">Onze Trainers</h2>
+            
             
             <div className="grid md:grid-cols-2 gap-8">
               {/* Dave van Schie */}
@@ -135,7 +131,7 @@ const OverOns = () => {
                     DvS
                   </div>
                   <h3 className="text-xl font-semibold text-brand-gray-dark">Dave van Schie</h3>
-                  <p className="text-brand-gray-medium text-sm">Mindfulness Trainer</p>
+                  <p className="text-brand-gray-medium text-sm">Medeoprichter &amp; Trainer</p>
                 </div>
                 
                 <div className="space-y-4 text-brand-gray-medium text-sm leading-relaxed">
@@ -215,8 +211,6 @@ const OverOns = () => {
           </div>
         </div>
       </footer>
-    </div>
-  );
+    </div>;
 };
-
 export default OverOns;
