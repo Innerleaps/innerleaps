@@ -165,7 +165,7 @@ const CalculatorModal = ({
 
             {/* Data confirmation checkbox */}
             <div className="flex items-start space-x-3">
-              <Checkbox id="dataConfirmed" checked={dataConfirmed} onCheckedChange={checked => setDataConfirmed(checked === true)} />
+              <Checkbox id="dataConfirmed" checked={dataConfirmed} onCheckedChange={checked => setDataConfirmed(checked === true)} className="bg-[253985] bg-[#253985]" />
               <Label htmlFor="dataConfirmed" className="text-sm text-brand-gray-dark leading-relaxed">
                 Ik bevestig dat ik akkoord ga met het delen van deze gegevens en wil mijn potentiële besparing berekenen
               </Label>
