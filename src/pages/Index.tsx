@@ -45,10 +45,10 @@ const Index = () => {
             <div>
               <h3 className="text-base md:text-lg font-semibold mb-3 md:mb-4">Snel naar</h3>
               <div className="space-y-1 md:space-y-2">
-                <button onClick={() => document.getElementById('home')?.scrollIntoView({ behavior: 'smooth' })} className="block text-gray-300 hover:text-white transition-colors text-left text-sm md:text-base">Home</button>
-                <button onClick={() => document.getElementById('wetenschap')?.scrollIntoView({ behavior: 'smooth' })} className="block text-gray-300 hover:text-white transition-colors text-left text-sm md:text-base">De Wetenschap</button>
-                <button onClick={() => document.getElementById('programma')?.scrollIntoView({ behavior: 'smooth' })} className="block text-gray-300 hover:text-white transition-colors text-left text-sm md:text-base">Programma</button>
-                <button onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })} className="block text-gray-300 hover:text-white transition-colors text-left text-sm md:text-base">Contact</button>
+                <button onClick={() => document.getElementById('home')?.scrollIntoView({ behavior: 'smooth' })} className="block text-gray-300 transition-colors text-left text-sm md:text-base">Home</button>
+                <button onClick={() => document.getElementById('wetenschap')?.scrollIntoView({ behavior: 'smooth' })} className="block text-gray-300 transition-colors text-left text-sm md:text-base">Wetenschap</button>
+                <button onClick={() => document.getElementById('programma')?.scrollIntoView({ behavior: 'smooth' })} className="block text-gray-300 transition-colors text-left text-sm md:text-base">Programma</button>
+                <button onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })} className="block text-gray-300 transition-colors text-left text-sm md:text-base">Contact</button>
               </div>
             </div>
           </div>

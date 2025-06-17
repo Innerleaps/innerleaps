@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -25,6 +24,7 @@ export default {
 			'xl': '1280px',
 			'2xl': '1400px',
 			'nav-lg': '1200px', // Custom breakpoint for navigation
+			'nav-xl': '1270px', // New breakpoint for better navigation spacing
 		},
 		extend: {
 			fontFamily: {
