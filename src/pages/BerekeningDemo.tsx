@@ -241,9 +241,7 @@ const BerekeningDemo = () => {
 
       {/* Sticky CTA Button rechtsonderin */}
       <div className="fixed bottom-6 right-6 z-40">
-        <Button onClick={openCalendar} className="bg-brand-green hover:bg-brand-green-light text-white font-semibold py-5 px-8 rounded-lg text-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
-          Plan een gesprek
-        </Button>
+        <Button onClick={openCalendar} className="bg-brand-green hover:bg-brand-green-light text-white font-semibold py-5 px-8 rounded-lg text-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">Ontdek de mogelijkheden en maak kennis</Button>
       </div>
     </div>;
 };
