@@ -59,7 +59,7 @@ const Navigation = () => {
         <div className="container-custom">
           <div className="flex justify-between items-center py-4">
             {/* Logo */}
-            <div className="flex flex-col items-start">
+            <div className="flex flex-col items-start min-w-0 flex-shrink-0">
               <Link to="/" className="text-2xl font-bold text-brand-blue hover:text-brand-blue/80 transition-colors">
                 Halt.academy
               </Link>
@@ -67,13 +67,13 @@ const Navigation = () => {
             </div>
 
             {/* Desktop Navigation */}
-            <div className="hidden md:flex items-center space-x-8">
+            <div className="hidden md:flex items-center space-x-4 lg:space-x-6 xl:space-x-8 flex-1 justify-center min-w-0 mx-4">
               {navItems.map(item => 
                 item.isLink ? (
                   <Link 
                     key={item.label}
                     to={item.href}
-                    className="text-brand-gray-dark hover:text-brand-blue transition-colors duration-300 font-medium"
+                    className="text-brand-gray-dark hover:text-brand-blue transition-colors duration-300 font-medium text-sm lg:text-base whitespace-nowrap"
                   >
                     {item.label}
                   </Link>
@@ -81,7 +81,7 @@ const Navigation = () => {
                   <button 
                     key={item.label}
                     onClick={() => scrollToSection(item.href)}
-                    className="text-brand-gray-dark hover:text-brand-blue transition-colors duration-300 font-medium cursor-pointer"
+                    className="text-brand-gray-dark hover:text-brand-blue transition-colors duration-300 font-medium text-sm lg:text-base whitespace-nowrap cursor-pointer"
                   >
                     {item.label}
                   </button>
@@ -90,7 +90,7 @@ const Navigation = () => {
             </div>
 
             {/* CTA Buttons */}
-            <div className="hidden md:flex items-center space-x-4">
+            <div className="hidden md:flex items-center space-x-4 flex-shrink-0">
               {/* Hide this button on screens smaller than 1200px but larger than md */}
               <Button 
                 variant="outline" 
@@ -101,7 +101,7 @@ const Navigation = () => {
               </Button>
               <Button 
                 onClick={() => setIsCalculatorOpen(true)} 
-                className="bg-brand-blue hover:bg-brand-blue-dark text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+                className="bg-brand-blue hover:bg-brand-blue-dark text-white font-semibold py-3 px-4 lg:px-6 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 text-sm lg:text-base"
               >
                 Bereken besparing
               </Button>
