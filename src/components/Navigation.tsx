@@ -59,10 +59,11 @@ const Navigation = () => {
         <div className="container-custom">
           <div className="flex justify-between items-center py-4">
             {/* Logo */}
-            <div className="flex items-center">
+            <div className="flex flex-col items-start">
               <Link to="/" className="text-2xl font-bold text-brand-blue hover:text-brand-blue/80 transition-colors">
                 Halt.academy
               </Link>
+              <span className="text-xs text-brand-gray-medium mt-1">40+ jaar wetenschap</span>
             </div>
 
             {/* Desktop Navigation */}
@@ -90,9 +91,10 @@ const Navigation = () => {
 
             {/* CTA Buttons */}
             <div className="hidden md:flex items-center space-x-4">
+              {/* Hide this button on screens smaller than 1200px but larger than md */}
               <Button 
                 variant="outline" 
-                className="border-2 border-brand-blue text-brand-blue hover:bg-brand-blue hover:text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300" 
+                className="hidden xl:flex border-2 border-brand-blue text-brand-blue hover:bg-brand-blue hover:text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300" 
                 onClick={() => window.open('https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1wwDnoAHyFrV0M1FxwmbcMa9ewkDxTDdwQObwPKF-WX-wZV9DssZKtb1haoeP5qXDLenQlZt_R', '_blank')}
               >
                 Vrijblijvend gesprek
