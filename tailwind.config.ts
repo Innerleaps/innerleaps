@@ -22,6 +22,18 @@ export default {
 			fontFamily: {
 				'sans': ['Inter', 'sans-serif'],
 			},
+			fontSize: {
+				'xs': ['0.875rem', { lineHeight: '1.5' }],    // 14px -> 16px equivalent
+				'sm': ['1rem', { lineHeight: '1.5' }],        // 16px
+				'base': ['1.125rem', { lineHeight: '1.6' }],  // 18px
+				'lg': ['1.25rem', { lineHeight: '1.6' }],     // 20px
+				'xl': ['1.375rem', { lineHeight: '1.5' }],    // 22px
+				'2xl': ['1.5rem', { lineHeight: '1.4' }],     // 24px
+				'3xl': ['1.875rem', { lineHeight: '1.3' }],   // 30px
+				'4xl': ['2.25rem', { lineHeight: '1.2' }],    // 36px
+				'5xl': ['3rem', { lineHeight: '1.1' }],       // 48px
+				'6xl': ['3.75rem', { lineHeight: '1' }],      // 60px
+			},
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
@@ -56,16 +68,17 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
-				// Professional color scheme for Halt.academy
+				// Verbeterde contrasten voor toegankelijkheid
 				brand: {
-					blue: '#1e3a8a',
+					blue: '#1e40af',           // Donkerder voor beter contrast
 					'blue-light': '#3b82f6',
-					'blue-dark': '#1e40af',
-					green: '#059669',
-					'green-light': '#10b981',
+					'blue-dark': '#1e3a8a',
+					green: '#047857',          // Donkerder groen voor beter contrast
+					'green-light': '#059669',
+					'green-dark': '#065f46',   // Nieuwe donkere variant
 					'gray-light': '#f8fafc',
-					'gray-medium': '#64748b',
-					'gray-dark': '#334155',
+					'gray-medium': '#475569',  // Donkerder voor beter contrast
+					'gray-dark': '#1e293b',    // Nog donkerder voor optimaal contrast
 				}
 			},
 			borderRadius: {
