@@ -212,9 +212,7 @@ const BerekeningDemo = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-brand-green hover:bg-brand-green-light text-white px-8 py-4 text-lg" onClick={openCalendar}>
-                Plan een gesprek
-              </Button>
+              <Button size="lg" className="bg-brand-green hover:bg-brand-green-light text-white px-8 py-4 text-lg" onClick={openCalendar}>Ontdek de mogelijkheden</Button>
               <Button variant="outline" size="lg" className="border-2 border-brand-blue text-brand-blue hover:bg-brand-blue hover:text-white px-8 py-4 text-lg" onClick={() => navigate('/')}>
                 <ArrowLeft className="h-5 w-5 mr-2" />
                 Terug naar home
