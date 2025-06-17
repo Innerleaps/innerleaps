@@ -1,20 +1,31 @@
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
-import { ArrowDown } from 'lucide-react';
+import { ArrowDown, Award } from 'lucide-react';
 import CalculatorModal from './CalculatorModal';
+
 const HeroSection = () => {
   const [isCalculatorOpen, setIsCalculatorOpen] = useState(false);
-  return <>
+
+  return (
+    <>
       <section id="home" className="bg-gradient-to-br from-brand-blue to-brand-blue-dark text-white section-padding overflow-hidden">
         <div className="container-custom">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-8 animate-fade-in">
               <div className="space-y-6">
+                {/* 40+ Years Research Badge */}
+                <div className="inline-flex items-center bg-white/20 backdrop-blur-sm text-white px-4 py-2 rounded-full text-sm font-semibold">
+                  <Award className="h-4 w-4 mr-2" />
+                  Gebaseerd op 40+ jaar wetenschappelijk onderzoek
+                </div>
+
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
                   <span className="text-brand-green-light">30% minder</span> ziekteverzuim<br />
                   <span className="text-brand-green-light">31% hogere</span> medewerkerretentie
                 </h1>
-                <p className="text-xl md:text-2xl text-blue-100 leading-relaxed">Wetenschappelijk bewezen stressreductieprogramma dat meetbare bedrijfsresultaten oplevert in 8 weken</p>
+                <p className="text-xl md:text-2xl text-blue-100 leading-relaxed">
+                  Wetenschappelijk bewezen stressreductieprogramma dat meetbare bedrijfsresultaten oplevert in 8 weken
+                </p>
               </div>
 
               <div className="flex flex-col sm:flex-row gap-4">
@@ -41,7 +52,11 @@ const HeroSection = () => {
             <div className="relative animate-scale-in">
               <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 shadow-2xl max-w-md mx-auto">
                 <div className="space-y-6">
-                  <h3 className="text-2xl font-semibold mb-6">Direct meetbare resultaten:</h3>
+                  <div className="text-center">
+                    <h3 className="text-2xl font-semibold mb-2">Direct meetbare resultaten:</h3>
+                    <p className="text-blue-200 text-sm">Gevalideerd door 40+ jaar MBSR onderzoek</p>
+                  </div>
+                  
                   <div className="space-y-4">
                     <div className="flex items-center justify-between p-3 bg-white/20 rounded-lg">
                       <span className="font-medium">Ziekteverzuim reductie</span>
@@ -72,6 +87,8 @@ const HeroSection = () => {
       </section>
 
       <CalculatorModal isOpen={isCalculatorOpen} onClose={() => setIsCalculatorOpen(false)} />
-    </>;
+    </>
+  );
 };
+
 export default HeroSection;

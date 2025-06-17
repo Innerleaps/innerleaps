@@ -1,9 +1,8 @@
-
 import Navigation from '@/components/Navigation';
 import StickyCtaButtons from '@/components/StickyCtaButtons';
 import { useEffect } from 'react';
 import { Button } from '@/components/ui/button';
-import { ArrowLeft, BookOpen, BarChart3, Brain, Heart, Users, Shield, TrendingUp } from 'lucide-react';
+import { ArrowLeft, BookOpen, BarChart3, Brain, Heart, Users, Shield, TrendingUp, Award } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const Wetenschap = () => {
@@ -107,13 +106,45 @@ const Wetenschap = () => {
               Terug naar home
             </Link>
             
+            {/* 40+ Years Badge */}
+            <div className="inline-flex items-center bg-brand-blue text-white px-4 py-2 rounded-full text-sm font-semibold mb-6">
+              <Award className="h-4 w-4 mr-2" />
+              40+ jaar wetenschappelijk onderzoek
+            </div>
+            
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-brand-gray-dark mb-6">
               De Wetenschap Achter Halt.academy
             </h1>
             
             <p className="text-xl text-brand-gray-medium leading-relaxed mb-8">
-              Op deze pagina duiken we dieper in de wetenschappelijke fundamenten van ons programma. De effectiviteit van stressreductietraining, gebaseerd op de principes van Mindfulness-Based Stress Reduction (MBSR), is uitgebreid onderzocht in diverse sectoren en contexten. Dit rigoureuze onderzoek toont consistent aan dat investeren in de mentale veerkracht van medewerkers leidt tot aantoonbare verbeteringen in bedrijfsresultaten, met name op het gebied van verzuim en retentie.
+              Ons programma is gebaseerd op <strong>meer dan 40 jaar wetenschappelijk onderzoek</strong> naar Mindfulness-Based Stress Reduction (MBSR), ontwikkeld door Jon Kabat-Zinn in 1979. Deze rigoureuze onderzoekstraditie toont consistent aan dat investeren in de mentale veerkracht van medewerkers leidt tot aantoonbare verbeteringen in bedrijfsresultaten, met name op het gebied van verzuim en retentie.
             </p>
+
+            {/* Research Heritage Section */}
+            <div className="bg-white rounded-xl p-6 shadow-lg mb-8">
+              <h3 className="text-2xl font-semibold text-brand-gray-dark mb-4 flex items-center">
+                <BookOpen className="h-6 w-6 mr-2 text-brand-blue" />
+                Wetenschappelijke Erfenis
+              </h3>
+              <div className="grid md:grid-cols-2 gap-6">
+                <div>
+                  <h4 className="font-semibold text-brand-gray-dark mb-2">1979 - Oorsprong</h4>
+                  <p className="text-brand-gray-medium">Jon Kabat-Zinn ontwikkelt MBSR aan de University of Massachusetts Medical School</p>
+                </div>
+                <div>
+                  <h4 className="font-semibold text-brand-gray-dark mb-2">2000+ Studies</h4>
+                  <p className="text-brand-gray-medium">Meer dan 2000 peer-reviewed onderzoeken naar de effectiviteit van MBSR</p>
+                </div>
+                <div>
+                  <h4 className="font-semibold text-brand-gray-dark mb-2">40+ Landen</h4>
+                  <p className="text-brand-gray-medium">MBSR wordt wereldwijd toegepast in ziekenhuizen, universiteiten en bedrijven</p>
+                </div>
+                <div>
+                  <h4 className="font-semibold text-brand-gray-dark mb-2">Evidence-Based</h4>
+                  <p className="text-brand-gray-medium">Gevalideerd door neurowetenschappelijk en klinisch onderzoek</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -121,9 +152,12 @@ const Wetenschap = () => {
       {/* Key Findings */}
       <section className="bg-white section-padding">
         <div className="container-custom">
-          <h2 className="text-3xl md:text-4xl font-bold text-brand-gray-dark text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold text-brand-gray-dark text-center mb-4">
             Directe Impact op Verzuim en Retentie
           </h2>
+          <p className="text-center text-brand-gray-medium mb-12 max-w-2xl mx-auto">
+            Vier decennia van onderzoek bevestigen de effectiviteit van MBSR in arbeidsomgevingen
+          </p>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
             {keyFindings.map((finding, index) => {
