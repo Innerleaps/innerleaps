@@ -27,7 +27,7 @@ const Navigation = () => {
 
   const navItems = [
     {
-      label: 'Wetenschap',
+      label: 'De Wetenschap',
       href: '/wetenschap',
       isLink: true
     },
@@ -58,22 +58,22 @@ const Navigation = () => {
       <nav className="bg-white shadow-lg sticky top-0 z-50">
         <div className="container-custom">
           <div className="flex justify-between items-center py-4">
-            {/* Logo - More spacing to prevent overlap */}
-            <div className="flex flex-col items-start flex-shrink-0 mr-8 lg:mr-10 nav-xl:mr-12">
-              <Link to="/" className="text-2xl md:text-3xl font-bold text-brand-blue transition-colors">
+            {/* Logo */}
+            <div className="flex flex-col items-start min-w-0 flex-shrink-0">
+              <Link to="/" className="text-2xl font-bold text-brand-blue hover:text-brand-blue/80 transition-colors">
                 Halt.academy
               </Link>
-              <span className="text-sm text-brand-gray-medium mt-1">40+ jaar wetenschap</span>
+              <span className="text-xs text-brand-gray-medium mt-1">40+ jaar wetenschap</span>
             </div>
 
-            {/* Desktop Navigation - Better spacing and responsive hiding */}
-            <div className="hidden lg:flex items-center space-x-1 nav-lg:space-x-3 nav-xl:space-x-4 xl:space-x-6 flex-1 justify-center min-w-0">
+            {/* Desktop Navigation */}
+            <div className="hidden md:flex items-center space-x-4 lg:space-x-6 xl:space-x-8 flex-1 justify-center min-w-0 mx-4">
               {navItems.map(item => 
                 item.isLink ? (
                   <Link 
                     key={item.label}
                     to={item.href}
-                    className="text-brand-gray-dark hover:text-brand-blue transition-colors duration-300 font-medium text-base whitespace-nowrap px-1 nav-lg:px-2"
+                    className="text-brand-gray-dark hover:text-brand-blue transition-colors duration-300 font-medium text-sm lg:text-base whitespace-nowrap"
                   >
                     {item.label}
                   </Link>
@@ -81,7 +81,7 @@ const Navigation = () => {
                   <button 
                     key={item.label}
                     onClick={() => scrollToSection(item.href)}
-                    className="text-brand-gray-dark hover:text-brand-blue transition-colors duration-300 font-medium text-base whitespace-nowrap cursor-pointer px-1 nav-lg:px-2"
+                    className="text-brand-gray-dark hover:text-brand-blue transition-colors duration-300 font-medium text-sm lg:text-base whitespace-nowrap cursor-pointer"
                   >
                     {item.label}
                   </button>
@@ -89,32 +89,30 @@ const Navigation = () => {
               )}
             </div>
 
-            {/* CTA Buttons - Progressive hiding based on new breakpoints */}
-            <div className="hidden lg:flex items-center space-x-2 xl:space-x-4 flex-shrink-0">
-              {/* Hide vrijblijvend gesprek button below nav-xl (1270px) instead of 2xl (1400px) */}
+            {/* CTA Buttons */}
+            <div className="hidden md:flex items-center space-x-4 flex-shrink-0">
+              {/* Hide this button on screens smaller than 1200px but larger than md */}
               <Button 
                 variant="outline" 
-                className="hidden nav-xl:flex border-2 border-brand-blue text-brand-blue font-semibold py-3 px-4 xl:px-6 rounded-lg transition-all duration-300 text-base transform hover:-translate-y-1 hover:shadow-xl" 
+                className="hidden xl:flex border-2 border-brand-blue text-brand-blue hover:bg-brand-blue hover:text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300" 
                 onClick={() => window.open('https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1wwDnoAHyFrV0M1FxwmbcMa9ewkDxTDdwQObwPKF-WX-wZV9DssZKtb1haoeP5qXDLenQlZt_R', '_blank')}
               >
                 Vrijblijvend gesprek
               </Button>
-              {/* Hide bereken besparing button below 1200px */}
               <Button 
                 onClick={() => setIsCalculatorOpen(true)} 
-                className="hidden nav-lg:flex bg-brand-blue text-white font-semibold py-3 px-4 lg:px-6 rounded-lg transition-all duration-300 shadow-lg text-base transform hover:-translate-y-1 hover:shadow-xl"
+                className="bg-brand-blue hover:bg-brand-blue-dark text-white font-semibold py-3 px-4 lg:px-6 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 text-sm lg:text-base"
               >
                 Bereken besparing
               </Button>
             </div>
 
             {/* Mobile menu button */}
-            <div className="lg:hidden">
+            <div className="md:hidden">
               <Button 
                 variant="ghost" 
                 size="sm" 
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
-                className="text-brand-gray-dark"
               >
                 {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
               </Button>
@@ -123,7 +121,7 @@ const Navigation = () => {
 
           {/* Mobile Navigation */}
           {isMenuOpen && (
-            <div className="lg:hidden pb-4">
+            <div className="md:hidden pb-4">
               <div className="flex flex-col space-y-4">
                 {navItems.map(item => 
                   item.isLink ? (
@@ -131,7 +129,7 @@ const Navigation = () => {
                       key={item.label}
                       to={item.href}
                       onClick={() => setIsMenuOpen(false)}
-                      className="text-brand-gray-dark hover:text-brand-blue transition-colors duration-300 font-medium py-2 text-left text-base"
+                      className="text-brand-gray-dark hover:text-brand-blue transition-colors duration-300 font-medium py-2 text-left"
                     >
                       {item.label}
                     </Link>
@@ -139,7 +137,7 @@ const Navigation = () => {
                     <button 
                       key={item.label}
                       onClick={() => scrollToSection(item.href)}
-                      className="text-brand-gray-dark hover:text-brand-blue transition-colors duration-300 font-medium py-2 text-left cursor-pointer text-base"
+                      className="text-brand-gray-dark hover:text-brand-blue transition-colors duration-300 font-medium py-2 text-left cursor-pointer"
                     >
                       {item.label}
                     </button>
@@ -148,7 +146,7 @@ const Navigation = () => {
                 <div className="flex flex-col space-y-3 pt-4">
                   <Button 
                     variant="outline" 
-                    className="border-2 border-brand-blue text-brand-blue font-semibold py-3 px-6 rounded-lg transition-all duration-300 w-full text-base transform hover:-translate-y-1 hover:shadow-xl" 
+                    className="border-2 border-brand-blue text-brand-blue hover:bg-brand-blue hover:text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 w-full" 
                     onClick={() => {
                       window.open('https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1wwDnoAHyFrV0M1FxwmbcMa9ewkDxTDdwQObwPKF-WX-wZV9DssZKtb1haoeP5qXDLenQlZt_R', '_blank');
                       setIsMenuOpen(false);
@@ -157,7 +155,7 @@ const Navigation = () => {
                     Vrijblijvend gesprek
                   </Button>
                   <Button 
-                    className="bg-brand-blue text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 w-full text-base transform hover:-translate-y-1 hover:shadow-xl" 
+                    className="bg-brand-blue hover:bg-brand-blue-dark text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 w-full" 
                     onClick={() => {
                       setIsCalculatorOpen(true);
                       setIsMenuOpen(false);

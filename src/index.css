@@ -8,24 +8,24 @@
 @layer base {
   :root {
     --background: 255 255 255;
-    --foreground: 30 41 59;
+    --foreground: 15 23 42;
 
     --card: 255 255 255;
-    --card-foreground: 30 41 59;
+    --card-foreground: 15 23 42;
 
     --popover: 255 255 255;
-    --popover-foreground: 30 41 59;
+    --popover-foreground: 15 23 42;
 
-    --primary: 30 64 175;
+    --primary: 30 58 138;
     --primary-foreground: 248 250 252;
 
     --secondary: 248 250 252;
-    --secondary-foreground: 30 64 175;
+    --secondary-foreground: 30 58 138;
 
     --muted: 248 250 252;
-    --muted-foreground: 71 85 105;
+    --muted-foreground: 100 116 139;
 
-    --accent: 4 120 87;
+    --accent: 5 150 105;
     --accent-foreground: 248 250 252;
 
     --destructive: 239 68 68;
@@ -33,23 +33,23 @@
 
     --border: 226 232 240;
     --input: 226 232 240;
-    --ring: 30 64 175;
+    --ring: 30 58 138;
 
     --radius: 0.75rem;
   }
 
   .dark {
-    --background: 30 41 59;
+    --background: 15 23 42;
     --foreground: 248 250 252;
 
-    --card: 30 41 59;
+    --card: 15 23 42;
     --card-foreground: 248 250 252;
 
-    --popover: 30 41 59;
+    --popover: 15 23 42;
     --popover-foreground: 248 250 252;
 
     --primary: 59 130 246;
-    --primary-foreground: 30 41 59;
+    --primary-foreground: 15 23 42;
 
     --secondary: 51 65 85;
     --secondary-foreground: 248 250 252;
@@ -58,7 +58,7 @@
     --muted-foreground: 148 163 184;
 
     --accent: 16 185 129;
-    --accent-foreground: 30 41 59;
+    --accent-foreground: 15 23 42;
 
     --destructive: 220 38 38;
     --destructive-foreground: 248 250 252;
@@ -75,60 +75,25 @@
   }
 
   body {
-    @apply bg-background text-foreground font-sans text-base;
-    /* Remove any yellow background that might appear on scroll */
-    background-color: white !important;
+    @apply bg-background text-foreground font-sans;
   }
 
   h1, h2, h3, h4, h5, h6 {
     @apply font-semibold;
   }
-
-  /* Remove any yellow styling that might appear */
-  *:focus,
-  *:hover,
-  *:active {
-    background-color: transparent !important;
-  }
-
-  /* Specifically target any elements that might have yellow */
-  .bg-yellow-100,
-  .bg-yellow-200,
-  .bg-yellow-300,
-  .hover\:bg-yellow-100:hover,
-  .hover\:bg-yellow-200:hover,
-  .hover\:bg-yellow-300:hover {
-    background-color: white !important;
-  }
-
-  /* Ensure scroll behavior doesn't add yellow backgrounds */
-  html,
-  body {
-    background: white !important;
-    overscroll-behavior: none;
-  }
-
-  /* Remove yellow from any potential browser autofill */
-  input:-webkit-autofill,
-  input:-webkit-autofill:hover,
-  input:-webkit-autofill:focus,
-  input:-webkit-autofill:active {
-    -webkit-box-shadow: 0 0 0 30px white inset !important;
-    -webkit-text-fill-color: #1e293b !important;
-  }
 }
 
 @layer components {
   .btn-primary {
-    @apply bg-brand-blue text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 text-base;
+    @apply bg-brand-blue hover:bg-brand-blue-dark text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5;
   }
   
   .btn-secondary {
-    @apply bg-white border-2 border-brand-blue text-brand-blue font-semibold py-3 px-6 rounded-lg transition-all duration-300 text-base;
+    @apply bg-white border-2 border-brand-blue text-brand-blue hover:bg-brand-blue hover:text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300;
   }
   
   .section-padding {
-    @apply py-16 md:py-20 lg:py-24;
+    @apply py-16 md:py-24;
   }
   
   .container-custom {
