@@ -59,7 +59,7 @@ const Navigation = () => {
         <div className="container-custom">
           <div className="flex justify-between items-center py-4">
             {/* Logo */}
-            <div className="flex flex-col items-start min-w-0 flex-shrink-0">
+            <div className="flex flex-col items-start min-w-0 flex-shrink-0 mr-4">
               <Link to="/" className="text-2xl md:text-3xl font-bold text-brand-blue hover:text-brand-blue-dark transition-colors">
                 Halt.academy
               </Link>
@@ -67,13 +67,13 @@ const Navigation = () => {
             </div>
 
             {/* Desktop Navigation */}
-            <div className="hidden lg:flex items-center space-x-6 xl:space-x-8 flex-1 justify-center min-w-0 mx-4">
+            <div className="hidden lg:flex items-center space-x-3 xl:space-x-6 flex-1 justify-center min-w-0 mx-2">
               {navItems.map(item => 
                 item.isLink ? (
                   <Link 
                     key={item.label}
                     to={item.href}
-                    className="text-brand-gray-dark hover:text-brand-blue transition-colors duration-300 font-medium text-base whitespace-nowrap"
+                    className="text-brand-gray-dark hover:text-brand-blue transition-colors duration-300 font-medium text-base whitespace-nowrap px-2"
                   >
                     {item.label}
                   </Link>
@@ -81,7 +81,7 @@ const Navigation = () => {
                   <button 
                     key={item.label}
                     onClick={() => scrollToSection(item.href)}
-                    className="text-brand-gray-dark hover:text-brand-blue transition-colors duration-300 font-medium text-base whitespace-nowrap cursor-pointer"
+                    className="text-brand-gray-dark hover:text-brand-blue transition-colors duration-300 font-medium text-base whitespace-nowrap cursor-pointer px-2"
                   >
                     {item.label}
                   </button>
@@ -90,11 +90,11 @@ const Navigation = () => {
             </div>
 
             {/* CTA Buttons */}
-            <div className="hidden lg:flex items-center space-x-4 flex-shrink-0">
-              {/* Hide this button on screens smaller than 1200px but larger than lg */}
+            <div className="hidden lg:flex items-center space-x-2 xl:space-x-4 flex-shrink-0">
+              {/* Hide vrijblijvend gesprek button on smaller screens but show on xl+ */}
               <Button 
                 variant="outline" 
-                className="hidden xl:flex border-2 border-brand-blue text-brand-blue hover:bg-brand-blue hover:text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 text-base" 
+                className="hidden xl:flex border-2 border-brand-blue text-brand-blue hover:bg-brand-blue hover:text-white font-semibold py-3 px-4 xl:px-6 rounded-lg transition-all duration-300 text-base" 
                 onClick={() => window.open('https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1wwDnoAHyFrV0M1FxwmbcMa9ewkDxTDdwQObwPKF-WX-wZV9DssZKtb1haoeP5qXDLenQlZt_R', '_blank')}
               >
                 Vrijblijvend gesprek
