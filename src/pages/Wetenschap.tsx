@@ -4,96 +4,77 @@ import { useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { ArrowLeft, BookOpen, BarChart3, Brain, Heart, Users, Shield, TrendingUp, Award } from 'lucide-react';
 import { Link } from 'react-router-dom';
-
 const Wetenschap = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-
-  const keyFindings = [
-    {
-      icon: TrendingUp,
-      percentage: "19-30%",
-      title: "Minder verzuim",
-      study: "Virgili (2015) & Aikens et al. (2014)",
-      color: "text-red-600"
-    },
-    {
-      icon: Users,
-      percentage: "17-31%",
-      title: "Betere retentie",
-      study: "Dane & Brummel (2014) & Good et al. (2016)",
-      color: "text-brand-green"
-    },
-    {
-      icon: Shield,
-      percentage: "40-58%",
-      title: "Minder werkstress",
-      study: "Khoury et al. (2015) & Janssen et al. (2018)",
-      color: "text-brand-blue"
-    },
-    {
-      icon: Brain,
-      percentage: "32%",
-      title: "Minder angst & depressie",
-      study: "Strauss et al. (2018)",
-      color: "text-purple-600"
-    }
-  ];
-
-  const mechanismen = [
-    {
-      title: "Stress en Burn-out Reductie",
-      percentage: "40-58%",
-      description: "Significante reductie in ervaren werkstress door verbeterde emotieregulatie en vermindering van piekeren.",
-      studies: ["Khoury et al. (2015)", "Janssen et al. (2018)"]
-    },
-    {
-      title: "Verbetering van Mentale Gezondheid",
-      percentage: "32%",
-      description: "Vermindering van symptomen van angst en depressie, veelvoorkomende oorzaken van psychisch verzuim.",
-      studies: ["Strauss et al. (2018)"]
-    },
-    {
-      title: "Bevordering van Slaapkwaliteit",
-      percentage: "20%",
-      description: "Verbetering in gerapporteerde slaapkwaliteit, essentieel voor herstel en productiviteit.",
-      studies: ["Black et al. (2015)"]
-    },
-    {
-      title: "Versterking van het Immuunsysteem",
-      percentage: "15%",
-      description: "Verbetering in immuunresponsen, wat bijdraagt aan lagere vatbaarheid voor ziekten.",
-      studies: ["Black & Slavich (2016)"]
-    },
-    {
-      title: "Verhoging van Werkgeluk en Tevredenheid",
-      percentage: "26%",
-      description: "Toename in gerapporteerde werktevredenheid door beter vermogen om positieve aspecten te waarderen.",
-      studies: ["Hülsheger et al. (2013)"]
-    },
-    {
-      title: "Stimulering van Werkbetrokkenheid",
-      percentage: "22%",
-      description: "Verhoging in werkbetrokkenheid door verbeterde aandacht en focus.",
-      studies: ["Leroy et al. (2013)"]
-    },
-    {
-      title: "Opbouw van Werkgerelateerde Veerkracht",
-      percentage: "35%",
-      description: "Versterking in werkgerelateerde veerkracht voor beter omgaan met stressvolle situaties.",
-      studies: ["Johnson et al. (2020)"]
-    },
-    {
-      title: "Verbetering van Werk-Privébalans",
-      percentage: "27%",
-      description: "Verbetering in ervaren werk-privébalans door beter leren grenzen stellen.",
-      studies: ["Michel et al. (2014)"]
-    }
-  ];
-
-  return (
-    <div className="min-h-screen bg-brand-gray-light">
+  const keyFindings = [{
+    icon: TrendingUp,
+    percentage: "19-30%",
+    title: "Minder verzuim",
+    study: "Virgili (2015) & Aikens et al. (2014)",
+    color: "text-red-600"
+  }, {
+    icon: Users,
+    percentage: "17-31%",
+    title: "Betere retentie",
+    study: "Dane & Brummel (2014) & Good et al. (2016)",
+    color: "text-brand-green"
+  }, {
+    icon: Shield,
+    percentage: "40-58%",
+    title: "Minder werkstress",
+    study: "Khoury et al. (2015) & Janssen et al. (2018)",
+    color: "text-brand-blue"
+  }, {
+    icon: Brain,
+    percentage: "32%",
+    title: "Minder angst & depressie",
+    study: "Strauss et al. (2018)",
+    color: "text-purple-600"
+  }];
+  const mechanismen = [{
+    title: "Stress en Burn-out Reductie",
+    percentage: "40-58%",
+    description: "Significante reductie in ervaren werkstress door verbeterde emotieregulatie en vermindering van piekeren.",
+    studies: ["Khoury et al. (2015)", "Janssen et al. (2018)"]
+  }, {
+    title: "Verbetering van Mentale Gezondheid",
+    percentage: "32%",
+    description: "Vermindering van symptomen van angst en depressie, veelvoorkomende oorzaken van psychisch verzuim.",
+    studies: ["Strauss et al. (2018)"]
+  }, {
+    title: "Bevordering van Slaapkwaliteit",
+    percentage: "20%",
+    description: "Verbetering in gerapporteerde slaapkwaliteit, essentieel voor herstel en productiviteit.",
+    studies: ["Black et al. (2015)"]
+  }, {
+    title: "Versterking van het Immuunsysteem",
+    percentage: "15%",
+    description: "Verbetering in immuunresponsen, wat bijdraagt aan lagere vatbaarheid voor ziekten.",
+    studies: ["Black & Slavich (2016)"]
+  }, {
+    title: "Verhoging van Werkgeluk en Tevredenheid",
+    percentage: "26%",
+    description: "Toename in gerapporteerde werktevredenheid door beter vermogen om positieve aspecten te waarderen.",
+    studies: ["Hülsheger et al. (2013)"]
+  }, {
+    title: "Stimulering van Werkbetrokkenheid",
+    percentage: "22%",
+    description: "Verhoging in werkbetrokkenheid door verbeterde aandacht en focus.",
+    studies: ["Leroy et al. (2013)"]
+  }, {
+    title: "Opbouw van Werkgerelateerde Veerkracht",
+    percentage: "35%",
+    description: "Versterking in werkgerelateerde veerkracht voor beter omgaan met stressvolle situaties.",
+    studies: ["Johnson et al. (2020)"]
+  }, {
+    title: "Verbetering van Werk-Privébalans",
+    percentage: "27%",
+    description: "Verbetering in ervaren werk-privébalans door beter leren grenzen stellen.",
+    studies: ["Michel et al. (2014)"]
+  }];
+  return <div className="min-h-screen bg-brand-gray-light">
       <Navigation />
       <StickyCtaButtons />
       
@@ -101,10 +82,7 @@ const Wetenschap = () => {
       <section className="bg-brand-gray-light section-padding">
         <div className="container-custom">
           <div className="max-w-4xl mx-auto">
-            <Link to="/" className="inline-flex items-center text-brand-blue hover:text-brand-blue/80 transition-colors mb-8">
-              <ArrowLeft className="h-5 w-5 mr-2" />
-              Terug naar home
-            </Link>
+            
             
             {/* 40+ Years Badge */}
             <div className="inline-flex items-center bg-brand-blue text-white px-4 py-2 rounded-full text-sm font-semibold mb-6">
@@ -161,9 +139,8 @@ const Wetenschap = () => {
           
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
             {keyFindings.map((finding, index) => {
-              const IconComponent = finding.icon;
-              return (
-                <div key={index} className="bg-brand-gray-light rounded-xl p-6 text-center">
+            const IconComponent = finding.icon;
+            return <div key={index} className="bg-brand-gray-light rounded-xl p-6 text-center">
                   <div className={`inline-flex items-center justify-center w-16 h-16 rounded-full bg-white ${finding.color} mb-4`}>
                     <IconComponent className="h-8 w-8" />
                   </div>
@@ -176,9 +153,8 @@ const Wetenschap = () => {
                   <p className="text-sm text-brand-gray-medium">
                     {finding.study}
                   </p>
-                </div>
-              );
-            })}
+                </div>;
+          })}
           </div>
 
           <div className="prose prose-lg max-w-4xl mx-auto text-brand-gray-medium">
@@ -239,8 +215,7 @@ const Wetenschap = () => {
           </p>
 
           <div className="grid lg:grid-cols-2 gap-8">
-            {mechanismen.map((mechanisme, index) => (
-              <div key={index} className="bg-white rounded-xl p-6 shadow-lg">
+            {mechanismen.map((mechanisme, index) => <div key={index} className="bg-white rounded-xl p-6 shadow-lg">
                 <div className="flex items-start justify-between mb-4">
                   <h3 className="text-xl font-semibold text-brand-gray-dark flex-1">
                     {mechanisme.title}
@@ -255,14 +230,11 @@ const Wetenschap = () => {
                 </p>
                 
                 <div className="flex flex-wrap gap-2">
-                  {mechanisme.studies.map((study, studyIndex) => (
-                    <span key={studyIndex} className="inline-block bg-brand-gray-light text-brand-gray-dark text-xs px-3 py-1 rounded-full">
+                  {mechanisme.studies.map((study, studyIndex) => <span key={studyIndex} className="inline-block bg-brand-gray-light text-brand-gray-dark text-xs px-3 py-1 rounded-full">
                       {study}
-                    </span>
-                  ))}
+                    </span>)}
                 </div>
-              </div>
-            ))}
+              </div>)}
           </div>
         </div>
       </section>
@@ -290,18 +262,14 @@ const Wetenschap = () => {
             </div>
 
             <div className="space-y-4">
-              <Button 
-                className="btn-primary text-lg px-8 py-3 bg-zinc-950 hover:bg-zinc-800"
-                onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-              >
+              <Button className="btn-primary text-lg px-8 py-3 bg-zinc-950 hover:bg-zinc-800" onClick={() => window.scrollTo({
+              top: 0,
+              behavior: 'smooth'
+            })}>
                 Bereken uw besparing
               </Button>
               <div>
-                <Button 
-                  variant="outline" 
-                  className="btn-secondary text-lg px-8 py-3"
-                  onClick={() => window.open('https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1wwDnoAHyFrV0M1FxwmbcMa9ewkDxTDdwQObwPKF-WX-wZV9DssZKtb1haoeP5qXDLenQlZt_R', '_blank')}
-                >
+                <Button variant="outline" className="btn-secondary text-lg px-8 py-3" onClick={() => window.open('https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1wwDnoAHyFrV0M1FxwmbcMa9ewkDxTDdwQObwPKF-WX-wZV9DssZKtb1haoeP5qXDLenQlZt_R', '_blank')}>
                   Vrijblijvend gesprek plannen
                 </Button>
               </div>
@@ -343,8 +311,6 @@ const Wetenschap = () => {
           </div>
         </div>
       </footer>
-    </div>
-  );
+    </div>;
 };
-
 export default Wetenschap;
