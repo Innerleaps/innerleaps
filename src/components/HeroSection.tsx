@@ -1,14 +1,10 @@
-
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { ArrowDown, Award } from 'lucide-react';
 import CalculatorModal from './CalculatorModal';
-
 const HeroSection = () => {
   const [isCalculatorOpen, setIsCalculatorOpen] = useState(false);
-
-  return (
-    <>
+  return <>
       <section id="home" className="bg-gradient-to-br from-brand-blue to-brand-blue-dark text-white section-padding overflow-hidden">
         <div className="container-custom">
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
@@ -30,19 +26,10 @@ const HeroSection = () => {
               </div>
 
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button 
-                  size="lg" 
-                  className="bg-brand-green hover:bg-brand-green-light text-white font-semibold py-3 md:py-4 px-6 md:px-8 rounded-lg text-base md:text-lg transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:-translate-y-1" 
-                  onClick={() => setIsCalculatorOpen(true)}
-                >
+                <Button size="lg" className="bg-brand-green hover:bg-brand-green-light text-white font-semibold py-3 md:py-4 px-6 md:px-8 rounded-lg text-base md:text-lg transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:-translate-y-1" onClick={() => setIsCalculatorOpen(true)}>
                   Bereken mijn besparing
                 </Button>
-                <Button 
-                  variant="outline" 
-                  size="lg" 
-                  onClick={() => window.open('https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1wwDnoAHyFrV0M1FxwmbcMa9ewkDxTDdwQObwPKF-WX-wZV9DssZKtb1haoeP5qXDLenQlZt_R', '_blank')} 
-                  className="border-2 border-white hover:bg-white/10 font-semibold py-3 md:py-4 px-6 md:px-8 rounded-lg text-base md:text-lg transition-all duration-300 transform hover:-translate-y-1 text-white hover:text-white"
-                >
+                <Button variant="outline" size="lg" onClick={() => window.open('https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1wwDnoAHyFrV0M1FxwmbcMa9ewkDxTDdwQObwPKF-WX-wZV9DssZKtb1haoeP5qXDLenQlZt_R', '_blank')} className="border-2 border-white hover:bg-white/10 font-semibold py-3 md:py-4 px-6 md:px-8 rounded-lg text-base md:text-lg transition-all duration-300 transform hover:-translate-y-1 text-[#253b92]">
                   Kennis maken
                 </Button>
               </div>
@@ -97,8 +84,6 @@ const HeroSection = () => {
       </section>
 
       <CalculatorModal isOpen={isCalculatorOpen} onClose={() => setIsCalculatorOpen(false)} />
-    </>
-  );
+    </>;
 };
-
 export default HeroSection;
