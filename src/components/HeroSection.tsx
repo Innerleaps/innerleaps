@@ -1,75 +1,88 @@
+
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { ArrowDown, Award } from 'lucide-react';
 import CalculatorModal from './CalculatorModal';
+
 const HeroSection = () => {
   const [isCalculatorOpen, setIsCalculatorOpen] = useState(false);
-  return <>
+
+  return (
+    <>
       <section id="home" className="bg-gradient-to-br from-brand-blue to-brand-blue-dark text-white section-padding overflow-hidden">
         <div className="container-custom">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="space-y-8 animate-fade-in">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+            <div className="space-y-6 lg:space-y-8 animate-fade-in">
               <div className="space-y-6">
                 {/* 40+ Years Research Badge */}
-                <div className="inline-flex items-center bg-white/20 backdrop-blur-sm text-white px-4 py-2 rounded-full text-sm font-semibold">
+                <div className="inline-flex items-center bg-white/20 backdrop-blur-sm text-white px-4 py-2 rounded-full text-sm md:text-base font-semibold">
                   <Award className="h-4 w-4 mr-2" />
                   Gebaseerd op 40+ jaar wetenschappelijk onderzoek
                 </div>
 
-                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
+                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
                   <span className="text-brand-green-light">30% minder</span> ziekteverzuim<br />
                   <span className="text-brand-green-light">31% hogere</span> medewerkerretentie
                 </h1>
-                <p className="text-xl md:text-2xl text-blue-100 leading-relaxed">
+                <p className="text-lg sm:text-xl md:text-2xl text-blue-100 leading-relaxed">
                   Wetenschappelijk bewezen stressreductieprogramma dat meetbare bedrijfsresultaten oplevert in 8 weken
                 </p>
               </div>
 
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button size="lg" className="bg-brand-green hover:bg-brand-green-light text-white font-semibold py-4 px-8 rounded-lg text-lg transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:-translate-y-1" onClick={() => setIsCalculatorOpen(true)}>
+                <Button 
+                  size="lg" 
+                  className="w-full sm:w-auto bg-brand-green hover:bg-brand-green-light text-white font-semibold py-4 px-6 lg:px-8 rounded-lg text-base lg:text-lg transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:-translate-y-1" 
+                  onClick={() => setIsCalculatorOpen(true)}
+                >
                   Bereken mijn besparing
                 </Button>
-                <Button variant="outline" size="lg" onClick={() => window.open('https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1wwDnoAHyFrV0M1FxwmbcMa9ewkDxTDdwQObwPKF-WX-wZV9DssZKtb1haoeP5qXDLenQlZt_R', '_blank')} className="border-2 border-white hover:bg-white/10 font-semibold py-4 px-8 rounded-lg text-lg transition-all duration-300 transform hover:-translate-y-1 text-[#253b92]">
+                <Button 
+                  variant="outline" 
+                  size="lg" 
+                  onClick={() => window.open('https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1wwDnoAHyFrV0M1FxwmbcMa9ewkDxTDdwQObwPKF-WX-wZV9DssZKtb1haoeP5qXDLenQlZt_R', '_blank')} 
+                  className="w-full sm:w-auto border-2 border-white hover:bg-white/10 font-semibold py-4 px-6 lg:px-8 rounded-lg text-base lg:text-lg transition-all duration-300 transform hover:-translate-y-1 text-white"
+                >
                   Kennis maken
                 </Button>
               </div>
 
-              <div className="grid grid-cols-2 gap-8 pt-8">
+              <div className="grid grid-cols-2 gap-6 lg:gap-8 pt-6 lg:pt-8">
                 <div className="text-center">
-                  <div className="text-3xl md:text-4xl font-bold text-brand-green-light">8 weken</div>
-                  <div className="text-blue-200">Programma duur</div>
+                  <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-brand-green-light">8 weken</div>
+                  <div className="text-blue-200 text-sm md:text-base">Programma duur</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl md:text-4xl font-bold text-brand-green-light">40+ jaar </div>
-                  <div className="text-blue-200">Wetenschappelijk onderzoek</div>
+                  <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-brand-green-light">40+ jaar</div>
+                  <div className="text-blue-200 text-sm md:text-base">Wetenschappelijk onderzoek</div>
                 </div>
               </div>
             </div>
 
             <div className="relative animate-scale-in">
-              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 shadow-2xl max-w-md mx-auto">
+              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 lg:p-8 shadow-2xl max-w-md mx-auto">
                 <div className="space-y-6">
                   <div className="text-center">
-                    <h3 className="text-2xl font-semibold mb-2">Direct meetbare resultaten:</h3>
-                    <p className="text-blue-200 text-sm">Gevalideerd door 40+ jaar MBSR onderzoek</p>
+                    <h3 className="text-xl lg:text-2xl font-semibold mb-2">Direct meetbare resultaten:</h3>
+                    <p className="text-blue-200 text-sm lg:text-base">Gevalideerd door 40+ jaar MBSR onderzoek</p>
                   </div>
                   
                   <div className="space-y-4">
-                    <div className="flex items-center justify-between p-3 bg-white/20 rounded-lg">
-                      <span className="font-medium">Ziekteverzuim reductie</span>
-                      <span className="text-white font-bold">-30%</span>
+                    <div className="flex items-center justify-between p-3 lg:p-4 bg-white/20 rounded-lg">
+                      <span className="font-medium text-sm lg:text-base">Ziekteverzuim reductie</span>
+                      <span className="text-white font-bold text-lg lg:text-xl">-30%</span>
                     </div>
-                    <div className="flex items-center justify-between p-3 bg-white/20 rounded-lg">
-                      <span className="font-medium">Medewerkerretentie</span>
-                      <span className="text-white font-bold">+31%</span>
+                    <div className="flex items-center justify-between p-3 lg:p-4 bg-white/20 rounded-lg">
+                      <span className="font-medium text-sm lg:text-base">Medewerkerretentie</span>
+                      <span className="text-white font-bold text-lg lg:text-xl">+31%</span>
                     </div>
-                    <div className="flex items-center justify-between p-3 bg-white/20 rounded-lg">
-                      <span className="font-medium">Werkstress reductie</span>
-                      <span className="text-white font-bold">-40%</span>
+                    <div className="flex items-center justify-between p-3 lg:p-4 bg-white/20 rounded-lg">
+                      <span className="font-medium text-sm lg:text-base">Werkstress reductie</span>
+                      <span className="text-white font-bold text-lg lg:text-xl">-40%</span>
                     </div>
-                    <div className="flex items-center justify-between p-3 bg-white/20 rounded-lg">
-                      <span className="font-medium">Werktevredenheid</span>
-                      <span className="text-white font-bold">+26%</span>
+                    <div className="flex items-center justify-between p-3 lg:p-4 bg-white/20 rounded-lg">
+                      <span className="font-medium text-sm lg:text-base">Werktevredenheid</span>
+                      <span className="text-white font-bold text-lg lg:text-xl">+26%</span>
                     </div>
                   </div>
                 </div>
@@ -77,13 +90,15 @@ const HeroSection = () => {
             </div>
           </div>
 
-          <div className="flex justify-center mt-16">
+          <div className="flex justify-center mt-12 lg:mt-16">
             <ArrowDown className="h-8 w-8 text-brand-green-light animate-bounce" />
           </div>
         </div>
       </section>
 
       <CalculatorModal isOpen={isCalculatorOpen} onClose={() => setIsCalculatorOpen(false)} />
-    </>;
+    </>
+  );
 };
+
 export default HeroSection;

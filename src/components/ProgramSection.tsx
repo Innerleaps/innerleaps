@@ -62,13 +62,13 @@ const ProgramSection = () => {
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-brand-gray-dark">
             Ons Programma
           </h2>
-          <p className="text-xl text-brand-gray-medium max-w-4xl mx-auto leading-relaxed">
+          <p className="text-lg md:text-xl text-brand-gray-medium max-w-4xl mx-auto leading-relaxed">
             Een gestructureerd 8-weekse programma gericht op stressreductie en het verbeteren van werkprestaties. Gebaseerd op het MBSR-programma (Mindfulness-Based Stress Reduction) ontwikkeld door Jon Kabat-Zinn in 1979 aan de University of Massachusetts Medical Center, met focus op praktische bedrijfstoepassingen.
           </p>
         </div>
 
         {/* Program Features */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
           {programFeatures.map((feature, index) => {
             const IconComponent = feature.icon;
             return (
@@ -76,10 +76,10 @@ const ProgramSection = () => {
                 <div className="inline-flex items-center justify-center w-12 h-12 bg-brand-blue text-white rounded-lg mb-4">
                   <IconComponent className="h-6 w-6" />
                 </div>
-                <h3 className="text-lg font-semibold text-brand-gray-dark mb-2">
+                <h3 className="text-lg md:text-xl font-semibold text-brand-gray-dark mb-2">
                   {feature.title}
                 </h3>
-                <p className="text-brand-gray-medium text-base">
+                <p className="text-brand-gray-medium text-base leading-relaxed">
                   {feature.description}
                 </p>
               </div>
@@ -95,7 +95,7 @@ const ProgramSection = () => {
           
           <div className="text-center mb-12">
             <Link to="/programma">
-              <Button className="bg-brand-blue hover:bg-brand-blue-dark text-white font-semibold py-3 px-8 rounded-lg text-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+              <Button className="w-full sm:w-auto bg-brand-blue hover:bg-brand-blue-dark text-white font-semibold py-3 px-8 rounded-lg text-base md:text-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
                 Programma Details Bekijken
               </Button>
             </Link>
@@ -105,13 +105,13 @@ const ProgramSection = () => {
             {programSteps.map((step, index) => (
               <div key={index} className="bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 p-6">
                 <div className="mb-4">
-                  <div className="text-base text-brand-blue font-medium mb-2">
+                  <div className="text-base md:text-lg text-brand-blue font-medium mb-2">
                     Week {step.weeks}
                   </div>
-                  <h4 className="text-xl font-semibold text-brand-gray-dark mb-3">
+                  <h4 className="text-lg md:text-xl font-semibold text-brand-gray-dark mb-3">
                     {step.title}
                   </h4>
-                  <p className="text-brand-gray-medium leading-relaxed text-base">
+                  <p className="text-brand-gray-medium leading-relaxed text-base md:text-lg">
                     {step.description}
                   </p>
                 </div>
@@ -122,7 +122,7 @@ const ProgramSection = () => {
 
         <div className="text-center mt-12">
           <Link to="/programma">
-            <Button className="bg-brand-blue hover:bg-brand-blue-dark text-white font-semibold py-3 px-8 rounded-lg text-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+            <Button className="w-full sm:w-auto bg-brand-blue hover:bg-brand-blue-dark text-white font-semibold py-3 px-8 rounded-lg text-base md:text-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
               Programma Details Bekijken
             </Button>
           </Link>
