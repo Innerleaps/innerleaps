@@ -93,7 +93,7 @@ const Navigation = () => {
             <div className="hidden lg:flex items-center space-x-4 flex-shrink-0">
               <Button 
                 variant="outline" 
-                className="hidden xl:flex border-2 border-brand-blue text-brand-blue font-semibold py-3 px-6 rounded-lg text-base transition-all duration-300 transform hover:-translate-y-1" 
+                className="hidden xl:flex border-2 border-brand-blue text-brand-blue hover:text-brand-blue font-semibold py-3 px-6 rounded-lg text-base transition-all duration-300 transform hover:-translate-y-1" 
                 onClick={() => window.open('https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1wwDnoAHyFrV0M1FxwmbcMa9ewkDxTDdwQObwPKF-WX-wZV9DssZKtb1haoeP5qXDLenQlZt_R', '_blank')}
               >
                 Vrijblijvend gesprek
@@ -145,7 +145,7 @@ const Navigation = () => {
                 <div className="flex flex-col space-y-3 pt-4">
                   <Button 
                     variant="outline" 
-                    className="border-2 border-brand-blue text-brand-blue font-semibold py-3 px-6 rounded-lg text-base transition-all duration-300 w-full transform hover:-translate-y-1" 
+                    className="border-2 border-brand-blue text-brand-blue hover:text-brand-blue font-semibold py-3 px-6 rounded-lg text-base transition-all duration-300 w-full transform hover:-translate-y-1" 
                     onClick={() => {
                       window.open('https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1wwDnoAHyFrV0M1FxwmbcMa9ewkDxTDdwQObwPKF-WX-wZV9DssZKtb1haoeP5qXDLenQlZt_R', '_blank');
                       setIsMenuOpen(false);
