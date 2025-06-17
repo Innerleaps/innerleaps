@@ -25,41 +25,52 @@ const CalculatorModal = ({
     functie: '',
     company: '',
     employees: '',
-    yearlyCosts: '',
+    avgEmployeeCosts: '',
     currentAbsenteeism: '',
     currentTurnover: ''
   });
   const [dataConfirmed, setDataConfirmed] = useState(false);
 
   const calculateSavings = () => {
-    const employees = parseInt(formData.employees) || 0;
-    const yearlyCosts = parseInt(formData.yearlyCosts) || 0;
-    const currentAbsenteeism = parseFloat(formData.currentAbsenteeism) || 0;
-    const currentTurnover = parseFloat(formData.currentTurnover) || 0;
+    const AD = parseInt(formData.employees) || 0; // Aantal deelnemers
+    const GWS = parseInt(formData.avgEmployeeCosts) || 0; // Gemiddelde werkgeverskosten per deelnemer per jaar
+    const HZ = parseFloat(formData.currentAbsenteeism) || 0; // Huidig verzuimpercentage
+    const HV = parseFloat(formData.currentTurnover) || 0; // Huidig verlooppercentage
 
-    // Calculate using the corrected formulas
-    // Verzuimbesparing = Aantal deelnemers * Totale loonkosten per jaar * 2 * 24%
-    const verzuimbesparing = employees * yearlyCosts * 2 * 0.24;
-    
-    // Retentiebesparing = Loonkosten deelnemers per jaar * Huidig verlooppercentage * 24% * 150%
-    const retentiebesparing = yearlyCosts * (currentTurnover / 100) * 0.24 * 1.5;
-    
-    // MBSR programma investering = rondup(aantal deelnemers / 15) * 8250 per groep
-    const numberOfGroups = Math.ceil(employees / 15);
-    const mbsrInvestering = numberOfGroups * 8250;
-    
-    // Kostenbesparing door MBSR = (Verzuimbesparing + Retentiebesparing) - MBSR programma investering
-    const totalSaving = verzuimbesparing + retentiebesparing;
-    const netSaving = totalSaving - mbsrInvestering;
+    // Constanten
+    const VK = 2; // Verzuimkosten multiplier (Johns, 2010)
+    const MV = 0.24; // 24% minder verzuim door MBSR (gemiddelde 19-29% uit verschillende onderzoeken)
+    const RV = 0.24; // 24% retentieverbetering door MBSR (gemiddelde 17-31% uit verschillende onderzoeken)
+    const VKP = 1.5; // Vervangingskosten personeel (O'Connell & Kung, 2007)
+    const G = 15; // Aantal deelnemers per groep
+    const I = 8625; // Indicatieve investering per groep
 
-    // Calculate ROI
-    const roi = mbsrInvestering > 0 ? (netSaving / mbsrInvestering) * 100 : 0;
+    // Berekeningen volgens de juiste formules
+    const verzuimBesparing = (HZ / 100) * AD * GWS * VK * MV;
+    const retentieBesparing = (HV / 100) * AD * GWS * RV * VKP;
+    const totaleBesparing = verzuimBesparing + retentieBesparing;
+    
+    const numberOfGroups = Math.ceil(AD / G);
+    const totalInvestment = numberOfGroups * I;
+    const netBesparing = totaleBesparing - totalInvestment;
+    
+    // ROI berekening
+    const roi = totalInvestment > 0 ? (netBesparing / totalInvestment) * 100 : 0;
 
     const results = {
-      totalSaving: Math.round(netSaving),
-      investment: mbsrInvestering,
+      verzuimBesparing: Math.round(verzuimBesparing),
+      retentieBesparing: Math.round(retentieBesparing),
+      totalSaving: Math.round(netBesparing),
+      grossSaving: Math.round(totaleBesparing),
+      investment: totalInvestment,
       roi: Math.round(roi),
-      numberOfGroups: numberOfGroups
+      numberOfGroups: numberOfGroups,
+      constants: {
+        VK: VK,
+        MV: MV * 100,
+        RV: RV * 100,
+        VKP: VKP
+      }
     };
 
     // Navigate to bedankt page with results
@@ -88,7 +99,7 @@ const CalculatorModal = ({
       functie: '',
       company: '',
       employees: '',
-      yearlyCosts: '',
+      avgEmployeeCosts: '',
       currentAbsenteeism: '',
       currentTurnover: ''
     });
@@ -100,7 +111,7 @@ const CalculatorModal = ({
     onClose();
   };
 
-  const isFormValid = formData.name && formData.functie && formData.company && formData.employees && formData.yearlyCosts && formData.currentAbsenteeism && formData.currentTurnover && dataConfirmed;
+  const isFormValid = formData.name && formData.functie && formData.company && formData.employees && formData.avgEmployeeCosts && formData.currentAbsenteeism && formData.currentTurnover && dataConfirmed;
 
   return (
     <Dialog open={isOpen} onOpenChange={handleClose}>
@@ -198,14 +209,14 @@ const CalculatorModal = ({
                 </div>
                 
                 <div>
-                  <Label htmlFor="yearlyCosts" className="text-brand-gray-dark font-medium">Totale jaarlijkse loonkosten (€) *</Label>
+                  <Label htmlFor="avgEmployeeCosts" className="text-brand-gray-dark font-medium">Gemiddelde werkgeverskosten per medewerker per jaar (€) *</Label>
                   <Input 
-                    id="yearlyCosts" 
+                    id="avgEmployeeCosts" 
                     type="number" 
-                    value={formData.yearlyCosts} 
-                    onChange={e => handleInputChange('yearlyCosts', e.target.value)} 
+                    value={formData.avgEmployeeCosts} 
+                    onChange={e => handleInputChange('avgEmployeeCosts', e.target.value)} 
                     className="mt-1" 
-                    placeholder={!formData.yearlyCosts ? "2500000" : ""} 
+                    placeholder={!formData.avgEmployeeCosts ? "50000" : ""} 
                     required 
                   />
                 </div>

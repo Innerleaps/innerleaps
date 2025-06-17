@@ -1,8 +1,10 @@
+
 import { useLocation, useNavigate } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
-import { CheckCircle, TrendingUp, ArrowLeft, Users } from 'lucide-react';
+import { CheckCircle, TrendingUp, ArrowLeft, Users, Calculator, BookOpen } from 'lucide-react';
 import { useEffect } from 'react';
+
 const Bedankt = () => {
   const location = useLocation();
   const navigate = useNavigate();
@@ -10,16 +12,20 @@ const Bedankt = () => {
     results,
     formData
   } = location.state || {};
+
   useEffect(() => {
     // Redirect to home if no data is provided
     if (!results || !formData) {
       navigate('/');
     }
   }, [results, formData, navigate]);
+
   if (!results || !formData) {
     return null;
   }
-  return <div className="min-h-screen bg-gradient-to-br from-brand-blue-light to-white">
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-brand-blue-light to-white">
       <div className="container mx-auto px-4 py-16">
         <div className="max-w-4xl mx-auto">
           {/* Header */}
@@ -30,8 +36,6 @@ const Bedankt = () => {
             <h1 className="text-4xl font-bold text-brand-gray-dark mb-4">
               Bedankt, {formData.name}!
             </h1>
-            
-            
           </div>
 
           {/* Results Card */}
@@ -46,7 +50,7 @@ const Bedankt = () => {
               <div className="grid md:grid-cols-3 gap-6">
                 <div className="text-center p-4 bg-white/20 rounded-lg">
                   <div className="text-3xl font-bold mb-2">€{results.totalSaving.toLocaleString()}</div>
-                  <div className="text-sm opacity-90">Jaarlijkse besparing</div>
+                  <div className="text-sm opacity-90">Netto jaarlijkse besparing</div>
                 </div>
                 <div className="text-center p-4 bg-white/20 rounded-lg">
                   <div className="text-3xl font-bold mb-2">€{results.investment.toLocaleString()}</div>
@@ -65,9 +69,100 @@ const Bedankt = () => {
                 </div>
                 <div className="text-sm opacity-90">Benodigde MBSR-groepen (max. 15 deelnemers per groep)</div>
               </div>
+            </div>
+          </Card>
+
+          {/* Calculation Breakdown */}
+          <Card className="p-6 mb-8">
+            <div className="flex items-center gap-3 mb-6">
+              <Calculator className="h-6 w-6 text-brand-blue" />
+              <h3 className="text-xl font-bold text-brand-gray-dark">Berekening Breakdown</h3>
+            </div>
+            
+            <div className="grid md:grid-cols-2 gap-6">
+              <div className="space-y-4">
+                <div className="p-4 bg-brand-blue-light rounded-lg">
+                  <h4 className="font-semibold text-brand-gray-dark mb-2">Verzuimbesparing</h4>
+                  <p className="text-2xl font-bold text-brand-green mb-1">€{results.verzuimBesparing.toLocaleString()}</p>
+                  <p className="text-sm text-brand-gray-medium">
+                    {formData.currentAbsenteeism}% × {formData.employees} × €{parseInt(formData.avgEmployeeCosts).toLocaleString()} × {results.constants.VK} × {results.constants.MV}%
+                  </p>
+                </div>
+                
+                <div className="p-4 bg-brand-blue-light rounded-lg">
+                  <h4 className="font-semibold text-brand-gray-dark mb-2">Retentiebesparing</h4>
+                  <p className="text-2xl font-bold text-brand-green mb-1">€{results.retentieBesparing.toLocaleString()}</p>
+                  <p className="text-sm text-brand-gray-medium">
+                    {formData.currentTurnover}% × {formData.employees} × €{parseInt(formData.avgEmployeeCosts).toLocaleString()} × {results.constants.RV}% × {results.constants.VKP}
+                  </p>
+                </div>
+              </div>
               
-              <p className="text-sm opacity-90">
-                *Berekening gebaseerd op wetenschappelijk bewezen MBSR resultaten: 24% reductie in werkgerelateerde kosten
+              <div className="space-y-4">
+                <div className="p-4 bg-gray-50 rounded-lg">
+                  <h4 className="font-semibold text-brand-gray-dark mb-2">Totale Bruto Besparing</h4>
+                  <p className="text-2xl font-bold text-brand-blue mb-1">€{results.grossSaving.toLocaleString()}</p>
+                  <p className="text-sm text-brand-gray-medium">Verzuim + Retentie besparing</p>
+                </div>
+                
+                <div className="p-4 bg-gray-50 rounded-lg">
+                  <h4 className="font-semibold text-brand-gray-dark mb-2">MBSR Programma Investering</h4>
+                  <p className="text-2xl font-bold text-brand-gray-dark mb-1">€{results.investment.toLocaleString()}</p>
+                  <p className="text-sm text-brand-gray-medium">{results.numberOfGroups} groep{results.numberOfGroups !== 1 ? 'en' : ''} van max. 15 deelnemers</p>
+                </div>
+              </div>
+            </div>
+          </Card>
+
+          {/* Scientific Foundation */}
+          <Card className="p-6 mb-8">
+            <div className="flex items-center gap-3 mb-6">
+              <BookOpen className="h-6 w-6 text-brand-blue" />
+              <h3 className="text-xl font-bold text-brand-gray-dark">Wetenschappelijke Onderbouwing</h3>
+            </div>
+            
+            <div className="grid md:grid-cols-2 gap-6">
+              <div className="space-y-4">
+                <div className="p-4 border border-brand-blue-light rounded-lg">
+                  <h4 className="font-semibold text-brand-gray-dark mb-2">Verzuimreductie door MBSR</h4>
+                  <p className="text-lg font-bold text-brand-blue mb-1">{results.constants.MV}%</p>
+                  <p className="text-sm text-brand-gray-medium">
+                    Gemiddelde van 19-29% uit verschillende wetenschappelijke onderzoeken naar MBSR effectiviteit op werkgerelateerde stress en verzuim.
+                  </p>
+                </div>
+                
+                <div className="p-4 border border-brand-blue-light rounded-lg">
+                  <h4 className="font-semibold text-brand-gray-dark mb-2">Verzuimkosten Multiplier</h4>
+                  <p className="text-lg font-bold text-brand-blue mb-1">{results.constants.VK}x</p>
+                  <p className="text-sm text-brand-gray-medium">
+                    <strong>Bron:</strong> Johns (2010) - Verzuimkosten zijn gemiddeld 2x het basissalaris door vervanging, verlies van productiviteit en administratiekosten.
+                  </p>
+                </div>
+              </div>
+              
+              <div className="space-y-4">
+                <div className="p-4 border border-brand-blue-light rounded-lg">
+                  <h4 className="font-semibold text-brand-gray-dark mb-2">Retentieverbetering door MBSR</h4>
+                  <p className="text-lg font-bold text-brand-blue mb-1">{results.constants.RV}%</p>
+                  <p className="text-sm text-brand-gray-medium">
+                    Gemiddelde van 17-31% uit verschillende onderzoeken naar MBSR impact op werknemerstevredenheid en retentie.
+                  </p>
+                </div>
+                
+                <div className="p-4 border border-brand-blue-light rounded-lg">
+                  <h4 className="font-semibold text-brand-gray-dark mb-2">Vervangingskosten Factor</h4>
+                  <p className="text-lg font-bold text-brand-blue mb-1">{results.constants.VKP}x</p>
+                  <p className="text-sm text-brand-gray-medium">
+                    <strong>Bron:</strong> O'Connell & Kung (2007) - Vervangingskosten zijn 150% van het jaarsalaris door werving, training en productieverlies.
+                  </p>
+                </div>
+              </div>
+            </div>
+            
+            <div className="mt-6 p-4 bg-brand-green-light rounded-lg">
+              <p className="text-sm text-brand-gray-dark">
+                <strong>Methodologie:</strong> Deze berekening is gebaseerd op 40+ jaar wetenschappelijk onderzoek naar MBSR (Mindfulness-Based Stress Reduction) 
+                en erkende HR-kostenmethodieken. Alle percentages zijn conservatieve gemiddelden uit peer-reviewed studies.
               </p>
             </div>
           </Card>
@@ -82,18 +177,24 @@ const Bedankt = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-brand-green hover:bg-brand-green-light text-white px-8 py-4 text-lg" onClick={() => window.open('https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1wwDnoAHyFrV0M1FxwmbcMa9ewkDxTDdwQObwPKF-WX-wZV9DssZKtb1haoeP5qXDLenQlZt_R', '_blank')}>
+              <Button 
+                size="lg" 
+                className="bg-brand-green hover:bg-brand-green-light text-white px-8 py-4 text-lg" 
+                onClick={() => window.open('https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1wwDnoAHyFrV0M1FxwmbcMa9ewkDxTDdwQObwPKF-WX-wZV9DssZKtb1haoeP5qXDLenQlZt_R', '_blank')}
+              >
                 Plan een gesprek
               </Button>
-              <Button variant="outline" size="lg" className="border-2 border-brand-blue text-brand-blue hover:bg-brand-blue hover:text-white px-8 py-4 text-lg" onClick={() => navigate('/')}>
+              <Button 
+                variant="outline" 
+                size="lg" 
+                className="border-2 border-brand-blue text-brand-blue hover:bg-brand-blue hover:text-white px-8 py-4 text-lg" 
+                onClick={() => navigate('/')}
+              >
                 <ArrowLeft className="h-5 w-5 mr-2" />
                 Terug naar home
               </Button>
             </div>
           </div>
-
-          {/* Additional Information */}
-          
 
           {/* Program Details */}
           <Card className="mt-6 p-6">
@@ -105,14 +206,16 @@ const Bedankt = () => {
                 <p><strong>Programma duur:</strong> 8 weken</p>
               </div>
               <div>
-                <p><strong>Investering per groep:</strong> €8.250</p>
-                <p><strong>Totale investering:</strong> €{results.investment.toLocaleString()}</p>
-                <p><strong>Verwachte ROI:</strong> {results.roi}%</p>
+                <p><strong>Gemiddelde werkgeverskosten:</strong> €{parseInt(formData.avgEmployeeCosts).toLocaleString()}</p>
+                <p><strong>Huidig verzuimpercentage:</strong> {formData.currentAbsenteeism}%</p>
+                <p><strong>Huidig verlooppercentage:</strong> {formData.currentTurnover}%</p>
               </div>
             </div>
           </Card>
         </div>
       </div>
-    </div>;
+    </div>
+  );
 };
+
 export default Bedankt;
