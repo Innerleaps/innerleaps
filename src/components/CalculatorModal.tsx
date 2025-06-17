@@ -54,8 +54,8 @@ const CalculatorModal = ({
     const totalInvestment = numberOfGroups * I;
     const netBesparing = totaleBesparing - totalInvestment;
     
-    // ROI berekening
-    const roi = totalInvestment > 0 ? (netBesparing / totalInvestment) * 100 : 0;
+    // ROI berekening - GECORRIGEERD: gebruik totale besparing, niet netto besparing
+    const roi = totalInvestment > 0 ? (totaleBesparing / totalInvestment) * 100 : 0;
 
     const results = {
       verzuimBesparing: Math.round(verzuimBesparing),
