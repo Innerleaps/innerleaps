@@ -1,9 +1,7 @@
-
 import { useNavigate } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { TrendingUp, ArrowLeft, Users, Calculator, BookOpen } from 'lucide-react';
-
 const BerekeningDemo = () => {
   const navigate = useNavigate();
 
@@ -22,24 +20,19 @@ const BerekeningDemo = () => {
   const GWS = 50000;
   const HZ = 4.2;
   const HV = 12.5;
-
   const VK = 2;
   const MV = 0.24;
   const RV = 0.24;
   const VKP = 1.5;
   const G = 15;
   const I = 8625;
-
-  const verzuimBesparing = (HZ / 100) * AD * GWS * VK * MV;
-  const retentieBesparing = (HV / 100) * AD * GWS * RV * VKP;
+  const verzuimBesparing = HZ / 100 * AD * GWS * VK * MV;
+  const retentieBesparing = HV / 100 * AD * GWS * RV * VKP;
   const totaleBesparing = verzuimBesparing + retentieBesparing;
-  
   const numberOfGroups = Math.ceil(AD / G);
   const totalInvestment = numberOfGroups * I;
   const netBesparing = totaleBesparing - totalInvestment;
-  
-  const roi = totalInvestment > 0 ? (totaleBesparing / totalInvestment) * 100 : 0;
-
+  const roi = totalInvestment > 0 ? totaleBesparing / totalInvestment * 100 : 0;
   const demoResults = {
     verzuimBesparing: Math.round(verzuimBesparing),
     retentieBesparing: Math.round(retentieBesparing),
@@ -55,13 +48,10 @@ const BerekeningDemo = () => {
       VKP: VKP
     }
   };
-
   const openCalendar = () => {
     window.open('https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1wwDnoAHyFrV0M1FxwmbcMa9ewkDxTDdwQObwPKF-WX-wZV9DssZKtb1haoeP5qXDLenQlZt_R', '_blank');
   };
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-brand-blue-light to-white">
+  return <div className="min-h-screen bg-gradient-to-br from-brand-blue-light to-white">
       <div className="container mx-auto px-4 py-16">
         <div className="max-w-4xl mx-auto">
           {/* Header */}
@@ -99,13 +89,7 @@ const BerekeningDemo = () => {
 
               {/* CTA Button in groene blok */}
               <div className="pt-4">
-                <Button 
-                  size="lg" 
-                  className="bg-white text-brand-green hover:bg-gray-100 font-semibold px-8 py-4 text-lg" 
-                  onClick={openCalendar}
-                >
-                  Plan een gesprek
-                </Button>
+                
               </div>
               
               <div className="text-center p-6 bg-white/10 rounded-lg">
@@ -118,11 +102,7 @@ const BerekeningDemo = () => {
 
               {/* CTA Button onderaan groene blok */}
               <div className="pt-4 border-t border-white/20">
-                <Button 
-                  size="lg" 
-                  className="bg-white text-brand-green hover:bg-gray-100 font-semibold px-8 py-4 text-lg" 
-                  onClick={openCalendar}
-                >
+                <Button size="lg" className="bg-white text-brand-green hover:bg-gray-100 font-semibold px-8 py-4 text-lg" onClick={openCalendar}>
                   Plan een gesprek
                 </Button>
               </div>
@@ -234,19 +214,10 @@ const BerekeningDemo = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button 
-                size="lg" 
-                className="bg-brand-green hover:bg-brand-green-light text-white px-8 py-4 text-lg" 
-                onClick={openCalendar}
-              >
+              <Button size="lg" className="bg-brand-green hover:bg-brand-green-light text-white px-8 py-4 text-lg" onClick={openCalendar}>
                 Plan een gesprek
               </Button>
-              <Button 
-                variant="outline" 
-                size="lg" 
-                className="border-2 border-brand-blue text-brand-blue hover:bg-brand-blue hover:text-white px-8 py-4 text-lg" 
-                onClick={() => navigate('/')}
-              >
+              <Button variant="outline" size="lg" className="border-2 border-brand-blue text-brand-blue hover:bg-brand-blue hover:text-white px-8 py-4 text-lg" onClick={() => navigate('/')}>
                 <ArrowLeft className="h-5 w-5 mr-2" />
                 Terug naar home
               </Button>
@@ -274,15 +245,10 @@ const BerekeningDemo = () => {
 
       {/* Sticky CTA Button rechtsonderin */}
       <div className="fixed bottom-6 right-6 z-40">
-        <Button 
-          onClick={openCalendar}
-          className="bg-brand-green hover:bg-brand-green-light text-white font-semibold py-5 px-8 rounded-lg text-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
-        >
+        <Button onClick={openCalendar} className="bg-brand-green hover:bg-brand-green-light text-white font-semibold py-5 px-8 rounded-lg text-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
           Plan een gesprek
         </Button>
       </div>
-    </div>
-  );
+    </div>;
 };
-
 export default BerekeningDemo;
