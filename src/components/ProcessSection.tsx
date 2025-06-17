@@ -1,4 +1,3 @@
-
 import { Button } from '@/components/ui/button';
 import { Calendar, CheckCircle, Target, TrendingUp, ArrowRight, Handshake, Presentation, UserPlus, Users } from 'lucide-react';
 import { useState } from 'react';
@@ -97,7 +96,7 @@ const ProcessSection = () => {
           <div className="text-center mt-8 md:mt-12">
             <Button 
               onClick={() => setIsCalculatorOpen(true)}
-              className="bg-brand-blue hover:bg-brand-blue-dark text-white font-semibold py-3 px-6 md:px-8 rounded-lg text-base md:text-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+              className="bg-brand-blue text-white font-semibold py-3 px-6 md:px-8 rounded-lg text-base md:text-lg transition-all duration-300 shadow-lg hover:shadow-xl"
             >
               Onze besparing berekenen
             </Button>

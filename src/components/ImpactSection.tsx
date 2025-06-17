@@ -1,4 +1,3 @@
-
 import { Button } from '@/components/ui/button';
 import { Shield, Heart, Moon, Users, Target, BarChart3 } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -99,7 +98,7 @@ const ImpactSection = () => {
             <Link to="/wetenschap">
               <Button 
                 variant="outline" 
-                className="border-2 border-brand-blue text-brand-blue hover:bg-brand-blue hover:text-white font-semibold py-3 px-6 md:px-8 rounded-lg text-base md:text-lg transition-all duration-300"
+                className="border-2 border-brand-blue text-brand-blue font-semibold py-3 px-6 md:px-8 rounded-lg text-base md:text-lg transition-all duration-300"
               >
                 Lees meer over de wetenschap
               </Button>

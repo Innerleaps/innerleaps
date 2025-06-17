@@ -1,4 +1,3 @@
-
 import { Button } from '@/components/ui/button';
 import { Clock, Users, MapPin, Calendar } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -95,7 +94,7 @@ const ProgramSection = () => {
           
           <div className="text-center mb-8 md:mb-12">
             <Link to="/programma">
-              <Button className="bg-brand-blue hover:bg-brand-blue-dark text-white font-semibold py-3 px-6 md:px-8 rounded-lg text-base md:text-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+              <Button className="bg-brand-blue text-white font-semibold py-3 px-6 md:px-8 rounded-lg text-base md:text-lg transition-all duration-300 shadow-lg hover:shadow-xl">
                 Programma Details Bekijken
               </Button>
             </Link>
@@ -122,7 +121,7 @@ const ProgramSection = () => {
 
         <div className="text-center mt-8 md:mt-12">
           <Link to="/programma">
-            <Button className="bg-brand-blue hover:bg-brand-blue-dark text-white font-semibold py-3 px-6 md:px-8 rounded-lg text-base md:text-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+            <Button className="bg-brand-blue text-white font-semibold py-3 px-6 md:px-8 rounded-lg text-base md:text-lg transition-all duration-300 shadow-lg hover:shadow-xl">
               Programma Details Bekijken
             </Button>
           </Link>

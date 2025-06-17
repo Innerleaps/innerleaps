@@ -18,6 +18,14 @@ export default {
 				'2xl': '1400px'
 			}
 		},
+		screens: {
+			'sm': '640px',
+			'md': '768px',
+			'lg': '1024px',
+			'xl': '1280px',
+			'2xl': '1400px',
+			'nav-lg': '1200px', // Custom breakpoint for navigation
+		},
 		extend: {
 			fontFamily: {
 				'sans': ['Inter', 'sans-serif'],
