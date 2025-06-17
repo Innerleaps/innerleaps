@@ -36,6 +36,18 @@
     --ring: 30 58 138;
 
     --radius: 0.75rem;
+
+    /* Halt.academy brand colors */
+    --brand-blue: 30 58 138;
+    --brand-blue-dark: 23 37 84;
+    --brand-blue-light: 59 130 246;
+    --brand-green: 5 150 105;
+    --brand-green-light: 16 185 129;
+    --brand-green-dark: 4 120 87;
+    --brand-gray-dark: 15 23 42;
+    --brand-gray-medium: 100 116 139;
+    --brand-gray-light: 248 250 252;
+    --brand-yellow: 234 179 8;
   }
 
   .dark {
@@ -78,6 +90,8 @@
     @apply bg-background text-foreground font-sans;
     font-size: 16px; /* Ensure minimum 16px base font size for accessibility */
     line-height: 1.6; /* Improved readability */
+    color: rgb(var(--foreground));
+    background-color: rgb(var(--background));
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -101,6 +115,35 @@
   .text-xl {
     font-size: 1.25rem; /* 20px */
   }
+
+  /* Brand color utilities */
+  .bg-brand-blue { background-color: rgb(var(--brand-blue)); }
+  .bg-brand-blue-dark { background-color: rgb(var(--brand-blue-dark)); }
+  .bg-brand-blue-light { background-color: rgb(var(--brand-blue-light)); }
+  .bg-brand-green { background-color: rgb(var(--brand-green)); }
+  .bg-brand-green-light { background-color: rgb(var(--brand-green-light)); }
+  .bg-brand-green-dark { background-color: rgb(var(--brand-green-dark)); }
+  .bg-brand-gray-dark { background-color: rgb(var(--brand-gray-dark)); }
+  .bg-brand-gray-medium { background-color: rgb(var(--brand-gray-medium)); }
+  .bg-brand-gray-light { background-color: rgb(var(--brand-gray-light)); }
+  .bg-brand-yellow { background-color: rgb(var(--brand-yellow)); }
+
+  .text-brand-blue { color: rgb(var(--brand-blue)); }
+  .text-brand-blue-dark { color: rgb(var(--brand-blue-dark)); }
+  .text-brand-blue-light { color: rgb(var(--brand-blue-light)); }
+  .text-brand-green { color: rgb(var(--brand-green)); }
+  .text-brand-green-light { color: rgb(var(--brand-green-light)); }
+  .text-brand-green-dark { color: rgb(var(--brand-green-dark)); }
+  .text-brand-gray-dark { color: rgb(var(--brand-gray-dark)); }
+  .text-brand-gray-medium { color: rgb(var(--brand-gray-medium)); }
+  .text-brand-gray-light { color: rgb(var(--brand-gray-light)); }
+  .text-brand-yellow { color: rgb(var(--brand-yellow)); }
+
+  .border-brand-blue { border-color: rgb(var(--brand-blue)); }
+  .border-brand-green { border-color: rgb(var(--brand-green)); }
+  
+  .hover\:bg-brand-blue-dark:hover { background-color: rgb(var(--brand-blue-dark)); }
+  .hover\:bg-brand-green-light:hover { background-color: rgb(var(--brand-green-light)); }
 }
 
 @layer components {
@@ -113,7 +156,7 @@
   }
   
   .section-padding {
-    @apply py-12 md:py-16 lg:py-24; /* More responsive padding */
+    @apply py-16 md:py-20 lg:py-28; /* More responsive padding */
   }
   
   .container-custom {

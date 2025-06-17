@@ -59,10 +59,10 @@ const ProgramSection = () => {
     <section className="bg-white section-padding">
       <div className="container-custom">
         <div className="text-center space-y-6 mb-16">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-brand-gray-dark">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-gray-dark">
             Ons Programma
           </h2>
-          <p className="text-lg md:text-xl text-brand-gray-medium max-w-4xl mx-auto leading-relaxed">
+          <p className="text-xl md:text-2xl text-brand-gray-medium max-w-4xl mx-auto leading-relaxed">
             Een gestructureerd 8-weekse programma gericht op stressreductie en het verbeteren van werkprestaties. Gebaseerd op het MBSR-programma (Mindfulness-Based Stress Reduction) ontwikkeld door Jon Kabat-Zinn in 1979 aan de University of Massachusetts Medical Center, met focus op praktische bedrijfstoepassingen.
           </p>
         </div>
@@ -76,10 +76,10 @@ const ProgramSection = () => {
                 <div className="inline-flex items-center justify-center w-12 h-12 bg-brand-blue text-white rounded-lg mb-4">
                   <IconComponent className="h-6 w-6" />
                 </div>
-                <h3 className="text-lg md:text-xl font-semibold text-brand-gray-dark mb-2">
+                <h3 className="text-xl md:text-2xl font-semibold text-brand-gray-dark mb-2">
                   {feature.title}
                 </h3>
-                <p className="text-brand-gray-medium text-base leading-relaxed">
+                <p className="text-brand-gray-medium text-lg md:text-xl leading-relaxed">
                   {feature.description}
                 </p>
               </div>
@@ -89,13 +89,13 @@ const ProgramSection = () => {
 
         {/* Program Steps */}
         <div className="space-y-8">
-          <h3 className="text-2xl md:text-3xl font-bold text-brand-gray-dark text-center mb-8">
+          <h3 className="text-3xl md:text-4xl font-bold text-brand-gray-dark text-center mb-8">
             Programma Overzicht
           </h3>
           
           <div className="text-center mb-12">
             <Link to="/programma">
-              <Button className="w-full sm:w-auto bg-brand-blue hover:bg-brand-blue-dark text-white font-semibold py-3 px-8 rounded-lg text-base md:text-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+              <Button className="w-full sm:w-auto bg-brand-blue text-white font-semibold py-3 px-8 rounded-lg text-lg md:text-xl transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
                 Programma Details Bekijken
               </Button>
             </Link>
@@ -105,13 +105,13 @@ const ProgramSection = () => {
             {programSteps.map((step, index) => (
               <div key={index} className="bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 p-6">
                 <div className="mb-4">
-                  <div className="text-base md:text-lg text-brand-blue font-medium mb-2">
+                  <div className="text-lg md:text-xl text-brand-blue font-medium mb-2">
                     Week {step.weeks}
                   </div>
-                  <h4 className="text-lg md:text-xl font-semibold text-brand-gray-dark mb-3">
+                  <h4 className="text-xl md:text-2xl font-semibold text-brand-gray-dark mb-3">
                     {step.title}
                   </h4>
-                  <p className="text-brand-gray-medium leading-relaxed text-base md:text-lg">
+                  <p className="text-brand-gray-medium leading-relaxed text-lg md:text-xl">
                     {step.description}
                   </p>
                 </div>
@@ -122,7 +122,7 @@ const ProgramSection = () => {
 
         <div className="text-center mt-12">
           <Link to="/programma">
-            <Button className="w-full sm:w-auto bg-brand-blue hover:bg-brand-blue-dark text-white font-semibold py-3 px-8 rounded-lg text-base md:text-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+            <Button className="w-full sm:w-auto bg-brand-blue text-white font-semibold py-3 px-8 rounded-lg text-lg md:text-xl transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
               Programma Details Bekijken
             </Button>
           </Link>

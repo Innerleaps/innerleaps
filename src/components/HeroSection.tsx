@@ -15,16 +15,16 @@ const HeroSection = () => {
             <div className="space-y-6 lg:space-y-8 animate-fade-in">
               <div className="space-y-6">
                 {/* 40+ Years Research Badge */}
-                <div className="inline-flex items-center bg-white/20 backdrop-blur-sm text-white px-4 py-2 rounded-full text-sm md:text-base font-semibold">
+                <div className="inline-flex items-center bg-white/20 backdrop-blur-sm text-white px-4 py-2 rounded-full text-base md:text-lg font-semibold">
                   <Award className="h-4 w-4 mr-2" />
                   Gebaseerd op 40+ jaar wetenschappelijk onderzoek
                 </div>
 
-                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
+                <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
                   <span className="text-brand-green-light">30% minder</span> ziekteverzuim<br />
                   <span className="text-brand-green-light">31% hogere</span> medewerkerretentie
                 </h1>
-                <p className="text-lg sm:text-xl md:text-2xl text-blue-100 leading-relaxed">
+                <p className="text-xl sm:text-2xl md:text-3xl text-blue-100 leading-relaxed">
                   Wetenschappelijk bewezen stressreductieprogramma dat meetbare bedrijfsresultaten oplevert in 8 weken
                 </p>
               </div>
@@ -32,7 +32,7 @@ const HeroSection = () => {
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button 
                   size="lg" 
-                  className="w-full sm:w-auto bg-brand-green hover:bg-brand-green-light text-white font-semibold py-4 px-6 lg:px-8 rounded-lg text-base lg:text-lg transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:-translate-y-1" 
+                  className="w-full sm:w-auto bg-brand-green hover:bg-brand-green-light text-white font-semibold py-4 px-6 lg:px-8 rounded-lg text-lg lg:text-xl transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:-translate-y-1" 
                   onClick={() => setIsCalculatorOpen(true)}
                 >
                   Bereken mijn besparing
@@ -41,7 +41,7 @@ const HeroSection = () => {
                   variant="outline" 
                   size="lg" 
                   onClick={() => window.open('https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1wwDnoAHyFrV0M1FxwmbcMa9ewkDxTDdwQObwPKF-WX-wZV9DssZKtb1haoeP5qXDLenQlZt_R', '_blank')} 
-                  className="w-full sm:w-auto border-2 border-white hover:bg-white/10 font-semibold py-4 px-6 lg:px-8 rounded-lg text-base lg:text-lg transition-all duration-300 transform hover:-translate-y-1 text-white"
+                  className="w-full sm:w-auto border-2 border-white text-white font-semibold py-4 px-6 lg:px-8 rounded-lg text-lg lg:text-xl transition-all duration-300 transform hover:-translate-y-1"
                 >
                   Kennis maken
                 </Button>
