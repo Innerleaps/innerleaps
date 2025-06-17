@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -73,8 +72,8 @@ const CalculatorModal = ({
       }
     };
 
-    // Navigate to bedankt page with results
-    navigate('/bedankt', {
+    // Navigate to berekening page with results
+    navigate('/berekening', {
       state: {
         results: results,
         formData: formData
