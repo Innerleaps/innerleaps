@@ -1,4 +1,3 @@
-
 import { useLocation, useNavigate } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
@@ -101,37 +100,27 @@ const Berekening = () => {
               <h3 className="text-xl font-bold text-brand-gray-dark">Berekening Breakdown</h3>
             </div>
             
-            <div className="grid md:grid-cols-2 gap-6">
-              <div className="space-y-4">
-                <div className="p-4 bg-gray-50 rounded-lg border">
-                  <h4 className="font-semibold text-brand-gray-dark mb-2">Verzuimbesparing</h4>
-                  <p className="text-2xl font-bold text-brand-green mb-1">€{results.verzuimBesparing.toLocaleString()}</p>
-                  <p className="text-sm text-brand-gray-medium">
-                    {formData.currentAbsenteeism}% × {formData.employees} × €{parseInt(formData.avgEmployeeCosts).toLocaleString()} × {results.constants.VK} × {results.constants.MV}%
-                  </p>
-                </div>
-                
-                <div className="p-4 bg-gray-50 rounded-lg border">
-                  <h4 className="font-semibold text-brand-gray-dark mb-2">Retentiebesparing</h4>
-                  <p className="text-2xl font-bold text-brand-green mb-1">€{results.retentieBesparing.toLocaleString()}</p>
-                  <p className="text-sm text-brand-gray-medium">
-                    {formData.currentTurnover}% × {formData.employees} × €{parseInt(formData.avgEmployeeCosts).toLocaleString()} × {results.constants.RV}% × {results.constants.VKP}
-                  </p>
-                </div>
+            <div className="space-y-4">
+              <div className="p-4 bg-gray-50 rounded-lg border">
+                <h4 className="font-semibold text-brand-gray-dark mb-2">Verzuimbesparing</h4>
+                <p className="text-2xl font-bold text-brand-green mb-1">€{results.verzuimBesparing.toLocaleString()}</p>
+                <p className="text-sm text-brand-gray-medium">
+                  {formData.currentAbsenteeism}% × {formData.employees} × €{parseInt(formData.avgEmployeeCosts).toLocaleString()} × {results.constants.VK} × {results.constants.MV}%
+                </p>
               </div>
               
-              <div className="space-y-4">
-                <div className="p-4 bg-white rounded-lg border">
-                  <h4 className="font-semibold text-brand-gray-dark mb-2">Totale Bruto Besparing</h4>
-                  <p className="text-2xl font-bold text-brand-blue mb-1">€{results.grossSaving.toLocaleString()}</p>
-                  <p className="text-sm text-brand-gray-medium">Verzuim + Retentie besparing</p>
-                </div>
-                
-                <div className="p-4 bg-white rounded-lg border">
-                  <h4 className="font-semibold text-brand-gray-dark mb-2">Netto Jaarlijkse Besparing</h4>
-                  <p className="text-2xl font-bold text-brand-green mb-1">€{results.totalSaving.toLocaleString()}</p>
-                  <p className="text-sm text-brand-gray-medium">Bruto besparing minus programmakosten</p>
-                </div>
+              <div className="p-4 bg-gray-50 rounded-lg border">
+                <h4 className="font-semibold text-brand-gray-dark mb-2">Retentiebesparing</h4>
+                <p className="text-2xl font-bold text-brand-green mb-1">€{results.retentieBesparing.toLocaleString()}</p>
+                <p className="text-sm text-brand-gray-medium">
+                  {formData.currentTurnover}% × {formData.employees} × €{parseInt(formData.avgEmployeeCosts).toLocaleString()} × {results.constants.RV}% × {results.constants.VKP}
+                </p>
+              </div>
+              
+              <div className="p-4 bg-white rounded-lg border">
+                <h4 className="font-semibold text-brand-gray-dark mb-2">Totale Bruto Besparing</h4>
+                <p className="text-2xl font-bold text-brand-blue mb-1">€{results.grossSaving.toLocaleString()}</p>
+                <p className="text-sm text-brand-gray-medium">Verzuim + Retentie besparing</p>
               </div>
             </div>
           </Card>
