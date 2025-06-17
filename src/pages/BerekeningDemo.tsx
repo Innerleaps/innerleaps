@@ -102,9 +102,7 @@ const BerekeningDemo = () => {
 
               {/* CTA Button onderaan groene blok */}
               <div className="pt-4 border-t border-white/20">
-                <Button size="lg" className="bg-white text-brand-green hover:bg-gray-100 font-semibold px-8 py-4 text-lg" onClick={openCalendar}>
-                  Plan een gesprek
-                </Button>
+                <Button size="lg" className="bg-white text-brand-green hover:bg-gray-100 font-semibold px-8 py-4 text-lg" onClick={openCalendar}>Plan een kennismaking</Button>
               </div>
             </div>
           </Card>
