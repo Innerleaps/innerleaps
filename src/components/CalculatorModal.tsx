@@ -1,3 +1,4 @@
+
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -5,8 +6,10 @@ import { Label } from '@/components/ui/label';
 import { Checkbox } from '@/components/ui/checkbox';
 import { Card } from '@/components/ui/card';
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
-import { Calculator as CalculatorIcon } from 'lucide-react';
+import { Calculator as CalculatorIcon, Loader2 } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
+import { supabase } from '@/integrations/supabase/client';
+import { useToast } from '@/hooks/use-toast';
 
 interface CalculatorModalProps {
   isOpen: boolean;
@@ -18,6 +21,8 @@ const CalculatorModal = ({
   onClose
 }: CalculatorModalProps) => {
   const navigate = useNavigate();
+  const { toast } = useToast();
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
     phone: '',
@@ -30,58 +35,104 @@ const CalculatorModal = ({
   });
   const [dataConfirmed, setDataConfirmed] = useState(false);
 
-  const calculateSavings = () => {
-    const AD = parseInt(formData.employees) || 0; // Aantal deelnemers
-    const GWS = parseInt(formData.avgEmployeeCosts) || 0; // Gemiddelde werkgeverskosten per deelnemer per jaar
-    const HZ = parseFloat(formData.currentAbsenteeism) || 0; // Huidig verzuimpercentage
-    const HV = parseFloat(formData.currentTurnover) || 0; // Huidig verlooppercentage
-
-    // Constanten
-    const VK = 2; // Verzuimkosten multiplier (Johns, 2010)
-    const MV = 0.24; // 24% minder verzuim door MBSR (gemiddelde 19-29% uit verschillende onderzoeken)
-    const RV = 0.24; // 24% retentieverbetering door MBSR (gemiddelde 17-31% uit verschillende onderzoeken)
-    const VKP = 1.5; // Vervangingskosten personeel (O'Connell & Kung, 2007)
-    const G = 15; // Aantal deelnemers per groep
-    const I = 8625; // Indicatieve investering per groep
-
-    // Berekeningen volgens de juiste formules
-    const verzuimBesparing = (HZ / 100) * AD * GWS * VK * MV;
-    const retentieBesparing = (HV / 100) * AD * GWS * RV * VKP;
-    const totaleBesparing = verzuimBesparing + retentieBesparing;
+  const calculateSavings = async () => {
+    setIsSubmitting(true);
     
-    const numberOfGroups = Math.ceil(AD / G);
-    const totalInvestment = numberOfGroups * I;
-    const netBesparing = totaleBesparing - totalInvestment;
-    
-    // ROI berekening - GECORRIGEERD: gebruik totale besparing, niet netto besparing
-    const roi = totalInvestment > 0 ? (totaleBesparing / totalInvestment) * 100 : 0;
+    try {
+      const AD = parseInt(formData.employees) || 0; // Aantal deelnemers
+      const GWS = parseInt(formData.avgEmployeeCosts) || 0; // Gemiddelde werkgeverskosten per deelnemer per jaar
+      const HZ = parseFloat(formData.currentAbsenteeism) || 0; // Huidig verzuimpercentage
+      const HV = parseFloat(formData.currentTurnover) || 0; // Huidig verlooppercentage
 
-    const results = {
-      verzuimBesparing: Math.round(verzuimBesparing),
-      retentieBesparing: Math.round(retentieBesparing),
-      totalSaving: Math.round(netBesparing),
-      grossSaving: Math.round(totaleBesparing),
-      investment: totalInvestment,
-      roi: Math.round(roi),
-      numberOfGroups: numberOfGroups,
-      constants: {
-        VK: VK,
-        MV: MV * 100,
-        RV: RV * 100,
-        VKP: VKP
+      // Constanten
+      const VK = 2; // Verzuimkosten multiplier (Johns, 2010)
+      const MV = 0.24; // 24% minder verzuim door MBSR (gemiddelde 19-29% uit verschillende onderzoeken)
+      const RV = 0.24; // 24% retentieverbetering door MBSR (gemiddelde 17-31% uit verschillende onderzoeken)
+      const VKP = 1.5; // Vervangingskosten personeel (O'Connell & Kung, 2007)
+      const G = 15; // Aantal deelnemers per groep
+      const I = 8625; // Indicatieve investering per groep
+
+      // Berekeningen volgens de juiste formules
+      const verzuimBesparing = (HZ / 100) * AD * GWS * VK * MV;
+      const retentieBesparing = (HV / 100) * AD * GWS * RV * VKP;
+      const totaleBesparing = verzuimBesparing + retentieBesparing;
+      
+      const numberOfGroups = Math.ceil(AD / G);
+      const totalInvestment = numberOfGroups * I;
+      const netBesparing = totaleBesparing - totalInvestment;
+      
+      // ROI berekening - GECORRIGEERD: gebruik totale besparing, niet netto besparing
+      const roi = totalInvestment > 0 ? (totaleBesparing / totalInvestment) * 100 : 0;
+
+      const results = {
+        verzuimBesparing: Math.round(verzuimBesparing),
+        retentieBesparing: Math.round(retentieBesparing),
+        totalSaving: Math.round(netBesparing),
+        grossSaving: Math.round(totaleBesparing),
+        investment: totalInvestment,
+        roi: Math.round(roi),
+        numberOfGroups: numberOfGroups,
+        constants: {
+          VK: VK,
+          MV: MV * 100,
+          RV: RV * 100,
+          VKP: VKP
+        }
+      };
+
+      // Submit to database and send email
+      const { data, error } = await supabase.functions.invoke('submit-calculator', {
+        body: {
+          name: formData.name,
+          phone: formData.phone,
+          functie: formData.functie,
+          company: formData.company,
+          employees: parseInt(formData.employees),
+          avgEmployeeCosts: parseInt(formData.avgEmployeeCosts),
+          currentAbsenteeism: parseFloat(formData.currentAbsenteeism),
+          currentTurnover: parseFloat(formData.currentTurnover),
+          calculationResults: results
+        }
+      });
+
+      if (error) {
+        console.error('Submission error:', error);
+        toast({
+          title: "Fout bij opslaan",
+          description: "Er is een fout opgetreden bij het opslaan van uw gegevens. Probeer het opnieuw.",
+          variant: "destructive",
+        });
+        return;
       }
-    };
 
-    // Navigate to berekening page with results
-    navigate('/berekening', {
-      state: {
-        results: results,
-        formData: formData
-      }
-    });
+      console.log('Successfully submitted:', data);
+      
+      toast({
+        title: "Gegevens opgeslagen",
+        description: "Uw berekening is succesvol opgeslagen en verstuurd.",
+      });
 
-    // Close the modal
-    onClose();
+      // Navigate to berekening page with results
+      navigate('/berekening', {
+        state: {
+          results: results,
+          formData: formData
+        }
+      });
+
+      // Close the modal
+      onClose();
+
+    } catch (error) {
+      console.error('Error calculating savings:', error);
+      toast({
+        title: "Fout opgetreden",
+        description: "Er is een onverwachte fout opgetreden. Probeer het opnieuw.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleInputChange = (field: string, value: string) => {
@@ -147,6 +198,7 @@ const CalculatorModal = ({
                     className="mt-1" 
                     placeholder={!formData.name ? "Jan Janssen" : ""} 
                     required 
+                    disabled={isSubmitting}
                   />
                 </div>
                 
@@ -159,6 +211,7 @@ const CalculatorModal = ({
                     onChange={e => handleInputChange('phone', e.target.value)} 
                     className="mt-1" 
                     placeholder={!formData.phone ? "06 12345678" : ""} 
+                    disabled={isSubmitting}
                   />
                 </div>
                 
@@ -172,6 +225,7 @@ const CalculatorModal = ({
                     className="mt-1" 
                     placeholder={!formData.functie ? "HR Manager" : ""} 
                     required 
+                    disabled={isSubmitting}
                   />
                 </div>
               </div>
@@ -191,6 +245,7 @@ const CalculatorModal = ({
                     className="mt-1" 
                     placeholder={!formData.company ? "Uw Bedrijf B.V." : ""} 
                     required 
+                    disabled={isSubmitting}
                   />
                 </div>
                 
@@ -204,6 +259,7 @@ const CalculatorModal = ({
                     className="mt-1" 
                     placeholder={!formData.employees ? "50" : ""} 
                     required 
+                    disabled={isSubmitting}
                   />
                 </div>
                 
@@ -217,6 +273,7 @@ const CalculatorModal = ({
                     className="mt-1" 
                     placeholder={!formData.avgEmployeeCosts ? "50000" : ""} 
                     required 
+                    disabled={isSubmitting}
                   />
                 </div>
                 
@@ -231,6 +288,7 @@ const CalculatorModal = ({
                     className="mt-1" 
                     placeholder={!formData.currentAbsenteeism ? "4.2" : ""} 
                     required 
+                    disabled={isSubmitting}
                   />
                 </div>
                 
@@ -245,6 +303,7 @@ const CalculatorModal = ({
                     className="mt-1" 
                     placeholder={!formData.currentTurnover ? "12.5" : ""} 
                     required 
+                    disabled={isSubmitting}
                   />
                 </div>
               </div>
@@ -257,6 +316,7 @@ const CalculatorModal = ({
                 checked={dataConfirmed} 
                 onCheckedChange={checked => setDataConfirmed(checked === true)} 
                 className="border-2 border-brand-blue data-[state=checked]:bg-brand-green data-[state=checked]:border-brand-green" 
+                disabled={isSubmitting}
               />
               <Label htmlFor="dataConfirmed" className="text-sm text-brand-gray-dark leading-relaxed">
                 Ik bevestig dat ik akkoord ga met het delen van deze gegevens en wil mijn potentiële besparing berekenen
@@ -266,10 +326,17 @@ const CalculatorModal = ({
             <div className="pt-4">
               <Button 
                 onClick={calculateSavings} 
-                disabled={!isFormValid} 
+                disabled={!isFormValid || isSubmitting} 
                 className="w-full bg-brand-blue hover:bg-brand-blue-dark text-white"
               >
-                Ontvang Mijn Besparing
+                {isSubmitting ? (
+                  <>
+                    <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                    Berekening wordt opgeslagen...
+                  </>
+                ) : (
+                  'Ontvang Mijn Besparing'
+                )}
               </Button>
             </div>
           </div>
