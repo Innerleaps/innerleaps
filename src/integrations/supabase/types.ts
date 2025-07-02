@@ -9,7 +9,48 @@ export type Json =
 export type Database = {
   public: {
     Tables: {
-      [_ in never]: never
+      calculator_submissions: {
+        Row: {
+          avg_employee_costs: number
+          calculation_results: Json
+          company: string
+          created_at: string
+          current_absenteeism: number
+          current_turnover: number
+          employees: number
+          functie: string
+          id: string
+          name: string
+          phone: string | null
+        }
+        Insert: {
+          avg_employee_costs: number
+          calculation_results: Json
+          company: string
+          created_at?: string
+          current_absenteeism: number
+          current_turnover: number
+          employees: number
+          functie: string
+          id?: string
+          name: string
+          phone?: string | null
+        }
+        Update: {
+          avg_employee_costs?: number
+          calculation_results?: Json
+          company?: string
+          created_at?: string
+          current_absenteeism?: number
+          current_turnover?: number
+          employees?: number
+          functie?: string
+          id?: string
+          name?: string
+          phone?: string | null
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
