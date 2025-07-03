@@ -20,25 +20,26 @@ const OverOns = () => {
           {/* Header */}
           <div className="text-center space-y-6 mb-16">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-gray-dark">
-              Over Ons
+              Wie zijn wij?
             </h1>
             <p className="text-xl text-brand-gray-medium max-w-3xl mx-auto leading-relaxed">
-              De Mensen Achter Halt.academy
+              De mensen achter Halt.academy - en waarom we dit doen
             </p>
           </div>
 
           {/* Mission */}
-          <div className="bg-brand-gray-light rounded-xl p-8 mb-16">
+          <div className="bg-white rounded-xl p-8 mb-16 shadow-lg">
+            <h2 className="text-2xl font-bold text-brand-gray-dark mb-4 text-center">Waarom wij dit werk doen</h2>
             <p className="text-lg text-brand-gray-dark leading-relaxed text-center">
-              Halt.academy is opgericht vanuit de overtuiging dat organisaties beter presteren wanneer medewerkers mentaal veerkrachtig zijn. Onze missie is het creëren van gezondere werkplekken waar zowel mensen als resultaten floreren.
+              We geloven dat werk een bron van voldoening en groei moet zijn, niet van stress en uitputting. Na jaren te hebben gezien hoe werkdruk mensen en organisaties ondermijnt, besloten we om de bewezen kracht van mindfulness toegankelijk te maken voor Nederlandse bedrijven. Want als mensen zich goed voelen, presteren ze beter - en gaan ze weer met plezier naar hun werk.
             </p>
           </div>
 
           {/* Expertise */}
           <div className="mb-16">
-            <h2 className="text-3xl font-bold text-brand-gray-dark mb-8">Onze Expertise</h2>
+            <h2 className="text-3xl font-bold text-brand-gray-dark mb-8">Wat we meebrengen</h2>
             <p className="text-lg text-brand-gray-medium mb-6">
-              Ons team bestaat uit gecertificeerde professionals met uitgebreide ervaring in:
+              Ons team combineert wetenschappelijke kennis met praktische ervaring. We zijn gecertificeerd en getraind in:
             </p>
             
             <div className="grid md:grid-cols-2 gap-8">
@@ -48,23 +49,23 @@ const OverOns = () => {
                     <Brain className="h-6 w-6 text-brand-blue mr-3" />
                     <h3 className="font-semibold text-brand-gray-dark">MBSR Training</h3>
                   </div>
-                  <p className="text-brand-gray-medium text-sm">Gecertificeerde trainers in MBSR (Mindfulness-Based Stress Reduction) volgens de richtlijnen van de VMBN.</p>
+                  <p className="text-brand-gray-medium text-sm">Gecertificeerde trainers volgens de richtlijnen van de VMBN - we weten waar we het over hebben.</p>
                 </div>
                 
                 <div className="bg-white p-6 rounded-lg shadow-sm">
                   <div className="flex items-center mb-3">
                     <Building className="h-6 w-6 text-brand-blue mr-3" />
-                    <h3 className="font-semibold text-brand-gray-dark">Werkplaatsimplementatie</h3>
+                    <h3 className="font-semibold text-brand-gray-dark">Werkplaats Implementatie</h3>
                   </div>
-                  <p className="text-brand-gray-medium text-sm">Specialisatie in werkplaatsimplementatie van stressreductietechnieken</p>
+                  <p className="text-brand-gray-medium text-sm">Ervaring met het praktisch toepassen van stressreductie in echte bedrijfsomgevingen</p>
                 </div>
                 
                 <div className="bg-white p-6 rounded-lg shadow-sm">
                   <div className="flex items-center mb-3">
                     <Globe className="h-6 w-6 text-brand-blue mr-3" />
-                    <h3 className="font-semibold text-brand-gray-dark">Sectorbrede Ervaring</h3>
+                    <h3 className="font-semibold text-brand-gray-dark">Brede Ervaring</h3>
                   </div>
-                  <p className="text-brand-gray-medium text-sm">Uitgebreide ervaring met diverse sectoren en organisatietypes</p>
+                  <p className="text-brand-gray-medium text-sm">We hebben met diverse sectoren gewerkt en begrijpen verschillende werkcontexten</p>
                 </div>
               </div>
               
@@ -72,17 +73,17 @@ const OverOns = () => {
                 <div className="bg-white p-6 rounded-lg shadow-sm">
                   <div className="flex items-center mb-3">
                     <TrendingUp className="h-6 w-6 text-brand-blue mr-3" />
-                    <h3 className="font-semibold text-brand-gray-dark">Bedrijfskunde & ROI</h3>
+                    <h3 className="font-semibold text-brand-gray-dark">Bedrijfsresultaten</h3>
                   </div>
-                  <p className="text-brand-gray-medium text-sm">Expertise in het meten en verbeteren van verzuim en retentie, inclusief ROI-berekeningen</p>
+                  <p className="text-brand-gray-medium text-sm">We snappen de business kant - ROI berekeningen, verzuimcijfers en retentie zijn ons niet vreemd</p>
                 </div>
                 
                 <div className="bg-white p-6 rounded-lg shadow-sm">
                   <div className="flex items-center mb-3">
                     <Users className="h-6 w-6 text-brand-blue mr-3" />
-                    <h3 className="font-semibold text-brand-gray-dark">Organisatieontwikkeling</h3>
+                    <h3 className="font-semibold text-brand-gray-dark">Mensen & Organisaties</h3>
                   </div>
-                  <p className="text-brand-gray-medium text-sm">Achtergrond in organisatieontwikkeling en verandermanagement</p>
+                  <p className="text-brand-gray-medium text-sm">Achtergrond in organisatieontwikkeling - we begrijpen hoe verandering werkt</p>
                 </div>
                 
                 <div className="bg-white p-6 rounded-lg shadow-sm">
@@ -90,7 +91,7 @@ const OverOns = () => {
                     <Heart className="h-6 w-6 text-brand-blue mr-3" />
                     <h3 className="font-semibold text-brand-gray-dark">Specialistische Zorg</h3>
                   </div>
-                  <p className="text-brand-gray-medium text-sm">Specialisatie in werkstress, burn-outpreventie en herstel</p>
+                  <p className="text-brand-gray-medium text-sm">Werkstress, burn-out preventie en herstel - dit is ons vakgebied</p>
                 </div>
               </div>
             </div>
@@ -98,7 +99,7 @@ const OverOns = () => {
 
           {/* Oprichtersverhaal */}
           <div className="mb-16">
-            <h2 className="text-3xl font-bold text-brand-gray-dark mb-8">Ons Oprichtersverhaal</h2>
+            <h2 className="text-3xl font-bold text-brand-gray-dark mb-8">Hoe het allemaal begon</h2>
             
             <div className="bg-white rounded-xl p-8 shadow-lg">
               <div className="flex flex-col md:flex-row gap-8 items-start">
@@ -113,11 +114,11 @@ const OverOns = () => {
                 
                 <div className="flex-1">
                   <p className="text-brand-gray-medium leading-relaxed mb-4">
-                    Halt.academy werd opgericht door Bas Ter Haar Romenij samen met Dave van Schie en Guido Scholte. Na een burn-out ontdekte Bas hoe effectief gestructureerde stressreductietechnieken kunnen zijn in het verbeteren van zowel persoonlijk welzijn als bedrijfsresultaten. Samen met Dave en Guido, beide ervaren trainers in bewuste aandacht, besloot hij een organisatie op te richten die deze technieken toegankelijk maakt voor bedrijven.
+                    Halt.academy ontstond uit persoonlijke ervaring. Na jaren in het bedrijfsleven en een eigen burn-out, ontdekte Bas hoe krachtig gestructureerde mindfulness kan zijn. Samen met Dave en Guido - beide ervaren trainers die hij leerde kennen tijdens zijn herstel - ontstond het idee om deze technieken breed toegankelijk te maken voor Nederlandse organisaties.
                   </p>
                   
                   <blockquote className="border-l-4 border-brand-blue pl-6 italic text-brand-gray-dark">
-                    "Na jaren in het bedrijfsleven te hebben gewerkt, zag ik hoe stress en burn-out niet alleen individuele medewerkers beïnvloedden, maar ook organisatieresultaten ondermijnden. Ik merkte dat er een kloof was tussen wetenschappelijk bewezen interventies en praktische implementatie op de werkvloer. Halt.academy overbrugt deze kloof door bewezen technieken toegankelijk en relevant te maken voor de zakelijke context. Samen met Dave en Guido hebben we de perfecte combinatie: zij zorgen voor de hoogwaardige training, ik voor de vertaalslag naar bedrijfsresultaten."
+                    "Ik zag jarenlang hoe stress niet alleen mensen kapot maakte, maar ook bedrijven ondermijnde. Tegelijkertijd ontdekte ik dat er bewezen technieken bestaan die echt helpen - maar die waren moeilijk toegankelijk voor de gewone werkvloer. Dave en Guido hebben de expertise om mensen echt te helpen, ik zorg ervoor dat het ook bedrijfsmatig werkt. Samen kunnen we écht het verschil maken."
                   </blockquote>
                   <cite className="block mt-2 text-right text-brand-gray-medium">— Bas Ter Haar Romenij</cite>
                 </div>
@@ -127,6 +128,7 @@ const OverOns = () => {
 
           {/* Trainers */}
           <div>
+            <h2 className="text-3xl font-bold text-brand-gray-dark mb-8 text-center">Onze trainers</h2>
             <div className="grid md:grid-cols-2 gap-8">
               {/* Dave van Schie */}
               <div className="bg-white rounded-xl p-8 shadow-lg">
@@ -140,14 +142,14 @@ const OverOns = () => {
                 </div>
                 
                 <div className="space-y-4 text-brand-gray-medium text-sm leading-relaxed">
-                  <p>Dave is gecertificeerd MBSR trainer. Hij voltooide zijn opleiding aan de Radboud Universiteit in 2017 en combineert sindsdien zijn expertise met praktijkervaring in het trainen van zowel particulieren als professionals.</p>
+                  <p>Dave is de rust zelve - en dat is precies wat hij ook uitstraalt in zijn trainingen. Als gecertificeerd MBSR trainer (Radboud Universiteit, 2017) combineert hij wetenschappelijke kennis met een warme, toegankelijke benadering.</p>
                   
                   <p>
-                    Met een achtergrond in psychologie en toegepaste interventies, brengt Dave een wetenschappelijk gefundeerde en praktische benadering naar zijn trainingen. Hij specialiseert zich in werkplaatsinterventies en heeft uitgebreide ervaring in het begeleiden van teams bij stressreductie.
+                    Met zijn achtergrond in psychologie weet Dave precies hoe hij complexe concepten simpel en praktisch kan maken. Hij heeft een bijzondere gave om groepen op hun gemak te stellen en iedereen mee te krijgen - van de grootste scepticus tot de meest enthousiaste deelnemer.
                   </p>
                   
                   <p>
-                    Daarnaast werkt Dave als contentmanager bij de Parnassia Groep, waar hij zijn kennis van mentale gezondheid in de praktijk brengt binnen een professionele organisatiecontext.
+                    Naast zijn werk bij Halt.academy werkt Dave als contentmanager bij de Parnassia Groep, waar hij dagelijks bezig is met mentale gezondheid in organisaties. Deze ervaring maakt hem extra goed in het begrijpen van de uitdagingen waarmee werknemers worstelen.
                   </p>
                 </div>
               </div>
@@ -160,18 +162,18 @@ const OverOns = () => {
                     <AvatarFallback className="text-white text-xl font-bold bg-brand-blue-light">GS</AvatarFallback>
                   </Avatar>
                   <h3 className="text-xl font-semibold text-brand-gray-dark">Guido Scholte</h3>
-                  <p className="text-brand-gray-medium text-sm">Medeoprichter & Trainer</p>
+                  <p className="text-brand-gray-medium text-sm">Medeoprichter &amp; Trainer</p>
                 </div>
                 
                 <div className="space-y-4 text-brand-gray-medium text-sm leading-relaxed">
-                  <p>Guido is gecertificeerd psycholoog en MBSR trainer in bewuste aandacht. Hij specialiseert zich in interventies voor stressreductie en het ontwikkelen van mentale veerkracht in professionele omgevingen.</p>
+                  <p>Guido brengt een unieke combinatie van diepte en praktische ervaring mee. Als gecertificeerd psycholoog en MBSR trainer heeft hij een scherp oog voor wat mensen écht nodig hebben om verder te komen.</p>
                   
                   <p>
-                    Sinds 2014 ontwikkelt en verzorgt Guido programma's binnen de justitiële sector, zowel voor medewerkers als management. Zijn expertise ligt in het vertalen van academische kennis naar praktische toepassingen in uitdagende werkomgevingen.
+                    Sinds 2014 ontwikkelt hij programma's binnen de justitiële sector - een van de meest uitdagende werkomgevingen die er zijn. Deze ervaring heeft hem geleerd hoe je ook in de moeilijkste omstandigheden mensen kunt helpen om veerkrachtiger te worden.
                   </p>
                   
                   <p>
-                    Als geestelijk verzorger werkt hij sinds 2020 in verschillende instellingen. Guido combineert zijn rustige professionele aanwezigheid met diepgaand inzicht in menselijke processen en gedragsverandering — waardevolle competenties voor organisatieontwikkeling.
+                    Als geestelijk verzorger (sinds 2020) combineert Guido professionele kennis met een diepe betrokkenheid bij mensen. Hij heeft de gave om snel door te hebben wat er speelt en mensen te helpen hun eigen kracht te ontdekken - precies wat nodig is voor duurzame verandering.
                   </p>
                 </div>
               </div>

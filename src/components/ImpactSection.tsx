@@ -1,56 +1,56 @@
 
 import { Button } from '@/components/ui/button';
-import { Shield, Heart, Moon, Users, Target, BarChart3 } from 'lucide-react';
+import { Shield, Heart, Moon, Users, Target, BarChart3, Smile } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const ImpactSection = () => {
   const impacts = [
     {
       icon: Heart,
-      title: "32% minder angst- en depressie",
-      description: "Verbeterde mentale gezondheid van medewerkers",
+      title: "32% minder angst en zorgen",
+      description: "Medewerkers voelen zich rustiger en zekerder",
       color: "text-purple-600"
     },
     {
       icon: Moon,
-      title: "20% betere slaap",
-      description: "Verbeterde slaapkwaliteit voor betere werkprestaties",
+      title: "20% betere nachtrust",
+      description: "Diepere slaap voor meer energie overdag",
       color: "text-indigo-600"
     },
     {
       icon: Shield,
-      title: "15% beter immuunsysteem",
-      description: "Sterkere weerstand tegen ziekte",
+      title: "15% sterker immuunsysteem",
+      description: "Minder vaak ziek, meer tijd voor wat telt",
       color: "text-emerald-600"
     },
     {
-      icon: Users,
-      title: "26% hogere werktevredenheid",
-      description: "Meer gemotiveerde en tevreden medewerkers",
+      icon: Smile,
+      title: "26% meer werkplezier",
+      description: "Medewerkers gaan weer met plezier naar werk",
       color: "text-brand-green"
     },
     {
       icon: Target,
-      title: "22% meer werkbetrokkenheid",
-      description: "Hogere productiviteit en betrokkenheid",
+      title: "22% meer betrokkenheid",
+      description: "Gemotiveerde teams die samen groeien",
       color: "text-orange-600"
     },
     {
       icon: BarChart3,
-      title: "35% meer werkgerelateerde veerkracht",
-      description: "Betere omgang met werkdruk en uitdagingen",
+      title: "35% meer veerkracht",
+      description: "Uitdagingen worden kansen voor groei",
       color: "text-brand-blue"
     },
     {
-      icon: Target,
-      title: "27% verbeterde werk-privébalans",
-      description: "Betere balans tussen werk en privéleven",
+      icon: Users,
+      title: "27% betere werk-privé balans",
+      description: "Meer tijd en energie voor het leven buiten werk",
       color: "text-teal-600"
     },
     {
       icon: Shield,
       title: "40-58% minder werkstress",
-      description: "Effectieve stressreductie op de werkplek",
+      description: "Van overweldiging naar overzicht en rust",
       color: "text-brand-blue"
     }
   ];
@@ -60,10 +60,10 @@ const ImpactSection = () => {
       <div className="container-custom">
         <div className="text-center space-y-6 mb-16">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-brand-gray-dark">
-            De impact op uw organisatie
+            Wat gebeurt er met uw medewerkers?
           </h2>
           <p className="text-lg md:text-xl text-brand-gray-medium max-w-3xl mx-auto leading-relaxed">
-            Ons wetenschappelijk bewezen stressreductieprogramma realiseert 30% minder verzuim en 31% verbetering in medewerkerretentie door de volgende factoren positief te beïnvloeden
+            Ons programma zorgt niet alleen voor 30% minder verzuim en 31% betere retentie. Het belangrijkste is wat er in die 8 weken verandert voor uw mensen:
           </p>
         </div>
 
@@ -95,13 +95,16 @@ const ImpactSection = () => {
         </div>
 
         <div className="text-center mt-12 space-y-4">
+          <p className="text-lg text-brand-gray-medium max-w-2xl mx-auto mb-6">
+            Deze cijfers zijn mooi, maar het echte verschil zit in de verhalen van mensen die weer plezier hebben in hun werk en leven.
+          </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link to="/wetenschap">
               <Button 
                 variant="outline" 
                 className="w-full sm:w-auto border-2 border-brand-blue text-brand-blue hover:bg-brand-blue hover:text-white font-semibold py-3 px-8 rounded-lg text-base md:text-lg transition-all duration-300"
               >
-                Lees meer over de wetenschap
+                Ontdek de wetenschap erachter
               </Button>
             </Link>
           </div>
