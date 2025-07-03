@@ -18,7 +18,7 @@ const StickyCtaButtons = () => {
         </Button>
         <Button 
           variant="outline"
-          className="border-2 border-brand-blue text-brand-blue hover:text-brand-blue font-semibold py-3 sm:py-5 px-4 sm:px-10 rounded-lg text-base sm:text-lg transition-all duration-300 bg-white shadow-lg hover:shadow-xl transform hover:-translate-y-1 whitespace-nowrap"
+          className="border-0 text-brand-blue hover:text-brand-blue font-semibold py-3 sm:py-5 px-4 sm:px-10 rounded-lg text-base sm:text-lg transition-all duration-300 bg-white shadow-lg hover:shadow-xl transform hover:-translate-y-1 whitespace-nowrap"
           onClick={() => window.open('https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1wwDnoAHyFrV0M1FxwmbcMa9ewkDxTDdwQObwPKF-WX-wZV9DssZKtb1haoeP5qXDLenQlZt_R', '_blank')}
         >
           <span className="hidden sm:inline">Kennis maken</span>

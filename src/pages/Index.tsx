@@ -37,9 +37,8 @@ const Index = () => {
             <div>
               <h3 className="text-lg font-semibold mb-4">Contact</h3>
               <div className="space-y-2 text-gray-300">
-                <p>Email: info@halt.academy</p>
-                <p>Telefoon: +31 (0)20 123 4567</p>
-                <p>KvK: 12345678</p>
+                <p>Email: bas@haltacademy.nl</p>
+                <p>Telefoon: 06 23 45 34 77</p>
               </div>
             </div>
             <div>

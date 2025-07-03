@@ -1,7 +1,7 @@
 
 import Navigation from '@/components/Navigation';
 import { Button } from '@/components/ui/button';
-import { Calendar, Mail, Phone, MapPin } from 'lucide-react';
+import { Calendar, Mail, Phone } from 'lucide-react';
 import StickyCtaButtons from '@/components/StickyCtaButtons';
 import { useEffect } from 'react';
 
@@ -42,7 +42,7 @@ const Contact = () => {
                       </div>
                       <div>
                         <h3 className="font-semibold text-brand-gray-dark">Email</h3>
-                        <p className="text-brand-gray-medium">info@halt.academy</p>
+                        <p className="text-brand-gray-medium">bas@haltacademy.nl</p>
                       </div>
                     </div>
                     
@@ -52,17 +52,7 @@ const Contact = () => {
                       </div>
                       <div>
                         <h3 className="font-semibold text-brand-gray-dark">Telefoon</h3>
-                        <p className="text-brand-gray-medium">+31 (0)20 123 4567</p>
-                      </div>
-                    </div>
-                    
-                    <div className="flex items-start space-x-4">
-                      <div className="bg-brand-blue text-white p-3 rounded-lg">
-                        <MapPin className="h-6 w-6" />
-                      </div>
-                      <div>
-                        <h3 className="font-semibold text-brand-gray-dark">KvK</h3>
-                        <p className="text-brand-gray-medium">12345678</p>
+                        <p className="text-brand-gray-medium">06 23 45 34 77</p>
                       </div>
                     </div>
                   </div>

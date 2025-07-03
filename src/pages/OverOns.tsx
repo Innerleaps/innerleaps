@@ -1,12 +1,17 @@
+
 import Navigation from '@/components/Navigation';
 import StickyCtaButtons from '@/components/StickyCtaButtons';
 import { Brain, Building, Globe, TrendingUp, Users, Heart } from 'lucide-react';
 import { useEffect } from 'react';
+import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
+
 const OverOns = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-  return <div className="min-h-screen bg-brand-gray-light">
+  
+  return (
+    <div className="min-h-screen bg-brand-gray-light">
       <Navigation />
       <StickyCtaButtons />
       
@@ -97,12 +102,13 @@ const OverOns = () => {
             
             <div className="bg-white rounded-xl p-8 shadow-lg">
               <div className="flex flex-col md:flex-row gap-8 items-start">
-                <div className="flex-shrink-0">
-                  <div className="w-32 h-32 bg-brand-blue rounded-full flex items-center justify-center text-white text-2xl font-bold">
-                    BtH
-                  </div>
-                  <p className="text-center mt-2 font-semibold text-brand-gray-dark">Bas Ter Haar Romenij</p>
-                  <p className="text-center text-sm text-brand-gray-medium">Medeoprichter & Marketing/Sales</p>
+                <div className="flex-shrink-0 text-center">
+                  <Avatar className="w-32 h-32 mx-auto mb-4">
+                    <AvatarImage src="/lovable-uploads/07c13706-b4be-4b0a-8b50-701bd69610fc.png" alt="Bas Ter Haar Romenij" />
+                    <AvatarFallback className="text-white text-2xl font-bold bg-brand-blue">BtH</AvatarFallback>
+                  </Avatar>
+                  <p className="font-semibold text-brand-gray-dark">Bas Ter Haar Romenij</p>
+                  <p className="text-sm text-brand-gray-medium">Medeoprichter & Marketing/Sales</p>
                 </div>
                 
                 <div className="flex-1">
@@ -125,9 +131,10 @@ const OverOns = () => {
               {/* Dave van Schie */}
               <div className="bg-white rounded-xl p-8 shadow-lg">
                 <div className="flex flex-col items-center mb-6">
-                  <div className="w-24 h-24 bg-brand-green rounded-full flex items-center justify-center text-white text-xl font-bold mb-4">
-                    DvS
-                  </div>
+                  <Avatar className="w-24 h-24 mb-4">
+                    <AvatarImage src="/lovable-uploads/e2b5c07e-4018-45d2-b441-a83bdc38ceaf.png" alt="Dave van Schie" />
+                    <AvatarFallback className="text-white text-xl font-bold bg-brand-green">DvS</AvatarFallback>
+                  </Avatar>
                   <h3 className="text-xl font-semibold text-brand-gray-dark">Dave van Schie</h3>
                   <p className="text-brand-gray-medium text-sm">Medeoprichter &amp; Trainer</p>
                 </div>
@@ -148,9 +155,10 @@ const OverOns = () => {
               {/* Guido Scholte */}
               <div className="bg-white rounded-xl p-8 shadow-lg">
                 <div className="flex flex-col items-center mb-6">
-                  <div className="w-24 h-24 bg-brand-blue-light rounded-full flex items-center justify-center text-white text-xl font-bold mb-4">
-                    GS
-                  </div>
+                  <Avatar className="w-24 h-24 mb-4">
+                    <AvatarImage src="/lovable-uploads/eaa7a159-2f85-4fa3-b487-4855426f2c14.png" alt="Guido Scholte" />
+                    <AvatarFallback className="text-white text-xl font-bold bg-brand-blue-light">GS</AvatarFallback>
+                  </Avatar>
                   <h3 className="text-xl font-semibold text-brand-gray-dark">Guido Scholte</h3>
                   <p className="text-brand-gray-medium text-sm">Medeoprichter & Trainer</p>
                 </div>
@@ -185,9 +193,8 @@ const OverOns = () => {
             <div>
               <h3 className="text-lg font-semibold mb-4">Contact</h3>
               <div className="space-y-2 text-gray-300">
-                <p>Email: info@halt.academy</p>
-                <p>Telefoon: +31 (0)20 123 4567</p>
-                <p>KvK: 12345678</p>
+                <p>Email: bas@haltacademy.nl</p>
+                <p>Telefoon: 06 23 45 34 77</p>
               </div>
             </div>
             <div>
@@ -205,6 +212,8 @@ const OverOns = () => {
           </div>
         </div>
       </footer>
-    </div>;
+    </div>
+  );
 };
+
 export default OverOns;
