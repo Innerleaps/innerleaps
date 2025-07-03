@@ -165,37 +165,37 @@ const CalculatorModal = ({
 
   return (
     <Dialog open={isOpen} onOpenChange={handleClose}>
-      <DialogContent className="max-w-4xl">
+      <DialogContent className="max-w-3xl max-h-[90vh] overflow-y-auto">
         <DialogHeader>
-          <DialogTitle>Bereken Uw Potentiële Besparing</DialogTitle>
+          <DialogTitle className="text-xl">Bereken Uw Potentiële Besparing</DialogTitle>
         </DialogHeader>
 
-        <Card className="p-8">
-          <div className="text-center mb-8">
-            <div className="inline-flex items-center justify-center w-16 h-16 bg-brand-blue text-white rounded-full mb-4">
-              <CalculatorIcon className="h-8 w-8" />
+        <Card className="p-6">
+          <div className="text-center mb-6">
+            <div className="inline-flex items-center justify-center w-12 h-12 bg-brand-blue text-white rounded-full mb-3">
+              <CalculatorIcon className="h-6 w-6" />
             </div>
-            <h3 className="text-2xl font-bold text-brand-gray-dark mb-2">
+            <h3 className="text-xl font-bold text-brand-gray-dark mb-2">
               Bereken Uw Potentiële Besparing
             </h3>
-            <p className="text-brand-gray-medium">
+            <p className="text-brand-gray-medium text-sm">
               Vul uw gegevens in voor een persoonlijke berekening van de ROI
             </p>
           </div>
 
-          <div className="space-y-8">
+          <div className="space-y-6">
             {/* Persoonsinformatie section */}
             <div>
-              <h4 className="text-lg font-semibold text-brand-gray-dark mb-4">Persoonsinformatie:</h4>
-              <div className="grid md:grid-cols-2 gap-4">
+              <h4 className="text-base font-semibold text-brand-gray-dark mb-3">Persoonsinformatie:</h4>
+              <div className="grid md:grid-cols-2 gap-3">
                 <div>
-                  <Label htmlFor="name" className="text-brand-gray-dark font-medium">Naam *</Label>
+                  <Label htmlFor="name" className="text-brand-gray-dark font-medium text-sm">Naam *</Label>
                   <Input 
                     id="name" 
                     type="text" 
                     value={formData.name} 
                     onChange={e => handleInputChange('name', e.target.value)} 
-                    className="mt-1" 
+                    className="mt-1 h-9 text-sm" 
                     placeholder={!formData.name ? "Jan Janssen" : ""} 
                     required 
                     disabled={isSubmitting}
@@ -203,26 +203,26 @@ const CalculatorModal = ({
                 </div>
                 
                 <div>
-                  <Label htmlFor="phone" className="text-brand-gray-dark font-medium">Telefoonnummer</Label>
+                  <Label htmlFor="phone" className="text-brand-gray-dark font-medium text-sm">Telefoonnummer</Label>
                   <Input 
                     id="phone" 
                     type="tel" 
                     value={formData.phone} 
                     onChange={e => handleInputChange('phone', e.target.value)} 
-                    className="mt-1" 
+                    className="mt-1 h-9 text-sm" 
                     placeholder={!formData.phone ? "06 12345678" : ""} 
                     disabled={isSubmitting}
                   />
                 </div>
                 
                 <div className="md:col-span-2">
-                  <Label htmlFor="functie" className="text-brand-gray-dark font-medium">Functie *</Label>
+                  <Label htmlFor="functie" className="text-brand-gray-dark font-medium text-sm">Functie *</Label>
                   <Input 
                     id="functie" 
                     type="text" 
                     value={formData.functie} 
                     onChange={e => handleInputChange('functie', e.target.value)} 
-                    className="mt-1" 
+                    className="mt-1 h-9 text-sm" 
                     placeholder={!formData.functie ? "HR Manager" : ""} 
                     required 
                     disabled={isSubmitting}
@@ -233,16 +233,16 @@ const CalculatorModal = ({
 
             {/* Bedrijfsgegevens section */}
             <div>
-              <h4 className="text-lg font-semibold text-brand-gray-dark mb-4">Bedrijfsgegevens:</h4>
-              <div className="grid md:grid-cols-2 gap-4">
+              <h4 className="text-base font-semibold text-brand-gray-dark mb-3">Bedrijfsgegevens:</h4>
+              <div className="grid md:grid-cols-2 gap-3">
                 <div>
-                  <Label htmlFor="company" className="text-brand-gray-dark font-medium">Bedrijfsnaam *</Label>
+                  <Label htmlFor="company" className="text-brand-gray-dark font-medium text-sm">Bedrijfsnaam *</Label>
                   <Input 
                     id="company" 
                     type="text" 
                     value={formData.company} 
                     onChange={e => handleInputChange('company', e.target.value)} 
-                    className="mt-1" 
+                    className="mt-1 h-9 text-sm" 
                     placeholder={!formData.company ? "Uw Bedrijf B.V." : ""} 
                     required 
                     disabled={isSubmitting}
@@ -250,13 +250,13 @@ const CalculatorModal = ({
                 </div>
                 
                 <div>
-                  <Label htmlFor="employees" className="text-brand-gray-dark font-medium">Aantal medewerkers *</Label>
+                  <Label htmlFor="employees" className="text-brand-gray-dark font-medium text-sm">Aantal medewerkers *</Label>
                   <Input 
                     id="employees" 
                     type="number" 
                     value={formData.employees} 
                     onChange={e => handleInputChange('employees', e.target.value)} 
-                    className="mt-1" 
+                    className="mt-1 h-9 text-sm" 
                     placeholder={!formData.employees ? "50" : ""} 
                     required 
                     disabled={isSubmitting}
@@ -264,13 +264,13 @@ const CalculatorModal = ({
                 </div>
                 
                 <div>
-                  <Label htmlFor="avgEmployeeCosts" className="text-brand-gray-dark font-medium">Gemiddelde werkgeverskosten per medewerker per jaar (€) *</Label>
+                  <Label htmlFor="avgEmployeeCosts" className="text-brand-gray-dark font-medium text-sm">Werkgeverskosten per medewerker per jaar (€) *</Label>
                   <Input 
                     id="avgEmployeeCosts" 
                     type="number" 
                     value={formData.avgEmployeeCosts} 
                     onChange={e => handleInputChange('avgEmployeeCosts', e.target.value)} 
-                    className="mt-1" 
+                    className="mt-1 h-9 text-sm" 
                     placeholder={!formData.avgEmployeeCosts ? "50000" : ""} 
                     required 
                     disabled={isSubmitting}
@@ -278,14 +278,14 @@ const CalculatorModal = ({
                 </div>
                 
                 <div>
-                  <Label htmlFor="currentAbsenteeism" className="text-brand-gray-dark font-medium">Huidig verzuimpercentage (%) *</Label>
+                  <Label htmlFor="currentAbsenteeism" className="text-brand-gray-dark font-medium text-sm">Huidig verzuimpercentage (%) *</Label>
                   <Input 
                     id="currentAbsenteeism" 
                     type="number" 
                     step="0.1" 
                     value={formData.currentAbsenteeism} 
                     onChange={e => handleInputChange('currentAbsenteeism', e.target.value)} 
-                    className="mt-1" 
+                    className="mt-1 h-9 text-sm" 
                     placeholder={!formData.currentAbsenteeism ? "4.2" : ""} 
                     required 
                     disabled={isSubmitting}
@@ -293,14 +293,14 @@ const CalculatorModal = ({
                 </div>
                 
                 <div>
-                  <Label htmlFor="currentTurnover" className="text-brand-gray-dark font-medium">Huidig verlooppercentage (%) *</Label>
+                  <Label htmlFor="currentTurnover" className="text-brand-gray-dark font-medium text-sm">Huidig verlooppercentage (%) *</Label>
                   <Input 
                     id="currentTurnover" 
                     type="number" 
                     step="0.1" 
                     value={formData.currentTurnover} 
                     onChange={e => handleInputChange('currentTurnover', e.target.value)} 
-                    className="mt-1" 
+                    className="mt-1 h-9 text-sm" 
                     placeholder={!formData.currentTurnover ? "12.5" : ""} 
                     required 
                     disabled={isSubmitting}
@@ -315,7 +315,7 @@ const CalculatorModal = ({
                 id="dataConfirmed" 
                 checked={dataConfirmed} 
                 onCheckedChange={checked => setDataConfirmed(checked === true)} 
-                className="border-2 border-brand-blue data-[state=checked]:bg-brand-green data-[state=checked]:border-brand-green" 
+                className="w-5 h-5 border-2 border-brand-blue data-[state=checked]:bg-brand-green data-[state=checked]:border-brand-green mt-0.5" 
                 disabled={isSubmitting}
               />
               <Label htmlFor="dataConfirmed" className="text-sm text-brand-gray-dark leading-relaxed">
@@ -323,11 +323,11 @@ const CalculatorModal = ({
               </Label>
             </div>
             
-            <div className="pt-4">
+            <div className="pt-2">
               <Button 
                 onClick={calculateSavings} 
                 disabled={!isFormValid || isSubmitting} 
-                className="w-full bg-brand-blue hover:bg-brand-blue-dark text-white"
+                className="w-full bg-brand-blue hover:bg-brand-blue-dark text-white h-10"
               >
                 {isSubmitting ? (
                   <>
@@ -341,7 +341,7 @@ const CalculatorModal = ({
             </div>
           </div>
           
-          <div className="mt-6 text-xs text-brand-gray-medium">
+          <div className="mt-4 text-xs text-brand-gray-medium">
             * Verplichte velden. Uw gegevens worden vertrouwelijk behandeld conform onze privacyverklaring.
           </div>
         </Card>

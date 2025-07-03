@@ -203,49 +203,50 @@ const VoorWie = () => {
           </div>
 
           {/* Is Uw Organisatie Geschikt */}
-          <div className="bg-brand-blue text-white rounded-xl p-8 text-center">
-            <h2 className="text-3xl font-bold mb-6">Is Uw Organisatie Geschikt?</h2>
-            <p className="text-xl mb-6">Ons programma is bijzonder effectief voor organisaties die:</p>
-            
-            <div className="grid md:grid-cols-2 gap-6 mb-8 text-left">
-              <ul className="space-y-3">
-                <li className="flex items-start">
-                  <div className="w-2 h-2 bg-brand-green-light rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                  Het verzuimpercentage willen verlagen
-                </li>
-                <li className="flex items-start">
-                  <div className="w-2 h-2 bg-brand-green-light rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                  Uitdagingen ervaren met het behouden van talent
-                </li>
-                <li className="flex items-start">
-                  <div className="w-2 h-2 bg-brand-green-light rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                  Opereren in een sector met hoge werkdruk of snelle veranderingen
-                </li>
-              </ul>
+          <div className="bg-brand-blue text-white rounded-xl p-8">
+            <div className="max-w-4xl mx-auto">
+              <h2 className="text-3xl font-bold mb-6 text-center">Is Uw Organisatie Geschikt?</h2>
+              <p className="text-xl mb-6 text-center">Ons programma is bijzonder effectief voor organisaties die:</p>
               
-              <ul className="space-y-3">
-                <li className="flex items-start">
-                  <div className="w-2 h-2 bg-brand-green-light rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                  Een proactieve benadering van medewerkerwelzijn nastreven
-                </li>
-                <li className="flex items-start">
-                  <div className="w-2 h-2 bg-brand-green-light rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                  Zoeken naar bewezen interventies met meetbare ROI
-                </li>
-              </ul>
+              <div className="max-w-2xl mx-auto mb-8">
+                <ul className="space-y-4">
+                  <li className="flex items-start">
+                    <div className="w-2 h-2 bg-brand-green-light rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                    Het verzuimpercentage willen verlagen
+                  </li>
+                  <li className="flex items-start">
+                    <div className="w-2 h-2 bg-brand-green-light rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                    Uitdagingen ervaren met het behouden van talent
+                  </li>
+                  <li className="flex items-start">
+                    <div className="w-2 h-2 bg-brand-green-light rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                    Opereren in een sector met hoge werkdruk of snelle veranderingen
+                  </li>
+                  <li className="flex items-start">
+                    <div className="w-2 h-2 bg-brand-green-light rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                    Een proactieve benadering van medewerkerwelzijn nastreven
+                  </li>
+                  <li className="flex items-start">
+                    <div className="w-2 h-2 bg-brand-green-light rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                    Zoeken naar bewezen interventies met meetbare ROI
+                  </li>
+                </ul>
+              </div>
+              
+              <div className="text-center">
+                <p className="text-lg mb-6 max-w-2xl mx-auto">
+                  Niet zeker of het programma past bij uw organisatie? Plan een vrijblijvend gesprek waarin we uw specifieke situatie analyseren en een op maat gemaakte aanpak voorstellen.
+                </p>
+                
+                <Button 
+                  size="lg"
+                  className="bg-brand-green hover:bg-brand-green-light text-white font-semibold py-4 px-8 rounded-lg text-lg transition-all duration-300 transform hover:-translate-y-1"
+                  onClick={() => window.open('https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1wwDnoAHyFrV0M1FxwmbcMa9ewkDxTDdwQObwPKF-WX-wZV9DssZKtb1haoeP5qXDLenQlZt_R', '_blank')}
+                >
+                  Plan Vrijblijvend Gesprek
+                </Button>
+              </div>
             </div>
-            
-            <p className="text-lg mb-6">
-              Niet zeker of het programma past bij uw organisatie? Plan een vrijblijvend gesprek waarin we uw specifieke situatie analyseren en een op maat gemaakte aanpak voorstellen.
-            </p>
-            
-            <Button 
-              size="lg"
-              className="bg-brand-green hover:bg-brand-green-light text-white font-semibold py-4 px-8 rounded-lg text-lg transition-all duration-300 transform hover:-translate-y-1"
-              onClick={() => window.open('https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1wwDnoAHyFrV0M1FxwmbcMa9ewkDxTDdwQObwPKF-WX-wZV9DssZKtb1haoeP5qXDLenQlZt_R', '_blank')}
-            >
-              Plan Vrijblijvend Gesprek
-            </Button>
           </div>
         </div>
       </main>
@@ -263,9 +264,8 @@ const VoorWie = () => {
             <div>
               <h3 className="text-lg font-semibold mb-4">Contact</h3>
               <div className="space-y-2 text-gray-300">
-                <p>Email: info@halt.academy</p>
-                <p>Telefoon: +31 (0)20 123 4567</p>
-                <p>KvK: 12345678</p>
+                <p>Email: bas@haltacademy.nl</p>
+                <p>Telefoon: 06 23 45 34 77</p>
               </div>
             </div>
             <div>
