@@ -104,7 +104,7 @@ const OverOns = () => {
               <div className="flex flex-col md:flex-row gap-8 items-start">
                 <div className="flex-shrink-0 text-center">
                   <Avatar className="w-32 h-32 mx-auto mb-4">
-                    <AvatarImage src="/lovable-uploads/07c13706-b4be-4b0a-8b50-701bd69610fc.png" alt="Bas Ter Haar Romenij" />
+                    <AvatarImage src="/lovable-uploads/eaa7a159-2f85-4fa3-b487-4855426f2c14.png" alt="Bas Ter Haar Romenij" />
                     <AvatarFallback className="text-white text-2xl font-bold bg-brand-blue">BtH</AvatarFallback>
                   </Avatar>
                   <p className="font-semibold text-brand-gray-dark">Bas Ter Haar Romenij</p>
@@ -156,7 +156,7 @@ const OverOns = () => {
               <div className="bg-white rounded-xl p-8 shadow-lg">
                 <div className="flex flex-col items-center mb-6">
                   <Avatar className="w-24 h-24 mb-4">
-                    <AvatarImage src="/lovable-uploads/eaa7a159-2f85-4fa3-b487-4855426f2c14.png" alt="Guido Scholte" />
+                    <AvatarImage src="/lovable-uploads/07c13706-b4be-4b0a-8b50-701bd69610fc.png" alt="Guido Scholte" />
                     <AvatarFallback className="text-white text-xl font-bold bg-brand-blue-light">GS</AvatarFallback>
                   </Avatar>
                   <h3 className="text-xl font-semibold text-brand-gray-dark">Guido Scholte</h3>
