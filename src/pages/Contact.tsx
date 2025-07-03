@@ -79,6 +79,25 @@ const Contact = () => {
                     </li>
                   </ul>
                 </div>
+
+                {/* Bas's personal message */}
+                <div className="bg-white border border-gray-200 p-6 rounded-xl shadow-sm">
+                  <div className="flex items-start space-x-4">
+                    <img 
+                      src="/lovable-uploads/07c13706-b4be-4b0a-8b50-701bd69610fc.png" 
+                      alt="Bas van der Ven" 
+                      className="w-16 h-16 rounded-full object-cover flex-shrink-0"
+                    />
+                    <div>
+                      <p className="text-brand-gray-dark italic mb-2">
+                        "Ik help graag persoonlijk mee om te kijken naar de mogelijkheden voor uw organisatie. Elke situatie is uniek, en samen vinden we de beste aanpak."
+                      </p>
+                      <p className="text-sm text-brand-gray-medium font-medium">
+                        — Bas van der Ven, Oprichter Halt.academy
+                      </p>
+                    </div>
+                  </div>
+                </div>
               </div>
 
               {/* CTA Section */}

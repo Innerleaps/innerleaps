@@ -63,36 +63,48 @@ const handler = async (req: Request): Promise<Response> => {
 
     // Send email notification
     const emailHtml = `
-      <h2>Nieuwe Calculator Besparing Aanvraag</h2>
-      
-      <h3>Contactgegevens:</h3>
-      <ul>
-        <li><strong>Naam:</strong> ${submission.name}</li>
-        <li><strong>Telefoon:</strong> ${submission.phone || 'Niet opgegeven'}</li>
-        <li><strong>Functie:</strong> ${submission.functie}</li>
-        <li><strong>Bedrijf:</strong> ${submission.company}</li>
-      </ul>
-      
-      <h3>Bedrijfsgegevens:</h3>
-      <ul>
-        <li><strong>Aantal medewerkers:</strong> ${submission.employees}</li>
-        <li><strong>Gem. werkgeverskosten per jaar:</strong> €${submission.avgEmployeeCosts.toLocaleString()}</li>
-        <li><strong>Huidig verzuimpercentage:</strong> ${submission.currentAbsenteeism}%</li>
-        <li><strong>Huidig verlooppercentage:</strong> ${submission.currentTurnover}%</li>
-      </ul>
-      
-      <h3>Berekende Resultaten:</h3>
-      <ul>
-        <li><strong>Verzuimbesparing:</strong> €${submission.calculationResults.verzuimBesparing?.toLocaleString() || 0}</li>
-        <li><strong>Retentiebesparing:</strong> €${submission.calculationResults.retentieBesparing?.toLocaleString() || 0}</li>
-        <li><strong>Totale besparing:</strong> €${submission.calculationResults.totalSaving?.toLocaleString() || 0}</li>
-        <li><strong>Bruto besparing:</strong> €${submission.calculationResults.grossSaving?.toLocaleString() || 0}</li>
-        <li><strong>ROI:</strong> ${submission.calculationResults.roi || 0}%</li>
-        <li><strong>Aantal groepen benodigd:</strong> ${submission.calculationResults.numberOfGroups || 0}</li>
-        <li><strong>Totale investering:</strong> €${submission.calculationResults.investment?.toLocaleString() || 0}</li>
-      </ul>
-      
-      <p><em>Ingediend op: ${new Date().toLocaleString('nl-NL')}</em></p>
+      <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
+        <h2>Nieuwe Calculator Besparing Aanvraag</h2>
+        
+        <h3>Contactgegevens:</h3>
+        <ul>
+          <li><strong>Naam:</strong> ${submission.name}</li>
+          <li><strong>Telefoon:</strong> ${submission.phone || 'Niet opgegeven'}</li>
+          <li><strong>Functie:</strong> ${submission.functie}</li>
+          <li><strong>Bedrijf:</strong> ${submission.company}</li>
+        </ul>
+        
+        <h3>Bedrijfsgegevens:</h3>
+        <ul>
+          <li><strong>Aantal medewerkers:</strong> ${submission.employees}</li>
+          <li><strong>Gem. werkgeverskosten per jaar:</strong> €${submission.avgEmployeeCosts.toLocaleString()}</li>
+          <li><strong>Huidig verzuimpercentage:</strong> ${submission.currentAbsenteeism}%</li>
+          <li><strong>Huidig verlooppercentage:</strong> ${submission.currentTurnover}%</li>
+        </ul>
+        
+        <h3>Berekende Resultaten:</h3>
+        <ul>
+          <li><strong>Verzuimbesparing:</strong> €${submission.calculationResults.verzuimBesparing?.toLocaleString() || 0}</li>
+          <li><strong>Retentiebesparing:</strong> €${submission.calculationResults.retentieBesparing?.toLocaleString() || 0}</li>
+          <li><strong>Totale besparing:</strong> €${submission.calculationResults.totalSaving?.toLocaleString() || 0}</li>
+          <li><strong>Bruto besparing:</strong> €${submission.calculationResults.grossSaving?.toLocaleString() || 0}</li>
+          <li><strong>ROI:</strong> ${submission.calculationResults.roi || 0}%</li>
+          <li><strong>Aantal groepen benodigd:</strong> ${submission.calculationResults.numberOfGroups || 0}</li>
+          <li><strong>Totale investering:</strong> €${submission.calculationResults.investment?.toLocaleString() || 0}</li>
+        </ul>
+        
+        <div style="margin-top: 30px; padding: 20px; background-color: #f8f9fa; border-radius: 8px; display: flex; align-items: center; gap: 15px;">
+          <img src="https://7f1b052b-e2ee-419a-aec0-e4591c9e4afe.lovableproject.com/lovable-uploads/07c13706-b4be-4b0a-8b50-701bd69610fc.png" 
+               alt="Bas van der Ven" 
+               style="width: 60px; height: 60px; border-radius: 50%; object-fit: cover;">
+          <div>
+            <p style="margin: 0; font-weight: bold; color: #333;">Bas van der Ven</p>
+            <p style="margin: 5px 0 0 0; color: #666; font-size: 14px;">Oprichter Halt.academy</p>
+          </div>
+        </div>
+        
+        <p style="margin-top: 20px;"><em>Ingediend op: ${new Date().toLocaleString('nl-NL')}</em></p>
+      </div>
     `;
 
     const emailResponse = await resend.emails.send({

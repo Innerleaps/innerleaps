@@ -1,3 +1,4 @@
+
 import { useLocation, useNavigate } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
@@ -60,17 +61,6 @@ const Berekening = () => {
                   <div className="text-sm opacity-90">ROI</div>
                 </div>
               </div>
-
-              {/* CTA Button in groene blok */}
-              <div className="pt-4">
-                <Button 
-                  size="lg" 
-                  className="bg-white text-brand-green hover:bg-gray-100 font-semibold px-8 py-4 text-lg" 
-                  onClick={openCalendar}
-                >
-                  Plan een gesprek
-                </Button>
-              </div>
               
               <div className="text-center p-6 bg-white/10 rounded-lg">
                 <div className="flex items-center justify-center gap-2 mb-2">
@@ -88,6 +78,31 @@ const Berekening = () => {
                   onClick={openCalendar}
                 >
                   Plan een gesprek
+                </Button>
+              </div>
+            </div>
+          </Card>
+
+          {/* Bas's personal message */}
+          <Card className="p-6 mb-8 bg-white border border-gray-200">
+            <div className="flex items-start space-x-4">
+              <img 
+                src="/lovable-uploads/07c13706-b4be-4b0a-8b50-701bd69610fc.png" 
+                alt="Bas van der Ven" 
+                className="w-16 h-16 rounded-full object-cover flex-shrink-0"
+              />
+              <div>
+                <p className="text-brand-gray-dark italic mb-2">
+                  "Mooie cijfers! Ik leg graag uit hoe we deze resultaten voor {formData.company} kunnen realiseren. Laten we kijken naar een aanpak die perfect past bij jullie organisatie."
+                </p>
+                <p className="text-sm text-brand-gray-medium font-medium mb-4">
+                  — Bas van der Ven, Oprichter Halt.academy
+                </p>
+                <Button 
+                  onClick={openCalendar}
+                  className="bg-brand-green hover:bg-brand-green-light text-white font-semibold py-2 px-6 rounded-lg text-sm"
+                >
+                  Plan een gesprek met Bas
                 </Button>
               </div>
             </div>
