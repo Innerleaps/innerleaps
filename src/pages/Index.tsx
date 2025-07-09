@@ -5,6 +5,7 @@ import ImpactSection from '@/components/ImpactSection';
 import ProgramSection from '@/components/ProgramSection';
 import ProcessSection from '@/components/ProcessSection';
 import StickyCtaButtons from '@/components/StickyCtaButtons';
+import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
 
 const Index = () => {
   return (
@@ -39,6 +40,12 @@ const Index = () => {
               <div className="space-y-2 text-gray-300">
                 <p>Email: bas@haltacademy.nl</p>
                 <p>Telefoon: 06 23 45 34 77</p>
+                <div className="mt-4 flex justify-start">
+                  <Avatar className="w-24 h-24">
+                    <AvatarImage src="/lovable-uploads/eaa7a159-2f85-4fa3-b487-4855426f2c14.png" alt="Bas Ter Haar Romenij" />
+                    <AvatarFallback className="text-white text-xl font-bold bg-brand-blue">BtH</AvatarFallback>
+                  </Avatar>
+                </div>
               </div>
             </div>
             <div>
