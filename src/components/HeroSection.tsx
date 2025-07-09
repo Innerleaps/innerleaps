@@ -20,7 +20,7 @@ const HeroSection = () => {
                   Minder stress, <br />
                   <span className="text-brand-green-light">meer geluk</span> op werk
                 </h1>
-                <p className="text-xl sm:text-2xl md:text-3xl text-blue-100 leading-relaxed">Wetenschappelijk bewezen programma dat in 8 weken tijd zorgt voor 30% minder verzuim en gelukkigere & veerkrachtigere medewerkers</p>
+                <p className="text-xl sm:text-2xl md:text-3xl text-blue-100 leading-relaxed">Wetenschappelijk bewezen programma dat in 8 weken tijd zorgt voor veel minder verzuim en gelukkigere medewerkers</p>
               </div>
 
               <div className="flex flex-col sm:flex-row gap-4">
