@@ -1,3 +1,4 @@
+
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { ArrowDown, Award } from 'lucide-react';
@@ -20,8 +21,9 @@ const HeroSection = () => {
                 </div>
 
                 <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
-                  Minder stress, <br />
-                  <span className="text-brand-green-light">meer geluk</span> op werk
+                  Lagere uitval. <br />
+                  <span className="text-brand-green-light">Hogere retentie.</span> <br />
+                  Voor jouw mensen
                 </h1>
                 <p className="text-xl sm:text-2xl md:text-3xl text-blue-100 leading-relaxed">Wetenschappelijk bewezen programma dat in 8 weken tijd zorgt voor minder verzuim en gelukkigere medewerkers</p>
               </div>
