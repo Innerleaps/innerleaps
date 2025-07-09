@@ -1,3 +1,4 @@
+
 import Navigation from '@/components/Navigation';
 import StickyCtaButtons from '@/components/StickyCtaButtons';
 import { Brain, Building, Globe, TrendingUp, Users, Heart } from 'lucide-react';
@@ -101,13 +102,17 @@ const OverOns = () => {
             <h2 className="text-3xl font-bold text-brand-gray-dark mb-8">Hoe het allemaal begon</h2>
             
             <div className="bg-white rounded-xl p-8 shadow-lg">
-              <div className="space-y-6">
-                <div className="text-center">
-                  <p className="font-semibold text-brand-gray-dark text-lg">Bas Ter Haar Romenij</p>
+              <div className="flex flex-col md:flex-row gap-8 items-start">
+                <div className="flex-shrink-0 text-center">
+                  <Avatar className="w-32 h-32 mx-auto mb-4">
+                    <AvatarImage src="/lovable-uploads/eaa7a159-2f85-4fa3-b487-4855426f2c14.png" alt="Bas Ter Haar Romenij" />
+                    <AvatarFallback className="text-white text-2xl font-bold bg-brand-blue">BtH</AvatarFallback>
+                  </Avatar>
+                  <p className="font-semibold text-brand-gray-dark">Bas Ter Haar Romenij</p>
                   <p className="text-sm text-brand-gray-medium">Medeoprichter & Marketing/Sales</p>
                 </div>
                 
-                <div>
+                <div className="flex-1">
                   <p className="text-brand-gray-medium leading-relaxed mb-4">
                     Halt.academy ontstond uit persoonlijke ervaring. Na jaren in het bedrijfsleven en een eigen burn-out, ontdekte Bas hoe krachtig gestructureerde mindfulness kan zijn. Samen met Dave en Guido - beide ervaren trainers die hij leerde kennen tijdens zijn herstel - ontstond het idee om deze technieken breed toegankelijk te maken voor Nederlandse organisaties.
                   </p>
@@ -124,7 +129,7 @@ const OverOns = () => {
           {/* Trainers */}
           <div>
             <h2 className="text-3xl font-bold text-brand-gray-dark mb-8 text-center">Onze trainers</h2>
-            <div className="grid md:grid-cols-3 gap-8">
+            <div className="grid md:grid-cols-2 gap-8">
               {/* Dave van Schie */}
               <div className="bg-white rounded-xl p-8 shadow-lg">
                 <div className="flex flex-col items-center mb-6">
@@ -146,17 +151,6 @@ const OverOns = () => {
                   <p>
                     Naast zijn werk bij Halt.academy werkt Dave als contentmanager bij de Parnassia Groep, waar hij dagelijks bezig is met mentale gezondheid in organisaties. Deze ervaring maakt hem extra goed in het begrijpen van de uitdagingen waarmee werknemers worstelen.
                   </p>
-                </div>
-              </div>
-
-              {/* Middle column with uploaded photo */}
-              <div className="flex items-center justify-center">
-                <div className="w-full max-w-sm">
-                  <img 
-                    src="/lovable-uploads/d9b949b9-fa2b-4b6e-a1e8-f4e99e61720f.png" 
-                    alt="Team foto" 
-                    className="w-full h-auto rounded-xl shadow-lg"
-                  />
                 </div>
               </div>
 
@@ -191,7 +185,7 @@ const OverOns = () => {
       {/* Footer */}
       <footer className="bg-brand-gray-dark text-white py-12 mt-16">
         <div className="container-custom">
-          <div className="grid md:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-3 gap-8">
             <div>
               <div className="text-2xl font-bold mb-4">Halt.academy</div>
               <p className="text-gray-300 leading-relaxed">
@@ -203,12 +197,6 @@ const OverOns = () => {
               <div className="space-y-2 text-gray-300">
                 <p>Email: bas@haltacademy.nl</p>
                 <p>Telefoon: 06 23 45 34 77</p>
-                <div className="flex items-center mt-4">
-                  <Avatar className="w-12 h-12">
-                    <AvatarImage src="/lovable-uploads/eaa7a159-2f85-4fa3-b487-4855426f2c14.png" alt="Bas Ter Haar Romenij" />
-                    <AvatarFallback className="text-white text-sm font-bold bg-brand-blue">BtH</AvatarFallback>
-                  </Avatar>
-                </div>
               </div>
             </div>
             <div>
