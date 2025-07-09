@@ -102,14 +102,29 @@ const OverOns = () => {
             <h2 className="text-3xl font-bold text-brand-gray-dark mb-8">Hoe het allemaal begon</h2>
             
             <div className="bg-white rounded-xl p-8 shadow-lg">
-              <div className="text-brand-gray-medium leading-relaxed mb-4">
-                Halt.academy ontstond uit persoonlijke ervaring. Na jaren in het bedrijfsleven en een eigen burn-out, ontdekte Bas hoe krachtig gestructureerde mindfulness kan zijn. Samen met Dave en Guido - beide ervaren trainers die hij leerde kennen tijdens zijn herstel - ontstond het idee om deze technieken breed toegankelijk te maken voor Nederlandse organisaties.
+              <div className="flex flex-col md:flex-row items-start gap-6 mb-6">
+                <div className="flex-shrink-0">
+                  <Avatar className="w-24 h-24">
+                    <AvatarImage src="/lovable-uploads/eaa7a159-2f85-4fa3-b487-4855426f2c14.png" alt="Bas Ter Haar Romenij" />
+                    <AvatarFallback className="text-white text-xl font-bold bg-brand-blue">BtH</AvatarFallback>
+                  </Avatar>
+                  <div className="text-center mt-2">
+                    <p className="font-semibold text-brand-gray-dark text-sm">Bas Ter Haar Romenij</p>
+                    <p className="text-brand-gray-medium text-xs">Oprichter & Adviseur</p>
+                  </div>
+                </div>
+                
+                <div className="flex-1">
+                  <div className="text-brand-gray-medium leading-relaxed mb-4">
+                    Halt.academy ontstond uit persoonlijke ervaring. Na jaren in het bedrijfsleven en een eigen burn-out, ontdekte Bas hoe krachtig gestructureerde mindfulness kan zijn. Samen met Dave en Guido - beide ervaren trainers die hij leerde kennen tijdens zijn herstel - ontstond het idee om deze technieken breed toegankelijk te maken voor Nederlandse organisaties.
+                  </div>
+                  
+                  <blockquote className="border-l-4 border-brand-blue pl-6 italic text-brand-gray-dark">
+                    "Ik zag jarenlang hoe stress niet alleen mensen kapot maakte, maar ook bedrijven ondermijnde. Tegelijkertijd ontdekte ik dat er bewezen technieken bestaan die echt helpen - maar die waren moeilijk toegankelijk voor de gewone werkvloer. Dave en Guido hebben de expertise om mensen echt te helpen, ik zorg ervoor dat het ook bedrijfsmatig werkt. Samen kunnen we écht het verschil maken."
+                  </blockquote>
+                  <cite className="block mt-2 text-right text-brand-gray-medium">— Bas Ter Haar Romenij</cite>
+                </div>
               </div>
-              
-              <blockquote className="border-l-4 border-brand-blue pl-6 italic text-brand-gray-dark">
-                "Ik zag jarenlang hoe stress niet alleen mensen kapot maakte, maar ook bedrijven ondermijnde. Tegelijkertijd ontdekte ik dat er bewezen technieken bestaan die echt helpen - maar die waren moeilijk toegankelijk voor de gewone werkvloer. Dave en Guido hebben de expertise om mensen echt te helpen, ik zorg ervoor dat het ook bedrijfsmatig werkt. Samen kunnen we écht het verschil maken."
-              </blockquote>
-              <cite className="block mt-2 text-right text-brand-gray-medium">— Bas Ter Haar Romenij</cite>
             </div>
           </div>
 
