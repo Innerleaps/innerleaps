@@ -87,7 +87,7 @@ const Contact = () => {
                     <img 
                       src="/lovable-uploads/eaa7a159-2f85-4fa3-b487-4855426f2c14.png" 
                       alt="Bas Ter Haar Romenij" 
-                      className="w-20 h-20 rounded-full object-cover flex-shrink-0"
+                      className="w-28 h-28 rounded-full object-cover flex-shrink-0"
                     />
                     <div>
                       <p className="text-brand-gray-dark italic mb-4 text-lg">
