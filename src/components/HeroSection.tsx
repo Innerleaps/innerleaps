@@ -1,10 +1,14 @@
+
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { ArrowDown, Award } from 'lucide-react';
 import CalculatorModal from './CalculatorModal';
+
 const HeroSection = () => {
   const [isCalculatorOpen, setIsCalculatorOpen] = useState(false);
-  return <>
+
+  return (
+    <>
       <section id="home" className="bg-gradient-to-br from-brand-blue to-brand-blue-dark text-white section-padding overflow-hidden">
         <div className="container-custom">
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
@@ -58,16 +62,12 @@ const HeroSection = () => {
                       <span className="text-white font-bold text-lg lg:text-xl">-30%</span>
                     </div>
                     <div className="flex items-center justify-between p-3 lg:p-4 bg-white/20 rounded-lg">
-                      <span className="font-medium text-sm lg:text-base">Meer werkgeluk</span>
+                      <span className="font-medium text-sm lg:text-base">Meer medewerker retentie</span>
                       <span className="text-white font-bold text-lg lg:text-xl">+26%</span>
                     </div>
                     <div className="flex items-center justify-between p-3 lg:p-4 bg-white/20 rounded-lg">
-                      <span className="font-medium text-sm lg:text-base">Minder werkstress</span>
-                      <span className="text-white font-bold text-lg lg:text-xl">-40%</span>
-                    </div>
-                    <div className="flex items-center justify-between p-3 lg:p-4 bg-white/20 rounded-lg">
-                      <span className="font-medium text-sm lg:text-base">Betere slaap</span>
-                      <span className="text-white font-bold text-lg lg:text-xl">+20%</span>
+                      <span className="font-medium text-sm lg:text-base">Meer veerkracht</span>
+                      <span className="text-white font-bold text-lg lg:text-xl">+40%</span>
                     </div>
                   </div>
                 </div>
@@ -82,6 +82,8 @@ const HeroSection = () => {
       </section>
 
       <CalculatorModal isOpen={isCalculatorOpen} onClose={() => setIsCalculatorOpen(false)} />
-    </>;
+    </>
+  );
 };
+
 export default HeroSection;
