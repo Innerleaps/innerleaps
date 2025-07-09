@@ -104,10 +104,9 @@ const OverOns = () => {
             <div className="bg-white rounded-xl p-8 shadow-lg">
               <div className="flex flex-col md:flex-row gap-8 items-start">
                 <div className="flex-shrink-0 text-center">
-                  <Avatar className="w-32 h-32 mx-auto mb-4">
-                    <AvatarImage src="/lovable-uploads/eaa7a159-2f85-4fa3-b487-4855426f2c14.png" alt="Bas Ter Haar Romenij" />
-                    <AvatarFallback className="text-white text-2xl font-bold bg-brand-blue">BtH</AvatarFallback>
-                  </Avatar>
+                  <div className="w-32 h-32 mx-auto mb-4 bg-brand-blue rounded-full flex items-center justify-center">
+                    <span className="text-white text-2xl font-bold">BtH</span>
+                  </div>
                   <p className="font-semibold text-brand-gray-dark">Bas Ter Haar Romenij</p>
                   <p className="text-sm text-brand-gray-medium">Medeoprichter & Marketing/Sales</p>
                 </div>
@@ -134,7 +133,7 @@ const OverOns = () => {
               <div className="bg-white rounded-xl p-8 shadow-lg">
                 <div className="flex flex-col items-center mb-6">
                   <Avatar className="w-24 h-24 mb-4">
-                    <AvatarImage src="/lovable-uploads/e2b5c07e-4018-45d2-b441-a83bdc38ceaf.png" alt="Dave van Schie" />
+                    <AvatarImage src="/lovable-uploads/d9b949b9-fa2b-4b6e-a1e8-f4e99e61720f.png" alt="Dave van Schie" />
                     <AvatarFallback className="text-white text-xl font-bold bg-brand-green">DvS</AvatarFallback>
                   </Avatar>
                   <h3 className="text-xl font-semibold text-brand-gray-dark">Dave van Schie</h3>
@@ -185,7 +184,15 @@ const OverOns = () => {
       {/* Footer */}
       <footer className="bg-brand-gray-dark text-white py-12 mt-16">
         <div className="container-custom">
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-4 gap-8">
+            <div className="flex flex-col items-center">
+              <Avatar className="w-20 h-20 mb-4">
+                <AvatarImage src="/lovable-uploads/eaa7a159-2f85-4fa3-b487-4855426f2c14.png" alt="Bas Ter Haar Romenij" />
+                <AvatarFallback className="text-white text-lg font-bold bg-brand-blue">BtH</AvatarFallback>
+              </Avatar>
+              <p className="text-sm font-semibold">Bas Ter Haar Romenij</p>
+              <p className="text-xs text-gray-300">Medeoprichter</p>
+            </div>
             <div>
               <div className="text-2xl font-bold mb-4">Halt.academy</div>
               <p className="text-gray-300 leading-relaxed">
