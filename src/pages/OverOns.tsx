@@ -1,4 +1,3 @@
-
 import Navigation from '@/components/Navigation';
 import StickyCtaButtons from '@/components/StickyCtaButtons';
 import { Brain, Building, Globe, TrendingUp, Users, Heart } from 'lucide-react';
@@ -193,14 +192,6 @@ const OverOns = () => {
       <footer className="bg-brand-gray-dark text-white py-12 mt-16">
         <div className="container-custom">
           <div className="grid md:grid-cols-4 gap-8">
-            <div className="flex flex-col items-center">
-              <Avatar className="w-20 h-20 mb-4">
-                <AvatarImage src="/lovable-uploads/eaa7a159-2f85-4fa3-b487-4855426f2c14.png" alt="Bas Ter Haar Romenij" />
-                <AvatarFallback className="text-white text-lg font-bold bg-brand-blue">BtH</AvatarFallback>
-              </Avatar>
-              <p className="text-sm font-semibold">Bas Ter Haar Romenij</p>
-              <p className="text-xs text-gray-300">Medeoprichter</p>
-            </div>
             <div>
               <div className="text-2xl font-bold mb-4">Halt.academy</div>
               <p className="text-gray-300 leading-relaxed">
