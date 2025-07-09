@@ -95,7 +95,7 @@ const ProgramSection = () => {
           
           <div className="text-center mb-12">
             <Link to="/programma">
-              <Button className="w-full sm:w-auto bg-brand-blue text-white font-semibold py-3 px-8 rounded-lg text-lg md:text-xl transition-transform duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+              <Button className="w-full sm:w-auto bg-brand-blue text-white font-semibold py-3 px-8 rounded-lg text-lg md:text-xl transition-all duration-300 shadow-lg transform hover:-translate-y-0.5">
                 Programma Details Bekijken
               </Button>
             </Link>
@@ -122,7 +122,7 @@ const ProgramSection = () => {
 
         <div className="text-center mt-12">
           <Link to="/programma">
-            <Button className="w-full sm:w-auto bg-brand-blue text-white font-semibold py-3 px-8 rounded-lg text-lg md:text-xl transition-transform duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+            <Button className="w-full sm:w-auto bg-brand-blue text-white font-semibold py-3 px-8 rounded-lg text-lg md:text-xl transition-all duration-300 shadow-lg transform hover:-translate-y-0.5">
               Programma Details Bekijken
             </Button>
           </Link>
