@@ -1,4 +1,5 @@
 
+
 import { useState } from 'react';
 import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -63,7 +64,6 @@ const Navigation = () => {
               <Link to="/" className="text-2xl font-bold text-brand-blue hover:text-brand-blue/80 transition-colors">
                 Halt.academy
               </Link>
-              <span className="text-xs text-brand-gray-medium mt-1">40+ jaar wetenschap</span>
             </div>
 
             {/* Desktop Navigation */}
@@ -178,3 +178,4 @@ const Navigation = () => {
 };
 
 export default Navigation;
+
