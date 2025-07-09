@@ -4,10 +4,12 @@ import { useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { ArrowLeft, BookOpen, BarChart3, Brain, Heart, Users, Shield, TrendingUp, Award } from 'lucide-react';
 import { Link } from 'react-router-dom';
+
 const Wetenschap = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
   const keyFindings = [{
     icon: TrendingUp,
     percentage: "19-30%",
@@ -33,6 +35,7 @@ const Wetenschap = () => {
     study: "Strauss et al. (2018)",
     color: "text-purple-600"
   }];
+
   const mechanismen = [{
     title: "Stress en Burn-out Reductie",
     percentage: "40-58%",
@@ -74,7 +77,9 @@ const Wetenschap = () => {
     description: "Verbetering in ervaren werk-privébalans door beter leren grenzen stellen.",
     studies: ["Michel et al. (2014)"]
   }];
-  return <div className="min-h-screen bg-brand-gray-light">
+
+  return (
+    <div className="min-h-screen bg-brand-gray-light">
       <Navigation />
       <StickyCtaButtons />
       
@@ -82,7 +87,6 @@ const Wetenschap = () => {
       <section className="bg-brand-gray-light section-padding">
         <div className="container-custom">
           <div className="max-w-4xl mx-auto">
-            
             
             {/* 40+ Years Badge */}
             <div className="inline-flex items-center bg-brand-blue text-white px-4 py-2 rounded-full text-sm font-semibold mb-6">
@@ -139,8 +143,9 @@ const Wetenschap = () => {
           
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
             {keyFindings.map((finding, index) => {
-            const IconComponent = finding.icon;
-            return <div key={index} className="bg-brand-gray-light rounded-xl p-6 text-center">
+              const IconComponent = finding.icon;
+              return (
+                <div key={index} className="bg-brand-gray-light rounded-xl p-6 text-center">
                   <div className={`inline-flex items-center justify-center w-16 h-16 rounded-full bg-white ${finding.color} mb-4`}>
                     <IconComponent className="h-8 w-8" />
                   </div>
@@ -153,8 +158,9 @@ const Wetenschap = () => {
                   <p className="text-sm text-brand-gray-medium">
                     {finding.study}
                   </p>
-                </div>;
-          })}
+                </div>
+              );
+            })}
           </div>
 
           <div className="prose prose-lg max-w-4xl mx-auto text-brand-gray-medium">
@@ -215,7 +221,8 @@ const Wetenschap = () => {
           </p>
 
           <div className="grid lg:grid-cols-2 gap-8">
-            {mechanismen.map((mechanisme, index) => <div key={index} className="bg-white rounded-xl p-6 shadow-lg">
+            {mechanismen.map((mechanisme, index) => (
+              <div key={index} className="bg-white rounded-xl p-6 shadow-lg">
                 <div className="flex items-start justify-between mb-4">
                   <h3 className="text-xl font-semibold text-brand-gray-dark flex-1">
                     {mechanisme.title}
@@ -230,11 +237,14 @@ const Wetenschap = () => {
                 </p>
                 
                 <div className="flex flex-wrap gap-2">
-                  {mechanisme.studies.map((study, studyIndex) => <span key={studyIndex} className="inline-block bg-brand-gray-light text-brand-gray-dark text-xs px-3 py-1 rounded-full">
+                  {mechanisme.studies.map((study, studyIndex) => (
+                    <span key={studyIndex} className="inline-block bg-brand-gray-light text-brand-gray-dark text-xs px-3 py-1 rounded-full">
                       {study}
-                    </span>)}
+                    </span>
+                  ))}
                 </div>
-              </div>)}
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -262,14 +272,21 @@ const Wetenschap = () => {
             </div>
 
             <div className="space-y-4">
-              <Button className="btn-primary text-lg px-8 py-3 bg-zinc-950 hover:bg-zinc-800" onClick={() => window.scrollTo({
-              top: 0,
-              behavior: 'smooth'
-            })}>
+              <Button 
+                className="text-lg px-8 py-3 bg-brand-blue hover:bg-brand-blue text-white hover:text-white font-semibold rounded-lg transition-all duration-300 shadow-lg transform hover:-translate-y-0.5" 
+                onClick={() => window.scrollTo({
+                  top: 0,
+                  behavior: 'smooth'
+                })}
+              >
                 Bereken uw besparing
               </Button>
               <div>
-                <Button variant="outline" className="btn-secondary text-lg px-8 py-3" onClick={() => window.open('https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1wwDnoAHyFrV0M1FxwmbcMa9ewkDxTDdwQObwPKF-WX-wZV9DssZKtb1haoeP5qXDLenQlZt_R', '_blank')}>
+                <Button 
+                  variant="outline" 
+                  className="text-lg px-8 py-3 bg-white hover:bg-white border-2 border-brand-blue text-brand-blue hover:text-brand-blue font-semibold rounded-lg transition-all duration-300 transform hover:-translate-y-0.5" 
+                  onClick={() => window.open('https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1wwDnoAHyFrV0M1FxwmbcMa9ewkDxTDdwQObwPKF-WX-wZV9DssZKtb1haoeP5qXDLenQlZt_R', '_blank')}
+                >
                   Vrijblijvend gesprek plannen
                 </Button>
               </div>
@@ -311,6 +328,8 @@ const Wetenschap = () => {
           </div>
         </div>
       </footer>
-    </div>;
+    </div>
+  );
 };
+
 export default Wetenschap;
