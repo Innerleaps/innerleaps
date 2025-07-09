@@ -1,3 +1,4 @@
+
 import { Button } from '@/components/ui/button';
 import { Shield, Heart, Moon, Users, Target, BarChart3, Smile } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -62,7 +63,7 @@ const ImpactSection = () => {
             Hoe 30% minder ziekteverzuim en 31% hogere medewerkers retentie bereikt wordt
           </h2>
           <p className="text-lg md:text-xl text-brand-gray-medium max-w-3xl mx-auto leading-relaxed">
-            Ons 8 weekse programma heeft de volgende uitkomsten:
+            Ons 8 weekse wetenschappelijk bewezen programma heeft de volgende uitkomsten:
           </p>
         </div>
 
