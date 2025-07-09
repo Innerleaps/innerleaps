@@ -1,4 +1,3 @@
-
 import { Button } from '@/components/ui/button';
 import { Shield, Heart, Moon, Users, Target, BarChart3, Smile } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -60,10 +59,10 @@ const ImpactSection = () => {
       <div className="container-custom">
         <div className="text-center space-y-6 mb-16">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-brand-gray-dark">
-            Wat gebeurt er met uw medewerkers?
+            Hoe 30% minder ziekteverzuim en 31% hogere medewerkers retentie bereikt wordt
           </h2>
           <p className="text-lg md:text-xl text-brand-gray-medium max-w-3xl mx-auto leading-relaxed">
-            Ons programma zorgt niet alleen voor 30% minder verzuim en 31% betere retentie. Het belangrijkste is wat er in die 8 weken verandert voor uw mensen:
+            Ons 8 weekse programma heeft de volgende uitkomsten:
           </p>
         </div>
 
