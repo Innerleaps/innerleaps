@@ -1,4 +1,3 @@
-
 import { Button } from '@/components/ui/button';
 import { Shield, Heart, Moon, Users, Target, BarChart3, Smile } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -49,7 +48,7 @@ const ImpactSection = () => {
     },
     {
       icon: Shield,
-      title: "40-58% minder werkstress",
+      title: "58% minder werkstress",
       description: "Van overweldiging naar overzicht en rust",
       color: "text-brand-blue"
     }
