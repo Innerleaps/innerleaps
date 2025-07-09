@@ -1,4 +1,5 @@
 
+
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { ArrowDown, Award } from 'lucide-react';
@@ -21,11 +22,9 @@ const HeroSection = () => {
                 </div>
 
                 <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
-                  Lagere uitval. <br />
-                  <span className="text-brand-green-light">Hogere retentie.</span> <br />
-                  Voor jouw mensen
+                  Zo blijven jouw mensen fit, betrokken en aan boord.
                 </h1>
-                <p className="text-xl sm:text-2xl md:text-3xl text-blue-100 leading-relaxed">Wetenschappelijk bewezen programma dat in 8 weken tijd zorgt voor minder verzuim en gelukkigere medewerkers</p>
+                <p className="text-xl sm:text-2xl md:text-3xl text-blue-100 leading-relaxed">Wetenschappelijk bewezen programma dat in 8 weken zorgt voor minder verzuim en medewerkers die blijven</p>
               </div>
 
               <div className="flex flex-col sm:flex-row gap-4">
@@ -60,11 +59,11 @@ const HeroSection = () => {
                   <div className="space-y-4">
                     <div className="flex items-center justify-between p-3 lg:p-4 bg-white/20 rounded-lg">
                       <span className="font-medium text-sm lg:text-base">Minder ziekteverzuim</span>
-                      <span className="text-white font-bold text-lg lg:text-xl">-30%</span>
+                      <span className="text-brand-green-light font-bold text-lg lg:text-xl">-30%</span>
                     </div>
                     <div className="flex items-center justify-between p-3 lg:p-4 bg-white/20 rounded-lg">
                       <span className="font-medium text-sm lg:text-base">Hogere medewerker retentie</span>
-                      <span className="text-white font-bold text-lg lg:text-xl">+31%</span>
+                      <span className="text-brand-green-light font-bold text-lg lg:text-xl">+31%</span>
                     </div>
                   </div>
                 </div>
@@ -84,3 +83,4 @@ const HeroSection = () => {
 };
 
 export default HeroSection;
+
