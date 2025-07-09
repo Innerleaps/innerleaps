@@ -1,5 +1,4 @@
 
-
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { ArrowDown, Award } from 'lucide-react';
@@ -59,11 +58,11 @@ const HeroSection = () => {
                   <div className="space-y-4">
                     <div className="flex items-center justify-between p-3 lg:p-4 bg-white/30 rounded-lg">
                       <span className="font-medium text-sm lg:text-base">Minder ziekteverzuim</span>
-                      <span className="text-brand-green-light font-bold text-lg lg:text-xl bg-white/20 px-2 py-1 rounded">-30%</span>
+                      <span className="text-brand-green font-bold text-lg lg:text-xl bg-white px-2 py-1 rounded">-30%</span>
                     </div>
                     <div className="flex items-center justify-between p-3 lg:p-4 bg-white/30 rounded-lg">
                       <span className="font-medium text-sm lg:text-base">Hogere medewerker retentie</span>
-                      <span className="text-brand-green-light font-bold text-lg lg:text-xl bg-white/20 px-2 py-1 rounded">+31%</span>
+                      <span className="text-brand-green font-bold text-lg lg:text-xl bg-white px-2 py-1 rounded">+31%</span>
                     </div>
                   </div>
                 </div>
@@ -83,4 +82,3 @@ const HeroSection = () => {
 };
 
 export default HeroSection;
-

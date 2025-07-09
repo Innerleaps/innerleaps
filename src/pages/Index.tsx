@@ -25,7 +25,7 @@ const Index = () => {
       </div>
 
       {/* Footer */}
-      <footer id="contact" className="bg-brand-gray-dark text-white py-12">
+      <footer id="contact" className="bg-gradient-to-br from-brand-blue to-brand-blue-dark text-white py-12">
         <div className="container-custom">
           <div className="grid md:grid-cols-3 gap-8">
             <div>

@@ -1,3 +1,4 @@
+
 import { Button } from '@/components/ui/button';
 import { Shield, Heart, Moon, Users, Target, BarChart3, Smile } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -72,7 +73,7 @@ const ImpactSection = () => {
             return (
               <div 
                 key={index} 
-                className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 animate-fade-in" 
+                className="bg-white rounded-xl p-6 shadow-lg animate-fade-in" 
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <div className="flex flex-col space-y-4">
@@ -94,9 +95,6 @@ const ImpactSection = () => {
         </div>
 
         <div className="text-center mt-12 space-y-4">
-          <p className="text-lg text-brand-gray-medium max-w-2xl mx-auto mb-6">
-            Deze cijfers zijn mooi, maar het echte verschil zit in de verhalen van mensen die weer plezier hebben in hun werk en leven.
-          </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link to="/wetenschap">
               <Button 
@@ -107,6 +105,9 @@ const ImpactSection = () => {
               </Button>
             </Link>
           </div>
+          <p className="text-lg text-brand-gray-medium max-w-2xl mx-auto">
+            Deze cijfers zijn mooi, maar het echte verschil zit in de verhalen van mensen die weer plezier hebben in hun werk en leven.
+          </p>
         </div>
       </div>
     </section>
