@@ -4,6 +4,7 @@ import { Button } from '@/components/ui/button';
 import { Calendar, Mail, Phone } from 'lucide-react';
 import StickyCtaButtons from '@/components/StickyCtaButtons';
 import { useEffect } from 'react';
+import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
 
 const Contact = () => {
   useEffect(() => {
@@ -58,7 +59,7 @@ const Contact = () => {
                   </div>
                 </div>
 
-                <div className="bg-gradient-to-r from-brand-blue to-brand-green text-white p-8 rounded-xl">
+                <div className="bg-brand-blue text-white p-8 rounded-xl">
                   <h3 className="text-xl font-bold mb-4">Waarom een vrijblijvend gesprek?</h3>
                   <ul className="space-y-3">
                     <li className="flex items-start">
@@ -81,19 +82,19 @@ const Contact = () => {
                 </div>
 
                 {/* Bas's personal message */}
-                <div className="bg-white border border-gray-200 p-6 rounded-xl shadow-sm">
-                  <div className="flex items-start space-x-4">
+                <div className="bg-white border border-gray-200 p-8 rounded-xl shadow-sm">
+                  <div className="flex items-start space-x-6">
                     <img 
-                      src="/lovable-uploads/07c13706-b4be-4b0a-8b50-701bd69610fc.png" 
-                      alt="Bas van der Ven" 
-                      className="w-16 h-16 rounded-full object-cover flex-shrink-0"
+                      src="/lovable-uploads/eaa7a159-2f85-4fa3-b487-4855426f2c14.png" 
+                      alt="Bas Ter Haar Romenij" 
+                      className="w-20 h-20 rounded-full object-cover flex-shrink-0"
                     />
                     <div>
-                      <p className="text-brand-gray-dark italic mb-2">
+                      <p className="text-brand-gray-dark italic mb-4 text-lg">
                         "Ik help graag persoonlijk mee om te kijken naar de mogelijkheden voor uw organisatie. Elke situatie is uniek, en samen vinden we de beste aanpak."
                       </p>
-                      <p className="text-sm text-brand-gray-medium font-medium">
-                        — Bas van der Ven, Oprichter Halt.academy
+                      <p className="text-brand-gray-medium font-medium">
+                        — Bas Ter Haar Romenij, Oprichter en adviseur bij Halt Academy
                       </p>
                     </div>
                   </div>
@@ -143,6 +144,45 @@ const Contact = () => {
           </div>
         </section>
       </main>
+
+      {/* Footer */}
+      <footer className="bg-gradient-to-br from-brand-blue to-brand-blue-dark text-white py-12">
+        <div className="container-custom">
+          <div className="grid md:grid-cols-3 gap-8">
+            <div>
+              <div className="text-2xl font-bold mb-4">Halt.academy</div>
+              <p className="text-gray-300 leading-relaxed">
+                MBSR-gebaseerde stressreductieprogramma's voor meetbare bedrijfsresultaten. Gebaseerd op het baanbrekende werk van Jon Kabat-Zinn.
+              </p>
+            </div>
+            <div>
+              <h3 className="text-lg font-semibold mb-4">Contact</h3>
+              <div className="space-y-2 text-gray-300">
+                <p>Email: bas@haltacademy.nl</p>
+                <p>Telefoon: 06 23 45 34 77</p>
+                <div className="mt-4 flex justify-start">
+                  <Avatar className="w-24 h-24">
+                    <AvatarImage src="/lovable-uploads/eaa7a159-2f85-4fa3-b487-4855426f2c14.png" alt="Bas Ter Haar Romenij" />
+                    <AvatarFallback className="text-white text-xl font-bold bg-brand-blue">BtH</AvatarFallback>
+                  </Avatar>
+                </div>
+              </div>
+            </div>
+            <div>
+              <h3 className="text-lg font-semibold mb-4">Snel naar</h3>
+              <div className="space-y-2">
+                <button onClick={() => document.getElementById('home')?.scrollIntoView({ behavior: 'smooth' })} className="block text-gray-300 hover:text-white transition-colors text-left">Home</button>
+                <button onClick={() => document.getElementById('wetenschap')?.scrollIntoView({ behavior: 'smooth' })} className="block text-gray-300 hover:text-white transition-colors text-left">De Wetenschap</button>
+                <button onClick={() => document.getElementById('programma')?.scrollIntoView({ behavior: 'smooth' })} className="block text-gray-300 hover:text-white transition-colors text-left">Programma</button>
+                <button onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })} className="block text-gray-300 hover:text-white transition-colors text-left">Contact</button>
+              </div>
+            </div>
+          </div>
+          <div className="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+            <p>&copy; 2024 Halt.academy. Alle rechten voorbehouden.</p>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 };

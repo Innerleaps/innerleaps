@@ -4,6 +4,7 @@ import { useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { ArrowLeft, BookOpen, BarChart3, Brain, Heart, Users, Shield, TrendingUp, Award } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
 
 const Wetenschap = () => {
   useEffect(() => {
@@ -19,7 +20,7 @@ const Wetenschap = () => {
   }, {
     icon: Users,
     percentage: "17-31%",
-    title: "Betere retentie",
+    title: "Betere retentie", 
     study: "Dane & Brummel (2014) & Good et al. (2016)",
     color: "text-brand-green"
   }, {
@@ -296,30 +297,35 @@ const Wetenschap = () => {
       </section>
 
       {/* Footer */}
-      <footer className="bg-brand-gray-dark text-white py-12">
+      <footer className="bg-gradient-to-br from-brand-blue to-brand-blue-dark text-white py-12">
         <div className="container-custom">
           <div className="grid md:grid-cols-3 gap-8">
             <div>
               <div className="text-2xl font-bold mb-4">Halt.academy</div>
               <p className="text-gray-300 leading-relaxed">
-                Wetenschappelijk bewezen stressreductieprogramma's voor meetbare bedrijfsresultaten.
+                MBSR-gebaseerde stressreductieprogramma's voor meetbare bedrijfsresultaten. Gebaseerd op het baanbrekende werk van Jon Kabat-Zinn.
               </p>
             </div>
             <div>
               <h3 className="text-lg font-semibold mb-4">Contact</h3>
               <div className="space-y-2 text-gray-300">
-                <p>Email: info@halt.academy</p>
-                <p>Telefoon: +31 (0)20 123 4567</p>
-                <p>KvK: 12345678</p>
+                <p>Email: bas@haltacademy.nl</p>
+                <p>Telefoon: 06 23 45 34 77</p>
+                <div className="mt-4 flex justify-start">
+                  <Avatar className="w-24 h-24">
+                    <AvatarImage src="/lovable-uploads/eaa7a159-2f85-4fa3-b487-4855426f2c14.png" alt="Bas Ter Haar Romenij" />
+                    <AvatarFallback className="text-white text-xl font-bold bg-brand-blue">BtH</AvatarFallback>
+                  </Avatar>
+                </div>
               </div>
             </div>
             <div>
               <h3 className="text-lg font-semibold mb-4">Snel naar</h3>
               <div className="space-y-2">
-                <Link to="/" className="block text-gray-300 hover:text-white transition-colors">Home</Link>
-                <Link to="/wetenschap" className="block text-gray-300 hover:text-white transition-colors">De Wetenschap</Link>
-                <button onClick={() => window.location.href = '/#programma'} className="block text-gray-300 hover:text-white transition-colors text-left">Programma</button>
-                <button onClick={() => window.location.href = '/#contact'} className="block text-gray-300 hover:text-white transition-colors text-left">Contact</button>
+                <button onClick={() => window.location.href = '/'} className="block text-gray-300 hover:text-white transition-colors text-left">Home</button>
+                <button onClick={() => window.location.href = '/wetenschap'} className="block text-gray-300 hover:text-white transition-colors text-left">De Wetenschap</button>
+                <button onClick={() => window.location.href = '/programma'} className="block text-gray-300 hover:text-white transition-colors text-left">Programma</button>
+                <button onClick={() => window.location.href = '/contact'} className="block text-gray-300 hover:text-white transition-colors text-left">Contact</button>
               </div>
             </div>
           </div>

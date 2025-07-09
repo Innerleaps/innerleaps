@@ -128,10 +128,10 @@ const OverOns = () => {
             </div>
           </div>
 
-          {/* Trainers - 3 Column Layout */}
+          {/* Trainers - 2 Column Layout */}
           <div>
             <h2 className="text-3xl font-bold text-brand-gray-dark mb-8 text-center">Onze trainers</h2>
-            <div className="grid md:grid-cols-3 gap-8">
+            <div className="grid md:grid-cols-2 gap-8">
               {/* Dave van Schie */}
               <div className="bg-white rounded-xl p-8 shadow-lg">
                 <div className="flex flex-col items-center mb-6">
@@ -154,15 +154,6 @@ const OverOns = () => {
                     Naast zijn werk bij Halt.academy werkt Dave als contentmanager bij de Parnassia Groep, waar hij dagelijks bezig is met mentale gezondheid in organisaties. Deze ervaring maakt hem extra goed in het begrijpen van de uitdagingen waarmee werknemers worstelen.
                   </p>
                 </div>
-              </div>
-
-              {/* Training Image */}
-              <div className="flex items-center justify-center">
-                <img 
-                  src="/lovable-uploads/80a543aa-5b76-4cf9-a8a9-fd9dcf2f7c5c.png" 
-                  alt="Stressfactoren training" 
-                  className="w-full h-auto rounded-xl shadow-lg object-cover max-h-96"
-                />
               </div>
 
               {/* Guido Scholte */}
@@ -194,13 +185,13 @@ const OverOns = () => {
       </main>
 
       {/* Footer */}
-      <footer className="bg-brand-gray-dark text-white py-12 mt-16">
+      <footer className="bg-gradient-to-br from-brand-blue to-brand-blue-dark text-white py-12 mt-16">
         <div className="container-custom">
           <div className="grid md:grid-cols-3 gap-8">
             <div>
               <div className="text-2xl font-bold mb-4">Halt.academy</div>
               <p className="text-gray-300 leading-relaxed">
-                Wetenschappelijk bewezen stressreductieprogramma's voor meetbare bedrijfsresultaten.
+                MBSR-gebaseerde stressreductieprogramma's voor meetbare bedrijfsresultaten. Gebaseerd op het baanbrekende werk van Jon Kabat-Zinn.
               </p>
             </div>
             <div>
@@ -219,10 +210,10 @@ const OverOns = () => {
             <div>
               <h3 className="text-lg font-semibold mb-4">Snel naar</h3>
               <div className="space-y-2">
-                <a href="/" className="block text-gray-300 hover:text-white transition-colors">Home</a>
-                <a href="/wetenschap" className="block text-gray-300 hover:text-white transition-colors">De Wetenschap</a>
-                <a href="/programma" className="block text-gray-300 hover:text-white transition-colors">Programma</a>
-                <a href="/contact" className="block text-gray-300 hover:text-white transition-colors">Contact</a>
+                <button onClick={() => window.location.href = '/'} className="block text-gray-300 hover:text-white transition-colors text-left">Home</button>
+                <button onClick={() => window.location.href = '/wetenschap'} className="block text-gray-300 hover:text-white transition-colors text-left">De Wetenschap</button>
+                <button onClick={() => window.location.href = '/programma'} className="block text-gray-300 hover:text-white transition-colors text-left">Programma</button>
+                <button onClick={() => window.location.href = '/contact'} className="block text-gray-300 hover:text-white transition-colors text-left">Contact</button>
               </div>
             </div>
           </div>

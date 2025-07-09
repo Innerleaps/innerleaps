@@ -1,9 +1,11 @@
 import Navigation from '@/components/Navigation';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { CheckCircle, Clock, Users, MapPin, Calendar, Brain, Target, Lightbulb } from 'lucide-react';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
+import { Clock, Users, MapPin, Calendar } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import StickyCtaButtons from '@/components/StickyCtaButtons';
 import { useEffect } from 'react';
+import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
 
 const Programma = () => {
   useEffect(() => {
@@ -13,7 +15,7 @@ const Programma = () => {
   const weeks = [{
     week: "Week 1",
     title: "Bewustwording & Automatische Piloot",
-    goals: ["Herkennen van de \"automatische piloot\" in dagelijkse activiteiten", "Begrijpen van de relatie tussen aandacht, stress en prestaties", "Ontwikkelen van basisvaardigheden in aandachtsregulatie"],
+    goals: ["Herkennen van stress signalen in het lichaam", "Bewust worden van automatische reactiepatronen", "Ontwikkelen van gerichte aandacht"],
     techniques: ["Lichaamsscan voor stresssignaalherkenning", "Gerichte aandachtstraining met focus op eetgewoonten", "Bewust ademen als ankerpunt tijdens stress"],
     applications: ["Herkennen van \"automatische piloot\" in werkroutines", "Implementatie van bewuste aandacht bij routinetaken", "Stressmonitoring tijdens werkdagen"]
   }, {
@@ -21,41 +23,41 @@ const Programma = () => {
     title: "Perceptie & Omgaan met Barrières",
     goals: ["Begrijpen hoe perceptie ervaringen vormt", "Herkennen van reactiepatronen op uitdagingen", "Ontwikkelen van volgehouden aandacht"],
     techniques: ["Lichaamsscan", "Zittende aandachtsoefening met focus op ademhaling", "Bewuste bewegingsoefeningen voor spanningsherkenning"],
-    applications: ["Herkennen van perceptiefilters in werksituaties", "Implementatie van korte ademhalingsoefeningen tussen taken", "Effectiever omschakelen tussen verschillende taken"]
+    applications: ["Toepassen van andere perspectieven bij werkuitdagingen", "Omgaan met weerstand tegen verandering", "Verbeteren van focus tijdens vergaderingen"]
   }, {
     week: "Week 3",
-    title: "Aanwezigheid & Grenzen van Aandacht",
-    goals: ["Ontwikkelen van lichamelijk bewustzijn tijdens stress", "Herkennen van grenzen aan aandacht en concentratie", "Cultiveren van stabiliteit en flexibiliteit in aandacht"],
-    techniques: ["Bewuste bewegingsoefeningen", "Zittende aandachtsoefening met focus op lichaam en ademhaling", "Drie-minuten ademruimte voor stressvolle momenten"],
-    applications: ["Herkennen van fysieke stresssignalen op het werk", "Implementeren van korte ademruimtes bij werkdruk", "Effectiever omgaan met afleidingen en onderbrekingen"]
+    title: "Bewuste Beweging & Aanwezigheid",
+    goals: ["Integreren van bewustzijn in beweging", "Herkennen van lichamelijke spanningspatronen", "Ontwikkelen van continue aanwezigheid"],
+    techniques: ["Bewuste yoga voor stressreductie", "Lopende aandachtsoefening", "Integratie van ademhaling bij fysieke activiteit"],
+    applications: ["Bewuste beweging tussen werktaken", "Stresspreventie door lichamelijke bewustwording", "Energiemanagement tijdens werkdagen"]
   }, {
     week: "Week 4",
-    title: "Stressreactiepatronen Herkennen",
-    goals: ["Inzicht in automatische reacties op werkdruk en uitdagingen", "Herkennen van niet-behulpzame denkpatronen", "Ontwikkelen van respons versus reactie"],
-    techniques: ["Zittende aandachtsoefening met focus op geluiden en gedachten", "Staande en liggende bewuste bewegingsoefeningen", "Drie-minuten ademruimte bij onplezierige ervaringen"],
-    applications: ["Herkennen van automatische stressreacties in werksituaties", "Verminderen van piekeren over werk buiten werktijd", "Constructiever omgaan met feedback en tegenslag"]
+    title: "Stress, Reacties & Automatismen",
+    goals: ["Begrijpen van stress-responsmechanismen", "Identificeren van persoonlijke stress-triggers", "Ontwikkelen van bewuste reactiekeuzes"],
+    techniques: ["STOP-techniek voor stressmanagement", "Bewust reageren in plaats van automatisch handelen", "Ademhaling als stressregulatietool"],
+    applications: ["Toepassen van bewuste responsen in conflictsituaties", "Stresspreventie tijdens deadline-druk", "Verbeteren van besluitvorming onder stress"]
   }, {
     week: "Week 5",
-    title: "Actieve Acceptatie & Effectief Reageren",
-    goals: ["Onderscheid maken tussen automatische reacties en bewuste, weloverwogen respons", "Ontwikkelen van acceptatie als basis voor effectieve actie", "Herkennen van vermijdingspatronen bij stress"],
-    techniques: ["Zittende aandachtsoefening met focus op moeilijkheden", "Bewuste bewegingsoefeningen voor omgaan met grenzen", "Drie-minuten ademruimte als eerste stap bij stress"],
-    applications: ["Effectiever navigeren van moeilijke werksituaties", "Herkennen van vermijdingsgedrag bij uitdagende taken", "Ontwikkelen van responskeuze bij werkdruk"]
+    title: "Moeilijke Emoties & Communicatie",
+    goals: ["Omgaan met uitdagende emoties", "Ontwikkelen van emotionele veerkracht", "Verbeteren van bewuste communicatie"],
+    techniques: ["RAIN-techniek voor emotieregulatie", "Bewuste communicatieoefeningen", "Compassie-oefeningen voor zelfzorg"],
+    applications: ["Effectiever omgaan met werkdruk en frustratie", "Verbeteren van teamdynamiek en samenwerking", "Constructieve feedback geven en ontvangen"]
   }, {
     week: "Week 6",
-    title: "Communicatie & Interpersoonlijke Stress",
-    goals: ["Herkennen van stresspatronen in communicatie", "Ontwikkelen van bewuste communicatievaardigheden", "Versterken van empathie en luistervaardigheid"],
-    techniques: ["Zittende aandachtsoefening", "Bewuste communicatieoefeningen", "Techniek voor het reguleren van emoties tijdens gesprekken"],
-    applications: ["Effectiever navigeren van moeilijke gesprekken", "Verbeteren van teamcommunicatie", "Verminderen van interpersoonlijke conflicten"]
+    title: "Gedachten & Mentale Patronen",
+    goals: ["Herkennen van gedachtepatronen", "Ontwikkelen van mentale flexibiliteit", "Creëren van ruimte rond gedachten"],
+    techniques: ["Observeren van gedachten zonder oordeel", "Bewust omgaan met piekeren en zorgen", "Technieken voor mentale rust"],
+    applications: ["Doorbreken van negatieve denkspiralen", "Verbeteren van probleemoplossend vermogen", "Reduceren van werkgerelateerd piekeren"]
   }, {
     week: "Week 7",
-    title: "Zelfzorg & Balans in Werk-Privé",
-    goals: ["Herkennen van energiegevers en energienemers", "Ontwikkelen van gezonde grenzen en zelfzorg", "Balans vinden tussen inspanning en ontspanning"],
-    techniques: ["Zittende aandachtsoefening", "Reflectie op dagelijkse activiteiten en energie", "Ontwikkelen van persoonlijk zelfzorgplan"],
-    applications: ["Bewuste keuzes maken in werkplanning en prioriteiten", "Implementeren van energiemanagement gedurende de werkdag", "Effectiever grenzen stellen en workload managen"]
+    title: "Zelfzorg & Grenzen Stellen",
+    goals: ["Ontwikkelen van effectieve zelfzorgstrategieën", "Leren grenzen stellen en bewaken", "Balans vinden tussen werk en privé"],
+    techniques: ["Persoonlijke zelfzorgplan ontwikkelen", "Boundary-setting oefeningen", "Bewuste work-life balance technieken"],
+    applications: ["Implementeren van dagelijkse zelfzorgroutines", "Effectief nee zeggen tegen overbelasting", "Creëren van gezonde werkgewoonten"]
   }, {
     week: "Week 8",
-    title: "Duurzame Implementatie & Vooruitblik",
-    goals: ["Integreren van technieken in dagelijkse werkroutines", "Ontwikkelen van een persoonlijk stresspreventieplan", "Strategieën voor langdurige toepassing"],
+    title: "Integratie & Duurzaamheid",
+    goals: ["Integreren van geleerde vaardigheden", "Ontwikkelen van persoonlijke praktijk", "Plannen voor toekomstige uitdagingen"],
     techniques: ["Lichaamsscan als review van het programma", "Persoonlijke reflectie op geleerde vaardigheden", "Ontwikkeling van toekomstplan"],
     applications: ["Creëren van gezonde werkroutines", "Implementeren van preventieve stressreductie", "Integratie van geleerde technieken in dagelijkse werkpraktijk"]
   }];
@@ -71,89 +73,83 @@ const Programma = () => {
   }, {
     icon: MapPin,
     title: "Op locatie",
-    description: "Training bij u op kantoor of externe locatie"
+    description: "Bij u in het bedrijf"
   }, {
     icon: Calendar,
     title: "Oefendag",
     description: "6 uur verdiepingssessie"
   }];
 
-  return <div className="min-h-screen bg-brand-gray-light">
+  return (
+    <div className="min-h-screen bg-brand-gray-light">
       <Navigation />
       <StickyCtaButtons />
       
-      <main className="pt-8">
-        {/* Hero Section */}
-        <section className="bg-white section-padding">
-          <div className="container-custom">
-            <div className="text-center space-y-6 mb-16">
-              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-brand-gray-dark">
-                Het 8-Weekse MBSR Stressreductie & Veerkrachtprogramma
-              </h1>
-              <p className="text-xl text-brand-gray-medium max-w-4xl mx-auto leading-relaxed">
-                Ons programma is gebaseerd op het baanbrekende MBSR-programma (Mindfulness-Based Stress Reduction) ontwikkeld door Jon Kabat-Zinn in 1979 aan de University of Massachusetts Medical Center. Gedurende 8 weken ontwikkelen deelnemers wetenschappelijk bewezen vaardigheden die direct toepasbaar zijn in de werkomgeving, resulterend in meetbare verbeteringen in verzuim en retentie.
-              </p>
-            </div>
+      <main className="section-padding">
+        <div className="container-custom">
+          {/* Header */}
+          <div className="text-center space-y-6 mb-16">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-gray-dark">
+              Programma
+            </h1>
+            <p className="text-xl text-brand-gray-medium max-w-4xl mx-auto leading-relaxed">
+              Ons 8-weekse MBSR-programma voor werknemers biedt een bewezen, stapsgewijze aanpak voor stressreductie en het ontwikkelen van veerkracht. Elke week bouwt voort op de vorige, met praktische vaardigheden die direct toepasbaar zijn in de werkomgeving.
+            </p>
           </div>
-        </section>
 
-        {/* Program Structure */}
-        <section className="bg-brand-gray-light section-padding">
-          <div className="container-custom">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-brand-gray-dark mb-8">
-                Programmastructuur
-              </h2>
-              
-              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-                {features.map((feature, index) => {
-                const IconComponent = feature.icon;
-                return <div key={index} className="text-center p-6 bg-white rounded-xl shadow-sm">
-                      <div className="inline-flex items-center justify-center w-12 h-12 bg-brand-blue text-white rounded-lg mb-4">
-                        <IconComponent className="h-6 w-6" />
-                      </div>
-                      <h3 className="text-lg font-semibold text-brand-gray-dark mb-2">
-                        {feature.title}
-                      </h3>
-                      <p className="text-brand-gray-medium text-base">
-                        {feature.description}
-                      </p>
-                    </div>;
-              })}
-              </div>
-
-              <div className="bg-white rounded-xl p-8 shadow-sm max-w-4xl mx-auto">
-                <div className="grid md:grid-cols-2 gap-8">
-                  <div>
-                    <h3 className="text-xl font-semibold text-brand-gray-dark mb-4">Dagelijkse Oefening</h3>
-                    <ul className="text-brand-gray-medium space-y-2 text-left text-base">
-                      <li>• 45 minuten formele oefening, 6 dagen per week</li>
-                      <li>• Informele oefeningen in dagelijkse activiteiten</li>
-                      <li>• Werkboek en audio-instructies</li>
-                      <li>• Digitale ondersteuning</li>
-                    </ul>
+          {/* Program Features */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+            {features.map((feature, index) => {
+              const IconComponent = feature.icon;
+              return (
+                <div key={index} className="bg-white rounded-xl p-6 text-center shadow-lg">
+                  <div className="bg-brand-blue text-white p-4 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                    <IconComponent className="h-8 w-8" />
                   </div>
-                  <div>
-                    <h3 className="text-xl font-semibold text-brand-gray-dark mb-4">MBSR Methodiek</h3>
-                    <p className="text-brand-gray-medium text-left text-base">
-                      Het oorspronkelijke MBSR-programma van Jon Kabat-Zinn heeft meer dan 40 jaar aan wetenschappelijk onderzoek achter zich. Onze bedrijfstoepassing behoudt de kernprincipes die neurologische veranderingen bewerkstelligen na 8 weken van dagelijkse oefening.
-                    </p>
-                  </div>
+                  <h3 className="text-xl font-semibold text-brand-gray-dark mb-2">
+                    {feature.title}
+                  </h3>
+                  <p className="text-brand-gray-medium">
+                    {feature.description}
+                  </p>
                 </div>
+              );
+            })}
+          </div>
+
+          {/* Key Benefits */}
+          <div className="bg-white rounded-xl p-8 mb-16 shadow-lg">
+            <h2 className="text-2xl font-bold text-brand-gray-dark mb-6 text-center">
+              Wat levert het programma op?
+            </h2>
+            <div className="grid md:grid-cols-3 gap-6">
+              <div className="text-center">
+                <div className="text-3xl font-bold text-brand-green mb-2">19-30%</div>
+                <p className="text-brand-gray-dark font-medium">Minder verzuim</p>
+                <p className="text-sm text-brand-gray-medium mt-1">Bewezen door wetenschappelijk onderzoek</p>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold text-brand-blue mb-2">17-31%</div>
+                <p className="text-brand-gray-dark font-medium">Betere retentie</p>
+                <p className="text-sm text-brand-gray-medium mt-1">Medewerkers blijven langer</p>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold text-red-600 mb-2">40-58%</div>
+                <p className="text-brand-gray-dark font-medium">Minder werkstress</p>
+                <p className="text-sm text-brand-gray-medium mt-1">Merkbare verbetering in welzijn</p>
               </div>
             </div>
           </div>
-        </section>
 
-        {/* Weekly Program */}
-        <section className="bg-white section-padding">
-          <div className="container-custom">
-            <h2 className="text-3xl md:text-4xl font-bold text-brand-gray-dark text-center mb-16">
+          {/* Weekly Program */}
+          <div className="mb-16">
+            <h2 className="text-3xl font-bold text-brand-gray-dark mb-8 text-center">
               Wekelijks Programma
             </h2>
             
             <div className="grid gap-8">
-              {weeks.map((week, index) => <Card key={index} className="overflow-hidden shadow-lg">
+              {weeks.map((week, index) => (
+                <Card key={index} className="overflow-hidden shadow-lg">
                   <CardHeader className="bg-brand-blue text-white">
                     <CardTitle className="text-xl md:text-2xl">
                       {week.week}: {week.title}
@@ -162,152 +158,185 @@ const Programma = () => {
                   <CardContent className="p-6">
                     <div className="grid md:grid-cols-3 gap-6">
                       <div>
-                        <h4 className="font-semibold text-brand-gray-dark mb-3 flex items-center text-base">
-                          <Target className="h-5 w-5 mr-2 text-brand-blue" />
+                        <h4 className="font-semibold text-brand-gray-dark mb-3 flex items-center">
+                          <span className="w-2 h-2 bg-brand-green rounded-full mr-2"></span>
                           Leerdoelen
                         </h4>
                         <ul className="space-y-2">
-                          {week.goals.map((goal, goalIndex) => <li key={goalIndex} className="text-base text-brand-gray-medium flex items-start">
-                              <CheckCircle className="h-4 w-4 mr-2 text-brand-green mt-0.5 flex-shrink-0" />
-                              {goal}
-                            </li>)}
+                          {week.goals.map((goal, goalIndex) => (
+                            <li key={goalIndex} className="text-brand-gray-medium text-sm leading-relaxed">
+                              • {goal}
+                            </li>
+                          ))}
                         </ul>
                       </div>
                       
                       <div>
-                        <h4 className="font-semibold text-brand-gray-dark mb-3 flex items-center text-base">
-                          <Brain className="h-5 w-5 mr-2 text-brand-blue" />
+                        <h4 className="font-semibold text-brand-gray-dark mb-3 flex items-center">
+                          <span className="w-2 h-2 bg-brand-blue rounded-full mr-2"></span>
                           Technieken
                         </h4>
                         <ul className="space-y-2">
-                          {week.techniques.map((technique, techIndex) => <li key={techIndex} className="text-base text-brand-gray-medium flex items-start">
-                              <CheckCircle className="h-4 w-4 mr-2 text-brand-green mt-0.5 flex-shrink-0" />
-                              {technique}
-                            </li>)}
+                          {week.techniques.map((technique, techniqueIndex) => (
+                            <li key={techniqueIndex} className="text-brand-gray-medium text-sm leading-relaxed">
+                              • {technique}
+                            </li>
+                          ))}
                         </ul>
                       </div>
                       
                       <div>
-                        <h4 className="font-semibold text-brand-gray-dark mb-3 flex items-center text-base">
-                          <Lightbulb className="h-5 w-5 mr-2 text-brand-blue" />
-                          Praktische Toepassingen
+                        <h4 className="font-semibold text-brand-gray-dark mb-3 flex items-center">
+                          <span className="w-2 h-2 bg-purple-600 rounded-full mr-2"></span>
+                          Toepassing
                         </h4>
                         <ul className="space-y-2">
-                          {week.applications.map((application, appIndex) => <li key={appIndex} className="text-base text-brand-gray-medium flex items-start">
-                              <CheckCircle className="h-4 w-4 mr-2 text-brand-green mt-0.5 flex-shrink-0" />
-                              {application}
-                            </li>)}
+                          {week.applications.map((application, applicationIndex) => (
+                            <li key={applicationIndex} className="text-brand-gray-medium text-sm leading-relaxed">
+                              • {application}
+                            </li>
+                          ))}
                         </ul>
                       </div>
                     </div>
                   </CardContent>
-                </Card>)}
+                </Card>
+              ))}
             </div>
           </div>
-        </section>
 
-        {/* Practice Day */}
-        <section className="bg-brand-gray-light section-padding">
-          <div className="container-custom">
+          {/* Intensive Practice Day */}
+          <div className="mb-16">
             <div className="max-w-4xl mx-auto">
               <Card className="shadow-lg">
                 <CardHeader className="bg-brand-blue text-white">
                   <CardTitle className="text-2xl md:text-3xl text-center">
                     Oefendag: Verdieping & Integratie
                   </CardTitle>
+                  <CardDescription className="text-center text-blue-100 text-lg">
+                    Tussenliggende verdiepingssessie van 6 uur (meestal tussen week 6 en 7)
+                  </CardDescription>
                 </CardHeader>
                 <CardContent className="p-8">
-                  <p className="text-brand-gray-medium mb-6 text-center text-base">
-                    De oefendag vindt plaats tussen week 5 en 7 en biedt deelnemers de gelegenheid om de geleerde MBSR-technieken te verdiepen en te integreren. Deze dag (6 uur) bestaat uit:
-                  </p>
-                  
-                  <div className="grid md:grid-cols-2 gap-6">
-                    <ul className="space-y-3">
-                      <li className="flex items-start">
-                        <CheckCircle className="h-5 w-5 mr-3 text-brand-green mt-0.5 flex-shrink-0" />
-                        <span className="text-brand-gray-medium text-base">Uitgebreide oefensessies in stilte</span>
-                      </li>
-                      <li className="flex items-start">
-                        <CheckCircle className="h-5 w-5 mr-3 text-brand-green mt-0.5 flex-shrink-0" />
-                        <span className="text-brand-gray-medium text-base">Afwisseling tussen formele oefeningen</span>
-                      </li>
-                      <li className="flex items-start">
-                        <CheckCircle className="h-5 w-5 mr-3 text-brand-green mt-0.5 flex-shrink-0" />
-                        <span className="text-brand-gray-medium text-base">Bewust eten en bewust communiceren</span>
-                      </li>
-                    </ul>
+                  <div className="grid md:grid-cols-2 gap-8">
+                    <div>
+                      <h3 className="text-xl font-semibold text-brand-gray-dark mb-4">Wat gebeurt er?</h3>
+                      <ul className="space-y-3 text-brand-gray-medium">
+                        <li className="flex items-start">
+                          <span className="text-brand-blue mr-2">•</span>
+                          <span>Verdieping van alle geleerde technieken in stilte</span>
+                        </li>
+                        <li className="flex items-start">
+                          <span className="text-brand-blue mr-2">•</span>
+                          <span>Langere meditatie- en bewustzijnsoefeningen</span>
+                        </li>
+                        <li className="flex items-start">
+                          <span className="text-brand-blue mr-2">•</span>
+                          <span>Integratie van lichaamsscan, ademhaling en bewuste beweging</span>
+                        </li>
+                        <li className="flex items-start">
+                          <span className="text-brand-blue mr-2">•</span>
+                          <span>Reflectie op persoonlijke ontwikkeling en inzichten</span>
+                        </li>
+                        <li className="flex items-start">
+                          <span className="text-brand-blue mr-2">•</span>
+                          <span>Voorbereiding op toepassing in complexe werksituaties</span>
+                        </li>
+                      </ul>
+                    </div>
                     
-                    <ul className="space-y-3">
-                      <li className="flex items-start">
-                        <CheckCircle className="h-5 w-5 mr-3 text-brand-green mt-0.5 flex-shrink-0" />
-                        <span className="text-brand-gray-medium text-base">Persoonlijke reflectie op voortgang en uitdagingen</span>
-                      </li>
-                      <li className="flex items-start">
-                        <CheckCircle className="h-5 w-5 mr-3 text-brand-green mt-0.5 flex-shrink-0" />
-                        <span className="text-brand-gray-medium text-base">Strategieën voor het overwinnen van barrières</span>
-                      </li>
-                      <li className="flex items-start">
-                        <CheckCircle className="h-5 w-5 mr-3 text-brand-green mt-0.5 flex-shrink-0" />
-                        <span className="text-brand-gray-medium text-base">Consolideren van geleerde vaardigheden</span>
-                      </li>
-                    </ul>
+                    <div>
+                      <h3 className="text-xl font-semibold text-brand-gray-dark mb-4">Waarom deze dag?</h3>
+                      <div className="bg-brand-gray-light p-6 rounded-lg">
+                        <p className="text-brand-gray-medium mb-4">
+                          De oefendag is een cruciale component van het MBSR-programma. Onderzoek toont aan dat deze intensieve sessie significant bijdraagt aan:
+                        </p>
+                        <ul className="space-y-2 text-brand-gray-medium">
+                          <li>• <strong>Diepere integratie</strong> van mindfulness-vaardigheden</li>
+                          <li>• <strong>Verhoogde zelfvertrouwen</strong> in het toepassen van technieken</li>
+                          <li>• <strong>Sterkere commitment</strong> aan voortgezette praktijk</li>
+                          <li>• <strong>Betere lange-termijn resultaten</strong> in stressreductie</li>
+                        </ul>
+                      </div>
+                    </div>
                   </div>
                   
-                  <p className="text-brand-gray-medium mt-6 text-center italic text-base">
-                    De oefendag is cruciaal voor het consolideren van de geleerde vaardigheden en het versterken van de commitment aan dagelijkse toepassing, conform de oorspronkelijke MBSR-methodiek.
-                  </p>
+                  <div className="mt-8 text-center">
+                    <Badge variant="outline" className="text-brand-blue border-brand-blue px-4 py-2">
+                      Optioneel maar sterk aanbevolen voor optimale resultaten
+                    </Badge>
+                  </div>
                 </CardContent>
               </Card>
             </div>
           </div>
-        </section>
 
-        {/* Scientific Foundation */}
-        <section className="bg-white section-padding">
-          <div className="container-custom">
-            <div className="max-w-4xl mx-auto text-center">
-              <h2 className="text-3xl md:text-4xl font-bold text-brand-gray-dark mb-8">
-                Wetenschappelijke Onderbouwing
-              </h2>
+          {/* Implementation & Support */}
+          <div className="bg-white rounded-xl p-8 mb-16 shadow-lg">
+            <h2 className="text-2xl font-bold text-brand-gray-dark mb-6 text-center">
+              Begeleiding & Materialen
+            </h2>
+            <div className="grid md:grid-cols-2 gap-8">
+              <div>
+                <h3 className="text-lg font-semibold text-brand-gray-dark mb-4">Wat krijgt u?</h3>
+                <ul className="space-y-3 text-brand-gray-medium">
+                  <li className="flex items-start">
+                    <span className="text-brand-green mr-2">✓</span>
+                    <span>Persoonlijk werkboek met oefeningen en reflecties</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-brand-green mr-2">✓</span>
+                    <span>Audio-opnames van geleide meditaties voor thuisoefening</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-brand-green mr-2">✓</span>
+                    <span>Wekelijkse huisopdrachten (30-45 minuten per dag)</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-brand-green mr-2">✓</span>
+                    <span>Begeleiding door gecertificeerde MBSR-trainers</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-brand-green mr-2">✓</span>
+                    <span>Certificaat van deelname na afronding</span>
+                  </li>
+                </ul>
+              </div>
               
-              <p className="text-xl text-brand-gray-medium mb-8">
-                Sinds 1979 heeft het MBSR-programma van Jon Kabat-Zinn aan de University of Massachusetts Medical Center een uitgebreide wetenschappelijke basis opgebouwd. Onze bedrijfstoepassing behoudt deze bewezen effectiviteit.
-              </p>
-              
-              <div className="grid md:grid-cols-2 gap-8 mb-12">
-                <div className="bg-brand-gray-light p-6 rounded-xl text-left">
-                  <h3 className="text-xl font-semibold text-brand-gray-dark mb-4">Het programma integreert elementen uit:</h3>
-                  <ul className="space-y-2 text-brand-gray-medium text-base">
-                    <li>• Cognitieve gedragsbenaderingen</li>
-                    <li>• Aandachtsregulatie-training</li>
-                    <li>• Emotieregulatie-strategieën</li>
-                    <li>• Neurobiologische inzichten in stress en herstel</li>
-                  </ul>
-                </div>
-                
-                <div className="bg-brand-gray-light p-6 rounded-xl text-left">
-                  <h3 className="text-xl font-semibold text-brand-gray-dark mb-4">40+ Jaar Onderzoek</h3>
-                  <p className="text-brand-gray-medium text-base mb-4">
-                    Het oorspronkelijke MBSR-programma heeft duizenden studies voortgebracht die de effectiviteit bewijzen voor stressreductie, veerkracht en algehele welzijn.
-                  </p>
-                  <ul className="space-y-2 text-brand-gray-medium text-base">
-                    
-                    
-                    
-                  </ul>
-                </div>
+              <div>
+                <h3 className="text-lg font-semibold text-brand-gray-dark mb-4">Praktische zaken</h3>
+                <ul className="space-y-3 text-brand-gray-medium">
+                  <li className="flex items-start">
+                    <span className="text-brand-blue mr-2">•</span>
+                    <span><strong>Locatie:</strong> Bij u in het bedrijf of externe locatie</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-brand-blue mr-2">•</span>
+                    <span><strong>Groepsgrootte:</strong> 8-15 deelnemers voor optimale interactie</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-brand-blue mr-2">•</span>
+                    <span><strong>Timing:</strong> Flexibel in te plannen tijdens of na werktijd</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-brand-blue mr-2">•</span>
+                    <span><strong>Follow-up:</strong> Optionele vervolgbijeenkomsten na 3 en 6 maanden</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-brand-blue mr-2">•</span>
+                    <span><strong>Meting:</strong> Voor- en nameting van stress en welzijn</span>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
-        </section>
 
-        {/* CTA Section */}
-        <section className="bg-brand-gray-light section-padding">
-          <div className="container-custom text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-brand-gray-dark mb-8">
-              Klaar om te beginnen?
+          {/* Call to Action */}
+          <div className="bg-brand-blue text-white rounded-xl p-8 text-center">
+            <h2 className="text-2xl md:text-3xl font-bold mb-4">
+              Klaar om te Starten?
             </h2>
-            <p className="text-xl text-brand-gray-medium mb-8 max-w-2xl mx-auto">
+            <p className="text-xl mb-8 max-w-2xl mx-auto">
               Ontdek hoe het bewezen MBSR-programma uw organisatie kan helpen bij het verlagen van verzuim en het verbeteren van retentie.
             </p>
             <div className="space-y-4 md:space-y-0 md:space-x-4 md:flex md:justify-center">
@@ -319,9 +348,49 @@ const Programma = () => {
               </Button>
             </div>
           </div>
-        </section>
+        </div>
       </main>
-    </div>;
+
+      {/* Footer */}
+      <footer className="bg-gradient-to-br from-brand-blue to-brand-blue-dark text-white py-12 mt-16">
+        <div className="container-custom">
+          <div className="grid md:grid-cols-3 gap-8">
+            <div>
+              <div className="text-2xl font-bold mb-4">Halt.academy</div>
+              <p className="text-gray-300 leading-relaxed">
+                MBSR-gebaseerde stressreductieprogramma's voor meetbare bedrijfsresultaten. Gebaseerd op het baanbrekende werk van Jon Kabat-Zinn.
+              </p>
+            </div>
+            <div>
+              <h3 className="text-lg font-semibold mb-4">Contact</h3>
+              <div className="space-y-2 text-gray-300">
+                <p>Email: bas@haltacademy.nl</p>
+                <p>Telefoon: 06 23 45 34 77</p>
+                <div className="mt-4 flex justify-start">
+                  <Avatar className="w-24 h-24">
+                    <AvatarImage src="/lovable-uploads/eaa7a159-2f85-4fa3-b487-4855426f2c14.png" alt="Bas Ter Haar Romenij" />
+                    <AvatarFallback className="text-white text-xl font-bold bg-brand-blue">BtH</AvatarFallback>
+                  </Avatar>
+                </div>
+              </div>
+            </div>
+            <div>
+              <h3 className="text-lg font-semibold mb-4">Snel naar</h3>
+              <div className="space-y-2">
+                <button onClick={() => window.location.href = '/'} className="block text-gray-300 hover:text-white transition-colors text-left">Home</button>
+                <button onClick={() => window.location.href = '/wetenschap'} className="block text-gray-300 hover:text-white transition-colors text-left">De Wetenschap</button>
+                <button onClick={() => window.location.href = '/programma'} className="block text-gray-300 hover:text-white transition-colors text-left">Programma</button>
+                <button onClick={() => window.location.href = '/contact'} className="block text-gray-300 hover:text-white transition-colors text-left">Contact</button>
+              </div>
+            </div>
+          </div>
+          <div className="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+            <p>&copy; 2024 Halt.academy. Alle rechten voorbehouden.</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+  );
 };
 
 export default Programma;

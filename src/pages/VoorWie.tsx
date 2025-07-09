@@ -1,8 +1,8 @@
-
 import Navigation from '@/components/Navigation';
 import StickyCtaButtons from '@/components/StickyCtaButtons';
 import { Button } from '@/components/ui/button';
 import { useEffect } from 'react';
+import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
 
 const VoorWie = () => {
   useEffect(() => {
@@ -17,7 +17,7 @@ const VoorWie = () => {
       source: "HR Directeur, internationaal consultancybedrijf"
     },
     {
-      title: "Technologie & IT",
+      title: "Technologie & IT", 
       services: ["Software-ontwikkeling", "IT-dienstverlening", "Telecom", "Tech startups"],
       testimonial: "In onze sector met hoge werkdruk en veel schermtijd heeft het programma bijgedragen aan een 22% daling in burn-out gerelateerd verzuim en een verbetering van 19% in retentie van toptalent.",
       source: "CTO, softwareontwikkelingsbedrijf"
@@ -252,13 +252,13 @@ const VoorWie = () => {
       </main>
 
       {/* Footer */}
-      <footer className="bg-brand-gray-dark text-white py-12 mt-16">
+      <footer className="bg-gradient-to-br from-brand-blue to-brand-blue-dark text-white py-12 mt-16">
         <div className="container-custom">
           <div className="grid md:grid-cols-3 gap-8">
             <div>
               <div className="text-2xl font-bold mb-4">Halt.academy</div>
               <p className="text-gray-300 leading-relaxed">
-                Wetenschappelijk bewezen stressreductieprogramma's voor meetbare bedrijfsresultaten.
+                MBSR-gebaseerde stressreductieprogramma's voor meetbare bedrijfsresultaten. Gebaseerd op het baanbrekende werk van Jon Kabat-Zinn.
               </p>
             </div>
             <div>
@@ -266,15 +266,21 @@ const VoorWie = () => {
               <div className="space-y-2 text-gray-300">
                 <p>Email: bas@haltacademy.nl</p>
                 <p>Telefoon: 06 23 45 34 77</p>
+                <div className="mt-4 flex justify-start">
+                  <Avatar className="w-24 h-24">
+                    <AvatarImage src="/lovable-uploads/eaa7a159-2f85-4fa3-b487-4855426f2c14.png" alt="Bas Ter Haar Romenij" />
+                    <AvatarFallback className="text-white text-xl font-bold bg-brand-blue">BtH</AvatarFallback>
+                  </Avatar>
+                </div>
               </div>
             </div>
             <div>
               <h3 className="text-lg font-semibold mb-4">Snel naar</h3>
               <div className="space-y-2">
-                <a href="/" className="block text-gray-300 hover:text-white transition-colors">Home</a>
-                <a href="/wetenschap" className="block text-gray-300 hover:text-white transition-colors">De Wetenschap</a>
-                <a href="/programma" className="block text-gray-300 hover:text-white transition-colors">Programma</a>
-                <a href="/contact" className="block text-gray-300 hover:text-white transition-colors">Contact</a>
+                <button onClick={() => window.location.href = '/'} className="block text-gray-300 hover:text-white transition-colors text-left">Home</button>
+                <button onClick={() => window.location.href = '/wetenschap'} className="block text-gray-300 hover:text-white transition-colors text-left">De Wetenschap</button>
+                <button onClick={() => window.location.href = '/programma'} className="block text-gray-300 hover:text-white transition-colors text-left">Programma</button>
+                <button onClick={() => window.location.href = '/contact'} className="block text-gray-300 hover:text-white transition-colors text-left">Contact</button>
               </div>
             </div>
           </div>
