@@ -1,4 +1,3 @@
-
 import { Button } from '@/components/ui/button';
 import { Clock, Users, MapPin, Calendar } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -11,7 +10,7 @@ const ProgramSection = () => {
       description: "Leren herkennen van stresssignalen en triggers in de werkomgeving"
     },
     {
-      weeks: "3-4",
+      weeks: "3-4", 
       title: "Aandachtsregulatie en concentratietechnieken",
       description: "Praktische technieken voor verbeterde focus en mentale helderheid"
     },
@@ -95,7 +94,7 @@ const ProgramSection = () => {
           
           <div className="text-center mb-12">
             <Link to="/programma">
-              <Button className="w-full sm:w-auto bg-brand-blue text-white font-semibold py-3 px-8 rounded-lg text-lg md:text-xl transition-all duration-300 shadow-lg transform hover:-translate-y-0.5">
+              <Button className="w-full sm:w-auto bg-brand-blue hover:bg-brand-blue text-white hover:text-white font-semibold py-3 px-8 rounded-lg text-lg md:text-xl transition-all duration-300 shadow-lg transform hover:-translate-y-0.5">
                 Programma Details Bekijken
               </Button>
             </Link>
@@ -122,7 +121,7 @@ const ProgramSection = () => {
 
         <div className="text-center mt-12">
           <Link to="/programma">
-            <Button className="w-full sm:w-auto bg-brand-blue text-white font-semibold py-3 px-8 rounded-lg text-lg md:text-xl transition-all duration-300 shadow-lg transform hover:-translate-y-0.5">
+            <Button className="w-full sm:w-auto bg-brand-blue hover:bg-brand-blue text-white hover:text-white font-semibold py-3 px-8 rounded-lg text-lg md:text-xl transition-all duration-300 shadow-lg transform hover:-translate-y-0.5">
               Programma Details Bekijken
             </Button>
           </Link>
