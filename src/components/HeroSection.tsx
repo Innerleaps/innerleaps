@@ -58,7 +58,7 @@ const HeroSection = () => {
                       <span className="text-white font-bold text-lg lg:text-xl">-30%</span>
                     </div>
                     <div className="flex items-center justify-between p-3 lg:p-4 bg-white/20 rounded-lg">
-                      <span className="font-medium text-sm lg:text-base">Hogere medewerker retentie</span>
+                      <span className="font-medium text-sm lg:text-base">Meer veerkrachtige werknemers</span>
                       <span className="text-white font-bold text-lg lg:text-xl">+26%</span>
                     </div>
                     <div className="flex items-center justify-between p-3 lg:p-4 bg-white/20 rounded-lg">
