@@ -133,7 +133,7 @@ const Contact = () => {
                   </h3>
                   <ul className="space-y-2 text-brand-gray-medium">
                     <li>• Gespreksduur: 30-45 minuten</li>
-                    <li>• Online of op locatie mogelijk</li>
+                    <li>• Online overleg</li>
                     <li>• Concrete cijfers en ROI-berekening</li>
                     <li>• Op maat gemaakte aanpak</li>
                     <li>• Geen verplichtingen</li>
