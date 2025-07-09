@@ -4,10 +4,12 @@ import { CheckCircle, Clock, Users, MapPin, Calendar, Brain, Target, Lightbulb }
 import { Button } from '@/components/ui/button';
 import StickyCtaButtons from '@/components/StickyCtaButtons';
 import { useEffect } from 'react';
+
 const Programma = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
   const weeks = [{
     week: "Week 1",
     title: "Bewustwording & Automatische Piloot",
@@ -15,7 +17,7 @@ const Programma = () => {
     techniques: ["Lichaamsscan voor stresssignaalherkenning", "Gerichte aandachtstraining met focus op eetgewoonten", "Bewust ademen als ankerpunt tijdens stress"],
     applications: ["Herkennen van \"automatische piloot\" in werkroutines", "Implementatie van bewuste aandacht bij routinetaken", "Stressmonitoring tijdens werkdagen"]
   }, {
-    week: "Week 2",
+    week: "Week 2", 
     title: "Perceptie & Omgaan met Barrières",
     goals: ["Begrijpen hoe perceptie ervaringen vormt", "Herkennen van reactiepatronen op uitdagingen", "Ontwikkelen van volgehouden aandacht"],
     techniques: ["Lichaamsscan", "Zittende aandachtsoefening met focus op ademhaling", "Bewuste bewegingsoefeningen voor spanningsherkenning"],
@@ -57,13 +59,14 @@ const Programma = () => {
     techniques: ["Lichaamsscan als review van het programma", "Persoonlijke reflectie op geleerde vaardigheden", "Ontwikkeling van toekomstplan"],
     applications: ["Creëren van gezonde werkroutines", "Implementeren van preventieve stressreductie", "Integratie van geleerde technieken in dagelijkse werkpraktijk"]
   }];
+
   const features = [{
     icon: Clock,
     title: "8 weken",
     description: "Wekelijks 2,5 uur op locatie"
   }, {
     icon: Users,
-    title: "15 deelnemers",
+    title: "15 deelnemers", 
     description: "Optimale groepsgrootte"
   }, {
     icon: MapPin,
@@ -74,6 +77,7 @@ const Programma = () => {
     title: "Oefendag",
     description: "6 uur verdiepingssessie"
   }];
+
   return <div className="min-h-screen bg-brand-gray-light">
       <Navigation />
       <StickyCtaButtons />
@@ -149,7 +153,7 @@ const Programma = () => {
             </h2>
             
             <div className="grid gap-8">
-              {weeks.map((week, index) => <Card key={index} className="overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
+              {weeks.map((week, index) => <Card key={index} className="overflow-hidden shadow-lg">
                   <CardHeader className="bg-brand-blue text-white">
                     <CardTitle className="text-xl md:text-2xl">
                       {week.week}: {week.title}
@@ -207,7 +211,7 @@ const Programma = () => {
           <div className="container-custom">
             <div className="max-w-4xl mx-auto">
               <Card className="shadow-lg">
-                <CardHeader className="bg-gradient-to-r from-brand-blue to-brand-green text-white">
+                <CardHeader className="bg-brand-blue text-white">
                   <CardTitle className="text-2xl md:text-3xl text-center">
                     Oefendag: Verdieping & Integratie
                   </CardTitle>
@@ -307,10 +311,10 @@ const Programma = () => {
               Ontdek hoe het bewezen MBSR-programma uw organisatie kan helpen bij het verlagen van verzuim en het verbeteren van retentie.
             </p>
             <div className="space-y-4 md:space-y-0 md:space-x-4 md:flex md:justify-center">
-              <Button className="bg-brand-blue hover:bg-brand-blue-dark text-white font-semibold py-3 px-8 rounded-lg text-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5" onClick={() => window.open('https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1wwDnoAHyFrV0M1FxwmbcMa9ewkDxTDdwQObwPKF-WX-wZV9DssZKtb1haoeP5qXDLenQlZt_R', '_blank')}>
+              <Button className="bg-brand-blue hover:bg-brand-blue text-white hover:text-white font-semibold py-3 px-8 rounded-lg text-lg transition-all duration-300 shadow-lg transform hover:-translate-y-0.5" onClick={() => window.open('https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1wwDnoAHyFrV0M1FxwmbcMa9ewkDxTDdwQObwPKF-WX-wZV9DssZKtb1haoeP5qXDLenQlZt_R', '_blank')}>
                 Vrijblijvend gesprek plannen
               </Button>
-              <Button variant="outline" className="border-2 border-brand-blue text-brand-blue hover:bg-brand-blue hover:text-white font-semibold py-3 px-8 rounded-lg text-lg transition-all duration-300" onClick={() => window.location.href = '/#calculator'}>
+              <Button variant="outline" className="border-2 border-brand-blue text-brand-blue hover:bg-white hover:text-brand-blue font-semibold py-3 px-8 rounded-lg text-lg transition-all duration-300 transform hover:-translate-y-0.5" onClick={() => window.location.href = '/#calculator'}>
                 Bereken uw besparing
               </Button>
             </div>
@@ -319,4 +323,5 @@ const Programma = () => {
       </main>
     </div>;
 };
+
 export default Programma;
