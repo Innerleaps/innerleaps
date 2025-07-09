@@ -95,7 +95,7 @@ const ProgramSection = () => {
           
           <div className="text-center mb-12">
             <Link to="/programma">
-              <Button className="w-full sm:w-auto bg-brand-blue text-white font-semibold py-3 px-8 rounded-lg text-lg md:text-xl transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+              <Button className="w-full sm:w-auto bg-brand-blue text-white font-semibold py-3 px-8 rounded-lg text-lg md:text-xl transition-transform duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
                 Programma Details Bekijken
               </Button>
             </Link>
@@ -103,7 +103,7 @@ const ProgramSection = () => {
           
           <div className="grid gap-6">
             {programSteps.map((step, index) => (
-              <div key={index} className="bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 p-6">
+              <div key={index} className="bg-white border border-gray-200 rounded-xl shadow-sm p-6">
                 <div className="mb-4">
                   <div className="text-lg md:text-xl text-brand-blue font-medium mb-2">
                     Week {step.weeks}
@@ -122,7 +122,7 @@ const ProgramSection = () => {
 
         <div className="text-center mt-12">
           <Link to="/programma">
-            <Button className="w-full sm:w-auto bg-brand-blue text-white font-semibold py-3 px-8 rounded-lg text-lg md:text-xl transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+            <Button className="w-full sm:w-auto bg-brand-blue text-white font-semibold py-3 px-8 rounded-lg text-lg md:text-xl transition-transform duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
               Programma Details Bekijken
             </Button>
           </Link>

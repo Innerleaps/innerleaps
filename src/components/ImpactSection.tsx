@@ -99,7 +99,7 @@ const ImpactSection = () => {
             <Link to="/wetenschap">
               <Button 
                 variant="outline" 
-                className="w-full sm:w-auto border-2 border-brand-blue text-brand-blue hover:bg-brand-blue hover:text-white font-semibold py-3 px-8 rounded-lg text-base md:text-lg transition-all duration-300"
+                className="w-full sm:w-auto border-2 border-brand-blue text-brand-blue font-semibold py-3 px-8 rounded-lg text-base md:text-lg transition-all duration-300 hover:bg-brand-blue hover:text-white"
               >
                 Ontdek de wetenschap erachter
               </Button>
