@@ -91,11 +91,6 @@ const BerekeningDemo = () => {
                 </div>
               </div>
 
-              {/* CTA Button in groene blok */}
-              <div className="pt-4">
-                
-              </div>
-              
               <div className="text-center p-6 bg-white/10 rounded-lg">
                 <div className="flex items-center justify-center gap-2 mb-2">
                   <Users className="h-6 w-6" />
@@ -104,7 +99,6 @@ const BerekeningDemo = () => {
                 <div className="text-sm opacity-90">Benodigde MBSR-groepen (max. 15 deelnemers per groep)</div>
               </div>
 
-              {/* CTA Button onderaan groene blok */}
               <div className="pt-4 border-t border-white/20">
                 <Button size="lg" className="bg-white text-brand-green hover:bg-gray-100 font-semibold px-8 py-4 text-lg" onClick={openCalendar}>Plan een kennismaking</Button>
               </div>
@@ -217,16 +211,18 @@ const BerekeningDemo = () => {
             
             {/* Bas contact section */}
             <div className="mt-8 p-6 bg-white rounded-lg border border-gray-200">
-              <div style="display: flex; align-items: center; gap: 15px; justify-content: center;">
-                <img src="https://7f1b052b-e2ee-419a-aec0-e4591c9e4afe.lovableproject.com/lovable-uploads/07c13706-b4be-4b0a-8b50-701bd69610fc.png" 
-                     alt="Bas van der Ven" 
-                     style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover;">
-                <div style="text-align: left;">
-                  <p style="margin: 0; font-weight: bold; color: #1e293b; font-size: 18px;">Bas van der Ven</p>
-                  <p style="margin: 5px 0; color: #666; font-size: 16px;">Oprichter Halt.academy</p>
-                  <p style="margin: 5px 0 0 0; color: #2563eb; font-size: 14px;">
-                    <a href="mailto:bas@haltacademy.nl" style="color: #2563eb; text-decoration: none;">bas@haltacademy.nl</a> | 
-                    <a href="tel:+31623453477" style="color: #2563eb; text-decoration: none;">06 23453477</a>
+              <div className="flex items-center gap-4 justify-center">
+                <img 
+                  src="https://7f1b052b-e2ee-419a-aec0-e4591c9e4afe.lovableproject.com/lovable-uploads/07c13706-b4be-4b0a-8b50-701bd69610fc.png" 
+                  alt="Bas van der Ven" 
+                  className="w-20 h-20 rounded-full object-cover"
+                />
+                <div className="text-left">
+                  <p className="font-bold text-brand-gray-dark text-lg">Bas van der Ven</p>
+                  <p className="text-brand-gray-medium">Oprichter Halt.academy</p>
+                  <p className="text-brand-blue text-sm">
+                    <a href="mailto:bas@haltacademy.nl" className="hover:underline">bas@haltacademy.nl</a> | 
+                    <a href="tel:+31623453477" className="hover:underline"> 06 23453477</a>
                   </p>
                 </div>
               </div>
