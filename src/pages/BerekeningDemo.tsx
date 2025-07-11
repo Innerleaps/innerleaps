@@ -1,4 +1,3 @@
-
 import { useNavigate } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
@@ -184,7 +183,7 @@ const BerekeningDemo = () => {
             </div>
             
             <div className="mt-6 p-4 bg-brand-blue text-white rounded-lg">
-              <p className="text-sm">
+              <p className="text-sm text-white">
                 <strong>Methodologie:</strong> Deze berekening is gebaseerd op 40+ jaar wetenschappelijk onderzoek naar MBSR (Mindfulness-Based Stress Reduction) 
                 en erkende HR-kostenmethodieken. Alle percentages zijn conservatieve gemiddelden uit peer-reviewed studies.
               </p>
@@ -214,7 +213,7 @@ const BerekeningDemo = () => {
             <div className="mt-8 p-6 bg-white rounded-lg border border-gray-200">
               <div className="flex items-center gap-4 justify-center">
                 <img 
-                  src="/lovable-uploads/dea9200c-b881-4007-bd3b-c07db498ca17.png" 
+                  src="/lovable-uploads/25a27d67-f5ef-4b9c-8e54-b246de0f3596.png" 
                   alt="Bas Ter Haar Romenij" 
                   className="w-20 h-20 rounded-full object-cover"
                 />
