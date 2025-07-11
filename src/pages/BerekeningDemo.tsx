@@ -213,12 +213,12 @@ const BerekeningDemo = () => {
             <div className="mt-8 p-6 bg-white rounded-lg border border-gray-200">
               <div className="flex items-center gap-4 justify-center">
                 <img 
-                  src="https://7f1b052b-e2ee-419a-aec0-e4591c9e4afe.lovableproject.com/lovable-uploads/07c13706-b4be-4b0a-8b50-701bd69610fc.png" 
-                  alt="Bas van der Ven" 
+                  src="/lovable-uploads/acec9ae1-954f-421e-9d40-c97f83c2f3d9.png" 
+                  alt="Bas Ter Haar Romenij" 
                   className="w-20 h-20 rounded-full object-cover"
                 />
                 <div className="text-left">
-                  <p className="font-bold text-brand-gray-dark text-lg">Bas van der Ven</p>
+                  <p className="font-bold text-brand-gray-dark text-lg">Bas Ter Haar Romenij</p>
                   <p className="text-brand-gray-medium">Oprichter Halt.academy</p>
                   <p className="text-brand-blue text-sm">
                     <a href="mailto:bas@haltacademy.nl" className="hover:underline">bas@haltacademy.nl</a> | 

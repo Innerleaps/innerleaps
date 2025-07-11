@@ -99,18 +99,25 @@ const handler = async (req: Request): Promise<Response> => {
             "Mindfulness is niet wegvluchten van de werkelijkheid, maar juist volledig aanwezig zijn bij wat er is. 
             Wanneer we dit toepassen in organisaties, ontstaat er ruimte voor echte verbinding en duurzame prestaties."
           </p>
-          <p style="color: #666; line-height: 1.6;">
+          <p style="color: #666; line-height: 1.6; margin-bottom: 20px;">
             Heeft u vragen of wilt u eerder contact? Bel of mail mij gerust.
           </p>
+          
+          <div style="text-align: center; margin: 20px 0;">
+            <a href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1wwDnoAHyFrV0M1FxwmbcMa9ewkDxTDdwQObwPKF-WX-wZV9DssZKtb1haoeP5qXDLenQlZt_R" 
+               style="display: inline-block; background-color: #059669; color: white; padding: 12px 24px; text-decoration: none; border-radius: 6px; font-weight: bold; font-size: 16px;">
+              Plan een afspraak
+            </a>
+          </div>
         </div>
         
         <div style="border-top: 1px solid #e2e8f0; padding-top: 20px;">
           <div style="display: flex; align-items: center; gap: 15px;">
-            <img src="https://7f1b052b-e2ee-419a-aec0-e4591c9e4afe.lovableproject.com/lovable-uploads/07c13706-b4be-4b0a-8b50-701bd69610fc.png" 
-                 alt="Bas van der Ven" 
+            <img src="https://7f1b052b-e2ee-419a-aec0-e4591c9e4afe.lovableproject.com/lovable-uploads/acec9ae1-954f-421e-9d40-c97f83c2f3d9.png" 
+                 alt="Bas Ter Haar Romenij" 
                  style="width: 60px; height: 60px; border-radius: 50%; object-fit: cover;">
             <div>
-              <p style="margin: 0; font-weight: bold; color: #1e293b;">Bas van der Ven</p>
+              <p style="margin: 0; font-weight: bold; color: #1e293b;">Bas Ter Haar Romenij</p>
               <p style="margin: 5px 0 0 0; color: #666; font-size: 14px;">Oprichter Halt.academy</p>
               <p style="margin: 5px 0 0 0; color: #2563eb; font-size: 14px;">
                 <a href="mailto:bas@haltacademy.nl" style="color: #2563eb; text-decoration: none;">bas@haltacademy.nl</a> | 
@@ -162,11 +169,11 @@ const handler = async (req: Request): Promise<Response> => {
         </ul>
         
         <div style="margin-top: 30px; padding: 20px; background-color: #f8f9fa; border-radius: 8px; display: flex; align-items: center; gap: 15px;">
-          <img src="https://7f1b052b-e2ee-419a-aec0-e4591c9e4afe.lovableproject.com/lovable-uploads/07c13706-b4be-4b0a-8b50-701bd69610fc.png" 
-               alt="Bas van der Ven" 
+          <img src="https://7f1b052b-e2ee-419a-aec0-e4591c9e4afe.lovableproject.com/lovable-uploads/acec9ae1-954f-421e-9d40-c97f83c2f3d9.png" 
+               alt="Bas Ter Haar Romenij" 
                style="width: 60px; height: 60px; border-radius: 50%; object-fit: cover;">
           <div>
-            <p style="margin: 0; font-weight: bold; color: #333;">Bas van der Ven</p>
+            <p style="margin: 0; font-weight: bold; color: #333;">Bas Ter Haar Romenij</p>
             <p style="margin: 5px 0 0 0; color: #666; font-size: 14px;">Oprichter Halt.academy</p>
           </div>
         </div>
@@ -179,7 +186,7 @@ const handler = async (req: Request): Promise<Response> => {
     try {
       // Send confirmation email to lead
       const confirmationResponse = await resend.emails.send({
-        from: "Bas van der Ven - HALT Academy <bas@haltacademy.nl>",
+        from: "Bas Ter Haar Romenij - HALT Academy <bas@haltacademy.nl>",
         to: [submission.email],
         subject: `Uw besparingsberekening voor ${submission.company}`,
         html: confirmationEmailHtml,
