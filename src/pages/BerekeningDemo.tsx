@@ -1,3 +1,4 @@
+
 import { useNavigate } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
@@ -99,7 +100,21 @@ const BerekeningDemo = () => {
                 <div className="text-sm opacity-90">Benodigde MBSR-groepen (max. 15 deelnemers per groep)</div>
               </div>
 
+              {/* Bas quote boven de CTA button */}
               <div className="pt-4 border-t border-white/20">
+                <div className="flex items-center gap-4 justify-center mb-4">
+                  <img 
+                    src="/lovable-uploads/25a27d67-f5ef-4b9c-8e54-b246de0f3596.png" 
+                    alt="Bas Ter Haar Romenij" 
+                    className="w-12 h-12 rounded-full object-cover"
+                  />
+                  <div className="text-left">
+                    <p className="text-white text-sm italic">
+                      "Deze cijfers zijn indrukwekkend! Laten we bespreken hoe we dit voor {demoFormData.company} gaan realiseren."
+                    </p>
+                    <p className="text-white/80 text-xs">— Bas Ter Haar Romenij</p>
+                  </div>
+                </div>
                 <Button size="lg" className="bg-white text-brand-green hover:bg-gray-100 font-semibold px-8 py-4 text-lg" onClick={openCalendar}>Plan een kennismaking</Button>
               </div>
             </div>
@@ -137,7 +152,6 @@ const BerekeningDemo = () => {
             </div>
           </Card>
 
-          {/* Scientific Foundation */}
           <Card className="p-6 mb-8">
             <div className="flex items-center gap-3 mb-6">
               <BookOpen className="h-6 w-6 text-brand-blue" />
@@ -190,7 +204,6 @@ const BerekeningDemo = () => {
             </div>
           </Card>
 
-          {/* Call to Action */}
           <div className="text-center space-y-6">
             <h3 className="text-2xl font-bold text-brand-gray-dark">
               Klaar om deze resultaten te behalen?
@@ -234,7 +247,6 @@ const BerekeningDemo = () => {
             </div>
           </div>
 
-          {/* Program Details */}
           <Card className="mt-6 p-6">
             <h4 className="text-lg font-semibold text-brand-gray-dark mb-4">Demo gegevens</h4>
             <div className="grid md:grid-cols-2 gap-4 text-brand-gray-medium">
@@ -253,7 +265,6 @@ const BerekeningDemo = () => {
         </div>
       </div>
 
-      {/* Sticky CTA Button rechtsonderin */}
       <div className="fixed bottom-6 right-6 z-40">
         <Button onClick={openCalendar} className="bg-brand-green hover:bg-brand-green-light text-white font-semibold py-5 px-8 rounded-lg text-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
           Ontdek de mogelijkheden en maak kennis

@@ -70,8 +70,21 @@ const Berekening = () => {
                 <div className="text-sm opacity-90">Benodigde MBSR-groepen (max. 15 deelnemers per groep)</div>
               </div>
 
-              {/* CTA Button onderaan groene blok */}
+              {/* Bas quote boven de CTA button */}
               <div className="pt-4 border-t border-white/20">
+                <div className="flex items-center gap-4 justify-center mb-4">
+                  <img 
+                    src="/lovable-uploads/25a27d67-f5ef-4b9c-8e54-b246de0f3596.png" 
+                    alt="Bas Ter Haar Romenij" 
+                    className="w-12 h-12 rounded-full object-cover"
+                  />
+                  <div className="text-left">
+                    <p className="text-white text-sm italic">
+                      "Deze cijfers zijn indrukwekkend! Laten we bespreken hoe we dit voor {formData.company} gaan realiseren."
+                    </p>
+                    <p className="text-white/80 text-xs">— Bas Ter Haar Romenij</p>
+                  </div>
+                </div>
                 <Button 
                   size="lg" 
                   className="bg-white text-brand-green hover:bg-gray-100 font-semibold px-8 py-4 text-lg" 
