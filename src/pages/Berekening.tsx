@@ -76,13 +76,14 @@ const Berekening = () => {
                   <img 
                     src="/lovable-uploads/25a27d67-f5ef-4b9c-8e54-b246de0f3596.png" 
                     alt="Bas Ter Haar Romenij" 
-                    className="w-12 h-12 rounded-full object-cover"
+                    className="w-16 h-16 rounded-full object-cover"
                   />
                   <div className="text-left">
                     <p className="text-white text-sm italic">
                       "Deze cijfers zijn indrukwekkend! Laten we bespreken hoe we dit voor {formData.company} gaan realiseren."
                     </p>
                     <p className="text-white/80 text-xs">— Bas Ter Haar Romenij</p>
+                    <p className="text-white/70 text-xs">Oprichter en adviseur</p>
                   </div>
                 </div>
                 <Button 

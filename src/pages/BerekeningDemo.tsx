@@ -1,4 +1,3 @@
-
 import { useNavigate } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
@@ -106,13 +105,14 @@ const BerekeningDemo = () => {
                   <img 
                     src="/lovable-uploads/25a27d67-f5ef-4b9c-8e54-b246de0f3596.png" 
                     alt="Bas Ter Haar Romenij" 
-                    className="w-12 h-12 rounded-full object-cover"
+                    className="w-16 h-16 rounded-full object-cover"
                   />
                   <div className="text-left">
                     <p className="text-white text-sm italic">
                       "Deze cijfers zijn indrukwekkend! Laten we bespreken hoe we dit voor {demoFormData.company} gaan realiseren."
                     </p>
                     <p className="text-white/80 text-xs">— Bas Ter Haar Romenij</p>
+                    <p className="text-white/70 text-xs">Oprichter en adviseur</p>
                   </div>
                 </div>
                 <Button size="lg" className="bg-white text-brand-green hover:bg-gray-100 font-semibold px-8 py-4 text-lg" onClick={openCalendar}>Plan een kennismaking</Button>
