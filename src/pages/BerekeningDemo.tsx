@@ -1,3 +1,4 @@
+
 import { useNavigate } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
@@ -182,8 +183,8 @@ const BerekeningDemo = () => {
               </div>
             </div>
             
-            <div className="mt-6 p-4 bg-brand-green-light rounded-lg">
-              <p className="text-sm text-brand-gray-dark">
+            <div className="mt-6 p-4 bg-brand-blue text-white rounded-lg">
+              <p className="text-sm">
                 <strong>Methodologie:</strong> Deze berekening is gebaseerd op 40+ jaar wetenschappelijk onderzoek naar MBSR (Mindfulness-Based Stress Reduction) 
                 en erkende HR-kostenmethodieken. Alle percentages zijn conservatieve gemiddelden uit peer-reviewed studies.
               </p>
@@ -213,7 +214,7 @@ const BerekeningDemo = () => {
             <div className="mt-8 p-6 bg-white rounded-lg border border-gray-200">
               <div className="flex items-center gap-4 justify-center">
                 <img 
-                  src="/lovable-uploads/acec9ae1-954f-421e-9d40-c97f83c2f3d9.png" 
+                  src="/lovable-uploads/dea9200c-b881-4007-bd3b-c07db498ca17.png" 
                   alt="Bas Ter Haar Romenij" 
                   className="w-20 h-20 rounded-full object-cover"
                 />
@@ -228,8 +229,7 @@ const BerekeningDemo = () => {
               </div>
               <div className="mt-4 text-center">
                 <p className="text-brand-gray-medium italic">
-                  "Mindfulness is niet wegvluchten van de werkelijkheid, maar juist volledig aanwezig zijn bij wat er is. 
-                  Wanneer we dit toepassen in organisaties, ontstaat er ruimte voor echte verbinding en duurzame prestaties."
+                  "Wij vinden het echt ontzettend gaaf om organisaties fitter te zien worden. HALT helpt {demoFormData.company} graag verder"
                 </p>
               </div>
             </div>

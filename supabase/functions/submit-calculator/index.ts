@@ -1,4 +1,3 @@
-
 import { serve } from "https://deno.land/std@0.190.0/http/server.ts";
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2.50.2";
 import { Resend } from "npm:resend@2.0.0";
@@ -138,8 +137,7 @@ const handler = async (req: Request): Promise<Response> => {
                     
                     <div style="background-color: #f8fafc; padding: 20px; border-radius: 6px; margin: 20px 0; border-left: 4px solid #2563eb;">
                       <p style="margin: 0; color: #475569; font-style: italic; line-height: 1.6;">
-                        "Mindfulness is niet wegvluchten van de werkelijkheid, maar juist volledig aanwezig zijn bij wat er is. 
-                        Wanneer we dit toepassen in organisaties, ontstaat er ruimte voor echte verbinding en duurzame prestaties."
+                        "Wij vinden het echt ontzettend gaaf om organisaties fitter te zien worden. HALT helpt ${submission.company} graag verder"
                       </p>
                     </div>
                     
@@ -167,7 +165,7 @@ const handler = async (req: Request): Promise<Response> => {
                     <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
                       <tr>
                         <td style="padding-right: 15px; vertical-align: top;">
-                          <img src="https://7f1b052b-e2ee-419a-aec0-e4591c9e4afe.lovableproject.com/lovable-uploads/acec9ae1-954f-421e-9d40-c97f83c2f3d9.png" 
+                          <img src="https://7f1b052b-e2ee-419a-aec0-e4591c9e4afe.lovableproject.com/lovable-uploads/dea9200c-b881-4007-bd3b-c07db498ca17.png" 
                                alt="Bas Ter Haar Romenij" 
                                style="width: 60px; height: 60px; border-radius: 50%; object-fit: cover; display: block;">
                         </td>
@@ -260,7 +258,7 @@ const handler = async (req: Request): Promise<Response> => {
                       <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
                         <tr>
                           <td style="padding-right: 15px; vertical-align: top;">
-                            <img src="https://7f1b052b-e2ee-419a-aec0-e4591c9e4afe.lovableproject.com/lovable-uploads/acec9ae1-954f-421e-9d40-c97f83c2f3d9.png" 
+                            <img src="https://7f1b052b-e2ee-419a-aec0-e4591c9e4afe.lovableproject.com/lovable-uploads/dea9200c-b881-4007-bd3b-c07db498ca17.png" 
                                  alt="Bas Ter Haar Romenij" 
                                  style="width: 60px; height: 60px; border-radius: 50%; object-fit: cover; display: block;">
                           </td>
