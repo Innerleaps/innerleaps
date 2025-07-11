@@ -2,6 +2,7 @@ import { useNavigate } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { TrendingUp, ArrowLeft, Users, Calculator, BookOpen } from 'lucide-react';
+
 const BerekeningDemo = () => {
   const navigate = useNavigate();
 
@@ -48,10 +49,13 @@ const BerekeningDemo = () => {
       VKP: VKP
     }
   };
+
   const openCalendar = () => {
     window.open('https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1wwDnoAHyFrV0M1FxwmbcMa9ewkDxTDdwQObwPKF-WX-wZV9DssZKtb1haoeP5qXDLenQlZt_R', '_blank');
   };
-  return <div className="min-h-screen bg-gradient-to-br from-brand-blue-light to-white">
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-brand-blue-light to-white">
       <div className="container mx-auto px-4 py-16">
         <div className="max-w-4xl mx-auto">
           {/* Header */}
@@ -202,11 +206,36 @@ const BerekeningDemo = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-brand-green hover:bg-brand-green-light text-white px-8 py-4 text-lg" onClick={openCalendar}>Ontdek de mogelijkheden</Button>
+              <Button size="lg" className="bg-brand-green hover:bg-brand-green-light text-white px-8 py-4 text-lg" onClick={openCalendar}>
+                Ontdek de mogelijkheden
+              </Button>
               <Button variant="outline" size="lg" className="border-2 border-brand-blue text-brand-blue hover:bg-brand-blue hover:text-white px-8 py-4 text-lg" onClick={() => navigate('/')}>
                 <ArrowLeft className="h-5 w-5 mr-2" />
                 Terug naar home
               </Button>
+            </div>
+            
+            {/* Bas contact section */}
+            <div className="mt-8 p-6 bg-white rounded-lg border border-gray-200">
+              <div style="display: flex; align-items: center; gap: 15px; justify-content: center;">
+                <img src="https://7f1b052b-e2ee-419a-aec0-e4591c9e4afe.lovableproject.com/lovable-uploads/07c13706-b4be-4b0a-8b50-701bd69610fc.png" 
+                     alt="Bas van der Ven" 
+                     style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover;">
+                <div style="text-align: left;">
+                  <p style="margin: 0; font-weight: bold; color: #1e293b; font-size: 18px;">Bas van der Ven</p>
+                  <p style="margin: 5px 0; color: #666; font-size: 16px;">Oprichter Halt.academy</p>
+                  <p style="margin: 5px 0 0 0; color: #2563eb; font-size: 14px;">
+                    <a href="mailto:bas@haltacademy.nl" style="color: #2563eb; text-decoration: none;">bas@haltacademy.nl</a> | 
+                    <a href="tel:+31623453477" style="color: #2563eb; text-decoration: none;">06 23453477</a>
+                  </p>
+                </div>
+              </div>
+              <div className="mt-4 text-center">
+                <p className="text-brand-gray-medium italic">
+                  "Mindfulness is niet wegvluchten van de werkelijkheid, maar juist volledig aanwezig zijn bij wat er is. 
+                  Wanneer we dit toepassen in organisaties, ontstaat er ruimte voor echte verbinding en duurzame prestaties."
+                </p>
+              </div>
             </div>
           </div>
 
@@ -231,8 +260,12 @@ const BerekeningDemo = () => {
 
       {/* Sticky CTA Button rechtsonderin */}
       <div className="fixed bottom-6 right-6 z-40">
-        <Button onClick={openCalendar} className="bg-brand-green hover:bg-brand-green-light text-white font-semibold py-5 px-8 rounded-lg text-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">Ontdek de mogelijkheden en maak kennis</Button>
+        <Button onClick={openCalendar} className="bg-brand-green hover:bg-brand-green-light text-white font-semibold py-5 px-8 rounded-lg text-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+          Ontdek de mogelijkheden en maak kennis
+        </Button>
       </div>
-    </div>;
+    </div>
+  );
 };
+
 export default BerekeningDemo;

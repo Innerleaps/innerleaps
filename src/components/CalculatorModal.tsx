@@ -25,6 +25,7 @@ const CalculatorModal = ({
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
+    email: '',
     phone: '',
     functie: '',
     company: '',
@@ -39,18 +40,18 @@ const CalculatorModal = ({
     setIsSubmitting(true);
     
     try {
-      const AD = parseInt(formData.employees) || 0; // Aantal deelnemers
-      const GWS = parseInt(formData.avgEmployeeCosts) || 0; // Gemiddelde werkgeverskosten per deelnemer per jaar
-      const HZ = parseFloat(formData.currentAbsenteeism) || 0; // Huidig verzuimpercentage
-      const HV = parseFloat(formData.currentTurnover) || 0; // Huidig verlooppercentage
+      const AD = parseInt(formData.employees) || 0;
+      const GWS = parseInt(formData.avgEmployeeCosts) || 0;
+      const HZ = parseFloat(formData.currentAbsenteeism) || 0;
+      const HV = parseFloat(formData.currentTurnover) || 0;
 
       // Constanten
-      const VK = 2; // Verzuimkosten multiplier (Johns, 2010)
-      const MV = 0.24; // 24% minder verzuim door MBSR (gemiddelde 19-29% uit verschillende onderzoeken)
-      const RV = 0.24; // 24% retentieverbetering door MBSR (gemiddelde 17-31% uit verschillende onderzoeken)
-      const VKP = 1.5; // Vervangingskosten personeel (O'Connell & Kung, 2007)
-      const G = 15; // Aantal deelnemers per groep
-      const I = 8625; // Indicatieve investering per groep
+      const VK = 2;
+      const MV = 0.24;
+      const RV = 0.24;
+      const VKP = 1.5;
+      const G = 15;
+      const I = 8625;
 
       // Berekeningen volgens de juiste formules
       const verzuimBesparing = (HZ / 100) * AD * GWS * VK * MV;
@@ -61,7 +62,6 @@ const CalculatorModal = ({
       const totalInvestment = numberOfGroups * I;
       const netBesparing = totaleBesparing - totalInvestment;
       
-      // ROI berekening - GECORRIGEERD: gebruik totale besparing, niet netto besparing
       const roi = totalInvestment > 0 ? (totaleBesparing / totalInvestment) * 100 : 0;
 
       const results = {
@@ -84,6 +84,7 @@ const CalculatorModal = ({
       const { data, error } = await supabase.functions.invoke('submit-calculator', {
         body: {
           name: formData.name,
+          email: formData.email,
           phone: formData.phone,
           functie: formData.functie,
           company: formData.company,
@@ -145,6 +146,7 @@ const CalculatorModal = ({
   const resetCalculator = () => {
     setFormData({
       name: '',
+      email: '',
       phone: '',
       functie: '',
       company: '',
@@ -161,7 +163,7 @@ const CalculatorModal = ({
     onClose();
   };
 
-  const isFormValid = formData.name && formData.functie && formData.company && formData.employees && formData.avgEmployeeCosts && formData.currentAbsenteeism && formData.currentTurnover && dataConfirmed;
+  const isFormValid = formData.name && formData.email && formData.functie && formData.company && formData.employees && formData.avgEmployeeCosts && formData.currentAbsenteeism && formData.currentTurnover && dataConfirmed;
 
   return (
     <Dialog open={isOpen} onOpenChange={handleClose}>
@@ -203,6 +205,20 @@ const CalculatorModal = ({
                 </div>
                 
                 <div>
+                  <Label htmlFor="email" className="text-brand-gray-dark font-medium text-sm">E-mailadres *</Label>
+                  <Input 
+                    id="email" 
+                    type="email" 
+                    value={formData.email} 
+                    onChange={e => handleInputChange('email', e.target.value)} 
+                    className="mt-1 h-9 text-sm" 
+                    placeholder={!formData.email ? "jan@bedrijf.nl" : ""} 
+                    required 
+                    disabled={isSubmitting}
+                  />
+                </div>
+                
+                <div>
                   <Label htmlFor="phone" className="text-brand-gray-dark font-medium text-sm">Telefoonnummer</Label>
                   <Input 
                     id="phone" 
@@ -215,7 +231,7 @@ const CalculatorModal = ({
                   />
                 </div>
                 
-                <div className="md:col-span-2">
+                <div>
                   <Label htmlFor="functie" className="text-brand-gray-dark font-medium text-sm">Functie *</Label>
                   <Input 
                     id="functie" 

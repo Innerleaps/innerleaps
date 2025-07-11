@@ -1,3 +1,4 @@
+
 import { serve } from "https://deno.land/std@0.190.0/http/server.ts";
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2.50.2";
 import { Resend } from "npm:resend@2.0.0";
@@ -9,6 +10,7 @@ const corsHeaders = {
 
 interface CalculatorSubmission {
   name: string;
+  email: string;
   phone?: string;
   functie: string;
   company: string;
@@ -41,6 +43,7 @@ const handler = async (req: Request): Promise<Response> => {
       .from("calculator_submissions")
       .insert({
         name: submission.name,
+        email: submission.email,
         phone: submission.phone || null,
         functie: submission.functie,
         company: submission.company,
@@ -92,6 +95,10 @@ const handler = async (req: Request): Promise<Response> => {
             Ik neem binnen 24 uur contact met u op om deze resultaten persoonlijk toe te lichten en te bespreken 
             hoe we deze besparing voor ${submission.company} kunnen realiseren.
           </p>
+          <p style="color: #666; line-height: 1.6; margin-bottom: 15px;">
+            "Mindfulness is niet wegvluchten van de werkelijkheid, maar juist volledig aanwezig zijn bij wat er is. 
+            Wanneer we dit toepassen in organisaties, ontstaat er ruimte voor echte verbinding en duurzame prestaties."
+          </p>
           <p style="color: #666; line-height: 1.6;">
             Heeft u vragen of wilt u eerder contact? Bel of mail mij gerust.
           </p>
@@ -107,7 +114,7 @@ const handler = async (req: Request): Promise<Response> => {
               <p style="margin: 5px 0 0 0; color: #666; font-size: 14px;">Oprichter Halt.academy</p>
               <p style="margin: 5px 0 0 0; color: #2563eb; font-size: 14px;">
                 <a href="mailto:bas@haltacademy.nl" style="color: #2563eb; text-decoration: none;">bas@haltacademy.nl</a> | 
-                <a href="tel:+31612345678" style="color: #2563eb; text-decoration: none;">06 12345678</a>
+                <a href="tel:+31623453477" style="color: #2563eb; text-decoration: none;">06 23453477</a>
               </p>
             </div>
           </div>
@@ -121,7 +128,7 @@ const handler = async (req: Request): Promise<Response> => {
       </div>
     `;
 
-    // Send notification email to Bas (keep existing functionality)
+    // Send notification email to Bas
     const notificationEmailHtml = `
       <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
         <h2>Nieuwe Calculator Besparing Aanvraag</h2>
@@ -129,6 +136,7 @@ const handler = async (req: Request): Promise<Response> => {
         <h3>Contactgegevens:</h3>
         <ul>
           <li><strong>Naam:</strong> ${submission.name}</li>
+          <li><strong>E-mail:</strong> ${submission.email}</li>
           <li><strong>Telefoon:</strong> ${submission.phone || 'Niet opgegeven'}</li>
           <li><strong>Functie:</strong> ${submission.functie}</li>
           <li><strong>Bedrijf:</strong> ${submission.company}</li>
@@ -169,10 +177,10 @@ const handler = async (req: Request): Promise<Response> => {
 
     // Send both emails
     try {
-      // Send confirmation email to user
+      // Send confirmation email to lead
       const confirmationResponse = await resend.emails.send({
         from: "Bas van der Ven - HALT Academy <bas@haltacademy.nl>",
-        to: [submission.name.includes('@') ? submission.name : `${submission.name}@${submission.company.toLowerCase().replace(/\s+/g, '')}.nl`],
+        to: [submission.email],
         subject: `Uw besparingsberekening voor ${submission.company}`,
         html: confirmationEmailHtml,
       });
