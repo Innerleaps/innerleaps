@@ -17,8 +17,8 @@ import UnderConstruction from "./pages/UnderConstruction";
 
 const queryClient = new QueryClient();
 
-// Flag to control production content - set to false to show construction page in production
-const SHOW_FULL_SITE_IN_PRODUCTION = false;
+// Flag to control production content - set to true to show full site
+const SHOW_FULL_SITE_IN_PRODUCTION = true;
 
 // Development flag to preview construction page in Lovable previewer
 // Set to true to see construction page in development mode
