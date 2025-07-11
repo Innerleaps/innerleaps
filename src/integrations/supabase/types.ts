@@ -22,6 +22,7 @@ export type Database = {
           created_at: string
           current_absenteeism: number
           current_turnover: number
+          email: string
           employees: number
           functie: string
           id: string
@@ -35,6 +36,7 @@ export type Database = {
           created_at?: string
           current_absenteeism: number
           current_turnover: number
+          email: string
           employees: number
           functie: string
           id?: string
@@ -48,6 +50,7 @@ export type Database = {
           created_at?: string
           current_absenteeism?: number
           current_turnover?: number
+          email?: string
           employees?: number
           functie?: string
           id?: string
