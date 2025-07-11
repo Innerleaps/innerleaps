@@ -83,31 +83,6 @@ const Berekening = () => {
             </div>
           </Card>
 
-          {/* Bas's personal message */}
-          <Card className="p-6 mb-8 bg-white border border-gray-200">
-            <div className="flex items-start space-x-4">
-              <img 
-                src="/lovable-uploads/07c13706-b4be-4b0a-8b50-701bd69610fc.png" 
-                alt="Bas van der Ven" 
-                className="w-16 h-16 rounded-full object-cover flex-shrink-0"
-              />
-              <div>
-                <p className="text-brand-gray-dark italic mb-2">
-                  "Mooie cijfers! Ik leg graag uit hoe we deze resultaten voor {formData.company} kunnen realiseren. Laten we kijken naar een aanpak die perfect past bij jullie organisatie."
-                </p>
-                <p className="text-sm text-brand-gray-medium font-medium mb-4">
-                  — Bas van der Ven, Oprichter Halt.academy
-                </p>
-                <Button 
-                  onClick={openCalendar}
-                  className="bg-brand-green hover:bg-brand-green-light text-white font-semibold py-2 px-6 rounded-lg text-sm"
-                >
-                  Plan een gesprek met Bas
-                </Button>
-              </div>
-            </div>
-          </Card>
-
           {/* Calculation Breakdown */}
           <Card className="p-6 mb-8">
             <div className="flex items-center gap-3 mb-6">
@@ -185,8 +160,8 @@ const Berekening = () => {
               </div>
             </div>
             
-            <div className="mt-6 p-4 bg-brand-green-light rounded-lg">
-              <p className="text-sm text-brand-gray-dark">
+            <div className="mt-6 p-4 bg-brand-blue text-white rounded-lg">
+              <p className="text-sm text-white">
                 <strong>Methodologie:</strong> Deze berekening is gebaseerd op 40+ jaar wetenschappelijk onderzoek naar MBSR (Mindfulness-Based Stress Reduction) 
                 en erkende HR-kostenmethodieken. Alle percentages zijn conservatieve gemiddelden uit peer-reviewed studies.
               </p>
@@ -219,6 +194,30 @@ const Berekening = () => {
                 <ArrowLeft className="h-5 w-5 mr-2" />
                 Terug naar home
               </Button>
+            </div>
+            
+            {/* Bas contact section */}
+            <div className="mt-8 p-6 bg-white rounded-lg border border-gray-200">
+              <div className="flex items-center gap-4 justify-center">
+                <img 
+                  src="/lovable-uploads/25a27d67-f5ef-4b9c-8e54-b246de0f3596.png" 
+                  alt="Bas Ter Haar Romenij" 
+                  className="w-20 h-20 rounded-full object-cover"
+                />
+                <div className="text-left">
+                  <p className="font-bold text-brand-gray-dark text-lg">Bas Ter Haar Romenij</p>
+                  <p className="text-brand-gray-medium">Oprichter Halt.academy</p>
+                  <p className="text-brand-blue text-sm">
+                    <a href="mailto:bas@haltacademy.nl" className="hover:underline">bas@haltacademy.nl</a> | 
+                    <a href="tel:+31623453477" className="hover:underline"> 06 23453477</a>
+                  </p>
+                </div>
+              </div>
+              <div className="mt-4 text-center">
+                <p className="text-brand-gray-medium italic">
+                  "Wij vinden het echt ontzettend gaaf om organisaties fitter te zien worden. HALT helpt {formData.company} graag verder"
+                </p>
+              </div>
             </div>
           </div>
 
