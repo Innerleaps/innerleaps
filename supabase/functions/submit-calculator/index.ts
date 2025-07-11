@@ -63,133 +63,242 @@ const handler = async (req: Request): Promise<Response> => {
 
     console.log("Successfully stored submission in database:", data);
 
-    // Send confirmation email to the user
+    // Improved confirmation email with better spam score
     const confirmationEmailHtml = `
-      <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;">
-        <div style="text-align: center; margin-bottom: 30px;">
-          <h1 style="color: #2563eb; margin-bottom: 10px;">Bedankt voor uw interesse!</h1>
-          <p style="color: #666; font-size: 16px;">We hebben uw besparingsberekening ontvangen</p>
-        </div>
-        
-        <div style="background-color: #f8fafc; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
-          <h2 style="color: #1e293b; margin-bottom: 15px;">Uw berekende besparing</h2>
-          <div style="display: flex; gap: 20px; margin-bottom: 15px;">
-            <div style="flex: 1; text-align: center; padding: 15px; background-color: white; border-radius: 6px;">
-              <div style="font-size: 24px; font-weight: bold; color: #059669;">€${submission.calculationResults.totalSaving?.toLocaleString() || 0}</div>
-              <div style="font-size: 14px; color: #666;">Netto jaarlijkse besparing</div>
-            </div>
-            <div style="flex: 1; text-align: center; padding: 15px; background-color: white; border-radius: 6px;">
-              <div style="font-size: 24px; font-weight: bold; color: #059669;">${submission.calculationResults.roi || 0}%</div>
-              <div style="font-size: 14px; color: #666;">ROI</div>
-            </div>
-          </div>
-          <div style="text-align: center; padding: 15px; background-color: white; border-radius: 6px;">
-            <div style="font-size: 18px; font-weight: bold; color: #2563eb;">${submission.calculationResults.numberOfGroups || 0} groep${submission.calculationResults.numberOfGroups !== 1 ? 'en' : ''}</div>
-            <div style="font-size: 14px; color: #666;">Benodigde MBSR-groepen</div>
-          </div>
-        </div>
-        
-        <div style="margin-bottom: 30px;">
-          <h3 style="color: #1e293b; margin-bottom: 15px;">Wat nu?</h3>
-          <p style="color: #666; line-height: 1.6; margin-bottom: 15px;">
-            Ik neem binnen 24 uur contact met u op om deze resultaten persoonlijk toe te lichten en te bespreken 
-            hoe we deze besparing voor ${submission.company} kunnen realiseren.
-          </p>
-          <p style="color: #666; line-height: 1.6; margin-bottom: 15px;">
-            "Mindfulness is niet wegvluchten van de werkelijkheid, maar juist volledig aanwezig zijn bij wat er is. 
-            Wanneer we dit toepassen in organisaties, ontstaat er ruimte voor echte verbinding en duurzame prestaties."
-          </p>
-          <p style="color: #666; line-height: 1.6; margin-bottom: 20px;">
-            Heeft u vragen of wilt u eerder contact? Bel of mail mij gerust.
-          </p>
-          
-          <div style="text-align: center; margin: 20px 0;">
-            <a href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1wwDnoAHyFrV0M1FxwmbcMa9ewkDxTDdwQObwPKF-WX-wZV9DssZKtb1haoeP5qXDLenQlZt_R" 
-               style="display: inline-block; background-color: #059669; color: white; padding: 12px 24px; text-decoration: none; border-radius: 6px; font-weight: bold; font-size: 16px;">
-              Plan een afspraak
-            </a>
-          </div>
-        </div>
-        
-        <div style="border-top: 1px solid #e2e8f0; padding-top: 20px;">
-          <div style="display: flex; align-items: center; gap: 15px;">
-            <img src="https://7f1b052b-e2ee-419a-aec0-e4591c9e4afe.lovableproject.com/lovable-uploads/acec9ae1-954f-421e-9d40-c97f83c2f3d9.png" 
-                 alt="Bas Ter Haar Romenij" 
-                 style="width: 60px; height: 60px; border-radius: 50%; object-fit: cover;">
-            <div>
-              <p style="margin: 0; font-weight: bold; color: #1e293b;">Bas Ter Haar Romenij</p>
-              <p style="margin: 5px 0 0 0; color: #666; font-size: 14px;">Oprichter Halt.academy</p>
-              <p style="margin: 5px 0 0 0; color: #2563eb; font-size: 14px;">
-                <a href="mailto:bas@haltacademy.nl" style="color: #2563eb; text-decoration: none;">bas@haltacademy.nl</a> | 
-                <a href="tel:+31623453477" style="color: #2563eb; text-decoration: none;">06 23453477</a>
-              </p>
-            </div>
-          </div>
-        </div>
-        
-        <div style="text-align: center; margin-top: 30px; padding-top: 20px; border-top: 1px solid #e2e8f0;">
-          <p style="color: #94a3b8; font-size: 12px;">
-            © ${new Date().getFullYear()} Halt.academy - Mindfulness-Based Stress Reduction voor organisaties
-          </p>
-        </div>
-      </div>
+      <!DOCTYPE html>
+      <html lang="nl">
+      <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Uw besparingsberekening - HALT Academy</title>
+      </head>
+      <body style="margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333333; background-color: #f8f9fa;">
+        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="background-color: #f8f9fa;">
+          <tr>
+            <td align="center" style="padding: 20px 0;">
+              <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="600" style="max-width: 600px; background-color: #ffffff; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                
+                <!-- Header -->
+                <tr>
+                  <td style="padding: 30px 30px 20px 30px; text-align: center; background-color: #2563eb; border-radius: 8px 8px 0 0;">
+                    <h1 style="margin: 0; color: #ffffff; font-size: 24px; font-weight: 600;">
+                      Bedankt voor uw interesse!
+                    </h1>
+                    <p style="margin: 10px 0 0 0; color: #e2e8f0; font-size: 16px;">
+                      We hebben uw besparingsberekening ontvangen
+                    </p>
+                  </td>
+                </tr>
+                
+                <!-- Results Section -->
+                <tr>
+                  <td style="padding: 30px;">
+                    <h2 style="margin: 0 0 20px 0; color: #1e293b; font-size: 20px; font-weight: 600;">
+                      Uw berekende besparing
+                    </h2>
+                    
+                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin-bottom: 20px;">
+                      <tr>
+                        <td style="padding: 20px; background-color: #f0fdf4; border-radius: 6px; text-align: center; width: 50%;">
+                          <div style="font-size: 28px; font-weight: 700; color: #059669; margin-bottom: 5px;">
+                            €${submission.calculationResults.totalSaving?.toLocaleString('nl-NL') || 0}
+                          </div>
+                          <div style="font-size: 14px; color: #065f46;">Netto jaarlijkse besparing</div>
+                        </td>
+                        <td style="width: 20px;"></td>
+                        <td style="padding: 20px; background-color: #eff6ff; border-radius: 6px; text-align: center; width: 50%;">
+                          <div style="font-size: 28px; font-weight: 700; color: #2563eb; margin-bottom: 5px;">
+                            ${submission.calculationResults.roi || 0}%
+                          </div>
+                          <div style="font-size: 14px; color: #1e40af;">Return on Investment</div>
+                        </td>
+                      </tr>
+                    </table>
+                    
+                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin-bottom: 30px;">
+                      <tr>
+                        <td style="padding: 20px; background-color: #fefce8; border-radius: 6px; text-align: center;">
+                          <div style="font-size: 20px; font-weight: 600; color: #ca8a04; margin-bottom: 5px;">
+                            ${submission.calculationResults.numberOfGroups || 0} groep${submission.calculationResults.numberOfGroups !== 1 ? 'en' : ''}
+                          </div>
+                          <div style="font-size: 14px; color: #a16207;">Benodigde MBSR-groepen</div>
+                        </td>
+                      </tr>
+                    </table>
+                    
+                    <!-- What's Next Section -->
+                    <h3 style="margin: 0 0 15px 0; color: #1e293b; font-size: 18px; font-weight: 600;">
+                      Wat nu?
+                    </h3>
+                    
+                    <p style="margin: 0 0 15px 0; color: #4b5563; line-height: 1.6;">
+                      Ik neem binnen 24 uur contact met u op om deze resultaten persoonlijk toe te lichten en te bespreken 
+                      hoe we deze besparing voor ${submission.company} kunnen realiseren.
+                    </p>
+                    
+                    <div style="background-color: #f8fafc; padding: 20px; border-radius: 6px; margin: 20px 0; border-left: 4px solid #2563eb;">
+                      <p style="margin: 0; color: #475569; font-style: italic; line-height: 1.6;">
+                        "Mindfulness is niet wegvluchten van de werkelijkheid, maar juist volledig aanwezig zijn bij wat er is. 
+                        Wanneer we dit toepassen in organisaties, ontstaat er ruimte voor echte verbinding en duurzame prestaties."
+                      </p>
+                    </div>
+                    
+                    <p style="margin: 0 0 25px 0; color: #4b5563; line-height: 1.6;">
+                      Heeft u vragen of wilt u eerder contact? Bel of mail mij gerust.
+                    </p>
+                    
+                    <!-- CTA Button -->
+                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin: 25px 0;">
+                      <tr>
+                        <td align="center">
+                          <a href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1wwDnoAHyFrV0M1FxwmbcMa9ewkDxTDdwQObwPKF-WX-wZV9DssZKtb1haoeP5qXDLenQlZt_R" 
+                             style="display: inline-block; padding: 15px 30px; background-color: #059669; color: #ffffff; text-decoration: none; border-radius: 6px; font-weight: 600; font-size: 16px;">
+                            Plan een afspraak
+                          </a>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+                
+                <!-- Contact Section -->
+                <tr>
+                  <td style="padding: 20px 30px; border-top: 1px solid #e2e8f0;">
+                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                      <tr>
+                        <td style="padding-right: 15px; vertical-align: top;">
+                          <img src="https://7f1b052b-e2ee-419a-aec0-e4591c9e4afe.lovableproject.com/lovable-uploads/acec9ae1-954f-421e-9d40-c97f83c2f3d9.png" 
+                               alt="Bas Ter Haar Romenij" 
+                               style="width: 60px; height: 60px; border-radius: 50%; object-fit: cover; display: block;">
+                        </td>
+                        <td style="vertical-align: top;">
+                          <p style="margin: 0; font-weight: 600; color: #1e293b; font-size: 16px;">
+                            Bas Ter Haar Romenij
+                          </p>
+                          <p style="margin: 5px 0; color: #6b7280; font-size: 14px;">
+                            Oprichter HALT Academy
+                          </p>
+                          <p style="margin: 5px 0 0 0; font-size: 14px;">
+                            <a href="mailto:bas@haltacademy.nl" style="color: #2563eb; text-decoration: none;">bas@haltacademy.nl</a>
+                            <span style="color: #6b7280;"> | </span>
+                            <a href="tel:+31623453477" style="color: #2563eb; text-decoration: none;">06 23453477</a>
+                          </p>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+                
+                <!-- Footer -->
+                <tr>
+                  <td style="padding: 20px 30px; text-align: center; background-color: #f8fafc; border-radius: 0 0 8px 8px;">
+                    <p style="margin: 0; color: #6b7280; font-size: 12px;">
+                      © ${new Date().getFullYear()} HALT Academy - Mindfulness-Based Stress Reduction voor organisaties
+                    </p>
+                    <p style="margin: 10px 0 0 0; color: #9ca3af; font-size: 11px;">
+                      Deze email is verstuurd naar ${submission.email} omdat u een besparingsberekening heeft aangevraagd.
+                    </p>
+                  </td>
+                </tr>
+                
+              </table>
+            </td>
+          </tr>
+        </table>
+      </body>
+      </html>
     `;
 
-    // Send notification email to Bas
+    // Improved notification email for Bas
     const notificationEmailHtml = `
-      <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
-        <h2>Nieuwe Calculator Besparing Aanvraag</h2>
-        
-        <h3>Contactgegevens:</h3>
-        <ul>
-          <li><strong>Naam:</strong> ${submission.name}</li>
-          <li><strong>E-mail:</strong> ${submission.email}</li>
-          <li><strong>Telefoon:</strong> ${submission.phone || 'Niet opgegeven'}</li>
-          <li><strong>Functie:</strong> ${submission.functie}</li>
-          <li><strong>Bedrijf:</strong> ${submission.company}</li>
-        </ul>
-        
-        <h3>Bedrijfsgegevens:</h3>
-        <ul>
-          <li><strong>Aantal medewerkers:</strong> ${submission.employees}</li>
-          <li><strong>Gem. werkgeverskosten per jaar:</strong> €${submission.avgEmployeeCosts.toLocaleString()}</li>
-          <li><strong>Huidig verzuimpercentage:</strong> ${submission.currentAbsenteeism}%</li>
-          <li><strong>Huidig verlooppercentage:</strong> ${submission.currentTurnover}%</li>
-        </ul>
-        
-        <h3>Berekende Resultaten:</h3>
-        <ul>
-          <li><strong>Verzuimbesparing:</strong> €${submission.calculationResults.verzuimBesparing?.toLocaleString() || 0}</li>
-          <li><strong>Retentiebesparing:</strong> €${submission.calculationResults.retentieBesparing?.toLocaleString() || 0}</li>
-          <li><strong>Totale besparing:</strong> €${submission.calculationResults.totalSaving?.toLocaleString() || 0}</li>
-          <li><strong>Bruto besparing:</strong> €${submission.calculationResults.grossSaving?.toLocaleString() || 0}</li>
-          <li><strong>ROI:</strong> ${submission.calculationResults.roi || 0}%</li>
-          <li><strong>Aantal groepen benodigd:</strong> ${submission.calculationResults.numberOfGroups || 0}</li>
-          <li><strong>Totale investering:</strong> €${submission.calculationResults.investment?.toLocaleString() || 0}</li>
-        </ul>
-        
-        <div style="margin-top: 30px; padding: 20px; background-color: #f8f9fa; border-radius: 8px; display: flex; align-items: center; gap: 15px;">
-          <img src="https://7f1b052b-e2ee-419a-aec0-e4591c9e4afe.lovableproject.com/lovable-uploads/acec9ae1-954f-421e-9d40-c97f83c2f3d9.png" 
-               alt="Bas Ter Haar Romenij" 
-               style="width: 60px; height: 60px; border-radius: 50%; object-fit: cover;">
-          <div>
-            <p style="margin: 0; font-weight: bold; color: #333;">Bas Ter Haar Romenij</p>
-            <p style="margin: 5px 0 0 0; color: #666; font-size: 14px;">Oprichter Halt.academy</p>
-          </div>
-        </div>
-        
-        <p style="margin-top: 20px;"><em>Ingediend op: ${new Date().toLocaleString('nl-NL')}</em></p>
-      </div>
+      <!DOCTYPE html>
+      <html lang="nl">
+      <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Nieuwe Calculator Aanvraag</title>
+      </head>
+      <body style="margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333333; background-color: #f8f9fa;">
+        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="background-color: #f8f9fa;">
+          <tr>
+            <td align="center" style="padding: 20px 0;">
+              <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="600" style="max-width: 600px; background-color: #ffffff; border-radius: 8px;">
+                
+                <tr>
+                  <td style="padding: 30px;">
+                    <h2 style="margin: 0 0 20px 0; color: #1e293b; font-size: 22px;">Nieuwe Calculator Besparing Aanvraag</h2>
+                    
+                    <h3 style="margin: 20px 0 10px 0; color: #374151; font-size: 16px;">Contactgegevens:</h3>
+                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin-bottom: 20px;">
+                      <tr><td style="padding: 5px 0; border-bottom: 1px solid #f3f4f6;"><strong>Naam:</strong> ${submission.name}</td></tr>
+                      <tr><td style="padding: 5px 0; border-bottom: 1px solid #f3f4f6;"><strong>E-mail:</strong> ${submission.email}</td></tr>
+                      <tr><td style="padding: 5px 0; border-bottom: 1px solid #f3f4f6;"><strong>Telefoon:</strong> ${submission.phone || 'Niet opgegeven'}</td></tr>
+                      <tr><td style="padding: 5px 0; border-bottom: 1px solid #f3f4f6;"><strong>Functie:</strong> ${submission.functie}</td></tr>
+                      <tr><td style="padding: 5px 0;"><strong>Bedrijf:</strong> ${submission.company}</td></tr>
+                    </table>
+                    
+                    <h3 style="margin: 20px 0 10px 0; color: #374151; font-size: 16px;">Bedrijfsgegevens:</h3>
+                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin-bottom: 20px;">
+                      <tr><td style="padding: 5px 0; border-bottom: 1px solid #f3f4f6;"><strong>Aantal medewerkers:</strong> ${submission.employees}</td></tr>
+                      <tr><td style="padding: 5px 0; border-bottom: 1px solid #f3f4f6;"><strong>Gem. werkgeverskosten per jaar:</strong> €${submission.avgEmployeeCosts.toLocaleString('nl-NL')}</td></tr>
+                      <tr><td style="padding: 5px 0; border-bottom: 1px solid #f3f4f6;"><strong>Huidig verzuimpercentage:</strong> ${submission.currentAbsenteeism}%</td></tr>
+                      <tr><td style="padding: 5px 0;"><strong>Huidig verlooppercentage:</strong> ${submission.currentTurnover}%</td></tr>
+                    </table>
+                    
+                    <h3 style="margin: 20px 0 10px 0; color: #374151; font-size: 16px;">Berekende Resultaten:</h3>
+                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin-bottom: 30px;">
+                      <tr><td style="padding: 5px 0; border-bottom: 1px solid #f3f4f6;"><strong>Verzuimbesparing:</strong> €${submission.calculationResults.verzuimBesparing?.toLocaleString('nl-NL') || 0}</td></tr>
+                      <tr><td style="padding: 5px 0; border-bottom: 1px solid #f3f4f6;"><strong>Retentiebesparing:</strong> €${submission.calculationResults.retentieBesparing?.toLocaleString('nl-NL') || 0}</td></tr>
+                      <tr><td style="padding: 5px 0; border-bottom: 1px solid #f3f4f6;"><strong>Totale besparing:</strong> €${submission.calculationResults.totalSaving?.toLocaleString('nl-NL') || 0}</td></tr>
+                      <tr><td style="padding: 5px 0; border-bottom: 1px solid #f3f4f6;"><strong>Bruto besparing:</strong> €${submission.calculationResults.grossSaving?.toLocaleString('nl-NL') || 0}</td></tr>
+                      <tr><td style="padding: 5px 0; border-bottom: 1px solid #f3f4f6;"><strong>ROI:</strong> ${submission.calculationResults.roi || 0}%</td></tr>
+                      <tr><td style="padding: 5px 0; border-bottom: 1px solid #f3f4f6;"><strong>Aantal groepen benodigd:</strong> ${submission.calculationResults.numberOfGroups || 0}</td></tr>
+                      <tr><td style="padding: 5px 0;"><strong>Totale investering:</strong> €${submission.calculationResults.investment?.toLocaleString('nl-NL') || 0}</td></tr>
+                    </table>
+                    
+                    <div style="padding: 20px; background-color: #f8f9fa; border-radius: 8px;">
+                      <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                        <tr>
+                          <td style="padding-right: 15px; vertical-align: top;">
+                            <img src="https://7f1b052b-e2ee-419a-aec0-e4591c9e4afe.lovableproject.com/lovable-uploads/acec9ae1-954f-421e-9d40-c97f83c2f3d9.png" 
+                                 alt="Bas Ter Haar Romenij" 
+                                 style="width: 60px; height: 60px; border-radius: 50%; object-fit: cover; display: block;">
+                          </td>
+                          <td style="vertical-align: top;">
+                            <p style="margin: 0; font-weight: 600; color: #333333;">Bas Ter Haar Romenij</p>
+                            <p style="margin: 5px 0 0 0; color: #666666; font-size: 14px;">Oprichter HALT Academy</p>
+                          </td>
+                        </tr>
+                      </table>
+                    </div>
+                    
+                    <p style="margin: 20px 0 0 0; color: #6b7280; font-size: 14px;">
+                      <em>Ingediend op: ${new Date().toLocaleString('nl-NL')}</em>
+                    </p>
+                  </td>
+                </tr>
+                
+              </table>
+            </td>
+          </tr>
+        </table>
+      </body>
+      </html>
     `;
 
-    // Send both emails
+    // Send both emails with improved headers
     try {
       // Send confirmation email to lead
       const confirmationResponse = await resend.emails.send({
         from: "Bas Ter Haar Romenij - HALT Academy <bas@haltacademy.nl>",
         to: [submission.email],
-        subject: `Uw besparingsberekening voor ${submission.company}`,
+        subject: `Uw besparingsberekening voor ${submission.company} - HALT Academy`,
         html: confirmationEmailHtml,
+        headers: {
+          'X-Entity-Ref-ID': Math.random().toString(36).substring(7),
+          'List-Unsubscribe': '<mailto:bas@haltacademy.nl?subject=unsubscribe>',
+          'List-Unsubscribe-Post': 'List-Unsubscribe=One-Click',
+        },
       });
 
       console.log("Confirmation email sent successfully:", confirmationResponse);
@@ -200,6 +309,9 @@ const handler = async (req: Request): Promise<Response> => {
         to: ["bas@haltacademy.nl"],
         subject: `Nieuwe Calculator Aanvraag - ${submission.company}`,
         html: notificationEmailHtml,
+        headers: {
+          'X-Entity-Ref-ID': Math.random().toString(36).substring(7),
+        },
       });
 
       console.log("Notification email sent successfully:", notificationResponse);
