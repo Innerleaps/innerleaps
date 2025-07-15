@@ -18,18 +18,15 @@ import UnderConstruction from "./pages/UnderConstruction";
 const queryClient = new QueryClient();
 
 // Flag to control production content - set to true to show full site
-const SHOW_FULL_SITE_IN_PRODUCTION = true;
+const SHOW_FULL_SITE_IN_PRODUCTION = false;
 
 // Development flag to preview construction page in Lovable previewer
 // Set to true to see construction page in development mode
 const PREVIEW_CONSTRUCTION_IN_DEV = false;
 
 const App = () => {
-  // Check if we're on the Lovable URL vs custom domain
-  const isLovableUrl = typeof window !== 'undefined' && window.location.hostname.includes('lovable.app');
-  
-  // Show construction page only for custom domain in production, not for Lovable URL
-  const shouldShowConstructionPage = (import.meta.env.PROD && !isLovableUrl && !SHOW_FULL_SITE_IN_PRODUCTION) || 
+  // Show construction page in production or when previewing in dev
+  const shouldShowConstructionPage = (import.meta.env.PROD && !SHOW_FULL_SITE_IN_PRODUCTION) || 
                                      (!import.meta.env.PROD && PREVIEW_CONSTRUCTION_IN_DEV);
 
   if (shouldShowConstructionPage) {
