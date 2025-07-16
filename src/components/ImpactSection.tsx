@@ -5,51 +5,51 @@ import { Link } from 'react-router-dom';
 const ImpactSection = () => {
   const impacts = [
     {
+      icon: Shield,
+      title: "19-25% minder werkstress",
+      description: "Van overweldiging naar overzicht en rust",
+      color: "text-brand-blue"
+    },
+    {
       icon: Heart,
-      title: "32% minder angst en zorgen",
-      description: "Medewerkers voelen zich rustiger en zekerder",
+      title: "20-35% minder burnout",
+      description: "Minder emotionele uitputting en meer energie",
       color: "text-purple-600"
     },
     {
-      icon: Moon,
-      title: "20% betere nachtrust",
-      description: "Diepere slaap voor meer energie overdag",
+      icon: Heart,
+      title: "15-25% minder angst en depressie",
+      description: "Medewerkers voelen zich rustiger en zekerder",
       color: "text-indigo-600"
     },
     {
-      icon: Shield,
-      title: "15% sterker immuunsysteem",
-      description: "Minder vaak ziek, meer tijd voor wat telt",
-      color: "text-emerald-600"
-    },
-    {
-      icon: Smile,
-      title: "26% meer werkplezier",
-      description: "Medewerkers gaan weer met plezier naar werk",
-      color: "text-brand-green"
-    },
-    {
       icon: Target,
-      title: "22% meer betrokkenheid",
+      title: "15-25% meer werkbetrokkenheid",
       description: "Gemotiveerde teams die samen groeien",
       color: "text-orange-600"
     },
     {
-      icon: BarChart3,
-      title: "35% meer veerkracht",
-      description: "Uitdagingen worden kansen voor groei",
-      color: "text-brand-blue"
+      icon: Smile,
+      title: "10-20% meer werkplezier",
+      description: "Medewerkers gaan weer met plezier naar werk",
+      color: "text-brand-green"
     },
     {
       icon: Users,
-      title: "27% betere werk-privé balans",
+      title: "15-25% betere werk-privé balans",
       description: "Meer tijd en energie voor het leven buiten werk",
       color: "text-teal-600"
     },
     {
+      icon: BarChart3,
+      title: "20-30% meer veerkracht",
+      description: "Uitdagingen worden kansen voor groei",
+      color: "text-emerald-600"
+    },
+    {
       icon: Shield,
-      title: "58% minder werkstress",
-      description: "Van overweldiging naar overzicht en rust",
+      title: "10-20% minder verzuim",
+      description: "Minder vaak ziek, meer aanwezigheid op het werk",
       color: "text-brand-blue"
     }
   ];
