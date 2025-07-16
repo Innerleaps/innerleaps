@@ -25,8 +25,11 @@ const SHOW_FULL_SITE_IN_PRODUCTION = false;
 const PREVIEW_CONSTRUCTION_IN_DEV = false;
 
 const App = () => {
-  // Show construction page in production or when previewing in dev
-  const shouldShowConstructionPage = (import.meta.env.PROD && !SHOW_FULL_SITE_IN_PRODUCTION) || 
+  // Check if we're on the Lovable URL vs custom domain
+  const isLovableUrl = typeof window !== 'undefined' && window.location.hostname.includes('lovable.app');
+  
+  // Show construction page only for custom domain in production, not for Lovable URL
+  const shouldShowConstructionPage = (import.meta.env.PROD && !isLovableUrl && !SHOW_FULL_SITE_IN_PRODUCTION) || 
                                      (!import.meta.env.PROD && PREVIEW_CONSTRUCTION_IN_DEV);
 
   if (shouldShowConstructionPage) {
