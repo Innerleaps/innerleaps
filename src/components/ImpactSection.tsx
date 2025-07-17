@@ -59,10 +59,10 @@ const ImpactSection = () => {
       <div className="container-custom">
         <div className="text-center space-y-6 mb-16">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-brand-gray-dark">
-            Hoe 30% minder ziekteverzuim en 31% hogere medewerkers retentie bereikt wordt
+            Bewezen effecten van MBSR stressmanagement cursus
           </h2>
           <p className="text-lg md:text-xl text-brand-gray-medium max-w-3xl mx-auto leading-relaxed">
-            Ons 8 weekse wetenschappelijk bewezen programma heeft de volgende uitkomsten:
+            Ons 8 weekse wetenschappelijk bewezen MBSR programma heeft de volgende meetbare uitkomsten in werkplekcontexten:
           </p>
         </div>
 
@@ -105,7 +105,7 @@ const ImpactSection = () => {
             </Link>
           </div>
           <p className="text-lg text-brand-gray-medium max-w-2xl mx-auto">
-            Deze cijfers zijn mooi, maar het echte verschil zit in de verhalen van mensen die weer plezier hebben in hun werk en leven.
+            ROI van 207%: €2,07 terug voor elke euro geïnvesteerd. Jaarlijkse besparing van €17.888 per groep van 15 deelnemers.
           </p>
         </div>
       </div>

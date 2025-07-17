@@ -6,28 +6,28 @@ const ProgramSection = () => {
   const programSteps = [
     {
       weeks: "1-2",
-      title: "Stressbewustzijn en -herkenning",
-      description: "Leren herkennen van stresssignalen en triggers in de werkomgeving"
+      title: "Stressregulatietechnieken en bewustzijn",
+      description: "Leren herkennen van stresssignalen en ontwikkelen van praktische regulatietechnieken voor de werkplek"
     },
     {
       weeks: "3-4", 
-      title: "Aandachtsregulatie en concentratietechnieken",
-      description: "Praktische technieken voor verbeterde focus en mentale helderheid"
+      title: "Observatietechnieken voor lichaamsbewustzijn",
+      description: "Praktische technieken voor verbeterde lichaamsbewustzijn en het herkennen van fysieke stresssignalen"
     },
     {
       weeks: "5-6",
-      title: "Stressresponsen en effectieve coping-strategieën",
-      description: "Concrete tools voor het omgaan met werkdruk en uitdagingen"
+      title: "Aandachtsoefeningen en concentratie",
+      description: "Concrete aandachtsoefeningen voor verbeterde focus en mentale helderheid op het werk"
     },
     {
       weeks: "Oefendag",
-      title: "Praktische integratie en verdieping",
-      description: "Intensieve dag voor het versterken en toepassen van alle technieken"
+      title: "Bewegingsoefeningen en integratie",
+      description: "Intensieve dag voor bewegingsoefeningen en praktische integratie van alle geleerde technieken"
     },
     {
       weeks: "7-8",
-      title: "Implementatie in werk en dagelijks leven",
-      description: "Integratie van geleerde technieken in de dagelijkse werkroutine"
+      title: "Persoonlijk stressmanagement-programma",
+      description: "Ontwikkeling van een persoonlijke toolkit voor dagelijkse toepassing in werk en leven"
     }
   ];
 
@@ -59,10 +59,10 @@ const ProgramSection = () => {
       <div className="container-custom">
         <div className="text-center space-y-6 mb-16">
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-gray-dark">
-            Ons Programma
+            MBSR Stressmanagement Cursus
           </h2>
           <p className="text-xl md:text-2xl text-brand-gray-medium max-w-4xl mx-auto leading-relaxed">
-            Een gestructureerd 8-weekse programma gericht op stressreductie en het verbeteren van werkprestaties. Gebaseerd op het MBSR-programma (Mindfulness-Based Stress Reduction) ontwikkeld door Jon Kabat-Zinn in 1979 aan de University of Massachusetts Medical Center, met focus op praktische bedrijfstoepassingen.
+            Een 8-weken durend, wetenschappelijk bewezen programma dat werkstress met 19-25% vermindert, burnout met 20-35% reduceert, en werkbetrokkenheid met 15-25% verhoogt. Ontwikkeld aan de Universiteit van Massachusetts, volledig niet-religieus en toegankelijk voor iedereen.
           </p>
         </div>
 
