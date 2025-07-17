@@ -21,9 +21,9 @@ const HeroSection = () => {
                 </div>
 
                 <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
-                  MBSR stressmanagement cursus: <span className="text-brand-green-light">bewezen oplossing</span> voor werkstress, burnout en vertrekkende medewerkers
+                  Zo blijven <span className="text-brand-green-light">jouw mensen</span> fit, betrokken en aan boord.
                 </h1>
-                <p className="text-xl sm:text-2xl md:text-3xl text-blue-100 leading-relaxed">ROI van 1:2,1 door 15% verzuimreductie en 15% retentieverbetering</p>
+                <p className="text-xl sm:text-2xl md:text-3xl text-blue-100 leading-relaxed">Wetenschappelijk bewezen stressmanagement cursus dat in 8 weken zorgt voor lager verzuim en medewerkers die blijven</p>
               </div>
 
               <div className="flex flex-col sm:flex-row gap-4">
