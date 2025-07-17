@@ -47,9 +47,7 @@ const ImpactSection = () => {
       <div className="container-custom">
         <div className="text-center space-y-6 mb-16">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-brand-gray-dark">Hoe onze cursus in stressmanagement verzuim met 15% verlaagt en retentie met 15% verbetert.</h2>
-          <p className="text-lg md:text-xl text-brand-gray-medium max-w-3xl mx-auto leading-relaxed">
-            Ons 8 weekse wetenschappelijk bewezen MBSR programma heeft de volgende meetbare uitkomsten in werkplekcontexten:
-          </p>
+          <p className="text-lg md:text-xl text-brand-gray-medium max-w-3xl mx-auto leading-relaxed">Onze 8-weekse, wetenschappelijk bewezen cursus in stressmanagement laat in werkplekcontexten de volgende meetbare resultaten zien:"</p>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 md:gap-8">
