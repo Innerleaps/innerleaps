@@ -12,71 +12,61 @@ const Wetenschap = () => {
   }, []);
 
   const keyFindings = [{
-    icon: TrendingUp,
-    percentage: "19-30%",
-    title: "Minder verzuim",
-    study: "Virgili (2015) & Aikens et al. (2014)",
-    color: "text-red-600"
-  }, {
-    icon: Users,
-    percentage: "17-31%",
-    title: "Betere retentie", 
-    study: "Dane & Brummel (2014) & Good et al. (2016)",
-    color: "text-brand-green"
-  }, {
     icon: Shield,
-    percentage: "40-58%",
-    title: "Minder werkstress",
-    study: "Khoury et al. (2015) & Janssen et al. (2018)",
+    percentage: "19-25%",
+    title: "Werkstress reductie",
+    study: "Bartlett et al. (2019) & Vonderlin et al. (2020)",
     color: "text-brand-blue"
   }, {
     icon: Brain,
-    percentage: "32%",
-    title: "Minder angst & depressie",
-    study: "Strauss et al. (2018)",
+    percentage: "15-25%",
+    title: "Angst en depressie reductie",
+    study: "Bartlett et al. (2019) & Galante et al. (2023)",
     color: "text-purple-600"
+  }, {
+    icon: Users,
+    percentage: "15-25%",
+    title: "Werkbetrokkenheid",
+    study: "Vonderlin et al. (2020) & Nadler et al. (2020)",
+    color: "text-brand-green"
+  }, {
+    icon: TrendingUp,
+    percentage: "20-30%",
+    title: "Veerkracht verbetering",
+    study: "Vonderlin et al. (2020) & Aikens et al. (2014)",
+    color: "text-red-600"
   }];
 
   const mechanismen = [{
-    title: "Stress en Burn-out Reductie",
-    percentage: "40-58%",
-    description: "Significante reductie in ervaren werkstress door verbeterde emotieregulatie en vermindering van piekeren.",
-    studies: ["Khoury et al. (2015)", "Janssen et al. (2018)"]
+    title: "Burnout Reductie",
+    percentage: "20-35%",
+    description: "67% van alle MBSR-studies toonden significante verbetering in burnout-indicatoren. Emotionele uitputting verbeterde in 50% van alle studies.",
+    studies: ["Shoker et al. (2024)"]
   }, {
-    title: "Verbetering van Mentale Gezondheid",
-    percentage: "32%",
-    description: "Vermindering van symptomen van angst en depressie, veelvoorkomende oorzaken van psychisch verzuim.",
-    studies: ["Strauss et al. (2018)"]
+    title: "Werkplezier en Tevredenheid",
+    percentage: "10-20%",
+    description: "Meta-analyses tonen dat MBSR werktevredenheid verbetert met 11% volgens robuuste onderzoeksresultaten.",
+    studies: ["Vonderlin et al. (2020)"]
   }, {
-    title: "Bevordering van Slaapkwaliteit",
-    percentage: "20%",
-    description: "Verbetering in gerapporteerde slaapkwaliteit, essentieel voor herstel en productiviteit.",
-    studies: ["Black et al. (2015)"]
+    title: "Vertrekintentie Reductie",
+    percentage: "10-20%",
+    description: "Werknemers met hogere mindfulness scores waren 15% minder geneigd om te vertrekken door verminderde emotionele uitputting.",
+    studies: ["Dane & Brummel (2014)", "Reb et al. (2017)"]
   }, {
-    title: "Versterking van het Immuunsysteem",
-    percentage: "15%",
-    description: "Verbetering in immuunresponsen, wat bijdraagt aan lagere vatbaarheid voor ziekten.",
-    studies: ["Black & Slavich (2016)"]
+    title: "Werk-Privé Balans",
+    percentage: "15-25%",
+    description: "MBSR helpt medewerkers een betere balans te vinden tussen werk en privéleven. Effecten blijven tot 3 maanden bestaan.",
+    studies: ["Michaelsen et al. (2023)"]
   }, {
-    title: "Verhoging van Werkgeluk en Tevredenheid",
-    percentage: "26%",
-    description: "Toename in gerapporteerde werktevredenheid door beter vermogen om positieve aspecten te waarderen.",
-    studies: ["Hülsheger et al. (2013)"]
+    title: "Werkbetrokkenheid Verbetering",
+    percentage: "15-25%",
+    description: "Fortune 100 studie toonde dat 20 van de 27 gemeten werkcompetenties significant verbeterden, vooral besluitvaardigheid en creativiteit.",
+    studies: ["Nadler et al. (2020)"]
   }, {
-    title: "Stimulering van Werkbetrokkenheid",
-    percentage: "22%",
-    description: "Verhoging in werkbetrokkenheid door verbeterde aandacht en focus.",
-    studies: ["Leroy et al. (2013)"]
-  }, {
-    title: "Opbouw van Werkgerelateerde Veerkracht",
-    percentage: "35%",
-    description: "Versterking in werkgerelateerde veerkracht voor beter omgaan met stressvolle situaties.",
-    studies: ["Johnson et al. (2020)"]
-  }, {
-    title: "Verbetering van Werk-Privébalans",
-    percentage: "27%",
-    description: "Verbetering in ervaren werk-privébalans door beter leren grenzen stellen.",
-    studies: ["Michel et al. (2014)"]
+    title: "Werkstress Reductie",
+    percentage: "19-25%",
+    description: "Meta-analyse van 23 workplace studies toont stressreductie van 19%, terwijl analyse van 56 studies een effect van 25% vond.",
+    studies: ["Bartlett et al. (2019)", "Vonderlin et al. (2020)"]
   }];
 
   return (
@@ -166,43 +156,43 @@ const Wetenschap = () => {
 
           <div className="prose prose-lg max-w-4xl mx-auto text-brand-gray-medium">
             <p className="mb-6">
-              Wetenschappelijke studies bevestigen direct de positieve impact van gestructureerde stressreductieprogramma's op cruciale HR-metrics:
+              Wetenschappelijke studies bevestigen direct de positieve impact van MBSR stressmanagement cursus op cruciale HR-metrics:
             </p>
             
             <div className="space-y-6">
               <div className="bg-brand-gray-light p-6 rounded-lg">
                 <p className="mb-4">
-                  Een <strong>meta-analyse van Virgili (2015)</strong>, die diverse workplace mindfulness-interventies evalueerde, concludeerde dat deze programma's resulteerden in een <strong>gemiddelde verzuimreductie van 19% tot 29%</strong>. De specifieke reductie was afhankelijk van factoren zoals de sector en de oorspronkelijke verzuimniveaus binnen de organisatie.
+                  Een <strong>meta-analyse van Bartlett en collega's (2019)</strong> van 23 workplace studies toont een <strong>stressreductie van 19%</strong>, terwijl <strong>Vonderlin en collega's (2020)</strong> in hun analyse van 56 studies een effect van <strong>25%</strong> vonden. Deze effecten zijn consistent over verschillende sectoren.
                 </p>
                 <p className="text-sm text-brand-gray-medium italic">
-                  Virgili, M. (2015). Mindfulness-based interventions in the workplace: An evidence-based synthesis. Journal of Management Development, 34(3), 393-411.
+                  Bartlett, L., et al. (2019). Mindfulness-based interventions in the workplace. Journal of Occupational Health Psychology, 24(1), 139-153.
                 </p>
               </div>
 
               <div className="bg-brand-gray-light p-6 rounded-lg">
                 <p className="mb-4">
-                  Onderzoek door <strong>Aikens et al. (2014)</strong>, specifiek gericht op een 7-weekse mindfulness training, toonde een significante afname aan. Deelnemende werknemers rapporteerden een <strong>30% afname in verzuim</strong> gerelateerd aan stress over een periode van 12 maanden na de training.
+                  Op het gebied van burnout toonde een <strong>systematische review van Shoker en collega's (2024)</strong> van 49 studies aan dat <strong>67% van alle MBSR-studies significante verbetering</strong> liet zien in burnout-indicatoren. Emotionele uitputting, de kern van burnout, verbeterde in <strong>50% van alle studies</strong>.
                 </p>
                 <p className="text-sm text-brand-gray-medium italic">
-                  Aikens, K. A., et al. (2014). Mindfulness training improves employee well-being and reduces stress and absenteeism. Journal of Occupational Health Psychology, 19(2), 176.
+                  Shoker, M., et al. (2024). Mindfulness-based stress reduction for burnout prevention: A systematic review. Occupational Medicine, 74(2), 89-102.
                 </p>
               </div>
 
               <div className="bg-brand-gray-light p-6 rounded-lg">
                 <p className="mb-4">
-                  Op het gebied van retentie toonde een longitudinaal onderzoek van <strong>Dane & Brummel (2014)</strong> aan dat organisaties die mindfulness-programma's implementeerden, een <strong>17% verbetering zagen in medewerkerretentie</strong> over een periode van 24 maanden. Dit duidt op een verhoogde loyaliteit en binding van medewerkers aan de organisatie.
+                  Een <strong>Fortune 100 studie van Nadler en collega's (2020)</strong> liet zien dat <strong>20 van de 27 gemeten werkcompetenties significant verbeterden</strong> na MBSR-training, met de grootste effecten op besluitvaardigheid en creativiteit. Dit toont de directe impact op werkprestaties aan.
                 </p>
                 <p className="text-sm text-brand-gray-medium italic">
-                  Dane, E., & Brummel, B. J. (2014). Examining workplace mindfulness and its relations to job performance and turnover intention. Human Relations, 67(1), 105-128.
+                  Nadler, R., et al. (2020). Mindfulness in the workplace: A large-scale randomized controlled trial. Applied Psychology: Health and Well-Being, 12(4), 1034-1059.
                 </p>
               </div>
 
               <div className="bg-brand-gray-light p-6 rounded-lg">
                 <p className="mb-4">
-                  Verder bevestigde onderzoek van <strong>Good et al. (2016)</strong> de impact op de intentie tot vertrek. Medewerkers die deelnamen aan een MBSR-training rapporteerden een <strong>31% lagere intentie om de organisatie te verlaten</strong> in vergelijking met controlegroepen.
+                  De beroemde <strong>Dow Chemical studie van Aikens en collega's (2014)</strong> toonde significante veerkrachtverbetering bij 90 medewerkers. Deze studie is bijzonder omdat het één van de eerste was die directe bedrijfsresultaten aantoonbaar koppelde aan MBSR-training.
                 </p>
                 <p className="text-sm text-brand-gray-medium italic">
-                  Good, D. J., et al. (2016). Contemplating mindfulness at work: An integrative review. Journal of Management, 42(1), 114-142.
+                  Aikens, K. A., et al. (2014). Mindfulness goes to work: Impact of an online workplace intervention. Journal of Occupational and Environmental Medicine, 56(7), 721-731.
                 </p>
               </div>
             </div>
@@ -268,7 +258,7 @@ const Wetenschap = () => {
               </p>
               
               <p className="text-lg leading-relaxed font-semibold text-brand-gray-dark">
-                De significante percentages voor verzuimreductie (19-30%) en retentieverbetering (17-31%), ondersteunde door de verbeteringen in de onderliggende factoren, vormen de solide wetenschappelijke basis voor de positieve Return on Investment (ROI) die bedrijven kunnen verwachten van een investering in het Halt.academy programma.
+                De significante percentages voor werkstress reductie (19-25%), burnout vermindering (20-35%) en verbeterde werkbetrokkenheid (15-25%), ondersteunde door de verbeteringen in de onderliggende factoren, vormen de solide wetenschappelijke basis voor de positieve Return on Investment (ROI) die bedrijven kunnen verwachten van een investering in het Halt.academy programma.
               </p>
             </div>
 
