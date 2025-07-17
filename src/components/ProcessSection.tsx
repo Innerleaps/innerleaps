@@ -15,16 +15,16 @@ const ProcessSection = () => {
       color: "bg-brand-blue"
     },
     {
-      icon: Handshake,
-      title: "Stap 2: Opdrachtakkoord",
-      description: "Vastleggen van praktische zaken: Startdata, Locatie en Investering.",
-      color: "bg-brand-green"
-    },
-    {
       icon: Presentation,
-      title: "Stap 3: Introductiesessie voor Medewerkers",
+      title: "Stap 2: Introductiesessie voor Medewerkers",
       description: "Korte introductiesessie op uw locatie, bijvoorbeeld tijdens lunch of tijdens algemeen presentatie moment. Medewerkers maken kennis met de trainer en de aanpak.",
       color: "bg-purple-600"
+    },
+    {
+      icon: Handshake,
+      title: "Stap 3: Opdrachtakkoord",
+      description: "Vastleggen van praktische zaken: Startdata, Locatie en Investering.",
+      color: "bg-brand-green"
     },
     {
       icon: Users,
