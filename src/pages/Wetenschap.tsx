@@ -167,7 +167,7 @@ const Wetenschap = () => {
         <div className="container-custom">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-brand-gray-dark mb-8">
-              Conclusie: De Wetenschappelijke Basis voor ROI
+              207% ROI: De Wetenschappelijke Basis
             </h2>
             
             <div className="prose prose-lg text-brand-gray-medium mb-12">
