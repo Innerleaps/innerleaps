@@ -46,7 +46,7 @@ const ImpactSection = () => {
   return <section className="bg-brand-gray-light section-padding">
       <div className="container-custom">
         <div className="text-center space-y-6 mb-16">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-brand-gray-dark">15</h2>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-brand-gray-dark">Hoe onze cursus in stressmanagement verzuim met 15% verlaagt en retentie met 15% verbetert.</h2>
           <p className="text-lg md:text-xl text-brand-gray-medium max-w-3xl mx-auto leading-relaxed">
             Ons 8 weekse wetenschappelijk bewezen MBSR programma heeft de volgende meetbare uitkomsten in werkplekcontexten:
           </p>
