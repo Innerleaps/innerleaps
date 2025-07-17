@@ -29,8 +29,8 @@ const ProgramSection = () => {
     description: "1x per week 2,5 uur + oefendag"
   }, {
     icon: MapPin,
-    title: "Op locatie",
-    description: "Bij u op kantoor of externe locatie"
+    title: "Online, hybride of op locatie",
+    description: "Online, hybride of op uw of externe locatie"
   }, {
     icon: Users,
     title: "15 deelnemers per groep",
