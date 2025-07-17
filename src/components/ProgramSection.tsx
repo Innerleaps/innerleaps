@@ -1,77 +1,59 @@
 import { Button } from '@/components/ui/button';
 import { Clock, Users, MapPin, Calendar } from 'lucide-react';
 import { Link } from 'react-router-dom';
-
 const ProgramSection = () => {
-  const programSteps = [
-    {
-      weeks: "1-2",
-      title: "Stressregulatietechnieken en bewustzijn",
-      description: "Leren herkennen van stresssignalen en ontwikkelen van praktische regulatietechnieken voor de werkplek"
-    },
-    {
-      weeks: "3-4", 
-      title: "Observatietechnieken voor lichaamsbewustzijn",
-      description: "Praktische technieken voor verbeterde lichaamsbewustzijn en het herkennen van fysieke stresssignalen"
-    },
-    {
-      weeks: "5-6",
-      title: "Aandachtsoefeningen en concentratie",
-      description: "Concrete aandachtsoefeningen voor verbeterde focus en mentale helderheid op het werk"
-    },
-    {
-      weeks: "Oefendag",
-      title: "Bewegingsoefeningen en integratie",
-      description: "Intensieve dag voor bewegingsoefeningen en praktische integratie van alle geleerde technieken"
-    },
-    {
-      weeks: "7-8",
-      title: "Persoonlijk stressmanagement-programma",
-      description: "Ontwikkeling van een persoonlijke toolkit voor dagelijkse toepassing in werk en leven"
-    }
-  ];
-
-  const programFeatures = [
-    {
-      icon: Clock,
-      title: "8 weken programma",
-      description: "1x per week 2,5 uur + oefendag"
-    },
-    {
-      icon: MapPin,
-      title: "Op locatie",
-      description: "Bij u op kantoor of externe locatie"
-    },
-    {
-      icon: Users,
-      title: "15 deelnemers per groep",
-      description: "Optimale groepsgrootte"
-    },
-    {
-      icon: Calendar,
-      title: "Flexibele planning",
-      description: "Afgestemd op uw agenda"
-    }
-  ];
-
-  return (
-    <section className="bg-white section-padding">
+  const programSteps = [{
+    weeks: "1-2",
+    title: "Stressregulatietechnieken en bewustzijn",
+    description: "Leren herkennen van stresssignalen en ontwikkelen van praktische regulatietechnieken voor de werkplek"
+  }, {
+    weeks: "3-4",
+    title: "Observatietechnieken voor lichaamsbewustzijn",
+    description: "Praktische technieken voor verbeterde lichaamsbewustzijn en het herkennen van fysieke stresssignalen"
+  }, {
+    weeks: "5-6",
+    title: "Aandachtsoefeningen en concentratie",
+    description: "Concrete aandachtsoefeningen voor verbeterde focus en mentale helderheid op het werk"
+  }, {
+    weeks: "Oefendag",
+    title: "Bewegingsoefeningen en integratie",
+    description: "Intensieve dag voor bewegingsoefeningen en praktische integratie van alle geleerde technieken"
+  }, {
+    weeks: "7-8",
+    title: "Persoonlijk stressmanagement-programma",
+    description: "Ontwikkeling van een persoonlijke toolkit voor dagelijkse toepassing in werk en leven"
+  }];
+  const programFeatures = [{
+    icon: Clock,
+    title: "8 weken programma",
+    description: "1x per week 2,5 uur + oefendag"
+  }, {
+    icon: MapPin,
+    title: "Op locatie",
+    description: "Bij u op kantoor of externe locatie"
+  }, {
+    icon: Users,
+    title: "15 deelnemers per groep",
+    description: "Optimale groepsgrootte"
+  }, {
+    icon: Calendar,
+    title: "Flexibele planning",
+    description: "Afgestemd op uw agenda"
+  }];
+  return <section className="bg-white section-padding">
       <div className="container-custom">
         <div className="text-center space-y-6 mb-16">
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-gray-dark">
             MBSR Stressmanagement Cursus
           </h2>
-          <p className="text-xl md:text-2xl text-brand-gray-medium max-w-4xl mx-auto leading-relaxed">
-            Een 8-weken durend, wetenschappelijk bewezen programma dat werkstress met 19-25% vermindert, burnout met 20-35% reduceert, en werkbetrokkenheid met 15-25% verhoogt. Ontwikkeld aan de Universiteit van Massachusetts, volledig niet-religieus en toegankelijk voor iedereen.
-          </p>
+          <p className="text-xl md:text-2xl text-brand-gray-medium max-w-4xl mx-auto leading-relaxed">Een 8-weken durend, wetenschappelijk bewezen cursus voor stressmanagement. Ontwikkeld aan de Universiteit van Massachusetts, volledig niet-religieus en toegankelijk voor iedereen.</p>
         </div>
 
         {/* Program Features */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
           {programFeatures.map((feature, index) => {
-            const IconComponent = feature.icon;
-            return (
-              <div key={index} className="text-center p-6 bg-brand-gray-light rounded-xl">
+          const IconComponent = feature.icon;
+          return <div key={index} className="text-center p-6 bg-brand-gray-light rounded-xl">
                 <div className="inline-flex items-center justify-center w-12 h-12 bg-brand-blue text-white rounded-lg mb-4">
                   <IconComponent className="h-6 w-6" />
                 </div>
@@ -81,9 +63,8 @@ const ProgramSection = () => {
                 <p className="text-brand-gray-medium text-lg md:text-xl leading-relaxed">
                   {feature.description}
                 </p>
-              </div>
-            );
-          })}
+              </div>;
+        })}
         </div>
 
         {/* Program Steps */}
@@ -101,8 +82,7 @@ const ProgramSection = () => {
           </div>
           
           <div className="grid gap-6">
-            {programSteps.map((step, index) => (
-              <div key={index} className="bg-white border border-gray-200 rounded-xl shadow-sm p-6">
+            {programSteps.map((step, index) => <div key={index} className="bg-white border border-gray-200 rounded-xl shadow-sm p-6">
                 <div className="mb-4">
                   <div className="text-lg md:text-xl text-brand-blue font-medium mb-2">
                     Week {step.weeks}
@@ -114,8 +94,7 @@ const ProgramSection = () => {
                     {step.description}
                   </p>
                 </div>
-              </div>
-            ))}
+              </div>)}
           </div>
         </div>
 
@@ -127,8 +106,6 @@ const ProgramSection = () => {
           </Link>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default ProgramSection;
