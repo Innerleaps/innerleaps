@@ -11,62 +11,63 @@ const Wetenschap = () => {
     window.scrollTo(0, 0);
   }, []);
 
-  const keyFindings = [{
-    icon: Shield,
-    percentage: "19-25%",
-    title: "Werkstress reductie",
-    study: "Bartlett et al. (2019) & Vonderlin et al. (2020)",
-    color: "text-brand-blue"
-  }, {
-    icon: Brain,
-    percentage: "15-25%",
-    title: "Angst en depressie reductie",
-    study: "Bartlett et al. (2019) & Galante et al. (2023)",
-    color: "text-purple-600"
-  }, {
-    icon: Users,
-    percentage: "15-25%",
-    title: "Werkbetrokkenheid",
-    study: "Vonderlin et al. (2020) & Nadler et al. (2020)",
-    color: "text-brand-green"
-  }, {
-    icon: TrendingUp,
-    percentage: "20-30%",
-    title: "Veerkracht verbetering",
-    study: "Vonderlin et al. (2020) & Aikens et al. (2014)",
-    color: "text-red-600"
-  }];
 
   const mechanismen = [{
+    icon: Shield,
     title: "Burnout Reductie",
     percentage: "20-35%",
     description: "67% van alle MBSR-studies toonden significante verbetering in burnout-indicatoren. Emotionele uitputting verbeterde in 50% van alle studies.",
-    studies: ["Shoker et al. (2024)"]
+    studies: ["Shoker et al. (2024)"],
+    color: "text-brand-blue"
   }, {
+    icon: Heart,
     title: "Werkplezier en Tevredenheid",
     percentage: "10-20%",
     description: "Meta-analyses tonen dat MBSR werktevredenheid verbetert met 11% volgens robuuste onderzoeksresultaten.",
-    studies: ["Vonderlin et al. (2020)"]
+    studies: ["Vonderlin et al. (2020)"],
+    color: "text-brand-green"
   }, {
+    icon: Users,
     title: "Vertrekintentie Reductie",
     percentage: "10-20%",
     description: "Werknemers met hogere mindfulness scores waren 15% minder geneigd om te vertrekken door verminderde emotionele uitputting.",
-    studies: ["Dane & Brummel (2014)", "Reb et al. (2017)"]
+    studies: ["Dane & Brummel (2014)", "Reb et al. (2017)"],
+    color: "text-brand-blue"
   }, {
+    icon: Brain,
     title: "Werk-Privé Balans",
     percentage: "15-25%",
     description: "MBSR helpt medewerkers een betere balans te vinden tussen werk en privéleven. Effecten blijven tot 3 maanden bestaan.",
-    studies: ["Michaelsen et al. (2023)"]
+    studies: ["Michaelsen et al. (2023)"],
+    color: "text-brand-green"
   }, {
+    icon: TrendingUp,
     title: "Werkbetrokkenheid Verbetering",
     percentage: "15-25%",
     description: "Fortune 100 studie toonde dat 20 van de 27 gemeten werkcompetenties significant verbeterden, vooral besluitvaardigheid en creativiteit.",
-    studies: ["Nadler et al. (2020)"]
+    studies: ["Nadler et al. (2020)"],
+    color: "text-brand-blue"
   }, {
+    icon: Shield,
     title: "Werkstress Reductie",
     percentage: "19-25%",
     description: "Meta-analyse van 23 workplace studies toont stressreductie van 19%, terwijl analyse van 56 studies een effect van 25% vond.",
-    studies: ["Bartlett et al. (2019)", "Vonderlin et al. (2020)"]
+    studies: ["Bartlett et al. (2019)", "Vonderlin et al. (2020)"],
+    color: "text-brand-green"
+  }, {
+    icon: Brain,
+    title: "Angst en Depressie Reductie",
+    percentage: "15-25%",
+    description: "Consistente effecten op angst- en depressiesymptomen. Angstreductie van 23% en verbetering van 12% in algemene psychologische stress.",
+    studies: ["Bartlett et al. (2019)", "Galante et al. (2023)"],
+    color: "text-brand-blue"
+  }, {
+    icon: Award,
+    title: "Veerkracht Verbetering",
+    percentage: "20-30%",
+    description: "Verbetering van 14% in veerkracht, met complexere interventies tot 30%. Dow Chemical studie toonde significante veerkrachtverbetering bij 90 medewerkers.",
+    studies: ["Vonderlin et al. (2020)", "Aikens et al. (2014)"],
+    color: "text-brand-green"
   }];
 
   return (
@@ -122,84 +123,6 @@ const Wetenschap = () => {
         </div>
       </section>
 
-      {/* Key Findings */}
-      <section className="bg-white section-padding">
-        <div className="container-custom">
-          <h2 className="text-3xl md:text-4xl font-bold text-brand-gray-dark text-center mb-4">
-            Directe Impact op Verzuim en Retentie
-          </h2>
-          <p className="text-center text-brand-gray-medium mb-12 max-w-2xl mx-auto">
-            Vier decennia van onderzoek bevestigen de effectiviteit van MBSR in arbeidsomgevingen
-          </p>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-            {keyFindings.map((finding, index) => {
-              const IconComponent = finding.icon;
-              return (
-                <div key={index} className="bg-brand-gray-light rounded-xl p-6 text-center">
-                  <div className={`inline-flex items-center justify-center w-16 h-16 rounded-full bg-white ${finding.color} mb-4`}>
-                    <IconComponent className="h-8 w-8" />
-                  </div>
-                  <div className={`text-3xl font-bold ${finding.color} mb-2`}>
-                    {finding.percentage}
-                  </div>
-                  <h3 className="text-lg font-semibold text-brand-gray-dark mb-2">
-                    {finding.title}
-                  </h3>
-                  <p className="text-sm text-brand-gray-medium">
-                    {finding.study}
-                  </p>
-                </div>
-              );
-            })}
-          </div>
-
-          <div className="prose prose-lg max-w-4xl mx-auto text-brand-gray-medium">
-            <p className="mb-6">
-              Wetenschappelijke studies bevestigen direct de positieve impact van MBSR stressmanagement cursus op cruciale HR-metrics:
-            </p>
-            
-            <div className="space-y-6">
-              <div className="bg-brand-gray-light p-6 rounded-lg">
-                <p className="mb-4">
-                  Een <strong>meta-analyse van Bartlett en collega's (2019)</strong> van 23 workplace studies toont een <strong>stressreductie van 19%</strong>, terwijl <strong>Vonderlin en collega's (2020)</strong> in hun analyse van 56 studies een effect van <strong>25%</strong> vonden. Deze effecten zijn consistent over verschillende sectoren.
-                </p>
-                <p className="text-sm text-brand-gray-medium italic">
-                  Bartlett, L., et al. (2019). Mindfulness-based interventions in the workplace. Journal of Occupational Health Psychology, 24(1), 139-153.
-                </p>
-              </div>
-
-              <div className="bg-brand-gray-light p-6 rounded-lg">
-                <p className="mb-4">
-                  Op het gebied van burnout toonde een <strong>systematische review van Shoker en collega's (2024)</strong> van 49 studies aan dat <strong>67% van alle MBSR-studies significante verbetering</strong> liet zien in burnout-indicatoren. Emotionele uitputting, de kern van burnout, verbeterde in <strong>50% van alle studies</strong>.
-                </p>
-                <p className="text-sm text-brand-gray-medium italic">
-                  Shoker, M., et al. (2024). Mindfulness-based stress reduction for burnout prevention: A systematic review. Occupational Medicine, 74(2), 89-102.
-                </p>
-              </div>
-
-              <div className="bg-brand-gray-light p-6 rounded-lg">
-                <p className="mb-4">
-                  Een <strong>Fortune 100 studie van Nadler en collega's (2020)</strong> liet zien dat <strong>20 van de 27 gemeten werkcompetenties significant verbeterden</strong> na MBSR-training, met de grootste effecten op besluitvaardigheid en creativiteit. Dit toont de directe impact op werkprestaties aan.
-                </p>
-                <p className="text-sm text-brand-gray-medium italic">
-                  Nadler, R., et al. (2020). Mindfulness in the workplace: A large-scale randomized controlled trial. Applied Psychology: Health and Well-Being, 12(4), 1034-1059.
-                </p>
-              </div>
-
-              <div className="bg-brand-gray-light p-6 rounded-lg">
-                <p className="mb-4">
-                  De beroemde <strong>Dow Chemical studie van Aikens en collega's (2014)</strong> toonde significante veerkrachtverbetering bij 90 medewerkers. Deze studie is bijzonder omdat het één van de eerste was die directe bedrijfsresultaten aantoonbaar koppelde aan MBSR-training.
-                </p>
-                <p className="text-sm text-brand-gray-medium italic">
-                  Aikens, K. A., et al. (2014). Mindfulness goes to work: Impact of an online workplace intervention. Journal of Occupational and Environmental Medicine, 56(7), 721-731.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Underlying Mechanisms */}
       <section className="bg-brand-gray-light section-padding">
         <div className="container-custom">
@@ -212,30 +135,40 @@ const Wetenschap = () => {
           </p>
 
           <div className="grid lg:grid-cols-2 gap-8">
-            {mechanismen.map((mechanisme, index) => (
-              <div key={index} className="bg-white rounded-xl p-6 shadow-lg">
-                <div className="flex items-start justify-between mb-4">
-                  <h3 className="text-xl font-semibold text-brand-gray-dark flex-1">
-                    {mechanisme.title}
-                  </h3>
-                  <div className="text-2xl font-bold text-brand-blue ml-4">
-                    {mechanisme.percentage}
+            {mechanismen.map((mechanisme, index) => {
+              const IconComponent = mechanisme.icon;
+              return (
+                <div key={index} className="bg-white rounded-xl p-6 shadow-lg">
+                  <div className="flex items-start mb-4">
+                    <div className={`inline-flex items-center justify-center w-12 h-12 rounded-full bg-brand-gray-light ${mechanisme.color} mr-4 flex-shrink-0`}>
+                      <IconComponent className="h-6 w-6" />
+                    </div>
+                    <div className="flex-1">
+                      <div className="flex items-start justify-between mb-2">
+                        <h3 className="text-xl font-semibold text-brand-gray-dark">
+                          {mechanisme.title}
+                        </h3>
+                        <div className={`text-2xl font-bold ${mechanisme.color} ml-4`}>
+                          {mechanisme.percentage}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <p className="text-brand-gray-medium mb-4 leading-relaxed">
+                    {mechanisme.description}
+                  </p>
+                  
+                  <div className="flex flex-wrap gap-2">
+                    {mechanisme.studies.map((study, studyIndex) => (
+                      <span key={studyIndex} className="inline-block bg-brand-gray-light text-brand-gray-dark text-xs px-3 py-1 rounded-full">
+                        {study}
+                      </span>
+                    ))}
                   </div>
                 </div>
-                
-                <p className="text-brand-gray-medium mb-4 leading-relaxed">
-                  {mechanisme.description}
-                </p>
-                
-                <div className="flex flex-wrap gap-2">
-                  {mechanisme.studies.map((study, studyIndex) => (
-                    <span key={studyIndex} className="inline-block bg-brand-gray-light text-brand-gray-dark text-xs px-3 py-1 rounded-full">
-                      {study}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>
