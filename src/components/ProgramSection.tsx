@@ -46,7 +46,7 @@ const ProgramSection = () => {
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-gray-dark">
             MBSR Stressmanagement Cursus
           </h2>
-          <p className="text-xl md:text-2xl text-brand-gray-medium max-w-4xl mx-auto leading-relaxed">Een 8-weken durend, wetenschappelijk bewezen cursus voor stressmanagement. Ontwikkeld aan de Universiteit van Massachusetts, volledig niet-religieus en toegankelijk voor iedereen.</p>
+          <p className="text-xl md:text-2xl text-brand-gray-medium max-w-4xl mx-auto leading-relaxed">Een 8-weken durend, wetenschappelijk bewezen cursus voor stressmanagement. Ontwikkeld aan de Universiteit van Massachusetts, toegankelijk voor iedereen.</p>
         </div>
 
         {/* Program Features */}
