@@ -24,6 +24,11 @@ const ImpactSection = () => {
     description: "Gemotiveerde teams die samen groeien",
     color: "text-orange-600"
   }, {
+    icon: Shield,
+    title: "10-20% minder verzuim",
+    description: "Gezondere medewerkers, minder ziekteverzuim",
+    color: "text-cyan-600"
+  }, {
     icon: Smile,
     title: "10-20% meer werkplezier",
     description: "Medewerkers gaan weer met plezier naar werk",
@@ -43,11 +48,6 @@ const ImpactSection = () => {
     title: "10-20% minder verzuim",
     description: "Minder vaak ziek, meer aanwezigheid op het werk",
     color: "text-brand-blue"
-  }, {
-    icon: Shield,
-    title: "10-20% minder verzuim",
-    description: "Gezondere medewerkers, minder ziekteverzuim",
-    color: "text-cyan-600"
   }];
 
   return <section className="bg-brand-gray-light section-padding">
