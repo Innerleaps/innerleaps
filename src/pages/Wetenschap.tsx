@@ -5,13 +5,10 @@ import { Button } from '@/components/ui/button';
 import { ArrowLeft, BookOpen, BarChart3, Brain, Heart, Users, Shield, TrendingUp, Award } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
-
 const Wetenschap = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-
-
   const mechanismen = [{
     icon: Shield,
     title: "Burnout Reductie",
@@ -69,9 +66,7 @@ const Wetenschap = () => {
     studies: ["Vonderlin et al. (2020)", "Aikens et al. (2014)"],
     color: "text-brand-green"
   }];
-
-  return (
-    <div className="min-h-screen bg-brand-gray-light">
+  return <div className="min-h-screen bg-brand-gray-light">
       <Navigation />
       <StickyCtaButtons />
       
@@ -126,9 +121,7 @@ const Wetenschap = () => {
       {/* Underlying Mechanisms */}
       <section className="bg-brand-gray-light section-padding">
         <div className="container-custom">
-          <h2 className="text-3xl md:text-4xl font-bold text-brand-gray-dark text-center mb-12">
-            Onderliggende Mechanismen: Hoe MBSR de Kernfactoren Beïnvloedt
-          </h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-brand-gray-dark text-center mb-12">Onderliggende mechanismen: hoe onze cursus in stressmanagement verzuim en retentie beïnvloedt</h2>
           
           <p className="text-xl text-brand-gray-medium text-center max-w-4xl mx-auto mb-16">
             De directe effecten op verzuim en retentie worden gedreven door de bewezen impact van MBSR op diverse onderliggende psychologische en fysiologische factoren die cruciaal zijn voor medewerkerwelzijn en prestaties:
@@ -136,9 +129,8 @@ const Wetenschap = () => {
 
           <div className="grid lg:grid-cols-2 gap-8">
             {mechanismen.map((mechanisme, index) => {
-              const IconComponent = mechanisme.icon;
-              return (
-                <div key={index} className="bg-white rounded-xl p-6 shadow-lg">
+            const IconComponent = mechanisme.icon;
+            return <div key={index} className="bg-white rounded-xl p-6 shadow-lg">
                   <div className="flex items-start mb-4">
                     <div className={`inline-flex items-center justify-center w-12 h-12 rounded-full bg-brand-gray-light ${mechanisme.color} mr-4 flex-shrink-0`}>
                       <IconComponent className="h-6 w-6" />
@@ -160,15 +152,12 @@ const Wetenschap = () => {
                   </p>
                   
                   <div className="flex flex-wrap gap-2">
-                    {mechanisme.studies.map((study, studyIndex) => (
-                      <span key={studyIndex} className="inline-block bg-brand-gray-light text-brand-gray-dark text-xs px-3 py-1 rounded-full">
+                    {mechanisme.studies.map((study, studyIndex) => <span key={studyIndex} className="inline-block bg-brand-gray-light text-brand-gray-dark text-xs px-3 py-1 rounded-full">
                         {study}
-                      </span>
-                    ))}
+                      </span>)}
                   </div>
-                </div>
-              );
-            })}
+                </div>;
+          })}
           </div>
         </div>
       </section>
@@ -196,21 +185,14 @@ const Wetenschap = () => {
             </div>
 
             <div className="space-y-4">
-              <Button 
-                className="text-lg px-8 py-3 bg-brand-blue hover:bg-brand-blue text-white hover:text-white font-semibold rounded-lg transition-all duration-300 shadow-lg transform hover:-translate-y-0.5" 
-                onClick={() => window.scrollTo({
-                  top: 0,
-                  behavior: 'smooth'
-                })}
-              >
+              <Button className="text-lg px-8 py-3 bg-brand-blue hover:bg-brand-blue text-white hover:text-white font-semibold rounded-lg transition-all duration-300 shadow-lg transform hover:-translate-y-0.5" onClick={() => window.scrollTo({
+              top: 0,
+              behavior: 'smooth'
+            })}>
                 Bereken uw besparing
               </Button>
               <div>
-                <Button 
-                  variant="outline" 
-                  className="text-lg px-8 py-3 bg-white hover:bg-white border-2 border-brand-blue text-brand-blue hover:text-brand-blue font-semibold rounded-lg transition-all duration-300 transform hover:-translate-y-0.5" 
-                  onClick={() => window.open('https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1wwDnoAHyFrV0M1FxwmbcMa9ewkDxTDdwQObwPKF-WX-wZV9DssZKtb1haoeP5qXDLenQlZt_R', '_blank')}
-                >
+                <Button variant="outline" className="text-lg px-8 py-3 bg-white hover:bg-white border-2 border-brand-blue text-brand-blue hover:text-brand-blue font-semibold rounded-lg transition-all duration-300 transform hover:-translate-y-0.5" onClick={() => window.open('https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1wwDnoAHyFrV0M1FxwmbcMa9ewkDxTDdwQObwPKF-WX-wZV9DssZKtb1haoeP5qXDLenQlZt_R', '_blank')}>
                   Vrijblijvend gesprek plannen
                 </Button>
               </div>
@@ -257,8 +239,6 @@ const Wetenschap = () => {
           </div>
         </div>
       </footer>
-    </div>
-  );
+    </div>;
 };
-
 export default Wetenschap;
