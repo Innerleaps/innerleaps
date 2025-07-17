@@ -171,17 +171,17 @@ const Wetenschap = () => {
             </h2>
             
             <div className="prose prose-lg text-brand-gray-medium mb-12">
-              <p className="text-xl leading-relaxed mb-6">
+              <p className="text-xl leading-relaxed mb-8">
                 De wetenschap is eenduidig: een gestructureerd programma zoals het onze, gebaseerd op bewezen stressreductietechnieken, heeft een aantoonbare positieve impact op de kernfactoren die verzuim en verloop veroorzaken.
               </p>
               
-              <p className="text-lg leading-relaxed mb-6">
-                Door stress te reduceren, mentaal en fysiek welzijn te verbeteren, en werkgeluk, betrokkenheid en veerkracht te verhogen, creëert u een gezondere, productievere en stabielere werkomgeving.
-              </p>
-              
-              <p className="text-lg leading-relaxed font-semibold text-brand-gray-dark">
-                De significante percentages voor werkstress reductie (19-25%), burnout vermindering (20-35%) en verbeterde werkbetrokkenheid (15-25%), ondersteunde door de verbeteringen in de onderliggende factoren, vormen de solide wetenschappelijke basis voor de positieve Return on Investment (ROI) die bedrijven kunnen verwachten van een investering in het Halt.academy programma.
-              </p>
+              <div className="bg-brand-blue text-white rounded-xl p-8 text-center">
+                <div className="text-5xl font-bold mb-4">207%</div>
+                <div className="text-2xl font-semibold mb-4">HALT ROI per groep van 15 deelnemers</div>
+                <p className="text-lg leading-relaxed">
+                  Op basis van Nederlandse sectorale data hebben we een conservatieve ROI-berekening gemaakt voor MBSR stressmanagement cursus-training. <strong>Voor elke euro geïnvesteerd in HALT's MBSR stressmanagement cursus krijgt u €2,07 terug in het eerste jaar.</strong>
+                </p>
+              </div>
             </div>
 
             <div className="space-y-4">
