@@ -1,7 +1,6 @@
 import { Button } from '@/components/ui/button';
 import { Shield, Heart, Moon, Users, Target, BarChart3, Smile } from 'lucide-react';
 import { Link } from 'react-router-dom';
-
 const ImpactSection = () => {
   const impacts = [{
     icon: Shield,
@@ -24,11 +23,6 @@ const ImpactSection = () => {
     description: "Gemotiveerde teams die samen groeien",
     color: "text-orange-600"
   }, {
-    icon: Shield,
-    title: "10-20% minder verzuim",
-    description: "Gezondere medewerkers, minder ziekteverzuim",
-    color: "text-cyan-600"
-  }, {
     icon: Smile,
     title: "10-20% meer werkplezier",
     description: "Medewerkers gaan weer met plezier naar werk",
@@ -49,7 +43,6 @@ const ImpactSection = () => {
     description: "Minder vaak ziek, meer aanwezigheid op het werk",
     color: "text-brand-blue"
   }];
-
   return <section className="bg-brand-gray-light section-padding">
       <div className="container-custom">
         <div className="text-center space-y-6 mb-16">
@@ -95,5 +88,4 @@ const ImpactSection = () => {
       </div>
     </section>;
 };
-
 export default ImpactSection;
