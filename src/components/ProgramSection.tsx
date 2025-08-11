@@ -25,7 +25,7 @@ const ProgramSection = () => {
   }];
   const programFeatures = [{
     icon: Clock,
-    title: "8 weken programma",
+    title: "8 weken bewezen programma",
     description: "8 weken om echte verandering te realiseren"
   }, {
     icon: Users,
@@ -34,7 +34,7 @@ const ProgramSection = () => {
   }, {
     icon: MapPin,
     title: "Workshop op locatie of online",
-    description: "De workshop wordt gegeven op een locatie naar je wens of (gedeeltelijk) online"
+    description: "De workshop wordt gegeven op een locatie naar wens of (gedeeltelijk) online"
   }, {
     icon: Calendar,
     title: "45 - 60 min oefenen per dag",

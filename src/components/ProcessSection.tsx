@@ -40,7 +40,7 @@ const ProcessSection = () => {
     },
     {
       icon: CheckCircle,
-      title: "Stap 6: Start Programma",
+      title: "Stap 6: Start Burnout preventie Programma",
       description: "Start van het 8-weekse programma met alle ingeschreven medewerkers, volledige ondersteuning",
       color: "bg-purple-600"
     },
@@ -61,7 +61,7 @@ const ProcessSection = () => {
               Zo Werken We Samen
             </h2>
             <p className="text-lg md:text-xl text-brand-gray-medium max-w-3xl mx-auto leading-relaxed">
-              Van kennismaking tot meetbare resultaten: ontdek hoe we je organisatie helpen bij het reduceren van verzuim en het verbeteren van retentie
+              Van kennismaking tot meetbare resultaten: ontdek hoe we je organisatie helpen om burnout te voorkomen, verzuim te verlagen en retentie te verbeteren
             </p>
           </div>
 
