@@ -4,41 +4,41 @@ import { Link } from 'react-router-dom';
 const ProgramSection = () => {
   const programSteps = [{
     weeks: "1-2",
-    title: "Stressregulatietechnieken en bewustzijn",
+    title: "Automatische piloot en bewustzijn",
     description: "Leren herkennen van stresssignalen en ontwikkelen van praktische regulatietechnieken voor de werkplek"
   }, {
     weeks: "3-4",
-    title: "Observatietechnieken voor lichaamsbewustzijn",
+    title: "Grenzen kennen en stresslandschap",
     description: "Praktische technieken voor verbeterde lichaamsbewustzijn en het herkennen van fysieke stresssignalen"
   }, {
     weeks: "5-6",
-    title: "Aandachtsoefeningen en concentratie",
+    title: "Bewust reageren en gedachtenpatronen",
     description: "Concrete aandachtsoefeningen voor verbeterde focus en mentale helderheid op het werk"
   }, {
-    weeks: "Oefendag",
-    title: "Bewegingsoefeningen en integratie",
+    weeks: "Oefenmiddag - 3,5 uur",
+    title: "Stiltedag en bewegingsoefeningen",
     description: "Intensieve dag voor bewegingsoefeningen en praktische integratie van alle geleerde technieken"
   }, {
     weeks: "7-8",
-    title: "Persoonlijk stressmanagement-programma",
+    title: "Zelfzorg en programma voor leven",
     description: "Ontwikkeling van een persoonlijke toolkit voor dagelijkse toepassing in werk en leven"
   }];
   const programFeatures = [{
     icon: Clock,
     title: "8 weken programma",
-    description: "1x per week 2,5 uur + oefendag"
-  }, {
-    icon: MapPin,
-    title: "Online, hybride of op locatie",
-    description: "Online, hybride of op uw of externe locatie"
+    description: "8 weken om echte verandering te realiseren"
   }, {
     icon: Users,
-    title: "15 deelnemers per groep",
-    description: "Optimale groepsgrootte"
+    title: "1x per week 1,5 uur groepsworkshop",
+    description: "Elke week een training van een gecertificeerde trainer per groep van 15 deelnemers"
+  }, {
+    icon: MapPin,
+    title: "Workshop op locatie of online",
+    description: "De workshop wordt gegeven op een locatie naar je wens of (gedeeltelijk) online"
   }, {
     icon: Calendar,
-    title: "Flexibele planning",
-    description: "Afgestemd op uw agenda"
+    title: "45 - 60 min oefenen per dag",
+    description: "Elke deelnemer oefent elke dag 45 - 60 min in eigen tijd"
   }];
   return <section className="bg-white section-padding">
       <div className="container-custom">

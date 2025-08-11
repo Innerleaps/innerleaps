@@ -12,14 +12,14 @@ const Wetenschap = () => {
   const mechanismen = [{
     icon: Shield,
     title: "Burnout Reductie",
-    percentage: "20-35%",
+    percentage: "25-34%",
     description: "67% van alle MBSR-studies toonden significante verbetering in burnout-indicatoren. Emotionele uitputting verbeterde in 50% van alle studies.",
     studies: ["Shoker et al. (2024)"],
     color: "text-brand-blue"
   }, {
     icon: Heart,
     title: "Werkplezier en Tevredenheid",
-    percentage: "10-20%",
+    percentage: "11-18%",
     description: "Meta-analyses tonen dat MBSR werktevredenheid verbetert met 11% volgens robuuste onderzoeksresultaten.",
     studies: ["Vonderlin et al. (2020)"],
     color: "text-brand-green"
@@ -33,7 +33,7 @@ const Wetenschap = () => {
   }, {
     icon: Brain,
     title: "Werk-Privé Balans",
-    percentage: "15-25%",
+    percentage: "18-22%",
     description: "MBSR helpt medewerkers een betere balans te vinden tussen werk en privéleven. Effecten blijven tot 3 maanden bestaan.",
     studies: ["Michaelsen et al. (2023)"],
     color: "text-brand-green"
@@ -54,14 +54,14 @@ const Wetenschap = () => {
   }, {
     icon: Brain,
     title: "Angst en Depressie Reductie",
-    percentage: "15-25%",
+    percentage: "12-23%",
     description: "Consistente effecten op angst- en depressiesymptomen. Angstreductie van 23% en verbetering van 12% in algemene psychologische stress.",
     studies: ["Bartlett et al. (2019)", "Galante et al. (2023)"],
     color: "text-brand-blue"
   }, {
     icon: Award,
     title: "Veerkracht Verbetering",
-    percentage: "20-30%",
+    percentage: "14-28%",
     description: "Verbetering van 14% in veerkracht, met complexere interventies tot 30%. Dow Chemical studie toonde significante veerkrachtverbetering bij 90 medewerkers.",
     studies: ["Vonderlin et al. (2020)", "Aikens et al. (2014)"],
     color: "text-brand-green"

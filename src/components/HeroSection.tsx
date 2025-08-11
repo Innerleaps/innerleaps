@@ -49,26 +49,26 @@ const HeroSection = () => {
 
             <div className="relative animate-scale-in">
               <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 lg:p-8 shadow-2xl max-w-md mx-auto">
-                <div className="space-y-6">
-                  <div className="text-center">
-                    <h3 className="text-xl lg:text-2xl font-semibold mb-2">Wat onze deelnemers ervaren</h3>
-                    <p className="text-blue-200 text-sm lg:text-base">Resultaten uit 40+ jaar onderzoek</p>
-                  </div>
-                  
-                  <div className="space-y-4">
-                    <div className="flex items-center justify-between p-3 lg:p-4 bg-white/30 rounded-lg">
-                      <span className="font-medium text-sm lg:text-base">Verzuimreductie</span>
-                      <span className="text-brand-green font-bold text-lg lg:text-xl bg-white px-2 py-1 rounded">10-20%</span>
+                  <div className="space-y-6">
+                    <div className="text-center">
+                      <h3 className="text-xl lg:text-2xl font-semibold mb-2">Wat onze deelnemers ervaren</h3>
+                      <p className="text-blue-200 text-sm lg:text-base">Resultaten uit 40+ jaar onderzoek</p>
                     </div>
-                    <div className="flex items-center justify-between p-3 lg:p-4 bg-white/30 rounded-lg">
-                      <span className="font-medium text-sm lg:text-base">Retentieverbetering</span>
-                      <span className="text-brand-green font-bold text-lg lg:text-xl bg-white px-2 py-1 rounded">10-20%</span>
+                    
+                    <div className="space-y-4">
+                      <div className="flex items-center justify-between p-3 lg:p-4 bg-white/30 rounded-lg">
+                        <span className="font-medium text-sm lg:text-base">Minder burn-outs</span>
+                        <span className="text-brand-green font-bold text-lg lg:text-xl bg-white px-2 py-1 rounded">25-34%</span>
+                      </div>
+                      <div className="flex items-center justify-between p-3 lg:p-4 bg-white/30 rounded-lg">
+                        <span className="font-medium text-sm lg:text-base">Verzuimreductie</span>
+                        <span className="text-brand-green font-bold text-lg lg:text-xl bg-white px-2 py-1 rounded">10%</span>
+                      </div>
+                      <div className="flex items-center justify-between p-3 lg:p-4 bg-white/30 rounded-lg">
+                        <span className="font-medium text-sm lg:text-base">Retentieverbetering</span>
+                        <span className="text-brand-green font-bold text-lg lg:text-xl bg-white px-2 py-1 rounded">10%</span>
+                      </div>
                     </div>
-                    <div className="flex items-center justify-between p-3 lg:p-4 bg-white/30 rounded-lg">
-                      <span className="font-medium text-sm lg:text-base">ROI per euro</span>
-                      <span className="text-brand-green font-bold text-lg lg:text-xl bg-white px-2 py-1 rounded">€2,07</span>
-                    </div>
-                  </div>
                 </div>
               </div>
             </div>

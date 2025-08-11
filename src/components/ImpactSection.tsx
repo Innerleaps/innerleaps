@@ -9,12 +9,12 @@ const ImpactSection = () => {
     color: "text-brand-blue"
   }, {
     icon: Heart,
-    title: "20-35% minder burnout",
+    title: "25-34% minder burnout",
     description: "Minder emotionele uitputting en meer energie",
     color: "text-purple-600"
   }, {
     icon: Heart,
-    title: "15-25% minder angst en depressie",
+    title: "12-23% minder angst en depressie",
     description: "Medewerkers voelen zich rustiger en zekerder",
     color: "text-indigo-600"
   }, {
@@ -24,17 +24,17 @@ const ImpactSection = () => {
     color: "text-orange-600"
   }, {
     icon: Smile,
-    title: "10-20% meer werkplezier",
+    title: "11-18% meer werkplezier",
     description: "Medewerkers gaan weer met plezier naar werk",
     color: "text-brand-green"
   }, {
     icon: Users,
-    title: "15-25% betere werk-privé balans",
+    title: "18-22% betere werk-privé balans",
     description: "Meer tijd en energie voor het leven buiten werk",
     color: "text-teal-600"
   }, {
     icon: BarChart3,
-    title: "20-30% meer veerkracht",
+    title: "14-28% meer veerkracht",
     description: "Uitdagingen worden kansen voor groei",
     color: "text-emerald-600"
   }, {
@@ -46,8 +46,8 @@ const ImpactSection = () => {
   return <section className="bg-brand-gray-light section-padding">
       <div className="container-custom">
         <div className="text-center space-y-6 mb-16">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-brand-gray-dark">Hoe onze cursus in stressmanagement verzuim met 15% verlaagt en retentie met 15% verbetert.</h2>
-          <p className="text-lg md:text-xl text-brand-gray-medium max-w-3xl mx-auto leading-relaxed">Onze 8-weekse, wetenschappelijk bewezen cursus in stressmanagement laat in werkplekcontexten de volgende meetbare resultaten zien:"</p>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-brand-gray-dark">Veel meer dan een bewezen burnout preventie programma</h2>
+          <p className="text-lg md:text-xl text-brand-gray-medium max-w-3xl mx-auto leading-relaxed">Onze 8-weekse, wetenschappelijk bewezen cursus in stressmanagement laat in werkplekcontexten de volgende meetbare resultaten zien:</p>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 md:gap-8">
@@ -81,9 +81,6 @@ const ImpactSection = () => {
               </Button>
             </Link>
           </div>
-          <p className="text-lg text-brand-gray-medium max-w-2xl mx-auto">
-            ROI van 207%: €2,07 terug voor elke euro geïnvesteerd. Jaarlijkse besparing van €17.888 per groep van 15 deelnemers.
-          </p>
         </div>
       </div>
     </section>;
