@@ -17,7 +17,7 @@ const HeroSection = () => {
                 {/* 40+ Years Research Badge */}
                 <div className="inline-flex items-center bg-white/20 backdrop-blur-sm text-white px-4 py-2 rounded-full text-base md:text-lg font-semibold">
                   <Award className="h-4 w-4 mr-2" />
-                  Gebaseerd op 40+ jaar wetenschappelijk onderzoek
+                  Burn out preventie gebaseerd op 40+ jaar wetenschappelijk onderzoek
                 </div>
 
                 <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
