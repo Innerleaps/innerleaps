@@ -12,9 +12,14 @@ const Wetenschap = () => {
   const mechanismen = [{
     icon: Shield,
     title: "Burnout Reductie",
-    percentage: "25-34%",
-    description: "67% van alle MBSR-studies toonden significante verbetering in burnout-indicatoren. Emotionele uitputting verbeterde in 50% van alle studies.",
-    studies: ["Shoker et al. (2024)"],
+    percentage: "36%",
+    description: "Het MBSR-programma toont bewezen resultaten bij burnout preventie. Deelnemers ervaren 36% minder burnout, 25% minder emotionele uitputting en significante verbeteringen in stressreductie en algemene gezondheid.",
+    studies: [
+      { name: "Shoker et al. (2024)", url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10853052/" },
+      { name: "Krasner et al. (2009)", url: "https://pubmed.ncbi.nlm.nih.gov/19653428/" },
+      { name: "Mackenzie et al. (2006)", url: "https://pubmed.ncbi.nlm.nih.gov/16536851/" },
+      { name: "AIMS Public Health (2025)", url: "https://www.aimspress.com/article/doi/10.3934/publichealth.2025007" }
+    ],
     color: "text-brand-blue"
   }, {
     icon: Heart,
@@ -152,9 +157,23 @@ const Wetenschap = () => {
                   </p>
                   
                   <div className="flex flex-wrap gap-2">
-                    {mechanisme.studies.map((study, studyIndex) => <span key={studyIndex} className="inline-block bg-brand-gray-light text-brand-gray-dark text-xs px-3 py-1 rounded-full">
-                        {study}
-                      </span>)}
+                    {mechanisme.studies.map((study, studyIndex) => (
+                      typeof study === 'string' ? (
+                        <span key={studyIndex} className="inline-block bg-brand-gray-light text-brand-gray-dark text-xs px-3 py-1 rounded-full">
+                          {study}
+                        </span>
+                      ) : (
+                        <a 
+                          key={studyIndex} 
+                          href={study.url} 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          className="inline-block bg-brand-gray-light text-brand-gray-dark text-xs px-3 py-1 rounded-full hover:bg-brand-blue hover:text-white transition-colors duration-200"
+                        >
+                          {study.name}
+                        </a>
+                      )
+                    ))}
                   </div>
                 </div>;
           })}
