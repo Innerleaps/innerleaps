@@ -15,9 +15,8 @@ const Wetenschap = () => {
     percentage: "36%",
     description: "Het MBSR-programma toont bewezen resultaten bij burnout preventie. Deelnemers ervaren 36% minder burnout, 25% minder emotionele uitputting en significante verbeteringen in stressreductie en algemene gezondheid.",
     studies: [
-      { name: "Shoker et al. (2024)", url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10853052/" },
-      { name: "Krasner et al. (2009)", url: "https://pubmed.ncbi.nlm.nih.gov/19653428/" },
-      { name: "Mackenzie et al. (2006)", url: "https://pubmed.ncbi.nlm.nih.gov/16536851/" },
+      { name: "Shoker et al. (2024)", url: "https://www.frontiersin.org/journals/public-health/articles/10.3389/fpubh.2024.1381373/full" },
+      { name: "Mackenzie et al. (2006)", url: "https://www.tandfonline.com/doi/full/10.1080/15555240.2013.779518#references-Section" },
       { name: "AIMS Public Health (2025)", url: "https://www.aimspress.com/article/doi/10.3934/publichealth.2025007" }
     ],
     color: "text-brand-blue"
