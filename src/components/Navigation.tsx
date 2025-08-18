@@ -65,7 +65,7 @@ const Navigation = () => {
                 <img 
                   src="/lovable-uploads/06d0112b-b23b-4ce0-b028-68ac939b2b2b.png" 
                   alt="InnerLeaps Logo" 
-                  className="h-12 w-auto"
+                  className="h-16 w-auto"
                 />
               </Link>
             </div>
