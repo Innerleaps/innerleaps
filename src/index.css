@@ -16,8 +16,8 @@
     --popover: 255 255 255;
     --popover-foreground: 15 23 42;
 
-    --primary: 30 58 138;
-    --primary-foreground: 248 250 252;
+    --primary: 16 89 60;
+    --primary-foreground: 30 33 96;
 
     --secondary: 248 250 252;
     --secondary-foreground: 30 58 138;
@@ -37,17 +37,14 @@
 
     --radius: 0.75rem;
 
-    /* Halt.academy brand colors */
-    --brand-blue: 30 58 138;
-    --brand-blue-dark: 23 37 84;
-    --brand-blue-light: 59 130 246;
-    --brand-green: 5 150 105;
-    --brand-green-light: 16 185 129;
-    --brand-green-dark: 4 120 87;
+    /* InnerLeaps brand colors */
+    --brand-orange: 16 89 60;
+    --brand-orange-light: 30 33 96;
+    --brand-blue: 246 51 37;
+    --brand-blue-dark: 257 68 16;
     --brand-gray-dark: 15 23 42;
     --brand-gray-medium: 100 116 139;
     --brand-gray-light: 248 250 252;
-    --brand-yellow: 234 179 8;
   }
 
   .dark {
@@ -87,7 +84,7 @@
   }
 
   body {
-    @apply bg-background text-foreground font-sans;
+    @apply bg-background text-foreground font-body;
     font-size: 16px; /* Ensure minimum 16px base font size for accessibility */
     line-height: 1.6; /* Improved readability */
     color: rgb(var(--foreground));
@@ -95,8 +92,12 @@
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply font-semibold;
+    @apply font-heading font-semibold;
     line-height: 1.3; /* Tighter line height for headings */
+  }
+
+  .subtitle {
+    @apply font-subtitle uppercase font-medium;
   }
 
   /* Ensure minimum text sizes for accessibility */
@@ -117,38 +118,32 @@
   }
 
   /* Brand color utilities */
-  .bg-brand-blue { background-color: rgb(var(--brand-blue)); }
-  .bg-brand-blue-dark { background-color: rgb(var(--brand-blue-dark)); }
-  .bg-brand-blue-light { background-color: rgb(var(--brand-blue-light)); }
-  .bg-brand-green { background-color: rgb(var(--brand-green)); }
-  .bg-brand-green-light { background-color: rgb(var(--brand-green-light)); }
-  .bg-brand-green-dark { background-color: rgb(var(--brand-green-dark)); }
-  .bg-brand-gray-dark { background-color: rgb(var(--brand-gray-dark)); }
-  .bg-brand-gray-medium { background-color: rgb(var(--brand-gray-medium)); }
-  .bg-brand-gray-light { background-color: rgb(var(--brand-gray-light)); }
-  .bg-brand-yellow { background-color: rgb(var(--brand-yellow)); }
+  .bg-brand-orange { background-color: hsl(var(--brand-orange)); }
+  .bg-brand-orange-light { background-color: hsl(var(--brand-orange-light)); }
+  .bg-brand-blue { background-color: hsl(var(--brand-blue)); }
+  .bg-brand-blue-dark { background-color: hsl(var(--brand-blue-dark)); }
+  .bg-brand-gray-dark { background-color: hsl(var(--brand-gray-dark)); }
+  .bg-brand-gray-medium { background-color: hsl(var(--brand-gray-medium)); }
+  .bg-brand-gray-light { background-color: hsl(var(--brand-gray-light)); }
 
-  .text-brand-blue { color: rgb(var(--brand-blue)); }
-  .text-brand-blue-dark { color: rgb(var(--brand-blue-dark)); }
-  .text-brand-blue-light { color: rgb(var(--brand-blue-light)); }
-  .text-brand-green { color: rgb(var(--brand-green)); }
-  .text-brand-green-light { color: rgb(var(--brand-green-light)); }
-  .text-brand-green-dark { color: rgb(var(--brand-green-dark)); }
-  .text-brand-gray-dark { color: rgb(var(--brand-gray-dark)); }
-  .text-brand-gray-medium { color: rgb(var(--brand-gray-medium)); }
-  .text-brand-gray-light { color: rgb(var(--brand-gray-light)); }
-  .text-brand-yellow { color: rgb(var(--brand-yellow)); }
+  .text-brand-orange { color: hsl(var(--brand-orange)); }
+  .text-brand-orange-light { color: hsl(var(--brand-orange-light)); }
+  .text-brand-blue { color: hsl(var(--brand-blue)); }
+  .text-brand-blue-dark { color: hsl(var(--brand-blue-dark)); }
+  .text-brand-gray-dark { color: hsl(var(--brand-gray-dark)); }
+  .text-brand-gray-medium { color: hsl(var(--brand-gray-medium)); }
+  .text-brand-gray-light { color: hsl(var(--brand-gray-light)); }
 
-  .border-brand-blue { border-color: rgb(var(--brand-blue)); }
-  .border-brand-green { border-color: rgb(var(--brand-green)); }
+  .border-brand-orange { border-color: hsl(var(--brand-orange)); }
+  .border-brand-blue { border-color: hsl(var(--brand-blue)); }
   
-  .hover\:bg-brand-blue-dark:hover { background-color: rgb(var(--brand-blue-dark)); }
-  .hover\:bg-brand-green-light:hover { background-color: rgb(var(--brand-green-light)); }
+  .hover\:bg-brand-orange:hover { background-color: hsl(var(--brand-orange)); }
+  .hover\:bg-brand-blue-dark:hover { background-color: hsl(var(--brand-blue-dark)); }
 }
 
 @layer components {
   .btn-primary {
-    @apply bg-brand-blue hover:bg-brand-blue-dark text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5;
+    @apply bg-brand-orange hover:bg-brand-orange text-brand-orange-light font-semibold py-3 px-6 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5;
   }
   
   .btn-secondary {

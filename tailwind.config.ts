@@ -20,7 +20,9 @@ export default {
 		},
 		extend: {
 			fontFamily: {
-				'sans': ['Inter', 'sans-serif'],
+				'heading': ['Figtree', 'sans-serif'],
+				'body': ['Figtree', 'sans-serif'],
+				'subtitle': ['Asap Condensed', 'sans-serif'],
 			},
 			colors: {
 				border: 'hsl(var(--border))',
@@ -56,13 +58,12 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
-				// Professional color scheme for Halt.academy
+				// InnerLeaps brand colors
 				brand: {
-					blue: '#1e3a8a',
-					'blue-light': '#3b82f6',
-					'blue-dark': '#1e40af',
-					green: '#059669',
-					'green-light': '#10b981',
+					orange: '#F47340',
+					'orange-light': '#F7F5F2',
+					blue: '#352D8C',
+					'blue-dark': '#230C47',
 					'gray-light': '#f8fafc',
 					'gray-medium': '#64748b',
 					'gray-dark': '#334155',

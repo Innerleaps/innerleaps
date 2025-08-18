@@ -20,14 +20,14 @@ const HeroSection = () => {
                   40+ jaar bewezen burn out preventie
                 </div>
 
-                <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
-                  Zo blijven <span className="text-brand-green-light">jouw mensen</span> fit, betrokken en aan boord.
+                <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight font-heading">
+                  Zo blijven <span className="text-brand-orange">jouw mensen</span> fit, betrokken en aan boord.
                 </h1>
                 <p className="text-xl sm:text-2xl md:text-3xl text-blue-100 leading-relaxed">Wetenschappelijk bewezen stressmanagement programma dat in 8 weken zorgt voor lager verzuim en medewerkers die blijven</p>
               </div>
 
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button size="lg" className="w-full sm:w-auto bg-brand-green hover:bg-brand-green-light text-white font-semibold py-4 px-6 lg:px-8 rounded-lg text-lg lg:text-xl transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:-translate-y-1" onClick={() => setIsCalculatorOpen(true)}>
+                <Button size="lg" className="w-full sm:w-auto bg-brand-orange hover:bg-brand-orange/90 text-brand-orange-light font-semibold py-4 px-6 lg:px-8 rounded-lg text-lg lg:text-xl transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:-translate-y-1" onClick={() => setIsCalculatorOpen(true)}>
                   Ontdek je besparing
                 </Button>
                 <Button variant="outline" size="lg" onClick={() => window.open('https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1wwDnoAHyFrV0M1FxwmbcMa9ewkDxTDdwQObwPKF-WX-wZV9DssZKtb1haoeP5qXDLenQlZt_R', '_blank')} className="w-full sm:w-auto border-2 border-white text-brand-blue hover:text-brand-blue font-semibold py-4 px-6 lg:px-8 rounded-lg text-lg lg:text-xl transition-all duration-300 transform hover:-translate-y-1">
@@ -37,11 +37,11 @@ const HeroSection = () => {
 
               <div className="grid grid-cols-2 gap-6 lg:gap-8 pt-6 lg:pt-8">
                 <div className="text-center">
-                  <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-brand-green-light">8 weken</div>
+                  <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-brand-orange">8 weken</div>
                   <div className="text-blue-200 text-sm md:text-base">Van stress naar balans</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-brand-green-light">40+ jaar</div>
+                  <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-brand-orange">40+ jaar</div>
                   <div className="text-blue-200 text-sm md:text-base">Bewezen resultaten</div>
                 </div>
               </div>
@@ -58,15 +58,15 @@ const HeroSection = () => {
                     <div className="space-y-4">
                       <div className="flex items-center justify-between p-3 lg:p-4 bg-white/30 rounded-lg">
                         <span className="font-medium text-sm lg:text-base">Minder burn-outs</span>
-                        <span className="text-brand-green font-bold text-lg lg:text-xl bg-white px-2 py-1 rounded">25-34%</span>
+                        <span className="text-brand-orange font-bold text-lg lg:text-xl bg-white px-2 py-1 rounded">25-34%</span>
                       </div>
                       <div className="flex items-center justify-between p-3 lg:p-4 bg-white/30 rounded-lg">
                         <span className="font-medium text-sm lg:text-base">Verzuimreductie</span>
-                        <span className="text-brand-green font-bold text-lg lg:text-xl bg-white px-2 py-1 rounded">10%</span>
+                        <span className="text-brand-orange font-bold text-lg lg:text-xl bg-white px-2 py-1 rounded">10%</span>
                       </div>
                       <div className="flex items-center justify-between p-3 lg:p-4 bg-white/30 rounded-lg">
                         <span className="font-medium text-sm lg:text-base">Retentieverbetering</span>
-                        <span className="text-brand-green font-bold text-lg lg:text-xl bg-white px-2 py-1 rounded">10%</span>
+                        <span className="text-brand-orange font-bold text-lg lg:text-xl bg-white px-2 py-1 rounded">10%</span>
                       </div>
                     </div>
                 </div>
@@ -75,7 +75,7 @@ const HeroSection = () => {
           </div>
 
           <div className="flex justify-center mt-12 lg:mt-16">
-            <ArrowDown className="h-8 w-8 text-brand-green-light animate-bounce" />
+            <ArrowDown className="h-8 w-8 text-brand-orange animate-bounce" />
           </div>
         </div>
       </section>

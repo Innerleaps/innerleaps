@@ -24,7 +24,7 @@ const ProcessSection = () => {
       icon: Handshake,
       title: "Stap 3: Opdrachtakkoord",
       description: "Vastleggen van praktische zaken: Startdata, Locatie en Investering.",
-      color: "bg-brand-green"
+      color: "bg-brand-orange"
     },
     {
       icon: Users,

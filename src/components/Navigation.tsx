@@ -61,8 +61,12 @@ const Navigation = () => {
           <div className="flex justify-between items-center py-4">
             {/* Logo */}
             <div className="flex flex-col items-start min-w-0 flex-shrink-0">
-              <Link to="/" className="text-2xl font-bold text-brand-blue hover:text-brand-blue/80 transition-colors">
-                Halt.academy
+              <Link to="/" className="hover:opacity-80 transition-opacity">
+                <img 
+                  src="/lovable-uploads/06d0112b-b23b-4ce0-b028-68ac939b2b2b.png" 
+                  alt="InnerLeaps Logo" 
+                  className="h-8 w-auto"
+                />
               </Link>
             </div>
 

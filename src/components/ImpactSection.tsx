@@ -26,7 +26,7 @@ const ImpactSection = () => {
     icon: Smile,
     title: "11-18% meer werkplezier",
     description: "Medewerkers gaan weer met plezier naar werk",
-    color: "text-brand-green"
+    color: "text-brand-orange"
   }, {
     icon: Users,
     title: "18-22% betere werk-privé balans",

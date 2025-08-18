@@ -62,7 +62,7 @@ const Calculator = () => {
 
   if (showResults) {
     return (
-      <Card className="p-8 bg-gradient-to-br from-brand-green to-brand-green-light text-white">
+      <Card className="p-8 bg-gradient-to-br from-brand-orange to-brand-orange/80 text-white">
         <div className="text-center space-y-6">
           <div className="inline-flex items-center justify-center w-16 h-16 bg-white/20 rounded-full mb-4">
             <TrendingUp className="h-8 w-8" />
@@ -96,14 +96,14 @@ const Calculator = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button 
-                className="bg-white text-brand-green hover:bg-gray-100"
+                className="bg-white text-brand-orange hover:bg-gray-100"
                 onClick={() => window.open('https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1wwDnoAHyFrV0M1FxwmbcMa9ewkDxTDdwQObwPKF-WX-wZV9DssZKtb1haoeP5qXDLenQlZt_R', '_blank')}
               >
                 Plan een gesprek over deze resultaten
               </Button>
               <Button 
                 variant="outline" 
-                className="border-white text-white hover:bg-white hover:text-brand-green"
+                className="border-white text-white hover:bg-white hover:text-brand-orange"
                 onClick={() => setShowResults(false)}
               >
                 Nieuwe berekening
