@@ -56,17 +56,17 @@ const HeroSection = () => {
                     </div>
                     
                     <div className="space-y-4">
-                      <div className="flex items-center justify-between p-3 lg:p-4 bg-white/30 rounded-lg">
-                        <span className="font-medium text-sm lg:text-base">Minder burn-outs</span>
-                        <span className="text-brand-orange font-bold text-lg lg:text-xl bg-white px-2 py-1 rounded">25-34%</span>
+                      <div className="flex items-center justify-between p-3 lg:p-4 bg-white rounded-lg">
+                        <span className="font-medium text-sm lg:text-base text-brand-blue-dark">Minder burn-outs</span>
+                        <span className="text-brand-orange font-bold text-lg lg:text-xl">25-34%</span>
                       </div>
-                      <div className="flex items-center justify-between p-3 lg:p-4 bg-white/30 rounded-lg">
-                        <span className="font-medium text-sm lg:text-base">Verzuimreductie</span>
-                        <span className="text-brand-orange font-bold text-lg lg:text-xl bg-white px-2 py-1 rounded">10%</span>
+                      <div className="flex items-center justify-between p-3 lg:p-4 bg-white rounded-lg">
+                        <span className="font-medium text-sm lg:text-base text-brand-blue-dark">Verzuimreductie</span>
+                        <span className="text-brand-orange font-bold text-lg lg:text-xl">10%</span>
                       </div>
-                      <div className="flex items-center justify-between p-3 lg:p-4 bg-white/30 rounded-lg">
-                        <span className="font-medium text-sm lg:text-base">Retentieverbetering</span>
-                        <span className="text-brand-orange font-bold text-lg lg:text-xl bg-white px-2 py-1 rounded">10%</span>
+                      <div className="flex items-center justify-between p-3 lg:p-4 bg-white rounded-lg">
+                        <span className="font-medium text-sm lg:text-base text-brand-blue-dark">Retentieverbetering</span>
+                        <span className="text-brand-orange font-bold text-lg lg:text-xl">10%</span>
                       </div>
                     </div>
                 </div>
