@@ -6,22 +6,22 @@ const ImpactSection = () => {
     icon: Shield,
     title: "19-25% minder werkstress",
     description: "Van overweldiging naar overzicht en rust",
-    color: "text-brand-blue"
+    color: "text-brand-orange"
   }, {
     icon: Heart,
     title: "25-34% minder burnout",
     description: "Minder emotionele uitputting en meer energie",
-    color: "text-purple-600"
+    color: "text-brand-orange"
   }, {
     icon: Heart,
     title: "12-23% minder angst en depressie",
     description: "Medewerkers voelen zich rustiger en zekerder",
-    color: "text-indigo-600"
+    color: "text-brand-orange"
   }, {
     icon: Target,
     title: "15-25% meer werkbetrokkenheid",
     description: "Gemotiveerde teams die samen groeien",
-    color: "text-orange-600"
+    color: "text-brand-orange"
   }, {
     icon: Smile,
     title: "11-18% meer werkplezier",
@@ -31,17 +31,17 @@ const ImpactSection = () => {
     icon: Users,
     title: "18-22% betere werk-privé balans",
     description: "Meer tijd en energie voor het leven buiten werk",
-    color: "text-teal-600"
+    color: "text-brand-orange"
   }, {
     icon: BarChart3,
     title: "14-28% meer veerkracht",
     description: "Uitdagingen worden kansen voor groei",
-    color: "text-emerald-600"
+    color: "text-brand-orange"
   }, {
     icon: Shield,
     title: "10-20% minder verzuim",
     description: "Minder vaak ziek, meer aanwezigheid op het werk",
-    color: "text-brand-blue"
+    color: "text-brand-orange"
   }];
   return <section className="bg-brand-gray-light section-padding">
       <div className="container-custom">

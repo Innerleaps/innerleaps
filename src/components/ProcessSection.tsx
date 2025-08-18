@@ -12,13 +12,13 @@ const ProcessSection = () => {
       icon: Calendar,
       title: "Stap 1: Kennismaking & Besparingsinventarisatie",
       description: "Vrijblijvend gesprek waarin we je huidige situatie analyseren en potentiële besparingen berekenen",
-      color: "bg-brand-blue"
+      color: "bg-brand-orange"
     },
     {
       icon: Presentation,
       title: "Stap 2: Demonstratie met HR team",
       description: "Voordat we akkoord zijn met de opdracht laten we je het programma ervaren.",
-      color: "bg-purple-600"
+      color: "bg-brand-orange"
     },
     {
       icon: Handshake,
@@ -30,25 +30,25 @@ const ProcessSection = () => {
       icon: Users,
       title: "Stap 4: Inschrijving Medewerkers",
       description: "Naar aanleiding van de vrijwillige demonstratie zullen medewerkers zich aanmelden voor het programma.",
-      color: "bg-teal-600"
+      color: "bg-brand-orange"
     },
     {
       icon: UserPlus,
       title: "Stap 5: Intake",
       description: "Onze coaches zullen met elke deelnemer een intake doen om goed hun persoonlijke situatie te begrijpen. Tevens zal onze trainer een gesprek voeren met jullie contactpersoon om goed op de hoogte te zijn.",
-      color: "bg-orange-600"
+      color: "bg-brand-orange"
     },
     {
       icon: CheckCircle,
       title: "Stap 6: Start Burnout preventie Programma",
       description: "Start van het 8-weekse programma met alle ingeschreven medewerkers, volledige ondersteuning",
-      color: "bg-purple-600"
+      color: "bg-brand-orange"
     },
     {
       icon: TrendingUp,
       title: "Stap 7: Resultaatmeting & evaluatie",
       description: "Continue monitoring van resultaten en evaluatie van impact op verzuim en retentie na afloop",
-      color: "bg-red-600"
+      color: "bg-brand-orange"
     }
   ];
 

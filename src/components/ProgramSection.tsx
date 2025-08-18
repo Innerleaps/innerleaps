@@ -54,7 +54,7 @@ const ProgramSection = () => {
           {programFeatures.map((feature, index) => {
           const IconComponent = feature.icon;
           return <div key={index} className="text-center p-6 bg-brand-gray-light rounded-xl">
-                <div className="inline-flex items-center justify-center w-12 h-12 bg-brand-blue text-white rounded-lg mb-4">
+                <div className="inline-flex items-center justify-center w-12 h-12 bg-brand-orange text-white rounded-lg mb-4">
                   <IconComponent className="h-6 w-6" />
                 </div>
                 <h3 className="text-xl md:text-2xl font-semibold text-brand-gray-dark mb-2">
