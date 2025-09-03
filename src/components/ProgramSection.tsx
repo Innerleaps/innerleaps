@@ -15,18 +15,18 @@ const ProgramSection = () => {
     title: "Bewust reageren en gedachtenpatronen",
     description: "Concrete aandachtsoefeningen voor verbeterde focus en mentale helderheid op het werk"
   }, {
-    weeks: "Oefenmiddag - 3,5 uur",
+    weeks: "7",
     title: "Stiltedag en bewegingsoefeningen",
     description: "Intensieve dag voor bewegingsoefeningen en praktische integratie van alle geleerde technieken"
   }, {
-    weeks: "7-8",
+    weeks: "8-9",
     title: "Zelfzorg en programma voor leven",
     description: "Ontwikkeling van een persoonlijke toolkit voor dagelijkse toepassing in werk en leven"
   }];
   const programFeatures = [{
     icon: Clock,
-    title: "8 weken bewezen programma",
-    description: "8 weken om echte verandering te realiseren"
+    title: "9 weken bewezen programma",
+    description: "9 weken om echte verandering te realiseren"
   }, {
     icon: Users,
     title: "1x per week 1,5 uur groepsworkshop",
@@ -34,11 +34,11 @@ const ProgramSection = () => {
   }, {
     icon: MapPin,
     title: "Workshop op locatie of online",
-    description: "De workshop wordt gegeven op een locatie naar wens of (gedeeltelijk) online"
+    description: "De workshop wordt gegeven op een locatie naar wens of online"
   }, {
     icon: Calendar,
-    title: "45 - 60 min oefenen per dag",
-    description: "Elke deelnemer oefent elke dag 45 - 60 min in eigen tijd"
+    title: "Dagelijks oefenen",
+    description: "Deelnemers proberen dagelijks te oefenen"
   }];
   return <section className="bg-white section-padding">
       <div className="container-custom">
@@ -46,7 +46,7 @@ const ProgramSection = () => {
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-gray-dark">
             MBSR Stressmanagement Cursus
           </h2>
-          <p className="text-xl md:text-2xl text-brand-gray-medium max-w-4xl mx-auto leading-relaxed">Een 8-weken durend, wetenschappelijk bewezen cursus voor stressmanagement. Ontwikkeld aan de Universiteit van Massachusetts, toegankelijk voor iedereen.</p>
+          <p className="text-xl md:text-2xl text-brand-gray-medium max-w-4xl mx-auto leading-relaxed">Een 9-weken durend, wetenschappelijk bewezen cursus voor stressmanagement. Ontwikkeld aan de Universiteit van Massachusetts, toegankelijk voor iedereen.</p>
         </div>
 
         {/* Program Features */}

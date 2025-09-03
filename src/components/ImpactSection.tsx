@@ -2,52 +2,90 @@ import { Button } from '@/components/ui/button';
 import { Shield, Heart, Moon, Users, Target, BarChart3, Smile } from 'lucide-react';
 import { Link } from 'react-router-dom';
 const ImpactSection = () => {
-  const impacts = [{
-    icon: Shield,
-    title: "19-25% minder werkstress",
-    description: "Van overweldiging naar overzicht en rust",
-    color: "text-brand-orange"
-  }, {
-    icon: Heart,
-    title: "25-34% minder burnout",
-    description: "Minder emotionele uitputting en meer energie",
-    color: "text-brand-orange"
-  }, {
-    icon: Heart,
-    title: "12-23% minder angst en depressie",
-    description: "Medewerkers voelen zich rustiger en zekerder",
-    color: "text-brand-orange"
-  }, {
-    icon: Target,
-    title: "15-25% meer werkbetrokkenheid",
-    description: "Gemotiveerde teams die samen groeien",
-    color: "text-brand-orange"
-  }, {
-    icon: Smile,
-    title: "11-18% meer werkplezier",
-    description: "Medewerkers gaan weer met plezier naar werk",
-    color: "text-brand-orange"
-  }, {
-    icon: Users,
-    title: "18-22% betere werk-privé balans",
-    description: "Meer tijd en energie voor het leven buiten werk",
-    color: "text-brand-orange"
-  }, {
-    icon: BarChart3,
-    title: "14-28% meer veerkracht",
-    description: "Uitdagingen worden kansen voor groei",
-    color: "text-brand-orange"
-  }, {
-    icon: Shield,
-    title: "10-20% minder verzuim",
-    description: "Minder vaak ziek, meer aanwezigheid op het werk",
-    color: "text-brand-orange"
-  }];
+  const impacts = [
+    // Werkeisen/Stressoren
+    {
+      icon: Shield,
+      title: "65-72% stressreductie",
+      description: "Minder werkstress en spanning",
+      color: "text-brand-orange"
+    },
+    // Persoonlijke Hulpbronnen
+    {
+      icon: Target,
+      title: "64-77% meer veerkracht",
+      description: "Beter omgaan met uitdagingen",
+      color: "text-brand-orange"
+    },
+    {
+      icon: Heart,
+      title: "71-79% meer self-efficacy",
+      description: "Meer vertrouwen in eigen kunnen",
+      color: "text-brand-orange"
+    },
+    {
+      icon: Smile,
+      title: "70% betere emotieregulatie",
+      description: "Beter beheersen van emoties",
+      color: "text-brand-orange"
+    },
+    // Werkhulpbronnen
+    {
+      icon: Users,
+      title: "64-67% beter werkklimaat",
+      description: "Positievere werkomgeving",
+      color: "text-brand-orange"
+    },
+    {
+      icon: Heart,
+      title: "67% meer compassie voor anderen",
+      description: "Empathie en begrip voor collega's",
+      color: "text-brand-orange"
+    },
+    // Stressreacties/Welbevinden
+    {
+      icon: Shield,
+      title: "60-84% burnoutreductie",
+      description: "Minder emotionele uitputting",
+      color: "text-brand-orange"
+    },
+    {
+      icon: Smile,
+      title: "63% meer werktevredenheid",
+      description: "Meer plezier in het werk",
+      color: "text-brand-orange"
+    },
+    {
+      icon: Target,
+      title: "65% meer werkbetrokkenheid",
+      description: "Gemotiveerde teams die samen groeien",
+      color: "text-brand-orange"
+    },
+    // Persoonlijke Impact
+    {
+      icon: Moon,
+      title: "57-78% betere slaap",
+      description: "Rustiger slapen en beter herstel",
+      color: "text-brand-orange"
+    },
+    {
+      icon: Heart,
+      title: "59-68% meer welzijn",
+      description: "Levenskwaliteit en tevredenheid",
+      color: "text-brand-orange"
+    },
+    {
+      icon: BarChart3,
+      title: "63-68% betere algemene gezondheid",
+      description: "Verbeterde fysieke en mentale gezondheid",
+      color: "text-brand-orange"
+    }
+  ];
   return <section className="bg-brand-gray-light section-padding">
       <div className="container-custom">
         <div className="text-center space-y-6 mb-16">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-brand-gray-dark">Veel meer dan een bewezen burnout preventie programma</h2>
-          <p className="text-lg md:text-xl text-brand-gray-medium max-w-3xl mx-auto leading-relaxed">Onze 8-weekse, wetenschappelijk bewezen cursus in stressmanagement laat in werkplekcontexten de volgende meetbare resultaten zien:</p>
+          <p className="text-lg md:text-xl text-brand-gray-medium max-w-3xl mx-auto leading-relaxed">Onze 9-weekse, wetenschappelijk bewezen cursus in stressmanagement laat in werkplekcontexten de volgende meetbare resultaten zien volgens het JD-R model waarbij zowel de stressreactie wordt verlicht als het welbevinden wordt verbeterd:</p>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 md:gap-8">

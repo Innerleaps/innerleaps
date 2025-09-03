@@ -1,6 +1,6 @@
 
 import { Button } from '@/components/ui/button';
-import { Calendar, CheckCircle, Target, TrendingUp, ArrowRight, Handshake, Presentation, UserPlus, Users } from 'lucide-react';
+import { Calendar, CheckCircle, Target, TrendingUp, ArrowRight, Handshake, Presentation, UserPlus, Users, BarChart3 } from 'lucide-react';
 import { useState } from 'react';
 import CalculatorModal from './CalculatorModal';
 

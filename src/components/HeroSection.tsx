@@ -21,9 +21,9 @@ const HeroSection = () => {
                 </div>
 
                 <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight font-heading">
-                  Zo blijven <span className="text-brand-orange">jouw mensen</span> fit, betrokken en aan boord.
+                  Een veerkrachtig team voor <span className="text-brand-orange">duurzaam succes</span>
                 </h1>
-                <p className="text-xl sm:text-2xl md:text-3xl text-blue-100 leading-relaxed">Wetenschappelijk bewezen stressmanagement programma dat in 8 weken zorgt voor lager verzuim en medewerkers die blijven</p>
+                <p className="text-xl sm:text-2xl md:text-3xl text-blue-100 leading-relaxed">Wetenschappelijk bewezen stressmanagement programma dat in 9 weken zorgt voor lager verzuim en veel lager uitval risico</p>
               </div>
 
               <div className="flex flex-col sm:flex-row gap-4">
@@ -31,13 +31,13 @@ const HeroSection = () => {
                   Ontdek je besparing
                 </Button>
                 <Button variant="outline" size="lg" onClick={() => window.open('https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1wwDnoAHyFrV0M1FxwmbcMa9ewkDxTDdwQObwPKF-WX-wZV9DssZKtb1haoeP5qXDLenQlZt_R', '_blank')} className="w-full sm:w-auto border-2 border-white text-brand-blue hover:text-brand-blue font-semibold py-4 px-6 lg:px-8 rounded-lg text-lg lg:text-xl transition-all duration-300 transform hover:-translate-y-1">
-                  Laten we kennismaken
+                  Stel je vragen aan Bas
                 </Button>
               </div>
 
               <div className="grid grid-cols-2 gap-6 lg:gap-8 pt-6 lg:pt-8">
                 <div className="text-center">
-                  <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-brand-orange">8 weken</div>
+                  <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-brand-orange">9 weken</div>
                   <div className="text-blue-200 text-sm md:text-base">Van stress naar balans</div>
                 </div>
                 <div className="text-center">
@@ -51,7 +51,7 @@ const HeroSection = () => {
               <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 lg:p-8 shadow-2xl max-w-md mx-auto">
                   <div className="space-y-6">
                     <div className="text-center">
-                      <h3 className="text-xl lg:text-2xl font-semibold mb-2">Wat onze deelnemers ervaren</h3>
+                      <h3 className="text-xl lg:text-2xl font-semibold mb-2">Veerkrachtiger: 64-77%, Lager uitval risico: -70%, Lager verzuim; -15 tot -21%</h3>
                       <p className="text-blue-200 text-sm lg:text-base">Resultaten uit 40+ jaar onderzoek</p>
                     </div>
                     
