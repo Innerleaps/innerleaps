@@ -7,7 +7,7 @@ const ImpactSection = () => {
     // Werkeisen/Stressoren
     {
       icon: Shield,
-      title: "65-72% stressreductie",
+      title: "65-72% minder werkstress",
       description: "Minder werkstress en spanning",
       color: "text-brand-orange",
       tag: "Werkeisen/Stressoren"
@@ -52,7 +52,7 @@ const ImpactSection = () => {
     // Stressreacties/Welbevinden
     {
       icon: Shield,
-      title: "60-84% burnoutreductie",
+      title: "60-84% minder burn-out klachten",
       description: "Minder emotionele uitputting",
       color: "text-brand-orange",
       tag: "Stressreacties/Welbevinden"
@@ -74,14 +74,14 @@ const ImpactSection = () => {
     // Persoonlijke Impact
     {
       icon: Moon,
-      title: "57-78% betere slaap",
+      title: "57-78% beter slapen en herstellen",
       description: "Rustiger slapen en beter herstel",
       color: "text-brand-orange",
       tag: "Persoonlijke Impact"
     },
     {
       icon: Heart,
-      title: "59-68% meer welzijn",
+      title: "59-68% meer welzijn en tevredenheid",
       description: "Levenskwaliteit en tevredenheid",
       color: "text-brand-orange",
       tag: "Persoonlijke Impact"
