@@ -10,44 +10,38 @@ const ProcessSection = () => {
   const steps = [
     {
       icon: Calendar,
-      title: "Stap 1: Kennismaking & Besparingsinventarisatie",
-      description: "Vrijblijvend gesprek waarin we je huidige situatie analyseren en potentiële besparingen berekenen",
+      title: "Stap 1: Kennismaking",
+      description: "Vrijblijvend gesprek om elkaar te leren kennen en je behoeften te bespreken",
+      color: "bg-brand-orange"
+    },
+    {
+      icon: BarChart3,
+      title: "Stap 2: Return on Investment berekenen",
+      description: "Analyse van je huidige situatie en berekening van potentiële besparingen",
       color: "bg-brand-orange"
     },
     {
       icon: Presentation,
-      title: "Stap 2: Demonstratie met HR team",
-      description: "Voordat we akkoord zijn met de opdracht laten we je het programma ervaren.",
-      color: "bg-brand-orange"
-    },
-    {
-      icon: Handshake,
-      title: "Stap 3: Opdrachtakkoord",
-      description: "Vastleggen van praktische zaken: Startdata, Locatie en Investering.",
-      color: "bg-brand-orange"
-    },
-    {
-      icon: Users,
-      title: "Stap 4: Inschrijving Medewerkers",
-      description: "Naar aanleiding van de vrijwillige demonstratie zullen medewerkers zich aanmelden voor het programma.",
+      title: "Stap 3: Try out Masterclass",
+      description: "Praktische ervaring van het programma voordat je een beslissing neemt",
       color: "bg-brand-orange"
     },
     {
       icon: UserPlus,
-      title: "Stap 5: Intake",
-      description: "Onze coaches zullen met elke deelnemer een intake doen om goed hun persoonlijke situatie te begrijpen. Tevens zal onze trainer een gesprek voeren met jullie contactpersoon om goed op de hoogte te zijn.",
+      title: "Stap 4: Intake",
+      description: "Persoonlijke gesprekken met deelnemers om hun situatie goed te begrijpen",
       color: "bg-brand-orange"
     },
     {
       icon: CheckCircle,
-      title: "Stap 6: Start Burnout preventie Programma",
-      description: "Start van het 8-weekse programma met alle ingeschreven medewerkers, volledige ondersteuning",
+      title: "Stap 5: Start programma",
+      description: "Start van het 9-weekse programma met alle ingeschreven medewerkers",
       color: "bg-brand-orange"
     },
     {
       icon: TrendingUp,
-      title: "Stap 7: Resultaatmeting & evaluatie",
-      description: "Continue monitoring van resultaten en evaluatie van impact op verzuim en retentie na afloop",
+      title: "Stap 6: Resultaatmeting & evaluatie",
+      description: "Continue monitoring van resultaten en evaluatie van impact op verzuim en retentie",
       color: "bg-brand-orange"
     }
   ];
