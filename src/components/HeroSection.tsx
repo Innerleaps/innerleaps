@@ -21,7 +21,7 @@ const HeroSection = () => {
                 </div>
 
                 <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight font-heading">
-                  Een veerkrachtig team voor <span className="text-brand-orange">duurzaam succes</span>
+                  Een <span className="text-brand-orange">veerkrachtig team</span> voor <span className="text-brand-orange">duurzaam succes</span>
                 </h1>
                 <p className="text-xl sm:text-2xl md:text-3xl text-blue-100 leading-relaxed">Wetenschappelijk bewezen stressmanagement programma dat in 9 weken zorgt voor lager verzuim en veel lager uitval risico</p>
               </div>
