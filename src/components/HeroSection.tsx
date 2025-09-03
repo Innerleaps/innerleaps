@@ -1,14 +1,10 @@
-
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { ArrowDown, Award } from 'lucide-react';
 import CalculatorModal from './CalculatorModal';
-
 const HeroSection = () => {
   const [isCalculatorOpen, setIsCalculatorOpen] = useState(false);
-
-  return (
-    <>
+  return <>
       <section id="home" className="bg-gradient-to-br from-brand-blue to-brand-blue-dark text-white section-padding overflow-hidden">
         <div className="container-custom">
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
@@ -23,7 +19,7 @@ const HeroSection = () => {
                 <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight font-heading">
                   Een <span className="text-brand-orange">veerkrachtig team</span> voor <span className="text-brand-orange">duurzaam succes</span>
                 </h1>
-                <p className="text-xl sm:text-2xl md:text-3xl text-blue-100 leading-relaxed">Wetenschappelijk bewezen stressmanagement programma dat in 9 weken zorgt voor lager verzuim en veel lager uitval risico</p>
+                <p className="text-xl sm:text-2xl md:text-3xl text-blue-100 leading-relaxed">Wetenschappelijk bewezen stressmanagement programma dat in 9 weken zorgt voor lager verzuim en een veel lager uitval risico</p>
               </div>
 
               <div className="flex flex-col sm:flex-row gap-4">
@@ -81,8 +77,6 @@ const HeroSection = () => {
       </section>
 
       <CalculatorModal isOpen={isCalculatorOpen} onClose={() => setIsCalculatorOpen(false)} />
-    </>
-  );
+    </>;
 };
-
 export default HeroSection;
