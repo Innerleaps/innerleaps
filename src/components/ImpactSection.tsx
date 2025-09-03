@@ -7,7 +7,7 @@ const ImpactSection = () => {
     // Werkeisen/Stressoren
     {
       icon: Shield,
-      title: "Minder stress. 65-72% reductie.",
+      title: "65-72% stressreductie",
       description: "Minder werkstress en spanning",
       color: "text-brand-orange",
       tag: "Werkeisen/Stressoren"
@@ -15,21 +15,21 @@ const ImpactSection = () => {
     // Oefenen: Praktijk dag
     {
       icon: Target,
-      title: "Meer veerkracht. 64-77% verbetering.",
+      title: "64-77% meer veerkracht",
       description: "Beter omgaan met uitdagingen",
       color: "text-brand-orange",
       tag: "Persoonlijke Hulpbronnen"
     },
     {
       icon: Heart,
-      title: "Meer zelfvertrouwen. 71-79% verbetering.",
+      title: "71-79% meer self-efficacy",
       description: "Meer vertrouwen in eigen kunnen",
       color: "text-brand-orange",
       tag: "Persoonlijke Hulpbronnen"
     },
     {
       icon: Smile,
-      title: "Betere emotieregulatie. 70% verbetering.",
+      title: "70% betere emotieregulatie",
       description: "Beter beheersen van emoties",
       color: "text-brand-orange",
       tag: "Persoonlijke Hulpbronnen"
@@ -37,14 +37,14 @@ const ImpactSection = () => {
     // Werkhulpbronnen
     {
       icon: Users,
-      title: "Beter werkklimaat. 64-67% verbetering.",
+      title: "64-67% beter werkklimaat",
       description: "Positievere werkomgeving",
       color: "text-brand-orange",
       tag: "Werkhulpbronnen"
     },
     {
       icon: Heart,
-      title: "Meer compassie. 67% verbetering.",
+      title: "67% meer compassie voor anderen",
       description: "Empathie en begrip voor collega's",
       color: "text-brand-orange",
       tag: "Werkhulpbronnen"
@@ -52,21 +52,21 @@ const ImpactSection = () => {
     // Stressreacties/Welbevinden
     {
       icon: Shield,
-      title: "Minder burnout. 60-84% reductie.",
+      title: "60-84% burnoutreductie",
       description: "Minder emotionele uitputting",
       color: "text-brand-orange",
       tag: "Stressreacties/Welbevinden"
     },
     {
       icon: Smile,
-      title: "Meer werktevredenheid. 63% verbetering.",
+      title: "63% meer werktevredenheid",
       description: "Meer plezier in het werk",
       color: "text-brand-orange",
       tag: "Stressreacties/Welbevinden"
     },
     {
       icon: Target,
-      title: "Meer werkbetrokkenheid. 65% verbetering.",
+      title: "65% meer werkbetrokkenheid",
       description: "Gemotiveerde teams die samen groeien",
       color: "text-brand-orange",
       tag: "Stressreacties/Welbevinden"
@@ -74,21 +74,21 @@ const ImpactSection = () => {
     // Persoonlijke Impact
     {
       icon: Moon,
-      title: "Betere slaap. 57-78% verbetering.",
+      title: "57-78% betere slaap",
       description: "Rustiger slapen en beter herstel",
       color: "text-brand-orange",
       tag: "Persoonlijke Impact"
     },
     {
       icon: Heart,
-      title: "Meer welzijn. 59-68% verbetering.",
+      title: "59-68% meer welzijn",
       description: "Levenskwaliteit en tevredenheid",
       color: "text-brand-orange",
       tag: "Persoonlijke Impact"
     },
     {
       icon: BarChart3,
-      title: "Betere gezondheid. 63-68% verbetering.",
+      title: "63-68% betere algemene gezondheid",
       description: "Verbeterde fysieke en mentale gezondheid",
       color: "text-brand-orange",
       tag: "Persoonlijke Impact"
