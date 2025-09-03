@@ -15,7 +15,7 @@ const ImpactSection = () => {
     // Oefenen: Praktijk dag
     {
       icon: Target,
-      title: "64-77% meer veerkracht",
+      title: "64-77% meer veerkracht en weerbaarheid",
       description: "Beter omgaan met uitdagingen",
       color: "text-brand-orange",
       tag: "Persoonlijke Hulpbronnen"
