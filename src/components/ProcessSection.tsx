@@ -41,7 +41,7 @@ const ProcessSection = () => {
     {
       icon: TrendingUp,
       title: "Stap 6: Resultaatmeting & evaluatie",
-      description: "Continue monitoring van resultaten en evaluatie van impact op verzuim en retentie",
+      description: "Continue monitoring van resultaten en evaluatie van impact",
       color: "bg-brand-orange"
     }
   ];
