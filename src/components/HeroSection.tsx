@@ -57,15 +57,15 @@ const HeroSection = () => {
                     
                     <div className="space-y-4">
                       <div className="flex items-center justify-between p-3 lg:p-4 bg-white rounded-lg">
-                        <span className="font-medium text-sm lg:text-base text-brand-blue-dark">Veerkrachtiger</span>
+                        <span className="font-bold text-sm lg:text-base text-brand-blue-dark">Veerkrachtiger</span>
                         <span className="text-brand-orange font-bold text-lg lg:text-xl">64 tot 77%</span>
                       </div>
                       <div className="flex items-center justify-between p-3 lg:p-4 bg-white rounded-lg">
-                        <span className="font-medium text-sm lg:text-base text-brand-blue-dark">Lager uitval risico</span>
+                        <span className="font-bold text-sm lg:text-base text-brand-blue-dark">Lager uitval risico</span>
                         <span className="text-brand-orange font-bold text-lg lg:text-xl">-70%</span>
                       </div>
                       <div className="flex items-center justify-between p-3 lg:p-4 bg-white rounded-lg">
-                        <span className="font-medium text-sm lg:text-base text-brand-blue-dark">Lager verzuim</span>
+                        <span className="font-bold text-sm lg:text-base text-brand-blue-dark">Lager verzuim</span>
                         <span className="text-brand-orange font-bold text-lg lg:text-xl">-15 tot -21%</span>
                       </div>
                     </div>
