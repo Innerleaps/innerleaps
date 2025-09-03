@@ -51,22 +51,22 @@ const HeroSection = () => {
               <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 lg:p-8 shadow-2xl max-w-md mx-auto">
                   <div className="space-y-6">
                     <div className="text-center">
-                      <h3 className="text-xl lg:text-2xl font-semibold mb-2">Veerkrachtiger: 64-77%, Lager uitval risico: -70%, Lager verzuim; -15 tot -21%</h3>
+                      <h3 className="text-xl lg:text-2xl font-semibold mb-2">Wat onze deelnemers ervaren</h3>
                       <p className="text-blue-200 text-sm lg:text-base">Resultaten uit 40+ jaar onderzoek</p>
                     </div>
                     
                     <div className="space-y-4">
                       <div className="flex items-center justify-between p-3 lg:p-4 bg-white rounded-lg">
-                        <span className="font-medium text-sm lg:text-base text-brand-blue-dark">Minder burn-outs</span>
-                        <span className="text-brand-orange font-bold text-lg lg:text-xl">25-34%</span>
+                        <span className="font-medium text-sm lg:text-base text-brand-blue-dark">Veerkrachtiger</span>
+                        <span className="text-brand-orange font-bold text-lg lg:text-xl">64-77%</span>
                       </div>
                       <div className="flex items-center justify-between p-3 lg:p-4 bg-white rounded-lg">
-                        <span className="font-medium text-sm lg:text-base text-brand-blue-dark">Verzuimreductie</span>
-                        <span className="text-brand-orange font-bold text-lg lg:text-xl">10%</span>
+                        <span className="font-medium text-sm lg:text-base text-brand-blue-dark">Lager uitval risico</span>
+                        <span className="text-brand-orange font-bold text-lg lg:text-xl">-70%</span>
                       </div>
                       <div className="flex items-center justify-between p-3 lg:p-4 bg-white rounded-lg">
-                        <span className="font-medium text-sm lg:text-base text-brand-blue-dark">Retentieverbetering</span>
-                        <span className="text-brand-orange font-bold text-lg lg:text-xl">10%</span>
+                        <span className="font-medium text-sm lg:text-base text-brand-blue-dark">Lager verzuim</span>
+                        <span className="text-brand-orange font-bold text-lg lg:text-xl">-15 tot -21%</span>
                       </div>
                     </div>
                 </div>
