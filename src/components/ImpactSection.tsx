@@ -18,21 +18,21 @@ const ImpactSection = () => {
       title: "64-77% meer veerkracht",
       description: "Beter omgaan met uitdagingen",
       color: "text-brand-orange",
-      tag: "Oefenen: Praktijk dag"
+      tag: "Persoonlijke Hulpbronnen"
     },
     {
       icon: Heart,
       title: "71-79% meer self-efficacy",
       description: "Meer vertrouwen in eigen kunnen",
       color: "text-brand-orange",
-      tag: "Oefenen: Praktijk dag"
+      tag: "Persoonlijke Hulpbronnen"
     },
     {
       icon: Smile,
       title: "70% betere emotieregulatie",
       description: "Beter beheersen van emoties",
       color: "text-brand-orange",
-      tag: "Oefenen: Praktijk dag"
+      tag: "Persoonlijke Hulpbronnen"
     },
     // Werkhulpbronnen
     {
