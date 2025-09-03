@@ -16,11 +16,11 @@ const ProgramSection = () => {
     description: "Concrete aandachtsoefeningen voor verbeterde focus en mentale helderheid op het werk"
   }, {
     weeks: "7",
-    title: "Stiltedag en bewegingsoefeningen",
+    title: "Praktijk oefendag",
     description: "Intensieve dag voor bewegingsoefeningen en praktische integratie van alle geleerde technieken"
   }, {
     weeks: "8-9",
-    title: "Zelfzorg en programma voor leven",
+    title: "Ontwikkeling eigen programma en integratie",
     description: "Ontwikkeling van een persoonlijke toolkit voor dagelijkse toepassing in werk en leven"
   }];
   const programFeatures = [{
