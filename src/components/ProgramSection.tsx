@@ -43,7 +43,7 @@ const ProgramSection = () => {
   return <section className="bg-white section-padding">
       <div className="container-custom">
         <div className="text-center space-y-6 mb-16">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-gray-dark">Het Life+ stressmanagement programma: 9 weken voor echte gedragsverandering</h2>
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-gray-dark">Het Life+ stressmanagement programma</h2>
           <p className="text-xl md:text-2xl text-brand-gray-medium max-w-4xl mx-auto leading-relaxed">Een 9-weken durend, wetenschappelijk bewezen cursus voor stressmanagement. Ontwikkeld aan de Universiteit van Massachusetts, toegankelijk voor iedereen.</p>
         </div>
 
