@@ -44,7 +44,7 @@ const ProgramSection = () => {
       <div className="container-custom">
         <div className="text-center space-y-6 mb-16">
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-gray-dark">Het Life+ stressmanagement programma</h2>
-          <p className="text-xl md:text-2xl text-brand-gray-medium max-w-4xl mx-auto leading-relaxed">Een 9-weken durend, wetenschappelijk bewezen cursus voor stressmanagement. Life+ is op MBSR dat ontwikkeld is aan de Universiteit van Massachusetts.</p>
+          <p className="text-xl md:text-2xl text-brand-gray-medium max-w-4xl mx-auto leading-relaxed">Wetenschappelijk bewezen met een praktische twist. Het Life+ programma neemt het 40 jaar onderzochte MBSR protocol en past dit specifiek aan voor de werkplek. </p>
         </div>
 
         {/* Program Features */}
