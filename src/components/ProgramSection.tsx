@@ -43,9 +43,7 @@ const ProgramSection = () => {
   return <section className="bg-white section-padding">
       <div className="container-custom">
         <div className="text-center space-y-6 mb-16">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-gray-dark">
-            MBSR Stressmanagement Cursus
-          </h2>
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-gray-dark">Het Life+ stressmanagement programma: 9 weken voor echte gedragsverandering</h2>
           <p className="text-xl md:text-2xl text-brand-gray-medium max-w-4xl mx-auto leading-relaxed">Een 9-weken durend, wetenschappelijk bewezen cursus voor stressmanagement. Ontwikkeld aan de Universiteit van Massachusetts, toegankelijk voor iedereen.</p>
         </div>
 
@@ -75,7 +73,7 @@ const ProgramSection = () => {
           
           <div className="text-center mb-12">
             <Link to="/programma">
-              <Button className="w-full sm:w-auto bg-brand-blue hover:bg-brand-blue text-white hover:text-white font-semibold py-3 px-8 rounded-lg text-lg md:text-xl shadow-lg">
+              <Button className="w-full sm:w-auto bg-brand-blue hover:bg-brand-blue text-white hover:text-white font-semibold py-3 px-8 rounded-lg text-lg md:text-xl transition-all duration-300 shadow-lg transform hover:-translate-y-0.5">
                 Programma Details Bekijken
               </Button>
             </Link>
@@ -100,7 +98,7 @@ const ProgramSection = () => {
 
         <div className="text-center mt-12">
           <Link to="/programma">
-            <Button className="w-full sm:w-auto bg-brand-blue hover:bg-brand-blue text-white hover:text-white font-semibold py-3 px-8 rounded-lg text-lg md:text-xl shadow-lg">
+            <Button className="w-full sm:w-auto bg-brand-blue hover:bg-brand-blue text-white hover:text-white font-semibold py-3 px-8 rounded-lg text-lg md:text-xl transition-all duration-300 shadow-lg transform hover:-translate-y-0.5">
               Programma Details Bekijken
             </Button>
           </Link>
