@@ -89,7 +89,7 @@ const ImpactSection = () => {
       <div className="container-custom">
         <div className="text-center space-y-6 mb-16">
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-gray-dark">Life+ gaat verder dan burnout preventie</h2>
-          <p className="text-lg md:text-xl text-brand-gray-medium max-w-3xl mx-auto leading-relaxed">Ons 9-weekse programma helpt teams niet alleen stress te verminderen, maar ook rust, veerkracht en gezonde gewoontes op te bouwen. Onderzoek laat het zien: minder stress, meer motivatie en een gezonder, tevredener leven — met blijvend effect.</p>
+          <p className="text-lg md:text-xl text-brand-gray-medium max-w-3xl mx-auto leading-relaxed">Ons 9-weekse Life+ programma helpt teams niet alleen stress te verminderen, maar ook rust, veerkracht en gezonde gewoontes op te bouwen. Onderzoek laat het zien: minder stress, meer motivatie en een gezonder, tevredener leven — met blijvend effect.</p>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 md:gap-8">
