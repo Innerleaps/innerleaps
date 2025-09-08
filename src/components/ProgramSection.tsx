@@ -37,8 +37,8 @@ const ProgramSection = () => {
     description: "De workshop wordt gegeven op een locatie naar wens of online"
   }, {
     icon: Calendar,
-    title: "Dagelijks oefenen in eigen tijd",
-    description: "Deelnemers hebben de intentie om dagelijks te oefenen"
+    title: "Dagelijks oefenen",
+    description: "Deelnemers proberen dagelijks te oefenen"
   }];
   return <section className="bg-white section-padding">
       <div className="container-custom">
@@ -73,9 +73,7 @@ const ProgramSection = () => {
           
           <div className="text-center mb-12">
             <Link to="/programma">
-              <Button className="w-full sm:w-auto bg-brand-blue hover:bg-brand-blue text-white hover:text-white font-semibold py-3 px-8 rounded-lg text-lg md:text-xl transition-all duration-300 shadow-lg transform hover:-translate-y-0.5">
-                Programma Details Bekijken
-              </Button>
+              
             </Link>
           </div>
           
