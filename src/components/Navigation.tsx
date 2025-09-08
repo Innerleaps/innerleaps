@@ -95,19 +95,19 @@ const Navigation = () => {
 
             {/* CTA Buttons */}
             <div className="hidden lg:flex items-center space-x-4 flex-shrink-0">
-              <Button 
-                variant="outline" 
-                className="hidden xl:flex border-2 border-brand-blue text-brand-blue hover:text-brand-blue font-semibold py-3 px-6 rounded-lg text-base transition-all duration-300 transform hover:-translate-y-1" 
-                onClick={() => window.open('https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1wwDnoAHyFrV0M1FxwmbcMa9ewkDxTDdwQObwPKF-WX-wZV9DssZKtb1haoeP5qXDLenQlZt_R', '_blank')}
-              >
-                Vrijblijvend gesprek
-              </Button>
-              <Button 
-                onClick={() => setIsCalculatorOpen(true)} 
-                className="bg-brand-blue hover:bg-brand-blue-dark text-white font-semibold py-3 px-4 lg:px-6 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 text-base"
-              >
-                Bereken besparing
-              </Button>
+                <Button 
+                  variant="outline"
+                  className="hidden xl:flex border-2 border-brand-blue text-brand-blue hover:text-brand-blue hover:border-brand-blue hover:bg-background font-semibold py-3 px-6 rounded-lg text-base" 
+                  onClick={() => window.open('https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1wwDnoAHyFrV0M1FxwmbcMa9ewkDxTDdwQObwPKF-WX-wZV9DssZKtb1haoeP5qXDLenQlZt_R', '_blank')}
+                >
+                  Vrijblijvend gesprek
+                </Button>
+                <Button 
+                  onClick={() => setIsCalculatorOpen(true)}
+                  className="bg-brand-blue hover:bg-brand-blue text-white hover:text-white font-semibold py-3 px-4 lg:px-6 rounded-lg shadow-lg text-base"
+                >
+                  Bereken besparing
+                </Button>
             </div>
 
             {/* Mobile menu button */}
@@ -149,7 +149,7 @@ const Navigation = () => {
                 <div className="flex flex-col space-y-3 pt-4">
                   <Button 
                     variant="outline" 
-                    className="border-2 border-brand-blue text-brand-blue hover:text-brand-blue font-semibold py-3 px-6 rounded-lg text-base transition-all duration-300 w-full transform hover:-translate-y-1" 
+                    className="border-2 border-brand-blue text-brand-blue hover:text-brand-blue hover:border-brand-blue hover:bg-background font-semibold py-3 px-6 rounded-lg text-base w-full" 
                     onClick={() => {
                       window.open('https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1wwDnoAHyFrV0M1FxwmbcMa9ewkDxTDdwQObwPKF-WX-wZV9DssZKtb1haoeP5qXDLenQlZt_R', '_blank');
                       setIsMenuOpen(false);
@@ -158,7 +158,7 @@ const Navigation = () => {
                     Vrijblijvend gesprek
                   </Button>
                   <Button 
-                    className="bg-brand-blue hover:bg-brand-blue-dark text-white font-semibold py-3 px-6 rounded-lg text-base transition-all duration-300 w-full" 
+                    className="bg-brand-blue hover:bg-brand-blue text-white hover:text-white font-semibold py-3 px-6 rounded-lg text-base w-full" 
                     onClick={() => {
                       setIsCalculatorOpen(true);
                       setIsMenuOpen(false);

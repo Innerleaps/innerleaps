@@ -96,14 +96,14 @@ const Calculator = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button 
-                className="bg-white text-brand-orange hover:bg-gray-100"
+                className="bg-white hover:bg-white text-brand-orange hover:text-brand-orange"
                 onClick={() => window.open('https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1wwDnoAHyFrV0M1FxwmbcMa9ewkDxTDdwQObwPKF-WX-wZV9DssZKtb1haoeP5qXDLenQlZt_R', '_blank')}
               >
                 Plan een gesprek over deze resultaten
               </Button>
               <Button 
                 variant="outline" 
-                className="border-white text-white hover:bg-white hover:text-brand-orange"
+                className="border-white text-white hover:text-white hover:border-white hover:bg-transparent"
                 onClick={() => setShowResults(false)}
               >
                 Nieuwe berekening

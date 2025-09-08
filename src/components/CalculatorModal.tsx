@@ -343,7 +343,7 @@ const CalculatorModal = ({
               <Button 
                 onClick={calculateSavings} 
                 disabled={!isFormValid || isSubmitting} 
-                className="w-full bg-brand-blue hover:bg-brand-blue-dark text-white h-10"
+                className="w-full bg-brand-blue hover:bg-brand-blue text-white hover:text-white h-10"
               >
                 {isSubmitting ? (
                   <>
