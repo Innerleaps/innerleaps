@@ -26,7 +26,7 @@ const HeroSection = () => {
                 <Button size="lg" className="w-full sm:w-auto bg-brand-orange hover:bg-brand-orange/90 text-brand-orange-light font-semibold py-4 px-6 lg:px-8 rounded-lg text-lg lg:text-xl transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:-translate-y-1" onClick={() => setIsCalculatorOpen(true)}>
                   Ontdek je besparing
                 </Button>
-                <Button variant="outline" size="lg" onClick={() => window.open('https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1wwDnoAHyFrV0M1FxwmbcMa9ewkDxTDdwQObwPKF-WX-wZV9DssZKtb1haoeP5qXDLenQlZt_R', '_blank')} className="w-full sm:w-auto border-2 border-white text-brand-blue hover:text-brand-blue font-semibold py-4 px-6 lg:px-8 rounded-lg text-lg lg:text-xl transition-all duration-300 transform hover:-translate-y-1">
+                <Button variant="outline" size="lg" onClick={() => window.open('https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1wwDnoAHyFrV0M1FxwmbcMa9ewkDxTDdwQObwPKF-WX-wZV9DssZKtb1haoeP5qXDLenQlZt_R', '_blank')} className="w-full sm:w-auto border-2 border-white text-brand-blue hover:text-brand-blue hover:bg-white font-semibold py-4 px-6 lg:px-8 rounded-lg text-lg lg:text-xl transition-all duration-300 transform hover:-translate-y-1">
                   Stel je vragen aan Bas
                 </Button>
               </div>
