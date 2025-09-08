@@ -38,7 +38,7 @@ const ProgramSection = () => {
   }, {
     icon: Calendar,
     title: "Dagelijks oefenen",
-    description: "Deelnemers proberen dagelijks te oefenen"
+    description: "Deelnemers hebben de intentie om dagelijks te oefenen"
   }];
   return <section className="bg-white section-padding">
       <div className="container-custom">
