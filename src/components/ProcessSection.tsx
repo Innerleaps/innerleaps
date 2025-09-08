@@ -51,7 +51,7 @@ const ProcessSection = () => {
       <section className="bg-brand-gray-light section-padding">
         <div className="container-custom">
           <div className="text-center space-y-6 mb-16">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-brand-gray-dark">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-gray-dark">
               Zo Werken We Samen
             </h2>
             <p className="text-lg md:text-xl text-brand-gray-medium max-w-3xl mx-auto leading-relaxed">
