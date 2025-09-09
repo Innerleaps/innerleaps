@@ -43,7 +43,7 @@ const Contact = () => {
                       </div>
                       <div>
                         <h3 className="font-semibold text-brand-gray-dark">Email</h3>
-                        <p className="text-brand-gray-medium">bas@haltacademy.nl</p>
+                        <p className="text-brand-gray-medium">bas@innerleaps.nl</p>
                       </div>
                     </div>
                     
@@ -94,7 +94,7 @@ const Contact = () => {
                         "Ik help graag persoonlijk mee om te kijken naar de mogelijkheden voor uw organisatie. Elke situatie is uniek, en samen vinden we de beste aanpak."
                       </p>
                       <p className="text-brand-gray-medium font-medium">
-                        — Bas Ter Haar Romenij, Oprichter en adviseur bij Halt Academy
+                        — Bas Ter Haar Romenij, Oprichter en adviseur bij Innerleaps
                       </p>
                     </div>
                   </div>
@@ -172,10 +172,10 @@ const Contact = () => {
             <div>
               <h3 className="text-lg font-semibold mb-4">Snel naar</h3>
               <div className="space-y-2">
-                <button onClick={() => document.getElementById('home')?.scrollIntoView({ behavior: 'smooth' })} className="block text-gray-300 hover:text-white transition-colors text-left">Home</button>
-                <button onClick={() => document.getElementById('wetenschap')?.scrollIntoView({ behavior: 'smooth' })} className="block text-gray-300 hover:text-white transition-colors text-left">De Wetenschap</button>
-                <button onClick={() => document.getElementById('programma')?.scrollIntoView({ behavior: 'smooth' })} className="block text-gray-300 hover:text-white transition-colors text-left">Programma</button>
-                <button onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })} className="block text-gray-300 hover:text-white transition-colors text-left">Contact</button>
+                <button onClick={() => window.location.href = '/'} className="block text-gray-300 hover:text-white transition-colors text-left">Home</button>
+                <button onClick={() => window.location.href = '/wetenschap'} className="block text-gray-300 hover:text-white transition-colors text-left">De Wetenschap</button>
+                <button onClick={() => window.location.href = '/programma'} className="block text-gray-300 hover:text-white transition-colors text-left">Programma</button>
+                <button onClick={() => window.location.href = '/contact'} className="block text-gray-300 hover:text-white transition-colors text-left">Contact</button>
               </div>
             </div>
           </div>
