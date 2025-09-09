@@ -132,7 +132,7 @@ const Wetenschap = () => {
         <div className="container-custom">
           <h2 className="text-3xl md:text-4xl font-bold text-brand-gray-dark text-center mb-12">Hoe ons burn-out preventie programma verzuim beïnvloedt</h2>
           
-          <p className="text-xl md:text-2xl text-brand-gray-medium text-center max-w-4xl mx-auto mb-16 leading-relaxed">Het Life+ programma werkt op twee fronten tegelijk: het vermindert uitputting door stress en stressoren aan te pakken, én het stimuleert motivatie door persoonlijke en werkhulpbronnen te versterken. Deze dubbele aanpak verklaart waarom de organisatorische resultaten zo significant zijn: 15-21% minder verzuim en 70% lager uitvalrisico.</p>
+          <p className="text-xl md:text-2xl text-brand-gray-medium text-center max-w-4xl mx-auto mb-16 leading-relaxed">Het Life+ programma werkt tegelijk op de twee fronten van het JD-R model: het vermindert uitputting door stress en stressoren aan te pakken, én het stimuleert motivatie door persoonlijke en werkhulpbronnen te versterken. Deze dubbele aanpak verklaart waarom de organisatorische resultaten zo significant zijn: 15-21% minder verzuim en 70% lager uitvalrisico.</p>
 
           <div className="grid lg:grid-cols-2 gap-8">
             {mechanismen.map((mechanisme, index) => {
