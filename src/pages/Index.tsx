@@ -30,7 +30,7 @@ const Index = () => {
         <div className="container-custom">
           <div className="grid md:grid-cols-3 gap-8">
             <div>
-              <div className="text-2xl font-bold mb-4">Halt.academy</div>
+              <div className="text-2xl font-bold mb-4">Innerleaps</div>
               <p className="text-gray-300 leading-relaxed">
                 MBSR-gebaseerde stressreductieprogramma's voor meetbare bedrijfsresultaten. Gebaseerd op het baanbrekende werk van Jon Kabat-Zinn.
               </p>
@@ -38,8 +38,9 @@ const Index = () => {
             <div>
               <h3 className="text-lg font-semibold mb-4">Contact</h3>
               <div className="space-y-2 text-gray-300">
-                <p>Email: bas@haltacademy.nl</p>
+                <p>Email: bas@innerleaps.nl</p>
                 <p>Telefoon: 06 23 45 34 77</p>
+                <p>KVK nummer: 98136925</p>
                 <div className="mt-4 flex justify-start">
                   <Avatar className="w-24 h-24">
                     <AvatarImage src="/lovable-uploads/eaa7a159-2f85-4fa3-b487-4855426f2c14.png" alt="Bas Ter Haar Romenij" />
@@ -59,7 +60,7 @@ const Index = () => {
             </div>
           </div>
           <div className="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
-            <p>&copy; 2024 Halt.academy. Alle rechten voorbehouden.</p>
+            <p>&copy; 2024 Innerleaps. Alle rechten voorbehouden.</p>
           </div>
         </div>
       </footer>
