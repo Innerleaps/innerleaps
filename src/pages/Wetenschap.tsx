@@ -2,7 +2,7 @@ import Navigation from '@/components/Navigation';
 import StickyCtaButtons from '@/components/StickyCtaButtons';
 import { useEffect } from 'react';
 import { Button } from '@/components/ui/button';
-import { ArrowLeft, BookOpen, BarChart3, Brain, Heart, Users, Shield, TrendingUp, Award } from 'lucide-react';
+import { ArrowLeft, BookOpen, BarChart3, Brain, Heart, Users, Shield, TrendingUp, Award, Target } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
 const Wetenschap = () => {
@@ -11,68 +11,91 @@ const Wetenschap = () => {
   }, []);
   const mechanismen = [{
     icon: Shield,
-    title: "Burnout Reductie",
-    percentage: "36%",
-    description: "Het MBSR-programma toont bewezen resultaten bij burnout preventie. Deelnemers ervaren 36% minder burnout, 25% minder emotionele uitputting en significante verbeteringen in stressreductie en algemene gezondheid.",
-    studies: [{
-      name: "Shoker et al. (2024)",
-      url: "https://www.frontiersin.org/journals/public-health/articles/10.3389/fpubh.2024.1381373/full"
-    }, {
-      name: "Mackenzie et al. (2006)",
-      url: "https://www.tandfonline.com/doi/full/10.1080/15555240.2013.779518#references-Section"
-    }, {
-      name: "AIMS Public Health (2025)",
-      url: "https://www.aimspress.com/article/doi/10.3934/publichealth.2025007"
-    }],
+    title: "65-72% minder werkstress",
+    description: "Zonder dat de werkdruk wordt verminderd ervaren deelnemers minder stress. De beleving van het werk en de werkdruk wordt minder stressvol.",
+    jdrTag: "Werkeisen/Stressoren",
+    studies: [
+      { name: "De Vibe et al. (2017)", url: "https://www.researchgate.net/publication/320809758_Mindfulness-based_stress_reduction_MBSR_for_improving_health_quality_of_life_and_social_functioning_in_adults_a_systematic_review_and_meta-analysis" },
+      { name: "Bartlett et al. (2018)", url: "https://scispace.com/pdf/a-systematic-review-and-meta-analysis-of-workplace-448vdu0m18.pdf" },
+      { name: "Vonderlin et al. (2020)", url: "https://link.springer.com/article/10.1007/s12671-020-01328-3" },
+      { name: "Lensen et al. (2024)", url: "https://www.frontiersin.org/journals/education/articles/10.3389/feduc.2024.1385375/full" },
+      { name: "Michaelsen et al. (2023)", url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC10172073/" },
+      { name: "Żołnierczyk-Zreda et al. (2016)", url: "https://academic.oup.com/occmed/article-abstract/66/8/630/2750551?redirectedFrom=fulltext" }
+    ],
+    color: "text-brand-blue"
+  }, {
+    icon: Target,
+    title: "64-77% meer veerkracht en weerbaarheid",
+    description: "Deelnemers ontwikkelen mentale spierkracht om uitdagingen het hoofd te bieden. Ze herstellen sneller van tegenslagen en blijven effectief functioneren onder druk.",
+    jdrTag: "Persoonlijke Hulpbronnen",
+    studies: [
+      { name: "Michaelsen et al. (2023)", url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC10172073/" },
+      { name: "Vonderlin et al. (2020)", url: "https://link.springer.com/article/10.1007/s12671-020-01328-3" },
+      { name: "Dou et al. (2024)", url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC12210539/" }
+    ],
+    color: "text-brand-green"
+  }, {
+    icon: Shield,
+    title: "60-84% minder burn-out klachten",
+    description: "Emotionele uitputting neemt drastisch af. Deelnemers voelen zich minder leeggelopen en behouden hun energie voor werk én privé.",
+    jdrTag: "Stressreacties/Welbevinden",
+    studies: [
+      { name: "Vonderlin et al. (2020)", url: "https://link.springer.com/article/10.1007/s12671-020-01328-3" },
+      { name: "Bartlett et al. (2018)", url: "https://scispace.com/pdf/a-systematic-review-and-meta-analysis-of-workplace-448vdu0m18.pdf" },
+      { name: "Michaelsen et al. (2023)", url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC10172073/" },
+      { name: "Dou et al. (2024)", url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC12210539/" }
+    ],
     color: "text-brand-blue"
   }, {
     icon: Heart,
-    title: "Werkplezier en Tevredenheid",
-    percentage: "11-18%",
-    description: "Meta-analyses tonen dat MBSR werktevredenheid verbetert met 11% volgens robuuste onderzoeksresultaten.",
-    studies: ["Vonderlin et al. (2020)"],
+    title: "65% meer werkbetrokkenheid",
+    description: "Teams worden gemotiveerder en meer betrokken bij hun werk. Ze investeren bewuster in hun taken en groeien samen naar betere prestaties.",
+    jdrTag: "Stressreacties/Welbevinden",
+    studies: [
+      { name: "Vonderlin et al. (2020)", url: "https://link.springer.com/article/10.1007/s12671-020-01328-3" }
+    ],
     color: "text-brand-green"
   }, {
-    icon: Users,
-    title: "Vertrekintentie Reductie",
-    percentage: "10-20%",
-    description: "Werknemers met hogere mindfulness scores waren 15% minder geneigd om te vertrekken door verminderde emotionele uitputting.",
-    studies: ["Dane & Brummel (2014)", "Reb et al. (2017)"],
+    icon: Brain,
+    title: "65-68% betere mentale gezondheid",
+    description: "De psychische gesteldheid verbetert merkbaar. Deelnemers voelen zich mentaal sterker en stabieler, met minder last van negatieve gedachten.",
+    jdrTag: "Persoonlijke Impact",
+    studies: [
+      { name: "De Vibe et al. (2017)", url: "https://www.researchgate.net/publication/320809758_Mindfulness-based_stress_reduction_MBSR_for_improving_health_quality_of_life_and_social_functioning_in_adults_a_systematic_review_and_meta-analysis" },
+      { name: "Michaelsen et al. (2023)", url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC10172073/" }
+    ],
     color: "text-brand-blue"
   }, {
-    icon: Brain,
-    title: "Werk-Privé Balans",
-    percentage: "18-22%",
-    description: "MBSR helpt medewerkers een betere balans te vinden tussen werk en privéleven. Effecten blijven tot 3 maanden bestaan.",
-    studies: ["Michaelsen et al. (2023)"],
+    icon: BarChart3,
+    title: "15-21% minder verzuim",
+    description: "Concrete reductie in ziekteverzuim door betere stressbestendigheid en algemene gezondheid van het team.",
+    jdrTag: "Organisatorische Impact",
+    studies: [
+      { name: "Żołnierczyk-Zreda et al. (2016)", url: "https://academic.oup.com/occmed/article-abstract/66/8/630/2750551?redirectedFrom=fulltext" },
+      { name: "Michaelsen et al. (2023)", url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC10172073/" },
+      { name: "Häusser et al. (2010)", url: "https://psycnet.apa.org/record/2010-06658-001" },
+      { name: "Karasek & Theorell (1990)", url: "https://www.scirp.org/reference/referencespapers?referenceid=1955102" },
+      { name: "Arboned (2024)", url: "https://www.arboned.nl/nieuws/griepachtige-klachten-en-stress-boosdoeners-van-verzuim-in-2024#:~:text=Stressgerelateerde%20klachten%20blijven%20stijgen&text=Kijken%20we%20naar%20het%20langdurend,opzichte%20van%20het%20jaar%20daarvoor." }
+    ],
     color: "text-brand-green"
   }, {
     icon: TrendingUp,
-    title: "Werkbetrokkenheid Verbetering",
-    percentage: "15-25%",
-    description: "Fortune 100 studie toonde dat 20 van de 27 gemeten werkcompetenties significant verbeterden, vooral besluitvaardigheid en creativiteit.",
-    studies: ["Nadler et al. (2020)"],
-    color: "text-brand-blue"
-  }, {
-    icon: Shield,
-    title: "Werkstress Reductie",
-    percentage: "19-25%",
-    description: "Meta-analyse van 23 workplace studies toont stressreductie van 19%, terwijl analyse van 56 studies een effect van 25% vond.",
-    studies: ["Bartlett et al. (2019)", "Vonderlin et al. (2020)"],
-    color: "text-brand-green"
-  }, {
-    icon: Brain,
-    title: "Angst en Depressie Reductie",
-    percentage: "12-23%",
-    description: "Consistente effecten op angst- en depressiesymptomen. Angstreductie van 23% en verbetering van 12% in algemene psychologische stress.",
-    studies: ["Bartlett et al. (2019)", "Galante et al. (2023)"],
+    title: "70% lager uitvalrisico",
+    description: "De kans dat medewerkers uitvallen door stress of burn-out daalt drastisch, wat zorgt voor meer stabiliteit in teams.",
+    jdrTag: "Organisatorische Impact",
+    studies: [
+      { name: "De Bruin et al. (2018)", url: "https://dare.uva.nl/search?identifier=2ec42a08-a20f-4859-8e23-609a6030e6b6" }
+    ],
     color: "text-brand-blue"
   }, {
     icon: Award,
-    title: "Veerkracht Verbetering",
-    percentage: "14-28%",
-    description: "Verbetering van 14% in veerkracht, met complexere interventies tot 30%. Dow Chemical studie toonde significante veerkrachtverbetering bij 90 medewerkers.",
-    studies: ["Vonderlin et al. (2020)", "Aikens et al. (2014)"],
+    title: "58-60% meer productiviteit",
+    description: "Teams presteren beter door verhoogde focus, minder stress en betere samenwerking.",
+    jdrTag: "Organisatorische Impact",
+    studies: [
+      { name: "Vonderlin et al. (2020)", url: "https://link.springer.com/article/10.1007/s12671-020-01328-3" },
+      { name: "Michaelsen et al. (2023)", url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC10172073/" }
+    ],
     color: "text-brand-green"
   }];
   return <div className="min-h-screen bg-brand-gray-light">
@@ -147,11 +170,14 @@ const Wetenschap = () => {
                         <h3 className="text-xl font-semibold text-brand-gray-dark">
                           {mechanisme.title}
                         </h3>
-                        <div className={`text-2xl font-bold ${mechanisme.color} ml-4`}>
-                          {mechanisme.percentage}
-                        </div>
                       </div>
                     </div>
+                  </div>
+                  
+                  <div className="mb-3">
+                    <span className={`inline-block text-xs px-3 py-1 rounded-full font-medium bg-brand-gray-light ${mechanisme.color}`}>
+                      {mechanisme.jdrTag}
+                    </span>
                   </div>
                   
                   <p className="text-brand-gray-medium mb-4 leading-relaxed">
@@ -159,11 +185,11 @@ const Wetenschap = () => {
                   </p>
                   
                   <div className="flex flex-wrap gap-2">
-                    {mechanisme.studies.map((study, studyIndex) => typeof study === 'string' ? <span key={studyIndex} className="inline-block bg-brand-gray-light text-brand-gray-dark text-xs px-3 py-1 rounded-full">
-                          {study}
-                        </span> : <a key={studyIndex} href={study.url} target="_blank" rel="noopener noreferrer" className="inline-block bg-brand-gray-light text-brand-gray-dark text-xs px-3 py-1 rounded-full hover:bg-brand-blue hover:text-white transition-colors duration-200">
-                          {study.name}
-                        </a>)}
+                    {mechanisme.studies.map((study, studyIndex) => 
+                      <a key={studyIndex} href={study.url} target="_blank" rel="noopener noreferrer" className="inline-block bg-brand-gray-light text-brand-gray-dark text-xs px-3 py-1 rounded-full hover:bg-brand-blue hover:text-white transition-colors duration-200">
+                        {study.name}
+                      </a>
+                    )}
                   </div>
                 </div>;
           })}
