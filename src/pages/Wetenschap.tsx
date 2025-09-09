@@ -24,6 +24,16 @@ const Wetenschap = () => {
     ],
     color: "text-brand-blue"
   }, {
+    icon: Brain,
+    title: "65-67% minder angst",
+    description: "Deelnemers ervaren minder algemene angstgevoelens in het dagelijks leven. Ze voelen zich rustiger en minder gespannen, waardoor angst hen minder belemmert.",
+    jdrTag: "Werkeisen/Stressoren",
+    studies: [
+      { name: "De Vibe et al. (2017)", url: "https://www.researchgate.net/publication/320809758_Mindfulness-based_stress_reduction_MBSR_for_improving_health_quality_of_life_and_social_functioning_in_adults_a_systematic_review_and_meta-analysis" },
+      { name: "Bartlett et al. (2018)", url: "https://scispace.com/pdf/a-systematic-review-and-meta-analysis-of-workplace-448vdu0m18.pdf" }
+    ],
+    color: "text-brand-green"
+  }, {
     icon: Target,
     title: "64-77% meer veerkracht en weerbaarheid",
     description: "Deelnemers ontwikkelen mentale spierkracht om uitdagingen het hoofd te bieden. Ze herstellen sneller van tegenslagen en blijven effectief functioneren onder druk.",
@@ -33,7 +43,66 @@ const Wetenschap = () => {
       { name: "Vonderlin et al. (2020)", url: "https://link.springer.com/article/10.1007/s12671-020-01328-3" },
       { name: "Dou et al. (2024)", url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC12210539/" }
     ],
+    color: "text-brand-blue"
+  }, {
+    icon: Brain,
+    title: "62-74% meer mindfulness",
+    description: "Deelnemers worden bewuster van hun gedachten, emoties en lichaamssignalen. Ze leven meer in het moment en reageren minder automatisch op situaties.",
+    jdrTag: "Persoonlijke Hulpbronnen",
+    studies: [
+      { name: "De Vibe et al. (2017)", url: "https://www.researchgate.net/publication/320809758_Mindfulness-based_stress_reduction_MBSR_for_improving_health_quality_of_life_and_social_functioning_in_adults_a_systematic_review_and_meta-analysis" },
+      { name: "Vonderlin et al. (2020)", url: "https://link.springer.com/article/10.1007/s12671-020-01328-3" },
+      { name: "Bartlett et al. (2018)", url: "https://scispace.com/pdf/a-systematic-review-and-meta-analysis-of-workplace-448vdu0m18.pdf" },
+      { name: "Lensen et al. (2024)", url: "https://www.frontiersin.org/journals/education/articles/10.3389/feduc.2024.1385375/full" },
+      { name: "Michaelsen et al. (2023)", url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC10172073/" }
+    ],
     color: "text-brand-green"
+  }, {
+    icon: TrendingUp,
+    title: "71-79% meer self-efficacy",
+    description: "Het vertrouwen in eigen kunnen groeit significant. Deelnemers pakken uitdagingen proactief aan in plaats van ze te vermijden of uit te stellen.",
+    jdrTag: "Persoonlijke Hulpbronnen",
+    studies: [
+      { name: "Lensen et al. (2024)", url: "https://www.frontiersin.org/journals/education/articles/10.3389/feduc.2024.1385375/full" },
+      { name: "Żołnierczyk-Zreda et al. (2016)", url: "https://academic.oup.com/occmed/article-abstract/66/8/630/2750551?redirectedFrom=fulltext" }
+    ],
+    color: "text-brand-blue"
+  }, {
+    icon: Heart,
+    title: "70% betere emotieregulatie",
+    description: "Sterke emoties zoals frustratie of boosheid krijgen minder grip. Deelnemers reageren rustiger in moeilijke situaties en maken bewustere keuzes.",
+    jdrTag: "Persoonlijke Hulpbronnen",
+    studies: [
+      { name: "Lensen et al. (2024)", url: "https://www.frontiersin.org/journals/education/articles/10.3389/feduc.2024.1385375/full" }
+    ],
+    color: "text-brand-green"
+  }, {
+    icon: Heart,
+    title: "68% meer zelfcompassie",
+    description: "Deelnemers gaan vriendelijker om met zichzelf. Ze zijn minder zelfkritisch bij fouten en behandelen zichzelf met dezelfde compassie die ze anderen zouden tonen.",
+    jdrTag: "Persoonlijke Hulpbronnen",
+    studies: [
+      { name: "Michaelsen et al. (2023)", url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC10172073/" }
+    ],
+    color: "text-brand-blue"
+  }, {
+    icon: Users,
+    title: "64-67% beter werkklimaat",
+    description: "Teams ervaren een positievere sfeer op de werkvloer. Samenwerking verbetert en conflicten nemen af door betere onderlinge verhoudingen.",
+    jdrTag: "Werkhulpbronnen",
+    studies: [
+      { name: "Lensen et al. (2024)", url: "https://www.frontiersin.org/journals/education/articles/10.3389/feduc.2024.1385375/full" }
+    ],
+    color: "text-brand-green"
+  }, {
+    icon: Users,
+    title: "67% meer compassie voor anderen",
+    description: "Deelnemers tonen meer begrip en geduld voor collega's. Dit versterkt teamcohesie en creëert een ondersteunende werkomgeving.",
+    jdrTag: "Werkhulpbronnen",
+    studies: [
+      { name: "Vonderlin et al. (2020)", url: "https://link.springer.com/article/10.1007/s12671-020-01328-3" }
+    ],
+    color: "text-brand-blue"
   }, {
     icon: Shield,
     title: "60-84% minder burn-out klachten",
@@ -45,9 +114,19 @@ const Wetenschap = () => {
       { name: "Michaelsen et al. (2023)", url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC10172073/" },
       { name: "Dou et al. (2024)", url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC12210539/" }
     ],
-    color: "text-brand-blue"
+    color: "text-brand-green"
   }, {
     icon: Heart,
+    title: "63% meer werktevredenheid",
+    description: "Het plezier in het werk neemt toe. Taken voelen minder zwaar aan en deelnemers ervaren meer betekenis in hun dagelijkse werkzaamheden.",
+    jdrTag: "Stressreacties/Welbevinden",
+    studies: [
+      { name: "Vonderlin et al. (2020)", url: "https://link.springer.com/article/10.1007/s12671-020-01328-3" },
+      { name: "Michaelsen et al. (2023)", url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC10172073/" }
+    ],
+    color: "text-brand-blue"
+  }, {
+    icon: TrendingUp,
     title: "65% meer werkbetrokkenheid",
     description: "Teams worden gemotiveerder en meer betrokken bij hun werk. Ze investeren bewuster in hun taken en groeien samen naar betere prestaties.",
     jdrTag: "Stressreacties/Welbevinden",
@@ -57,11 +136,53 @@ const Wetenschap = () => {
     color: "text-brand-green"
   }, {
     icon: Brain,
+    title: "57-78% beter slapen en herstellen",
+    description: "Deelnemers vallen makkelijker in slaap en slapen dieper. Dit zorgt voor beter herstel en meer energie voor de volgende dag.",
+    jdrTag: "Persoonlijke Impact",
+    studies: [
+      { name: "Bartlett et al. (2018)", url: "https://scispace.com/pdf/a-systematic-review-and-meta-analysis-of-workplace-448vdu0m18.pdf" },
+      { name: "Michaelsen et al. (2023)", url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC10172073/" },
+      { name: "Dou et al. (2024)", url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC12210539/" }
+    ],
+    color: "text-brand-blue"
+  }, {
+    icon: Heart,
+    title: "59-68% meer welzijn en tevredenheid",
+    description: "De algemene levenskwaliteit stijgt merkbaar. Deelnemers voelen zich gelukkiger en meer tevreden met hun leven als geheel.",
+    jdrTag: "Persoonlijke Impact",
+    studies: [
+      { name: "Vonderlin et al. (2020)", url: "https://link.springer.com/article/10.1007/s12671-020-01328-3" },
+      { name: "Lensen et al. (2024)", url: "https://www.frontiersin.org/journals/education/articles/10.3389/feduc.2024.1385375/full" },
+      { name: "Bartlett et al. (2018)", url: "https://scispace.com/pdf/a-systematic-review-and-meta-analysis-of-workplace-448vdu0m18.pdf" }
+    ],
+    color: "text-brand-green"
+  }, {
+    icon: Award,
+    title: "61-63% betere levenskwaliteit",
+    description: "Het algehele gevoel van welbevinden en tevredenheid met het leven stijgt. Deelnemers ervaren meer vreugde en betekenis in hun dagelijkse activiteiten.",
+    jdrTag: "Persoonlijke Impact",
+    studies: [
+      { name: "De Vibe et al. (2017)", url: "https://www.researchgate.net/publication/320809758_Mindfulness-based_stress_reduction_MBSR_for_improving_health_quality_of_life_and_social_functioning_in_adults_a_systematic_review_and_meta-analysis" },
+      { name: "Vonderlin et al. (2020)", url: "https://link.springer.com/article/10.1007/s12671-020-01328-3" },
+      { name: "Michaelsen et al. (2023)", url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC10172073/" }
+    ],
+    color: "text-brand-blue"
+  }, {
+    icon: Brain,
     title: "65-68% betere mentale gezondheid",
     description: "De psychische gesteldheid verbetert merkbaar. Deelnemers voelen zich mentaal sterker en stabieler, met minder last van negatieve gedachten.",
     jdrTag: "Persoonlijke Impact",
     studies: [
       { name: "De Vibe et al. (2017)", url: "https://www.researchgate.net/publication/320809758_Mindfulness-based_stress_reduction_MBSR_for_improving_health_quality_of_life_and_social_functioning_in_adults_a_systematic_review_and_meta-analysis" },
+      { name: "Michaelsen et al. (2023)", url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC10172073/" }
+    ],
+    color: "text-brand-green"
+  }, {
+    icon: Heart,
+    title: "63% betere fysieke gezondheid",
+    description: "Het lichaam functioneert beter door minder stress. Deelnemers ervaren minder lichamelijke klachten en hebben meer energie.",
+    jdrTag: "Persoonlijke Impact",
+    studies: [
       { name: "Michaelsen et al. (2023)", url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC10172073/" }
     ],
     color: "text-brand-blue"
@@ -160,24 +281,21 @@ const Wetenschap = () => {
           <div className="grid lg:grid-cols-2 gap-8">
             {mechanismen.map((mechanisme, index) => {
             const IconComponent = mechanisme.icon;
-            return <div key={index} className="bg-white rounded-xl p-6 shadow-lg">
-                  <div className="flex items-start mb-4">
-                    <div className={`inline-flex items-center justify-center w-12 h-12 rounded-full bg-brand-gray-light ${mechanisme.color} mr-4 flex-shrink-0`}>
-                      <IconComponent className="h-6 w-6" />
-                    </div>
-                    <div className="flex-1">
-                      <div className="flex items-start justify-between mb-2">
-                        <h3 className="text-xl font-semibold text-brand-gray-dark">
-                          {mechanisme.title}
-                        </h3>
-                      </div>
-                    </div>
-                  </div>
-                  
-                  <div className="mb-3">
+            return <div key={index} className="bg-white rounded-xl p-6 shadow-lg relative">
+                  {/* JD-R Tag in top-right corner */}
+                  <div className="absolute top-4 right-4">
                     <span className={`inline-block text-xs px-3 py-1 rounded-full font-medium bg-brand-gray-light ${mechanisme.color}`}>
                       {mechanisme.jdrTag}
                     </span>
+                  </div>
+                  
+                  <div className="flex items-center mb-4 pr-16">
+                    <div className={`inline-flex items-center justify-center w-12 h-12 rounded-full bg-brand-gray-light ${mechanisme.color} mr-4 flex-shrink-0`}>
+                      <IconComponent className="h-6 w-6" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-brand-gray-dark leading-tight">
+                      {mechanisme.title}
+                    </h3>
                   </div>
                   
                   <p className="text-brand-gray-medium mb-4 leading-relaxed">
