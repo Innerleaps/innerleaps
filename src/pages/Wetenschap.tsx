@@ -130,7 +130,7 @@ const Wetenschap = () => {
       {/* Underlying Mechanisms */}
       <section className="bg-brand-gray-light section-padding">
         <div className="container-custom">
-          <h2 className="text-3xl md:text-4xl font-bold text-brand-gray-dark text-center mb-12">Onderliggende mechanismen: hoe onze cursus in stressmanagement verzuim en retentie beïnvloedt</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-brand-gray-dark text-center mb-12">Hoe onze cursus in stressmanagement verzuim beïnvloedt</h2>
           
           <p className="text-xl md:text-2xl text-brand-gray-medium text-center max-w-4xl mx-auto mb-16 leading-relaxed">
             De directe effecten op verzuim en retentie worden gedreven door de bewezen impact van MBSR op diverse onderliggende psychologische en fysiologische factoren die cruciaal zijn voor medewerkerwelzijn en prestaties:
