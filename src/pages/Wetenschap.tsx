@@ -282,20 +282,17 @@ const Wetenschap = () => {
             {mechanismen.map((mechanisme, index) => {
             const IconComponent = mechanisme.icon;
             return <div key={index} className="bg-white rounded-xl p-6 shadow-lg relative">
-                  {/* JD-R Tag in top-right corner */}
-                  <div className="absolute top-4 right-4">
-                    <span className={`inline-block text-xs px-3 py-1 rounded-full font-medium bg-brand-gray-light ${mechanisme.color}`}>
-                      {mechanisme.jdrTag}
-                    </span>
-                  </div>
-                  
-                  <div className="flex items-center mb-4 pr-16">
-                    <div className={`inline-flex items-center justify-center w-12 h-12 rounded-full bg-brand-gray-light ${mechanisme.color} mr-4 flex-shrink-0`}>
+                  <div className="flex items-center mb-4">
+                    <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-brand-orange/10 text-brand-orange mr-4 flex-shrink-0">
                       <IconComponent className="h-6 w-6" />
                     </div>
-                    <h3 className="text-xl font-semibold text-brand-gray-dark leading-tight">
+                    <h3 className="text-xl font-semibold text-brand-orange leading-tight flex-1">
                       {mechanisme.title}
                     </h3>
+                    {/* JD-R Tag aligned with title center */}
+                    <span className="inline-block text-xs px-3 py-1 rounded-full font-medium bg-brand-gray-light text-brand-gray-dark ml-4">
+                      {mechanisme.jdrTag}
+                    </span>
                   </div>
                   
                   <p className="text-brand-gray-medium mb-4 leading-relaxed">
