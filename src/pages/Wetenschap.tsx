@@ -14,11 +14,16 @@ const Wetenschap = () => {
     title: "Burnout Reductie",
     percentage: "36%",
     description: "Het MBSR-programma toont bewezen resultaten bij burnout preventie. Deelnemers ervaren 36% minder burnout, 25% minder emotionele uitputting en significante verbeteringen in stressreductie en algemene gezondheid.",
-    studies: [
-      { name: "Shoker et al. (2024)", url: "https://www.frontiersin.org/journals/public-health/articles/10.3389/fpubh.2024.1381373/full" },
-      { name: "Mackenzie et al. (2006)", url: "https://www.tandfonline.com/doi/full/10.1080/15555240.2013.779518#references-Section" },
-      { name: "AIMS Public Health (2025)", url: "https://www.aimspress.com/article/doi/10.3934/publichealth.2025007" }
-    ],
+    studies: [{
+      name: "Shoker et al. (2024)",
+      url: "https://www.frontiersin.org/journals/public-health/articles/10.3389/fpubh.2024.1381373/full"
+    }, {
+      name: "Mackenzie et al. (2006)",
+      url: "https://www.tandfonline.com/doi/full/10.1080/15555240.2013.779518#references-Section"
+    }, {
+      name: "AIMS Public Health (2025)",
+      url: "https://www.aimspress.com/article/doi/10.3934/publichealth.2025007"
+    }],
     color: "text-brand-blue"
   }, {
     icon: Heart,
@@ -105,8 +110,8 @@ const Wetenschap = () => {
                   <p className="text-brand-gray-medium">Jon Kabat-Zinn ontwikkelt MBSR aan de University of Massachusetts Medical School</p>
                 </div>
                 <div>
-                  <h4 className="font-semibold text-brand-gray-dark mb-2">2000+ Studies</h4>
-                  <p className="text-brand-gray-medium">Meer dan 2000 peer-reviewed onderzoeken naar de effectiviteit van MBSR</p>
+                  <h4 className="font-semibold text-brand-gray-dark mb-2">Honderden onderzoeken</h4>
+                  <p className="text-brand-gray-medium">Meer dan 100 peer-reviewed onderzoeken gepubliceerd naar de effectiviteit van MBSR</p>
                 </div>
                 <div>
                   <h4 className="font-semibold text-brand-gray-dark mb-2">40+ Landen</h4>
@@ -156,23 +161,11 @@ const Wetenschap = () => {
                   </p>
                   
                   <div className="flex flex-wrap gap-2">
-                    {mechanisme.studies.map((study, studyIndex) => (
-                      typeof study === 'string' ? (
-                        <span key={studyIndex} className="inline-block bg-brand-gray-light text-brand-gray-dark text-xs px-3 py-1 rounded-full">
+                    {mechanisme.studies.map((study, studyIndex) => typeof study === 'string' ? <span key={studyIndex} className="inline-block bg-brand-gray-light text-brand-gray-dark text-xs px-3 py-1 rounded-full">
                           {study}
-                        </span>
-                      ) : (
-                        <a 
-                          key={studyIndex} 
-                          href={study.url} 
-                          target="_blank" 
-                          rel="noopener noreferrer"
-                          className="inline-block bg-brand-gray-light text-brand-gray-dark text-xs px-3 py-1 rounded-full hover:bg-brand-blue hover:text-white transition-colors duration-200"
-                        >
+                        </span> : <a key={studyIndex} href={study.url} target="_blank" rel="noopener noreferrer" className="inline-block bg-brand-gray-light text-brand-gray-dark text-xs px-3 py-1 rounded-full hover:bg-brand-blue hover:text-white transition-colors duration-200">
                           {study.name}
-                        </a>
-                      )
-                    ))}
+                        </a>)}
                   </div>
                 </div>;
           })}
@@ -224,7 +217,7 @@ const Wetenschap = () => {
         <div className="container-custom">
           <div className="grid md:grid-cols-3 gap-8">
             <div>
-              <div className="text-2xl font-bold mb-4">Innerleaps</div>
+              <div className="text-2xl font-bold mb-4">Halt.academy</div>
               <p className="text-gray-300 leading-relaxed">
                 MBSR-gebaseerde stressreductieprogramma's voor meetbare bedrijfsresultaten. Gebaseerd op het baanbrekende werk van Jon Kabat-Zinn.
               </p>
@@ -232,9 +225,8 @@ const Wetenschap = () => {
             <div>
               <h3 className="text-lg font-semibold mb-4">Contact</h3>
               <div className="space-y-2 text-gray-300">
-                <p>Email: bas@innerleaps.nl</p>
+                <p>Email: bas@haltacademy.nl</p>
                 <p>Telefoon: 06 23 45 34 77</p>
-                <p>KVK nummer: 98136925</p>
                 <div className="mt-4 flex justify-start">
                   <Avatar className="w-24 h-24">
                     <AvatarImage src="/lovable-uploads/eaa7a159-2f85-4fa3-b487-4855426f2c14.png" alt="Bas Ter Haar Romenij" />
@@ -254,7 +246,7 @@ const Wetenschap = () => {
             </div>
           </div>
           <div className="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
-            <p>&copy; 2024 Innerleaps. Alle rechten voorbehouden.</p>
+            <p>&copy; 2024 Halt.academy. Alle rechten voorbehouden.</p>
           </div>
         </div>
       </footer>
