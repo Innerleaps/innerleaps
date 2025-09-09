@@ -23,7 +23,7 @@ const ProcessSection = () => {
     {
       icon: Presentation,
       title: "Stap 3: Masterclass om programma te ervaren",
-      description: "Praktische ervaring van het programma voordat je een beslissing neemt",
+      description: "Praktische ervaring van het programma waar werknemers zich kunnen aanmelden",
       color: "bg-brand-orange"
     },
     {
