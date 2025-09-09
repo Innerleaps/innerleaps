@@ -68,8 +68,12 @@ const ProgramSection = () => {
         {/* Program Steps */}
         <div className="space-y-8">
           <h3 className="text-3xl md:text-4xl font-bold text-brand-gray-dark text-center mb-8">
-            Programma Overzicht
+            9 stappen naar duurzame gedragsverandering
           </h3>
+          
+          <p className="text-xl md:text-2xl text-brand-gray-medium max-w-4xl mx-auto leading-relaxed text-center mb-8">
+            Elke workshop bouwt voort op de vorige. Deelnemers leren stress herkennen en managen met concrete tools. Tijdens de oefenworkshop komen alle technieken en methodes aan bod. Daarna ontwikkelt elke deelnemer zijn of haar eigen persoonlijke stressmanagement programma. De laatste week zorgt voor duurzame integratie in het dagelijkse werk.
+          </p>
           
           <div className="text-center mb-12">
             <Link to="/programma">
