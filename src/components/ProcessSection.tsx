@@ -10,7 +10,7 @@ const ProcessSection = () => {
   const steps = [
     {
       icon: Calendar,
-      title: "Een vriendelijke gesprek met Bas",
+      title: "Stap 1:",
       description: "Vrijblijvend gesprek om elkaar te leren kennen en je behoeften te bespreken",
       color: "bg-brand-orange"
     },
