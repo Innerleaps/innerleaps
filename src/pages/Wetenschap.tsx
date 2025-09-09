@@ -115,7 +115,7 @@ const Wetenschap = () => {
                 </div>
                 <div>
                   <h4 className="font-semibold text-brand-gray-dark mb-2">40+ Landen</h4>
-                  <p className="text-brand-gray-medium">MBSR wordt wereldwijd toegepast in ziekenhuizen, universiteiten en bedrijven</p>
+                  <p className="text-brand-gray-medium">100+ onderzoeken</p>
                 </div>
                 <div>
                   <h4 className="font-semibold text-brand-gray-dark mb-2">Evidence-Based</h4>
