@@ -22,7 +22,7 @@ const OverOns = () => {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-gray-dark">
               Wie zijn wij?
             </h1>
-            <p className="text-xl text-brand-gray-medium max-w-3xl mx-auto leading-relaxed">
+            <p className="text-xl md:text-2xl text-brand-gray-medium max-w-3xl mx-auto leading-relaxed text-center">
               De mensen achter Halt.academy - en waarom we dit doen
             </p>
           </div>

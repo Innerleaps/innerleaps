@@ -71,8 +71,8 @@ const ProgramSection = () => {
             9 stappen naar duurzame gedragsverandering
           </h3>
           
-          <p className="text-xl md:text-2xl text-brand-gray-medium max-w-4xl mx-auto leading-relaxed text-left mb-8">
-            Elke workshop bouwt voort op de vorige. Deelnemers leren stress herkennen en managen met concrete tools. Tijdens de oefenworkshop komen alle technieken en methodes aan bod. Daarna ontwikkelt elke deelnemer zijn of haar eigen persoonlijke stressmanagement programma. De laatste week zorgt voor duurzame integratie in het dagelijkse werk.
+          <p className="text-xl md:text-2xl text-brand-gray-medium max-w-4xl mx-auto leading-relaxed text-center mb-8">
+            Elke workshop bouwt voort op de vorige: van stress herkennen naar concrete tools, tot het ontwikkelen van een persoonlijk stressmanagement programma en integratie in het dagelijkse leven.
           </p>
           
           <div className="text-center mb-12">

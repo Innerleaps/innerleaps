@@ -98,10 +98,7 @@ const VoorWie = () => {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-gray-dark">
               Voor Wie
             </h1>
-            <p className="text-xl text-brand-gray-medium max-w-4xl mx-auto leading-relaxed">
-              Wie Profiteert van Ons Stressreductie & Veerkrachtprogramma?
-            </p>
-            <p className="text-lg text-brand-gray-medium max-w-4xl mx-auto leading-relaxed">
+            <p className="text-xl md:text-2xl text-brand-gray-medium max-w-4xl mx-auto leading-relaxed text-center">
               Ons programma is ontwikkeld voor organisaties die verzuim willen verlagen, medewerkerretentie willen verhogen, en een gezondere, productievere werkomgeving willen creëren. De wetenschappelijk bewezen technieken zijn effectief in diverse sectoren en voor verschillende typen functies.
             </p>
           </div>
@@ -142,7 +139,7 @@ const VoorWie = () => {
           {/* Implementatiemogelijkheden */}
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-brand-gray-dark mb-8 text-center">Implementatiemogelijkheden</h2>
-            <p className="text-lg text-brand-gray-medium mb-8 text-center max-w-4xl mx-auto">
+            <p className="text-xl md:text-2xl text-brand-gray-medium mb-8 text-center max-w-4xl mx-auto leading-relaxed">
               Ons programma kan op verschillende manieren worden geïmplementeerd, afhankelijk van de specifieke behoeften en structuur van uw organisatie:
             </p>
             

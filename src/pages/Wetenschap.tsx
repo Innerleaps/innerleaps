@@ -89,7 +89,7 @@ const Wetenschap = () => {
               De Wetenschap Achter Halt.academy
             </h1>
             
-            <p className="text-xl text-brand-gray-medium leading-relaxed mb-8">
+            <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed mb-8 text-center">
               Ons programma is gebaseerd op <strong>meer dan 40 jaar wetenschappelijk onderzoek</strong> naar Mindfulness-Based Stress Reduction (MBSR), ontwikkeld door Jon Kabat-Zinn in 1979. Wetenschappelijk erkende studies tonen consistent aan dat investeren in de mentale veerkracht van medewerkers leidt tot aantoonbare verbeteringen in bedrijfsresultaten, met name op het gebied van verzuim en retentie.
             </p>
 
@@ -127,7 +127,7 @@ const Wetenschap = () => {
         <div className="container-custom">
           <h2 className="text-3xl md:text-4xl font-bold text-brand-gray-dark text-center mb-12">Onderliggende mechanismen: hoe onze cursus in stressmanagement verzuim en retentie beïnvloedt</h2>
           
-          <p className="text-xl text-brand-gray-medium text-center max-w-4xl mx-auto mb-16">
+          <p className="text-xl md:text-2xl text-brand-gray-medium text-center max-w-4xl mx-auto mb-16 leading-relaxed">
             De directe effecten op verzuim en retentie worden gedreven door de bewezen impact van MBSR op diverse onderliggende psychologische en fysiologische factoren die cruciaal zijn voor medewerkerwelzijn en prestaties:
           </p>
 
