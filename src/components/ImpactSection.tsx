@@ -3,82 +3,28 @@ import { Shield, Heart, Moon, Users, Target, BarChart3, Smile } from 'lucide-rea
 import { Link } from 'react-router-dom';
 const ImpactSection = () => {
   const impacts = [
-  // Werkeisen/Stressoren
-  {
-    icon: Shield,
-    title: "65-72% minder werkstress",
-    description: "Minder werkstress en spanning",
-    color: "text-brand-orange",
-    tag: "Werkeisen/Stressoren"
-  },
-  // Oefenen: Praktijk dag
   {
     icon: Target,
     title: "64-77% meer veerkracht en weerbaarheid",
     description: "Beter omgaan met uitdagingen",
     color: "text-brand-orange",
     tag: "Persoonlijke Hulpbronnen"
-  }, {
-    icon: Heart,
-    title: "71-79% meer self-efficacy",
-    description: "Meer vertrouwen in eigen kunnen",
-    color: "text-brand-orange",
-    tag: "Persoonlijke Hulpbronnen"
-  }, {
-    icon: Smile,
-    title: "70% betere emotieregulatie",
-    description: "Beter beheersen van emoties",
-    color: "text-brand-orange",
-    tag: "Persoonlijke Hulpbronnen"
   },
-  // Werkhulpbronnen
-  {
-    icon: Users,
-    title: "64-67% beter werkklimaat",
-    description: "Positievere werkomgeving",
-    color: "text-brand-orange",
-    tag: "Werkhulpbronnen"
-  }, {
-    icon: Heart,
-    title: "67% meer compassie voor anderen",
-    description: "Empathie en begrip voor collega's",
-    color: "text-brand-orange",
-    tag: "Werkhulpbronnen"
-  },
-  // Stressreacties/Welbevinden
   {
     icon: Shield,
     title: "60-84% minder burn-out klachten",
     description: "Minder emotionele uitputting",
     color: "text-brand-orange",
     tag: "Stressreacties/Welbevinden"
-  }, {
-    icon: Smile,
-    title: "63% meer werktevredenheid",
-    description: "Meer plezier in het werk",
-    color: "text-brand-orange",
-    tag: "Stressreacties/Welbevinden"
-  }, {
+  },
+  {
     icon: Target,
     title: "65% meer werkbetrokkenheid",
     description: "Gemotiveerde teams die samen groeien",
     color: "text-brand-orange",
     tag: "Stressreacties/Welbevinden"
   },
-  // Persoonlijke Impact
   {
-    icon: Moon,
-    title: "57-78% beter slapen en herstellen",
-    description: "Rustiger slapen en beter herstel",
-    color: "text-brand-orange",
-    tag: "Persoonlijke Impact"
-  }, {
-    icon: Heart,
-    title: "59-68% meer welzijn en tevredenheid",
-    description: "Levenskwaliteit en tevredenheid",
-    color: "text-brand-orange",
-    tag: "Persoonlijke Impact"
-  }, {
     icon: BarChart3,
     title: "63-68% betere algemene gezondheid",
     description: "Verbeterde fysieke en mentale gezondheid",
@@ -124,7 +70,7 @@ const ImpactSection = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link to="/wetenschap">
               <Button variant="outline" className="w-full sm:w-auto border-2 border-brand-blue text-brand-blue hover:text-brand-blue hover:border-brand-blue hover:bg-transparent font-semibold py-3 px-8 rounded-lg text-base md:text-lg transition-all duration-300 transform hover:-translate-y-0.5">
-                Ontdek de wetenschap erachter
+                ontdek alle uitkomsten
               </Button>
             </Link>
           </div>
