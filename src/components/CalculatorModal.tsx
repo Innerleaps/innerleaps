@@ -1,135 +1,110 @@
-
 import { useState } from 'react';
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
-import { Checkbox } from '@/components/ui/checkbox';
-import { Card } from '@/components/ui/card';
-import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
-import { Calculator as CalculatorIcon, Loader2 } from 'lucide-react';
-import { useNavigate } from 'react-router-dom';
+import { Calculator, CheckCircle } from 'lucide-react';
+import { toast } from '@/hooks/use-toast';
 import { supabase } from '@/integrations/supabase/client';
-import { useToast } from '@/hooks/use-toast';
 
 interface CalculatorModalProps {
   isOpen: boolean;
   onClose: () => void;
 }
 
-const CalculatorModal = ({
-  isOpen,
-  onClose
-}: CalculatorModalProps) => {
-  const navigate = useNavigate();
-  const { toast } = useToast();
-  const [isSubmitting, setIsSubmitting] = useState(false);
+const CalculatorModal = ({ isOpen, onClose }: CalculatorModalProps) => {
   const [formData, setFormData] = useState({
-    name: '',
+    naam: '',
     email: '',
-    phone: '',
-    functie: '',
-    company: '',
-    employees: '',
-    avgEmployeeCosts: '',
-    currentAbsenteeism: '',
-    currentTurnover: ''
+    bedrijfsnaam: '',
+    verzuimPercentage: '5.2',
+    aantalDeelnemers: '15',
+    brutoJaarsalaris: '39700'
   });
-  const [dataConfirmed, setDataConfirmed] = useState(false);
 
-  const calculateSavings = async () => {
-    setIsSubmitting(true);
-    
-    try {
-      const AD = parseInt(formData.employees) || 0;
-      const GWS = parseInt(formData.avgEmployeeCosts) || 0;
-      const HZ = parseFloat(formData.currentAbsenteeism) || 0;
-      const HV = parseFloat(formData.currentTurnover) || 0;
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
 
-      // Constanten
-      const VK = 2;
-      const MV = 0.24;
-      const RV = 0.24;
-      const VKP = 1.5;
-      const G = 15;
-      const I = 8625;
+  const calculateROI = () => {
+    const deelnemers = parseInt(formData.aantalDeelnemers);
+    const salaris = parseFloat(formData.brutoJaarsalaris);
+    const verzuimPerc = parseFloat(formData.verzuimPercentage) / 100;
 
-      // Berekeningen volgens de juiste formules
-      const verzuimBesparing = (HZ / 100) * AD * GWS * VK * MV;
-      const retentieBesparing = (HV / 100) * AD * GWS * RV * VKP;
-      const totaleBesparing = verzuimBesparing + retentieBesparing;
-      
-      const numberOfGroups = Math.ceil(AD / G);
-      const totalInvestment = numberOfGroups * I;
-      const netBesparing = totaleBesparing - totalInvestment;
-      
-      const roi = totalInvestment > 0 ? (totaleBesparing / totalInvestment) * 100 : 0;
+    // Stap 1: Totale Loonkosten
+    const totaleLoonkosten = deelnemers * salaris;
 
-      const results = {
-        verzuimBesparing: Math.round(verzuimBesparing),
-        retentieBesparing: Math.round(retentieBesparing),
-        totalSaving: Math.round(netBesparing),
-        grossSaving: Math.round(totaleBesparing),
-        investment: totalInvestment,
-        roi: Math.round(roi),
-        numberOfGroups: numberOfGroups,
-        constants: {
-          VK: VK,
-          MV: MV * 100,
-          RV: RV * 100,
-          VKP: VKP
-        }
-      };
+    // Stap 2: Verzuimkosten (185% factor volgens Sazas, 2024)
+    const verzuimkosten = totaleLoonkosten * verzuimPerc * 1.85;
 
-      // Submit to database and send email
-      const { data, error } = await supabase.functions.invoke('submit-calculator', {
-        body: {
-          name: formData.name,
-          email: formData.email,
-          phone: formData.phone,
-          functie: formData.functie,
-          company: formData.company,
-          employees: parseInt(formData.employees),
-          avgEmployeeCosts: parseInt(formData.avgEmployeeCosts),
-          currentAbsenteeism: parseFloat(formData.currentAbsenteeism),
-          currentTurnover: parseFloat(formData.currentTurnover),
-          calculationResults: results
-        }
-      });
+    // Stap 3: Programmakosten
+    const aantalGroepen = Math.ceil(deelnemers / 15);
+    const programmakosten = aantalGroepen * 5925;
 
-      if (error) {
-        console.error('Submission error:', error);
-        toast({
-          title: "Fout bij opslaan",
-          description: "Er is een fout opgetreden bij het opslaan van uw gegevens. Probeer het opnieuw.",
-          variant: "destructive",
-        });
-        return;
-      }
+    // Stap 4: Verzuimbesparing
+    const minVerzuimbesparing = verzuimkosten * 0.15;
+    const maxVerzuimbesparing = verzuimkosten * 0.21;
 
-      console.log('Successfully submitted:', data);
-      
+    // Stap 5: Terugverdientijd
+    const minTerugverdientijd = programmakosten / maxVerzuimbesparing * 12;
+    const maxTerugverdientijd = programmakosten / minVerzuimbesparing * 12;
+
+    // Stap 6: ROI Berekening
+    const minROI = (minVerzuimbesparing - programmakosten) / programmakosten * 100;
+    const maxROI = (maxVerzuimbesparing - programmakosten) / programmakosten * 100;
+
+    return {
+      totaleLoonkosten,
+      verzuimkosten,
+      programmakosten,
+      minVerzuimbesparing,
+      maxVerzuimbesparing,
+      minTerugverdientijd,
+      maxTerugverdientijd,
+      minROI,
+      maxROI,
+      showROI: maxROI >= 100
+    };
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+
+    // Basic validation
+    if (!formData.naam || !formData.email || !formData.bedrijfsnaam) {
       toast({
-        title: "Gegevens opgeslagen",
-        description: "Uw berekening is succesvol opgeslagen en verstuurd.",
+        title: "Velden vereist",
+        description: "Vul alle verplichte velden in om jouw ROI-analyse te ontvangen.",
+        variant: "destructive"
       });
+      return;
+    }
 
-      // Navigate to berekening page with results
-      navigate('/berekening', {
-        state: {
-          results: results,
-          formData: formData
+    setIsSubmitting(true);
+
+    try {
+      const calculationResults = calculateROI();
+
+      const { error } = await supabase.functions.invoke('send-roi-analysis', {
+        body: {
+          ...formData,
+          calculationResults
         }
       });
 
-      // Close the modal
-      onClose();
+      if (error) throw error;
+
+      setIsSubmitted(true);
+      toast({
+        title: "ROI-analyse verstuurd!",
+        description: `Je ontvangt de analyse binnen 1-2 minuten op ${formData.email}`
+      });
 
     } catch (error) {
-      console.error('Error calculating savings:', error);
+      console.error('Error sending ROI analysis:', error);
       toast({
-        title: "Fout opgetreden",
-        description: "Er is een onverwachte fout opgetreden. Probeer het opnieuw.",
-        variant: "destructive",
+        title: "Er ging iets mis",
+        description: "Probeer het later opnieuw of neem contact met ons op.",
+        variant: "destructive"
       });
     } finally {
       setIsSubmitting(false);
@@ -145,17 +120,14 @@ const CalculatorModal = ({
 
   const resetCalculator = () => {
     setFormData({
-      name: '',
+      naam: '',
       email: '',
-      phone: '',
-      functie: '',
-      company: '',
-      employees: '',
-      avgEmployeeCosts: '',
-      currentAbsenteeism: '',
-      currentTurnover: ''
+      bedrijfsnaam: '',
+      verzuimPercentage: '5.2',
+      aantalDeelnemers: '15',
+      brutoJaarsalaris: '39700'
     });
-    setDataConfirmed(false);
+    setIsSubmitted(false);
   };
 
   const handleClose = () => {
@@ -163,204 +135,182 @@ const CalculatorModal = ({
     onClose();
   };
 
-  const isFormValid = formData.name && formData.email && formData.functie && formData.company && formData.employees && formData.avgEmployeeCosts && formData.currentAbsenteeism && formData.currentTurnover && dataConfirmed;
+  if (isSubmitted) {
+    return (
+      <Dialog open={isOpen} onOpenChange={handleClose}>
+        <DialogContent className="sm:max-w-2xl">
+          <div className="text-center py-8">
+            <CheckCircle className="h-16 w-16 mx-auto mb-6 text-green-400" />
+            <h2 className="text-3xl font-bold mb-4 text-brand-gray-dark">ROI-analyse verstuurd!</h2>
+            <p className="text-xl mb-6 text-brand-gray-medium">
+              Je ontvangt de gepersonaliseerde ROI-analyse binnen 1-2 minuten op <strong>{formData.email}</strong>
+            </p>
+            <p className="text-brand-gray-medium mb-8">
+              Check ook je spam-folder. Heb je vragen? Neem direct contact op met Bas via bas@innerleaps.nl
+            </p>
+            <Button 
+              onClick={() => {
+                setIsSubmitted(false);
+                setFormData({
+                  naam: '',
+                  email: '',
+                  bedrijfsnaam: '',
+                  verzuimPercentage: '5.2',
+                  aantalDeelnemers: '15',
+                  brutoJaarsalaris: '39700'
+                });
+              }} 
+              className="bg-brand-blue hover:bg-brand-blue/90 text-white font-semibold"
+            >
+              Nieuwe berekening maken
+            </Button>
+          </div>
+        </DialogContent>
+      </Dialog>
+    );
+  }
 
   return (
     <Dialog open={isOpen} onOpenChange={handleClose}>
-      <DialogContent className="max-w-3xl max-h-[90vh] overflow-y-auto">
+      <DialogContent className="sm:max-w-4xl max-h-[90vh] overflow-y-auto">
         <DialogHeader>
-          <DialogTitle className="text-xl">Bereken Uw Potentiële Besparing</DialogTitle>
-        </DialogHeader>
-
-        <Card className="p-6">
-          <div className="text-center mb-6">
-            <div className="inline-flex items-center justify-center w-12 h-12 bg-brand-blue text-white rounded-full mb-3">
-              <CalculatorIcon className="h-6 w-6" />
-            </div>
-            <h3 className="text-xl font-bold text-brand-gray-dark mb-2">
-              Bereken Uw Potentiële Besparing
-            </h3>
-            <p className="text-brand-gray-medium text-sm">
-              Vul uw gegevens in voor een persoonlijke berekening van de ROI
-            </p>
-          </div>
-
-          <div className="space-y-6">
-            {/* Persoonsinformatie section */}
-            <div>
-              <h4 className="text-base font-semibold text-brand-gray-dark mb-3">Persoonsinformatie:</h4>
-              <div className="grid md:grid-cols-2 gap-3">
-                <div>
-                  <Label htmlFor="name" className="text-brand-gray-dark font-medium text-sm">Naam *</Label>
-                  <Input 
-                    id="name" 
-                    type="text" 
-                    value={formData.name} 
-                    onChange={e => handleInputChange('name', e.target.value)} 
-                    className="mt-1 h-9 text-sm" 
-                    placeholder={!formData.name ? "Jan Janssen" : ""} 
-                    required 
-                    disabled={isSubmitting}
-                  />
-                </div>
-                
-                <div>
-                  <Label htmlFor="email" className="text-brand-gray-dark font-medium text-sm">E-mailadres *</Label>
-                  <Input 
-                    id="email" 
-                    type="email" 
-                    value={formData.email} 
-                    onChange={e => handleInputChange('email', e.target.value)} 
-                    className="mt-1 h-9 text-sm" 
-                    placeholder={!formData.email ? "jan@bedrijf.nl" : ""} 
-                    required 
-                    disabled={isSubmitting}
-                  />
-                </div>
-                
-                <div>
-                  <Label htmlFor="phone" className="text-brand-gray-dark font-medium text-sm">Telefoonnummer</Label>
-                  <Input 
-                    id="phone" 
-                    type="tel" 
-                    value={formData.phone} 
-                    onChange={e => handleInputChange('phone', e.target.value)} 
-                    className="mt-1 h-9 text-sm" 
-                    placeholder={!formData.phone ? "06 12345678" : ""} 
-                    disabled={isSubmitting}
-                  />
-                </div>
-                
-                <div>
-                  <Label htmlFor="functie" className="text-brand-gray-dark font-medium text-sm">Functie *</Label>
-                  <Input 
-                    id="functie" 
-                    type="text" 
-                    value={formData.functie} 
-                    onChange={e => handleInputChange('functie', e.target.value)} 
-                    className="mt-1 h-9 text-sm" 
-                    placeholder={!formData.functie ? "HR Manager" : ""} 
-                    required 
-                    disabled={isSubmitting}
-                  />
-                </div>
-              </div>
-            </div>
-
-            {/* Bedrijfsgegevens section */}
-            <div>
-              <h4 className="text-base font-semibold text-brand-gray-dark mb-3">Bedrijfsgegevens:</h4>
-              <div className="grid md:grid-cols-2 gap-3">
-                <div>
-                  <Label htmlFor="company" className="text-brand-gray-dark font-medium text-sm">Bedrijfsnaam *</Label>
-                  <Input 
-                    id="company" 
-                    type="text" 
-                    value={formData.company} 
-                    onChange={e => handleInputChange('company', e.target.value)} 
-                    className="mt-1 h-9 text-sm" 
-                    placeholder={!formData.company ? "Uw Bedrijf B.V." : ""} 
-                    required 
-                    disabled={isSubmitting}
-                  />
-                </div>
-                
-                <div>
-                  <Label htmlFor="employees" className="text-brand-gray-dark font-medium text-sm">Aantal medewerkers *</Label>
-                  <Input 
-                    id="employees" 
-                    type="number" 
-                    value={formData.employees} 
-                    onChange={e => handleInputChange('employees', e.target.value)} 
-                    className="mt-1 h-9 text-sm" 
-                    placeholder={!formData.employees ? "50" : ""} 
-                    required 
-                    disabled={isSubmitting}
-                  />
-                </div>
-                
-                <div>
-                  <Label htmlFor="avgEmployeeCosts" className="text-brand-gray-dark font-medium text-sm">Werkgeverskosten per medewerker per jaar (€) *</Label>
-                  <Input 
-                    id="avgEmployeeCosts" 
-                    type="number" 
-                    value={formData.avgEmployeeCosts} 
-                    onChange={e => handleInputChange('avgEmployeeCosts', e.target.value)} 
-                    className="mt-1 h-9 text-sm" 
-                    placeholder={!formData.avgEmployeeCosts ? "50000" : ""} 
-                    required 
-                    disabled={isSubmitting}
-                  />
-                </div>
-                
-                <div>
-                  <Label htmlFor="currentAbsenteeism" className="text-brand-gray-dark font-medium text-sm">Huidig verzuimpercentage (%) *</Label>
-                  <Input 
-                    id="currentAbsenteeism" 
-                    type="number" 
-                    step="0.1" 
-                    value={formData.currentAbsenteeism} 
-                    onChange={e => handleInputChange('currentAbsenteeism', e.target.value)} 
-                    className="mt-1 h-9 text-sm" 
-                    placeholder={!formData.currentAbsenteeism ? "4.2" : ""} 
-                    required 
-                    disabled={isSubmitting}
-                  />
-                </div>
-                
-                <div>
-                  <Label htmlFor="currentTurnover" className="text-brand-gray-dark font-medium text-sm">Huidig verlooppercentage (%) *</Label>
-                  <Input 
-                    id="currentTurnover" 
-                    type="number" 
-                    step="0.1" 
-                    value={formData.currentTurnover} 
-                    onChange={e => handleInputChange('currentTurnover', e.target.value)} 
-                    className="mt-1 h-9 text-sm" 
-                    placeholder={!formData.currentTurnover ? "12.5" : ""} 
-                    required 
-                    disabled={isSubmitting}
-                  />
-                </div>
-              </div>
-            </div>
-
-            {/* Data confirmation checkbox */}
-            <div className="flex items-start space-x-3">
-              <Checkbox 
-                id="dataConfirmed" 
-                checked={dataConfirmed} 
-                onCheckedChange={checked => setDataConfirmed(checked === true)} 
-                className="w-5 h-5 border-2 border-brand-blue data-[state=checked]:bg-brand-green data-[state=checked]:border-brand-green mt-0.5" 
-                disabled={isSubmitting}
-              />
-              <Label htmlFor="dataConfirmed" className="text-sm text-brand-gray-dark leading-relaxed">
-                Ik bevestig dat ik akkoord ga met het delen van deze gegevens en wil mijn potentiële besparing berekenen
-              </Label>
+          <div className="text-center">
+            <div className="inline-flex items-center bg-brand-blue/10 text-brand-blue px-4 py-2 rounded-full text-sm font-medium mb-6">
+              <Calculator className="h-4 w-4 mr-2" />
+              ROI Calculator
             </div>
             
-            <div className="pt-2">
-              <Button 
-                onClick={calculateSavings} 
-                disabled={!isFormValid || isSubmitting} 
-                className="w-full h-10"
-              >
-                {isSubmitting ? (
-                  <>
-                    <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-                    Berekening wordt opgeslagen...
-                  </>
-                ) : (
-                  'Ontvang Mijn Besparing'
-                )}
-              </Button>
+            <DialogTitle className="text-3xl font-bold mb-6 text-brand-gray-dark">
+              Bereken jouw ROI: van investering naar rendement
+            </DialogTitle>
+            
+            <p className="text-xl leading-relaxed mb-8 text-brand-gray-medium">
+              Ontvang een gepersonaliseerde ROI-analyse voor het InnerLeaps Life+ programma direct in je mailbox. Gebaseerd op wetenschappelijk onderzoek en jouw specifieke bedrijfssituatie.
+            </p>
+          </div>
+        </DialogHeader>
+        
+        <div className="space-y-6">
+          <form onSubmit={handleSubmit} className="space-y-6">
+            <div className="grid md:grid-cols-3 gap-6">
+              <div className="space-y-2">
+                <Label htmlFor="modal-naam" className="text-brand-gray-dark font-medium">
+                  Naam*
+                </Label>
+                <Input
+                  id="modal-naam"
+                  type="text"
+                  value={formData.naam}
+                  onChange={(e) => handleInputChange('naam', e.target.value)}
+                  className="bg-white border-gray-300 text-brand-gray-dark placeholder-gray-400"
+                  placeholder="Je volledige naam"
+                  required
+                />
+              </div>
+
+              <div className="space-y-2">
+                <Label htmlFor="modal-email" className="text-brand-gray-dark font-medium">
+                  Email*
+                </Label>
+                <Input
+                  id="modal-email"
+                  type="email"
+                  value={formData.email}
+                  onChange={(e) => handleInputChange('email', e.target.value)}
+                  className="bg-white border-gray-300 text-brand-gray-dark placeholder-gray-400"
+                  placeholder="je.email@bedrijf.nl"
+                  required
+                />
+              </div>
+
+              <div className="space-y-2">
+                <Label htmlFor="modal-bedrijfsnaam" className="text-brand-gray-dark font-medium">
+                  Bedrijfsnaam*
+                </Label>
+                <Input
+                  id="modal-bedrijfsnaam"
+                  type="text"
+                  value={formData.bedrijfsnaam}
+                  onChange={(e) => handleInputChange('bedrijfsnaam', e.target.value)}
+                  className="bg-white border-gray-300 text-brand-gray-dark placeholder-gray-400"
+                  placeholder="Je bedrijfsnaam"
+                  required
+                />
+              </div>
             </div>
-          </div>
-          
-          <div className="mt-4 text-xs text-brand-gray-medium">
-            * Verplichte velden. Uw gegevens worden vertrouwelijk behandeld conform onze privacyverklaring.
-          </div>
-        </Card>
+
+            <div className="grid md:grid-cols-3 gap-6">
+              <div className="space-y-2">
+                <Label htmlFor="modal-verzuim" className="text-brand-gray-dark font-medium">
+                  Huidig verzuimpercentage
+                </Label>
+                <Input
+                  id="modal-verzuim"
+                  type="number"
+                  step="0.1"
+                  value={formData.verzuimPercentage}
+                  onChange={(e) => handleInputChange('verzuimPercentage', e.target.value)}
+                  className="bg-white border-gray-300 text-brand-gray-dark placeholder-gray-400"
+                  placeholder="5.2"
+                  required
+                />
+              </div>
+
+              <div className="space-y-2">
+                <Label htmlFor="modal-deelnemers" className="text-brand-gray-dark font-medium">
+                  Aantal InnerLeaps deelnemers
+                </Label>
+                <Input
+                  id="modal-deelnemers"
+                  type="number"
+                  value={formData.aantalDeelnemers}
+                  onChange={(e) => handleInputChange('aantalDeelnemers', e.target.value)}
+                  className="bg-white border-gray-300 text-brand-gray-dark placeholder-gray-400"
+                  placeholder="15"
+                  required
+                />
+              </div>
+
+              <div className="space-y-2">
+                <Label htmlFor="modal-salaris" className="text-brand-gray-dark font-medium">
+                  Gemiddelde of mediaan bruto jaarsalaris
+                </Label>
+                <Input
+                  id="modal-salaris"
+                  type="number"
+                  value={formData.brutoJaarsalaris}
+                  onChange={(e) => handleInputChange('brutoJaarsalaris', e.target.value)}
+                  className="bg-white border-gray-300 text-brand-gray-dark placeholder-gray-400"
+                  placeholder="39700"
+                  required
+                />
+              </div>
+            </div>
+
+            <div className="text-center">
+              <p className="text-brand-gray-medium mb-6">
+                Ontvang jouw gepersonaliseerde ROI-analyse direct per email
+              </p>
+              <div className="flex justify-end space-x-3">
+                <Button
+                  type="button"
+                  variant="outline"
+                  onClick={handleClose}
+                  className="px-6 border-brand-blue text-brand-blue hover:bg-brand-blue hover:text-white"
+                >
+                  Annuleren
+                </Button>
+                <Button
+                  type="submit"
+                  disabled={isSubmitting}
+                  className="px-8 py-3 bg-brand-orange hover:bg-brand-orange/90 text-white font-semibold disabled:opacity-50"
+                >
+                  {isSubmitting ? 'Jouw analyse wordt verstuurd...' : 'Verstuur mijn ROI-analyse'}
+                </Button>
+              </div>
+            </div>
+          </form>
+        </div>
       </DialogContent>
     </Dialog>
   );
