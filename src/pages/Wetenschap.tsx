@@ -316,7 +316,7 @@ const Wetenschap = () => {
             </div>
             
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-brand-gray-dark mb-6">
-              De Wetenschap Achter Halt.academy
+              De Wetenschap Achter Innerleaps
             </h1>
             
             <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed mb-8 text-center">

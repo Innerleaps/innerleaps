@@ -232,16 +232,16 @@ const BerekeningDemo = () => {
                 />
                 <div className="text-left">
                   <p className="font-bold text-brand-gray-dark text-lg">Bas Ter Haar Romenij</p>
-                  <p className="text-brand-gray-medium">Oprichter Halt.academy</p>
+                  <p className="text-brand-gray-medium">Oprichter Innerleaps</p>
                   <p className="text-brand-blue text-sm">
-                    <a href="mailto:bas@haltacademy.nl" className="hover:underline">bas@haltacademy.nl</a> | 
+                    <a href="mailto:bas@innerleaps.nl" className="hover:underline">bas@innerleaps.nl</a> |
                     <a href="tel:+31623453477" className="hover:underline"> 06 23453477</a>
                   </p>
                 </div>
               </div>
               <div className="mt-4 text-center">
                 <p className="text-brand-gray-medium italic">
-                  "Wij vinden het echt ontzettend gaaf om organisaties fitter te zien worden. HALT helpt {demoFormData.company} graag verder"
+                  "Wij vinden het echt ontzettend gaaf om organisaties fitter te zien worden. Innerleaps helpt {demoFormData.company} graag verder"
                 </p>
               </div>
             </div>

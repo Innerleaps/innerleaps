@@ -69,7 +69,7 @@ const handler = async (req: Request): Promise<Response> => {
       <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Uw aangevraagde berekening - HALT Academy</title>
+        <title>Uw aangevraagde berekening - Innerleaps</title>
       </head>
       <body style="margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333333; background-color: #ffffff;">
         <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="background-color: #ffffff;">
@@ -125,7 +125,7 @@ const handler = async (req: Request): Promise<Response> => {
                     
                     <div style="background-color: #f1f5f9; padding: 15px; margin: 20px 0; border-left: 3px solid #2563eb;">
                       <p style="margin: 0; color: #475569; font-size: 14px; font-style: italic;">
-                        "Wij vinden het echt ontzettend gaaf om organisaties fitter te zien worden. HALT helpt ${submission.company} graag verder"
+                        "Wij vinden het echt ontzettend gaaf om organisaties fitter te zien worden. Innerleaps helpt ${submission.company} graag verder"
                       </p>
                     </div>
                     
@@ -150,10 +150,10 @@ const handler = async (req: Request): Promise<Response> => {
                             Bas Ter Haar Romenij
                           </p>
                           <p style="margin: 2px 0; color: #64748b; font-size: 13px;">
-                            HALT Academy
+                            Innerleaps
                           </p>
                           <p style="margin: 5px 0 0 0; font-size: 13px;">
-                            <a href="mailto:bas@haltacademy.nl" style="color: #2563eb; text-decoration: none;">bas@haltacademy.nl</a>
+                            <a href="mailto:bas@innerleaps.nl" style="color: #2563eb; text-decoration: none;">bas@innerleaps.nl</a>
                             <span style="color: #64748b;"> | </span>
                             <a href="tel:+31623453477" style="color: #2563eb; text-decoration: none;">06 23453477</a>
                           </p>
@@ -166,7 +166,7 @@ const handler = async (req: Request): Promise<Response> => {
                 <!-- Simple Footer -->
                 <tr>
                   <td style="padding: 15px 30px; text-align: center; font-size: 12px; color: #64748b; border-top: 1px solid #e2e8f0;">
-                    HALT Academy - ${new Date().getFullYear()}
+                    Innerleaps - ${new Date().getFullYear()}
                   </td>
                 </tr>
                 
@@ -235,7 +235,7 @@ const handler = async (req: Request): Promise<Response> => {
                           </td>
                           <td style="vertical-align: top;">
                             <p style="margin: 0; font-weight: 600; color: #333333;">Bas Ter Haar Romenij</p>
-                            <p style="margin: 5px 0 0 0; color: #666666; font-size: 14px;">Oprichter HALT Academy</p>
+                            <p style="margin: 5px 0 0 0; color: #666666; font-size: 14px;">Oprichter Innerleaps</p>
                           </td>
                         </tr>
                       </table>
@@ -259,13 +259,13 @@ const handler = async (req: Request): Promise<Response> => {
     try {
       // Send confirmation email to lead with transactional headers
       const confirmationResponse = await resend.emails.send({
-        from: "Bas Ter Haar Romenij <bas@haltacademy.nl>",
+        from: "Bas Ter Haar Romenij <bas@innerleaps.nl>",
         to: [submission.email],
         subject: `Uw kostenbesparingsberekening voor ${submission.company}`,
         html: confirmationEmailHtml,
         headers: {
           'X-Entity-Ref-ID': Math.random().toString(36).substring(7),
-          'List-Unsubscribe': '<mailto:bas@haltacademy.nl?subject=unsubscribe>',
+          'List-Unsubscribe': '<mailto:bas@innerleaps.nl?subject=unsubscribe>',
           'List-Unsubscribe-Post': 'List-Unsubscribe=One-Click',
           'Precedence': 'bulk',
           'X-Auto-Response-Suppress': 'OOF, DR, RN, NRN, AutoReply',
@@ -280,8 +280,8 @@ const handler = async (req: Request): Promise<Response> => {
 
       // Send notification email to Bas
       const notificationResponse = await resend.emails.send({
-        from: "HALT Academy Calculator <bas@haltacademy.nl>",
-        to: ["bas@haltacademy.nl"],
+        from: "Innerleaps Calculator <bas@innerleaps.nl>",
+        to: ["bas@innerleaps.nl"],
         subject: `Nieuwe Calculator Aanvraag - ${submission.company}`,
         html: notificationEmailHtml,
         headers: {

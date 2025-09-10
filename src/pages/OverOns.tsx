@@ -24,7 +24,7 @@ const OverOns = () => {
               Wie zijn wij?
             </h1>
             <p className="text-xl md:text-2xl text-brand-gray-medium max-w-3xl mx-auto leading-relaxed text-center">
-              De mensen achter Halt.academy - en waarom we dit doen
+              De mensen achter Innerleaps - en waarom we dit doen
             </p>
           </div>
 
@@ -117,7 +117,7 @@ const OverOns = () => {
                 
                 <div className="flex-1">
                   <div className="text-brand-gray-medium leading-relaxed mb-4">
-                    Halt.academy ontstond uit persoonlijke ervaring. Na jaren in het bedrijfsleven en een eigen burn-out, ontdekte Bas hoe krachtig gestructureerde mindfulness kan zijn. Samen met Dave en Guido - beide ervaren trainers die hij leerde kennen tijdens zijn herstel - ontstond het idee om deze technieken breed toegankelijk te maken voor Nederlandse organisaties.
+                    Innerleaps ontstond uit persoonlijke ervaring. Na jaren in het bedrijfsleven en een eigen burn-out, ontdekte Bas hoe krachtig gestructureerde mindfulness kan zijn. Samen met Dave en Guido - beide ervaren trainers die hij leerde kennen tijdens zijn herstel - ontstond het idee om deze technieken breed toegankelijk te maken voor Nederlandse organisaties.
                   </div>
                   
                   <blockquote className="border-l-4 border-brand-blue pl-6 italic text-brand-gray-dark">
@@ -152,7 +152,7 @@ const OverOns = () => {
                   </p>
                   
                   <p>
-                    Naast zijn werk bij Halt.academy werkt Dave als contentmanager bij de Parnassia Groep, waar hij dagelijks bezig is met mentale gezondheid in organisaties. Deze ervaring maakt hem extra goed in het begrijpen van de uitdagingen waarmee werknemers worstelen.
+                    Naast zijn werk bij Innerleaps werkt Dave als contentmanager bij de Parnassia Groep, waar hij dagelijks bezig is met mentale gezondheid in organisaties. Deze ervaring maakt hem extra goed in het begrijpen van de uitdagingen waarmee werknemers worstelen.
                   </p>
                 </div>
               </div>
