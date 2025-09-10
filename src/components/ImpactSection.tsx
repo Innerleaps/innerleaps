@@ -46,7 +46,7 @@ const ImpactSection = () => {
           }}>
                 <div className="flex flex-col space-y-4">
                   <div className="flex items-center justify-between">
-                    <div className="p-3 rounded-lg bg-brand-gray-light self-start">
+                    <div className="p-3 rounded-lg bg-white self-start">
                       <IconComponent className="h-6 w-6 text-brand-orange stroke-2" />
                     </div>
                     <span className="text-xs bg-brand-orange/5 text-brand-orange/70 px-2 py-1 rounded-full font-normal">
