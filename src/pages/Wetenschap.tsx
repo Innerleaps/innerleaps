@@ -416,7 +416,7 @@ const Wetenschap = () => {
                 Vraag het bewijs op
               </Button>
               <Button variant="outline" className="text-lg px-8 py-3 bg-white/10 hover:bg-white/20 border-2 border-white text-white hover:text-white font-semibold rounded-lg transition-all duration-300 transform hover:-translate-y-0.5" onClick={() => window.open('https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1wwDnoAHyFrV0M1FxwmbcMa9ewkDxTDdwQObwPKF-WX-wZV9DssZKtb1haoeP5qXDLenQlZt_R', '_blank')}>
-                Een vriendelijke gesprek met Bas plannen
+                Een vrijblijvend gesprek met Bas plannen
               </Button>
             </div>
           </div>
