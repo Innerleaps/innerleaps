@@ -86,7 +86,7 @@ const Programma = () => {
           {/* Header */}
           <div className="text-center space-y-6 mb-16">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-gray-dark">
-              Programma
+              Het Life+ Programma
             </h1>
             <p className="text-xl md:text-2xl text-brand-gray-medium max-w-4xl mx-auto leading-relaxed text-center">
               Ons 9-weekse MBSR-programma voor werknemers biedt een bewezen, stapsgewijze aanpak voor stressreductie en het ontwikkelen van veerkracht. Elke week bouwt voort op de vorige, met praktische vaardigheden die direct toepasbaar zijn in de werkomgeving.
