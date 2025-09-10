@@ -285,16 +285,19 @@ const Wetenschap = () => {
           <div className="grid lg:grid-cols-2 gap-8">
             {mechanismen.map((mechanisme, index) => {
             const IconComponent = mechanisme.icon;
-            return <div key={index} className="bg-white rounded-xl p-6 shadow-lg relative">
-                  <div className="flex items-center mb-4">
-                    <div className={`inline-flex items-center justify-center w-12 h-12 rounded-full bg-brand-gray-light ${mechanisme.color} mr-4 flex-shrink-0`}>
-                      <IconComponent className="h-6 w-6" />
+            return <div key={index} className="bg-white rounded-xl p-4 md:p-6 shadow-lg relative">
+                  {/* Mobile-first: Stack vertically, desktop: flex horizontally */}
+                  <div className="flex flex-col sm:flex-row sm:items-center mb-4 gap-3">
+                    <div className="flex items-center flex-1 min-w-0">
+                      <div className={`inline-flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-brand-gray-light ${mechanisme.color} mr-3 sm:mr-4 flex-shrink-0`}>
+                        <IconComponent className="h-5 w-5 sm:h-6 sm:w-6" />
+                      </div>
+                      <h3 className="text-lg sm:text-xl font-semibold text-brand-gray-dark leading-tight min-w-0">
+                        {mechanisme.title}
+                      </h3>
                     </div>
-                    <h3 className="text-xl font-semibold text-brand-gray-dark leading-tight flex-1">
-                      {mechanisme.title}
-                    </h3>
-                    {/* JD-R Tag aligned with title center */}
-                    <span className="inline-block text-xs px-3 py-1 rounded-full font-medium bg-brand-orange/10 text-brand-orange ml-4">
+                    {/* JD-R Tag - mobile: below title, desktop: aligned right */}
+                    <span className="inline-block text-xs px-3 py-1 rounded-full font-medium bg-brand-orange/10 text-brand-orange self-start sm:self-center sm:ml-4 flex-shrink-0">
                       {mechanisme.jdrTag}
                     </span>
                   </div>
