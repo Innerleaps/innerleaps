@@ -125,18 +125,18 @@ const Programma = () => {
             </h2>
             <div className="grid md:grid-cols-3 gap-6">
               <div className="text-center">
-                <div className="text-3xl font-bold text-brand-green mb-2">19-30%</div>
-                <p className="text-brand-gray-dark font-medium">Minder verzuim</p>
+                <div className="text-3xl font-bold text-brand-orange mb-2">-15 tot -21%</div>
+                <p className="text-brand-gray-dark font-medium">Lager verzuim</p>
                 <p className="text-sm text-brand-gray-medium mt-1">Bewezen door wetenschappelijk onderzoek</p>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-brand-blue mb-2">17-31%</div>
-                <p className="text-brand-gray-dark font-medium">Betere retentie</p>
+                <div className="text-3xl font-bold text-brand-orange mb-2">-70%</div>
+                <p className="text-brand-gray-dark font-medium">Lager uitval risico</p>
                 <p className="text-sm text-brand-gray-medium mt-1">Medewerkers blijven langer</p>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-red-600 mb-2">40-58%</div>
-                <p className="text-brand-gray-dark font-medium">Minder werkstress</p>
+                <div className="text-3xl font-bold text-brand-orange mb-2">64 tot 77%</div>
+                <p className="text-brand-gray-dark font-medium">Veerkrachtiger</p>
                 <p className="text-sm text-brand-gray-medium mt-1">Merkbare verbetering in welzijn</p>
               </div>
             </div>
