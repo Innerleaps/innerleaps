@@ -39,8 +39,8 @@ const Contact = () => {
                   
                   <div className="space-y-6">
                     <div className="flex items-start space-x-4">
-                      <div className="bg-brand-blue text-white p-3 rounded-lg">
-                        <Mail className="h-6 w-6" />
+                      <div className="bg-white p-3 rounded-lg">
+                        <Mail className="h-6 w-6 text-brand-orange stroke-2" />
                       </div>
                       <div>
                         <h3 className="font-semibold text-brand-gray-dark">Email</h3>
@@ -49,8 +49,8 @@ const Contact = () => {
                     </div>
                     
                     <div className="flex items-start space-x-4">
-                      <div className="bg-brand-blue text-white p-3 rounded-lg">
-                        <Phone className="h-6 w-6" />
+                      <div className="bg-white p-3 rounded-lg">
+                        <Phone className="h-6 w-6 text-brand-orange stroke-2" />
                       </div>
                       <div>
                         <h3 className="font-semibold text-brand-gray-dark">Telefoon</h3>
@@ -106,8 +106,8 @@ const Contact = () => {
               <div className="space-y-8">
                 <div className="bg-white border border-gray-200 p-8 rounded-xl shadow-sm">
                   <div className="text-center space-y-6">
-                    <div className="bg-brand-blue text-white p-4 rounded-full w-16 h-16 flex items-center justify-center mx-auto">
-                      <Calendar className="h-8 w-8" />
+                    <div className="bg-gray-100 p-4 rounded-full w-16 h-16 flex items-center justify-center mx-auto">
+                      <Calendar className="h-8 w-8 text-brand-orange stroke-2" />
                     </div>
                     
                     <div>

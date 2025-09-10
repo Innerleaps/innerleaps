@@ -67,8 +67,8 @@ const ProcessSection = () => {
                   <div key={index} className="relative">
                     <div className="bg-white rounded-xl p-6 md:p-8 shadow-lg">
                       <div className="flex flex-col sm:flex-row items-start space-y-4 sm:space-y-0 sm:space-x-6">
-                        <div className={`w-12 h-12 ${step.color} text-white rounded-lg flex items-center justify-center flex-shrink-0`}>
-                          <IconComponent className="h-6 w-6" />
+                        <div className="w-12 h-12 bg-gray-100 border border-gray-200 rounded-lg flex items-center justify-center flex-shrink-0">
+                          <IconComponent className="h-6 w-6 text-brand-orange stroke-2" />
                         </div>
                         <div className="flex-1">
                           <h3 className="text-lg md:text-xl font-semibold text-brand-gray-dark mb-3 md:mb-4 leading-tight">

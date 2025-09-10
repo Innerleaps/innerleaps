@@ -118,8 +118,8 @@ const Calculator = () => {
   return (
     <Card className="p-8">
       <div className="text-center mb-8">
-        <div className="inline-flex items-center justify-center w-16 h-16 bg-brand-blue text-white rounded-full mb-4">
-          <CalculatorIcon className="h-8 w-8" />
+        <div className="inline-flex items-center justify-center w-16 h-16 bg-gray-100 rounded-full mb-4">
+          <CalculatorIcon className="h-8 w-8 text-brand-orange stroke-2" />
         </div>
         <h3 className="text-2xl font-bold text-brand-gray-dark mb-2">
           Bereken Uw Potentiële Besparing
