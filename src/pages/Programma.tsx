@@ -7,12 +7,10 @@ import StickyCtaButtons from '@/components/StickyCtaButtons';
 import ROICalculator from '@/components/ROICalculator';
 import { useEffect } from 'react';
 import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
-
 const Programma = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-
   const weeks = [{
     week: "Week 1",
     title: "Bewustwording & Automatische Piloot",
@@ -20,7 +18,7 @@ const Programma = () => {
     techniques: ["Lichaamsscan voor stresssignaalherkenning", "Gerichte aandachtstraining met focus op eetgewoonten", "Bewust ademen als ankerpunt tijdens stress"],
     applications: ["Herkennen van \"automatische piloot\" in werkroutines", "Implementatie van bewuste aandacht bij routinetaken", "Stressmonitoring tijdens werkdagen"]
   }, {
-    week: "Week 2", 
+    week: "Week 2",
     title: "Perceptie & Omgaan met Barrières",
     goals: ["Begrijpen hoe perceptie ervaringen vormt", "Herkennen van reactiepatronen op uitdagingen", "Ontwikkelen van volgehouden aandacht"],
     techniques: ["Lichaamsscan", "Zittende aandachtsoefening met focus op ademhaling", "Bewuste bewegingsoefeningen voor spanningsherkenning"],
@@ -62,14 +60,13 @@ const Programma = () => {
     techniques: ["Lichaamsscan als review van het programma", "Persoonlijke reflectie op geleerde vaardigheden", "Ontwikkeling van toekomstplan"],
     applications: ["Creëren van gezonde werkroutines", "Implementeren van preventieve stressreductie", "Integratie van geleerde technieken in dagelijkse werkpraktijk"]
   }];
-
   const features = [{
     icon: Clock,
     title: "8 weken",
     description: "Wekelijks 2,5 uur op locatie"
   }, {
     icon: Users,
-    title: "15 deelnemers", 
+    title: "15 deelnemers",
     description: "Optimale groepsgrootte"
   }, {
     icon: MapPin,
@@ -80,9 +77,7 @@ const Programma = () => {
     title: "Oefendag",
     description: "6 uur verdiepingssessie"
   }];
-
-  return (
-    <div className="min-h-screen bg-brand-gray-light">
+  return <div className="min-h-screen bg-brand-gray-light">
       <Navigation />
       <StickyCtaButtons />
       
@@ -101,9 +96,8 @@ const Programma = () => {
           {/* Program Features */}
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
             {features.map((feature, index) => {
-              const IconComponent = feature.icon;
-              return (
-                <div key={index} className="bg-white rounded-xl p-6 text-center">
+            const IconComponent = feature.icon;
+            return <div key={index} className="bg-white rounded-xl p-6 text-center">
                   <div className="bg-white p-4 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
                     <IconComponent className="h-8 w-8 text-brand-orange stroke-2" />
                   </div>
@@ -113,9 +107,8 @@ const Programma = () => {
                   <p className="text-brand-gray-medium">
                     {feature.description}
                   </p>
-                </div>
-              );
-            })}
+                </div>;
+          })}
           </div>
 
           {/* Key Benefits */}
@@ -132,7 +125,7 @@ const Programma = () => {
               <div className="text-center">
                 <div className="text-3xl font-bold text-brand-orange mb-2">-70%</div>
                 <p className="text-brand-gray-dark font-medium">Lager uitval risico</p>
-                <p className="text-sm text-brand-gray-medium mt-1">Medewerkers blijven langer</p>
+                <p className="text-sm text-brand-gray-medium mt-1">Medewerkers blijven vitaal</p>
               </div>
               <div className="text-center">
                 <div className="text-3xl font-bold text-brand-orange mb-2">64 tot 77%</div>
@@ -149,8 +142,7 @@ const Programma = () => {
             </h2>
             
             <div className="grid gap-8">
-              {weeks.map((week, index) => (
-                <Card key={index} className="overflow-hidden">
+              {weeks.map((week, index) => <Card key={index} className="overflow-hidden">
                   <CardHeader className="bg-brand-blue text-white">
                     <CardTitle className="text-xl md:text-2xl">
                       {week.week}: {week.title}
@@ -164,11 +156,9 @@ const Programma = () => {
                           Leerdoelen
                         </h4>
                         <ul className="space-y-2">
-                          {week.goals.map((goal, goalIndex) => (
-                            <li key={goalIndex} className="text-brand-gray-medium text-sm leading-relaxed">
+                          {week.goals.map((goal, goalIndex) => <li key={goalIndex} className="text-brand-gray-medium text-sm leading-relaxed">
                               • {goal}
-                            </li>
-                          ))}
+                            </li>)}
                         </ul>
                       </div>
                       
@@ -178,11 +168,9 @@ const Programma = () => {
                           Technieken
                         </h4>
                         <ul className="space-y-2">
-                          {week.techniques.map((technique, techniqueIndex) => (
-                            <li key={techniqueIndex} className="text-brand-gray-medium text-sm leading-relaxed">
+                          {week.techniques.map((technique, techniqueIndex) => <li key={techniqueIndex} className="text-brand-gray-medium text-sm leading-relaxed">
                               • {technique}
-                            </li>
-                          ))}
+                            </li>)}
                         </ul>
                       </div>
                       
@@ -192,17 +180,14 @@ const Programma = () => {
                           Toepassing
                         </h4>
                         <ul className="space-y-2">
-                          {week.applications.map((application, applicationIndex) => (
-                            <li key={applicationIndex} className="text-brand-gray-medium text-sm leading-relaxed">
+                          {week.applications.map((application, applicationIndex) => <li key={applicationIndex} className="text-brand-gray-medium text-sm leading-relaxed">
                               • {application}
-                            </li>
-                          ))}
+                            </li>)}
                         </ul>
                       </div>
                     </div>
                   </CardContent>
-                </Card>
-              ))}
+                </Card>)}
             </div>
           </div>
 
@@ -391,8 +376,6 @@ const Programma = () => {
           </div>
         </div>
       </footer>
-    </div>
-  );
+    </div>;
 };
-
 export default Programma;
