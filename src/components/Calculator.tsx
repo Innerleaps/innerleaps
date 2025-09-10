@@ -42,7 +42,7 @@ const Calculator = () => {
     
     const totalSaving = absenteeismSaving + turnoverSaving;
     
-    // Estimate program cost (€800 per employee for 8-week program)
+    // Estimate program cost (€800 per employee for 9-week program)
     const programCost = employees * 800;
     const roi = ((totalSaving - programCost) / programCost) * 100;
     

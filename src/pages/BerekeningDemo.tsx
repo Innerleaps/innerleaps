@@ -253,7 +253,7 @@ const BerekeningDemo = () => {
               <div>
                 <p><strong>Aantal deelnemers:</strong> {demoFormData.employees}</p>
                 <p><strong>Aantal groepen:</strong> {demoResults.numberOfGroups}</p>
-                <p><strong>Programma duur:</strong> 8 weken</p>
+                <p><strong>Programma duur:</strong> 9 weken</p>
               </div>
               <div>
                 <p><strong>Gemiddelde werkgeverskosten:</strong> €{parseInt(demoFormData.avgEmployeeCosts).toLocaleString()}</p>

@@ -62,7 +62,7 @@ const Programma = () => {
   }];
   const features = [{
     icon: Clock,
-    title: "8 weken",
+    title: "9 weken",
     description: "Wekelijks 2,5 uur op locatie"
   }, {
     icon: Users,
@@ -89,7 +89,7 @@ const Programma = () => {
               Programma
             </h1>
             <p className="text-xl md:text-2xl text-brand-gray-medium max-w-4xl mx-auto leading-relaxed text-center">
-              Ons 8-weekse MBSR-programma voor werknemers biedt een bewezen, stapsgewijze aanpak voor stressreductie en het ontwikkelen van veerkracht. Elke week bouwt voort op de vorige, met praktische vaardigheden die direct toepasbaar zijn in de werkomgeving.
+              Ons 9-weekse MBSR-programma voor werknemers biedt een bewezen, stapsgewijze aanpak voor stressreductie en het ontwikkelen van veerkracht. Elke week bouwt voort op de vorige, met praktische vaardigheden die direct toepasbaar zijn in de werkomgeving.
             </p>
           </div>
 

@@ -242,7 +242,7 @@ const Berekening = () => {
               <div>
                 <p><strong>Aantal deelnemers:</strong> {formData.employees}</p>
                 <p><strong>Aantal groepen:</strong> {results.numberOfGroups}</p>
-                <p><strong>Programma duur:</strong> 8 weken</p>
+                <p><strong>Programma duur:</strong> 9 weken</p>
               </div>
               <div>
                 <p><strong>Gemiddelde werkgeverskosten:</strong> €{parseInt(formData.avgEmployeeCosts).toLocaleString()}</p>
