@@ -1,7 +1,8 @@
 import { serve } from "https://deno.land/std@0.190.0/http/server.ts";
 import { Resend } from "npm:resend@4.0.0";
 
-const resend = new Resend(Deno.env.get("RESEND_API_KEY"));
+const RESEND_API_KEY = Deno.env.get("RESEND_API_KEY");
+const resend = RESEND_API_KEY ? new Resend(RESEND_API_KEY) : null;
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
@@ -206,6 +207,28 @@ const handler = async (req: Request): Promise<Response> => {
   try {
     const data: ROIAnalysisRequest = await req.json();
     console.log("Sending ROI analysis for:", data.bedrijfsnaam);
+
+    // Check if Resend API key is available
+    if (!resend) {
+      console.log("Testing mode: No RESEND_API_KEY found, simulating email send");
+      console.log("Email would be sent to:", data.email);
+      console.log("Subject:", `ROI-analyse voor ${data.bedrijfsnaam} - Life+ programma resultaten`);
+      console.log("HTML Content:", generateEmailHTML(data));
+      console.log("Text Content:", generateEmailText(data));
+      
+      // Return success for testing
+      return new Response(JSON.stringify({ 
+        success: true, 
+        emailId: "test-mode-" + Date.now(),
+        message: "Testing mode: Email content logged to console"
+      }), {
+        status: 200,
+        headers: {
+          "Content-Type": "application/json",
+          ...corsHeaders,
+        },
+      });
+    }
 
     // Send email using Resend
     const emailResponse = await resend.emails.send({
