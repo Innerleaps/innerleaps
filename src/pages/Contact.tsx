@@ -39,7 +39,7 @@ const Contact = () => {
                   
                   <div className="space-y-6">
                     <div className="flex items-start space-x-4">
-                      <div className="bg-white p-3 rounded-lg">
+                      <div className="bg-brand-gray-light p-3 rounded-lg">
                         <Mail className="h-6 w-6 text-brand-orange stroke-2" />
                       </div>
                       <div>
@@ -49,7 +49,7 @@ const Contact = () => {
                     </div>
                     
                     <div className="flex items-start space-x-4">
-                      <div className="bg-white p-3 rounded-lg">
+                      <div className="bg-brand-gray-light p-3 rounded-lg">
                         <Phone className="h-6 w-6 text-brand-orange stroke-2" />
                       </div>
                       <div>
@@ -83,7 +83,7 @@ const Contact = () => {
                 </div>
 
                 {/* Bas's personal message */}
-                <div className="bg-white border border-gray-200 p-8 rounded-xl shadow-sm">
+                <div className="bg-white border border-gray-200 p-8 rounded-xl">
                   <div className="flex items-start space-x-6">
                     <img 
                       src="/lovable-uploads/eaa7a159-2f85-4fa3-b487-4855426f2c14.png" 
@@ -104,9 +104,9 @@ const Contact = () => {
 
               {/* CTA Section */}
               <div className="space-y-8">
-                <div className="bg-white border border-gray-200 p-8 rounded-xl shadow-sm">
+                <div className="bg-white border border-gray-200 p-8 rounded-xl">
                   <div className="text-center space-y-6">
-                    <div className="bg-gray-100 p-4 rounded-full w-16 h-16 flex items-center justify-center mx-auto">
+                    <div className="bg-white p-4 rounded-full w-16 h-16 flex items-center justify-center mx-auto">
                       <Calendar className="h-8 w-8 text-brand-orange stroke-2" />
                     </div>
                     

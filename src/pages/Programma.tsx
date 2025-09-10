@@ -103,7 +103,7 @@ const Programma = () => {
             {features.map((feature, index) => {
               const IconComponent = feature.icon;
               return (
-                <div key={index} className="bg-white rounded-xl p-6 text-center shadow-lg">
+                <div key={index} className="bg-white rounded-xl p-6 text-center">
                   <div className="bg-white p-4 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
                     <IconComponent className="h-8 w-8 text-brand-orange stroke-2" />
                   </div>
@@ -119,7 +119,7 @@ const Programma = () => {
           </div>
 
           {/* Key Benefits */}
-          <div className="bg-white rounded-xl p-8 mb-16 shadow-lg">
+          <div className="bg-white rounded-xl p-8 mb-16">
             <h2 className="text-2xl font-bold text-brand-gray-dark mb-6 text-center">
               Wat levert het programma op?
             </h2>
@@ -150,7 +150,7 @@ const Programma = () => {
             
             <div className="grid gap-8">
               {weeks.map((week, index) => (
-                <Card key={index} className="overflow-hidden shadow-lg">
+                <Card key={index} className="overflow-hidden">
                   <CardHeader className="bg-brand-blue text-white">
                     <CardTitle className="text-xl md:text-2xl">
                       {week.week}: {week.title}
@@ -209,7 +209,7 @@ const Programma = () => {
           {/* Intensive Practice Day */}
           <div className="mb-16">
             <div className="max-w-4xl mx-auto">
-              <Card className="shadow-lg">
+              <Card className="">
                 <CardHeader className="bg-brand-blue text-white">
                   <CardTitle className="text-2xl md:text-3xl text-center">
                     Oefendag: Verdieping & Integratie
@@ -273,7 +273,7 @@ const Programma = () => {
           </div>
 
           {/* Implementation & Support */}
-          <div className="bg-white rounded-xl p-8 mb-16 shadow-lg">
+          <div className="bg-white rounded-xl p-8 mb-16">
             <h2 className="text-2xl font-bold text-brand-gray-dark mb-6 text-center">
               Begeleiding & Materialen
             </h2>

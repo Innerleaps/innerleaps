@@ -41,12 +41,12 @@ const ImpactSection = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 md:gap-8">
           {impacts.map((impact, index) => {
           const IconComponent = impact.icon;
-          return <div key={index} className="bg-white rounded-xl p-6 shadow-lg animate-fade-in" style={{
+          return <div key={index} className="bg-white rounded-xl p-6 animate-fade-in" style={{
             animationDelay: `${index * 0.1}s`
           }}>
                 <div className="flex flex-col space-y-4">
                   <div className="flex items-center justify-between">
-                    <div className="p-3 rounded-lg bg-gray-100 self-start">
+                    <div className="p-3 rounded-lg bg-brand-gray-light self-start">
                       <IconComponent className="h-6 w-6 text-brand-orange stroke-2" />
                     </div>
                     <span className="text-xs bg-brand-orange/5 text-brand-orange/70 px-2 py-1 rounded-full font-normal">
