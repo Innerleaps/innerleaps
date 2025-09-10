@@ -411,27 +411,13 @@ const Wetenschap = () => {
               Wil je precies begrijpen hoe deze resultaten tot stand komen? Ons academische onderzoeksrapport legt de methodologie en berekeningen achter de 15-21% verzuimreductie volledig uit. Inclusief pathway-analyses, effectgroottes en de wetenschappelijke basis van 40 jaar MBSR-onderzoek.
             </p>
             
-            <Button onClick={() => setIsLeadMagnetOpen(true)} className="text-lg px-8 py-3 bg-white hover:bg-gray-100 text-brand-blue hover:text-brand-blue font-semibold rounded-lg transition-all duration-300 shadow-lg transform hover:-translate-y-0.5">
-              Vraag het bewijs op
-            </Button>
-          </div>
-        </div>
-      </section>
-
-      {/* Conclusion */}
-      <section className="bg-white section-padding">
-        <div className="container-custom">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-brand-gray-dark mb-8">
-              De Wetenschappelijke Basis
-            </h2>
-            
-            <div className="prose prose-lg text-brand-gray-medium mb-12">
-              <p className="text-xl leading-relaxed mb-8">De wetenschap is eenduidig: een gestructureerd programma zoals het onze, gebaseerd op bewezen stressreductietechnieken, heeft een aantoonbare positieve impact op verzuim en het uitval risico. Bas gaat graag een open en vrijblijvend gesprek met je aan. </p>
-            </div>
-
-            <div className="space-y-4">
-              <Button variant="outline" className="text-lg px-8 py-3 bg-white hover:bg-white border-2 border-brand-blue text-brand-blue hover:text-brand-blue font-semibold rounded-lg transition-all duration-300 transform hover:-translate-y-0.5" onClick={() => window.open('https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1wwDnoAHyFrV0M1FxwmbcMa9ewkDxTDdwQObwPKF-WX-wZV9DssZKtb1haoeP5qXDLenQlZt_R', '_blank')}>Een gesprek met Bas plannen</Button>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button onClick={() => setIsLeadMagnetOpen(true)} className="text-lg px-8 py-3 bg-white hover:bg-gray-100 text-brand-blue hover:text-brand-blue font-semibold rounded-lg transition-all duration-300 shadow-lg transform hover:-translate-y-0.5">
+                Vraag het bewijs op
+              </Button>
+              <Button variant="outline" className="text-lg px-8 py-3 bg-white/10 hover:bg-white/20 border-2 border-white text-white hover:text-white font-semibold rounded-lg transition-all duration-300 transform hover:-translate-y-0.5" onClick={() => window.open('https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1wwDnoAHyFrV0M1FxwmbcMa9ewkDxTDdwQObwPKF-WX-wZV9DssZKtb1haoeP5qXDLenQlZt_R', '_blank')}>
+                Een vriendelijke gesprek met Bas plannen
+              </Button>
             </div>
           </div>
         </div>
