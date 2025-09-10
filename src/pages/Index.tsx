@@ -1,4 +1,3 @@
-
 import Navigation from '@/components/Navigation';
 import HeroSection from '@/components/HeroSection';
 import ImpactSection from '@/components/ImpactSection';
@@ -7,10 +6,8 @@ import ProcessSection from '@/components/ProcessSection';
 import StickyCtaButtons from '@/components/StickyCtaButtons';
 import ROICalculator from '@/components/ROICalculator';
 import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
-
 const Index = () => {
-  return (
-    <div className="min-h-screen bg-white">
+  return <div className="min-h-screen bg-white">
       <Navigation />
       <StickyCtaButtons />
       <div id="home">
@@ -34,9 +31,7 @@ const Index = () => {
           <div className="grid md:grid-cols-3 gap-8">
             <div>
               <div className="text-2xl font-bold mb-4">Innerleaps</div>
-              <p className="text-gray-300 leading-relaxed">
-                MBSR-gebaseerde stressreductieprogramma's voor meetbare bedrijfsresultaten. Gebaseerd op het baanbrekende werk van Jon Kabat-Zinn.
-              </p>
+              <p className="text-gray-300 leading-relaxed">InnerLeaps transformeert teams met wetenschappelijk bewezen stressmanagement. Het Life+ programma reduceert verzuim met 15-21% en uitvalrisico met 70%. Geen quick fixes, wel duurzame gedragsverandering.</p>
             </div>
             <div>
               <h3 className="text-lg font-semibold mb-4">Contact</h3>
@@ -55,10 +50,18 @@ const Index = () => {
             <div>
               <h3 className="text-lg font-semibold mb-4">Snel naar</h3>
               <div className="space-y-2">
-                <button onClick={() => document.getElementById('home')?.scrollIntoView({ behavior: 'smooth' })} className="block text-gray-300 hover:text-white transition-colors text-left">Home</button>
-                <button onClick={() => document.getElementById('wetenschap')?.scrollIntoView({ behavior: 'smooth' })} className="block text-gray-300 hover:text-white transition-colors text-left">De Wetenschap</button>
-                <button onClick={() => document.getElementById('programma')?.scrollIntoView({ behavior: 'smooth' })} className="block text-gray-300 hover:text-white transition-colors text-left">Programma</button>
-                <button onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })} className="block text-gray-300 hover:text-white transition-colors text-left">Contact</button>
+                <button onClick={() => document.getElementById('home')?.scrollIntoView({
+                behavior: 'smooth'
+              })} className="block text-gray-300 hover:text-white transition-colors text-left">Home</button>
+                <button onClick={() => document.getElementById('wetenschap')?.scrollIntoView({
+                behavior: 'smooth'
+              })} className="block text-gray-300 hover:text-white transition-colors text-left">De Wetenschap</button>
+                <button onClick={() => document.getElementById('programma')?.scrollIntoView({
+                behavior: 'smooth'
+              })} className="block text-gray-300 hover:text-white transition-colors text-left">Programma</button>
+                <button onClick={() => document.getElementById('contact')?.scrollIntoView({
+                behavior: 'smooth'
+              })} className="block text-gray-300 hover:text-white transition-colors text-left">Contact</button>
               </div>
             </div>
           </div>
@@ -67,8 +70,6 @@ const Index = () => {
           </div>
         </div>
       </footer>
-    </div>
-  );
+    </div>;
 };
-
 export default Index;
