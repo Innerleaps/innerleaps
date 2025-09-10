@@ -68,20 +68,20 @@ const Programma = () => {
   }];
   const features = [{
     icon: Clock,
-    title: "9 weken",
-    description: "Wekelijks 2,5 uur op locatie"
+    title: "9 weken bewezen programma",
+    description: "9 weken om echte verandering te realiseren"
   }, {
     icon: Users,
-    title: "15 deelnemers",
-    description: "Optimale groepsgrootte"
+    title: "1x per week 1,5 uur groepsworkshop",
+    description: "Elke week een training van een gecertificeerde trainer per groep van 15 deelnemers"
   }, {
     icon: MapPin,
-    title: "Op locatie",
-    description: "Bij u in het bedrijf"
+    title: "Workshop op locatie of online",
+    description: "De workshop wordt gegeven op een locatie naar wens of online"
   }, {
     icon: Calendar,
-    title: "Oefendag",
-    description: "6 uur verdiepingssessie"
+    title: "Dagelijks oefenen",
+    description: "Deelnemers proberen dagelijks te oefenen"
   }];
   return <div className="min-h-screen bg-brand-gray-light">
       <Navigation />
