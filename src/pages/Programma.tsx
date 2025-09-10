@@ -104,7 +104,7 @@ const Programma = () => {
             {features.map((feature, index) => {
             const IconComponent = feature.icon;
             return <div key={index} className="bg-brand-gray-light rounded-xl p-6 text-center">
-                  <div className="bg-white p-4 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <div className="bg-brand-gray-light p-4 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
                     <IconComponent className="h-8 w-8 text-brand-orange stroke-2" />
                   </div>
                   <h3 className="text-xl font-semibold text-brand-gray-dark mb-2">
