@@ -1,11 +1,14 @@
 import Navigation from '@/components/Navigation';
 import StickyCtaButtons from '@/components/StickyCtaButtons';
-import { useEffect } from 'react';
+import LeadMagnetModal from '@/components/LeadMagnetModal';
+import { useEffect, useState } from 'react';
 import { Button } from '@/components/ui/button';
-import { ArrowLeft, BookOpen, BarChart3, Brain, Heart, Users, Shield, TrendingUp, Award, Target } from 'lucide-react';
+import { ArrowLeft, BookOpen, BarChart3, Brain, Heart, Users, Shield, TrendingUp, Award, Target, FileText } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
 const Wetenschap = () => {
+  const [isLeadMagnetOpen, setIsLeadMagnetOpen] = useState(false);
+  
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -312,6 +315,33 @@ const Wetenschap = () => {
         </div>
       </section>
 
+      {/* Lead Magnet Section */}
+      <section className="bg-gradient-to-r from-brand-blue to-brand-blue-dark text-white section-padding">
+        <div className="container-custom">
+          <div className="max-w-4xl mx-auto text-center">
+            <div className="inline-flex items-center bg-white/10 text-white px-4 py-2 rounded-full text-sm font-semibold mb-6">
+              <FileText className="h-4 w-4 mr-2" />
+              Exclusief wetenschappelijk rapport
+            </div>
+            
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+              Ontvang het wetenschappelijke bewijs
+            </h2>
+            
+            <p className="text-xl md:text-2xl leading-relaxed mb-8 text-white/90">
+              Wil je precies begrijpen hoe deze resultaten tot stand komen? Ons academische onderzoeksrapport legt de methodologie en berekeningen achter de 15-21% verzuimreductie volledig uit. Inclusief pathway-analyses, effectgroottes en de wetenschappelijke basis van 40 jaar MBSR-onderzoek.
+            </p>
+            
+            <Button
+              onClick={() => setIsLeadMagnetOpen(true)}
+              className="text-lg px-8 py-3 bg-white hover:bg-gray-100 text-brand-blue hover:text-brand-blue font-semibold rounded-lg transition-all duration-300 shadow-lg transform hover:-translate-y-0.5"
+            >
+              Vraag het bewijs op
+            </Button>
+          </div>
+        </div>
+      </section>
+
       {/* Conclusion */}
       <section className="bg-white section-padding">
         <div className="container-custom">
@@ -389,6 +419,11 @@ const Wetenschap = () => {
           </div>
         </div>
       </footer>
+      
+      <LeadMagnetModal 
+        isOpen={isLeadMagnetOpen}
+        onClose={() => setIsLeadMagnetOpen(false)}
+      />
     </div>;
 };
 export default Wetenschap;
