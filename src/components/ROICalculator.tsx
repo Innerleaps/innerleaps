@@ -12,7 +12,8 @@ const ROICalculator = () => {
     aantalDeelnemers: '15',
     brutoJaarsalaris: '39700',
     bedrijfsnaam: '',
-    contactgegevens: ''
+    email: '',
+    telefoon: ''
   });
 
   const handleInputChange = (field: string, value: string) => {
@@ -26,10 +27,10 @@ const ROICalculator = () => {
     e.preventDefault();
     
     // Basic validation
-    if (!formData.bedrijfsnaam || !formData.contactgegevens) {
+    if (!formData.bedrijfsnaam || !formData.email) {
       toast({
         title: "Velden vereist",
-        description: "Vul alle velden in om uw ROI-berekening te ontvangen.",
+        description: "Vul alle verplichte velden in om uw ROI-berekening te ontvangen.",
         variant: "destructive"
       });
       return;
@@ -47,7 +48,8 @@ const ROICalculator = () => {
       aantalDeelnemers: '15',
       brutoJaarsalaris: '39700',
       bedrijfsnaam: '',
-      contactgegevens: ''
+      email: '',
+      telefoon: ''
     });
   };
 
@@ -126,7 +128,7 @@ const ROICalculator = () => {
                   </div>
                 </div>
 
-                <div className="grid md:grid-cols-2 gap-6">
+                <div className="space-y-6">
                   <div className="space-y-2">
                     <Label htmlFor="bedrijf" className="text-white font-medium">
                       Bedrijfsnaam*
@@ -142,19 +144,35 @@ const ROICalculator = () => {
                     />
                   </div>
 
-                  <div className="space-y-2">
-                    <Label htmlFor="contact" className="text-white font-medium">
-                      Contactgegevens*
-                    </Label>
-                    <Input
-                      id="contact"
-                      type="email"
-                      value={formData.contactgegevens}
-                      onChange={(e) => handleInputChange('contactgegevens', e.target.value)}
-                      className="bg-white/10 border-white/30 text-white placeholder-white/60"
-                      placeholder="uw.email@bedrijf.nl"
-                      required
-                    />
+                  <div className="grid md:grid-cols-2 gap-6">
+                    <div className="space-y-2">
+                      <Label htmlFor="email" className="text-white font-medium">
+                        Email*
+                      </Label>
+                      <Input
+                        id="email"
+                        type="email"
+                        value={formData.email}
+                        onChange={(e) => handleInputChange('email', e.target.value)}
+                        className="bg-white/10 border-white/30 text-white placeholder-white/60"
+                        placeholder="uw.email@bedrijf.nl"
+                        required
+                      />
+                    </div>
+
+                    <div className="space-y-2">
+                      <Label htmlFor="telefoon" className="text-white font-medium">
+                        Telefoonnummer
+                      </Label>
+                      <Input
+                        id="telefoon"
+                        type="tel"
+                        value={formData.telefoon}
+                        onChange={(e) => handleInputChange('telefoon', e.target.value)}
+                        className="bg-white/10 border-white/30 text-white placeholder-white/60"
+                        placeholder="06 12 34 56 78"
+                      />
+                    </div>
                   </div>
                 </div>
 
