@@ -150,8 +150,8 @@ const ROICalculator = () => {
           </div>
 
           <Card className="bg-white border shadow-lg">
-            <CardHeader>
-              <CardTitle className="text-2xl font-semibold text-brand-gray-dark">
+            <CardHeader className="bg-brand-blue text-white">
+              <CardTitle className="text-2xl font-semibold text-white">
                 Jouw bedrijfsgegevens
               </CardTitle>
             </CardHeader>
