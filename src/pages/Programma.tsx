@@ -13,52 +13,58 @@ const Programma = () => {
   }, []);
   const weeks = [{
     week: "Week 1",
-    title: "Bewustwording & Automatische Piloot",
-    goals: ["Herkennen van stress signalen in het lichaam", "Bewust worden van automatische reactiepatronen", "Ontwikkelen van gerichte aandacht"],
-    techniques: ["Lichaamsscan voor stresssignaalherkenning", "Gerichte aandachtstraining met focus op eetgewoonten", "Bewust ademen als ankerpunt tijdens stress"],
-    applications: ["Herkennen van \"automatische piloot\" in werkroutines", "Implementatie van bewuste aandacht bij routinetaken", "Stressmonitoring tijdens werkdagen"]
+    title: "Automatische Piloot Doorbreken",
+    goals: ["Herkennen van stress signalen voordat ze escaleren", "Bewust worden van automatische reactiepatronen", "Ontwikkelen van gerichte aandacht als basis voor verandering"],
+    techniques: ["Lichaamsscan voor stresssignaalherkenning", "Ademhalingstechnieken als ankerpunt tijdens druk", "Bewuste aandachtstraining via eetgewoonten"],
+    applications: ["Doorbreken van automatische werkroutines", "Bewuste aandacht bij dagelijkse taken", "Stressmonitoring gedurende werkdagen"]
   }, {
     week: "Week 2",
-    title: "Perceptie & Omgaan met Barrières",
-    goals: ["Begrijpen hoe perceptie ervaringen vormt", "Herkennen van reactiepatronen op uitdagingen", "Ontwikkelen van volgehouden aandacht"],
-    techniques: ["Lichaamsscan", "Zittende aandachtsoefening met focus op ademhaling", "Bewuste bewegingsoefeningen voor spanningsherkenning"],
-    applications: ["Toepassen van andere perspectieven bij werkuitdagingen", "Omgaan met weerstand tegen verandering", "Verbeteren van focus tijdens vergaderingen"]
+    title: "Perceptie Veranderen",
+    goals: ["Begrijpen hoe perceptie stress bepaalt", "Herkennen van reactiepatronen op uitdagingen", "Ontwikkelen van volgehouden focus"],
+    techniques: ["Lichaamsscan voor diepere bewustwording", "Zittende ademhalingstechnieken", "Bewuste bewegingsoefeningen"],
+    applications: ["Nieuwe perspectieven toepassen bij werkuitdagingen", "Weerstand tegen verandering hanteren", "Focus verbeteren tijdens vergaderingen en taken"]
   }, {
     week: "Week 3",
-    title: "Bewuste Beweging & Aanwezigheid",
-    goals: ["Integreren van bewustzijn in beweging", "Herkennen van lichamelijke spanningspatronen", "Ontwikkelen van continue aanwezigheid"],
-    techniques: ["Bewuste yoga voor stressreductie", "Lopende aandachtsoefening", "Integratie van ademhaling bij fysieke activiteit"],
-    applications: ["Bewuste beweging tussen werktaken", "Stresspreventie door lichamelijke bewustwording", "Energiemanagement tijdens werkdagen"]
+    title: "Lichamelijke Bewustwording",
+    goals: ["Integreren van bewustzijn in beweging", "Herkennen van spanningspatronen in het lichaam", "Ontwikkelen van continue aanwezigheid"],
+    techniques: ["Bewegingsoefeningen voor stressreductie", "Lopende aandachtstraining", "Ademhalingstechnieken bij fysieke activiteit"],
+    applications: ["Bewuste beweging tussen werktaken", "Stresspreventie door lichamelijke signalen", "Energiemanagement tijdens lange werkdagen"]
   }, {
     week: "Week 4",
-    title: "Stress, Reacties & Automatismen",
+    title: "Stress Herkennen en Managen",
     goals: ["Begrijpen van stress-responsmechanismen", "Identificeren van persoonlijke stress-triggers", "Ontwikkelen van bewuste reactiekeuzes"],
-    techniques: ["STOP-techniek voor stressmanagement", "Bewust reageren in plaats van automatisch handelen", "Ademhaling als stressregulatietool"],
-    applications: ["Toepassen van bewuste responsen in conflictsituaties", "Stresspreventie tijdens deadline-druk", "Verbeteren van besluitvorming onder stress"]
+    techniques: ["STOP-techniek voor directe stressinterventie", "Bewust reageren in plaats van automatisch handelen", "Ademhalingstechnieken voor stressregulatie"],
+    applications: ["Bewuste responsen in conflictsituaties", "Stressmanagement tijdens deadline-druk", "Betere besluitvorming onder druk"]
   }, {
     week: "Week 5",
-    title: "Moeilijke Emoties & Communicatie",
+    title: "Emotieregulatie en Communicatie",
     goals: ["Omgaan met uitdagende emoties", "Ontwikkelen van emotionele veerkracht", "Verbeteren van bewuste communicatie"],
-    techniques: ["RAIN-techniek voor emotieregulatie", "Bewuste communicatieoefeningen", "Compassie-oefeningen voor zelfzorg"],
-    applications: ["Effectiever omgaan met werkdruk en frustratie", "Verbeteren van teamdynamiek en samenwerking", "Constructieve feedback geven en ontvangen"]
+    techniques: ["RAIN-techniek voor emotieregulatie", "Bewuste communicatieoefeningen", "Zelfcompassie-oefeningen"],
+    applications: ["Werkdruk en frustratie effectiever hanteren", "Teamdynamiek en samenwerking verbeteren", "Constructieve feedback geven en ontvangen"]
   }, {
     week: "Week 6",
-    title: "Gedachten & Mentale Patronen",
-    goals: ["Herkennen van gedachtepatronen", "Ontwikkelen van mentale flexibiliteit", "Creëren van ruimte rond gedachten"],
-    techniques: ["Observeren van gedachten zonder oordeel", "Bewust omgaan met piekeren en zorgen", "Technieken voor mentale rust"],
-    applications: ["Doorbreken van negatieve denkspiralen", "Verbeteren van probleemoplossend vermogen", "Reduceren van werkgerelateerd piekeren"]
+    title: "Gedachtepatronen Doorbreken",
+    goals: ["Herkennen van negatieve gedachtepatronen", "Ontwikkelen van mentale flexibiliteit", "Creëren van ruimte rond gedachten"],
+    techniques: ["Gedachten observeren zonder oordeel", "Bewust omgaan met piekeren en zorgen", "Ademhalingstechnieken voor mentale rust"],
+    applications: ["Negatieve denkspiralen doorbreken", "Probleemoplossend vermogen verbeteren", "Werkgerelateerd piekeren reduceren"]
   }, {
     week: "Week 7",
-    title: "Zelfzorg & Grenzen Stellen",
-    goals: ["Ontwikkelen van effectieve zelfzorgstrategieën", "Leren grenzen stellen en bewaken", "Balans vinden tussen werk en privé"],
-    techniques: ["Persoonlijke zelfzorgplan ontwikkelen", "Boundary-setting oefeningen", "Bewuste work-life balance technieken"],
-    applications: ["Implementeren van dagelijkse zelfzorgroutines", "Effectief nee zeggen tegen overbelasting", "Creëren van gezonde werkgewoonten"]
+    title: "Oefendag - Alle Technieken Integreren",
+    goals: ["Alle geleerde technieken in één dag toepassen", "Diepere ervaring opdoen met stressmanagement", "Vertrouwen opbouwen in eigen kunnen"],
+    techniques: ["Uitgebreide lichaamsscan", "Verschillende ademhalingstechnieken", "Bewegingsoefeningen en stilte-oefeningen"],
+    applications: ["Langdurige focus ontwikkelen", "Stressbestendigheid testen en versterken", "Zelfvertrouwen in eigen vaardigheden opbouwen"]
   }, {
     week: "Week 8",
-    title: "Integratie & Duurzaamheid",
-    goals: ["Integreren van geleerde vaardigheden", "Ontwikkelen van persoonlijke praktijk", "Plannen voor toekomstige uitdagingen"],
-    techniques: ["Lichaamsscan als review van het programma", "Persoonlijke reflectie op geleerde vaardigheden", "Ontwikkeling van toekomstplan"],
-    applications: ["Creëren van gezonde werkroutines", "Implementeren van preventieve stressreductie", "Integratie van geleerde technieken in dagelijkse werkpraktijk"]
+    title: "Zelfzorg en Grenzen",
+    goals: ["Ontwikkelen van effectieve zelfzorgstrategieën", "Leren gezonde grenzen stellen en bewaken", "Balans creëren tussen werk en privé"],
+    techniques: ["Persoonlijke zelfzorgplan ontwikkelen", "Grenzenstelling-oefeningen", "Work-life balance technieken"],
+    applications: ["Dagelijkse zelfzorgroutines implementeren", "Effectief nee zeggen tegen overbelasting", "Gezonde werkgewoonten creëren"]
+  }, {
+    week: "Week 9",
+    title: "Duurzame Integratie",
+    goals: ["Geleerde vaardigheden volledig integreren", "Persoonlijk stressmanagement programma ontwikkelen", "Toekomstige uitdagingen voorbereiden"],
+    techniques: ["Lichaamsscan als programma-evaluatie", "Persoonlijke reflectie op ontwikkeling", "Toekomstplan voor duurzame praktijk"],
+    applications: ["Gezonde werkroutines voor de lange termijn", "Preventieve stressreductie implementeren", "Alle technieken integreren in dagelijkse werkpraktijk"]
   }];
   const features = [{
     icon: Clock,
@@ -163,8 +169,7 @@ const Programma = () => {
                       </div>
                       
                       <div>
-                        <h4 className="font-semibold text-brand-gray-dark mb-3 flex items-center">
-                          <span className="w-2 h-2 bg-brand-blue rounded-full mr-2"></span>
+                        <h4 className="font-semibold text-brand-gray-dark mb-3">
                           Technieken
                         </h4>
                         <ul className="space-y-2">
@@ -175,8 +180,7 @@ const Programma = () => {
                       </div>
                       
                       <div>
-                        <h4 className="font-semibold text-brand-gray-dark mb-3 flex items-center">
-                          <span className="w-2 h-2 bg-purple-600 rounded-full mr-2"></span>
+                        <h4 className="font-semibold text-brand-gray-dark mb-3">
                           Toepassing
                         </h4>
                         <ul className="space-y-2">
