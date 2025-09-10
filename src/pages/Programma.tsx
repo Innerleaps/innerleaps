@@ -95,7 +95,7 @@ const Programma = () => {
               Programma
             </h1>
             <p className="text-xl md:text-2xl text-brand-gray-medium max-w-4xl mx-auto leading-relaxed text-center">
-              Ons 9-weekse MBSR-programma voor werknemers biedt een bewezen, stapsgewijze aanpak voor stressreductie en het ontwikkelen van veerkracht. Elke week bouwt voort op de vorige, met praktische vaardigheden die direct toepasbaar zijn in de werkomgeving.
+              Het Life+ programma levert niet alleen organisatorische voordelen - het maakt het leven van je medewerkers aantoonbaar prettiger. Beter slapen (57-78%), meer welzijn (59-68%) en betere gezondheid (63-68%). Deelnemers gaan rustiger naar huis, zijn minder gestrest en hebben meer energie voor hun privéleven. Wederzijds voordeel: betere medewerkers, betere resultaten, betere organisatie.
             </p>
           </div>
 
