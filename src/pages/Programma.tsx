@@ -95,7 +95,7 @@ const Programma = () => {
               Het Life+ Programma
             </h1>
             <p className="text-xl md:text-2xl text-brand-gray-medium max-w-4xl mx-auto leading-relaxed text-center">
-              Het Life+ programma levert niet alleen organisatorische voordelen - het maakt het leven van je medewerkers aantoonbaar prettiger. Beter slapen (57-78%), meer welzijn (59-68%) en betere gezondheid (63-68%). Deelnemers gaan rustiger naar huis, zijn minder gestrest en hebben meer energie voor hun privéleven. Wederzijds voordeel: betere medewerkers, betere resultaten, betere organisatie.
+              Het Life+ programma levert niet alleen organisatorische voordelen - het <strong>maakt het leven van je medewerkers aantoonbaar prettiger</strong>. Beter slapen (57-78%), meer welzijn (59-68%) en betere gezondheid (63-68%). Deelnemers gaan rustiger naar huis, zijn minder gestrest en hebben meer energie voor hun privéleven. Wederzijds voordeel: betere medewerkers, betere resultaten, betere organisatie.
             </p>
           </div>
 
