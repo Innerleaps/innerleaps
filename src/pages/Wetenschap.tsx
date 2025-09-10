@@ -9,7 +9,6 @@ import { Link } from 'react-router-dom';
 import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
 const Wetenschap = () => {
   const [isLeadMagnetOpen, setIsLeadMagnetOpen] = useState(false);
-  
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -18,209 +17,287 @@ const Wetenschap = () => {
     title: "65-72% minder werkstress",
     description: "Zonder dat de werkdruk wordt verminderd ervaren deelnemers minder stress. De beleving van het werk en de werkdruk wordt minder stressvol.",
     jdrTag: "Werkeisen/Stressoren",
-    studies: [
-      { name: "De Vibe et al. (2017)", url: "https://www.researchgate.net/publication/320809758_Mindfulness-based_stress_reduction_MBSR_for_improving_health_quality_of_life_and_social_functioning_in_adults_a_systematic_review_and_meta-analysis" },
-      { name: "Bartlett et al. (2018)", url: "https://scispace.com/pdf/a-systematic-review-and-meta-analysis-of-workplace-448vdu0m18.pdf" },
-      { name: "Vonderlin et al. (2020)", url: "https://link.springer.com/article/10.1007/s12671-020-01328-3" },
-      { name: "Lensen et al. (2024)", url: "https://www.frontiersin.org/journals/education/articles/10.3389/feduc.2024.1385375/full" },
-      { name: "Michaelsen et al. (2023)", url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC10172073/" },
-      { name: "Żołnierczyk-Zreda et al. (2016)", url: "https://academic.oup.com/occmed/article-abstract/66/8/630/2750551?redirectedFrom=fulltext" }
-    ],
+    studies: [{
+      name: "De Vibe et al. (2017)",
+      url: "https://www.researchgate.net/publication/320809758_Mindfulness-based_stress_reduction_MBSR_for_improving_health_quality_of_life_and_social_functioning_in_adults_a_systematic_review_and_meta-analysis"
+    }, {
+      name: "Bartlett et al. (2018)",
+      url: "https://scispace.com/pdf/a-systematic-review-and-meta-analysis-of-workplace-448vdu0m18.pdf"
+    }, {
+      name: "Vonderlin et al. (2020)",
+      url: "https://link.springer.com/article/10.1007/s12671-020-01328-3"
+    }, {
+      name: "Lensen et al. (2024)",
+      url: "https://www.frontiersin.org/journals/education/articles/10.3389/feduc.2024.1385375/full"
+    }, {
+      name: "Michaelsen et al. (2023)",
+      url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC10172073/"
+    }, {
+      name: "Żołnierczyk-Zreda et al. (2016)",
+      url: "https://academic.oup.com/occmed/article-abstract/66/8/630/2750551?redirectedFrom=fulltext"
+    }],
     color: "text-brand-blue"
   }, {
     icon: Brain,
     title: "65-67% minder angst",
     description: "Deelnemers ervaren minder algemene angstgevoelens in het dagelijks leven. Ze voelen zich rustiger en minder gespannen, waardoor angst hen minder belemmert.",
     jdrTag: "Werkeisen/Stressoren",
-    studies: [
-      { name: "De Vibe et al. (2017)", url: "https://www.researchgate.net/publication/320809758_Mindfulness-based_stress_reduction_MBSR_for_improving_health_quality_of_life_and_social_functioning_in_adults_a_systematic_review_and_meta-analysis" },
-      { name: "Bartlett et al. (2018)", url: "https://scispace.com/pdf/a-systematic-review-and-meta-analysis-of-workplace-448vdu0m18.pdf" }
-    ],
+    studies: [{
+      name: "De Vibe et al. (2017)",
+      url: "https://www.researchgate.net/publication/320809758_Mindfulness-based_stress_reduction_MBSR_for_improving_health_quality_of_life_and_social_functioning_in_adults_a_systematic_review_and_meta-analysis"
+    }, {
+      name: "Bartlett et al. (2018)",
+      url: "https://scispace.com/pdf/a-systematic-review-and-meta-analysis-of-workplace-448vdu0m18.pdf"
+    }],
     color: "text-brand-green"
   }, {
     icon: Target,
     title: "64-77% meer veerkracht en weerbaarheid",
     description: "Deelnemers ontwikkelen mentale spierkracht om uitdagingen het hoofd te bieden. Ze herstellen sneller van tegenslagen en blijven effectief functioneren onder druk.",
     jdrTag: "Persoonlijke Hulpbronnen",
-    studies: [
-      { name: "Michaelsen et al. (2023)", url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC10172073/" },
-      { name: "Vonderlin et al. (2020)", url: "https://link.springer.com/article/10.1007/s12671-020-01328-3" },
-      { name: "Dou et al. (2024)", url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC12210539/" }
-    ],
+    studies: [{
+      name: "Michaelsen et al. (2023)",
+      url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC10172073/"
+    }, {
+      name: "Vonderlin et al. (2020)",
+      url: "https://link.springer.com/article/10.1007/s12671-020-01328-3"
+    }, {
+      name: "Dou et al. (2024)",
+      url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC12210539/"
+    }],
     color: "text-brand-blue"
   }, {
     icon: Brain,
     title: "62-74% meer mindfulness",
     description: "Deelnemers worden bewuster van hun gedachten, emoties en lichaamssignalen. Ze leven meer in het moment en reageren minder automatisch op situaties.",
     jdrTag: "Persoonlijke Hulpbronnen",
-    studies: [
-      { name: "De Vibe et al. (2017)", url: "https://www.researchgate.net/publication/320809758_Mindfulness-based_stress_reduction_MBSR_for_improving_health_quality_of_life_and_social_functioning_in_adults_a_systematic_review_and_meta-analysis" },
-      { name: "Vonderlin et al. (2020)", url: "https://link.springer.com/article/10.1007/s12671-020-01328-3" },
-      { name: "Bartlett et al. (2018)", url: "https://scispace.com/pdf/a-systematic-review-and-meta-analysis-of-workplace-448vdu0m18.pdf" },
-      { name: "Lensen et al. (2024)", url: "https://www.frontiersin.org/journals/education/articles/10.3389/feduc.2024.1385375/full" },
-      { name: "Michaelsen et al. (2023)", url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC10172073/" }
-    ],
+    studies: [{
+      name: "De Vibe et al. (2017)",
+      url: "https://www.researchgate.net/publication/320809758_Mindfulness-based_stress_reduction_MBSR_for_improving_health_quality_of_life_and_social_functioning_in_adults_a_systematic_review_and_meta-analysis"
+    }, {
+      name: "Vonderlin et al. (2020)",
+      url: "https://link.springer.com/article/10.1007/s12671-020-01328-3"
+    }, {
+      name: "Bartlett et al. (2018)",
+      url: "https://scispace.com/pdf/a-systematic-review-and-meta-analysis-of-workplace-448vdu0m18.pdf"
+    }, {
+      name: "Lensen et al. (2024)",
+      url: "https://www.frontiersin.org/journals/education/articles/10.3389/feduc.2024.1385375/full"
+    }, {
+      name: "Michaelsen et al. (2023)",
+      url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC10172073/"
+    }],
     color: "text-brand-green"
   }, {
     icon: TrendingUp,
     title: "71-79% meer self-efficacy",
     description: "Het vertrouwen in eigen kunnen groeit significant. Deelnemers pakken uitdagingen proactief aan in plaats van ze te vermijden of uit te stellen.",
     jdrTag: "Persoonlijke Hulpbronnen",
-    studies: [
-      { name: "Lensen et al. (2024)", url: "https://www.frontiersin.org/journals/education/articles/10.3389/feduc.2024.1385375/full" },
-      { name: "Żołnierczyk-Zreda et al. (2016)", url: "https://academic.oup.com/occmed/article-abstract/66/8/630/2750551?redirectedFrom=fulltext" }
-    ],
+    studies: [{
+      name: "Lensen et al. (2024)",
+      url: "https://www.frontiersin.org/journals/education/articles/10.3389/feduc.2024.1385375/full"
+    }, {
+      name: "Żołnierczyk-Zreda et al. (2016)",
+      url: "https://academic.oup.com/occmed/article-abstract/66/8/630/2750551?redirectedFrom=fulltext"
+    }],
     color: "text-brand-blue"
   }, {
     icon: Heart,
     title: "70% betere emotieregulatie",
     description: "Sterke emoties zoals frustratie of boosheid krijgen minder grip. Deelnemers reageren rustiger in moeilijke situaties en maken bewustere keuzes.",
     jdrTag: "Persoonlijke Hulpbronnen",
-    studies: [
-      { name: "Lensen et al. (2024)", url: "https://www.frontiersin.org/journals/education/articles/10.3389/feduc.2024.1385375/full" }
-    ],
+    studies: [{
+      name: "Lensen et al. (2024)",
+      url: "https://www.frontiersin.org/journals/education/articles/10.3389/feduc.2024.1385375/full"
+    }],
     color: "text-brand-green"
   }, {
     icon: Heart,
     title: "68% meer zelfcompassie",
     description: "Deelnemers gaan vriendelijker om met zichzelf. Ze zijn minder zelfkritisch bij fouten en behandelen zichzelf met dezelfde compassie die ze anderen zouden tonen.",
     jdrTag: "Persoonlijke Hulpbronnen",
-    studies: [
-      { name: "Michaelsen et al. (2023)", url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC10172073/" }
-    ],
+    studies: [{
+      name: "Michaelsen et al. (2023)",
+      url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC10172073/"
+    }],
     color: "text-brand-blue"
   }, {
     icon: Users,
     title: "64-67% beter werkklimaat",
     description: "Teams ervaren een positievere sfeer op de werkvloer. Samenwerking verbetert en conflicten nemen af door betere onderlinge verhoudingen.",
     jdrTag: "Werkhulpbronnen",
-    studies: [
-      { name: "Lensen et al. (2024)", url: "https://www.frontiersin.org/journals/education/articles/10.3389/feduc.2024.1385375/full" }
-    ],
+    studies: [{
+      name: "Lensen et al. (2024)",
+      url: "https://www.frontiersin.org/journals/education/articles/10.3389/feduc.2024.1385375/full"
+    }],
     color: "text-brand-green"
   }, {
     icon: Users,
     title: "67% meer compassie voor anderen",
     description: "Deelnemers tonen meer begrip en geduld voor collega's. Dit versterkt teamcohesie en creëert een ondersteunende werkomgeving.",
     jdrTag: "Werkhulpbronnen",
-    studies: [
-      { name: "Vonderlin et al. (2020)", url: "https://link.springer.com/article/10.1007/s12671-020-01328-3" }
-    ],
+    studies: [{
+      name: "Vonderlin et al. (2020)",
+      url: "https://link.springer.com/article/10.1007/s12671-020-01328-3"
+    }],
     color: "text-brand-blue"
   }, {
     icon: Shield,
     title: "60-84% minder burn-out klachten",
     description: "Emotionele uitputting neemt drastisch af. Deelnemers voelen zich minder leeggelopen en behouden hun energie voor werk én privé.",
     jdrTag: "Stressreacties/Welbevinden",
-    studies: [
-      { name: "Vonderlin et al. (2020)", url: "https://link.springer.com/article/10.1007/s12671-020-01328-3" },
-      { name: "Bartlett et al. (2018)", url: "https://scispace.com/pdf/a-systematic-review-and-meta-analysis-of-workplace-448vdu0m18.pdf" },
-      { name: "Michaelsen et al. (2023)", url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC10172073/" },
-      { name: "Dou et al. (2024)", url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC12210539/" }
-    ],
+    studies: [{
+      name: "Vonderlin et al. (2020)",
+      url: "https://link.springer.com/article/10.1007/s12671-020-01328-3"
+    }, {
+      name: "Bartlett et al. (2018)",
+      url: "https://scispace.com/pdf/a-systematic-review-and-meta-analysis-of-workplace-448vdu0m18.pdf"
+    }, {
+      name: "Michaelsen et al. (2023)",
+      url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC10172073/"
+    }, {
+      name: "Dou et al. (2024)",
+      url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC12210539/"
+    }],
     color: "text-brand-green"
   }, {
     icon: Heart,
     title: "63% meer werktevredenheid",
     description: "Het plezier in het werk neemt toe. Taken voelen minder zwaar aan en deelnemers ervaren meer betekenis in hun dagelijkse werkzaamheden.",
     jdrTag: "Stressreacties/Welbevinden",
-    studies: [
-      { name: "Vonderlin et al. (2020)", url: "https://link.springer.com/article/10.1007/s12671-020-01328-3" },
-      { name: "Michaelsen et al. (2023)", url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC10172073/" }
-    ],
+    studies: [{
+      name: "Vonderlin et al. (2020)",
+      url: "https://link.springer.com/article/10.1007/s12671-020-01328-3"
+    }, {
+      name: "Michaelsen et al. (2023)",
+      url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC10172073/"
+    }],
     color: "text-brand-blue"
   }, {
     icon: TrendingUp,
     title: "65% meer werkbetrokkenheid",
     description: "Teams worden gemotiveerder en meer betrokken bij hun werk. Ze investeren bewuster in hun taken en groeien samen naar betere prestaties.",
     jdrTag: "Stressreacties/Welbevinden",
-    studies: [
-      { name: "Vonderlin et al. (2020)", url: "https://link.springer.com/article/10.1007/s12671-020-01328-3" }
-    ],
+    studies: [{
+      name: "Vonderlin et al. (2020)",
+      url: "https://link.springer.com/article/10.1007/s12671-020-01328-3"
+    }],
     color: "text-brand-green"
   }, {
     icon: Brain,
     title: "57-78% beter slapen en herstellen",
     description: "Deelnemers vallen makkelijker in slaap en slapen dieper. Dit zorgt voor beter herstel en meer energie voor de volgende dag.",
     jdrTag: "Persoonlijke Impact",
-    studies: [
-      { name: "Bartlett et al. (2018)", url: "https://scispace.com/pdf/a-systematic-review-and-meta-analysis-of-workplace-448vdu0m18.pdf" },
-      { name: "Michaelsen et al. (2023)", url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC10172073/" },
-      { name: "Dou et al. (2024)", url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC12210539/" }
-    ],
+    studies: [{
+      name: "Bartlett et al. (2018)",
+      url: "https://scispace.com/pdf/a-systematic-review-and-meta-analysis-of-workplace-448vdu0m18.pdf"
+    }, {
+      name: "Michaelsen et al. (2023)",
+      url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC10172073/"
+    }, {
+      name: "Dou et al. (2024)",
+      url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC12210539/"
+    }],
     color: "text-brand-blue"
   }, {
     icon: Heart,
     title: "59-68% meer welzijn en tevredenheid",
     description: "De algemene levenskwaliteit stijgt merkbaar. Deelnemers voelen zich gelukkiger en meer tevreden met hun leven als geheel.",
     jdrTag: "Persoonlijke Impact",
-    studies: [
-      { name: "Vonderlin et al. (2020)", url: "https://link.springer.com/article/10.1007/s12671-020-01328-3" },
-      { name: "Lensen et al. (2024)", url: "https://www.frontiersin.org/journals/education/articles/10.3389/feduc.2024.1385375/full" },
-      { name: "Bartlett et al. (2018)", url: "https://scispace.com/pdf/a-systematic-review-and-meta-analysis-of-workplace-448vdu0m18.pdf" }
-    ],
+    studies: [{
+      name: "Vonderlin et al. (2020)",
+      url: "https://link.springer.com/article/10.1007/s12671-020-01328-3"
+    }, {
+      name: "Lensen et al. (2024)",
+      url: "https://www.frontiersin.org/journals/education/articles/10.3389/feduc.2024.1385375/full"
+    }, {
+      name: "Bartlett et al. (2018)",
+      url: "https://scispace.com/pdf/a-systematic-review-and-meta-analysis-of-workplace-448vdu0m18.pdf"
+    }],
     color: "text-brand-green"
   }, {
     icon: Award,
     title: "61-63% betere levenskwaliteit",
     description: "Het algehele gevoel van welbevinden en tevredenheid met het leven stijgt. Deelnemers ervaren meer vreugde en betekenis in hun dagelijkse activiteiten.",
     jdrTag: "Persoonlijke Impact",
-    studies: [
-      { name: "De Vibe et al. (2017)", url: "https://www.researchgate.net/publication/320809758_Mindfulness-based_stress_reduction_MBSR_for_improving_health_quality_of_life_and_social_functioning_in_adults_a_systematic_review_and_meta-analysis" },
-      { name: "Vonderlin et al. (2020)", url: "https://link.springer.com/article/10.1007/s12671-020-01328-3" },
-      { name: "Michaelsen et al. (2023)", url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC10172073/" }
-    ],
+    studies: [{
+      name: "De Vibe et al. (2017)",
+      url: "https://www.researchgate.net/publication/320809758_Mindfulness-based_stress_reduction_MBSR_for_improving_health_quality_of_life_and_social_functioning_in_adults_a_systematic_review_and_meta-analysis"
+    }, {
+      name: "Vonderlin et al. (2020)",
+      url: "https://link.springer.com/article/10.1007/s12671-020-01328-3"
+    }, {
+      name: "Michaelsen et al. (2023)",
+      url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC10172073/"
+    }],
     color: "text-brand-blue"
   }, {
     icon: Brain,
     title: "65-68% betere mentale gezondheid",
     description: "De psychische gesteldheid verbetert merkbaar. Deelnemers voelen zich mentaal sterker en stabieler, met minder last van negatieve gedachten.",
     jdrTag: "Persoonlijke Impact",
-    studies: [
-      { name: "De Vibe et al. (2017)", url: "https://www.researchgate.net/publication/320809758_Mindfulness-based_stress_reduction_MBSR_for_improving_health_quality_of_life_and_social_functioning_in_adults_a_systematic_review_and_meta-analysis" },
-      { name: "Michaelsen et al. (2023)", url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC10172073/" }
-    ],
+    studies: [{
+      name: "De Vibe et al. (2017)",
+      url: "https://www.researchgate.net/publication/320809758_Mindfulness-based_stress_reduction_MBSR_for_improving_health_quality_of_life_and_social_functioning_in_adults_a_systematic_review_and_meta-analysis"
+    }, {
+      name: "Michaelsen et al. (2023)",
+      url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC10172073/"
+    }],
     color: "text-brand-green"
   }, {
     icon: Heart,
     title: "63% betere fysieke gezondheid",
     description: "Het lichaam functioneert beter door minder stress. Deelnemers ervaren minder lichamelijke klachten en hebben meer energie.",
     jdrTag: "Persoonlijke Impact",
-    studies: [
-      { name: "Michaelsen et al. (2023)", url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC10172073/" }
-    ],
+    studies: [{
+      name: "Michaelsen et al. (2023)",
+      url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC10172073/"
+    }],
     color: "text-brand-blue"
   }, {
     icon: BarChart3,
     title: "15-21% minder verzuim",
     description: "Concrete reductie in ziekteverzuim door betere stressbestendigheid en algemene gezondheid van het team.",
     jdrTag: "Organisatorische Impact",
-    studies: [
-      { name: "Żołnierczyk-Zreda et al. (2016)", url: "https://academic.oup.com/occmed/article-abstract/66/8/630/2750551?redirectedFrom=fulltext" },
-      { name: "Michaelsen et al. (2023)", url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC10172073/" },
-      { name: "Häusser et al. (2010)", url: "https://psycnet.apa.org/record/2010-06658-001" },
-      { name: "Karasek & Theorell (1990)", url: "https://www.scirp.org/reference/referencespapers?referenceid=1955102" },
-      { name: "Arboned (2024)", url: "https://www.arboned.nl/nieuws/griepachtige-klachten-en-stress-boosdoeners-van-verzuim-in-2024#:~:text=Stressgerelateerde%20klachten%20blijven%20stijgen&text=Kijken%20we%20naar%20het%20langdurend,opzichte%20van%20het%20jaar%20daarvoor." }
-    ],
+    studies: [{
+      name: "Żołnierczyk-Zreda et al. (2016)",
+      url: "https://academic.oup.com/occmed/article-abstract/66/8/630/2750551?redirectedFrom=fulltext"
+    }, {
+      name: "Michaelsen et al. (2023)",
+      url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC10172073/"
+    }, {
+      name: "Häusser et al. (2010)",
+      url: "https://psycnet.apa.org/record/2010-06658-001"
+    }, {
+      name: "Karasek & Theorell (1990)",
+      url: "https://www.scirp.org/reference/referencespapers?referenceid=1955102"
+    }, {
+      name: "Arboned (2024)",
+      url: "https://www.arboned.nl/nieuws/griepachtige-klachten-en-stress-boosdoeners-van-verzuim-in-2024#:~:text=Stressgerelateerde%20klachten%20blijven%20stijgen&text=Kijken%20we%20naar%20het%20langdurend,opzichte%20van%20het%20jaar%20daarvoor."
+    }],
     color: "text-brand-green"
   }, {
     icon: TrendingUp,
     title: "70% lager uitvalrisico",
     description: "De kans dat medewerkers uitvallen door stress of burn-out daalt drastisch, wat zorgt voor meer stabiliteit in teams.",
     jdrTag: "Organisatorische Impact",
-    studies: [
-      { name: "De Bruin et al. (2018)", url: "https://dare.uva.nl/search?identifier=2ec42a08-a20f-4859-8e23-609a6030e6b6" }
-    ],
+    studies: [{
+      name: "De Bruin et al. (2018)",
+      url: "https://dare.uva.nl/search?identifier=2ec42a08-a20f-4859-8e23-609a6030e6b6"
+    }],
     color: "text-brand-blue"
   }, {
     icon: Award,
     title: "58-60% meer productiviteit",
     description: "Teams presteren beter door verhoogde focus, minder stress en betere samenwerking.",
     jdrTag: "Organisatorische Impact",
-    studies: [
-      { name: "Vonderlin et al. (2020)", url: "https://link.springer.com/article/10.1007/s12671-020-01328-3" },
-      { name: "Michaelsen et al. (2023)", url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC10172073/" }
-    ],
+    studies: [{
+      name: "Vonderlin et al. (2020)",
+      url: "https://link.springer.com/article/10.1007/s12671-020-01328-3"
+    }, {
+      name: "Michaelsen et al. (2023)",
+      url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC10172073/"
+    }],
     color: "text-brand-green"
   }];
   return <div className="min-h-screen bg-brand-gray-light">
@@ -307,11 +384,9 @@ const Wetenschap = () => {
                   </p>
                   
                   <div className="flex flex-wrap gap-2">
-                    {mechanisme.studies.map((study, studyIndex) => 
-                      <a key={studyIndex} href={study.url} target="_blank" rel="noopener noreferrer" className="inline-block bg-brand-gray-light text-brand-gray-dark text-xs px-3 py-1 rounded-full hover:bg-brand-blue hover:text-white transition-colors duration-200">
+                    {mechanisme.studies.map((study, studyIndex) => <a key={studyIndex} href={study.url} target="_blank" rel="noopener noreferrer" className="inline-block bg-brand-gray-light text-brand-gray-dark text-xs px-3 py-1 rounded-full hover:bg-brand-blue hover:text-white transition-colors duration-200">
                         {study.name}
-                      </a>
-                    )}
+                      </a>)}
                   </div>
                 </div>;
           })}
@@ -336,10 +411,7 @@ const Wetenschap = () => {
               Wil je precies begrijpen hoe deze resultaten tot stand komen? Ons academische onderzoeksrapport legt de methodologie en berekeningen achter de 15-21% verzuimreductie volledig uit. Inclusief pathway-analyses, effectgroottes en de wetenschappelijke basis van 40 jaar MBSR-onderzoek.
             </p>
             
-            <Button
-              onClick={() => setIsLeadMagnetOpen(true)}
-              className="text-lg px-8 py-3 bg-white hover:bg-gray-100 text-brand-blue hover:text-brand-blue font-semibold rounded-lg transition-all duration-300 shadow-lg transform hover:-translate-y-0.5"
-            >
+            <Button onClick={() => setIsLeadMagnetOpen(true)} className="text-lg px-8 py-3 bg-white hover:bg-gray-100 text-brand-blue hover:text-brand-blue font-semibold rounded-lg transition-all duration-300 shadow-lg transform hover:-translate-y-0.5">
               Vraag het bewijs op
             </Button>
           </div>
@@ -355,15 +427,11 @@ const Wetenschap = () => {
             </h2>
             
             <div className="prose prose-lg text-brand-gray-medium mb-12">
-              <p className="text-xl leading-relaxed mb-8">
-                De wetenschap is eenduidig: een gestructureerd programma zoals het onze, gebaseerd op bewezen stressreductietechnieken, heeft een aantoonbare positieve impact op de kernfactoren die verzuim en verloop veroorzaken.
-              </p>
+              <p className="text-xl leading-relaxed mb-8">De wetenschap is eenduidig: een gestructureerd programma zoals het onze, gebaseerd op bewezen stressreductietechnieken, heeft een aantoonbare positieve impact op verzuim en het uitval risico. Bas gaat graag een open en vrijblijvend gesprek met je aan. </p>
             </div>
 
             <div className="space-y-4">
-              <Button variant="outline" className="text-lg px-8 py-3 bg-white hover:bg-white border-2 border-brand-blue text-brand-blue hover:text-brand-blue font-semibold rounded-lg transition-all duration-300 transform hover:-translate-y-0.5" onClick={() => window.open('https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1wwDnoAHyFrV0M1FxwmbcMa9ewkDxTDdwQObwPKF-WX-wZV9DssZKtb1haoeP5qXDLenQlZt_R', '_blank')}>
-                Vrijblijvend gesprek plannen
-              </Button>
+              <Button variant="outline" className="text-lg px-8 py-3 bg-white hover:bg-white border-2 border-brand-blue text-brand-blue hover:text-brand-blue font-semibold rounded-lg transition-all duration-300 transform hover:-translate-y-0.5" onClick={() => window.open('https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1wwDnoAHyFrV0M1FxwmbcMa9ewkDxTDdwQObwPKF-WX-wZV9DssZKtb1haoeP5qXDLenQlZt_R', '_blank')}>Een gesprek met Bas plannen</Button>
             </div>
           </div>
         </div>
@@ -410,10 +478,7 @@ const Wetenschap = () => {
         </div>
       </footer>
       
-      <LeadMagnetModal 
-        isOpen={isLeadMagnetOpen}
-        onClose={() => setIsLeadMagnetOpen(false)}
-      />
+      <LeadMagnetModal isOpen={isLeadMagnetOpen} onClose={() => setIsLeadMagnetOpen(false)} />
     </div>;
 };
 export default Wetenschap;
