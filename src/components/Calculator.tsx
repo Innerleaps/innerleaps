@@ -64,8 +64,8 @@ const Calculator = () => {
     return (
       <Card className="p-8 bg-gradient-to-br from-brand-orange to-brand-orange/80 text-white">
         <div className="text-center space-y-6">
-          <div className="inline-flex items-center justify-center w-16 h-16 bg-white/20 rounded-full mb-4">
-            <TrendingUp className="h-8 w-8" />
+          <div className="inline-flex items-center justify-center w-16 h-16 bg-hero-gradient rounded-full mb-4">
+            <TrendingUp className="h-8 w-8 text-brand-orange" />
           </div>
           
           <h3 className="text-2xl font-bold">Uw Potentiële Besparing</h3>
@@ -118,7 +118,7 @@ const Calculator = () => {
   return (
     <Card className="p-8">
       <div className="text-center mb-8">
-        <div className="inline-flex items-center justify-center w-16 h-16 bg-gray-100 rounded-full mb-4">
+        <div className="inline-flex items-center justify-center w-16 h-16 bg-hero-gradient rounded-full mb-4">
           <CalculatorIcon className="h-8 w-8 text-brand-orange stroke-2" />
         </div>
         <h3 className="text-2xl font-bold text-brand-gray-dark mb-2">
