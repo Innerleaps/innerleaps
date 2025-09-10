@@ -128,7 +128,7 @@ const ROICalculator = () => {
                   </div>
                 </div>
 
-                <div className="space-y-6">
+                <div className="grid md:grid-cols-3 gap-6">
                   <div className="space-y-2">
                     <Label htmlFor="bedrijf" className="text-white font-medium">
                       Bedrijfsnaam*
@@ -144,35 +144,33 @@ const ROICalculator = () => {
                     />
                   </div>
 
-                  <div className="grid md:grid-cols-2 gap-6">
-                    <div className="space-y-2">
-                      <Label htmlFor="email" className="text-white font-medium">
-                        Email*
-                      </Label>
-                      <Input
-                        id="email"
-                        type="email"
-                        value={formData.email}
-                        onChange={(e) => handleInputChange('email', e.target.value)}
-                        className="bg-white/10 border-white/30 text-white placeholder-white/60"
-                        placeholder="uw.email@bedrijf.nl"
-                        required
-                      />
-                    </div>
+                  <div className="space-y-2">
+                    <Label htmlFor="email" className="text-white font-medium">
+                      Email*
+                    </Label>
+                    <Input
+                      id="email"
+                      type="email"
+                      value={formData.email}
+                      onChange={(e) => handleInputChange('email', e.target.value)}
+                      className="bg-white/10 border-white/30 text-white placeholder-white/60"
+                      placeholder="uw.email@bedrijf.nl"
+                      required
+                    />
+                  </div>
 
-                    <div className="space-y-2">
-                      <Label htmlFor="telefoon" className="text-white font-medium">
-                        Telefoonnummer
-                      </Label>
-                      <Input
-                        id="telefoon"
-                        type="tel"
-                        value={formData.telefoon}
-                        onChange={(e) => handleInputChange('telefoon', e.target.value)}
-                        className="bg-white/10 border-white/30 text-white placeholder-white/60"
-                        placeholder="06 12 34 56 78"
-                      />
-                    </div>
+                  <div className="space-y-2">
+                    <Label htmlFor="telefoon" className="text-white font-medium">
+                      Telefoonnummer
+                    </Label>
+                    <Input
+                      id="telefoon"
+                      type="tel"
+                      value={formData.telefoon}
+                      onChange={(e) => handleInputChange('telefoon', e.target.value)}
+                      className="bg-white/10 border-white/30 text-white placeholder-white/60"
+                      placeholder="06 12 34 56 78"
+                    />
                   </div>
                 </div>
 
