@@ -1,6 +1,7 @@
 import Navigation from '@/components/Navigation';
 import StickyCtaButtons from '@/components/StickyCtaButtons';
 import LeadMagnetModal from '@/components/LeadMagnetModal';
+import ROICalculator from '@/components/ROICalculator';
 import { useEffect, useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { ArrowLeft, BookOpen, BarChart3, Brain, Heart, Users, Shield, TrendingUp, Award, Target, FileText } from 'lucide-react';
@@ -347,39 +348,25 @@ const Wetenschap = () => {
         <div className="container-custom">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-brand-gray-dark mb-8">
-              207% ROI: De Wetenschappelijke Basis
+              De Wetenschappelijke Basis
             </h2>
             
             <div className="prose prose-lg text-brand-gray-medium mb-12">
               <p className="text-xl leading-relaxed mb-8">
                 De wetenschap is eenduidig: een gestructureerd programma zoals het onze, gebaseerd op bewezen stressreductietechnieken, heeft een aantoonbare positieve impact op de kernfactoren die verzuim en verloop veroorzaken.
               </p>
-              
-              <div className="bg-brand-blue text-white rounded-xl p-8 text-center">
-                <div className="text-5xl font-bold mb-4">207%</div>
-                <div className="text-2xl font-semibold mb-4">HALT ROI per groep van 15 deelnemers</div>
-                <p className="text-lg leading-relaxed">
-                  Op basis van Nederlandse sectorale data hebben we een conservatieve ROI-berekening gemaakt voor MBSR stressmanagement cursus-training. <strong>Voor elke euro geïnvesteerd in HALT's MBSR stressmanagement cursus krijgt u €2,07 terug in het eerste jaar.</strong>
-                </p>
-              </div>
             </div>
 
             <div className="space-y-4">
-              <Button className="text-lg px-8 py-3 bg-brand-blue hover:bg-brand-blue text-white hover:text-white font-semibold rounded-lg transition-all duration-300 shadow-lg transform hover:-translate-y-0.5" onClick={() => window.scrollTo({
-              top: 0,
-              behavior: 'smooth'
-            })}>
-                Bereken uw besparing
+              <Button variant="outline" className="text-lg px-8 py-3 bg-white hover:bg-white border-2 border-brand-blue text-brand-blue hover:text-brand-blue font-semibold rounded-lg transition-all duration-300 transform hover:-translate-y-0.5" onClick={() => window.open('https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1wwDnoAHyFrV0M1FxwmbcMa9ewkDxTDdwQObwPKF-WX-wZV9DssZKtb1haoeP5qXDLenQlZt_R', '_blank')}>
+                Vrijblijvend gesprek plannen
               </Button>
-              <div>
-                <Button variant="outline" className="text-lg px-8 py-3 bg-white hover:bg-white border-2 border-brand-blue text-brand-blue hover:text-brand-blue font-semibold rounded-lg transition-all duration-300 transform hover:-translate-y-0.5" onClick={() => window.open('https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1wwDnoAHyFrV0M1FxwmbcMa9ewkDxTDdwQObwPKF-WX-wZV9DssZKtb1haoeP5qXDLenQlZt_R', '_blank')}>
-                  Vrijblijvend gesprek plannen
-                </Button>
-              </div>
             </div>
           </div>
         </div>
       </section>
+
+      <ROICalculator />
 
       {/* Footer */}
       <footer className="bg-gradient-to-br from-brand-blue to-brand-blue-dark text-white py-12">

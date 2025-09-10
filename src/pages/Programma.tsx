@@ -4,6 +4,7 @@ import { Badge } from '@/components/ui/badge';
 import { Clock, Users, MapPin, Calendar } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import StickyCtaButtons from '@/components/StickyCtaButtons';
+import ROICalculator from '@/components/ROICalculator';
 import { useEffect } from 'react';
 import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
 
@@ -350,6 +351,8 @@ const Programma = () => {
           </div>
         </div>
       </main>
+
+      <ROICalculator />
 
       {/* Footer */}
       <footer className="bg-gradient-to-br from-brand-blue to-brand-blue-dark text-white py-12 mt-16">

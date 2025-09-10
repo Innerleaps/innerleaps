@@ -3,6 +3,7 @@ import Navigation from '@/components/Navigation';
 import { Button } from '@/components/ui/button';
 import { Calendar, Mail, Phone } from 'lucide-react';
 import StickyCtaButtons from '@/components/StickyCtaButtons';
+import ROICalculator from '@/components/ROICalculator';
 import { useEffect } from 'react';
 import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
 
@@ -144,6 +145,8 @@ const Contact = () => {
           </div>
         </section>
       </main>
+
+      <ROICalculator />
 
       {/* Footer */}
       <footer className="bg-gradient-to-br from-brand-blue to-brand-blue-dark text-white py-12">

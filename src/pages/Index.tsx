@@ -5,6 +5,7 @@ import ImpactSection from '@/components/ImpactSection';
 import ProgramSection from '@/components/ProgramSection';
 import ProcessSection from '@/components/ProcessSection';
 import StickyCtaButtons from '@/components/StickyCtaButtons';
+import ROICalculator from '@/components/ROICalculator';
 import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
 
 const Index = () => {
@@ -24,6 +25,8 @@ const Index = () => {
       <div id="voor-wie">
         <ProcessSection />
       </div>
+
+      <ROICalculator />
 
       {/* Footer */}
       <footer id="contact" className="bg-gradient-to-br from-brand-blue to-brand-blue-dark text-white py-12">
