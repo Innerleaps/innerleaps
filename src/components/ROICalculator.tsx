@@ -201,7 +201,7 @@ const ROICalculator = () => {
                   <p className="text-brand-gray-medium mb-6">
                     Ontvang jouw gepersonaliseerde ROI-analyse direct per email
                   </p>
-                  <Button type="submit" disabled={isSubmitting} className="text-lg px-8 py-3 bg-brand-blue hover:bg-brand-blue-dark text-white hover:text-white font-semibold rounded-lg transition-all duration-300 shadow-lg transform hover:-translate-y-0.5 disabled:opacity-50">
+                  <Button type="submit" disabled={isSubmitting} className="text-lg px-8 py-3 font-semibold rounded-lg shadow-lg disabled:opacity-50">
                     {isSubmitting ? 'Jouw analyse wordt verstuurd...' : 'Verstuur mijn ROI-analyse'}
                   </Button>
                 </div>

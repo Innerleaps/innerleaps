@@ -341,10 +341,10 @@ const Programma = () => {
               Ontdek hoe het bewezen MBSR-programma uw organisatie kan helpen bij het verlagen van verzuim en het verbeteren van retentie.
             </p>
             <div className="space-y-4 md:space-y-0 md:space-x-4 md:flex md:justify-center">
-              <Button className="bg-brand-blue hover:bg-brand-blue text-white hover:text-white font-semibold py-3 px-8 rounded-lg text-lg transition-all duration-300 shadow-lg transform hover:-translate-y-0.5" onClick={() => window.open('https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1wwDnoAHyFrV0M1FxwmbcMa9ewkDxTDdwQObwPKF-WX-wZV9DssZKtb1haoeP5qXDLenQlZt_R', '_blank')}>
+              <Button variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-brand-blue font-semibold py-3 px-8 rounded-lg text-lg" onClick={() => window.open('https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1wwDnoAHyFrV0M1FxwmbcMa9ewkDxTDdwQObwPKF-WX-wZV9DssZKtb1haoeP5qXDLenQlZt_R', '_blank')}>
                 Vrijblijvend gesprek plannen
               </Button>
-              <Button variant="outline" className="border-2 border-brand-blue text-brand-blue hover:bg-white hover:text-brand-blue font-semibold py-3 px-8 rounded-lg text-lg transition-all duration-300 transform hover:-translate-y-0.5" onClick={() => window.location.href = '/#calculator'}>
+              <Button className="font-semibold py-3 px-8 rounded-lg text-lg" onClick={() => window.location.href = '/#calculator'}>
                 Bereken uw besparing
               </Button>
             </div>

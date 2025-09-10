@@ -96,7 +96,7 @@ const ProcessSection = () => {
           <div className="text-center mt-12">
             <Button 
               onClick={() => setIsCalculatorOpen(true)}
-              className="w-full sm:w-auto bg-brand-blue hover:bg-brand-blue text-white hover:text-white font-semibold py-3 px-8 rounded-lg text-base md:text-lg shadow-lg"
+              className="w-full sm:w-auto font-semibold py-3 px-8 rounded-lg text-base md:text-lg"
             >
               Onze besparing berekenen
             </Button>

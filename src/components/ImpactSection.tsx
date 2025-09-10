@@ -69,7 +69,7 @@ const ImpactSection = () => {
         <div className="text-center mt-12 space-y-4">
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link to="/wetenschap">
-              <Button variant="outline" className="w-full sm:w-auto border-2 border-brand-blue text-brand-blue hover:text-brand-blue hover:border-brand-blue hover:bg-transparent font-semibold py-3 px-8 rounded-lg text-base md:text-lg transition-all duration-300 transform hover:-translate-y-0.5">
+              <Button variant="secondary" className="w-full sm:w-auto font-semibold py-3 px-8 rounded-lg text-base md:text-lg">
                 ontdek alle uitkomsten
               </Button>
             </Link>

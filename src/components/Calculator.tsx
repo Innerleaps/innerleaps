@@ -225,7 +225,7 @@ const Calculator = () => {
           <div className="pt-4">
             <Button 
               onClick={calculateSavings}
-              className="w-full btn-primary"
+              className="w-full"
               disabled={!formData.name || !formData.phone || !formData.company || !formData.employees || !formData.yearlyCosts || !formData.currentAbsenteeism || !formData.currentTurnover}
             >
               Bereken Mijn Besparing
