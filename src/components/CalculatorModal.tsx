@@ -202,7 +202,7 @@ const CalculatorModal = ({ isOpen, onClose }: CalculatorModalProps) => {
                   type="text"
                   value={formData.naam}
                   onChange={(e) => handleInputChange('naam', e.target.value)}
-                  className="bg-white border-gray-300 text-brand-gray-dark placeholder-[rgb(51,65,85)]"
+                  className="bg-white border-gray-300 text-brand-gray-dark placeholder:!text-[rgb(51,65,85)]"
                   placeholder="Je volledige naam"
                   required
                 />
@@ -217,7 +217,7 @@ const CalculatorModal = ({ isOpen, onClose }: CalculatorModalProps) => {
                   type="email"
                   value={formData.email}
                   onChange={(e) => handleInputChange('email', e.target.value)}
-                  className="bg-white border-gray-300 text-brand-gray-dark placeholder-[rgb(51,65,85)]"
+                  className="bg-white border-gray-300 text-brand-gray-dark placeholder:!text-[rgb(51,65,85)]"
                   placeholder="je.email@bedrijf.nl"
                   required
                 />
@@ -232,7 +232,7 @@ const CalculatorModal = ({ isOpen, onClose }: CalculatorModalProps) => {
                   type="text"
                   value={formData.bedrijfsnaam}
                   onChange={(e) => handleInputChange('bedrijfsnaam', e.target.value)}
-                  className="bg-white border-gray-300 text-brand-gray-dark placeholder-[rgb(51,65,85)]"
+                  className="bg-white border-gray-300 text-brand-gray-dark placeholder:!text-[rgb(51,65,85)]"
                   placeholder="Je bedrijfsnaam"
                   required
                 />
