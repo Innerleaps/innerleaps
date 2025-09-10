@@ -150,12 +150,12 @@ const ROICalculator = () => {
           </div>
 
           <Card className="bg-brand-blue border shadow-lg rounded-xl">
-            <CardHeader className="bg-brand-blue text-white">
+            <CardHeader className="bg-brand-blue text-white rounded-t-xl">
               <CardTitle className="text-2xl font-semibold text-white">
                 Jouw bedrijfsgegevens
               </CardTitle>
             </CardHeader>
-            <CardContent className="bg-brand-blue">
+            <CardContent className="bg-brand-blue rounded-b-xl p-8">
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid md:grid-cols-3 gap-6">
                   <div className="space-y-2">
