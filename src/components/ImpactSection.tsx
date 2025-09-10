@@ -49,7 +49,7 @@ const ImpactSection = () => {
                     <div className={`p-3 rounded-lg bg-gray-50 ${impact.color} self-start`}>
                       <IconComponent className="h-6 w-6" />
                     </div>
-                    <span className="text-xs bg-brand-orange/10 text-brand-orange px-2 py-1 rounded-full font-medium">
+                    <span className="text-xs bg-brand-orange/5 text-brand-orange/70 px-2 py-1 rounded-full font-normal">
                       {impact.tag}
                     </span>
                   </div>

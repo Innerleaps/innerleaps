@@ -310,7 +310,7 @@ const Wetenschap = () => {
           <div className="max-w-4xl mx-auto">
             
             {/* 40+ Years Badge */}
-            <div className="inline-flex items-center bg-brand-blue text-white px-4 py-2 rounded-full text-sm font-semibold mb-6">
+            <div className="inline-flex items-center bg-brand-blue/10 text-brand-blue px-4 py-2 rounded-full text-sm font-medium mb-6">
               <Award className="h-4 w-4 mr-2" />
               40+ jaar wetenschappelijk onderzoek
             </div>

@@ -135,7 +135,7 @@ const ROICalculator = () => {
       <div className="container-custom">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
-            <div className="inline-flex items-center bg-brand-blue text-white px-4 py-2 rounded-full text-sm font-semibold mb-6">
+            <div className="inline-flex items-center bg-brand-blue/10 text-brand-blue px-4 py-2 rounded-full text-sm font-medium mb-6">
               <Calculator className="h-4 w-4 mr-2" />
               ROI Calculator
             </div>
@@ -162,21 +162,21 @@ const ROICalculator = () => {
                     <Label htmlFor="naam" className="text-brand-gray-dark font-medium">
                       Naam*
                     </Label>
-                    <Input id="naam" type="text" value={formData.naam} onChange={e => handleInputChange('naam', e.target.value)} className="bg-white border-gray-300 text-brand-gray-dark placeholder-gray-400" placeholder="Je volledige naam" required />
+                    <Input id="naam" type="text" value={formData.naam} onChange={e => handleInputChange('naam', e.target.value)} className="bg-white border-gray-300 text-brand-gray-dark placeholder-gray-400" required />
                   </div>
 
                   <div className="space-y-2">
                     <Label htmlFor="email" className="text-brand-gray-dark font-medium">
                       Email*
                     </Label>
-                    <Input id="email" type="email" value={formData.email} onChange={e => handleInputChange('email', e.target.value)} className="bg-white border-gray-300 text-brand-gray-dark placeholder-gray-400" placeholder="je.email@bedrijf.nl" required />
+                    <Input id="email" type="email" value={formData.email} onChange={e => handleInputChange('email', e.target.value)} className="bg-white border-gray-300 text-brand-gray-dark placeholder-gray-400" required />
                   </div>
 
                   <div className="space-y-2">
                     <Label htmlFor="bedrijfsnaam" className="text-brand-gray-dark font-medium">
                       Bedrijfsnaam*
                     </Label>
-                    <Input id="bedrijfsnaam" type="text" value={formData.bedrijfsnaam} onChange={e => handleInputChange('bedrijfsnaam', e.target.value)} className="bg-white border-gray-300 text-brand-gray-dark placeholder-gray-400" placeholder="Je bedrijfsnaam" required />
+                    <Input id="bedrijfsnaam" type="text" value={formData.bedrijfsnaam} onChange={e => handleInputChange('bedrijfsnaam', e.target.value)} className="bg-white border-gray-300 text-brand-gray-dark placeholder-gray-400" required />
                   </div>
                 </div>
 

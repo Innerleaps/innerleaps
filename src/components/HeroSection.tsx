@@ -11,7 +11,7 @@ const HeroSection = () => {
             <div className="space-y-6 lg:space-y-8 animate-fade-in">
               <div className="space-y-6">
                 {/* 40+ Years Research Badge */}
-                <div className="inline-flex items-center bg-white/20 backdrop-blur-sm text-white px-4 py-2 rounded-full text-base md:text-lg font-semibold">
+                <div className="inline-flex items-center bg-white/10 backdrop-blur-sm text-blue-200 px-4 py-2 rounded-full text-base md:text-lg font-medium">
                   <Award className="h-4 w-4 mr-2" />
                   40+ jaar bewezen burn out preventie
                 </div>
