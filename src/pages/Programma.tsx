@@ -97,14 +97,14 @@ const Programma = () => {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
             {features.map((feature, index) => {
             const IconComponent = feature.icon;
-            return <div key={index} className="bg-white rounded-xl p-6 text-center">
-                  <div className="bg-white p-4 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                    <IconComponent className="h-8 w-8 text-brand-orange stroke-2" />
+            return <div key={index} className="text-center p-6 bg-brand-gray-light rounded-xl">
+                  <div className="inline-flex items-center justify-center w-12 h-12 bg-brand-gray-light rounded-lg mb-4">
+                    <IconComponent className="h-6 w-6 text-brand-orange stroke-2" />
                   </div>
-                  <h3 className="text-xl font-semibold text-brand-gray-dark mb-2">
+                  <h3 className="text-xl md:text-2xl font-semibold text-brand-gray-dark mb-2">
                     {feature.title}
                   </h3>
-                  <p className="text-brand-gray-medium">
+                  <p className="text-brand-gray-medium text-lg md:text-xl leading-relaxed">
                     {feature.description}
                   </p>
                 </div>;
