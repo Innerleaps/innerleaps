@@ -187,9 +187,7 @@ const ROICalculator = () => {
                   </div>
 
                   <div className="space-y-2">
-                    <Label htmlFor="deelnemers" className="text-white font-medium">
-                      Aantal InnerLeaps deelnemers (default: 15)
-                    </Label>
+                    <Label htmlFor="deelnemers" className="text-white font-medium">Aantal InnerLeaps deelnemers</Label>
                     <Input id="deelnemers" type="number" value={formData.aantalDeelnemers} onChange={e => handleInputChange('aantalDeelnemers', e.target.value)} className="bg-white/10 border-white/30 text-white placeholder-white/60" placeholder="15" required />
                   </div>
 
