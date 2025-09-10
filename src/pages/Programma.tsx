@@ -163,8 +163,7 @@ const Programma = () => {
                       </div>
                       
                       <div>
-                        <h4 className="font-semibold text-brand-gray-dark mb-3 flex items-center">
-                          <span className="w-2 h-2 bg-brand-blue rounded-full mr-2"></span>
+                        <h4 className="font-semibold text-brand-gray-dark mb-3">
                           Technieken
                         </h4>
                         <ul className="space-y-2">
@@ -175,8 +174,7 @@ const Programma = () => {
                       </div>
                       
                       <div>
-                        <h4 className="font-semibold text-brand-gray-dark mb-3 flex items-center">
-                          <span className="w-2 h-2 bg-purple-600 rounded-full mr-2"></span>
+                        <h4 className="font-semibold text-brand-gray-dark mb-3">
                           Toepassing
                         </h4>
                         <ul className="space-y-2">
