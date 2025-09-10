@@ -192,9 +192,7 @@ const ROICalculator = () => {
                   </div>
 
                   <div className="space-y-2">
-                    <Label htmlFor="salaris" className="text-white font-medium">
-                      Mediaan bruto jaarsalaris (default: €39.700)
-                    </Label>
+                    <Label htmlFor="salaris" className="text-white font-medium">Mediaan bruto jaarsalaris</Label>
                     <Input id="salaris" type="number" value={formData.brutoJaarsalaris} onChange={e => handleInputChange('brutoJaarsalaris', e.target.value)} className="bg-white/10 border-white/30 text-white placeholder-white/60" placeholder="39700" required />
                   </div>
                 </div>
