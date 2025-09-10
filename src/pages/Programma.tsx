@@ -100,7 +100,7 @@ const Programma = () => {
           </div>
 
           {/* Program Features */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
             {features.map((feature, index) => {
             const IconComponent = feature.icon;
             return <div key={index} className="bg-brand-gray-light rounded-xl p-6 text-center">
@@ -122,7 +122,7 @@ const Programma = () => {
             <h2 className="text-2xl font-bold text-brand-gray-dark mb-6 text-center">
               Wat levert het programma op?
             </h2>
-            <div className="grid md:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <div className="text-center">
                 <div className="text-3xl font-bold text-brand-orange mb-2">-15 tot -21%</div>
                 <p className="text-brand-gray-dark font-medium">Lager verzuim</p>
@@ -155,7 +155,7 @@ const Programma = () => {
                     </CardTitle>
                   </CardHeader>
                   <CardContent className="p-6">
-                    <div className="grid md:grid-cols-3 gap-6">
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                       <div>
                         <h4 className="font-semibold text-brand-gray-dark mb-3 flex items-center">
                           <span className="w-2 h-2 bg-brand-green rounded-full mr-2"></span>
@@ -346,7 +346,7 @@ const Programma = () => {
       {/* Footer */}
       <footer className="bg-gradient-to-br from-brand-blue to-brand-blue-dark text-white py-12">
         <div className="container-custom">
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div>
               <div className="text-2xl font-bold mb-4">Innerleaps</div>
               <p className="text-gray-300 leading-relaxed">InnerLeaps transformeert teams met wetenschappelijk bewezen stress management voor duurzaam succes. Geen quick fixes, wel echte gedragsverandering.</p>

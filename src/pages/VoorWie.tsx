@@ -113,7 +113,7 @@ const VoorWie = () => {
                 <div key={index} className="bg-white rounded-xl p-8 shadow-lg">
                   <h3 className="text-2xl font-semibold text-brand-gray-dark mb-4">{sector.title}</h3>
                   
-                  <div className="grid md:grid-cols-2 gap-8">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                     <div>
                       <ul className="space-y-2 mb-6">
                         {sector.services.map((service, serviceIndex) => (
@@ -144,7 +144,7 @@ const VoorWie = () => {
               Ons programma kan op verschillende manieren worden geïmplementeerd, afhankelijk van de specifieke behoeften en structuur van uw organisatie:
             </p>
             
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {implementations.map((impl, index) => (
                 <div key={index} className="bg-white rounded-xl p-6 shadow-lg">
                   <h3 className="text-xl font-semibold text-brand-gray-dark mb-3">{impl.title}</h3>
@@ -172,7 +172,7 @@ const VoorWie = () => {
                 <div key={index} className="bg-white rounded-xl p-8 shadow-lg">
                   <h3 className="text-2xl font-semibold text-brand-gray-dark mb-6">{study.title}</h3>
                   
-                  <div className="grid md:grid-cols-3 gap-6">
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                     <div>
                       <h4 className="font-semibold text-brand-gray-dark mb-2">Uitdaging:</h4>
                       <p className="text-brand-gray-medium text-sm">{study.challenge}</p>
@@ -254,7 +254,7 @@ const VoorWie = () => {
       {/* Footer */}
       <footer className="bg-gradient-to-br from-brand-blue to-brand-blue-dark text-white py-12">
         <div className="container-custom">
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div>
               <div className="text-2xl font-bold mb-4">Innerleaps</div>
               <p className="text-gray-300 leading-relaxed">InnerLeaps transformeert teams met wetenschappelijk bewezen stress management voor duurzaam succes. Geen quick fixes, wel echte gedragsverandering.</p>

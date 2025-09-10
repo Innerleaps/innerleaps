@@ -192,7 +192,7 @@ const CalculatorModal = ({ isOpen, onClose }: CalculatorModalProps) => {
         
         <div className="space-y-6">
           <form onSubmit={handleSubmit} className="space-y-6">
-            <div className="grid md:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <div className="space-y-2">
                 <Label htmlFor="modal-naam" className="text-brand-gray-dark font-medium">
                   Naam*
@@ -239,7 +239,7 @@ const CalculatorModal = ({ isOpen, onClose }: CalculatorModalProps) => {
               </div>
             </div>
 
-            <div className="grid md:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <div className="space-y-2">
                 <Label htmlFor="modal-verzuim" className="text-brand-gray-dark font-medium">
                   Huidig verzuimpercentage

@@ -29,7 +29,7 @@ const Contact = () => {
               </p>
             </div>
 
-            <div className="grid md:grid-cols-2 gap-12">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
               {/* Contact Information */}
               <div className="space-y-8">
                 <div className="bg-brand-gray-light p-8 rounded-xl">
@@ -84,7 +84,7 @@ const Contact = () => {
 
                 {/* Bas's personal message */}
                 <div className="bg-white border border-gray-200 p-8 rounded-xl">
-                  <div className="flex items-start space-x-6">
+                  <div className="flex flex-col sm:flex-row items-start space-y-4 sm:space-y-0 sm:space-x-6">
                     <img 
                       src="/lovable-uploads/eaa7a159-2f85-4fa3-b487-4855426f2c14.png" 
                       alt="Bas Ter Haar Romenij" 
@@ -151,7 +151,7 @@ const Contact = () => {
       {/* Footer */}
       <footer className="bg-gradient-to-br from-brand-blue to-brand-blue-dark text-white py-12">
         <div className="container-custom">
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div>
               <div className="text-2xl font-bold mb-4">Innerleaps</div>
               <p className="text-gray-300 leading-relaxed">InnerLeaps transformeert teams met wetenschappelijk bewezen stress management voor duurzaam succes. Geen quick fixes, wel echte gedragsverandering.</p>

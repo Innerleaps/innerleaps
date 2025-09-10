@@ -157,7 +157,7 @@ const ROICalculator = () => {
             </CardHeader>
             <CardContent className="bg-brand-blue rounded-b-xl p-8">
               <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="grid md:grid-cols-3 gap-6">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                   <div className="space-y-2">
                     <Label htmlFor="naam" className="text-white font-medium">
                       Naam*
@@ -180,7 +180,7 @@ const ROICalculator = () => {
                   </div>
                 </div>
 
-                <div className="grid md:grid-cols-3 gap-6">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                   <div className="space-y-2">
                     <Label htmlFor="verzuim" className="text-white font-medium">Huidig verzuimpercentage</Label>
                     <Input id="verzuim" type="number" step="0.1" value={formData.verzuimPercentage} onChange={e => handleInputChange('verzuimPercentage', e.target.value)} className="bg-white border-gray-300 text-brand-gray-dark placeholder-gray-400" placeholder="5.2" required />

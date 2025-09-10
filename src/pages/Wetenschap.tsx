@@ -331,7 +331,7 @@ const Wetenschap = () => {
                   </div>
                 Wetenschappelijke Erfenis
               </h3>
-              <div className="grid md:grid-cols-2 gap-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
                   <h4 className="font-semibold text-brand-gray-dark mb-2">1979 - Oorsprong</h4>
                   <p className="text-brand-gray-medium">Jon Kabat-Zinn ontwikkelt MBSR aan de University of Massachusetts Medical School</p>
@@ -361,7 +361,7 @@ const Wetenschap = () => {
           
           <p className="text-xl md:text-2xl text-brand-gray-medium text-center max-w-4xl mx-auto mb-16 leading-relaxed">Het Life+ programma werkt tegelijk op de twee fronten van het JD-R model: het vermindert uitputting door stress en stressoren aan te pakken, én het stimuleert motivatie door persoonlijke en werkhulpbronnen te versterken. Deze dubbele aanpak verklaart de significante organisatorische resultaten van 15-21% minder verzuim en 70% lager uitvalrisico. De onderstaande percentages geven de kans weer dat deelnemers daadwerkelijk verbetering ervaren.</p>
 
-          <div className="grid lg:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {mechanismen.map((mechanisme, index) => {
             const IconComponent = mechanisme.icon;
             return <div key={index} className="bg-white rounded-xl p-4 md:p-6 relative">
@@ -430,7 +430,7 @@ const Wetenschap = () => {
       {/* Footer */}
       <footer className="bg-gradient-to-br from-brand-blue to-brand-blue-dark text-white py-12">
         <div className="container-custom">
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div>
               <div className="text-2xl font-bold mb-4">Innerleaps</div>
               <p className="text-gray-300 leading-relaxed">InnerLeaps transformeert teams met wetenschappelijk bewezen stress management voor duurzaam succes. Geen quick fixes, wel echte gedragsverandering.</p>

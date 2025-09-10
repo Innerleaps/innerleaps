@@ -43,7 +43,7 @@ const OverOns = () => {
               Ons team combineert wetenschappelijke kennis met praktische ervaring. We zijn gecertificeerd en getraind in:
             </p>
             
-            <div className="grid md:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div className="space-y-4">
                 <div className="bg-white p-6 rounded-lg shadow-sm">
                   <div className="flex items-center mb-3">
@@ -132,7 +132,7 @@ const OverOns = () => {
           {/* Trainers - 2 Column Layout */}
           <div>
             <h2 className="text-3xl font-bold text-brand-gray-dark mb-8 text-center">Onze trainers</h2>
-            <div className="grid md:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {/* Dave van Schie */}
               <div className="bg-white rounded-xl p-8 shadow-lg">
                 <div className="flex flex-col items-center mb-6">
@@ -190,7 +190,7 @@ const OverOns = () => {
       {/* Footer */}
       <footer className="bg-gradient-to-br from-brand-blue to-brand-blue-dark text-white py-12">
         <div className="container-custom">
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div>
               <div className="text-2xl font-bold mb-4">Innerleaps</div>
               <p className="text-gray-300 leading-relaxed">InnerLeaps transformeert teams met wetenschappelijk bewezen stress management voor duurzaam succes. Geen quick fixes, wel echte gedragsverandering.</p>
