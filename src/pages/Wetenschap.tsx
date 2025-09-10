@@ -326,7 +326,7 @@ const Wetenschap = () => {
             {/* Research Heritage Section */}
             <div className="bg-white rounded-xl p-6 shadow-lg mb-8">
               <h3 className="text-2xl font-semibold text-brand-gray-dark mb-4 flex items-center">
-                <div className="inline-flex items-center justify-center w-8 h-8 bg-hero-gradient rounded-lg mr-2">
+                <div className="inline-flex items-center justify-center w-8 h-8 bg-gray-100 rounded-lg mr-2">
                   <BookOpen className="h-5 w-5 text-brand-orange stroke-2" />
                 </div>
                 Wetenschappelijke Erfenis
@@ -368,7 +368,7 @@ const Wetenschap = () => {
                   {/* Mobile-first: Stack vertically, desktop: flex horizontally */}
                   <div className="flex flex-col sm:flex-row sm:items-center mb-4 gap-3">
                     <div className="flex items-center flex-1 min-w-0">
-                      <div className="inline-flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-hero-gradient mr-3 sm:mr-4 flex-shrink-0">
+                      <div className="inline-flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-gray-100 mr-3 sm:mr-4 flex-shrink-0">
                         <IconComponent className="h-5 w-5 sm:h-6 sm:w-6 text-brand-orange stroke-2" />
                       </div>
                       <h3 className="text-lg sm:text-xl font-semibold text-brand-gray-dark leading-tight min-w-0">

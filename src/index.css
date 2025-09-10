@@ -139,11 +139,6 @@
   
   .hover\:bg-brand-orange:hover { background-color: hsl(var(--brand-orange)); }
   .hover\:bg-brand-blue-dark:hover { background-color: hsl(var(--brand-blue-dark)); }
-  
-  /* Hero gradient for icon backgrounds */
-  .bg-hero-gradient {
-    background: linear-gradient(135deg, #352d8cff, #230c47ff);
-  }
 }
 
 @layer components {
