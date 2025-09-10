@@ -62,20 +62,20 @@ const Programma = () => {
   }];
   const features = [{
     icon: Clock,
-    title: "9 weken bewezen programma",
-    description: "9 weken om echte verandering te realiseren"
+    title: "9 weken",
+    description: "Wekelijks 2,5 uur op locatie"
   }, {
     icon: Users,
-    title: "1x per week 1,5 uur groepsworkshop",
-    description: "Elke week een training van een gecertificeerde trainer per groep van 15 deelnemers"
+    title: "15 deelnemers",
+    description: "Optimale groepsgrootte"
   }, {
     icon: MapPin,
-    title: "Workshop op locatie of online",
-    description: "De workshop wordt gegeven op een locatie naar wens of online"
+    title: "Op locatie",
+    description: "Bij u in het bedrijf"
   }, {
     icon: Calendar,
-    title: "Dagelijks oefenen",
-    description: "Deelnemers proberen dagelijks te oefenen"
+    title: "Oefendag",
+    description: "6 uur verdiepingssessie"
   }];
   return <div className="min-h-screen bg-brand-gray-light">
       <Navigation />
@@ -86,25 +86,23 @@ const Programma = () => {
           {/* Header */}
           <div className="text-center space-y-6 mb-16">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-gray-dark">
-              Het Life+ Programma
+              Programma
             </h1>
-            <p className="text-xl md:text-2xl text-brand-gray-medium max-w-4xl mx-auto leading-relaxed text-center">
-              Waarom Life+? Omdat het écht het leven verbetert Het Life+ programma levert niet alleen organisatorische voordelen - het maakt het leven van je medewerkers aantoonbaar prettiger. Beter slapen (57-78%), meer welzijn (59-68%) en betere gezondheid (63-68%). Deelnemers gaan rustiger naar huis, zijn minder gestrest en hebben meer energie voor hun privéleven. Wederzijds voordeel: betere medewerkers, betere resultaten, betere organisatie.
-            </p>
+            <p className="text-xl md:text-2xl text-brand-gray-medium max-w-4xl mx-auto leading-relaxed text-center">Het Life+ programma levert niet alleen organisatorische voordelen - het maakt het leven van je medewerkers aantoonbaar prettiger. Beter slapen (57-78%), meer welzijn (59-68%) en betere gezondheid (63-68%). Deelnemers gaan rustiger naar huis, zijn minder gestrest en hebben meer energie voor hun privéleven. Wederzijds voordeel: betere medewerkers, betere resultaten, betere organisatie.</p>
           </div>
 
           {/* Program Features */}
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
             {features.map((feature, index) => {
             const IconComponent = feature.icon;
-            return <div key={index} className="text-center p-6 bg-brand-gray-light rounded-xl">
-                  <div className="inline-flex items-center justify-center w-12 h-12 bg-brand-gray-light rounded-lg mb-4">
-                    <IconComponent className="h-6 w-6 text-brand-orange stroke-2" />
+            return <div key={index} className="bg-white rounded-xl p-6 text-center">
+                  <div className="bg-white p-4 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                    <IconComponent className="h-8 w-8 text-brand-orange stroke-2" />
                   </div>
-                  <h3 className="text-xl md:text-2xl font-semibold text-brand-gray-dark mb-2">
+                  <h3 className="text-xl font-semibold text-brand-gray-dark mb-2">
                     {feature.title}
                   </h3>
-                  <p className="text-brand-gray-medium text-lg md:text-xl leading-relaxed">
+                  <p className="text-brand-gray-medium">
                     {feature.description}
                   </p>
                 </div>;
@@ -163,7 +161,8 @@ const Programma = () => {
                       </div>
                       
                       <div>
-                        <h4 className="font-semibold text-brand-gray-dark mb-3">
+                        <h4 className="font-semibold text-brand-gray-dark mb-3 flex items-center">
+                          <span className="w-2 h-2 bg-brand-blue rounded-full mr-2"></span>
                           Technieken
                         </h4>
                         <ul className="space-y-2">
@@ -174,7 +173,8 @@ const Programma = () => {
                       </div>
                       
                       <div>
-                        <h4 className="font-semibold text-brand-gray-dark mb-3">
+                        <h4 className="font-semibold text-brand-gray-dark mb-3 flex items-center">
+                          <span className="w-2 h-2 bg-purple-600 rounded-full mr-2"></span>
                           Toepassing
                         </h4>
                         <ul className="space-y-2">
