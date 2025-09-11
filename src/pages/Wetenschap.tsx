@@ -7,11 +7,24 @@ import { Button } from '@/components/ui/button';
 import { ArrowLeft, BookOpen, BarChart3, Brain, Heart, Users, Shield, TrendingUp, Award, Target, FileText } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
 const Wetenschap = () => {
   const [isLeadMagnetOpen, setIsLeadMagnetOpen] = useState(false);
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
+  const getJdrTooltipContent = (tag: string) => {
+    const tooltips: Record<string, string> = {
+      "Werkeisen/Stressoren": "Het binnen HR populaire JD-R model identificeert Werkeisen/Stressoren als aspecten die inspanning kosten (werkdruk, emotionele belasting, ervaring van het werk). Volgens het JD-R model zal het reduceren van Werkeisen/Stressoren leiden tot minder uitputting, lagere burnout en uiteindelijk minder verzuim en uitval.",
+      "Persoonlijke Hulpbronnen": "Het binnen HR populaire JD-R model definieert Persoonlijke Hulpbronnen als individuele capaciteiten (veerkracht, self-efficacy, emotieregulatie). Volgens het JD-R model zal het versterken van deze hulpbronnen leiden tot hogere motivatie, betere prestaties en uiteindelijk minder verzuim en uitval.",
+      "Stressreacties/Welbevinden": "Het binnen HR populaire JD-R model toont dat Stressreacties/Welbevinden de directe uitkomsten zijn van de balans tussen werkeisen en hulpbronnen. Volgens het JD-R model leiden verbeterde stressreacties en hoger welbevinden rechtstreeks tot betere organisatorische resultaten.",
+      "Persoonlijke Impact": "Het binnen HR populaire JD-R model erkent dat Persoonlijke Impact (gezondheid, slaap, levenskwaliteit) de werksituatie beïnvloedt. Volgens het JD-R model leiden verbeteringen in het persoonlijke leven tot betere werkprestaties en lagere organisatorische kosten.",
+      "Organisatorische Impact": "Het binnen HR populaire JD-R model voorspelt dat verbeterde hulpbronnen en verminderde stress doorwerken in Organisatorische Impact. Volgens het JD-R model resulteren interventies in meetbare bedrijfsvoordelen zoals verzuimreductie en lagere uitvalkosten.",
+      "Werkhulpbronnen": "Het binnen HR populaire JD-R model definieert Werkhulpbronnen als aspecten van het werk die helpen doelen te bereiken, werkstress te verminderen of persoonlijke groei te stimuleren (sociale steun, autonomie, feedback). Volgens het JD-R model leiden meer werkhulpbronnen tot hogere motivatie en betere prestaties."
+    };
+    return tooltips[tag] || "";
+  };
   const mechanismen = [{
     icon: Shield,
     title: "65-72% minder werkstress",
@@ -300,7 +313,8 @@ const Wetenschap = () => {
     }],
     color: "text-brand-green"
   }];
-  return <div className="min-h-screen bg-brand-gray-light">
+  return <TooltipProvider>
+    <div className="min-h-screen bg-brand-gray-light">
       <Navigation />
       <StickyCtaButtons />
       
@@ -376,9 +390,16 @@ const Wetenschap = () => {
                       </h3>
                     </div>
                     {/* JD-R Tag - mobile: below title, desktop: aligned right */}
-                    <span className="inline-block text-xs px-3 py-1 rounded-full font-medium bg-brand-orange/10 text-brand-orange self-start sm:self-center sm:ml-4 flex-shrink-0">
-                      {mechanisme.jdrTag}
-                    </span>
+                    <Tooltip>
+                      <TooltipTrigger asChild>
+                        <span className="inline-block text-xs px-3 py-1 rounded-full font-medium bg-brand-orange/10 text-brand-orange self-start sm:self-center sm:ml-4 flex-shrink-0 cursor-help">
+                          {mechanisme.jdrTag}
+                        </span>
+                      </TooltipTrigger>
+                      <TooltipContent className="max-w-sm p-3">
+                        <p className="text-sm leading-relaxed">{getJdrTooltipContent(mechanisme.jdrTag)}</p>
+                      </TooltipContent>
+                    </Tooltip>
                   </div>
                   
                   <p className="text-brand-gray-medium mb-4 leading-relaxed">
@@ -466,6 +487,7 @@ const Wetenschap = () => {
       </footer>
       
       <LeadMagnetModal isOpen={isLeadMagnetOpen} onClose={() => setIsLeadMagnetOpen(false)} />
-    </div>;
+    </div>
+  </TooltipProvider>;
 };
 export default Wetenschap;

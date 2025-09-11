@@ -1,7 +1,19 @@
 import { Button } from '@/components/ui/button';
 import { Shield, Heart, Moon, Users, Target, BarChart3, Smile } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
 const ImpactSection = () => {
+  const getJdrTooltipContent = (tag: string) => {
+    const tooltips: Record<string, string> = {
+      "Werkeisen/Stressoren": "Het binnen HR populaire JD-R model identificeert Werkeisen/Stressoren als aspecten die inspanning kosten (werkdruk, emotionele belasting, ervaring van het werk). Volgens het JD-R model zal het reduceren van Werkeisen/Stressoren leiden tot minder uitputting, lagere burnout en uiteindelijk minder verzuim en uitval.",
+      "Persoonlijke Hulpbronnen": "Het binnen HR populaire JD-R model definieert Persoonlijke Hulpbronnen als individuele capaciteiten (veerkracht, self-efficacy, emotieregulatie). Volgens het JD-R model zal het versterken van deze hulpbronnen leiden tot hogere motivatie, betere prestaties en uiteindelijk minder verzuim en uitval.",
+      "Stressreacties/Welbevinden": "Het binnen HR populaire JD-R model toont dat Stressreacties/Welbevinden de directe uitkomsten zijn van de balans tussen werkeisen en hulpbronnen. Volgens het JD-R model leiden verbeterde stressreacties en hoger welbevinden rechtstreeks tot betere organisatorische resultaten.",
+      "Persoonlijke Impact": "Het binnen HR populaire JD-R model erkent dat Persoonlijke Impact (gezondheid, slaap, levenskwaliteit) de werksituatie beïnvloedt. Volgens het JD-R model leiden verbeteringen in het persoonlijke leven tot betere werkprestaties en lagere organisatorische kosten.",
+      "Organisatorische Impact": "Het binnen HR populaire JD-R model voorspelt dat verbeterde hulpbronnen en verminderde stress doorwerken in Organisatorische Impact. Volgens het JD-R model resulteren interventies in meetbare bedrijfsvoordelen zoals verzuimreductie en lagere uitvalkosten."
+    };
+    return tooltips[tag] || "";
+  };
+
   const impacts = [
   {
     icon: Target,
@@ -31,7 +43,8 @@ const ImpactSection = () => {
     color: "text-brand-orange",
     tag: "Persoonlijke Impact"
   }];
-  return <section className="bg-brand-gray-light section-padding">
+  return <TooltipProvider>
+    <section className="bg-brand-gray-light section-padding">
       <div className="container-custom">
         <div className="text-center space-y-6 mb-16">
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-gray-dark">Ons Life+ programma gaat verder dan burnout preventie</h2>
@@ -49,9 +62,16 @@ const ImpactSection = () => {
                     <div className="p-3 rounded-lg bg-white self-start">
                       <IconComponent className="h-6 w-6 text-brand-orange stroke-2" />
                     </div>
-                    <span className="text-xs bg-brand-orange/5 text-brand-orange/70 px-2 py-1 rounded-full font-normal">
-                      {impact.tag}
-                    </span>
+                    <Tooltip>
+                      <TooltipTrigger asChild>
+                        <span className="text-xs bg-brand-orange/5 text-brand-orange/70 px-2 py-1 rounded-full font-normal cursor-help">
+                          {impact.tag}
+                        </span>
+                      </TooltipTrigger>
+                      <TooltipContent className="max-w-sm p-3">
+                        <p className="text-sm leading-relaxed">{getJdrTooltipContent(impact.tag)}</p>
+                      </TooltipContent>
+                    </Tooltip>
                   </div>
                   <div className="flex-1">
                     <h3 className="text-lg md:text-xl font-semibold text-brand-gray-dark mb-3 leading-tight">
@@ -76,6 +96,7 @@ const ImpactSection = () => {
           </div>
         </div>
       </div>
-    </section>;
+    </section>
+  </TooltipProvider>;
 };
 export default ImpactSection;
