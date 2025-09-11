@@ -43,7 +43,7 @@ const ImpactSection = () => {
     color: "text-brand-orange",
     tag: "Persoonlijke Impact"
   }];
-  return <TooltipProvider>
+  return <TooltipProvider delayDuration={0}>
     <section className="bg-brand-gray-light section-padding">
       <div className="container-custom">
         <div className="text-center space-y-6 mb-16">
@@ -64,7 +64,7 @@ const ImpactSection = () => {
                     </div>
                     <Tooltip>
                       <TooltipTrigger asChild>
-                        <span className="text-xs bg-brand-orange/5 text-brand-orange/70 px-2 py-1 rounded-full font-normal cursor-help">
+                        <span className="text-xs bg-brand-orange/5 text-brand-orange/70 px-2 py-1 rounded-full font-normal cursor-help hover:bg-brand-orange/10 hover:text-brand-orange transition-colors duration-200">
                           {impact.tag}
                         </span>
                       </TooltipTrigger>

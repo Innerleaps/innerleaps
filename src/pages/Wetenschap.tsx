@@ -313,7 +313,7 @@ const Wetenschap = () => {
     }],
     color: "text-brand-green"
   }];
-  return <TooltipProvider>
+  return <TooltipProvider delayDuration={0}>
     <div className="min-h-screen bg-brand-gray-light">
       <Navigation />
       <StickyCtaButtons />
@@ -392,7 +392,7 @@ const Wetenschap = () => {
                     {/* JD-R Tag - mobile: below title, desktop: aligned right */}
                     <Tooltip>
                       <TooltipTrigger asChild>
-                        <span className="inline-block text-xs px-3 py-1 rounded-full font-medium bg-brand-orange/10 text-brand-orange self-start sm:self-center sm:ml-4 flex-shrink-0 cursor-help">
+                        <span className="inline-block text-xs px-3 py-1 rounded-full font-medium bg-brand-orange/10 text-brand-orange self-start sm:self-center sm:ml-4 flex-shrink-0 cursor-help hover:bg-brand-orange/20 hover:text-brand-orange transition-colors duration-200">
                           {mechanisme.jdrTag}
                         </span>
                       </TooltipTrigger>
