@@ -396,8 +396,12 @@ const Wetenschap = () => {
                           {mechanisme.jdrTag}
                         </span>
                       </TooltipTrigger>
-                      <TooltipContent className="max-w-sm p-3">
-                        <p className="text-sm leading-relaxed">{getJdrTooltipContent(mechanisme.jdrTag)}</p>
+                      <TooltipContent 
+                        className="max-w-sm p-4 bg-white border border-gray-200 shadow-lg rounded-lg z-50"
+                        side="top"
+                        align="center"
+                      >
+                        <p className="text-sm leading-relaxed text-gray-700">{getJdrTooltipContent(mechanisme.jdrTag)}</p>
                       </TooltipContent>
                     </Tooltip>
                   </div>

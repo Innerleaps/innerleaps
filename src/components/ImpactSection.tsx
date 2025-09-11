@@ -68,8 +68,12 @@ const ImpactSection = () => {
                           {impact.tag}
                         </span>
                       </TooltipTrigger>
-                      <TooltipContent className="max-w-sm p-3">
-                        <p className="text-sm leading-relaxed">{getJdrTooltipContent(impact.tag)}</p>
+                      <TooltipContent 
+                        className="max-w-sm p-4 bg-white border border-gray-200 shadow-lg rounded-lg z-50"
+                        side="top"
+                        align="center"
+                      >
+                        <p className="text-sm leading-relaxed text-gray-700">{getJdrTooltipContent(impact.tag)}</p>
                       </TooltipContent>
                     </Tooltip>
                   </div>
