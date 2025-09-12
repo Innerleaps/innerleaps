@@ -49,10 +49,10 @@ const Programma = () => {
     applications: ["Negatieve denkspiralen doorbreken", "Probleemoplossend vermogen verbeteren", "Werkgerelateerd piekeren reduceren"]
   }, {
     week: "Week 7",
-    title: "Oefendag - Alle Technieken Integreren",
-    goals: ["Alle geleerde technieken in één dag toepassen", "Diepere ervaring opdoen met stressmanagement", "Vertrouwen opbouwen in eigen kunnen"],
-    techniques: ["Uitgebreide lichaamsscan", "Verschillende ademhalingstechnieken", "Bewegingsoefeningen en stilte-oefeningen"],
-    applications: ["Langdurige focus ontwikkelen", "Stressbestendigheid testen en versterken", "Zelfvertrouwen in eigen vaardigheden opbouwen"]
+    title: "Mindful Communicatie en Relaties",
+    goals: ["Bewuste communicatievaardigheden ontwikkelen", "Empathie en compassie versterken", "Relationele stress verminderen"],
+    techniques: ["Mindful luisteren oefeningen", "Compassie meditaties", "Bewuste communicatie technieken"],
+    applications: ["Betere teamcommunicatie", "Constructieve conflicthantering", "Verhoogde werkplezier door betere relaties"]
   }, {
     week: "Week 8",
     title: "Zelfzorg en Grenzen",
@@ -195,71 +195,6 @@ const Programma = () => {
             </div>
           </div>
 
-          {/* Intensive Practice Day */}
-          <div className="mb-16">
-            <div className="max-w-4xl mx-auto">
-              <Card className="">
-                <CardHeader className="bg-brand-blue text-white">
-                  <CardTitle className="text-2xl md:text-3xl text-center">
-                    Oefendag: Verdieping & Integratie
-                  </CardTitle>
-                  <CardDescription className="text-center text-blue-100 text-lg">
-                    Tussenliggende verdiepingssessie van 6 uur (meestal tussen week 6 en 7)
-                  </CardDescription>
-                </CardHeader>
-                <CardContent className="p-8">
-                  <div className="grid md:grid-cols-2 gap-8">
-                    <div>
-                      <h3 className="text-xl font-semibold text-brand-gray-dark mb-4">Wat gebeurt er?</h3>
-                      <ul className="space-y-3 text-brand-gray-medium">
-                        <li className="flex items-start">
-                          <span className="text-brand-blue mr-2">•</span>
-                          <span>Verdieping van alle geleerde technieken in stilte</span>
-                        </li>
-                        <li className="flex items-start">
-                          <span className="text-brand-blue mr-2">•</span>
-                          <span>Langere meditatie- en bewustzijnsoefeningen</span>
-                        </li>
-                        <li className="flex items-start">
-                          <span className="text-brand-blue mr-2">•</span>
-                          <span>Integratie van lichaamsscan, ademhaling en bewuste beweging</span>
-                        </li>
-                        <li className="flex items-start">
-                          <span className="text-brand-blue mr-2">•</span>
-                          <span>Reflectie op persoonlijke ontwikkeling en inzichten</span>
-                        </li>
-                        <li className="flex items-start">
-                          <span className="text-brand-blue mr-2">•</span>
-                          <span>Voorbereiding op toepassing in complexe werksituaties</span>
-                        </li>
-                      </ul>
-                    </div>
-                    
-                    <div>
-                      <h3 className="text-xl font-semibold text-brand-gray-dark mb-4">Waarom deze dag?</h3>
-                      <div className="bg-brand-gray-light p-6 rounded-lg">
-                        <p className="text-brand-gray-medium mb-4">
-                          De oefendag is een cruciale component van het MBSR-programma. Onderzoek toont aan dat deze intensieve sessie significant bijdraagt aan:
-                        </p>
-                        <ul className="space-y-2 text-brand-gray-medium">
-                          <li>• <strong>Diepere integratie</strong> van mindfulness-vaardigheden</li>
-                          <li>• <strong>Verhoogde zelfvertrouwen</strong> in het toepassen van technieken</li>
-                          <li>• <strong>Sterkere commitment</strong> aan voortgezette praktijk</li>
-                          <li>• <strong>Betere lange-termijn resultaten</strong> in stressreductie</li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                  
-                  <div className="mt-8 text-center">
-                    <Badge variant="outline" className="text-brand-blue border-brand-blue px-4 py-2">
-                      Optioneel maar sterk aanbevolen voor optimale resultaten
-                    </Badge>
-                  </div>
-                </CardContent>
-              </Card>
-            </div>
-          </div>
 
           {/* Implementation & Support */}
           <div className="bg-white rounded-xl p-8 mb-16">
@@ -268,7 +203,7 @@ const Programma = () => {
             </h2>
             <div className="grid md:grid-cols-2 gap-8">
               <div>
-                <h3 className="text-lg font-semibold text-brand-gray-dark mb-4">Wat krijgt u?</h3>
+                <h3 className="text-lg font-semibold text-brand-gray-dark mb-4">Wat krijgen deelnemers?</h3>
                 <ul className="space-y-3 text-brand-gray-medium">
                   <li className="flex items-start">
                     <span className="text-brand-green mr-2">✓</span>
@@ -276,15 +211,11 @@ const Programma = () => {
                   </li>
                   <li className="flex items-start">
                     <span className="text-brand-green mr-2">✓</span>
-                    <span>Audio-opnames van geleide meditaties voor thuisoefening</span>
+                    <span>Audio-opnames voor thuisoefening</span>
                   </li>
                   <li className="flex items-start">
                     <span className="text-brand-green mr-2">✓</span>
-                    <span>Wekelijkse huisopdrachten (30-45 minuten per dag)</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-brand-green mr-2">✓</span>
-                    <span>Begeleiding door gecertificeerde MBSR-trainers</span>
+                    <span>Begeleiding door gecertificeerde Life+ trainers</span>
                   </li>
                   <li className="flex items-start">
                     <span className="text-brand-green mr-2">✓</span>
@@ -298,11 +229,15 @@ const Programma = () => {
                 <ul className="space-y-3 text-brand-gray-medium">
                   <li className="flex items-start">
                     <span className="text-brand-blue mr-2">•</span>
-                    <span><strong>Locatie:</strong> Bij u in het bedrijf of externe locatie</span>
+                    <span><strong>Locatie:</strong> Bij jullie in het bedrijf of externe locatie</span>
                   </li>
                   <li className="flex items-start">
                     <span className="text-brand-blue mr-2">•</span>
-                    <span><strong>Groepsgrootte:</strong> 8-15 deelnemers voor optimale interactie</span>
+                    <span><strong>Groepsgrootte:</strong> Tot 15 deelnemers voor optimale interactie</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-brand-blue mr-2">•</span>
+                    <span><strong>Groepssamenstelling:</strong> Enkel jullie werknemers óf gemengd met externe deelnemers</span>
                   </li>
                   <li className="flex items-start">
                     <span className="text-brand-blue mr-2">•</span>
@@ -314,7 +249,7 @@ const Programma = () => {
                   </li>
                   <li className="flex items-start">
                     <span className="text-brand-blue mr-2">•</span>
-                    <span><strong>Meting:</strong> Voor- en nameting van stress en welzijn</span>
+                    <span><strong>Meting:</strong> Voor- en nameting van stress en welzijn - direct na training en na 6 en 12 maanden</span>
                   </li>
                 </ul>
               </div>
