@@ -143,7 +143,7 @@ const Programma = () => {
 
           {/* Weekly Program */}
           <div className="mb-16">
-            <h2 className="text-3xl font-bold text-brand-gray-dark mb-8 text-center">Wekelijks Programma voor echte gedragsverandering</h2>
+            <h2 className="text-3xl font-bold text-brand-gray-dark mb-8 text-center">Wekelijks Programma voor Echte Gedragsverandering</h2>
             
             <div className="grid gap-8">
               {weeks.map((week, index) => <Card key={index} className="overflow-hidden">
