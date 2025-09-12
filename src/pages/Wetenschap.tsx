@@ -400,6 +400,8 @@ const Wetenschap = () => {
                         className="max-w-sm p-4 bg-white border border-gray-200 shadow-lg rounded-lg z-50"
                         side="top"
                         align="center"
+                        sideOffset={8}
+                        avoidCollisions={false}
                       >
                         <p className="text-sm leading-relaxed text-gray-700">{getJdrTooltipContent(mechanisme.jdrTag)}</p>
                       </TooltipContent>
