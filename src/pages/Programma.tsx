@@ -201,7 +201,7 @@ const Programma = () => {
             <h2 className="text-2xl font-bold text-brand-gray-dark mb-6 text-center">
               Begeleiding & Materialen
             </h2>
-            <div className="grid md:grid-cols-2 gap-8">
+            <div className="grid md:grid-cols-3 gap-8">
               <div>
                 <h3 className="text-lg font-semibold text-brand-gray-dark mb-4">Wat krijgen deelnemers?</h3>
                 <ul className="space-y-3 text-brand-gray-medium">
@@ -217,38 +217,34 @@ const Programma = () => {
                     <span className="text-brand-green mr-2">✓</span>
                     <span>Begeleiding door gecertificeerde Life+ trainers</span>
                   </li>
-                  <li className="flex items-start">
-                    <span className="text-brand-green mr-2">✓</span>
-                    <span>Certificaat van deelname na afronding</span>
+                </ul>
+              </div>
+              
+              <div>
+                <h3 className="text-lg font-semibold text-brand-gray-dark mb-4">Groepsopzet</h3>
+                <ul className="space-y-3 text-brand-gray-medium">
+                  <li>
+                    <span><strong>Groepsgrootte:</strong> Tot 15 deelnemers voor optimale interactie</span>
+                  </li>
+                  <li>
+                    <span><strong>Samenstelling:</strong> Enkel jullie werknemers óf gemengd met externe deelnemers</span>
+                  </li>
+                  <li>
+                    <span><strong>Locatie:</strong> Bij jullie in het bedrijf of externe locatie</span>
                   </li>
                 </ul>
               </div>
               
               <div>
-                <h3 className="text-lg font-semibold text-brand-gray-dark mb-4">Praktische zaken</h3>
+                <h3 className="text-lg font-semibold text-brand-gray-dark mb-4">Planning & Follow-up</h3>
                 <ul className="space-y-3 text-brand-gray-medium">
-                  <li className="flex items-start">
-                    <span className="text-brand-blue mr-2">•</span>
-                    <span><strong>Locatie:</strong> Bij jullie in het bedrijf of externe locatie</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-brand-blue mr-2">•</span>
-                    <span><strong>Groepsgrootte:</strong> Tot 15 deelnemers voor optimale interactie</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-brand-blue mr-2">•</span>
-                    <span><strong>Groepssamenstelling:</strong> Enkel jullie werknemers óf gemengd met externe deelnemers</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-brand-blue mr-2">•</span>
+                  <li>
                     <span><strong>Timing:</strong> Flexibel in te plannen tijdens of na werktijd</span>
                   </li>
-                  <li className="flex items-start">
-                    <span className="text-brand-blue mr-2">•</span>
+                  <li>
                     <span><strong>Follow-up:</strong> Optionele vervolgbijeenkomsten na 3 en 6 maanden</span>
                   </li>
-                  <li className="flex items-start">
-                    <span className="text-brand-blue mr-2">•</span>
+                  <li>
                     <span><strong>Meting:</strong> Voor- en nameting van stress en welzijn - direct na training en na 6 en 12 maanden</span>
                   </li>
                 </ul>
