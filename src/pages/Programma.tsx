@@ -217,6 +217,10 @@ const Programma = () => {
                     <span className="text-brand-green mr-2">✓</span>
                     <span>Begeleiding door gecertificeerde Life+ trainers</span>
                   </li>
+                  <li className="flex items-start">
+                    <span className="text-brand-green mr-2">✓</span>
+                    <span>Certificaat van deelname na afronding</span>
+                  </li>
                 </ul>
               </div>
               
