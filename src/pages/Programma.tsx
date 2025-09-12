@@ -196,70 +196,7 @@ const Programma = () => {
           </div>
 
           {/* Intensive Practice Day */}
-          <div className="mb-16">
-            <div className="max-w-4xl mx-auto">
-              <Card className="">
-                <CardHeader className="bg-brand-blue text-white">
-                  <CardTitle className="text-2xl md:text-3xl text-center">
-                    Oefendag: Verdieping & Integratie
-                  </CardTitle>
-                  <CardDescription className="text-center text-blue-100 text-lg">
-                    Tussenliggende verdiepingssessie van 6 uur (meestal tussen week 6 en 7)
-                  </CardDescription>
-                </CardHeader>
-                <CardContent className="p-8">
-                  <div className="grid md:grid-cols-2 gap-8">
-                    <div>
-                      <h3 className="text-xl font-semibold text-brand-gray-dark mb-4">Wat gebeurt er?</h3>
-                      <ul className="space-y-3 text-brand-gray-medium">
-                        <li className="flex items-start">
-                          <span className="text-brand-blue mr-2">•</span>
-                          <span>Verdieping van alle geleerde technieken in stilte</span>
-                        </li>
-                        <li className="flex items-start">
-                          <span className="text-brand-blue mr-2">•</span>
-                          <span>Langere meditatie- en bewustzijnsoefeningen</span>
-                        </li>
-                        <li className="flex items-start">
-                          <span className="text-brand-blue mr-2">•</span>
-                          <span>Integratie van lichaamsscan, ademhaling en bewuste beweging</span>
-                        </li>
-                        <li className="flex items-start">
-                          <span className="text-brand-blue mr-2">•</span>
-                          <span>Reflectie op persoonlijke ontwikkeling en inzichten</span>
-                        </li>
-                        <li className="flex items-start">
-                          <span className="text-brand-blue mr-2">•</span>
-                          <span>Voorbereiding op toepassing in complexe werksituaties</span>
-                        </li>
-                      </ul>
-                    </div>
-                    
-                    <div>
-                      <h3 className="text-xl font-semibold text-brand-gray-dark mb-4">Waarom deze dag?</h3>
-                      <div className="bg-brand-gray-light p-6 rounded-lg">
-                        <p className="text-brand-gray-medium mb-4">
-                          De oefendag is een cruciale component van het MBSR-programma. Onderzoek toont aan dat deze intensieve sessie significant bijdraagt aan:
-                        </p>
-                        <ul className="space-y-2 text-brand-gray-medium">
-                          <li>• <strong>Diepere integratie</strong> van mindfulness-vaardigheden</li>
-                          <li>• <strong>Verhoogde zelfvertrouwen</strong> in het toepassen van technieken</li>
-                          <li>• <strong>Sterkere commitment</strong> aan voortgezette praktijk</li>
-                          <li>• <strong>Betere lange-termijn resultaten</strong> in stressreductie</li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                  
-                  <div className="mt-8 text-center">
-                    <Badge variant="outline" className="text-brand-blue border-brand-blue px-4 py-2">
-                      Optioneel maar sterk aanbevolen voor optimale resultaten
-                    </Badge>
-                  </div>
-                </CardContent>
-              </Card>
-            </div>
-          </div>
+          
 
           {/* Implementation & Support */}
           <div className="bg-white rounded-xl p-8 mb-16">
