@@ -13,7 +13,6 @@ const Wetenschap = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-
   const getJdrTooltipContent = (tag: string) => {
     const tooltips: Record<string, string> = {
       "Werkeisen/Stressoren": "Het binnen HR populaire JD-R model identificeert Werkeisen/Stressoren als aspecten die inspanning kosten (werkdruk, emotionele belasting, ervaring van het werk). Volgens het JD-R model zal het reduceren van Werkeisen/Stressoren leiden tot minder uitputting, lagere burnout en uiteindelijk minder verzuim en uitval.",
@@ -373,12 +372,12 @@ const Wetenschap = () => {
         <div className="container-custom">
           <h2 className="text-3xl md:text-4xl font-bold text-brand-gray-dark text-center mb-12">Hoe ons burn-out preventie programma verzuim beïnvloedt</h2>
           
-          <p className="text-xl md:text-2xl text-brand-gray-medium text-center max-w-4xl mx-auto mb-16 leading-relaxed">Het Life+ programma werkt tegelijk op de twee fronten van het JD-R model: het vermindert uitputting door stress en stressoren aan te pakken, én het stimuleert motivatie door persoonlijke en werkhulpbronnen te versterken. Deze dubbele aanpak verklaart de significante organisatorische resultaten van 15-21% minder verzuim en 70% lager uitvalrisico. De onderstaande percentages geven de kans weer dat deelnemers daadwerkelijk verbetering ervaren.</p>
+          <p className="text-xl md:text-2xl text-brand-gray-medium text-center max-w-4xl mx-auto mb-16 leading-relaxed">Het Life+ programma werkt tegelijk op de twee fronten van het JD-R model: het vermindert uitputting door stress en stressoren aan te pakken, én het stimuleert motivatie door persoonlijke en werkhulpbronnen te versterken. Deze dubbele aanpak verklaart de significante organisatorische resultaten van 15-21% minder verzuim en 70% lager uitvalrisico. Alle wetenschappelijk bewezen resultaten van het programma worden hieronder genoemd. De bijbehorende percentages geven de kans weer dat deelnemers daadwerkelijk verbetering ervaren.</p>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {mechanismen.map((mechanisme, index) => {
-            const IconComponent = mechanisme.icon;
-            return <div key={index} className="bg-white rounded-xl p-4 md:p-6 relative">
+              const IconComponent = mechanisme.icon;
+              return <div key={index} className="bg-white rounded-xl p-4 md:p-6 relative">
                   {/* Mobile-first: Stack vertically, desktop: flex horizontally */}
                   <div className="flex flex-col sm:flex-row sm:items-center mb-4 gap-3">
                     <div className="flex items-center flex-1 min-w-0">
@@ -396,13 +395,7 @@ const Wetenschap = () => {
                           {mechanisme.jdrTag}
                         </span>
                       </TooltipTrigger>
-                      <TooltipContent 
-                        className="max-w-sm p-4 bg-white border border-gray-200 shadow-lg rounded-lg z-50"
-                        side="top"
-                        align="center"
-                        sideOffset={8}
-                        avoidCollisions={false}
-                      >
+                      <TooltipContent className="max-w-sm p-4 bg-white border border-gray-200 shadow-lg rounded-lg z-50" side="top" align="center" sideOffset={8} avoidCollisions={false}>
                         <p className="text-sm leading-relaxed text-gray-700">{getJdrTooltipContent(mechanisme.jdrTag)}</p>
                       </TooltipContent>
                     </Tooltip>
@@ -418,7 +411,7 @@ const Wetenschap = () => {
                       </a>)}
                   </div>
                 </div>;
-          })}
+            })}
           </div>
         </div>
       </section>
