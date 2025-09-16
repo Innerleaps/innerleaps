@@ -50,7 +50,7 @@ const Programma = () => {
   }, {
     week: "Week 7",
     title: "Alle technieken oefenen",
-    goals: ["Alle geleerde technieken in één dag toepassen", "Diepere ervaring opdoen met stressmanagement", "Vertrouwen opbouwen in eigen kunnen"],
+    goals: ["De meeste geleerde technieken in één workshop toepassen", "Diepere ervaring opdoen met stressmanagement", "Vertrouwen opbouwen in eigen kunnen"],
     techniques: ["Uitgebreide lichaamsscan", "Verschillende ademhalingstechnieken", "Bewegingsoefeningen en stilte-oefeningen"],
     applications: ["Langdurige focus ontwikkelen", "Stressbestendigheid testen en versterken", "Zelfvertrouwen in eigen vaardigheden opbouwen"]
   }, {
