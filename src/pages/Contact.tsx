@@ -104,7 +104,7 @@ const Contact = () => {
                   </div>
                   <div className="text-center">
                     <Button 
-                      className="bg-brand-green hover:bg-brand-green-light text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+                      className="btn-secondary"
                       onClick={() => window.open('https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1wwDnoAHyFrV0M1FxwmbcMa9ewkDxTDdwQObwPKF-WX-wZV9DssZKtb1haoeP5qXDLenQlZt_R', '_blank')}
                     >
                       Plan een gesprek met Bas
