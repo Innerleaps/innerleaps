@@ -16,6 +16,8 @@ const buttonVariants = cva(
           "border border-brand-blue bg-background text-brand-blue hover:bg-background hover:text-brand-blue transform hover:-translate-y-0.5 transition-all duration-300",
         secondary:
           "bg-brand-blue text-white hover:bg-brand-blue hover:text-white transform hover:-translate-y-0.5 transition-all duration-300",
+        "secondary-on-blue":
+          "bg-white border-2 border-brand-blue text-brand-blue hover:bg-white hover:text-brand-blue transform hover:-translate-y-0.5 transition-all duration-300",
         ghost: "hover:bg-accent hover:text-accent-foreground transform hover:-translate-y-0.5 transition-all duration-300",
         link: "text-brand-orange underline-offset-4 hover:underline hover:text-brand-orange",
       },

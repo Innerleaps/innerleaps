@@ -104,7 +104,7 @@ const Contact = () => {
                   </div>
                   <div className="text-center">
                     <Button 
-                      className="btn-secondary"
+                      variant="secondary"
                       onClick={() => window.open('https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1wwDnoAHyFrV0M1FxwmbcMa9ewkDxTDdwQObwPKF-WX-wZV9DssZKtb1haoeP5qXDLenQlZt_R', '_blank')}
                     >
                       Plan een gesprek met Bas
@@ -131,7 +131,8 @@ const Contact = () => {
                     </div>
                     
                     <Button 
-                      className="btn-secondary w-full"
+                      variant="secondary"
+                      className="w-full"
                       onClick={() => window.open('https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1wwDnoAHyFrV0M1FxwmbcMa9ewkDxTDdwQObwPKF-WX-wZV9DssZKtb1haoeP5qXDLenQlZt_R', '_blank')}
                     >
                       Afspraak Inplannen
