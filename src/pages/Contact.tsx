@@ -1,4 +1,3 @@
-
 import Navigation from '@/components/Navigation';
 import { Button } from '@/components/ui/button';
 import { Calendar, Mail, Phone } from 'lucide-react';
@@ -6,14 +5,11 @@ import StickyCtaButtons from '@/components/StickyCtaButtons';
 import ROICalculator from '@/components/ROICalculator';
 import { useEffect } from 'react';
 import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
-
 const Contact = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-
-  return (
-    <div className="min-h-screen bg-brand-gray-light">
+  return <div className="min-h-screen bg-brand-gray-light">
       <Navigation />
       <StickyCtaButtons />
       
@@ -83,11 +79,7 @@ const Contact = () => {
                     </ul>
                   </div>
                   
-                  <Button 
-                    variant="secondary"
-                    className="w-full"
-                    onClick={() => window.open('https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1wwDnoAHyFrV0M1FxwmbcMa9ewkDxTDdwQObwPKF-WX-wZV9DssZKtb1haoeP5qXDLenQlZt_R', '_blank')}
-                  >
+                  <Button variant="secondary" className="w-full" onClick={() => window.open('https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1wwDnoAHyFrV0M1FxwmbcMa9ewkDxTDdwQObwPKF-WX-wZV9DssZKtb1haoeP5qXDLenQlZt_R', '_blank')}>
                     Afspraak Inplannen
                   </Button>
                 </div>
@@ -100,11 +92,7 @@ const Contact = () => {
                 </h3>
 
                 <div className="flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-6 mb-6">
-                  <img 
-                    src="/lovable-uploads/eaa7a159-2f85-4fa3-b487-4855426f2c14.png" 
-                    alt="Bas Ter Haar Romenij" 
-                    className="w-28 h-28 rounded-full object-cover flex-shrink-0"
-                  />
+                  <img src="/lovable-uploads/eaa7a159-2f85-4fa3-b487-4855426f2c14.png" alt="Bas Ter Haar Romenij" className="w-28 h-28 rounded-full object-cover flex-shrink-0" />
                   <div className="text-center sm:text-left">
                     <p className="text-brand-gray-dark italic mb-4 text-lg">
                       "Heb je vragen over verzuimreductie, ROI-berekeningen of hoe het programma precies werkt? Ik luister graag naar jullie specifieke uitdagingen en beantwoord al je vragen persoonlijk. Samen bepalen we wat bij jullie organisatie past."
@@ -115,19 +103,14 @@ const Contact = () => {
                   </div>
                 </div>
                 <div className="text-center mb-6">
-                  <Button 
-                    variant="secondary"
-                    onClick={() => window.open('https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1wwDnoAHyFrV0M1FxwmbcMa9ewkDxTDdwQObwPKF-WX-wZV9DssZKtb1haoeP5qXDLenQlZt_R', '_blank')}
-                  >
+                  <Button variant="secondary" onClick={() => window.open('https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1wwDnoAHyFrV0M1FxwmbcMa9ewkDxTDdwQObwPKF-WX-wZV9DssZKtb1haoeP5qXDLenQlZt_R', '_blank')}>
                     Plan een gesprek met Bas
                   </Button>
                 </div>
                 
                 {/* Contact Information */}
                 <div className="p-6 mb-6">
-                  <h4 className="text-lg font-semibold text-brand-gray-dark mb-4">
-                    Neem Direct Contact Op
-                  </h4>
+                  <h4 className="text-lg font-semibold text-brand-gray-dark mb-4">Of neem direct zelf contact op</h4>
                   
                   <div className="space-y-4">
                     <div className="flex items-start space-x-3">
@@ -196,8 +179,6 @@ const Contact = () => {
           </div>
         </div>
       </footer>
-    </div>
-  );
+    </div>;
 };
-
 export default Contact;
