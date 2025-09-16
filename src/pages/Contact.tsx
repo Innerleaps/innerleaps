@@ -107,7 +107,7 @@ const Contact = () => {
                   />
                   <div className="text-center sm:text-left">
                     <p className="text-brand-gray-dark italic mb-4 text-lg">
-                      "Ik help graag persoonlijk mee om te kijken naar de concrete mogelijkheden voor jullie organisatie. Elke situatie vraagt om een specifieke aanpak, en ik denk graag mee over wat het beste werkt."
+                      "Heb je vragen over verzuimreductie, ROI-berekeningen of hoe het programma precies werkt? Ik luister graag naar jullie specifieke uitdagingen en beantwoord al je vragen persoonlijk. Samen bepalen we wat bij jullie organisatie past."
                     </p>
                     <p className="text-brand-gray-medium font-medium">
                       — Bas Ter Haar Romenij, Oprichter InnerLeaps
