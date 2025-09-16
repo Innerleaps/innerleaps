@@ -231,8 +231,7 @@ const Programma = () => {
                   <CardContent className="p-6">
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                       <div>
-                        <h4 className="font-semibold text-brand-gray-dark mb-3 flex items-center">
-                          <span className="w-2 h-2 bg-brand-green rounded-full mr-2"></span>
+                        <h4 className="font-semibold text-brand-gray-dark mb-3">
                           Leerdoelen
                         </h4>
                         <ul className="space-y-2">
