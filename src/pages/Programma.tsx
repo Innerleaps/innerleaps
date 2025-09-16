@@ -125,7 +125,7 @@ const Programma = () => {
             </h2>
             <div className="max-w-4xl mx-auto space-y-6 text-lg md:text-xl text-brand-gray-medium leading-relaxed">
               <p>
-                Tijdens het Life+ programma komen heel veel verschillende technieken aan bod. Deelnemers ervaren zo wat wel en juist niet voor hen werkt. Met deze kennis ontwikkelt elke deelnemer een eigen stressmanagement programma.
+                Tijdens het Life+ programma komen heel veel verschillende technieken aan bod. Deelnemers ervaren zo wat wel en juist niet voor hen werkt. <strong>Met deze kennis ontwikkelt elke deelnemer een eigen stressmanagement programma.</strong>
               </p>
               <p>
                 Een routine die ontwikkeld is op basis van persoonlijke ervaring door degene die het gaat toepassen. <strong>Geen snelle workshop, wel echte gedragsverandering.</strong>
