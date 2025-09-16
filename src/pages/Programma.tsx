@@ -157,59 +157,6 @@ const Programma = () => {
             </div>
           </div>
 
-          {/* Weekly Program */}
-          <div className="mb-16">
-            <h2 className="text-3xl font-bold text-brand-gray-dark mb-8 text-center">Wekelijks Programma voor Echte Gedragsverandering</h2>
-            
-            <div className="grid gap-8">
-              {weeks.map((week, index) => <Card key={index} className="overflow-hidden">
-                  <CardHeader className="bg-brand-blue text-white">
-                    <CardTitle className="text-xl md:text-2xl">
-                      {week.week}: {week.title}
-                    </CardTitle>
-                  </CardHeader>
-                  <CardContent className="p-6">
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                      <div>
-                        <h4 className="font-semibold text-brand-gray-dark mb-3 flex items-center">
-                          <span className="w-2 h-2 bg-brand-green rounded-full mr-2"></span>
-                          Leerdoelen
-                        </h4>
-                        <ul className="space-y-2">
-                          {week.goals.map((goal, goalIndex) => <li key={goalIndex} className="text-brand-gray-medium text-sm leading-relaxed">
-                              • {goal}
-                            </li>)}
-                        </ul>
-                      </div>
-                      
-                      <div>
-                        <h4 className="font-semibold text-brand-gray-dark mb-3">
-                          Technieken
-                        </h4>
-                        <ul className="space-y-2">
-                          {week.techniques.map((technique, techniqueIndex) => <li key={techniqueIndex} className="text-brand-gray-medium text-sm leading-relaxed">
-                              • {technique}
-                            </li>)}
-                        </ul>
-                      </div>
-                      
-                      <div>
-                        <h4 className="font-semibold text-brand-gray-dark mb-3">
-                          Toepassing
-                        </h4>
-                        <ul className="space-y-2">
-                          {week.applications.map((application, applicationIndex) => <li key={applicationIndex} className="text-brand-gray-medium text-sm leading-relaxed">
-                              • {application}
-                            </li>)}
-                        </ul>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>)}
-            </div>
-          </div>
-
-
           {/* Implementation & Support */}
           <div className="bg-white rounded-xl p-8 mb-16">
             <h2 className="text-2xl font-bold text-brand-gray-dark mb-6 text-center">
@@ -269,6 +216,60 @@ const Programma = () => {
               </div>
             </div>
           </div>
+
+          {/* Weekly Program */}
+          <div className="mb-16">
+            <h2 className="text-3xl font-bold text-brand-gray-dark mb-8 text-center">Wekelijks Programma voor Echte Gedragsverandering</h2>
+            
+            <div className="grid gap-8">
+              {weeks.map((week, index) => <Card key={index} className="overflow-hidden">
+                  <CardHeader className="bg-brand-blue text-white">
+                    <CardTitle className="text-xl md:text-2xl">
+                      {week.week}: {week.title}
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent className="p-6">
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                      <div>
+                        <h4 className="font-semibold text-brand-gray-dark mb-3 flex items-center">
+                          <span className="w-2 h-2 bg-brand-green rounded-full mr-2"></span>
+                          Leerdoelen
+                        </h4>
+                        <ul className="space-y-2">
+                          {week.goals.map((goal, goalIndex) => <li key={goalIndex} className="text-brand-gray-medium text-sm leading-relaxed">
+                              • {goal}
+                            </li>)}
+                        </ul>
+                      </div>
+                      
+                      <div>
+                        <h4 className="font-semibold text-brand-gray-dark mb-3">
+                          Technieken
+                        </h4>
+                        <ul className="space-y-2">
+                          {week.techniques.map((technique, techniqueIndex) => <li key={techniqueIndex} className="text-brand-gray-medium text-sm leading-relaxed">
+                              • {technique}
+                            </li>)}
+                        </ul>
+                      </div>
+                      
+                      <div>
+                        <h4 className="font-semibold text-brand-gray-dark mb-3">
+                          Toepassing
+                        </h4>
+                        <ul className="space-y-2">
+                          {week.applications.map((application, applicationIndex) => <li key={applicationIndex} className="text-brand-gray-medium text-sm leading-relaxed">
+                              • {application}
+                            </li>)}
+                        </ul>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>)}
+            </div>
+          </div>
+
+
 
           {/* Call to Action */}
           <div className="bg-brand-blue text-white rounded-xl p-8 text-center">
