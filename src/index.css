@@ -40,6 +40,8 @@
     /* InnerLeaps brand colors */
     --brand-orange: 16 89 60;
     --brand-orange-light: 30 33 96;
+    --brand-green: 136 84 58;
+    --brand-green-light: 142 87 61;
     --brand-blue: 259 51 36;
     --brand-blue-dark: 230 40 25;
     --brand-gray-dark: 15 23 42;
@@ -120,6 +122,8 @@
   /* Brand color utilities */
   .bg-brand-orange { background-color: hsl(var(--brand-orange)); }
   .bg-brand-orange-light { background-color: hsl(var(--brand-orange-light)); }
+  .bg-brand-green { background-color: hsl(var(--brand-green)); }
+  .bg-brand-green-light { background-color: hsl(var(--brand-green-light)); }
   .bg-brand-blue { background-color: hsl(var(--brand-blue)); }
   .bg-brand-blue-dark { background-color: hsl(var(--brand-blue-dark)); }
   .bg-brand-gray-dark { background-color: hsl(var(--brand-gray-dark)); }

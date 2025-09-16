@@ -62,6 +62,8 @@ export default {
 				brand: {
 					orange: '#F47340',
 					'orange-light': '#F7F5F2',
+					green: '#16a085',
+					'green-light': '#48c9b0',
 					blue: '#352D8C',
 					'blue-dark': '#1E0B32',
 					'gray-light': '#f8fafc',
