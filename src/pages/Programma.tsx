@@ -135,7 +135,7 @@ const Programma = () => {
 
           {/* Key Benefits */}
           <div className="bg-white rounded-xl p-8 mb-16">
-            <h2 className="text-2xl font-bold text-brand-gray-dark mb-6 text-center">Wat levert het Life+ programma op?</h2>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-brand-gray-dark mb-6 text-center">Wat levert het Life+ programma op?</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <div className="text-center">
                 <div className="text-3xl font-bold text-brand-orange mb-2">-15 tot -21%</div>
@@ -157,12 +157,12 @@ const Programma = () => {
 
           {/* Implementation & Support */}
           <div className="bg-white rounded-xl p-8 mb-16">
-            <h2 className="text-2xl font-bold text-brand-gray-dark mb-6 text-center">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-brand-gray-dark mb-6 text-center">
               Begeleiding & Materialen
             </h2>
             <div className="grid md:grid-cols-3 gap-8">
               <div>
-                <h3 className="text-lg font-semibold text-brand-gray-dark mb-4">Wat krijgen deelnemers?</h3>
+                <h3 className="text-xl md:text-2xl lg:text-3xl font-semibold text-brand-gray-dark mb-4">Wat krijgen deelnemers?</h3>
                 <ul className="space-y-3 text-brand-gray-medium">
                   <li className="flex items-start">
                     <span className="text-brand-green mr-2">✓</span>
@@ -184,7 +184,7 @@ const Programma = () => {
               </div>
               
               <div>
-                <h3 className="text-lg font-semibold text-brand-gray-dark mb-4">Groepsopzet</h3>
+                <h3 className="text-xl md:text-2xl lg:text-3xl font-semibold text-brand-gray-dark mb-4">Groepsopzet</h3>
                 <ul className="space-y-3 text-brand-gray-medium">
                   <li>
                     <span><strong>Groepsgrootte:</strong> Tot 15 deelnemers voor optimale interactie</span>
@@ -199,7 +199,7 @@ const Programma = () => {
               </div>
               
               <div>
-                <h3 className="text-lg font-semibold text-brand-gray-dark mb-4">Planning & Follow-up</h3>
+                <h3 className="text-xl md:text-2xl lg:text-3xl font-semibold text-brand-gray-dark mb-4">Planning & Follow-up</h3>
                 <ul className="space-y-3 text-brand-gray-medium">
                   <li>
                     <span><strong>Timing:</strong> Flexibel in te plannen tijdens of na werktijd</span>
@@ -217,7 +217,7 @@ const Programma = () => {
 
           {/* Weekly Program */}
           <div className="mb-16">
-            <h2 className="text-3xl font-bold text-brand-gray-dark mb-8 text-center">Wekelijks Programma voor Echte Gedragsverandering</h2>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-brand-gray-dark mb-8 text-center">Wekelijks Programma voor Echte Gedragsverandering</h2>
             
             <div className="grid gap-8">
               {weeks.map((week, index) => <Card key={index} className="overflow-hidden">

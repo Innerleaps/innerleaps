@@ -17,9 +17,9 @@ const Contact = () => {
         <section className="bg-white section-padding">
           <div className="container-custom">
             <div className="text-center space-y-6 mb-16">
-              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-brand-gray-dark">
-                Contact
-              </h1>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-gray-dark">
+              Contact
+            </h1>
               <p className="text-xl text-brand-gray-medium max-w-3xl mx-auto leading-relaxed">
                 Klaar om de eerste stap te zetten naar een gezondere, productievere werkomgeving? Plan een vrijblijvend gesprek en ontdek hoe ons programma jullie organisatie kan helpen.
               </p>
@@ -28,7 +28,7 @@ const Contact = () => {
             {/* Centered wider contact block */}
             <div className="max-w-5xl mx-auto">
               <div className="bg-white p-8 rounded-xl">
-                <h2 className="text-2xl font-bold text-brand-gray-dark mb-8 text-center">
+                <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-brand-gray-dark mb-8 text-center">
                   Stel je vragen vrijblijvend aan Bas
                 </h2>
 
@@ -57,7 +57,7 @@ const Contact = () => {
                   {/* Contact Information - Right side */}
                   <div className="lg:w-80 w-full">
                     <div className="bg-brand-gray-light p-6 rounded-lg">
-                      <h3 className="text-lg font-semibold text-brand-gray-dark mb-4">Of neem direct zelf contact op</h3>
+                      <h3 className="text-xl md:text-2xl lg:text-3xl font-semibold text-brand-gray-dark mb-4">Of neem direct zelf contact op</h3>
                       
                       <div className="space-y-4">
                         <div className="flex items-start space-x-3">

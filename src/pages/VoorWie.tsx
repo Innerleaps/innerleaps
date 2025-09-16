@@ -106,12 +106,12 @@ const VoorWie = () => {
 
           {/* Sectoren */}
           <div className="mb-16">
-            <h2 className="text-3xl font-bold text-brand-gray-dark mb-8 text-center">Sectoren met Bewezen Resultaten</h2>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-brand-gray-dark mb-8 text-center">Sectoren met Bewezen Resultaten</h2>
             
             <div className="space-y-8">
               {sectors.map((sector, index) => (
                 <div key={index} className="bg-white rounded-xl p-8 shadow-lg">
-                  <h3 className="text-2xl font-semibold text-brand-gray-dark mb-4">{sector.title}</h3>
+                  <h3 className="text-xl md:text-2xl lg:text-3xl font-semibold text-brand-gray-dark mb-4">{sector.title}</h3>
                   
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                     <div>
@@ -139,7 +139,7 @@ const VoorWie = () => {
 
           {/* Implementatiemogelijkheden */}
           <div className="mb-16">
-            <h2 className="text-3xl font-bold text-brand-gray-dark mb-8 text-center">Implementatiemogelijkheden</h2>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-brand-gray-dark mb-8 text-center">Implementatiemogelijkheden</h2>
             <p className="text-xl md:text-2xl text-brand-gray-medium mb-8 text-center max-w-4xl mx-auto leading-relaxed">
               Ons programma kan op verschillende manieren worden geïmplementeerd, afhankelijk van de specifieke behoeften en structuur van jullie organisatie:
             </p>
@@ -147,7 +147,7 @@ const VoorWie = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {implementations.map((impl, index) => (
                 <div key={index} className="bg-white rounded-xl p-6 shadow-lg">
-                  <h3 className="text-xl font-semibold text-brand-gray-dark mb-3">{impl.title}</h3>
+                  <h3 className="text-xl md:text-2xl lg:text-3xl font-semibold text-brand-gray-dark mb-3">{impl.title}</h3>
                   <p className="text-brand-gray-medium mb-4 text-sm">{impl.description}</p>
                   
                   <ul className="space-y-2">
@@ -165,26 +165,26 @@ const VoorWie = () => {
 
           {/* Case Studies */}
           <div className="mb-16">
-            <h2 className="text-3xl font-bold text-brand-gray-dark mb-8 text-center">Case Studies: Succesvolle Implementaties</h2>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-brand-gray-dark mb-8 text-center">Case Studies: Succesvolle Implementaties</h2>
             
             <div className="space-y-8">
               {caseStudies.map((study, index) => (
                 <div key={index} className="bg-white rounded-xl p-8 shadow-lg">
-                  <h3 className="text-2xl font-semibold text-brand-gray-dark mb-6">{study.title}</h3>
+                  <h3 className="text-xl md:text-2xl lg:text-3xl font-semibold text-brand-gray-dark mb-6">{study.title}</h3>
                   
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                     <div>
-                      <h4 className="font-semibold text-brand-gray-dark mb-2">Uitdaging:</h4>
+                      <h4 className="text-lg md:text-xl font-semibold text-brand-gray-dark mb-2">Uitdaging:</h4>
                       <p className="text-brand-gray-medium text-sm">{study.challenge}</p>
                     </div>
                     
                     <div>
-                      <h4 className="font-semibold text-brand-gray-dark mb-2">Aanpak:</h4>
+                      <h4 className="text-lg md:text-xl font-semibold text-brand-gray-dark mb-2">Aanpak:</h4>
                       <p className="text-brand-gray-medium text-sm">{study.approach}</p>
                     </div>
                     
                     <div>
-                      <h4 className="font-semibold text-brand-gray-dark mb-2">Resultaten na 12 maanden:</h4>
+                      <h4 className="text-lg md:text-xl font-semibold text-brand-gray-dark mb-2">Resultaten na 12 maanden:</h4>
                       <ul className="space-y-1">
                         {study.results.map((result, resultIndex) => (
                           <li key={resultIndex} className="flex items-start text-brand-gray-medium text-sm">

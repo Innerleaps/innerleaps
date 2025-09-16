@@ -30,7 +30,7 @@ const OverOns = () => {
 
           {/* Mission */}
           <div className="bg-white rounded-xl p-8 mb-16 shadow-lg">
-            <h2 className="text-2xl font-bold text-brand-gray-dark mb-4 text-center">Waarom wij dit werk doen</h2>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-brand-gray-dark mb-4 text-center">Waarom wij dit werk doen</h2>
             <p className="text-lg text-brand-gray-dark leading-relaxed text-center">
               We geloven dat werk een bron van voldoening en groei moet zijn, niet van stress en uitputting. Na jaren te hebben gezien hoe werkdruk mensen en organisaties ondermijnt, besloten we om de bewezen kracht van mindfulness toegankelijk te maken voor Nederlandse bedrijven. Want als mensen zich goed voelen, presteren ze beter - en gaan ze weer met plezier naar hun werk.
             </p>
@@ -38,7 +38,7 @@ const OverOns = () => {
 
           {/* Expertise */}
           <div className="mb-16">
-            <h2 className="text-3xl font-bold text-brand-gray-dark mb-8">Wat we meebrengen</h2>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-brand-gray-dark mb-8">Wat we meebrengen</h2>
             <p className="text-lg text-brand-gray-medium mb-6">
               Ons team combineert wetenschappelijke kennis met praktische ervaring. We zijn gecertificeerd en getraind in:
             </p>
@@ -48,7 +48,7 @@ const OverOns = () => {
                 <div className="bg-white p-6 rounded-lg shadow-sm">
                   <div className="flex items-center mb-3">
                     <Brain className="h-6 w-6 text-brand-blue mr-3" />
-                    <h3 className="font-semibold text-brand-gray-dark">MBSR Training</h3>
+                    <h3 className="text-lg md:text-xl font-semibold text-brand-gray-dark">MBSR Training</h3>
                   </div>
                   <p className="text-brand-gray-medium text-sm">Gecertificeerde trainers volgens de richtlijnen van de VMBN - we weten waar we het over hebben.</p>
                 </div>
@@ -56,7 +56,7 @@ const OverOns = () => {
                 <div className="bg-white p-6 rounded-lg shadow-sm">
                   <div className="flex items-center mb-3">
                     <Building className="h-6 w-6 text-brand-blue mr-3" />
-                    <h3 className="font-semibold text-brand-gray-dark">Werkplaats Implementatie</h3>
+                    <h3 className="text-lg md:text-xl font-semibold text-brand-gray-dark">Werkplaats Implementatie</h3>
                   </div>
                   <p className="text-brand-gray-medium text-sm">Ervaring met het praktisch toepassen van stressreductie in echte bedrijfsomgevingen</p>
                 </div>
@@ -64,7 +64,7 @@ const OverOns = () => {
                 <div className="bg-white p-6 rounded-lg shadow-sm">
                   <div className="flex items-center mb-3">
                     <Globe className="h-6 w-6 text-brand-blue mr-3" />
-                    <h3 className="font-semibold text-brand-gray-dark">Brede Ervaring</h3>
+                    <h3 className="text-lg md:text-xl font-semibold text-brand-gray-dark">Brede Ervaring</h3>
                   </div>
                   <p className="text-brand-gray-medium text-sm">We hebben met diverse sectoren gewerkt en begrijpen verschillende werkcontexten</p>
                 </div>
@@ -74,7 +74,7 @@ const OverOns = () => {
                 <div className="bg-white p-6 rounded-lg shadow-sm">
                   <div className="flex items-center mb-3">
                     <TrendingUp className="h-6 w-6 text-brand-blue mr-3" />
-                    <h3 className="font-semibold text-brand-gray-dark">Bedrijfsresultaten</h3>
+                    <h3 className="text-lg md:text-xl font-semibold text-brand-gray-dark">Bedrijfsresultaten</h3>
                   </div>
                   <p className="text-brand-gray-medium text-sm">We snappen de business kant - ROI berekeningen, verzuimcijfers en retentie zijn ons niet vreemd</p>
                 </div>
@@ -82,7 +82,7 @@ const OverOns = () => {
                 <div className="bg-white p-6 rounded-lg shadow-sm">
                   <div className="flex items-center mb-3">
                     <Users className="h-6 w-6 text-brand-blue mr-3" />
-                    <h3 className="font-semibold text-brand-gray-dark">Mensen & Organisaties</h3>
+                    <h3 className="text-lg md:text-xl font-semibold text-brand-gray-dark">Mensen & Organisaties</h3>
                   </div>
                   <p className="text-brand-gray-medium text-sm">Achtergrond in organisatieontwikkeling - we begrijpen hoe verandering werkt</p>
                 </div>
@@ -90,7 +90,7 @@ const OverOns = () => {
                 <div className="bg-white p-6 rounded-lg shadow-sm">
                   <div className="flex items-center mb-3">
                     <Heart className="h-6 w-6 text-brand-blue mr-3" />
-                    <h3 className="font-semibold text-brand-gray-dark">Specialistische Zorg</h3>
+                    <h3 className="text-lg md:text-xl font-semibold text-brand-gray-dark">Specialistische Zorg</h3>
                   </div>
                   <p className="text-brand-gray-medium text-sm">Werkstress, burn-out preventie en herstel - dit is ons vakgebied</p>
                 </div>
@@ -100,7 +100,7 @@ const OverOns = () => {
 
           {/* Oprichtersverhaal */}
           <div className="mb-16">
-            <h2 className="text-3xl font-bold text-brand-gray-dark mb-8">Hoe het allemaal begon</h2>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-brand-gray-dark mb-8">Hoe het allemaal begon</h2>
             
             <div className="bg-white rounded-xl p-8 shadow-lg">
               <div className="flex flex-col md:flex-row items-start gap-6 mb-6">
@@ -131,7 +131,7 @@ const OverOns = () => {
 
           {/* Trainers - 2 Column Layout */}
           <div>
-            <h2 className="text-3xl font-bold text-brand-gray-dark mb-8 text-center">Onze trainers</h2>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-brand-gray-dark mb-8 text-center">Onze trainers</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {/* Dave van Schie */}
               <div className="bg-white rounded-xl p-8 shadow-lg">
@@ -140,7 +140,7 @@ const OverOns = () => {
                     <AvatarImage src="/lovable-uploads/e2b5c07e-4018-45d2-b441-a83bdc38ceaf.png" alt="Dave van Schie" />
                     <AvatarFallback className="text-white text-xl font-bold bg-brand-green">DvS</AvatarFallback>
                   </Avatar>
-                  <h3 className="text-xl font-semibold text-brand-gray-dark">Dave van Schie</h3>
+                  <h3 className="text-xl md:text-2xl lg:text-3xl font-semibold text-brand-gray-dark">Dave van Schie</h3>
                   <p className="text-brand-gray-medium text-sm">Medeoprichter &amp; Trainer</p>
                 </div>
                 
@@ -164,7 +164,7 @@ const OverOns = () => {
                     <AvatarImage src="/lovable-uploads/07c13706-b4be-4b0a-8b50-701bd69610fc.png" alt="Guido Scholte" />
                     <AvatarFallback className="text-white text-xl font-bold bg-brand-blue-light">GS</AvatarFallback>
                   </Avatar>
-                  <h3 className="text-xl font-semibold text-brand-gray-dark">Guido Scholte</h3>
+                  <h3 className="text-xl md:text-2xl lg:text-3xl font-semibold text-brand-gray-dark">Guido Scholte</h3>
                   <p className="text-brand-gray-medium text-sm">Medeoprichter &amp; Trainer</p>
                 </div>
                 
