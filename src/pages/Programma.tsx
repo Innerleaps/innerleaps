@@ -119,9 +119,7 @@ const Programma = () => {
 
           {/* Key Benefits */}
           <div className="bg-white rounded-xl p-8 mb-16">
-            <h2 className="text-2xl font-bold text-brand-gray-dark mb-6 text-center">
-              Wat levert het programma op?
-            </h2>
+            <h2 className="text-2xl font-bold text-brand-gray-dark mb-6 text-center">Wat levert het Life+ programma op?</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <div className="text-center">
                 <div className="text-3xl font-bold text-brand-orange mb-2">-15 tot -21%</div>
