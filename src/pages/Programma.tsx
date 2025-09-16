@@ -124,7 +124,7 @@ const Programma = () => {
             </h2>
             <div className="max-w-4xl mx-auto space-y-6 text-lg md:text-xl text-brand-gray-medium leading-relaxed">
               <p>
-                Het Life+ programma draait om één doel: deelnemers ontwikkelen hun eigen geïntegreerde stressmanagement routine. Ieder mens is anders, daarom leren deelnemers uit alle aangeboden technieken en methodes wat voor hen persoonlijk het beste werkt.
+                Het Life+ programma draait om één doel: <strong>deelnemers ontwikkelen hun eigen geïntegreerde stressmanagement routine</strong>. Ieder mens is anders, daarom leren deelnemers uit alle aangeboden technieken en methodes wat voor hen persoonlijk het beste werkt.
               </p>
               <p>
                 <strong>Geen standaard oplossing, wel maatwerk.</strong> We kijken samen hoe elke deelnemer hun persoonlijke toolkit kan integreren in het dagelijks leven. Van herkennen van stresssignalen tot het daadwerkelijk toepassen van technieken wanneer het er echt toe doet.
