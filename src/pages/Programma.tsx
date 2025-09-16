@@ -49,10 +49,10 @@ const Programma = () => {
     applications: ["Negatieve denkspiralen doorbreken", "Probleemoplossend vermogen verbeteren", "Werkgerelateerd piekeren reduceren"]
   }, {
     week: "Week 7",
-    title: "Mindful Communicatie en Relaties",
-    goals: ["Bewuste communicatievaardigheden ontwikkelen", "Empathie en compassie versterken", "Relationele stress verminderen"],
-    techniques: ["Mindful luisteren oefeningen", "Compassie meditaties", "Bewuste communicatie technieken"],
-    applications: ["Betere teamcommunicatie", "Constructieve conflicthantering", "Verhoogde werkplezier door betere relaties"]
+    title: "Oefendag - Alle Technieken Integreren",
+    goals: ["Alle geleerde technieken in één dag toepassen", "Diepere ervaring opdoen met stressmanagement", "Vertrouwen opbouwen in eigen kunnen"],
+    techniques: ["Uitgebreide lichaamsscan", "Verschillende ademhalingstechnieken", "Bewegingsoefeningen en stilte-oefeningen"],
+    applications: ["Langdurige focus ontwikkelen", "Stressbestendigheid testen en versterken", "Zelfvertrouwen in eigen vaardigheden opbouwen"]
   }, {
     week: "Week 8",
     title: "Zelfzorg en Grenzen",
