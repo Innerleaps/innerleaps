@@ -82,22 +82,33 @@ const Contact = () => {
                   </ul>
                 </div>
 
-                {/* Bas's personal message */}
+                {/* Bas CTA Block */}
                 <div className="bg-white border border-gray-200 p-8 rounded-xl">
-                  <div className="flex flex-col sm:flex-row items-start space-y-4 sm:space-y-0 sm:space-x-6">
+                  <h3 className="text-xl font-bold text-brand-gray-dark mb-6 text-center">
+                    Stel je vragen vrijblijvend aan Bas
+                  </h3>
+                  <div className="flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-6 mb-6">
                     <img 
                       src="/lovable-uploads/eaa7a159-2f85-4fa3-b487-4855426f2c14.png" 
                       alt="Bas Ter Haar Romenij" 
                       className="w-28 h-28 rounded-full object-cover flex-shrink-0"
                     />
-                    <div>
+                    <div className="text-center sm:text-left">
                       <p className="text-brand-gray-dark italic mb-4 text-lg">
-                        "Ik help graag persoonlijk mee om te kijken naar de mogelijkheden voor jullie organisatie. Elke situatie is uniek, en samen vinden we de beste aanpak."
+                        "Ik help graag persoonlijk mee om te kijken naar de concrete mogelijkheden voor jullie organisatie. Elke situatie vraagt om een specifieke aanpak, en ik denk graag mee over wat het beste werkt."
                       </p>
                       <p className="text-brand-gray-medium font-medium">
-                        — Bas Ter Haar Romenij, Oprichter en adviseur bij Innerleaps
+                        — Bas Ter Haar Romenij, Oprichter InnerLeaps
                       </p>
                     </div>
+                  </div>
+                  <div className="text-center">
+                    <Button 
+                      className="bg-brand-green hover:bg-brand-green-light text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+                      onClick={() => window.open('https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1wwDnoAHyFrV0M1FxwmbcMa9ewkDxTDdwQObwPKF-WX-wZV9DssZKtb1haoeP5qXDLenQlZt_R', '_blank')}
+                    >
+                      Plan een gesprek met Bas
+                    </Button>
                   </div>
                 </div>
               </div>
