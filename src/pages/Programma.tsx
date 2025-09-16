@@ -120,7 +120,7 @@ const Programma = () => {
           {/* Program Outcome */}
           <div className="bg-white rounded-xl p-8 mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-brand-gray-dark mb-6 text-center">
-              De uitkomst: Een Persoonlijk Stressmanagement Programma
+              Een Persoonlijk Stressmanagement Programma
             </h2>
             <div className="max-w-4xl mx-auto space-y-6 text-lg md:text-xl text-brand-gray-medium leading-relaxed">
               <p>
