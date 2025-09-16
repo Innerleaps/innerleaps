@@ -119,15 +119,17 @@ const Programma = () => {
 
           {/* Program Outcome */}
           <div className="bg-white rounded-xl p-8 mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-brand-gray-dark mb-6 text-center">
-              Het eindproduct: Een Persoonlijk Stressmanagement Programma
-            </h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-brand-gray-dark mb-6 text-center">Het eindproduct:
+Een Persoonlijk Stressmanagement Programma</h2>
             <div className="max-w-4xl mx-auto space-y-6 text-lg md:text-xl text-brand-gray-medium leading-relaxed">
               <p>
-                Tijdens het Life+ programma komen heel veel verschillende technieken aan bod. Deelnemers ervaren zo wat wel en juist niet voor hen werkt. Met deze kennis ontwikkelt elke deelnemer een eigen stressmanagement programma.
+                Het Life+ programma draait om één doel: <strong>deelnemers ontwikkelen hun eigen geïntegreerde stressmanagement routine</strong>. Ieder mens is anders, daarom leren deelnemers uit alle aangeboden technieken en methodes wat voor hen persoonlijk het beste werkt.
               </p>
               <p>
-                Een routine die ontwikkeld is op basis van persoonlijke ervaring door degene die het gaat toepassen. <strong>Geen snelle workshop, wel echte gedragsverandering.</strong>
+                <strong>Geen standaard oplossing, wel maatwerk.</strong> We kijken samen hoe elke deelnemer hun persoonlijke toolkit kan integreren in het dagelijks leven. Van herkennen van stresssignalen tot het daadwerkelijk toepassen van technieken wanneer het er echt toe doet.
+              </p>
+              <p>
+                <strong>Geen snelle workshop, wel echte gedragsverandering.</strong> Deelnemers trainen zichzelf om hun persoonlijke aanpak écht toe te passen. Het resultaat: een duurzame stressmanagement routine die naadloos verweven is met hun specifieke dagelijkse situatie.
               </p>
             </div>
           </div>
@@ -228,7 +230,8 @@ const Programma = () => {
                   <CardContent className="p-6">
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                       <div>
-                        <h4 className="font-semibold text-brand-gray-dark mb-3">
+                        <h4 className="font-semibold text-brand-gray-dark mb-3 flex items-center">
+                          <span className="w-2 h-2 bg-brand-green rounded-full mr-2"></span>
                           Leerdoelen
                         </h4>
                         <ul className="space-y-2">
@@ -276,7 +279,7 @@ const Programma = () => {
               Ontdek hoe het bewezen MBSR-programma jullie organisatie kan helpen bij het verlagen van verzuim en het verbeteren van retentie.
             </p>
             <div className="space-y-4 md:space-y-0 md:space-x-4 md:flex md:justify-center">
-              <Button variant="secondary-on-blue" className="font-semibold py-3 px-8 rounded-lg text-lg" onClick={() => window.open('https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1wwDnoAHyFrV0M1FxwmbcMa9ewkDxTDdwQObwPKF-WX-wZV9DssZKtb1haoeP5qXDLenQlZt_R', '_blank')}>
+              <Button variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-brand-blue font-semibold py-3 px-8 rounded-lg text-lg" onClick={() => window.open('https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1wwDnoAHyFrV0M1FxwmbcMa9ewkDxTDdwQObwPKF-WX-wZV9DssZKtb1haoeP5qXDLenQlZt_R', '_blank')}>
                 Vrijblijvend gesprek plannen
               </Button>
               <Button className="font-semibold py-3 px-8 rounded-lg text-lg" onClick={() => window.location.href = '/#calculator'}>
