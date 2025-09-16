@@ -81,7 +81,7 @@ const Programma = () => {
   }, {
     icon: Calendar,
     title: "Dagelijks oefenen",
-    description: "Deelnemers proberen dagelijks te oefenen"
+    description: "Deelnemers hebben de intentie om dagelijks te oefenen"
   }];
   return <div className="min-h-screen bg-brand-gray-light">
       <Navigation />
