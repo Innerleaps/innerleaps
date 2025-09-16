@@ -98,9 +98,33 @@ const Contact = () => {
                 <h3 className="text-xl font-bold text-brand-gray-dark mb-6 text-center">
                   Stel je vragen vrijblijvend aan Bas
                 </h3>
+
+                <div className="flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-6 mb-6">
+                  <img 
+                    src="/lovable-uploads/eaa7a159-2f85-4fa3-b487-4855426f2c14.png" 
+                    alt="Bas Ter Haar Romenij" 
+                    className="w-28 h-28 rounded-full object-cover flex-shrink-0"
+                  />
+                  <div className="text-center sm:text-left">
+                    <p className="text-brand-gray-dark italic mb-4 text-lg">
+                      "Ik help graag persoonlijk mee om te kijken naar de concrete mogelijkheden voor jullie organisatie. Elke situatie vraagt om een specifieke aanpak, en ik denk graag mee over wat het beste werkt."
+                    </p>
+                    <p className="text-brand-gray-medium font-medium">
+                      — Bas Ter Haar Romenij, Oprichter InnerLeaps
+                    </p>
+                  </div>
+                </div>
+                <div className="text-center mb-6">
+                  <Button 
+                    variant="secondary"
+                    onClick={() => window.open('https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1wwDnoAHyFrV0M1FxwmbcMa9ewkDxTDdwQObwPKF-WX-wZV9DssZKtb1haoeP5qXDLenQlZt_R', '_blank')}
+                  >
+                    Plan een gesprek met Bas
+                  </Button>
+                </div>
                 
                 {/* Contact Information */}
-                <div className="bg-brand-gray-light p-6 rounded-xl mb-6">
+                <div className="p-6 mb-6">
                   <h4 className="text-lg font-semibold text-brand-gray-dark mb-4">
                     Neem Direct Contact Op
                   </h4>
@@ -126,30 +150,6 @@ const Contact = () => {
                       </div>
                     </div>
                   </div>
-                </div>
-
-                <div className="flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-6 mb-6">
-                  <img 
-                    src="/lovable-uploads/eaa7a159-2f85-4fa3-b487-4855426f2c14.png" 
-                    alt="Bas Ter Haar Romenij" 
-                    className="w-28 h-28 rounded-full object-cover flex-shrink-0"
-                  />
-                  <div className="text-center sm:text-left">
-                    <p className="text-brand-gray-dark italic mb-4 text-lg">
-                      "Ik help graag persoonlijk mee om te kijken naar de concrete mogelijkheden voor jullie organisatie. Elke situatie vraagt om een specifieke aanpak, en ik denk graag mee over wat het beste werkt."
-                    </p>
-                    <p className="text-brand-gray-medium font-medium">
-                      — Bas Ter Haar Romenij, Oprichter InnerLeaps
-                    </p>
-                  </div>
-                </div>
-                <div className="text-center">
-                  <Button 
-                    variant="secondary"
-                    onClick={() => window.open('https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1wwDnoAHyFrV0M1FxwmbcMa9ewkDxTDdwQObwPKF-WX-wZV9DssZKtb1haoeP5qXDLenQlZt_R', '_blank')}
-                  >
-                    Plan een gesprek met Bas
-                  </Button>
                 </div>
               </div>
             </div>
