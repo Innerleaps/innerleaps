@@ -134,7 +134,7 @@ const Programma = () => {
               <div className="text-center">
                 <div className="text-3xl font-bold text-brand-orange mb-2">64 tot 77%</div>
                 <p className="text-brand-gray-dark font-medium">Veerkrachtiger</p>
-                <p className="text-sm text-brand-gray-medium mt-1">Merkbare verbetering in welzijn</p>
+                <p className="text-sm text-brand-gray-medium mt-1">Merkbare verbetering in veerkracht</p>
               </div>
             </div>
           </div>
