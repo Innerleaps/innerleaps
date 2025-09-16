@@ -141,7 +141,7 @@ const VoorWie = () => {
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-brand-gray-dark mb-8 text-center">Implementatiemogelijkheden</h2>
             <p className="text-xl md:text-2xl text-brand-gray-medium mb-8 text-center max-w-4xl mx-auto leading-relaxed">
-              Ons programma kan op verschillende manieren worden geïmplementeerd, afhankelijk van de specifieke behoeften en structuur van uw organisatie:
+              Ons programma kan op verschillende manieren worden geïmplementeerd, afhankelijk van de specifieke behoeften en structuur van jullie organisatie:
             </p>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -203,7 +203,7 @@ const VoorWie = () => {
           {/* Is Uw Organisatie Geschikt */}
           <div className="bg-brand-blue text-white rounded-xl p-8">
             <div className="max-w-4xl mx-auto">
-              <h2 className="text-3xl font-bold mb-6 text-center">Is Uw Organisatie Geschikt?</h2>
+              <h2 className="text-3xl font-bold mb-6 text-center">Is Jullie Organisatie Geschikt?</h2>
               <p className="text-xl mb-6 text-center">Ons programma is bijzonder effectief voor organisaties die:</p>
               
               <div className="max-w-2xl mx-auto mb-8">
@@ -233,7 +233,7 @@ const VoorWie = () => {
               
               <div className="text-center">
                 <p className="text-lg mb-6 max-w-2xl mx-auto">
-                  Niet zeker of het programma past bij uw organisatie? Plan een vrijblijvend gesprek waarin we uw specifieke situatie analyseren en een op maat gemaakte aanpak voorstellen.
+                  Niet zeker of het programma past bij jullie organisatie? Plan een vrijblijvend gesprek waarin we jullie specifieke situatie analyseren en een op maat gemaakte aanpak voorstellen.
                 </p>
                 
                 <Button 

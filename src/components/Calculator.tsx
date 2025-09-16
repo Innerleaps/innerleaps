@@ -68,7 +68,7 @@ const Calculator = () => {
             <TrendingUp className="h-8 w-8" />
           </div>
           
-          <h3 className="text-2xl font-bold">Uw Potentiële Besparing</h3>
+          <h3 className="text-2xl font-bold">Je Potentiële Besparing</h3>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="text-center p-4 bg-white/20 rounded-lg">
@@ -122,10 +122,10 @@ const Calculator = () => {
           <CalculatorIcon className="h-8 w-8 text-brand-orange stroke-2" />
         </div>
         <h3 className="text-2xl font-bold text-brand-gray-dark mb-2">
-          Bereken Uw Potentiële Besparing
+          Bereken Je Potentiële Besparing
         </h3>
         <p className="text-brand-gray-medium">
-          Vul uw gegevens in voor een persoonlijke berekening van de ROI
+          Vul je gegevens in voor een persoonlijke berekening van de ROI
         </p>
       </div>
 
@@ -235,7 +235,7 @@ const Calculator = () => {
       </div>
       
       <div className="mt-6 text-xs text-brand-gray-medium">
-        * Alle velden zijn verplicht. Uw gegevens worden vertrouwelijk behandeld conform onze privacyverklaring.
+        * Alle velden zijn verplicht. Je gegevens worden vertrouwelijk behandeld conform onze privacyverklaring.
       </div>
     </Card>
   );

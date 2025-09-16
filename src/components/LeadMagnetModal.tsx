@@ -51,7 +51,7 @@ const LeadMagnetModal = ({ isOpen, onClose }: LeadMagnetModalProps) => {
       setIsSubmitted(true);
       toast({
         title: "Aanvraag verzonden!",
-        description: "U ontvangt het wetenschappelijke bewijs binnen 24 uur op uw emailadres.",
+        description: "Je ontvangt het wetenschappelijke bewijs binnen 24 uur op je emailadres.",
       });
       
       // Reset form after 3 seconds and close modal
@@ -100,7 +100,7 @@ const LeadMagnetModal = ({ isOpen, onClose }: LeadMagnetModalProps) => {
         {!isSubmitted ? (
           <div className="space-y-4">
             <p className="text-brand-gray-medium text-sm">
-              Vul uw gegevens in om het volledige academische onderzoeksrapport te ontvangen.
+              Vul je gegevens in om het volledige academische onderzoeksrapport te ontvangen.
             </p>
             
             <div className="space-y-4">
@@ -113,7 +113,7 @@ const LeadMagnetModal = ({ isOpen, onClose }: LeadMagnetModalProps) => {
                   type="text"
                   value={formData.naam}
                   onChange={handleInputChange('naam')}
-                  placeholder="Uw volledige naam"
+                  placeholder="Je volledige naam"
                   className="mt-1"
                 />
               </div>
@@ -127,7 +127,7 @@ const LeadMagnetModal = ({ isOpen, onClose }: LeadMagnetModalProps) => {
                   type="text"
                   value={formData.bedrijfsnaam}
                   onChange={handleInputChange('bedrijfsnaam')}
-                  placeholder="Naam van uw organisatie"
+                  placeholder="Naam van je organisatie"
                   className="mt-1"
                 />
               </div>
@@ -141,7 +141,7 @@ const LeadMagnetModal = ({ isOpen, onClose }: LeadMagnetModalProps) => {
                   type="email"
                   value={formData.email}
                   onChange={handleInputChange('email')}
-                  placeholder="uw.email@bedrijf.nl"
+                  placeholder="je.email@bedrijf.nl"
                   className="mt-1"
                 />
               </div>
@@ -159,10 +159,10 @@ const LeadMagnetModal = ({ isOpen, onClose }: LeadMagnetModalProps) => {
           <div className="text-center py-8">
             <CheckCircle className="mx-auto h-12 w-12 text-brand-green mb-4" />
             <h3 className="text-lg font-semibold text-brand-gray-dark mb-2">
-              Bedankt voor uw aanvraag!
+              Bedankt voor je aanvraag!
             </h3>
             <p className="text-brand-gray-medium">
-              U ontvangt het wetenschappelijke bewijs binnen 24 uur op uw emailadres.
+              Je ontvangt het wetenschappelijke bewijs binnen 24 uur op je emailadres.
             </p>
           </div>
         )}

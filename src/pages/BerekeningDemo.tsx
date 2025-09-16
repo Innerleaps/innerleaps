@@ -78,7 +78,7 @@ const BerekeningDemo = () => {
                 <TrendingUp className="h-8 w-8" />
               </div>
               
-              <h2 className="text-3xl font-bold">Uw Potentiële Besparing</h2>
+              <h2 className="text-3xl font-bold">Je Potentiële Besparing</h2>
               
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="text-center p-4 bg-white/20 rounded-lg">
@@ -209,7 +209,7 @@ const BerekeningDemo = () => {
               Klaar om deze resultaten te behalen?
             </h3>
             <p className="text-brand-gray-medium">
-              Plan een vrijblijvend gesprek om te bespreken hoe u deze besparingen kunt realiseren met ons bewezen MBSR programma.
+              Plan een vrijblijvend gesprek om te bespreken hoe je deze besparingen kunt realiseren met ons bewezen MBSR programma.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

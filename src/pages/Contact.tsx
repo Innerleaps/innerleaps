@@ -25,7 +25,7 @@ const Contact = () => {
                 Contact
               </h1>
               <p className="text-xl text-brand-gray-medium max-w-3xl mx-auto leading-relaxed">
-                Klaar om de eerste stap te zetten naar een gezondere, productievere werkomgeving? Plan een vrijblijvend gesprek en ontdek hoe ons programma uw organisatie kan helpen.
+                Klaar om de eerste stap te zetten naar een gezondere, productievere werkomgeving? Plan een vrijblijvend gesprek en ontdek hoe ons programma jullie organisatie kan helpen.
               </p>
             </div>
 
@@ -65,7 +65,7 @@ const Contact = () => {
                   <ul className="space-y-3">
                     <li className="flex items-start">
                       <span className="text-lg mr-2">•</span>
-                      <span>Analyse van uw huidige verzuim- en retentiecijfers</span>
+                      <span>Analyse van jullie huidige verzuim- en retentiecijfers</span>
                     </li>
                     <li className="flex items-start">
                       <span className="text-lg mr-2">•</span>
@@ -92,7 +92,7 @@ const Contact = () => {
                     />
                     <div>
                       <p className="text-brand-gray-dark italic mb-4 text-lg">
-                        "Ik help graag persoonlijk mee om te kijken naar de mogelijkheden voor uw organisatie. Elke situatie is uniek, en samen vinden we de beste aanpak."
+                        "Ik help graag persoonlijk mee om te kijken naar de mogelijkheden voor jullie organisatie. Elke situatie is uniek, en samen vinden we de beste aanpak."
                       </p>
                       <p className="text-brand-gray-medium font-medium">
                         — Bas Ter Haar Romenij, Oprichter en adviseur bij Innerleaps
@@ -115,7 +115,7 @@ const Contact = () => {
                         Plan een Vrijblijvend Gesprek
                       </h2>
                       <p className="text-brand-gray-medium mb-6">
-                        Ontdek in 30 minuten hoe ons programma uw organisatie kan helpen bij het verlagen van verzuim en verbeteren van retentie.
+                        Ontdek in 30 minuten hoe ons programma jullie organisatie kan helpen bij het verlagen van verzuim en verbeteren van retentie.
                       </p>
                     </div>
                     
@@ -130,7 +130,7 @@ const Contact = () => {
 
                 <div className="bg-brand-gray-light p-6 rounded-xl">
                   <h3 className="text-lg font-semibold text-brand-gray-dark mb-4">
-                    Wat kunt u verwachten?
+                    Wat kun je verwachten?
                   </h3>
                   <ul className="space-y-2 text-brand-gray-medium">
                     <li>• Gespreksduur: 30-45 minuten</li>
