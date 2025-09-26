@@ -25,12 +25,12 @@ const ProgramSection = () => {
   }];
   const programFeatures = [{
     icon: Clock,
-    title: "6 tot 9 weken programma",
-    description: "Meerdere weken training voor echte gedragsverandering."
+    title: "9 weken bewezen programma",
+    description: "9 weken om echte verandering te realiseren"
   }, {
     icon: Users,
-    title: "1x per week groepsworkshop",
-    description: "Elke week een training van een gecertificeerde trainer. 60 minuten tot 2,5 uur. Alles is mogelijk."
+    title: "1x per week 1,5 uur groepsworkshop",
+    description: "Elke week een training van een gecertificeerde trainer per groep van 15 deelnemers"
   }, {
     icon: MapPin,
     title: "Workshop op locatie of online",
@@ -38,14 +38,14 @@ const ProgramSection = () => {
   }, {
     icon: Calendar,
     title: "Dagelijks oefenen",
-    description: "Deelnemers hebben de intentie om dagelijks te oefenen. Ook hier hebben we opties van 15 tot 60 minuten."
+    description: "Deelnemers proberen dagelijks te oefenen"
   }];
   return <section className="bg-white section-padding">
       <div className="container-custom">
         <div className="text-center space-y-6 mb-16">
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-gray-dark">Een wetenschappelijk training in 
-<span className="text-brand-orange">persoonlijk leiderschap</span></h2>
-          <p className="text-xl md:text-2xl text-brand-gray-medium max-w-4xl mx-auto leading-relaxed">Meer dan 40 jaar onderzoek toont keer op keer aan, onze training werkt echt. Afhankelijk van de beschikbare tijd kunnen we het programma op jullie organisatie afstemmen. </p>
+persoonlijk leiderschap</h2>
+          <p className="text-xl md:text-2xl text-brand-gray-medium max-w-4xl mx-auto leading-relaxed">Wetenschappelijk bewezen met een praktische twist. Het Life+ programma neemt het 40 jaar onderzochte MBSR protocol en past dit specifiek aan voor de werkplek. </p>
         </div>
 
         {/* Program Features */}
