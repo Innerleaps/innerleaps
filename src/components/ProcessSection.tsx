@@ -52,7 +52,7 @@ const ProcessSection = () => {
         <div className="container-custom">
           <div className="text-center space-y-6 mb-16">
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-gray-dark">
-              Zo Werken We Samen
+              <span className="text-brand-orange">Samen werken</span> doen we zo
             </h2>
             <p className="text-xl md:text-2xl text-brand-gray-medium max-w-3xl mx-auto leading-relaxed text-center">
               Van kennismaking tot meetbare resultaten: ontdek hoe we je organisatie helpen om burnout te voorkomen, verzuim te verlagen en retentie te verbeteren

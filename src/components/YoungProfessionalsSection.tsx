@@ -4,7 +4,7 @@ const YoungProfessionalsSection = () => {
   return <section className="section-padding bg-gray-50">
       <div className="container-custom">
         <div className="text-center space-y-8">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-gray-dark">Je young professionals worstelen.<br />
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-gray-dark">Je <span className="text-brand-orange">young professionals worstelen</span>.<br />
 En jij ziet het.</h2>
           
           <div className="text-xl md:text-2xl text-brand-gray-medium max-w-4xl mx-auto leading-relaxed space-y-6">
