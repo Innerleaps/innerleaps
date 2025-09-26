@@ -11,7 +11,7 @@ const Footer = ({ showNavigation = true }: FooterProps) => {
         <div className={`grid grid-cols-1 ${showNavigation ? 'md:grid-cols-3' : 'md:grid-cols-2'} gap-8`}>
           <div>
             <div className="text-2xl font-bold mb-4">Innerleaps</div>
-            <p className="text-gray-300 leading-relaxed">InnerLeaps transformeert teams met wetenschappelijk bewezen stress management voor duurzaam succes. Geen quick fixes, wel echte gedragsverandering.</p>
+            <p className="text-gray-300 leading-relaxed">Wetenschappelijk bewezen training in persoonlijk leiderschap. Medewerkers leren zichzelf kennen, communiceren over hun behoeften en presteren duurzaam beter.</p>
           </div>
           <div>
             <h3 className="text-lg font-semibold mb-4">Contact</h3>
