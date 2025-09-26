@@ -44,7 +44,8 @@ const ProgramSection = () => {
       <div className="container-custom">
         <div className="text-center space-y-6 mb-16">
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-gray-dark">Een wetenschappelijk training in 
-<span className="text-brand-orange">persoonlijk leiderschap</span></h2>
+          <span className="text-brand-orange">
+persoonlijk leiderschap</span></h2>
           <p className="text-xl md:text-2xl text-brand-gray-medium max-w-4xl mx-auto leading-relaxed">Meer dan 40 jaar onderzoek toont keer op keer aan, onze training werkt echt. Afhankelijk van de beschikbare tijd kunnen we het programma op jullie organisatie afstemmen. </p>
         </div>
 
