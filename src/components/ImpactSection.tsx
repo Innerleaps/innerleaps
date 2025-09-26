@@ -13,30 +13,25 @@ const ImpactSection = () => {
     };
     return tooltips[tag] || "";
   };
-
-  const impacts = [
-  {
+  const impacts = [{
     icon: Target,
     title: "64-77% meer veerkracht en weerbaarheid",
     description: "Beter omgaan met uitdagingen",
     color: "text-brand-orange",
     tag: "Persoonlijke Hulpbronnen"
-  },
-  {
+  }, {
     icon: Shield,
     title: "60-84% minder burn-out klachten",
     description: "Minder emotionele uitputting",
     color: "text-brand-orange",
     tag: "Stressreacties/Welbevinden"
-  },
-  {
+  }, {
     icon: Target,
     title: "65% meer werkbetrokkenheid",
     description: "Gemotiveerde teams die samen groeien",
     color: "text-brand-orange",
     tag: "Stressreacties/Welbevinden"
-  },
-  {
+  }, {
     icon: BarChart3,
     title: "63-68% betere algemene gezondheid",
     description: "Verbeterde fysieke en mentale gezondheid",
@@ -47,16 +42,17 @@ const ImpactSection = () => {
     <section className="bg-brand-gray-light section-padding">
       <div className="container-custom">
         <div className="text-center space-y-6 mb-16">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-gray-dark">Ons Life+ programma gaat verder dan burnout preventie</h2>
-          <p className="text-xl md:text-2xl text-brand-gray-medium max-w-3xl mx-auto leading-relaxed text-center">Ons 9-weekse Life+ programma helpt teams niet alleen stress te verminderen, maar ook rust, veerkracht en gezonde gewoontes op te bouwen. Onderzoek laat het zien: minder stress, meer motivatie en een gezonder, tevredener leven — met blijvend effect.</p>
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-gray-dark">Wat wij doen werkt. 
+Dat zegt de wetenschap.</h2>
+          <p className="text-xl md:text-2xl text-brand-gray-medium max-w-3xl mx-auto leading-relaxed text-center">Ons Life+ programma in persoonlijk leiderschap helpt young professionals niet alleen stress te verminderen, maar ook rust, veerkracht en gezonde gewoontes op te bouwen. Onderzoek laat het zien: minder stress, meer motivatie en een gezonder, tevredener leven — met blijvend effect.</p>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 md:gap-8">
           {impacts.map((impact, index) => {
-          const IconComponent = impact.icon;
-          return <div key={index} className="bg-white rounded-xl p-6 animate-fade-in" style={{
-            animationDelay: `${index * 0.1}s`
-          }}>
+            const IconComponent = impact.icon;
+            return <div key={index} className="bg-white rounded-xl p-6 animate-fade-in" style={{
+              animationDelay: `${index * 0.1}s`
+            }}>
                 <div className="flex flex-col space-y-4">
                   <div className="flex items-center justify-between">
                     <div className="p-3 rounded-lg bg-white self-start">
@@ -68,13 +64,7 @@ const ImpactSection = () => {
                           {impact.tag}
                         </span>
                       </TooltipTrigger>
-                      <TooltipContent 
-                        className="max-w-sm p-4 bg-white border border-gray-200 shadow-lg rounded-lg z-50"
-                        side="top"
-                        align="center"
-                        sideOffset={8}
-                        avoidCollisions={false}
-                      >
+                      <TooltipContent className="max-w-sm p-4 bg-white border border-gray-200 shadow-lg rounded-lg z-50" side="top" align="center" sideOffset={8} avoidCollisions={false}>
                         <p className="text-sm leading-relaxed text-gray-700">{getJdrTooltipContent(impact.tag)}</p>
                       </TooltipContent>
                     </Tooltip>
@@ -89,7 +79,7 @@ const ImpactSection = () => {
                   </div>
                 </div>
               </div>;
-        })}
+          })}
         </div>
 
         <div className="text-center mt-12 space-y-4">
