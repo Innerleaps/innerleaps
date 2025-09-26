@@ -42,8 +42,8 @@ const ImpactSection = () => {
     <section className="bg-brand-gray-light section-padding">
       <div className="container-custom">
         <div className="text-center space-y-6 mb-16">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-gray-dark">Wat wij doen werkt. 
-Dat zegt de wetenschap.</h2>
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-gray-dark">Wat wij doen werkt.<br />
+Dat zegt <span className="text-brand-orange">De Wetenschap</span>.</h2>
           <p className="text-xl md:text-2xl text-brand-gray-medium max-w-3xl mx-auto leading-relaxed text-center">Ons Life+ programma in persoonlijk leiderschap helpt young professionals niet alleen stress te verminderen, maar ook rust, veerkracht en gezonde gewoontes op te bouwen. Onderzoek laat het zien: minder stress, meer motivatie en een gezonder, tevredener leven — met blijvend effect.</p>
         </div>
 
