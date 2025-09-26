@@ -46,7 +46,7 @@ const ProgramSection = () => {
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-gray-dark">Een wetenschappelijk training in 
           <span className="text-brand-orange">
 persoonlijk leiderschap</span></h2>
-          <p className="text-xl md:text-2xl text-brand-gray-medium max-w-4xl mx-auto leading-relaxed">Meer dan 40 jaar onderzoek toont keer op keer aan, onze training werkt echt. Afhankelijk van de beschikbare tijd kunnen we het programma op jullie organisatie afstemmen. </p>
+          <p className="text-xl md:text-2xl text-brand-gray-medium max-w-4xl mx-auto leading-relaxed">Meer dan 40 jaar onderzoek toont keer op keer aan, onze training werkt echt. Afhankelijk van jullie beschikbare tijd kunnen we het programma op jullie organisatie afstemmen. </p>
         </div>
 
         {/* Program Features */}
