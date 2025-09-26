@@ -37,7 +37,7 @@ const ProgramSection = () => {
     description: "De workshop wordt gegeven op een locatie naar wens of online"
   }, {
     icon: Calendar,
-    title: "Dagelijks oefenen",
+    title: "Intentie om dagelijks te oefenen",
     description: "Deelnemers hebben de intentie om dagelijks te oefenen. Ook hier hebben we opties van 15 tot 60 minuten."
   }];
   return <section className="bg-white section-padding">
