@@ -43,9 +43,9 @@ const ProgramSection = () => {
   return <section className="bg-white section-padding">
       <div className="container-custom">
         <div className="text-center space-y-6 mb-16">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-gray-dark">Een wetenschappelijk training in 
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-gray-dark">Een wetenschappelijk training in<br />
           <span className="text-brand-orange">
-persoonlijk leiderschap</span></h2>
+Persoonlijk Leiderschap</span></h2>
           <p className="text-xl md:text-2xl text-brand-gray-medium max-w-4xl mx-auto leading-relaxed">Meer dan 40 jaar onderzoek toont keer op keer aan, onze training werkt echt. Afhankelijk van jullie beschikbare tijd kunnen we het programma op jullie organisatie afstemmen. </p>
         </div>
 
@@ -67,43 +67,10 @@ persoonlijk leiderschap</span></h2>
         })}
         </div>
 
-        {/* Program Steps */}
-        <div className="space-y-8">
-          <h3 className="text-3xl md:text-4xl font-bold text-brand-gray-dark text-center mb-8">
-            9 stappen naar duurzame gedragsverandering
-          </h3>
-          
-          <p className="text-xl md:text-2xl text-brand-gray-medium max-w-4xl mx-auto leading-relaxed text-center mb-8">
-            Elke workshop bouwt voort op de vorige: van stress herkennen naar concrete tools, tot het ontwikkelen van een persoonlijk stressmanagement programma en integratie in het dagelijkse leven.
-          </p>
-          
-          <div className="text-center mb-12">
-            <Link to="/programma">
-              
-            </Link>
-          </div>
-          
-          <div className="grid gap-6">
-            {programSteps.map((step, index) => <div key={index} className="bg-white border border-gray-200 rounded-xl p-6">
-                <div className="mb-4">
-                  <div className="text-lg md:text-xl text-brand-blue font-medium mb-2">
-                    Week {step.weeks}
-                  </div>
-                  <h4 className="text-xl md:text-2xl font-semibold text-brand-gray-dark mb-3">
-                    {step.title}
-                  </h4>
-                  <p className="text-brand-gray-medium leading-relaxed text-lg md:text-xl">
-                    {step.description}
-                  </p>
-                </div>
-              </div>)}
-          </div>
-        </div>
-
         <div className="text-center mt-12">
           <Link to="/programma">
-            <Button className="w-full sm:w-auto bg-brand-blue hover:bg-brand-blue text-white hover:text-white font-semibold py-3 px-8 rounded-lg text-lg md:text-xl transition-all duration-300 shadow-lg transform hover:-translate-y-0.5">
-              Programma Details Bekijken
+            <Button size="lg" className="bg-brand-blue hover:bg-brand-blue text-white hover:text-white font-semibold py-4 px-8 rounded-lg text-xl shadow-xl">
+              Persoonlijk Leiderschap voor Young Professionals
             </Button>
           </Link>
         </div>
