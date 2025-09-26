@@ -26,7 +26,7 @@ const ContactSection = () => {
                 <img src="/lovable-uploads/eaa7a159-2f85-4fa3-b487-4855426f2c14.png" alt="Bas Ter Haar Romenij" className="w-36 h-36 rounded-full object-cover" />
                 <div className="text-center">
                   <p className="text-brand-gray-dark italic mb-4 text-lg leading-relaxed">
-                    "Heb je vragen over verzuimreductie, ROI-berekeningen of hoe het programma precies werkt? Ik luister graag naar jullie specifieke uitdagingen en beantwoord al je vragen persoonlijk. Samen bepalen we wat bij jullie organisatie past."
+                    "Heb je vragen over de resultaten, of hoe het Life+ programma precies werkt? Ik luister graag naar jullie specifieke uitdagingen en beantwoord al je vragen persoonlijk. Samen bepalen we wat bij jullie organisatie past."
                   </p>
                   <p className="text-brand-gray-medium font-medium">
                     — Bas Ter Haar Romenij, Oprichter InnerLeaps
