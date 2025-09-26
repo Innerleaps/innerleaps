@@ -3,11 +3,11 @@ import { Link } from 'react-router-dom';
 const YoungProfessionalsSection = () => {
   return <section className="section-padding bg-gray-50">
       <div className="container-custom">
-        <div className="max-w-4xl mx-auto text-center space-y-8">
+        <div className="text-center space-y-8">
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-gray-dark">Je young professionals worstelen.<br />
 En jij ziet het.</h2>
           
-          <div className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed space-y-6">
+          <div className="text-xl md:text-2xl text-brand-gray-medium max-w-4xl mx-auto leading-relaxed space-y-6">
             <p>
               Veel mensen denken dat young professionals lui zijn, snel opgeven of te weinig zelfreflectie tonen. Maar de kern ligt dieper. Zij groeien op in een online wereld waar iedereen het beter lijkt te doen, wat leidt tot constante prestatiedruk en een aandachtsspanne die 33% lager is.
             </p>
