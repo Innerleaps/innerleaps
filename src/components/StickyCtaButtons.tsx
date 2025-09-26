@@ -9,6 +9,7 @@ const StickyCtaButtons = () => {
   const [isVisible, setIsVisible] = useState(false);
   const location = useLocation();
   const isHomePage = location.pathname === '/';
+  const isLandingPage = location.pathname === '/landing';
 
   useEffect(() => {
     if (!isHomePage) {
@@ -40,7 +41,8 @@ const StickyCtaButtons = () => {
     };
   }, [isHomePage]);
 
-  if (!isVisible) {
+  // Don't show sticky buttons if not visible or on landing page
+  if (!isVisible || isLandingPage) {
     return null;
   }
 
