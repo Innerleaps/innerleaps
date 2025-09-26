@@ -4,16 +4,12 @@ const YoungProfessionalsSection = () => {
   return <section className="section-padding bg-gray-50">
       <div className="container-custom">
         <div className="max-w-4xl mx-auto text-center space-y-8">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-brand-blue-dark font-heading">Je young professionals worstelen. 
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-gray-dark">Je young professionals worstelen.<br />
 En jij ziet het.</h2>
           
-          <div className="text-lg md:text-xl text-gray-700 leading-relaxed space-y-6">
+          <div className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed space-y-6">
             <p>
-              Je denkt misschien dat ze lui zijn, verwend of dat het ze aan zelfreflectie ontbreekt. 
-              Maar de werkelijke oorzaak ligt dieper. De aandachtsspanne van young professionals is 
-              33% lager door de online wereld waar iedereen het altijd beter lijkt te doen. Dit creëert 
-              constante prestatiedruk en resulteert in de meeste mentale klachten van alle generaties. 
-              Dat vraagt om een wetenschappelijke training in persoonlijk leiderschap.
+              Veel mensen denken dat young professionals lui zijn, snel opgeven of te weinig zelfreflectie tonen. Maar de kern ligt dieper. Zij groeien op in een online wereld waar iedereen het beter lijkt te doen, wat leidt tot constante prestatiedruk en een aandachtsspanne die 33% lager is.
             </p>
           </div>
 
