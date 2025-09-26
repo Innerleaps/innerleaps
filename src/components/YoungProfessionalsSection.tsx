@@ -1,14 +1,11 @@
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
-
 const YoungProfessionalsSection = () => {
-  return (
-    <section className="section-padding bg-gray-50">
+  return <section className="section-padding bg-gray-50">
       <div className="container-custom">
         <div className="max-w-4xl mx-auto text-center space-y-8">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-brand-blue-dark font-heading">
-            Je young professionals worstelen. En jij ziet het.
-          </h2>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-brand-blue-dark font-heading">Je young professionals worstelen. 
+En jij ziet het.</h2>
           
           <div className="text-lg md:text-xl text-gray-700 leading-relaxed space-y-6">
             <p>
@@ -29,8 +26,6 @@ const YoungProfessionalsSection = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default YoungProfessionalsSection;
