@@ -18,14 +18,8 @@ const Contact = () => {
           <div className="container-custom">
             <div className="text-center space-y-6 mb-16">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-gray-dark">
-                Stel je vragen vrijblijvend aan Bas
+                Stel je vragen aan Bas
               </h1>
-              <p className="text-lg md:text-xl lg:text-2xl text-brand-gray-medium max-w-4xl mx-auto leading-relaxed">
-                Nieuwsgierig naar het Life+ programma?
-              </p>
-              <p className="text-base md:text-lg text-brand-gray-medium max-w-4xl mx-auto leading-relaxed">
-                Ben je nieuwsgierig naar het Life+ programma, wil je meer weten over de concrete resultaten of even kennismaken om te kijken of er een match is? Plan dan een afspraak met Bas of neem direct contact op. Geen verplichtingen, wel duidelijke antwoorden over wat het programma voor jouw organisatie kan betekenen.
-              </p>
             </div>
 
             {/* Contact sections */}
@@ -37,7 +31,7 @@ const Contact = () => {
                     <img src="/lovable-uploads/eaa7a159-2f85-4fa3-b487-4855426f2c14.png" alt="Bas Ter Haar Romenij" className="w-36 h-36 rounded-full object-cover" />
                     <div className="text-center">
                       <p className="text-brand-gray-dark italic mb-4 text-lg leading-relaxed">
-                        "Heb je vragen over verzuimreductie, ROI-berekeningen of hoe het programma precies werkt? Ik luister graag naar jullie specifieke uitdagingen en beantwoord al je vragen persoonlijk. Samen bepalen we wat bij jullie organisatie past."
+                        "Hoi! Wat leuk dat je hier bent. Zullen we even kennismaken? Dan hoor ik graag wat jullie nodig hebben."
                       </p>
                       <p className="text-brand-gray-medium font-medium">
                         — Bas Ter Haar Romenij, Oprichter InnerLeaps
