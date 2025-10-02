@@ -86,9 +86,11 @@ const handler = async (req: Request): Promise<Response> => {
   }
 
   try {
+    // Use service role key to bypass RLS for inserting validated submissions
+    // This ensures all submissions go through this function's rate limiting and validation
     const supabase = createClient(
       Deno.env.get("SUPABASE_URL") ?? "",
-      Deno.env.get("SUPABASE_ANON_KEY") ?? ""
+      Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") ?? ""
     );
 
     const resend = new Resend(Deno.env.get("RESEND_API_KEY"));
