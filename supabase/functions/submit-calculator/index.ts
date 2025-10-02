@@ -1,11 +1,34 @@
 import { serve } from "https://deno.land/std@0.190.0/http/server.ts";
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2.50.2";
 import { Resend } from "npm:resend@2.0.0";
+import { z } from "https://deno.land/x/zod@v3.22.4/mod.ts";
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type",
 };
+
+// Validation schema with strict input validation
+const SubmissionSchema = z.object({
+  name: z.string().trim().min(1).max(100),
+  email: z.string().trim().email().max(255),
+  phone: z.string().trim().max(20).optional().nullable(),
+  functie: z.string().trim().min(1).max(100),
+  company: z.string().trim().min(1).max(200),
+  employees: z.number().int().positive().max(1000000),
+  avgEmployeeCosts: z.number().positive().max(10000000),
+  currentAbsenteeism: z.number().min(0).max(100),
+  currentTurnover: z.number().min(0).max(100),
+  calculationResults: z.object({
+    verzuimBesparing: z.number().optional(),
+    retentieBesparing: z.number().optional(),
+    totalSaving: z.number().optional(),
+    grossSaving: z.number().optional(),
+    roi: z.number().optional(),
+    numberOfGroups: z.number().optional(),
+    investment: z.number().optional(),
+  }),
+});
 
 interface CalculatorSubmission {
   name: string;
@@ -19,6 +42,42 @@ interface CalculatorSubmission {
   currentTurnover: number;
   calculationResults: any;
 }
+
+// In-memory rate limiting store (resets on function restart)
+const rateLimitStore = new Map<string, { count: number; resetTime: number }>();
+
+// Rate limiting: 3 submissions per email per hour
+const RATE_LIMIT_MAX = 3;
+const RATE_LIMIT_WINDOW_MS = 60 * 60 * 1000; // 1 hour
+
+function checkRateLimit(email: string): { allowed: boolean; retryAfter?: number } {
+  const now = Date.now();
+  const key = email.toLowerCase();
+  const record = rateLimitStore.get(key);
+
+  if (!record || now > record.resetTime) {
+    rateLimitStore.set(key, { count: 1, resetTime: now + RATE_LIMIT_WINDOW_MS });
+    return { allowed: true };
+  }
+
+  if (record.count >= RATE_LIMIT_MAX) {
+    const retryAfter = Math.ceil((record.resetTime - now) / 1000);
+    return { allowed: false, retryAfter };
+  }
+
+  record.count++;
+  return { allowed: true };
+}
+
+// Clean up old rate limit records periodically
+setInterval(() => {
+  const now = Date.now();
+  for (const [key, record] of rateLimitStore.entries()) {
+    if (now > record.resetTime) {
+      rateLimitStore.delete(key);
+    }
+  }
+}, 5 * 60 * 1000); // Clean up every 5 minutes
 
 const handler = async (req: Request): Promise<Response> => {
   // Handle CORS preflight requests
@@ -34,8 +93,77 @@ const handler = async (req: Request): Promise<Response> => {
 
     const resend = new Resend(Deno.env.get("RESEND_API_KEY"));
 
-    const submission: CalculatorSubmission = await req.json();
-    console.log("Received calculator submission:", submission);
+    // Parse and validate input
+    const rawData = await req.json();
+    
+    // Validate input against schema
+    let submission: CalculatorSubmission;
+    try {
+      submission = SubmissionSchema.parse(rawData);
+    } catch (validationError) {
+      console.error("Validation error:", validationError);
+      return new Response(
+        JSON.stringify({ 
+          success: false, 
+          error: "Invalid input data. Please check your submission and try again." 
+        }),
+        {
+          status: 400,
+          headers: { "Content-Type": "application/json", ...corsHeaders },
+        }
+      );
+    }
+
+    // Check rate limit
+    const rateLimitCheck = checkRateLimit(submission.email);
+    if (!rateLimitCheck.allowed) {
+      console.warn(`Rate limit exceeded for email: ${submission.email}`);
+      return new Response(
+        JSON.stringify({ 
+          success: false, 
+          error: `Te veel aanvragen. Probeer het over ${rateLimitCheck.retryAfter} seconden opnieuw.`,
+          retryAfter: rateLimitCheck.retryAfter
+        }),
+        {
+          status: 429,
+          headers: { 
+            "Content-Type": "application/json",
+            "Retry-After": rateLimitCheck.retryAfter?.toString() || "3600",
+            ...corsHeaders 
+          },
+        }
+      );
+    }
+
+    // Check for duplicate submissions within last 5 minutes
+    const fiveMinutesAgo = new Date(Date.now() - 5 * 60 * 1000).toISOString();
+    const { data: recentSubmissions, error: checkError } = await supabase
+      .from("calculator_submissions")
+      .select("id")
+      .eq("email", submission.email)
+      .gte("created_at", fiveMinutesAgo)
+      .limit(1);
+
+    if (checkError) {
+      console.error("Error checking for duplicates:", checkError);
+    } else if (recentSubmissions && recentSubmissions.length > 0) {
+      console.warn(`Duplicate submission attempt from: ${submission.email}`);
+      return new Response(
+        JSON.stringify({ 
+          success: false, 
+          error: "U heeft recent al een berekening aangevraagd. Controleer uw e-mail of probeer het later opnieuw." 
+        }),
+        {
+          status: 409,
+          headers: { "Content-Type": "application/json", ...corsHeaders },
+        }
+      );
+    }
+
+    console.log("Validated calculator submission:", {
+      email: submission.email,
+      company: submission.company
+    });
 
     // Store in database
     const { data, error: dbError } = await supabase
