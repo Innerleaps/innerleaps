@@ -17,7 +17,7 @@ const HeroSection = () => {
                 </div>
 
                 <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight font-heading">
-                  Prestaties groeien waar collega's bloeien
+                  Prestaties <span className="text-brand-orange">groeien</span> waar collega's <span className="text-brand-orange">bloeien</span>
                 </h1>
                 <p className="text-xl sm:text-2xl md:text-3xl text-blue-100 leading-relaxed">Wetenschappelijk bewezen training in persoonlijk leiderschap: Medewerkers worden productiever, gelukkiger en kunnen beter samenwerken.</p>
               </div>
