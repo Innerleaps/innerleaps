@@ -18,37 +18,10 @@ import UnderConstruction from "./pages/UnderConstruction";
 
 const queryClient = new QueryClient();
 
-// Flag to control production content - set to true to show full site
-const SHOW_FULL_SITE_IN_PRODUCTION = false;
-
-// Development flag to preview construction page in Lovable previewer
-// Set to true to see construction page in development mode
-const PREVIEW_CONSTRUCTION_IN_DEV = false;
+// Enable all routes in development (Lovable editor), only landing page in production
+const ENABLE_ALL_ROUTES = !import.meta.env.PROD;
 
 const App = () => {
-  // Check if we're on the Lovable URL vs custom domain
-  const isLovableUrl = typeof window !== 'undefined' && window.location.hostname.includes('lovable.app');
-  
-  // Show construction page only for custom domain in production, not for Lovable URL
-  const shouldShowConstructionPage = (import.meta.env.PROD && !isLovableUrl && !SHOW_FULL_SITE_IN_PRODUCTION) || 
-                                     (!import.meta.env.PROD && PREVIEW_CONSTRUCTION_IN_DEV);
-
-  if (shouldShowConstructionPage) {
-    return (
-      <QueryClientProvider client={queryClient}>
-        <TooltipProvider>
-          <Toaster />
-          <Sonner />
-          <BrowserRouter>
-            <Routes>
-              <Route path="*" element={<UnderConstruction />} />
-            </Routes>
-          </BrowserRouter>
-        </TooltipProvider>
-      </QueryClientProvider>
-    );
-  }
-
   return (
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
@@ -57,16 +30,18 @@ const App = () => {
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<LandingPage />} />
-            {/* All other routes disabled - only landing page is live */}
-            {/* <Route path="/landing" element={<LandingPage />} /> */}
-            {/* <Route path="/wetenschap" element={<Wetenschap />} /> */}
-            {/* <Route path="/programma" element={<Programma />} /> */}
-            {/* <Route path="/over-ons" element={<OverOns />} /> */}
-            {/* <Route path="/voor-wie" element={<VoorWie />} /> */}
-            {/* <Route path="/contact" element={<Contact />} /> */}
-            {/* <Route path="/berekening" element={<Berekening />} /> */}
-            {/* <Route path="/berekening-demo" element={<BerekeningDemo />} /> */}
-            <Route path="*" element={<LandingPage />} />
+            {ENABLE_ALL_ROUTES && (
+              <>
+                <Route path="/wetenschap" element={<Wetenschap />} />
+                <Route path="/programma" element={<Programma />} />
+                <Route path="/over-ons" element={<OverOns />} />
+                <Route path="/voor-wie" element={<VoorWie />} />
+                <Route path="/contact" element={<Contact />} />
+                <Route path="/berekening" element={<Berekening />} />
+                <Route path="/berekening-demo" element={<BerekeningDemo />} />
+              </>
+            )}
+            <Route path="*" element={ENABLE_ALL_ROUTES ? <NotFound /> : <LandingPage />} />
           </Routes>
         </BrowserRouter>
       </TooltipProvider>
