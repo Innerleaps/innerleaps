@@ -47,7 +47,7 @@ const HeroSection = () => {
               <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 lg:p-8 shadow-2xl max-w-md mx-auto">
                   <div className="space-y-6">
                     <div className="text-center">
-                      <h3 className="text-xl lg:text-2xl font-semibold mb-2">Waarom organisaties voor ons kiezen</h3>
+                      <h3 className="text-xl lg:text-2xl font-semibold mb-2">Waarom organisaties ons kiezen</h3>
                       <p className="text-blue-200 text-sm lg:text-base">Resultaten uit 40+ jaar wetenschappelijk onderzoek</p>
                     </div>
                     
