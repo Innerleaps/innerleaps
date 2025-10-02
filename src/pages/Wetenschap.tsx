@@ -437,7 +437,7 @@ const Wetenschap = () => {
               <Button onClick={() => setIsLeadMagnetOpen(true)} className="text-lg px-8 py-3 bg-white hover:bg-gray-100 text-brand-blue hover:text-brand-blue font-semibold rounded-lg transition-all duration-300 shadow-lg transform hover:-translate-y-0.5">
                 Vraag het bewijs op
               </Button>
-              <Button variant="secondary-on-blue" className="text-lg px-8 py-3 font-semibold rounded-lg" onClick={() => window.open('https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1wwDnoAHyFrV0M1FxwmbcMa9ewkDxTDdwQObwPKF-WX-wZV9DssZKtb1haoeP5qXDLenQlZt_R', '_blank')}>
+              <Button variant="secondary-on-blue" className="text-lg px-8 py-3 font-semibold rounded-lg" onClick={() => window.open('https://calendar.google.com/appointments/schedules/AcZssZ3VM8RLgeZm9Ej29kbhx4LugakTLXw_vF9BePhup0zm-DtWT5kk6nbHQw-chzBGEQQInd7l3Fs4', '_blank')}>
                 Een vrijblijvend gesprek met Bas plannen
               </Button>
             </div>

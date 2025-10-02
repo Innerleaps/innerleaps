@@ -26,7 +26,7 @@ const HeroSection = () => {
                 <Button size="lg" className="w-full sm:w-auto bg-brand-orange hover:bg-brand-orange text-brand-orange-light hover:text-brand-orange-light font-semibold py-4 px-6 lg:px-8 rounded-lg text-lg lg:text-xl shadow-xl" onClick={() => setIsCalculatorOpen(true)}>
                   Ontdek je besparing
                 </Button>
-                <Button variant="secondary-on-blue" size="lg" onClick={() => window.open('https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1wwDnoAHyFrV0M1FxwmbcMa9ewkDxTDdwQObwPKF-WX-wZV9DssZKtb1haoeP5qXDLenQlZt_R', '_blank')} className="w-full sm:w-auto font-semibold py-4 px-6 lg:px-8 rounded-lg text-lg lg:text-xl">
+                <Button variant="secondary-on-blue" size="lg" onClick={() => window.open('https://calendar.google.com/appointments/schedules/AcZssZ3VM8RLgeZm9Ej29kbhx4LugakTLXw_vF9BePhup0zm-DtWT5kk6nbHQw-chzBGEQQInd7l3Fs4', '_blank')} className="w-full sm:w-auto font-semibold py-4 px-6 lg:px-8 rounded-lg text-lg lg:text-xl">
                   Stel je vragen aan Bas
                 </Button>
               </div>
