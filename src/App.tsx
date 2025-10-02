@@ -56,17 +56,17 @@ const App = () => {
         <Sonner />
         <BrowserRouter>
           <Routes>
-            <Route path="/" element={<Index />} />
-            <Route path="/landing" element={<LandingPage />} />
-            <Route path="/wetenschap" element={<Wetenschap />} />
-            <Route path="/programma" element={<Programma />} />
-            <Route path="/over-ons" element={<OverOns />} />
-            <Route path="/voor-wie" element={<VoorWie />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/berekening" element={<Berekening />} />
-            <Route path="/berekening-demo" element={<BerekeningDemo />} />
-            {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-            <Route path="*" element={<NotFound />} />
+            <Route path="/" element={<LandingPage />} />
+            {/* All other routes disabled - only landing page is live */}
+            {/* <Route path="/landing" element={<LandingPage />} /> */}
+            {/* <Route path="/wetenschap" element={<Wetenschap />} /> */}
+            {/* <Route path="/programma" element={<Programma />} /> */}
+            {/* <Route path="/over-ons" element={<OverOns />} /> */}
+            {/* <Route path="/voor-wie" element={<VoorWie />} /> */}
+            {/* <Route path="/contact" element={<Contact />} /> */}
+            {/* <Route path="/berekening" element={<Berekening />} /> */}
+            {/* <Route path="/berekening-demo" element={<BerekeningDemo />} /> */}
+            <Route path="*" element={<LandingPage />} />
           </Routes>
         </BrowserRouter>
       </TooltipProvider>
