@@ -7,7 +7,7 @@ const ContactSection = () => {
       <div className="container-custom">
         <div className="text-center space-y-6 mb-16">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-gray-dark">
-            Stel je vragen vrijblijvend aan Bas
+            Stel je vragen aan Bas
           </h1>
           <p className="text-lg md:text-xl lg:text-2xl text-brand-gray-medium max-w-4xl mx-auto leading-relaxed">
             Nieuwsgierig naar het Life+ programma?
