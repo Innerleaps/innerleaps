@@ -32,6 +32,7 @@ const App = () => {
             <Route path="/" element={<LandingPage />} />
             {ENABLE_ALL_ROUTES && (
               <>
+                <Route path="/home" element={<Index />} />
                 <Route path="/wetenschap" element={<Wetenschap />} />
                 <Route path="/programma" element={<Programma />} />
                 <Route path="/over-ons" element={<OverOns />} />
