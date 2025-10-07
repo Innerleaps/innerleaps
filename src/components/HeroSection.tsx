@@ -19,7 +19,7 @@ const HeroSection = () => {
                 <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight font-heading">
                   Prestaties <span className="text-brand-orange">groeien</span> waar collega's <span className="text-brand-orange">bloeien</span>
                 </h1>
-                <p className="text-xl sm:text-2xl md:text-3xl text-blue-100 leading-relaxed">Wetenschappelijk bewezen weerbaarheidstraining: Medewerkers worden productiever, gelukkiger en kunnen beter samenwerken.</p>
+                <p className="text-xl sm:text-2xl md:text-3xl text-blue-100 leading-relaxed">Wetenschappelijk bewezen training in stressmanagement: Medewerkers ontwikkelen niet alleen regie maar worden ook productiever, gelukkiger en kunnen beter samenwerken.</p>
               </div>
 
               <div className="flex flex-col sm:flex-row gap-4">
