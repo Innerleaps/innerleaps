@@ -44,13 +44,20 @@ const CalculatorModal = ({ isOpen, onClose }: CalculatorModalProps) => {
     const minVerzuimbesparing = verzuimkosten * 0.15;
     const maxVerzuimbesparing = verzuimkosten * 0.21;
 
-    // Stap 5: Terugverdientijd
-    const minTerugverdientijd = programmakosten / maxVerzuimbesparing * 12;
-    const maxTerugverdientijd = programmakosten / minVerzuimbesparing * 12;
+    // Stap 5: Productiviteitswinst (6% van totale loonkosten)
+    const productiviteitswinst = totaleLoonkosten * 0.06;
 
-    // Stap 6: ROI Berekening
-    const minROI = (minVerzuimbesparing - programmakosten) / programmakosten * 100;
-    const maxROI = (maxVerzuimbesparing - programmakosten) / programmakosten * 100;
+    // Stap 6: Totale besparing (verzuim + productiviteit)
+    const minTotaleBesparing = minVerzuimbesparing + productiviteitswinst;
+    const maxTotaleBesparing = maxVerzuimbesparing + productiviteitswinst;
+
+    // Stap 7: Terugverdientijd
+    const minTerugverdientijd = programmakosten / maxTotaleBesparing * 12;
+    const maxTerugverdientijd = programmakosten / minTotaleBesparing * 12;
+
+    // Stap 8: ROI Berekening
+    const minROI = (minTotaleBesparing - programmakosten) / programmakosten * 100;
+    const maxROI = (maxTotaleBesparing - programmakosten) / programmakosten * 100;
 
     return {
       totaleLoonkosten,
@@ -58,6 +65,9 @@ const CalculatorModal = ({ isOpen, onClose }: CalculatorModalProps) => {
       programmakosten,
       minVerzuimbesparing,
       maxVerzuimbesparing,
+      productiviteitswinst,
+      minTotaleBesparing,
+      maxTotaleBesparing,
       minTerugverdientijd,
       maxTerugverdientijd,
       minROI,

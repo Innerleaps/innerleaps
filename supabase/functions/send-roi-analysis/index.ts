@@ -22,6 +22,9 @@ interface ROIAnalysisRequest {
     programmakosten: number;
     minVerzuimbesparing: number;
     maxVerzuimbesparing: number;
+    productiviteitswinst: number;
+    minTotaleBesparing: number;
+    maxTotaleBesparing: number;
     minTerugverdientijd: number;
     maxTerugverdientijd: number;
     minROI: number;
@@ -49,14 +52,16 @@ const formatMonths = (months: number): string => {
 
 const generateEmailHTML = (data: ROIAnalysisRequest): string => {
   const { naam, bedrijfsnaam, verzuimPercentage, aantalDeelnemers, brutoJaarsalaris, calculationResults } = data;
-  const { programmakosten, minVerzuimbesparing, maxVerzuimbesparing, minTerugverdientijd, maxTerugverdientijd, minROI, maxROI, showROI } = calculationResults;
+  const { programmakosten, minVerzuimbesparing, maxVerzuimbesparing, productiviteitswinst, minTotaleBesparing, maxTotaleBesparing, minTerugverdientijd, maxTerugverdientijd, minROI, maxROI, showROI } = calculationResults;
 
   const conditionalContent = showROI ? `
     <h3 style="color: #2563eb; margin: 24px 0 16px 0;">FINANCIËLE IMPACT LIFE+ PROGRAMMA:</h3>
     <div style="background: #f8fafc; padding: 20px; border-radius: 8px; margin: 20px 0;">
       <p style="margin: 8px 0;"><strong>Programma-investering:</strong> ${formatCurrency(programmakosten)}</p>
       <p style="margin: 8px 0;"><strong>Terugverdientijd:</strong> ${formatMonths(minTerugverdientijd)}-${formatMonths(maxTerugverdientijd)} maanden</p>
-      <p style="margin: 8px 0;"><strong>Jaarlijkse kostenbesparing:</strong> ${formatCurrency(minVerzuimbesparing)} - ${formatCurrency(maxVerzuimbesparing)}</p>
+      <p style="margin: 8px 0;"><strong>Jaarlijkse verzuimbesparing:</strong> ${formatCurrency(minVerzuimbesparing)} - ${formatCurrency(maxVerzuimbesparing)}</p>
+      <p style="margin: 8px 0;"><strong>Productiviteitswinst (6%):</strong> ${formatCurrency(productiviteitswinst)}</p>
+      <p style="margin: 8px 0; padding-top: 8px; border-top: 1px solid #e2e8f0;"><strong>Totale jaarlijkse besparing:</strong> ${formatCurrency(minTotaleBesparing)} - ${formatCurrency(maxTotaleBesparing)}</p>
       <p style="margin: 8px 0;"><strong>ROI na 1 jaar:</strong> ${formatPercentage(minROI)}% - ${formatPercentage(maxROI)}%</p>
     </div>
     <p>Het Life+ programma verdient zichzelf binnen ${formatMonths(maxTerugverdientijd)} maanden terug.</p>
@@ -65,6 +70,9 @@ const generateEmailHTML = (data: ROIAnalysisRequest): string => {
     <div style="background: #f8fafc; padding: 20px; border-radius: 8px; margin: 20px 0;">
       <p style="margin: 8px 0;"><strong>Programma-investering:</strong> ${formatCurrency(programmakosten)}</p>
       <p style="margin: 8px 0;"><strong>Geschatte terugverdientijd:</strong> ${formatMonths(minTerugverdientijd)}-${formatMonths(maxTerugverdientijd)} maanden</p>
+      <p style="margin: 8px 0;"><strong>Jaarlijkse verzuimbesparing:</strong> ${formatCurrency(minVerzuimbesparing)} - ${formatCurrency(maxVerzuimbesparing)}</p>
+      <p style="margin: 8px 0;"><strong>Productiviteitswinst (6%):</strong> ${formatCurrency(productiviteitswinst)}</p>
+      <p style="margin: 8px 0; padding-top: 8px; border-top: 1px solid #e2e8f0;"><strong>Totale jaarlijkse besparing:</strong> ${formatCurrency(minTotaleBesparing)} - ${formatCurrency(maxTotaleBesparing)}</p>
     </div>
     <p>Het Life+ programma is een investering in duurzame inzetbaarheid die zich binnen ${formatMonths(maxTerugverdientijd)} maanden terugverdient.</p>
   `;
@@ -119,6 +127,7 @@ const generateEmailHTML = (data: ROIAnalysisRequest): string => {
           <li>Verzuimpercentages gebaseerd op CBS Nederland (2024)</li>
           <li>Verzuimkostenfactor volgens Sazas onderzoek (2024): 140-230%</li>
           <li>MBSR verzuimreductie: 15-21% (gebaseerd op meta-analyses van 40+ jaar onderzoek)</li>
+          <li>Productiviteitsstijging: 6% (gebaseerd op onderzoek naar mindfulness en werkprestaties)</li>
           <li>Volledige referentielijst en onderzoeksdata op aanvraag beschikbaar</li>
         </ul>
 
@@ -141,14 +150,16 @@ const generateEmailHTML = (data: ROIAnalysisRequest): string => {
 
 const generateEmailText = (data: ROIAnalysisRequest): string => {
   const { naam, bedrijfsnaam, verzuimPercentage, aantalDeelnemers, brutoJaarsalaris, calculationResults } = data;
-  const { programmakosten, minVerzuimbesparing, maxVerzuimbesparing, minTerugverdientijd, maxTerugverdientijd, minROI, maxROI, showROI } = calculationResults;
+  const { programmakosten, minVerzuimbesparing, maxVerzuimbesparing, productiviteitswinst, minTotaleBesparing, maxTotaleBesparing, minTerugverdientijd, maxTerugverdientijd, minROI, maxROI, showROI } = calculationResults;
 
   const conditionalContent = showROI ? `
 FINANCIËLE IMPACT LIFE+ PROGRAMMA:
 
 Programma-investering: ${formatCurrency(programmakosten)}
 Terugverdientijd: ${formatMonths(minTerugverdientijd)}-${formatMonths(maxTerugverdientijd)} maanden
-Jaarlijkse kostenbesparing: ${formatCurrency(minVerzuimbesparing)} - ${formatCurrency(maxVerzuimbesparing)}
+Jaarlijkse verzuimbesparing: ${formatCurrency(minVerzuimbesparing)} - ${formatCurrency(maxVerzuimbesparing)}
+Productiviteitswinst (6%): ${formatCurrency(productiviteitswinst)}
+Totale jaarlijkse besparing: ${formatCurrency(minTotaleBesparing)} - ${formatCurrency(maxTotaleBesparing)}
 ROI na 1 jaar: ${formatPercentage(minROI)}% - ${formatPercentage(maxROI)}%
 
 Het Life+ programma verdient zichzelf binnen ${formatMonths(maxTerugverdientijd)} maanden terug.
@@ -157,6 +168,9 @@ FINANCIËLE IMPACT LIFE+ PROGRAMMA:
 
 Programma-investering: ${formatCurrency(programmakosten)}
 Geschatte terugverdientijd: ${formatMonths(minTerugverdientijd)}-${formatMonths(maxTerugverdientijd)} maanden
+Jaarlijkse verzuimbesparing: ${formatCurrency(minVerzuimbesparing)} - ${formatCurrency(maxVerzuimbesparing)}
+Productiviteitswinst (6%): ${formatCurrency(productiviteitswinst)}
+Totale jaarlijkse besparing: ${formatCurrency(minTotaleBesparing)} - ${formatCurrency(maxTotaleBesparing)}
 
 Het Life+ programma is een investering in duurzame inzetbaarheid die zich binnen ${formatMonths(maxTerugverdientijd)} maanden terugverdient.
   `;
@@ -188,6 +202,7 @@ Bronvermelding:
 - Verzuimpercentages gebaseerd op CBS Nederland (2024)
 - Verzuimkostenfactor volgens Sazas onderzoek (2024): 140-230%
 - MBSR verzuimreductie: 15-21% (gebaseerd op meta-analyses van 40+ jaar onderzoek)
+- Productiviteitsstijging: 6% (gebaseerd op onderzoek naar mindfulness en werkprestaties)
 - Volledige referentielijst en onderzoeksdata op aanvraag beschikbaar
 
 InnerLeaps
