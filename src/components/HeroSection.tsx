@@ -53,16 +53,16 @@ const HeroSection = () => {
                     
                     <div className="space-y-4">
                       <div className="flex items-center justify-between p-3 lg:p-4 bg-white rounded-lg">
-                        <span className="font-bold text-lg lg:text-xl text-brand-blue-dark">Personeelsverloop</span>
-                        <span className="text-brand-orange font-bold text-lg lg:text-xl">-26%</span>
+                        <span className="font-bold text-lg lg:text-xl text-brand-blue-dark">Uitval risico</span>
+                        <span className="text-brand-orange font-bold text-lg lg:text-xl">-70%</span>
                       </div>
                       <div className="flex items-center justify-between p-3 lg:p-4 bg-white rounded-lg">
                         <span className="font-bold text-lg lg:text-xl text-brand-blue-dark">Verzuim</span>
                         <span className="text-brand-orange font-bold text-lg lg:text-xl">-21%</span>
                       </div>
                       <div className="flex items-center justify-between p-3 lg:p-4 bg-white rounded-lg">
-                        <span className="font-bold text-lg lg:text-xl text-brand-blue-dark">Productiviteit</span>
-                        <span className="text-brand-orange font-bold text-lg lg:text-xl">+15%</span>
+                        <span className="font-bold text-lg lg:text-xl text-brand-blue-dark">Veerkracht</span>
+                        <span className="text-brand-orange font-bold text-lg lg:text-xl">+77%</span>
                       </div>
                     </div>
                 </div>
