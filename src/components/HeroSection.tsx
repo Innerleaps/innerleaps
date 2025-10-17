@@ -26,8 +26,8 @@ const HeroSection = () => {
                   <span className="text-brand-orange">prestatie</span>
                 </h1>
                 <p className="text-xl sm:text-2xl md:text-3xl text-blue-100 leading-relaxed">
-                  Wetenschappelijk bewezen vitaliteitsprogramma. Medewerkers ontwikkelen eigenaarschap en worden
-                  veerkrachtiger, productiever en kunnen beter samenwerken.
+                  Wetenschappelijk bewezen vitaliteitsprogramma. Medewerkers ontwikkelen eigenaarschap, worden
+                  veerkrachtiger en kunnen beter samenwerken.
                 </p>
               </div>
 
