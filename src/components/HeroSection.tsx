@@ -13,13 +13,13 @@ const HeroSection = () => {
                 {/* 40+ Years Research Badge */}
                 <div className="inline-flex items-center bg-white/10 backdrop-blur-sm text-blue-200 px-4 py-2 rounded-full text-base md:text-lg font-medium">
                   <Award className="h-4 w-4 mr-2" />
-                  40+ jaar wetenschappelijk onderzoek
+                  Vitaliteitsprogramma met 40+ jaar onderzoek
                 </div>
 
                 <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight font-heading">
-                  Prestaties <span className="text-brand-orange">groeien</span> waar collega's <span className="text-brand-orange">bloeien</span>
+                  Het vitaliteitsprogramma voor <span className="text-brand-orange">eigenaarschap</span> en <span className="text-brand-orange">prestatie</span>
                 </h1>
-                <p className="text-xl sm:text-2xl md:text-3xl text-blue-100 leading-relaxed">Wetenschappelijk bewezen training in stressmanagement: Medewerkers ontwikkelen niet alleen regie maar worden ook productiever, gelukkiger en kunnen beter samenwerken.</p>
+                <p className="text-xl sm:text-2xl md:text-3xl text-blue-100 leading-relaxed">Wetenschappelijk bewezen vitaliteitsprogramma. Medewerkers ontwikkelen eigenaarschap en worden veerkrachtiger, productiever en kunnen beter samenwerken.</p>
               </div>
 
               <div className="flex flex-col sm:flex-row gap-4">
