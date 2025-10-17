@@ -16,7 +16,7 @@ const HeroSection = () => {
                   Vitaliteitsprogramma met 40+ jaar onderzoek
                 </div>
 
-                <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight font-heading">
+                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-snug font-heading">
                   Het vitaliteitsprogramma voor <span className="text-brand-orange">eigenaarschap</span> en <span className="text-brand-orange">prestatie</span>
                 </h1>
                 <p className="text-xl sm:text-2xl md:text-3xl text-blue-100 leading-relaxed">Wetenschappelijk bewezen vitaliteitsprogramma. Medewerkers ontwikkelen eigenaarschap en worden veerkrachtiger, productiever en kunnen beter samenwerken.</p>
