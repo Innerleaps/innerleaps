@@ -57,7 +57,7 @@ const HeroSection = () => {
               <div className="grid grid-cols-2 gap-6 lg:gap-8 pt-6 lg:pt-8">
                 <div className="text-center">
                   <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-brand-orange">6 weken</div>
-                  <div className="text-blue-200 text-sm md:text-base">Training in persoonlijk leiderschap</div>
+                  <div className="text-blue-200 text-sm md:text-base">Voor echte gedragsverandering </div>
                 </div>
                 <div className="text-center">
                   <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-brand-orange">40+ jaar</div>
