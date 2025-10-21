@@ -109,7 +109,7 @@ const LevenVragenlijst = () => {
       <div className="max-w-3xl mx-auto">
         <div className="bg-card rounded-lg shadow-lg p-8">
           <h1 className="text-3xl font-bold mb-4">Hoe ga jij om met je dagelijks leven?</h1>
-          <p className="text-muted-foreground mb-8">
+          <p className="text-foreground/80 mb-8">
             De volgende vragen gaan over hoe je de afgelopen maand situaties en uitdagingen hebt ervaren. Het geeft je inzicht in hoe je omgaat met wat er op je afkomt. Later in de training bespreken we wat de uitkomsten betekenen.
           </p>
 
@@ -118,40 +118,37 @@ const LevenVragenlijst = () => {
             <div className="space-y-6">
               <div>
                 <h2 className="text-2xl font-bold mb-2">Persoonlijke gegevens</h2>
-                <p className="text-muted-foreground mb-6">
+                <p className="text-foreground/80 mb-6">
                   We bewaren jouw gegevens beveiligd en delen deze nooit met je werkgever. Het invullen van je gegevens is niet verplicht, maar hierdoor kunnen we wel de score van de vragenlijst met je delen per e-mail.
                 </p>
               </div>
               
               <div className="space-y-4 pb-6 border-b">
-              <div>
-                <Label htmlFor="naam">Naam *</Label>
-                <Input
-                  id="naam"
-                  required
-                  value={formData.naam}
-                  onChange={(e) => setFormData({ ...formData, naam: e.target.value })}
-                />
-              </div>
-              <div>
-                <Label htmlFor="email">E-mailadres *</Label>
-                <Input
-                  id="email"
-                  type="email"
-                  required
-                  value={formData.email}
-                  onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                />
-              </div>
-              <div>
-                <Label htmlFor="organisatie">Organisatie *</Label>
-                <Input
-                  id="organisatie"
-                  required
-                  value={formData.organisatie}
-                  onChange={(e) => setFormData({ ...formData, organisatie: e.target.value })}
-                />
-              </div>
+                <div>
+                  <Label htmlFor="naam">Naam</Label>
+                  <Input
+                    id="naam"
+                    value={formData.naam}
+                    onChange={(e) => setFormData({ ...formData, naam: e.target.value })}
+                  />
+                </div>
+                <div>
+                  <Label htmlFor="email">E-mailadres</Label>
+                  <Input
+                    id="email"
+                    type="email"
+                    value={formData.email}
+                    onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                  />
+                </div>
+                <div>
+                  <Label htmlFor="organisatie">Organisatie</Label>
+                  <Input
+                    id="organisatie"
+                    value={formData.organisatie}
+                    onChange={(e) => setFormData({ ...formData, organisatie: e.target.value })}
+                  />
+                </div>
               </div>
             </div>
 
