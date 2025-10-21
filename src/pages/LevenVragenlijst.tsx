@@ -7,16 +7,16 @@ import { useToast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
 
 const questions = [
-  "Ik voel me gespannen of opgejaagd",
-  "Ik maak me zorgen",
-  "Ik ben prikkelbaar",
-  "Ik voel me gefrustreerd",
-  "Ik heb moeite om te ontspannen",
-  "Ik voel me down of somber",
-  "Ik heb moeite met concentreren",
-  "Ik voel me vermoeid of uitgeput",
-  "Ik heb moeite om in slaap te vallen of door te slapen",
-  "Ik voel me overweldigd",
+  "Hoe vaak bent u de afgelopen maand van streek geweest vanwege iets dat onverwachts gebeurde?",
+  "Hoe vaak heeft u de afgelopen maand het gevoel gehad dat u geen controle had over de belangrijke dingen in uw leven?",
+  "Hoe vaak heeft u zich de afgelopen maand zenuwachtig en \"gestrest\" gevoeld?",
+  "Hoe vaak heeft u zich de afgelopen maand zelfverzekerd gevoeld over uw vermogen om met uw persoonlijke problemen om te gaan?",
+  "Hoe vaak heeft u de afgelopen maand het gevoel gehad dat de dingen gingen zoals u wenste?",
+  "Hoe vaak heeft u de afgelopen maand gemerkt dat u niet alle dingen aankon die u moest doen?",
+  "Hoe vaak heeft u de afgelopen maand irritaties in uw leven onder controle kunnen houden?",
+  "Hoe vaak heeft u de afgelopen maand het gevoel gehad dat u alles onder controle had?",
+  "Hoe vaak bent u de afgelopen maand boos geweest vanwege zaken waar u geen controle over had?",
+  "Hoe vaak heeft u de afgelopen maand het gevoel gehad dat de moeilijkheden zich zo hebben opgestapeld dat u ze niet kunt overwinnen?",
 ];
 
 const options = [
