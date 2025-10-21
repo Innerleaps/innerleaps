@@ -185,12 +185,14 @@ const handler = async (req: Request): Promise<Response> => {
 
     console.log("Submission saved to database successfully");
 
-    // Send email only if email and name are provided
-    if (submission.email && submission.email.trim() !== "" && submission.naam && submission.naam.trim() !== "") {
+    // Send email only if email is provided
+    if (submission.email && submission.email.trim() !== "") {
       const resend = new Resend(Deno.env.get("RESEND_API_KEY"));
 
-      // Escape user data for HTML
-      const escapedNaam = escapeHtml(submission.naam);
+      // Escape user data for HTML (use email if no name provided)
+      const displayName = submission.naam && submission.naam.trim() !== "" 
+        ? escapeHtml(submission.naam) 
+        : "Beste deelnemer";
 
       const emailResponse = await resend.emails.send({
         from: "InnerLeaps <bas@innerleaps.nl>",
@@ -200,7 +202,7 @@ const handler = async (req: Request): Promise<Response> => {
           <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;">
             <h1 style="color: #333;">Bedankt voor het invullen</h1>
             
-            <p>Beste ${escapedNaam},</p>
+            <p>${displayName},</p>
             
             <p>Je score is <strong>${submission.total_score} van de 40 punten</strong>.</p>
             
@@ -218,7 +220,7 @@ const handler = async (req: Request): Promise<Response> => {
 
       console.log("Email sent successfully:", emailResponse);
     } else {
-      console.log("No email sent - contact details not provided");
+      console.log("No email sent - email not provided");
     }
 
     return new Response(

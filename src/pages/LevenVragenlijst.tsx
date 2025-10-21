@@ -119,7 +119,7 @@ const LevenVragenlijst = () => {
       navigate("/leven-vragenlijst/resultaat", {
         state: {
           score: totalScore,
-          emailSent: !!(formData.email && formData.naam),
+          emailSent: !!(formData.email && formData.email.trim() !== ""),
         },
       });
     } catch (error: any) {
