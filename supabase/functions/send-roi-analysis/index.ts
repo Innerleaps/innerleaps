@@ -55,26 +55,57 @@ const generateEmailHTML = (data: ROIAnalysisRequest): string => {
   const { programmakosten, minVerzuimbesparing, maxVerzuimbesparing, productiviteitswinst, minTotaleBesparing, maxTotaleBesparing, minTerugverdientijd, maxTerugverdientijd, minROI, maxROI, showROI } = calculationResults;
 
   const conditionalContent = showROI ? `
-    <h3 style="color: #2563eb; margin: 24px 0 16px 0;">FINANCIËLE IMPACT LIFE+ PROGRAMMA:</h3>
-    <div style="background: #f8fafc; padding: 20px; border-radius: 8px; margin: 20px 0;">
-      <p style="margin: 8px 0;"><strong>Programma-investering:</strong> ${formatCurrency(programmakosten)}</p>
-      <p style="margin: 8px 0;"><strong>Terugverdientijd:</strong> ${formatMonths(minTerugverdientijd)}-${formatMonths(maxTerugverdientijd)} maanden</p>
-      <p style="margin: 8px 0;"><strong>Jaarlijkse verzuimbesparing:</strong> ${formatCurrency(minVerzuimbesparing)} - ${formatCurrency(maxVerzuimbesparing)}</p>
-      <p style="margin: 8px 0;"><strong>Productiviteitswinst (6%):</strong> ${formatCurrency(productiviteitswinst)}</p>
-      <p style="margin: 8px 0; padding-top: 8px; border-top: 1px solid #e2e8f0;"><strong>Totale jaarlijkse besparing:</strong> ${formatCurrency(minTotaleBesparing)} - ${formatCurrency(maxTotaleBesparing)}</p>
-      <p style="margin: 8px 0;"><strong>ROI na 1 jaar:</strong> ${formatPercentage(minROI)}% - ${formatPercentage(maxROI)}%</p>
+    <h3 style="color: #6B46C1; font-family: 'Figtree', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; margin: 24px 0 16px 0; font-weight: 600;">FINANCIËLE IMPACT INNERLEAPS PROGRAMMA:</h3>
+    <div style="background: #F8FAFC; padding: 24px; border-radius: 8px; margin: 20px 0;">
+      <div style="margin: 12px 0; padding: 12px; border-left: 4px solid #F97316;">
+        <p style="margin: 0; color: #6B46C1; font-size: 14px; font-weight: 600;">Programma-investering</p>
+        <p style="margin: 4px 0 0 0; font-size: 20px; font-weight: 700; color: #334155;">${formatCurrency(programmakosten)}</p>
+      </div>
+      <div style="margin: 12px 0; padding: 12px; border-left: 4px solid #F97316;">
+        <p style="margin: 0; color: #6B46C1; font-size: 14px; font-weight: 600;">Terugverdientijd</p>
+        <p style="margin: 4px 0 0 0; font-size: 20px; font-weight: 700; color: #334155;">${formatMonths(minTerugverdientijd)}-${formatMonths(maxTerugverdientijd)} maanden</p>
+      </div>
+      <div style="margin: 12px 0; padding: 12px; border-left: 4px solid #F97316;">
+        <p style="margin: 0; color: #6B46C1; font-size: 14px; font-weight: 600;">Jaarlijkse verzuimbesparing</p>
+        <p style="margin: 4px 0 0 0; font-size: 20px; font-weight: 700; color: #334155;">${formatCurrency(minVerzuimbesparing)} - ${formatCurrency(maxVerzuimbesparing)}</p>
+      </div>
+      <div style="margin: 12px 0; padding: 12px; border-left: 4px solid #F97316;">
+        <p style="margin: 0; color: #6B46C1; font-size: 14px; font-weight: 600;">Productiviteitswinst</p>
+        <p style="margin: 4px 0 0 0; font-size: 20px; font-weight: 700; color: #334155;">${formatCurrency(productiviteitswinst)}</p>
+      </div>
+      <div style="margin: 12px 0; padding: 16px; border-left: 4px solid #F97316; background: white; border-radius: 4px;">
+        <p style="margin: 0; color: #6B46C1; font-size: 14px; font-weight: 600;">Totale jaarlijkse besparing</p>
+        <p style="margin: 4px 0 0 0; font-size: 20px; font-weight: 700; color: #334155;">${formatCurrency(minTotaleBesparing)} - ${formatCurrency(maxTotaleBesparing)}</p>
+      </div>
+      <div style="margin: 12px 0; padding: 12px; border-left: 4px solid #F97316;">
+        <p style="margin: 0; color: #6B46C1; font-size: 14px; font-weight: 600;">ROI na 1 jaar</p>
+        <p style="margin: 4px 0 0 0; font-size: 20px; font-weight: 700; color: #334155;">${formatPercentage(minROI)}% - ${formatPercentage(maxROI)}%</p>
+      </div>
     </div>
-    <p>Het Life+ programma verdient zichzelf binnen ${formatMonths(maxTerugverdientijd)} maanden terug.</p>
   ` : `
-    <h3 style="color: #2563eb; margin: 24px 0 16px 0;">FINANCIËLE IMPACT LIFE+ PROGRAMMA:</h3>
-    <div style="background: #f8fafc; padding: 20px; border-radius: 8px; margin: 20px 0;">
-      <p style="margin: 8px 0;"><strong>Programma-investering:</strong> ${formatCurrency(programmakosten)}</p>
-      <p style="margin: 8px 0;"><strong>Geschatte terugverdientijd:</strong> ${formatMonths(minTerugverdientijd)}-${formatMonths(maxTerugverdientijd)} maanden</p>
-      <p style="margin: 8px 0;"><strong>Jaarlijkse verzuimbesparing:</strong> ${formatCurrency(minVerzuimbesparing)} - ${formatCurrency(maxVerzuimbesparing)}</p>
-      <p style="margin: 8px 0;"><strong>Productiviteitswinst (6%):</strong> ${formatCurrency(productiviteitswinst)}</p>
-      <p style="margin: 8px 0; padding-top: 8px; border-top: 1px solid #e2e8f0;"><strong>Totale jaarlijkse besparing:</strong> ${formatCurrency(minTotaleBesparing)} - ${formatCurrency(maxTotaleBesparing)}</p>
+    <h3 style="color: #6B46C1; font-family: 'Figtree', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; margin: 24px 0 16px 0; font-weight: 600;">FINANCIËLE IMPACT INNERLEAPS PROGRAMMA:</h3>
+    <div style="background: #F8FAFC; padding: 24px; border-radius: 8px; margin: 20px 0;">
+      <div style="margin: 12px 0; padding: 12px; border-left: 4px solid #F97316;">
+        <p style="margin: 0; color: #6B46C1; font-size: 14px; font-weight: 600;">Programma-investering</p>
+        <p style="margin: 4px 0 0 0; font-size: 20px; font-weight: 700; color: #334155;">${formatCurrency(programmakosten)}</p>
+      </div>
+      <div style="margin: 12px 0; padding: 12px; border-left: 4px solid #F97316;">
+        <p style="margin: 0; color: #6B46C1; font-size: 14px; font-weight: 600;">Geschatte terugverdientijd</p>
+        <p style="margin: 4px 0 0 0; font-size: 20px; font-weight: 700; color: #334155;">${formatMonths(minTerugverdientijd)}-${formatMonths(maxTerugverdientijd)} maanden</p>
+      </div>
+      <div style="margin: 12px 0; padding: 12px; border-left: 4px solid #F97316;">
+        <p style="margin: 0; color: #6B46C1; font-size: 14px; font-weight: 600;">Jaarlijkse verzuimbesparing</p>
+        <p style="margin: 4px 0 0 0; font-size: 20px; font-weight: 700; color: #334155;">${formatCurrency(minVerzuimbesparing)} - ${formatCurrency(maxVerzuimbesparing)}</p>
+      </div>
+      <div style="margin: 12px 0; padding: 12px; border-left: 4px solid #F97316;">
+        <p style="margin: 0; color: #6B46C1; font-size: 14px; font-weight: 600;">Productiviteitswinst</p>
+        <p style="margin: 4px 0 0 0; font-size: 20px; font-weight: 700; color: #334155;">${formatCurrency(productiviteitswinst)}</p>
+      </div>
+      <div style="margin: 12px 0; padding: 16px; border-left: 4px solid #F97316; background: white; border-radius: 4px;">
+        <p style="margin: 0; color: #6B46C1; font-size: 14px; font-weight: 600;">Totale jaarlijkse besparing</p>
+        <p style="margin: 4px 0 0 0; font-size: 20px; font-weight: 700; color: #334155;">${formatCurrency(minTotaleBesparing)} - ${formatCurrency(maxTotaleBesparing)}</p>
+      </div>
     </div>
-    <p>Het Life+ programma is een investering in duurzame inzetbaarheid die zich binnen ${formatMonths(maxTerugverdientijd)} maanden terugverdient.</p>
   `;
 
   return `
@@ -83,63 +114,78 @@ const generateEmailHTML = (data: ROIAnalysisRequest): string => {
     <head>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>ROI-analyse voor ${bedrijfsnaam}</title>
+      <title>InnerLeaps ROI analyse voor ${bedrijfsnaam}</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;600;700&display=swap" rel="stylesheet">
     </head>
-    <body style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; color: #333; max-width: 600px; margin: 0 auto; padding: 20px;">
+    <body style="font-family: 'Figtree', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; line-height: 1.6; color: #334155; max-width: 600px; margin: 0 auto; padding: 0; background: #ffffff;">
       
-      <div style="text-align: center; margin-bottom: 30px;">
-        <h1 style="color: #2563eb; margin-bottom: 10px;">InnerLeaps Life+ Programma</h1>
-        <p style="color: #666; margin: 0;">ROI-analyse voor ${bedrijfsnaam}</p>
+      <div style="background: #6B46C1; padding: 32px 20px; text-align: center;">
+        <h1 style="color: #ffffff; margin: 0; font-size: 28px; font-weight: 700;">InnerLeaps Programma</h1>
+        <p style="color: #E9D5FF; margin: 8px 0 0 0; font-size: 16px;">ROI-analyse voor ${bedrijfsnaam}</p>
       </div>
 
-      <p>Beste ${naam},</p>
+      <div style="padding: 32px 20px;">
+        <p style="margin: 0 0 16px 0; font-size: 16px;">Beste ${naam},</p>
 
-      <p>Bedankt voor je interesse in het InnerLeaps Life+ programma.<br>
-      Op basis van jouw bedrijfsgegevens hebben we de volgende analyse gemaakt:</p>
+        <p style="margin: 0 0 24px 0; font-size: 16px;">Leuk dat je onze website hebt bezocht en verstandig dat je uitzoekt of ons programma de investering waard is. Hieronder jullie resultaten.</p>
 
-      <div style="background: #f1f5f9; padding: 20px; border-radius: 8px; margin: 20px 0;">
-        <h3 style="color: #2563eb; margin-top: 0;">JOUW ORGANISATIE:</h3>
-        <ul style="list-style: none; padding: 0;">
-          <li style="margin: 8px 0;">• ${bedrijfsnaam}</li>
-          <li style="margin: 8px 0;">• ${aantalDeelnemers} deelnemers</li>
-          <li style="margin: 8px 0;">• ${verzuimPercentage}% huidig verzuimpercentage</li>
-          <li style="margin: 8px 0;">• ${formatCurrency(parseInt(brutoJaarsalaris))} gemiddeld bruto jaarsalaris</li>
-        </ul>
-      </div>
+        <div style="background: #F8FAFC; padding: 24px; border-radius: 8px; margin: 24px 0; border: 1px solid #E2E8F0;">
+          <h3 style="color: #6B46C1; margin: 0 0 16px 0; font-size: 18px; font-weight: 600;">JOUW ORGANISATIE:</h3>
+          <ul style="list-style: none; padding: 0; margin: 0;">
+            <li style="margin: 0 0 8px 0; padding-left: 20px; position: relative; font-size: 15px;">
+              <span style="position: absolute; left: 0; color: #F97316; font-weight: 700;">•</span>
+              ${bedrijfsnaam}
+            </li>
+            <li style="margin: 0 0 8px 0; padding-left: 20px; position: relative; font-size: 15px;">
+              <span style="position: absolute; left: 0; color: #F97316; font-weight: 700;">•</span>
+              ${aantalDeelnemers} deelnemers
+            </li>
+            <li style="margin: 0 0 8px 0; padding-left: 20px; position: relative; font-size: 15px;">
+              <span style="position: absolute; left: 0; color: #F97316; font-weight: 700;">•</span>
+              ${verzuimPercentage}% huidig verzuimpercentage
+            </li>
+            <li style="margin: 0 0 0 0; padding-left: 20px; position: relative; font-size: 15px;">
+              <span style="position: absolute; left: 0; color: #F97316; font-weight: 700;">•</span>
+              ${formatCurrency(parseInt(brutoJaarsalaris))} gemiddeld bruto jaarsalaris
+            </li>
+          </ul>
+        </div>
 
-      ${conditionalContent}
+        ${conditionalContent}
 
-      <p>Deze berekening is gebaseerd op wetenschappelijk onderzoek naar MBSR-effectiviteit.</p>
+        <p style="margin: 24px 0; font-size: 15px; line-height: 1.6;">Deze berekening is gebaseerd op wetenschappelijk onderzoek naar aandacht training.</p>
 
-      <div style="text-align: center; margin: 30px 0;">
-        <a href="https://calendly.com/bas-innerleaps" style="background: #2563eb; color: white; padding: 12px 24px; text-decoration: none; border-radius: 6px; display: inline-block;">Plan een vrijblijvend gesprek</a>
-      </div>
+        <div style="text-align: center; margin: 32px 0;">
+          <a href="https://calendar.google.com/appointments/schedules/AcZssZ3VM8RLgeZm9Ej29kbhx4LugakTLXw_vF9BePhup0zm-DtWT5kk6nbHQw-chzBGEQQInd7l3Fs4" style="background: #F97316; color: white; padding: 14px 32px; text-decoration: none; border-radius: 8px; display: inline-block; font-weight: 600; font-size: 16px;">Maak kennis met Bas</a>
+        </div>
 
-      <p>Met vriendelijke groet,<br>
-      <strong>Bas ter Haar Romenij</strong><br>
-      InnerLeaps</p>
+        <p style="margin: 24px 0 8px 0; font-size: 15px;">Met vriendelijke groet,</p>
+        <p style="margin: 0 0 4px 0; font-weight: 700; font-size: 15px; color: #6B46C1;">Bas ter Haar Romenij</p>
+        <p style="margin: 0; font-size: 15px; color: #64748B;">InnerLeaps</p>
 
-      <hr style="border: none; border-top: 1px solid #e2e8f0; margin: 30px 0;">
+        <hr style="border: none; border-top: 2px solid #E2E8F0; margin: 32px 0;">
 
-      <div style="font-size: 12px; color: #666;">
-        <p><strong>Bronvermelding:</strong></p>
-        <ul style="margin: 10px 0; padding-left: 20px;">
-          <li>Verzuimpercentages gebaseerd op CBS Nederland (2024)</li>
-          <li>Verzuimkostenfactor volgens Sazas onderzoek (2024): 140-230%</li>
-          <li>MBSR verzuimreductie: 15-21% (gebaseerd op meta-analyses van 40+ jaar onderzoek)</li>
-          <li>Productiviteitsstijging: 6% (gebaseerd op onderzoek naar mindfulness en werkprestaties)</li>
-          <li>Volledige referentielijst en onderzoeksdata op aanvraag beschikbaar</li>
-        </ul>
+        <div style="font-size: 13px; color: #64748B; line-height: 1.6;">
+          <p style="margin: 0 0 12px 0; font-weight: 600; color: #334155;">Bronvermelding:</p>
+          <ul style="margin: 0; padding-left: 20px;">
+            <li style="margin: 0 0 6px 0;">Verzuimkostenfactor volgens Sazas onderzoek (2024): 140-230%</li>
+            <li style="margin: 0 0 6px 0;">Verzuimreductie: 15-21% (gebaseerd op meta-analyses van 40+ jaar onderzoek)</li>
+            <li style="margin: 0 0 6px 0;">Productiviteitsstijging: 6% (gebaseerd op meta-analyses van 40+ jaar onderzoek)</li>
+            <li style="margin: 0;">Volledige referentielijst en onderzoeksdata op aanvraag beschikbaar</li>
+          </ul>
 
-        <div style="margin-top: 20px; padding-top: 20px; border-top: 1px solid #e2e8f0;">
-          <p><strong>InnerLeaps</strong><br>
-          Koningin Wilhelminaplein 454<br>
-          06 23 45 34 77<br>
-          KVK nummer: 98136925</p>
-          
-          <p style="font-size: 11px; color: #888;">
-            Individuele resultaten kunnen variëren. Berekening gebaseerd op gemiddelde effecten uit wetenschappelijke literatuur.
-          </p>
+          <div style="margin-top: 24px; padding-top: 24px; border-top: 1px solid #E2E8F0;">
+            <p style="margin: 0 0 4px 0; font-weight: 600; color: #334155;">InnerLeaps</p>
+            <p style="margin: 0 0 2px 0;">Koningin Wilhelminaplein 454</p>
+            <p style="margin: 0 0 2px 0;">06 23 45 34 77</p>
+            <p style="margin: 0 0 12px 0;">KVK nummer: 98136925</p>
+            
+            <p style="font-size: 11px; color: #94A3B8; margin: 0;">
+              Individuele resultaten kunnen variëren. Berekening gebaseerd op gemiddelde effecten uit wetenschappelijke literatuur.
+            </p>
+          </div>
         </div>
       </div>
 
@@ -153,33 +199,28 @@ const generateEmailText = (data: ROIAnalysisRequest): string => {
   const { programmakosten, minVerzuimbesparing, maxVerzuimbesparing, productiviteitswinst, minTotaleBesparing, maxTotaleBesparing, minTerugverdientijd, maxTerugverdientijd, minROI, maxROI, showROI } = calculationResults;
 
   const conditionalContent = showROI ? `
-FINANCIËLE IMPACT LIFE+ PROGRAMMA:
+FINANCIËLE IMPACT INNERLEAPS PROGRAMMA:
 
 Programma-investering: ${formatCurrency(programmakosten)}
 Terugverdientijd: ${formatMonths(minTerugverdientijd)}-${formatMonths(maxTerugverdientijd)} maanden
 Jaarlijkse verzuimbesparing: ${formatCurrency(minVerzuimbesparing)} - ${formatCurrency(maxVerzuimbesparing)}
-Productiviteitswinst (6%): ${formatCurrency(productiviteitswinst)}
+Productiviteitswinst: ${formatCurrency(productiviteitswinst)}
 Totale jaarlijkse besparing: ${formatCurrency(minTotaleBesparing)} - ${formatCurrency(maxTotaleBesparing)}
 ROI na 1 jaar: ${formatPercentage(minROI)}% - ${formatPercentage(maxROI)}%
-
-Het Life+ programma verdient zichzelf binnen ${formatMonths(maxTerugverdientijd)} maanden terug.
   ` : `
-FINANCIËLE IMPACT LIFE+ PROGRAMMA:
+FINANCIËLE IMPACT INNERLEAPS PROGRAMMA:
 
 Programma-investering: ${formatCurrency(programmakosten)}
 Geschatte terugverdientijd: ${formatMonths(minTerugverdientijd)}-${formatMonths(maxTerugverdientijd)} maanden
 Jaarlijkse verzuimbesparing: ${formatCurrency(minVerzuimbesparing)} - ${formatCurrency(maxVerzuimbesparing)}
-Productiviteitswinst (6%): ${formatCurrency(productiviteitswinst)}
+Productiviteitswinst: ${formatCurrency(productiviteitswinst)}
 Totale jaarlijkse besparing: ${formatCurrency(minTotaleBesparing)} - ${formatCurrency(maxTotaleBesparing)}
-
-Het Life+ programma is een investering in duurzame inzetbaarheid die zich binnen ${formatMonths(maxTerugverdientijd)} maanden terugverdient.
   `;
 
   return `
 Beste ${naam},
 
-Bedankt voor je interesse in het InnerLeaps Life+ programma.
-Op basis van jouw bedrijfsgegevens hebben we de volgende analyse gemaakt:
+Leuk dat je onze website hebt bezocht en verstandig dat je uitzoekt of ons programma de investering waard is. Hieronder jullie resultaten.
 
 JOUW ORGANISATIE:
 - ${bedrijfsnaam}
@@ -189,9 +230,9 @@ JOUW ORGANISATIE:
 
 ${conditionalContent}
 
-Deze berekening is gebaseerd op wetenschappelijk onderzoek naar MBSR-effectiviteit.
+Deze berekening is gebaseerd op wetenschappelijk onderzoek naar aandacht training.
 
-Wil je deze cijfers bespreken? Plan een vrijblijvend gesprek in via: https://calendly.com/bas-innerleaps
+Plan een gesprek: https://calendar.google.com/appointments/schedules/AcZssZ3VM8RLgeZm9Ej29kbhx4LugakTLXw_vF9BePhup0zm-DtWT5kk6nbHQw-chzBGEQQInd7l3Fs4
 
 Met vriendelijke groet,
 Bas ter Haar Romenij
@@ -199,10 +240,9 @@ InnerLeaps
 
 ---
 Bronvermelding:
-- Verzuimpercentages gebaseerd op CBS Nederland (2024)
 - Verzuimkostenfactor volgens Sazas onderzoek (2024): 140-230%
-- MBSR verzuimreductie: 15-21% (gebaseerd op meta-analyses van 40+ jaar onderzoek)
-- Productiviteitsstijging: 6% (gebaseerd op onderzoek naar mindfulness en werkprestaties)
+- Verzuimreductie: 15-21% (gebaseerd op meta-analyses van 40+ jaar onderzoek)
+- Productiviteitsstijging: 6% (gebaseerd op meta-analyses van 40+ jaar onderzoek)
 - Volledige referentielijst en onderzoeksdata op aanvraag beschikbaar
 
 InnerLeaps
@@ -211,6 +251,35 @@ Koningin Wilhelminaplein 454
 KVK nummer: 98136925
 
 Individuele resultaten kunnen variëren. Berekening gebaseerd op gemiddelde effecten uit wetenschappelijke literatuur.
+  `;
+};
+
+const generateNotificationEmail = (data: ROIAnalysisRequest): string => {
+  const { naam, email, bedrijfsnaam, verzuimPercentage, aantalDeelnemers, brutoJaarsalaris, calculationResults } = data;
+  const { programmakosten, minVerzuimbesparing, maxVerzuimbesparing, productiviteitswinst, minTotaleBesparing, maxTotaleBesparing, minTerugverdientijd, maxTerugverdientijd, minROI, maxROI, showROI } = calculationResults;
+
+  return `
+Nieuwe ROI aanvraag ontvangen
+
+CONTACTGEGEVENS:
+- Naam: ${naam}
+- Email: ${email}
+- Bedrijfsnaam: ${bedrijfsnaam}
+
+BEDRIJFSGEGEVENS:
+- Huidig verzuimpercentage: ${verzuimPercentage}%
+- Aantal deelnemers: ${aantalDeelnemers}
+- Gemiddeld bruto jaarsalaris: €${brutoJaarsalaris}
+
+BEREKENDE RESULTATEN:
+- Programmakosten: ${formatCurrency(programmakosten)}
+- Terugverdientijd: ${formatMonths(minTerugverdientijd)}-${formatMonths(maxTerugverdientijd)} maanden
+- Jaarlijkse verzuimbesparing: ${formatCurrency(minVerzuimbesparing)} - ${formatCurrency(maxVerzuimbesparing)}
+- Productiviteitswinst: ${formatCurrency(productiviteitswinst)}
+- Totale jaarlijkse besparing: ${formatCurrency(minTotaleBesparing)} - ${formatCurrency(maxTotaleBesparing)}
+${showROI ? `- ROI na 1 jaar: ${formatPercentage(minROI)}% - ${formatPercentage(maxROI)}%` : ''}
+
+Dit is een automatische notificatie van de ROI calculator op de website.
   `;
 };
 
@@ -245,19 +314,33 @@ const handler = async (req: Request): Promise<Response> => {
       });
     }
 
-    // Send email using Resend
-    const emailResponse = await resend.emails.send({
+    // Send customer email using Resend
+    const customerEmailResponse = await resend.emails.send({
       from: "Bas van InnerLeaps <bas@innerleaps.nl>",
       replyTo: "bas@innerleaps.nl",
       to: [data.email],
-      subject: `ROI-analyse voor ${data.bedrijfsnaam} - Life+ programma resultaten`,
+      subject: `InnerLeaps ROI analyse voor ${data.bedrijfsnaam}`,
       html: generateEmailHTML(data),
       text: generateEmailText(data),
     });
 
-    console.log("Email sent successfully:", emailResponse);
+    console.log("Customer email sent successfully:", customerEmailResponse);
 
-    return new Response(JSON.stringify({ success: true, emailId: emailResponse.data?.id }), {
+    // Send notification email to Bas
+    const notificationEmailResponse = await resend.emails.send({
+      from: "InnerLeaps Notifications <bas@innerleaps.nl>",
+      to: ["bas@innerleaps.nl"],
+      subject: `Nieuwe ROI aanvraag van ${data.bedrijfsnaam}`,
+      text: generateNotificationEmail(data),
+    });
+
+    console.log("Notification email sent successfully:", notificationEmailResponse);
+
+    return new Response(JSON.stringify({ 
+      success: true, 
+      customerEmailId: customerEmailResponse.data?.id,
+      notificationEmailId: notificationEmailResponse.data?.id
+    }), {
       status: 200,
       headers: {
         "Content-Type": "application/json",
