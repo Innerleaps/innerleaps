@@ -5,7 +5,7 @@ import performanceImage from '@/assets/burnout_voorkomen_en_beter_presteren_door
 const MethodologySection = () => {
   return (
     <section className="section-padding bg-white">
-      <div className="container-custom space-y-16 md:space-y-24">
+      <div className="container-custom space-y-24 md:space-y-32 lg:space-y-40">
         {/* Blok 1 - Het Probleem - Tekst boven, Visual onder */}
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           <div className="space-y-4">
@@ -36,7 +36,7 @@ const MethodologySection = () => {
           </div>
           <div className="space-y-4">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-brand-gray-dark leading-tight">
-              Het vitaliteitsprogramma waarin we <span className="text-brand-orange">aandacht trainen</span>
+              Het vitaliteitsprogramma waar we <span className="text-brand-orange">aandacht trainen</span>
             </h2>
             <p className="text-lg md:text-xl text-brand-gray-medium leading-relaxed">
               Deelnemers trainen mensen hun "aandachtsspier". Dit verhoogt de activiteit in de neocortex én laat deze efficiënter werken. Dit gebied is het "controlecentrum" dat stress vroeg signaleert, focus verbetert en impulsieve reacties voorkomt.
