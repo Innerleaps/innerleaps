@@ -1,0 +1,187 @@
+import { useState } from "react";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
+import { useToast } from "@/hooks/use-toast";
+import { supabase } from "@/integrations/supabase/client";
+
+const questions = [
+  "Ik voel me gespannen of opgejaagd",
+  "Ik maak me zorgen",
+  "Ik ben prikkelbaar",
+  "Ik voel me gefrustreerd",
+  "Ik heb moeite om te ontspannen",
+  "Ik voel me down of somber",
+  "Ik heb moeite met concentreren",
+  "Ik voel me vermoeid of uitgeput",
+  "Ik heb moeite om in slaap te vallen of door te slapen",
+  "Ik voel me overweldigd",
+];
+
+const options = [
+  { value: "0", label: "Nooit" },
+  { value: "1", label: "Soms" },
+  { value: "2", label: "Regelmatig" },
+  { value: "3", label: "Vaak" },
+];
+
+const LevenVragenlijst = () => {
+  const { toast } = useToast();
+  const [formData, setFormData] = useState({
+    naam: "",
+    email: "",
+    organisatie: "",
+  });
+  const [answers, setAnswers] = useState<Record<string, number>>({});
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleAnswerChange = (questionIndex: number, value: string) => {
+    setAnswers((prev) => ({
+      ...prev,
+      [`q${questionIndex + 1}`]: parseInt(value),
+    }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+
+    // Validate all questions are answered
+    if (Object.keys(answers).length < 10) {
+      toast({
+        title: "Niet alle vragen beantwoord",
+        description: "Beantwoord alle vragen voordat je het formulier verstuurt.",
+        variant: "destructive",
+      });
+      return;
+    }
+
+    setIsSubmitting(true);
+
+    try {
+      const totalScore = Object.values(answers).reduce((sum, val) => sum + val, 0);
+
+      const submission = {
+        naam: formData.naam,
+        email: formData.email,
+        organisatie: formData.organisatie,
+        q1: answers.q1,
+        q2: answers.q2,
+        q3: answers.q3,
+        q4: answers.q4,
+        q5: answers.q5,
+        q6: answers.q6,
+        q7: answers.q7,
+        q8: answers.q8,
+        q9: answers.q9,
+        q10: answers.q10,
+        total_score: totalScore,
+      };
+
+      const { error } = await supabase.functions.invoke("submit-stress-questionnaire", {
+        body: submission,
+      });
+
+      if (error) throw error;
+
+      toast({
+        title: "Succesvol verstuurd!",
+        description: "Bedankt voor het invullen. Je ontvangt een email met je resultaten.",
+      });
+
+      // Reset form
+      setFormData({ naam: "", email: "", organisatie: "" });
+      setAnswers({});
+    } catch (error: any) {
+      console.error("Submission error:", error);
+      toast({
+        title: "Er ging iets mis",
+        description: "Probeer het later opnieuw.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
+  return (
+    <div className="min-h-screen bg-gradient-to-b from-background to-secondary/20 py-12 px-4">
+      <div className="max-w-3xl mx-auto">
+        <div className="bg-card rounded-lg shadow-lg p-8">
+          <h1 className="text-3xl font-bold mb-4">Stressvragenlijst</h1>
+          <p className="text-muted-foreground mb-8">
+            Beantwoord de volgende vragen om jouw huidige stressniveau te bepalen.
+          </p>
+
+          <form onSubmit={handleSubmit} className="space-y-8">
+            {/* Contact Information */}
+            <div className="space-y-4 pb-6 border-b">
+              <div>
+                <Label htmlFor="naam">Naam *</Label>
+                <Input
+                  id="naam"
+                  required
+                  value={formData.naam}
+                  onChange={(e) => setFormData({ ...formData, naam: e.target.value })}
+                />
+              </div>
+              <div>
+                <Label htmlFor="email">E-mailadres *</Label>
+                <Input
+                  id="email"
+                  type="email"
+                  required
+                  value={formData.email}
+                  onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                />
+              </div>
+              <div>
+                <Label htmlFor="organisatie">Organisatie *</Label>
+                <Input
+                  id="organisatie"
+                  required
+                  value={formData.organisatie}
+                  onChange={(e) => setFormData({ ...formData, organisatie: e.target.value })}
+                />
+              </div>
+            </div>
+
+            {/* Questions */}
+            <div className="space-y-8">
+              {questions.map((question, index) => (
+                <div key={index} className="space-y-3">
+                  <Label className="text-base font-medium">
+                    {index + 1}. {question} *
+                  </Label>
+                  <RadioGroup
+                    value={answers[`q${index + 1}`]?.toString()}
+                    onValueChange={(value) => handleAnswerChange(index, value)}
+                    className="flex flex-col space-y-2"
+                  >
+                    {options.map((option) => (
+                      <div key={option.value} className="flex items-center space-x-2">
+                        <RadioGroupItem value={option.value} id={`q${index + 1}-${option.value}`} />
+                        <Label
+                          htmlFor={`q${index + 1}-${option.value}`}
+                          className="font-normal cursor-pointer"
+                        >
+                          {option.label}
+                        </Label>
+                      </div>
+                    ))}
+                  </RadioGroup>
+                </div>
+              ))}
+            </div>
+
+            <Button type="submit" size="lg" className="w-full" disabled={isSubmitting}>
+              {isSubmitting ? "Bezig met versturen..." : "Verstuur"}
+            </Button>
+          </form>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default LevenVragenlijst;

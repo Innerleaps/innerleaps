@@ -59,6 +59,63 @@ export type Database = {
         }
         Relationships: []
       }
+      stress_questionnaire_submissions: {
+        Row: {
+          created_at: string
+          email: string
+          id: string
+          naam: string
+          organisatie: string
+          q1: number
+          q10: number
+          q2: number
+          q3: number
+          q4: number
+          q5: number
+          q6: number
+          q7: number
+          q8: number
+          q9: number
+          total_score: number
+        }
+        Insert: {
+          created_at?: string
+          email: string
+          id?: string
+          naam: string
+          organisatie: string
+          q1: number
+          q10: number
+          q2: number
+          q3: number
+          q4: number
+          q5: number
+          q6: number
+          q7: number
+          q8: number
+          q9: number
+          total_score: number
+        }
+        Update: {
+          created_at?: string
+          email?: string
+          id?: string
+          naam?: string
+          organisatie?: string
+          q1?: number
+          q10?: number
+          q2?: number
+          q3?: number
+          q4?: number
+          q5?: number
+          q6?: number
+          q7?: number
+          q8?: number
+          q9?: number
+          total_score?: number
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
