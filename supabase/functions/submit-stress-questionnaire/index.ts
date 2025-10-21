@@ -47,7 +47,7 @@ const handler = async (req: Request): Promise<Response> => {
 
     if (dbError) {
       console.error("Database error:", dbError);
-      throw new Error(`Database error: ${dbError.message}`);
+      throw new Error("Unable to save your submission. Please try again later.");
     }
 
     console.log("Submission saved to database successfully");
