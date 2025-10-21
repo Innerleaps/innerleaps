@@ -1,0 +1,80 @@
+import autopilotImage from '@/assets/Grip_op_de_automatische_piloot.png';
+import neocortexImage from '@/assets/Meer_activiteit_in_neo_cortex_door_aandacht_training.png';
+import performanceImage from '@/assets/burnout_voorkomen_en_beter_presteren_door_aandacht_training.png';
+
+const MethodologySection = () => {
+  return (
+    <section className="section-padding bg-white">
+      <div className="container-custom space-y-16 md:space-y-24">
+        {/* Blok 1 - Het Probleem - Tekst links, Visual rechts */}
+        <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+          <div className="space-y-4">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-brand-gray-dark leading-tight">
+              De <span className="text-brand-orange">automatische piloot</span> die jullie organisatie geld kost
+            </h2>
+            <p className="text-lg md:text-xl text-brand-gray-medium leading-relaxed">
+              Tot 90% van ons gedrag is onbewust. Ons oerbrein maakt automatische keuzes om ons te beschermen, terwijl er vaak geen echte bedreiging is. Wij leren mensen in stresssituaties bewust te handelen. Hierdoor ontstaan gezondere keuzes en effectievere samenwerking, ook zonder stress.
+            </p>
+          </div>
+          <div className="order-first md:order-last">
+            <img 
+              src={autopilotImage} 
+              alt="Grip op de automatische piloot" 
+              className="w-full h-auto rounded-lg"
+            />
+          </div>
+        </div>
+
+        {/* Blok 2 - De Methode - Visual links, Tekst rechts */}
+        <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+          <div className="order-last md:order-first">
+            <img 
+              src={neocortexImage} 
+              alt="Meer activiteit in neo cortex door aandacht training" 
+              className="w-full h-auto rounded-lg"
+            />
+          </div>
+          <div className="space-y-4">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-brand-gray-dark leading-tight">
+              In ons vitaliteitsprogramma dat productiviteit verhoogt <span className="text-brand-orange">trainen</span> deelnemers hun <span className="text-brand-orange">aandacht</span>
+            </h2>
+            <p className="text-lg md:text-xl text-brand-gray-medium leading-relaxed">
+              Deelnemers trainen mensen hun "aandachtsspier". Dit verhoogt de activiteit in de neocortex én laat deze efficiënter werken. Dit gebied is het "controlecentrum" dat stress vroeg signaleert, focus verbetert en impulsieve reacties voorkomt.
+            </p>
+          </div>
+        </div>
+
+        {/* Blok 3 - Het Resultaat - Tekst links, Visual rechts */}
+        <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+          <div className="space-y-6">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-brand-gray-dark leading-tight">
+              <span className="text-brand-orange">Prestatie</span> en <span className="text-brand-orange">samenwerking</span> verbeteren terwijl het <span className="text-brand-orange">uitvalrisico</span> daalt met maarliefst 70%
+            </h2>
+            <p className="text-lg md:text-xl text-brand-gray-medium leading-relaxed">
+              Deelnemers leren stress te herkennen, erover te communiceren en ontdekken hoe ze hiervan kunnen herstellen. Zo ontwikkelen ze eigenaarschap, blijven ze productief, betrokken en tevreden en wordt burn-out voorkomen.
+            </p>
+            <div className="space-y-3 pt-2">
+              <div className="flex items-center gap-3">
+                <span className="text-3xl">📉</span>
+                <span className="text-xl font-semibold text-brand-orange">15-21% minder verzuim</span>
+              </div>
+              <div className="flex items-center gap-3">
+                <span className="text-3xl">🛡️</span>
+                <span className="text-xl font-semibold text-brand-orange">70% lager uitvalrisico</span>
+              </div>
+            </div>
+          </div>
+          <div className="order-first md:order-last">
+            <img 
+              src={performanceImage} 
+              alt="Burnout voorkomen en beter presteren door aandacht training" 
+              className="w-full h-auto rounded-lg"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default MethodologySection;
