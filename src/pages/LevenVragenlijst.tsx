@@ -10,16 +10,16 @@ import { supabase } from "@/integrations/supabase/client";
 import { Check } from "lucide-react";
 
 const questions = [
-  "Hoe vaak bent u de afgelopen maand van streek geweest vanwege iets dat onverwachts gebeurde?",
-  "Hoe vaak heeft u de afgelopen maand het gevoel gehad dat u geen controle had over de belangrijke dingen in uw leven?",
-  "Hoe vaak heeft u zich de afgelopen maand zenuwachtig en \"gestrest\" gevoeld?",
-  "Hoe vaak heeft u zich de afgelopen maand zelfverzekerd gevoeld over uw vermogen om met uw persoonlijke problemen om te gaan?",
-  "Hoe vaak heeft u de afgelopen maand het gevoel gehad dat de dingen gingen zoals u wenste?",
-  "Hoe vaak heeft u de afgelopen maand gemerkt dat u niet alle dingen aankon die u moest doen?",
-  "Hoe vaak heeft u de afgelopen maand irritaties in uw leven onder controle kunnen houden?",
-  "Hoe vaak heeft u de afgelopen maand het gevoel gehad dat u alles onder controle had?",
-  "Hoe vaak bent u de afgelopen maand boos geweest vanwege zaken waar u geen controle over had?",
-  "Hoe vaak heeft u de afgelopen maand het gevoel gehad dat de moeilijkheden zich zo hebben opgestapeld dat u ze niet kunt overwinnen?",
+  "Hoe vaak bent u de afgelopen maand van streek geweest vanwege iets dat onverwachts gebeurde?*",
+  "Hoe vaak heeft u de afgelopen maand het gevoel gehad dat u geen controle had over de belangrijke dingen in uw leven?*",
+  "Hoe vaak heeft u zich de afgelopen maand zenuwachtig en \"gestrest\" gevoeld?*",
+  "Hoe vaak heeft u zich de afgelopen maand zelfverzekerd gevoeld over uw vermogen om met uw persoonlijke problemen om te gaan?*",
+  "Hoe vaak heeft u de afgelopen maand het gevoel gehad dat de dingen gingen zoals u wenste?*",
+  "Hoe vaak heeft u de afgelopen maand gemerkt dat u niet alle dingen aankon die u moest doen?*",
+  "Hoe vaak heeft u de afgelopen maand irritaties in uw leven onder controle kunnen houden?*",
+  "Hoe vaak heeft u de afgelopen maand het gevoel gehad dat u alles onder controle had?*",
+  "Hoe vaak bent u de afgelopen maand boos geweest vanwege zaken waar u geen controle over had?*",
+  "Hoe vaak heeft u de afgelopen maand het gevoel gehad dat de moeilijkheden zich zo hebben opgestapeld dat u ze niet kunt overwinnen?*",
 ];
 
 const options = [
@@ -231,12 +231,12 @@ const LevenVragenlijst = () => {
                           <RadioGroup
                             value={answers[`q${index + 1}`]?.toString()}
                             onValueChange={(value) => handleAnswerChange(index, value)}
-                            className="flex flex-col md:flex-row md:flex-wrap gap-3 md:gap-4"
+                            className="flex flex-col gap-3"
                           >
                             {options.map((option) => (
                               <div 
                                 key={option.value} 
-                                className="flex items-center space-x-2 md:flex-1 md:min-w-[150px]"
+                                className="flex items-center space-x-2"
                               >
                                 <RadioGroupItem
                                   value={option.value}
