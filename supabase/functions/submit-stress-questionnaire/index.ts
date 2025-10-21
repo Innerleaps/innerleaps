@@ -8,11 +8,11 @@ const corsHeaders = {
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type",
 };
 
-// Validation schema
+// Validation schema - personal details are optional
 const StressQuestionnaireSchema = z.object({
-  naam: z.string().trim().min(1, "Name is required").max(100, "Name must be less than 100 characters"),
-  email: z.string().trim().email("Invalid email address").max(255, "Email must be less than 255 characters"),
-  organisatie: z.string().trim().min(1, "Organization is required").max(200, "Organization must be less than 200 characters"),
+  naam: z.string().trim().max(100, "Name must be less than 100 characters").optional().default(""),
+  email: z.string().trim().email("Invalid email address").max(255, "Email must be less than 255 characters").optional().or(z.literal("")),
+  organisatie: z.string().trim().max(200, "Organization must be less than 200 characters").optional().default(""),
   q1: z.number().int().min(0).max(4, "Question 1 must be between 0 and 4"),
   q2: z.number().int().min(0).max(4, "Question 2 must be between 0 and 4"),
   q3: z.number().int().min(0).max(4, "Question 3 must be between 0 and 4"),
@@ -181,37 +181,41 @@ const handler = async (req: Request): Promise<Response> => {
 
     console.log("Submission saved to database successfully");
 
-    // Send email with Resend
-    const resend = new Resend(Deno.env.get("RESEND_API_KEY"));
+    // Send email only if email and name are provided
+    if (submission.email && submission.email.trim() !== "" && submission.naam && submission.naam.trim() !== "") {
+      const resend = new Resend(Deno.env.get("RESEND_API_KEY"));
 
-    // Escape user data for HTML
-    const escapedNaam = escapeHtml(submission.naam);
+      // Escape user data for HTML
+      const escapedNaam = escapeHtml(submission.naam);
 
-    const emailResponse = await resend.emails.send({
-      from: "InnerLeaps <bas@innerleaps.nl>",
-      to: [submission.email],
-      subject: "Jouw vragenlijst resultaat",
-      html: `
-        <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;">
-          <h1 style="color: #333;">Bedankt voor het invullen</h1>
-          
-          <p>Beste ${escapedNaam},</p>
-          
-          <p>Je score is <strong>${submission.total_score} van de 40 punten</strong>.</p>
-          
-          <p>In de workshop gaan we in op wat deze score betekent.</p>
-          
-          <div style="margin-top: 30px; padding-top: 20px; border-top: 1px solid #ddd;">
-            <p style="color: #666;">
-              Met vriendelijke groet,<br>
-              <strong>InnerLeaps</strong>
-            </p>
+      const emailResponse = await resend.emails.send({
+        from: "InnerLeaps <bas@innerleaps.nl>",
+        to: [submission.email],
+        subject: "Jouw vragenlijst resultaat",
+        html: `
+          <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;">
+            <h1 style="color: #333;">Bedankt voor het invullen</h1>
+            
+            <p>Beste ${escapedNaam},</p>
+            
+            <p>Je score is <strong>${submission.total_score} van de 40 punten</strong>.</p>
+            
+            <p>In de workshop gaan we in op wat deze score betekent.</p>
+            
+            <div style="margin-top: 30px; padding-top: 20px; border-top: 1px solid #ddd;">
+              <p style="color: #666;">
+                Met vriendelijke groet,<br>
+                <strong>InnerLeaps</strong>
+              </p>
+            </div>
           </div>
-        </div>
-      `,
-    });
+        `,
+      });
 
-    console.log("Email sent successfully:", emailResponse);
+      console.log("Email sent successfully:", emailResponse);
+    } else {
+      console.log("No email sent - contact details not provided");
+    }
 
     return new Response(
       JSON.stringify({ success: true, message: "Submission saved and email sent" }),
