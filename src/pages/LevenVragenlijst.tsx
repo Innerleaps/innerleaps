@@ -4,8 +4,10 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { useToast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
+import { Check } from "lucide-react";
 
 const questions = [
   "Hoe vaak bent u de afgelopen maand van streek geweest vanwege iets dat onverwachts gebeurde?",
@@ -38,6 +40,7 @@ const LevenVragenlijst = () => {
   });
   const [answers, setAnswers] = useState<Record<string, number>>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [openAccordion, setOpenAccordion] = useState<string>("question-0");
 
   // Calculate score with reversed scoring for questions 4, 5, 7, 8
   const calculateTotalScore = () => {
@@ -63,6 +66,13 @@ const LevenVragenlijst = () => {
       ...prev,
       [`q${questionIndex + 1}`]: parseInt(value),
     }));
+    
+    // Automatically open next question or close if this was the last one
+    if (questionIndex + 1 < questions.length) {
+      setOpenAccordion(`question-${questionIndex + 1}`);
+    } else {
+      setOpenAccordion("");
+    }
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -176,32 +186,77 @@ const LevenVragenlijst = () => {
             {/* Questions */}
             <div className="space-y-6">
               <h2 className="text-2xl font-bold">Jouw dagelijkse leven</h2>
-              <div className="space-y-8">
-              {questions.map((question, index) => (
-                <div key={index} className="space-y-3">
-                  <Label className="text-base font-medium">
-                    {index + 1}. {question} *
-                  </Label>
-                  <RadioGroup
-                    value={answers[`q${index + 1}`]?.toString()}
-                    onValueChange={(value) => handleAnswerChange(index, value)}
-                    className="flex flex-col space-y-2"
-                  >
-                    {options.map((option) => (
-                      <div key={option.value} className="flex items-center space-x-2">
-                        <RadioGroupItem value={option.value} id={`q${index + 1}-${option.value}`} />
-                        <Label
-                          htmlFor={`q${index + 1}-${option.value}`}
-                          className="font-normal cursor-pointer"
-                        >
-                          {option.label}
-                        </Label>
-                      </div>
-                    ))}
-                  </RadioGroup>
-                </div>
-              ))}
+              
+              <div className="mb-4 text-sm text-muted-foreground">
+                {Object.keys(answers).length} van {questions.length} vragen beantwoord
               </div>
+              
+              <Accordion 
+                type="single" 
+                collapsible 
+                value={openAccordion}
+                onValueChange={setOpenAccordion}
+                className="space-y-2"
+              >
+                {questions.map((question, index) => {
+                  const isAnswered = answers[`q${index + 1}`] !== undefined;
+                  
+                  return (
+                    <AccordionItem 
+                      key={index} 
+                      value={`question-${index}`}
+                      className="border rounded-lg px-4"
+                    >
+                      <AccordionTrigger className="hover:no-underline">
+                        <div className="flex items-center gap-3 text-left">
+                          <div className={`flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center ${
+                            isAnswered 
+                              ? "bg-primary text-primary-foreground" 
+                              : "bg-muted text-muted-foreground"
+                          }`}>
+                            {isAnswered ? (
+                              <Check className="h-4 w-4" />
+                            ) : (
+                              <span className="text-sm font-medium">{index + 1}</span>
+                            )}
+                          </div>
+                          <span className="font-medium">
+                            Vraag {index + 1}
+                          </span>
+                        </div>
+                      </AccordionTrigger>
+                      <AccordionContent className="pt-4 pb-2">
+                        <div className="space-y-4">
+                          <p className="text-base font-medium mb-4">{question}</p>
+                          <RadioGroup
+                            value={answers[`q${index + 1}`]?.toString()}
+                            onValueChange={(value) => handleAnswerChange(index, value)}
+                            className="flex flex-col md:flex-row md:flex-wrap gap-3 md:gap-4"
+                          >
+                            {options.map((option) => (
+                              <div 
+                                key={option.value} 
+                                className="flex items-center space-x-2 md:flex-1 md:min-w-[150px]"
+                              >
+                                <RadioGroupItem
+                                  value={option.value}
+                                  id={`q${index + 1}-${option.value}`}
+                                />
+                                <Label
+                                  htmlFor={`q${index + 1}-${option.value}`}
+                                  className="font-normal cursor-pointer text-sm"
+                                >
+                                  {option.label}
+                                </Label>
+                              </div>
+                            ))}
+                          </RadioGroup>
+                        </div>
+                      </AccordionContent>
+                    </AccordionItem>
+                  );
+                })}
+              </Accordion>
             </div>
 
             <Button type="submit" size="lg" className="w-full" disabled={isSubmitting}>
