@@ -108,14 +108,22 @@ const LevenVragenlijst = () => {
     <div className="min-h-screen bg-gradient-to-b from-background to-secondary/20 py-12 px-4">
       <div className="max-w-3xl mx-auto">
         <div className="bg-card rounded-lg shadow-lg p-8">
-          <h1 className="text-3xl font-bold mb-4">Stressvragenlijst</h1>
+          <h1 className="text-3xl font-bold mb-4">Hoe ga jij om met je dagelijks leven?</h1>
           <p className="text-muted-foreground mb-8">
-            Beantwoord de volgende vragen om jouw huidige stressniveau te bepalen.
+            De volgende vragen gaan over hoe je de afgelopen maand situaties en uitdagingen hebt ervaren. Het geeft je inzicht in hoe je omgaat met wat er op je afkomt. Later in de training bespreken we wat de uitkomsten betekenen.
           </p>
 
           <form onSubmit={handleSubmit} className="space-y-8">
             {/* Contact Information */}
-            <div className="space-y-4 pb-6 border-b">
+            <div className="space-y-6">
+              <div>
+                <h2 className="text-2xl font-bold mb-2">Persoonlijke gegevens</h2>
+                <p className="text-muted-foreground mb-6">
+                  We bewaren jouw gegevens beveiligd en delen deze nooit met je werkgever. Het invullen van je gegevens is niet verplicht, maar hierdoor kunnen we wel de score van de vragenlijst met je delen per e-mail.
+                </p>
+              </div>
+              
+              <div className="space-y-4 pb-6 border-b">
               <div>
                 <Label htmlFor="naam">Naam *</Label>
                 <Input
@@ -144,10 +152,13 @@ const LevenVragenlijst = () => {
                   onChange={(e) => setFormData({ ...formData, organisatie: e.target.value })}
                 />
               </div>
+              </div>
             </div>
 
             {/* Questions */}
-            <div className="space-y-8">
+            <div className="space-y-6">
+              <h2 className="text-2xl font-bold">Jouw dagelijkse leven</h2>
+              <div className="space-y-8">
               {questions.map((question, index) => (
                 <div key={index} className="space-y-3">
                   <Label className="text-base font-medium">
@@ -172,6 +183,7 @@ const LevenVragenlijst = () => {
                   </RadioGroup>
                 </div>
               ))}
+              </div>
             </div>
 
             <Button type="submit" size="lg" className="w-full" disabled={isSubmitting}>
