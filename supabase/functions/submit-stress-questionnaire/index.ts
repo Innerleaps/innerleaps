@@ -188,7 +188,7 @@ const handler = async (req: Request): Promise<Response> => {
     const escapedNaam = escapeHtml(submission.naam);
 
     const emailResponse = await resend.emails.send({
-      from: "InnerLeaps <onboarding@resend.dev>",
+      from: "InnerLeaps <bas@innerleaps.nl>",
       to: [submission.email],
       subject: "Jouw vragenlijst resultaat",
       html: `
