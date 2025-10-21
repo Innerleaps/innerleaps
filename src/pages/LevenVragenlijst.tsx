@@ -12,7 +12,7 @@ import { Check } from "lucide-react";
 const questions = [
   "Hoe vaak bent u de afgelopen maand van streek geweest vanwege iets dat onverwachts gebeurde?*",
   "Hoe vaak heeft u de afgelopen maand het gevoel gehad dat u geen controle had over de belangrijke dingen in uw leven?*",
-  "Hoe vaak heeft u zich de afgelopen maand zenuwachtig en \"gestrest\" gevoeld?*",
+  'Hoe vaak heeft u zich de afgelopen maand zenuwachtig en "gestrest" gevoeld?*',
   "Hoe vaak heeft u zich de afgelopen maand zelfverzekerd gevoeld over uw vermogen om met uw persoonlijke problemen om te gaan?*",
   "Hoe vaak heeft u de afgelopen maand het gevoel gehad dat de dingen gingen zoals u wenste?*",
   "Hoe vaak heeft u de afgelopen maand gemerkt dat u niet alle dingen aankon die u moest doen?*",
@@ -46,18 +46,18 @@ const LevenVragenlijst = () => {
   const calculateTotalScore = () => {
     const reversedQuestions = [4, 5, 7, 8];
     let total = 0;
-    
+
     for (let i = 1; i <= 10; i++) {
       const value = answers[`q${i}`];
       if (reversedQuestions.includes(i)) {
         // Reversed scoring: 0→4, 1→3, 2→2, 3→1, 4→0
-        total += (4 - value);
+        total += 4 - value;
       } else {
         // Normal scoring
         total += value;
       }
     }
-    
+
     return total;
   };
 
@@ -66,7 +66,7 @@ const LevenVragenlijst = () => {
       ...prev,
       [`q${questionIndex + 1}`]: parseInt(value),
     }));
-    
+
     // Automatically open next question or close if this was the last one
     if (questionIndex + 1 < questions.length) {
       setOpenAccordion(`question-${questionIndex + 1}`);
@@ -117,11 +117,11 @@ const LevenVragenlijst = () => {
       if (error) throw error;
 
       // Navigate to results page with score
-      navigate('/leven-vragenlijst/resultaat', { 
-        state: { 
+      navigate("/leven-vragenlijst/resultaat", {
+        state: {
           score: totalScore,
-          emailSent: !!(formData.email && formData.naam)
-        } 
+          emailSent: !!(formData.email && formData.naam),
+        },
       });
     } catch (error: any) {
       console.error("Submission error:", error);
@@ -141,7 +141,9 @@ const LevenVragenlijst = () => {
         <div className="bg-card rounded-lg shadow-lg p-8">
           <h1 className="text-3xl font-bold mb-4">Hoe ga jij om met je dagelijks leven?</h1>
           <p className="text-foreground/80 mb-8">
-            De volgende vragen gaan over hoe je de afgelopen maand situaties en uitdagingen hebt ervaren. Het geeft je inzicht in hoe je omgaat met wat er op je afkomt. Later in de training bespreken we wat de uitkomsten betekenen.
+            De volgende vragen gaan over hoe je de afgelopen maand situaties en uitdagingen hebt ervaren. Het geeft je
+            inzicht in hoe je omgaat met wat er op je afkomt. Later in de training bespreken we wat de uitkomsten
+            betekenen.
           </p>
 
           <form onSubmit={handleSubmit} className="space-y-8">
@@ -150,10 +152,11 @@ const LevenVragenlijst = () => {
               <div>
                 <h2 className="text-2xl font-bold mb-2">Persoonlijke gegevens</h2>
                 <p className="text-foreground/80 mb-6">
-                  We bewaren jouw gegevens beveiligd en delen deze nooit met je werkgever. Het invullen van je gegevens is niet verplicht, maar hierdoor kunnen we wel de score van de vragenlijst met je delen per e-mail.
+                  We bewaren jouw gegevens beveiligd en delen deze nooit met je werkgever. Het invullen van je gegevens
+                  is niet verplicht, maar hierdoor kunnen we wel de score van de vragenlijst met je delen per e-mail.
                 </p>
               </div>
-              
+
               <div className="space-y-4 pb-6 border-b">
                 <div>
                   <Label htmlFor="naam">Naam</Label>
@@ -185,44 +188,38 @@ const LevenVragenlijst = () => {
 
             {/* Questions */}
             <div className="space-y-6">
-              <h2 className="text-2xl font-bold">Jouw dagelijkse leven</h2>
-              
+              <h2 className="text-2xl font-bold">10 vragen over jouw dagelijkse leven</h2>
+
               <div className="mb-4 text-sm text-muted-foreground">
                 {Object.keys(answers).length} van {questions.length} vragen beantwoord
               </div>
-              
-              <Accordion 
-                type="single" 
-                collapsible 
+
+              <Accordion
+                type="single"
+                collapsible
                 value={openAccordion}
                 onValueChange={setOpenAccordion}
                 className="space-y-2"
               >
                 {questions.map((question, index) => {
                   const isAnswered = answers[`q${index + 1}`] !== undefined;
-                  
+
                   return (
-                    <AccordionItem 
-                      key={index} 
-                      value={`question-${index}`}
-                      className="border rounded-lg px-4"
-                    >
+                    <AccordionItem key={index} value={`question-${index}`} className="border rounded-lg px-4">
                       <AccordionTrigger className="hover:no-underline">
                         <div className="flex items-center gap-3 text-left">
-                          <div className={`flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center ${
-                            isAnswered 
-                              ? "bg-primary text-primary-foreground" 
-                              : "bg-muted text-muted-foreground"
-                          }`}>
+                          <div
+                            className={`flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center ${
+                              isAnswered ? "bg-primary text-primary-foreground" : "bg-muted text-muted-foreground"
+                            }`}
+                          >
                             {isAnswered ? (
                               <Check className="h-4 w-4" />
                             ) : (
                               <span className="text-sm font-medium">{index + 1}</span>
                             )}
                           </div>
-                          <span className="font-medium">
-                            Vraag {index + 1}
-                          </span>
+                          <span className="font-medium">Vraag {index + 1}</span>
                         </div>
                       </AccordionTrigger>
                       <AccordionContent className="pt-4 pb-2">
@@ -234,14 +231,8 @@ const LevenVragenlijst = () => {
                             className="flex flex-col gap-3"
                           >
                             {options.map((option) => (
-                              <div 
-                                key={option.value} 
-                                className="flex items-center space-x-2"
-                              >
-                                <RadioGroupItem
-                                  value={option.value}
-                                  id={`q${index + 1}-${option.value}`}
-                                />
+                              <div key={option.value} className="flex items-center space-x-2">
+                                <RadioGroupItem value={option.value} id={`q${index + 1}-${option.value}`} />
                                 <Label
                                   htmlFor={`q${index + 1}-${option.value}`}
                                   className="font-normal cursor-pointer text-sm"
