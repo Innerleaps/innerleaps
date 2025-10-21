@@ -31,6 +31,7 @@ const App = () => {
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<LandingPage />} />
+            <Route path="/leven-vragenlijst" element={<LevenVragenlijst />} />
             {ENABLE_ALL_ROUTES && (
               <>
                 <Route path="/home" element={<Index />} />
@@ -41,7 +42,6 @@ const App = () => {
                 <Route path="/contact" element={<Contact />} />
                 <Route path="/berekening" element={<Berekening />} />
                 <Route path="/berekening-demo" element={<BerekeningDemo />} />
-                <Route path="/leven-vragenlijst" element={<LevenVragenlijst />} />
               </>
             )}
             <Route path="*" element={ENABLE_ALL_ROUTES ? <NotFound /> : <LandingPage />} />
