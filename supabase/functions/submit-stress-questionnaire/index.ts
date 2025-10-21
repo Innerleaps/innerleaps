@@ -124,20 +124,22 @@ const handler = async (req: Request): Promise<Response> => {
     // Use server-calculated score (more trustworthy)
     submission.total_score = calculatedScore;
 
-    // Check rate limit
-    const rateLimitCheck = checkRateLimit(submission.email);
-    if (!rateLimitCheck.allowed) {
-      console.warn("Rate limit exceeded for:", submission.email);
-      return new Response(
-        JSON.stringify({ 
-          error: "Too many submissions. Please try again later.",
-          retryAfter: "1 hour"
-        }),
-        {
-          status: 429,
-          headers: { "Content-Type": "application/json", ...corsHeaders },
-        }
-      );
+    // Check rate limit (only if email is provided)
+    if (submission.email && submission.email.trim() !== "") {
+      const rateLimitCheck = checkRateLimit(submission.email);
+      if (!rateLimitCheck.allowed) {
+        console.warn("Rate limit exceeded for:", submission.email);
+        return new Response(
+          JSON.stringify({ 
+            error: "Te veel inzendingen. Probeer het over een uur opnieuw.",
+            retryAfter: "1 hour"
+          }),
+          {
+            status: 429,
+            headers: { "Content-Type": "application/json", ...corsHeaders },
+          }
+        );
+      }
     }
 
     // Initialize Supabase client
@@ -145,28 +147,30 @@ const handler = async (req: Request): Promise<Response> => {
     const supabaseKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!;
     const supabase = createClient(supabaseUrl, supabaseKey);
 
-    // Check for duplicate submission in last 5 minutes
-    const fiveMinutesAgo = new Date(Date.now() - 5 * 60 * 1000).toISOString();
-    const { data: recentSubmissions, error: checkError } = await supabase
-      .from("stress_questionnaire_submissions")
-      .select("id")
-      .eq("email", submission.email)
-      .gte("created_at", fiveMinutesAgo)
-      .limit(1);
+    // Check for duplicate submission in last 5 minutes (only if email is provided)
+    if (submission.email && submission.email.trim() !== "") {
+      const fiveMinutesAgo = new Date(Date.now() - 5 * 60 * 1000).toISOString();
+      const { data: recentSubmissions, error: checkError } = await supabase
+        .from("stress_questionnaire_submissions")
+        .select("id")
+        .eq("email", submission.email)
+        .gte("created_at", fiveMinutesAgo)
+        .limit(1);
 
-    if (checkError) {
-      console.error("Error checking for duplicates:", checkError);
-    } else if (recentSubmissions && recentSubmissions.length > 0) {
-      console.warn("Duplicate submission detected for:", submission.email);
-      return new Response(
-        JSON.stringify({ 
-          error: "You have already submitted this form recently. Please wait a few minutes before submitting again."
-        }),
-        {
-          status: 409,
-          headers: { "Content-Type": "application/json", ...corsHeaders },
-        }
-      );
+      if (checkError) {
+        console.error("Error checking for duplicates:", checkError);
+      } else if (recentSubmissions && recentSubmissions.length > 0) {
+        console.warn("Duplicate submission detected for:", submission.email);
+        return new Response(
+          JSON.stringify({ 
+            error: "Je hebt dit formulier recent al ingevuld. Wacht een paar minuten voordat je opnieuw indient."
+          }),
+          {
+            status: 409,
+            headers: { "Content-Type": "application/json", ...corsHeaders },
+          }
+        );
+      }
     }
 
     // Save to database
