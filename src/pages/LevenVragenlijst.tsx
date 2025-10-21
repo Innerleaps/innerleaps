@@ -83,7 +83,6 @@ const LevenVragenlijst = () => {
       toast({
         title: "Niet alle vragen beantwoord",
         description: "Beantwoord alle vragen voordat je het formulier verstuurt.",
-        variant: "destructive",
       });
       return;
     }
@@ -128,7 +127,6 @@ const LevenVragenlijst = () => {
       toast({
         title: "Er ging iets mis",
         description: "Probeer het later opnieuw.",
-        variant: "destructive",
       });
     } finally {
       setIsSubmitting(false);
@@ -235,7 +233,7 @@ const LevenVragenlijst = () => {
                                 <RadioGroupItem value={option.value} id={`q${index + 1}-${option.value}`} />
                                 <Label
                                   htmlFor={`q${index + 1}-${option.value}`}
-                                  className="font-normal cursor-pointer text-sm"
+                                  className="font-normal cursor-pointer text-base"
                                 >
                                   {option.label}
                                 </Label>
