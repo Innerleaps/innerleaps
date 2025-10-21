@@ -62,10 +62,10 @@ export type Database = {
       stress_questionnaire_submissions: {
         Row: {
           created_at: string
-          email: string
+          email: string | null
           id: string
-          naam: string
-          organisatie: string
+          naam: string | null
+          organisatie: string | null
           q1: number
           q10: number
           q2: number
@@ -80,10 +80,10 @@ export type Database = {
         }
         Insert: {
           created_at?: string
-          email: string
+          email?: string | null
           id?: string
-          naam: string
-          organisatie: string
+          naam?: string | null
+          organisatie?: string | null
           q1: number
           q10: number
           q2: number
@@ -98,10 +98,10 @@ export type Database = {
         }
         Update: {
           created_at?: string
-          email?: string
+          email?: string | null
           id?: string
-          naam?: string
-          organisatie?: string
+          naam?: string | null
+          organisatie?: string | null
           q1?: number
           q10?: number
           q2?: number
