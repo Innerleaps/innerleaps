@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -21,13 +22,15 @@ const questions = [
 
 const options = [
   { value: "0", label: "Nooit" },
-  { value: "1", label: "Soms" },
-  { value: "2", label: "Regelmatig" },
-  { value: "3", label: "Vaak" },
+  { value: "1", label: "Bijna nooit" },
+  { value: "2", label: "Soms" },
+  { value: "3", label: "Vrij vaak" },
+  { value: "4", label: "Heel vaak" },
 ];
 
 const LevenVragenlijst = () => {
   const { toast } = useToast();
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     naam: "",
     email: "",
@@ -35,6 +38,25 @@ const LevenVragenlijst = () => {
   });
   const [answers, setAnswers] = useState<Record<string, number>>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
+
+  // Calculate score with reversed scoring for questions 4, 5, 7, 8
+  const calculateTotalScore = () => {
+    const reversedQuestions = [4, 5, 7, 8];
+    let total = 0;
+    
+    for (let i = 1; i <= 10; i++) {
+      const value = answers[`q${i}`];
+      if (reversedQuestions.includes(i)) {
+        // Reversed scoring: 0→4, 1→3, 2→2, 3→1, 4→0
+        total += (4 - value);
+      } else {
+        // Normal scoring
+        total += value;
+      }
+    }
+    
+    return total;
+  };
 
   const handleAnswerChange = (questionIndex: number, value: string) => {
     setAnswers((prev) => ({
@@ -59,7 +81,7 @@ const LevenVragenlijst = () => {
     setIsSubmitting(true);
 
     try {
-      const totalScore = Object.values(answers).reduce((sum, val) => sum + val, 0);
+      const totalScore = calculateTotalScore();
 
       const submission = {
         naam: formData.naam,
@@ -84,14 +106,13 @@ const LevenVragenlijst = () => {
 
       if (error) throw error;
 
-      toast({
-        title: "Succesvol verstuurd!",
-        description: "Bedankt voor het invullen. Je ontvangt een email met je resultaten.",
+      // Navigate to results page with score
+      navigate('/leven-vragenlijst/resultaat', { 
+        state: { 
+          score: totalScore,
+          emailSent: !!(formData.email && formData.naam)
+        } 
       });
-
-      // Reset form
-      setFormData({ naam: "", email: "", organisatie: "" });
-      setAnswers({});
     } catch (error: any) {
       console.error("Submission error:", error);
       toast({

@@ -14,6 +14,7 @@ import Contact from "./pages/Contact";
 import Berekening from "./pages/Berekening";
 import BerekeningDemo from "./pages/BerekeningDemo";
 import LevenVragenlijst from "./pages/LevenVragenlijst";
+import LevenVragenlijstResultaat from "./pages/LevenVragenlijstResultaat";
 import NotFound from "./pages/NotFound";
 import UnderConstruction from "./pages/UnderConstruction";
 
@@ -32,6 +33,7 @@ const App = () => {
           <Routes>
             <Route path="/" element={<LandingPage />} />
             <Route path="/leven-vragenlijst" element={<LevenVragenlijst />} />
+            <Route path="/leven-vragenlijst/resultaat" element={<LevenVragenlijstResultaat />} />
             {ENABLE_ALL_ROUTES && (
               <>
                 <Route path="/home" element={<Index />} />

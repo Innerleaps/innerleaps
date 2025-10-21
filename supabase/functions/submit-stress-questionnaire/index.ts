@@ -13,17 +13,17 @@ const StressQuestionnaireSchema = z.object({
   naam: z.string().trim().min(1, "Name is required").max(100, "Name must be less than 100 characters"),
   email: z.string().trim().email("Invalid email address").max(255, "Email must be less than 255 characters"),
   organisatie: z.string().trim().min(1, "Organization is required").max(200, "Organization must be less than 200 characters"),
-  q1: z.number().int().min(0).max(3, "Question 1 must be between 0 and 3"),
-  q2: z.number().int().min(0).max(3, "Question 2 must be between 0 and 3"),
-  q3: z.number().int().min(0).max(3, "Question 3 must be between 0 and 3"),
-  q4: z.number().int().min(0).max(3, "Question 4 must be between 0 and 3"),
-  q5: z.number().int().min(0).max(3, "Question 5 must be between 0 and 3"),
-  q6: z.number().int().min(0).max(3, "Question 6 must be between 0 and 3"),
-  q7: z.number().int().min(0).max(3, "Question 7 must be between 0 and 3"),
-  q8: z.number().int().min(0).max(3, "Question 8 must be between 0 and 3"),
-  q9: z.number().int().min(0).max(3, "Question 9 must be between 0 and 3"),
-  q10: z.number().int().min(0).max(3, "Question 10 must be between 0 and 3"),
-  total_score: z.number().int().min(0).max(30, "Total score must be between 0 and 30"),
+  q1: z.number().int().min(0).max(4, "Question 1 must be between 0 and 4"),
+  q2: z.number().int().min(0).max(4, "Question 2 must be between 0 and 4"),
+  q3: z.number().int().min(0).max(4, "Question 3 must be between 0 and 4"),
+  q4: z.number().int().min(0).max(4, "Question 4 must be between 0 and 4"),
+  q5: z.number().int().min(0).max(4, "Question 5 must be between 0 and 4"),
+  q6: z.number().int().min(0).max(4, "Question 6 must be between 0 and 4"),
+  q7: z.number().int().min(0).max(4, "Question 7 must be between 0 and 4"),
+  q8: z.number().int().min(0).max(4, "Question 8 must be between 0 and 4"),
+  q9: z.number().int().min(0).max(4, "Question 9 must be between 0 and 4"),
+  q10: z.number().int().min(0).max(4, "Question 10 must be between 0 and 4"),
+  total_score: z.number().int().min(0).max(40, "Total score must be between 0 and 40"),
 });
 
 type StressQuestionnaireSubmission = z.infer<typeof StressQuestionnaireSchema>;
@@ -104,6 +104,26 @@ const handler = async (req: Request): Promise<Response> => {
 
     const submission = validationResult.data;
 
+    // Server-side score verification with reversed scoring for questions 4, 5, 7, 8
+    const reversedQuestions = [4, 5, 7, 8];
+    let calculatedScore = 0;
+    
+    for (let i = 1; i <= 10; i++) {
+      const value = submission[`q${i}` as keyof typeof submission] as number;
+      if (reversedQuestions.includes(i)) {
+        // Reversed scoring: 0→4, 1→3, 2→2, 3→1, 4→0
+        calculatedScore += (4 - value);
+      } else {
+        // Normal scoring
+        calculatedScore += value;
+      }
+    }
+
+    console.log(`Client score: ${submission.total_score}, Server calculated score: ${calculatedScore}`);
+    
+    // Use server-calculated score (more trustworthy)
+    submission.total_score = calculatedScore;
+
     // Check rate limit
     const rateLimitCheck = checkRateLimit(submission.email);
     if (!rateLimitCheck.allowed) {
@@ -163,45 +183,30 @@ const handler = async (req: Request): Promise<Response> => {
 
     // Send email with Resend
     const resend = new Resend(Deno.env.get("RESEND_API_KEY"));
-    
-    const getStressLevel = (score: number): string => {
-      if (score <= 13) return "Laag stressniveau";
-      if (score <= 18) return "Gemiddeld stressniveau";
-      return "Hoog stressniveau";
-    };
 
     // Escape user data for HTML
     const escapedNaam = escapeHtml(submission.naam);
-    const escapedOrganisatie = escapeHtml(submission.organisatie);
 
     const emailResponse = await resend.emails.send({
-      from: "MBSR Nederland <onboarding@resend.dev>",
+      from: "InnerLeaps <onboarding@resend.dev>",
       to: [submission.email],
-      subject: "Jouw stressvragenlijst resultaat",
+      subject: "Jouw vragenlijst resultaat",
       html: `
-        <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
-          <h1 style="color: #333;">Bedankt voor het invullen van de stressvragenlijst</h1>
-          <p>Beste ${escapedNaam},</p>
-          <p>Bedankt voor het invullen van onze stressvragenlijst. Hieronder vind je jouw resultaten:</p>
+        <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;">
+          <h1 style="color: #333;">Bedankt voor het invullen</h1>
           
-          <div style="background-color: #f5f5f5; padding: 20px; border-radius: 8px; margin: 20px 0;">
-            <h2 style="color: #333; margin-top: 0;">Jouw Score: ${submission.total_score}/30</h2>
-            <p style="font-size: 18px; font-weight: bold; color: ${submission.total_score > 18 ? '#d32f2f' : submission.total_score > 13 ? '#f57c00' : '#388e3c'};">
-              ${getStressLevel(submission.total_score)}
+          <p>Beste ${escapedNaam},</p>
+          
+          <p>Je score is <strong>${submission.total_score} van de 40 punten</strong>.</p>
+          
+          <p>In de workshop gaan we in op wat deze score betekent.</p>
+          
+          <div style="margin-top: 30px; padding-top: 20px; border-top: 1px solid #ddd;">
+            <p style="color: #666;">
+              Met vriendelijke groet,<br>
+              <strong>InnerLeaps</strong>
             </p>
           </div>
-
-          <h3>Wat betekent dit?</h3>
-          <ul>
-            <li><strong>0-13 punten:</strong> Laag stressniveau - Je ervaart weinig stress</li>
-            <li><strong>14-18 punten:</strong> Gemiddeld stressniveau - Er is ruimte voor verbeterin</li>
-            <li><strong>19-30 punten:</strong> Hoog stressniveau - Overwegingen voor stressreductie zijn belangrijk</li>
-          </ul>
-
-          <p>Wil je meer weten over hoe MBSR je kan helpen? Neem gerust contact met ons op.</p>
-          
-          <p>Met vriendelijke groet,<br>
-          Het MBSR Nederland Team</p>
         </div>
       `,
     });
