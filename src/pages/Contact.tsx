@@ -40,8 +40,14 @@ const Contact = () => {
                   </div>
                   
                   <div className="text-center">
-                    <Button variant="secondary" onClick={() => window.open('https://calendar.google.com/appointments/schedules/AcZssZ3VM8RLgeZm9Ej29kbhx4LugakTLXw_vF9BePhup0zm-DtWT5kk6nbHQw-chzBGEQQInd7l3Fs4', '_blank')}>
-                      Plan een gesprek met Bas
+                    <Button asChild variant="secondary">
+                      <a
+                        href="https://calendar.google.com/appointments/schedules/AcZssZ3VM8RLgeZm9Ej29kbhx4LugakTLXw_vF9BePhup0zm-DtWT5kk6nbHQw-chzBGEQQInd7l3Fs4"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Plan een gesprek met Bas
+                      </a>
                     </Button>
                   </div>
                 </div>

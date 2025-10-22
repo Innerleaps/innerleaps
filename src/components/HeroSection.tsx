@@ -39,17 +39,18 @@ const HeroSection = () => {
                   Ontdek je besparing
                 </Button>
                 <Button
+                  asChild
                   variant="secondary-on-blue"
                   size="lg"
-                  onClick={() =>
-                    window.open(
-                      "https://calendar.google.com/appointments/schedules/AcZssZ3VM8RLgeZm9Ej29kbhx4LugakTLXw_vF9BePhup0zm-DtWT5kk6nbHQw-chzBGEQQInd7l3Fs4",
-                      "_blank",
-                    )
-                  }
                   className="w-full sm:w-auto font-semibold py-4 px-6 lg:px-8 rounded-lg text-lg lg:text-xl"
                 >
-                  Stel je vragen aan Bas
+                  <a
+                    href="https://calendar.google.com/appointments/schedules/AcZssZ3VM8RLgeZm9Ej29kbhx4LugakTLXw_vF9BePhup0zm-DtWT5kk6nbHQw-chzBGEQQInd7l3Fs4"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Stel je vragen aan Bas
+                  </a>
                 </Button>
               </div>
 

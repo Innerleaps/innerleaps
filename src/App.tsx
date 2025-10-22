@@ -20,9 +20,6 @@ import UnderConstruction from "./pages/UnderConstruction";
 
 const queryClient = new QueryClient();
 
-// Enable all routes in development (Lovable editor), only landing page in production
-const ENABLE_ALL_ROUTES = !import.meta.env.PROD;
-
 const App = () => {
   return (
     <QueryClientProvider client={queryClient}>
@@ -34,19 +31,19 @@ const App = () => {
             <Route path="/" element={<LandingPage />} />
             <Route path="/leven-vragenlijst" element={<LevenVragenlijst />} />
             <Route path="/leven-vragenlijst/resultaat" element={<LevenVragenlijstResultaat />} />
-            {ENABLE_ALL_ROUTES && (
+            <Route path="/contact" element={<Contact />} />
+            {!import.meta.env.PROD && (
               <>
                 <Route path="/home" element={<Index />} />
                 <Route path="/wetenschap" element={<Wetenschap />} />
                 <Route path="/programma" element={<Programma />} />
                 <Route path="/over-ons" element={<OverOns />} />
                 <Route path="/voor-wie" element={<VoorWie />} />
-                <Route path="/contact" element={<Contact />} />
                 <Route path="/berekening" element={<Berekening />} />
                 <Route path="/berekening-demo" element={<BerekeningDemo />} />
               </>
             )}
-            <Route path="*" element={ENABLE_ALL_ROUTES ? <NotFound /> : <LandingPage />} />
+            <Route path="*" element={!import.meta.env.PROD ? <NotFound /> : <LandingPage />} />
           </Routes>
         </BrowserRouter>
       </TooltipProvider>
