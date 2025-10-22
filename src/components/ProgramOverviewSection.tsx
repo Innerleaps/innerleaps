@@ -5,7 +5,8 @@ const ProgramOverviewSection = () => {
     {
       icon: Clock,
       title: "Wekelijkse workshops",
-      description: "6 workshops van 60 of 90 minuten door een van onze geaccrediteerde trainers, op locatie of online.",
+      description:
+        "Wekelijks workshops van 60 of 90 minuten door een van onze geaccrediteerde trainers, op locatie of online.",
     },
     {
       icon: Users,
