@@ -1,40 +1,35 @@
-import { Check } from "lucide-react";
-import vmbLogo from "@/assets/Geaccrediteerde_vitaliteitstrainers_bij_Innerleaps.png";
-import uMassLogo from "@/assets/Vitaliteitsprogramma_ontwikkeld_door_university_of_massachusetts.png";
-import oxfordLogo from "@/assets/Vitaliteitsprogramma_ontwikkeld_door_oxford.jpg";
-import vgzLogo from "@/assets/Vitaliteitprogramma_herkent_door_vgz.png";
-import achmeaLogo from "@/assets/Vitaliteitprogramma_herkent_door_zilveren_kruis_achmea.svg";
+import { Check } from 'lucide-react';
+import vmbLogo from '@/assets/Geaccrediteerde_vitaliteitstrainers_bij_Innerleaps.png';
+import uMassLogo from '@/assets/Vitaliteitsprogramma_ontwikkeld_door_university_of_massachusetts.png';
+import oxfordLogo from '@/assets/Vitaliteitsprogramma_ontwikkeld_door_oxford.jpg';
+import vgzLogo from '@/assets/Vitaliteitprogramma_herkent_door_vgz.png';
+import achmeaLogo from '@/assets/Vitaliteitprogramma_herkent_door_zilveren_kruis_achmea.svg';
 
 const TrustSection = () => {
   const trustItems = [
     {
-      title: "Herkend door het Nederlandse zorgsysteem",
-      description:
-        "De uitgebreide variant van ons programma wordt vergoed vanuit basisverzekering door Nederlandse zorgverzekeraars.",
+      title: 'Herkend door het Nederlandse zorgsysteem',
+      description: 'De uitgebreide variant van ons programma wordt vergoed vanuit basisverzekering door Nederlandse zorgverzekeraars.',
       logos: [
-        { src: achmeaLogo, alt: "Vitaliteitsprogramma herkend door Zilveren Kruis Achmea", className: "h-12" },
-        { src: vgzLogo, alt: "Vitaliteitsprogramma herkend door VGZ", className: "h-12" },
-      ],
+        { src: achmeaLogo, alt: 'Vitaliteitsprogramma herkend door Zilveren Kruis Achmea', className: 'h-12' },
+        { src: vgzLogo, alt: 'Vitaliteitsprogramma herkend door VGZ', className: 'h-12' }
+      ]
     },
     {
-      title: "40 jaar wetenschappelijk onderzoek",
-      description:
-        "Gebaseerd op de wetenschappelijke MBSR-methode, een van de best onderzochte interventies wereldwijd.",
+      title: '40 jaar wetenschappelijk onderzoek',
+      description: 'Gebaseerd op de wetenschappelijke MBSR-methode, een van de best onderzochte interventies wereldwijd.',
       logos: [
-        {
-          src: oxfordLogo,
-          alt: "Vitaliteitsprogramma ontwikkeld door Oxford University",
-          className: "h-12 rounded border border-border",
-        },
-        { src: uMassLogo, alt: "Vitaliteitsprogramma ontwikkeld door University of Massachusetts", className: "h-12" },
-      ],
+        { src: oxfordLogo, alt: 'Vitaliteitsprogramma ontwikkeld door Oxford University', className: 'h-12 rounded border border-border' },
+        { src: uMassLogo, alt: 'Vitaliteitsprogramma ontwikkeld door University of Massachusetts', className: 'h-12' }
+      ]
     },
     {
-      title: "VMBN gecertificeerd",
-      description:
-        "Al onze trainers zijn VMBN categorie 1 gecertificeerd, de hoogste erkenning binnen de VMBN. Dit betekent dat zij voldoen aan de strengste kwaliteitseisen op het gebied van opleiding, ervaring en professionaliteit.",
-      logos: [{ src: vmbLogo, alt: "Geaccrediteerde vitaliteitstrainers bij InnerLeaps", className: "h-16" }],
-    },
+      title: 'VMBN gecertificeerd',
+      description: Al onze trainers zijn VMBN categorie 1 gecertificeerd, de hoogste erkenning binnen VMBN. Dit betekent dat zij voldoen aan de strengste kwaliteitseisen op het gebied van opleiding, ervaring en professionaliteit.',
+      logos: [
+        { src: vmbLogo, alt: 'Geaccrediteerde vitaliteitstrainers bij InnerLeaps', className: 'h-16' }
+      ]
+    }
   ];
 
   return (
@@ -52,8 +47,12 @@ const TrustSection = () => {
                   <Check className="h-6 w-6 text-accent stroke-[3]" />
                 </div>
                 <div className="flex-1">
-                  <h3 className="text-xl font-semibold text-brand-gray-dark mb-3">{item.title}</h3>
-                  <p className="text-brand-gray-medium leading-relaxed mb-6">{item.description}</p>
+                  <h3 className="text-xl font-semibold text-brand-gray-dark mb-3">
+                    {item.title}
+                  </h3>
+                  <p className="text-brand-gray-medium leading-relaxed mb-6">
+                    {item.description}
+                  </p>
                   <div className="flex flex-row gap-4 items-center flex-wrap">
                     {item.logos.map((logo, logoIndex) => (
                       <img
