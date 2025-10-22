@@ -56,15 +56,15 @@ const MethodologySection = () => {
             <div className="space-y-3 pt-2">
               <div className="flex items-center gap-3">
                 <span className="text-3xl">📈</span>
-                <span className="text-xl font-semibold text-brand-orange">6% hogere productiviteit</span>
+                <span className="text-xl font-semibold text-brand-purple">6% hogere productiviteit</span>
               </div>
               <div className="flex items-center gap-3">
                 <span className="text-3xl">📉</span>
-                <span className="text-xl font-semibold text-brand-orange">15-21% minder verzuim</span>
+                <span className="text-xl font-semibold text-brand-purple">15-21% minder verzuim</span>
               </div>
               <div className="flex items-center gap-3">
                 <span className="text-3xl">🛡️</span>
-                <span className="text-xl font-semibold text-brand-orange">70% lager uitvalrisico</span>
+                <span className="text-xl font-semibold text-brand-purple">70% lager uitvalrisico</span>
               </div>
             </div>
           </div>
