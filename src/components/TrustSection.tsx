@@ -11,31 +11,31 @@ const TrustSection = () => {
       title: 'Herkend door het Nederlandse zorgsysteem',
       description: 'De uitgebreide variant van ons programma wordt vergoed vanuit basisverzekering door Nederlandse zorgverzekeraars.',
       logos: [
-        { src: achmeaLogo, alt: 'Vitaliteitsprogramma herkend door Zilveren Kruis Achmea', className: 'h-12' },
-        { src: vgzLogo, alt: 'Vitaliteitsprogramma herkend door VGZ', className: 'h-12' }
+        { src: achmeaLogo, alt: 'Vitaliteitsprogramma herkend door Zilveren Kruis Achmea', className: 'h-24' },
+        { src: vgzLogo, alt: 'Vitaliteitsprogramma herkend door VGZ', className: 'h-24' }
       ]
     },
     {
       title: '40 jaar wetenschappelijk onderzoek',
       description: 'Gebaseerd op de wetenschappelijke MBSR-methode, een van de best onderzochte interventies wereldwijd.',
       logos: [
-        { src: oxfordLogo, alt: 'Vitaliteitsprogramma ontwikkeld door Oxford University', className: 'h-12 rounded border border-border' },
-        { src: uMassLogo, alt: 'Vitaliteitsprogramma ontwikkeld door University of Massachusetts', className: 'h-12' }
+        { src: oxfordLogo, alt: 'Vitaliteitsprogramma ontwikkeld door Oxford University', className: 'h-24 rounded border border-border' },
+        { src: uMassLogo, alt: 'Vitaliteitsprogramma ontwikkeld door University of Massachusetts', className: 'h-24' }
       ]
     },
     {
       title: 'VMBN gecertificeerd',
-      description: Al onze trainers zijn VMBN categorie 1 gecertificeerd, de hoogste erkenning binnen VMBN. Dit betekent dat zij voldoen aan de strengste kwaliteitseisen op het gebied van opleiding, ervaring en professionaliteit.',
+      description: 'Al onze trainers zijn VMBN categorie 1 gecertificeerd',
       logos: [
-        { src: vmbLogo, alt: 'Geaccrediteerde vitaliteitstrainers bij InnerLeaps', className: 'h-16' }
+        { src: vmbLogo, alt: 'Geaccrediteerde vitaliteitstrainers bij InnerLeaps', className: 'h-32' }
       ]
     }
   ];
 
   return (
-    <section className="bg-brand-gray-light section-padding">
+    <section className="bg-brand-off-white section-padding">
       <div className="container-custom">
-        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-brand-gray-dark text-center mb-12">
+        <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-purple text-center leading-tight mb-12">
           Waarom organisaties voor <span className="text-brand-orange">ons kiezen</span>
         </h2>
 
@@ -44,13 +44,13 @@ const TrustSection = () => {
             <div key={index} className="bg-white p-8 rounded-xl shadow-sm">
               <div className="flex items-start space-x-3 mb-4">
                 <div className="flex-shrink-0 mt-1">
-                  <Check className="h-6 w-6 text-accent stroke-[3]" />
+                  <Check className="h-6 w-6 text-brand-orange stroke-[3]" />
                 </div>
                 <div className="flex-1">
-                  <h3 className="text-xl font-semibold text-brand-gray-dark mb-3">
+                  <h3 className="text-2xl font-bold text-brand-purple mb-3">
                     {item.title}
                   </h3>
-                  <p className="text-brand-gray-medium leading-relaxed mb-6">
+                  <p className="text-xl text-brand-gray-medium leading-relaxed mb-6">
                     {item.description}
                   </p>
                   <div className="flex flex-row gap-4 items-center flex-wrap">
