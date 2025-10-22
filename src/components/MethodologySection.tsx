@@ -9,14 +9,14 @@ const MethodologySection = () => {
         {/* Blok 1 - Het Probleem - Tekst boven, Visual onder */}
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           <div className="space-y-4">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-brand-purple leading-tight">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-purple leading-tight">
               De <span className="text-brand-orange">automatische piloot</span> die jullie geld kost
             </h2>
             <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
               Tot 90% van ons gedrag is onbewust. Ons oerbrein maakt automatische keuzes om ons te beschermen, terwijl er vaak geen echte bedreiging is. Wij leren mensen in stresssituaties bewust te handelen. Hierdoor ontstaan gezondere keuzes en effectievere samenwerking, ook zonder stress.
             </p>
           </div>
-          <div className="lg:order-last">
+          <div className="order-last">
             <img 
               src={autopilotImage} 
               alt="Grip op de automatische piloot" 
@@ -27,27 +27,27 @@ const MethodologySection = () => {
 
         {/* Blok 2 - De Methode - Tekst boven, Visual onder */}
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-          <div className="lg:order-first">
-            <img 
-              src={neocortexImage} 
-              alt="Meer activiteit in neo cortex door aandacht training" 
-              className="w-full h-auto rounded-lg"
-            />
-          </div>
-          <div className="space-y-4">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-brand-purple leading-tight">
+          <div className="space-y-4 lg:order-last">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-purple leading-tight">
               Het vitaliteitsprogramma waar we <span className="text-brand-orange">aandacht trainen</span>
             </h2>
             <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
               Deelnemers trainen mensen hun "aandachtsspier". Dit verhoogt de activiteit in de neocortex én laat deze efficiënter werken. Dit gebied is het "controlecentrum" dat stress vroeg signaleert, focus verbetert en impulsieve reacties voorkomt.
             </p>
           </div>
+          <div>
+            <img 
+              src={neocortexImage} 
+              alt="Meer activiteit in neo cortex door aandacht training" 
+              className="w-full h-auto rounded-lg"
+            />
+          </div>
         </div>
 
         {/* Blok 3 - Het Resultaat - Tekst boven, Visual onder */}
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           <div className="space-y-6">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-brand-purple leading-tight">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-purple leading-tight">
               <span className="text-brand-orange">Prestatie</span> verbeterd en het <span className="text-brand-orange">uitvalrisico</span> daalt met 70%
             </h2>
             <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
@@ -68,7 +68,7 @@ const MethodologySection = () => {
               </div>
             </div>
           </div>
-          <div className="lg:order-last">
+          <div className="order-last">
             <img 
               src={performanceImage} 
               alt="Burnout voorkomen en beter presteren door aandacht training" 
