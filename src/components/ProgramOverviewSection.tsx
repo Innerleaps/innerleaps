@@ -1,26 +1,27 @@
-import { Clock, Users, Target, Sliders } from 'lucide-react';
+import { Clock, Users, Target, Sliders } from "lucide-react";
 
 const ProgramOverviewSection = () => {
   const features = [
     {
       icon: Clock,
-      title: 'Wekelijkse workshops',
-      description: '6 workshops van 60 of 90 minuten door een van onze geaccrediteerde trainers, op locatie of online.',
+      title: "Wekelijkse workshops",
+      description: "6 workshops van 60 of 90 minuten door een van onze geaccrediteerde trainers, op locatie of online.",
     },
     {
       icon: Users,
-      title: 'Veilige setting',
-      description: 'Groepen van maximaal 15 deelnemers. Leren door te reageren op concrete vragen in plaats van persoonlijke verhalen delen.',
+      title: "Veilige setting",
+      description:
+        "Groepen van maximaal 15 deelnemers. Leren door te reageren op concrete vragen in plaats van persoonlijke verhalen delen.",
     },
     {
       icon: Target,
-      title: 'Dagelijks oefenen',
-      description: 'Deelnemers oefenen dagelijks zo\'n 15 minuten om echte gedragsverandering te realiseren.',
+      title: "Dagelijks oefenen",
+      description: "Deelnemers oefenen dagelijks zo'n 15 minuten om echte gedragsverandering te realiseren.",
     },
     {
       icon: Sliders,
-      title: 'Aanpasbaar programma',
-      description: 'Systematische opbouw automatische patronen herkennen naar bewust handelen. Maatwerk mogelijk op thema\'s zoals pauzeren, perfectionisme of communicatie.',
+      title: "Aanpasbaar programma",
+      description: "Systematische opbouw van automatische patronen herkennen naar bewust handelen.",
     },
   ];
 
@@ -29,7 +30,8 @@ const ProgramOverviewSection = () => {
       <div className="container-custom space-y-12">
         {/* Title */}
         <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-center text-brand-purple">
-          Wetenschappelijk <span className="text-brand-orange">programma</span> voor echte <span className="text-brand-orange">gedragsverandering</span>
+          Wetenschappelijk <span className="text-brand-orange">programma</span> voor echte{" "}
+          <span className="text-brand-orange">gedragsverandering</span>
         </h2>
 
         {/* Intro tekst */}
@@ -48,12 +50,8 @@ const ProgramOverviewSection = () => {
                 <div className="w-14 h-14 bg-brand-orange/10 rounded-lg flex items-center justify-center">
                   <Icon className="w-7 h-7 text-brand-orange" />
                 </div>
-                <h3 className="text-2xl font-bold text-brand-purple">
-                  {feature.title}
-                </h3>
-                <p className="text-xl text-brand-gray-medium leading-relaxed">
-                  {feature.description}
-                </p>
+                <h3 className="text-2xl font-bold text-brand-purple">{feature.title}</h3>
+                <p className="text-xl text-brand-gray-medium leading-relaxed">{feature.description}</p>
               </div>
             );
           })}
