@@ -17,7 +17,7 @@
     --popover-foreground: 15 23 42;
 
     --primary: 16 89 60;
-    --primary-foreground: 30 33 96;
+    --primary-foreground: 255 255 255;
 
     --secondary: 248 250 252;
     --secondary-foreground: 30 58 138;
@@ -25,8 +25,8 @@
     --muted: 248 250 252;
     --muted-foreground: 100 116 139;
 
-    --accent: 5 150 105;
-    --accent-foreground: 248 250 252;
+    --accent: 16 89 60;
+    --accent-foreground: 255 255 255;
 
     --destructive: 239 68 68;
     --destructive-foreground: 248 250 252;
@@ -37,16 +37,15 @@
 
     --radius: 0.75rem;
 
-    /* InnerLeaps brand colors */
+    /* InnerLeaps brand colors - Correct HSL values */
     --brand-orange: 16 89 60;
-    --brand-orange-light: 30 33 96;
-    --brand-green: 136 84 58;
-    --brand-green-light: 142 87 61;
-    --brand-blue: 259 51 36;
-    --brand-blue-dark: 230 40 25;
-    --brand-gray-dark: 15 23 42;
-    --brand-gray-medium: 100 116 139;
-    --brand-gray-light: 248 250 252;
+    --brand-off-white: 30 33 96;
+    --brand-blue: 249 51 36;
+    --brand-blue-dark: 259 52 19;
+    --brand-purple: 259 68 16;
+    --brand-gray-dark: 214 28 28;
+    --brand-gray-medium: 215 16 47;
+    --brand-gray-light: 210 40 96;
   }
 
   .dark {
@@ -121,25 +120,26 @@
 
   /* Brand color utilities */
   .bg-brand-orange { background-color: hsl(var(--brand-orange)); }
-  .bg-brand-orange-light { background-color: hsl(var(--brand-orange-light)); }
-  .bg-brand-green { background-color: hsl(var(--brand-green)); }
-  .bg-brand-green-light { background-color: hsl(var(--brand-green-light)); }
+  .bg-brand-off-white { background-color: hsl(var(--brand-off-white)); }
   .bg-brand-blue { background-color: hsl(var(--brand-blue)); }
   .bg-brand-blue-dark { background-color: hsl(var(--brand-blue-dark)); }
+  .bg-brand-purple { background-color: hsl(var(--brand-purple)); }
   .bg-brand-gray-dark { background-color: hsl(var(--brand-gray-dark)); }
   .bg-brand-gray-medium { background-color: hsl(var(--brand-gray-medium)); }
   .bg-brand-gray-light { background-color: hsl(var(--brand-gray-light)); }
 
   .text-brand-orange { color: hsl(var(--brand-orange)); }
-  .text-brand-orange-light { color: hsl(var(--brand-orange-light)); }
+  .text-brand-off-white { color: hsl(var(--brand-off-white)); }
   .text-brand-blue { color: hsl(var(--brand-blue)); }
   .text-brand-blue-dark { color: hsl(var(--brand-blue-dark)); }
+  .text-brand-purple { color: hsl(var(--brand-purple)); }
   .text-brand-gray-dark { color: hsl(var(--brand-gray-dark)); }
   .text-brand-gray-medium { color: hsl(var(--brand-gray-medium)); }
   .text-brand-gray-light { color: hsl(var(--brand-gray-light)); }
 
   .border-brand-orange { border-color: hsl(var(--brand-orange)); }
   .border-brand-blue { border-color: hsl(var(--brand-blue)); }
+  .border-brand-purple { border-color: hsl(var(--brand-purple)); }
   
   .hover\:bg-brand-orange:hover { background-color: hsl(var(--brand-orange)); }
   .hover\:bg-brand-blue-dark:hover { background-color: hsl(var(--brand-blue-dark)); }
@@ -147,7 +147,7 @@
 
 @layer components {
   .btn-primary {
-    @apply bg-brand-orange hover:bg-brand-orange text-brand-orange-light font-semibold py-3 px-6 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5;
+    @apply bg-brand-orange hover:bg-brand-orange text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5;
   }
   
   

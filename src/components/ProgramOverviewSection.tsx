@@ -27,7 +27,7 @@ const ProgramOverviewSection = () => {
   ];
 
   return (
-    <section className="section-padding bg-gray-50">
+    <section className="section-padding bg-white">
       <div className="container-custom space-y-12">
         {/* Title */}
         <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-center text-brand-purple">

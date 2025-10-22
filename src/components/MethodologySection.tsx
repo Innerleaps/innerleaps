@@ -4,7 +4,7 @@ import performanceImage from "@/assets/burnout_voorkomen_en_beter_presteren_door
 
 const MethodologySection = () => {
   return (
-    <section className="section-padding bg-white">
+    <section className="section-padding bg-brand-off-white">
       <div className="container-custom space-y-24 md:space-y-32 lg:space-y-40">
         {/* Blok 1 - Het Probleem - Tekst boven, Visual onder */}
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">

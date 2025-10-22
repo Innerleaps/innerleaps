@@ -50,6 +50,34 @@ npm run dev
 - Click on "New codespace" to launch a new Codespace environment.
 - Edit files directly within the Codespace and commit and push your changes once you're done.
 
+## 🎨 Styling & Design
+
+Dit project volgt strikte styling guidelines voor consistentie. **Voordat je componenten maakt of wijzigt:**
+
+📖 **Lees [STYLING_GUIDELINES.md](./STYLING_GUIDELINES.md)** - Complete typografie, kleuren, spacing en component styling standaarden
+
+### Brand Kleuren
+
+- **Oranje** `#F47340` - Accenten & CTAs
+- **Donker Paars** `#230C47` - Tekst & titels
+- **Licht Paars** `#352D8C` - Achtergronden & gradients
+- **Off-White** `#F7F5F2` - Default sectie achtergrond
+
+### Typography Quick Reference
+
+- **H2 titels**: `text-4xl md:text-5xl lg:text-6xl font-bold leading-tight`
+- **H3 titels**: `text-2xl font-bold`
+- **Body tekst**: `text-xl md:text-2xl leading-relaxed`
+- **Minimaal**: `text-xl` voor leesbaarheid
+
+### Logo Groottes
+
+- Klein: `h-24` (96px)
+- Medium: `h-32` (128px)
+- Groot: `h-40` (160px)
+
+⚠️ **Let op**: Gebruik GEEN groene kleuren - deze zitten niet in de brand guidelines. Gebruik `text-brand-orange` voor accenten, niet `text-accent`.
+
 ## What technologies are used for this project?
 
 This project is built with:

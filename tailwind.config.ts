@@ -58,19 +58,17 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
-				// InnerLeaps brand colors
-				brand: {
-					orange: '#F47340',
-					'orange-light': '#F7F5F2',
-					green: '#16a085',
-					'green-light': '#48c9b0',
-					blue: '#352D8C',
-					'blue-dark': '#1E0B32',
-					purple: '#230C47',
-					'gray-light': '#f8fafc',
-					'gray-medium': '#64748b',
-					'gray-dark': '#334155',
-				}
+			// InnerLeaps brand colors
+			brand: {
+				orange: '#F47340',
+				'off-white': '#F7F5F2',
+				blue: '#352D8C',
+				'blue-dark': '#1E0B32',
+				purple: '#230C47',
+				'gray-light': '#f8fafc',
+				'gray-medium': '#64748b',
+				'gray-dark': '#334155',
+			}
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
