@@ -21,9 +21,8 @@ const HeroSection = () => {
                 </div>
 
                 <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-snug font-heading">
-                  Het <span className="text-brand-orange">vitaliteitsprogramma</span> voor{" "}
-                  <span className="text-brand-orange">eigenaarschap</span> en{" "}
-                  <span className="text-brand-orange">prestatie</span>
+                  Het <span className="text-brand-orange">vitaliteitsprogramma</span> dat{" "}
+                  <span className="text-brand-orange">prestatie</span> verbeterd{" "}
                 </h1>
                 <p className="text-xl sm:text-2xl md:text-3xl text-blue-100 leading-relaxed">
                   Wetenschappelijk bewezen vitaliteitsprogramma. Medewerkers ontwikkelen eigenaarschap, worden
