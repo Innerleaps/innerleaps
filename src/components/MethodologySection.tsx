@@ -30,9 +30,9 @@ const MethodologySection = () => {
               Het vitaliteitsprogramma waar we <span className="text-brand-orange">aandacht trainen</span>
             </h2>
             <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
-              Deelnemers trainen mensen hun "aandachtsspier". Dit verhoogt de activiteit in de neocortex én laat deze
-              efficiënter werken. Dit gebied is het "controlecentrum" dat stress vroeg signaleert, focus verbetert en
-              impulsieve reacties voorkomt.
+              Met het programma van InnerLeaps trainen mensen hun "aandachtsspier". Hiermee verbeterd de kracht en
+              efficiëntie van de neocortex. Het "controlecentrum" voor rationele keuzes waarmee we focussen, sociale
+              signalen opmerken en strategieën bedenken.
             </p>
           </div>
           <div>
@@ -52,9 +52,9 @@ const MethodologySection = () => {
               <span className="text-brand-orange">uitvalrisico</span> daalt met 70%
             </h2>
             <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
-              Deelnemers leren stress te herkennen, erover te communiceren en ontdekken hoe ze hiervan kunnen
-              herstellen. Zo ontwikkelen ze eigenaarschap, blijven ze productief, betrokken en tevreden en wordt
-              burn-out voorkomen.
+              Omdat deelnemers bewuster worden kunnen ze stress sneller herkennen, erover communiceren en ontdekken hoe
+              ze hiervan kunnen herstellen. Zo ontwikkelen ze eigenaarschap, worden ze productiever en wordt burn-out
+              voorkomen.
             </p>
             <div className="space-y-3 pt-2">
               <div className="flex items-center gap-3">
