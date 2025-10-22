@@ -1,11 +1,11 @@
-import { Clock, Users, Target } from 'lucide-react';
+import { Clock, Users, Target, Sliders } from 'lucide-react';
 
 const ProgramOverviewSection = () => {
   const features = [
     {
       icon: Clock,
       title: 'Wekelijkse workshops',
-      description: 'Wekelijks een workshop van 60 of 90 minuten door een van onze geaccrediteerde trainers, op locatie of online.',
+      description: '6 workshops van 60 of 90 minuten door een van onze geaccrediteerde trainers, op locatie of online.',
     },
     {
       icon: Users,
@@ -15,25 +15,32 @@ const ProgramOverviewSection = () => {
     {
       icon: Target,
       title: 'Dagelijks oefenen',
-      description: 'Deelnemers proberen dagelijks 15 minuten te oefenen voor echte gedragsverandering.',
+      description: 'Deelnemers oefenen dagelijks zo\'n 15 minuten om echte gedragsverandering te realiseren.',
+    },
+    {
+      icon: Sliders,
+      title: 'Aanpasbaar programma',
+      description: 'Systematische opbouw automatische patronen herkennen naar bewust handelen. Maatwerk mogelijk op thema\'s zoals pauzeren, perfectionisme of communicatie.',
     },
   ];
 
   return (
     <section className="section-padding bg-gray-50">
       <div className="container-custom space-y-12">
+        {/* Title */}
+        <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-center text-brand-purple">
+          Wetenschappelijk <span className="text-brand-orange">programma</span> voor echte <span className="text-brand-orange">gedragsverandering</span>
+        </h2>
+
         {/* Intro tekst */}
-        <div className="max-w-4xl mx-auto space-y-6">
-          <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
-            Een wetenschappelijk bewezen traject van 6 weken dat jouw team veerkrachtiger maakt. Het programma bouwt systematisch op: van het herkennen van stress signalen naar bewust handelen in plaats van automatisch reageren. Elke week focust op een ander aspect, van het loskomen van de automatische piloot tot duurzame implementatie in het dagelijks leven.
-          </p>
-          <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
-            Het programma is deels aan te passen naar thema's die bij jouw organisatie spelen: gezond pauzeren, piekeren, perfectionisme, werk-privé balans of communicatie. Vraag naar de mogelijkheden.
+        <div className="max-w-4xl mx-auto">
+          <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed text-center">
+            Ons wetenschappelijk bewezen standaardprogramma duurt 6 weken. Vraag naar de mogelijkheden voor maatwerk.
           </p>
         </div>
 
         {/* Features grid */}
-        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
           {features.map((feature, index) => {
             const Icon = feature.icon;
             return (
