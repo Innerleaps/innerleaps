@@ -46,8 +46,8 @@ const ProgramOverviewSection = () => {
           {features.map((feature, index) => {
             const Icon = feature.icon;
             return (
-              <div key={index} className="bg-white p-8 rounded-xl space-y-4 hover:shadow-lg transition-shadow">
-                <div className="w-14 h-14 bg-brand-orange/10 rounded-lg flex items-center justify-center">
+              <div key={index} className="bg-white p-8 rounded-xl space-y-4">
+                <div className="w-14 h-14 bg-brand-orange/10 rounded-lg flex items-center justify-center mx-auto">
                   <Icon className="w-7 h-7 text-brand-orange" />
                 </div>
                 <h3 className="text-2xl font-bold text-brand-purple">{feature.title}</h3>
