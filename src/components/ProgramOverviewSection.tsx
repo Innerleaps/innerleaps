@@ -4,9 +4,14 @@ const ProgramOverviewSection = () => {
   const features = [
     {
       icon: Clock,
-      title: "Wekelijkse workshops",
+      title: "Workshops",
       description:
         "Wekelijks workshops van 60 of 90 minuten door een van onze geaccrediteerde trainers, op locatie of online.",
+    },
+    {
+      icon: Sliders,
+      title: "Programma",
+      description: "Systematische opbouw van automatische patronen herkennen naar bewust handelen.",
     },
     {
       icon: Users,
@@ -18,11 +23,6 @@ const ProgramOverviewSection = () => {
       icon: Target,
       title: "Dagelijks oefenen",
       description: "Deelnemers oefenen dagelijks zo'n 15 minuten om echte gedragsverandering te realiseren.",
-    },
-    {
-      icon: Sliders,
-      title: "Aanpasbaar programma",
-      description: "Systematische opbouw van automatische patronen herkennen naar bewust handelen.",
     },
   ];
 
