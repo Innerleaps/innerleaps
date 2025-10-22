@@ -13,9 +13,9 @@ const MethodologySection = () => {
               De <span className="text-brand-orange">automatische piloot</span> die geld kost
             </h2>
             <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
-              Tot 90% van ons gedrag is onbewust. Ons oerbrein maakt automatische keuzes om ons te beschermen, terwijl
-              er vaak geen echte bedreiging is. Wij leren mensen in stresssituaties bewust te handelen. Hierdoor
-              ontstaan gezondere keuzes en effectievere samenwerking, ook zonder stress.
+              In 2 miljoen jaar evolutie is ons brein getraind om dreiging te herkennen. Ons stresssysteem maakt echter
+              geen onderscheid tussen een leeuw en moderne dreigingen als reputatieverlies, controleverlies of
+              onzekerheid. Daardoor is tot 90% van ons gedrag onbewust en maken we soms ongezonde of spijtige keuzes.
             </p>
           </div>
           <div className="order-last">
