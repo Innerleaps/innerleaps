@@ -21,7 +21,7 @@ const HeroSection = () => {
                 </div>
 
                 <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-snug font-heading">
-                  Het <span className="text-brand-orange">vitaliteitsprogramma</span> dat{" "}
+                  Het <span className="text-brand-orange">vitaliteitsprogramma</span> dat ook{" "}
                   <span className="text-brand-orange">prestatie</span> verbeterd{" "}
                 </h1>
                 <p className="text-xl sm:text-2xl md:text-3xl text-blue-100 leading-relaxed">
