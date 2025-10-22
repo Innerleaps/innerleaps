@@ -10,7 +10,8 @@ const ProgramOverviewSection = () => {
     {
       icon: Sliders,
       title: "Programma",
-      description: "Systematische opbouw van automatische patronen herkennen naar bewust handelen.",
+      description:
+        "Systematische opbouw van automatische patronen herkennen naar bewust handelen en integratie in het dagelijks leven.",
     },
     {
       icon: Users,
