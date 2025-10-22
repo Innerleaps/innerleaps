@@ -86,8 +86,8 @@ const HeroSection = () => {
                       <span className="text-brand-orange font-bold text-lg lg:text-xl">-21%</span>
                     </div>
                     <div className="flex items-center justify-between p-3 lg:p-4 bg-white rounded-lg">
-                      <span className="font-bold text-lg lg:text-xl text-brand-blue-dark">Veerkracht</span>
-                      <span className="text-brand-orange font-bold text-lg lg:text-xl">+77%</span>
+                      <span className="font-bold text-lg lg:text-xl text-brand-blue-dark">Productiviteit</span>
+                      <span className="text-brand-orange font-bold text-lg lg:text-xl">+6%</span>
                     </div>
                   </div>
                 </div>

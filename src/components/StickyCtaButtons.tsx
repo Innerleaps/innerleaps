@@ -17,27 +17,16 @@ const StickyCtaButtons = () => {
       return;
     }
 
-    const heroSection = document.getElementById('home');
-    if (!heroSection) {
-      setIsVisible(true);
-      return;
-    }
+    const handleScroll = () => {
+      // Show sticky buttons as soon as user starts scrolling
+      setIsVisible(window.scrollY > 50);
+    };
 
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        // Show sticky buttons when hero section is not in view
-        setIsVisible(!entry.isIntersecting);
-      },
-      {
-        threshold: 0.1,
-        rootMargin: '-100px 0px 0px 0px'
-      }
-    );
-
-    observer.observe(heroSection);
+    handleScroll(); // Check initial scroll position
+    window.addEventListener('scroll', handleScroll);
 
     return () => {
-      observer.disconnect();
+      window.removeEventListener('scroll', handleScroll);
     };
   }, [isHomePage]);
 
