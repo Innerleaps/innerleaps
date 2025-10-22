@@ -66,6 +66,7 @@ export default {
 					'green-light': '#48c9b0',
 					blue: '#352D8C',
 					'blue-dark': '#1E0B32',
+					purple: '#230C47',
 					'gray-light': '#f8fafc',
 					'gray-medium': '#64748b',
 					'gray-dark': '#334155',
