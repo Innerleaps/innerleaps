@@ -51,7 +51,7 @@ const StickyCtaButtons = () => {
       <div className="fixed bottom-4 sm:bottom-6 right-4 sm:right-6 z-40 flex flex-col gap-2 sm:gap-3 max-w-[calc(100vw-2rem)] sm:max-w-none">
         <Button 
           onClick={() => setIsCalculatorOpen(true)}
-          className="bg-brand-orange hover:bg-brand-orange text-brand-orange-light hover:text-brand-orange-light font-semibold py-3 sm:py-5 px-4 sm:px-10 rounded-lg text-base sm:text-lg shadow-lg whitespace-nowrap"
+          className="font-semibold py-3 sm:py-5 px-4 sm:px-10 rounded-lg text-base sm:text-lg shadow-lg whitespace-nowrap"
         >
           <span className="hidden sm:inline">Bereken mijn besparing</span>
           <span className="sm:hidden">Besparing berekenen</span>
@@ -59,7 +59,7 @@ const StickyCtaButtons = () => {
         <Button 
           variant="secondary"
           className="font-semibold py-3 sm:py-5 px-4 sm:px-10 rounded-lg text-base sm:text-lg shadow-lg whitespace-nowrap"
-          onClick={() => window.open('https://calendar.google.com/appointments/schedules/AcZssZ3VM8RLgeZm9Ej29kbhx4LugakTLXw_vF9BePhup0zm-DtWT5kk6nbHQw-chzBGEQQInd7l3Fs4', '_blank')}
+          onClick={() => window.open('https://calendly.com/innerleaps/kennismaking', '_blank')}
         >
           <span className="hidden sm:inline">Gesprek met Bas plannen</span>
           <span className="sm:hidden">Contact</span>
