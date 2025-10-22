@@ -16,7 +16,7 @@ const MethodologySection = () => {
               Tot 90% van ons gedrag is onbewust. Ons oerbrein maakt automatische keuzes om ons te beschermen, terwijl er vaak geen echte bedreiging is. Wij leren mensen in stresssituaties bewust te handelen. Hierdoor ontstaan gezondere keuzes en effectievere samenwerking, ook zonder stress.
             </p>
           </div>
-          <div>
+          <div className="order-last">
             <img 
               src={autopilotImage} 
               alt="Grip op de automatische piloot" 
@@ -27,7 +27,7 @@ const MethodologySection = () => {
 
         {/* Blok 2 - De Methode - Tekst boven, Visual onder */}
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-          <div className="space-y-4">
+          <div className="space-y-4 lg:order-last">
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-purple leading-tight">
               Het vitaliteitsprogramma waar we <span className="text-brand-orange">aandacht trainen</span>
             </h2>
@@ -68,7 +68,7 @@ const MethodologySection = () => {
               </div>
             </div>
           </div>
-          <div>
+          <div className="order-last">
             <img 
               src={performanceImage} 
               alt="Burnout voorkomen en beter presteren door aandacht training" 
