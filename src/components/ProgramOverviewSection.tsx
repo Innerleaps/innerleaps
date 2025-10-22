@@ -4,7 +4,7 @@ const ProgramOverviewSection = () => {
   const features = [
     {
       icon: Clock,
-      title: "Wekelijkse workshops",
+      title: "Workshops",
       description: "6 workshops van 60 of 90 minuten door een van onze geaccrediteerde trainers, op locatie of online.",
     },
     {
@@ -20,7 +20,7 @@ const ProgramOverviewSection = () => {
     },
     {
       icon: Sliders,
-      title: "Aanpasbaar programma",
+      title: "Programma",
       description: "Systematische opbouw van automatische patronen herkennen naar bewust handelen.",
     },
   ];
