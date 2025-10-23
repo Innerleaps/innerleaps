@@ -59,9 +59,9 @@ const Wetenschap = () => {
       <section className="bg-white section-padding">
         <div className="container-custom">
           <div className="max-w-3xl mx-auto text-center space-y-6 mb-12">
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-gray-dark leading-tight">
-              De automatische piloot, ons beschermingsmechanisme
-            </h2>
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-gray-dark leading-tight">
+            De <span className="text-brand-orange">automatische piloot</span>, ons beschermingsmechanisme
+          </h2>
             <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
               In 2 miljoen jaar is ons brein geëvolueerd om twee dingen te doen: dreigingen vermijden én beloningen najagen. 
               Helaas ziet het geen verschil tussen een leeuw en werkstress, en de sterke behoefte naar dopamine leidt ons af. 
@@ -87,7 +87,7 @@ const Wetenschap = () => {
                   </h3>
                   <ul className="list-disc list-outside ml-5 space-y-2">
                     {system.points.map((point, idx) => (
-                      <li key={idx} className="text-base md:text-lg text-brand-gray-medium leading-relaxed">
+                      <li key={idx} className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
                         {point}
                       </li>
                     ))}
@@ -117,19 +117,29 @@ const Wetenschap = () => {
             </p>
           </div>
 
-          <div className="max-w-2xl mx-auto space-y-3 mb-12">
-            <div className="flex items-start gap-3">
-              <CheckCircle className="h-6 w-6 text-brand-orange stroke-2 flex-shrink-0 mt-1" />
-              <span className="text-lg md:text-xl text-brand-gray-dark">Emoties regulatie</span>
+          <div className="grid grid-cols-3 gap-8 mb-12">
+            <div></div>
+            <div className="space-y-3">
+              <div className="flex items-start gap-3">
+                <CheckCircle className="h-6 w-6 text-brand-orange stroke-2 flex-shrink-0 mt-1" />
+                <span className="text-xl md:text-2xl text-brand-gray-dark">
+                  Emoties regulatie
+                </span>
+              </div>
+              <div className="flex items-start gap-3">
+                <CheckCircle className="h-6 w-6 text-brand-orange stroke-2 flex-shrink-0 mt-1" />
+                <span className="text-xl md:text-2xl text-brand-gray-dark">
+                  Bewust reageren op sociale signalen
+                </span>
+              </div>
+              <div className="flex items-start gap-3">
+                <CheckCircle className="h-6 w-6 text-brand-orange stroke-2 flex-shrink-0 mt-1" />
+                <span className="text-xl md:text-2xl text-brand-gray-dark">
+                  Strategieën bedenken en prioriteren
+                </span>
+              </div>
             </div>
-            <div className="flex items-start gap-3">
-              <CheckCircle className="h-6 w-6 text-brand-orange stroke-2 flex-shrink-0 mt-1" />
-              <span className="text-lg md:text-xl text-brand-gray-dark">Bewust reageren op sociale signalen</span>
-            </div>
-            <div className="flex items-start gap-3">
-              <CheckCircle className="h-6 w-6 text-brand-orange stroke-2 flex-shrink-0 mt-1" />
-              <span className="text-lg md:text-xl text-brand-gray-dark">Strategieën bedenken en prioriteren</span>
-            </div>
+            <div></div>
           </div>
 
           <div className="max-w-4xl mx-auto">
@@ -168,17 +178,30 @@ const Wetenschap = () => {
               Omdat deelnemers met ons programma bewuster worden en hun automatische piloot afschakelen zullen ze:
             </p>
 
-            <ul className="space-y-4">
-              <li className="text-lg md:text-xl text-brand-gray-dark">
-                <span className="font-semibold">Stress vroeg herkennen</span> – en bijsturen voordat het escaleert
-              </li>
-              <li className="text-lg md:text-xl text-brand-gray-dark">
-                <span className="font-semibold">Beter herstellen</span> – sneller terug naar optimale prestatie
-              </li>
-              <li className="text-lg md:text-xl text-brand-gray-dark">
-                <span className="font-semibold">In de prestatie sweet spot blijven</span> – waar focus, energie en prestatie hoog zijn
-              </li>
-            </ul>
+            <div className="grid grid-cols-3 gap-8">
+              <div></div>
+              <div className="space-y-3">
+                <div className="flex items-start gap-3">
+                  <CheckCircle className="h-6 w-6 text-brand-orange stroke-2 flex-shrink-0 mt-1" />
+                  <span className="text-xl md:text-2xl text-brand-gray-dark">
+                    <strong>Stress vroeg herkennen</strong> en bijsturen voordat het escaleert
+                  </span>
+                </div>
+                <div className="flex items-start gap-3">
+                  <CheckCircle className="h-6 w-6 text-brand-orange stroke-2 flex-shrink-0 mt-1" />
+                  <span className="text-xl md:text-2xl text-brand-gray-dark">
+                    <strong>Beter herstellen,</strong> sneller terug naar optimale prestatie
+                  </span>
+                </div>
+                <div className="flex items-start gap-3">
+                  <CheckCircle className="h-6 w-6 text-brand-orange stroke-2 flex-shrink-0 mt-1" />
+                  <span className="text-xl md:text-2xl text-brand-gray-dark">
+                    <strong>In de prestatie sweet spot blijven</strong> waar focus, energie en prestatie hoog zijn
+                  </span>
+                </div>
+              </div>
+              <div></div>
+            </div>
 
             <div className="pt-8">
               <h3 className="text-2xl md:text-3xl font-bold text-brand-gray-dark mb-6 text-center">
