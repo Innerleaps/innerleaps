@@ -1,4 +1,4 @@
-import autopilotImage from "@/assets/Grip_op_de_automatische_piloot.png";
+import autopilotImage from "@/assets/We_verliezen_aandacht_door_ons_beloning-_en_stresssysteem.png";
 import neocortexImage from "@/assets/Meer_activiteit_in_neo_cortex_door_aandacht_training.png";
 import performanceImage from "@/assets/burnout_voorkomen_en_beter_presteren_door_aandacht_training.png";
 
