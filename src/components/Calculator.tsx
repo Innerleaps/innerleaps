@@ -96,16 +96,17 @@ const Calculator = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button 
-                asChild
                 className="bg-white hover:bg-white text-brand-orange hover:text-brand-orange"
+                onClick={() => {
+                  // Open in parent window if in iframe, otherwise in new tab
+                  if (window.self !== window.top) {
+                    window.top!.location.href = 'https://calendar.app.google/ZimMXqBKdvgv92g6A';
+                  } else {
+                    window.location.href = 'https://calendar.app.google/ZimMXqBKdvgv92g6A';
+                  }
+                }}
               >
-                <a
-                  href="https://calendar.app.google/ZimMXqBKdvgv92g6A"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Plan een gesprek over deze resultaten
-                </a>
+                Plan een gesprek over deze resultaten
               </Button>
               <Button 
                 variant="outline" 

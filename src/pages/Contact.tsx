@@ -40,14 +40,18 @@ const Contact = () => {
                   </div>
                   
                   <div className="text-center">
-                    <Button asChild variant="secondary">
-                      <a
-                        href="https://calendar.app.google/ZimMXqBKdvgv92g6A"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        Plan een gesprek met Bas
-                      </a>
+                    <Button 
+                      variant="secondary"
+                      onClick={() => {
+                        // Open in parent window if in iframe, otherwise in new tab
+                        if (window.self !== window.top) {
+                          window.top!.location.href = 'https://calendar.app.google/ZimMXqBKdvgv92g6A';
+                        } else {
+                          window.location.href = 'https://calendar.app.google/ZimMXqBKdvgv92g6A';
+                        }
+                      }}
+                    >
+                      Plan een gesprek met Bas
                     </Button>
                   </div>
                 </div>

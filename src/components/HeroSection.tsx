@@ -39,18 +39,19 @@ const HeroSection = () => {
                   Ontdek je besparing
                 </Button>
                 <Button
-                  asChild
                   variant="secondary-on-blue"
                   size="lg"
                   className="w-full sm:w-auto font-semibold py-4 px-6 lg:px-8 rounded-lg text-lg lg:text-xl"
+                  onClick={() => {
+                    // Open in parent window if in iframe, otherwise in new tab
+                    if (window.self !== window.top) {
+                      window.top!.location.href = 'https://calendar.app.google/ZimMXqBKdvgv92g6A';
+                    } else {
+                      window.location.href = 'https://calendar.app.google/ZimMXqBKdvgv92g6A';
+                    }
+                  }}
                 >
-                  <a
-                    href="https://calendar.app.google/ZimMXqBKdvgv92g6A"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Stel je vragen aan Bas
-                  </a>
+                  Stel je vragen aan Bas
                 </Button>
               </div>
 

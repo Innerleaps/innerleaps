@@ -46,18 +46,19 @@ const StickyCtaButtons = () => {
           <span className="sm:hidden">Besparing berekenen</span>
         </Button>
         <Button 
-          asChild
           variant="secondary"
           className="font-semibold py-3 sm:py-5 px-4 sm:px-10 rounded-lg text-base sm:text-lg shadow-lg whitespace-nowrap"
+          onClick={() => {
+            // Open in parent window if in iframe, otherwise in new tab
+            if (window.self !== window.top) {
+              window.top!.location.href = 'https://calendar.app.google/ZimMXqBKdvgv92g6A';
+            } else {
+              window.location.href = 'https://calendar.app.google/ZimMXqBKdvgv92g6A';
+            }
+          }}
         >
-          <a
-            href="https://calendar.app.google/ZimMXqBKdvgv92g6A"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <span className="hidden sm:inline">Gesprek met Bas plannen</span>
-            <span className="sm:hidden">Contact</span>
-          </a>
+          <span className="hidden sm:inline">Gesprek met Bas plannen</span>
+          <span className="sm:hidden">Contact</span>
         </Button>
       </div>
 

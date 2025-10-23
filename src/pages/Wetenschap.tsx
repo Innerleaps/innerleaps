@@ -437,10 +437,19 @@ const Wetenschap = () => {
               <Button onClick={() => setIsLeadMagnetOpen(true)} className="text-lg px-8 py-3 bg-white hover:bg-gray-100 text-brand-blue hover:text-brand-blue font-semibold rounded-lg transition-all duration-300 shadow-lg transform hover:-translate-y-0.5">
                 Vraag het bewijs op
               </Button>
-              <Button asChild variant="secondary-on-blue" className="text-lg px-8 py-3 font-semibold rounded-lg">
-                <a href="https://calendar.app.google/ZimMXqBKdvgv92g6A" target="_blank" rel="noopener noreferrer">
-                  Een vrijblijvend gesprek met Bas plannen
-                </a>
+              <Button 
+                variant="secondary-on-blue" 
+                className="text-lg px-8 py-3 font-semibold rounded-lg"
+                onClick={() => {
+                  // Open in parent window if in iframe, otherwise in new tab
+                  if (window.self !== window.top) {
+                    window.top!.location.href = 'https://calendar.app.google/ZimMXqBKdvgv92g6A';
+                  } else {
+                    window.location.href = 'https://calendar.app.google/ZimMXqBKdvgv92g6A';
+                  }
+                }}
+              >
+                Een vrijblijvend gesprek met Bas plannen
               </Button>
             </div>
           </div>

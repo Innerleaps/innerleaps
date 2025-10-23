@@ -237,13 +237,18 @@ const VoorWie = () => {
                 </p>
                 
                 <Button 
-                  asChild
                   size="lg"
                   className="bg-brand-green hover:bg-brand-green-light text-white font-semibold py-4 px-8 rounded-lg text-lg transition-all duration-300 transform hover:-translate-y-1"
+                  onClick={() => {
+                    // Open in parent window if in iframe, otherwise in new tab
+                    if (window.self !== window.top) {
+                      window.top!.location.href = 'https://calendar.app.google/ZimMXqBKdvgv92g6A';
+                    } else {
+                      window.location.href = 'https://calendar.app.google/ZimMXqBKdvgv92g6A';
+                    }
+                  }}
                 >
-                  <a href="https://calendar.app.google/ZimMXqBKdvgv92g6A" target="_blank" rel="noopener noreferrer">
-                    Plan Vrijblijvend Gesprek
-                  </a>
+                  Plan Vrijblijvend Gesprek
                 </Button>
               </div>
             </div>
