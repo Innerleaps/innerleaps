@@ -17,15 +17,15 @@ const HeroSection = () => {
                 {/* 40+ Years Research Badge */}
                 <div className="inline-flex items-center bg-white/10 backdrop-blur-sm text-blue-200 px-4 py-2 rounded-full text-base md:text-lg font-medium">
                   <Award className="h-4 w-4 mr-2" />
-                  Vitaliteits{'\u00AD'}programma met 40+ jaar onderzoek
+                  Vitaliteits{"\u00AD"}programma met 40+ jaar onderzoek
                 </div>
 
                 <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-snug font-heading">
-                  Het <span className="text-brand-orange">vitaliteits{'\u00AD'}programma</span> dat ook{" "}
+                  Het <span className="text-brand-orange">vitaliteits{"\u00AD"}programma</span> dat{" "}
                   <span className="text-brand-orange">prestatie</span> verbeterd{" "}
                 </h1>
                 <p className="text-xl sm:text-2xl md:text-3xl text-blue-100 leading-relaxed">
-                  Wetenschappelijk bewezen vitaliteits{'\u00AD'}programma. Medewerkers ontwikkelen eigenaarschap, worden
+                  Wetenschappelijk bewezen vitaliteits{"\u00AD"}programma. Medewerkers ontwikkelen eigenaarschap, worden
                   veerkrachtiger en kunnen beter samenwerken.
                 </p>
               </div>
@@ -43,10 +43,10 @@ const HeroSection = () => {
                   size="lg"
                   className="w-full sm:w-auto font-semibold py-4 px-6 lg:px-8 rounded-lg text-lg lg:text-xl"
                   onClick={() => {
-                    const link = document.createElement('a');
-                    link.href = 'https://calendar.app.google/BgGy8cVUSk4w5Zzg8';
-                    link.target = '_blank';
-                    link.rel = 'noopener noreferrer';
+                    const link = document.createElement("a");
+                    link.href = "https://calendar.app.google/BgGy8cVUSk4w5Zzg8";
+                    link.target = "_blank";
+                    link.rel = "noopener noreferrer";
                     document.body.appendChild(link);
                     link.click();
                     document.body.removeChild(link);
