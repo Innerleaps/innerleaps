@@ -17,15 +17,15 @@ const HeroSection = () => {
                 {/* 40+ Years Research Badge */}
                 <div className="inline-flex items-center bg-white/10 backdrop-blur-sm text-blue-200 px-4 py-2 rounded-full text-base md:text-lg font-medium">
                   <Award className="h-4 w-4 mr-2" />
-                  Vitaliteitsprogramma met 40+ jaar onderzoek
+                  Vitaliteits{'\u00AD'}programma met 40+ jaar onderzoek
                 </div>
 
                 <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-snug font-heading">
-                  Het <span className="text-brand-orange">vitaliteitsprogramma</span> dat ook{" "}
+                  Het <span className="text-brand-orange">vitaliteits{'\u00AD'}programma</span> dat ook{" "}
                   <span className="text-brand-orange">prestatie</span> verbeterd{" "}
                 </h1>
                 <p className="text-xl sm:text-2xl md:text-3xl text-blue-100 leading-relaxed">
-                  Wetenschappelijk bewezen vitaliteitsprogramma. Medewerkers ontwikkelen eigenaarschap, worden
+                  Wetenschappelijk bewezen vitaliteits{'\u00AD'}programma. Medewerkers ontwikkelen eigenaarschap, worden
                   veerkrachtiger en kunnen beter samenwerken.
                 </p>
               </div>

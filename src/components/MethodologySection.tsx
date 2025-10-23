@@ -27,7 +27,7 @@ const MethodologySection = () => {
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           <div className="space-y-4 lg:order-last">
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-purple leading-tight">
-              Het vitaliteitsprogramma waar we <span className="text-brand-orange">aandacht trainen</span>
+              Het vitaliteits{'\u00AD'}programma waar we <span className="text-brand-orange">aandacht trainen</span>
             </h2>
             <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
               Met het programma van InnerLeaps trainen mensen hun "aandachtsspier". Hiermee verbeterd de kracht en

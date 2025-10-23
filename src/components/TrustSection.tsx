@@ -12,8 +12,8 @@ const TrustSection = () => {
       description:
         "De uitgebreide variant van ons programma wordt vergoed vanuit basisverzekering door Nederlandse zorgverzekeraars.",
       logos: [
-        { src: achmeaLogo, alt: "Vitaliteitsprogramma herkend door Zilveren Kruis Achmea", className: "h-24" },
-        { src: vgzLogo, alt: "Vitaliteitsprogramma herkend door VGZ", className: "h-24" },
+        { src: achmeaLogo, alt: "Vitaliteits\u00ADprogramma herkend door Zilveren Kruis Achmea", className: "h-24" },
+        { src: vgzLogo, alt: "Vitaliteits\u00ADprogramma herkend door VGZ", className: "h-24" },
       ],
     },
     {
@@ -23,10 +23,10 @@ const TrustSection = () => {
       logos: [
         {
           src: oxfordLogo,
-          alt: "Vitaliteitsprogramma ontwikkeld door Oxford University",
+          alt: "Vitaliteits\u00ADprogramma ontwikkeld door Oxford University",
           className: "h-24 rounded border border-border",
         },
-        { src: uMassLogo, alt: "Vitaliteitsprogramma ontwikkeld door University of Massachusetts", className: "h-24" },
+        { src: uMassLogo, alt: "Vitaliteits\u00ADprogramma ontwikkeld door University of Massachusetts", className: "h-24" },
       ],
     },
     {
