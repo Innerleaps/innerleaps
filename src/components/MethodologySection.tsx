@@ -10,12 +10,12 @@ const MethodologySection = () => {
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           <div className="space-y-4">
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-purple leading-tight">
-              De <span className="text-brand-orange">automatische piloot</span> door stress en dopamine
+              De <span className="text-brand-orange">automatische piloot</span> die pijn doet
             </h2>
             <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
               In 2 miljoen jaar is ons brein geëvolueerd om dreigingen te vermijden én beloningen na te jagen. Het ziet
-              helaas geen verschil tussen een leeuw en volle agenda en trekt je naar social media voor een dopamine
-              shot. Hierdoor is tot 90% van ons gedrag onbewust en zijn we snel afgeleid.
+              helaas geen verschil tussen een leeuw en werkstress en tussen gezonde keuzes en snelle dopamine via social
+              media. Hierdoor is tot 90% van ons gedrag onbewust en zijn we snel afgeleid. .
             </p>
           </div>
           <div className="order-last">
@@ -53,8 +53,8 @@ const MethodologySection = () => {
             </h2>
             <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
               Omdat deelnemers bewuster worden kunnen ze stress sneller herkennen, erover communiceren en ontdekken hoe
-              ze hiervan kunnen herstellen. Zo ontwikkelen ze eigenaarschap, worden ze productiever en wordt burn-out
-              voorkomen.
+              ze hiervan kunnen herstellen. Zo ontwikkelen ze eigenaarschap, wordt burn-out voorkomen en door verhoogde
+              focus worden ze productiever.
             </p>
             <div className="space-y-3 pt-2">
               <div className="flex items-center gap-3">
