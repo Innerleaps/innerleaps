@@ -13,9 +13,9 @@ const MethodologySection = () => {
               De <span className="text-brand-orange">automatische piloot</span> die pijn doet
             </h2>
             <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
-              In 2 miljoen jaar evolutie is ons brein getraind om dreiging te herkennen. Ons stresssysteem maakt echter
-              geen onderscheid tussen een leeuw en moderne dreigingen als reputatieverlies, controleverlies of
-              onzekerheid. Daardoor is tot 90% van ons gedrag onbewust en maken we soms ongezonde of spijtige keuzes.
+              In 2 miljoen jaar is ons brein geëvolueerd om dreigingen te vermijden én beloningen na te jagen. Het ziet
+              helaas geen verschil tussen een leeuw en werkstress en tussen gezonde keuzes en snelle dopamine via social
+              media. Hierdoor is tot 90% van ons gedrag onbewust en zijn we snel afgeleid. .
             </p>
           </div>
           <div className="order-last">
@@ -27,7 +27,7 @@ const MethodologySection = () => {
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           <div className="space-y-4 lg:order-last">
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-purple leading-tight">
-              Het vitaliteits{'\u00AD'}programma waar we <span className="text-brand-orange">aandacht trainen</span>
+              Het vitaliteits{"\u00AD"}programma waar we <span className="text-brand-orange">aandacht trainen</span>
             </h2>
             <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
               Met het programma van InnerLeaps trainen mensen hun "aandachtsspier". Hiermee verbeterd de kracht en
