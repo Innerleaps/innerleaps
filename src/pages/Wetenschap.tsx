@@ -441,12 +441,13 @@ const Wetenschap = () => {
                 variant="secondary-on-blue" 
                 className="text-lg px-8 py-3 font-semibold rounded-lg"
                 onClick={() => {
-                  // Open in parent window if in iframe, otherwise in new tab
-                  if (window.self !== window.top) {
-                    window.top!.location.href = 'https://calendar.app.google/ZimMXqBKdvgv92g6A';
-                  } else {
-                    window.location.href = 'https://calendar.app.google/ZimMXqBKdvgv92g6A';
-                  }
+                  const link = document.createElement('a');
+                  link.href = 'https://calendar.app.google/BgGy8cVUSk4w5Zzg8';
+                  link.target = '_blank';
+                  link.rel = 'noopener noreferrer';
+                  document.body.appendChild(link);
+                  link.click();
+                  document.body.removeChild(link);
                 }}
               >
                 Een vrijblijvend gesprek met Bas plannen

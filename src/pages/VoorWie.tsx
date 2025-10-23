@@ -240,12 +240,13 @@ const VoorWie = () => {
                   size="lg"
                   className="bg-brand-green hover:bg-brand-green-light text-white font-semibold py-4 px-8 rounded-lg text-lg transition-all duration-300 transform hover:-translate-y-1"
                   onClick={() => {
-                    // Open in parent window if in iframe, otherwise in new tab
-                    if (window.self !== window.top) {
-                      window.top!.location.href = 'https://calendar.app.google/ZimMXqBKdvgv92g6A';
-                    } else {
-                      window.location.href = 'https://calendar.app.google/ZimMXqBKdvgv92g6A';
-                    }
+                    const link = document.createElement('a');
+                    link.href = 'https://calendar.app.google/BgGy8cVUSk4w5Zzg8';
+                    link.target = '_blank';
+                    link.rel = 'noopener noreferrer';
+                    document.body.appendChild(link);
+                    link.click();
+                    document.body.removeChild(link);
                   }}
                 >
                   Plan Vrijblijvend Gesprek

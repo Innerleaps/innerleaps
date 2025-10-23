@@ -25,12 +25,13 @@ const Berekening = () => {
   }
 
   const openCalendar = () => {
-    // Using anchor tag with target="_blank" to avoid ERR_BLOCKED_BY_RESPONSE
     const link = document.createElement('a');
-    link.href = 'https://calendar.app.google/ZimMXqBKdvgv92g6A';
+    link.href = 'https://calendar.app.google/BgGy8cVUSk4w5Zzg8';
     link.target = '_blank';
     link.rel = 'noopener noreferrer';
+    document.body.appendChild(link);
     link.click();
+    document.body.removeChild(link);
   };
 
   return (
