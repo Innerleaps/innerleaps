@@ -3,7 +3,7 @@ import Navigation from '@/components/Navigation';
 import StickyCtaButtons from '@/components/StickyCtaButtons';
 import ROICalculator from '@/components/ROICalculator';
 import Footer from '@/components/Footer';
-import { Brain, Heart, Shield, CheckCircle } from 'lucide-react';
+import { Brain, Heart, Shield, CheckCircle, Target, Award, TrendingUp } from 'lucide-react';
 import neocortexImage from "@/assets/Meer_activiteit_in_neo_cortex_door_aandacht_training.png";
 import performanceImage from "@/assets/burnout_voorkomen_en_beter_presteren_door_aandacht_training.png";
 
@@ -173,62 +173,398 @@ const Wetenschap = () => {
             />
           </div>
 
-          <div className="max-w-3xl mx-auto space-y-6">
-            <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
+          <div className="max-w-5xl mx-auto space-y-6">
+            <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed text-center">
               Omdat deelnemers met ons programma bewuster worden en hun automatische piloot afschakelen zullen ze:
             </p>
 
-            <div className="grid grid-cols-3 gap-8">
-              <div></div>
-              <div className="space-y-3">
+            <div className="grid md:grid-cols-3 gap-8">
+              {/* Linkerkolom: 3 checkmark items */}
+              <div className="space-y-4">
                 <div className="flex items-start gap-3">
                   <CheckCircle className="h-6 w-6 text-brand-orange stroke-2 flex-shrink-0 mt-1" />
                   <span className="text-xl md:text-2xl text-brand-gray-dark">
-                    <strong>Stress vroeg herkennen</strong> en bijsturen voordat het escaleert
+                    Stress vroeg herkennen en bijsturen voordat het escaleert
                   </span>
                 </div>
                 <div className="flex items-start gap-3">
                   <CheckCircle className="h-6 w-6 text-brand-orange stroke-2 flex-shrink-0 mt-1" />
                   <span className="text-xl md:text-2xl text-brand-gray-dark">
-                    <strong>Beter herstellen,</strong> sneller terug naar optimale prestatie
+                    Beter herstellen, sneller terug naar optimale prestatie
                   </span>
                 </div>
                 <div className="flex items-start gap-3">
                   <CheckCircle className="h-6 w-6 text-brand-orange stroke-2 flex-shrink-0 mt-1" />
                   <span className="text-xl md:text-2xl text-brand-gray-dark">
-                    <strong>In de prestatie sweet spot blijven</strong> waar focus, energie en prestatie hoog zijn
+                    In de prestatie sweet spot blijven waar focus, energie en prestatie hoog zijn
                   </span>
                 </div>
               </div>
-              <div></div>
+
+              {/* Rechter 2 kolommen: "Het resultaat in cijfers" */}
+              <div className="md:col-span-2 bg-brand-off-white p-8 rounded-lg">
+                <h3 className="text-2xl md:text-3xl font-semibold text-brand-gray-dark mb-6">
+                  Het resultaat in cijfers:
+                </h3>
+                <div className="space-y-4">
+                  <div className="flex items-start gap-4">
+                    <span className="text-4xl">🛡️</span>
+                    <div>
+                      <p className="text-xl md:text-2xl font-semibold text-brand-gray-dark">70% lager uitvalrisico</p>
+                      <p className="text-base md:text-lg text-brand-gray-medium">Burn-out wordt voorkomen</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-4">
+                    <span className="text-4xl">📈</span>
+                    <div>
+                      <p className="text-xl md:text-2xl font-semibold text-brand-gray-dark">+6% meer productiviteit</p>
+                      <p className="text-base md:text-lg text-brand-gray-medium">Mensen werken effectiever, niet harder</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-4">
+                    <span className="text-4xl">📉</span>
+                    <div>
+                      <p className="text-xl md:text-2xl font-semibold text-brand-gray-dark">15-21% minder verzuim</p>
+                      <p className="text-base md:text-lg text-brand-gray-medium">Minder ziektedagen, lagere kosten</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
 
-            <div className="pt-8">
-              <h3 className="text-2xl md:text-3xl font-bold text-brand-gray-dark mb-6 text-center">
-                Het resultaat in cijfers:
+            <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed text-center mt-12">
+              Geen quick fix voor verzuimcijfers. Wel échte verandering die medewerkers dagelijks voelen. Meetbaar, blijvend, wetenschappelijk bewezen.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* ORGANISATIE IMPACT */}
+      <section className="bg-brand-off-white section-padding">
+        <div className="container-custom">
+          <div className="max-w-3xl mx-auto text-center space-y-6 mb-12">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-gray-dark leading-tight">
+              Concreet impact op jouw organisatie. Volgens de wetenschap.
+            </h2>
+            <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
+              40 jaar wetenschappelijk onderzoek levert cijfers die overtuigen. Minder verzuim en hogere productiviteit zijn slechts het begin:
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+            {/* Veerkracht */}
+            <div className="bg-white p-6 rounded-lg space-y-4">
+              <div className="p-3 rounded-lg bg-brand-blue/5 w-fit">
+                <Target className="h-8 w-8 text-brand-blue stroke-2" />
+              </div>
+              <h3 className="text-xl md:text-2xl font-semibold text-brand-gray-dark">
+                64-77% meer veerkracht en weerbaarheid
               </h3>
-              <div className="space-y-4 bg-brand-off-white p-8 rounded-lg">
-                <div className="flex items-start gap-4">
-                  <span className="text-4xl">🛡️</span>
-                  <div>
-                    <p className="text-xl md:text-2xl font-semibold text-brand-gray-dark">70% lager uitvalrisico</p>
-                    <p className="text-base md:text-lg text-brand-gray-medium">Burn-out wordt voorkomen</p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-4">
-                  <span className="text-4xl">📈</span>
-                  <div>
-                    <p className="text-xl md:text-2xl font-semibold text-brand-gray-dark">+6% meer productiviteit</p>
-                    <p className="text-base md:text-lg text-brand-gray-medium">Mensen werken effectiever, niet harder</p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-4">
-                  <span className="text-4xl">📉</span>
-                  <div>
-                    <p className="text-xl md:text-2xl font-semibold text-brand-gray-dark">15-21% minder verzuim</p>
-                    <p className="text-base md:text-lg text-brand-gray-medium">Minder ziektedagen, lagere kosten</p>
-                  </div>
-                </div>
+              <p className="text-base md:text-lg text-brand-gray-medium leading-relaxed">
+                Deelnemers ontwikkelen mentale spierkracht om uitdagingen het hoofd te bieden. Ze herstellen sneller van tegenslagen en blijven effectief functioneren onder druk.
+              </p>
+              <div className="flex flex-wrap gap-2">
+                <a
+                  href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10172073/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-xs px-2 py-1 bg-brand-gray-light text-brand-gray-medium rounded hover:bg-brand-orange/10 hover:text-brand-orange transition-colors"
+                >
+                  Michaelsen et al. (2023)
+                </a>
+                <a
+                  href="https://link.springer.com/article/10.1007/s12671-020-01328-3"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-xs px-2 py-1 bg-brand-gray-light text-brand-gray-medium rounded hover:bg-brand-orange/10 hover:text-brand-orange transition-colors"
+                >
+                  Vonderlin et al. (2020)
+                </a>
+                <a
+                  href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12210539/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-xs px-2 py-1 bg-brand-gray-light text-brand-gray-medium rounded hover:bg-brand-orange/10 hover:text-brand-orange transition-colors"
+                >
+                  Dou et al. (2024)
+                </a>
+              </div>
+            </div>
+
+            {/* Werktevredenheid */}
+            <div className="bg-white p-6 rounded-lg space-y-4">
+              <div className="p-3 rounded-lg bg-brand-blue/5 w-fit">
+                <Heart className="h-8 w-8 text-brand-blue stroke-2" />
+              </div>
+              <h3 className="text-xl md:text-2xl font-semibold text-brand-gray-dark">
+                63% meer werktevredenheid
+              </h3>
+              <p className="text-base md:text-lg text-brand-gray-medium leading-relaxed">
+                Het plezier in het werk neemt toe. Taken voelen minder zwaar aan en deelnemers ervaren meer betekenis in hun dagelijkse werkzaamheden.
+              </p>
+              <div className="flex flex-wrap gap-2">
+                <a
+                  href="https://link.springer.com/article/10.1007/s12671-020-01328-3"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-xs px-2 py-1 bg-brand-gray-light text-brand-gray-medium rounded hover:bg-brand-orange/10 hover:text-brand-orange transition-colors"
+                >
+                  Vonderlin et al. (2020)
+                </a>
+                <a
+                  href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10172073/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-xs px-2 py-1 bg-brand-gray-light text-brand-gray-medium rounded hover:bg-brand-orange/10 hover:text-brand-orange transition-colors"
+                >
+                  Michaelsen et al. (2023)
+                </a>
+              </div>
+            </div>
+
+            {/* Uitval risico */}
+            <div className="bg-white p-6 rounded-lg space-y-4">
+              <div className="p-3 rounded-lg bg-brand-green/5 w-fit">
+                <TrendingUp className="h-8 w-8 text-brand-green stroke-2" />
+              </div>
+              <h3 className="text-xl md:text-2xl font-semibold text-brand-gray-dark">
+                70% lager uitvalrisico
+              </h3>
+              <p className="text-base md:text-lg text-brand-gray-medium leading-relaxed">
+                De kans dat medewerkers uitvallen door stress of burn-out daalt drastisch, wat zorgt voor meer stabiliteit in teams.
+              </p>
+              <div className="flex flex-wrap gap-2">
+                <a
+                  href="https://dare.uva.nl/search?identifier=2ec42a08-a20f-4859-8e23-609a6030e6b6"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-xs px-2 py-1 bg-brand-gray-light text-brand-gray-medium rounded hover:bg-brand-orange/10 hover:text-brand-orange transition-colors"
+                >
+                  De Bruin et al. (2018)
+                </a>
+              </div>
+            </div>
+
+            {/* Productiviteit */}
+            <div className="bg-white p-6 rounded-lg space-y-4">
+              <div className="p-3 rounded-lg bg-brand-green/5 w-fit">
+                <Award className="h-8 w-8 text-brand-green stroke-2" />
+              </div>
+              <h3 className="text-xl md:text-2xl font-semibold text-brand-gray-dark">
+                58-60% meer productiviteit
+              </h3>
+              <p className="text-base md:text-lg text-brand-gray-medium leading-relaxed">
+                Teams presteren beter door verhoogde focus, minder stress en betere samenwerking.
+              </p>
+              <div className="flex flex-wrap gap-2">
+                <a
+                  href="https://link.springer.com/article/10.1007/s12671-020-01328-3"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-xs px-2 py-1 bg-brand-gray-light text-brand-gray-medium rounded hover:bg-brand-orange/10 hover:text-brand-orange transition-colors"
+                >
+                  Vonderlin et al. (2020)
+                </a>
+                <a
+                  href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10172073/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-xs px-2 py-1 bg-brand-gray-light text-brand-gray-medium rounded hover:bg-brand-orange/10 hover:text-brand-orange transition-colors"
+                >
+                  Michaelsen et al. (2023)
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed text-center">
+            Duurzame resultaten. Effecten blijven 12+ maanden aanhouden.
+          </p>
+        </div>
+      </section>
+
+      {/* DEELNEMERS IMPACT */}
+      <section className="bg-white section-padding">
+        <div className="container-custom">
+          <div className="max-w-3xl mx-auto text-center space-y-6 mb-12">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-gray-dark leading-tight">
+              Deelnemers krijgen een beter leven. Dat bewijst de wetenschap.
+            </h2>
+            <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
+              Jouw medewerkers ervaren de impact direct. Meer rust, betere gezondheid, diepere slaap:
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {/* Meer rust */}
+            <div className="bg-brand-off-white p-6 rounded-lg space-y-4">
+              <div className="p-3 rounded-lg bg-brand-blue/5 w-fit">
+                <Shield className="h-8 w-8 text-brand-blue stroke-2" />
+              </div>
+              <h3 className="text-xl md:text-2xl font-semibold text-brand-gray-dark">
+                65-72% meer rust
+              </h3>
+              <p className="text-base md:text-lg text-brand-gray-medium leading-relaxed">
+                Zonder dat de werkdruk wordt verminderd ervaren deelnemers minder stress. De beleving van het werk en de werkdruk wordt minder stressvol.
+              </p>
+              <div className="flex flex-wrap gap-2">
+                <a
+                  href="https://www.researchgate.net/publication/320809758_Mindfulness-based_stress_reduction_MBSR_for_improving_health_quality_of_life_and_social_functioning_in_adults_a_systematic_review_and_meta-analysis"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-xs px-2 py-1 bg-brand-gray-light text-brand-gray-medium rounded hover:bg-brand-orange/10 hover:text-brand-orange transition-colors"
+                >
+                  De Vibe et al. (2017)
+                </a>
+                <a
+                  href="https://scispace.com/pdf/a-systematic-review-and-meta-analysis-of-workplace-448vdu0m18.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-xs px-2 py-1 bg-brand-gray-light text-brand-gray-medium rounded hover:bg-brand-orange/10 hover:text-brand-orange transition-colors"
+                >
+                  Bartlett et al. (2018)
+                </a>
+                <a
+                  href="https://link.springer.com/article/10.1007/s12671-020-01328-3"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-xs px-2 py-1 bg-brand-gray-light text-brand-gray-medium rounded hover:bg-brand-orange/10 hover:text-brand-orange transition-colors"
+                >
+                  Vonderlin et al. (2020)
+                </a>
+                <a
+                  href="https://www.frontiersin.org/journals/education/articles/10.3389/feduc.2024.1385375/full"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-xs px-2 py-1 bg-brand-gray-light text-brand-gray-medium rounded hover:bg-brand-orange/10 hover:text-brand-orange transition-colors"
+                >
+                  Lensen et al. (2024)
+                </a>
+                <a
+                  href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10172073/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-xs px-2 py-1 bg-brand-gray-light text-brand-gray-medium rounded hover:bg-brand-orange/10 hover:text-brand-orange transition-colors"
+                >
+                  Michaelsen et al. (2023)
+                </a>
+                <a
+                  href="https://academic.oup.com/occmed/article-abstract/66/8/630/2750551?redirectedFrom=fulltext"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-xs px-2 py-1 bg-brand-gray-light text-brand-gray-medium rounded hover:bg-brand-orange/10 hover:text-brand-orange transition-colors"
+                >
+                  Żołnierczyk-Zreda et al. (2016)
+                </a>
+              </div>
+            </div>
+
+            {/* Gezondheid */}
+            <div className="bg-brand-off-white p-6 rounded-lg space-y-4">
+              <div className="p-3 rounded-lg bg-brand-green/5 w-fit">
+                <Brain className="h-8 w-8 text-brand-green stroke-2" />
+              </div>
+              <h3 className="text-xl md:text-2xl font-semibold text-brand-gray-dark">
+                65-68% betere gezondheid
+              </h3>
+              <p className="text-base md:text-lg text-brand-gray-medium leading-relaxed">
+                De psychische gesteldheid verbetert merkbaar. Deelnemers voelen zich mentaal sterker en stabieler, met minder last van negatieve gedachten.
+              </p>
+              <div className="flex flex-wrap gap-2">
+                <a
+                  href="https://www.researchgate.net/publication/320809758_Mindfulness-based_stress_reduction_MBSR_for_improving_health_quality_of_life_and_social_functioning_in_adults_a_systematic_review_and_meta-analysis"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-xs px-2 py-1 bg-brand-gray-light text-brand-gray-medium rounded hover:bg-brand-orange/10 hover:text-brand-orange transition-colors"
+                >
+                  De Vibe et al. (2017)
+                </a>
+                <a
+                  href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10172073/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-xs px-2 py-1 bg-brand-gray-light text-brand-gray-medium rounded hover:bg-brand-orange/10 hover:text-brand-orange transition-colors"
+                >
+                  Michaelsen et al. (2023)
+                </a>
+              </div>
+            </div>
+
+            {/* Betere levenskwaliteit */}
+            <div className="bg-brand-off-white p-6 rounded-lg space-y-4">
+              <div className="p-3 rounded-lg bg-brand-blue/5 w-fit">
+                <Award className="h-8 w-8 text-brand-blue stroke-2" />
+              </div>
+              <h3 className="text-xl md:text-2xl font-semibold text-brand-gray-dark">
+                61-63% betere levenskwaliteit
+              </h3>
+              <p className="text-base md:text-lg text-brand-gray-medium leading-relaxed">
+                Het algehele welzijn en tevredenheid over het leven verbeterd. Deelnemers ervaren meer plezier en betekenis in hun dagelijkse activiteiten.
+              </p>
+              <div className="flex flex-wrap gap-2">
+                <a
+                  href="https://www.researchgate.net/publication/320809758_Mindfulness-based_stress_reduction_MBSR_for_improving_health_quality_of_life_and_social_functioning_in_adults_a_systematic_review_and_meta-analysis"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-xs px-2 py-1 bg-brand-gray-light text-brand-gray-medium rounded hover:bg-brand-orange/10 hover:text-brand-orange transition-colors"
+                >
+                  De Vibe et al. (2017)
+                </a>
+                <a
+                  href="https://link.springer.com/article/10.1007/s12671-020-01328-3"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-xs px-2 py-1 bg-brand-gray-light text-brand-gray-medium rounded hover:bg-brand-orange/10 hover:text-brand-orange transition-colors"
+                >
+                  Vonderlin et al. (2020)
+                </a>
+                <a
+                  href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10172073/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-xs px-2 py-1 bg-brand-gray-light text-brand-gray-medium rounded hover:bg-brand-orange/10 hover:text-brand-orange transition-colors"
+                >
+                  Michaelsen et al. (2023)
+                </a>
+              </div>
+            </div>
+
+            {/* Beter slapen */}
+            <div className="bg-brand-off-white p-6 rounded-lg space-y-4">
+              <div className="p-3 rounded-lg bg-brand-blue/5 w-fit">
+                <Brain className="h-8 w-8 text-brand-blue stroke-2" />
+              </div>
+              <h3 className="text-xl md:text-2xl font-semibold text-brand-gray-dark">
+                57-78% beter slapen en herstellen
+              </h3>
+              <p className="text-base md:text-lg text-brand-gray-medium leading-relaxed">
+                Deelnemers vallen makkelijker in slaap en slapen dieper. Dit zorgt voor beter herstel en meer energie voor de volgende dag.
+              </p>
+              <div className="flex flex-wrap gap-2">
+                <a
+                  href="https://scispace.com/pdf/a-systematic-review-and-meta-analysis-of-workplace-448vdu0m18.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-xs px-2 py-1 bg-brand-gray-light text-brand-gray-medium rounded hover:bg-brand-orange/10 hover:text-brand-orange transition-colors"
+                >
+                  Bartlett et al. (2018)
+                </a>
+                <a
+                  href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10172073/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-xs px-2 py-1 bg-brand-gray-light text-brand-gray-medium rounded hover:bg-brand-orange/10 hover:text-brand-orange transition-colors"
+                >
+                  Michaelsen et al. (2023)
+                </a>
+                <a
+                  href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12210539/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-xs px-2 py-1 bg-brand-gray-light text-brand-gray-medium rounded hover:bg-brand-orange/10 hover:text-brand-orange transition-colors"
+                >
+                  Dou et al. (2024)
+                </a>
               </div>
             </div>
           </div>
