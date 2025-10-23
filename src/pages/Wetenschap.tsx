@@ -17,8 +17,8 @@ const Wetenschap = () => {
       number: 1,
       icon: Brain,
       title: "Neocortex: rationele keuzes",
-      color: "text-brand-blue",
-      bgColor: "bg-brand-blue/5",
+      color: "text-brand-orange",
+      bgColor: "bg-brand-orange/5",
       points: [
         "Denkt na, plant, maakt doordachte beslissingen",
         "Zorgt voor situationeel bewustzijn, verdeelt taken en prioriteert",
@@ -41,8 +41,8 @@ const Wetenschap = () => {
       number: 3,
       icon: Shield,
       title: "Reptielenbrein: dreigingen vermijden",
-      color: "text-brand-purple",
-      bgColor: "bg-brand-purple/5",
+      color: "text-brand-orange",
+      bgColor: "bg-brand-orange/5",
       points: [
         "Beschermt tegen gevaar maar maakt geen onderscheid tussen fysieke bedreiging en moderne stressoren",
         "Zoals reputatieverlies, gebrek aan controle of onzekerheid"
@@ -63,10 +63,10 @@ const Wetenschap = () => {
             De <span className="text-brand-orange">automatische piloot</span>, ons beschermingsmechanisme
           </h2>
             <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
-              In 2 miljoen jaar is ons brein geëvolueerd om twee dingen te doen: dreigingen vermijden én beloningen najagen. 
-              Helaas ziet het geen verschil tussen een leeuw en werkstress, en de sterke behoefte naar dopamine leidt ons af. 
-              Hierdoor is tot 90% van ons gedrag onbewust en zeker onder stress neemt onze auto pilot het over. Dat leidt tot 
-              ongezonde keuzes, impulsieve reacties en afleiding. Dit komt door drie systemen:
+        In 2 miljoen jaar is ons brein geëvolueerd om twee dingen te doen: dreigingen vermijden én beloningen najagen. 
+        Het probleem? Ons brein ziet geen verschil tussen een leeuw en werkstress. Tegelijk leidt de dopamine craving ons af.
+        Hierdoor is tot 90% van ons gedrag onbewust en zeker onder stress neemt onze auto pilot het over. Dat leidt tot 
+        ongezonde keuzes, impulsieve reacties en afleiding.
             </p>
           </div>
 
@@ -75,16 +75,16 @@ const Wetenschap = () => {
             {brainSystems.map((system) => {
               const IconComponent = system.icon;
               return (
-                <div key={system.number} className="flex flex-col space-y-4 bg-brand-off-white p-6 rounded-lg">
-                  <div className="flex items-center gap-3">
-                    <div className={`p-3 rounded-lg ${system.bgColor}`}>
-                      <IconComponent className={`h-8 w-8 ${system.color} stroke-2`} />
-                    </div>
-                    <span className={`text-2xl font-bold ${system.color}`}>{system.number}</span>
+              <div key={system.number} className="flex flex-col space-y-4 bg-brand-off-white p-6 rounded-lg">
+                <div className="flex flex-col items-center text-center space-y-4">
+                  <div className={`p-3 rounded-lg ${system.bgColor}`}>
+                    <IconComponent className={`h-8 w-8 ${system.color} stroke-2`} />
                   </div>
-                  <h3 className="text-xl md:text-2xl font-semibold text-brand-gray-dark leading-tight">
-                    {system.title}
-                  </h3>
+                  <span className={`text-2xl font-bold ${system.color}`}>{system.number}</span>
+                </div>
+                <h3 className="text-xl md:text-2xl font-semibold text-brand-gray-dark leading-tight text-center">
+                  {system.title}
+                </h3>
                   <ul className="list-disc list-outside ml-5 space-y-2">
                     {system.points.map((point, idx) => (
                       <li key={idx} className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
@@ -201,10 +201,11 @@ const Wetenschap = () => {
             </div>
 
             {/* Het resultaat in cijfers card daaronder */}
-            <div className="bg-brand-off-white p-8 rounded-lg">
-              <h3 className="text-2xl md:text-3xl font-semibold text-brand-gray-dark mb-6">
-                Het resultaat in cijfers:
-              </h3>
+            <div className="grid grid-cols-4 gap-8">
+              <div className="col-span-4 md:col-span-2 md:col-start-2 bg-brand-off-white p-8 rounded-lg">
+                <h3 className="text-2xl md:text-3xl font-semibold text-brand-gray-dark mb-6">
+                  Het resultaat in cijfers:
+                </h3>
               <div className="space-y-4">
                 <div className="flex items-start gap-4">
                   <span className="text-4xl">🛡️</span>
@@ -227,6 +228,7 @@ const Wetenschap = () => {
                     <p className="text-base md:text-lg text-brand-gray-medium">Minder ziektedagen, lagere kosten</p>
                   </div>
                 </div>
+              </div>
               </div>
             </div>
           </div>
@@ -252,13 +254,13 @@ const Wetenschap = () => {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
             {/* Veerkracht */}
             <div className="bg-white p-6 rounded-lg space-y-4">
-              <div className="p-3 rounded-lg bg-brand-orange/5 w-fit">
+              <div className="p-3 rounded-lg bg-brand-orange/5 w-fit mx-auto">
                 <Target className="h-8 w-8 text-brand-orange stroke-2" />
               </div>
-              <h3 className="text-xl md:text-2xl font-semibold text-brand-gray-dark">
+              <h3 className="text-xl md:text-2xl font-semibold text-brand-gray-dark text-center">
                 77% meer veerkracht
               </h3>
-              <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
+              <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed text-center">
                 Deelnemers ontwikkelen mentale spierkracht om uitdagingen het hoofd te bieden. Ze herstellen sneller van tegenslagen en blijven effectief functioneren onder druk.
               </p>
               <div className="flex flex-wrap gap-2">
@@ -291,13 +293,13 @@ const Wetenschap = () => {
 
             {/* Werktevredenheid */}
             <div className="bg-white p-6 rounded-lg space-y-4">
-              <div className="p-3 rounded-lg bg-brand-orange/5 w-fit">
+              <div className="p-3 rounded-lg bg-brand-orange/5 w-fit mx-auto">
                 <Heart className="h-8 w-8 text-brand-orange stroke-2" />
               </div>
-              <h3 className="text-xl md:text-2xl font-semibold text-brand-gray-dark">
+              <h3 className="text-xl md:text-2xl font-semibold text-brand-gray-dark text-center">
                 63% meer werktevredenheid
               </h3>
-              <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
+              <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed text-center">
                 Het plezier in het werk neemt toe. Taken voelen minder zwaar aan en deelnemers ervaren meer betekenis in hun dagelijkse werkzaamheden.
               </p>
               <div className="flex flex-wrap gap-2">
@@ -322,13 +324,13 @@ const Wetenschap = () => {
 
             {/* Uitval risico */}
             <div className="bg-white p-6 rounded-lg space-y-4">
-              <div className="p-3 rounded-lg bg-brand-orange/5 w-fit">
+              <div className="p-3 rounded-lg bg-brand-orange/5 w-fit mx-auto">
                 <TrendingUp className="h-8 w-8 text-brand-orange stroke-2" />
               </div>
-              <h3 className="text-xl md:text-2xl font-semibold text-brand-gray-dark">
+              <h3 className="text-xl md:text-2xl font-semibold text-brand-gray-dark text-center">
                 70% lager risico op uitval
               </h3>
-              <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
+              <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed text-center">
                 De kans dat medewerkers uitvallen door stress of burn-out daalt drastisch, wat zorgt voor meer stabiliteit in teams.
               </p>
               <div className="flex flex-wrap gap-2">
@@ -345,13 +347,13 @@ const Wetenschap = () => {
 
             {/* Productiviteit */}
             <div className="bg-white p-6 rounded-lg space-y-4">
-              <div className="p-3 rounded-lg bg-brand-orange/5 w-fit">
+              <div className="p-3 rounded-lg bg-brand-orange/5 w-fit mx-auto">
                 <Award className="h-8 w-8 text-brand-orange stroke-2" />
               </div>
-              <h3 className="text-xl md:text-2xl font-semibold text-brand-gray-dark">
+              <h3 className="text-xl md:text-2xl font-semibold text-brand-gray-dark text-center">
                 60% hogere productiviteit
               </h3>
-              <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
+              <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed text-center">
                 Teams presteren beter door verhoogde focus, minder stress en betere samenwerking.
               </p>
               <div className="flex flex-wrap gap-2">
@@ -396,13 +398,13 @@ const Wetenschap = () => {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {/* Meer rust */}
             <div className="bg-brand-off-white p-6 rounded-lg space-y-4">
-              <div className="p-3 rounded-lg bg-brand-orange/5 w-fit">
+              <div className="p-3 rounded-lg bg-brand-orange/5 w-fit mx-auto">
                 <Shield className="h-8 w-8 text-brand-orange stroke-2" />
               </div>
-              <h3 className="text-xl md:text-2xl font-semibold text-brand-gray-dark">
+              <h3 className="text-xl md:text-2xl font-semibold text-brand-gray-dark text-center">
                 72% meer rust in het leven
               </h3>
-              <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
+              <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed text-center">
                 Zonder dat de werkdruk wordt verminderd ervaren deelnemers minder stress. De beleving van het werk en de werkdruk wordt minder stressvol.
               </p>
               <div className="flex flex-wrap gap-2">
@@ -459,13 +461,13 @@ const Wetenschap = () => {
 
             {/* Gezondheid */}
             <div className="bg-brand-off-white p-6 rounded-lg space-y-4">
-              <div className="p-3 rounded-lg bg-brand-orange/5 w-fit">
+              <div className="p-3 rounded-lg bg-brand-orange/5 w-fit mx-auto">
                 <Brain className="h-8 w-8 text-brand-orange stroke-2" />
               </div>
-              <h3 className="text-xl md:text-2xl font-semibold text-brand-gray-dark">
+              <h3 className="text-xl md:text-2xl font-semibold text-brand-gray-dark text-center">
                 68% betere gezondheid
               </h3>
-              <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
+              <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed text-center">
                 De psychische gesteldheid verbetert merkbaar. Deelnemers voelen zich mentaal sterker en stabieler, met minder last van negatieve gedachten.
               </p>
               <div className="flex flex-wrap gap-2">
@@ -490,13 +492,13 @@ const Wetenschap = () => {
 
             {/* Betere levenskwaliteit */}
             <div className="bg-brand-off-white p-6 rounded-lg space-y-4">
-              <div className="p-3 rounded-lg bg-brand-orange/5 w-fit">
+              <div className="p-3 rounded-lg bg-brand-orange/5 w-fit mx-auto">
                 <Award className="h-8 w-8 text-brand-orange stroke-2" />
               </div>
-              <h3 className="text-xl md:text-2xl font-semibold text-brand-gray-dark">
+              <h3 className="text-xl md:text-2xl font-semibold text-brand-gray-dark text-center">
                 63% betere levenskwaliteit
               </h3>
-              <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
+              <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed text-center">
                 Het algehele welzijn en tevredenheid over het leven verbeterd. Deelnemers ervaren meer plezier en betekenis in hun dagelijkse activiteiten.
               </p>
               <div className="flex flex-wrap gap-2">
@@ -529,13 +531,13 @@ const Wetenschap = () => {
 
             {/* Beter slapen */}
             <div className="bg-brand-off-white p-6 rounded-lg space-y-4">
-              <div className="p-3 rounded-lg bg-brand-orange/5 w-fit">
+              <div className="p-3 rounded-lg bg-brand-orange/5 w-fit mx-auto">
                 <Brain className="h-8 w-8 text-brand-orange stroke-2" />
               </div>
-              <h3 className="text-xl md:text-2xl font-semibold text-brand-gray-dark">
+              <h3 className="text-xl md:text-2xl font-semibold text-brand-gray-dark text-center">
                 78% beter slapen en herstellen
               </h3>
-              <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
+              <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed text-center">
                 Deelnemers vallen makkelijker in slaap en slapen dieper. Dit zorgt voor beter herstel en meer energie voor de volgende dag.
               </p>
               <div className="flex flex-wrap gap-2">
