@@ -10,7 +10,7 @@ const MethodologySection = () => {
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           <div className="space-y-4">
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-purple leading-tight">
-              De <span className="text-brand-orange">automatische piloot</span> die pijn doet
+              De <span className="text-brand-orange">automatische piloot</span> die aandacht kaapt
             </h2>
             <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
               In 2 miljoen jaar is ons brein geëvolueerd om dreigingen te vermijden én beloningen na te jagen. Het ziet
