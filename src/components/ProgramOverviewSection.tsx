@@ -38,7 +38,7 @@ const ProgramOverviewSection = () => {
         {/* Intro tekst */}
         <div className="max-w-4xl mx-auto">
           <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed text-center">
-            Ons wetenschappelijk bewezen standaardprogramma duurt 6 weken. Vraag naar de mogelijkheden voor maatwerk.
+            Ons wetenschappelijk bewezen en kernprogramma duurt 6 weken. Vraag naar de mogelijkheden voor maatwerk.
           </p>
         </div>
 
