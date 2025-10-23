@@ -97,7 +97,7 @@ const Calculator = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button 
                 className="bg-white hover:bg-white text-brand-orange hover:text-brand-orange"
-                onClick={() => window.open('https://calendar.google.com/appointments/schedules/AcZssZ3VM8RLgeZm9Ej29kbhx4LugakTLXw_vF9BePhup0zm-DtWT5kk6nbHQw-chzBGEQQInd7l3Fs4', '_blank')}
+                onClick={() => window.open('https://calendar.app.google/ZimMXqBKdvgv92g6A', '_blank')}
               >
                 Plan een gesprek over deze resultaten
               </Button>

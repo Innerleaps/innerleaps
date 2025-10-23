@@ -48,7 +48,7 @@ const StickyCtaButtons = () => {
         <Button 
           variant="secondary"
           className="font-semibold py-3 sm:py-5 px-4 sm:px-10 rounded-lg text-base sm:text-lg shadow-lg whitespace-nowrap"
-          onClick={() => window.open('https://calendly.com/innerleaps/kennismaking', '_blank')}
+          onClick={() => window.open('https://calendar.app.google/ZimMXqBKdvgv92g6A', '_blank')}
         >
           <span className="hidden sm:inline">Gesprek met Bas plannen</span>
           <span className="sm:hidden">Contact</span>

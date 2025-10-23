@@ -51,7 +51,7 @@ const BerekeningDemo = () => {
   };
 
   const openCalendar = () => {
-    window.open('https://calendar.google.com/appointments/schedules/AcZssZ3VM8RLgeZm9Ej29kbhx4LugakTLXw_vF9BePhup0zm-DtWT5kk6nbHQw-chzBGEQQInd7l3Fs4', '_blank');
+    window.open('https://calendar.app.google/ZimMXqBKdvgv92g6A', '_blank');
   };
 
   return (

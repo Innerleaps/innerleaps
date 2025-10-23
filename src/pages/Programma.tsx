@@ -277,7 +277,7 @@ const Programma = () => {
               Ontdek hoe het bewezen MBSR-programma jullie organisatie kan helpen bij het verlagen van verzuim en het verbeteren van retentie.
             </p>
             <div className="space-y-4 md:space-y-0 md:space-x-4 md:flex md:justify-center">
-              <Button variant="secondary-on-blue" className="font-semibold py-3 px-8 rounded-lg text-lg" onClick={() => window.open('https://calendar.google.com/appointments/schedules/AcZssZ3VM8RLgeZm9Ej29kbhx4LugakTLXw_vF9BePhup0zm-DtWT5kk6nbHQw-chzBGEQQInd7l3Fs4', '_blank')}>
+              <Button variant="secondary-on-blue" className="font-semibold py-3 px-8 rounded-lg text-lg" onClick={() => window.open('https://calendar.app.google/ZimMXqBKdvgv92g6A', '_blank')}>
                 Vrijblijvend gesprek plannen
               </Button>
               <Button className="font-semibold py-3 px-8 rounded-lg text-lg" onClick={() => window.location.href = '/#calculator'}>

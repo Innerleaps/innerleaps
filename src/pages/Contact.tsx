@@ -42,7 +42,7 @@ const Contact = () => {
                   <div className="text-center">
                     <Button asChild variant="secondary">
                       <a
-                        href="https://calendar.google.com/appointments/schedules/AcZssZ3VM8RLgeZm9Ej29kbhx4LugakTLXw_vF9BePhup0zm-DtWT5kk6nbHQw-chzBGEQQInd7l3Fs4"
+                        href="https://calendar.app.google/ZimMXqBKdvgv92g6A"
                         target="_blank"
                         rel="noopener noreferrer"
                       >
