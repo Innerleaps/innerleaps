@@ -96,10 +96,16 @@ const Calculator = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button 
+                asChild
                 className="bg-white hover:bg-white text-brand-orange hover:text-brand-orange"
-                onClick={() => window.open('https://calendar.app.google/ZimMXqBKdvgv92g6A', '_blank')}
               >
-                Plan een gesprek over deze resultaten
+                <a
+                  href="https://calendar.app.google/ZimMXqBKdvgv92g6A"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Plan een gesprek over deze resultaten
+                </a>
               </Button>
               <Button 
                 variant="outline" 

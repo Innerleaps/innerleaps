@@ -46,12 +46,18 @@ const StickyCtaButtons = () => {
           <span className="sm:hidden">Besparing berekenen</span>
         </Button>
         <Button 
+          asChild
           variant="secondary"
           className="font-semibold py-3 sm:py-5 px-4 sm:px-10 rounded-lg text-base sm:text-lg shadow-lg whitespace-nowrap"
-          onClick={() => window.open('https://calendar.app.google/ZimMXqBKdvgv92g6A', '_blank')}
         >
-          <span className="hidden sm:inline">Gesprek met Bas plannen</span>
-          <span className="sm:hidden">Contact</span>
+          <a
+            href="https://calendar.app.google/ZimMXqBKdvgv92g6A"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span className="hidden sm:inline">Gesprek met Bas plannen</span>
+            <span className="sm:hidden">Contact</span>
+          </a>
         </Button>
       </div>
 

@@ -237,11 +237,13 @@ const VoorWie = () => {
                 </p>
                 
                 <Button 
+                  asChild
                   size="lg"
                   className="bg-brand-green hover:bg-brand-green-light text-white font-semibold py-4 px-8 rounded-lg text-lg transition-all duration-300 transform hover:-translate-y-1"
-                  onClick={() => window.open('https://calendar.app.google/ZimMXqBKdvgv92g6A', '_blank')}
                 >
-                  Plan Vrijblijvend Gesprek
+                  <a href="https://calendar.app.google/ZimMXqBKdvgv92g6A" target="_blank" rel="noopener noreferrer">
+                    Plan Vrijblijvend Gesprek
+                  </a>
                 </Button>
               </div>
             </div>

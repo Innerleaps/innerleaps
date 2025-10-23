@@ -25,7 +25,12 @@ const Berekening = () => {
   }
 
   const openCalendar = () => {
-    window.open('https://calendar.app.google/ZimMXqBKdvgv92g6A', '_blank');
+    // Using anchor tag with target="_blank" to avoid ERR_BLOCKED_BY_RESPONSE
+    const link = document.createElement('a');
+    link.href = 'https://calendar.app.google/ZimMXqBKdvgv92g6A';
+    link.target = '_blank';
+    link.rel = 'noopener noreferrer';
+    link.click();
   };
 
   return (
