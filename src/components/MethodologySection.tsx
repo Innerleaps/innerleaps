@@ -53,8 +53,8 @@ const MethodologySection = () => {
             </h2>
             <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
               Omdat deelnemers bewuster worden kunnen ze stress sneller herkennen, erover communiceren en ontdekken hoe
-              ze hiervan kunnen herstellen. Zo ontwikkelen ze eigenaarschap, wordt burn-out voorkomen en door verhoogde
-              focus worden ze productiever.
+              ze hiervan kunnen herstellen. Zo ontwikkelen deelnemers eigenaarschap, wordt burn-out voorkomen en door
+              verhoogde focus worden ze productiever.
             </p>
             <div className="space-y-3 pt-2">
               <div className="flex items-center gap-3">
