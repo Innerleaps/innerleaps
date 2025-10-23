@@ -25,8 +25,8 @@ const HeroSection = () => {
                   <span className="text-brand-orange">prestatie</span> verbeterd{" "}
                 </h1>
                 <p className="text-xl sm:text-2xl md:text-3xl text-blue-100 leading-relaxed">
-                  Wetenschappelijk bewezen vitaliteits{"\u00AD"}programma. Medewerkers ontwikkelen eigenaarschap, worden
-                  veerkrachtiger en kunnen beter samenwerken.
+                  Wetenschappelijk bewezen vitaliteits{"\u00AD"}programma. Medewerkers ontwikkelen eigenaarschap en
+                  vergroten hun veerkracht en productiviteit.
                 </p>
               </div>
 
