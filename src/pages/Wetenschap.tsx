@@ -6,52 +6,33 @@ import Footer from '@/components/Footer';
 import { Brain, Heart, Shield, CheckCircle, Target, Award, TrendingUp } from 'lucide-react';
 import neocortexImage from "@/assets/Meer_activiteit_in_neo_cortex_door_aandacht_training.png";
 import performanceImage from "@/assets/burnout_voorkomen_en_beter_presteren_door_aandacht_training.png";
-
 const Wetenschap = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-
-  const brainSystems = [
-    {
-      number: 1,
-      icon: Brain,
-      title: "Neocortex: rationele keuzes",
-      color: "text-brand-orange",
-      bgColor: "bg-brand-orange/5",
-      points: [
-        "Denkt na, plant, maakt doordachte beslissingen",
-        "Zorgt voor situationeel bewustzijn, verdeelt taken en prioriteert",
-        "Maar onder stress? Uitgeschakeld"
-      ]
-    },
-    {
-      number: 2,
-      icon: Heart,
-      title: "Limbisch systeem: beloningen najagen",
-      color: "text-brand-orange",
-      bgColor: "bg-brand-orange/5",
-      points: [
-        "Verwerkt emoties, geheugen, motivatie en genot",
-        "Jaagt constant op beloningen: dopamine, erkenning, afleidende content",
-        "Handelt snel, niet altijd slim. Kiest directe beloning boven het lange termijn"
-      ]
-    },
-    {
-      number: 3,
-      icon: Shield,
-      title: "Reptielenbrein: dreigingen vermijden",
-      color: "text-brand-orange",
-      bgColor: "bg-brand-orange/5",
-      points: [
-        "Beschermt tegen gevaar maar maakt geen onderscheid tussen fysieke bedreiging en moderne stressoren",
-        "Zoals reputatieverlies, gebrek aan controle of onzekerheid"
-      ]
-    }
-  ];
-
-  return (
-    <div className="min-h-screen bg-white">
+  const brainSystems = [{
+    number: 1,
+    icon: Brain,
+    title: "Neocortex: rationele keuzes",
+    color: "text-brand-orange",
+    bgColor: "bg-brand-orange/5",
+    points: ["Denkt na, plant, maakt doordachte beslissingen", "Zorgt voor situationeel bewustzijn, verdeelt taken en prioriteert", "Maar onder stress? Uitgeschakeld"]
+  }, {
+    number: 2,
+    icon: Heart,
+    title: "Limbisch systeem: beloningen najagen",
+    color: "text-brand-orange",
+    bgColor: "bg-brand-orange/5",
+    points: ["Verwerkt emoties, geheugen, motivatie en genot", "Jaagt constant op beloningen: dopamine, erkenning, afleidende content", "Handelt snel, niet altijd slim. Kiest directe beloning boven het lange termijn"]
+  }, {
+    number: 3,
+    icon: Shield,
+    title: "Reptielenbrein: dreigingen vermijden",
+    color: "text-brand-orange",
+    bgColor: "bg-brand-orange/5",
+    points: ["Beschermt tegen gevaar maar maakt geen onderscheid tussen fysieke bedreiging en moderne stressoren", "Zoals reputatieverlies, gebrek aan controle of onzekerheid"]
+  }];
+  return <div className="min-h-screen bg-white">
       <Navigation />
       <StickyCtaButtons />
 
@@ -72,10 +53,9 @@ const Wetenschap = () => {
 
           {/* Drie kolommen met iconen */}
           <div className="grid md:grid-cols-3 gap-8 mb-8">
-            {brainSystems.map((system) => {
-              const IconComponent = system.icon;
-              return (
-              <div key={system.number} className="flex flex-col space-y-4 bg-brand-off-white p-6 rounded-lg">
+            {brainSystems.map(system => {
+            const IconComponent = system.icon;
+            return <div key={system.number} className="flex flex-col space-y-4 bg-brand-off-white p-6 rounded-lg">
                 <div className="flex flex-col items-center text-center space-y-4">
                   <div className={`p-3 rounded-lg ${system.bgColor}`}>
                     <IconComponent className={`h-8 w-8 ${system.color} stroke-2`} />
@@ -86,15 +66,12 @@ const Wetenschap = () => {
                   {system.title}
                 </h3>
                   <ul className="list-disc list-outside ml-5 space-y-2">
-                    {system.points.map((point, idx) => (
-                      <li key={idx} className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
+                    {system.points.map((point, idx) => <li key={idx} className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
                         {point}
-                      </li>
-                    ))}
+                      </li>)}
                   </ul>
-                </div>
-              );
-            })}
+                </div>;
+          })}
           </div>
 
           <p className="text-xl md:text-2xl text-brand-gray-dark font-semibold text-center mt-12">
@@ -143,11 +120,7 @@ const Wetenschap = () => {
           </div>
 
           <div className="max-w-4xl mx-auto">
-            <img
-              src={neocortexImage}
-              alt="Meer activiteit in neo cortex door aandacht training"
-              className="w-full h-auto rounded-lg"
-            />
+            <img src={neocortexImage} alt="Meer activiteit in neo cortex door aandacht training" className="w-full h-auto rounded-lg" />
           </div>
         </div>
       </section>
@@ -166,11 +139,7 @@ const Wetenschap = () => {
           </div>
 
           <div className="max-w-4xl mx-auto mb-12">
-            <img
-              src={performanceImage}
-              alt="Burnout voorkomen en beter presteren door aandacht training - Yerkes-Dodson curve"
-              className="w-full h-auto rounded-lg"
-            />
+            <img src={performanceImage} alt="Burnout voorkomen en beter presteren door aandacht training - Yerkes-Dodson curve" className="w-full h-auto rounded-lg" />
           </div>
 
           <div className="max-w-5xl mx-auto space-y-8">
@@ -201,41 +170,10 @@ const Wetenschap = () => {
             </div>
 
             {/* Het resultaat in cijfers card daaronder */}
-            <div className="grid grid-cols-4 gap-8">
-              <div className="col-span-4 md:col-span-2 md:col-start-2 bg-brand-off-white p-8 rounded-lg">
-                <h3 className="text-2xl md:text-3xl font-semibold text-brand-gray-dark mb-6">
-                  Het resultaat in cijfers:
-                </h3>
-              <div className="space-y-4">
-                <div className="flex items-start gap-4">
-                  <span className="text-4xl">🛡️</span>
-                  <div>
-                    <p className="text-xl md:text-2xl font-semibold text-brand-gray-dark">70% lager uitvalrisico</p>
-                    <p className="text-base md:text-lg text-brand-gray-medium">Burn-out wordt voorkomen</p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-4">
-                  <span className="text-4xl">📈</span>
-                  <div>
-                    <p className="text-xl md:text-2xl font-semibold text-brand-gray-dark">+6% meer productiviteit</p>
-                    <p className="text-base md:text-lg text-brand-gray-medium">Mensen werken effectiever, niet harder</p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-4">
-                  <span className="text-4xl">📉</span>
-                  <div>
-                    <p className="text-xl md:text-2xl font-semibold text-brand-gray-dark">15-21% minder verzuim</p>
-                    <p className="text-base md:text-lg text-brand-gray-medium">Minder ziektedagen, lagere kosten</p>
-                  </div>
-                </div>
-              </div>
-              </div>
-            </div>
+            
           </div>
 
-          <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed text-center mt-12">
-            Geen quick fix voor verzuimcijfers. Wel échte verandering die medewerkers dagelijks voelen. Meetbaar, blijvend, wetenschappelijk bewezen.
-          </p>
+          
         </div>
       </section>
 
@@ -264,28 +202,13 @@ const Wetenschap = () => {
                 Deelnemers ontwikkelen mentale spierkracht om uitdagingen het hoofd te bieden. Ze herstellen sneller van tegenslagen en blijven effectief functioneren onder druk.
               </p>
               <div className="flex flex-wrap gap-2">
-                <a
-                  href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10172073/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-xs px-2 py-1 bg-brand-gray-light text-brand-gray-medium rounded hover:bg-brand-orange/10 hover:text-brand-orange transition-colors"
-                >
+                <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10172073/" target="_blank" rel="noopener noreferrer" className="text-xs px-2 py-1 bg-brand-gray-light text-brand-gray-medium rounded hover:bg-brand-orange/10 hover:text-brand-orange transition-colors">
                   Michaelsen et al. (2023)
                 </a>
-                <a
-                  href="https://link.springer.com/article/10.1007/s12671-020-01328-3"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-xs px-2 py-1 bg-brand-gray-light text-brand-gray-medium rounded hover:bg-brand-orange/10 hover:text-brand-orange transition-colors"
-                >
+                <a href="https://link.springer.com/article/10.1007/s12671-020-01328-3" target="_blank" rel="noopener noreferrer" className="text-xs px-2 py-1 bg-brand-gray-light text-brand-gray-medium rounded hover:bg-brand-orange/10 hover:text-brand-orange transition-colors">
                   Vonderlin et al. (2020)
                 </a>
-                <a
-                  href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12210539/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-xs px-2 py-1 bg-brand-gray-light text-brand-gray-medium rounded hover:bg-brand-orange/10 hover:text-brand-orange transition-colors"
-                >
+                <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12210539/" target="_blank" rel="noopener noreferrer" className="text-xs px-2 py-1 bg-brand-gray-light text-brand-gray-medium rounded hover:bg-brand-orange/10 hover:text-brand-orange transition-colors">
                   Dou et al. (2024)
                 </a>
               </div>
@@ -303,20 +226,10 @@ const Wetenschap = () => {
                 Het plezier in het werk neemt toe. Taken voelen minder zwaar aan en deelnemers ervaren meer betekenis in hun dagelijkse werkzaamheden.
               </p>
               <div className="flex flex-wrap gap-2">
-                <a
-                  href="https://link.springer.com/article/10.1007/s12671-020-01328-3"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-xs px-2 py-1 bg-brand-gray-light text-brand-gray-medium rounded hover:bg-brand-orange/10 hover:text-brand-orange transition-colors"
-                >
+                <a href="https://link.springer.com/article/10.1007/s12671-020-01328-3" target="_blank" rel="noopener noreferrer" className="text-xs px-2 py-1 bg-brand-gray-light text-brand-gray-medium rounded hover:bg-brand-orange/10 hover:text-brand-orange transition-colors">
                   Vonderlin et al. (2020)
                 </a>
-                <a
-                  href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10172073/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-xs px-2 py-1 bg-brand-gray-light text-brand-gray-medium rounded hover:bg-brand-orange/10 hover:text-brand-orange transition-colors"
-                >
+                <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10172073/" target="_blank" rel="noopener noreferrer" className="text-xs px-2 py-1 bg-brand-gray-light text-brand-gray-medium rounded hover:bg-brand-orange/10 hover:text-brand-orange transition-colors">
                   Michaelsen et al. (2023)
                 </a>
               </div>
@@ -334,12 +247,7 @@ const Wetenschap = () => {
                 De kans dat medewerkers uitvallen door stress of burn-out daalt drastisch, wat zorgt voor meer stabiliteit in teams.
               </p>
               <div className="flex flex-wrap gap-2">
-                <a
-                  href="https://dare.uva.nl/search?identifier=2ec42a08-a20f-4859-8e23-609a6030e6b6"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-xs px-2 py-1 bg-brand-gray-light text-brand-gray-medium rounded hover:bg-brand-orange/10 hover:text-brand-orange transition-colors"
-                >
+                <a href="https://dare.uva.nl/search?identifier=2ec42a08-a20f-4859-8e23-609a6030e6b6" target="_blank" rel="noopener noreferrer" className="text-xs px-2 py-1 bg-brand-gray-light text-brand-gray-medium rounded hover:bg-brand-orange/10 hover:text-brand-orange transition-colors">
                   De Bruin et al. (2018)
                 </a>
               </div>
@@ -357,20 +265,10 @@ const Wetenschap = () => {
                 Teams presteren beter door verhoogde focus, minder stress en betere samenwerking.
               </p>
               <div className="flex flex-wrap gap-2">
-                <a
-                  href="https://link.springer.com/article/10.1007/s12671-020-01328-3"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-xs px-2 py-1 bg-brand-gray-light text-brand-gray-medium rounded hover:bg-brand-orange/10 hover:text-brand-orange transition-colors"
-                >
+                <a href="https://link.springer.com/article/10.1007/s12671-020-01328-3" target="_blank" rel="noopener noreferrer" className="text-xs px-2 py-1 bg-brand-gray-light text-brand-gray-medium rounded hover:bg-brand-orange/10 hover:text-brand-orange transition-colors">
                   Vonderlin et al. (2020)
                 </a>
-                <a
-                  href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10172073/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-xs px-2 py-1 bg-brand-gray-light text-brand-gray-medium rounded hover:bg-brand-orange/10 hover:text-brand-orange transition-colors"
-                >
+                <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10172073/" target="_blank" rel="noopener noreferrer" className="text-xs px-2 py-1 bg-brand-gray-light text-brand-gray-medium rounded hover:bg-brand-orange/10 hover:text-brand-orange transition-colors">
                   Michaelsen et al. (2023)
                 </a>
               </div>
@@ -408,52 +306,22 @@ const Wetenschap = () => {
                 Zonder dat de werkdruk wordt verminderd ervaren deelnemers minder stress. De beleving van het werk en de werkdruk wordt minder stressvol.
               </p>
               <div className="flex flex-wrap gap-2">
-                <a
-                  href="https://www.researchgate.net/publication/320809758_Mindfulness-based_stress_reduction_MBSR_for_improving_health_quality_of_life_and_social_functioning_in_adults_a_systematic_review_and_meta-analysis"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-xs px-2 py-1 bg-brand-gray-light text-brand-gray-medium rounded hover:bg-brand-orange/10 hover:text-brand-orange transition-colors"
-                >
+                <a href="https://www.researchgate.net/publication/320809758_Mindfulness-based_stress_reduction_MBSR_for_improving_health_quality_of_life_and_social_functioning_in_adults_a_systematic_review_and_meta-analysis" target="_blank" rel="noopener noreferrer" className="text-xs px-2 py-1 bg-brand-gray-light text-brand-gray-medium rounded hover:bg-brand-orange/10 hover:text-brand-orange transition-colors">
                   De Vibe et al. (2017)
                 </a>
-                <a
-                  href="https://scispace.com/pdf/a-systematic-review-and-meta-analysis-of-workplace-448vdu0m18.pdf"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-xs px-2 py-1 bg-brand-gray-light text-brand-gray-medium rounded hover:bg-brand-orange/10 hover:text-brand-orange transition-colors"
-                >
+                <a href="https://scispace.com/pdf/a-systematic-review-and-meta-analysis-of-workplace-448vdu0m18.pdf" target="_blank" rel="noopener noreferrer" className="text-xs px-2 py-1 bg-brand-gray-light text-brand-gray-medium rounded hover:bg-brand-orange/10 hover:text-brand-orange transition-colors">
                   Bartlett et al. (2018)
                 </a>
-                <a
-                  href="https://link.springer.com/article/10.1007/s12671-020-01328-3"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-xs px-2 py-1 bg-brand-gray-light text-brand-gray-medium rounded hover:bg-brand-orange/10 hover:text-brand-orange transition-colors"
-                >
+                <a href="https://link.springer.com/article/10.1007/s12671-020-01328-3" target="_blank" rel="noopener noreferrer" className="text-xs px-2 py-1 bg-brand-gray-light text-brand-gray-medium rounded hover:bg-brand-orange/10 hover:text-brand-orange transition-colors">
                   Vonderlin et al. (2020)
                 </a>
-                <a
-                  href="https://www.frontiersin.org/journals/education/articles/10.3389/feduc.2024.1385375/full"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-xs px-2 py-1 bg-brand-gray-light text-brand-gray-medium rounded hover:bg-brand-orange/10 hover:text-brand-orange transition-colors"
-                >
+                <a href="https://www.frontiersin.org/journals/education/articles/10.3389/feduc.2024.1385375/full" target="_blank" rel="noopener noreferrer" className="text-xs px-2 py-1 bg-brand-gray-light text-brand-gray-medium rounded hover:bg-brand-orange/10 hover:text-brand-orange transition-colors">
                   Lensen et al. (2024)
                 </a>
-                <a
-                  href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10172073/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-xs px-2 py-1 bg-brand-gray-light text-brand-gray-medium rounded hover:bg-brand-orange/10 hover:text-brand-orange transition-colors"
-                >
+                <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10172073/" target="_blank" rel="noopener noreferrer" className="text-xs px-2 py-1 bg-brand-gray-light text-brand-gray-medium rounded hover:bg-brand-orange/10 hover:text-brand-orange transition-colors">
                   Michaelsen et al. (2023)
                 </a>
-                <a
-                  href="https://academic.oup.com/occmed/article-abstract/66/8/630/2750551?redirectedFrom=fulltext"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-xs px-2 py-1 bg-brand-gray-light text-brand-gray-medium rounded hover:bg-brand-orange/10 hover:text-brand-orange transition-colors"
-                >
+                <a href="https://academic.oup.com/occmed/article-abstract/66/8/630/2750551?redirectedFrom=fulltext" target="_blank" rel="noopener noreferrer" className="text-xs px-2 py-1 bg-brand-gray-light text-brand-gray-medium rounded hover:bg-brand-orange/10 hover:text-brand-orange transition-colors">
                   Żołnierczyk-Zreda et al. (2016)
                 </a>
               </div>
@@ -471,20 +339,10 @@ const Wetenschap = () => {
                 De psychische gesteldheid verbetert merkbaar. Deelnemers voelen zich mentaal sterker en stabieler, met minder last van negatieve gedachten.
               </p>
               <div className="flex flex-wrap gap-2">
-                <a
-                  href="https://www.researchgate.net/publication/320809758_Mindfulness-based_stress_reduction_MBSR_for_improving_health_quality_of_life_and_social_functioning_in_adults_a_systematic_review_and_meta-analysis"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-xs px-2 py-1 bg-brand-gray-light text-brand-gray-medium rounded hover:bg-brand-orange/10 hover:text-brand-orange transition-colors"
-                >
+                <a href="https://www.researchgate.net/publication/320809758_Mindfulness-based_stress_reduction_MBSR_for_improving_health_quality_of_life_and_social_functioning_in_adults_a_systematic_review_and_meta-analysis" target="_blank" rel="noopener noreferrer" className="text-xs px-2 py-1 bg-brand-gray-light text-brand-gray-medium rounded hover:bg-brand-orange/10 hover:text-brand-orange transition-colors">
                   De Vibe et al. (2017)
                 </a>
-                <a
-                  href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10172073/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-xs px-2 py-1 bg-brand-gray-light text-brand-gray-medium rounded hover:bg-brand-orange/10 hover:text-brand-orange transition-colors"
-                >
+                <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10172073/" target="_blank" rel="noopener noreferrer" className="text-xs px-2 py-1 bg-brand-gray-light text-brand-gray-medium rounded hover:bg-brand-orange/10 hover:text-brand-orange transition-colors">
                   Michaelsen et al. (2023)
                 </a>
               </div>
@@ -502,28 +360,13 @@ const Wetenschap = () => {
                 Het algehele welzijn en tevredenheid over het leven verbeterd. Deelnemers ervaren meer plezier en betekenis in hun dagelijkse activiteiten.
               </p>
               <div className="flex flex-wrap gap-2">
-                <a
-                  href="https://www.researchgate.net/publication/320809758_Mindfulness-based_stress_reduction_MBSR_for_improving_health_quality_of_life_and_social_functioning_in_adults_a_systematic_review_and_meta-analysis"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-xs px-2 py-1 bg-brand-gray-light text-brand-gray-medium rounded hover:bg-brand-orange/10 hover:text-brand-orange transition-colors"
-                >
+                <a href="https://www.researchgate.net/publication/320809758_Mindfulness-based_stress_reduction_MBSR_for_improving_health_quality_of_life_and_social_functioning_in_adults_a_systematic_review_and_meta-analysis" target="_blank" rel="noopener noreferrer" className="text-xs px-2 py-1 bg-brand-gray-light text-brand-gray-medium rounded hover:bg-brand-orange/10 hover:text-brand-orange transition-colors">
                   De Vibe et al. (2017)
                 </a>
-                <a
-                  href="https://link.springer.com/article/10.1007/s12671-020-01328-3"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-xs px-2 py-1 bg-brand-gray-light text-brand-gray-medium rounded hover:bg-brand-orange/10 hover:text-brand-orange transition-colors"
-                >
+                <a href="https://link.springer.com/article/10.1007/s12671-020-01328-3" target="_blank" rel="noopener noreferrer" className="text-xs px-2 py-1 bg-brand-gray-light text-brand-gray-medium rounded hover:bg-brand-orange/10 hover:text-brand-orange transition-colors">
                   Vonderlin et al. (2020)
                 </a>
-                <a
-                  href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10172073/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-xs px-2 py-1 bg-brand-gray-light text-brand-gray-medium rounded hover:bg-brand-orange/10 hover:text-brand-orange transition-colors"
-                >
+                <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10172073/" target="_blank" rel="noopener noreferrer" className="text-xs px-2 py-1 bg-brand-gray-light text-brand-gray-medium rounded hover:bg-brand-orange/10 hover:text-brand-orange transition-colors">
                   Michaelsen et al. (2023)
                 </a>
               </div>
@@ -541,28 +384,13 @@ const Wetenschap = () => {
                 Deelnemers vallen makkelijker in slaap en slapen dieper. Dit zorgt voor beter herstel en meer energie voor de volgende dag.
               </p>
               <div className="flex flex-wrap gap-2">
-                <a
-                  href="https://scispace.com/pdf/a-systematic-review-and-meta-analysis-of-workplace-448vdu0m18.pdf"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-xs px-2 py-1 bg-brand-gray-light text-brand-gray-medium rounded hover:bg-brand-orange/10 hover:text-brand-orange transition-colors"
-                >
+                <a href="https://scispace.com/pdf/a-systematic-review-and-meta-analysis-of-workplace-448vdu0m18.pdf" target="_blank" rel="noopener noreferrer" className="text-xs px-2 py-1 bg-brand-gray-light text-brand-gray-medium rounded hover:bg-brand-orange/10 hover:text-brand-orange transition-colors">
                   Bartlett et al. (2018)
                 </a>
-                <a
-                  href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10172073/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-xs px-2 py-1 bg-brand-gray-light text-brand-gray-medium rounded hover:bg-brand-orange/10 hover:text-brand-orange transition-colors"
-                >
+                <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10172073/" target="_blank" rel="noopener noreferrer" className="text-xs px-2 py-1 bg-brand-gray-light text-brand-gray-medium rounded hover:bg-brand-orange/10 hover:text-brand-orange transition-colors">
                   Michaelsen et al. (2023)
                 </a>
-                <a
-                  href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12210539/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-xs px-2 py-1 bg-brand-gray-light text-brand-gray-medium rounded hover:bg-brand-orange/10 hover:text-brand-orange transition-colors"
-                >
+                <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12210539/" target="_blank" rel="noopener noreferrer" className="text-xs px-2 py-1 bg-brand-gray-light text-brand-gray-medium rounded hover:bg-brand-orange/10 hover:text-brand-orange transition-colors">
                   Dou et al. (2024)
                 </a>
               </div>
@@ -576,8 +404,6 @@ const Wetenschap = () => {
       <div id="contact">
         <Footer />
       </div>
-    </div>
-  );
+    </div>;
 };
-
 export default Wetenschap;
