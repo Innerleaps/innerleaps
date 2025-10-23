@@ -4,6 +4,8 @@ import uMassLogo from "@/assets/Vitaliteitsprogramma_ontwikkeld_door_university_
 import oxfordLogo from "@/assets/Vitaliteitsprogramma_ontwikkeld_door_oxford.jpg";
 import vgzLogo from "@/assets/Vitaliteitprogramma_herkent_door_vgz.png";
 import achmeaLogo from "@/assets/Vitaliteitprogramma_herkent_door_zilveren_kruis_achmea.svg";
+import czLogo from "@/assets/Vitaliteitsprogramma_herkend_door_CZ.png";
+import uvaLogo from "@/assets/Aandachttraining_aan_de_universiteit_van_amsterdam.png";
 
 const TrustSection = () => {
   const trustItems = [
@@ -14,6 +16,7 @@ const TrustSection = () => {
       logos: [
         { src: achmeaLogo, alt: "Vitaliteits\u00ADprogramma herkend door Zilveren Kruis Achmea", className: "h-24" },
         { src: vgzLogo, alt: "Vitaliteits\u00ADprogramma herkend door VGZ", className: "h-24" },
+        { src: czLogo, alt: "Vitaliteits\u00ADprogramma herkend door CZ", className: "h-24" },
       ],
     },
     {
@@ -27,6 +30,7 @@ const TrustSection = () => {
           className: "h-24 rounded border border-border",
         },
         { src: uMassLogo, alt: "Vitaliteits\u00ADprogramma ontwikkeld door University of Massachusetts", className: "h-24" },
+        { src: uvaLogo, alt: "Aandacht\u00ADtraining aan de Universiteit van Amsterdam", className: "h-24" },
       ],
     },
     {
