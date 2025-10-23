@@ -108,6 +108,8 @@ Secties wisselen af tussen `bg-white` en `bg-brand-off-white` (#F7F5F2):
 
 ## 🎯 Icons
 
+**🔥 BELANGRIJKE REGEL: Alle iconen zijn ALTIJD oranje (`text-brand-orange`).**
+
 ### Check Icons (Lucide React)
 
 ```tsx
@@ -118,7 +120,7 @@ import { Check } from 'lucide-react';
 
 - **Grootte**: `h-6 w-6` (24px)
 - **Stroke**: `stroke-[3]` voor extra dikte
-- **Kleur**: `text-brand-orange` (NIET groen!)
+- **Kleur**: `text-brand-orange` (ALTIJD!)
 
 ### Feature Icons
 
@@ -130,7 +132,24 @@ import { Check } from 'lucide-react';
 
 - **Container**: `w-14 h-14` met `bg-brand-orange/10` (10% opacity)
 - **Icon**: `w-7 h-7` (28px)
-- **Kleur**: `text-brand-orange`
+- **Kleur**: `text-brand-orange` (ALTIJD!)
+
+### Card Icons (zoals in Organisatie/Deelnemers blokken)
+
+```tsx
+<div className="p-3 rounded-lg bg-brand-orange/5 w-fit">
+  <Icon className="h-8 w-8 text-brand-orange stroke-2" />
+</div>
+```
+
+- **Container**: `p-3 rounded-lg bg-brand-orange/5`
+- **Icon**: `h-8 w-8` met `stroke-2`
+- **Kleur**: `text-brand-orange` (ALTIJD!)
+
+**Referentie implementatie**: Zie ProgramSection.tsx en Wetenschap.tsx voor correcte icoon styling.
+
+**❌ NOOIT gebruiken**: `text-brand-blue`, `text-brand-green`, `text-brand-purple` voor iconen  
+**✅ ALTIJD gebruiken**: `text-brand-orange` voor ALLE iconen
 
 ## 🖼️ Logo Groottes
 
@@ -315,6 +334,7 @@ De sticky buttons rechtsonder zijn de perfecte referentie:
 6. **Geen inline styles**: Alles via Tailwind classes
 7. **Geen hardcoded hex waarden**: Gebruik de CSS variabelen
 8. **Check brand colors**: Geen groen, alleen oranje/paars/blauw/off-white
+9. **Iconen**: ALLE iconen zijn oranje (`text-brand-orange`) - geen uitzonderingen
 
 ## 🚫 Veel gemaakte fouten (vermijd deze)
 
@@ -335,6 +355,9 @@ De sticky buttons rechtsonder zijn de perfecte referentie:
 
 ❌ **FOUT**: Custom CSS in component bestanden
 ✅ **GOED**: Alles via Tailwind utilities en design system
+
+❌ **FOUT**: `text-brand-blue` of `text-brand-green` voor iconen
+✅ **GOED**: `text-brand-orange` voor ALLE iconen
 
 ---
 
