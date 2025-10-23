@@ -75,7 +75,7 @@ const Wetenschap = () => {
             {brainSystems.map((system) => {
               const IconComponent = system.icon;
               return (
-                <div key={system.number} className="flex flex-col space-y-4">
+                <div key={system.number} className="flex flex-col space-y-4 bg-brand-off-white p-6 rounded-lg">
                   <div className="flex items-center gap-3">
                     <div className={`p-3 rounded-lg ${system.bgColor}`}>
                       <IconComponent className={`h-8 w-8 ${system.color} stroke-2`} />
@@ -85,7 +85,7 @@ const Wetenschap = () => {
                   <h3 className="text-xl md:text-2xl font-semibold text-brand-gray-dark leading-tight">
                     {system.title}
                   </h3>
-                  <ul className="space-y-2">
+                  <ul className="list-disc list-outside ml-5 space-y-2">
                     {system.points.map((point, idx) => (
                       <li key={idx} className="text-base md:text-lg text-brand-gray-medium leading-relaxed">
                         {point}
