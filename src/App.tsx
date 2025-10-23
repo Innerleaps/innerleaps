@@ -7,6 +7,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import LandingPage from "./pages/LandingPage";
 import Wetenschap from "./pages/Wetenschap";
+import WetenschapOld from "./pages/WetenschapOld";
 import Programma from "./pages/Programma";
 import OverOns from "./pages/OverOns";
 import VoorWie from "./pages/VoorWie";
@@ -36,6 +37,7 @@ const App = () => {
               <>
                 <Route path="/home" element={<Index />} />
                 <Route path="/wetenschap" element={<Wetenschap />} />
+                <Route path="/wetenschap_old" element={<WetenschapOld />} />
                 <Route path="/programma" element={<Programma />} />
                 <Route path="/over-ons" element={<OverOns />} />
                 <Route path="/voor-wie" element={<VoorWie />} />
