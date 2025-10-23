@@ -18,7 +18,7 @@ const TrustSection = () => {
         { src: achmeaLogo, alt: "Vitaliteits\u00ADprogramma herkend door Zilveren Kruis Achmea", className: "h-24" },
         { src: vgzLogo, alt: "Vitaliteits\u00ADprogramma herkend door VGZ", className: "h-24" },
         { src: czLogo, alt: "Vitaliteits\u00ADprogramma herkend door CZ", className: "h-24" },
-        { src: menzisLogo, alt: "Vitaliteits\u00ADprogramma herkend door Menzis", className: "h-24" },
+        { src: menzisLogo, alt: "Vitaliteits\u00ADprogramma herkend door Menzis", className: "h-20" },
       ],
     },
     {
