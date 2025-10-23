@@ -14,7 +14,7 @@ const Contact = () => {
       <StickyCtaButtons />
       
       <main className="pt-8">
-        <section className="bg-white section-padding">
+        <section className="bg-brand-off-white section-padding">
           <div className="container-custom">
             <div className="text-center space-y-6 mb-16">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-gray-dark">
@@ -42,6 +42,7 @@ const Contact = () => {
                   <div className="text-center">
                     <Button 
                       variant="secondary"
+                      className="font-semibold py-5 px-10 rounded-lg text-lg"
                       onClick={() => {
                         const link = document.createElement('a');
                         link.href = 'https://calendar.app.google/BgGy8cVUSk4w5Zzg8';

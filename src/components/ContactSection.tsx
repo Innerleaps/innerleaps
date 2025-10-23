@@ -31,6 +31,7 @@ const ContactSection = () => {
               <div className="text-center">
                 <Button 
                   variant="secondary"
+                  className="font-semibold py-5 px-10 rounded-lg text-lg"
                   onClick={() => {
                     const link = document.createElement('a');
                     link.href = 'https://calendar.app.google/BgGy8cVUSk4w5Zzg8';

@@ -266,6 +266,45 @@ import { Check } from 'lucide-react';
 </div>
 ```
 
+## 🔘 Buttons (Call-to-Action Richtlijnen)
+
+### Button Varianten voor Niet-Ingelogde Sectie
+
+**Primaire Buttons (Oranje)** - `variant="default"` of geen variant
+- **Gebruik voor**: ROI Calculator gerelateerde acties
+- **Voorbeelden**: "Bereken mijn besparing", "Verstuur mijn ROI-analyse", "Bereken ROI"
+- **Styling**: Oranje achtergrond (`bg-brand-orange`), witte tekst
+- **Code**: `<Button>Bereken mijn besparing</Button>`
+
+**Secundaire Buttons (Paars/Blauw)** - `variant="secondary"`
+- **Gebruik voor**: Afspraken plannen, contact, downloads (wetenschappelijke papers)
+- **Voorbeelden**: "Gesprek met Bas plannen", "Plan een gesprek met Bas", "Download paper"
+- **Styling**: Paars/blauwe achtergrond (`bg-brand-blue`), witte tekst
+- **Code**: `<Button variant="secondary">Gesprek met Bas plannen</Button>`
+
+### Button Text Styling
+
+Voor prominente CTA buttons:
+```tsx
+<Button 
+  variant="secondary"
+  className="font-semibold py-5 px-10 rounded-lg text-lg"
+>
+  Plan een gesprek met Bas
+</Button>
+```
+
+- **Text size**: `text-lg` (18px) of groter voor belangrijke CTAs
+- **Font weight**: `font-semibold` of `font-bold`
+- **Padding**: `py-5 px-10` voor prominente buttons
+- **Border radius**: `rounded-lg`
+
+### Voorbeeld Sticky Buttons (Referentie Implementatie)
+
+De sticky buttons rechtsonder zijn de perfecte referentie:
+- ROI Calculator button: Primair (oranje) - `<Button>`
+- Gesprek plannen button: Secundair (paars) - `<Button variant="secondary">`
+
 ## ✅ Best Practices
 
 1. **Consistentie**: Gebruik ALTIJD deze vooraf gedefinieerde classes

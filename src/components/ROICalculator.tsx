@@ -141,11 +141,11 @@ const ROICalculator = () => {
             </div>
             
             <h2 className="text-3xl md:text-4xl font-bold mb-6 text-brand-gray-dark">
-              Bereken jouw ROI: van investering naar rendement
+              Wat levert het vitaliteitsprogramma op?
             </h2>
             
             <p className="text-xl md:text-2xl leading-relaxed mb-8 text-brand-gray-medium">
-              Ontvang een gepersonaliseerde ROI-analyse voor het InnerLeaps Life+ programma direct in je mailbox. Gebaseerd op wetenschappelijk onderzoek en jouw specifieke bedrijfssituatie.
+              Ontvang een gepersonaliseerde ROI-analyse van ons programma direct in je mailbox. Gebaseerd op wetenschappelijk onderzoek en jouw specifieke bedrijfssituatie.
             </p>
           </div>
 
