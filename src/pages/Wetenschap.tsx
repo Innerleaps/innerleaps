@@ -114,9 +114,9 @@ const Wetenschap = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-3 gap-8 mb-12">
+          <div className="grid grid-cols-4 gap-8 mb-12">
             <div></div>
-            <div className="space-y-3">
+            <div className="col-span-2 space-y-3">
               <div className="flex items-start gap-3">
                 <CheckCircle className="h-6 w-6 text-brand-orange stroke-2 flex-shrink-0 mt-1" />
                 <span className="text-xl md:text-2xl text-brand-gray-dark">Emoties regulatie.</span>
