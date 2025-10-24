@@ -218,9 +218,7 @@ const Wetenschap = () => {
               <div className="p-3 rounded-lg bg-brand-orange/5 w-fit mx-auto">
                 <Target className="h-8 w-8 text-brand-orange stroke-2" />
               </div>
-              <h3 className="text-xl md:text-2xl font-semibold text-brand-gray-dark text-center">
-                77% meer veerkracht
-              </h3>
+              <h3 className="text-xl md:text-2xl font-semibold text-brand-gray-dark text-center">Veerkrachtiger</h3>
               <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed text-center">
                 Deelnemers ontwikkelen mentale spierkracht om uitdagingen het hoofd te bieden. Ze herstellen sneller van
                 tegenslagen en blijven effectief functioneren onder druk.
@@ -259,7 +257,7 @@ const Wetenschap = () => {
                 <Heart className="h-8 w-8 text-brand-orange stroke-2" />
               </div>
               <h3 className="text-xl md:text-2xl font-semibold text-brand-gray-dark text-center">
-                63% meer werktevredenheid
+                Hogere werktevredenheid
               </h3>
               <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed text-center">
                 Het plezier in het werk neemt toe. Taken voelen minder zwaar aan en deelnemers ervaren meer betekenis in
@@ -291,7 +289,7 @@ const Wetenschap = () => {
                 <TrendingUp className="h-8 w-8 text-brand-orange stroke-2" />
               </div>
               <h3 className="text-xl md:text-2xl font-semibold text-brand-gray-dark text-center">
-                70% lager risico op uitval
+                Lager uitval risico
               </h3>
               <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed text-center">
                 De kans dat medewerkers uitvallen door stress of burn-out daalt drastisch, wat zorgt voor meer
@@ -315,7 +313,7 @@ const Wetenschap = () => {
                 <Award className="h-8 w-8 text-brand-orange stroke-2" />
               </div>
               <h3 className="text-xl md:text-2xl font-semibold text-brand-gray-dark text-center">
-                60% hogere productiviteit
+                Hogere productiviteit
               </h3>
               <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed text-center">
                 Teams presteren beter door verhoogde focus, minder stress en betere samenwerking.
@@ -342,7 +340,7 @@ const Wetenschap = () => {
           </div>
 
           <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed text-center">
-            Resultaten uitgedrukt in Common Language Effect Size. <br />
+            <br />
             Effecten blijven 12+ maanden aanhouden.
           </p>
         </div>
@@ -358,7 +356,8 @@ const Wetenschap = () => {
               <span className="text-brand-orange">wetenschap</span>.
             </h2>
             <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
-              Jouw medewerkers ervaren de impact direct. Meer rust, betere gezondheid, diepere slaap:
+              Goed voor de organisatie maar nog beter voor de deelnemers. De positieve effecten zijn op heel veel
+              vlakken van het leven merkbaar.
             </p>
           </div>
 
