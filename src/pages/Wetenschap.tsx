@@ -3,7 +3,7 @@ import Navigation from "@/components/Navigation";
 import StickyCtaButtons from "@/components/StickyCtaButtons";
 import ROICalculator from "@/components/ROICalculator";
 import Footer from "@/components/Footer";
-import { Brain, Heart, Shield, CheckCircle, Target, Award, TrendingUp } from "lucide-react";
+import { Brain, Heart, Shield, CheckCircle, Target, Award, TrendingUp, FileText } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import LeadMagnetModal from "@/components/LeadMagnetModal";
 import neocortexImage from "@/assets/Meer_activiteit_in_neo_cortex_door_aandacht_training.png";
@@ -556,22 +556,24 @@ const Wetenschap = () => {
       </section>
 
       {/* LEAD MAGNET */}
-      <section className="bg-brand-off-white section-padding">
+      <section className="bg-gradient-to-r from-brand-blue to-brand-blue-dark text-white section-padding">
         <div className="container-custom">
-          <div className="max-w-3xl mx-auto text-center space-y-6">
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-gray-dark leading-tight">
-              De resultaten van 40 jaar onderzoek naar aandachttraining. 
-              <span className="text-brand-orange"> Vraag het hier aan.</span>
+          <div className="max-w-4xl mx-auto text-center">
+            <div className="inline-flex items-center bg-white/10 text-white px-4 py-2 rounded-full text-sm font-semibold mb-6">
+              <FileText className="h-4 w-4 mr-2" />
+              Exclusief wetenschappelijk rapport
+            </div>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+              De resultaten van 40 jaar onderzoek naar aandachttraining. Vraag het hier aan.
             </h2>
-            <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
+            <p className="text-xl md:text-2xl leading-relaxed mb-8 text-white/90">
               Zelf de wetenschappelijke details bekijken? Ons academische rapport bundelt de laatste studies, analyses en berekeningen rond de effecten van aandachttraining. Inclusief effectgroottes en pathway-analyses.
             </p>
-            <Button
-              onClick={() => setIsLeadMagnetOpen(true)}
-              size="lg"
-              className="bg-brand-blue hover:bg-brand-blue-dark text-white text-lg px-8 py-6"
+            <Button 
+              onClick={() => setIsLeadMagnetOpen(true)} 
+              className="text-lg px-8 py-3 bg-white hover:bg-gray-100 text-brand-blue hover:text-brand-blue font-semibold rounded-lg transition-all duration-300 shadow-lg transform hover:-translate-y-0.5"
             >
-              Ontvang het wetenschappelijke bewijs
+              Vraag het bewijs op
             </Button>
           </div>
         </div>
