@@ -433,7 +433,9 @@ const Wetenschap = () => {
               <div className="p-3 rounded-lg bg-brand-orange/5 w-fit mx-auto">
                 <Brain className="h-8 w-8 text-brand-orange stroke-2" />
               </div>
-              <h3 className="text-xl md:text-2xl font-semibold text-brand-gray-dark text-center">Betere gezondheid</h3>
+              <h3 className="text-xl md:text-2xl font-semibold text-brand-gray-dark text-center">
+                Betere fysieke en mentale gezondheid
+              </h3>
               <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed text-center">
                 De fysieke en mentale gezondheid verbetert merkbaar. Deelnemers voelen zich fitter en mentaal sterker en
                 stabieler, met minder last van negatieve gedachten.
