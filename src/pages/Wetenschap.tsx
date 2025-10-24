@@ -26,7 +26,7 @@ const Wetenschap = () => {
     {
       number: 2,
       icon: Heart,
-      title: "2. Limbisch systeem - Beloningen najagen",
+      title: "2. Limbisch systeem: beloningen najagen",
       color: "text-brand-orange",
       bgColor: "bg-brand-orange/5",
       points: [
@@ -38,7 +38,7 @@ const Wetenschap = () => {
     {
       number: 3,
       icon: Shield,
-      title: "3. Reptielenbrein - dreigingen vermijden",
+      title: "3. Reptielenbrein: dreigingen vermijden",
       color: "text-brand-orange",
       bgColor: "bg-brand-orange/5",
       points: [
