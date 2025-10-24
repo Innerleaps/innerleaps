@@ -60,7 +60,7 @@ const Wetenschap = () => {
                   <div className={`p-3 rounded-lg ${system.bgColor}`}>
                     <IconComponent className={`h-8 w-8 ${system.color} stroke-2`} />
                   </div>
-                  <span className={`text-2xl font-bold ${system.color}`}>{system.number}</span>
+                  
                 </div>
                 <h3 className="text-xl md:text-2xl font-semibold text-brand-gray-dark leading-tight text-center">
                   {system.title}
