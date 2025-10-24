@@ -218,7 +218,9 @@ const Wetenschap = () => {
               <div className="p-3 rounded-lg bg-brand-orange/5 w-fit mx-auto">
                 <Target className="h-8 w-8 text-brand-orange stroke-2" />
               </div>
-              <h3 className="text-xl md:text-2xl font-semibold text-brand-gray-dark text-center">Veerkrachtiger</h3>
+              <h3 className="text-xl md:text-2xl font-semibold text-brand-gray-dark text-center">
+                Veerkrachtiger en weerbaarder
+              </h3>
               <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed text-center">
                 Deelnemers ontwikkelen mentale spierkracht om uitdagingen het hoofd te bieden. Ze herstellen sneller van
                 tegenslagen en blijven effectief functioneren onder druk.
@@ -257,7 +259,7 @@ const Wetenschap = () => {
                 <Heart className="h-8 w-8 text-brand-orange stroke-2" />
               </div>
               <h3 className="text-xl md:text-2xl font-semibold text-brand-gray-dark text-center">
-                Meer werktevredenheid
+                Hogere werktevredenheid
               </h3>
               <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed text-center">
                 Het plezier in het werk neemt toe. Taken voelen minder zwaar aan en deelnemers ervaren meer betekenis in
@@ -313,7 +315,7 @@ const Wetenschap = () => {
                 <Award className="h-8 w-8 text-brand-orange stroke-2" />
               </div>
               <h3 className="text-xl md:text-2xl font-semibold text-brand-gray-dark text-center">
-                Hogere productiviteit
+                Hogere productiviteit en prestatie
               </h3>
               <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed text-center">
                 Teams presteren beter door verhoogde focus, minder stress en betere samenwerking.
@@ -368,7 +370,7 @@ const Wetenschap = () => {
                 <Shield className="h-8 w-8 text-brand-orange stroke-2" />
               </div>
               <h3 className="text-xl md:text-2xl font-semibold text-brand-gray-dark text-center">
-                Minder stress, rustiger
+                72% meer rust in het leven
               </h3>
               <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed text-center">
                 Zonder dat de werkdruk wordt verminderd ervaren deelnemers minder stress. De beleving van het werk en de
@@ -431,7 +433,9 @@ const Wetenschap = () => {
               <div className="p-3 rounded-lg bg-brand-orange/5 w-fit mx-auto">
                 <Brain className="h-8 w-8 text-brand-orange stroke-2" />
               </div>
-              <h3 className="text-xl md:text-2xl font-semibold text-brand-gray-dark text-center">Gezonder</h3>
+              <h3 className="text-xl md:text-2xl font-semibold text-brand-gray-dark text-center">
+                68% betere gezondheid
+              </h3>
               <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed text-center">
                 De psychische gesteldheid verbetert merkbaar. Deelnemers voelen zich mentaal sterker en stabieler, met
                 minder last van negatieve gedachten.
@@ -462,7 +466,7 @@ const Wetenschap = () => {
                 <Award className="h-8 w-8 text-brand-orange stroke-2" />
               </div>
               <h3 className="text-xl md:text-2xl font-semibold text-brand-gray-dark text-center">
-                Betere levenskwaliteit
+                63% betere levenskwaliteit
               </h3>
               <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed text-center">
                 Het algehele welzijn en tevredenheid over het leven verbeterd. Deelnemers ervaren meer plezier en
@@ -501,7 +505,9 @@ const Wetenschap = () => {
               <div className="p-3 rounded-lg bg-brand-orange/5 w-fit mx-auto">
                 <Brain className="h-8 w-8 text-brand-orange stroke-2" />
               </div>
-              <h3 className="text-xl md:text-2xl font-semibold text-brand-gray-dark text-center">Beter slapen</h3>
+              <h3 className="text-xl md:text-2xl font-semibold text-brand-gray-dark text-center">
+                78% beter slapen en herstellen
+              </h3>
               <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed text-center">
                 Deelnemers vallen makkelijker in slaap en slapen dieper. Dit zorgt voor beter herstel en meer energie
                 voor de volgende dag.
