@@ -167,7 +167,7 @@ const Wetenschap = () => {
 
           <div className="max-w-5xl mx-auto space-y-8">
             <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed text-center">
-              "Door meer bewustzijn en minder automatische piloot kunnen deelnemers:
+              Door meer bewustzijn en minder automatische piloot kunnen deelnemers:
             </p>
 
             {/* 3 checkmarks op volle breedte */}
