@@ -7,7 +7,6 @@ import { Brain, Heart, Shield, CheckCircle, Target, Award, TrendingUp, FileText 
 import { Button } from "@/components/ui/button";
 import LeadMagnetModal from "@/components/LeadMagnetModal";
 import neocortexImage from "@/assets/Meer_activiteit_in_neo_cortex_door_aandacht_training.png";
-import performanceImage from "@/assets/burnout_voorkomen_en_beter_presteren_door_aandacht_training.png";
 const Wetenschap = () => {
   const [isLeadMagnetOpen, setIsLeadMagnetOpen] = useState(false);
   
@@ -147,65 +146,9 @@ const Wetenschap = () => {
         </div>
       </section>
 
-      {/* STAP 3: HET RESULTAAT */}
-      <section className="bg-white section-padding">
-        <div className="container-custom">
-          <div className="max-w-3xl mx-auto text-center space-y-6 mb-12">
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-gray-dark leading-tight">
-              <span className="text-brand-orange">Burn-out voorkomen</span> én{" "}
-              <span className="text-brand-orange">prestaties verhogen</span>
-            </h2>
-            <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
-              De Yerkes-Dodson curve laat het zien: optimale prestatie zit in de sweet spot van stress. Te weinig druk?
-              Bore-out. Te veel druk? Burn-out.
-            </p>
-          </div>
-
-          <div className="max-w-4xl mx-auto mb-12">
-            <img
-              src={performanceImage}
-              alt="Burnout voorkomen en beter presteren door aandacht training - Yerkes-Dodson curve"
-              className="w-full h-auto rounded-lg"
-            />
-          </div>
-
-          <div className="max-w-5xl mx-auto space-y-8">
-            <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed text-center">
-              Door meer bewustzijn en minder automatische piloot kunnen deelnemers:
-            </p>
-
-            <div className="grid grid-cols-4 gap-6">
-              <div></div>
-              <div className="col-span-2 space-y-4">
-                <div className="flex items-start gap-3">
-                  <CheckCircle className="h-6 w-6 text-brand-orange stroke-2 flex-shrink-0 mt-1" />
-                  <span className="text-xl md:text-2xl text-brand-gray-dark">
-                    Stress vroeg herkennen en bijsturen voordat het escaleert
-                  </span>
-                </div>
-                <div className="flex items-start gap-3">
-                  <CheckCircle className="h-6 w-6 text-brand-orange stroke-2 flex-shrink-0 mt-1" />
-                  <span className="text-xl md:text-2xl text-brand-gray-dark">
-                    Beter herstellen, sneller terug naar optimale prestatie
-                  </span>
-                </div>
-                <div className="flex items-start gap-3">
-                  <CheckCircle className="h-6 w-6 text-brand-orange stroke-2 flex-shrink-0 mt-1" />
-                  <span className="text-xl md:text-2xl text-brand-gray-dark">
-                    In de prestatie sweet spot blijven waar focus, energie en prestatie hoog zijn
-                  </span>
-                </div>
-              </div>
-              <div></div>
-            </div>
-
-            {/* Het resultaat in cijfers card daaronder */}
-          </div>
-        </div>
-      </section>
 
       {/* ORGANISATIE IMPACT */}
-      <section className="bg-brand-off-white section-padding">
+      <section className="bg-white section-padding">
         <div className="container-custom">
           <div className="max-w-3xl mx-auto text-center space-y-6 mb-12">
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-gray-dark leading-tight">
@@ -221,7 +164,7 @@ const Wetenschap = () => {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
             {/* Veerkracht */}
-            <div className="bg-white p-6 rounded-lg space-y-4">
+            <div className="bg-brand-off-white p-6 rounded-lg space-y-4">
               <div className="p-3 rounded-lg bg-brand-orange/5 w-fit mx-auto">
                 <Target className="h-8 w-8 text-brand-orange stroke-2" />
               </div>
@@ -261,7 +204,7 @@ const Wetenschap = () => {
             </div>
 
             {/* Werktevredenheid */}
-            <div className="bg-white p-6 rounded-lg space-y-4">
+            <div className="bg-brand-off-white p-6 rounded-lg space-y-4">
               <div className="p-3 rounded-lg bg-brand-orange/5 w-fit mx-auto">
                 <Heart className="h-8 w-8 text-brand-orange stroke-2" />
               </div>
@@ -293,7 +236,7 @@ const Wetenschap = () => {
             </div>
 
             {/* Uitval risico */}
-            <div className="bg-white p-6 rounded-lg space-y-4">
+            <div className="bg-brand-off-white p-6 rounded-lg space-y-4">
               <div className="p-3 rounded-lg bg-brand-orange/5 w-fit mx-auto">
                 <TrendingUp className="h-8 w-8 text-brand-orange stroke-2" />
               </div>
@@ -317,7 +260,7 @@ const Wetenschap = () => {
             </div>
 
             {/* Productiviteit */}
-            <div className="bg-white p-6 rounded-lg space-y-4">
+            <div className="bg-brand-off-white p-6 rounded-lg space-y-4">
               <div className="p-3 rounded-lg bg-brand-orange/5 w-fit mx-auto">
                 <Award className="h-8 w-8 text-brand-orange stroke-2" />
               </div>
@@ -356,7 +299,7 @@ const Wetenschap = () => {
       </section>
 
       {/* DEELNEMERS IMPACT */}
-      <section className="bg-white section-padding">
+      <section className="bg-brand-off-white section-padding">
         <div className="container-custom">
           <div className="max-w-3xl mx-auto text-center space-y-6 mb-12">
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-gray-dark leading-tight">
@@ -372,7 +315,7 @@ const Wetenschap = () => {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {/* Meer rust */}
-            <div className="bg-brand-off-white p-6 rounded-lg space-y-4">
+            <div className="bg-white p-6 rounded-lg space-y-4">
               <div className="p-3 rounded-lg bg-brand-orange/5 w-fit mx-auto">
                 <Shield className="h-8 w-8 text-brand-orange stroke-2" />
               </div>
@@ -435,40 +378,31 @@ const Wetenschap = () => {
               </div>
             </div>
 
-            {/* Gezondheid */}
-            <div className="bg-brand-off-white p-6 rounded-lg space-y-4">
+            {/* Betere emotieregulatie */}
+            <div className="bg-white p-6 rounded-lg space-y-4">
               <div className="p-3 rounded-lg bg-brand-orange/5 w-fit mx-auto">
-                <Brain className="h-8 w-8 text-brand-orange stroke-2" />
+                <Heart className="h-8 w-8 text-brand-orange stroke-2" />
               </div>
               <h3 className="text-xl md:text-2xl font-semibold text-brand-gray-dark text-center">
-                Betere fysieke en mentale gezondheid
+                Betere emotieregulatie
               </h3>
               <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed text-center">
-                De fysieke en mentale gezondheid verbetert merkbaar. Deelnemers voelen zich fitter en mentaal sterker en
-                stabieler, met minder last van negatieve gedachten.
+                Sterke emoties zoals frustratie of boosheid krijgen minder grip. Deelnemers reageren rustiger in moeilijke situaties en maken bewustere keuzes.
               </p>
               <div className="flex flex-wrap gap-2">
                 <a
-                  href="https://www.researchgate.net/publication/320809758_Mindfulness-based_stress_reduction_MBSR_for_improving_health_quality_of_life_and_social_functioning_in_adults_a_systematic_review_and_meta-analysis"
+                  href="https://www.frontiersin.org/journals/education/articles/10.3389/feduc.2024.1385375/full"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-xs px-2 py-1 bg-brand-gray-light text-brand-gray-medium rounded hover:bg-brand-orange/10 hover:text-brand-orange transition-colors"
                 >
-                  De Vibe et al. (2017)
-                </a>
-                <a
-                  href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10172073/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-xs px-2 py-1 bg-brand-gray-light text-brand-gray-medium rounded hover:bg-brand-orange/10 hover:text-brand-orange transition-colors"
-                >
-                  Michaelsen et al. (2023)
+                  Lensen et al. (2024)
                 </a>
               </div>
             </div>
 
             {/* Betere levenskwaliteit */}
-            <div className="bg-brand-off-white p-6 rounded-lg space-y-4">
+            <div className="bg-white p-6 rounded-lg space-y-4">
               <div className="p-3 rounded-lg bg-brand-orange/5 w-fit mx-auto">
                 <Award className="h-8 w-8 text-brand-orange stroke-2" />
               </div>
@@ -508,7 +442,7 @@ const Wetenschap = () => {
             </div>
 
             {/* Beter slapen */}
-            <div className="bg-brand-off-white p-6 rounded-lg space-y-4">
+            <div className="bg-white p-6 rounded-lg space-y-4">
               <div className="p-3 rounded-lg bg-brand-orange/5 w-fit mx-auto">
                 <Brain className="h-8 w-8 text-brand-orange stroke-2" />
               </div>
@@ -543,6 +477,38 @@ const Wetenschap = () => {
                   className="text-xs px-2 py-1 bg-brand-gray-light text-brand-gray-medium rounded hover:bg-brand-orange/10 hover:text-brand-orange transition-colors"
                 >
                   Dou et al. (2024)
+                </a>
+              </div>
+            </div>
+
+            {/* Betere fysieke en mentale gezondheid */}
+            <div className="bg-white p-6 rounded-lg space-y-4">
+              <div className="p-3 rounded-lg bg-brand-orange/5 w-fit mx-auto">
+                <Brain className="h-8 w-8 text-brand-orange stroke-2" />
+              </div>
+              <h3 className="text-xl md:text-2xl font-semibold text-brand-gray-dark text-center">
+                Betere fysieke en mentale gezondheid
+              </h3>
+              <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed text-center">
+                De fysieke en mentale gezondheid verbetert merkbaar. Deelnemers voelen zich fitter en mentaal sterker en
+                stabieler, met minder last van negatieve gedachten.
+              </p>
+              <div className="flex flex-wrap gap-2">
+                <a
+                  href="https://www.researchgate.net/publication/320809758_Mindfulness-based_stress_reduction_MBSR_for_improving_health_quality_of_life_and_social_functioning_in_adults_a_systematic_review_and_meta-analysis"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-xs px-2 py-1 bg-brand-gray-light text-brand-gray-medium rounded hover:bg-brand-orange/10 hover:text-brand-orange transition-colors"
+                >
+                  De Vibe et al. (2017)
+                </a>
+                <a
+                  href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10172073/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-xs px-2 py-1 bg-brand-gray-light text-brand-gray-medium rounded hover:bg-brand-orange/10 hover:text-brand-orange transition-colors"
+                >
+                  Michaelsen et al. (2023)
                 </a>
               </div>
             </div>
