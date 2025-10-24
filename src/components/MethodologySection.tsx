@@ -4,8 +4,7 @@ import autopilotImage from "@/assets/We_verliezen_aandacht_door_ons_beloning-_en
 import neocortexImage from "@/assets/Meer_activiteit_in_neo_cortex_door_aandacht_training.png";
 import performanceImage from "@/assets/burnout_voorkomen_en_beter_presteren_door_aandacht_training.png";
 const MethodologySection = () => {
-  return (
-    <section className="section-padding bg-brand-off-white">
+  return <section className="section-padding bg-brand-off-white">
       <div className="container-custom space-y-24 md:space-y-32 lg:space-y-40">
         {/* Blok 1 - Het Probleem - Tekst boven, Visual onder */}
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
@@ -37,11 +36,7 @@ const MethodologySection = () => {
             </p>
           </div>
           <div>
-            <img
-              src={neocortexImage}
-              alt="Meer activiteit in neo cortex door aandacht training"
-              className="w-full h-auto rounded-lg"
-            />
+            <img src={neocortexImage} alt="Meer activiteit in neo cortex door aandacht training" className="w-full h-auto rounded-lg" />
           </div>
         </div>
 
@@ -74,16 +69,12 @@ const MethodologySection = () => {
               </div>
             </div>
             <div className="order-last">
-              <img
-                src={performanceImage}
-                alt="Burnout voorkomen en beter presteren door aandacht training"
-                className="w-full h-auto rounded-lg"
-              />
+              <img src={performanceImage} alt="Burnout voorkomen en beter presteren door aandacht training" className="w-full h-auto rounded-lg" />
             </div>
           </div>
           
           {/* Wetenschap CTA - Over volledige breedte gecentreerd */}
-          <div className="text-center pt-12 space-y-6">
+          <div className="text-center pt-12 space-y-6 py-0">
             <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
               Wil je nog meer weten over de wetenschappelijke basis van onze methode?
             </p>
@@ -95,7 +86,6 @@ const MethodologySection = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
 export default MethodologySection;
