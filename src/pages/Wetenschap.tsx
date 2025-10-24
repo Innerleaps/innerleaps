@@ -342,8 +342,7 @@ const Wetenschap = () => {
           </div>
 
           <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed text-center">
-            Duurzame resultaten uitgedrukt in Common Language Effect Size.{" "}
-            <br />
+            Resultaten uitgedrukt in Common Language Effect Size. <br />
             Effecten blijven 12+ maanden aanhouden.
           </p>
         </div>
@@ -538,6 +537,10 @@ const Wetenschap = () => {
                 </a>
               </div>
             </div>
+            <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed text-center">
+              Resultaten uitgedrukt in Common Language Effect Size. <br />
+              Effecten blijven 12+ maanden aanhouden.
+            </p>
           </div>
         </div>
       </section>
