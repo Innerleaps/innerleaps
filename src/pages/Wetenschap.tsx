@@ -353,7 +353,8 @@ const Wetenschap = () => {
         <div className="container-custom">
           <div className="max-w-3xl mx-auto text-center space-y-6 mb-12">
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-gray-dark leading-tight">
-              <span className="text-brand-orange">Deelnemers</span> krijgen een beter leven. Dat zegt de{" "}
+              <span className="text-brand-orange">Deelnemers</span> krijgen een{" "}
+              <span className="text-brand-orange">beter leven</span>. Dat zegt de{" "}
               <span className="text-brand-orange">wetenschap</span>.
             </h2>
             <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
