@@ -539,11 +539,11 @@ const Wetenschap = () => {
             </div>
           </div>
         </div>
-        <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed text-center">
-          Resultaten uitgedrukt in Common Language Effect Size. <br />
-          Effecten blijven 12+ maanden aanhouden.
-        </p>
       </section>
+      <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed text-center">
+        Resultaten uitgedrukt in Common Language Effect Size. <br />
+        Effecten blijven 12+ maanden aanhouden.
+      </p>
 
       <ROICalculator />
 
