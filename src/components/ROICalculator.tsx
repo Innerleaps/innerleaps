@@ -145,7 +145,7 @@ const ROICalculator = () => {
             </div>
 
             <h2 className="text-3xl md:text-4xl font-bold mb-6 text-brand-gray-dark">
-              Wat levert het vitaliteitsprogramma dat productiviteit verbeterd op?
+              Ontdek wat ons programma jullie organisatie oplevert
             </h2>
 
             <p className="text-xl md:text-2xl leading-relaxed mb-8 text-brand-gray-medium">
