@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+import { Button } from "@/components/ui/button";
 import autopilotImage from "@/assets/We_verliezen_aandacht_door_ons_beloning-_en_stresssysteem.png";
 import neocortexImage from "@/assets/Meer_activiteit_in_neo_cortex_door_aandacht_training.png";
 import performanceImage from "@/assets/burnout_voorkomen_en_beter_presteren_door_aandacht_training.png";
@@ -77,6 +79,23 @@ const MethodologySection = () => {
               alt="Burnout voorkomen en beter presteren door aandacht training"
               className="w-full h-auto rounded-lg"
             />
+          </div>
+        </div>
+
+        {/* Wetenschap CTA - Midden tussen blok 3 en einde sectie */}
+        <div className="flex justify-center items-center pt-16 md:pt-20">
+          <div className="text-center space-y-6 max-w-2xl">
+            <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
+              Wil je nog meer weten over de wetenschappelijke basis van onze methode?
+            </p>
+            <Link to="/wetenschap">
+              <Button 
+                variant="secondary" 
+                className="font-semibold py-3 px-8 rounded-lg text-base md:text-lg"
+              >
+                Ontdek de wetenschap
+              </Button>
+            </Link>
           </div>
         </div>
       </div>
