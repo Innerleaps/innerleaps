@@ -1,5 +1,6 @@
 import { serve } from "https://deno.land/std@0.190.0/http/server.ts";
 import { Resend } from "npm:resend@4.0.0";
+import { z } from "https://deno.land/x/zod@v3.22.4/mod.ts";
 
 const RESEND_API_KEY = Deno.env.get("RESEND_API_KEY");
 const resend = RESEND_API_KEY ? new Resend(RESEND_API_KEY) : null;
@@ -9,29 +10,46 @@ const corsHeaders = {
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type",
 };
 
-interface ROIAnalysisRequest {
-  naam: string;
-  email: string;
-  bedrijfsnaam: string;
-  verzuimPercentage: string;
-  aantalDeelnemers: string;
-  brutoJaarsalaris: string;
-  calculationResults: {
-    totaleLoonkosten: number;
-    verzuimkosten: number;
-    programmakosten: number;
-    minVerzuimbesparing: number;
-    maxVerzuimbesparing: number;
-    productiviteitswinst: number;
-    minTotaleBesparing: number;
-    maxTotaleBesparing: number;
-    minTerugverdientijd: number;
-    maxTerugverdientijd: number;
-    minROI: number;
-    maxROI: number;
-    showROI: boolean;
-  };
-}
+// HTML escaping function to prevent XSS attacks
+const escapeHtml = (text: string): string => {
+  return text.replace(/[&<>"']/g, (char) => {
+    const escapeMap: Record<string, string> = {
+      '&': '&amp;',
+      '<': '&lt;',
+      '>': '&gt;',
+      '"': '&quot;',
+      "'": '&#39;'
+    };
+    return escapeMap[char] || char;
+  });
+};
+
+// Zod validation schema
+const roiAnalysisSchema = z.object({
+  naam: z.string().trim().min(1, "Name is required").max(100, "Name must be less than 100 characters"),
+  email: z.string().trim().email("Invalid email address").max(255, "Email must be less than 255 characters"),
+  bedrijfsnaam: z.string().trim().min(1, "Company name is required").max(200, "Company name must be less than 200 characters"),
+  verzuimPercentage: z.string().trim().regex(/^\d+(\.\d+)?$/, "Invalid percentage format").max(10, "Invalid percentage"),
+  aantalDeelnemers: z.string().trim().regex(/^\d+$/, "Invalid number format").max(10, "Invalid number"),
+  brutoJaarsalaris: z.string().trim().regex(/^\d+$/, "Invalid salary format").max(15, "Invalid salary"),
+  calculationResults: z.object({
+    totaleLoonkosten: z.number(),
+    verzuimkosten: z.number(),
+    programmakosten: z.number(),
+    minVerzuimbesparing: z.number(),
+    maxVerzuimbesparing: z.number(),
+    productiviteitswinst: z.number(),
+    minTotaleBesparing: z.number(),
+    maxTotaleBesparing: z.number(),
+    minTerugverdientijd: z.number(),
+    maxTerugverdientijd: z.number(),
+    minROI: z.number(),
+    maxROI: z.number(),
+    showROI: z.boolean(),
+  }),
+});
+
+type ROIAnalysisRequest = z.infer<typeof roiAnalysisSchema>;
 
 const formatCurrency = (amount: number): string => {
   return new Intl.NumberFormat('nl-NL', {
@@ -53,6 +71,13 @@ const formatMonths = (months: number): string => {
 const generateEmailHTML = (data: ROIAnalysisRequest): string => {
   const { naam, bedrijfsnaam, verzuimPercentage, aantalDeelnemers, brutoJaarsalaris, calculationResults } = data;
   const { programmakosten, minVerzuimbesparing, maxVerzuimbesparing, productiviteitswinst, minTotaleBesparing, maxTotaleBesparing, minTerugverdientijd, maxTerugverdientijd, minROI, maxROI, showROI } = calculationResults;
+  
+  // Escape all user-controlled data for HTML
+  const safeNaam = escapeHtml(naam);
+  const safeBedrijfsnaam = escapeHtml(bedrijfsnaam);
+  const safeVerzuimPercentage = escapeHtml(verzuimPercentage);
+  const safeAantalDeelnemers = escapeHtml(aantalDeelnemers);
+  const safeBrutoJaarsalaris = escapeHtml(brutoJaarsalaris);
 
   const conditionalContent = showROI ? `
     <h3 style="color: #6B46C1; font-family: 'Figtree', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; margin: 24px 0 16px 0; font-weight: 600;">FINANCIËLE IMPACT INNERLEAPS PROGRAMMA:</h3>
@@ -123,11 +148,11 @@ const generateEmailHTML = (data: ROIAnalysisRequest): string => {
       
       <div style="background: #6B46C1; padding: 32px 20px; text-align: center;">
         <h1 style="color: #ffffff; margin: 0; font-size: 28px; font-weight: 700;">InnerLeaps Programma</h1>
-        <p style="color: #E9D5FF; margin: 8px 0 0 0; font-size: 16px;">ROI-analyse voor ${bedrijfsnaam}</p>
+        <p style="color: #E9D5FF; margin: 8px 0 0 0; font-size: 16px;">ROI-analyse voor ${safeBedrijfsnaam}</p>
       </div>
 
       <div style="padding: 32px 20px;">
-        <p style="margin: 0 0 16px 0; font-size: 16px;">Beste ${naam},</p>
+        <p style="margin: 0 0 16px 0; font-size: 16px;">Beste ${safeNaam},</p>
 
         <p style="margin: 0 0 24px 0; font-size: 16px;">Leuk dat je onze website hebt bezocht en verstandig dat je uitzoekt of ons programma de investering waard is. Hieronder jullie resultaten.</p>
 
@@ -136,19 +161,19 @@ const generateEmailHTML = (data: ROIAnalysisRequest): string => {
           <ul style="list-style: none; padding: 0; margin: 0;">
             <li style="margin: 0 0 8px 0; padding-left: 20px; position: relative; font-size: 15px;">
               <span style="position: absolute; left: 0; color: #F97316; font-weight: 700;">•</span>
-              ${bedrijfsnaam}
+              ${safeBedrijfsnaam}
             </li>
             <li style="margin: 0 0 8px 0; padding-left: 20px; position: relative; font-size: 15px;">
               <span style="position: absolute; left: 0; color: #F97316; font-weight: 700;">•</span>
-              ${aantalDeelnemers} deelnemers
+              ${safeAantalDeelnemers} deelnemers
             </li>
             <li style="margin: 0 0 8px 0; padding-left: 20px; position: relative; font-size: 15px;">
               <span style="position: absolute; left: 0; color: #F97316; font-weight: 700;">•</span>
-              ${verzuimPercentage}% huidig verzuimpercentage
+              ${safeVerzuimPercentage}% huidig verzuimpercentage
             </li>
             <li style="margin: 0 0 0 0; padding-left: 20px; position: relative; font-size: 15px;">
               <span style="position: absolute; left: 0; color: #F97316; font-weight: 700;">•</span>
-              ${formatCurrency(parseInt(brutoJaarsalaris))} gemiddeld bruto jaarsalaris
+              ${formatCurrency(parseInt(safeBrutoJaarsalaris))} gemiddeld bruto jaarsalaris
             </li>
           </ul>
         </div>
@@ -197,6 +222,8 @@ const generateEmailHTML = (data: ROIAnalysisRequest): string => {
 const generateEmailText = (data: ROIAnalysisRequest): string => {
   const { naam, bedrijfsnaam, verzuimPercentage, aantalDeelnemers, brutoJaarsalaris, calculationResults } = data;
   const { programmakosten, minVerzuimbesparing, maxVerzuimbesparing, productiviteitswinst, minTotaleBesparing, maxTotaleBesparing, minTerugverdientijd, maxTerugverdientijd, minROI, maxROI, showROI } = calculationResults;
+  
+  // Plain text doesn't need HTML escaping, but we still use the validated data
 
   const conditionalContent = showROI ? `
 FINANCIËLE IMPACT INNERLEAPS PROGRAMMA:
@@ -257,6 +284,8 @@ Individuele resultaten kunnen variëren. Berekening gebaseerd op gemiddelde effe
 const generateNotificationEmail = (data: ROIAnalysisRequest): string => {
   const { naam, email, bedrijfsnaam, verzuimPercentage, aantalDeelnemers, brutoJaarsalaris, calculationResults } = data;
   const { programmakosten, minVerzuimbesparing, maxVerzuimbesparing, productiviteitswinst, minTotaleBesparing, maxTotaleBesparing, minTerugverdientijd, maxTerugverdientijd, minROI, maxROI, showROI } = calculationResults;
+  
+  // Plain text doesn't need HTML escaping, but we still use the validated data
 
   return `
 Nieuwe ROI aanvraag ontvangen
@@ -289,7 +318,29 @@ const handler = async (req: Request): Promise<Response> => {
   }
 
   try {
-    const data: ROIAnalysisRequest = await req.json();
+    const rawData = await req.json();
+    
+    // Validate input data using Zod schema
+    const validationResult = roiAnalysisSchema.safeParse(rawData);
+    
+    if (!validationResult.success) {
+      console.error("Validation error:", validationResult.error.format());
+      return new Response(
+        JSON.stringify({ 
+          error: "Invalid input data",
+          details: validationResult.error.format()
+        }),
+        {
+          status: 400,
+          headers: { 
+            "Content-Type": "application/json",
+            ...corsHeaders,
+          },
+        }
+      );
+    }
+    
+    const data = validationResult.data;
     console.log("Sending ROI analysis for:", data.bedrijfsnaam);
 
     // Check if Resend API key is available
@@ -319,7 +370,7 @@ const handler = async (req: Request): Promise<Response> => {
       from: "Bas van InnerLeaps <bas@innerleaps.nl>",
       replyTo: "bas@innerleaps.nl",
       to: [data.email],
-      subject: `InnerLeaps ROI analyse voor ${data.bedrijfsnaam}`,
+      subject: `InnerLeaps ROI analyse voor ${escapeHtml(data.bedrijfsnaam)}`,
       html: generateEmailHTML(data),
       text: generateEmailText(data),
     });
@@ -330,7 +381,7 @@ const handler = async (req: Request): Promise<Response> => {
     const notificationEmailResponse = await resend.emails.send({
       from: "InnerLeaps Notifications <bas@innerleaps.nl>",
       to: ["bas@innerleaps.nl"],
-      subject: `Nieuwe ROI aanvraag van ${data.bedrijfsnaam}`,
+      subject: `Nieuwe ROI aanvraag van ${escapeHtml(data.bedrijfsnaam)}`,
       text: generateNotificationEmail(data),
     });
 
