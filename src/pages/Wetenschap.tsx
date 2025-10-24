@@ -145,8 +145,62 @@ const Wetenschap = () => {
         </div>
       </section>
 
-      {/* ORGANISATIE IMPACT */}
+      {/* STAP 3: HET RESULTAAT */}
       <section className="bg-white section-padding">
+        <div className="container-custom">
+          <div className="max-w-3xl mx-auto text-center space-y-6 mb-12">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-gray-dark leading-tight">
+              <span className="text-brand-orange">Burn-out voorkomen</span> én{" "}
+              <span className="text-brand-orange">prestaties verhogen</span>
+            </h2>
+            <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
+              De Yerkes-Dodson curve laat het zien: optimale prestatie zit in de sweet spot van stress. Te weinig druk?
+              Bore-out. Te veel druk? Burn-out.
+            </p>
+          </div>
+
+          <div className="max-w-4xl mx-auto mb-12">
+            <img
+              src={performanceImage}
+              alt="Burnout voorkomen en beter presteren door aandacht training - Yerkes-Dodson curve"
+              className="w-full h-auto rounded-lg"
+            />
+          </div>
+
+          <div className="max-w-5xl mx-auto space-y-8">
+            <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed text-center">
+              Door meer bewustzijn en minder automatische piloot kunnen deelnemers:
+            </p>
+
+            {/* 3 checkmarks op volle breedte */}
+            <div className="space-y-4">
+              <div className="flex items-start gap-3">
+                <CheckCircle className="h-6 w-6 text-brand-orange stroke-2 flex-shrink-0 mt-1" />
+                <span className="text-xl md:text-2xl text-brand-gray-dark">
+                  Stress vroeg herkennen en bijsturen voordat het escaleert
+                </span>
+              </div>
+              <div className="flex items-start gap-3">
+                <CheckCircle className="h-6 w-6 text-brand-orange stroke-2 flex-shrink-0 mt-1" />
+                <span className="text-xl md:text-2xl text-brand-gray-dark">
+                  Beter herstellen, sneller terug naar optimale prestatie
+                </span>
+              </div>
+              <div className="flex items-start gap-3">
+                <CheckCircle className="h-6 w-6 text-brand-orange stroke-2 flex-shrink-0 mt-1" />
+                <span className="text-xl md:text-2xl text-brand-gray-dark">
+                  In de prestatie sweet spot blijven waar focus, energie en prestatie hoog zijn
+                </span>
+              </div>
+            </div>
+
+            {/* Het resultaat in cijfers card daaronder */}
+          </div>
+        </div>
+      </section>
+
+      {/* ORGANISATIE IMPACT */}
+      <section className="bg-brand-off-white section-padding">
         <div className="container-custom">
           <div className="max-w-3xl mx-auto text-center space-y-6 mb-12">
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-gray-dark leading-tight">
@@ -297,7 +351,7 @@ const Wetenschap = () => {
       </section>
 
       {/* DEELNEMERS IMPACT */}
-      <section className="bg-brand-off-white section-padding">
+      <section className="bg-white section-padding">
         <div className="container-custom">
           <div className="max-w-3xl mx-auto text-center space-y-6 mb-12">
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-gray-dark leading-tight">
