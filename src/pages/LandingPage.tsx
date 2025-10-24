@@ -3,6 +3,7 @@ import HeroSection from '@/components/HeroSection';
 import MethodologySection from '@/components/MethodologySection';
 import ProgramOverviewSection from '@/components/ProgramOverviewSection';
 import TrustSection from '@/components/TrustSection';
+import ROICalculator from '@/components/ROICalculator';
 import StickyCtaButtons from '@/components/StickyCtaButtons';
 import Footer from '@/components/Footer';
 
@@ -17,6 +18,7 @@ const LandingPage = () => {
       <MethodologySection />
       <ProgramOverviewSection />
       <TrustSection />
+      <ROICalculator />
       <Footer showNavigation={false} />
     </div>
   );

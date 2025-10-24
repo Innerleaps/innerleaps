@@ -83,8 +83,8 @@ const MethodologySection = () => {
         </div>
 
         {/* Wetenschap CTA - Midden tussen blok 3 en einde sectie */}
-        <div className="flex justify-center items-center pt-16 md:pt-20">
-          <div className="text-center space-y-6 max-w-2xl">
+        <div className="flex justify-center items-center pt-24 md:pt-32">
+          <div className="text-center space-y-4 max-w-2xl">
             <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
               Wil je nog meer weten over de wetenschappelijke basis van onze methode?
             </p>

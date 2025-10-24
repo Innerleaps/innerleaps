@@ -22,7 +22,13 @@ const SimplifiedNavigation = () => {
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center">
+          <div className="hidden lg:flex items-center space-x-6 xl:space-x-8 flex-1 justify-center min-w-0 mx-8">
+            <Link 
+              to="/wetenschap"
+              className="text-brand-gray-dark hover:text-brand-blue transition-colors duration-300 font-medium text-base whitespace-nowrap"
+            >
+              Wetenschap
+            </Link>
             <Link 
               to="/contact"
               className="text-brand-gray-dark hover:text-brand-blue transition-colors duration-300 font-medium text-base whitespace-nowrap"
@@ -47,6 +53,13 @@ const SimplifiedNavigation = () => {
         {isMenuOpen && (
           <div className="lg:hidden pb-4">
             <div className="flex flex-col space-y-4">
+              <Link 
+                to="/wetenschap"
+                onClick={() => setIsMenuOpen(false)}
+                className="text-brand-gray-dark hover:text-brand-blue transition-colors duration-300 font-medium py-2 text-left text-base"
+              >
+                Wetenschap
+              </Link>
               <Link 
                 to="/contact"
                 onClick={() => setIsMenuOpen(false)}
