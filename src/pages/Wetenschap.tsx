@@ -368,7 +368,7 @@ const Wetenschap = () => {
                 <Shield className="h-8 w-8 text-brand-orange stroke-2" />
               </div>
               <h3 className="text-xl md:text-2xl font-semibold text-brand-gray-dark text-center">
-                Minder stress meer rust
+                Minder stress, meer rust
               </h3>
               <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed text-center">
                 Zonder dat de werkdruk wordt verminderd ervaren deelnemers minder stress. De beleving van het werk en de
