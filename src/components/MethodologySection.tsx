@@ -54,9 +54,9 @@ const MethodologySection = () => {
                 <span className="text-brand-orange">uitvalrisico</span> daalt met 70%
               </h2>
               <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
-                Omdat deelnemers bewuster worden kunnen ze stress sneller herkennen, erover communiceren en ontdekken hoe
-                ze hiervan kunnen herstellen. Zo ontwikkelen deelnemers eigenaarschap, wordt burn-out voorkomen en door
-                verhoogde focus worden ze productiever.
+                Omdat deelnemers bewuster worden kunnen ze stress sneller herkennen, erover communiceren en ontdekken
+                hoe ze hiervan kunnen herstellen. Zo ontwikkelen deelnemers eigenaarschap, wordt burn-out voorkomen en
+                door verhoogde focus worden ze productiever.
               </p>
               <div className="space-y-3 pt-2">
                 <div className="flex items-center gap-3">
@@ -81,12 +81,13 @@ const MethodologySection = () => {
               />
             </div>
           </div>
-          
+
           {/* Wetenschap CTA - Over volledige breedte gecentreerd */}
           <div className="text-center pt-12 space-y-6">
             <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
               Wil je nog meer weten over de wetenschappelijke basis van onze methode?
             </p>
+            <br></br>
             <Link to="/wetenschap">
               <Button variant="secondary" className="font-semibold py-3 px-8 rounded-lg text-base md:text-lg">
                 Ontdek de wetenschap
