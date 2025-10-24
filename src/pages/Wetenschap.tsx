@@ -202,7 +202,8 @@ const Wetenschap = () => {
         <div className="container-custom">
           <div className="max-w-3xl mx-auto text-center space-y-6 mb-12">
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-gray-dark leading-tight">
-              Concreet impact op jouw <span className="text-brand-orange">organisatie</span>. Volgens de{" "}
+              Concreet <span className="text-brand-orange">impact</span> op jouw{" "}
+              <span className="text-brand-orange">organisatie</span>. Volgens de{" "}
               <span className="text-brand-orange">wetenschap</span>.
             </h2>
             <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
