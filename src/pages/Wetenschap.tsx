@@ -207,7 +207,7 @@ const Wetenschap = () => {
             </h2>
             <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
               40 jaar wetenschappelijk onderzoek levert bewijs. Heel veel bewijs. Minder verzuim en hogere
-              productiviteit zijn slechts het begin:
+              productiviteit zijn slechts het begin.
             </p>
           </div>
 
