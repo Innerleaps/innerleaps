@@ -257,7 +257,7 @@ const Wetenschap = () => {
                 <Heart className="h-8 w-8 text-brand-orange stroke-2" />
               </div>
               <h3 className="text-xl md:text-2xl font-semibold text-brand-gray-dark text-center">
-                Hogere werktevredenheid
+                Meer werktevredenheid
               </h3>
               <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed text-center">
                 Het plezier in het werk neemt toe. Taken voelen minder zwaar aan en deelnemers ervaren meer betekenis in
