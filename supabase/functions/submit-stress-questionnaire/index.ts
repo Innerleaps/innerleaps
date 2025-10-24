@@ -189,10 +189,12 @@ const handler = async (req: Request): Promise<Response> => {
     if (submission.email && submission.email.trim() !== "") {
       const resend = new Resend(Deno.env.get("RESEND_API_KEY"));
 
-      // Escape user data for HTML (use email if no name provided)
-      const displayName = submission.naam && submission.naam.trim() !== "" 
+      // Escape all user-controlled fields for HTML to prevent XSS
+      const safeName = submission.naam && submission.naam.trim() !== "" 
         ? escapeHtml(submission.naam) 
         : "Beste deelnemer";
+      const safeEmail = submission.email ? escapeHtml(submission.email) : "";
+      const safeOrganisatie = submission.organisatie ? escapeHtml(submission.organisatie) : "";
 
       const emailResponse = await resend.emails.send({
         from: "InnerLeaps <bas@innerleaps.nl>",
@@ -202,7 +204,7 @@ const handler = async (req: Request): Promise<Response> => {
           <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;">
             <h1 style="color: #333;">Bedankt voor het invullen</h1>
             
-            <p>${displayName},</p>
+            <p>${safeName},</p>
             
             <p>Je score is <strong>${submission.total_score} van de 40 punten</strong>.</p>
             
