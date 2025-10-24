@@ -83,8 +83,18 @@ const MethodologySection = () => {
           </div>
           
           {/* Wetenschap CTA - Over volledige breedte gecentreerd */}
-          <div className="text-center pt-4 space-y-6">
-            <p classNa
+          <div className="text-center pt-12 space-y-6">
+            <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
+              Wil je nog meer weten over de wetenschappelijke basis van onze methode?
+            </p>
+            <Link to="/wetenschap">
+              <Button variant="secondary" className="font-semibold py-3 px-8 rounded-lg text-base md:text-lg">
+                Ontdek de wetenschap
+              </Button>
+            </Link>
+          </div>
+        </div>
+      </div>
     </section>
   );
 };
