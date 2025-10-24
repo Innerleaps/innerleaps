@@ -206,8 +206,8 @@ const Wetenschap = () => {
               <span className="text-brand-orange">wetenschap</span>.
             </h2>
             <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
-              40 jaar wetenschappelijk onderzoek levert cijfers die overtuigen. Minder verzuim en hogere productiviteit
-              zijn slechts het begin:
+              40 jaar wetenschappelijk onderzoek levert bewijs. Heel veel bewijs. Minder verzuim en hogere
+              productiviteit zijn slechts het begin:
             </p>
           </div>
 
