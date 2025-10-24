@@ -1,12 +1,16 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import Navigation from "@/components/Navigation";
 import StickyCtaButtons from "@/components/StickyCtaButtons";
 import ROICalculator from "@/components/ROICalculator";
 import Footer from "@/components/Footer";
-import { Brain, Heart, Shield, CheckCircle, Target, Award, TrendingUp } from "lucide-react";
+import { Brain, Heart, Shield, CheckCircle, Target, Award, TrendingUp, FileText } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import LeadMagnetModal from "@/components/LeadMagnetModal";
 import neocortexImage from "@/assets/Meer_activiteit_in_neo_cortex_door_aandacht_training.png";
 import performanceImage from "@/assets/burnout_voorkomen_en_beter_presteren_door_aandacht_training.png";
 const Wetenschap = () => {
+  const [isLeadMagnetOpen, setIsLeadMagnetOpen] = useState(false);
+  
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -114,22 +118,20 @@ const Wetenschap = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-3 gap-8 mb-12">
+          <div className="grid grid-cols-4 gap-6 mb-12">
             <div></div>
-            <div className="space-y-3">
+            <div className="col-span-2 space-y-3">
               <div className="flex items-start gap-3">
                 <CheckCircle className="h-6 w-6 text-brand-orange stroke-2 flex-shrink-0 mt-1" />
-                <span className="text-xl md:text-2xl text-brand-gray-dark">Emoties regulatie.</span>
+                <span className="text-xl md:text-2xl text-brand-gray-dark">Emoties regulatie</span>
               </div>
               <div className="flex items-start gap-3">
                 <CheckCircle className="h-6 w-6 text-brand-orange stroke-2 flex-shrink-0 mt-1" />
-                <span className="text-xl md:text-2xl text-brand-gray-dark">Bewust reageren op sociale signalen.</span>
+                <span className="text-xl md:text-2xl text-brand-gray-dark">Bewust reageren op sociale signalen</span>
               </div>
               <div className="flex items-start gap-3">
                 <CheckCircle className="h-6 w-6 text-brand-orange stroke-2 flex-shrink-0 mt-1" />
-                <span className="text-xl md:text-2xl text-brand-gray-dark">
-                  Strategieën bedenken en taken prioriteren.
-                </span>
+                <span className="text-xl md:text-2xl text-brand-gray-dark">Strategieën bedenken en prioriteren</span>
               </div>
             </div>
             <div></div>
@@ -172,26 +174,29 @@ const Wetenschap = () => {
               Door meer bewustzijn en minder automatische piloot kunnen deelnemers:
             </p>
 
-            {/* 3 checkmarks op volle breedte */}
-            <div className="space-y-4">
-              <div className="flex items-start gap-3">
-                <CheckCircle className="h-6 w-6 text-brand-orange stroke-2 flex-shrink-0 mt-1" />
-                <span className="text-xl md:text-2xl text-brand-gray-dark">
-                  Stress vroeg herkennen en bijsturen voordat het escaleert
-                </span>
+            <div className="grid grid-cols-4 gap-6">
+              <div></div>
+              <div className="col-span-2 space-y-4">
+                <div className="flex items-start gap-3">
+                  <CheckCircle className="h-6 w-6 text-brand-orange stroke-2 flex-shrink-0 mt-1" />
+                  <span className="text-xl md:text-2xl text-brand-gray-dark">
+                    Stress vroeg herkennen en bijsturen voordat het escaleert
+                  </span>
+                </div>
+                <div className="flex items-start gap-3">
+                  <CheckCircle className="h-6 w-6 text-brand-orange stroke-2 flex-shrink-0 mt-1" />
+                  <span className="text-xl md:text-2xl text-brand-gray-dark">
+                    Beter herstellen, sneller terug naar optimale prestatie
+                  </span>
+                </div>
+                <div className="flex items-start gap-3">
+                  <CheckCircle className="h-6 w-6 text-brand-orange stroke-2 flex-shrink-0 mt-1" />
+                  <span className="text-xl md:text-2xl text-brand-gray-dark">
+                    In de prestatie sweet spot blijven waar focus, energie en prestatie hoog zijn
+                  </span>
+                </div>
               </div>
-              <div className="flex items-start gap-3">
-                <CheckCircle className="h-6 w-6 text-brand-orange stroke-2 flex-shrink-0 mt-1" />
-                <span className="text-xl md:text-2xl text-brand-gray-dark">
-                  Beter herstellen, sneller terug naar optimale prestatie
-                </span>
-              </div>
-              <div className="flex items-start gap-3">
-                <CheckCircle className="h-6 w-6 text-brand-orange stroke-2 flex-shrink-0 mt-1" />
-                <span className="text-xl md:text-2xl text-brand-gray-dark">
-                  In de prestatie sweet spot blijven waar focus, energie en prestatie hoog zijn
-                </span>
-              </div>
+              <div></div>
             </div>
 
             {/* Het resultaat in cijfers card daaronder */}
@@ -542,6 +547,35 @@ const Wetenschap = () => {
               </div>
             </div>
           </div>
+
+          <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed text-center mt-12">
+            <br />
+            Effecten blijven 12+ maanden aanhouden.
+          </p>
+        </div>
+      </section>
+
+      {/* LEAD MAGNET */}
+      <section className="bg-gradient-to-r from-brand-blue to-brand-blue-dark text-white section-padding">
+        <div className="container-custom">
+          <div className="max-w-4xl mx-auto text-center">
+            <div className="inline-flex items-center bg-white/10 text-white px-4 py-2 rounded-full text-sm font-semibold mb-6">
+              <FileText className="h-4 w-4 mr-2" />
+              Exclusief wetenschappelijk rapport
+            </div>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+              De resultaten van 40 jaar onderzoek naar aandachttraining. Vraag het hier aan.
+            </h2>
+            <p className="text-xl md:text-2xl leading-relaxed mb-8 text-white/90">
+              Zelf de wetenschappelijke details bekijken? Ons academische rapport bundelt de laatste studies, analyses en berekeningen rond de effecten van aandachttraining. Inclusief effectgroottes en pathway-analyses.
+            </p>
+            <Button 
+              onClick={() => setIsLeadMagnetOpen(true)} 
+              className="text-lg px-8 py-3 bg-white hover:bg-gray-100 text-brand-blue hover:text-brand-blue font-semibold rounded-lg transition-all duration-300 shadow-lg transform hover:-translate-y-0.5"
+            >
+              Vraag het bewijs op
+            </Button>
+          </div>
         </div>
       </section>
 
@@ -550,6 +584,11 @@ const Wetenschap = () => {
       <div id="contact">
         <Footer />
       </div>
+
+      <LeadMagnetModal 
+        isOpen={isLeadMagnetOpen} 
+        onClose={() => setIsLeadMagnetOpen(false)} 
+      />
     </div>
   );
 };
