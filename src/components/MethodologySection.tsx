@@ -46,52 +46,45 @@ const MethodologySection = () => {
         </div>
 
         {/* Blok 3 - Het Resultaat - Tekst boven, Visual onder */}
-        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-          <div className="space-y-6">
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-purple leading-tight">
-              <span className="text-brand-orange">Prestatie</span> verbeterd en het{" "}
-              <span className="text-brand-orange">uitvalrisico</span> daalt met 70%
-            </h2>
-            <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
-              Omdat deelnemers bewuster worden kunnen ze stress sneller herkennen, erover communiceren en ontdekken hoe
-              ze hiervan kunnen herstellen. Zo ontwikkelen deelnemers eigenaarschap, wordt burn-out voorkomen en door
-              verhoogde focus worden ze productiever.
-            </p>
-            <div className="space-y-3 pt-2">
-              <div className="flex items-center gap-3">
-                <span className="text-3xl">📈</span>
-                <span className="text-xl font-semibold text-brand-purple">6% hogere productiviteit</span>
-              </div>
-              <div className="flex items-center gap-3">
-                <span className="text-3xl">📉</span>
-                <span className="text-xl font-semibold text-brand-purple">15-21% minder verzuim</span>
-              </div>
-              <div className="flex items-center gap-3">
-                <span className="text-3xl">🛡️</span>
-                <span className="text-xl font-semibold text-brand-purple">70% lager uitvalrisico</span>
+        <div className="space-y-8 lg:space-y-12">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+            <div className="space-y-6">
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-purple leading-tight">
+                <span className="text-brand-orange">Prestatie</span> verbeterd en het{" "}
+                <span className="text-brand-orange">uitvalrisico</span> daalt met 70%
+              </h2>
+              <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
+                Omdat deelnemers bewuster worden kunnen ze stress sneller herkennen, erover communiceren en ontdekken hoe
+                ze hiervan kunnen herstellen. Zo ontwikkelen deelnemers eigenaarschap, wordt burn-out voorkomen en door
+                verhoogde focus worden ze productiever.
+              </p>
+              <div className="space-y-3 pt-2">
+                <div className="flex items-center gap-3">
+                  <span className="text-3xl">📈</span>
+                  <span className="text-xl font-semibold text-brand-purple">6% hogere productiviteit</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <span className="text-3xl">📉</span>
+                  <span className="text-xl font-semibold text-brand-purple">15-21% minder verzuim</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <span className="text-3xl">🛡️</span>
+                  <span className="text-xl font-semibold text-brand-purple">70% lager uitvalrisico</span>
+                </div>
               </div>
             </div>
+            <div className="order-last">
+              <img
+                src={performanceImage}
+                alt="Burnout voorkomen en beter presteren door aandacht training"
+                className="w-full h-auto rounded-lg"
+              />
+            </div>
           </div>
-          <div className="order-last">
-            <img
-              src={performanceImage}
-              alt="Burnout voorkomen en beter presteren door aandacht training"
-              className="w-full h-auto rounded-lg"
-            />
-          </div>
-        </div>
-        {/* Wetenschap CTA - Over volledige breedte gecentreerd */}
-        <div className="text-center pt-12 space-y-6">
-          <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
-            Wil je nog meer weten over de wetenschappelijke basis van onze methode?
-          </p>
-          <Link to="/wetenschap">
-            <Button variant="secondary" className="font-semibold py-3 px-8 rounded-lg text-base md:text-lg">
-              Ontdek de wetenschap
-            </Button>
-          </Link>
-        </div>
-      </div>
+          
+          {/* Wetenschap CTA - Over volledige breedte gecentreerd */}
+          <div className="text-center pt-4 space-y-6">
+            <p classNa
     </section>
   );
 };
