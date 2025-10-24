@@ -342,7 +342,7 @@ const Wetenschap = () => {
           </div>
 
           <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed text-center">
-            Duurzame resultaten. Effecten blijven 12+ maanden aanhouden.
+            Duurzame resultaten uitgedrukt in Common Language Effect Size. Effecten blijven 12+ maanden aanhouden.
           </p>
         </div>
       </section>
