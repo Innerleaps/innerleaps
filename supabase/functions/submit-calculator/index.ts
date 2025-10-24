@@ -79,6 +79,16 @@ setInterval(() => {
   }
 }, 5 * 60 * 1000); // Clean up every 5 minutes
 
+// HTML escape function to prevent XSS attacks
+function escapeHtml(unsafe: string): string {
+  return unsafe
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#039;");
+}
+
 const handler = async (req: Request): Promise<Response> => {
   // Handle CORS preflight requests
   if (req.method === "OPTIONS") {
@@ -192,6 +202,13 @@ const handler = async (req: Request): Promise<Response> => {
 
     console.log("Successfully stored submission in database:", data);
 
+    // Escape all user-controlled data for safe HTML insertion
+    const safeName = escapeHtml(submission.name);
+    const safeEmail = escapeHtml(submission.email);
+    const safePhone = submission.phone ? escapeHtml(submission.phone) : 'Niet opgegeven';
+    const safeFunctie = escapeHtml(submission.functie);
+    const safeCompany = escapeHtml(submission.company);
+
     // More transactional confirmation email
     const confirmationEmailHtml = `
       <!DOCTYPE html>
@@ -211,7 +228,7 @@ const handler = async (req: Request): Promise<Response> => {
                 <tr>
                   <td style="padding: 30px; text-align: left; border-bottom: 1px solid #e2e8f0;">
                     <h1 style="margin: 0; color: #1e293b; font-size: 20px; font-weight: 600;">
-                      Uw berekening voor ${submission.company}
+                      Uw berekening voor ${safeCompany}
                     </h1>
                     <p style="margin: 10px 0 0 0; color: #64748b; font-size: 14px;">
                       Zoals aangevraagd hebben wij uw kostenbesparingsberekening uitgevoerd.
@@ -223,7 +240,7 @@ const handler = async (req: Request): Promise<Response> => {
                 <tr>
                   <td style="padding: 30px;">
                     <p style="margin: 0 0 20px 0; color: #374151; font-size: 16px;">
-                      Beste ${submission.name},
+                      Beste ${safeName},
                     </p>
                     
                     <p style="margin: 0 0 20px 0; color: #374151; font-size: 14px; line-height: 1.6;">
@@ -231,7 +248,7 @@ const handler = async (req: Request): Promise<Response> => {
                     </p>
                     
                     <h2 style="margin: 20px 0 15px 0; color: #1e293b; font-size: 16px; font-weight: 600;">
-                      Berekende resultaten voor ${submission.company}:
+                      Berekende resultaten voor ${safeCompany}:
                     </h2>
                     
                     <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin-bottom: 25px; border: 1px solid #e2e8f0;">
@@ -255,7 +272,7 @@ const handler = async (req: Request): Promise<Response> => {
                     
                     <div style="background-color: #f1f5f9; padding: 15px; margin: 20px 0; border-left: 3px solid #2563eb;">
                       <p style="margin: 0; color: #475569; font-size: 14px; font-style: italic;">
-                        "Wij vinden het echt ontzettend gaaf om organisaties fitter te zien worden. Innerleaps helpt ${submission.company} graag verder"
+                        "Wij vinden het echt ontzettend gaaf om organisaties fitter te zien worden. Innerleaps helpt ${safeCompany} graag verder"
                       </p>
                     </div>
                     
@@ -329,11 +346,11 @@ const handler = async (req: Request): Promise<Response> => {
                     
                     <h3 style="margin: 20px 0 10px 0; color: #374151; font-size: 16px;">Contactgegevens:</h3>
                     <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin-bottom: 20px;">
-                      <tr><td style="padding: 5px 0; border-bottom: 1px solid #f3f4f6;"><strong>Naam:</strong> ${submission.name}</td></tr>
-                      <tr><td style="padding: 5px 0; border-bottom: 1px solid #f3f4f6;"><strong>E-mail:</strong> ${submission.email}</td></tr>
-                      <tr><td style="padding: 5px 0; border-bottom: 1px solid #f3f4f6;"><strong>Telefoon:</strong> ${submission.phone || 'Niet opgegeven'}</td></tr>
-                      <tr><td style="padding: 5px 0; border-bottom: 1px solid #f3f4f6;"><strong>Functie:</strong> ${submission.functie}</td></tr>
-                      <tr><td style="padding: 5px 0;"><strong>Bedrijf:</strong> ${submission.company}</td></tr>
+                      <tr><td style="padding: 5px 0; border-bottom: 1px solid #f3f4f6;"><strong>Naam:</strong> ${safeName}</td></tr>
+                      <tr><td style="padding: 5px 0; border-bottom: 1px solid #f3f4f6;"><strong>E-mail:</strong> ${safeEmail}</td></tr>
+                      <tr><td style="padding: 5px 0; border-bottom: 1px solid #f3f4f6;"><strong>Telefoon:</strong> ${safePhone}</td></tr>
+                      <tr><td style="padding: 5px 0; border-bottom: 1px solid #f3f4f6;"><strong>Functie:</strong> ${safeFunctie}</td></tr>
+                      <tr><td style="padding: 5px 0;"><strong>Bedrijf:</strong> ${safeCompany}</td></tr>
                     </table>
                     
                     <h3 style="margin: 20px 0 10px 0; color: #374151; font-size: 16px;">Bedrijfsgegevens:</h3>
@@ -391,7 +408,7 @@ const handler = async (req: Request): Promise<Response> => {
       const confirmationResponse = await resend.emails.send({
         from: "Bas Ter Haar Romenij <bas@innerleaps.nl>",
         to: [submission.email],
-        subject: `Uw kostenbesparingsberekening voor ${submission.company}`,
+        subject: `Uw kostenbesparingsberekening voor ${safeCompany}`,
         html: confirmationEmailHtml,
         headers: {
           'X-Entity-Ref-ID': Math.random().toString(36).substring(7),
@@ -412,7 +429,7 @@ const handler = async (req: Request): Promise<Response> => {
       const notificationResponse = await resend.emails.send({
         from: "Innerleaps Calculator <bas@innerleaps.nl>",
         to: ["bas@innerleaps.nl"],
-        subject: `Nieuwe Calculator Aanvraag - ${submission.company}`,
+        subject: `Nieuwe Calculator Aanvraag - ${safeCompany}`,
         html: notificationEmailHtml,
         headers: {
           'X-Entity-Ref-ID': Math.random().toString(36).substring(7),
