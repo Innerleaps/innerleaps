@@ -9,7 +9,7 @@ const SimplifiedNavigation = () => {
   return (
     <nav className="bg-white shadow-lg sticky top-0 z-50">
       <div className="container-custom">
-        <div className="flex justify-between items-center py-4">
+        <div className="flex items-center gap-8 py-4">
           {/* Logo */}
           <div className="flex flex-col items-start min-w-0 flex-shrink-0">
             <Link to="/" className="hover:opacity-80 transition-opacity">

@@ -66,23 +66,21 @@ const MethodologySection = () => {
                 <span className="text-xl font-semibold text-brand-purple">70% lager uitvalrisico</span>
               </div>
             </div>
+            
+            {/* Wetenschap CTA - Nu binnen deze kolom */}
+            <div className="text-center pt-8 space-y-4">
+              <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
+                Wil je nog meer weten over de wetenschappelijke basis van onze methode?
+              </p>
+              <Link to="/wetenschap">
+                <Button variant="secondary" className="font-semibold py-3 px-8 rounded-lg text-base md:text-lg">
+                  Ontdek de wetenschap
+                </Button>
+              </Link>
+            </div>
           </div>
           <div className="order-last">
             <img src={performanceImage} alt="Burnout voorkomen en beter presteren door aandacht training" className="w-full h-auto rounded-lg" />
-          </div>
-        </div>
-
-        {/* Wetenschap CTA - Midden tussen blok 3 en einde sectie */}
-        <div className="flex justify-center items-center pt-8 py-0">
-          <div className="text-center space-y-6 max-w-2xl">
-            <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
-              Wil je nog meer weten over de wetenschappelijke basis van onze methode?
-            </p>
-            <Link to="/wetenschap">
-              <Button variant="secondary" className="font-semibold py-3 px-8 rounded-lg text-base md:text-lg">
-                Ontdek de wetenschap
-              </Button>
-            </Link>
           </div>
         </div>
       </div>
