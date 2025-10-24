@@ -22,7 +22,7 @@ const SimplifiedNavigation = () => {
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center space-x-6 xl:space-x-8 flex-1 justify-center min-w-0 mx-8">
+          <div className="hidden lg:flex items-center space-x-6 xl:space-x-8">
             <Link 
               to="/wetenschap"
               className="text-brand-gray-dark hover:text-brand-blue transition-colors duration-300 font-medium text-base whitespace-nowrap"
