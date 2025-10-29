@@ -1,4 +1,4 @@
-import Navigation from '@/components/Navigation';
+import SimplifiedNavigation from '@/components/SimplifiedNavigation';
 import { Button } from '@/components/ui/button';
 import { Calendar, Mail, Phone } from 'lucide-react';
 import StickyCtaButtons from '@/components/StickyCtaButtons';
@@ -10,7 +10,7 @@ const Contact = () => {
     window.scrollTo(0, 0);
   }, []);
   return <div className="min-h-screen bg-brand-gray-light">
-      <Navigation />
+      <SimplifiedNavigation />
       <StickyCtaButtons />
       
       <main className="pt-8">
