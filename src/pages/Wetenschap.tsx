@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import Navigation from "@/components/Navigation";
+import SimplifiedNavigation from "@/components/SimplifiedNavigation";
 import StickyCtaButtons from "@/components/StickyCtaButtons";
 import ROICalculator from "@/components/ROICalculator";
 import Footer from "@/components/Footer";
@@ -35,7 +35,7 @@ const Wetenschap = () => {
     points: ["Beschermt tegen gevaar maar maakt geen onderscheid tussen fysieke bedreiging en moderne stressoren", "Zoals reputatieverlies, gebrek aan controle of onzekerheid"]
   }];
   return <div className="min-h-screen bg-white">
-      <Navigation />
+      <SimplifiedNavigation />
       <StickyCtaButtons />
 
       {/* STAP 1: HET PROBLEEM */}
