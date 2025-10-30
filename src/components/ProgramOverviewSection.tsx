@@ -31,7 +31,7 @@ const ProgramOverviewSection = () => {
       <div className="container-custom space-y-12">
         {/* Title */}
         <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-center text-brand-purple">
-          Wetenschappelijk <span className="text-brand-orange">programma</span> voor echte{" "}
+          Het <span className="text-brand-orange">programma</span> voor echte{" "}
           <span className="text-brand-orange">gedragsverandering</span>
         </h2>
 
