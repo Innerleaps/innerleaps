@@ -8,9 +8,8 @@ const MethodologySection = () => {
         {/* Blok 1 - De Methode */}
         <div className="space-y-8 lg:space-y-12">
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-center text-brand-purple leading-tight">
-            De methode die <span className="text-brand-orange">prestatie</span> verbetert en verzuim verlaagd door
-            minder <span className="text-brand-orange">druk</span> en meer
-            <span className="text-brand-orange"> focus</span>
+            De methode die <span className="text-brand-orange">prestatie</span> verbetert door minder{" "}
+            <span className="text-brand-orange">druk</span> en meer<span className="text-brand-orange">focus</span>
           </h2>
 
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
