@@ -2,6 +2,7 @@ import Navigation from '@/components/Navigation';
 import StickyCtaButtons from '@/components/StickyCtaButtons';
 import TrustSection from '@/components/TrustSection';
 import ContactSection from '@/components/ContactSection';
+import Footer from '@/components/Footer';
 import { Button } from '@/components/ui/button';
 import { useEffect } from 'react';
 
@@ -68,51 +69,51 @@ const OverOns = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-white">
       <Navigation />
       <StickyCtaButtons />
       
-      <main className="pt-20 pb-16">
+      <main>
         {/* Sectie 1: Visie */}
-        <section className="container mx-auto px-4 md:px-8 py-16">
-          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-            {/* Links: Titel + Body */}
-            <div className="space-y-6">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground">
-                Waarom wij dit werk doen
-              </h1>
-              <div className="space-y-4 text-lg md:text-xl text-muted-foreground leading-relaxed">
-                <p>
-                  We staan altijd aan. Het drukke leven vraagt veel van ons. We over onze eigen grenzen én die van anderen. 
-                  We verliezen het contact met wat we ècht nodig hebben. Hierdoor leven we 65% tot 90% op de automatische piloot. 
-                  Die automatische piloot trekt ons voort maar ten koste van wat?
-                </p>
-                <p>
-                  Samenwerkingen gaan stroef, we raken energie en focus kwijt en het aantal burn-outs is nog nooit zo hoog geweest.
+        <section className="section-padding bg-brand-off-white">
+          <div className="container-custom">
+            <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+              {/* Links: Titel + Body */}
+              <div className="space-y-6">
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-purple leading-tight">
+                  Waarom wij dit werk doen
+                </h1>
+                <div className="space-y-4 text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
+                  <p>
+                    We staan altijd aan. Het drukke leven vraagt veel van ons. We over onze eigen grenzen én die van anderen. 
+                    We verliezen het contact met wat we ècht nodig hebben. Hierdoor leven we 65% tot 90% op de automatische piloot. 
+                    Die automatische piloot trekt ons voort maar ten koste van wat?
+                  </p>
+                  <p>
+                    Samenwerkingen gaan stroef, we raken energie en focus kwijt en het aantal burn-outs is nog nooit zo hoog geweest.
+                  </p>
+                </div>
+              </div>
+              
+              {/* Rechts: Orange Vision Box */}
+              <div className="bg-brand-orange text-white rounded-xl p-8 lg:p-10 shadow-lg">
+                <p className="text-xl md:text-2xl font-bold leading-relaxed">
+                  Onze missie is dat mensen met rust, focus en plezier door het leven gaan, door mentale scherpte te vergroten en spanning, stress en druk te doorbreken.
                 </p>
               </div>
-            </div>
-            
-            {/* Rechts: Orange Vision Box */}
-            <div className="bg-accent text-accent-foreground rounded-xl p-8 shadow-lg">
-              <p className="text-lg md:text-xl font-bold leading-relaxed">
-                Wij geloven dat aandachtstraining de kern is van duurzame vitaliteit. Door bewust te worden van onze 
-                automatische patronen, creëren we ruimte voor echte verbinding, focus en welzijn. Niet als quick fix, 
-                maar als fundamentele vaardigheid die iedereen kan leren.
-              </p>
             </div>
           </div>
         </section>
 
         {/* Sectie 2: Bas's verhaal */}
-        <section className="bg-muted/30 py-16">
-          <div className="container mx-auto px-4 md:px-8">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-12 text-center">
-              Waarom Bas InnerLeaps is begonnen
+        <section className="section-padding bg-white">
+          <div className="container-custom">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-purple leading-tight mb-12 text-center">
+              Waarom Bas <span className="text-brand-orange">InnerLeaps</span> is begonnen
             </h2>
             <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-start">
               {/* Links: Body */}
-              <div className="space-y-4 text-lg md:text-xl text-muted-foreground leading-relaxed">
+              <div className="space-y-4 text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
                 <p>
                   Hoi, ik ben Bas! Na mijn master Design for Interaction aan de TU Delft werkte ik in consultancy en als 
                   product manager bij een SaaS-bedrijf. Veel mensen in mijn omgeving merkten op dat ik gestresst was. Ja ik 
@@ -146,12 +147,13 @@ const OverOns = () => {
                   alt="Bas ter Haar Romenij - Oprichter InnerLeaps"
                   className="rounded-full w-64 h-64 object-cover shadow-xl"
                 />
-                <p className="text-xl md:text-2xl font-semibold text-foreground text-center">
+                <p className="text-xl md:text-2xl font-semibold text-brand-purple text-center">
                   Oprichter & Algemeen Directeur
                 </p>
                 <Button 
+                  variant="secondary"
                   size="lg"
-                  className="w-full sm:w-auto"
+                  className="w-full sm:w-auto font-semibold"
                   onClick={() => window.open('https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1kmdh8c16sdfL2rT3r2bH49IScgjnH-yx3-QStH8VF9ufZBPcwKoL6jfcgLjnRs6iM1KlcXC8i', '_blank')}
                 >
                   Plan gesprek met Bas
@@ -162,83 +164,85 @@ const OverOns = () => {
         </section>
 
         {/* Sectie 3: Onze trainers */}
-        <section className="container mx-auto px-4 md:px-8 py-16">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-12 text-center">
-            Onze trainers
-          </h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {trainers.map((trainer, index) => (
-              <div key={index} className="bg-card rounded-xl shadow-lg p-6 space-y-6">
-                {/* Naam - full width */}
-                <h3 className="text-2xl md:text-3xl font-bold text-card-foreground text-center">
-                  {trainer.name}
-                </h3>
-                
-                {/* Internal 2-column grid */}
-                <div className="grid grid-cols-2 gap-6">
-                  {/* Linker kolom: Foto + Quote + Badge */}
-                  <div className="space-y-4 flex flex-col items-center">
-                    <img 
-                      src={trainer.photo} 
-                      alt={trainer.name}
-                      className="rounded-full w-32 h-32 object-cover shadow-md"
-                    />
-                    
-                    {/* Quote box */}
-                    <div className="bg-muted/50 p-3 rounded-lg border-l-4 border-accent">
-                      <p className="text-sm italic text-muted-foreground leading-snug">
-                        "{trainer.quote}"
-                      </p>
-                      <p className="text-xs text-muted-foreground mt-2">
-                        — Oud deelnemer
-                      </p>
+        <section className="section-padding bg-brand-off-white">
+          <div className="container-custom">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-purple leading-tight mb-12 text-center">
+              Onze <span className="text-brand-orange">trainers</span>
+            </h2>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {trainers.map((trainer, index) => (
+                <div key={index} className="bg-white rounded-xl shadow-lg p-8 space-y-6">
+                  {/* Naam - full width */}
+                  <h3 className="text-2xl md:text-3xl font-bold text-brand-purple text-center">
+                    {trainer.name}
+                  </h3>
+                  
+                  {/* Internal 2-column grid */}
+                  <div className="grid grid-cols-2 gap-6">
+                    {/* Linker kolom: Foto + Quote + Badge */}
+                    <div className="space-y-4 flex flex-col items-center">
+                      <img 
+                        src={trainer.photo} 
+                        alt={trainer.name}
+                        className="rounded-full w-40 h-40 object-cover shadow-md"
+                      />
+                      
+                      {/* Quote box */}
+                      <div className="bg-brand-off-white p-4 rounded-lg border-l-4 border-brand-orange">
+                        <p className="text-sm italic text-brand-gray-medium leading-snug">
+                          "{trainer.quote}"
+                        </p>
+                        <p className="text-xs text-brand-gray-medium mt-2">
+                          — Oud deelnemer
+                        </p>
+                      </div>
+                      
+                      {/* VMBN Badge */}
+                      <img 
+                        src={vmbnBadge} 
+                        alt="VMBN Accreditatie"
+                        className="h-20 object-contain"
+                      />
                     </div>
                     
-                    {/* VMBN Badge */}
-                    <img 
-                      src={vmbnBadge} 
-                      alt="VMBN Accreditatie"
-                      className="h-16 object-contain"
-                    />
+                    {/* Rechter kolom: Body + Tags */}
+                    <div className="space-y-4">
+                      <p className="text-base md:text-lg text-brand-gray-medium leading-relaxed">
+                        {trainer.body}
+                      </p>
+                      
+                      {/* Language tags */}
+                      <div className="flex gap-2 flex-wrap">
+                        {trainer.languages.map((lang, i) => (
+                          <span 
+                            key={i}
+                            className={`px-3 py-1 rounded-full text-sm font-medium ${
+                              lang === 'Nederlands' 
+                                ? 'bg-brand-blue text-white' 
+                                : 'bg-brand-orange text-white'
+                            }`}
+                          >
+                            {lang}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
                   </div>
                   
-                  {/* Rechter kolom: Body + Tags */}
-                  <div className="space-y-4">
-                    <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
-                      {trainer.body}
-                    </p>
-                    
-                    {/* Language tags */}
-                    <div className="flex gap-2 flex-wrap">
-                      {trainer.languages.map((lang, i) => (
-                        <span 
-                          key={i}
-                          className={`px-3 py-1 rounded-full text-xs font-medium ${
-                            lang === 'Nederlands' 
-                              ? 'bg-primary text-primary-foreground' 
-                              : 'bg-secondary text-secondary-foreground'
-                          }`}
-                        >
-                          {lang}
-                        </span>
-                      ))}
-                    </div>
+                  {/* Client logos - full width */}
+                  <div className="flex gap-6 items-center justify-center flex-wrap pt-4 border-t border-brand-gray-light">
+                    {trainer.logos.map((logo, i) => (
+                      <img 
+                        key={i}
+                        src={logo.src} 
+                        alt={logo.alt}
+                        className="h-24 object-contain grayscale hover:grayscale-0 transition-all"
+                      />
+                    ))}
                   </div>
                 </div>
-                
-                {/* Client logos - full width */}
-                <div className="flex gap-4 items-center justify-center flex-wrap pt-4 border-t border-border">
-                  {trainer.logos.map((logo, i) => (
-                    <img 
-                      key={i}
-                      src={logo.src} 
-                      alt={logo.alt}
-                      className="h-8 object-contain grayscale hover:grayscale-0 transition-all"
-                    />
-                  ))}
-                </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </section>
       </main>
@@ -248,6 +252,9 @@ const OverOns = () => {
 
       {/* Sectie 5: Contact */}
       <ContactSection />
+
+      {/* Sectie 6: Footer */}
+      <Footer />
     </div>
   );
 };
