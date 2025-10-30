@@ -95,7 +95,7 @@ const OverOns = () => {
             {/* Rechts: Oranje blok met missie */}
             <div className="bg-brand-orange text-white rounded-xl p-8 lg:p-10 shadow-lg">
               <p className="text-2xl md:text-3xl lg:text-4xl font-bold leading-tight">
-                Onze missie is dat mensen met rust, focus en plezier door het leven gaan, door mentale scherpte te vergroten en spanning, stress en druk te doorbreken.
+                Onze missie is dat mensen met rust en mentale scherpte door het leven gaan.
               </p>
             </div>
           </div>
