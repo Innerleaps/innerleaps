@@ -9,12 +9,13 @@ import LeadMagnetModal from "@/components/LeadMagnetModal";
 import brainActivityImage from "@/assets/Door_aandachttraining_wordt_informatie_beter_verwerkt_gerichter_vastgehouden_en_efficiënter_ingezet.-2.png";
 const Wetenschap = () => {
   const [isLeadMagnetOpen, setIsLeadMagnetOpen] = useState(false);
-  
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-  
-  return <div className="min-h-screen bg-white">
+
+  return (
+    <div className="min-h-screen bg-white">
       <SimplifiedNavigation />
       <StickyCtaButtons />
 
@@ -23,22 +24,25 @@ const Wetenschap = () => {
         <div className="container-custom space-y-8 lg:space-y-12">
           {/* Titel over volledige breedte */}
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-center text-brand-gray-dark leading-tight">
-            Het vitaliteit en performance programma waar we{" "}
-            <span className="text-brand-orange">aandacht trainen</span>
+            Het vitaliteit en performance programma waar we <span className="text-brand-orange">aandacht trainen</span>
           </h2>
 
           {/* Body text links, plaatje rechts */}
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             <div>
               <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
-                In ons vitaliteit- en effectiviteit programma trainen deelnemers hun aandacht. Net zoals je spieren traint
-                in de sportschool, train je hier je focus. Hiermee neemt de activiteit in de Frontale cortex en 
-                Fronto-pariëtale netwerken toe. Tegelijkertijd vragen deze minder energie. Hierdoor wordt informatie 
+                In ons vitaliteit- en effectiviteit programma trainen deelnemers hun aandacht. Net zoals je spieren
+                traint in de sportschool, train je hier je focus. Hiermee neemt de activiteit in de Frontale cortex en
+                Fronto-pariëtale netwerken toe. Tegelijkertijd vragen deze minder energie. Hierdoor wordt informatie
                 beter verwerkt, gerichter vastgehouden en efficiënter ingezet.
               </p>
             </div>
             <div>
-              <img src={brainActivityImage} alt="Door aandachttraining wordt informatie beter verwerkt gerichter vastgehouden en efficiënter ingezet" className="w-full h-auto rounded-lg" />
+              <img
+                src={brainActivityImage}
+                alt="Door aandachttraining wordt informatie beter verwerkt gerichter vastgehouden en efficiënter ingezet"
+                className="w-full h-auto rounded-lg"
+              />
             </div>
           </div>
 
@@ -50,7 +54,7 @@ const Wetenschap = () => {
                 <Brain className="h-8 w-8 text-brand-orange stroke-2" />
               </div>
               <h3 className="text-xl md:text-2xl font-bold text-brand-gray-dark text-center">
-                Informatieverwerking
+                Informatie{"\u00AD"}verwerking
               </h3>
               <div className="space-y-3">
                 <div className="flex items-start gap-3">
@@ -69,12 +73,12 @@ const Wetenschap = () => {
             </div>
 
             {/* Card 2: Aandachtscontrole */}
-          <div className="bg-white p-6 rounded-lg space-y-4 md:col-span-2">
-            <div className="p-3 rounded-lg bg-brand-orange/5 w-fit mx-auto">
-              <Target className="h-8 w-8 text-brand-orange stroke-2" />
-            </div>
+            <div className="bg-white p-6 rounded-lg space-y-4 md:col-span-2">
+              <div className="p-3 rounded-lg bg-brand-orange/5 w-fit mx-auto">
+                <Target className="h-8 w-8 text-brand-orange stroke-2" />
+              </div>
               <h3 className="text-xl md:text-2xl font-bold text-brand-gray-dark text-center">
-                Aandachtscontrole
+                Aandachts{"\u00AD"}controle
               </h3>
               <div className="space-y-3">
                 <div className="flex items-start gap-3">
@@ -85,9 +89,7 @@ const Wetenschap = () => {
                 </div>
                 <div className="flex items-start gap-3">
                   <CheckCircle className="h-5 w-5 text-brand-orange stroke-2 flex-shrink-0 mt-1" />
-                  <span className="text-base md:text-lg text-brand-gray-medium">
-                    Aandacht langer vasthouden.
-                  </span>
+                  <span className="text-base md:text-lg text-brand-gray-medium">Aandacht langer vasthouden.</span>
                 </div>
                 <div className="flex items-start gap-3">
                   <CheckCircle className="h-5 w-5 text-brand-orange stroke-2 flex-shrink-0 mt-1" />
@@ -99,13 +101,11 @@ const Wetenschap = () => {
             </div>
 
             {/* Card 3: Cognitieve Efficiëntie */}
-          <div className="bg-white p-6 rounded-lg space-y-4 md:col-span-2">
-            <div className="p-3 rounded-lg bg-brand-orange/5 w-fit mx-auto">
-              <Zap className="h-8 w-8 text-brand-orange stroke-2" />
-            </div>
-              <h3 className="text-xl md:text-2xl font-bold text-brand-gray-dark text-center">
-                Cognitieve Efficiëntie
-              </h3>
+            <div className="bg-white p-6 rounded-lg space-y-4 md:col-span-2">
+              <div className="p-3 rounded-lg bg-brand-orange/5 w-fit mx-auto">
+                <Zap className="h-8 w-8 text-brand-orange stroke-2" />
+              </div>
+              <h3 className="text-xl md:text-2xl font-bold text-brand-gray-dark text-center">Cognitieve Efficiëntie</h3>
               <div className="space-y-3">
                 <div className="flex items-start gap-3">
                   <CheckCircle className="h-5 w-5 text-brand-orange stroke-2 flex-shrink-0 mt-1" />
@@ -115,51 +115,41 @@ const Wetenschap = () => {
                 </div>
                 <div className="flex items-start gap-3">
                   <CheckCircle className="h-5 w-5 text-brand-orange stroke-2 flex-shrink-0 mt-1" />
-                  <span className="text-base md:text-lg text-brand-gray-medium">
-                    Sneller schakelen tussen taken.
-                  </span>
+                  <span className="text-base md:text-lg text-brand-gray-medium">Sneller schakelen tussen taken.</span>
                 </div>
               </div>
             </div>
 
             {/* Card 4: Filteren & onderdrukken (gecentreerd, start kolom 2) */}
-          <div className="bg-white p-6 rounded-lg space-y-4 md:col-span-2 md:col-start-2">
-            <div className="p-3 rounded-lg bg-brand-orange/5 w-fit mx-auto">
-              <Shield className="h-8 w-8 text-brand-orange stroke-2" />
-            </div>
+            <div className="bg-white p-6 rounded-lg space-y-4 md:col-span-2 md:col-start-2">
+              <div className="p-3 rounded-lg bg-brand-orange/5 w-fit mx-auto">
+                <Shield className="h-8 w-8 text-brand-orange stroke-2" />
+              </div>
               <h3 className="text-xl md:text-2xl font-bold text-brand-gray-dark text-center">
                 Filteren & onderdrukken
               </h3>
               <div className="space-y-3">
                 <div className="flex items-start gap-3">
                   <CheckCircle className="h-5 w-5 text-brand-orange stroke-2 flex-shrink-0 mt-1" />
-                  <span className="text-base md:text-lg text-brand-gray-medium">
-                    Irrelevante informatie filteren.
-                  </span>
+                  <span className="text-base md:text-lg text-brand-gray-medium">Irrelevante informatie filteren.</span>
                 </div>
                 <div className="flex items-start gap-3">
                   <CheckCircle className="h-5 w-5 text-brand-orange stroke-2 flex-shrink-0 mt-1" />
-                  <span className="text-base md:text-lg text-brand-gray-medium">
-                    Ongewenste reacties onderdrukken.
-                  </span>
+                  <span className="text-base md:text-lg text-brand-gray-medium">Ongewenste reacties onderdrukken.</span>
                 </div>
               </div>
             </div>
 
             {/* Card 5: Executieve Planning (gecentreerd, start kolom 4) */}
-          <div className="bg-white p-6 rounded-lg space-y-4 md:col-span-2 md:col-start-4">
-            <div className="p-3 rounded-lg bg-brand-orange/5 w-fit mx-auto">
-              <FileText className="h-8 w-8 text-brand-orange stroke-2" />
-            </div>
-              <h3 className="text-xl md:text-2xl font-bold text-brand-gray-dark text-center">
-                Executieve Planning
-              </h3>
+            <div className="bg-white p-6 rounded-lg space-y-4 md:col-span-2 md:col-start-4">
+              <div className="p-3 rounded-lg bg-brand-orange/5 w-fit mx-auto">
+                <FileText className="h-8 w-8 text-brand-orange stroke-2" />
+              </div>
+              <h3 className="text-xl md:text-2xl font-bold text-brand-gray-dark text-center">Executieve Planning</h3>
               <div className="space-y-3">
                 <div className="flex items-start gap-3">
                   <CheckCircle className="h-5 w-5 text-brand-orange stroke-2 flex-shrink-0 mt-1" />
-                  <span className="text-base md:text-lg text-brand-gray-medium">
-                    Beter plannen van handelingen.
-                  </span>
+                  <span className="text-base md:text-lg text-brand-gray-medium">Beter plannen van handelingen.</span>
                 </div>
                 <div className="flex items-start gap-3">
                   <CheckCircle className="h-5 w-5 text-brand-orange stroke-2 flex-shrink-0 mt-1" />
@@ -172,7 +162,6 @@ const Wetenschap = () => {
           </div>
         </div>
       </section>
-
 
       {/* ORGANISATIE IMPACT */}
       <section className="bg-white section-padding">
@@ -203,13 +192,28 @@ const Wetenschap = () => {
                 tegenslagen en blijven effectief functioneren onder druk.
               </p>
               <div className="flex flex-wrap gap-2">
-                <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10172073/" target="_blank" rel="noopener noreferrer" className="text-xs px-2 py-1 bg-brand-gray-light text-brand-gray-medium rounded hover:bg-brand-orange/10 hover:text-brand-orange transition-colors">
+                <a
+                  href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10172073/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-xs px-2 py-1 bg-brand-gray-light text-brand-gray-medium rounded hover:bg-brand-orange/10 hover:text-brand-orange transition-colors"
+                >
                   Michaelsen et al. (2023)
                 </a>
-                <a href="https://link.springer.com/article/10.1007/s12671-020-01328-3" target="_blank" rel="noopener noreferrer" className="text-xs px-2 py-1 bg-brand-gray-light text-brand-gray-medium rounded hover:bg-brand-orange/10 hover:text-brand-orange transition-colors">
+                <a
+                  href="https://link.springer.com/article/10.1007/s12671-020-01328-3"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-xs px-2 py-1 bg-brand-gray-light text-brand-gray-medium rounded hover:bg-brand-orange/10 hover:text-brand-orange transition-colors"
+                >
                   Vonderlin et al. (2020)
                 </a>
-                <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12210539/" target="_blank" rel="noopener noreferrer" className="text-xs px-2 py-1 bg-brand-gray-light text-brand-gray-medium rounded hover:bg-brand-orange/10 hover:text-brand-orange transition-colors">
+                <a
+                  href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12210539/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-xs px-2 py-1 bg-brand-gray-light text-brand-gray-medium rounded hover:bg-brand-orange/10 hover:text-brand-orange transition-colors"
+                >
                   Dou et al. (2024)
                 </a>
               </div>
@@ -228,10 +232,20 @@ const Wetenschap = () => {
                 hun dagelijkse werkzaamheden.
               </p>
               <div className="flex flex-wrap gap-2">
-                <a href="https://link.springer.com/article/10.1007/s12671-020-01328-3" target="_blank" rel="noopener noreferrer" className="text-xs px-2 py-1 bg-brand-gray-light text-brand-gray-medium rounded hover:bg-brand-orange/10 hover:text-brand-orange transition-colors">
+                <a
+                  href="https://link.springer.com/article/10.1007/s12671-020-01328-3"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-xs px-2 py-1 bg-brand-gray-light text-brand-gray-medium rounded hover:bg-brand-orange/10 hover:text-brand-orange transition-colors"
+                >
                   Vonderlin et al. (2020)
                 </a>
-                <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10172073/" target="_blank" rel="noopener noreferrer" className="text-xs px-2 py-1 bg-brand-gray-light text-brand-gray-medium rounded hover:bg-brand-orange/10 hover:text-brand-orange transition-colors">
+                <a
+                  href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10172073/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-xs px-2 py-1 bg-brand-gray-light text-brand-gray-medium rounded hover:bg-brand-orange/10 hover:text-brand-orange transition-colors"
+                >
                   Michaelsen et al. (2023)
                 </a>
               </div>
@@ -250,7 +264,12 @@ const Wetenschap = () => {
                 stabiliteit in teams.
               </p>
               <div className="flex flex-wrap gap-2">
-                <a href="https://dare.uva.nl/search?identifier=2ec42a08-a20f-4859-8e23-609a6030e6b6" target="_blank" rel="noopener noreferrer" className="text-xs px-2 py-1 bg-brand-gray-light text-brand-gray-medium rounded hover:bg-brand-orange/10 hover:text-brand-orange transition-colors">
+                <a
+                  href="https://dare.uva.nl/search?identifier=2ec42a08-a20f-4859-8e23-609a6030e6b6"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-xs px-2 py-1 bg-brand-gray-light text-brand-gray-medium rounded hover:bg-brand-orange/10 hover:text-brand-orange transition-colors"
+                >
                   De Bruin et al. (2018)
                 </a>
               </div>
@@ -268,10 +287,20 @@ const Wetenschap = () => {
                 Teams presteren beter door verhoogde focus, minder stress en betere samenwerking.
               </p>
               <div className="flex flex-wrap gap-2">
-                <a href="https://link.springer.com/article/10.1007/s12671-020-01328-3" target="_blank" rel="noopener noreferrer" className="text-xs px-2 py-1 bg-brand-gray-light text-brand-gray-medium rounded hover:bg-brand-orange/10 hover:text-brand-orange transition-colors">
+                <a
+                  href="https://link.springer.com/article/10.1007/s12671-020-01328-3"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-xs px-2 py-1 bg-brand-gray-light text-brand-gray-medium rounded hover:bg-brand-orange/10 hover:text-brand-orange transition-colors"
+                >
                   Vonderlin et al. (2020)
                 </a>
-                <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10172073/" target="_blank" rel="noopener noreferrer" className="text-xs px-2 py-1 bg-brand-gray-light text-brand-gray-medium rounded hover:bg-brand-orange/10 hover:text-brand-orange transition-colors">
+                <a
+                  href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10172073/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-xs px-2 py-1 bg-brand-gray-light text-brand-gray-medium rounded hover:bg-brand-orange/10 hover:text-brand-orange transition-colors"
+                >
                   Michaelsen et al. (2023)
                 </a>
               </div>
@@ -314,22 +343,52 @@ const Wetenschap = () => {
                 werkdruk wordt minder stressvol.
               </p>
               <div className="flex flex-wrap gap-2">
-                <a href="https://www.researchgate.net/publication/320809758_Mindfulness-based_stress_reduction_MBSR_for_improving_health_quality_of_life_and_social_functioning_in_adults_a_systematic_review_and_meta-analysis" target="_blank" rel="noopener noreferrer" className="text-xs px-2 py-1 bg-brand-gray-light text-brand-gray-medium rounded hover:bg-brand-orange/10 hover:text-brand-orange transition-colors">
+                <a
+                  href="https://www.researchgate.net/publication/320809758_Mindfulness-based_stress_reduction_MBSR_for_improving_health_quality_of_life_and_social_functioning_in_adults_a_systematic_review_and_meta-analysis"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-xs px-2 py-1 bg-brand-gray-light text-brand-gray-medium rounded hover:bg-brand-orange/10 hover:text-brand-orange transition-colors"
+                >
                   De Vibe et al. (2017)
                 </a>
-                <a href="https://scispace.com/pdf/a-systematic-review-and-meta-analysis-of-workplace-448vdu0m18.pdf" target="_blank" rel="noopener noreferrer" className="text-xs px-2 py-1 bg-brand-gray-light text-brand-gray-medium rounded hover:bg-brand-orange/10 hover:text-brand-orange transition-colors">
+                <a
+                  href="https://scispace.com/pdf/a-systematic-review-and-meta-analysis-of-workplace-448vdu0m18.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-xs px-2 py-1 bg-brand-gray-light text-brand-gray-medium rounded hover:bg-brand-orange/10 hover:text-brand-orange transition-colors"
+                >
                   Bartlett et al. (2018)
                 </a>
-                <a href="https://link.springer.com/article/10.1007/s12671-020-01328-3" target="_blank" rel="noopener noreferrer" className="text-xs px-2 py-1 bg-brand-gray-light text-brand-gray-medium rounded hover:bg-brand-orange/10 hover:text-brand-orange transition-colors">
+                <a
+                  href="https://link.springer.com/article/10.1007/s12671-020-01328-3"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-xs px-2 py-1 bg-brand-gray-light text-brand-gray-medium rounded hover:bg-brand-orange/10 hover:text-brand-orange transition-colors"
+                >
                   Vonderlin et al. (2020)
                 </a>
-                <a href="https://www.frontiersin.org/journals/education/articles/10.3389/feduc.2024.1385375/full" target="_blank" rel="noopener noreferrer" className="text-xs px-2 py-1 bg-brand-gray-light text-brand-gray-medium rounded hover:bg-brand-orange/10 hover:text-brand-orange transition-colors">
+                <a
+                  href="https://www.frontiersin.org/journals/education/articles/10.3389/feduc.2024.1385375/full"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-xs px-2 py-1 bg-brand-gray-light text-brand-gray-medium rounded hover:bg-brand-orange/10 hover:text-brand-orange transition-colors"
+                >
                   Lensen et al. (2024)
                 </a>
-                <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10172073/" target="_blank" rel="noopener noreferrer" className="text-xs px-2 py-1 bg-brand-gray-light text-brand-gray-medium rounded hover:bg-brand-orange/10 hover:text-brand-orange transition-colors">
+                <a
+                  href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10172073/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-xs px-2 py-1 bg-brand-gray-light text-brand-gray-medium rounded hover:bg-brand-orange/10 hover:text-brand-orange transition-colors"
+                >
                   Michaelsen et al. (2023)
                 </a>
-                <a href="https://academic.oup.com/occmed/article-abstract/66/8/630/2750551?redirectedFrom=fulltext" target="_blank" rel="noopener noreferrer" className="text-xs px-2 py-1 bg-brand-gray-light text-brand-gray-medium rounded hover:bg-brand-orange/10 hover:text-brand-orange transition-colors">
+                <a
+                  href="https://academic.oup.com/occmed/article-abstract/66/8/630/2750551?redirectedFrom=fulltext"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-xs px-2 py-1 bg-brand-gray-light text-brand-gray-medium rounded hover:bg-brand-orange/10 hover:text-brand-orange transition-colors"
+                >
                   Żołnierczyk-Zreda et al. (2016)
                 </a>
               </div>
@@ -344,10 +403,16 @@ const Wetenschap = () => {
                 Betere emotieregulatie
               </h3>
               <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed text-center">
-                Sterke emoties zoals frustratie of boosheid krijgen minder grip. Deelnemers reageren rustiger in moeilijke situaties en maken bewustere keuzes.
+                Sterke emoties zoals frustratie of boosheid krijgen minder grip. Deelnemers reageren rustiger in
+                moeilijke situaties en maken bewustere keuzes.
               </p>
               <div className="flex flex-wrap gap-2">
-                <a href="https://www.frontiersin.org/journals/education/articles/10.3389/feduc.2024.1385375/full" target="_blank" rel="noopener noreferrer" className="text-xs px-2 py-1 bg-brand-gray-light text-brand-gray-medium rounded hover:bg-brand-orange/10 hover:text-brand-orange transition-colors">
+                <a
+                  href="https://www.frontiersin.org/journals/education/articles/10.3389/feduc.2024.1385375/full"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-xs px-2 py-1 bg-brand-gray-light text-brand-gray-medium rounded hover:bg-brand-orange/10 hover:text-brand-orange transition-colors"
+                >
                   Lensen et al. (2024)
                 </a>
               </div>
@@ -366,13 +431,28 @@ const Wetenschap = () => {
                 betekenis in hun dagelijkse activiteiten.
               </p>
               <div className="flex flex-wrap gap-2">
-                <a href="https://www.researchgate.net/publication/320809758_Mindfulness-based_stress_reduction_MBSR_for_improving_health_quality_of_life_and_social_functioning_in_adults_a_systematic_review_and_meta-analysis" target="_blank" rel="noopener noreferrer" className="text-xs px-2 py-1 bg-brand-gray-light text-brand-gray-medium rounded hover:bg-brand-orange/10 hover:text-brand-orange transition-colors">
+                <a
+                  href="https://www.researchgate.net/publication/320809758_Mindfulness-based_stress_reduction_MBSR_for_improving_health_quality_of_life_and_social_functioning_in_adults_a_systematic_review_and_meta-analysis"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-xs px-2 py-1 bg-brand-gray-light text-brand-gray-medium rounded hover:bg-brand-orange/10 hover:text-brand-orange transition-colors"
+                >
                   De Vibe et al. (2017)
                 </a>
-                <a href="https://link.springer.com/article/10.1007/s12671-020-01328-3" target="_blank" rel="noopener noreferrer" className="text-xs px-2 py-1 bg-brand-gray-light text-brand-gray-medium rounded hover:bg-brand-orange/10 hover:text-brand-orange transition-colors">
+                <a
+                  href="https://link.springer.com/article/10.1007/s12671-020-01328-3"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-xs px-2 py-1 bg-brand-gray-light text-brand-gray-medium rounded hover:bg-brand-orange/10 hover:text-brand-orange transition-colors"
+                >
                   Vonderlin et al. (2020)
                 </a>
-                <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10172073/" target="_blank" rel="noopener noreferrer" className="text-xs px-2 py-1 bg-brand-gray-light text-brand-gray-medium rounded hover:bg-brand-orange/10 hover:text-brand-orange transition-colors">
+                <a
+                  href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10172073/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-xs px-2 py-1 bg-brand-gray-light text-brand-gray-medium rounded hover:bg-brand-orange/10 hover:text-brand-orange transition-colors"
+                >
                   Michaelsen et al. (2023)
                 </a>
               </div>
@@ -391,20 +471,34 @@ const Wetenschap = () => {
                 voor de volgende dag.
               </p>
               <div className="flex flex-wrap gap-2">
-                <a href="https://scispace.com/pdf/a-systematic-review-and-meta-analysis-of-workplace-448vdu0m18.pdf" target="_blank" rel="noopener noreferrer" className="text-xs px-2 py-1 bg-brand-gray-light text-brand-gray-medium rounded hover:bg-brand-orange/10 hover:text-brand-orange transition-colors">
+                <a
+                  href="https://scispace.com/pdf/a-systematic-review-and-meta-analysis-of-workplace-448vdu0m18.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-xs px-2 py-1 bg-brand-gray-light text-brand-gray-medium rounded hover:bg-brand-orange/10 hover:text-brand-orange transition-colors"
+                >
                   Bartlett et al. (2018)
                 </a>
-                <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10172073/" target="_blank" rel="noopener noreferrer" className="text-xs px-2 py-1 bg-brand-gray-light text-brand-gray-medium rounded hover:bg-brand-orange/10 hover:text-brand-orange transition-colors">
+                <a
+                  href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10172073/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-xs px-2 py-1 bg-brand-gray-light text-brand-gray-medium rounded hover:bg-brand-orange/10 hover:text-brand-orange transition-colors"
+                >
                   Michaelsen et al. (2023)
                 </a>
-                <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12210539/" target="_blank" rel="noopener noreferrer" className="text-xs px-2 py-1 bg-brand-gray-light text-brand-gray-medium rounded hover:bg-brand-orange/10 hover:text-brand-orange transition-colors">
+                <a
+                  href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12210539/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-xs px-2 py-1 bg-brand-gray-light text-brand-gray-medium rounded hover:bg-brand-orange/10 hover:text-brand-orange transition-colors"
+                >
                   Dou et al. (2024)
                 </a>
               </div>
             </div>
 
             {/* Betere fysieke en mentale gezondheid */}
-            
           </div>
 
           <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed text-center mt-12">
@@ -426,9 +520,13 @@ const Wetenschap = () => {
               De resultaten van 40 jaar onderzoek naar aandachttraining. Vraag het hier aan.
             </h2>
             <p className="text-xl md:text-2xl leading-relaxed mb-8 text-white/90">
-              Zelf de wetenschappelijke details bekijken? Ons academische rapport bundelt de laatste studies, analyses en berekeningen rond de effecten van aandachttraining. Inclusief effectgroottes en pathway-analyses.
+              Zelf de wetenschappelijke details bekijken? Ons academische rapport bundelt de laatste studies, analyses
+              en berekeningen rond de effecten van aandachttraining. Inclusief effectgroottes en pathway-analyses.
             </p>
-            <Button onClick={() => setIsLeadMagnetOpen(true)} className="text-lg px-8 py-3 bg-white hover:bg-gray-100 text-brand-blue hover:text-brand-blue font-semibold rounded-lg transition-all duration-300 shadow-lg transform hover:-translate-y-0.5">
+            <Button
+              onClick={() => setIsLeadMagnetOpen(true)}
+              className="text-lg px-8 py-3 bg-white hover:bg-gray-100 text-brand-blue hover:text-brand-blue font-semibold rounded-lg transition-all duration-300 shadow-lg transform hover:-translate-y-0.5"
+            >
               Vraag het bewijs op
             </Button>
           </div>
@@ -442,6 +540,7 @@ const Wetenschap = () => {
       </div>
 
       <LeadMagnetModal isOpen={isLeadMagnetOpen} onClose={() => setIsLeadMagnetOpen(false)} />
-    </div>;
+    </div>
+  );
 };
 export default Wetenschap;
