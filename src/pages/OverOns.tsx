@@ -1,4 +1,4 @@
-import SimplifiedNavigation from '@/components/SimplifiedNavigation';
+import Navigation from '@/components/Navigation';
 import StickyCtaButtons from '@/components/StickyCtaButtons';
 import TrustSection from '@/components/TrustSection';
 import ContactSection from '@/components/ContactSection';
@@ -70,7 +70,7 @@ const OverOns = () => {
 
   return (
     <div className="min-h-screen bg-white">
-      <SimplifiedNavigation />
+      <Navigation />
       <StickyCtaButtons />
       
       <main>
@@ -118,7 +118,7 @@ const OverOns = () => {
                   Tijdens herstel ontdekte ik hoe je je aandacht kunt trainen, gebaseerd op 40 jaar wetenschappelijk onderzoek. Terug op werk merkte ik het verschil: minder stress, betere concentratie, meer controle over gedrag en gedachten, en een productiviteit die ik nooit eerder kende.
                 </p>
                 <p>
-                  Die ervaring wil ik delen. Daarom richtte ik InnerLeaps op. Ik verzorg de visie en marketing, trainers geven de trainingen, en samen maken we maximale impact voor bedrijven.
+                  Die ervaring wil ik delen. Daarom richtte ik InnerLeaps op.
                 </p>
                 
               </div>
@@ -152,7 +152,7 @@ const OverOns = () => {
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-purple leading-tight mb-12 text-center">
               Onze <span className="text-brand-orange">trainers</span>
             </h2>
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <div className="grid md:grid-cols-1 lg:grid-cols-2 gap-8">
               {trainers.map((trainer, index) => (
                 <div key={index} className="bg-white rounded-xl shadow-lg p-8 space-y-6">
                   {/* Naam - full width */}
@@ -161,7 +161,7 @@ const OverOns = () => {
                   </h3>
                   
                   {/* Internal 2-column grid */}
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                  <div className="grid grid-cols-2 gap-6">
                     {/* Linker kolom: Foto + Quote + Badge */}
                     <div className="space-y-4 flex flex-col items-center">
                       <img 
