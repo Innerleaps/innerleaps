@@ -89,9 +89,7 @@ const OverOns = () => {
               <p>
                 Door het drukke leven dat veel van ons vraagt, verliezen we soms het contact met wat we echt nodig hebben om effectief te zijn. Ons werkgeheugen raakt vol en spanningen lopen op in ons systeem, vaak zonder dat we het echt merken. Daardoor schakelen we vaak op de automatische piloot: zo’n 65% tot 90% van ons gedrag gebeurt onbewust. Zo overschrijden we onze grenzen, wat leidt tot lagere productiviteit en een toenemend verzuim.
               </p>
-              <p>
-                Samenwerkingen gaan stroef, we raken energie en focus kwijt en het aantal burn-outs is nog nooit zo hoog geweest.
-              </p>
+              
             </div>
             
             {/* Rechts: Oranje blok met missie */}
