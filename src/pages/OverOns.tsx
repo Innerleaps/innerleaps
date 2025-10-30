@@ -16,14 +16,14 @@ import jacquelinePhoto from '@/assets/Geaccrediteerde_Vitaliteitstrainer_Jacquel
 import vmbnBadge from '@/assets/Aaccreditatie_voor_Vitaliteitsprogramma.png';
 
 // Client logos
-import dhlLogo from '@/assets/Vitaliteitsprogramma_ervaring_met_DHL.png';
-import affiniusLogo from '@/assets/Vitaliteitsprogramma_ervaring_met_affinius_capital.png';
-import rijksLogo from '@/assets/Vitaliteitsprogramma_ervaring_met_Rijkswaterstaat.png';
-import politieLogo from '@/assets/Vitaliteitsprogramma_Politie.png';
-import youTalentLogo from '@/assets/Vitaliteitsprogramma_ervaring_met_You_Talent.png';
-import nobelLogo from '@/assets/Vitaliteitsprogramma_ervaring_met_Nobel_recruitment.png';
-import paLogo from '@/assets/Vitaliteitsprogramma_ervaring_met_PA_consulting.png';
-import hollandLogo from '@/assets/Vitaliteitsprogramma_ervaring_met_Holland_Colours.png';
+import dhlLogo from '@/assets/Vitaliteitsprogramma_ervaring_met_DHL_new.png';
+import affiniusLogo from '@/assets/Vitaliteitsprogramma_ervaring_met_affinius_capital_new.png';
+import rijksLogo from '@/assets/Vitaliteitsprogramma_ervaring_met_Rijkswaterstaat_new.png';
+import politieLogo from '@/assets/Vitaliteitsprogramma_Politie_new.png';
+import youTalentLogo from '@/assets/Vitaliteitsprogramma_ervaring_met_You_Talent_new.png';
+import nobelLogo from '@/assets/Vitaliteitsprogramma_ervaring_met_Nobel_recruitment_new.png';
+import paLogo from '@/assets/Vitaliteitsprogramma_ervaring_met_PA_consulting_new.png';
+import hollandLogo from '@/assets/Vitaliteitsprogramma_ervaring_met_Holland_Colours_new.png';
 
 const OverOns = () => {
   useEffect(() => {
@@ -215,13 +215,13 @@ const OverOns = () => {
                   </div>
                   
                   {/* Client logos - full width */}
-                  <div className="flex gap-4 items-center justify-center pt-4 border-t border-brand-gray-light overflow-x-auto">
+                  <div className="flex gap-4 items-center justify-center pt-4 border-t border-brand-gray-light flex-wrap">
                     {trainer.logos.map((logo, i) => (
                       <img 
                         key={i}
                         src={logo.src} 
                         alt={logo.alt}
-                        className="h-16 md:h-20 lg:h-24 object-contain flex-shrink-0"
+                        className="h-20 object-contain"
                       />
                     ))}
                   </div>
