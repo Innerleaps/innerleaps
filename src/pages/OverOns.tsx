@@ -113,20 +113,14 @@ const OverOns = () => {
               <div className="space-y-4 text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
                 <p>
                   Hoi, ik ben Bas. Na mijn master Design for Interaction aan de TU Delft werkte ik in consultancy en als productmanager bij een SaaS-bedrijf. Hoge ambities brachten veel spanning en op mijn 27e kreeg ik hardnekkige klachten en liep ik tijdens een snowboardvakantie een flinke hersenschudding op. Dat was mijn keerpunt.
-
-Tijdens herstel ontdekte ik hoe je je aandacht kunt trainen, gebaseerd op 40 jaar wetenschappelijk onderzoek. Terug op werk merkte ik het verschil: minder stress, betere concentratie, meer controle over gedrag en gedachten, en een productiviteit die ik nooit eerder kende.
-
-Die ervaring wil ik delen. Daarom richtte ik InnerLeaps op. Ik verzorg de visie en marketing, trainers geven de trainingen, en samen maken we maximale impact voor bedrijven.
                 </p>
                 <p>
-                  Op mijn 27e kreeg ik hardnekkige lichamelijke klachten en een snowboardvakantie eindigde met een flinke hersenschudding. Dat werd mijn keerpunt.
+                  Tijdens herstel ontdekte ik hoe je je aandacht kunt trainen, gebaseerd op 40 jaar wetenschappelijk onderzoek. Terug op werk merkte ik het verschil: minder stress, betere concentratie, meer controle over gedrag en gedachten, en een productiviteit die ik nooit eerder kende.
                 </p>
                 <p>
-                  Tijdens mijn herstel ontdekte ik dat ik mijn aandacht kon trainen, een techniek gebaseerd op 40 jaar wetenschappelijk onderzoek. Toen ik weer ging werken, was het verschil groot: ik herkende stress sneller, creëerde ruimte tussen negatieve gedachten, onderdrukte ongewenst gedrag en kon me beter concentreren dan ooit.
+                  Die ervaring wil ik delen. Daarom richtte ik InnerLeaps op. Ik verzorg de visie en marketing, trainers geven de trainingen, en samen maken we maximale impact voor bedrijven.
                 </p>
-                <p>
-                  Die ervaring wil ik iedereen gunnen. Omdat er bij bedrijven een duidelijke business case is, richt ik mij daar op. Zo ontstond InnerLeaps. Ik zorg voor visie en marketing, trainers verzorgen de trainingen, samen maken we maximale impact.
-                </p>
+                
               </div>
               
               {/* Rechts: Foto + Functie + CTA */}
