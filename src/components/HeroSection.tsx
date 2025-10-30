@@ -4,8 +4,12 @@ import { ArrowDown, Award } from "lucide-react";
 import CalculatorModal from "./CalculatorModal";
 const HeroSection = () => {
   const [isCalculatorOpen, setIsCalculatorOpen] = useState(false);
-  return <>
-      <section id="home" className="bg-gradient-to-br from-brand-blue to-brand-blue-dark text-white section-padding overflow-hidden">
+  return (
+    <>
+      <section
+        id="home"
+        className="bg-gradient-to-br from-brand-blue to-brand-blue-dark text-white section-padding overflow-hidden"
+      >
         <div className="container-custom">
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             <div className="space-y-6 lg:space-y-8 animate-fade-in">
@@ -21,24 +25,33 @@ const HeroSection = () => {
                   <span className="text-brand-orange">prestatie</span> verbeterd{" "}
                 </h1>
                 <p className="text-xl sm:text-2xl md:text-3xl text-blue-100 leading-relaxed">
-                  Wetenschappelijk bewezen vitaliteits{"\u00AD"}programma. Medewerkers ontwikkelen eigenaarschap en
-                  vergroten hun veerkracht en productiviteit.
+                  Wetenschappelijk bewezen vitaliteits{"\u00AD"}programma. Deelnemers ontwikkelen eigenaarschap over hun
+                  eigen stress én verhogen hun veerkracht en productiviteit.
                 </p>
               </div>
 
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button size="lg" className="w-full sm:w-auto bg-brand-orange hover:bg-brand-orange text-brand-orange-light hover:text-brand-orange-light font-semibold py-4 px-6 lg:px-8 rounded-lg text-lg lg:text-xl shadow-xl" onClick={() => setIsCalculatorOpen(true)}>
+                <Button
+                  size="lg"
+                  className="w-full sm:w-auto bg-brand-orange hover:bg-brand-orange text-brand-orange-light hover:text-brand-orange-light font-semibold py-4 px-6 lg:px-8 rounded-lg text-lg lg:text-xl shadow-xl"
+                  onClick={() => setIsCalculatorOpen(true)}
+                >
                   Ontdek je besparing
                 </Button>
-                <Button variant="secondary-on-blue" size="lg" className="w-full sm:w-auto font-semibold py-4 px-6 lg:px-8 rounded-lg text-lg lg:text-xl" onClick={() => {
-                const link = document.createElement("a");
-                link.href = "https://calendar.app.google/BgGy8cVUSk4w5Zzg8";
-                link.target = "_blank";
-                link.rel = "noopener noreferrer";
-                document.body.appendChild(link);
-                link.click();
-                document.body.removeChild(link);
-              }}>
+                <Button
+                  variant="secondary-on-blue"
+                  size="lg"
+                  className="w-full sm:w-auto font-semibold py-4 px-6 lg:px-8 rounded-lg text-lg lg:text-xl"
+                  onClick={() => {
+                    const link = document.createElement("a");
+                    link.href = "https://calendar.app.google/BgGy8cVUSk4w5Zzg8";
+                    link.target = "_blank";
+                    link.rel = "noopener noreferrer";
+                    document.body.appendChild(link);
+                    link.click();
+                    document.body.removeChild(link);
+                  }}
+                >
                   Stel je vragen aan Bas
                 </Button>
               </div>
@@ -91,6 +104,7 @@ const HeroSection = () => {
       </section>
 
       <CalculatorModal isOpen={isCalculatorOpen} onClose={() => setIsCalculatorOpen(false)} />
-    </>;
+    </>
+  );
 };
 export default HeroSection;
