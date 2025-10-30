@@ -6,7 +6,7 @@ import Footer from "@/components/Footer";
 import { Brain, Heart, Shield, CheckCircle, Target, Award, TrendingUp, FileText, Zap } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import LeadMagnetModal from "@/components/LeadMagnetModal";
-import brainActivityImage from "@/assets/Door_aandachttraining_wordt_informatie_beter_verwerkt_gerichter_vastgehouden_en_efficiënter_ingezet.png";
+import brainActivityImage from "@/assets/Door_aandachttraining_wordt_informatie_beter_verwerkt_gerichter_vastgehouden_en_efficiënter_ingezet.-2.png";
 const Wetenschap = () => {
   const [isLeadMagnetOpen, setIsLeadMagnetOpen] = useState(false);
   
@@ -69,10 +69,10 @@ const Wetenschap = () => {
             </div>
 
             {/* Card 2: Aandachtscontrole */}
-            <div className="bg-white p-6 rounded-lg space-y-4 md:col-span-2">
-              <div className="p-3 rounded-lg bg-brand-orange/5 w-fit">
-                <Target className="h-8 w-8 text-brand-orange stroke-2" />
-              </div>
+          <div className="bg-white p-6 rounded-lg space-y-4 md:col-span-2">
+            <div className="p-3 rounded-lg bg-brand-orange/5 w-fit mx-auto">
+              <Target className="h-8 w-8 text-brand-orange stroke-2" />
+            </div>
               <h3 className="text-xl md:text-2xl font-bold text-brand-gray-dark">
                 Aandachtscontrole
               </h3>
@@ -99,10 +99,10 @@ const Wetenschap = () => {
             </div>
 
             {/* Card 3: Cognitieve Efficiëntie */}
-            <div className="bg-white p-6 rounded-lg space-y-4 md:col-span-2">
-              <div className="p-3 rounded-lg bg-brand-orange/5 w-fit">
-                <Zap className="h-8 w-8 text-brand-orange stroke-2" />
-              </div>
+          <div className="bg-white p-6 rounded-lg space-y-4 md:col-span-2">
+            <div className="p-3 rounded-lg bg-brand-orange/5 w-fit mx-auto">
+              <Zap className="h-8 w-8 text-brand-orange stroke-2" />
+            </div>
               <h3 className="text-xl md:text-2xl font-bold text-brand-gray-dark">
                 Cognitieve Efficiëntie
               </h3>
@@ -123,10 +123,10 @@ const Wetenschap = () => {
             </div>
 
             {/* Card 4: Filteren & onderdrukken (gecentreerd, start kolom 2) */}
-            <div className="bg-white p-6 rounded-lg space-y-4 md:col-span-2 md:col-start-2">
-              <div className="p-3 rounded-lg bg-brand-orange/5 w-fit">
-                <Shield className="h-8 w-8 text-brand-orange stroke-2" />
-              </div>
+          <div className="bg-white p-6 rounded-lg space-y-4 md:col-span-2 md:col-start-2">
+            <div className="p-3 rounded-lg bg-brand-orange/5 w-fit mx-auto">
+              <Shield className="h-8 w-8 text-brand-orange stroke-2" />
+            </div>
               <h3 className="text-xl md:text-2xl font-bold text-brand-gray-dark">
                 Filteren & onderdrukken
               </h3>
@@ -147,10 +147,10 @@ const Wetenschap = () => {
             </div>
 
             {/* Card 5: Executieve Planning (gecentreerd, start kolom 4) */}
-            <div className="bg-white p-6 rounded-lg space-y-4 md:col-span-2 md:col-start-4">
-              <div className="p-3 rounded-lg bg-brand-orange/5 w-fit">
-                <FileText className="h-8 w-8 text-brand-orange stroke-2" />
-              </div>
+          <div className="bg-white p-6 rounded-lg space-y-4 md:col-span-2 md:col-start-4">
+            <div className="p-3 rounded-lg bg-brand-orange/5 w-fit mx-auto">
+              <FileText className="h-8 w-8 text-brand-orange stroke-2" />
+            </div>
               <h3 className="text-xl md:text-2xl font-bold text-brand-gray-dark">
                 Executieve Planning
               </h3>
