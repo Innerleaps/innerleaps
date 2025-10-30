@@ -176,6 +176,13 @@ const OverOns = () => {
                         className="rounded-full w-40 h-40 object-cover shadow-md"
                       />
                       
+                      {/* VMBN Badge */}
+                      <img 
+                        src={vmbnBadge} 
+                        alt="VMBN Accreditatie"
+                        className="h-20 object-contain"
+                      />
+                      
                       {/* Quote box */}
                       <div className="bg-brand-off-white p-4 rounded-lg border-l-4 border-brand-orange">
                         <p className="text-base md:text-lg italic text-brand-gray-medium leading-snug">
@@ -185,13 +192,6 @@ const OverOns = () => {
                           — Oud deelnemer
                         </p>
                       </div>
-                      
-                      {/* VMBN Badge */}
-                      <img 
-                        src={vmbnBadge} 
-                        alt="VMBN Accreditatie"
-                        className="h-20 object-contain"
-                      />
                     </div>
                     
                     {/* Rechter kolom: Body + Tags */}
