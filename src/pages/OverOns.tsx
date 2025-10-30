@@ -82,23 +82,26 @@ const OverOns = () => {
             Waarom wij dit werk doen
           </h1>
           
-          {/* Body tekst - LEFT aligned */}
-          <div className="max-w-4xl mx-auto space-y-6 text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
-            <p>
-              We staan altijd aan. Het drukke leven vraagt veel van ons. We over onze eigen grenzen én die van anderen. 
-              We verliezen het contact met wat we ècht nodig hebben. Hierdoor leven we 65% tot 90% op de automatische piloot. 
-              Die automatische piloot trekt ons voort maar ten koste van wat?
-            </p>
-            <p>
-              Samenwerkingen gaan stroef, we raken energie en focus kwijt en het aantal burn-outs is nog nooit zo hoog geweest.
-            </p>
-          </div>
-          
-          {/* Oranje blok met missie - GROTE letters */}
-          <div className="max-w-4xl mx-auto mt-8 bg-brand-orange text-white rounded-xl p-8 lg:p-10 shadow-lg">
-            <p className="text-2xl md:text-3xl lg:text-4xl font-bold leading-tight">
-              Onze missie is dat mensen met rust, focus en plezier door het leven gaan, door mentale scherpte te vergroten en spanning, stress en druk te doorbreken.
-            </p>
+          {/* Grid met 2 kolommen: Links body, rechts oranje blok */}
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-start">
+            {/* Links: Body tekst */}
+            <div className="space-y-6 text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
+              <p>
+                We staan altijd aan. Het drukke leven vraagt veel van ons. We over onze eigen grenzen én die van anderen. 
+                We verliezen het contact met wat we ècht nodig hebben. Hierdoor leven we 65% tot 90% op de automatische piloot. 
+                Die automatische piloot trekt ons voort maar ten koste van wat?
+              </p>
+              <p>
+                Samenwerkingen gaan stroef, we raken energie en focus kwijt en het aantal burn-outs is nog nooit zo hoog geweest.
+              </p>
+            </div>
+            
+            {/* Rechts: Oranje blok met missie */}
+            <div className="bg-brand-orange text-white rounded-xl p-8 lg:p-10 shadow-lg">
+              <p className="text-2xl md:text-3xl lg:text-4xl font-bold leading-tight">
+                Onze missie is dat mensen met rust, focus en plezier door het leven gaan, door mentale scherpte te vergroten en spanning, stress en druk te doorbreken.
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -113,28 +116,16 @@ const OverOns = () => {
               {/* Links: Body */}
               <div className="space-y-4 text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
                 <p>
-                  Hoi, ik ben Bas! Na mijn master Design for Interaction aan de TU Delft werkte ik in consultancy en als 
-                  product manager bij een SaaS-bedrijf. Veel mensen in mijn omgeving merkten op dat ik gestresst was. Ja ik 
-                  maakte wel eens een foutje en was niet heel scherp maar dan zette ik dit toch ook weer snel recht? Waar 
-                  hebben die mensen het toch over?
+                  Hoi, ik ben Bas. Na mijn master Design for Interaction aan de TU Delft werkte ik in consultancy en als productmanager bij een SaaS-bedrijf. Mijn ambities waren groot, maar dat bracht ook veel spanning en druk.
                 </p>
                 <p>
-                  Toen ik 27 werd kreeg ik hardnekkige lichamelijke klachten. Maar toen een snowboard vakantie eindidige met 
-                  een fikse hersenschudding begon mijn verandering.
+                  Op mijn 27e kreeg ik hardnekkige lichamelijke klachten en een snowboardvakantie eindigde met een flinke hersenschudding. Dat werd mijn keerpunt.
                 </p>
                 <p>
-                  Ik was opzoek naar wat mijn hersenen wel nog aankonden en stuitte op wetenschappelijk bewijs. Het trainen 
-                  van aandacht. Een techniek met 40 jaar wetenschappelijk onderzoek.
+                  Tijdens mijn herstel ontdekte ik dat ik mijn aandacht kon trainen, een techniek gebaseerd op 40 jaar wetenschappelijk onderzoek. Toen ik weer ging werken, was het verschil groot: ik herkende stress sneller, creëerde ruimte tussen negatieve gedachten, onderdrukte ongewenst gedrag en kon me beter concentreren dan ooit.
                 </p>
                 <p>
-                  Ik begon met het trainen van mijn aandacht en het verschil was enorm: ik merkte stress vroegtijdig op, 
-                  creëerde ruimte tussen negatieve gedachten, onderdrukte ongewenst gedrag en kon mij beter concentreren dan 
-                  nooit tevoren.
-                </p>
-                <p>
-                  Deze ervaring gun ik iedereen. En omdat er bij bedrijven een duidelijke business case is, zie ik daar mijn 
-                  kans om de meeste impact te maken. Daarom ben ik InnerLeaps begonnen. Ik werk samen met trainers om onze 
-                  krachten te bundelen. Zij de training en ik de marketing en visie.
+                  Die ervaring wil ik iedereen gunnen. Omdat er bij bedrijven een duidelijke business case is, richt ik mij daar op. Zo ontstond InnerLeaps. Ik zorg voor visie en marketing, trainers verzorgen de trainingen, samen maken we maximale impact.
                 </p>
               </div>
               

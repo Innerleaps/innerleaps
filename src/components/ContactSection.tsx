@@ -3,7 +3,7 @@ import { Mail, Phone } from 'lucide-react';
 
 const ContactSection = () => {
   return (
-    <section className="bg-white section-padding">
+    <section className="bg-brand-off-white section-padding">
       <div className="container-custom">
         <div className="text-center space-y-6 mb-16">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-gray-dark">
