@@ -34,12 +34,12 @@ const App = () => {
             <Route path="/leven-vragenlijst/resultaat" element={<LevenVragenlijstResultaat />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/wetenschap" element={<Wetenschap />} />
+            <Route path="/over-ons" element={<OverOns />} />
             {!import.meta.env.PROD && (
               <>
                 <Route path="/home" element={<Index />} />
                 <Route path="/wetenschap_old" element={<WetenschapOld />} />
                 <Route path="/programma" element={<Programma />} />
-                <Route path="/over-ons" element={<OverOns />} />
                 <Route path="/voor-wie" element={<VoorWie />} />
                 <Route path="/berekening" element={<Berekening />} />
                 <Route path="/berekening-demo" element={<BerekeningDemo />} />

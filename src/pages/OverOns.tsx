@@ -1,4 +1,4 @@
-import Navigation from '@/components/Navigation';
+import SimplifiedNavigation from '@/components/SimplifiedNavigation';
 import StickyCtaButtons from '@/components/StickyCtaButtons';
 import TrustSection from '@/components/TrustSection';
 import ContactSection from '@/components/ContactSection';
@@ -70,7 +70,7 @@ const OverOns = () => {
 
   return (
     <div className="min-h-screen bg-white">
-      <Navigation />
+      <SimplifiedNavigation />
       <StickyCtaButtons />
       
       <main>
