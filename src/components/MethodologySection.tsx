@@ -31,9 +31,7 @@ const MethodologySection = () => {
               Het vitaliteits{"\u00AD"}programma waar we <span className="text-brand-orange">aandacht trainen</span>
             </h2>
             <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
-              Met het programma van InnerLeaps trainen mensen hun "aandachtsspier". Hiermee verbeterd de kracht en
-              efficiëntie van de neocortex. Het "controlecentrum" voor rationele keuzes waarmee we focussen, sociale
-              signalen opmerken en strategieën bedenken.
+              In ons wetenschappelijk bewezen programma trainen deelnemers hun "aandachtsspier". Hiermee versterkt de kracht en efficiëntie van de Neocortex. Het "controlecentrum" voor rationele keuzes waarmee we onder andere focussen, sociale signalen opmerken, stress bewust signaleren en strategieën bedenken. Hierdoor verbeterd prestatie én daalt het verzuim. 
             </p>
           </div>
           <div>
