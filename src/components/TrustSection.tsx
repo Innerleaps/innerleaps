@@ -44,7 +44,7 @@ const TrustSection = () => {
   ];
 
   return (
-    <section className="bg-brand-off-white section-padding">
+    <section className="bg-white section-padding">
       <div className="container-custom">
         <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-purple text-center leading-tight mb-12">
           Waarom organisaties voor <span className="text-brand-orange">ons kiezen</span>

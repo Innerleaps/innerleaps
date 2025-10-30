@@ -82,8 +82,8 @@ const OverOns = () => {
             Waarom wij dit werk doen
           </h1>
           
-          {/* Alle tekst in één doorlopend blok */}
-          <div className="max-w-4xl mx-auto space-y-6 text-xl md:text-2xl text-brand-gray-medium leading-relaxed text-center">
+          {/* Body tekst - LEFT aligned */}
+          <div className="max-w-4xl mx-auto space-y-6 text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
             <p>
               We staan altijd aan. Het drukke leven vraagt veel van ons. We over onze eigen grenzen én die van anderen. 
               We verliezen het contact met wat we ècht nodig hebben. Hierdoor leven we 65% tot 90% op de automatische piloot. 
@@ -92,7 +92,11 @@ const OverOns = () => {
             <p>
               Samenwerkingen gaan stroef, we raken energie en focus kwijt en het aantal burn-outs is nog nooit zo hoog geweest.
             </p>
-            <p className="font-bold text-brand-purple">
+          </div>
+          
+          {/* Oranje blok met missie - GROTE letters */}
+          <div className="max-w-4xl mx-auto mt-8 bg-brand-orange text-white rounded-xl p-8 lg:p-10 shadow-lg">
+            <p className="text-2xl md:text-3xl lg:text-4xl font-bold leading-tight">
               Onze missie is dat mensen met rust, focus en plezier door het leven gaan, door mentale scherpte te vergroten en spanning, stress en druk te doorbreken.
             </p>
           </div>
@@ -183,10 +187,10 @@ const OverOns = () => {
                       
                       {/* Quote box */}
                       <div className="bg-brand-off-white p-4 rounded-lg border-l-4 border-brand-orange">
-                        <p className="text-sm italic text-brand-gray-medium leading-snug">
+                        <p className="text-base md:text-lg italic text-brand-gray-medium leading-snug">
                           "{trainer.quote}"
                         </p>
-                        <p className="text-xs text-brand-gray-medium mt-2">
+                        <p className="text-sm text-brand-gray-medium mt-2">
                           — Oud deelnemer
                         </p>
                       </div>
@@ -201,7 +205,7 @@ const OverOns = () => {
                     
                     {/* Rechter kolom: Body + Tags */}
                     <div className="space-y-4">
-                      <p className="text-base md:text-lg text-brand-gray-medium leading-relaxed">
+                      <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
                         {trainer.body}
                       </p>
                       
@@ -210,11 +214,7 @@ const OverOns = () => {
                         {trainer.languages.map((lang, i) => (
                           <span 
                             key={i}
-                            className={`px-3 py-1 rounded-full text-sm font-medium ${
-                              lang === 'Nederlands' 
-                                ? 'bg-brand-blue text-white' 
-                                : 'bg-brand-orange text-white'
-                            }`}
+                            className="px-3 py-1 rounded-full text-sm font-medium bg-brand-orange text-white"
                           >
                             {lang}
                           </span>
@@ -224,13 +224,13 @@ const OverOns = () => {
                   </div>
                   
                   {/* Client logos - full width */}
-                  <div className="flex gap-6 items-center justify-center flex-wrap pt-4 border-t border-brand-gray-light">
+                  <div className="flex gap-4 items-center justify-center pt-4 border-t border-brand-gray-light overflow-x-auto">
                     {trainer.logos.map((logo, i) => (
                       <img 
                         key={i}
                         src={logo.src} 
                         alt={logo.alt}
-                        className="h-24 object-contain transition-all"
+                        className="h-16 md:h-20 lg:h-24 object-contain flex-shrink-0"
                       />
                     ))}
                   </div>
