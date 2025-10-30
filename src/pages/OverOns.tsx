@@ -136,7 +136,7 @@ const OverOns = () => {
                 <Button 
                   variant="secondary"
                   size="lg"
-                  className="w-full sm:w-auto font-semibold"
+                  className="w-full sm:w-auto font-semibold py-4 px-6 lg:px-8 rounded-lg text-lg lg:text-xl"
                   onClick={() => window.open('https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1kmdh8c16sdfL2rT3r2bH49IScgjnH-yx3-QStH8VF9ufZBPcwKoL6jfcgLjnRs6iM1KlcXC8i', '_blank')}
                 >
                   Plan gesprek met Bas
