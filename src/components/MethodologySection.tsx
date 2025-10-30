@@ -16,8 +16,8 @@ const MethodologySection = () => {
             <div>
               <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
                 In ons wetenschappelijk bewezen programma trainen deelnemers hun "aandachtsspier". Hiermee versterkt de
-                kracht en efficiëntie van de Neocortex. Het "controlecentrum" voor rationele keuzes, focus en
-                concentratie. Hierdoor verbeterd prestatie én daalt het verzuim.
+                kracht en efficiëntie van de Neocortex. Het "controlecentrum" voor rationele keuzes, focus en het bewust
+                opmerken van stresssignalen. Hierdoor verbeterd prestatie én daalt het verzuim.
               </p>
             </div>
             <div>
