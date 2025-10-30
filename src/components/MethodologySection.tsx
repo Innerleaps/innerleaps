@@ -8,13 +8,17 @@ const MethodologySection = () => {
         {/* Blok 1 - De Methode */}
         <div className="space-y-8 lg:space-y-12">
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-center text-brand-purple leading-tight">
-            De training voor betere <span className="text-brand-orange">prestatie</span>, minder <span className="text-brand-orange">stress</span> en lager <span className="text-brand-orange">verzuim</span>
+            De methode die <span className="text-brand-orange">prestatie</span>, verbetert door minder{" "}
+            <span className="text-brand-orange">druk</span> en <span className="text-brand-orange">spanning</span>
           </h2>
-          
+
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-start">
             <div>
               <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
-                In ons wetenschappelijk bewezen programma trainen deelnemers hun "aandachtsspier". Hiermee versterkt de kracht en efficiëntie van de Neocortex. Het "controlecentrum" voor rationele keuzes waarmee we onder andere focussen, sociale signalen opmerken, stress bewust signaleren en strategieën bedenken. Hierdoor verbeterd prestatie én daalt het verzuim. 
+                In ons wetenschappelijk bewezen programma trainen deelnemers hun "aandachtsspier". Hiermee versterkt de
+                kracht en efficiëntie van de Neocortex. Het "controlecentrum" voor rationele keuzes waarmee we onder
+                andere focussen, sociale signalen opmerken, stress bewust signaleren en strategieën bedenken. Hierdoor
+                verbeterd prestatie én daalt het verzuim.
               </p>
             </div>
             <div>
