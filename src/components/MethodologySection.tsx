@@ -9,7 +9,7 @@ const MethodologySection = () => {
         <div className="space-y-8 lg:space-y-12">
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-center text-brand-purple leading-tight">
             Minder <span className="text-brand-orange">verzuim</span> en betere{" "}
-            <span className="text-brand-orange">prestatie </span> door minder druk en betere focus
+            <span className="text-brand-orange">prestatie </span> door minder stress en betere focus
           </h2>
 
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
