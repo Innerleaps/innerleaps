@@ -6,82 +6,19 @@ import Footer from "@/components/Footer";
 import { Brain, Heart, Shield, CheckCircle, Target, Award, TrendingUp, FileText } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import LeadMagnetModal from "@/components/LeadMagnetModal";
-import neocortexImage from "@/assets/Meer_activiteit_in_neo_cortex_door_aandacht_training.png";
+import brainActivityImage from "@/assets/Door_aandachttraining_wordt_informatie_beter_verwerkt_gerichter_vastgehouden_en_efficiënter_ingezet.png";
 const Wetenschap = () => {
   const [isLeadMagnetOpen, setIsLeadMagnetOpen] = useState(false);
+  
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-  const brainSystems = [{
-    number: 1,
-    icon: Brain,
-    title: "1. Neocortex: rationele keuzes",
-    color: "text-brand-orange",
-    bgColor: "bg-brand-orange/5",
-    points: ["Denkt na, plant, maakt doordachte beslissingen", "Zorgt voor situationeel bewustzijn, verdeelt taken en prioriteert", "Maar onder stress? Uitgeschakeld"]
-  }, {
-    number: 2,
-    icon: Heart,
-    title: "2. Limbisch systeem: beloningen najagen",
-    color: "text-brand-orange",
-    bgColor: "bg-brand-orange/5",
-    points: ["Verwerkt emoties, geheugen, motivatie en genot", "Jaagt constant op beloningen: dopamine, erkenning, afleidende content", "Handelt snel, niet altijd slim. Kiest directe beloning boven het lange termijn"]
-  }, {
-    number: 3,
-    icon: Shield,
-    title: "3. Reptielenbrein: dreigingen vermijden",
-    color: "text-brand-orange",
-    bgColor: "bg-brand-orange/5",
-    points: ["Beschermt tegen gevaar maar maakt geen onderscheid tussen fysieke bedreiging en moderne stressoren", "Zoals reputatieverlies, gebrek aan controle of onzekerheid"]
-  }];
+  
   return <div className="min-h-screen bg-white">
       <SimplifiedNavigation />
       <StickyCtaButtons />
 
-      {/* STAP 1: HET PROBLEEM */}
-      <section className="bg-white section-padding">
-        <div className="container-custom">
-          <div className="max-w-3xl mx-auto text-center space-y-6 mb-12">
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-gray-dark leading-tight">
-              De <span className="text-brand-orange">automatische piloot</span>, ons beschermingsmechanisme
-            </h2>
-            <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
-              In 2 miljoen jaar is ons brein geëvolueerd om twee dingen te doen: dreigingen vermijden én beloningen
-              najagen. Het probleem? Ons brein ziet geen verschil tussen een leeuw en werkstress. Tegelijk leidt de
-              dopamine craving ons af. Hierdoor is tot 90% van ons gedrag onbewust en zeker onder stress neemt onze auto
-              pilot het over. Dat leidt tot ongezonde keuzes, impulsieve reacties en afleiding.
-            </p>
-          </div>
-
-          {/* Drie kolommen met iconen */}
-          <div className="grid md:grid-cols-3 gap-8 mb-8">
-            {brainSystems.map(system => {
-            const IconComponent = system.icon;
-            return <div key={system.number} className="flex flex-col space-y-4 bg-brand-off-white p-6 rounded-lg">
-                  <div className="flex flex-col items-center text-center space-y-4">
-                    <div className={`p-3 rounded-lg ${system.bgColor}`}>
-                      <IconComponent className={`h-8 w-8 ${system.color} stroke-2`} />
-                    </div>
-                  </div>
-                  <h3 className="text-xl md:text-2xl font-semibold text-brand-gray-dark leading-tight text-center">
-                    {system.title}
-                  </h3>
-                  <ul className="list-disc list-outside ml-5 space-y-2">
-                    {system.points.map((point, idx) => <li key={idx} className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
-                        {point}
-                      </li>)}
-                  </ul>
-                </div>;
-          })}
-          </div>
-
-          <p className="text-xl md:text-2xl text-brand-gray-dark font-semibold text-center mt-12">
-            Onder stress domineren systeem 2 en 3. Rationeel denken verliest.
-          </p>
-        </div>
-      </section>
-
-      {/* STAP 2: DE OPLOSSING */}
+      {/* DE OPLOSSING */}
       <section className="bg-brand-off-white section-padding">
         <div className="container-custom">
           <div className="max-w-3xl mx-auto text-center space-y-6 mb-12">
@@ -91,32 +28,89 @@ const Wetenschap = () => {
             </h2>
             <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
               In ons vitaliteit- en effectiviteit programma trainen deelnemers hun aandacht. Net zoals je spieren traint
-              in de sportschool, train je hier je focus. Hiermee neemt de activiteit in de neocortex toe. Tegelijkertijd
-              vraagt deze minder energie. De neocortex is het "controlecentrum" voor:
+              in de sportschool, train je hier je focus. Hiermee neemt de activiteit in de Frontale cortex en 
+              Fronto-pariëtale netwerken toe. Tegelijkertijd vragen deze minder energie. Hierdoor wordt informatie 
+              beter verwerkt, gerichter vastgehouden en efficiënter ingezet.
             </p>
           </div>
 
-          <div className="grid grid-cols-4 gap-6 mb-12">
-            <div></div>
-            <div className="col-span-2 space-y-3">
-              <div className="flex items-start gap-3">
-                <CheckCircle className="h-6 w-6 text-brand-orange stroke-2 flex-shrink-0 mt-1" />
-                <span className="text-xl md:text-2xl text-brand-gray-dark">Emoties regulatie</span>
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+            {/* Linker kolom: Gestructureerde lijst */}
+            <div className="space-y-6">
+              {/* Informatieverwerking */}
+              <div className="space-y-3">
+                <h3 className="text-xl md:text-2xl font-bold text-brand-gray-dark">Informatieverwerking</h3>
+                <div className="flex items-start gap-3">
+                  <CheckCircle className="h-6 w-6 text-brand-orange stroke-2 flex-shrink-0 mt-1" />
+                  <span className="text-xl md:text-2xl text-brand-gray-dark">Informatie langer vasthouden en beter onthouden.</span>
+                </div>
+                <div className="flex items-start gap-3">
+                  <CheckCircle className="h-6 w-6 text-brand-orange stroke-2 flex-shrink-0 mt-1" />
+                  <span className="text-xl md:text-2xl text-brand-gray-dark">Informatie sneller en beter verwerken.</span>
+                </div>
               </div>
-              <div className="flex items-start gap-3">
-                <CheckCircle className="h-6 w-6 text-brand-orange stroke-2 flex-shrink-0 mt-1" />
-                <span className="text-xl md:text-2xl text-brand-gray-dark">Bewust reageren op sociale signalen</span>
+
+              {/* Aandachtscontrole */}
+              <div className="space-y-3">
+                <h3 className="text-xl md:text-2xl font-bold text-brand-gray-dark">Aandachtscontrole</h3>
+                <div className="flex items-start gap-3">
+                  <CheckCircle className="h-6 w-6 text-brand-orange stroke-2 flex-shrink-0 mt-1" />
+                  <span className="text-xl md:text-2xl text-brand-gray-dark">Aandacht beter richten op wat belangrijk is.</span>
+                </div>
+                <div className="flex items-start gap-3">
+                  <CheckCircle className="h-6 w-6 text-brand-orange stroke-2 flex-shrink-0 mt-1" />
+                  <span className="text-xl md:text-2xl text-brand-gray-dark">Aandacht langer vasthouden.</span>
+                </div>
+                <div className="flex items-start gap-3">
+                  <CheckCircle className="h-6 w-6 text-brand-orange stroke-2 flex-shrink-0 mt-1" />
+                  <span className="text-xl md:text-2xl text-brand-gray-dark">Minder afgeleid door onbelangrijke informatie.</span>
+                </div>
               </div>
-              <div className="flex items-start gap-3">
-                <CheckCircle className="h-6 w-6 text-brand-orange stroke-2 flex-shrink-0 mt-1" />
-                <span className="text-xl md:text-2xl text-brand-gray-dark">Strategieën bedenken en prioriteren</span>
+
+              {/* Cognitieve Efficiëntie */}
+              <div className="space-y-3">
+                <h3 className="text-xl md:text-2xl font-bold text-brand-gray-dark">Cognitieve Efficiëntie</h3>
+                <div className="flex items-start gap-3">
+                  <CheckCircle className="h-6 w-6 text-brand-orange stroke-2 flex-shrink-0 mt-1" />
+                  <span className="text-xl md:text-2xl text-brand-gray-dark">Dezelfde taken vragen minder hersenenergie.</span>
+                </div>
+                <div className="flex items-start gap-3">
+                  <CheckCircle className="h-6 w-6 text-brand-orange stroke-2 flex-shrink-0 mt-1" />
+                  <span className="text-xl md:text-2xl text-brand-gray-dark">Sneller schakelen tussen taken.</span>
+                </div>
+              </div>
+
+              {/* Filteren & onderdrukken */}
+              <div className="space-y-3">
+                <h3 className="text-xl md:text-2xl font-bold text-brand-gray-dark">Filteren & onderdrukken</h3>
+                <div className="flex items-start gap-3">
+                  <CheckCircle className="h-6 w-6 text-brand-orange stroke-2 flex-shrink-0 mt-1" />
+                  <span className="text-xl md:text-2xl text-brand-gray-dark">Irrelevante informatie filteren.</span>
+                </div>
+                <div className="flex items-start gap-3">
+                  <CheckCircle className="h-6 w-6 text-brand-orange stroke-2 flex-shrink-0 mt-1" />
+                  <span className="text-xl md:text-2xl text-brand-gray-dark">Ongewenste reacties onderdrukken.</span>
+                </div>
+              </div>
+
+              {/* Executieve Planning */}
+              <div className="space-y-3">
+                <h3 className="text-xl md:text-2xl font-bold text-brand-gray-dark">Executieve Planning</h3>
+                <div className="flex items-start gap-3">
+                  <CheckCircle className="h-6 w-6 text-brand-orange stroke-2 flex-shrink-0 mt-1" />
+                  <span className="text-xl md:text-2xl text-brand-gray-dark">Beter plannen van handelingen.</span>
+                </div>
+                <div className="flex items-start gap-3">
+                  <CheckCircle className="h-6 w-6 text-brand-orange stroke-2 flex-shrink-0 mt-1" />
+                  <span className="text-xl md:text-2xl text-brand-gray-dark">Doelen beter bepalen en volhouden.</span>
+                </div>
               </div>
             </div>
-            <div></div>
-          </div>
 
-          <div className="max-w-4xl mx-auto">
-            <img src={neocortexImage} alt="Meer activiteit in neo cortex door aandacht training" className="w-full h-auto rounded-lg" />
+            {/* Rechter kolom: Visual */}
+            <div>
+              <img src={brainActivityImage} alt="Door aandachttraining wordt informatie beter verwerkt gerichter vastgehouden en efficiënter ingezet" className="w-full h-auto rounded-lg" />
+            </div>
           </div>
         </div>
       </section>
