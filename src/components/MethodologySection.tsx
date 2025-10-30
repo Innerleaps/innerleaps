@@ -2,14 +2,13 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import trainingImage from "@/assets/training_voor_betere_prestatie_minder_stress_en_lager_verzuim.png";
 const MethodologySection = () => {
-  return (
-    <section className="section-padding bg-brand-off-white">
+  return <section className="section-padding bg-brand-off-white">
       <div className="container-custom space-y-24 md:space-y-32 lg:space-y-40">
         {/* Blok 1 - De Methode */}
         <div className="space-y-8 lg:space-y-12">
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-center text-brand-purple leading-tight">
             Minder <span className="text-brand-orange">verzuim</span> en betere{" "}
-            <span className="text-brand-orange">prestatie </span> door minder stress en betere focus
+            <span className="text-brand-orange">prestaties</span> door minder stress en betere focus
           </h2>
 
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
@@ -21,11 +20,7 @@ const MethodologySection = () => {
               </p>
             </div>
             <div>
-              <img
-                src={trainingImage}
-                alt="Training voor betere prestatie minder stress en lager verzuim"
-                className="w-full h-auto rounded-lg"
-              />
+              <img src={trainingImage} alt="Training voor betere prestatie minder stress en lager verzuim" className="w-full h-auto rounded-lg" />
             </div>
           </div>
           {/* Wetenschap CTA - Over volledige breedte gecentreerd */}
@@ -42,7 +37,6 @@ const MethodologySection = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
 export default MethodologySection;
