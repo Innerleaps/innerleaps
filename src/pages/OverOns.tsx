@@ -74,36 +74,30 @@ const OverOns = () => {
       <StickyCtaButtons />
       
       <main>
-        {/* Sectie 1: Visie */}
-        <section className="section-padding bg-brand-off-white">
-          <div className="container-custom">
-            <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-              {/* Links: Titel + Body */}
-              <div className="space-y-6">
-                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-purple leading-tight">
-                  Waarom wij dit werk doen
-                </h1>
-                <div className="space-y-4 text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
-                  <p>
-                    We staan altijd aan. Het drukke leven vraagt veel van ons. We over onze eigen grenzen én die van anderen. 
-                    We verliezen het contact met wat we ècht nodig hebben. Hierdoor leven we 65% tot 90% op de automatische piloot. 
-                    Die automatische piloot trekt ons voort maar ten koste van wat?
-                  </p>
-                  <p>
-                    Samenwerkingen gaan stroef, we raken energie en focus kwijt en het aantal burn-outs is nog nooit zo hoog geweest.
-                  </p>
-                </div>
-              </div>
-              
-              {/* Rechts: Orange Vision Box */}
-              <div className="bg-brand-orange text-white rounded-xl p-8 lg:p-10 shadow-lg">
-                <p className="text-xl md:text-2xl font-bold leading-relaxed">
-                  Onze missie is dat mensen met rust, focus en plezier door het leven gaan, door mentale scherpte te vergroten en spanning, stress en druk te doorbreken.
-                </p>
-              </div>
-            </div>
+      {/* Sectie 1: Visie & Missie */}
+      <section className="section-padding bg-brand-off-white">
+        <div className="container-custom">
+          {/* Titel bovenaan, volle breedte */}
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-purple leading-tight mb-8 text-center">
+            Waarom wij dit werk doen
+          </h1>
+          
+          {/* Alle tekst in één doorlopend blok */}
+          <div className="max-w-4xl mx-auto space-y-6 text-xl md:text-2xl text-brand-gray-medium leading-relaxed text-center">
+            <p>
+              We staan altijd aan. Het drukke leven vraagt veel van ons. We over onze eigen grenzen én die van anderen. 
+              We verliezen het contact met wat we ècht nodig hebben. Hierdoor leven we 65% tot 90% op de automatische piloot. 
+              Die automatische piloot trekt ons voort maar ten koste van wat?
+            </p>
+            <p>
+              Samenwerkingen gaan stroef, we raken energie en focus kwijt en het aantal burn-outs is nog nooit zo hoog geweest.
+            </p>
+            <p className="font-bold text-brand-purple">
+              Onze missie is dat mensen met rust, focus en plezier door het leven gaan, door mentale scherpte te vergroten en spanning, stress en druk te doorbreken.
+            </p>
           </div>
-        </section>
+        </div>
+      </section>
 
         {/* Sectie 2: Bas's verhaal */}
         <section className="section-padding bg-white">
@@ -169,7 +163,7 @@ const OverOns = () => {
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-purple leading-tight mb-12 text-center">
               Onze <span className="text-brand-orange">trainers</span>
             </h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid md:grid-cols-1 lg:grid-cols-2 gap-8">
               {trainers.map((trainer, index) => (
                 <div key={index} className="bg-white rounded-xl shadow-lg p-8 space-y-6">
                   {/* Naam - full width */}
@@ -236,7 +230,7 @@ const OverOns = () => {
                         key={i}
                         src={logo.src} 
                         alt={logo.alt}
-                        className="h-24 object-contain grayscale hover:grayscale-0 transition-all"
+                        className="h-24 object-contain transition-all"
                       />
                     ))}
                   </div>
