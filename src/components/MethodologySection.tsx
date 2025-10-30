@@ -12,7 +12,7 @@ const MethodologySection = () => {
             <span className="text-brand-orange">druk</span> en <span className="text-brand-orange">spanning</span>
           </h2>
 
-          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-start">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             <div>
               <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
                 In ons wetenschappelijk bewezen programma trainen deelnemers hun "aandachtsspier". Hiermee versterkt de
