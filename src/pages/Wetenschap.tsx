@@ -46,10 +46,10 @@ const Wetenschap = () => {
           <div className="grid md:grid-cols-6 gap-6 lg:gap-8">
             {/* Card 1: Informatieverwerking */}
             <div className="bg-white p-6 rounded-lg space-y-4 md:col-span-2">
-              <div className="p-3 rounded-lg bg-brand-orange/5 w-fit">
+              <div className="p-3 rounded-lg bg-brand-orange/5 w-fit mx-auto">
                 <Brain className="h-8 w-8 text-brand-orange stroke-2" />
               </div>
-              <h3 className="text-xl md:text-2xl font-bold text-brand-gray-dark">
+              <h3 className="text-xl md:text-2xl font-bold text-brand-gray-dark text-center">
                 Informatieverwerking
               </h3>
               <div className="space-y-3">
@@ -73,7 +73,7 @@ const Wetenschap = () => {
             <div className="p-3 rounded-lg bg-brand-orange/5 w-fit mx-auto">
               <Target className="h-8 w-8 text-brand-orange stroke-2" />
             </div>
-              <h3 className="text-xl md:text-2xl font-bold text-brand-gray-dark">
+              <h3 className="text-xl md:text-2xl font-bold text-brand-gray-dark text-center">
                 Aandachtscontrole
               </h3>
               <div className="space-y-3">
@@ -103,7 +103,7 @@ const Wetenschap = () => {
             <div className="p-3 rounded-lg bg-brand-orange/5 w-fit mx-auto">
               <Zap className="h-8 w-8 text-brand-orange stroke-2" />
             </div>
-              <h3 className="text-xl md:text-2xl font-bold text-brand-gray-dark">
+              <h3 className="text-xl md:text-2xl font-bold text-brand-gray-dark text-center">
                 Cognitieve Efficiëntie
               </h3>
               <div className="space-y-3">
@@ -127,7 +127,7 @@ const Wetenschap = () => {
             <div className="p-3 rounded-lg bg-brand-orange/5 w-fit mx-auto">
               <Shield className="h-8 w-8 text-brand-orange stroke-2" />
             </div>
-              <h3 className="text-xl md:text-2xl font-bold text-brand-gray-dark">
+              <h3 className="text-xl md:text-2xl font-bold text-brand-gray-dark text-center">
                 Filteren & onderdrukken
               </h3>
               <div className="space-y-3">
@@ -151,7 +151,7 @@ const Wetenschap = () => {
             <div className="p-3 rounded-lg bg-brand-orange/5 w-fit mx-auto">
               <FileText className="h-8 w-8 text-brand-orange stroke-2" />
             </div>
-              <h3 className="text-xl md:text-2xl font-bold text-brand-gray-dark">
+              <h3 className="text-xl md:text-2xl font-bold text-brand-gray-dark text-center">
                 Executieve Planning
               </h3>
               <div className="space-y-3">
