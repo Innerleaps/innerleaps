@@ -87,9 +87,7 @@ const OverOns = () => {
             {/* Links: Body tekst */}
             <div className="space-y-6 text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
               <p>
-                We staan altijd aan. Het drukke leven vraagt veel van ons. We over onze eigen grenzen én die van anderen. 
-                We verliezen het contact met wat we ècht nodig hebben. Hierdoor leven we 65% tot 90% op de automatische piloot. 
-                Die automatische piloot trekt ons voort maar ten koste van wat?
+                Door het drukke leven dat veel van ons vraagt, verliezen we soms het contact met wat we echt nodig hebben om effectief te zijn. Ons werkgeheugen raakt vol en spanningen lopen op in ons systeem, vaak zonder dat we het echt merken. Daardoor schakelen we vaak op de automatische piloot: zo’n 65% tot 90% van ons gedrag gebeurt onbewust. Zo overschrijden we onze grenzen, wat leidt tot lagere productiviteit en een toenemend verzuim.
               </p>
               <p>
                 Samenwerkingen gaan stroef, we raken energie en focus kwijt en het aantal burn-outs is nog nooit zo hoog geweest.
