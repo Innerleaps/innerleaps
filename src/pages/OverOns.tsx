@@ -32,7 +32,7 @@ const OverOns = () => {
 
   const trainers = [
     {
-      name: 'Anne Katelijne Limbeek',
+      name: 'Anne Limbeek',
       photo: annePhoto,
       languages: ['Nederlands', 'Engels'],
       body: 'Anne is een ervaren en gecertificeerde trainer met 8 jaar ervaring en heeft trainingen gegeven bij onder andere DHL en Affinius Capital. Daarvoor werkte ze 15 jaar in marketing- en communicatiefuncties bij BAT en Ziggo.',
@@ -137,7 +137,7 @@ const OverOns = () => {
                   className="rounded-full w-64 h-64 object-cover shadow-xl"
                 />
                 <p className="text-xl md:text-2xl font-semibold text-brand-purple text-center">
-                  Oprichter & Algemeen Directeur
+                  Oprichter
                 </p>
                 <Button 
                   variant="secondary"
