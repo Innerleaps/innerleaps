@@ -152,7 +152,7 @@ const OverOns = () => {
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-purple leading-tight mb-12 text-center">
               Onze <span className="text-brand-orange">trainers</span>
             </h2>
-            <div className="grid md:grid-cols-1 lg:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               {trainers.map((trainer, index) => (
                 <div key={index} className="bg-white rounded-xl shadow-lg p-8 space-y-6">
                   {/* Naam - full width */}
@@ -161,7 +161,7 @@ const OverOns = () => {
                   </h3>
                   
                   {/* Internal 2-column grid */}
-                  <div className="grid grid-cols-2 gap-6">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                     {/* Linker kolom: Foto + Quote + Badge */}
                     <div className="space-y-4 flex flex-col items-center">
                       <img 

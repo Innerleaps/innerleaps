@@ -9,7 +9,7 @@ const SimplifiedNavigation = () => {
   return (
     <nav className="bg-white shadow-lg sticky top-0 z-50">
       <div className="container-custom">
-        <div className="flex items-center gap-8 py-4">
+        <div className="flex items-center gap-4 sm:gap-8 py-4">
           {/* Logo */}
           <div className="flex flex-col items-start min-w-0 flex-shrink-0">
             <Link to="/" className="hover:opacity-80 transition-opacity">
@@ -30,6 +30,12 @@ const SimplifiedNavigation = () => {
               Wetenschap
             </Link>
             <Link 
+              to="/over-ons"
+              className="text-brand-gray-dark hover:text-brand-blue transition-colors duration-300 font-medium text-base whitespace-nowrap"
+            >
+              Over Ons
+            </Link>
+            <Link 
               to="/contact"
               className="text-brand-gray-dark hover:text-brand-blue transition-colors duration-300 font-medium text-base whitespace-nowrap"
             >
@@ -38,7 +44,7 @@ const SimplifiedNavigation = () => {
           </div>
 
           {/* Mobile menu button */}
-          <div className="lg:hidden">
+          <div className="lg:hidden ml-auto">
             <Button 
               variant="ghost" 
               size="sm" 
@@ -59,6 +65,13 @@ const SimplifiedNavigation = () => {
                 className="text-brand-gray-dark hover:text-brand-blue transition-colors duration-300 font-medium py-2 text-left text-base"
               >
                 Wetenschap
+              </Link>
+              <Link 
+                to="/over-ons"
+                onClick={() => setIsMenuOpen(false)}
+                className="text-brand-gray-dark hover:text-brand-blue transition-colors duration-300 font-medium py-2 text-left text-base"
+              >
+                Over Ons
               </Link>
               <Link 
                 to="/contact"

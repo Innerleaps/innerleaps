@@ -50,7 +50,7 @@ const TrustSection = () => {
           Waarom organisaties voor <span className="text-brand-orange">ons kiezen</span>
         </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {trustItems.map((item, index) => (
             <div key={index} className="bg-brand-off-white p-8 rounded-xl shadow-lg">
               <div className="flex items-start space-x-3 mb-4">
