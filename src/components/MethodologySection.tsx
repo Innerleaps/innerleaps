@@ -17,7 +17,7 @@ const MethodologySection = () => {
               <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
                 In ons wetenschappelijk bewezen programma trainen deelnemers hun "aandachtsspier". Hiermee versterkt de
                 kracht en efficiëntie van de Neocortex. Het "controlecentrum" voor rationele keuzes, focus en het bewust
-                opmerken van stresssignalen. Hierdoor verbeterd prestatie én daalt stress en stressgerelateerd verzuim.
+                opmerken van stresssignalen. Hierdoor verbeterd prestatie én daalt stress en het bijhorende verzuim.
               </p>
             </div>
             <div>
