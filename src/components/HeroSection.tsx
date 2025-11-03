@@ -181,11 +181,7 @@ const HeroSection = () => {
                   }}>
                       Waarom organisaties ons kiezen
                     </h3>
-                    <p className="text-blue-200 text-sm lg:text-base" style={{
-                    textShadow: '0 2px 8px rgba(0,0,0,0.5)'
-                  }}>
-                      Resultaten uit 40+ jaar wetenschappelijk onderzoek
-                    </p>
+                    
                   </div>
 
                   <div className="space-y-4">
@@ -222,21 +218,11 @@ const HeroSection = () => {
                   </div>
 
                   {/* Google Review Badge */}
-                  <a 
-                    href="https://www.google.com/maps/place/Innerleaps/@52.1909763,5.2795551,7z/data=!4m8!3m7!1s0x41d7861255c94705:0x571bbf751b212eea!8m2!3d52.1909763!4d5.2795551!9m1!1b1!16s%2Fg%2F11y10xf1qm?entry=ttu&g_ep=EgoyMDI1MTAyOS4yIKXMDSoASAFQAw%3D%3D"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="mt-4 block bg-brand-purple/90 backdrop-blur-sm rounded-lg p-3 hover:bg-brand-purple transition-all group"
-                  >
+                  <a href="https://www.google.com/maps/place/Innerleaps/@52.1909763,5.2795551,7z/data=!4m8!3m7!1s0x41d7861255c94705:0x571bbf751b212eea!8m2!3d52.1909763!4d5.2795551!9m1!1b1!16s%2Fg%2F11y10xf1qm?entry=ttu&g_ep=EgoyMDI1MTAyOS4yIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" className="mt-4 block bg-brand-purple/90 backdrop-blur-sm rounded-lg p-3 hover:bg-brand-purple transition-all group">
                     <div className="flex items-center justify-center gap-2">
                       <span className="text-white font-semibold text-lg">4,7 / 5</span>
                       <div className="flex gap-0.5">
-                        {[...Array(5)].map((_, i) => (
-                          <Star 
-                            key={i} 
-                            className="w-4 h-4 fill-amber-400 text-amber-400 group-hover:scale-110 transition-transform" 
-                          />
-                        ))}
+                        {[...Array(5)].map((_, i) => <Star key={i} className="w-4 h-4 fill-amber-400 text-amber-400 group-hover:scale-110 transition-transform" />)}
                       </div>
                     </div>
                     <p className="text-amber-100 text-xs text-center mt-1">Google Reviews</p>
