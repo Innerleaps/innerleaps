@@ -145,9 +145,9 @@ const HeroSection = () => {
         </div>
 
         {/* Content */}
-        <div className="container-custom relative z-10 py-8 sm:py-12 lg:py-20">
+        <div className="container-custom relative z-10 py-8 sm:py-12 lg:py-20 px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-12 items-start">
-            <div className="space-y-3 sm:space-y-4 md:space-y-6 lg:space-y-8 animate-fade-in w-full max-w-[600px] mx-auto text-center lg:text-left break-words px-4 sm:px-0">
+            <div className="space-y-3 sm:space-y-4 md:space-y-6 lg:space-y-8 animate-fade-in w-full max-w-[600px] mx-auto text-center lg:text-left">
               <div className="space-y-6 break-words">
                 {/* Research Badge */}
                 <div className="inline-flex items-center bg-white/50 text-brand-purple px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm md:text-base lg:text-lg font-medium backdrop-blur-sm max-w-full">
@@ -205,7 +205,7 @@ sm:w-auto font-semibold py-2.5 sm:py-3 md:py-4 px-4 sm:px-5 md:px-6 rounded-lg t
             </div>
 
             <div className="relative animate-scale-in mt-8 lg:mt-0 w-full">
-              <div className="rounded-2xl p-4 sm:p-6 lg:p-8 max-w-[calc(100vw-2rem)] sm:max-w-md mx-auto bg-white/50 backdrop-blur-sm">
+              <div className="inline-flex items-center bg-white/50 text-brand-purple px-2 sm:px-4 py-1 sm:py-2 rounded-full text-xs sm:text-sm md:text-base lg:text-lg font-medium backdrop-blur-sm max-w-full">
                 <div className="space-y-6">
                   <div className="text-center">
                     <h3 className="text-lg sm:text-xl lg:text-2xl font-semibold mb-2 text-brand-purple">
