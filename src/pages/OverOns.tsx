@@ -57,7 +57,7 @@ const OverOns = () => {
     {
       name: 'Wineke van Aken',
       photo: winekePhoto,
-      languages: ['Nederlands'],
+      languages: ['Nederlands', 'Engels'],
       body: 'Wineke is al 15 jaar actief als trainer en heeft in die rol trainingen gegeven bij onder andere Tele2, Oliver Wyman (financiële dienstverlener), Leaseplan, VU (geneeskundestudenten), Spirit, Gemeente Den Haag, Cordaan en Sygnific (onderdeel van KLM). Voordat Wineke trainer werd, werkte zij 17 jaar in commerciële en zakelijke functies, waaronder als projectmanager, marketing- en communicatieadviseur en consultant. Deze ervaring maakt dat zij mindfulness op een praktische en zakelijke manier weet over te brengen, met concrete handvatten die direct toepasbaar zijn in het dagelijks werk.',
       quote: 'Wineke heeft een praktische, nuchtere aanpak met concrete handvatten. Ik kan nu afstand nemen, stresssignalen sneller herkennen, efficiënter werken en ben meer tevreden over mijn resultaten.',
       logos: [
@@ -208,105 +208,52 @@ const OverOns = () => {
                     {trainer.name}
                   </h3>
 
-                  {trainer.name === 'Wineke van Aken' ? (
-                    // NIEUWE LAYOUT VOOR WINEKE
-                    <>
-                      {/* Grid layout: foto links, quote rechts */}
-                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                        {/* Linker kolom: Foto + Badge & Talen horizontaal */}
-                        <div className="space-y-4 flex flex-col items-center">
-                          <img 
-                            src={trainer.photo} 
-                            alt={`Vitaliteitstrainer ${trainer.name}`}
-                            className="rounded-full w-40 h-40 object-cover shadow-md"
-                          />
-                          
-                          {/* VMBN Badge en Talen naast elkaar */}
-                          <div className="flex gap-4 items-center justify-center flex-wrap">
-                            <img 
-                              src={vmbnBadge} 
-                              alt="VMBN Geaccrediteerde Vitaliteitstrainer" 
-                              className="h-16 object-contain"
-                            />
-                            <div className="flex gap-2 flex-wrap">
-                              {trainer.languages.map((lang, langIndex) => (
-                                <span 
-                                  key={langIndex}
-                                  className="px-3 py-1 rounded-full text-sm font-medium bg-brand-orange text-white"
-                                >
-                                  {lang}
-                                </span>
-                              ))}
-                            </div>
-                          </div>
-                        </div>
-
-                        {/* Rechter kolom: Quote */}
-                        <div className="flex items-start">
-                          <div className="bg-brand-off-white p-4 rounded-lg border-l-4 border-brand-orange h-full flex items-center">
-                            <p className="text-base md:text-lg italic text-brand-gray-medium leading-snug">
-                              "{trainer.quote}"
-                            </p>
-                          </div>
+                  {/* Grid layout: foto links, quote rechts */}
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    {/* Linker kolom: Foto + Badge & Talen horizontaal */}
+                    <div className="space-y-4 flex flex-col items-center">
+                      <img 
+                        src={trainer.photo} 
+                        alt={`Vitaliteitstrainer ${trainer.name}`}
+                        className="rounded-full w-40 h-40 object-cover shadow-md"
+                      />
+                      
+                      {/* VMBN Badge en Talen naast elkaar */}
+                      <div className="flex gap-4 items-center justify-center flex-wrap">
+                        <img 
+                          src={vmbnBadge} 
+                          alt="VMBN Geaccrediteerde Vitaliteitstrainer" 
+                          className="h-16 object-contain"
+                        />
+                        <div className="flex gap-2 flex-wrap">
+                          {trainer.languages.map((lang, langIndex) => (
+                            <span 
+                              key={langIndex}
+                              className="px-3 py-1 rounded-full text-sm font-medium bg-brand-orange text-white"
+                            >
+                              {lang}
+                            </span>
+                          ))}
                         </div>
                       </div>
+                    </div>
 
-                      {/* Body tekst - full width onder de grid */}
-                      <div className="pt-4 border-t border-brand-gray-light">
-                        <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
-                          {trainer.body}
+                    {/* Rechter kolom: Quote */}
+                    <div className="flex items-start">
+                      <div className="bg-brand-off-white p-4 rounded-lg border-l-4 border-brand-orange h-full flex items-center">
+                        <p className="text-base md:text-lg italic text-brand-gray-medium leading-snug">
+                          "{trainer.quote}"
                         </p>
                       </div>
-                    </>
-                  ) : (
-                    // OUDE LAYOUT VOOR ANDERE TRAINERS
-                    <>
-                      {/* Internal 2-column grid */}
-                      <div className="grid grid-cols-2 gap-6">
-                        {/* Linker kolom: Foto + Quote + Badge */}
-                        <div className="space-y-4 flex flex-col items-center">
-                          <img 
-                            src={trainer.photo} 
-                            alt={trainer.name}
-                            className="rounded-full w-40 h-40 object-cover shadow-md"
-                          />
-                          
-                          {/* VMBN Badge */}
-                          <img 
-                            src={vmbnBadge} 
-                            alt="VMBN Accreditatie"
-                            className="h-20 object-contain"
-                          />
-                          
-                          {/* Quote box */}
-                          <div className="bg-brand-off-white p-4 rounded-lg border-l-4 border-brand-orange">
-                            <p className="text-base md:text-lg italic text-brand-gray-medium leading-snug">
-                              "{trainer.quote}"
-                            </p>
-                          </div>
-                        </div>
-                        
-                        {/* Rechter kolom: Body + Tags */}
-                        <div className="space-y-4">
-                          <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
-                            {trainer.body}
-                          </p>
-                          
-                          {/* Language tags */}
-                          <div className="flex gap-2 flex-wrap">
-                            {trainer.languages.map((lang, i) => (
-                              <span 
-                                key={i}
-                                className="px-3 py-1 rounded-full text-sm font-medium bg-brand-orange text-white"
-                              >
-                                {lang}
-                              </span>
-                            ))}
-                          </div>
-                        </div>
-                      </div>
-                    </>
-                  )}
+                    </div>
+                  </div>
+
+                  {/* Body tekst - full width onder de grid */}
+                  <div className="pt-4 border-t border-brand-gray-light">
+                    <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
+                      {trainer.body}
+                    </p>
+                  </div>
                   
                   {/* Client logos - full width */}
                   <div className="flex gap-5 items-center justify-center pt-4 border-t border-brand-gray-light flex-wrap">
