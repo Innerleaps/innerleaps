@@ -147,7 +147,7 @@ const HeroSection = () => {
         {/* Content */}
         <div className="container-custom relative z-10 py-8 sm:py-12 lg:py-20 px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-12 items-start">
-            <div className="space-y-3 sm:space-y-4 md:space-y-6 lg:space-y-8 animate-fade-in w-full max-w-[600px] mx-auto text-center lg:text-left break-words px-4 sm:px-0">
+            <div className="space-y-3 sm:space-y-4 md:space-y-6 lg:space-y-8 animate-fade-in w-full max-w-[600px] mx-auto text-center lg:text-left">
               <div className="space-y-6 break-words">
                 {/* Research Badge */}
                 <div className="inline-flex items-center bg-white/50 text-brand-purple px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm md:text-base lg:text-lg font-medium backdrop-blur-sm max-w-full">
