@@ -108,7 +108,13 @@ const HeroSection = () => {
       <section id="home" className="relative min-h-screen flex items-center overflow-hidden text-white">
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
-          <img src={heroBackground} alt="Vitaliteitsprogramma presentatie InnerLeaps" className="w-full h-full object-cover" />
+          <img 
+            src={heroBackground} 
+            alt="Vitaliteitsprogramma presentatie InnerLeaps" 
+            className="w-full h-full object-cover"
+            fetchPriority="high"
+            loading="eager"
+          />
           <div className="absolute inset-0 bg-black/50" />
         </div>
 
