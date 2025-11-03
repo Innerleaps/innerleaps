@@ -206,8 +206,8 @@ sm:w-auto bg-brand-orange hover:bg-brand-orange text-white hover:text-white font
               </div>
             </div>
 
-            <div className="relative animate-scale-in mt-8 lg:mt-0 w-full px-4 sm:px-0">
-              <div className="rounded-2xl p-4 sm:p-6 lg:p-8 max-w-full sm:max-w-md mx-auto bg-white/50 backdrop-blur-sm">
+            <div className="relative animate-scale-in mt-8 lg:mt-0 w-full">
+              <div className="rounded-2xl p-4 sm:p-6 lg:p-8 max-w-[calc(100vw-2rem)] sm:max-w-md mx-auto bg-white/50 backdrop-blur-sm">
                 <div className="space-y-6">
                   <div className="text-center">
                     <h3 className="text-lg sm:text-xl lg:text-2xl font-semibold mb-2 text-brand-purple">
