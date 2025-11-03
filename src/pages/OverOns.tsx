@@ -16,14 +16,16 @@ import jacquelinePhoto from '@/assets/Geaccrediteerde_Vitaliteitstrainer_Jacquel
 import vmbnBadge from '@/assets/Aaccreditatie_voor_Vitaliteitsprogramma.png';
 
 // Client logos
-import dhlLogo from '@/assets/Vitaliteitsprogramma_ervaring_met_DHL_new.png';
-import affiniusLogo from '@/assets/Vitaliteitsprogramma_ervaring_met_affinius_capital_new.png';
-import rijksLogo from '@/assets/Vitaliteitsprogramma_ervaring_met_Rijkswaterstaat_new.png';
-import politieLogo from '@/assets/Vitaliteitsprogramma_Politie_new.png';
-import youTalentLogo from '@/assets/Vitaliteitsprogramma_ervaring_met_You_Talent_new.png';
-import nobelLogo from '@/assets/Vitaliteitsprogramma_ervaring_met_Nobel_recruitment_new.png';
-import paLogo from '@/assets/Vitaliteitsprogramma_ervaring_met_PA_consulting_new.png';
-import hollandLogo from '@/assets/Vitaliteitsprogramma_ervaring_met_Holland_Colours_new.png';
+import dhlLogo from '@/assets/Vitaliteitsprogramma_DHL-2.png';
+import affiniusLogo from '@/assets/Vitaliteitsprogramma_Affinius_Capital-2.png';
+import rijksLogo from '@/assets/Vitaliteitsprogramma_Rijkswaterstaat-2.png';
+import politieLogo from '@/assets/Vitaliteitsprogramma_Politite-3.png';
+import youTalentLogo from '@/assets/Vitaliteitsprogramma_You_Talent-2.png';
+import nobelLogo from '@/assets/Vitaliteitsprogramma_nobel_recruitment-2.png';
+import paLogo from '@/assets/Vitaliteitsprogramma_PA_consulting-2.png';
+import hollandLogo from '@/assets/Vitaliteitsprogramma_Holland_Colours-2.png';
+import primoLogo from '@/assets/Vitaliteitsprogramma_primo.png';
+import ministerieLogo from '@/assets/Vitaliteitsprogramma_Ministerie_van_justitie_en_veiligheid.png';
 
 const OverOns = () => {
   useEffect(() => {
@@ -49,21 +51,25 @@ const OverOns = () => {
       body: 'Dave trainer met 8 jaar ervaring en gaf trainingen bij o.a. Rijkswaterstaat, Nationale Politie, het Ministerie van Justitie en Veiligheid, Parnassia Groep en diverse onderwijs- en talentorganisaties. Daarvoor werkte hij 15 jaar als redacteur en contentmanager.',
       quote: 'betrokken, open en vriendelijk, met duidelijke uitleg. Doordat hij zijn eigen ervaringen deelt, voelt de training toegankelijk en mag ik \'fouten maken\'.',
       logos: [
-        { src: rijksLogo, alt: 'Vitaliteitsprogramma Rijkswaterstaat' },
+        { src: primoLogo, alt: 'Vitaliteitsprogramma Primo' },
+        { src: ministerieLogo, alt: 'Vitaliteitsprogramma Ministerie van Justitie en Veiligheid' },
+        { src: youTalentLogo, alt: 'Vitaliteitsprogramma You Talent' },
         { src: politieLogo, alt: 'Vitaliteitsprogramma Politie' },
-        { src: youTalentLogo, alt: 'Vitaliteitsprogramma You Talent' }
+        { src: rijksLogo, alt: 'Vitaliteitsprogramma Rijkswaterstaat' },
+        { src: dhlLogo, alt: 'Vitaliteitsprogramma DHL' },
+        { src: affiniusLogo, alt: 'Vitaliteitsprogramma Affinius Capital' }
       ]
     },
     {
-      name: 'Jacqueline Heneck',
+      name: 'Jacqueline Henock',
       photo: jacquelinePhoto,
       languages: ['Nederlands'],
       body: 'Jacqueline is begonnen als trainer in 2017 en werkte onder andere met Holland Colours, Carel Lurvink, PA Consulting, Nobel Recruitment, Humanitas en GGZ Centraal. Haar eerdere carrière omvat o.a. rollen als eigenaar van een automatiseringsbedrijf en HR-manager, manager zorgprocessen én freelance organisatieadviseur.',
       quote: 'Jacqueline weet precies hoe ze theorie en ervaring laat samenkomen. Haar begeleiding is persoonlijk, doordacht en professioneel.',
       logos: [
-        { src: nobelLogo, alt: 'Vitaliteitsprogramma Nobel Recruitment' },
+        { src: hollandLogo, alt: 'Vitaliteitsprogramma Holland Colours' },
         { src: paLogo, alt: 'Vitaliteitsprogramma PA Consulting' },
-        { src: hollandLogo, alt: 'Vitaliteitsprogramma Holland Colours' }
+        { src: nobelLogo, alt: 'Vitaliteitsprogramma Nobel Recruitment' }
       ]
     }
   ];
@@ -209,13 +215,13 @@ const OverOns = () => {
                   </div>
                   
                   {/* Client logos - full width */}
-                  <div className="flex gap-4 items-center justify-center pt-4 border-t border-brand-gray-light flex-wrap">
+                  <div className="flex gap-5 items-center justify-center pt-4 border-t border-brand-gray-light flex-wrap">
                     {trainer.logos.map((logo, i) => (
                       <img 
                         key={i}
                         src={logo.src} 
                         alt={logo.alt}
-                        className="h-20 object-contain"
+                        className="h-[50px] object-contain"
                       />
                     ))}
                   </div>
