@@ -147,7 +147,7 @@ const HeroSection = () => {
         {/* Content */}
         <div className="container-custom relative z-10 py-8 sm:py-12 lg:py-20">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-12 items-start">
-            <div className="space-y-3 sm:space-y-4 md:space-y-6 lg:space-y-8 animate-fade-in w-full max-w-[600px] mx-auto text-center lg:text-left break-words">
+            <div className="space-y-3 sm:space-y-4 md:space-y-6 lg:space-y-8 animate-fade-in w-full max-w-[600px] mx-auto text-center lg:text-left break-words px-4 sm:px-0">
               <div className="space-y-6 break-words">
                 {/* Research Badge */}
                 <div className="inline-flex items-center bg-white/50 text-brand-purple px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm md:text-base lg:text-lg font-medium backdrop-blur-sm max-w-full">
@@ -156,9 +156,11 @@ const HeroSection = () => {
                 </div>
 
                 <h1
-                  className="text-xl xs:text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight sm:leading-snug font-heading break-words"
+                  className="text-xl xs:text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight sm:leading-snug font-heading break-words hyphens-auto"
                   style={{
                     textShadow: "0 2px 8px rgba(0,0,0,0.5)",
+                    overflowWrap: "break-word",
+                    wordBreak: "break-word",
                   }}
                 >
                   Het <span className="text-brand-orange">vitaliteits{"\u00AD"}programma</span> dat{" "}
@@ -175,7 +177,7 @@ const HeroSection = () => {
                 </p>
               </div>
 
-              <div className="flex flex-col sm:flex-row gap-4 max-w-full">
+              <div className="flex flex-col sm:flex-row gap-4 max-w-full justify-center lg:justify-start">
                 <Button
                   size="lg"
                   className="w-full w-full text-center whitespace-normal
