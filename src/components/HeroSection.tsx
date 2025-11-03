@@ -156,7 +156,7 @@ const HeroSection = () => {
                 </div>
 
                 <h1
-                  className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight font-heading break-words"
+                  className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight font-heading break-words"
                   style={{
                     textShadow: "0 2px 8px rgba(0,0,0,0.5)",
                   }}
@@ -165,7 +165,7 @@ const HeroSection = () => {
                   <span className="text-brand-orange">prestatie</span> verbeterd{" "}
                 </h1>
                 <p
-                  className="text-lg sm:text-xl md:text-2xl text-blue-100 leading-relaxed break-words"
+                  className="text-xl md:text-2xl text-blue-100 leading-relaxed break-words"
                   style={{
                     textShadow: "0 2px 8px rgba(0,0,0,0.5)",
                   }}
@@ -206,7 +206,7 @@ const HeroSection = () => {
               <div className="w-full rounded-2xl p-4 sm:p-6 lg:p-8 max-w-full sm:max-w-md mx-auto bg-white/50 backdrop-blur-sm">
                 <div className="space-y-6">
                   <div className="text-center">
-                    <h3 className="text-base sm:text-lg md:text-xl lg:text-2xl font-semibold mb-2 text-brand-purple">
+                    <h3 className="text-xl md:text-2xl font-semibold mb-2 text-brand-purple">
                       Waarom organisaties ons kiezen
                     </h3>
                   </div>
@@ -214,47 +214,47 @@ const HeroSection = () => {
                   <div className="w-full space-y-3 sm:space-y-4">
                     <div className="flex items-center justify-between w-full p-2.5 sm:p-3 lg:p-4 bg-brand-purple/90 rounded-lg">
                       <span
-                        className="font-bold text-xs sm:text-sm md:text-base lg:text-lg text-white"
+                        className="font-bold text-xl md:text-2xl text-white"
                         style={{
                           textShadow: "0 2px 8px rgba(0,0,0,0.5)",
                         }}
                       >
                         Uitval risico
                       </span>
-                      <span className="text-brand-orange font-bold text-sm sm:text-base md:text-lg shrink-0">-70%</span>
+                      <span className="text-brand-orange font-bold text-xl md:text-2xl shrink-0">-70%</span>
                     </div>
                     <div className="flex items-center justify-between w-full p-2.5 sm:p-3 lg:p-4 bg-brand-purple/90 rounded-lg">
                       <span
-                        className="font-bold text-xs sm:text-sm md:text-base lg:text-lg text-white"
+                        className="font-bold text-xl md:text-2xl text-white"
                         style={{
                           textShadow: "0 2px 8px rgba(0,0,0,0.5)",
                         }}
                       >
                         Verzuim
                       </span>
-                      <span className="text-brand-orange font-bold text-sm sm:text-base md:text-lg shrink-0">-21%</span>
+                      <span className="text-brand-orange font-bold text-xl md:text-2xl shrink-0">-21%</span>
                     </div>
                     <div className="flex items-center justify-between w-full p-2.5 sm:p-3 lg:p-4 bg-brand-purple/90 rounded-lg">
                       <span
-                        className="font-bold text-xs sm:text-sm md:text-base lg:text-lg text-white"
+                        className="font-bold text-xl md:text-2xl text-white"
                         style={{
                           textShadow: "0 2px 8px rgba(0,0,0,0.5)",
                         }}
                       >
                         Productiviteit
                       </span>
-                      <span className="text-brand-orange font-bold text-sm sm:text-base md:text-lg shrink-0">+10%</span>
+                      <span className="text-brand-orange font-bold text-xl md:text-2xl shrink-0">+10%</span>
                     </div>
                     <div className="flex items-center justify-between w-full p-2.5 sm:p-3 lg:p-4 bg-brand-purple/90 rounded-lg">
                       <span
-                        className="font-bold text-xs sm:text-sm md:text-base lg:text-lg text-white"
+                        className="font-bold text-xl md:text-2xl text-white"
                         style={{
                           textShadow: "0 2px 8px rgba(0,0,0,0.5)",
                         }}
                       >
                         Wetenschappelijk onderzoek
                       </span>
-                      <span className="text-brand-orange font-bold text-sm sm:text-base md:text-lg shrink-0">40+ jaar</span>
+                      <span className="text-brand-orange font-bold text-xl md:text-2xl shrink-0">40+ jaar</span>
                     </div>
                   </div>
 
