@@ -145,7 +145,7 @@ const HeroSection = () => {
         </div>
 
         {/* Content */}
-        <div className="container-custom relative z-10 py-8 sm:py-12 lg:py-20 px-4 sm:px-6">
+        <div className="relative z-10 py-8 sm:py-12 lg:py-20 px-4 sm:px-6 max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start overflow-hidden">
             <div className="space-y-6 animate-fade-in text-center lg:text-left">
               <div className="space-y-6">
