@@ -2,7 +2,8 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import trainingImage from "@/assets/training_voor_betere_prestatie_minder_stress_en_lager_verzuim.png";
 const MethodologySection = () => {
-  return <section className="section-padding bg-brand-off-white">
+  return (
+    <section className="section-padding bg-brand-off-white">
       <div className="container-custom space-y-24 md:space-y-32 lg:space-y-40">
         {/* Blok 1 - De Methode */}
         <div className="space-y-8 lg:space-y-12">
@@ -16,11 +17,15 @@ const MethodologySection = () => {
               <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
                 In ons wetenschappelijk bewezen programma trainen deelnemers hun "aandachtsspier". Hiermee versterkt de
                 kracht en efficiëntie van de Neocortex. Het "controlecentrum" voor rationele keuzes, focus en het bewust
-                opmerken van stresssignalen. Hierdoor verbeterd prestatie én daalt het verzuim.
+                opmerken van stresssignalen. Hierdoor verbeterd prestatie én daalt stress en stressgerelateerd verzuim.
               </p>
             </div>
             <div>
-              <img src={trainingImage} alt="Training voor betere prestatie minder stress en lager verzuim" className="w-full h-auto rounded-lg" />
+              <img
+                src={trainingImage}
+                alt="Training voor betere prestatie minder stress en lager verzuim"
+                className="w-full h-auto rounded-lg"
+              />
             </div>
           </div>
           {/* Wetenschap CTA - Over volledige breedte gecentreerd */}
@@ -37,6 +42,7 @@ const MethodologySection = () => {
           </div>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
 export default MethodologySection;
