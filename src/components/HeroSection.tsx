@@ -145,18 +145,18 @@ const HeroSection = () => {
         </div>
 
         {/* Content */}
-        <div className="relative z-10 py-8 sm:py-12 lg:py-20 px-4 sm:px-6 max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start">
-            <div className="space-y-6 animate-fade-in text-center lg:text-left w-full mx-auto lg:mx-0">
-              <div className="space-y-6">
+        <div className="relative z-10 w-full px-4 py-8 sm:px-6 sm:py-12 lg:py-20 max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-12 items-start w-full overflow-hidden">
+            <div className="w-full space-y-6 animate-fade-in text-center lg:text-left">
+              <div className="w-full space-y-4 sm:space-y-6">
                 {/* Research Badge */}
-                <div className="inline-flex items-center bg-white/50 text-brand-purple px-4 py-2 rounded-full text-sm md:text-base font-medium backdrop-blur-sm">
-                  <Award className="h-4 w-4 mr-2" />
+                <div className="inline-flex items-center gap-2 bg-white/50 text-brand-purple px-3 py-1.5 sm:px-4 sm:py-2 rounded-full text-xs sm:text-sm md:text-base font-medium backdrop-blur-sm">
+                  <Award className="h-4 w-4" />
                   Wetenschappelijk bewezen programma
                 </div>
 
                 <h1
-                  className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight font-heading"
+                  className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight font-heading break-words"
                   style={{
                     textShadow: "0 2px 8px rgba(0,0,0,0.5)",
                   }}
@@ -165,7 +165,7 @@ const HeroSection = () => {
                   <span className="text-brand-orange">prestatie</span> verbeterd{" "}
                 </h1>
                 <p
-                  className="text-lg sm:text-xl md:text-2xl text-blue-100 leading-relaxed"
+                  className="text-base sm:text-lg md:text-xl lg:text-2xl text-blue-100 leading-relaxed break-words"
                   style={{
                     textShadow: "0 2px 8px rgba(0,0,0,0.5)",
                   }}
@@ -175,10 +175,10 @@ const HeroSection = () => {
                 </p>
               </div>
 
-              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 w-full justify-center lg:justify-start">
                 <Button
                   size="lg"
-                  className="w-full sm:w-auto bg-brand-orange hover:bg-brand-orange text-white hover:text-white font-semibold py-3 sm:py-4 px-5 sm:px-6 rounded-lg text-base sm:text-lg shadow-xl"
+                  className="w-full sm:w-auto bg-brand-orange hover:bg-brand-orange text-white hover:text-white font-semibold py-3 px-4 sm:py-4 sm:px-6 rounded-lg text-sm sm:text-base lg:text-lg shadow-xl"
                   onClick={() => setIsCalculatorOpen(true)}
                 >
                   Ontdek je besparing
@@ -186,7 +186,7 @@ const HeroSection = () => {
                 <Button
                   variant="secondary-on-blue"
                   size="lg"
-                  className="w-full sm:w-auto font-semibold py-3 sm:py-4 px-5 sm:px-6 rounded-lg text-base sm:text-lg"
+                  className="w-full sm:w-auto font-semibold py-3 px-4 sm:py-4 sm:px-6 rounded-lg text-sm sm:text-base lg:text-lg"
                   onClick={() => {
                     const link = document.createElement("a");
                     link.href = "https://calendar.app.google/BgGy8cVUSk4w5Zzg8";
@@ -202,59 +202,59 @@ const HeroSection = () => {
               </div>
             </div>
 
-            <div className="relative animate-scale-in mt-8 lg:mt-0">
-              <div className="rounded-2xl p-6 lg:p-8 max-w-md mx-auto bg-white/50 backdrop-blur-sm">
+            <div className="w-full relative animate-scale-in mt-6 lg:mt-0">
+              <div className="w-full rounded-2xl p-4 sm:p-6 lg:p-8 max-w-full sm:max-w-md mx-auto bg-white/50 backdrop-blur-sm">
                 <div className="space-y-6">
                   <div className="text-center">
-                    <h3 className="text-lg md:text-xl lg:text-2xl font-semibold mb-2 text-brand-purple">
+                    <h3 className="text-base sm:text-lg md:text-xl lg:text-2xl font-semibold mb-2 text-brand-purple">
                       Waarom organisaties ons kiezen
                     </h3>
                   </div>
 
-                  <div className="space-y-4">
-                    <div className="flex items-center justify-between p-3 lg:p-4 bg-brand-purple/90 rounded-lg">
+                  <div className="w-full space-y-3 sm:space-y-4">
+                    <div className="flex items-center justify-between w-full p-2.5 sm:p-3 lg:p-4 bg-brand-purple/90 rounded-lg">
                       <span
-                        className="font-bold text-sm sm:text-base md:text-lg text-white"
+                        className="font-bold text-xs sm:text-sm md:text-base lg:text-lg text-white"
                         style={{
                           textShadow: "0 2px 8px rgba(0,0,0,0.5)",
                         }}
                       >
                         Uitval risico
                       </span>
-                      <span className="text-brand-orange font-bold text-sm sm:text-base md:text-lg">-70%</span>
+                      <span className="text-brand-orange font-bold text-sm sm:text-base md:text-lg shrink-0">-70%</span>
                     </div>
-                    <div className="flex items-center justify-between p-3 lg:p-4 bg-brand-purple/90 rounded-lg">
+                    <div className="flex items-center justify-between w-full p-2.5 sm:p-3 lg:p-4 bg-brand-purple/90 rounded-lg">
                       <span
-                        className="font-bold text-sm sm:text-base md:text-lg text-white"
+                        className="font-bold text-xs sm:text-sm md:text-base lg:text-lg text-white"
                         style={{
                           textShadow: "0 2px 8px rgba(0,0,0,0.5)",
                         }}
                       >
                         Verzuim
                       </span>
-                      <span className="text-brand-orange font-bold text-sm sm:text-base md:text-lg">-21%</span>
+                      <span className="text-brand-orange font-bold text-sm sm:text-base md:text-lg shrink-0">-21%</span>
                     </div>
-                    <div className="flex items-center justify-between p-3 lg:p-4 bg-brand-purple/90 rounded-lg">
+                    <div className="flex items-center justify-between w-full p-2.5 sm:p-3 lg:p-4 bg-brand-purple/90 rounded-lg">
                       <span
-                        className="font-bold text-sm sm:text-base md:text-lg text-white"
+                        className="font-bold text-xs sm:text-sm md:text-base lg:text-lg text-white"
                         style={{
                           textShadow: "0 2px 8px rgba(0,0,0,0.5)",
                         }}
                       >
                         Productiviteit
                       </span>
-                      <span className="text-brand-orange font-bold text-sm sm:text-base md:text-lg">+10%</span>
+                      <span className="text-brand-orange font-bold text-sm sm:text-base md:text-lg shrink-0">+10%</span>
                     </div>
-                    <div className="flex items-center justify-between p-3 lg:p-4 bg-brand-purple/90 rounded-lg">
+                    <div className="flex items-center justify-between w-full p-2.5 sm:p-3 lg:p-4 bg-brand-purple/90 rounded-lg">
                       <span
-                        className="font-bold text-sm sm:text-base md:text-lg text-white"
+                        className="font-bold text-xs sm:text-sm md:text-base lg:text-lg text-white"
                         style={{
                           textShadow: "0 2px 8px rgba(0,0,0,0.5)",
                         }}
                       >
                         Wetenschappelijk onderzoek
                       </span>
-                      <span className="text-brand-orange font-bold text-sm sm:text-base md:text-lg">40+ jaar</span>
+                      <span className="text-brand-orange font-bold text-sm sm:text-base md:text-lg shrink-0">40+ jaar</span>
                     </div>
                   </div>
 
@@ -263,7 +263,7 @@ const HeroSection = () => {
                     href="https://www.google.com/maps/place/Innerleaps/@52.1909763,5.2795551,7z/data=!4m8!3m7!1s0x41d7861255c94705:0x571bbf751b212eea!8m2!3d52.1909763!4d5.2795551!9m1!1b1!16s%2Fg%2F11y10xf1qm?entry=ttu&g_ep=EgoyMDI1MTAyOS4yIKXMDSoASAFQAw%3D%3D"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="mt-4 block bg-brand-purple/90 backdrop-blur-sm rounded-lg p-3 hover:bg-brand-purple transition-all group"
+                    className="w-full mt-3 sm:mt-4 block bg-brand-purple/90 backdrop-blur-sm rounded-lg p-2.5 sm:p-3 hover:bg-brand-purple transition-all group"
                   >
                     <div className="flex items-center justify-center gap-2">
                       <span className="text-white font-semibold text-lg">4,7 / 5</span>
@@ -284,7 +284,7 @@ const HeroSection = () => {
           </div>
 
           {/* Scrolling Logos */}
-          <div className="mt-12 lg:mt-16">
+          <div className="w-full mt-8 sm:mt-12 lg:mt-16">
             <div className="relative overflow-hidden [mask-image:linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)]">
               <div className="flex gap-8 animate-marquee">
                 {logos.map((logo, index) => (
@@ -292,7 +292,7 @@ const HeroSection = () => {
                     key={index}
                     src={logo.src}
                     alt={logo.alt}
-                    className="h-12 object-contain flex-shrink-0 opacity-100 transition-all"
+                    className="h-8 sm:h-10 md:h-12 object-contain flex-shrink-0 opacity-100 transition-all"
                   />
                 ))}
               </div>
@@ -303,14 +303,14 @@ const HeroSection = () => {
                     key={`duplicate-${index}`}
                     src={logo.src}
                     alt={logo.alt}
-                    className="h-12 object-contain flex-shrink-0 opacity-100 transition-all"
+                    className="h-8 sm:h-10 md:h-12 object-contain flex-shrink-0 opacity-100 transition-all"
                   />
                 ))}
               </div>
             </div>
           </div>
 
-          <div className="flex justify-center mt-12 lg:mt-16">
+          <div className="flex justify-center mt-8 sm:mt-12 lg:mt-16 w-full">
             <ArrowDown className="h-8 w-8 text-brand-orange animate-bounce" />
           </div>
         </div>
