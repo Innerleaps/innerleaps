@@ -145,18 +145,18 @@ const HeroSection = () => {
         </div>
 
         {/* Content */}
-        <div className="container-custom relative z-10 py-8 sm:py-12 lg:py-20 px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start">
-            <div className="space-y-3 sm:space-y-4 md:space-y-6 lg:space-y-8 animate-fade-in w-full max-w-[600px] mx-auto text-center lg:text-left">
-              <div className="space-y-6 break-words">
+        <div className="container-custom relative z-10 py-8 sm:py-12 lg:py-20">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start overflow-hidden">
+            <div className="space-y-4 sm:space-y-6 lg:space-y-8 animate-fade-in w-full max-w-full lg:max-w-[600px] mx-auto text-center lg:text-left px-2 sm:px-0">
+              <div className="space-y-4 sm:space-y-6 break-words">
                 {/* Research Badge */}
-                <div className="inline-flex items-center bg-white/50 text-brand-purple px-2 sm:px-4 py-1 sm:py-2 rounded-full text-xs sm:text-sm md:text-base lg:text-lg font-medium backdrop-blur-sm max-w-full">
+                <div className="inline-flex items-center bg-white/50 text-brand-purple px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-sm sm:text-base font-medium backdrop-blur-sm max-w-full">
                   <Award className="h-4 w-4 mr-2" />
                   Wetenschappelijk bewezen programma
                 </div>
 
-                <h1
-                  className="text-xl xs:text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight sm:leading-snug font-heading"
+                <h1 
+                  className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight font-heading break-words"
                   style={{
                     textShadow: "0 2px 8px rgba(0,0,0,0.5)",
                   }}
@@ -164,8 +164,8 @@ const HeroSection = () => {
                   Het <span className="text-brand-orange">vitaliteits{"\u00AD"}programma</span> dat{" "}
                   <span className="text-brand-orange">prestatie</span> verbeterd{" "}
                 </h1>
-                <p
-                  className="text-base sm:text-lg md:text-xl lg:text-2xl text-blue-100 leading-relaxed break-words"
+                <p 
+                  className="text-lg sm:text-xl md:text-2xl text-blue-100 leading-relaxed break-words"
                   style={{
                     textShadow: "0 2px 8px rgba(0,0,0,0.5)",
                   }}
@@ -175,11 +175,10 @@ const HeroSection = () => {
                 </p>
               </div>
 
-              <div className="flex flex-col sm:flex-row gap-4 max-w-full justify-center lg:justify-start">
+              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 max-w-full justify-center lg:justify-start">
                 <Button
                   size="lg"
-                  className="w-full text-center
-sm:w-auto bg-brand-orange hover:bg-brand-orange text-white hover:text-white font-semibold py-2.5 sm:py-3 md:py-4 px-4 sm:px-5 md:px-6 rounded-lg text-sm sm:text-base lg:text-lg shadow-xl"
+                  className="w-full sm:w-auto bg-brand-orange hover:bg-brand-orange text-white hover:text-white font-semibold py-3 sm:py-4 px-5 sm:px-6 rounded-lg text-base sm:text-lg shadow-xl"
                   onClick={() => setIsCalculatorOpen(true)}
                 >
                   Ontdek je besparing
@@ -187,8 +186,7 @@ sm:w-auto bg-brand-orange hover:bg-brand-orange text-white hover:text-white font
                 <Button
                   variant="secondary-on-blue"
                   size="lg"
-                  className="w-full text-center
-sm:w-auto font-semibold py-2.5 sm:py-3 md:py-4 px-4 sm:px-5 md:px-6 rounded-lg text-sm sm:text-base lg:text-lg"
+                  className="w-full sm:w-auto font-semibold py-3 sm:py-4 px-5 sm:px-6 rounded-lg text-base sm:text-lg"
                   onClick={() => {
                     const link = document.createElement("a");
                     link.href = "https://calendar.app.google/BgGy8cVUSk4w5Zzg8";
@@ -204,11 +202,11 @@ sm:w-auto font-semibold py-2.5 sm:py-3 md:py-4 px-4 sm:px-5 md:px-6 rounded-lg t
               </div>
             </div>
 
-            <div className="relative animate-scale-in mt-8 lg:mt-0 w-full">
-              <div className="rounded-2xl p-3 sm:p-6 lg:p-8 w-full sm:max-w-md mx-auto bg-white/50 backdrop-blur-sm">
+            <div className="relative animate-scale-in mt-8 lg:mt-0 w-full px-2 sm:px-0">
+              <div className="rounded-2xl p-4 sm:p-6 lg:p-8 w-full max-w-full sm:max-w-md mx-auto bg-white/50 backdrop-blur-sm">
                 <div className="space-y-6">
                   <div className="text-center">
-                    <h3 className="text-lg sm:text-xl lg:text-2xl font-semibold mb-2 text-brand-purple">
+                    <h3 className="text-base sm:text-lg lg:text-xl xl:text-2xl font-semibold mb-2 text-brand-purple">
                       Waarom organisaties ons kiezen
                     </h3>
                   </div>
