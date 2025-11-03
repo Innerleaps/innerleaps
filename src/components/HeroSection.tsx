@@ -190,7 +190,7 @@ sm:w-auto bg-brand-orange hover:bg-brand-orange text-white hover:text-white font
                   variant="secondary-on-blue"
                   size="lg"
                   className="w-full text-center
-sm:w-auto bg-brand-orange hover:bg-brand-orange text-white hover:text-white font-semibold py-2.5 sm:py-3 md:py-4 px-4 sm:px-5 md:px-6 rounded-lg text-sm sm:text-base lg:text-lg shadow-xl"
+sm:w-auto font-semibold py-2.5 sm:py-3 md:py-4 px-4 sm:px-5 md:px-6 rounded-lg text-sm sm:text-base lg:text-lg"
                   onClick={() => {
                     const link = document.createElement("a");
                     link.href = "https://calendar.app.google/BgGy8cVUSk4w5Zzg8";
