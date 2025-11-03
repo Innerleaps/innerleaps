@@ -156,7 +156,7 @@ const HeroSection = () => {
                 </div>
 
                 <h1
-                  className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight font-heading break-words"
+                  className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight font-heading break-words"
                   style={{
                     textShadow: "0 2px 8px rgba(0,0,0,0.5)",
                   }}
@@ -165,7 +165,7 @@ const HeroSection = () => {
                   <span className="text-brand-orange">prestatie</span> verbeterd{" "}
                 </h1>
                 <p
-                  className="text-base sm:text-lg md:text-xl lg:text-2xl text-blue-100 leading-relaxed break-words"
+                  className="text-lg sm:text-xl md:text-2xl text-blue-100 leading-relaxed break-words"
                   style={{
                     textShadow: "0 2px 8px rgba(0,0,0,0.5)",
                   }}
@@ -297,7 +297,7 @@ const HeroSection = () => {
                 ))}
               </div>
 
-              <div className="flex gap-8 animate-marquee absolute top-0 left-0" aria-hidden="true">
+              <div className="flex gap-8 animate-marquee absolute top-0 left-full" aria-hidden="true">
                 {logos.map((logo, index) => (
                   <img
                     key={`duplicate-${index}`}
