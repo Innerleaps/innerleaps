@@ -283,7 +283,7 @@ const HeroSection = () => {
             </div>
           </div>
 
-          {/* Scrolling Logos */}
+         {/* Scrolling Logos */}
           <div className="w-full mt-8 sm:mt-12 lg:mt-16">
             <div className="relative overflow-hidden [mask-image:linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)]">
               <div className="flex gap-8 animate-marquee">
@@ -301,6 +301,17 @@ const HeroSection = () => {
                 {logos.map((logo, index) => (
                   <img
                     key={`duplicate-${index}`}
+                    src={logo.src}
+                    alt={logo.alt}
+                    className="h-8 sm:h-10 md:h-12 object-contain flex-shrink-0 opacity-100 transition-all"
+                  />
+                ))}
+              </div>
+
+              <div className="flex gap-8 animate-marquee absolute top-0 left-[200%]" aria-hidden="true">
+                {logos.map((logo, index) => (
+                  <img
+                    key={`duplicate-2-${index}`}
                     src={logo.src}
                     alt={logo.alt}
                     className="h-8 sm:h-10 md:h-12 object-contain flex-shrink-0 opacity-100 transition-all"
