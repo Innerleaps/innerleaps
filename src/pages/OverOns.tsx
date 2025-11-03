@@ -92,7 +92,8 @@ const OverOns = () => {
       photo: annePhoto,
       languages: ['Nederlands', 'Engels'],
       body: 'Anne is een ervaren en gecertificeerde trainer met 8 jaar ervaring en heeft trainingen gegeven bij onder andere DHL en Affinius Capital. Daarvoor werkte ze 15 jaar in marketing- en communicatiefuncties bij BAT en Ziggo.',
-      quote: 'Anne snapt mij en weet haar kennis op een makkelijke manier uit te leggen!',
+      quote: 'Anne begrijpt mij echt. Haar kennis weet ze op een leuke en makkelijke manier uit te leggen. Ik voel mij productiver en gelukkiger dan ooit!',
+
       logos: [
         { src: dhlLogo, alt: 'Vitaliteitsprogramma DHL' },
         { src: affiniusLogo, alt: 'Vitaliteitsprogramma Affinius Capital' }
