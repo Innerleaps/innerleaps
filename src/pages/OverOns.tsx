@@ -58,7 +58,7 @@ const OverOns = () => {
       name: 'Wineke van Aken',
       photo: winekePhoto,
       languages: ['Nederlands'],
-      body: 'Wineke is al 15 jaar actief als mindfulness-trainer en heeft in die rol trainingen gegeven bij onder andere Tele2, Oliver Wyman (financiële dienstverlener), Leaseplan, VU (geneeskundestudenten), Spirit, Gemeente Den Haag, Cordaan en Sygnific (onderdeel van KLM). Voordat Wineke trainer werd, werkte zij 17 jaar in commerciële en zakelijke functies, waaronder als projectmanager, marketing- en communicatieadviseur en consultant. Deze ervaring maakt dat zij mindfulness op een praktische en zakelijke manier weet over te brengen, met concrete handvatten die direct toepasbaar zijn in het dagelijks werk.',
+      body: 'Wineke is al 15 jaar actief als trainer en heeft in die rol trainingen gegeven bij onder andere Tele2, Oliver Wyman (financiële dienstverlener), Leaseplan, VU (geneeskundestudenten), Spirit, Gemeente Den Haag, Cordaan en Sygnific (onderdeel van KLM). Voordat Wineke trainer werd, werkte zij 17 jaar in commerciële en zakelijke functies, waaronder als projectmanager, marketing- en communicatieadviseur en consultant. Deze ervaring maakt dat zij mindfulness op een praktische en zakelijke manier weet over te brengen, met concrete handvatten die direct toepasbaar zijn in het dagelijks werk.',
       quote: 'Wineke heeft een praktische, nuchtere aanpak met concrete handvatten. Ik kan nu afstand nemen, stresssignalen sneller herkennen, efficiënter werken en ben meer tevreden over mijn resultaten.',
       logos: [
         { src: winekeOliverLogo, alt: 'Vitaliteitsprogramma Oliver Wyman' },
