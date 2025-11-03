@@ -120,22 +120,22 @@ const HeroSection = () => {
 
         {/* Content */}
         <div className="container-custom relative z-10 py-8 sm:py-12 lg:py-20">
-          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-            <div className="space-y-3 sm:space-y-4 md:space-y-6 lg:space-y-8 animate-fade-in">
-              <div className="space-y-6">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center overflow-hidden">
+            <div className="space-y-3 sm:space-y-4 md:space-y-6 lg:space-y-8 animate-fade-in max-w-full">
+              <div className="space-y-6 break-words">
                 {/* Research Badge */}
-                <div className="inline-flex items-center bg-white/50 text-brand-purple px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm md:text-base lg:text-lg font-medium backdrop-blur-sm">
+                <div className="inline-flex items-center bg-white/50 text-brand-purple px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm md:text-base lg:text-lg font-medium backdrop-blur-sm max-w-full">
                   <Award className="h-4 w-4 mr-2" />
                   Wetenschappelijk bewezen programma
                 </div>
 
-                <h1 className="text-xl xs:text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight sm:leading-snug font-heading" style={{
+                <h1 className="text-xl xs:text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight sm:leading-snug font-heading break-words" style={{
                 textShadow: '0 2px 8px rgba(0,0,0,0.5)'
               }}>
                   Het <span className="text-brand-orange">vitaliteits{"\u00AD"}programma</span> dat{" "}
                   <span className="text-brand-orange">prestatie</span> verbeterd{" "}
                 </h1>
-                <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-blue-100 leading-relaxed" style={{
+                <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-blue-100 leading-relaxed break-words" style={{
                 textShadow: '0 2px 8px rgba(0,0,0,0.5)'
               }}>
                   Wetenschappelijk bewezen vitaliteits{"\u00AD"}programma. Deelnemers ontwikkelen eigenaarschap over hun
@@ -143,7 +143,7 @@ const HeroSection = () => {
                 </p>
               </div>
 
-              <div className="flex flex-col sm:flex-row gap-4">
+              <div className="flex flex-col sm:flex-row gap-4 max-w-full">
                 <Button size="lg" className="w-full sm:w-auto bg-brand-orange hover:bg-brand-orange text-white hover:text-white font-semibold py-2.5 sm:py-3 md:py-4 px-4 sm:px-5 md:px-6 rounded-lg text-sm sm:text-base lg:text-lg shadow-xl" onClick={() => setIsCalculatorOpen(true)}>
                   Ontdek je besparing
                 </Button>
@@ -162,8 +162,8 @@ const HeroSection = () => {
 
             </div>
 
-            <div className="relative animate-scale-in mt-8 lg:mt-0 w-full">
-              <div className="rounded-2xl p-4 sm:p-6 lg:p-8 max-w-md mx-auto bg-white/50 backdrop-blur-sm w-full sm:w-auto">
+            <div className="relative animate-scale-in mt-8 lg:mt-0 w-full px-4 sm:px-0">
+              <div className="rounded-2xl p-4 sm:p-6 lg:p-8 max-w-full sm:max-w-md mx-auto bg-white/50 backdrop-blur-sm">
                 <div className="space-y-6">
                   <div className="text-center">
                     <h3 className="text-lg sm:text-xl lg:text-2xl font-semibold mb-2 text-brand-purple">
