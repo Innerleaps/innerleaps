@@ -156,9 +156,11 @@ const HeroSection = () => {
                 </div>
 
                 <h1
-                  className="text-xl xs:text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight sm:leading-snug font-heading"
+                  className="text-xl xs:text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight sm:leading-snug font-heading break-words hyphens-auto"
                   style={{
                     textShadow: "0 2px 8px rgba(0,0,0,0.5)",
+                    overflowWrap: "break-word",
+                    wordBreak: "break-word",
                   }}
                 >
                   Het <span className="text-brand-orange">vitaliteits{"\u00AD"}programma</span> dat{" "}
