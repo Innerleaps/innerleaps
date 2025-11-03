@@ -141,17 +141,7 @@ const HeroSection = () => {
                 <Button size="lg" className="w-full sm:w-auto bg-brand-orange hover:bg-brand-orange text-white hover:text-white font-semibold py-3 px-4 sm:py-4 sm:px-6 rounded-lg text-sm sm:text-base lg:text-lg shadow-xl" onClick={() => setIsCalculatorOpen(true)}>
                   Ontdek je besparing
                 </Button>
-                <Button variant="secondary-on-blue" size="lg" className="w-full sm:w-auto font-semibold py-3 px-4 sm:py-4 sm:px-6 rounded-lg text-sm sm:text-base lg:text-lg" onClick={() => {
-                const link = document.createElement("a");
-                link.href = "https://calendar.app.google/BgGy8cVUSk4w5Zzg8";
-                link.target = "_blank";
-                link.rel = "noopener noreferrer";
-                document.body.appendChild(link);
-                link.click();
-                document.body.removeChild(link);
-              }}>
-                  Stel je vragen aan Bas
-                </Button>
+                
               </div>
             </div>
 
