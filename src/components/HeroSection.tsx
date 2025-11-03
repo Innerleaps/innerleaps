@@ -205,7 +205,7 @@ sm:w-auto font-semibold py-2.5 sm:py-3 md:py-4 px-4 sm:px-5 md:px-6 rounded-lg t
             </div>
 
             <div className="relative animate-scale-in mt-8 lg:mt-0 w-full">
-              <div className="rounded-2xl p-4 sm:p-6 lg:p-8 max-w-[calc(100vw-2rem)] sm:max-w-md mx-auto bg-white/50 backdrop-blur-sm">
+              <div className="rounded-2xl p-3 sm:p-6 lg:p-8 w-full sm:max-w-md mx-auto bg-white/50 backdrop-blur-sm">
                 <div className="space-y-6">
                   <div className="text-center">
                     <h3 className="text-lg sm:text-xl lg:text-2xl font-semibold mb-2 text-brand-purple">
