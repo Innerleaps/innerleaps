@@ -147,16 +147,16 @@ const HeroSection = () => {
         {/* Content */}
         <div className="container-custom relative z-10 py-8 sm:py-12 lg:py-20">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start overflow-hidden">
-            <div className="space-y-4 sm:space-y-6 lg:space-y-8 animate-fade-in w-full max-w-full lg:max-w-[600px] mx-auto text-center lg:text-left px-2 sm:px-0">
-              <div className="space-y-4 sm:space-y-6 break-words">
+          <div className="space-y-6 animate-fade-in text-center lg:text-left">
+            <div className="space-y-6">
                 {/* Research Badge */}
-                <div className="inline-flex items-center bg-white/50 text-brand-purple px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-sm sm:text-base font-medium backdrop-blur-sm max-w-full">
+                <div className="inline-flex items-center bg-white/50 text-brand-purple px-4 py-2 rounded-full text-sm md:text-base font-medium backdrop-blur-sm">
                   <Award className="h-4 w-4 mr-2" />
                   Wetenschappelijk bewezen programma
                 </div>
 
                 <h1 
-                  className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight font-heading break-words"
+                  className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight font-heading"
                   style={{
                     textShadow: "0 2px 8px rgba(0,0,0,0.5)",
                   }}
@@ -165,7 +165,7 @@ const HeroSection = () => {
                   <span className="text-brand-orange">prestatie</span> verbeterd{" "}
                 </h1>
                 <p 
-                  className="text-lg sm:text-xl md:text-2xl text-blue-100 leading-relaxed break-words"
+                  className="text-lg sm:text-xl md:text-2xl text-blue-100 leading-relaxed"
                   style={{
                     textShadow: "0 2px 8px rgba(0,0,0,0.5)",
                   }}
@@ -175,7 +175,7 @@ const HeroSection = () => {
                 </p>
               </div>
 
-              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 max-w-full justify-center lg:justify-start">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                 <Button
                   size="lg"
                   className="w-full sm:w-auto bg-brand-orange hover:bg-brand-orange text-white hover:text-white font-semibold py-3 sm:py-4 px-5 sm:px-6 rounded-lg text-base sm:text-lg shadow-xl"
@@ -202,59 +202,59 @@ const HeroSection = () => {
               </div>
             </div>
 
-            <div className="relative animate-scale-in mt-8 lg:mt-0 w-full px-2 sm:px-0">
-              <div className="rounded-2xl p-4 sm:p-6 lg:p-8 w-full max-w-full sm:max-w-md mx-auto bg-white/50 backdrop-blur-sm">
+          <div className="relative animate-scale-in mt-8 lg:mt-0">
+            <div className="rounded-2xl p-6 lg:p-8 max-w-md mx-auto bg-white/50 backdrop-blur-sm">
                 <div className="space-y-6">
                   <div className="text-center">
-                    <h3 className="text-base sm:text-lg lg:text-xl xl:text-2xl font-semibold mb-2 text-brand-purple">
+                    <h3 className="text-lg md:text-xl lg:text-2xl font-semibold mb-2 text-brand-purple">
                       Waarom organisaties ons kiezen
                     </h3>
                   </div>
 
                   <div className="space-y-4">
-                    <div className="flex items-center justify-between p-2.5 sm:p-3 lg:p-4 bg-brand-purple/90 rounded-lg">
+                    <div className="flex items-center justify-between p-3 lg:p-4 bg-brand-purple/90 rounded-lg">
                       <span
-                        className="font-bold text-base sm:text-lg lg:text-xl text-white"
+                        className="font-bold text-sm sm:text-base md:text-lg text-white"
                         style={{
                           textShadow: "0 2px 8px rgba(0,0,0,0.5)",
                         }}
                       >
                         Uitval risico
                       </span>
-                      <span className="text-brand-orange font-bold text-base sm:text-lg lg:text-xl">-70%</span>
+                      <span className="text-brand-orange font-bold text-sm sm:text-base md:text-lg">-70%</span>
                     </div>
-                    <div className="flex items-center justify-between p-2.5 sm:p-3 lg:p-4 bg-brand-purple/90 rounded-lg">
+                    <div className="flex items-center justify-between p-3 lg:p-4 bg-brand-purple/90 rounded-lg">
                       <span
-                        className="font-bold text-base sm:text-lg lg:text-xl text-white"
+                        className="font-bold text-sm sm:text-base md:text-lg text-white"
                         style={{
                           textShadow: "0 2px 8px rgba(0,0,0,0.5)",
                         }}
                       >
                         Verzuim
                       </span>
-                      <span className="text-brand-orange font-bold text-base sm:text-lg lg:text-xl">-21%</span>
+                      <span className="text-brand-orange font-bold text-sm sm:text-base md:text-lg">-21%</span>
                     </div>
-                    <div className="flex items-center justify-between p-2.5 sm:p-3 lg:p-4 bg-brand-purple/90 rounded-lg">
+                    <div className="flex items-center justify-between p-3 lg:p-4 bg-brand-purple/90 rounded-lg">
                       <span
-                        className="font-bold text-base sm:text-lg lg:text-xl text-white"
+                        className="font-bold text-sm sm:text-base md:text-lg text-white"
                         style={{
                           textShadow: "0 2px 8px rgba(0,0,0,0.5)",
                         }}
                       >
                         Productiviteit
                       </span>
-                      <span className="text-brand-orange font-bold text-base sm:text-lg lg:text-xl">+10%</span>
+                      <span className="text-brand-orange font-bold text-sm sm:text-base md:text-lg">+10%</span>
                     </div>
-                    <div className="flex items-center justify-between p-2.5 sm:p-3 lg:p-4 bg-brand-purple/90 rounded-lg">
+                    <div className="flex items-center justify-between p-3 lg:p-4 bg-brand-purple/90 rounded-lg">
                       <span
-                        className="font-bold text-base sm:text-lg lg:text-xl text-white"
+                        className="font-bold text-sm sm:text-base md:text-lg text-white"
                         style={{
                           textShadow: "0 2px 8px rgba(0,0,0,0.5)",
                         }}
                       >
                         Wetenschappelijk onderzoek
                       </span>
-                      <span className="text-brand-orange font-bold text-base sm:text-lg lg:text-xl">40+ jaar</span>
+                      <span className="text-brand-orange font-bold text-sm sm:text-base md:text-lg">40+ jaar</span>
                     </div>
                   </div>
 
