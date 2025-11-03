@@ -149,7 +149,7 @@ const HeroSection = () => {
               <div className="w-full rounded-2xl p-4 sm:p-6 lg:p-8 max-w-full sm:max-w-md mx-auto bg-white/50 backdrop-blur-sm">
                 <div className="space-y-6">
                   <div className="text-center">
-                    <h3 className="text-xl md:text-2xl font-semibold mb-2 text-brand-purple">
+                    <h3 className="text-base sm:text-lg md:text-xl lg:text-2xl font-semibold mb-2 text-brand-purple">
                       Waarom organisaties ons kiezen
                     </h3>
                   </div>
@@ -158,33 +158,33 @@ const HeroSection = () => {
                     <div className="flex items-center justify-between w-full p-2.5 sm:p-3 lg:p-4 bg-brand-purple/90 rounded-lg">
                       <span style={{
                       textShadow: "0 2px 8px rgba(0,0,0,0.5)"
-                    }} className="text-xl md:text-2xl text-white font-normal">
+                    }} className="text-xs sm:text-sm md:text-base lg:text-lg text-white font-normal">
                         Uitval risico
                       </span>
-                      <span className="text-brand-orange font-bold text-xl md:text-2xl shrink-0">-70%</span>
+                      <span className="text-brand-orange font-bold text-sm sm:text-base md:text-lg shrink-0">-70%</span>
                     </div>
                     <div className="flex items-center justify-between w-full p-2.5 sm:p-3 lg:p-4 bg-brand-purple/90 rounded-lg">
                       <span style={{
                       textShadow: "0 2px 8px rgba(0,0,0,0.5)"
-                    }} className="text-xl md:text-2xl text-white font-normal">
+                    }} className="text-xs sm:text-sm md:text-base lg:text-lg text-white font-normal">
                         Verzuim
                       </span>
-                      <span className="text-brand-orange font-bold text-xl md:text-2xl shrink-0">-21%</span>
+                      <span className="text-brand-orange font-bold text-sm sm:text-base md:text-lg shrink-0">-21%</span>
                     </div>
                     <div className="flex items-center justify-between w-full p-2.5 sm:p-3 lg:p-4 bg-brand-purple/90 rounded-lg">
                       <span style={{
                       textShadow: "0 2px 8px rgba(0,0,0,0.5)"
-                    }} className="text-xl md:text-2xl text-white font-normal">
+                    }} className="text-xs sm:text-sm md:text-base lg:text-lg text-white font-normal">
                         Productiviteit
                       </span>
-                      <span className="text-brand-orange font-bold text-xl md:text-2xl shrink-0">+10%</span>
+                      <span className="text-brand-orange font-bold text-sm sm:text-base md:text-lg shrink-0">+10%</span>
                     </div>
                     <div className="flex items-center justify-between w-full p-2.5 sm:p-3 lg:p-4 bg-brand-purple/90 rounded-lg">
                       <span style={{
                       textShadow: "0 2px 8px rgba(0,0,0,0.5)"
-                    }} className="text-xl md:text-2xl text-white font-normal">Wetenschappelijk
+                    }} className="text-xs sm:text-sm md:text-base lg:text-lg text-white font-normal">Wetenschappelijk
 onderzoek</span>
-                      <span className="text-brand-orange font-bold text-xl md:text-2xl shrink-0">40+ jaar</span>
+                      <span className="text-brand-orange font-bold text-sm sm:text-base md:text-lg shrink-0">40+ jaar</span>
                     </div>
                   </div>
 
