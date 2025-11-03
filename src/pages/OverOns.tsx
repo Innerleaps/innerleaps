@@ -1,4 +1,4 @@
-import Navigation from '@/components/Navigation';
+import SimplifiedNavigation from '@/components/SimplifiedNavigation';
 import StickyCtaButtons from '@/components/StickyCtaButtons';
 import TrustSection from '@/components/TrustSection';
 import ContactSection from '@/components/ContactSection';
@@ -7,25 +7,46 @@ import { Button } from '@/components/ui/button';
 import { useEffect } from 'react';
 
 // Trainer photos
-import basPhoto from '@/assets/Oprichter_Innerleaps_Bas_Ter_Haar_Romenij.png';
-import annePhoto from '@/assets/Geaccrediteerde_Vitaliteitstrainer_Anne_Linnebank.png';
-import davePhoto from '@/assets/Geaccrediteerde_Vitaliteitstrainer_Dave_Hoppema.png';
-import jacquelinePhoto from '@/assets/Geaccrediteerde_Vitaliteitstrainer_Jacqueline.png';
+import basPhoto from '@/assets/Vitaliteitstrainer_Bas_Ter_Haar_Romenij.png';
+import winekePhoto from '@/assets/Vitaliteitstrainer_Wineke_van_Aken.png';
+import annePhoto from '@/assets/Vitaliteitstrainer_Anne_Linnebank.png';
+import davePhoto from '@/assets/Vitaliteitstrainer_Dave_Hoppema.png';
+import jacquelinePhoto from '@/assets/Vitaliteitstrainer_Jacqueline_Henock.png';
 
 // Badges
 import vmbnBadge from '@/assets/Aaccreditatie_voor_Vitaliteitsprogramma.png';
 
-// Client logos
+// Wineke's logos
+import winekeOliverLogo from '@/assets/Vitaliteitsprogramma_Oliver_Wyman.png';
+import winekeSygnificLogo from '@/assets/Vitaliteitsprogramma_Sygnific.png';
+import winekeCordaanLogo from '@/assets/Vitaliteitsprogramma_Cordaan.png';
+import winekeGemeenteLogo from '@/assets/Vitaliteitsprogramma_Gemeente_Den_Haag.png';
+import winekeSpiritLogo from '@/assets/Vitaliteitsprogramma_Spirit.png';
+import winekeVULogo from '@/assets/Vitaliteitsprogramma_VU_amsterdam.png';
+import winekeLeaseLogo from '@/assets/Vitaliteitsprogramma_Leaseplan.png';
+import winekeTele2Logo from '@/assets/Vitaliteitsprogramma_Tele2.png';
+
+// Dave's logos
+import daveParnassiaLogo from '@/assets/Vitaliteitsprogramma_Parnassia_groep.png';
+import daveLentizLogo from '@/assets/Vitaliteitsprogramma_Lentiz.png';
+import davePrimoLogo from '@/assets/Vitaliteitsprogramma_primo-2.png';
+import daveMinisterieLogo from '@/assets/Vitaliteitsprogramma_Ministerie_van_justitie_en_veiligheid-2.png';
+import daveYouTalentLogo from '@/assets/Vitaliteitsprogramma_You_Talent-3.png';
+import daveRijksLogo from '@/assets/Vitaliteitsprogramma_Rijkswaterstaat-3.png';
+import davePolitieLogo from '@/assets/Vitaliteitsprogramma_Politite-4.png';
+
+// Anne's logos
 import dhlLogo from '@/assets/Vitaliteitsprogramma_DHL-2.png';
 import affiniusLogo from '@/assets/Vitaliteitsprogramma_Affinius_Capital-2.png';
-import rijksLogo from '@/assets/Vitaliteitsprogramma_Rijkswaterstaat-2.png';
-import politieLogo from '@/assets/Vitaliteitsprogramma_Politite-3.png';
-import youTalentLogo from '@/assets/Vitaliteitsprogramma_You_Talent-2.png';
-import nobelLogo from '@/assets/Vitaliteitsprogramma_nobel_recruitment-2.png';
-import paLogo from '@/assets/Vitaliteitsprogramma_PA_consulting-2.png';
-import hollandLogo from '@/assets/Vitaliteitsprogramma_Holland_Colours-2.png';
-import primoLogo from '@/assets/Vitaliteitsprogramma_primo.png';
-import ministerieLogo from '@/assets/Vitaliteitsprogramma_Ministerie_van_justitie_en_veiligheid.png';
+
+// Jacqueline's logos
+import jacquelineGGZLogo from '@/assets/Vitaliteitsprogramma_GGZ_centraal.png';
+import jacquelineHumanitasLogo from '@/assets/Vitaliteitsprogramma_Humanitas.png';
+import jacquelinePlevierLogo from '@/assets/Vitaliteitsprogramma_Plevier.png';
+import jacquelineCarelLogo from '@/assets/Vitaliteitsprogramma_Carel_Lurvink.png';
+import jacquelinePALogo from '@/assets/Vitaliteitsprogramma_PA_consulting-3.png';
+import jacquelineNobelLogo from '@/assets/Vitaliteitsprogramma_nobel_recruitment-3.png';
+import jacquelineHollandLogo from '@/assets/Vitaliteitsprogramma_Holland_Colours-3.png';
 
 const OverOns = () => {
   useEffect(() => {
@@ -34,14 +55,20 @@ const OverOns = () => {
 
   const trainers = [
     {
-      name: 'Anne Limbeek',
-      photo: annePhoto,
-      languages: ['Nederlands', 'Engels'],
-      body: 'Anne is een ervaren en gecertificeerde trainer met 8 jaar ervaring en heeft trainingen gegeven bij onder andere DHL en Affinius Capital. Daarvoor werkte ze 15 jaar in marketing- en communicatiefuncties bij BAT en Ziggo.',
-      quote: 'Anne snapt mij en weet haar kennis op een makkelijke manier uit te leggen!',
+      name: 'Wineke van Aken',
+      photo: winekePhoto,
+      languages: ['Nederlands'],
+      body: 'Wineke is al 15 jaar actief als mindfulness-trainer en heeft in die rol trainingen gegeven bij onder andere Tele2, Oliver Wyman (financiële dienstverlener), Leaseplan, VU (geneeskundestudenten), Spirit, Gemeente Den Haag, Cordaan en Sygnific (onderdeel van KLM). Voordat Wineke trainer werd, werkte zij 17 jaar in commerciële en zakelijke functies, waaronder als projectmanager, marketing- en communicatieadviseur en consultant. Deze ervaring maakt dat zij mindfulness op een praktische en zakelijke manier weet over te brengen, met concrete handvatten die direct toepasbaar zijn in het dagelijks werk.',
+      quote: 'Wineke heeft een praktische, nuchtere aanpak met concrete handvatten. Ik kan nu afstand nemen, stresssignalen sneller herkennen, efficiënter werken en ben meer tevreden over mijn resultaten.',
       logos: [
-        { src: dhlLogo, alt: 'Vitaliteitsprogramma DHL' },
-        { src: affiniusLogo, alt: 'Vitaliteitsprogramma Affinius Capital' }
+        { src: winekeOliverLogo, alt: 'Vitaliteitsprogramma Oliver Wyman' },
+        { src: winekeSygnificLogo, alt: 'Vitaliteitsprogramma Sygnific' },
+        { src: winekeCordaanLogo, alt: 'Vitaliteitsprogramma Cordaan' },
+        { src: winekeGemeenteLogo, alt: 'Vitaliteitsprogramma Gemeente Den Haag' },
+        { src: winekeSpiritLogo, alt: 'Vitaliteitsprogramma Spirit' },
+        { src: winekeVULogo, alt: 'Vitaliteitsprogramma VU Amsterdam' },
+        { src: winekeLeaseLogo, alt: 'Vitaliteitsprogramma Leaseplan' },
+        { src: winekeTele2Logo, alt: 'Vitaliteitsprogramma Tele2' }
       ]
     },
     {
@@ -51,11 +78,22 @@ const OverOns = () => {
       body: 'Dave trainer met 8 jaar ervaring en gaf trainingen bij o.a. Rijkswaterstaat, Nationale Politie, het Ministerie van Justitie en Veiligheid, Parnassia Groep en diverse onderwijs- en talentorganisaties. Daarvoor werkte hij 15 jaar als redacteur en contentmanager.',
       quote: 'betrokken, open en vriendelijk, met duidelijke uitleg. Doordat hij zijn eigen ervaringen deelt, voelt de training toegankelijk en mag ik \'fouten maken\'.',
       logos: [
-        { src: primoLogo, alt: 'Vitaliteitsprogramma Primo' },
-        { src: ministerieLogo, alt: 'Vitaliteitsprogramma Ministerie van Justitie en Veiligheid' },
-        { src: youTalentLogo, alt: 'Vitaliteitsprogramma You Talent' },
-        { src: politieLogo, alt: 'Vitaliteitsprogramma Politie' },
-        { src: rijksLogo, alt: 'Vitaliteitsprogramma Rijkswaterstaat' },
+        { src: daveParnassiaLogo, alt: 'Vitaliteitsprogramma Parnassia Groep' },
+        { src: daveLentizLogo, alt: 'Vitaliteitsprogramma Lentiz' },
+        { src: davePrimoLogo, alt: 'Vitaliteitsprogramma Primo' },
+        { src: daveMinisterieLogo, alt: 'Vitaliteitsprogramma Ministerie van Justitie en Veiligheid' },
+        { src: daveYouTalentLogo, alt: 'Vitaliteitsprogramma You Talent' },
+        { src: daveRijksLogo, alt: 'Vitaliteitsprogramma Rijkswaterstaat' },
+        { src: davePolitieLogo, alt: 'Vitaliteitsprogramma Politie' }
+      ]
+    },
+    {
+      name: 'Anne Linnebank',
+      photo: annePhoto,
+      languages: ['Nederlands', 'Engels'],
+      body: 'Anne is een ervaren en gecertificeerde trainer met 8 jaar ervaring en heeft trainingen gegeven bij onder andere DHL en Affinius Capital. Daarvoor werkte ze 15 jaar in marketing- en communicatiefuncties bij BAT en Ziggo.',
+      quote: 'Anne snapt mij en weet haar kennis op een makkelijke manier uit te leggen!',
+      logos: [
         { src: dhlLogo, alt: 'Vitaliteitsprogramma DHL' },
         { src: affiniusLogo, alt: 'Vitaliteitsprogramma Affinius Capital' }
       ]
@@ -67,16 +105,20 @@ const OverOns = () => {
       body: 'Jacqueline is begonnen als trainer in 2017 en werkte onder andere met Holland Colours, Carel Lurvink, PA Consulting, Nobel Recruitment, Humanitas en GGZ Centraal. Haar eerdere carrière omvat o.a. rollen als eigenaar van een automatiseringsbedrijf en HR-manager, manager zorgprocessen én freelance organisatieadviseur.',
       quote: 'Jacqueline weet precies hoe ze theorie en ervaring laat samenkomen. Haar begeleiding is persoonlijk, doordacht en professioneel.',
       logos: [
-        { src: hollandLogo, alt: 'Vitaliteitsprogramma Holland Colours' },
-        { src: paLogo, alt: 'Vitaliteitsprogramma PA Consulting' },
-        { src: nobelLogo, alt: 'Vitaliteitsprogramma Nobel Recruitment' }
+        { src: jacquelineGGZLogo, alt: 'Vitaliteitsprogramma GGZ Centraal' },
+        { src: jacquelineHumanitasLogo, alt: 'Vitaliteitsprogramma Humanitas' },
+        { src: jacquelinePlevierLogo, alt: 'Vitaliteitsprogramma Plevier Speciaal Onderwijs' },
+        { src: jacquelineCarelLogo, alt: 'Vitaliteitsprogramma Carel Lurvink Industry' },
+        { src: jacquelinePALogo, alt: 'Vitaliteitsprogramma PA Consulting' },
+        { src: jacquelineNobelLogo, alt: 'Vitaliteitsprogramma Nobel Recruitment' },
+        { src: jacquelineHollandLogo, alt: 'Vitaliteitsprogramma Holland Colours' }
       ]
     }
   ];
 
   return (
     <div className="min-h-screen bg-white">
-      <Navigation />
+      <SimplifiedNavigation />
       <StickyCtaButtons />
       
       <main>
@@ -93,7 +135,7 @@ const OverOns = () => {
             {/* Links: Body tekst */}
             <div className="space-y-6 text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
               <p>
-                Door het drukke leven dat veel van ons vraagt, verliezen we soms het contact met wat we echt nodig hebben om effectief te zijn. Ons werkgeheugen raakt vol en spanningen lopen op in ons systeem, vaak zonder dat we het echt merken. Daardoor schakelen we vaak op de automatische piloot: zo’n 65% tot 90% van ons gedrag gebeurt onbewust. Zo overschrijden we onze grenzen, wat leidt tot lagere productiviteit en een toenemend verzuim.
+                Door het drukke leven dat veel van ons vraagt, verliezen we soms het contact met wat we echt nodig hebben om effectief te zijn. Ons werkgeheugen raakt vol en spanningen lopen op in ons systeem, vaak zonder dat we het echt merken. Daardoor schakelen we vaak op de automatische piloot: zo'n 65% tot 90% van ons gedrag gebeurt onbewust. Zo overschrijden we onze grenzen, wat leidt tot lagere productiviteit en een toenemend verzuim.
               </p>
               
             </div>
@@ -133,11 +175,11 @@ const OverOns = () => {
               <div className="flex flex-col items-center space-y-6">
                 <img 
                   src={basPhoto} 
-                  alt="Bas ter Haar Romenij - Oprichter InnerLeaps"
+                  alt="Vitaliteitstrainer Bas ter Haar Romenij | Oprichter InnerLeaps"
                   className="rounded-full w-64 h-64 object-cover shadow-xl"
                 />
                 <p className="text-xl md:text-2xl font-semibold text-brand-purple text-center">
-                  Oprichter
+                  Bas ter Haar Romenij | Oprichter
                 </p>
                 <Button 
                   variant="secondary"
@@ -187,9 +229,6 @@ const OverOns = () => {
                       <div className="bg-brand-off-white p-4 rounded-lg border-l-4 border-brand-orange">
                         <p className="text-base md:text-lg italic text-brand-gray-medium leading-snug">
                           "{trainer.quote}"
-                        </p>
-                        <p className="text-sm text-brand-gray-medium mt-2">
-                          — Oud deelnemer
                         </p>
                       </div>
                     </div>
