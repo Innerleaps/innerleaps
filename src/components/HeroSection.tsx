@@ -297,28 +297,7 @@ const HeroSection = () => {
                 ))}
               </div>
 
-              <div className="flex gap-8 animate-marquee absolute top-0 left-full" aria-hidden="true">
-                {logos.map((logo, index) => (
-                  <img
-                    key={`duplicate-${index}`}
-                    src={logo.src}
-                    alt={logo.alt}
-                    className="h-8 sm:h-10 md:h-12 object-contain flex-shrink-0 opacity-100 transition-all"
-                  />
-                ))}
-              </div>
-
-              <div className="flex gap-8 animate-marquee absolute top-0 left-[200%]" aria-hidden="true">
-                {logos.map((logo, index) => (
-                  <img
-                    key={`duplicate-2-${index}`}
-                    src={logo.src}
-                    alt={logo.alt}
-                    className="h-8 sm:h-10 md:h-12 object-contain flex-shrink-0 opacity-100 transition-all"
-                  />
-                ))}
-              </div>
-            </div>
+       
           </div>
 
           <div className="flex justify-center mt-8 sm:mt-12 lg:mt-16 w-full">
