@@ -5,20 +5,20 @@ import CalculatorModal from "./CalculatorModal";
 import heroBackground from "@/assets/Vitaliteitsprogramma_presentatie_Innerleaps.png";
 
 // Client logos - Light versions with transparent backgrounds
-import oliverLogo from "@/assets/Vitaliteitsprogramma_Oliver_Wyman_light.png";
+import oliverLogo from "@/assets/Vitaliteitsprogramma_Oliver_Wyman_light-2.png";
 import sygnificLogo from "@/assets/Vitaliteitsprogramma_Sygnific_light.png";
 import cordaanLogo from "@/assets/Vitaliteitsprogramma_Cordaan_light.png";
 import denHaagLogo from "@/assets/Vitaliteitsprogramma_Gemeente_Den_Haag_light.png";
 import spiritLogo from "@/assets/Vitaliteitsprogramma_Spirit_light.png";
 import vuLogo from "@/assets/Vitaliteitsprogramma_VU_amsterdam_light.png";
-import leaseplanLogo from "@/assets/Vitaliteitsprogramma_Leaseplan_light.png";
-import tele2Logo from "@/assets/Vitaliteitsprogramma_Tele2_light.png";
+import leaseplanLogo from "@/assets/Vitaliteitsprogramma_Leaseplan_light-2.png";
+import tele2Logo from "@/assets/Vitaliteitsprogramma_Tele2_light-2.png";
 import parnassiaLogo from "@/assets/Vitaliteitsprogramma_Parnassia_groep_light.png";
 import lentizLogo from "@/assets/Vitaliteitsprogramma_Lentiz_light.png";
 import primoLogo from "@/assets/Vitaliteitsprogramma_primo_light.png";
-import justitieLogo from "@/assets/Vitaliteitsprogramma_Ministerie_van_justitie_en_veiligheid_light.png";
+import justitieLogo from "@/assets/Vitaliteitsprogramma_Ministerie_van_justitie_en_veiligheid_light-2.png";
 import youTalentLogo from "@/assets/Vitaliteitsprogramma_You_Talent_light.png";
-import rijkswaterstaatLogo from "@/assets/Vitaliteitsprogramma_ervaring_met_Rijkswaterstaat_1.png";
+import rijkswaterstaatLogo from "@/assets/Vitaliteitsprogramma_Rijkswaterstaat_light.png";
 import politieLogo from "@/assets/Vitaliteitsprogramma_Politite_light.png";
 import dhlLogo from "@/assets/Vitaliteitsprogramma_DHL_light.png";
 import affiniusLogo from "@/assets/Vitaliteitsprogramma_Affinius_Capital_light.png";
