@@ -145,17 +145,17 @@ const HeroSection = () => {
         </div>
 
         {/* Content */}
-        <div className="container-custom relative z-10 py-8 sm:py-12 lg:py-20">
+        <div className="container-custom relative z-10 py-8 sm:py-12 lg:py-20 px-4 sm:px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start overflow-hidden">
-          <div className="space-y-6 animate-fade-in text-center lg:text-left">
-            <div className="space-y-6">
+            <div className="space-y-6 animate-fade-in text-center lg:text-left">
+              <div className="space-y-6">
                 {/* Research Badge */}
                 <div className="inline-flex items-center bg-white/50 text-brand-purple px-4 py-2 rounded-full text-sm md:text-base font-medium backdrop-blur-sm">
                   <Award className="h-4 w-4 mr-2" />
                   Wetenschappelijk bewezen programma
                 </div>
 
-                <h1 
+                <h1
                   className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight font-heading"
                   style={{
                     textShadow: "0 2px 8px rgba(0,0,0,0.5)",
@@ -164,7 +164,7 @@ const HeroSection = () => {
                   Het <span className="text-brand-orange">vitaliteits{"\u00AD"}programma</span> dat{" "}
                   <span className="text-brand-orange">prestatie</span> verbeterd{" "}
                 </h1>
-                <p 
+                <p
                   className="text-lg sm:text-xl md:text-2xl text-blue-100 leading-relaxed"
                   style={{
                     textShadow: "0 2px 8px rgba(0,0,0,0.5)",
@@ -202,8 +202,8 @@ const HeroSection = () => {
               </div>
             </div>
 
-          <div className="relative animate-scale-in mt-8 lg:mt-0">
-            <div className="rounded-2xl p-6 lg:p-8 max-w-md mx-auto bg-white/50 backdrop-blur-sm">
+            <div className="relative animate-scale-in mt-8 lg:mt-0">
+              <div className="rounded-2xl p-6 lg:p-8 max-w-md mx-auto bg-white/50 backdrop-blur-sm">
                 <div className="space-y-6">
                   <div className="text-center">
                     <h3 className="text-lg md:text-xl lg:text-2xl font-semibold mb-2 text-brand-purple">
