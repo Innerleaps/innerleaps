@@ -117,12 +117,12 @@ const HeroSection = () => {
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             <div className="space-y-6 lg:space-y-8 animate-fade-in">
               <div className="space-y-6">
-                {/* 40+ Years Research Badge */}
+                {/* Research Badge */}
                 <div className="inline-flex items-center bg-brand-purple/50 text-white px-4 py-2 rounded-full text-base md:text-lg font-medium backdrop-blur-sm" style={{
                 textShadow: '0 2px 8px rgba(0,0,0,0.5)'
               }}>
                   <Award className="h-4 w-4 mr-2" />
-                  Vitaliteits{"\u00AD"}programma met 40+ jaar onderzoek
+                  Wetenschappelijk bewezen programma
                 </div>
 
                 <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-snug font-heading" style={{
@@ -156,20 +156,6 @@ const HeroSection = () => {
                 </Button>
               </div>
 
-              <div className="flex justify-center pt-6 lg:pt-8">
-                <div className="text-center">
-                  <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-brand-orange" style={{
-                  textShadow: '0 2px 8px rgba(0,0,0,0.5)'
-                }}>
-                    40+ jaar
-                  </div>
-                  <div className="text-blue-200 text-sm md:text-base" style={{
-                  textShadow: '0 2px 8px rgba(0,0,0,0.5)'
-                }}>
-                    onderzoek
-                  </div>
-                </div>
-              </div>
             </div>
 
             <div className="relative animate-scale-in">
@@ -213,6 +199,16 @@ const HeroSection = () => {
                       </span>
                       <span className="text-brand-orange font-bold text-lg lg:text-xl">
                         +10%
+                      </span>
+                    </div>
+                    <div className="flex items-center justify-between p-3 lg:p-4 bg-brand-purple/90 rounded-lg">
+                      <span className="font-bold text-lg lg:text-xl text-white" style={{
+                      textShadow: '0 2px 8px rgba(0,0,0,0.5)'
+                    }}>
+                        Wetenschappelijk onderzoek
+                      </span>
+                      <span className="text-brand-orange font-bold text-lg lg:text-xl">
+                        40+ jaar
                       </span>
                     </div>
                   </div>
