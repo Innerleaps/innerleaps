@@ -124,12 +124,10 @@ const HeroSection = () => {
             <div className="space-y-6 lg:space-y-8 animate-fade-in">
               <div className="space-y-6">
                 {/* Research Badge */}
-                <div className="inline-flex items-center bg-brand-purple/50 text-white px-4 py-2 rounded-full text-base md:text-lg font-medium backdrop-blur-sm" style={{
-                textShadow: '0 2px 8px rgba(0,0,0,0.5)'
-              }}>
-                  <Award className="h-4 w-4 mr-2" />
-                  Wetenschappelijk bewezen programma
-                </div>
+          <div className="inline-flex items-center bg-white/50 text-brand-purple px-4 py-2 rounded-full text-base md:text-lg font-medium backdrop-blur-sm">
+            <Award className="h-4 w-4 mr-2" />
+            Wetenschappelijk bewezen programma
+          </div>
 
                 <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-snug font-heading" style={{
                 textShadow: '0 2px 8px rgba(0,0,0,0.5)'
@@ -168,11 +166,9 @@ const HeroSection = () => {
               <div className="rounded-2xl p-6 lg:p-8 max-w-md mx-auto bg-white/50 backdrop-blur-sm">
                 <div className="space-y-6">
                   <div className="text-center">
-                    <h3 className="text-xl lg:text-2xl font-semibold mb-2" style={{
-                    textShadow: '0 2px 8px rgba(0,0,0,0.5)'
-                  }}>
-                      Waarom organisaties ons kiezen
-                    </h3>
+            <h3 className="text-xl lg:text-2xl font-semibold mb-2 text-brand-purple">
+              Waarom organisaties ons kiezen
+            </h3>
                     
                   </div>
 
