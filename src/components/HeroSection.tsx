@@ -4,31 +4,31 @@ import { ArrowDown, Award, Star } from "lucide-react";
 import CalculatorModal from "./CalculatorModal";
 import heroBackground from "@/assets/Vitaliteitsprogramma_presentatie_Innerleaps.png";
 
-// Client logos
-import oliverLogo from "@/assets/Vitaliteitsprogramma_Oliver_Wyman.png";
-import sygnificLogo from "@/assets/Vitaliteitsprogramma_Sygnific.png";
-import cordaanLogo from "@/assets/Vitaliteitsprogramma_Cordaan.png";
-import denHaagLogo from "@/assets/Vitaliteitsprogramma_Gemeente_Den_Haag.png";
-import spiritLogo from "@/assets/Vitaliteitsprogramma_Spirit.png";
-import vuLogo from "@/assets/Vitaliteitsprogramma_VU_amsterdam.png";
-import leaseplanLogo from "@/assets/Vitaliteitsprogramma_Leaseplan.png";
-import tele2Logo from "@/assets/Vitaliteitsprogramma_Tele2.png";
-import parnassiaLogo from "@/assets/Vitaliteitsprogramma_Parnassia_groep.png";
-import lentizLogo from "@/assets/Vitaliteitsprogramma_Lentiz.png";
-import primoLogo from "@/assets/Vitaliteitsprogramma_primo-2.png";
-import justitieLogo from "@/assets/Vitaliteitsprogramma_Ministerie_van_justitie_en_veiligheid-2.png";
-import youTalentLogo from "@/assets/Vitaliteitsprogramma_You_Talent-2.png";
-import rijkswaterstaatLogo from "@/assets/Vitaliteitsprogramma_Rijkswaterstaat-2.png";
-import politieLogo from "@/assets/Vitaliteitsprogramma_Politie_new.png";
-import dhlLogo from "@/assets/Vitaliteitsprogramma_DHL-2.png";
-import affiniusLogo from "@/assets/Vitaliteitsprogramma_Affinius_Capital-2.png";
-import ggzLogo from "@/assets/Vitaliteitsprogramma_GGZ_centraal.png";
-import humanitasLogo from "@/assets/Vitaliteitsprogramma_Humanitas.png";
-import plevierLogo from "@/assets/Vitaliteitsprogramma_Plevier.png";
-import carelLogo from "@/assets/Vitaliteitsprogramma_Carel_Lurvink.png";
-import paConsultingLogo from "@/assets/Vitaliteitsprogramma_PA_consulting-2.png";
-import nobelLogo from "@/assets/Vitaliteitsprogramma_nobel_recruitment-2.png";
-import hollandColoursLogo from "@/assets/Vitaliteitsprogramma_Holland_Colours-2.png";
+// Client logos - Light versions with transparent backgrounds
+import oliverLogo from "@/assets/Vitaliteitsprogramma_Oliver_Wyman_light.png";
+import sygnificLogo from "@/assets/Vitaliteitsprogramma_Sygnific_light.png";
+import cordaanLogo from "@/assets/Vitaliteitsprogramma_Cordaan_light.png";
+import denHaagLogo from "@/assets/Vitaliteitsprogramma_Gemeente_Den_Haag_light.png";
+import spiritLogo from "@/assets/Vitaliteitsprogramma_Spirit_light.png";
+import vuLogo from "@/assets/Vitaliteitsprogramma_VU_amsterdam_light.png";
+import leaseplanLogo from "@/assets/Vitaliteitsprogramma_Leaseplan_light.png";
+import tele2Logo from "@/assets/Vitaliteitsprogramma_Tele2_light.png";
+import parnassiaLogo from "@/assets/Vitaliteitsprogramma_Parnassia_groep_light.png";
+import lentizLogo from "@/assets/Vitaliteitsprogramma_Lentiz_light.png";
+import primoLogo from "@/assets/Vitaliteitsprogramma_primo_light.png";
+import justitieLogo from "@/assets/Vitaliteitsprogramma_Ministerie_van_justitie_en_veiligheid_light.png";
+import youTalentLogo from "@/assets/Vitaliteitsprogramma_You_Talent_light.png";
+import rijkswaterstaatLogo from "@/assets/Vitaliteitsprogramma_ervaring_met_Rijkswaterstaat_1.png";
+import politieLogo from "@/assets/Vitaliteitsprogramma_Politite_light.png";
+import dhlLogo from "@/assets/Vitaliteitsprogramma_DHL_light.png";
+import affiniusLogo from "@/assets/Vitaliteitsprogramma_Affinius_Capital_light.png";
+import ggzLogo from "@/assets/Vitaliteitsprogramma_GGZ_centraal_light.png";
+import humanitasLogo from "@/assets/Vitaliteitsprogramma_Humanitas_light.png";
+import plevierLogo from "@/assets/Vitaliteitsprogramma_Plevier_light.png";
+import carelLogo from "@/assets/Vitaliteitsprogramma_Carel_Lurvink_light.png";
+import paConsultingLogo from "@/assets/Vitaliteitsprogramma_PA_consulting_light.png";
+import nobelLogo from "@/assets/Vitaliteitsprogramma_nobel_recruitment_light.png";
+import hollandColoursLogo from "@/assets/Vitaliteitsprogramma_Holland_Colours_light.png";
 const HeroSection = () => {
   const [isCalculatorOpen, setIsCalculatorOpen] = useState(false);
   const logos = [{
@@ -118,7 +118,7 @@ const HeroSection = () => {
             <div className="space-y-6 lg:space-y-8 animate-fade-in">
               <div className="space-y-6">
                 {/* 40+ Years Research Badge */}
-                <div className="inline-flex items-center text-blue-200 px-4 py-2 rounded-full text-base md:text-lg font-medium" style={{
+                <div className="inline-flex items-center bg-brand-purple/50 text-white px-4 py-2 rounded-full text-base md:text-lg font-medium backdrop-blur-sm" style={{
                 textShadow: '0 2px 8px rgba(0,0,0,0.5)'
               }}>
                   <Award className="h-4 w-4 mr-2" />
@@ -238,11 +238,11 @@ const HeroSection = () => {
             
             <div className="relative overflow-hidden [mask-image:linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)]">
               <div className="flex gap-8 animate-marquee">
-                {logos.map((logo, index) => <img key={index} src={logo.src} alt={logo.alt} className="h-12 object-contain flex-shrink-0 grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all" />)}
+                {logos.map((logo, index) => <img key={index} src={logo.src} alt={logo.alt} className="h-12 object-contain flex-shrink-0 opacity-100 transition-all" />)}
               </div>
               
               <div className="flex gap-8 animate-marquee absolute top-0 left-0" aria-hidden="true">
-                {logos.map((logo, index) => <img key={`duplicate-${index}`} src={logo.src} alt={logo.alt} className="h-12 object-contain flex-shrink-0 grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all" />)}
+                {logos.map((logo, index) => <img key={`duplicate-${index}`} src={logo.src} alt={logo.alt} className="h-12 object-contain flex-shrink-0 opacity-100 transition-all" />)}
               </div>
             </div>
           </div>
