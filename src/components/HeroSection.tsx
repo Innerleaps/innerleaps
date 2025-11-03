@@ -178,7 +178,8 @@ const HeroSection = () => {
               <div className="flex flex-col sm:flex-row gap-4 max-w-full">
                 <Button
                   size="lg"
-                  className="w-full sm:w-auto bg-brand-orange hover:bg-brand-orange text-white hover:text-white font-semibold py-2.5 sm:py-3 md:py-4 px-4 sm:px-5 md:px-6 rounded-lg text-sm sm:text-base lg:text-lg shadow-xl"
+                  className="w-full w-full text-center whitespace-normal
+sm:w-auto bg-brand-orange hover:bg-brand-orange text-white hover:text-white font-semibold py-2.5 sm:py-3 md:py-4 px-4 sm:px-5 md:px-6 rounded-lg text-sm sm:text-base lg:text-lg shadow-xl"
                   onClick={() => setIsCalculatorOpen(true)}
                 >
                   Ontdek je besparing
@@ -186,7 +187,8 @@ const HeroSection = () => {
                 <Button
                   variant="secondary-on-blue"
                   size="lg"
-                  className="w-full sm:w-auto font-semibold py-2.5 sm:py-3 md:py-4 px-4 sm:px-5 md:px-6 rounded-lg text-sm sm:text-base lg:text-lg"
+                  className="w-full w-full text-center whitespace-normal
+ sm:w-auto font-semibold py-2.5 sm:py-3 md:py-4 px-4 sm:px-5 md:px-6 rounded-lg text-sm sm:text-base lg:text-lg"
                   onClick={() => {
                     const link = document.createElement("a");
                     link.href = "https://calendar.app.google/BgGy8cVUSk4w5Zzg8";
