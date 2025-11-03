@@ -129,13 +129,13 @@ const HeroSection = () => {
                   Wetenschappelijk bewezen programma
                 </div>
 
-                <h1 className="text-xl xs:text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight sm:leading-snug font-heading" style={{
+                <h1 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight sm:leading-snug font-heading" style={{
                 textShadow: '0 2px 8px rgba(0,0,0,0.5)'
               }}>
                   Het <span className="text-brand-orange">vitaliteits{"\u00AD"}programma</span> dat{" "}
                   <span className="text-brand-orange">prestatie</span> verbeterd{" "}
                 </h1>
-                <p className="text-sm xs:text-base sm:text-xl md:text-2xl lg:text-3xl text-blue-100 leading-relaxed" style={{
+                <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-blue-100 leading-relaxed" style={{
                 textShadow: '0 2px 8px rgba(0,0,0,0.5)'
               }}>
                   Wetenschappelijk bewezen vitaliteits{"\u00AD"}programma. Deelnemers ontwikkelen eigenaarschap over hun
@@ -143,11 +143,11 @@ const HeroSection = () => {
                 </p>
               </div>
 
-              <div className="flex flex-col gap-3 sm:gap-4">
-                <Button size="lg" className="w-full bg-brand-orange hover:bg-brand-orange text-white hover:text-white font-semibold py-3 sm:py-4 px-5 sm:px-6 lg:px-8 rounded-lg text-sm sm:text-lg lg:text-xl shadow-xl" onClick={() => setIsCalculatorOpen(true)}>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Button size="lg" className="w-full sm:w-auto bg-brand-orange hover:bg-brand-orange text-white hover:text-white font-semibold py-3 sm:py-4 px-5 sm:px-6 lg:px-8 rounded-lg text-base sm:text-lg lg:text-xl shadow-xl" onClick={() => setIsCalculatorOpen(true)}>
                   Ontdek je besparing
                 </Button>
-                <Button variant="secondary-on-blue" size="lg" className="w-full font-semibold py-3 sm:py-4 px-5 sm:px-6 lg:px-8 rounded-lg text-sm sm:text-lg lg:text-xl" onClick={() => {
+                <Button variant="secondary-on-blue" size="lg" className="w-full sm:w-auto font-semibold py-3 sm:py-4 px-5 sm:px-6 lg:px-8 rounded-lg text-base sm:text-lg lg:text-xl" onClick={() => {
                 const link = document.createElement("a");
                 link.href = "https://calendar.app.google/BgGy8cVUSk4w5Zzg8";
                 link.target = "_blank";
@@ -162,7 +162,7 @@ const HeroSection = () => {
 
             </div>
 
-            <div className="relative animate-scale-in mt-8 lg:mt-0 px-4 sm:px-0">
+            <div className="relative animate-scale-in mt-8 lg:mt-0">
               <div className="rounded-2xl p-4 sm:p-6 lg:p-8 max-w-md mx-auto bg-white/50 backdrop-blur-sm">
                 <div className="space-y-6">
                   <div className="text-center">
