@@ -150,7 +150,7 @@ const HeroSection = () => {
             <div className="space-y-3 sm:space-y-4 md:space-y-6 lg:space-y-8 animate-fade-in w-full max-w-[600px] mx-auto text-center lg:text-left">
               <div className="space-y-6 break-words">
                 {/* Research Badge */}
-                <div className="inline-flex items-center bg-white/50 text-brand-purple px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm md:text-base lg:text-lg font-medium backdrop-blur-sm max-w-full">
+                <div className="inline-flex items-center bg-white/50 text-brand-purple px-2 sm:px-4 py-1 sm:py-2 rounded-full text-xs sm:text-sm md:text-base lg:text-lg font-medium backdrop-blur-sm max-w-full">
                   <Award className="h-4 w-4 mr-2" />
                   Wetenschappelijk bewezen programma
                 </div>
