@@ -353,7 +353,7 @@ const StressManagement = () => {
                 <div className="flex items-start gap-2">
                   <CheckCircle className="h-5 w-5 text-brand-orange flex-shrink-0 mt-0.5" />
                   <p className="text-base md:text-lg text-brand-gray-medium">
-                    Aandachtstraining verbetert je levenssatisfactie aantoonbaar.
+                    Aandachtstraining maakt mensen meer tevreden over hun leven.
                   </p>
                 </div>
               </div>
@@ -365,7 +365,7 @@ const StressManagement = () => {
                 <Shield className="h-8 w-8 text-brand-orange stroke-2" />
               </div>
               <h3 className="text-xl md:text-2xl font-bold text-brand-gray-dark text-center">
-                Verhoogde emotieregulatie
+                Emoties onder controle
               </h3>
               <div className="space-y-2">
                 <div className="flex items-start gap-2">
@@ -443,7 +443,7 @@ const StressManagement = () => {
       <section className="py-16 md:py-24 bg-brand-off-white">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-purple text-center leading-tight mb-6">
-            Het 6-weekse <span className="text-brand-orange">stressmanagement</span> programma: Van spanning naar rust.
+            Het 6-weekse <span className="text-brand-orange">stressmanagement</span> programma. Van spanning naar rust.
           </h2>
           <p className="text-xl md:text-2xl text-brand-gray-medium text-center leading-relaxed mb-12">
             Wetenschappelijk bewezen. Praktisch toepasbaar. Meetbare resultaten.
