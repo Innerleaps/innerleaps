@@ -269,8 +269,7 @@ const StressManagement = () => {
               </div>
               <h3 className="text-xl md:text-2xl font-bold text-brand-gray-dark text-center">Snel geïrriteerd</h3>
               <p className="text-base md:text-lg text-brand-gray-medium text-center">
-                Kleine dingen kunnen je uit je evenwicht brengen. Drukte in huis, een collega die iets vraagt, verkeer –
-                het kost je meer energie dan je zou willen.
+                Kleine dingen kunnen je uit je evenwicht brengen. Drukte in huis, een collega die iets vraagt, file. Het kost je meer energie dan je zou willen.
               </p>
             </div>
 
@@ -281,7 +280,7 @@ const StressManagement = () => {
               </div>
               <h3 className="text-xl md:text-2xl font-bold text-brand-gray-dark text-center">Minder genieten</h3>
               <p className="text-base md:text-lg text-brand-gray-medium text-center">
-                Je merkt dat je niet meer volledig geniet van leuke momenten. Je bent er met je lijf, maar je hoofd is
+                Je merkt dat je niet meer volledig geniet van leuke momenten. Je bent er maar je hoofd is
                 vaak ergens anders.
               </p>
             </div>
@@ -295,7 +294,7 @@ const StressManagement = () => {
                 's Avonds moeilijk uitschakelen
               </h3>
               <p className="text-base md:text-lg text-brand-gray-medium text-center">
-                Als je in bed ligt speelt de volgende dag al door je hoofd. Echt uitrusten lukt niet altijd meer.
+                Jij wil slapen maar je hoofd is nog druk. Je verlangt naar een goede nachtrust. 
               </p>
             </div>
           </div>
@@ -308,7 +307,7 @@ const StressManagement = () => {
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-purple text-center leading-tight mb-6">
            <span className="text-brand-orange"> Rust </span>in je hoofd. 
             <br></br>
-            Meer <span className="text-brand-orange">genieten{" "}</span>.van je leven
+            Meer <span className="text-brand-orange">genieten /span>van je leven
           </h2>
           <p className="text-xl md:text-2xl text-brand-gray-medium text-center leading-relaxed mb-12">
             Wetenschappelijk bewezen effecten:
