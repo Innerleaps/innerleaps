@@ -705,7 +705,7 @@ const StressManagement = () => {
                     <span className="font-semibold">Duur:</span> 60 minuten
                   </p>
                   <p className="text-lg">
-                    <span className="font-semibold">Live online via:</span> Google Hangouts
+                    <span className="font-semibold">Live online via:</span> Google Meet
                   </p>
                   <div>
                     <p className="text-lg font-semibold mb-2">Wanneer:</p>
