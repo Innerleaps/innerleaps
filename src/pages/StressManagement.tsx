@@ -700,13 +700,13 @@ const StressManagement = () => {
             
             <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
               <div className="space-y-6">
-                <h3 className="text-2xl font-bold text-white">Praktisch</h3>
+                
                 <div className="space-y-3 text-white">
                   <p className="text-lg">
                     <span className="font-semibold">Duur:</span> 60 minuten
                   </p>
                   <p className="text-lg">
-                    <span className="font-semibold">Live online via:</span> Google Hangouts
+                    <span className="font-semibold">Live online</span>
                   </p>
                   <div>
                     <p className="text-lg font-semibold mb-2">Wanneer:</p>
