@@ -151,53 +151,8 @@ const OverOns = () => {
         </div>
       </section>
 
-        {/* Sectie 2: Bas's verhaal */}
+        {/* Sectie 2: Onze trainers */}
         <section className="section-padding bg-white">
-          <div className="container-custom">
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-purple leading-tight mb-12 text-center">
-              Waarom Bas <span className="text-brand-orange">InnerLeaps</span> is begonnen
-            </h2>
-            <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-start">
-              {/* Links: Body */}
-              <div className="space-y-4 text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
-                <p>
-                  Hoi, ik ben Bas. Na mijn master Design for Interaction aan de TU Delft werkte ik in consultancy en als productmanager bij een SaaS-bedrijf. 
-                </p>
-                <p>Naast mijn werk met grote ambities houd ik van sporten. Helaas niet zonder gevaren, want mijn snowboardvakantie eindigde met een fikse hersenschudding.</p>
-                <p>
-                  Tijdens mijn herstel verdiepte ik mij in de hersenen en ontdekte ik dat ik die kan trainen. Het was bizar, ik stuite op een berg van 40 jaar wetenschappelijk onderzoek. 
-                </p>
-                <p>
-                  Terug op werk merkte ik het verschil: minder stress, betere concentratie, meer controle over gedrag en gedachten, en een productiviteit die ik nooit eerder kende. Die ervaring wil ik delen. Daarom richtte ik InnerLeaps op.
-                </p>
-                
-              </div>
-              
-              {/* Rechts: Foto + Functie + CTA */}
-              <div className="flex flex-col items-center space-y-6">
-                <img 
-                  src={basPhoto} 
-                  alt="Vitaliteitstrainer Bas ter Haar Romenij | Oprichter InnerLeaps"
-                  className="rounded-full w-64 h-64 object-cover shadow-xl"
-                />
-                <p className="text-xl md:text-2xl font-semibold text-brand-purple text-center">
-                  Bas ter Haar Romenij | Oprichter
-                </p>
-                <Button 
-                  variant="secondary"
-                  size="lg"
-                  className="w-full sm:w-auto font-semibold py-4 px-6 lg:px-8 rounded-lg text-lg lg:text-xl"
-                  onClick={() => window.open('https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1kmdh8c16sdfL2rT3r2bH49IScgjnH-yx3-QStH8VF9ufZBPcwKoL6jfcgLjnRs6iM1KlcXC8i', '_blank')}
-                >
-                  Plan gesprek met Bas
-                </Button>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Sectie 3: Onze trainers */}
-        <section className="section-padding bg-brand-off-white">
           <div className="container-custom">
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-purple leading-tight mb-12 text-center">
               Onze <span className="text-brand-orange">geaccrediteerde</span> trainers
@@ -270,6 +225,51 @@ const OverOns = () => {
                   </div>
                 </div>
               ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Sectie 3: Bas's verhaal */}
+        <section className="section-padding bg-brand-off-white">
+          <div className="container-custom">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-purple leading-tight mb-12 text-center">
+              Waarom Bas <span className="text-brand-orange">InnerLeaps</span> is begonnen
+            </h2>
+            <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-start">
+              {/* Links: Body */}
+              <div className="space-y-4 text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
+                <p>
+                  Hoi, ik ben Bas. Na mijn master Design for Interaction aan de TU Delft werkte ik in consultancy en als productmanager bij een SaaS-bedrijf. 
+                </p>
+                <p>Naast mijn werk met grote ambities houd ik van sporten. Helaas niet zonder gevaren, want mijn snowboardvakantie eindigde met een fikse hersenschudding.</p>
+                <p>
+                  Tijdens mijn herstel verdiepte ik mij in de hersenen en ontdekte ik dat ik die kan trainen. Het was bizar, ik stuite op een berg van 40 jaar wetenschappelijk onderzoek. 
+                </p>
+                <p>
+                  Terug op werk merkte ik het verschil: minder stress, betere concentratie, meer controle over gedrag en gedachten, en een productiviteit die ik nooit eerder kende. Die ervaring wil ik delen. Daarom richtte ik InnerLeaps op.
+                </p>
+                
+              </div>
+              
+              {/* Rechts: Foto + Functie + CTA */}
+              <div className="flex flex-col items-center space-y-6">
+                <img 
+                  src={basPhoto} 
+                  alt="Vitaliteitstrainer Bas ter Haar Romenij | Oprichter InnerLeaps"
+                  className="rounded-full w-64 h-64 object-cover shadow-xl"
+                />
+                <p className="text-xl md:text-2xl font-semibold text-brand-purple text-center">
+                  Bas ter Haar Romenij | Oprichter
+                </p>
+                <Button 
+                  variant="secondary"
+                  size="lg"
+                  className="w-full sm:w-auto font-semibold py-4 px-6 lg:px-8 rounded-lg text-lg lg:text-xl"
+                  onClick={() => window.open('https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1kmdh8c16sdfL2rT3r2bH49IScgjnH-yx3-QStH8VF9ufZBPcwKoL6jfcgLjnRs6iM1KlcXC8i', '_blank')}
+                >
+                  Plan gesprek met Bas
+                </Button>
+              </div>
             </div>
           </div>
         </section>
