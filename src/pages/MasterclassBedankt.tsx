@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import { Check } from "lucide-react";
 import vgzLogo from "@/assets/Vitaliteitprogramma_herkent_door_vgz.png";
-import czLogo from "@/assets/Vitaliteitsprogramma_herkent_door_CZ.png";
+import czLogo from "@/assets/Vitaliteitsprogramma_herkend_door_CZ.png";
 import menzisLogo from "@/assets/Vitaliteitsprogramma_herkent_door_menzis.png";
 
 // Declare gtag for Google Analytics
