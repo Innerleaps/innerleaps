@@ -92,7 +92,7 @@ const StressManagement = () => {
       <SimplifiedNavigation />
 
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center overflow-hidden text-white">
+      <section className="relative min-h-screen flex items-start sm:items-center overflow-hidden text-white">
         <div className="absolute inset-0 z-0">
           <img
             src={heroBackground}
@@ -104,7 +104,7 @@ const StressManagement = () => {
           <div className="absolute inset-0 bg-black/50" />
         </div>
 
-        <div className="relative z-10 w-full px-4 py-8 sm:px-6 sm:py-12 lg:py-20 max-w-7xl mx-auto">
+        <div className="relative z-10 w-full px-4 pt-20 pb-8 sm:px-6 sm:py-12 lg:py-20 max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-12 items-start w-full overflow-hidden">
             <div className="w-full space-y-6 animate-fade-in text-center lg:text-left">
               <div className="w-full space-y-4 sm:space-y-6">
