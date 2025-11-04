@@ -6,7 +6,7 @@ import Footer from "@/components/Footer";
 import { Brain, Heart, Shield, CheckCircle, Target, Award, TrendingUp, FileText, Zap } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import LeadMagnetModal from "@/components/LeadMagnetModal";
-import brainActivityImage from "@/assets/Door_aandachttraining_wordt_informatie_beter_verwerkt_gerichter_vastgehouden_en_efficiënter_ingezet.-2.png";
+import brainActivityImage from "@/assets/hersenen_aandachttraining.png";
 const Wetenschap = () => {
   const [isLeadMagnetOpen, setIsLeadMagnetOpen] = useState(false);
 
