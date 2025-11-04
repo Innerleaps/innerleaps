@@ -41,7 +41,6 @@ import vmbLogo from "@/assets/Geaccrediteerde_vitaliteitstrainers_bij_Innerleaps
 import uMassLogo from "@/assets/Vitaliteitsprogramma_ontwikkeld_door_university_of_massachusetts.png";
 import oxfordLogo from "@/assets/Vitaliteitsprogramma_ontwikkeld_door_oxford.jpg";
 import vgzLogo from "@/assets/Vitaliteitprogramma_herkent_door_vgz.png";
-import achmeaLogo from "@/assets/Vitaliteitsprogramma_herkent_door_zilveren_kruis_achmea.svg";
 import czLogo from "@/assets/Vitaliteitsprogramma_herkend_door_CZ.png";
 import uvaLogo from "@/assets/Aandachttraining_aan_de_universiteit_van_amsterdam_new.png";
 import menzisLogo from "@/assets/Vitaliteitsprogramma_herkend_door_menzis.png";
@@ -747,11 +746,6 @@ const StressManagement = () => {
                     De nederlandse zorgverzekeraars erkennen de methode van Innerleaps als effectief bij stressmanagement.
                   </p>
                   <div className="flex flex-row gap-4 items-center flex-wrap">
-                    <img
-                      src={achmeaLogo}
-                      alt="Vitaliteitsprogramma herkend door Zilveren Kruis Achmea"
-                      className="h-24 object-contain"
-                    />
                     <img src={vgzLogo} alt="Vitaliteitsprogramma herkend door VGZ" className="h-24 object-contain" />
                     <img src={czLogo} alt="Vitaliteitsprogramma herkend door CZ" className="h-24 object-contain" />
                     <img

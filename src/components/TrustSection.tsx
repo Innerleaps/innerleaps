@@ -3,7 +3,6 @@ import vmbLogo from "@/assets/Geaccrediteerde_vitaliteitstrainers_bij_Innerleaps
 import uMassLogo from "@/assets/Vitaliteitsprogramma_ontwikkeld_door_university_of_massachusetts.png";
 import oxfordLogo from "@/assets/Vitaliteitsprogramma_ontwikkeld_door_oxford.jpg";
 import vgzLogo from "@/assets/Vitaliteitprogramma_herkent_door_vgz.png";
-import achmeaLogo from "@/assets/Vitaliteitprogramma_herkent_door_zilveren_kruis_achmea.svg";
 import czLogo from "@/assets/Vitaliteitsprogramma_herkend_door_CZ.png";
 import uvaLogo from "@/assets/Aandachttraining_aan_de_universiteit_van_amsterdam_new.png";
 import menzisLogo from "@/assets/Vitaliteitsprogramma_herkend_door_menzis.png";
@@ -15,7 +14,6 @@ const TrustSection = () => {
       description:
         "De uitgebreide variant van ons programma wordt vergoed vanuit basisverzekering door Nederlandse zorgverzekeraars.",
       logos: [
-        { src: achmeaLogo, alt: "Vitaliteits\u00ADprogramma herkend door Zilveren Kruis Achmea", className: "h-24" },
         { src: vgzLogo, alt: "Vitaliteits\u00ADprogramma herkend door VGZ", className: "h-24" },
         { src: czLogo, alt: "Vitaliteits\u00ADprogramma herkend door CZ", className: "h-24" },
         { src: menzisLogo, alt: "Vitaliteits\u00ADprogramma herkend door Menzis", className: "h-20" },
