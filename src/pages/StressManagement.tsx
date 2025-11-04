@@ -117,7 +117,7 @@ const StressManagement = () => {
                   className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight font-heading break-words"
                   style={{ textShadow: "0 2px 8px rgba(0,0,0,0.5)" }}
                 >
-                  Een <span className="text-brand-orange">druk leven</span> dat veel van je vraagt.
+                  Een <span className="text-brand-orange">druk leven</span> dat veel van je vraagt
                 </h1>
                 <p
                   className="text-xl md:text-2xl text-blue-100 leading-relaxed break-words"
@@ -233,7 +233,7 @@ const StressManagement = () => {
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-purple text-center leading-tight mb-6">
              <span className="text-brand-orange">Veel druk</span> in je leven.
             <br></br>
-            <span className="text-brand-orange"> Weinig rust</span> in je hoofd.{" "} 
+            <span className="text-brand-orange"> Weinig rust</span> in je hoofd{" "} 
           </h2>
           <p className="text-xl md:text-2xl text-brand-gray-medium text-center leading-relaxed mb-12">
             Herken je dit?
