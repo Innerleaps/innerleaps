@@ -200,7 +200,7 @@ const OverOns = () => {
         <section className="section-padding bg-brand-off-white">
           <div className="container-custom">
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-purple leading-tight mb-12 text-center">
-              Onze <span className="text-brand-orange">trainers</span>
+              Onze geaccrediteerde <span className="text-brand-orange">trainers</span>
             </h2>
             <div className="grid md:grid-cols-1 lg:grid-cols-2 gap-8">
               {trainers.map((trainer, index) => (
