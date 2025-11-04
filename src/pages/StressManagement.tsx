@@ -698,7 +698,7 @@ const StressManagement = () => {
           >
             <div className="absolute inset-0 bg-black/30 -z-10"></div>
             
-            <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+            <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
               <div className="space-y-6">
                 <h3 className="text-2xl font-bold text-white">Praktisch</h3>
                 <div className="space-y-3 text-white">
@@ -717,7 +717,9 @@ const StressManagement = () => {
                     </ul>
                   </div>
                 </div>
+              </div>
 
+              <div className="space-y-6">
                 <div className="bg-white/50 backdrop-blur-sm p-4 rounded-lg">
                   <div className="flex items-center gap-2 mb-2">
                     <div className="flex gap-0.5">
@@ -733,16 +735,16 @@ const StressManagement = () => {
                     Denk dat iedereen hier wat aan heeft, dus kan dit zeker aanbevelen."
                   </p>
                 </div>
-              </div>
 
-              <div className="flex items-center justify-center">
-                <Button
-                  size="lg"
-                  className="bg-brand-orange hover:bg-brand-orange/90 text-white py-4 px-8 rounded-lg text-lg md:text-xl font-semibold shadow-xl w-full lg:w-auto"
-                  onClick={scrollToMasterclass}
-                >
-                  Aanmelden gratis masterclass
-                </Button>
+                <div className="flex items-center justify-center lg:justify-start">
+                  <Button
+                    size="lg"
+                    className="bg-brand-orange hover:bg-brand-orange/90 text-white py-4 px-8 rounded-lg text-lg md:text-xl font-semibold shadow-xl w-full lg:w-auto"
+                    onClick={scrollToMasterclass}
+                  >
+                    Aanmelden gratis masterclass
+                  </Button>
+                </div>
               </div>
             </div>
           </div>
@@ -924,13 +926,14 @@ const StressManagement = () => {
       </section>
 
       {/* Sticky CTA Button */}
-      <div className="fixed bottom-6 right-6 z-50 animate-scale-in">
+      <div className="fixed bottom-4 sm:bottom-6 right-4 sm:right-6 z-50 animate-scale-in">
         <Button
           size="lg"
-          className="bg-brand-orange hover:bg-brand-orange/90 text-white font-semibold py-3 px-6 rounded-lg shadow-2xl"
+          className="bg-brand-orange hover:bg-brand-orange/90 text-white font-semibold py-3 sm:py-5 px-4 sm:px-10 rounded-lg text-base sm:text-lg shadow-2xl whitespace-nowrap"
           onClick={scrollToMasterclass}
         >
-          Gratis Masterclass
+          <span className="hidden sm:inline">Gratis Masterclass</span>
+          <span className="sm:hidden">Masterclass</span>
         </Button>
       </div>
 
