@@ -59,6 +59,45 @@ export type Database = {
         }
         Relationships: []
       }
+      masterclass_registrations: {
+        Row: {
+          calendar_url: string | null
+          created_at: string
+          email: string
+          functie_titel: string
+          id: string
+          is_leidinggevende: boolean
+          naam: string
+          selected_timeslot: string
+          source_page: string | null
+          timeslot_display: string
+        }
+        Insert: {
+          calendar_url?: string | null
+          created_at?: string
+          email: string
+          functie_titel: string
+          id?: string
+          is_leidinggevende: boolean
+          naam: string
+          selected_timeslot: string
+          source_page?: string | null
+          timeslot_display: string
+        }
+        Update: {
+          calendar_url?: string | null
+          created_at?: string
+          email?: string
+          functie_titel?: string
+          id?: string
+          is_leidinggevende?: boolean
+          naam?: string
+          selected_timeslot?: string
+          source_page?: string | null
+          timeslot_display?: string
+        }
+        Relationships: []
+      }
       stress_questionnaire_submissions: {
         Row: {
           created_at: string

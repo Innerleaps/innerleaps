@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import SimplifiedNavigation from "@/components/SimplifiedNavigation";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
+import MasterclassFormModal from "@/components/MasterclassFormModal";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { 
   Brain, Heart, Shield, Smile, Moon, CheckCircle, 
@@ -47,7 +48,7 @@ import uvaLogo from "@/assets/Aandachttraining_aan_de_universiteit_van_amsterdam
 import menzisLogo from "@/assets/Vitaliteitsprogramma_herkend_door_menzis.png";
 
 const StressManagement = () => {
-  const [isMasterclassModalOpen, setIsMasterclassModalOpen] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -58,6 +59,10 @@ const StressManagement = () => {
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
     }
+  };
+  
+  const handleModalOpen = () => {
+    setIsModalOpen(true);
   };
 
   const logos = [
@@ -688,7 +693,7 @@ const StressManagement = () => {
           </div>
 
           <div 
-            className="relative p-8 rounded-xl max-w-5xl mx-auto overflow-hidden"
+            className="relative p-8 rounded-xl max-w-7xl mx-auto overflow-hidden"
             style={{
               backgroundImage: `url(${masterclassBackground})`,
               backgroundSize: 'cover',
@@ -696,57 +701,39 @@ const StressManagement = () => {
               backgroundRepeat: 'no-repeat'
             }}
           >
-            <div className="absolute inset-0 bg-black/30 -z-10"></div>
+            <div className="absolute inset-0 bg-black/30"></div>
             
-            <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
-              <div className="space-y-6">
-                                <div className="space-y-3 text-white">
-                  <p className="text-lg">
-                    <span className="font-semibold">Duur:</span> 60 minuten
-                  </p>
-                  <p className="text-lg">
-                    <span className="font-semibold">Live online via:</span> Google Meet
-                  </p>
-                  <div>
-                    <p className="text-lg font-semibold mb-2">Wanneer:</p>
-                    <ul className="space-y-1 text-lg ml-4">
-                      <li>• Dinsdag 19:30 uur</li>
-                      <li>• Woensdag 16:00 uur</li>
-                      <li>• Woensdag 19:30 uur</li>
-                    </ul>
+            <div className="relative z-10 flex flex-col items-center justify-center gap-6 max-w-2xl mx-auto">
+              {/* Review Quote */}
+              <div className="bg-white/50 backdrop-blur-sm p-4 rounded-lg w-full">
+                <div className="flex items-center gap-2 mb-2 justify-center">
+                  <div className="flex gap-0.5">
+                    {[...Array(5)].map((_, i) => (
+                      <Star key={i} className="w-4 h-4 fill-amber-400 text-amber-400" />
+                    ))}
                   </div>
+                  <span className="font-semibold text-brand-gray-dark">4,7 / 5</span>
                 </div>
+                <p className="text-base text-brand-gray-dark italic leading-relaxed text-center">
+                  "Deze workshop laat je duidelijk het belang zien van het trainen van je aandachtsspier. De workshop
+                  bestaat uit een mooie mix tussen oefeningen en theorie, waardoor je gelijk al wat ervaring opdoet.
+                  Denk dat iedereen hier wat aan heeft, dus kan dit zeker aanbevelen."
+                </p>
               </div>
 
-              <div className="space-y-6">
-                <div className="bg-white/50 backdrop-blur-sm p-4 rounded-lg">
-                  <div className="flex items-center gap-2 mb-2">
-                    <div className="flex gap-0.5">
-                      {[...Array(5)].map((_, i) => (
-                        <Star key={i} className="w-4 h-4 fill-amber-400 text-amber-400" />
-                      ))}
-                    </div>
-                    <span className="font-semibold text-brand-gray-dark">4,7 / 5</span>
-                  </div>
-                  <p className="text-base text-brand-gray-dark italic leading-relaxed">
-                    "Deze workshop laat je duidelijk het belang zien van het trainen van je aandachtsspier. De workshop
-                    bestaat uit een mooie mix tussen oefeningen en theorie, waardoor je gelijk al wat ervaring opdoet.
-                    Denk dat iedereen hier wat aan heeft, dus kan dit zeker aanbevelen."
-                  </p>
-                </div>
-
-                <div className="flex items-center justify-center lg:justify-start">
-                  <Button
-                    size="lg"
-                    className="bg-brand-orange hover:bg-brand-orange/90 text-white py-4 px-8 rounded-lg text-lg md:text-xl font-semibold shadow-xl w-full lg:w-auto"
-                    onClick={scrollToMasterclass}
-                  >
-                    Aanmelden gratis masterclass
-                  </Button>
-                </div>
-              </div>
+              {/* CTA Button */}
+              <Button
+                size="lg"
+                className="bg-brand-orange hover:bg-brand-orange/90 text-white py-4 px-8 rounded-lg text-lg md:text-xl font-semibold shadow-xl w-full"
+                onClick={handleModalOpen}
+              >
+                Aanmelden gratis masterclass
+              </Button>
             </div>
           </div>
+          
+          {/* Modal */}
+          <MasterclassFormModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
         </div>
       </section>
 

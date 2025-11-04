@@ -2,3 +2,6 @@ project_id = "bvvzmprtuzdvvosaenbs"
 
 [functions.submit-stress-questionnaire]
 verify_jwt = false
+
+[functions.submit-masterclass-registration]
+verify_jwt = false

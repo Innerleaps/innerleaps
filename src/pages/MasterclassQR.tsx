@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Star, Activity, Brain, RotateCcw, Gift, Mail, Phone } from "lucide-react";
+import MasterclassFormModal from "@/components/MasterclassFormModal";
 import masterclassBackground from "@/assets/Gratis_masterclass_stressmanagement_cursus.png";
 
 // Declare gtag type for Google Analytics
@@ -16,8 +17,7 @@ import czLogo from "@/assets/Vitaliteitsprogramma_herkend_door_CZ.png";
 import menzisLogo from "@/assets/Vitaliteitsprogramma_herkend_door_menzis.png";
 
 const MasterclassQR = () => {
-  const [email, setEmail] = useState("");
-  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -27,51 +27,20 @@ const MasterclassQR = () => {
       window.gtag('event', 'page_view', {
         page_title: 'Masterclass QR Landing',
         page_location: window.location.href,
-        page_path: '/masterclass-qr'
+        page_path: '/masterclass-stress-qr'
       });
     }
   }, []);
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!email) return;
-
-    setIsSubmitting(true);
+  const handleModalOpen = () => {
+    setIsModalOpen(true);
     
-    // Track form submission (conversion)
-    if (typeof window.gtag !== 'undefined') {
-      window.gtag('event', 'conversion', {
-        event_category: 'Masterclass',
-        event_label: 'QR Landing Page',
-        value: 1
-      });
-      
-      window.gtag('event', 'generate_lead', {
-        event_category: 'Masterclass',
-        event_label: 'Email Submitted'
-      });
-    }
-    
-    try {
-      // Simulate submission - replace with actual submission logic
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      
-      // Redirect to calendar booking
-      window.location.href = 'https://calendar.app.google/BgGy8cVUSk4w5Zzg8';
-    } catch (error) {
-      console.error('Submission error:', error);
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
-  
-  const handleButtonClick = () => {
-    // Track CTA button click
+    // Track modal open
     if (typeof window.gtag !== 'undefined') {
       window.gtag('event', 'click', {
         event_category: 'Masterclass',
-        event_label: 'CTA Button Click - QR Landing',
-        value: 1
+        event_label: 'Modal Opened',
+        source: 'QR Landing'
       });
     }
   };
@@ -82,7 +51,7 @@ const MasterclassQR = () => {
       <section className="relative py-12 sm:py-16 px-4 bg-gradient-to-b from-brand-purple to-brand-purple/90 text-white overflow-hidden">
         <div className="max-w-4xl mx-auto text-center space-y-6">
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight">
-            Minder stress, meer <span className="text-brand-orange">levensplezier</span>
+            Minder <span className="text-brand-orange">stress</span>, meer <span className="text-brand-orange">levensplezier</span>
           </h1>
           <p className="text-lg sm:text-xl md:text-2xl text-blue-100 leading-relaxed max-w-2xl mx-auto">
             Ervaar in 60 minuten hoe je met wetenschappelijk bewezen technieken rust in je hoofd krijgt
@@ -152,9 +121,9 @@ const MasterclassQR = () => {
             </div>
           </div>
 
-          {/* Masterclass Details with Background */}
+          {/* CTA Section with Background */}
           <div 
-            className="relative p-6 sm:p-8 rounded-xl max-w-5xl mx-auto overflow-hidden"
+            className="relative p-6 sm:p-8 rounded-xl max-w-7xl mx-auto overflow-hidden"
             style={{
               backgroundImage: `url(${masterclassBackground})`,
               backgroundSize: 'cover',
@@ -164,64 +133,36 @@ const MasterclassQR = () => {
           >
             <div className="absolute inset-0 bg-black/30"></div>
             
-            <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 items-start">
-              <div className="space-y-4 sm:space-y-6">
-                <div className="space-y-3 text-white">
-                  <p className="text-base sm:text-lg">
-                    <span className="font-semibold">Duur:</span> 60 minuten
-                  </p>
-                  <p className="text-base sm:text-lg">
-                    <span className="font-semibold">Live online via:</span> Google Meet
-                  </p>
-                  <div>
-                    <p className="text-base sm:text-lg font-semibold mb-2">Wanneer:</p>
-                    <ul className="space-y-1 text-base sm:text-lg ml-4">
-                      <li>• Dinsdag 19:30 uur</li>
-                      <li>• Woensdag 16:00 uur</li>
-                      <li>• Woensdag 19:30 uur</li>
-                    </ul>
+            <div className="relative z-10 flex flex-col items-center justify-center gap-6 max-w-2xl mx-auto">
+              {/* Review Quote */}
+              <div className="bg-white/50 backdrop-blur-sm p-4 rounded-lg w-full">
+                <div className="flex items-center gap-2 mb-2 justify-center">
+                  <div className="flex gap-0.5">
+                    {[...Array(5)].map((_, i) => (
+                      <Star key={i} className="w-4 h-4 fill-amber-400 text-amber-400" />
+                    ))}
                   </div>
+                  <span className="font-semibold text-brand-gray-dark">4,7 / 5</span>
                 </div>
+                <p className="text-sm sm:text-base text-brand-gray-dark italic leading-relaxed text-center">
+                  "Deze workshop laat je duidelijk het belang zien van het trainen van je aandachtsspier. De workshop
+                  bestaat uit een mooie mix tussen oefeningen en theorie, waardoor je gelijk al wat ervaring opdoet."
+                </p>
               </div>
-
-              <div className="space-y-4 sm:space-y-6">
-                <div className="bg-white/50 backdrop-blur-sm p-4 rounded-lg">
-                  <div className="flex items-center gap-2 mb-2">
-                    <div className="flex gap-0.5">
-                      {[...Array(5)].map((_, i) => (
-                        <Star key={i} className="w-4 h-4 fill-amber-400 text-amber-400" />
-                      ))}
-                    </div>
-                    <span className="font-semibold text-brand-gray-dark">4,7 / 5</span>
-                  </div>
-                  <p className="text-sm sm:text-base text-brand-gray-dark italic leading-relaxed">
-                    "Deze workshop laat je duidelijk het belang zien van het trainen van je aandachtsspier. De workshop
-                    bestaat uit een mooie mix tussen oefeningen en theorie, waardoor je gelijk al wat ervaring opdoet."
-                  </p>
-                </div>
-
-                <form onSubmit={handleSubmit} className="space-y-3">
-                  <input
-                    type="email"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    placeholder="je.email@voorbeeld.nl"
-                    required
-                    className="w-full px-4 py-3 rounded-lg bg-white/90 backdrop-blur-sm text-brand-gray-dark placeholder:text-brand-gray-medium/70 focus:outline-none focus:ring-2 focus:ring-brand-orange"
-                  />
-                  <Button
-                    type="submit"
-                    disabled={isSubmitting}
-                    size="lg"
-                    onClick={handleButtonClick}
-                    className="w-full bg-brand-orange hover:bg-brand-orange/90 text-white py-4 px-8 rounded-lg text-lg font-semibold shadow-xl"
-                  >
-                    {isSubmitting ? 'Bezig...' : 'Aanmelden gratis masterclass'}
-                  </Button>
-                </form>
-              </div>
+              
+              {/* CTA Button */}
+              <Button
+                onClick={handleModalOpen}
+                size="lg"
+                className="w-full bg-brand-orange hover:bg-brand-orange/90 text-white py-4 px-8 rounded-lg text-lg font-semibold shadow-xl"
+              >
+                Aanmelden gratis masterclass
+              </Button>
             </div>
           </div>
+          
+          {/* Modal */}
+          <MasterclassFormModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
         </div>
       </section>
 
