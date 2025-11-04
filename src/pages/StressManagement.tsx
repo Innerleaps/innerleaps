@@ -700,8 +700,7 @@ const StressManagement = () => {
             
             <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
               <div className="space-y-6">
-                <h3 className="text-2xl font-bold text-white">Praktisch</h3>
-                <div className="space-y-3 text-white">
+                                <div className="space-y-3 text-white">
                   <p className="text-lg">
                     <span className="font-semibold">Duur:</span> 60 minuten
                   </p>
@@ -711,8 +710,8 @@ const StressManagement = () => {
                   <div>
                     <p className="text-lg font-semibold mb-2">Wanneer:</p>
                     <ul className="space-y-1 text-lg ml-4">
-                      <li>• Dinsdag 16:00 uur</li>
                       <li>• Dinsdag 19:30 uur</li>
+                      <li>• Woensdag 16:00 uur</li>
                       <li>• Woensdag 19:30 uur</li>
                     </ul>
                   </div>
