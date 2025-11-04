@@ -17,6 +17,7 @@ import BerekeningDemo from "./pages/BerekeningDemo";
 import LevenVragenlijst from "./pages/LevenVragenlijst";
 import LevenVragenlijstResultaat from "./pages/LevenVragenlijstResultaat";
 import StressManagement from "./pages/StressManagement";
+import MasterclassQR from "./pages/MasterclassQR";
 import NotFound from "./pages/NotFound";
 import UnderConstruction from "./pages/UnderConstruction";
 
@@ -45,6 +46,7 @@ const App = () => {
                 <Route path="/berekening" element={<Berekening />} />
                 <Route path="/berekening-demo" element={<BerekeningDemo />} />
                 <Route path="/stressmanagement-programma" element={<StressManagement />} />
+                <Route path="/masterclass-qr" element={<MasterclassQR />} />
               </>
             )}
             <Route path="*" element={!import.meta.env.PROD ? <NotFound /> : <LandingPage />} />

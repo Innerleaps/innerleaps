@@ -3,6 +3,13 @@ import { Button } from "@/components/ui/button";
 import { Star, Activity, Brain, RotateCcw, Gift, Mail, Phone } from "lucide-react";
 import masterclassBackground from "@/assets/Gratis_masterclass_stressmanagement_cursus.png";
 
+// Declare gtag type for Google Analytics
+declare global {
+  interface Window {
+    gtag?: (command: string, eventName: string, params?: Record<string, any>) => void;
+  }
+}
+
 // Trust logos
 import vgzLogo from "@/assets/Vitaliteitprogramma_herkent_door_vgz.png";
 import czLogo from "@/assets/Vitaliteitsprogramma_herkend_door_CZ.png";
@@ -14,6 +21,15 @@ const MasterclassQR = () => {
 
   useEffect(() => {
     window.scrollTo(0, 0);
+    
+    // Track page view
+    if (typeof window.gtag !== 'undefined') {
+      window.gtag('event', 'page_view', {
+        page_title: 'Masterclass QR Landing',
+        page_location: window.location.href,
+        page_path: '/masterclass-qr'
+      });
+    }
   }, []);
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -21,6 +37,20 @@ const MasterclassQR = () => {
     if (!email) return;
 
     setIsSubmitting(true);
+    
+    // Track form submission (conversion)
+    if (typeof window.gtag !== 'undefined') {
+      window.gtag('event', 'conversion', {
+        event_category: 'Masterclass',
+        event_label: 'QR Landing Page',
+        value: 1
+      });
+      
+      window.gtag('event', 'generate_lead', {
+        event_category: 'Masterclass',
+        event_label: 'Email Submitted'
+      });
+    }
     
     try {
       // Simulate submission - replace with actual submission logic
@@ -32,6 +62,17 @@ const MasterclassQR = () => {
       console.error('Submission error:', error);
     } finally {
       setIsSubmitting(false);
+    }
+  };
+  
+  const handleButtonClick = () => {
+    // Track CTA button click
+    if (typeof window.gtag !== 'undefined') {
+      window.gtag('event', 'click', {
+        event_category: 'Masterclass',
+        event_label: 'CTA Button Click - QR Landing',
+        value: 1
+      });
     }
   };
 
@@ -172,6 +213,7 @@ const MasterclassQR = () => {
                     type="submit"
                     disabled={isSubmitting}
                     size="lg"
+                    onClick={handleButtonClick}
                     className="w-full bg-brand-orange hover:bg-brand-orange/90 text-white py-4 px-8 rounded-lg text-lg font-semibold shadow-xl"
                   >
                     {isSubmitting ? 'Bezig...' : 'Aanmelden gratis masterclass'}
