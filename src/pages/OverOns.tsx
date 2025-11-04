@@ -161,13 +161,14 @@ const OverOns = () => {
               {/* Links: Body */}
               <div className="space-y-4 text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
                 <p>
-                  Hoi, ik ben Bas. Na mijn master Design for Interaction aan de TU Delft werkte ik in consultancy en als productmanager bij een SaaS-bedrijf. Naast mijn werk met grote ambities houd ik van sporten. Helaas niet zonder gevaren, want mijn snowboardvakantie in 2022 eindigde door een fikse hersenschudding.
+                  Hoi, ik ben Bas. Na mijn master Design for Interaction aan de TU Delft werkte ik in consultancy en als productmanager bij een SaaS-bedrijf. 
+                </p>
+                <p>Naast mijn werk met grote ambities houd ik van sporten. Helaas niet zonder gevaren, want mijn snowboardvakantie in 2022 eindigde door een fikse hersenschudding.</p>
+                <p>
+                  Tijdens mijn herstel verdiepte ik mij in de hersenen en ontdekte ik dat ik die kan trainen. Het was bizar, ik stuite op een berg van 40 jaar wetenschappelijk onderzoek. 
                 </p>
                 <p>
-                  Tijdens mijn herstel verdiepte ik mij in de hersenen en ontdekte ik dat ik die kan trainen. Het was bizar, ik stuite op een berg van 40 jaar wetenschappelijk onderzoek. Terug op werk merkte ik het verschil: minder stress, betere concentratie, meer controle over gedrag en gedachten, en een productiviteit die ik nooit eerder kende.
-                </p>
-                <p>
-                  Die ervaring wil ik delen. Daarom richtte ik InnerLeaps op.
+                  Terug op werk merkte ik het verschil: minder stress, betere concentratie, meer controle over gedrag en gedachten, en een productiviteit die ik nooit eerder kende. Die ervaring wil ik delen. Daarom richtte ik InnerLeaps op.
                 </p>
                 
               </div>
