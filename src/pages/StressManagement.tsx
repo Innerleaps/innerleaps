@@ -589,7 +589,7 @@ const StressManagement = () => {
       <section className="py-16 md:py-24 bg-brand-off-white">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-purple text-center leading-tight mb-6">
-            Laat je <span className="text-brand-orange">werkgever</span> jou deelname vergoeden
+            Laat je <span className="text-brand-orange">werkgever</span> jou deelname <span className="text-brand-orange">vergoeden</span>
           </h2>
           <p className="text-xl md:text-2xl text-brand-gray-medium text-center leading-relaxed mb-12 max-w-4xl mx-auto">
             Veel werkgevers vergoeden dit programma vanuit het persoonlijk ontwikkelingsbudget. Wij leveren een brochure
