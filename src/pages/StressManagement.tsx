@@ -6,9 +6,10 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { 
   Brain, Heart, Shield, Smile, Moon, CheckCircle, 
   AlertCircle, Frown, BedDouble, Calendar, Clock, 
-  Laptop, Award, Activity, RotateCcw, BookOpen, Star, Check 
+  Laptop, Award, Activity, RotateCcw, BookOpen, Star, Check, Gift
 } from "lucide-react";
 import heroBackground from "@/assets/Vitaliteitsprogramma_presentatie_Innerleaps.png";
+import masterclassBackground from "@/assets/Gratis_masterclass_stressmanagement_cursus.png";
 
 // Client logos
 import oliverLogo from "@/assets/Vitaliteitsprogramma_Oliver_Wyman_light-2.png";
@@ -443,7 +444,7 @@ const StressManagement = () => {
       <section className="py-16 md:py-24 bg-brand-off-white">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-purple text-center leading-tight mb-6">
-            Het 6-weekse <span className="text-brand-orange">stressmanagement</span> programma. Van spanning naar rust.
+            Het 6-weekse <span className="text-brand-orange">stressmanagement</span> programma: Van spanning naar rust
           </h2>
           <p className="text-xl md:text-2xl text-brand-gray-medium text-center leading-relaxed mb-12">
             Wetenschappelijk bewezen. Praktisch toepasbaar. Meetbare resultaten.
@@ -510,66 +511,78 @@ const StressManagement = () => {
       {/* 6 Weken Thema's Sectie */}
       <section className="py-16 md:py-24 bg-white">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-purple text-center leading-tight mb-12">
-            6 weken, 6 thema's voor echte verandering.
-          </h2>
+        <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-purple text-center leading-tight mb-12">
+          6 weken, 6 thema's voor <span className="text-brand-orange">echte verandering</span>
+        </h2>
 
           <div className="max-w-3xl mx-auto space-y-6">
-            <div className="bg-brand-off-white p-6 rounded-xl space-y-3">
-              <span className="inline-block bg-brand-orange text-white px-3 py-1 rounded-full text-sm font-semibold">
-                Week 1
-              </span>
-              <h3 className="text-xl font-bold text-brand-gray-dark">Loskomen van de automatische piloot</h3>
+            <div className="bg-brand-off-white p-6 rounded-xl space-y-2">
+              <div className="flex items-center gap-3">
+                <span className="bg-brand-orange text-white px-3 py-1 rounded-full text-sm font-semibold whitespace-nowrap">
+                  Week 1
+                </span>
+                <h3 className="text-xl font-bold text-brand-gray-dark">Loskomen van de automatische piloot</h3>
+              </div>
               <p className="text-lg text-brand-gray-medium leading-relaxed">
                 Herken wanneer je op de automatische piloot zit en leer je aandacht terug te pakken.
               </p>
             </div>
 
-            <div className="bg-brand-off-white p-6 rounded-xl space-y-3">
-              <span className="inline-block bg-brand-orange text-white px-3 py-1 rounded-full text-sm font-semibold">
-                Week 2
-              </span>
-              <h3 className="text-xl font-bold text-brand-gray-dark">Stress signalen van het lichaam herkennen</h3>
+            <div className="bg-brand-off-white p-6 rounded-xl space-y-2">
+              <div className="flex items-center gap-3">
+                <span className="bg-brand-orange text-white px-3 py-1 rounded-full text-sm font-semibold whitespace-nowrap">
+                  Week 2
+                </span>
+                <h3 className="text-xl font-bold text-brand-gray-dark">Stress signalen van het lichaam herkennen</h3>
+              </div>
               <p className="text-lg text-brand-gray-medium leading-relaxed">
                 Je lichaam geeft signalen. Leer ze tijdig herkennen voordat spanning escaleert.
               </p>
             </div>
 
-            <div className="bg-brand-off-white p-6 rounded-xl space-y-3">
-              <span className="inline-block bg-brand-orange text-white px-3 py-1 rounded-full text-sm font-semibold">
-                Week 3
-              </span>
-              <h3 className="text-xl font-bold text-brand-gray-dark">Met aandacht door het dagelijkse leven</h3>
+            <div className="bg-brand-off-white p-6 rounded-xl space-y-2">
+              <div className="flex items-center gap-3">
+                <span className="bg-brand-orange text-white px-3 py-1 rounded-full text-sm font-semibold whitespace-nowrap">
+                  Week 3
+                </span>
+                <h3 className="text-xl font-bold text-brand-gray-dark">Met aandacht door het dagelijkse leven</h3>
+              </div>
               <p className="text-lg text-brand-gray-medium leading-relaxed">
                 Integreer aandacht in je dagelijkse routines. Praktisch en toepasbaar.
               </p>
             </div>
 
-            <div className="bg-brand-off-white p-6 rounded-xl space-y-3">
-              <span className="inline-block bg-brand-orange text-white px-3 py-1 rounded-full text-sm font-semibold">
-                Week 4
-              </span>
-              <h3 className="text-xl font-bold text-brand-gray-dark">Omgaan met stressvolle gedachten</h3>
+            <div className="bg-brand-off-white p-6 rounded-xl space-y-2">
+              <div className="flex items-center gap-3">
+                <span className="bg-brand-orange text-white px-3 py-1 rounded-full text-sm font-semibold whitespace-nowrap">
+                  Week 4
+                </span>
+                <h3 className="text-xl font-bold text-brand-gray-dark">Omgaan met stressvolle gedachten</h3>
+              </div>
               <p className="text-lg text-brand-gray-medium leading-relaxed">
                 Gedachten zijn geen feiten. Leer ruimte te creëren tussen gedachte en reactie.
               </p>
             </div>
 
-            <div className="bg-brand-off-white p-6 rounded-xl space-y-3">
-              <span className="inline-block bg-brand-orange text-white px-3 py-1 rounded-full text-sm font-semibold">
-                Week 5
-              </span>
-              <h3 className="text-xl font-bold text-brand-gray-dark">Samenwerken en luisteren met aandacht</h3>
+            <div className="bg-brand-off-white p-6 rounded-xl space-y-2">
+              <div className="flex items-center gap-3">
+                <span className="bg-brand-orange text-white px-3 py-1 rounded-full text-sm font-semibold whitespace-nowrap">
+                  Week 5
+                </span>
+                <h3 className="text-xl font-bold text-brand-gray-dark">Samenwerken en luisteren met aandacht</h3>
+              </div>
               <p className="text-lg text-brand-gray-medium leading-relaxed">
                 Betere communicatie door bewuste aandacht in gesprekken en samenwerking.
               </p>
             </div>
 
-            <div className="bg-brand-off-white p-6 rounded-xl space-y-3">
-              <span className="inline-block bg-brand-orange text-white px-3 py-1 rounded-full text-sm font-semibold">
-                Week 6
-              </span>
-              <h3 className="text-xl font-bold text-brand-gray-dark">Implementatie in het dagelijks leven</h3>
+            <div className="bg-brand-off-white p-6 rounded-xl space-y-2">
+              <div className="flex items-center gap-3">
+                <span className="bg-brand-orange text-white px-3 py-1 rounded-full text-sm font-semibold whitespace-nowrap">
+                  Week 6
+                </span>
+                <h3 className="text-xl font-bold text-brand-gray-dark">Implementatie in het dagelijks leven</h3>
+              </div>
               <p className="text-lg text-brand-gray-medium leading-relaxed">
                 Maak het blijvend. Integreer de geleerde technieken in je dagelijkse routine.
               </p>
@@ -632,7 +645,7 @@ const StressManagement = () => {
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto mb-12">
-            <div className="bg-white border-2 border-brand-off-white p-6 rounded-xl space-y-4">
+            <div className="bg-brand-off-white p-6 rounded-xl space-y-4">
               <div className="p-3 rounded-lg bg-brand-orange/10 w-fit mx-auto">
                 <Activity className="h-10 w-10 text-brand-orange stroke-2" />
               </div>
@@ -642,7 +655,7 @@ const StressManagement = () => {
               </p>
             </div>
 
-            <div className="bg-white border-2 border-brand-off-white p-6 rounded-xl space-y-4">
+            <div className="bg-brand-off-white p-6 rounded-xl space-y-4">
               <div className="p-3 rounded-lg bg-brand-orange/10 w-fit mx-auto">
                 <Brain className="h-10 w-10 text-brand-orange stroke-2" />
               </div>
@@ -653,7 +666,7 @@ const StressManagement = () => {
               </p>
             </div>
 
-            <div className="bg-white border-2 border-brand-off-white p-6 rounded-xl space-y-4">
+            <div className="bg-brand-off-white p-6 rounded-xl space-y-4">
               <div className="p-3 rounded-lg bg-brand-orange/10 w-fit mx-auto">
                 <RotateCcw className="h-10 w-10 text-brand-orange stroke-2" />
               </div>
@@ -663,22 +676,32 @@ const StressManagement = () => {
               </p>
             </div>
 
-            <div className="bg-white border-2 border-brand-off-white p-6 rounded-xl space-y-4">
+            <div className="bg-brand-off-white p-6 rounded-xl space-y-4">
               <div className="p-3 rounded-lg bg-brand-orange/10 w-fit mx-auto">
-                <BookOpen className="h-10 w-10 text-brand-orange stroke-2" />
+                <Gift className="h-10 w-10 text-brand-orange stroke-2" />
               </div>
-              <h3 className="text-xl font-bold text-brand-gray-dark text-center">Theorie</h3>
+              <h3 className="text-xl font-bold text-brand-gray-dark text-center">Gratis</h3>
               <p className="text-base md:text-lg text-brand-gray-medium text-center leading-relaxed">
-                Naast alle ervaringen leggen wij ook uit hoe jouw aandachtssysteem werkt.
+                Wij geloven dat iedereen onze effectieve techniek moet kunnen proberen. Daarom is onze masterclass volledig gratis en vrijblijvend.
               </p>
             </div>
           </div>
 
-          <div className="bg-brand-off-white p-8 rounded-xl max-w-5xl mx-auto">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+          <div 
+            className="relative p-8 rounded-xl max-w-5xl mx-auto overflow-hidden"
+            style={{
+              backgroundImage: `url(${masterclassBackground})`,
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+              backgroundRepeat: 'no-repeat'
+            }}
+          >
+            <div className="absolute inset-0 bg-black/30 -z-10"></div>
+            
+            <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
               <div className="space-y-6">
-                <h3 className="text-2xl font-bold text-brand-purple">Praktisch</h3>
-                <div className="space-y-3 text-brand-gray-dark">
+                <h3 className="text-2xl font-bold text-white">Praktisch</h3>
+                <div className="space-y-3 text-white">
                   <p className="text-lg">
                     <span className="font-semibold">Duur:</span> 60 minuten
                   </p>
@@ -695,7 +718,7 @@ const StressManagement = () => {
                   </div>
                 </div>
 
-                <div className="bg-white p-4 rounded-lg">
+                <div className="bg-white/50 backdrop-blur-sm p-4 rounded-lg">
                   <div className="flex items-center gap-2 mb-2">
                     <div className="flex gap-0.5">
                       {[...Array(5)].map((_, i) => (
@@ -704,7 +727,7 @@ const StressManagement = () => {
                     </div>
                     <span className="font-semibold text-brand-gray-dark">4,7 / 5</span>
                   </div>
-                  <p className="text-base text-brand-gray-medium italic leading-relaxed">
+                  <p className="text-base text-brand-gray-dark italic leading-relaxed">
                     "Deze workshop laat je duidelijk het belang zien van het trainen van je aandachtsspier. De workshop
                     bestaat uit een mooie mix tussen oefeningen en theorie, waardoor je gelijk al wat ervaring opdoet.
                     Denk dat iedereen hier wat aan heeft, dus kan dit zeker aanbevelen."
@@ -715,10 +738,10 @@ const StressManagement = () => {
               <div className="flex items-center justify-center">
                 <Button
                   size="lg"
-                  className="bg-brand-orange hover:bg-brand-orange/90 text-white py-6 px-10 rounded-lg text-xl font-semibold shadow-xl w-full lg:w-auto"
+                  className="bg-brand-orange hover:bg-brand-orange/90 text-white py-4 px-8 rounded-lg text-lg md:text-xl font-semibold shadow-xl w-full lg:w-auto"
                   onClick={scrollToMasterclass}
                 >
-                  Ja, ik meld me aan voor de gratis masterclass
+                  Aanmelden gratis masterclass
                 </Button>
               </div>
             </div>
