@@ -208,15 +208,11 @@ const MasterclassQR = () => {
             <p className="text-base sm:text-lg text-brand-gray-dark font-semibold">Vragen? Neem contact op</p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8 text-brand-gray-medium">
               <a
-                href="mailto:info@innerleaps.nl"
+                href="mailto:bas@innerleaps.nl"
                 className="flex items-center gap-2 hover:text-brand-orange transition-colors"
               >
                 <Mail className="h-5 w-5" />
-                <span>info@innerleaps.nl</span>
-              </a>
-              <a href="tel:+31621967068" className="flex items-center gap-2 hover:text-brand-orange transition-colors">
-                <Phone className="h-5 w-5" />
-                <span>06 21 96 70 68</span>
+                <span>bas@innerleaps.nl</span>
               </a>
             </div>
             <p className="text-sm text-brand-gray-medium pt-4">
