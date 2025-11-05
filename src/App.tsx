@@ -18,6 +18,7 @@ import BerekeningDemo from "./pages/BerekeningDemo";
 import LevenVragenlijst from "./pages/LevenVragenlijst";
 import LevenVragenlijstResultaat from "./pages/LevenVragenlijstResultaat";
 import StressManagement from "./pages/StressManagement";
+import PrestatieProgramma from "./pages/PrestatieProgramma";
 import MasterclassQR from "./pages/MasterclassQR";
 import MasterclassBedankt from "./pages/MasterclassBedankt";
 import NegenStippen from "./pages/NegenStippen";
@@ -40,8 +41,9 @@ const App = () => {
             <Route path="/contact" element={<Contact />} />
             <Route path="/wetenschap" element={<Wetenschap />} />
             <Route path="/over-ons" element={<OverOns />} />
-            <Route path="/9-stippen-oplossing" element={<NegenStippen />} />
+            <Route path="/9-stippen" element={<NegenStippen />} />
             <Route path="/stressmanagement-programma" element={<StressManagement />} />
+            <Route path="/prestatie-programma" element={<PrestatieProgramma />} />
             
             {/* Feature-flag routes - visible in Lovable editor, but redirect in production */}
             <Route path="/masterclass-stress-qr" element={
