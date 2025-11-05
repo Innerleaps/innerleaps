@@ -4,6 +4,7 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { ProductionRedirect } from "./components/ProductionRedirect";
 import Index from "./pages/Index";
 import LandingPage from "./pages/LandingPage";
 import Wetenschap from "./pages/Wetenschap";
@@ -38,6 +39,20 @@ const App = () => {
             <Route path="/contact" element={<Contact />} />
             <Route path="/wetenschap" element={<Wetenschap />} />
             <Route path="/over-ons" element={<OverOns />} />
+            
+            {/* Feature-flag routes - visible in Lovable editor, but redirect in production */}
+            <Route path="/masterclass-stress-qr" element={
+              <ProductionRedirect>
+                <MasterclassQR />
+              </ProductionRedirect>
+            } />
+            <Route path="/masterclass-bedankt" element={
+              <ProductionRedirect>
+                <MasterclassBedankt />
+              </ProductionRedirect>
+            } />
+            
+            {/* Development-only routes */}
             {!import.meta.env.PROD && (
               <>
                 <Route path="/home" element={<Index />} />
@@ -47,10 +62,9 @@ const App = () => {
                 <Route path="/berekening" element={<Berekening />} />
                 <Route path="/berekening-demo" element={<BerekeningDemo />} />
                 <Route path="/stressmanagement-programma" element={<StressManagement />} />
-                <Route path="/masterclass-stress-qr" element={<MasterclassQR />} />
-                <Route path="/masterclass-bedankt" element={<MasterclassBedankt />} />
               </>
             )}
+            
             <Route path="*" element={!import.meta.env.PROD ? <NotFound /> : <LandingPage />} />
           </Routes>
         </BrowserRouter>
