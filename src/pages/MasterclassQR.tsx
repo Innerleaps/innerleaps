@@ -73,7 +73,7 @@ const MasterclassQR = () => {
       <section className="py-12 sm:py-16 md:py-20 bg-brand-off-white">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-brand-purple text-center leading-tight mb-4 sm:mb-6">
-            Wat krijg je in de <span className="text-brand-orange">gratis masterclass </span>?
+            Wat krijg je in de <span className="text-brand-orange">gratis masterclass</span>?
           </h2>
           <p className="text-lg sm:text-xl text-brand-gray-medium text-center leading-relaxed mb-8 sm:mb-12 max-w-3xl mx-auto">
             In 60 minuten maak je op speelse wijze kennis met onze aanpak
