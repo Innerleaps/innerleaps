@@ -5,6 +5,7 @@ import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import raadselImage from '@/assets/9_stippen_raadsel.png';
 import oplossingImage from '@/assets/9_stippen_oplossing.png';
+import kantineImage from '@/assets/druk_en_spanning_stressmanagement.jpg';
 
 const NegenStippen = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -18,7 +19,7 @@ const NegenStippen = () => {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="section-padding bg-brand-off-white">
+      <section className="section-padding bg-white">
         <div className="container-custom text-center">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-purple mb-6">
             9 Stippen
@@ -32,7 +33,62 @@ const NegenStippen = () => {
         </div>
       </section>
 
-      {/* De Opdracht Section */}
+      {/* Scenario Section */}
+      <section className="section-padding bg-brand-off-white">
+        <div className="container-custom">
+          <h2 className="text-3xl md:text-4xl font-bold text-brand-purple mb-8 text-center">
+            Stel je het volgende voor:
+          </h2>
+          
+          <div className="max-w-6xl mx-auto">
+            <div className="grid md:grid-cols-2 gap-8 items-center">
+              {/* Tekst links */}
+              <div className="space-y-6">
+                <p className="text-lg md:text-xl text-brand-gray-medium leading-relaxed">
+                  Je zit in een sollicitatiegesprek. Niet alleen - er zijn 3 andere kandidaten. Jullie zitten in de drukke bedrijfskantine. Om jullie heen lopen mensen, klinkt bestek, gesprekken, een koffiemachine die stomt.
+                </p>
+
+                <p className="text-lg md:text-xl text-brand-gray-medium leading-relaxed">
+                  Je potentiële nieuwe manager legt een vel papier voor jullie neer en zegt:
+                </p>
+
+                <div className="border-l-4 border-brand-orange pl-6 py-4 bg-white/50">
+                  <p className="text-lg md:text-xl text-brand-gray-medium leading-relaxed italic mb-4">
+                    "Ik wil kijken of jullie scherp zijn, creatief met oplossingen kunnen komen en snel kunnen werken. Daarom wil ik dat jullie dit raadsel oplossen."
+                  </p>
+                  <p className="text-lg md:text-xl text-brand-gray-medium leading-relaxed italic mb-4">
+                    "Jullie hebben drie minuten. Maar de meeste kandidaten lossen dit op in 1 minuet."
+                  </p>
+                  <p className="text-lg md:text-xl text-brand-gray-medium leading-relaxed italic">
+                    "Ik zal aan één van jullie vragen om zijn of haar aanpak te presenteren."
+                  </p>
+                </div>
+
+                <p className="text-lg md:text-xl text-brand-gray-medium leading-relaxed">
+                  Hij kijkt jullie aan. De andere kandidaten buigen zich al over het papier.
+                </p>
+                
+                <p className="text-lg md:text-xl font-bold text-brand-orange text-center pt-4">
+                  Je hebt 3 minuten. De klok tikt.
+                  <br />
+                  <span className="text-2xl">GO! Begin nu.</span>
+                </p>
+              </div>
+
+              {/* Afbeelding rechts */}
+              <div className="flex justify-center">
+                <img 
+                  src={kantineImage} 
+                  alt="Drukke bedrijfskantine tijdens sollicitatiegesprek" 
+                  className="w-full h-auto rounded-lg shadow-lg"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* De Opdracht Section met geïntegreerde oplossing */}
       <section className="section-padding bg-white">
         <div className="container-custom">
           <h2 className="text-3xl md:text-4xl font-bold text-brand-purple mb-8 text-center">
@@ -51,74 +107,33 @@ const NegenStippen = () => {
                 className="max-w-md w-full h-auto"
               />
             </div>
-          </div>
-        </div>
-      </section>
 
-      {/* De Uitdaging Section */}
-      <section className="section-padding bg-brand-off-white">
-        <div className="container-custom">
-          <h2 className="text-3xl md:text-4xl font-bold text-brand-purple mb-8 text-center">
-            Stel je het volgende voor:
-          </h2>
-          
-          <div className="max-w-4xl mx-auto space-y-6">
-            <p className="text-lg md:text-xl text-brand-gray-medium leading-relaxed">
-              Je zit met 3 collega's in een restaurant op een druk station. Door de open deur hoor je omroepberichten, haastige reizigers en het geratel van koffers. Mensen lopen voorbij, praten hard.
-            </p>
-
-            <p className="text-lg md:text-xl text-brand-gray-medium leading-relaxed">
-              Jullie leidinggevende loopt binnen en zegt:
-            </p>
-
-            <div className="border-l-4 border-brand-orange pl-6 py-4 my-6 bg-white/50">
-              <p className="text-lg md:text-xl text-brand-gray-medium leading-relaxed italic">
-                "Over 3 minuten moet een van jullie je aanpak presenteren aan het hele bedrijf. Andere collega's hebben het raadsel in 1 minuut opgelost."
-              </p>
+            {/* Oplossing collapsible - verplaatst hierheen */}
+            <div className="pt-6">
+              <Collapsible open={isOpen} onOpenChange={setIsOpen}>
+                <CollapsibleTrigger className="w-full border-2 border-brand-orange rounded-lg p-6 hover:bg-brand-off-white transition-all duration-300">
+                  <div className="flex items-center justify-between">
+                    <span className="text-xl md:text-2xl font-semibold text-brand-orange">
+                      {isOpen ? "Verberg de oplossing" : "Klik hier voor de oplossing"}
+                    </span>
+                    {isOpen ? (
+                      <ChevronUp className="h-6 w-6 text-brand-orange" />
+                    ) : (
+                      <ChevronDown className="h-6 w-6 text-brand-orange" />
+                    )}
+                  </div>
+                </CollapsibleTrigger>
+                <CollapsibleContent className="mt-6">
+                  <div className="flex justify-center">
+                    <img 
+                      src={oplossingImage} 
+                      alt="9 stippen oplossing" 
+                      className="max-w-md w-full h-auto"
+                    />
+                  </div>
+                </CollapsibleContent>
+              </Collapsible>
             </div>
-
-            <p className="text-lg md:text-xl text-brand-gray-medium leading-relaxed">
-              Ja? Heb je de situatie ingebeeld?
-            </p>
-            
-            <p className="text-lg md:text-xl font-bold text-brand-orange text-center pt-4">
-              GO! Je hebt 3 minuten. De klok tikt.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* De Oplossing Section */}
-      <section className="section-padding bg-white">
-        <div className="container-custom">
-          <h2 className="text-3xl md:text-4xl font-bold text-brand-purple mb-8 text-center">
-            De oplossing
-          </h2>
-          
-          <div className="max-w-3xl mx-auto">
-            <Collapsible open={isOpen} onOpenChange={setIsOpen}>
-              <CollapsibleTrigger className="w-full border-2 border-brand-orange rounded-lg p-6 hover:bg-brand-off-white transition-all duration-300">
-                <div className="flex items-center justify-between">
-                  <span className="text-xl md:text-2xl font-semibold text-brand-orange">
-                    {isOpen ? "Verberg de oplossing" : "Klik hier voor de oplossing"}
-                  </span>
-                  {isOpen ? (
-                    <ChevronUp className="h-6 w-6 text-brand-orange" />
-                  ) : (
-                    <ChevronDown className="h-6 w-6 text-brand-orange" />
-                  )}
-                </div>
-              </CollapsibleTrigger>
-              <CollapsibleContent className="mt-6">
-                <div className="flex justify-center">
-                  <img 
-                    src={oplossingImage} 
-                    alt="9 stippen oplossing" 
-                    className="max-w-md w-full h-auto"
-                  />
-                </div>
-              </CollapsibleContent>
-            </Collapsible>
           </div>
         </div>
       </section>
@@ -138,10 +153,10 @@ const NegenStippen = () => {
             <div className="space-y-3">
               {[
                 "Frustratie voelde omdat het niet lukte",
-                "Afleiding ervaarde door de drukke omgeving met omroepen",
-                "Spanning voelde door de tijdsdruk",
+                "Afleiding ervaarde door de drukke kantine met gesprekken en rondlopende mensen",
+                "Spanning voelde door de tijdsdruk en competitie",
                 "Ongemak kreeg bij de mogelijkheid dat jij moet presenteren",
-                "Onzekerheid voelde of het jou wel in 1 minuut zou lukken"
+                "Onzekerheid voelde of je het wel sneller dan de anderen zou oplossen"
               ].map((item, index) => (
                 <div key={index} className="flex gap-3 items-start">
                   <span className="text-brand-orange text-xl mt-1">•</span>
