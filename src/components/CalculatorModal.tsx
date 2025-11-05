@@ -27,6 +27,11 @@ const CalculatorModal = ({ isOpen, onClose }: CalculatorModalProps) => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
 
+  // Check if all required contact fields are filled
+  const isContactInfoComplete = formData.naam.trim() !== '' && 
+                                formData.email.trim() !== '' && 
+                                formData.bedrijfsnaam.trim() !== '';
+
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -290,19 +295,19 @@ const CalculatorModal = ({ isOpen, onClose }: CalculatorModalProps) => {
               <p className="text-brand-gray-medium mb-6">
                 Ontvang jouw gepersonaliseerde ROI-analyse direct per email
               </p>
-              <div className="flex justify-end space-x-3">
-                <Button
-                  type="button"
-                  variant="outline"
-                  onClick={handleClose}
-                  className="px-6 border-brand-blue text-brand-blue hover:bg-brand-blue hover:text-white"
-                >
-                  Annuleren
-                </Button>
+              <div className="flex justify-center">
                 <Button
                   type="submit"
-                  disabled={isSubmitting}
-                  className="px-8 py-3 bg-brand-orange hover:bg-brand-orange/90 text-white font-semibold disabled:opacity-50"
+                  disabled={isSubmitting || !isContactInfoComplete}
+                  className={`
+                    px-8 py-4 rounded-lg shadow-xl font-semibold text-lg
+                    transition-all duration-300
+                    ${isContactInfoComplete 
+                      ? 'bg-brand-orange hover:bg-brand-orange/90 text-white cursor-pointer' 
+                      : 'bg-gray-300 text-gray-500 cursor-not-allowed'
+                    }
+                    ${isSubmitting ? 'opacity-50' : ''}
+                  `}
                 >
                   {isSubmitting ? 'Jouw analyse wordt verstuurd...' : 'Verstuur mijn ROI-analyse'}
                 </Button>
