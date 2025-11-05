@@ -6,27 +6,19 @@ import Footer from "@/components/Footer";
 import raadselImage from "@/assets/9_stippen_raadsel.png";
 import oplossingImage from "@/assets/9_stippen_oplossing.png";
 import kantineImage from "@/assets/druk_en_spanning_stressmanagement.jpg";
-
 const NegenStippen = () => {
   const [isOpen, setIsOpen] = useState(false);
-
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-
-  return (
-    <div className="min-h-screen flex flex-col">
+  return <div className="min-h-screen flex flex-col">
       <Navigation />
 
       {/* Hero Section with Background */}
       <section className="relative min-h-screen flex items-center overflow-hidden">
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
-          <img 
-            src={kantineImage} 
-            alt="Drukke bedrijfskantine" 
-            className="w-full h-full object-cover"
-          />
+          <img src={kantineImage} alt="Drukke bedrijfskantine" className="w-full h-full object-cover" />
           <div className="absolute inset-0 bg-black/50" />
         </div>
 
@@ -94,11 +86,7 @@ const NegenStippen = () => {
                 </p>
 
                 <div className="flex justify-center">
-                  <img 
-                    src={raadselImage} 
-                    alt="9 stippen raadsel" 
-                    className="max-w-xs w-full h-auto"
-                  />
+                  <img src={raadselImage} alt="9 stippen raadsel" className="max-w-xs w-full h-auto" />
                 </div>
 
                 {/* Oplossing collapsible */}
@@ -108,20 +96,12 @@ const NegenStippen = () => {
                       <span className="text-lg md:text-xl font-semibold text-brand-orange">
                         {isOpen ? "Verberg de oplossing" : "Klik hier voor de oplossing"}
                       </span>
-                      {isOpen ? (
-                        <ChevronUp className="h-5 w-5 text-brand-orange" />
-                      ) : (
-                        <ChevronDown className="h-5 w-5 text-brand-orange" />
-                      )}
+                      {isOpen ? <ChevronUp className="h-5 w-5 text-brand-orange" /> : <ChevronDown className="h-5 w-5 text-brand-orange" />}
                     </div>
                   </CollapsibleTrigger>
                   <CollapsibleContent className="mt-4">
                     <div className="flex justify-center">
-                      <img 
-                        src={oplossingImage} 
-                        alt="9 stippen oplossing" 
-                        className="max-w-xs w-full h-auto"
-                      />
+                      <img src={oplossingImage} alt="9 stippen oplossing" className="max-w-xs w-full h-auto" />
                     </div>
                   </CollapsibleContent>
                 </Collapsible>
@@ -150,18 +130,10 @@ const NegenStippen = () => {
             </p>
 
             <div className="space-y-3">
-              {[
-                "Frustratie voelde omdat het niet lukte",
-                "Afleiding ervaarde door de drukke kantine met gesprekken en rondlopende mensen",
-                "Spanning voelde door de tijdsdruk en competitie",
-                "Ongemak kreeg bij de mogelijkheid dat jij moet presenteren",
-                "Onzekerheid voelde of je het wel sneller dan de anderen zou oplossen",
-              ].map((item, index) => (
-                <div key={index} className="flex gap-3 items-start">
+              {["Frustratie voelde omdat het niet lukte", "Afleiding ervaarde door de drukke kantine met gesprekken en rondlopende mensen", "Spanning voelde door de tijdsdruk en competitie", "Ongemak kreeg bij de mogelijkheid dat jij moet presenteren", "Onzekerheid voelde of je het wel sneller dan de anderen zou oplossen"].map((item, index) => <div key={index} className="flex gap-3 items-start">
                   <span className="text-brand-orange text-xl mt-1">•</span>
                   <p className="text-lg md:text-xl text-brand-gray-medium">{item}</p>
-                </div>
-              ))}
+                </div>)}
             </div>
 
             <p className="text-lg md:text-xl text-brand-gray-medium leading-relaxed pt-6">
@@ -182,9 +154,7 @@ const NegenStippen = () => {
                 <button className="px-8 py-4 bg-brand-purple text-white text-lg font-semibold rounded-lg hover:bg-brand-purple/90 transition-colors shadow-md">
                   Minder spanning & druk in mijn leven
                 </button>
-                <button className="px-8 py-4 bg-brand-purple text-white text-lg font-semibold rounded-lg hover:bg-brand-purple/90 transition-colors shadow-md">
-                  Beter kunnen presteren
-                </button>
+                <button className="px-8 py-4 bg-brand-purple text-white text-lg font-semibold rounded-lg hover:bg-brand-purple/90 transition-colors shadow-md">Met meer focus beter presteren</button>
               </div>
             </div>
           </div>
@@ -192,8 +162,6 @@ const NegenStippen = () => {
       </section>
 
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default NegenStippen;
