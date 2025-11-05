@@ -112,9 +112,8 @@ const generateEmailHTML = (data: ROIAnalysisRequest): string => {
           
           <!-- Header -->
           <tr>
-            <td style="background: linear-gradient(135deg, #0f766e 0%, #14b8a6 100%); padding: 40px 30px; text-align: center;">
-              <h1 style="margin: 0; color: #ffffff; font-size: 28px; font-weight: 700;">ROI-Analyse InnerLeaps</h1>
-              <p style="margin: 10px 0 0 0; color: #ffffff; font-size: 18px;">${safeBedrijfsnaam}</p>
+            <td style="background: linear-gradient(135deg, #1e293b 0%, #4b5563 100%); padding: 40px 30px; text-align: center;">
+              <h1 style="margin: 0; color: #ffffff; font-size: 28px; font-weight: 700;">ROI van Innerleaps voor ${safeBedrijfsnaam}</h1>
             </td>
           </tr>
 
@@ -137,7 +136,7 @@ const generateEmailHTML = (data: ROIAnalysisRequest): string => {
                       <tr><td style="padding: 10px 0 4px 0; color: #4b5563;">Netto besparing</td></tr>
                       <tr><td style="padding: 4px 0; font-weight: 700; color: #1f2937;">${formatCurrency(scenarios.scenario1.netBesparing)}</td></tr>
                       <tr><td style="padding: 10px 0 4px 0; color: #4b5563;">ROI</td></tr>
-                      <tr><td style="padding: 4px 0; font-weight: 700; font-size: 18px; color: #0f766e;">${formatPercentage(scenarios.scenario1.roi)}</td></tr>
+                      <tr><td style="padding: 4px 0; font-weight: 700; font-size: 18px; color: #ea580c;">${formatPercentage(scenarios.scenario1.roi)}</td></tr>
                     </table>
                   </td>
 
@@ -145,7 +144,7 @@ const generateEmailHTML = (data: ROIAnalysisRequest): string => {
                   <td style="width: 2%;"></td>
 
                   <!-- Scenario 2 -->
-                  <td style="width: 32%; padding: 20px; background-color: #f0fdfa; border: 2px solid #14b8a6; border-radius: 8px; vertical-align: top;">
+                  <td style="width: 32%; padding: 20px; background-color: #fff5f0; border: 2px solid #ea580c; border-radius: 8px; vertical-align: top;">
                     <h3 style="margin: 0 0 10px 0; font-size: 18px; color: #1f2937;">${escapeHtml(scenarios.scenario2.name)}</h3>
                     <p style="margin: 0 0 15px 0; font-size: 13px; color: #6b7280; line-height: 1.5;">${escapeHtml(scenarios.scenario2.description)}</p>
                     <table role="presentation" style="width: 100%; font-size: 14px;">
@@ -158,7 +157,7 @@ const generateEmailHTML = (data: ROIAnalysisRequest): string => {
                       <tr><td style="padding: 10px 0 4px 0; color: #4b5563;">Netto besparing</td></tr>
                       <tr><td style="padding: 4px 0; font-weight: 700; color: #1f2937;">${formatCurrency(scenarios.scenario2.netBesparing)}</td></tr>
                       <tr><td style="padding: 10px 0 4px 0; color: #4b5563;">ROI</td></tr>
-                      <tr><td style="padding: 4px 0; font-weight: 700; font-size: 18px; color: #0f766e;">${formatPercentage(scenarios.scenario2.roi)}</td></tr>
+                      <tr><td style="padding: 4px 0; font-weight: 700; font-size: 18px; color: #ea580c;">${formatPercentage(scenarios.scenario2.roi)}</td></tr>
                     </table>
                   </td>
 
@@ -179,7 +178,7 @@ const generateEmailHTML = (data: ROIAnalysisRequest): string => {
                       <tr><td style="padding: 10px 0 4px 0; color: #4b5563;">Netto besparing</td></tr>
                       <tr><td style="padding: 4px 0; font-weight: 700; color: #1f2937;">${formatCurrency(scenarios.scenario3.netBesparing)}</td></tr>
                       <tr><td style="padding: 10px 0 4px 0; color: #4b5563;">ROI</td></tr>
-                      <tr><td style="padding: 4px 0; font-weight: 700; font-size: 18px; color: #0f766e;">${formatPercentage(scenarios.scenario3.roi)}</td></tr>
+                      <tr><td style="padding: 4px 0; font-weight: 700; font-size: 18px; color: #ea580c;">${formatPercentage(scenarios.scenario3.roi)}</td></tr>
                     </table>
                   </td>
                 </tr>
@@ -188,8 +187,9 @@ const generateEmailHTML = (data: ROIAnalysisRequest): string => {
               <!-- CTA Button -->
               <table role="presentation" style="width: 100%; margin: 0 0 40px 0;">
                 <tr>
-                  <td style="text-align: center; padding: 20px 0;">
-                    <a href="https://calendar.app.google/BgGy8cVUSk4w5Zzg8" style="display: inline-block; background-color: #ea580c; color: #ffffff; padding: 16px 40px; text-decoration: none; border-radius: 8px; font-weight: 600; font-size: 16px;">Plan een gesprek</a>
+                  <td style="text-align: center;">
+                    <p style="margin: 0 0 20px 0; font-size: 16px; color: #4b5563;">Wil je kijken hoe ${safeBedrijfsnaam} deze resultaten kan behalen?</p>
+                    <a href="https://calendar.app.google/BgGy8cVUSk4w5Zzg8" style="display: inline-block; background-color: #ea580c; color: #ffffff; padding: 16px 40px; text-decoration: none; border-radius: 8px; font-weight: 600; font-size: 16px;">Maak vrijblijvend kennis met Bas</a>
                   </td>
                 </tr>
               </table>
@@ -229,7 +229,7 @@ const generateEmailText = (data: ROIAnalysisRequest): string => {
   const { naam, bedrijfsnaam, calculationResults } = data;
   const { scenarios, numberOfGroups } = calculationResults;
   
-  return `ROI-Analyse InnerLeaps - ${bedrijfsnaam}
+  return `ROI van Innerleaps voor ${bedrijfsnaam}
 
 Beste ${naam},
 
@@ -268,7 +268,9 @@ ROI: ${formatPercentage(scenarios.scenario3.roi)}
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-PLAN EEN GESPREK
+Wil je kijken hoe ${bedrijfsnaam} deze resultaten kan behalen?
+
+MAAK VRIJBLIJVEND KENNIS MET BAS
 https://calendar.app.google/BgGy8cVUSk4w5Zzg8
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
@@ -311,7 +313,7 @@ const handler = async (req: Request): Promise<Response> => {
     await resend.emails.send({
       from: "InnerLeaps <info@innerleaps.nl>",
       to: [validatedData.email],
-      subject: `Jouw ROI-analyse voor ${validatedData.bedrijfsnaam}`,
+      subject: `Ontdek de ROI van Innerleaps voor ${validatedData.bedrijfsnaam}`,
       html: htmlContent,
       text: textContent,
       replyTo: "bas@innerleaps.nl",

@@ -123,7 +123,7 @@ export const calculateMBSRSavings = (inputs: CalculationInputs): CalculationResu
       },
       scenario2: {
         name: "Realistisch Conservatief",
-        description: "Alle minimale impacts (aanbevolen scenario)",
+        description: "Alle minimale impacts",
         verzuimBesparing: Math.round(s2_verzuim),
         retentieBesparing: Math.round(s2_retentie),
         productiviteitBesparing: Math.round(s2_productiviteit),
