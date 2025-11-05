@@ -161,11 +161,11 @@ const CalculatorModal = ({ isOpen, onClose }: CalculatorModalProps) => {
             </div>
             
             <DialogTitle className="text-3xl font-bold mb-6 text-brand-gray-dark">
-              Bereken jouw ROI: van investering naar rendement
+              Bereken wat ons programma oplevert
             </DialogTitle>
             
             <p className="text-xl leading-relaxed mb-8 text-brand-gray-medium">
-              Ontvang een gepersonaliseerde ROI-analyse voor het InnerLeaps Life+ programma direct in je mailbox. Gebaseerd op wetenschappelijk onderzoek en jouw specifieke bedrijfssituatie.
+              Vul de gegevens in en ontvang een gepersonaliseerde ROI-analyse. Deze is gebaseerd op het kernprogramma van InnerLeaps en wetenschappelijk onderzoek.
             </p>
           </div>
         </DialogHeader>
@@ -292,9 +292,6 @@ const CalculatorModal = ({ isOpen, onClose }: CalculatorModalProps) => {
             </div>
 
             <div className="text-center">
-              <p className="text-brand-gray-medium mb-6">
-                Ontvang jouw gepersonaliseerde ROI-analyse direct per email
-              </p>
               <div className="flex justify-center">
                 <Button
                   type="submit"
@@ -309,7 +306,7 @@ const CalculatorModal = ({ isOpen, onClose }: CalculatorModalProps) => {
                     ${isSubmitting ? 'opacity-50' : ''}
                   `}
                 >
-                  {isSubmitting ? 'Jouw analyse wordt verstuurd...' : 'Verstuur mijn ROI-analyse'}
+                  {isSubmitting ? 'Jouw analyse wordt verstuurd...' : 'ROI berekening ontvangen'}
                 </Button>
               </div>
             </div>

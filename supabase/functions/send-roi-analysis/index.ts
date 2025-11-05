@@ -99,103 +99,193 @@ const generateEmailHTML = (data: ROIAnalysisRequest): string => {
   return `
 <!DOCTYPE html>
 <html>
-<head><meta charset="UTF-8"></head>
-<body style="font-family: Arial, sans-serif; line-height: 1.6; color: #333;">
-  <div style="max-width: 800px; margin: 0 auto; padding: 20px;">
-    <div style="background: linear-gradient(135deg, #0f766e 0%, #14b8a6 100%); color: white; padding: 30px; border-radius: 10px 10px 0 0; text-align: center;">
-      <h1 style="margin: 0;">ROI-Analyse InnerLeaps</h1>
-      <p style="margin: 10px 0 0 0;">${safeBedrijfsnaam}</p>
-    </div>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ROI-Analyse InnerLeaps</title>
+</head>
+<body style="margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; line-height: 1.6; color: #1f2937; background-color: #f9fafb;">
+  <table role="presentation" style="width: 100%; border-collapse: collapse;">
+    <tr>
+      <td style="padding: 20px 0;">
+        <table role="presentation" style="max-width: 900px; margin: 0 auto; background-color: #ffffff; border-radius: 8px; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
+          
+          <!-- Header -->
+          <tr>
+            <td style="background: linear-gradient(135deg, #0f766e 0%, #14b8a6 100%); padding: 40px 30px; text-align: center;">
+              <h1 style="margin: 0; color: #ffffff; font-size: 28px; font-weight: 700;">ROI-Analyse InnerLeaps</h1>
+              <p style="margin: 10px 0 0 0; color: #ffffff; font-size: 18px;">${safeBedrijfsnaam}</p>
+            </td>
+          </tr>
 
-    <div style="background: white; padding: 30px; border-radius: 0 0 10px 10px;">
-      <p>Beste ${safeNaam},</p>
-      <p>Hieronder vind je drie scenario's voor ${safeBedrijfsnaam} met ${data.aantalDeelnemers} deelnemers (${numberOfGroups} groep${numberOfGroups !== 1 ? 'en' : ''}).</p>
+          <!-- Content -->
+          <tr>
+            <td style="padding: 40px 30px;">
+              <p style="margin: 0 0 20px 0; font-size: 16px;">Beste ${safeNaam},</p>
+              <p style="margin: 0 0 30px 0; font-size: 16px;">Hieronder vind je drie scenario's voor ${safeBedrijfsnaam} met ${data.aantalDeelnemers} deelnemers (${numberOfGroups} groep${numberOfGroups !== 1 ? 'en' : ''}).</p>
 
-      <!-- Scenario 1 -->
-      <div style="border: 2px solid #e5e7eb; border-radius: 8px; padding: 20px; margin: 20px 0;">
-        <h3>${escapeHtml(scenarios.scenario1.name)}</h3>
-        <p style="color: #6b7280;">${escapeHtml(scenarios.scenario1.description)}</p>
-        <table style="width: 100%;">
-          <tr><td>Verzuimbesparing</td><td style="text-align: right;"><strong>${formatCurrency(scenarios.scenario1.verzuimBesparing)}</strong></td></tr>
-          <tr><td>Netto besparing</td><td style="text-align: right;"><strong>${formatCurrency(scenarios.scenario1.netBesparing)}</strong></td></tr>
-          <tr><td>ROI</td><td style="text-align: right;"><strong>${formatPercentage(scenarios.scenario1.roi)}</strong></td></tr>
+              <!-- Three Scenarios Side by Side -->
+              <table role="presentation" style="width: 100%; border-collapse: collapse; margin: 0 0 40px 0;">
+                <tr>
+                  <!-- Scenario 1 -->
+                  <td style="width: 32%; padding: 20px; background-color: #f9fafb; border: 2px solid #e5e7eb; border-radius: 8px; vertical-align: top;">
+                    <h3 style="margin: 0 0 10px 0; font-size: 18px; color: #1f2937;">${escapeHtml(scenarios.scenario1.name)}</h3>
+                    <p style="margin: 0 0 15px 0; font-size: 13px; color: #6b7280; line-height: 1.5;">${escapeHtml(scenarios.scenario1.description)}</p>
+                    <table role="presentation" style="width: 100%; font-size: 14px;">
+                      <tr><td style="padding: 4px 0; color: #4b5563;">Verzuimbesparing</td></tr>
+                      <tr><td style="padding: 4px 0; font-weight: 700; color: #1f2937;">${formatCurrency(scenarios.scenario1.verzuimBesparing)}</td></tr>
+                      <tr><td style="padding: 10px 0 4px 0; color: #4b5563;">Netto besparing</td></tr>
+                      <tr><td style="padding: 4px 0; font-weight: 700; color: #1f2937;">${formatCurrency(scenarios.scenario1.netBesparing)}</td></tr>
+                      <tr><td style="padding: 10px 0 4px 0; color: #4b5563;">ROI</td></tr>
+                      <tr><td style="padding: 4px 0; font-weight: 700; font-size: 18px; color: #0f766e;">${formatPercentage(scenarios.scenario1.roi)}</td></tr>
+                    </table>
+                  </td>
+
+                  <!-- Spacer -->
+                  <td style="width: 2%;"></td>
+
+                  <!-- Scenario 2 -->
+                  <td style="width: 32%; padding: 20px; background-color: #f0fdfa; border: 2px solid #14b8a6; border-radius: 8px; vertical-align: top;">
+                    <h3 style="margin: 0 0 10px 0; font-size: 18px; color: #1f2937;">${escapeHtml(scenarios.scenario2.name)}</h3>
+                    <p style="margin: 0 0 15px 0; font-size: 13px; color: #6b7280; line-height: 1.5;">${escapeHtml(scenarios.scenario2.description)}</p>
+                    <table role="presentation" style="width: 100%; font-size: 14px;">
+                      <tr><td style="padding: 4px 0; color: #4b5563;">Verzuimbesparing</td></tr>
+                      <tr><td style="padding: 4px 0; color: #1f2937;">${formatCurrency(scenarios.scenario2.verzuimBesparing)}</td></tr>
+                      <tr><td style="padding: 4px 0; color: #4b5563;">Retentiebesparing</td></tr>
+                      <tr><td style="padding: 4px 0; color: #1f2937;">${formatCurrency(scenarios.scenario2.retentieBesparing)}</td></tr>
+                      <tr><td style="padding: 4px 0; color: #4b5563;">Productiviteit</td></tr>
+                      <tr><td style="padding: 4px 0; color: #1f2937;">${formatCurrency(scenarios.scenario2.productiviteitBesparing)}</td></tr>
+                      <tr><td style="padding: 10px 0 4px 0; color: #4b5563;">Netto besparing</td></tr>
+                      <tr><td style="padding: 4px 0; font-weight: 700; color: #1f2937;">${formatCurrency(scenarios.scenario2.netBesparing)}</td></tr>
+                      <tr><td style="padding: 10px 0 4px 0; color: #4b5563;">ROI</td></tr>
+                      <tr><td style="padding: 4px 0; font-weight: 700; font-size: 18px; color: #0f766e;">${formatPercentage(scenarios.scenario2.roi)}</td></tr>
+                    </table>
+                  </td>
+
+                  <!-- Spacer -->
+                  <td style="width: 2%;"></td>
+
+                  <!-- Scenario 3 -->
+                  <td style="width: 32%; padding: 20px; background-color: #f9fafb; border: 2px solid #e5e7eb; border-radius: 8px; vertical-align: top;">
+                    <h3 style="margin: 0 0 10px 0; font-size: 18px; color: #1f2937;">${escapeHtml(scenarios.scenario3.name)}</h3>
+                    <p style="margin: 0 0 15px 0; font-size: 13px; color: #6b7280; line-height: 1.5;">${escapeHtml(scenarios.scenario3.description)}</p>
+                    <table role="presentation" style="width: 100%; font-size: 14px;">
+                      <tr><td style="padding: 4px 0; color: #4b5563;">Verzuimbesparing</td></tr>
+                      <tr><td style="padding: 4px 0; color: #1f2937;">${formatCurrency(scenarios.scenario3.verzuimBesparing)}</td></tr>
+                      <tr><td style="padding: 4px 0; color: #4b5563;">Retentiebesparing</td></tr>
+                      <tr><td style="padding: 4px 0; color: #1f2937;">${formatCurrency(scenarios.scenario3.retentieBesparing)}</td></tr>
+                      <tr><td style="padding: 4px 0; color: #4b5563;">Productiviteit</td></tr>
+                      <tr><td style="padding: 4px 0; color: #1f2937;">${formatCurrency(scenarios.scenario3.productiviteitBesparing)}</td></tr>
+                      <tr><td style="padding: 10px 0 4px 0; color: #4b5563;">Netto besparing</td></tr>
+                      <tr><td style="padding: 4px 0; font-weight: 700; color: #1f2937;">${formatCurrency(scenarios.scenario3.netBesparing)}</td></tr>
+                      <tr><td style="padding: 10px 0 4px 0; color: #4b5563;">ROI</td></tr>
+                      <tr><td style="padding: 4px 0; font-weight: 700; font-size: 18px; color: #0f766e;">${formatPercentage(scenarios.scenario3.roi)}</td></tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+
+              <!-- CTA Button -->
+              <table role="presentation" style="width: 100%; margin: 0 0 40px 0;">
+                <tr>
+                  <td style="text-align: center; padding: 20px 0;">
+                    <a href="https://calendar.app.google/BgGy8cVUSk4w5Zzg8" style="display: inline-block; background-color: #ea580c; color: #ffffff; padding: 16px 40px; text-decoration: none; border-radius: 8px; font-weight: 600; font-size: 16px;">Plan een gesprek</a>
+                  </td>
+                </tr>
+              </table>
+
+              <!-- Scientific Sources -->
+              <div style="background-color: #f9fafb; padding: 25px; border-radius: 8px; margin: 0 0 30px 0;">
+                <h3 style="margin: 0 0 15px 0; font-size: 18px; color: #1f2937;">Wetenschappelijke Bronnen</h3>
+                <ul style="margin: 0; padding-left: 20px; font-size: 14px; color: #4b5563; line-height: 1.8;">
+                  <li><strong>Verzuimkosten (${calculationResults.constants.VK}x):</strong> Sazas (2024)</li>
+                  <li><strong>Verzuimreductie (15-21%):</strong> Virgili (2015) - Meta-analyse 19 studies</li>
+                  <li><strong>Vervangingskosten (${calculationResults.constants.VKP}x):</strong> O'Connell & Kung (2007)</li>
+                  <li><strong>Retentie & Productiviteit (5-8%):</strong> Khoury et al. (2015), Good et al. (2016)</li>
+                </ul>
+              </div>
+
+              <!-- Signature -->
+              <p style="margin: 0; font-size: 16px;">Met vriendelijke groet,<br><strong>Het InnerLeaps Team</strong></p>
+            </td>
+          </tr>
+
+          <!-- Footer -->
+          <tr>
+            <td style="background-color: #f9fafb; padding: 20px 30px; text-align: center; border-top: 1px solid #e5e7eb;">
+              <p style="margin: 0; font-size: 13px; color: #6b7280;">InnerLeaps - Vitaliteitsprogramma's voor duurzame inzetbaarheid</p>
+            </td>
+          </tr>
+
         </table>
-      </div>
-
-      <!-- Scenario 2 - Aanbevolen -->
-      <div style="background: linear-gradient(135deg, #0f766e, #14b8a6); color: white; border: 4px solid #ea580c; border-radius: 8px; padding: 20px; margin: 20px 0;">
-        <div style="text-align: center; background: #ea580c; margin: -20px -20px 15px -20px; padding: 5px; border-radius: 4px 4px 0 0;"><strong>⭐ AANBEVOLEN</strong></div>
-        <h3>${escapeHtml(scenarios.scenario2.name)}</h3>
-        <p>${escapeHtml(scenarios.scenario2.description)}</p>
-        <table style="width: 100%; color: white;">
-          <tr><td>Verzuimbesparing</td><td style="text-align: right;">${formatCurrency(scenarios.scenario2.verzuimBesparing)}</td></tr>
-          <tr><td>Retentiebesparing</td><td style="text-align: right;">${formatCurrency(scenarios.scenario2.retentieBesparing)}</td></tr>
-          <tr><td>Productiviteit</td><td style="text-align: right;">${formatCurrency(scenarios.scenario2.productiviteitBesparing)}</td></tr>
-          <tr><td><strong>Netto besparing</strong></td><td style="text-align: right;"><strong>${formatCurrency(scenarios.scenario2.netBesparing)}</strong></td></tr>
-          <tr><td><strong>ROI</strong></td><td style="text-align: right;"><strong>${formatPercentage(scenarios.scenario2.roi)}</strong></td></tr>
-        </table>
-      </div>
-
-      <!-- Scenario 3 -->
-      <div style="border: 2px solid #e5e7eb; border-radius: 8px; padding: 20px; margin: 20px 0;">
-        <h3>${escapeHtml(scenarios.scenario3.name)}</h3>
-        <p style="color: #6b7280;">${escapeHtml(scenarios.scenario3.description)}</p>
-        <table style="width: 100%;">
-          <tr><td>Verzuimbesparing</td><td style="text-align: right;">${formatCurrency(scenarios.scenario3.verzuimBesparing)}</td></tr>
-          <tr><td>Retentiebesparing</td><td style="text-align: right;">${formatCurrency(scenarios.scenario3.retentieBesparing)}</td></tr>
-          <tr><td>Productiviteit</td><td style="text-align: right;">${formatCurrency(scenarios.scenario3.productiviteitBesparing)}</td></tr>
-          <tr><td><strong>Netto besparing</strong></td><td style="text-align: right;"><strong>${formatCurrency(scenarios.scenario3.netBesparing)}</strong></td></tr>
-          <tr><td><strong>ROI</strong></td><td style="text-align: right;"><strong>${formatPercentage(scenarios.scenario3.roi)}</strong></td></tr>
-        </table>
-      </div>
-
-      <h3>Wetenschappelijke Bronnen</h3>
-      <ul>
-        <li><strong>Verzuimkosten (${calculationResults.constants.VK}x):</strong> Sazas (2024)</li>
-        <li><strong>Verzuimreductie (15-21%):</strong> Virgili (2015) - Meta-analyse 19 studies</li>
-        <li><strong>Vervangingskosten (${calculationResults.constants.VKP}x):</strong> O'Connell & Kung (2007)</li>
-        <li><strong>Retentie & Productiviteit (5-8%):</strong> Khoury et al. (2015), Good et al. (2016)</li>
-      </ul>
-
-      <div style="text-align: center; margin: 30px 0;">
-        <a href="https://calendar.app.google/BgGy8cVUSk4w5Zzg8" style="display: inline-block; background: #0f766e; color: white; padding: 15px 30px; text-decoration: none; border-radius: 6px; font-weight: bold;">📅 Plan een gesprek</a>
-      </div>
-
-      <p>Met vriendelijke groet,<br><strong>Het InnerLeaps Team</strong></p>
-    </div>
-  </div>
+      </td>
+    </tr>
+  </table>
 </body>
 </html>`;
 };
 
 const generateEmailText = (data: ROIAnalysisRequest): string => {
   const { naam, bedrijfsnaam, calculationResults } = data;
-  const { scenarios } = calculationResults;
+  const { scenarios, numberOfGroups } = calculationResults;
   
-  return `
-ROI ANALYSE - ${bedrijfsnaam.toUpperCase()}
+  return `ROI-Analyse InnerLeaps - ${bedrijfsnaam}
 
 Beste ${naam},
 
+Hieronder vind je drie ROI-scenario's voor ${bedrijfsnaam} met ${data.aantalDeelnemers} deelnemers (${numberOfGroups} groep${numberOfGroups !== 1 ? 'en' : ''}).
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
 SCENARIO 1: ${scenarios.scenario1.name}
+${scenarios.scenario1.description}
+
+Verzuimbesparing: ${formatCurrency(scenarios.scenario1.verzuimBesparing)}
 Netto besparing: ${formatCurrency(scenarios.scenario1.netBesparing)}
 ROI: ${formatPercentage(scenarios.scenario1.roi)}
 
-⭐ SCENARIO 2 (AANBEVOLEN): ${scenarios.scenario2.name}
-Verzuim: ${formatCurrency(scenarios.scenario2.verzuimBesparing)}
-Retentie: ${formatCurrency(scenarios.scenario2.retentieBesparing)}
-Productiviteit: ${formatCurrency(scenarios.scenario2.productiviteitBesparing)}
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+SCENARIO 2: ${scenarios.scenario2.name}
+${scenarios.scenario2.description}
+
+Verzuimbesparing: ${formatCurrency(scenarios.scenario2.verzuimBesparing)}
+Retentiebesparing: ${formatCurrency(scenarios.scenario2.retentieBesparing)}
+Productiviteitsbesparing: ${formatCurrency(scenarios.scenario2.productiviteitBesparing)}
 Netto besparing: ${formatCurrency(scenarios.scenario2.netBesparing)}
 ROI: ${formatPercentage(scenarios.scenario2.roi)}
 
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
 SCENARIO 3: ${scenarios.scenario3.name}
+${scenarios.scenario3.description}
+
+Verzuimbesparing: ${formatCurrency(scenarios.scenario3.verzuimBesparing)}
+Retentiebesparing: ${formatCurrency(scenarios.scenario3.retentieBesparing)}
+Productiviteitsbesparing: ${formatCurrency(scenarios.scenario3.productiviteitBesparing)}
 Netto besparing: ${formatCurrency(scenarios.scenario3.netBesparing)}
 ROI: ${formatPercentage(scenarios.scenario3.roi)}
 
-Plan een gesprek: https://calendar.app.google/BgGy8cVUSk4w5Zzg8
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+PLAN EEN GESPREK
+https://calendar.app.google/BgGy8cVUSk4w5Zzg8
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+WETENSCHAPPELIJKE BRONNEN
+
+• Verzuimkosten (${calculationResults.constants.VK}x): Sazas (2024)
+• Verzuimreductie (15-21%): Virgili (2015) - Meta-analyse 19 studies
+• Vervangingskosten (${calculationResults.constants.VKP}x): O'Connell & Kung (2007)
+• Retentie & Productiviteit (5-8%): Khoury et al. (2015), Good et al. (2016)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 Met vriendelijke groet,
 Het InnerLeaps Team
+
+InnerLeaps - Vitaliteitsprogramma's voor duurzame inzetbaarheid
 `;
 };
 
@@ -221,9 +311,10 @@ const handler = async (req: Request): Promise<Response> => {
     await resend.emails.send({
       from: "InnerLeaps <info@innerleaps.nl>",
       to: [validatedData.email],
-      subject: `ROI-analyse ${validatedData.bedrijfsnaam}`,
+      subject: `Jouw ROI-analyse voor ${validatedData.bedrijfsnaam}`,
       html: htmlContent,
       text: textContent,
+      replyTo: "bas@innerleaps.nl",
     });
 
     await resend.emails.send({
