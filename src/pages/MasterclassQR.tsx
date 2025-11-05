@@ -24,26 +24,26 @@ const MasterclassQR = () => {
 
   useEffect(() => {
     window.scrollTo(0, 0);
-    
+
     // Track page view
-    if (typeof window.gtag !== 'undefined') {
-      window.gtag('event', 'page_view', {
-        page_title: 'Masterclass QR Landing',
+    if (typeof window.gtag !== "undefined") {
+      window.gtag("event", "page_view", {
+        page_title: "Masterclass QR Landing",
         page_location: window.location.href,
-        page_path: '/masterclass-stress-qr'
+        page_path: "/masterclass-stress-qr",
       });
     }
   }, []);
 
   const handleModalOpen = () => {
     setIsModalOpen(true);
-    
+
     // Track modal open
-    if (typeof window.gtag !== 'undefined') {
-      window.gtag('event', 'click', {
-        event_category: 'Masterclass',
-        event_label: 'Modal Opened',
-        source: 'QR Landing'
+    if (typeof window.gtag !== "undefined") {
+      window.gtag("event", "click", {
+        event_category: "Masterclass",
+        event_label: "Modal Opened",
+        source: "QR Landing",
       });
     }
   };
@@ -54,12 +54,13 @@ const MasterclassQR = () => {
       <section className="relative py-12 sm:py-16 px-4 bg-gradient-to-b from-brand-purple to-brand-purple/90 text-white overflow-hidden">
         <div className="max-w-4xl mx-auto text-center space-y-6">
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight">
-            Minder <span className="text-brand-orange">stress</span>, meer <span className="text-brand-orange">levensplezier</span>
+            Minder <span className="text-brand-orange">stress</span>, meer{" "}
+            <span className="text-brand-orange">levensplezier</span>
           </h1>
           <p className="text-lg sm:text-xl md:text-2xl text-blue-100 leading-relaxed max-w-2xl mx-auto">
             Ervaar in 60 minuten hoe je met wetenschappelijk bewezen technieken rust in je hoofd krijgt
           </p>
-          
+
           {/* Trust Badge */}
           <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full">
             <div className="flex gap-0.5">
@@ -143,7 +144,7 @@ const MasterclassQR = () => {
                   bestaat uit een mooie mix tussen oefeningen en theorie, waardoor je gelijk al wat ervaring opdoet."
                 </p>
               </div>
-              
+
               {/* CTA Button */}
               <Button
                 onClick={handleModalOpen}
@@ -163,7 +164,7 @@ const MasterclassQR = () => {
               />
             </div>
           </div>
-          
+
           {/* Modal */}
           <MasterclassFormModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
         </div>
@@ -174,47 +175,27 @@ const MasterclassQR = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto">
             <h3 className="text-2xl sm:text-3xl font-bold text-brand-purple text-center mb-4">
-              Erkende methode
+              Erkende <span className="text-brand-orange">methode</span>
             </h3>
             <p className="text-base sm:text-lg text-brand-gray-medium text-center mb-8 sm:mb-10 max-w-2xl mx-auto">
               Al meer dan 40 jaar wetenschappelijk bewezen en erkend door Nederlandse zorgverzekeraars.
             </p>
-            
+
             {/* Logo Grid - Universiteiten en Zorgverzekeraars */}
             <div className="flex flex-wrap justify-center items-center gap-6 sm:gap-8 lg:gap-10">
               {/* Universiteiten */}
-              <img 
-                src={oxfordLogo} 
-                alt="Oxford University" 
-                className="h-16 sm:h-20 object-contain rounded border border-border" 
+              <img
+                src={oxfordLogo}
+                alt="Oxford University"
+                className="h-16 sm:h-20 object-contain rounded border border-border"
               />
-              <img 
-                src={uMassLogo} 
-                alt="University of Massachusetts" 
-                className="h-16 sm:h-20 object-contain" 
-              />
-              <img 
-                src={uvaLogo} 
-                alt="Universiteit van Amsterdam" 
-                className="h-16 sm:h-20 object-contain" 
-              />
-              
+              <img src={uMassLogo} alt="University of Massachusetts" className="h-16 sm:h-20 object-contain" />
+              <img src={uvaLogo} alt="Universiteit van Amsterdam" className="h-16 sm:h-20 object-contain" />
+
               {/* Zorgverzekeraars */}
-              <img 
-                src={vgzLogo} 
-                alt="VGZ" 
-                className="h-16 sm:h-20 object-contain" 
-              />
-              <img 
-                src={czLogo} 
-                alt="CZ" 
-                className="h-16 sm:h-20 object-contain" 
-              />
-              <img 
-                src={menzisLogo} 
-                alt="Menzis" 
-                className="h-14 sm:h-16 object-contain" 
-              />
+              <img src={vgzLogo} alt="VGZ" className="h-16 sm:h-20 object-contain" />
+              <img src={czLogo} alt="CZ" className="h-16 sm:h-20 object-contain" />
+              <img src={menzisLogo} alt="Menzis" className="h-14 sm:h-16 object-contain" />
             </div>
           </div>
         </div>
@@ -224,21 +205,16 @@ const MasterclassQR = () => {
       <footer className="py-8 bg-brand-off-white border-t border-brand-gray-light/20">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center space-y-4">
-            <p className="text-base sm:text-lg text-brand-gray-dark font-semibold">
-              Vragen? Neem contact op
-            </p>
+            <p className="text-base sm:text-lg text-brand-gray-dark font-semibold">Vragen? Neem contact op</p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8 text-brand-gray-medium">
-              <a 
-                href="mailto:info@innerleaps.nl" 
+              <a
+                href="mailto:info@innerleaps.nl"
                 className="flex items-center gap-2 hover:text-brand-orange transition-colors"
               >
                 <Mail className="h-5 w-5" />
                 <span>info@innerleaps.nl</span>
               </a>
-              <a 
-                href="tel:+31621967068" 
-                className="flex items-center gap-2 hover:text-brand-orange transition-colors"
-              >
+              <a href="tel:+31621967068" className="flex items-center gap-2 hover:text-brand-orange transition-colors">
                 <Phone className="h-5 w-5" />
                 <span>06 21 96 70 68</span>
               </a>
