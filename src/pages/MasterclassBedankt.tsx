@@ -27,29 +27,29 @@ const MasterclassBedankt = () => {
     window.scrollTo(0, 0);
 
     // Track page view
-    if (typeof window.gtag !== 'undefined') {
-      window.gtag('event', 'page_view', {
-        page_title: 'Masterclass Bedankt',
-        page_path: '/masterclass-bedankt',
-        page_location: window.location.href
+    if (typeof window.gtag !== "undefined") {
+      window.gtag("event", "page_view", {
+        page_title: "Masterclass Bedankt",
+        page_path: "/masterclass-bedankt",
+        page_location: window.location.href,
       });
 
       // Track conversion
-      window.gtag('event', 'conversion', {
-        event_category: 'Masterclass',
-        event_label: 'Thank You Page Viewed',
-        selected_time: timeslot
+      window.gtag("event", "conversion", {
+        event_category: "Masterclass",
+        event_label: "Thank You Page Viewed",
+        selected_time: timeslot,
       });
     }
   }, [timeslot]);
 
   const handleCalendarClick = () => {
     // Track calendar link click
-    if (typeof window.gtag !== 'undefined') {
-      window.gtag('event', 'click', {
-        event_category: 'Masterclass',
-        event_label: 'Add to Calendar',
-        selected_time: timeslot
+    if (typeof window.gtag !== "undefined") {
+      window.gtag("event", "click", {
+        event_category: "Masterclass",
+        event_label: "Add to Calendar",
+        selected_time: timeslot,
       });
     }
   };
@@ -69,7 +69,7 @@ const MasterclassBedankt = () => {
               {naam && `Gefeliciteerd ${naam}!`}
               {!naam && "Gefeliciteerd!"}
             </h1>
-            
+
             <p className="text-lg md:text-xl text-brand-gray-medium leading-relaxed">
               Je bent aangemeld voor de gratis Masterclass Stressmanagement.
             </p>
@@ -80,9 +80,7 @@ const MasterclassBedankt = () => {
             <p className="text-sm text-brand-gray-medium uppercase tracking-wide font-semibold">
               Jouw gekozen tijdstip:
             </p>
-            <p className="text-xl md:text-2xl font-bold text-brand-purple">
-              {timeslot}
-            </p>
+            <p className="text-xl md:text-2xl font-bold text-brand-purple">{timeslot}</p>
           </div>
 
           {/* Calendar CTA */}
@@ -96,17 +94,16 @@ const MasterclassBedankt = () => {
             >
               📅 Voeg toe aan mijn agenda
             </a>
-            
+
             <p className="text-sm text-brand-gray-medium max-w-md mx-auto">
-              Je ontvangt ook een bevestiging per email met de link naar de agenda en meer informatie over de masterclass.
+              Je ontvangt ook een bevestiging per email met de link naar de agenda en meer informatie over de
+              masterclass.
             </p>
           </div>
 
           {/* What to Expect */}
           <div className="pt-8 border-t border-gray-200 space-y-4">
-            <h2 className="text-xl md:text-2xl font-bold text-brand-purple">
-              Wat je kunt verwachten:
-            </h2>
+            <h2 className="text-xl md:text-2xl font-bold text-brand-purple">Wat je kunt verwachten:</h2>
             <ul className="text-left space-y-3 max-w-md mx-auto">
               <li className="flex items-start gap-3">
                 <Check className="h-5 w-5 text-brand-orange flex-shrink-0 mt-0.5" />
@@ -116,15 +113,11 @@ const MasterclassBedankt = () => {
               </li>
               <li className="flex items-start gap-3">
                 <Check className="h-5 w-5 text-brand-orange flex-shrink-0 mt-0.5" />
-                <span className="text-brand-gray-medium">
-                  Praktische aandachtoefening voor meer focus
-                </span>
+                <span className="text-brand-gray-medium">Praktische aandachtoefening voor meer focus</span>
               </li>
               <li className="flex items-start gap-3">
                 <Check className="h-5 w-5 text-brand-orange flex-shrink-0 mt-0.5" />
-                <span className="text-brand-gray-medium">
-                  Reset tool om je werkgeheugen te resetten
-                </span>
+                <span className="text-brand-gray-medium">Reset tool om je werkgeheugen te resetten</span>
               </li>
             </ul>
           </div>
@@ -132,48 +125,26 @@ const MasterclassBedankt = () => {
 
         {/* Mini Trust Section - Updated */}
         <div className="mt-12 text-center space-y-6">
-          <h3 className="text-2xl font-bold text-brand-purple">
-            Erkende methode
-          </h3>
+          <h3 className="text-2xl font-bold text-brand-purple">Erkende methode</h3>
           <p className="text-base text-brand-gray-medium max-w-2xl mx-auto">
             Al meer dan 40 jaar wetenschappelijk bewezen en erkend door Nederlandse zorgverzekeraars.
           </p>
-          
+
           {/* Logo Grid - Universiteiten en Zorgverzekeraars */}
           <div className="flex flex-wrap justify-center items-center gap-6 sm:gap-8">
             {/* Universiteiten */}
-            <img 
-              src={oxfordLogo} 
-              alt="Oxford University" 
-              className="h-12 sm:h-16 object-contain rounded border border-border" 
+            <img
+              src={oxfordLogo}
+              alt="Oxford University"
+              className="h-12 sm:h-16 object-contain rounded border border-border"
             />
-            <img 
-              src={uMassLogo} 
-              alt="University of Massachusetts" 
-              className="h-12 sm:h-16 object-contain" 
-            />
-            <img 
-              src={uvaLogo} 
-              alt="Universiteit van Amsterdam" 
-              className="h-12 sm:h-16 object-contain" 
-            />
-            
+            <img src={uMassLogo} alt="University of Massachusetts" className="h-12 sm:h-16 object-contain" />
+            <img src={uvaLogo} alt="Universiteit van Amsterdam" className="h-12 sm:h-16 object-contain" />
+
             {/* Zorgverzekeraars */}
-            <img 
-              src={vgzLogo} 
-              alt="VGZ" 
-              className="h-12 sm:h-16 object-contain" 
-            />
-            <img 
-              src={czLogo} 
-              alt="CZ" 
-              className="h-12 sm:h-16 object-contain" 
-            />
-            <img 
-              src={menzisLogo} 
-              alt="Menzis" 
-              className="h-10 sm:h-14 object-contain" 
-            />
+            <img src={vgzLogo} alt="VGZ" className="h-12 sm:h-16 object-contain" />
+            <img src={czLogo} alt="CZ" className="h-12 sm:h-16 object-contain" />
+            <img src={menzisLogo} alt="Menzis" className="h-10 sm:h-14 object-contain" />
           </div>
         </div>
 
@@ -181,9 +152,10 @@ const MasterclassBedankt = () => {
         <div className="mt-8 text-center text-sm text-brand-gray-medium space-y-2">
           <p>Vragen? Neem contact op:</p>
           <p>
-            📧 <a href="mailto:info@innerleaps.nl" className="text-brand-orange hover:underline">info@innerleaps.nl</a>
-            {" · "}
-            📱 <a href="tel:+31621967068" className="text-brand-orange hover:underline">06 21 96 70 68</a>
+            📧{" "}
+            <a href="mailto:bas@innerleaps.nl" className="text-brand-orange hover:underline">
+              bas@innerleaps.nl
+            </a>
           </p>
         </div>
       </div>
