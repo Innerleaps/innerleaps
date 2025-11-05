@@ -4,6 +4,9 @@ import { Check } from "lucide-react";
 import vgzLogo from "@/assets/Vitaliteitprogramma_herkent_door_vgz.png";
 import czLogo from "@/assets/Vitaliteitsprogramma_herkend_door_CZ.png";
 import menzisLogo from "@/assets/Vitaliteitsprogramma_herkend_door_menzis.png";
+import oxfordLogo from "@/assets/Vitaliteitsprogramma_ontwikkeld_door_oxford.jpg";
+import uMassLogo from "@/assets/Vitaliteitsprogramma_ontwikkeld_door_university_of_massachusetts.png";
+import uvaLogo from "@/assets/Aandachttraining_aan_de_universiteit_van_amsterdam_new.png";
 
 // Declare gtag for Google Analytics
 declare global {
@@ -127,13 +130,50 @@ const MasterclassBedankt = () => {
           </div>
         </div>
 
-        {/* Mini Trust Section */}
+        {/* Mini Trust Section - Updated */}
         <div className="mt-12 text-center space-y-6">
-          <p className="text-brand-gray-medium font-semibold">Vertrouwd door:</p>
-          <div className="flex items-center justify-center gap-8 flex-wrap">
-            <img src={vgzLogo} alt="VGZ" className="h-8 md:h-10 opacity-70 hover:opacity-100 transition-opacity" />
-            <img src={czLogo} alt="CZ" className="h-8 md:h-10 opacity-70 hover:opacity-100 transition-opacity" />
-            <img src={menzisLogo} alt="Menzis" className="h-8 md:h-10 opacity-70 hover:opacity-100 transition-opacity" />
+          <h3 className="text-2xl font-bold text-brand-purple">
+            Erkende methode
+          </h3>
+          <p className="text-base text-brand-gray-medium max-w-2xl mx-auto">
+            Al meer dan 40 jaar wetenschappelijk bewezen en erkend door Nederlandse zorgverzekeraars.
+          </p>
+          
+          {/* Logo Grid - Universiteiten en Zorgverzekeraars */}
+          <div className="flex flex-wrap justify-center items-center gap-6 sm:gap-8">
+            {/* Universiteiten */}
+            <img 
+              src={oxfordLogo} 
+              alt="Oxford University" 
+              className="h-12 sm:h-16 object-contain rounded border border-border" 
+            />
+            <img 
+              src={uMassLogo} 
+              alt="University of Massachusetts" 
+              className="h-12 sm:h-16 object-contain" 
+            />
+            <img 
+              src={uvaLogo} 
+              alt="Universiteit van Amsterdam" 
+              className="h-12 sm:h-16 object-contain" 
+            />
+            
+            {/* Zorgverzekeraars */}
+            <img 
+              src={vgzLogo} 
+              alt="VGZ" 
+              className="h-12 sm:h-16 object-contain" 
+            />
+            <img 
+              src={czLogo} 
+              alt="CZ" 
+              className="h-12 sm:h-16 object-contain" 
+            />
+            <img 
+              src={menzisLogo} 
+              alt="Menzis" 
+              className="h-10 sm:h-14 object-contain" 
+            />
           </div>
         </div>
 

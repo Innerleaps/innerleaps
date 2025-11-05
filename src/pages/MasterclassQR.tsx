@@ -15,6 +15,9 @@ declare global {
 import vgzLogo from "@/assets/Vitaliteitprogramma_herkent_door_vgz.png";
 import czLogo from "@/assets/Vitaliteitsprogramma_herkend_door_CZ.png";
 import menzisLogo from "@/assets/Vitaliteitsprogramma_herkend_door_menzis.png";
+import oxfordLogo from "@/assets/Vitaliteitsprogramma_ontwikkeld_door_oxford.jpg";
+import uMassLogo from "@/assets/Vitaliteitsprogramma_ontwikkeld_door_university_of_massachusetts.png";
+import uvaLogo from "@/assets/Aandachttraining_aan_de_universiteit_van_amsterdam_new.png";
 
 const MasterclassQR = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -166,20 +169,52 @@ const MasterclassQR = () => {
         </div>
       </section>
 
-      {/* Mini Trust Section */}
+      {/* Mini Trust Section - Updated */}
       <section className="py-12 sm:py-16 bg-white">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <h3 className="text-2xl sm:text-3xl font-bold text-brand-purple text-center mb-6 sm:mb-8">
-              Erkend door het <span className="text-brand-orange">Nederlandse zorgsysteem</span>
+          <div className="max-w-5xl mx-auto">
+            <h3 className="text-2xl sm:text-3xl font-bold text-brand-purple text-center mb-4">
+              Erkende methode
             </h3>
-            <p className="text-base sm:text-lg text-brand-gray-medium text-center mb-6 sm:mb-8 max-w-2xl mx-auto">
-              Onze wetenschappelijk bewezen methode wordt erkend door de belangrijkste Nederlandse zorgverzekeraars
+            <p className="text-base sm:text-lg text-brand-gray-medium text-center mb-8 sm:mb-10 max-w-2xl mx-auto">
+              Al meer dan 40 jaar wetenschappelijk bewezen en erkend door Nederlandse zorgverzekeraars.
             </p>
-            <div className="flex flex-wrap justify-center items-center gap-6 sm:gap-8">
-              <img src={vgzLogo} alt="Erkend door VGZ" className="h-16 sm:h-20 object-contain" />
-              <img src={czLogo} alt="Erkend door CZ" className="h-16 sm:h-20 object-contain" />
-              <img src={menzisLogo} alt="Erkend door Menzis" className="h-14 sm:h-16 object-contain" />
+            
+            {/* Logo Grid - Universiteiten en Zorgverzekeraars */}
+            <div className="flex flex-wrap justify-center items-center gap-6 sm:gap-8 lg:gap-10">
+              {/* Universiteiten */}
+              <img 
+                src={oxfordLogo} 
+                alt="Oxford University" 
+                className="h-16 sm:h-20 object-contain rounded border border-border" 
+              />
+              <img 
+                src={uMassLogo} 
+                alt="University of Massachusetts" 
+                className="h-16 sm:h-20 object-contain" 
+              />
+              <img 
+                src={uvaLogo} 
+                alt="Universiteit van Amsterdam" 
+                className="h-16 sm:h-20 object-contain" 
+              />
+              
+              {/* Zorgverzekeraars */}
+              <img 
+                src={vgzLogo} 
+                alt="VGZ" 
+                className="h-16 sm:h-20 object-contain" 
+              />
+              <img 
+                src={czLogo} 
+                alt="CZ" 
+                className="h-16 sm:h-20 object-contain" 
+              />
+              <img 
+                src={menzisLogo} 
+                alt="Menzis" 
+                className="h-14 sm:h-16 object-contain" 
+              />
             </div>
           </div>
         </div>

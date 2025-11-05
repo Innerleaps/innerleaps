@@ -753,7 +753,7 @@ const StressManagement = () => {
                 </div>
                 <div className="flex-1">
                   <h3 className="text-2xl font-bold text-brand-purple mb-3">
-                    Herkend door het Nederlandse zorgsysteem
+                    Onderliggende methode erkend door Nederlandse zorgsysteem
                   </h3>
                   <p className="text-xl text-brand-gray-medium leading-relaxed mb-6">
                     De nederlandse zorgverzekeraars erkennen de methode van Innerleaps als effectief bij stressmanagement.

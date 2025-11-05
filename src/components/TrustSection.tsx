@@ -10,7 +10,7 @@ import menzisLogo from "@/assets/Vitaliteitsprogramma_herkend_door_menzis.png";
 const TrustSection = () => {
   const trustItems = [
     {
-      title: "Herkend door het Nederlandse zorgsysteem",
+      title: "Onderliggende methode erkend door Nederlandse zorgsysteem",
       description:
         "De uitgebreide variant van ons programma wordt vergoed vanuit basisverzekering door Nederlandse zorgverzekeraars.",
       logos: [
