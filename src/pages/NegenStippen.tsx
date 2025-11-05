@@ -44,7 +44,7 @@ const NegenStippen = () => {
               {/* Tekst links */}
               <div className="space-y-6">
                 <p className="text-lg md:text-xl text-brand-gray-medium leading-relaxed">
-                  Je zit in een sollicitatiegesprek. Niet alleen - er zijn 3 andere kandidaten. Jullie zitten in de
+                  Je zit in een sollicitatiegesprek. Niet alleen, er zijn 3 andere kandidaten. Jullie zitten in de
                   drukke bedrijfskantine. Om jullie heen lopen mensen, klinkt bestek, gesprekken, een koffiemachine die
                   stomt.
                 </p>
