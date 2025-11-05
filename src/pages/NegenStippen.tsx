@@ -59,7 +59,7 @@ const NegenStippen = () => {
                     Daarom wil ik dat jullie dit raadsel oplossen."
                   </p>
                   <p className="text-lg md:text-xl text-brand-gray-medium leading-relaxed italic mb-4">
-                    "Jullie hebben drie minuten. Maar de meeste kandidaten lossen dit op in 1 minuet."
+                    "Jullie hebben drie minuten. Maar de meeste kandidaten lossen dit op in 1 minuut."
                   </p>
                   <p className="text-lg md:text-xl text-brand-gray-medium leading-relaxed italic">
                     "Ik zal aan één van jullie vragen om zijn of haar aanpak te presenteren."
