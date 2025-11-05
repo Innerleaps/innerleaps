@@ -1,9 +1,19 @@
-
 import { useLocation, useNavigate } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
-import { TrendingUp, ArrowLeft, Users, Calculator, BookOpen } from 'lucide-react';
+import { TrendingUp, ArrowLeft, Users, Calculator, BookOpen, Star } from 'lucide-react';
 import { useEffect } from 'react';
+import { CalculationResults } from '@/utils/calculationEngine';
+
+interface FormData {
+  name: string;
+  phone: string;
+  company: string;
+  employees: string;
+  avgEmployeeCosts: string;
+  currentAbsenteeism: string;
+  currentTurnover: string;
+}
 
 const Berekening = () => {
   const location = useLocation();
@@ -11,10 +21,9 @@ const Berekening = () => {
   const {
     results,
     formData
-  } = location.state || {};
+  }: { results: CalculationResults; formData: FormData } = location.state || {};
 
   useEffect(() => {
-    // Redirect to home if no data is provided
     if (!results || !formData) {
       navigate('/');
     }
@@ -37,7 +46,7 @@ const Berekening = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-brand-blue-light to-white">
       <div className="container mx-auto px-4 py-16">
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-5xl mx-auto">
           {/* Header */}
           <div className="text-center mb-12">
             <div className="inline-flex items-center justify-center w-20 h-20 bg-brand-green text-white rounded-full mb-6">
@@ -46,94 +55,183 @@ const Berekening = () => {
             <h1 className="text-4xl font-bold text-brand-gray-dark mb-4">
               De besparing van {formData.company}
             </h1>
+            <p className="text-lg text-brand-gray-medium">
+              Gebaseerd op {formData.employees} deelnemers, {results.numberOfGroups} groep{results.numberOfGroups !== 1 ? 'en' : ''} van 15 personen
+            </p>
           </div>
 
-          {/* Results Card */}
-          <Card className="p-8 bg-gradient-to-br from-brand-green to-brand-green-light text-white mb-8">
-            <div className="text-center space-y-6">
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-white/20 rounded-full mb-4">
-                <TrendingUp className="h-8 w-8" />
-              </div>
-              
-              <h2 className="text-3xl font-bold">Je Potentiële Besparing</h2>
-              
-              <div className="grid md:grid-cols-2 gap-6">
-                <div className="text-center p-4 bg-white/20 rounded-lg">
-                  <div className="text-3xl font-bold mb-2">€{results.totalSaving.toLocaleString()}</div>
-                  <div className="text-sm opacity-90">Netto jaarlijkse besparing</div>
-                </div>
-                <div className="text-center p-4 bg-white/20 rounded-lg">
-                  <div className="text-3xl font-bold mb-2">{results.roi}%</div>
-                  <div className="text-sm opacity-90">ROI</div>
-                </div>
-              </div>
-              
-              <div className="text-center p-6 bg-white/10 rounded-lg">
-                <div className="flex items-center justify-center gap-2 mb-2">
-                  <Users className="h-6 w-6" />
-                  <span className="text-2xl font-bold">{results.numberOfGroups} groep{results.numberOfGroups !== 1 ? 'en' : ''}</span>
-                </div>
-                <div className="text-sm opacity-90">Benodigde MBSR-groepen (max. 15 deelnemers per groep)</div>
-              </div>
-
-              {/* Bas quote boven de CTA button */}
-              <div className="pt-4 border-t border-white/20">
-                <div className="flex items-center gap-4 justify-center mb-4">
-                  <img 
-                    src="/lovable-uploads/25a27d67-f5ef-4b9c-8e54-b246de0f3596.png" 
-                    alt="Bas Ter Haar Romenij" 
-                    className="w-16 h-16 rounded-full object-cover"
-                  />
-                  <div className="text-left">
-                    <p className="text-white text-sm italic">
-                      "Deze cijfers zijn indrukwekkend! Laten we bespreken hoe we dit voor {formData.company} gaan realiseren."
-                    </p>
-                    <p className="text-white/80 text-xs">— Bas Ter Haar Romenij</p>
-                    <p className="text-white/70 text-xs">Oprichter en adviseur</p>
-                  </div>
-                </div>
-                <Button 
-                  size="lg" 
-                  className="bg-white text-brand-green hover:bg-gray-100 font-semibold px-8 py-4 text-lg" 
-                  onClick={openCalendar}
-                >
-                  Plan een gesprek
-                </Button>
-              </div>
-            </div>
-          </Card>
-
-          {/* Calculation Breakdown */}
-          <Card className="p-6 mb-8">
-            <div className="flex items-center gap-3 mb-6">
-              <Calculator className="h-6 w-6 text-brand-blue" />
-              <h3 className="text-xl font-bold text-brand-gray-dark">Berekening Breakdown</h3>
-            </div>
-            
-            <div className="space-y-4">
-              <div className="p-4 bg-gray-50 rounded-lg border">
-                <h4 className="font-semibold text-brand-gray-dark mb-2">Verzuimbesparing</h4>
-                <p className="text-2xl font-bold text-brand-green mb-1">€{results.verzuimBesparing.toLocaleString()}</p>
+          {/* Scenarios Grid */}
+          <div className="grid md:grid-cols-3 gap-6 mb-8">
+            {/* Scenario 1 */}
+            <Card className="p-6 bg-white border-2 border-gray-200">
+              <div className="text-center mb-4">
+                <h3 className="text-xl font-bold text-brand-gray-dark mb-2">
+                  {results.scenarios.scenario1.name}
+                </h3>
                 <p className="text-sm text-brand-gray-medium">
-                  {formData.currentAbsenteeism}% × {formData.employees} × €{parseInt(formData.avgEmployeeCosts).toLocaleString()} × {results.constants.VK} × {results.constants.MV}%
+                  {results.scenarios.scenario1.description}
                 </p>
               </div>
               
-              <div className="p-4 bg-gray-50 rounded-lg border">
-                <h4 className="font-semibold text-brand-gray-dark mb-2">Retentiebesparing</h4>
-                <p className="text-2xl font-bold text-brand-green mb-1">€{results.retentieBesparing.toLocaleString()}</p>
-                <p className="text-sm text-brand-gray-medium">
-                  {formData.currentTurnover}% × {formData.employees} × €{parseInt(formData.avgEmployeeCosts).toLocaleString()} × {results.constants.RV}% × {results.constants.VKP}
+              <div className="space-y-3 mb-6">
+                <div className="p-3 bg-gray-50 rounded-lg">
+                  <p className="text-xs text-brand-gray-medium mb-1">Verzuimbesparing (15%)</p>
+                  <p className="text-lg font-bold text-brand-green">
+                    €{results.scenarios.scenario1.verzuimBesparing.toLocaleString()}
+                  </p>
+                </div>
+              </div>
+
+              <div className="pt-4 border-t border-gray-200">
+                <div className="flex justify-between items-center mb-2">
+                  <span className="text-sm text-brand-gray-medium">Totale besparing</span>
+                  <span className="text-lg font-bold text-brand-blue">
+                    €{results.scenarios.scenario1.totaleBesparing.toLocaleString()}
+                  </span>
+                </div>
+                <div className="flex justify-between items-center mb-2">
+                  <span className="text-sm text-brand-gray-medium">Investering</span>
+                  <span className="text-lg font-semibold text-brand-orange">
+                    €{results.investment.toLocaleString()}
+                  </span>
+                </div>
+                <div className="flex justify-between items-center mb-3 pt-3 border-t border-gray-200">
+                  <span className="text-sm font-semibold text-brand-gray-dark">Netto besparing</span>
+                  <span className="text-xl font-bold text-brand-green">
+                    €{results.scenarios.scenario1.netBesparing.toLocaleString()}
+                  </span>
+                </div>
+                <div className="bg-brand-blue text-white p-3 rounded-lg text-center">
+                  <p className="text-sm mb-1">ROI</p>
+                  <p className="text-2xl font-bold">{results.scenarios.scenario1.roi}%</p>
+                  <p className="text-xs mt-1">Voor elke €1 krijg je €{(results.scenarios.scenario1.roi / 100).toFixed(2)} terug</p>
+                </div>
+              </div>
+            </Card>
+
+            {/* Scenario 2 - Aanbevolen */}
+            <Card className="p-6 bg-gradient-to-br from-brand-green to-brand-green-light text-white border-4 border-brand-orange relative">
+              <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-brand-orange text-white px-4 py-1 rounded-full text-sm font-bold flex items-center gap-1">
+                <Star className="h-4 w-4" />
+                Aanbevolen
+              </div>
+              
+              <div className="text-center mb-4 mt-2">
+                <h3 className="text-xl font-bold mb-2">
+                  {results.scenarios.scenario2.name}
+                </h3>
+                <p className="text-sm text-white/90">
+                  {results.scenarios.scenario2.description}
                 </p>
               </div>
               
-              <div className="p-4 bg-white rounded-lg border">
-                <h4 className="font-semibold text-brand-gray-dark mb-2">Totale Bruto Besparing</h4>
-                <p className="text-2xl font-bold text-brand-blue mb-1">€{results.grossSaving.toLocaleString()}</p>
-                <p className="text-sm text-brand-gray-medium">Verzuim + Retentie besparing</p>
+              <div className="space-y-3 mb-6">
+                <div className="p-3 bg-white/20 rounded-lg">
+                  <p className="text-xs text-white/80 mb-1">Verzuimbesparing (15%)</p>
+                  <p className="text-lg font-bold">
+                    €{results.scenarios.scenario2.verzuimBesparing.toLocaleString()}
+                  </p>
+                </div>
+                <div className="p-3 bg-white/20 rounded-lg">
+                  <p className="text-xs text-white/80 mb-1">Retentiebesparing (5%)</p>
+                  <p className="text-lg font-bold">
+                    €{results.scenarios.scenario2.retentieBesparing.toLocaleString()}
+                  </p>
+                </div>
+                <div className="p-3 bg-white/20 rounded-lg">
+                  <p className="text-xs text-white/80 mb-1">Productiviteitsbesparing (5%)</p>
+                  <p className="text-lg font-bold">
+                    €{results.scenarios.scenario2.productiviteitBesparing.toLocaleString()}
+                  </p>
+                </div>
               </div>
-            </div>
-          </Card>
+
+              <div className="pt-4 border-t border-white/30">
+                <div className="flex justify-between items-center mb-2">
+                  <span className="text-sm">Totale besparing</span>
+                  <span className="text-lg font-bold">
+                    €{results.scenarios.scenario2.totaleBesparing.toLocaleString()}
+                  </span>
+                </div>
+                <div className="flex justify-between items-center mb-2">
+                  <span className="text-sm">Investering</span>
+                  <span className="text-lg font-semibold">
+                    €{results.investment.toLocaleString()}
+                  </span>
+                </div>
+                <div className="flex justify-between items-center mb-3 pt-3 border-t border-white/30">
+                  <span className="text-sm font-semibold">Netto besparing</span>
+                  <span className="text-xl font-bold">
+                    €{results.scenarios.scenario2.netBesparing.toLocaleString()}
+                  </span>
+                </div>
+                <div className="bg-white/30 backdrop-blur-sm p-3 rounded-lg text-center">
+                  <p className="text-sm mb-1">ROI</p>
+                  <p className="text-3xl font-bold">{results.scenarios.scenario2.roi}%</p>
+                  <p className="text-xs mt-1">Voor elke €1 krijg je €{(results.scenarios.scenario2.roi / 100).toFixed(2)} terug</p>
+                </div>
+              </div>
+            </Card>
+
+            {/* Scenario 3 */}
+            <Card className="p-6 bg-white border-2 border-gray-200">
+              <div className="text-center mb-4">
+                <h3 className="text-xl font-bold text-brand-gray-dark mb-2">
+                  {results.scenarios.scenario3.name}
+                </h3>
+                <p className="text-sm text-brand-gray-medium">
+                  {results.scenarios.scenario3.description}
+                </p>
+              </div>
+              
+              <div className="space-y-3 mb-6">
+                <div className="p-3 bg-gray-50 rounded-lg">
+                  <p className="text-xs text-brand-gray-medium mb-1">Verzuimbesparing (21%)</p>
+                  <p className="text-lg font-bold text-brand-green">
+                    €{results.scenarios.scenario3.verzuimBesparing.toLocaleString()}
+                  </p>
+                </div>
+                <div className="p-3 bg-gray-50 rounded-lg">
+                  <p className="text-xs text-brand-gray-medium mb-1">Retentiebesparing (8%)</p>
+                  <p className="text-lg font-bold text-brand-green">
+                    €{results.scenarios.scenario3.retentieBesparing.toLocaleString()}
+                  </p>
+                </div>
+                <div className="p-3 bg-gray-50 rounded-lg">
+                  <p className="text-xs text-brand-gray-medium mb-1">Productiviteitsbesparing (8%)</p>
+                  <p className="text-lg font-bold text-brand-green">
+                    €{results.scenarios.scenario3.productiviteitBesparing.toLocaleString()}
+                  </p>
+                </div>
+              </div>
+
+              <div className="pt-4 border-t border-gray-200">
+                <div className="flex justify-between items-center mb-2">
+                  <span className="text-sm text-brand-gray-medium">Totale besparing</span>
+                  <span className="text-lg font-bold text-brand-blue">
+                    €{results.scenarios.scenario3.totaleBesparing.toLocaleString()}
+                  </span>
+                </div>
+                <div className="flex justify-between items-center mb-2">
+                  <span className="text-sm text-brand-gray-medium">Investering</span>
+                  <span className="text-lg font-semibold text-brand-orange">
+                    €{results.investment.toLocaleString()}
+                  </span>
+                </div>
+                <div className="flex justify-between items-center mb-3 pt-3 border-t border-gray-200">
+                  <span className="text-sm font-semibold text-brand-gray-dark">Netto besparing</span>
+                  <span className="text-xl font-bold text-brand-green">
+                    €{results.scenarios.scenario3.netBesparing.toLocaleString()}
+                  </span>
+                </div>
+                <div className="bg-brand-blue text-white p-3 rounded-lg text-center">
+                  <p className="text-sm mb-1">ROI</p>
+                  <p className="text-2xl font-bold">{results.scenarios.scenario3.roi}%</p>
+                  <p className="text-xs mt-1">Voor elke €1 krijg je €{(results.scenarios.scenario3.roi / 100).toFixed(2)} terug</p>
+                </div>
+              </div>
+            </Card>
+          </div>
 
           {/* Scientific Foundation */}
           <Card className="p-6 mb-8">
@@ -142,125 +240,96 @@ const Berekening = () => {
               <h3 className="text-xl font-bold text-brand-gray-dark">Wetenschappelijke Onderbouwing</h3>
             </div>
             
-            <div className="grid md:grid-cols-2 gap-6">
-              <div className="space-y-4">
-                <div className="p-4 border border-brand-blue-light rounded-lg">
-                  <h4 className="font-semibold text-brand-gray-dark mb-2">Verzuimreductie door MBSR</h4>
-                  <p className="text-lg font-bold text-brand-blue mb-1">{results.constants.MV}%</p>
-                  <p className="text-sm text-brand-gray-medium">
-                    Gemiddelde van 19-29% uit verschillende wetenschappelijke onderzoeken naar MBSR effectiviteit op werkgerelateerde stress en verzuim.
-                  </p>
-                </div>
-                
+            <div className="grid md:grid-cols-3 gap-6">
+              <div className="space-y-3">
                 <div className="p-4 border border-brand-blue-light rounded-lg">
                   <h4 className="font-semibold text-brand-gray-dark mb-2">Verzuimkosten Multiplier</h4>
                   <p className="text-lg font-bold text-brand-blue mb-1">{results.constants.VK}x</p>
                   <p className="text-sm text-brand-gray-medium">
-                    <strong>Bron:</strong> Johns (2010) - Verzuimkosten zijn gemiddeld 2x het basissalaris door vervanging, verlies van productiviteit en administratiekosten.
+                    <strong>Bron:</strong> Sazas (2024) - Echte verzuimkosten zijn {results.constants.VK}x het basissalaris door vervanging, verlies van productiviteit en administratiekosten.
                   </p>
                 </div>
               </div>
               
-              <div className="space-y-4">
+              <div className="space-y-3">
                 <div className="p-4 border border-brand-blue-light rounded-lg">
-                  <h4 className="font-semibold text-brand-gray-dark mb-2">Retentieverbetering door MBSR</h4>
-                  <p className="text-lg font-bold text-brand-blue mb-1">{results.constants.RV}%</p>
+                  <h4 className="font-semibold text-brand-gray-dark mb-2">Verzuimreductie door MBSR</h4>
+                  <p className="text-lg font-bold text-brand-blue mb-1">15-21%</p>
                   <p className="text-sm text-brand-gray-medium">
-                    Gemiddelde van 17-31% uit verschillende onderzoeken naar MBSR impact op werknemerstevredenheid en retentie.
+                    <strong>Bron:</strong> Virgili (2015), meta-analyse van 19 studies - MBSR vermindert werkgerelateerde stress en verzuim met 15-21%.
                   </p>
                 </div>
-                
+              </div>
+              
+              <div className="space-y-3">
                 <div className="p-4 border border-brand-blue-light rounded-lg">
                   <h4 className="font-semibold text-brand-gray-dark mb-2">Vervangingskosten Factor</h4>
                   <p className="text-lg font-bold text-brand-blue mb-1">{results.constants.VKP}x</p>
                   <p className="text-sm text-brand-gray-medium">
-                    <strong>Bron:</strong> O'Connell & Kung (2007) - Vervangingskosten zijn 150% van het jaarsalaris door werving, training en productieverlies.
+                    <strong>Bron:</strong> O'Connell & Kung (2007) - Vervangingskosten zijn {results.constants.VKP}x het jaarsalaris door werving, training en productieverlies.
                   </p>
                 </div>
+              </div>
+
+              <div className="md:col-span-3 p-4 border border-brand-blue-light rounded-lg">
+                <h4 className="font-semibold text-brand-gray-dark mb-2">Retentieverbetering & Productiviteit</h4>
+                <p className="text-sm text-brand-gray-medium">
+                  <strong>Bronnen:</strong> Khoury et al. (2015) meta-analyse toont 5-8% verbetering in werknemerstevredenheid en retentie. 
+                  Good et al. (2016) toont 5-8% productiviteitsverbetering door verbeterde focus en verminderde stress.
+                </p>
               </div>
             </div>
             
             <div className="mt-6 p-4 bg-brand-blue text-white rounded-lg">
               <p className="text-sm text-white">
                 <strong>Methodologie:</strong> Deze berekening is gebaseerd op 40+ jaar wetenschappelijk onderzoek naar MBSR (Mindfulness-Based Stress Reduction) 
-                en erkende HR-kostenmethodieken. Alle percentages zijn conservatieve gemiddelden uit peer-reviewed studies.
+                en erkende HR-kostenmethodieken. Alle percentages zijn conservatieve ranges uit peer-reviewed meta-analyses.
               </p>
             </div>
           </Card>
 
           {/* Call to Action */}
-          <div className="text-center space-y-6">
-            <h3 className="text-2xl font-bold text-brand-gray-dark">
-              Klaar om deze resultaten te behalen?
-            </h3>
-            <p className="text-brand-gray-medium">
-              Plan een vrijblijvend gesprek om te bespreken hoe je deze besparingen kunt realiseren met ons bewezen MBSR programma.
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button 
-                size="lg" 
-                className="bg-brand-green hover:bg-brand-green-light text-white px-8 py-4 text-lg" 
-                onClick={openCalendar}
-              >
-                Plan een gesprek
-              </Button>
-              <Button 
-                variant="outline" 
-                size="lg" 
-                className="border-2 border-brand-blue text-brand-blue hover:bg-brand-blue hover:text-white px-8 py-4 text-lg" 
-                onClick={() => navigate('/')}
-              >
-                <ArrowLeft className="h-5 w-5 mr-2" />
-                Terug naar home
-              </Button>
-            </div>
-            
-            {/* Bas contact section */}
-            <div className="mt-8 p-6 bg-white rounded-lg border border-gray-200">
-              <div className="flex items-center gap-4 justify-center">
-                <img 
-                  src="/lovable-uploads/25a27d67-f5ef-4b9c-8e54-b246de0f3596.png" 
-                  alt="Bas Ter Haar Romenij" 
-                  className="w-20 h-20 rounded-full object-cover"
-                />
-                <div className="text-left">
-                  <p className="font-bold text-brand-gray-dark text-lg">Bas Ter Haar Romenij</p>
-                  <p className="text-brand-gray-medium">Oprichter Innerleaps</p>
-                  <p className="text-brand-blue text-sm">
-                    <a href="mailto:bas@innerleaps.nl" className="hover:underline">bas@innerleaps.nl</a> |
-                    <a href="tel:+31623453477" className="hover:underline"> 06 23453477</a>
-                  </p>
-                </div>
-              </div>
-              <div className="mt-4 text-center">
-                <p className="text-brand-gray-medium italic">
-                  "Wij vinden het echt ontzettend gaaf om organisaties fitter te zien worden. Innerleaps helpt {formData.company} graag verder"
+          <Card className="p-8 bg-gradient-to-br from-brand-green to-brand-green-light text-white text-center mb-8">
+            <div className="flex items-center gap-4 justify-center mb-6">
+              <img 
+                src="/lovable-uploads/25a27d67-f5ef-4b9c-8e54-b246de0f3596.png" 
+                alt="Bas Ter Haar Romenij" 
+                className="w-20 h-20 rounded-full object-cover border-4 border-white"
+              />
+              <div className="text-left">
+                <p className="text-white text-lg italic">
+                  "Deze cijfers zijn indrukwekkend! Laten we bespreken hoe we dit voor {formData.company} gaan realiseren."
                 </p>
+                <p className="text-white/90 text-sm mt-1">— Bas Ter Haar Romenij</p>
+                <p className="text-white/80 text-xs">Oprichter en adviseur InnerLeaps</p>
               </div>
             </div>
-          </div>
-
-          {/* Program Details */}
-          <Card className="mt-6 p-6">
-            <h4 className="text-lg font-semibold text-brand-gray-dark mb-4">Je gegevens</h4>
-            <div className="grid md:grid-cols-2 gap-4 text-brand-gray-medium">
-              <div>
-                <p><strong>Aantal deelnemers:</strong> {formData.employees}</p>
-                <p><strong>Aantal groepen:</strong> {results.numberOfGroups}</p>
-                <p><strong>Programma duur:</strong> 9 weken</p>
-              </div>
-              <div>
-                <p><strong>Gemiddelde werkgeverskosten:</strong> €{parseInt(formData.avgEmployeeCosts).toLocaleString()}</p>
-                <p><strong>Huidig verzuimpercentage:</strong> {formData.currentAbsenteeism}%</p>
-                <p><strong>Huidig verlooppercentage:</strong> {formData.currentTurnover}%</p>
-              </div>
-            </div>
+            
+            <Button 
+              size="lg" 
+              className="bg-white text-brand-green hover:bg-gray-100 font-semibold px-8 py-4 text-lg" 
+              onClick={openCalendar}
+            >
+              Plan een vrijblijvend gesprek
+            </Button>
           </Card>
+
+          {/* Back button */}
+          <div className="text-center">
+            <Button 
+              variant="outline" 
+              size="lg" 
+              className="border-2 border-brand-blue text-brand-blue hover:bg-brand-blue hover:text-white px-8 py-4 text-lg" 
+              onClick={() => navigate('/')}
+            >
+              <ArrowLeft className="h-5 w-5 mr-2" />
+              Terug naar home
+            </Button>
+          </div>
         </div>
       </div>
 
-      {/* Sticky CTA Button rechtsonderin */}
+      {/* Sticky CTA Button */}
       <div className="fixed bottom-6 right-6 z-40">
         <Button 
           onClick={openCalendar}

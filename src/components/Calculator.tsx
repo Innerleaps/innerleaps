@@ -1,127 +1,45 @@
-
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Card } from '@/components/ui/card';
-import { Calculator as CalculatorIcon, TrendingUp, TrendingDown } from 'lucide-react';
+import { Calculator as CalculatorIcon } from 'lucide-react';
+import { calculateMBSRSavings, CalculationInputs } from '@/utils/calculationEngine';
 
 const Calculator = () => {
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     name: '',
     phone: '',
     company: '',
     employees: '',
-    yearlyCosts: '',
+    avgEmployeeCosts: '',
     currentAbsenteeism: '',
     currentTurnover: ''
   });
-  
-  const [showResults, setShowResults] = useState(false);
-  const [results, setResults] = useState({
-    absenteeismSaving: 0,
-    turnoverSaving: 0,
-    totalSaving: 0,
-    roi: 0
-  });
 
-  const calculateSavings = () => {
-    const employees = parseInt(formData.employees) || 0;
-    const yearlyCosts = parseInt(formData.yearlyCosts) || 0;
-    const currentAbsenteeism = parseFloat(formData.currentAbsenteeism) || 0;
-    const currentTurnover = parseFloat(formData.currentTurnover) || 0;
-    
-    // Calculate average cost per employee
-    const costPerEmployee = yearlyCosts / employees;
-    
-    // Calculate absenteeism savings (using conservative 20% reduction)
-    const absenteeismSaving = (currentAbsenteeism / 100) * yearlyCosts * 0.20;
-    
-    // Calculate turnover savings (using conservative 20% improvement)
-    const turnoverSaving = (currentTurnover / 100) * employees * costPerEmployee * 0.20;
-    
-    const totalSaving = absenteeismSaving + turnoverSaving;
-    
-    // Estimate program cost (€800 per employee for 9-week program)
-    const programCost = employees * 800;
-    const roi = ((totalSaving - programCost) / programCost) * 100;
-    
-    setResults({
-      absenteeismSaving: Math.round(absenteeismSaving),
-      turnoverSaving: Math.round(turnoverSaving),
-      totalSaving: Math.round(totalSaving),
-      roi: Math.round(roi)
+  const calculateAndNavigate = () => {
+    const inputs: CalculationInputs = {
+      employees: parseInt(formData.employees) || 0,
+      avgEmployeeCosts: parseInt(formData.avgEmployeeCosts) || 0,
+      currentAbsenteeism: parseFloat(formData.currentAbsenteeism) || 0,
+      currentTurnover: parseFloat(formData.currentTurnover) || 0,
+    };
+
+    const results = calculateMBSRSavings(inputs);
+
+    navigate('/berekening', {
+      state: {
+        results,
+        formData
+      }
     });
-    
-    setShowResults(true);
   };
 
   const handleInputChange = (field: string, value: string) => {
     setFormData(prev => ({ ...prev, [field]: value }));
   };
-
-  if (showResults) {
-    return (
-      <Card className="p-8 bg-gradient-to-br from-brand-orange to-brand-orange/80 text-white">
-        <div className="text-center space-y-6">
-          <div className="inline-flex items-center justify-center w-16 h-16 bg-white/20 rounded-full mb-4">
-            <TrendingUp className="h-8 w-8" />
-          </div>
-          
-          <h3 className="text-2xl font-bold">Je Potentiële Besparing</h3>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="text-center p-4 bg-white/20 rounded-lg">
-              <div className="text-3xl font-bold mb-2">€{results.absenteeismSaving.toLocaleString()}</div>
-              <div className="text-sm opacity-90">Verzuim reductie</div>
-            </div>
-            <div className="text-center p-4 bg-white/20 rounded-lg">
-              <div className="text-3xl font-bold mb-2">€{results.turnoverSaving.toLocaleString()}</div>
-              <div className="text-sm opacity-90">Retentie verbetering</div>
-            </div>
-            <div className="text-center p-4 bg-white/20 rounded-lg">
-              <div className="text-3xl font-bold mb-2">{results.roi}%</div>
-              <div className="text-sm opacity-90">ROI binnen 1 jaar</div>
-            </div>
-          </div>
-          
-          <div className="text-center p-6 bg-white/10 rounded-lg">
-            <div className="text-4xl font-bold mb-2">€{results.totalSaving.toLocaleString()}</div>
-            <div className="text-lg">Totale jaarlijkse besparing</div>
-          </div>
-          
-          <div className="space-y-4">
-            <p className="text-sm opacity-90">
-              *Berekening gebaseerd op wetenschappelijk bewezen resultaten: 19-30% verzuimreductie en 17-31% retentieverbetering
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button 
-                className="bg-white hover:bg-white text-brand-orange hover:text-brand-orange"
-                onClick={() => {
-                  const link = document.createElement('a');
-                  link.href = 'https://calendar.app.google/BgGy8cVUSk4w5Zzg8';
-                  link.target = '_blank';
-                  link.rel = 'noopener noreferrer';
-                  document.body.appendChild(link);
-                  link.click();
-                  document.body.removeChild(link);
-                }}
-              >
-                Plan een gesprek over deze resultaten
-              </Button>
-              <Button 
-                variant="outline" 
-                className="border-white text-white hover:text-white hover:border-white hover:bg-transparent"
-                onClick={() => setShowResults(false)}
-              >
-                Nieuwe berekening
-              </Button>
-            </div>
-          </div>
-        </div>
-      </Card>
-    );
-  }
 
   return (
     <Card className="p-8">
@@ -133,7 +51,7 @@ const Calculator = () => {
           Bereken Je Potentiële Besparing
         </h3>
         <p className="text-brand-gray-medium">
-          Vul je gegevens in voor een persoonlijke berekening van de ROI
+          Vul je gegevens in voor een persoonlijke berekening van de ROI over 3 scenario's
         </p>
       </div>
 
@@ -176,13 +94,14 @@ const Calculator = () => {
           </div>
           
           <div>
-            <Label htmlFor="employees" className="text-brand-gray-dark font-medium">Aantal medewerkers *</Label>
+            <Label htmlFor="employees" className="text-brand-gray-dark font-medium">Aantal deelnemers *</Label>
             <Input
               id="employees"
               type="number"
               value={formData.employees}
               onChange={(e) => handleInputChange('employees', e.target.value)}
               className="mt-1"
+              placeholder="15"
               required
             />
           </div>
@@ -190,14 +109,14 @@ const Calculator = () => {
 
         <div className="space-y-4">
           <div>
-            <Label htmlFor="yearlyCosts" className="text-brand-gray-dark font-medium">Totale jaarlijkse loonkosten (€) *</Label>
+            <Label htmlFor="avgEmployeeCosts" className="text-brand-gray-dark font-medium">Gemiddeld bruto jaarsalaris (€) *</Label>
             <Input
-              id="yearlyCosts"
+              id="avgEmployeeCosts"
               type="number"
-              value={formData.yearlyCosts}
-              onChange={(e) => handleInputChange('yearlyCosts', e.target.value)}
+              value={formData.avgEmployeeCosts}
+              onChange={(e) => handleInputChange('avgEmployeeCosts', e.target.value)}
               className="mt-1"
-              placeholder="bijv. 2500000"
+              placeholder="39700"
               required
             />
           </div>
@@ -211,7 +130,7 @@ const Calculator = () => {
               value={formData.currentAbsenteeism}
               onChange={(e) => handleInputChange('currentAbsenteeism', e.target.value)}
               className="mt-1"
-              placeholder="bijv. 4.2"
+              placeholder="5.2"
               required
             />
           </div>
@@ -225,16 +144,16 @@ const Calculator = () => {
               value={formData.currentTurnover}
               onChange={(e) => handleInputChange('currentTurnover', e.target.value)}
               className="mt-1"
-              placeholder="bijv. 12.5"
+              placeholder="10"
               required
             />
           </div>
           
           <div className="pt-4">
             <Button 
-              onClick={calculateSavings}
+              onClick={calculateAndNavigate}
               className="w-full"
-              disabled={!formData.name || !formData.phone || !formData.company || !formData.employees || !formData.yearlyCosts || !formData.currentAbsenteeism || !formData.currentTurnover}
+              disabled={!formData.name || !formData.phone || !formData.company || !formData.employees || !formData.avgEmployeeCosts || !formData.currentAbsenteeism || !formData.currentTurnover}
             >
               Bereken Mijn Besparing
             </Button>
