@@ -10,7 +10,7 @@ import {
   Laptop, Award, Activity, RotateCcw, BookOpen, Star, Check, Gift
 } from "lucide-react";
 import heroBackground from "@/assets/Vitaliteitsprogramma_presentatie_Innerleaps.png";
-import masterclassBackground from "@/assets/Gratis_masterclass_stressmanagement_cursus.png";
+import masterclassImage from "@/assets/Stressmanagement_masterclass.png";
 
 // Client logos
 import oliverLogo from "@/assets/Vitaliteitsprogramma_Oliver_Wyman_light-2.png";
@@ -692,27 +692,19 @@ const StressManagement = () => {
             </div>
           </div>
 
-          <div 
-            className="relative p-8 rounded-xl max-w-7xl mx-auto overflow-hidden"
-            style={{
-              backgroundImage: `url(${masterclassBackground})`,
-              backgroundSize: 'cover',
-              backgroundPosition: 'center',
-              backgroundRepeat: 'no-repeat'
-            }}
-          >
-            <div className="absolute inset-0 bg-black/30"></div>
-            
-            <div className="relative z-10 flex flex-col items-center justify-center gap-6 max-w-2xl mx-auto">
+          {/* CTA Section - 4 Column Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-6 md:gap-8 max-w-7xl mx-auto">
+            {/* Column 1-2: Quote and CTA */}
+            <div className="md:col-span-2 flex flex-col gap-6 justify-center">
               {/* Review Quote */}
-              <div className="bg-white/50 backdrop-blur-sm p-4 rounded-lg w-full">
-                <div className="flex items-center gap-2 mb-2 justify-center">
+              <div className="bg-white/95 backdrop-blur-sm p-6 rounded-lg shadow-lg">
+                <div className="flex items-center gap-2 mb-3 justify-center">
                   <div className="flex gap-0.5">
                     {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="w-4 h-4 fill-amber-400 text-amber-400" />
+                      <Star key={i} className="w-5 h-5 fill-amber-400 text-amber-400" />
                     ))}
                   </div>
-                  <span className="font-semibold text-brand-gray-dark">4,7 / 5</span>
+                  <span className="font-semibold text-brand-gray-dark text-lg">4,7 / 5</span>
                 </div>
                 <p className="text-base text-brand-gray-dark italic leading-relaxed text-center">
                   "Deze workshop laat je duidelijk het belang zien van het trainen van je aandachtsspier. De workshop
@@ -729,6 +721,15 @@ const StressManagement = () => {
               >
                 Aanmelden gratis masterclass
               </Button>
+            </div>
+
+            {/* Column 3-4: Masterclass Photo */}
+            <div className="md:col-span-2">
+              <img
+                src={masterclassImage}
+                alt="Stressmanagement masterclass bij Innerleaps"
+                className="w-full h-full object-cover rounded-xl shadow-lg"
+              />
             </div>
           </div>
           
