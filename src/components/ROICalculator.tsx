@@ -6,56 +6,19 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Calculator, CheckCircle } from "lucide-react";
 import { toast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
+import { calculateMBSRSavings, type CalculationResults } from "@/utils/calculationEngine";
 const ROICalculator = () => {
   const [formData, setFormData] = useState({
     naam: "",
     email: "",
     bedrijfsnaam: "",
     verzuimPercentage: "5.2",
+    verloopPercentage: "10",
     aantalDeelnemers: "15",
     brutoJaarsalaris: "39700",
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
-  const calculateROI = () => {
-    const deelnemers = parseInt(formData.aantalDeelnemers);
-    const salaris = parseFloat(formData.brutoJaarsalaris);
-    const verzuimPerc = parseFloat(formData.verzuimPercentage) / 100;
-
-    // Stap 1: Totale Loonkosten
-    const totaleLoonkosten = deelnemers * salaris;
-
-    // Stap 2: Verzuimkosten (185% factor volgens Sazas, 2024)
-    const verzuimkosten = totaleLoonkosten * verzuimPerc * 1.85;
-
-    // Stap 3: Programmakosten
-    const aantalGroepen = Math.ceil(deelnemers / 15);
-    const programmakosten = aantalGroepen * 5925;
-
-    // Stap 4: Verzuimbesparing
-    const minVerzuimbesparing = verzuimkosten * 0.15;
-    const maxVerzuimbesparing = verzuimkosten * 0.21;
-
-    // Stap 5: Terugverdientijd
-    const minTerugverdientijd = (programmakosten / maxVerzuimbesparing) * 12;
-    const maxTerugverdientijd = (programmakosten / minVerzuimbesparing) * 12;
-
-    // Stap 6: ROI Berekening
-    const minROI = ((minVerzuimbesparing - programmakosten) / programmakosten) * 100;
-    const maxROI = ((maxVerzuimbesparing - programmakosten) / programmakosten) * 100;
-    return {
-      totaleLoonkosten,
-      verzuimkosten,
-      programmakosten,
-      minVerzuimbesparing,
-      maxVerzuimbesparing,
-      minTerugverdientijd,
-      maxTerugverdientijd,
-      minROI,
-      maxROI,
-      showROI: maxROI >= 100,
-    };
-  };
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
@@ -70,10 +33,22 @@ const ROICalculator = () => {
     }
     setIsSubmitting(true);
     try {
-      const calculationResults = calculateROI();
+      const calculationResults: CalculationResults = calculateMBSRSavings({
+        employees: parseInt(formData.aantalDeelnemers),
+        avgEmployeeCosts: parseFloat(formData.brutoJaarsalaris),
+        currentAbsenteeism: parseFloat(formData.verzuimPercentage),
+        currentTurnover: parseFloat(formData.verloopPercentage),
+      });
+
       const { error } = await supabase.functions.invoke("send-roi-analysis", {
         body: {
-          ...formData,
+          naam: formData.naam,
+          email: formData.email,
+          bedrijfsnaam: formData.bedrijfsnaam,
+          verzuimPercentage: formData.verzuimPercentage,
+          verloopPercentage: formData.verloopPercentage,
+          aantalDeelnemers: formData.aantalDeelnemers,
+          brutoJaarsalaris: formData.brutoJaarsalaris,
           calculationResults,
         },
       });
@@ -121,6 +96,7 @@ const ROICalculator = () => {
                   email: "",
                   bedrijfsnaam: "",
                   verzuimPercentage: "5.2",
+                  verloopPercentage: "10",
                   aantalDeelnemers: "15",
                   brutoJaarsalaris: "39700",
                 });
@@ -220,6 +196,22 @@ const ROICalculator = () => {
                       onChange={(e) => handleInputChange("verzuimPercentage", e.target.value)}
                       className="bg-white border-gray-300 text-brand-gray-dark placeholder-gray-400"
                       placeholder="5.2"
+                      required
+                    />
+                  </div>
+
+                  <div className="space-y-2">
+                    <Label htmlFor="verloop" className="text-white font-medium">
+                      Huidig personeelsverloop percentage
+                    </Label>
+                    <Input
+                      id="verloop"
+                      type="number"
+                      step="0.1"
+                      value={formData.verloopPercentage}
+                      onChange={(e) => handleInputChange("verloopPercentage", e.target.value)}
+                      className="bg-white border-gray-300 text-brand-gray-dark placeholder-gray-400"
+                      placeholder="10"
                       required
                     />
                   </div>
