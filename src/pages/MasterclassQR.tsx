@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { Star, Activity, Brain, RotateCcw, Gift, Mail, Phone, X } from "lucide-react";
+import { Star, Activity, Brain, RotateCcw, Gift, Mail, Phone } from "lucide-react";
 import MasterclassFormModal from "@/components/MasterclassFormModal";
 import masterclassBackground from "@/assets/Gratis_masterclass_stressmanagement_cursus.png";
 
@@ -53,32 +53,9 @@ const MasterclassQR = () => {
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight">
             Minder <span className="text-brand-orange">stress</span>, meer <span className="text-brand-orange">levensplezier</span>
           </h1>
-          <div className="text-lg sm:text-xl md:text-2xl text-blue-100 leading-relaxed max-w-2xl mx-auto space-y-4">
-            <p className="font-semibold">Herken je dit?</p>
-            <ul className="text-base sm:text-lg space-y-3 text-left max-w-xl mx-auto">
-              <li className="flex items-start gap-3">
-                <X className="h-5 w-5 text-brand-orange stroke-[3] mt-0.5 flex-shrink-0" />
-                <span>Je hoofd zit vaak vol, zelfs 's avonds.</span>
-              </li>
-              <li className="flex items-start gap-3">
-                <X className="h-5 w-5 text-brand-orange stroke-[3] mt-0.5 flex-shrink-0" />
-                <span>Moeite om écht te ontspannen tijdens vrije tijd of vakantie.</span>
-              </li>
-              <li className="flex items-start gap-3">
-                <X className="h-5 w-5 text-brand-orange stroke-[3] mt-0.5 flex-shrink-0" />
-                <span>Kleine dingen brengen je snel uit balans.</span>
-              </li>
-              <li className="flex items-start gap-3">
-                <X className="h-5 w-5 text-brand-orange stroke-[3] mt-0.5 flex-shrink-0" />
-                <span>Je geniet minder van leuke momenten.</span>
-              </li>
-              <li className="flex items-start gap-3">
-                <X className="h-5 w-5 text-brand-orange stroke-[3] mt-0.5 flex-shrink-0" />
-                <span>Moeilijk om 's avonds je hoofd uit te schakelen voor een goede nachtrust.</span>
-              </li>
-            </ul>
-            <p className="font-semibold pt-2">Ontdek het brein geheim voor minder stress en meer levensplezier met onze gratis masterclass.</p>
-          </div>
+          <p className="text-lg sm:text-xl md:text-2xl text-blue-100 leading-relaxed max-w-2xl mx-auto">
+            Ervaar in 60 minuten hoe je met wetenschappelijk bewezen technieken rust in je hoofd krijgt
+          </p>
           
           {/* Trust Badge */}
           <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full">
@@ -96,7 +73,7 @@ const MasterclassQR = () => {
       <section className="py-12 sm:py-16 md:py-20 bg-brand-off-white">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-brand-purple text-center leading-tight mb-4 sm:mb-6">
-            Wat krijg je in de <span className="text-brand-orange">gratis</span> masterclass?
+            Wat krijg je in de <span className="text-brand-orange">gratis masterclass </span>?
           </h2>
           <p className="text-lg sm:text-xl text-brand-gray-medium text-center leading-relaxed mb-8 sm:mb-12 max-w-3xl mx-auto">
             In 60 minuten maak je op speelse wijze kennis met onze aanpak
