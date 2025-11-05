@@ -53,9 +53,17 @@ const MasterclassQR = () => {
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight">
             Minder <span className="text-brand-orange">stress</span>, meer <span className="text-brand-orange">levensplezier</span>
           </h1>
-          <p className="text-lg sm:text-xl md:text-2xl text-blue-100 leading-relaxed max-w-2xl mx-auto">
-            Ervaar in 60 minuten hoe je met wetenschappelijk bewezen technieken rust in je hoofd krijgt
-          </p>
+          <div className="text-lg sm:text-xl md:text-2xl text-blue-100 leading-relaxed max-w-2xl mx-auto space-y-4">
+            <p className="font-semibold">Herken je dit?</p>
+            <ul className="text-base sm:text-lg space-y-2 text-left">
+              <li>- Je hoofd zit vaak vol, zelfs 's avonds.</li>
+              <li>- Moeite om écht te ontspannen tijdens vrije tijd of vakantie.</li>
+              <li>- Kleine dingen brengen je snel uit balans.</li>
+              <li>- Je geniet minder van leuke momenten.</li>
+              <li>- Moeilijk om 's avonds je hoofd uit te schakelen voor een goede nachtrust.</li>
+            </ul>
+            <p className="font-semibold pt-2">Ontdek het brein geheim voor minder stress en meer levensplezier met onze gratis masterclass.</p>
+          </div>
           
           {/* Trust Badge */}
           <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full">
