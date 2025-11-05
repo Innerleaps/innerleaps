@@ -167,114 +167,122 @@ const CalculatorModal = ({ isOpen, onClose }: CalculatorModalProps) => {
         
         <div className="space-y-6">
           <form onSubmit={handleSubmit} className="space-y-6">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <div className="space-y-2">
-                <Label htmlFor="modal-naam" className="text-brand-gray-dark font-medium">
-                  Naam*
-                </Label>
-                <Input
-                  id="modal-naam"
-                  type="text"
-                  value={formData.naam}
-                  onChange={(e) => handleInputChange('naam', e.target.value)}
-                  className="bg-white border-gray-300 text-brand-gray-dark placeholder:!text-[rgb(51,65,85)]"
-                  placeholder="Je volledige naam"
-                  required
-                />
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {/* Left Column - Contactgegevens */}
+              <div className="space-y-4">
+                <h3 className="text-xl font-semibold text-brand-gray-dark mb-4">Contactgegevens</h3>
+                
+                <div className="space-y-2">
+                  <Label htmlFor="modal-naam" className="text-brand-gray-dark font-medium">
+                    Naam*
+                  </Label>
+                  <Input
+                    id="modal-naam"
+                    type="text"
+                    value={formData.naam}
+                    onChange={(e) => handleInputChange('naam', e.target.value)}
+                    className="bg-white border-gray-300 text-brand-gray-dark placeholder:!text-[rgb(51,65,85)]"
+                    placeholder="Je volledige naam"
+                    required
+                  />
+                </div>
+
+                <div className="space-y-2">
+                  <Label htmlFor="modal-email" className="text-brand-gray-dark font-medium">
+                    Email*
+                  </Label>
+                  <Input
+                    id="modal-email"
+                    type="email"
+                    value={formData.email}
+                    onChange={(e) => handleInputChange('email', e.target.value)}
+                    className="bg-white border-gray-300 text-brand-gray-dark placeholder:!text-[rgb(51,65,85)]"
+                    placeholder="je.email@bedrijf.nl"
+                    required
+                  />
+                </div>
+
+                <div className="space-y-2">
+                  <Label htmlFor="modal-bedrijfsnaam" className="text-brand-gray-dark font-medium">
+                    Bedrijfsnaam*
+                  </Label>
+                  <Input
+                    id="modal-bedrijfsnaam"
+                    type="text"
+                    value={formData.bedrijfsnaam}
+                    onChange={(e) => handleInputChange('bedrijfsnaam', e.target.value)}
+                    className="bg-white border-gray-300 text-brand-gray-dark placeholder:!text-[rgb(51,65,85)]"
+                    placeholder="Je bedrijfsnaam"
+                    required
+                  />
+                </div>
               </div>
 
-              <div className="space-y-2">
-                <Label htmlFor="modal-email" className="text-brand-gray-dark font-medium">
-                  Email*
-                </Label>
-                <Input
-                  id="modal-email"
-                  type="email"
-                  value={formData.email}
-                  onChange={(e) => handleInputChange('email', e.target.value)}
-                  className="bg-white border-gray-300 text-brand-gray-dark placeholder:!text-[rgb(51,65,85)]"
-                  placeholder="je.email@bedrijf.nl"
-                  required
-                />
-              </div>
+              {/* Right Column - Input voor berekening */}
+              <div className="space-y-4">
+                <h3 className="text-xl font-semibold text-brand-gray-dark mb-4">Input voor berekening</h3>
+                
+                <div className="space-y-2">
+                  <Label htmlFor="modal-verzuim" className="text-brand-gray-dark font-medium">
+                    Huidig verzuimpercentage
+                  </Label>
+                  <Input
+                    id="modal-verzuim"
+                    type="number"
+                    step="0.1"
+                    value={formData.verzuimPercentage}
+                    onChange={(e) => handleInputChange('verzuimPercentage', e.target.value)}
+                    className="bg-white border-gray-300 text-brand-gray-dark placeholder-gray-400"
+                    placeholder="5.2"
+                    required
+                  />
+                </div>
 
-              <div className="space-y-2">
-                <Label htmlFor="modal-bedrijfsnaam" className="text-brand-gray-dark font-medium">
-                  Bedrijfsnaam*
-                </Label>
-                <Input
-                  id="modal-bedrijfsnaam"
-                  type="text"
-                  value={formData.bedrijfsnaam}
-                  onChange={(e) => handleInputChange('bedrijfsnaam', e.target.value)}
-                  className="bg-white border-gray-300 text-brand-gray-dark placeholder:!text-[rgb(51,65,85)]"
-                  placeholder="Je bedrijfsnaam"
-                  required
-                />
-              </div>
-            </div>
+                <div className="space-y-2">
+                  <Label htmlFor="modal-verloop" className="text-brand-gray-dark font-medium">
+                    Huidig personeelsverloop percentage
+                  </Label>
+                  <Input
+                    id="modal-verloop"
+                    type="number"
+                    step="0.1"
+                    value={formData.verloopPercentage}
+                    onChange={(e) => handleInputChange('verloopPercentage', e.target.value)}
+                    className="bg-white border-gray-300 text-brand-gray-dark placeholder-gray-400"
+                    placeholder="10"
+                    required
+                  />
+                </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <div className="space-y-2">
-                <Label htmlFor="modal-verzuim" className="text-brand-gray-dark font-medium">
-                  Huidig verzuimpercentage
-                </Label>
-                <Input
-                  id="modal-verzuim"
-                  type="number"
-                  step="0.1"
-                  value={formData.verzuimPercentage}
-                  onChange={(e) => handleInputChange('verzuimPercentage', e.target.value)}
-                  className="bg-white border-gray-300 text-brand-gray-dark placeholder-gray-400"
-                  placeholder="5.2"
-                  required
-                />
-              </div>
+                <div className="space-y-2">
+                  <Label htmlFor="modal-deelnemers" className="text-brand-gray-dark font-medium">
+                    Aantal InnerLeaps deelnemers
+                  </Label>
+                  <Input
+                    id="modal-deelnemers"
+                    type="number"
+                    value={formData.aantalDeelnemers}
+                    onChange={(e) => handleInputChange('aantalDeelnemers', e.target.value)}
+                    className="bg-white border-gray-300 text-brand-gray-dark placeholder-gray-400"
+                    placeholder="15"
+                    required
+                  />
+                </div>
 
-              <div className="space-y-2">
-                <Label htmlFor="modal-verloop" className="text-brand-gray-dark font-medium">
-                  Huidig personeelsverloop percentage
-                </Label>
-                <Input
-                  id="modal-verloop"
-                  type="number"
-                  step="0.1"
-                  value={formData.verloopPercentage}
-                  onChange={(e) => handleInputChange('verloopPercentage', e.target.value)}
-                  className="bg-white border-gray-300 text-brand-gray-dark placeholder-gray-400"
-                  placeholder="10"
-                  required
-                />
-              </div>
-
-              <div className="space-y-2">
-                <Label htmlFor="modal-deelnemers" className="text-brand-gray-dark font-medium">
-                  Aantal InnerLeaps deelnemers
-                </Label>
-                <Input
-                  id="modal-deelnemers"
-                  type="number"
-                  value={formData.aantalDeelnemers}
-                  onChange={(e) => handleInputChange('aantalDeelnemers', e.target.value)}
-                  className="bg-white border-gray-300 text-brand-gray-dark placeholder-gray-400"
-                  placeholder="15"
-                  required
-                />
-              </div>
-
-              <div className="space-y-2">
-                <Label htmlFor="modal-salaris" className="text-brand-gray-dark font-medium">
-                  Gemiddelde of mediaan bruto jaarsalaris
-                </Label>
-                <Input
-                  id="modal-salaris"
-                  type="number"
-                  value={formData.brutoJaarsalaris}
-                  onChange={(e) => handleInputChange('brutoJaarsalaris', e.target.value)}
-                  className="bg-white border-gray-300 text-brand-gray-dark placeholder-gray-400"
-                  placeholder="39700"
-                  required
-                />
+                <div className="space-y-2">
+                  <Label htmlFor="modal-salaris" className="text-brand-gray-dark font-medium">
+                    Gemiddelde of mediaan bruto jaarsalaris
+                  </Label>
+                  <Input
+                    id="modal-salaris"
+                    type="number"
+                    value={formData.brutoJaarsalaris}
+                    onChange={(e) => handleInputChange('brutoJaarsalaris', e.target.value)}
+                    className="bg-white border-gray-300 text-brand-gray-dark placeholder-gray-400"
+                    placeholder="39700"
+                    required
+                  />
+                </div>
               </div>
             </div>
 
