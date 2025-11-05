@@ -41,6 +41,7 @@ const App = () => {
             <Route path="/wetenschap" element={<Wetenschap />} />
             <Route path="/over-ons" element={<OverOns />} />
             <Route path="/9-stippen-oplossing" element={<NegenStippenOplossing />} />
+            <Route path="/stressmanagement-programma" element={<StressManagement />} />
             
             {/* Feature-flag routes - visible in Lovable editor, but redirect in production */}
             <Route path="/masterclass-stress-qr" element={
@@ -63,7 +64,6 @@ const App = () => {
                 <Route path="/voor-wie" element={<VoorWie />} />
                 <Route path="/berekening" element={<Berekening />} />
                 <Route path="/berekening-demo" element={<BerekeningDemo />} />
-                <Route path="/stressmanagement-programma" element={<StressManagement />} />
               </>
             )}
             
