@@ -198,9 +198,12 @@ const ProgramRegistrationModal = ({
   const companyName = watch("companyName");
   const selectedTimeslot = watch("selectedTimeslot");
 
-  const isStep1Valid = fullName && email && phone && birthDay && birthMonth && birthYear;
-  const isStep2Valid = address && (registrationType === "particulier" || (registrationType === "zakelijk" && companyName));
-  const isStep3Valid = selectedTimeslot;
+  const isStep1Valid = fullName && email && phone && birthDay && birthMonth && birthYear && 
+    !errors.fullName && !errors.email && !errors.phone && !errors.birthDay && !errors.birthMonth && !errors.birthYear;
+  const isStep2Valid = address && 
+    (registrationType === "particulier" || (registrationType === "zakelijk" && companyName)) &&
+    !errors.address && !errors.companyName;
+  const isStep3Valid = selectedTimeslot && !errors.selectedTimeslot;
 
   const onSubmit = async (data: ProgramRegistrationForm) => {
     setIsSubmitting(true);
@@ -264,7 +267,7 @@ const ProgramRegistrationModal = ({
                   id="fullName" 
                   {...register("fullName")} 
                   placeholder="Jan Jansen" 
-                  className="bg-white border-gray-300 text-brand-gray-dark placeholder:text-[rgb(51,65,85)]"
+                  className="bg-white border-gray-300 text-brand-gray-dark placeholder:text-gray-400"
                 />
                 {errors.fullName && <p className="text-sm text-destructive">{errors.fullName.message}</p>}
               </div>
@@ -276,7 +279,7 @@ const ProgramRegistrationModal = ({
                   type="email" 
                   {...register("email")} 
                   placeholder="jan@voorbeeld.nl" 
-                  className="bg-white border-gray-300 text-brand-gray-dark placeholder:text-[rgb(51,65,85)]"
+                  className="bg-white border-gray-300 text-brand-gray-dark placeholder:text-gray-400"
                 />
                 {errors.email && <p className="text-sm text-destructive">{errors.email.message}</p>}
               </div>
@@ -288,7 +291,7 @@ const ProgramRegistrationModal = ({
                   type="tel" 
                   {...register("phone")} 
                   placeholder="06 12345678" 
-                  className="bg-white border-gray-300 text-brand-gray-dark placeholder:text-[rgb(51,65,85)]"
+                  className="bg-white border-gray-300 text-brand-gray-dark placeholder:text-gray-400"
                 />
                 {errors.phone && <p className="text-sm text-destructive">{errors.phone.message}</p>}
               </div>
@@ -300,19 +303,19 @@ const ProgramRegistrationModal = ({
                     placeholder="DD" 
                     maxLength={2}
                     {...register("birthDay")}
-                    className="text-center bg-white border-gray-300 text-brand-gray-dark placeholder:text-[rgb(51,65,85)]"
+                    className="text-center bg-white border-gray-300 text-brand-gray-dark placeholder:text-gray-400"
                   />
                   <Input 
                     placeholder="MM" 
                     maxLength={2}
                     {...register("birthMonth")}
-                    className="text-center bg-white border-gray-300 text-brand-gray-dark placeholder:text-[rgb(51,65,85)]"
+                    className="text-center bg-white border-gray-300 text-brand-gray-dark placeholder:text-gray-400"
                   />
                   <Input 
                     placeholder="YYYY" 
                     maxLength={4}
                     {...register("birthYear")}
-                    className="text-center bg-white border-gray-300 text-brand-gray-dark placeholder:text-[rgb(51,65,85)]"
+                    className="text-center bg-white border-gray-300 text-brand-gray-dark placeholder:text-gray-400"
                   />
                 </div>
                 {errors.birthDay && <p className="text-sm text-destructive">{errors.birthDay.message}</p>}
@@ -358,7 +361,7 @@ const ProgramRegistrationModal = ({
                   id="address" 
                   {...register("address")} 
                   placeholder="Straatnaam 123, 1234 AB Plaats" 
-                  className="bg-white border-gray-300 text-brand-gray-dark placeholder:text-[rgb(51,65,85)]"
+                  className="bg-white border-gray-300 text-brand-gray-dark placeholder:text-gray-400"
                 />
                 {errors.address && <p className="text-sm text-destructive">{errors.address.message}</p>}
               </div>
@@ -369,7 +372,7 @@ const ProgramRegistrationModal = ({
                     id="companyName" 
                     {...register("companyName")} 
                     placeholder="Bedrijfsnaam BV" 
-                    className="bg-white border-gray-300 text-brand-gray-dark placeholder:text-[rgb(51,65,85)]"
+                    className="bg-white border-gray-300 text-brand-gray-dark placeholder:text-gray-400"
                   />
                   {errors.companyName && <p className="text-sm text-destructive">{errors.companyName.message}</p>}
                 </div>}
@@ -381,7 +384,7 @@ const ProgramRegistrationModal = ({
                       id="departmentCostCenter" 
                       {...register("departmentCostCenter")} 
                       placeholder="Marketing, HR, etc." 
-                      className="bg-white border-gray-300 text-brand-gray-dark placeholder:text-[rgb(51,65,85)]"
+                      className="bg-white border-gray-300 text-brand-gray-dark placeholder:text-gray-400"
                     />
                   </div>
 

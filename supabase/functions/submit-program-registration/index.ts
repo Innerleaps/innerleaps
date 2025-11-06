@@ -164,10 +164,11 @@ const handler = async (req: Request): Promise<Response> => {
 `;
 
     const { error: participantEmailError } = await resend.emails.send({
-      from: "InnerLeaps <onboarding@resend.dev>",
+      from: "InnerLeaps <info@innerleaps.nl>",
       to: [data.email],
       subject: `Bevestiging aanmelding ${programName}`,
       html: participantEmailHtml,
+      replyTo: "bas@innerleaps.nl",
     });
 
     if (participantEmailError) {
@@ -204,10 +205,11 @@ const handler = async (req: Request): Promise<Response> => {
 `;
 
     const { error: adminEmailError } = await resend.emails.send({
-      from: "InnerLeaps Aanmeldingen <onboarding@resend.dev>",
+      from: "InnerLeaps <info@innerleaps.nl>",
       to: ["bas@innerleaps.nl"],
       subject: `[ADMIN] Nieuwe aanmelding: ${programName} - ${data.fullName}`,
       html: adminEmailHtml,
+      replyTo: data.email,
     });
 
     if (adminEmailError) {
