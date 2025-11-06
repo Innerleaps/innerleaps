@@ -958,6 +958,12 @@ const PrestatieProgramma = () => {
         </Button>
       </div>
 
+      <ProgramRegistrationModal
+        isOpen={isRegistrationModalOpen}
+        onClose={() => setIsRegistrationModalOpen(false)}
+        programType="prestatie"
+      />
+
       <Footer showNavigation={false} />
     </div>
   );

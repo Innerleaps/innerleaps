@@ -957,6 +957,12 @@ const StressManagement = () => {
         </Button>
       </div>
 
+      <ProgramRegistrationModal
+        isOpen={isRegistrationModalOpen}
+        onClose={() => setIsRegistrationModalOpen(false)}
+        programType="stress-management"
+      />
+
       <Footer showNavigation={false} />
     </div>
   );
