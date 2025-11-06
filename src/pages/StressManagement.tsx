@@ -3,6 +3,7 @@ import SimplifiedNavigation from "@/components/SimplifiedNavigation";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import MasterclassFormModal from "@/components/MasterclassFormModal";
+import ProgramRegistrationModal from "@/components/ProgramRegistrationModal";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import {
   Brain,
@@ -65,6 +66,7 @@ import menzisLogo from "@/assets/Vitaliteitsprogramma_herkend_door_menzis.png";
 
 const StressManagement = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isRegistrationModalOpen, setIsRegistrationModalOpen] = useState(false);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -454,7 +456,10 @@ const StressManagement = () => {
 
           <div className="text-center mt-12">
             <p className="text-xl text-brand-gray-medium mb-6">Wil jij dit ook bereiken?</p>
-            <Button className="bg-brand-orange hover:bg-brand-orange/90 text-white py-3 px-8 rounded-lg text-lg font-semibold">
+            <Button 
+              onClick={() => setIsRegistrationModalOpen(true)}
+              className="bg-brand-orange hover:bg-brand-orange/90 text-white py-3 px-8 rounded-lg text-lg font-semibold"
+            >
               Aanmelden Programma
             </Button>
           </div>
@@ -522,7 +527,10 @@ const StressManagement = () => {
 
           <div className="text-center mt-12">
             <p className="text-xl text-brand-gray-medium mb-6">Klaar om ook te starten?</p>
-            <Button className="bg-brand-orange hover:bg-brand-orange/90 text-white py-3 px-8 rounded-lg text-lg font-semibold">
+            <Button 
+              onClick={() => setIsRegistrationModalOpen(true)}
+              className="bg-brand-orange hover:bg-brand-orange/90 text-white py-3 px-8 rounded-lg text-lg font-semibold"
+            >
               Aanmelden Programma
             </Button>
           </div>
@@ -612,7 +620,10 @@ const StressManagement = () => {
 
           <div className="text-center mt-12">
             <p className="text-xl text-brand-gray-medium mb-6">Ben je ook zo enthousiast?</p>
-            <Button className="bg-brand-orange hover:bg-brand-orange/90 text-white py-3 px-8 rounded-lg text-lg font-semibold">
+            <Button 
+              onClick={() => setIsRegistrationModalOpen(true)}
+              className="bg-brand-orange hover:bg-brand-orange/90 text-white py-3 px-8 rounded-lg text-lg font-semibold"
+            >
               Aanmelden Programma
             </Button>
           </div>
@@ -647,7 +658,10 @@ const StressManagement = () => {
 
           <div className="text-center mt-12">
             <p className="text-xl text-brand-gray-medium mb-6">Wil jij nu een leven met minder spanning en druk?</p>
-            <Button className="bg-brand-orange hover:bg-brand-orange/90 text-white py-3 px-8 rounded-lg text-lg font-semibold">
+            <Button 
+              onClick={() => setIsRegistrationModalOpen(true)}
+              className="bg-brand-orange hover:bg-brand-orange/90 text-white py-3 px-8 rounded-lg text-lg font-semibold"
+            >
               Aanmelden Programma
             </Button>
           </div>

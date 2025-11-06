@@ -98,6 +98,57 @@ export type Database = {
         }
         Relationships: []
       }
+      program_registrations: {
+        Row: {
+          additional_info: string | null
+          address: string
+          agreed_to_terms: boolean
+          birth_date: string
+          company_name: string | null
+          created_at: string
+          department_cost_center: string | null
+          email: string
+          full_name: string
+          id: string
+          phone: string
+          program_type: string
+          registration_type: string
+          selected_timeslot: string
+        }
+        Insert: {
+          additional_info?: string | null
+          address: string
+          agreed_to_terms?: boolean
+          birth_date: string
+          company_name?: string | null
+          created_at?: string
+          department_cost_center?: string | null
+          email: string
+          full_name: string
+          id?: string
+          phone: string
+          program_type: string
+          registration_type: string
+          selected_timeslot: string
+        }
+        Update: {
+          additional_info?: string | null
+          address?: string
+          agreed_to_terms?: boolean
+          birth_date?: string
+          company_name?: string | null
+          created_at?: string
+          department_cost_center?: string | null
+          email?: string
+          full_name?: string
+          id?: string
+          phone?: string
+          program_type?: string
+          registration_type?: string
+          selected_timeslot?: string
+        }
+        Relationships: []
+      }
       stress_questionnaire_submissions: {
         Row: {
           created_at: string

@@ -20,7 +20,7 @@ import LevenVragenlijstResultaat from "./pages/LevenVragenlijstResultaat";
 import StressManagement from "./pages/StressManagement";
 import PrestatieProgramma from "./pages/PrestatieProgramma";
 import MasterclassQR from "./pages/MasterclassQR";
-import MasterclassBedankt from "./pages/MasterclassBedankt";
+import Bedankt from "./pages/Bedankt";
 import NegenStippen from "./pages/NegenStippen";
 import NotFound from "./pages/NotFound";
 import UnderConstruction from "./pages/UnderConstruction";
@@ -51,9 +51,14 @@ const App = () => {
                 <MasterclassQR />
               </ProductionRedirect>
             } />
+            <Route path="/bedankt" element={
+              <ProductionRedirect>
+                <Bedankt />
+              </ProductionRedirect>
+            } />
             <Route path="/masterclass-bedankt" element={
               <ProductionRedirect>
-                <MasterclassBedankt />
+                <Bedankt />
               </ProductionRedirect>
             } />
             
