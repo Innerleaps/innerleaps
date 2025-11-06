@@ -308,11 +308,11 @@ const PrestatieProgramma = () => {
             {/* Probleem 5 */}
             <div className="md:col-span-2 bg-white p-6 rounded-lg space-y-4">
               <div className="p-3 rounded-lg bg-brand-orange/5 w-fit mx-auto">
-                <RotateCcw className="h-8 w-8 text-brand-orange stroke-2" />
+                <BedDouble className="h-8 w-8 text-brand-orange stroke-2" />
               </div>
-              <h3 className="text-xl md:text-2xl font-bold text-brand-gray-dark text-center">Herstellen kost tijd</h3>
+              <h3 className="text-xl md:text-2xl font-bold text-brand-gray-dark text-center">Niet optimaal herstellen</h3>
               <p className="text-base md:text-lg text-brand-gray-medium text-center">
-                Na een tegenvaller of drukke periode duurt het langer dan je zou willen om weer op volle kracht te zijn.
+                Ook als je ligt te slapen, blijft je hoofd soms aanstaan. Daardoor word je niet echt uitgerust wakker en merk je dat je dingen sneller vergeet of minder goed kunt onthouden.
               </p>
             </div>
           </div>
@@ -424,20 +424,20 @@ const PrestatieProgramma = () => {
             {/* Oplossing 5 */}
             <div className="md:col-span-2 bg-brand-off-white p-6 rounded-lg space-y-4">
               <div className="p-3 rounded-lg bg-brand-orange/5 w-fit mx-auto">
-                <RotateCcw className="h-8 w-8 text-brand-orange stroke-2" />
+                <BedDouble className="h-8 w-8 text-brand-orange stroke-2" />
               </div>
-              <h3 className="text-xl md:text-2xl font-bold text-brand-gray-dark text-center">Sneller herstellen</h3>
+              <h3 className="text-xl md:text-2xl font-bold text-brand-gray-dark text-center">Beter slapen & sterker geheugen</h3>
               <div className="space-y-2">
                 <div className="flex items-start gap-2">
                   <CheckCircle className="h-5 w-5 text-brand-orange flex-shrink-0 mt-0.5" />
                   <p className="text-base md:text-lg text-brand-gray-medium">
-                    Tegenslag raakt je minder hard. Je bent sneller weer scherp na een zware periode of uitdaging.
+                    Je komt écht tot rust in je hoofd voordat je gaat slapen. Je wordt uitgeruster wakker en merkt dat je dingen makkelijker onthoudt.
                   </p>
                 </div>
                 <div className="flex items-start gap-2">
                   <CheckCircle className="h-5 w-5 text-brand-orange flex-shrink-0 mt-0.5" />
                   <p className="text-base md:text-lg text-brand-gray-medium">
-                    64 tot 77% van de deelnemers ontwikkelen veel meer veerkracht.
+                    Deelnemers geven aan 20% beter te slapen en informatie makkelijker te onthouden.
                   </p>
                 </div>
               </div>
