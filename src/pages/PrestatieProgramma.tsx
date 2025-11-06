@@ -175,7 +175,7 @@ const PrestatieProgramma = () => {
                         style={{ textShadow: "0 2px 8px rgba(0,0,0,0.5)" }}
                         className="text-xs sm:text-sm md:text-base lg:text-lg text-white font-normal"
                       >
-                        Meer focus
+                        Meer focus, minder fouten
                       </span>
                       <span className="text-brand-orange font-bold text-sm sm:text-base md:text-lg shrink-0">25%</span>
                     </div>
