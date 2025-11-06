@@ -4,10 +4,26 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import MasterclassFormModal from "@/components/MasterclassFormModal";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { 
-  Brain, Heart, Shield, Smile, Moon, CheckCircle, 
-  AlertCircle, Frown, BedDouble, Calendar, Clock, 
-  Laptop, Award, Activity, RotateCcw, BookOpen, Star, Check, Gift
+import {
+  Brain,
+  Heart,
+  Shield,
+  Smile,
+  Moon,
+  CheckCircle,
+  AlertCircle,
+  Frown,
+  BedDouble,
+  Calendar,
+  Clock,
+  Laptop,
+  Award,
+  Activity,
+  RotateCcw,
+  BookOpen,
+  Star,
+  Check,
+  Gift,
 } from "lucide-react";
 import heroBackground from "@/assets/Vitaliteitsprogramma_presentatie_Innerleaps.png";
 import masterclassImage from "@/assets/Stressmanagement_masterclass.png";
@@ -60,7 +76,7 @@ const PrestatieProgramma = () => {
       element.scrollIntoView({ behavior: "smooth" });
     }
   };
-  
+
   const handleModalOpen = () => {
     setIsModalOpen(true);
   };
@@ -128,7 +144,8 @@ const PrestatieProgramma = () => {
                   className="text-xl md:text-2xl text-blue-100 leading-relaxed break-words"
                   style={{ textShadow: "0 2px 8px rgba(0,0,0,0.5)" }}
                 >
-                  Wetenschappelijk bewezen programma om prestaties te verbeteren. Mentale scherpte met meer focus voor betere performance.
+                  Wetenschappelijk bewezen programma om prestaties te verbeteren. Mentale scherpte met meer focus voor
+                  betere performance.
                 </p>
               </div>
 
@@ -178,7 +195,9 @@ const PrestatieProgramma = () => {
                       >
                         Wetenschappelijk onderzoek
                       </span>
-                      <span className="text-brand-orange font-bold text-sm sm:text-base md:text-lg shrink-0">40+ jaar</span>
+                      <span className="text-brand-orange font-bold text-sm sm:text-base md:text-lg shrink-0">
+                        40+ jaar
+                      </span>
                     </div>
                   </div>
 
@@ -227,11 +246,9 @@ const PrestatieProgramma = () => {
       <section className="py-16 md:py-24 bg-brand-off-white">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-purple text-center leading-tight mb-6">
-            Niet optimaal kunnen <span className="text-brand-orange">presteren</span>
+            Je wil beter kunnen<span className="text-brand-orange">presteren</span>
           </h2>
-          <p className="text-xl md:text-2xl text-brand-gray-medium text-center leading-relaxed mb-12">
-            Herken je dit?
-          </p>
+          <p className="text-xl md:text-2xl text-brand-gray-medium text-center leading-relaxed mb-12">Herken je dit?</p>
 
           <div className="grid grid-cols-1 md:grid-cols-6 gap-8 max-w-6xl mx-auto">
             {/* Probleem 1 */}
@@ -239,9 +256,12 @@ const PrestatieProgramma = () => {
               <div className="p-3 rounded-lg bg-brand-orange/5 w-fit mx-auto">
                 <Brain className="h-8 w-8 text-brand-orange stroke-2" />
               </div>
-              <h3 className="text-xl md:text-2xl font-bold text-brand-gray-dark text-center">Afleiding kost je focus</h3>
+              <h3 className="text-xl md:text-2xl font-bold text-brand-gray-dark text-center">
+                Afleiding kost je focus
+              </h3>
               <p className="text-base md:text-lg text-brand-gray-medium text-center">
-                Je wordt makkelijk uit je concentratie gehaald. Diep werk kost meer moeite dan vroeger, je zweeft sneller af.
+                Je wordt makkelijk uit je concentratie gehaald. Diep werk kost meer moeite dan vroeger, je zweeft
+                sneller af.
               </p>
             </div>
 
@@ -250,7 +270,9 @@ const PrestatieProgramma = () => {
               <div className="p-3 rounded-lg bg-brand-orange/5 w-fit mx-auto">
                 <AlertCircle className="h-8 w-8 text-brand-orange stroke-2" />
               </div>
-              <h3 className="text-xl md:text-2xl font-bold text-brand-gray-dark text-center">Mentale vermoeidheid gedurende de dag</h3>
+              <h3 className="text-xl md:text-2xl font-bold text-brand-gray-dark text-center">
+                Mentale vermoeidheid gedurende de dag
+              </h3>
               <p className="text-base md:text-lg text-brand-gray-medium text-center">
                 Halverwege de dag voelt je hoofd al vol. Beslissingen kosten meer energie, je scherpte neemt af.
               </p>
@@ -261,9 +283,12 @@ const PrestatieProgramma = () => {
               <div className="p-3 rounded-lg bg-brand-orange/5 w-fit mx-auto">
                 <Activity className="h-8 w-8 text-brand-orange stroke-2" />
               </div>
-              <h3 className="text-xl md:text-2xl font-bold text-brand-gray-dark text-center">Niet optimaal presteren</h3>
+              <h3 className="text-xl md:text-2xl font-bold text-brand-gray-dark text-center">
+                Niet optimaal presteren
+              </h3>
               <p className="text-base md:text-lg text-brand-gray-medium text-center">
-                Je weet dat er meer in zit. Je haalt je targets, maar het voelt alsof je potentieel niet volledig wordt benut.
+                Je weet dat er meer in zit. Je haalt je targets, maar het voelt alsof je potentieel niet volledig wordt
+                benut.
               </p>
             </div>
 
@@ -272,7 +297,9 @@ const PrestatieProgramma = () => {
               <div className="p-3 rounded-lg bg-brand-orange/5 w-fit mx-auto">
                 <Clock className="h-8 w-8 text-brand-orange stroke-2" />
               </div>
-              <h3 className="text-xl md:text-2xl font-bold text-brand-gray-dark text-center">Veel bezig, niet altijd effectief</h3>
+              <h3 className="text-xl md:text-2xl font-bold text-brand-gray-dark text-center">
+                Veel bezig, niet altijd effectief
+              </h3>
               <p className="text-base md:text-lg text-brand-gray-medium text-center">
                 Je werkt hard, maar niet alles wat je doet levert evenveel op. Prioriteren lukt niet altijd even goed.
               </p>
@@ -296,7 +323,8 @@ const PrestatieProgramma = () => {
       <section className="py-16 md:py-24 bg-white">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-purple text-center leading-tight mb-6">
-            Beter <span className="text-brand-orange">presteren</span> met meer <span className="text-brand-orange">focus</span>
+            Beter <span className="text-brand-orange">presteren</span> met meer{" "}
+            <span className="text-brand-orange">focus</span>
           </h2>
           <p className="text-xl md:text-2xl text-brand-gray-medium text-center leading-relaxed mb-12">
             Wetenschappelijk bewezen effecten:
@@ -313,14 +341,13 @@ const PrestatieProgramma = () => {
                 <div className="flex items-start gap-2">
                   <CheckCircle className="h-5 w-5 text-brand-orange flex-shrink-0 mt-0.5" />
                   <p className="text-base md:text-lg text-brand-gray-medium">
-                    Je aandacht is waar jij hem wil hebben. Diep werken gaat makkelijker, afleidingen hebben minder grip.
+                    Je aandacht is waar jij hem wil hebben. Diep werken gaat makkelijker, afleidingen hebben minder
+                    grip.
                   </p>
                 </div>
                 <div className="flex items-start gap-2">
                   <CheckCircle className="h-5 w-5 text-brand-orange flex-shrink-0 mt-0.5" />
-                  <p className="text-base md:text-lg text-brand-gray-medium">
-                    Verwacht 25% meer focus.
-                  </p>
+                  <p className="text-base md:text-lg text-brand-gray-medium">Verwacht 25% meer focus.</p>
                 </div>
               </div>
             </div>
@@ -335,7 +362,8 @@ const PrestatieProgramma = () => {
                 <div className="flex items-start gap-2">
                   <CheckCircle className="h-5 w-5 text-brand-orange flex-shrink-0 mt-0.5" />
                   <p className="text-base md:text-lg text-brand-gray-medium">
-                    Je hoofd blijft helder gedurende de dag. Beslissingen kosten minder kracht, je eindigt je werkdag met energie over.
+                    Je hoofd blijft helder gedurende de dag. Beslissingen kosten minder kracht, je eindigt je werkdag
+                    met energie over.
                   </p>
                 </div>
                 <div className="flex items-start gap-2">
@@ -352,7 +380,9 @@ const PrestatieProgramma = () => {
               <div className="p-3 rounded-lg bg-brand-orange/5 w-fit mx-auto">
                 <CheckCircle className="h-8 w-8 text-brand-orange stroke-2" />
               </div>
-              <h3 className="text-xl md:text-2xl font-bold text-brand-gray-dark text-center">Verhoogde productiviteit</h3>
+              <h3 className="text-xl md:text-2xl font-bold text-brand-gray-dark text-center">
+                Verhoogde productiviteit
+              </h3>
               <div className="space-y-2">
                 <div className="flex items-start gap-2">
                   <CheckCircle className="h-5 w-5 text-brand-orange flex-shrink-0 mt-0.5" />
@@ -442,8 +472,8 @@ const PrestatieProgramma = () => {
                 6 wekelijkse online workshops
               </h3>
               <p className="text-base md:text-lg text-brand-gray-medium text-center leading-relaxed">
-                Elke week 60 minuten live training met gecertificeerde trainers. Je zit in een groep met anderen omdat je
-                hiervan het meeste leert. We creëren een veilige setting en je hoeft nooit verplicht mee te doen.
+                Elke week 60 minuten live training met gecertificeerde trainers. Je zit in een groep met anderen omdat
+                je hiervan het meeste leert. We creëren een veilige setting en je hoeft nooit verplicht mee te doen.
               </p>
             </div>
 
@@ -455,8 +485,8 @@ const PrestatieProgramma = () => {
                 Dagelijks 15 minuten oefenen
               </h3>
               <p className="text-base md:text-lg text-brand-gray-medium text-center leading-relaxed">
-                Audio-opnames en werkboek met concrete oefeningen die je direct in je leven toepast. Nauwelijks extra tijd
-                nodig. Oefen tijdens tandenpoetsen, douchen of afwassen.
+                Audio-opnames en werkboek met concrete oefeningen die je direct in je leven toepast. Nauwelijks extra
+                tijd nodig. Oefen tijdens tandenpoetsen, douchen of afwassen.
               </p>
             </div>
 
@@ -494,9 +524,9 @@ const PrestatieProgramma = () => {
       {/* 6 Weken Thema's Sectie */}
       <section className="py-16 md:py-24 bg-white">
         <div className="container mx-auto px-4">
-        <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-purple text-center leading-tight mb-12">
-          6 weken, 6 thema's voor <span className="text-brand-orange">echte verandering</span>
-        </h2>
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-purple text-center leading-tight mb-12">
+            6 weken, 6 thema's voor <span className="text-brand-orange">echte verandering</span>
+          </h2>
 
           <div className="max-w-3xl mx-auto space-y-6">
             <div className="bg-brand-off-white p-6 rounded-xl space-y-2">
@@ -585,7 +615,8 @@ const PrestatieProgramma = () => {
       <section className="py-16 md:py-24 bg-brand-off-white">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-purple text-center leading-tight mb-6">
-            Laat je <span className="text-brand-orange">werkgever</span> jou deelname <span className="text-brand-orange">vergoeden</span>
+            Laat je <span className="text-brand-orange">werkgever</span> jou deelname{" "}
+            <span className="text-brand-orange">vergoeden</span>
           </h2>
           <p className="text-xl md:text-2xl text-brand-gray-medium text-center leading-relaxed mb-12 max-w-4xl mx-auto">
             Veel werkgevers vergoeden dit programma vanuit het persoonlijk ontwikkelingsbudget. Wij leveren een brochure
@@ -665,7 +696,8 @@ const PrestatieProgramma = () => {
               </div>
               <h3 className="text-xl font-bold text-brand-gray-dark text-center">Gratis</h3>
               <p className="text-base md:text-lg text-brand-gray-medium text-center leading-relaxed">
-                Wij geloven dat iedereen onze effectieve techniek moet kunnen proberen. Daarom is onze masterclass volledig gratis en vrijblijvend.
+                Wij geloven dat iedereen onze effectieve techniek moet kunnen proberen. Daarom is onze masterclass
+                volledig gratis en vrijblijvend.
               </p>
             </div>
           </div>
@@ -710,7 +742,7 @@ const PrestatieProgramma = () => {
               />
             </div>
           </div>
-          
+
           {/* Modal */}
           <MasterclassFormModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
         </div>
@@ -734,7 +766,8 @@ const PrestatieProgramma = () => {
                     Onderliggende methode erkend door Nederlandse zorgsysteem
                   </h3>
                   <p className="text-xl text-brand-gray-medium leading-relaxed mb-6">
-                    De nederlandse zorgverzekeraars erkennen de methode van Innerleaps als effectief bij stressmanagement.
+                    De nederlandse zorgverzekeraars erkennen de methode van Innerleaps als effectief bij
+                    stressmanagement.
                   </p>
                   <div className="flex flex-row gap-4 items-center flex-wrap">
                     <img src={vgzLogo} alt="Vitaliteitsprogramma herkend door VGZ" className="h-24 object-contain" />
@@ -848,8 +881,8 @@ const PrestatieProgramma = () => {
                 </AccordionTrigger>
                 <AccordionContent className="text-base md:text-lg text-brand-gray-medium leading-relaxed">
                   Stress kost werkgevers enorm veel geld. Zowel in verzuim als in verminderde prestatie. Werkgevers
-                  willen je graag helpen om dit te verbeteren. Wij overhandigen je een brochure waardoor je werkgever dit
-                  makkelijk kan begrijpen en goedkeuren.
+                  willen je graag helpen om dit te verbeteren. Wij overhandigen je een brochure waardoor je werkgever
+                  dit makkelijk kan begrijpen en goedkeuren.
                 </AccordionContent>
               </AccordionItem>
 
@@ -871,8 +904,8 @@ const PrestatieProgramma = () => {
                 </AccordionTrigger>
                 <AccordionContent className="text-base md:text-lg text-brand-gray-medium leading-relaxed">
                   Het doel is om minder spanning in je leven te krijgen. Daarom zijn de oefeningen ook echt toegepast op
-                  je leven. Denk aan aandachtsoefeningen tijdens dagelijkse activiteiten zoals tandenpoetsen, eten, lopen.
-                  Daarnaast probeer je elke dag een aandachttraining te doen van 12 minuten.
+                  je leven. Denk aan aandachtsoefeningen tijdens dagelijkse activiteiten zoals tandenpoetsen, eten,
+                  lopen. Daarnaast probeer je elke dag een aandachttraining te doen van 12 minuten.
                 </AccordionContent>
               </AccordionItem>
 
@@ -881,8 +914,8 @@ const PrestatieProgramma = () => {
                   Wat als ik een week mis?
                 </AccordionTrigger>
                 <AccordionContent className="text-base md:text-lg text-brand-gray-medium leading-relaxed">
-                  Je krijgt lifetime toegang tot alle materialen en opnames. Gemiste sessies kun je terug kijken. We raden
-                  wel aan maximaal 1 sessie te missen voor optimaal resultaat.
+                  Je krijgt lifetime toegang tot alle materialen en opnames. Gemiste sessies kun je terug kijken. We
+                  raden wel aan maximaal 1 sessie te missen voor optimaal resultaat.
                 </AccordionContent>
               </AccordionItem>
             </Accordion>
