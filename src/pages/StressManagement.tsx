@@ -4,10 +4,26 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import MasterclassFormModal from "@/components/MasterclassFormModal";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { 
-  Brain, Heart, Shield, Smile, Moon, CheckCircle, 
-  AlertCircle, Frown, BedDouble, Calendar, Clock, 
-  Laptop, Award, Activity, RotateCcw, BookOpen, Star, Check, Gift
+import {
+  Brain,
+  Heart,
+  Shield,
+  Smile,
+  Moon,
+  CheckCircle,
+  AlertCircle,
+  Frown,
+  BedDouble,
+  Calendar,
+  Clock,
+  Laptop,
+  Award,
+  Activity,
+  RotateCcw,
+  BookOpen,
+  Star,
+  Check,
+  Gift,
 } from "lucide-react";
 import heroBackground from "@/assets/Vitaliteitsprogramma_presentatie_Innerleaps.png";
 import masterclassImage from "@/assets/Stressmanagement_masterclass.png";
@@ -60,7 +76,7 @@ const StressManagement = () => {
       element.scrollIntoView({ behavior: "smooth" });
     }
   };
-  
+
   const handleModalOpen = () => {
     setIsModalOpen(true);
   };
@@ -122,7 +138,8 @@ const StressManagement = () => {
                   className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight font-heading break-words"
                   style={{ textShadow: "0 2px 8px rgba(0,0,0,0.5)" }}
                 >
-                  Een <span className="text-brand-orange">druk leven</span> dat veel van je vraagt
+                  Minder <span className="text-brand-orange">spanning </span> en{" "}
+                  <span className="text-brand-orange">rust </span> in je hoofd
                 </h1>
                 <p
                   className="text-xl md:text-2xl text-blue-100 leading-relaxed break-words"
@@ -187,7 +204,9 @@ const StressManagement = () => {
                       >
                         Wetenschappelijk onderzoek
                       </span>
-                      <span className="text-brand-orange font-bold text-sm sm:text-base md:text-lg shrink-0">40+ jaar</span>
+                      <span className="text-brand-orange font-bold text-sm sm:text-base md:text-lg shrink-0">
+                        40+ jaar
+                      </span>
                     </div>
                   </div>
 
@@ -236,13 +255,11 @@ const StressManagement = () => {
       <section className="py-16 md:py-24 bg-brand-off-white">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-purple text-center leading-tight mb-6">
-             <span className="text-brand-orange">Veel druk</span> in je leven.
+            <span className="text-brand-orange">Veel druk</span> in je leven.
             <br></br>
-            <span className="text-brand-orange"> Weinig rust</span> in je hoofd{" "} 
+            <span className="text-brand-orange"> Weinig rust</span> in je hoofd{" "}
           </h2>
-          <p className="text-xl md:text-2xl text-brand-gray-medium text-center leading-relaxed mb-12">
-            Herken je dit?
-          </p>
+          <p className="text-xl md:text-2xl text-brand-gray-medium text-center leading-relaxed mb-12">Herken je dit?</p>
 
           <div className="grid grid-cols-1 md:grid-cols-6 gap-8 max-w-6xl mx-auto">
             {/* Probleem 1 */}
@@ -275,7 +292,8 @@ const StressManagement = () => {
               </div>
               <h3 className="text-xl md:text-2xl font-bold text-brand-gray-dark text-center">Snel geïrriteerd</h3>
               <p className="text-base md:text-lg text-brand-gray-medium text-center">
-                Kleine dingen kunnen je uit je evenwicht brengen. Drukte in huis, een collega die iets vraagt, file. Het kost je meer energie dan je zou willen.
+                Kleine dingen kunnen je uit je evenwicht brengen. Drukte in huis, een collega die iets vraagt, file. Het
+                kost je meer energie dan je zou willen.
               </p>
             </div>
 
@@ -286,8 +304,8 @@ const StressManagement = () => {
               </div>
               <h3 className="text-xl md:text-2xl font-bold text-brand-gray-dark text-center">Minder genieten</h3>
               <p className="text-base md:text-lg text-brand-gray-medium text-center">
-                Je merkt dat je niet meer volledig geniet van leuke momenten. Je bent er maar je hoofd is
-                vaak ergens anders.
+                Je merkt dat je niet meer volledig geniet van leuke momenten. Je bent er maar je hoofd is vaak ergens
+                anders.
               </p>
             </div>
 
@@ -300,7 +318,7 @@ const StressManagement = () => {
                 's Avonds moeilijk uitschakelen
               </h3>
               <p className="text-base md:text-lg text-brand-gray-medium text-center">
-                Jij wil slapen maar je hoofd is nog druk. Je verlangt naar een goede nachtrust. 
+                Jij wil slapen maar je hoofd is nog druk. Je verlangt naar een goede nachtrust.
               </p>
             </div>
           </div>
@@ -311,7 +329,7 @@ const StressManagement = () => {
       <section className="py-16 md:py-24 bg-white">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-purple text-center leading-tight mb-6">
-           <span className="text-brand-orange"> Rust </span>in je hoofd. 
+            <span className="text-brand-orange"> Rust </span>in je hoofd.
             <br></br>
             Meer <span className="text-brand-orange">genieten</span> van je leven
           </h2>
@@ -370,9 +388,7 @@ const StressManagement = () => {
               <div className="p-3 rounded-lg bg-brand-orange/5 w-fit mx-auto">
                 <Shield className="h-8 w-8 text-brand-orange stroke-2" />
               </div>
-              <h3 className="text-xl md:text-2xl font-bold text-brand-gray-dark text-center">
-                Emoties onder controle
-              </h3>
+              <h3 className="text-xl md:text-2xl font-bold text-brand-gray-dark text-center">Emoties onder controle</h3>
               <div className="space-y-2">
                 <div className="flex items-start gap-2">
                   <CheckCircle className="h-5 w-5 text-brand-orange flex-shrink-0 mt-0.5" />
@@ -464,8 +480,8 @@ const StressManagement = () => {
                 6 wekelijkse online workshops
               </h3>
               <p className="text-base md:text-lg text-brand-gray-medium text-center leading-relaxed">
-                Elke week 60 minuten live training met gecertificeerde trainers. Je zit in een groep met anderen omdat je
-                hiervan het meeste leert. We creëren een veilige setting en je hoeft nooit verplicht mee te doen.
+                Elke week 60 minuten live training met gecertificeerde trainers. Je zit in een groep met anderen omdat
+                je hiervan het meeste leert. We creëren een veilige setting en je hoeft nooit verplicht mee te doen.
               </p>
             </div>
 
@@ -477,8 +493,8 @@ const StressManagement = () => {
                 Dagelijks 15 minuten oefenen
               </h3>
               <p className="text-base md:text-lg text-brand-gray-medium text-center leading-relaxed">
-                Audio-opnames en werkboek met concrete oefeningen die je direct in je leven toepast. Nauwelijks extra tijd
-                nodig. Oefen tijdens tandenpoetsen, douchen of afwassen.
+                Audio-opnames en werkboek met concrete oefeningen die je direct in je leven toepast. Nauwelijks extra
+                tijd nodig. Oefen tijdens tandenpoetsen, douchen of afwassen.
               </p>
             </div>
 
@@ -516,9 +532,9 @@ const StressManagement = () => {
       {/* 6 Weken Thema's Sectie */}
       <section className="py-16 md:py-24 bg-white">
         <div className="container mx-auto px-4">
-        <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-purple text-center leading-tight mb-12">
-          6 weken, 6 thema's voor <span className="text-brand-orange">echte verandering</span>
-        </h2>
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-purple text-center leading-tight mb-12">
+            6 weken, 6 thema's voor <span className="text-brand-orange">echte verandering</span>
+          </h2>
 
           <div className="max-w-3xl mx-auto space-y-6">
             <div className="bg-brand-off-white p-6 rounded-xl space-y-2">
@@ -607,7 +623,8 @@ const StressManagement = () => {
       <section className="py-16 md:py-24 bg-brand-off-white">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-purple text-center leading-tight mb-6">
-            Laat je <span className="text-brand-orange">werkgever</span> jou deelname <span className="text-brand-orange">vergoeden</span>
+            Laat je <span className="text-brand-orange">werkgever</span> jou deelname{" "}
+            <span className="text-brand-orange">vergoeden</span>
           </h2>
           <p className="text-xl md:text-2xl text-brand-gray-medium text-center leading-relaxed mb-12 max-w-4xl mx-auto">
             Veel werkgevers vergoeden dit programma vanuit het persoonlijk ontwikkelingsbudget. Wij leveren een brochure
@@ -687,7 +704,8 @@ const StressManagement = () => {
               </div>
               <h3 className="text-xl font-bold text-brand-gray-dark text-center">Gratis</h3>
               <p className="text-base md:text-lg text-brand-gray-medium text-center leading-relaxed">
-                Wij geloven dat iedereen onze effectieve techniek moet kunnen proberen. Daarom is onze masterclass volledig gratis en vrijblijvend.
+                Wij geloven dat iedereen onze effectieve techniek moet kunnen proberen. Daarom is onze masterclass
+                volledig gratis en vrijblijvend.
               </p>
             </div>
           </div>
@@ -732,7 +750,7 @@ const StressManagement = () => {
               />
             </div>
           </div>
-          
+
           {/* Modal */}
           <MasterclassFormModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
         </div>
@@ -756,7 +774,8 @@ const StressManagement = () => {
                     Onderliggende methode erkend door Nederlandse zorgsysteem
                   </h3>
                   <p className="text-xl text-brand-gray-medium leading-relaxed mb-6">
-                    De nederlandse zorgverzekeraars erkennen de methode van Innerleaps als effectief bij stressmanagement.
+                    De nederlandse zorgverzekeraars erkennen de methode van Innerleaps als effectief bij
+                    stressmanagement.
                   </p>
                   <div className="flex flex-row gap-4 items-center flex-wrap">
                     <img src={vgzLogo} alt="Vitaliteitsprogramma herkend door VGZ" className="h-24 object-contain" />
@@ -870,8 +889,8 @@ const StressManagement = () => {
                 </AccordionTrigger>
                 <AccordionContent className="text-base md:text-lg text-brand-gray-medium leading-relaxed">
                   Stress kost werkgevers enorm veel geld. Zowel in verzuim als in verminderde prestatie. Werkgevers
-                  willen je graag helpen om dit te verbeteren. Wij overhandigen je een brochure waardoor je werkgever dit
-                  makkelijk kan begrijpen en goedkeuren.
+                  willen je graag helpen om dit te verbeteren. Wij overhandigen je een brochure waardoor je werkgever
+                  dit makkelijk kan begrijpen en goedkeuren.
                 </AccordionContent>
               </AccordionItem>
 
@@ -893,8 +912,8 @@ const StressManagement = () => {
                 </AccordionTrigger>
                 <AccordionContent className="text-base md:text-lg text-brand-gray-medium leading-relaxed">
                   Het doel is om minder spanning in je leven te krijgen. Daarom zijn de oefeningen ook echt toegepast op
-                  je leven. Denk aan aandachtsoefeningen tijdens dagelijkse activiteiten zoals tandenpoetsen, eten, lopen.
-                  Daarnaast probeer je elke dag een aandachttraining te doen van 12 minuten.
+                  je leven. Denk aan aandachtsoefeningen tijdens dagelijkse activiteiten zoals tandenpoetsen, eten,
+                  lopen. Daarnaast probeer je elke dag een aandachttraining te doen van 12 minuten.
                 </AccordionContent>
               </AccordionItem>
 
@@ -903,8 +922,8 @@ const StressManagement = () => {
                   Wat als ik een week mis?
                 </AccordionTrigger>
                 <AccordionContent className="text-base md:text-lg text-brand-gray-medium leading-relaxed">
-                  Je krijgt lifetime toegang tot alle materialen en opnames. Gemiste sessies kun je terug kijken. We raden
-                  wel aan maximaal 1 sessie te missen voor optimaal resultaat.
+                  Je krijgt lifetime toegang tot alle materialen en opnames. Gemiste sessies kun je terug kijken. We
+                  raden wel aan maximaal 1 sessie te missen voor optimaal resultaat.
                 </AccordionContent>
               </AccordionItem>
             </Accordion>
