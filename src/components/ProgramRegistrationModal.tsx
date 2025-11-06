@@ -79,7 +79,19 @@ const getMonthName = (date: Date): string => {
   });
 };
 
-const getRandomAvailableSpots = () => Math.floor(Math.random() * 4) + 2;
+const getOrCreateAvailableSpots = (timeslotKey: string): number => {
+  const storageKey = `timeslot_spots_${timeslotKey}`;
+  const stored = localStorage.getItem(storageKey);
+  
+  if (stored) {
+    return parseInt(stored);
+  }
+  
+  // Generate new random number and store it
+  const spots = Math.floor(Math.random() * 4) + 2;
+  localStorage.setItem(storageKey, spots.toString());
+  return spots;
+};
 
 const getNextProgramDates = (): ProgramDates => {
   const today = new Date();
@@ -97,6 +109,11 @@ const getNextProgramDates = (): ProgramDates => {
   const nextThursday = new Date(nextWednesday);
   nextThursday.setDate(nextWednesday.getDate() + 1);
 
+  // Create unique keys for each timeslot based on the date
+  const tuesdayKey = `${nextTuesday.toISOString().split('T')[0]}_evening`;
+  const wednesdayAfternoonKey = `${nextWednesday.toISOString().split('T')[0]}_afternoon`;
+  const wednesdayEveningKey = `${nextWednesday.toISOString().split('T')[0]}_evening`;
+
   return {
     tuesdayAfternoon: {
       date: nextTuesday,
@@ -109,21 +126,21 @@ const getNextProgramDates = (): ProgramDates => {
       date: nextTuesday,
       display: `${nextTuesday.getDate()} ${getMonthName(nextTuesday)} Dinsdagavond 20:00 - 21:00`,
       value: nextTuesday.toISOString(),
-      availableSpots: getRandomAvailableSpots(),
+      availableSpots: getOrCreateAvailableSpots(tuesdayKey),
       isFull: false,
     },
     wednesdayAfternoon: {
       date: nextWednesday,
       display: `${nextWednesday.getDate()} ${getMonthName(nextWednesday)} Woensdagmiddag 16:00 - 17:00`,
       value: nextWednesday.toISOString(),
-      availableSpots: getRandomAvailableSpots(),
+      availableSpots: getOrCreateAvailableSpots(wednesdayAfternoonKey),
       isFull: false,
     },
     wednesdayEvening: {
       date: nextWednesday,
       display: `${nextWednesday.getDate()} ${getMonthName(nextWednesday)} Woensdagavond 20:00 - 21:00`,
       value: nextWednesday.toISOString(),
-      availableSpots: getRandomAvailableSpots(),
+      availableSpots: getOrCreateAvailableSpots(wednesdayEveningKey),
       isFull: false,
     },
     thursdayEvening: {

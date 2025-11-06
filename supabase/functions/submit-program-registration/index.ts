@@ -134,43 +134,27 @@ const handler = async (req: Request): Promise<Response> => {
 <!DOCTYPE html>
 <html>
 <body style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;">
-  <h1 style="color: #1e293b;">Bedankt voor je aanmelding!</h1>
-  
   <p>Hoi ${data.fullName},</p>
   
   <p>We hebben je aanmelding ontvangen voor het <strong>${programName}</strong>.</p>
   
-  <div style="background-color: #f8f9fa; padding: 15px; border-radius: 8px; margin: 20px 0;">
-    <h3 style="margin-top: 0;">Programma Details:</h3>
-    <p><strong>Programma:</strong> ${programName}</p>
-    <p><strong>Startdatum:</strong> ${data.selectedTimeslot}</p>
-    <p><strong>Type aanmelding:</strong> ${registrationTypeText}</p>
-  </div>
-
-  <div style="background-color: #f8f9fa; padding: 15px; border-radius: 8px; margin: 20px 0;">
-    <h3 style="margin-top: 0;">Jouw gegevens:</h3>
-    <p><strong>Naam:</strong> ${data.fullName}</p>
-    <p><strong>Email:</strong> ${data.email}</p>
-    <p><strong>Telefoon:</strong> ${data.phone}</p>
-    <p><strong>Geboortedatum:</strong> ${birthDate.toLocaleDateString("nl-NL")}</p>
-    <p><strong>Adres:</strong> ${data.address}</p>
-    ${data.registrationType === "zakelijk" ? `
-    <p><strong>Bedrijf:</strong> ${data.companyName || "Niet opgegeven"}</p>
-    ${data.departmentCostCenter ? `<p><strong>Afdeling/Kostenplaats:</strong> ${data.departmentCostCenter}</p>` : ""}
-    ` : ""}
-    ${data.additionalInfo ? `<p><strong>Aanvullende informatie:</strong> ${data.additionalInfo}</p>` : ""}
-  </div>
+  <p><strong>Jouw gegevens:</strong></p>
+  <p>Naam: ${data.fullName}</p>
+  <p>Email: ${data.email}</p>
+  <p>Telefoon: ${data.phone}</p>
+  <p>Geboortedatum: ${birthDate.toLocaleDateString("nl-NL")}</p>
+  <p>Adres: ${data.address}</p>
+  ${data.registrationType === "zakelijk" ? `
+  <p>Bedrijf: ${data.companyName || "Niet opgegeven"}</p>
+  ${data.departmentCostCenter ? `<p>Afdeling/Kostenplaats: ${data.departmentCostCenter}</p>` : ""}
+  ` : ""}
+  <p>Type aanmelding: ${registrationTypeText}</p>
+  <p>Startdatum: ${data.selectedTimeslot}</p>
+  ${data.additionalInfo ? `<p>Aanvullende informatie: ${data.additionalInfo}</p>` : ""}
   
-  <div style="background-color: #fff3cd; border-left: 4px solid #ffc107; padding: 15px; margin: 20px 0;">
-    <h3 style="margin-top: 0;">Belangrijke informatie:</h3>
-    <ul style="margin: 0; padding-left: 20px;">
-      <li>De factuur wordt binnenkort verstuurd</li>
-      <li>Betaal de factuur binnen 14 dagen</li>
-      <li>Het programma duurt 6 opeenvolgende weken</li>
-      <li>Op nationale feestdagen vindt geen cursus plaats</li>
-      <li>Bij gemiste sessies ontvang je de opname</li>
-    </ul>
-  </div>
+  <p>De factuur wordt binnenkort verstuurd. Het verzoek is om binnen 14 dagen de factuur te betalen.</p>
+  
+  <p>Het programma vindt plaats gedurende 6 opeenvolgende weken. Op nationale feestdagen zal de cursus niet plaatsvinden. Mocht je onverhoopt een sessie missen dan zal je de opname ontvangen.</p>
   
   <p>Heb je vragen? Neem gerust contact op via <a href="mailto:bas@innerleaps.nl">bas@innerleaps.nl</a></p>
   
@@ -221,7 +205,7 @@ const handler = async (req: Request): Promise<Response> => {
 
     const { error: adminEmailError } = await resend.emails.send({
       from: "InnerLeaps Aanmeldingen <onboarding@resend.dev>",
-      to: ["b.ter.haar.romenij@gmail.com"],
+      to: ["bas@innerleaps.nl"],
       subject: `[ADMIN] Nieuwe aanmelding: ${programName} - ${data.fullName}`,
       html: adminEmailHtml,
     });
