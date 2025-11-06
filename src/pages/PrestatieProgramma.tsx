@@ -310,9 +310,12 @@ const PrestatieProgramma = () => {
               <div className="p-3 rounded-lg bg-brand-orange/5 w-fit mx-auto">
                 <BedDouble className="h-8 w-8 text-brand-orange stroke-2" />
               </div>
-              <h3 className="text-xl md:text-2xl font-bold text-brand-gray-dark text-center">Niet optimaal herstellen</h3>
+              <h3 className="text-xl md:text-2xl font-bold text-brand-gray-dark text-center">
+                Niet optimaal herstellen
+              </h3>
               <p className="text-base md:text-lg text-brand-gray-medium text-center">
-                Ook als je ligt te slapen, blijft je hoofd soms aanstaan. Daardoor word je niet echt uitgerust wakker en merk je dat je dingen sneller vergeet of minder goed kunt onthouden.
+                Ook als je ligt te slapen, blijft je hoofd soms aanstaan. Daardoor word je niet echt uitgerust wakker en
+                merk je dat je dingen sneller vergeet of minder goed kunt onthouden.
               </p>
             </div>
           </div>
@@ -347,7 +350,10 @@ const PrestatieProgramma = () => {
                 </div>
                 <div className="flex items-start gap-2">
                   <CheckCircle className="h-5 w-5 text-brand-orange flex-shrink-0 mt-0.5" />
-                  <p className="text-base md:text-lg text-brand-gray-medium">Verwacht 25% meer focus.</p>
+                  <p className="text-base md:text-lg text-brand-gray-medium">
+                    {" "}
+                    In aandachttesten maken deelnemers 25% minder fouten door de training.
+                  </p>
                 </div>
               </div>
             </div>
@@ -426,12 +432,15 @@ const PrestatieProgramma = () => {
               <div className="p-3 rounded-lg bg-brand-orange/5 w-fit mx-auto">
                 <BedDouble className="h-8 w-8 text-brand-orange stroke-2" />
               </div>
-              <h3 className="text-xl md:text-2xl font-bold text-brand-gray-dark text-center">Beter slapen & sterker geheugen</h3>
+              <h3 className="text-xl md:text-2xl font-bold text-brand-gray-dark text-center">
+                Beter slapen & sterker geheugen
+              </h3>
               <div className="space-y-2">
                 <div className="flex items-start gap-2">
                   <CheckCircle className="h-5 w-5 text-brand-orange flex-shrink-0 mt-0.5" />
                   <p className="text-base md:text-lg text-brand-gray-medium">
-                    Je komt écht tot rust in je hoofd voordat je gaat slapen. Je wordt uitgeruster wakker en merkt dat je dingen makkelijker onthoudt.
+                    Je komt écht tot rust in je hoofd voordat je gaat slapen. Je wordt uitgeruster wakker en merkt dat
+                    je dingen makkelijker onthoudt.
                   </p>
                 </div>
                 <div className="flex items-start gap-2">
