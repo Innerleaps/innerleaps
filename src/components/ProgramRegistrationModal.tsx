@@ -10,21 +10,19 @@ import { Label } from "@/components/ui/label";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Textarea } from "@/components/ui/textarea";
-import { Calendar } from "@/components/ui/calendar";
-import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
-import { CalendarIcon, ChevronLeft, ChevronRight, Loader2 } from "lucide-react";
+import { ChevronLeft, ChevronRight, Loader2 } from "lucide-react";
 import { format } from "date-fns";
 import { nl } from "date-fns/locale";
-import { cn } from "@/lib/utils";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
+
 const programRegistrationSchema = z.object({
   fullName: z.string().min(2, "Volledige naam is verplicht"),
   email: z.string().email("Ongeldig emailadres"),
   phone: z.string().min(10, "Telefoonnummer is verplicht"),
-  birthDate: z.date({
-    required_error: "Geboortedatum is verplicht"
-  }),
+  birthDay: z.string().min(1, "Dag is verplicht"),
+  birthMonth: z.string().min(1, "Maand is verplicht"),
+  birthYear: z.string().min(4, "Jaar is verplicht"),
   registrationType: z.enum(["particulier", "zakelijk"]),
   address: z.string().min(5, "Adres is verplicht"),
   companyName: z.string().optional(),
@@ -40,68 +38,110 @@ const programRegistrationSchema = z.object({
 }, {
   message: "Bedrijfsnaam is verplicht bij zakelijke aanmelding",
   path: ["companyName"]
+}).refine(data => {
+  const day = parseInt(data.birthDay);
+  const month = parseInt(data.birthMonth);
+  const year = parseInt(data.birthYear);
+  
+  if (isNaN(day) || isNaN(month) || isNaN(year)) return false;
+  if (day < 1 || day > 31) return false;
+  if (month < 1 || month > 12) return false;
+  if (year < 1900 || year > new Date().getFullYear()) return false;
+  
+  const date = new Date(year, month - 1, day);
+  return date.getDate() === day && date.getMonth() === month - 1;
+}, {
+  message: "Ongeldige geboortedatum",
+  path: ["birthDay"]
 });
+
 type ProgramRegistrationForm = z.infer<typeof programRegistrationSchema>;
-interface ProgramDates {
-  tuesdayEvening: {
-    date: Date;
-    display: string;
-    value: string;
-  };
-  wednesdayAfternoon: {
-    date: Date;
-    display: string;
-    value: string;
-  };
-  wednesdayEvening: {
-    date: Date;
-    display: string;
-    value: string;
-  };
+
+interface ProgramTimeslot {
+  date: Date;
+  display: string;
+  value: string;
+  availableSpots: number;
+  isFull: boolean;
 }
+
+interface ProgramDates {
+  tuesdayAfternoon: ProgramTimeslot;
+  tuesdayEvening: ProgramTimeslot;
+  wednesdayAfternoon: ProgramTimeslot;
+  wednesdayEvening: ProgramTimeslot;
+  thursdayEvening: ProgramTimeslot;
+}
+
 const getMonthName = (date: Date): string => {
   return format(date, "MMMM", {
     locale: nl
   });
 };
+
+const getRandomAvailableSpots = () => Math.floor(Math.random() * 4) + 2;
+
 const getNextProgramDates = (): ProgramDates => {
   const today = new Date();
   const fourWeeksFromNow = new Date(today);
-  fourWeeksFromNow.setDate(today.getDate() + 28); // 4 weken = 28 dagen
+  fourWeeksFromNow.setDate(today.getDate() + 28);
 
-  // Vind eerste dinsdag >= 4 weken vooruit
   let nextTuesday = new Date(fourWeeksFromNow);
   while (nextTuesday.getDay() !== 2) {
-    // 2 = dinsdag
     nextTuesday.setDate(nextTuesday.getDate() + 1);
   }
 
-  // Woensdag is de dag erna
   const nextWednesday = new Date(nextTuesday);
   nextWednesday.setDate(nextTuesday.getDate() + 1);
+
+  const nextThursday = new Date(nextWednesday);
+  nextThursday.setDate(nextWednesday.getDate() + 1);
+
   return {
+    tuesdayAfternoon: {
+      date: nextTuesday,
+      display: `${nextTuesday.getDate()} ${getMonthName(nextTuesday)} Dinsdagmiddag 16:00 - 17:00`,
+      value: nextTuesday.toISOString(),
+      availableSpots: 0,
+      isFull: true,
+    },
     tuesdayEvening: {
       date: nextTuesday,
       display: `${nextTuesday.getDate()} ${getMonthName(nextTuesday)} Dinsdagavond 20:00 - 21:00`,
-      value: nextTuesday.toISOString()
+      value: nextTuesday.toISOString(),
+      availableSpots: getRandomAvailableSpots(),
+      isFull: false,
     },
     wednesdayAfternoon: {
       date: nextWednesday,
       display: `${nextWednesday.getDate()} ${getMonthName(nextWednesday)} Woensdagmiddag 16:00 - 17:00`,
-      value: nextWednesday.toISOString()
+      value: nextWednesday.toISOString(),
+      availableSpots: getRandomAvailableSpots(),
+      isFull: false,
     },
     wednesdayEvening: {
       date: nextWednesday,
       display: `${nextWednesday.getDate()} ${getMonthName(nextWednesday)} Woensdagavond 20:00 - 21:00`,
-      value: nextWednesday.toISOString()
-    }
+      value: nextWednesday.toISOString(),
+      availableSpots: getRandomAvailableSpots(),
+      isFull: false,
+    },
+    thursdayEvening: {
+      date: nextThursday,
+      display: `${nextThursday.getDate()} ${getMonthName(nextThursday)} Donderdagavond 20:00 - 21:00`,
+      value: nextThursday.toISOString(),
+      availableSpots: 0,
+      isFull: true,
+    },
   };
 };
+
 interface ProgramRegistrationModalProps {
   isOpen: boolean;
   onClose: () => void;
   programType: "prestatie" | "stress-management";
 }
+
 const ProgramRegistrationModal = ({
   isOpen,
   onClose,
@@ -111,6 +151,7 @@ const ProgramRegistrationModal = ({
   const [step, setStep] = useState(1);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const programDates = getNextProgramDates();
+
   const {
     register,
     handleSubmit,
@@ -126,9 +167,24 @@ const ProgramRegistrationModal = ({
       agreedToTerms: false
     }
   });
+
   const registrationType = watch("registrationType");
-  const birthDate = watch("birthDate");
   const agreedToTerms = watch("agreedToTerms");
+  
+  const fullName = watch("fullName");
+  const email = watch("email");
+  const phone = watch("phone");
+  const birthDay = watch("birthDay");
+  const birthMonth = watch("birthMonth");
+  const birthYear = watch("birthYear");
+  const address = watch("address");
+  const companyName = watch("companyName");
+  const selectedTimeslot = watch("selectedTimeslot");
+
+  const isStep1Valid = fullName && email && phone && birthDay && birthMonth && birthYear;
+  const isStep2Valid = address && (registrationType === "particulier" || (registrationType === "zakelijk" && companyName));
+  const isStep3Valid = selectedTimeslot;
+
   const onSubmit = async (data: ProgramRegistrationForm) => {
     setIsSubmitting(true);
     try {
@@ -136,12 +192,25 @@ const ProgramRegistrationModal = ({
         error
       } = await supabase.functions.invoke("submit-program-registration", {
         body: {
-          ...data,
+          fullName: data.fullName,
+          email: data.email,
+          phone: data.phone,
+          birthDay: data.birthDay,
+          birthMonth: data.birthMonth,
+          birthYear: data.birthYear,
+          address: data.address,
+          registrationType: data.registrationType,
+          companyName: data.companyName,
+          departmentCostCenter: data.departmentCostCenter,
+          selectedTimeslot: data.selectedTimeslot,
+          additionalInfo: data.additionalInfo,
           programType,
-          birthDate: data.birthDate.toISOString()
+          agreedToTerms: data.agreedToTerms
         }
       });
+
       if (error) throw error;
+
       toast.success("Aanmelding succesvol verzonden!");
       onClose();
       navigate("/bedankt");
@@ -152,8 +221,10 @@ const ProgramRegistrationModal = ({
       setIsSubmitting(false);
     }
   };
+
   const nextStep = () => setStep(prev => Math.min(prev + 1, 4));
   const prevStep = () => setStep(prev => Math.max(prev - 1, 1));
+
   return <Dialog open={isOpen} onOpenChange={onClose}>
       <DialogContent className="max-w-2xl max-h-[90vh] overflow-y-auto">
         <DialogHeader>
@@ -161,7 +232,7 @@ const ProgramRegistrationModal = ({
             Aanmelden {programType === "prestatie" ? "Prestatie Programma" : "Stress-Management Programma"}
           </DialogTitle>
           <div className="flex items-center gap-2 mt-4">
-            {[1, 2, 3, 4].map(s => <div key={s} className={cn("h-2 flex-1 rounded-full", s <= step ? "bg-brand-orange" : "bg-gray-200")} />)}
+            {[1, 2, 3, 4].map(s => <div key={s} className={`h-2 flex-1 rounded-full ${s <= step ? "bg-brand-orange" : "bg-gray-200"}`} />)}
           </div>
         </DialogHeader>
 
@@ -172,43 +243,77 @@ const ProgramRegistrationModal = ({
 
               <div className="space-y-2">
                 <Label htmlFor="fullName">Volledige naam *</Label>
-                <Input id="fullName" {...register("fullName")} placeholder="Jan Jansen" />
+                <Input 
+                  id="fullName" 
+                  {...register("fullName")} 
+                  placeholder="Jan Jansen" 
+                  className="bg-white border-gray-300 text-brand-gray-dark placeholder:text-[rgb(51,65,85)]"
+                />
                 {errors.fullName && <p className="text-sm text-destructive">{errors.fullName.message}</p>}
               </div>
 
               <div className="space-y-2">
                 <Label htmlFor="email">E-mailadres *</Label>
-                <Input id="email" type="email" {...register("email")} placeholder="jan@voorbeeld.nl" />
+                <Input 
+                  id="email" 
+                  type="email" 
+                  {...register("email")} 
+                  placeholder="jan@voorbeeld.nl" 
+                  className="bg-white border-gray-300 text-brand-gray-dark placeholder:text-[rgb(51,65,85)]"
+                />
                 {errors.email && <p className="text-sm text-destructive">{errors.email.message}</p>}
               </div>
 
               <div className="space-y-2">
                 <Label htmlFor="phone">Telefoonnummer *</Label>
-                <Input id="phone" type="tel" {...register("phone")} placeholder="06 12345678" />
+                <Input 
+                  id="phone" 
+                  type="tel" 
+                  {...register("phone")} 
+                  placeholder="06 12345678" 
+                  className="bg-white border-gray-300 text-brand-gray-dark placeholder:text-[rgb(51,65,85)]"
+                />
                 {errors.phone && <p className="text-sm text-destructive">{errors.phone.message}</p>}
               </div>
 
               <div className="space-y-2">
                 <Label>Geboortedatum *</Label>
-                <Popover>
-                  <PopoverTrigger asChild>
-                    <Button variant="outline" className={cn("w-full justify-start text-left font-normal", !birthDate && "text-muted-foreground")}>
-                      <CalendarIcon className="mr-2 h-4 w-4" />
-                      {birthDate ? format(birthDate, "PPP", {
-                    locale: nl
-                  }) : "Selecteer een datum"}
-                    </Button>
-                  </PopoverTrigger>
-                  <PopoverContent className="w-auto p-0" align="start">
-                    <Calendar mode="single" selected={birthDate} onSelect={date => setValue("birthDate", date as Date)} disabled={date => date > new Date() || date < new Date("1900-01-01")} initialFocus />
-                  </PopoverContent>
-                </Popover>
-                {errors.birthDate && <p className="text-sm text-destructive">{errors.birthDate.message}</p>}
+                <div className="grid grid-cols-3 gap-2">
+                  <Input 
+                    placeholder="DD" 
+                    maxLength={2}
+                    {...register("birthDay")}
+                    className="text-center bg-white border-gray-300 text-brand-gray-dark placeholder:text-[rgb(51,65,85)]"
+                  />
+                  <Input 
+                    placeholder="MM" 
+                    maxLength={2}
+                    {...register("birthMonth")}
+                    className="text-center bg-white border-gray-300 text-brand-gray-dark placeholder:text-[rgb(51,65,85)]"
+                  />
+                  <Input 
+                    placeholder="YYYY" 
+                    maxLength={4}
+                    {...register("birthYear")}
+                    className="text-center bg-white border-gray-300 text-brand-gray-dark placeholder:text-[rgb(51,65,85)]"
+                  />
+                </div>
+                {errors.birthDay && <p className="text-sm text-destructive">{errors.birthDay.message}</p>}
               </div>
 
-              <Button type="button" onClick={nextStep} className="w-full">
+              <Button 
+                type="button" 
+                onClick={nextStep} 
+                className="w-full"
+                disabled={!isStep1Valid}
+              >
                 Volgende <ChevronRight className="ml-2 h-4 w-4" />
               </Button>
+              {!isStep1Valid && (
+                <p className="text-sm text-brand-gray-medium text-center mt-2">
+                  Vul alle verplichte velden in om door te gaan
+                </p>
+              )}
             </div>}
 
           {/* Stap 2: Registratie Type */}
@@ -230,27 +335,48 @@ const ProgramRegistrationModal = ({
                 </div>
               </RadioGroup>
 
-              {registrationType === "zakelijk" && <div className="space-y-2">
-                  <Label htmlFor="companyName">Bedrijfsnaam *</Label>
-                  <Input id="companyName" {...register("companyName")} placeholder="Bedrijfsnaam BV" />
-                  {errors.companyName && <p className="text-sm text-destructive">{errors.companyName.message}</p>}
-                </div>}
-
               <div className="space-y-2">
                 <Label htmlFor="address">Adres *</Label>
-                <Input id="address" {...register("address")} placeholder="Straatnaam 123, 1234 AB Plaats" />
+                <Input 
+                  id="address" 
+                  {...register("address")} 
+                  placeholder="Straatnaam 123, 1234 AB Plaats" 
+                  className="bg-white border-gray-300 text-brand-gray-dark placeholder:text-[rgb(51,65,85)]"
+                />
                 {errors.address && <p className="text-sm text-destructive">{errors.address.message}</p>}
               </div>
+
+              {registrationType === "zakelijk" && <div className="space-y-2">
+                  <Label htmlFor="companyName">Bedrijfsnaam *</Label>
+                  <Input 
+                    id="companyName" 
+                    {...register("companyName")} 
+                    placeholder="Bedrijfsnaam BV" 
+                    className="bg-white border-gray-300 text-brand-gray-dark placeholder:text-[rgb(51,65,85)]"
+                  />
+                  {errors.companyName && <p className="text-sm text-destructive">{errors.companyName.message}</p>}
+                </div>}
 
               {registrationType === "zakelijk" && <>
                   <div className="space-y-2">
                     <Label htmlFor="departmentCostCenter">Afdeling/kostenplaats (optioneel)</Label>
-                    <Input id="departmentCostCenter" {...register("departmentCostCenter")} placeholder="Marketing, HR, etc." />
+                    <Input 
+                      id="departmentCostCenter" 
+                      {...register("departmentCostCenter")} 
+                      placeholder="Marketing, HR, etc." 
+                      className="bg-white border-gray-300 text-brand-gray-dark placeholder:text-[rgb(51,65,85)]"
+                    />
                   </div>
 
                   <div className="space-y-2">
                     <Label htmlFor="additionalInfo">Aanvullende informatie (optioneel)</Label>
-                    <Textarea id="additionalInfo" {...register("additionalInfo")} placeholder="Extra informatie die voor ons handig is om te weten" rows={3} />
+                    <Textarea 
+                      id="additionalInfo" 
+                      {...register("additionalInfo")} 
+                      placeholder="Extra informatie die voor ons handig is om te weten" 
+                      rows={3}
+                      className="border-2 border-gray-300 bg-white text-brand-gray-dark placeholder:text-[rgb(51,65,85)]"
+                    />
                   </div>
                 </>}
 
@@ -258,10 +384,20 @@ const ProgramRegistrationModal = ({
                 <Button type="button" variant="outline" onClick={prevStep} className="flex-1">
                   <ChevronLeft className="mr-2 h-4 w-4" /> Vorige
                 </Button>
-                <Button type="button" onClick={nextStep} className="flex-1">
+                <Button 
+                  type="button" 
+                  onClick={nextStep} 
+                  className="flex-1"
+                  disabled={!isStep2Valid}
+                >
                   Volgende <ChevronRight className="ml-2 h-4 w-4" />
                 </Button>
               </div>
+              {!isStep2Valid && (
+                <p className="text-sm text-brand-gray-medium text-center mt-2">
+                  Vul alle verplichte velden in om door te gaan
+                </p>
+              )}
             </div>}
 
           {/* Stap 3: Startdatum Selectie */}
@@ -274,23 +410,64 @@ const ProgramRegistrationModal = ({
               </p>
 
               <RadioGroup onValueChange={value => setValue("selectedTimeslot", value)}>
+                <div className="flex items-start space-x-2 p-3 border rounded-lg bg-gray-100 opacity-60">
+                  <RadioGroupItem 
+                    value={programDates.tuesdayAfternoon.display} 
+                    id="tuesday-afternoon" 
+                    disabled 
+                    className="mt-1" 
+                  />
+                  <Label htmlFor="tuesday-afternoon" className="cursor-not-allowed flex-1 line-through">
+                    {programDates.tuesdayAfternoon.display}
+                  </Label>
+                  <span className="bg-red-500 text-white text-xs font-bold px-2 py-1 rounded">
+                    VOL!
+                  </span>
+                </div>
+                
                 <div className="flex items-start space-x-2 p-3 border rounded-lg hover:bg-brand-off-white transition-colors">
                   <RadioGroupItem value={programDates.tuesdayEvening.display} id="tuesday" className="mt-1" />
                   <Label htmlFor="tuesday" className="cursor-pointer flex-1">
                     {programDates.tuesdayEvening.display}
                   </Label>
+                  <span className="bg-green-500 text-white text-xs font-bold px-2 py-1 rounded">
+                    {programDates.tuesdayEvening.availableSpots} plekken beschikbaar
+                  </span>
                 </div>
+                
                 <div className="flex items-start space-x-2 p-3 border rounded-lg hover:bg-brand-off-white transition-colors">
                   <RadioGroupItem value={programDates.wednesdayAfternoon.display} id="wed-afternoon" className="mt-1" />
                   <Label htmlFor="wed-afternoon" className="cursor-pointer flex-1">
                     {programDates.wednesdayAfternoon.display}
                   </Label>
+                  <span className="bg-green-500 text-white text-xs font-bold px-2 py-1 rounded">
+                    {programDates.wednesdayAfternoon.availableSpots} plekken beschikbaar
+                  </span>
                 </div>
+                
                 <div className="flex items-start space-x-2 p-3 border rounded-lg hover:bg-brand-off-white transition-colors">
                   <RadioGroupItem value={programDates.wednesdayEvening.display} id="wed-evening" className="mt-1" />
                   <Label htmlFor="wed-evening" className="cursor-pointer flex-1">
                     {programDates.wednesdayEvening.display}
                   </Label>
+                  <span className="bg-green-500 text-white text-xs font-bold px-2 py-1 rounded">
+                    {programDates.wednesdayEvening.availableSpots} plekken beschikbaar
+                  </span>
+                </div>
+
+                <div className="flex items-start space-x-2 p-3 border rounded-lg bg-gray-100 opacity-60">
+                  <RadioGroupItem 
+                    value={programDates.thursdayEvening.display} 
+                    id="thursday" 
+                    disabled 
+                    className="mt-1" 
+                  />
+                  <Label htmlFor="thursday" className="cursor-not-allowed flex-1 line-through">
+                    {programDates.thursdayEvening.display}
+                  </Label>
+                  <span className="bg-red-500 text-white text-xs font-bold px-2 py-1 rounded">
+                    VOL!
+                  </span>
                 </div>
               </RadioGroup>
               {errors.selectedTimeslot && <p className="text-sm text-destructive">{errors.selectedTimeslot.message}</p>}
@@ -299,10 +476,20 @@ const ProgramRegistrationModal = ({
                 <Button type="button" variant="outline" onClick={prevStep} className="flex-1">
                   <ChevronLeft className="mr-2 h-4 w-4" /> Vorige
                 </Button>
-                <Button type="button" onClick={nextStep} className="flex-1">
+                <Button 
+                  type="button" 
+                  onClick={nextStep} 
+                  className="flex-1"
+                  disabled={!isStep3Valid}
+                >
                   Volgende <ChevronRight className="ml-2 h-4 w-4" />
                 </Button>
               </div>
+              {!isStep3Valid && (
+                <p className="text-sm text-brand-gray-medium text-center mt-2">
+                  Selecteer een startdatum om door te gaan
+                </p>
+              )}
             </div>}
 
           {/* Stap 4: Voorwaarden & Betalingsinformatie */}
@@ -339,4 +526,5 @@ const ProgramRegistrationModal = ({
       </DialogContent>
     </Dialog>;
 };
+
 export default ProgramRegistrationModal;

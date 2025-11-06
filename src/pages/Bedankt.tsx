@@ -1,6 +1,8 @@
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import { Check } from "lucide-react";
+import SimplifiedNavigation from "@/components/SimplifiedNavigation";
+import Footer from "@/components/Footer";
 import vgzLogo from "@/assets/Vitaliteitprogramma_herkent_door_vgz.png";
 import czLogo from "@/assets/Vitaliteitsprogramma_herkend_door_CZ.png";
 import menzisLogo from "@/assets/Vitaliteitsprogramma_herkend_door_menzis.png";
@@ -37,7 +39,9 @@ const Bedankt = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-brand-blue-light to-white flex items-center justify-center p-4">
+    <>
+      <SimplifiedNavigation />
+      <div className="min-h-screen bg-gradient-to-br from-brand-blue-light to-white flex items-center justify-center p-4">
       <div className="container mx-auto px-4 py-16 max-w-3xl">
         <div className="bg-white rounded-2xl shadow-2xl p-8 md:p-12 text-center space-y-8">
           {/* Success Icon */}
@@ -147,6 +151,8 @@ const Bedankt = () => {
         </div>
       </div>
     </div>
+    <Footer showNavigation={false} />
+    </>
   );
 };
 

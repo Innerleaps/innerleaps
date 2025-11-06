@@ -15,7 +15,9 @@ interface ProgramRegistrationRequest {
   fullName: string;
   email: string;
   phone: string;
-  birthDate: string;
+  birthDay: string;
+  birthMonth: string;
+  birthYear: string;
   registrationType: "particulier" | "zakelijk";
   address: string;
   companyName?: string;
@@ -39,8 +41,19 @@ const handler = async (req: Request): Promise<Response> => {
     console.log("Received registration:", { email: data.email, programType: data.programType });
 
     // Input validatie
-    if (!data.fullName || !data.email || !data.phone || !data.birthDate || !data.selectedTimeslot) {
+    if (!data.fullName || !data.email || !data.phone || !data.birthDay || !data.birthMonth || !data.birthYear || !data.selectedTimeslot) {
       throw new Error("Verplichte velden ontbreken");
+    }
+
+    // Construct birth date
+    const birthDate = new Date(
+      parseInt(data.birthYear),
+      parseInt(data.birthMonth) - 1,
+      parseInt(data.birthDay)
+    );
+
+    if (isNaN(birthDate.getTime())) {
+      throw new Error("Ongeldige geboortedatum");
     }
 
     if (data.registrationType === "zakelijk" && !data.companyName) {
@@ -95,7 +108,7 @@ const handler = async (req: Request): Promise<Response> => {
       full_name: data.fullName,
       email: data.email,
       phone: data.phone,
-      birth_date: data.birthDate,
+      birth_date: birthDate.toISOString(),
       registration_type: data.registrationType,
       address: data.address,
       company_name: data.companyName || null,
@@ -125,18 +138,39 @@ const handler = async (req: Request): Promise<Response> => {
   
   <p>Hoi ${data.fullName},</p>
   
-  <p>We hebben je aanmelding ontvangen voor het ${programName}.</p>
+  <p>We hebben je aanmelding ontvangen voor het <strong>${programName}</strong>.</p>
   
   <div style="background-color: #f8f9fa; padding: 15px; border-radius: 8px; margin: 20px 0;">
-    <h3 style="margin-top: 0;">Jouw gegevens:</h3>
+    <h3 style="margin-top: 0;">Programma Details:</h3>
+    <p><strong>Programma:</strong> ${programName}</p>
     <p><strong>Startdatum:</strong> ${data.selectedTimeslot}</p>
     <p><strong>Type aanmelding:</strong> ${registrationTypeText}</p>
-    ${data.registrationType === "zakelijk" ? `<p><strong>Bedrijf:</strong> ${data.companyName}</p>` : ""}
+  </div>
+
+  <div style="background-color: #f8f9fa; padding: 15px; border-radius: 8px; margin: 20px 0;">
+    <h3 style="margin-top: 0;">Jouw gegevens:</h3>
+    <p><strong>Naam:</strong> ${data.fullName}</p>
+    <p><strong>Email:</strong> ${data.email}</p>
+    <p><strong>Telefoon:</strong> ${data.phone}</p>
+    <p><strong>Geboortedatum:</strong> ${birthDate.toLocaleDateString("nl-NL")}</p>
+    <p><strong>Adres:</strong> ${data.address}</p>
+    ${data.registrationType === "zakelijk" ? `
+    <p><strong>Bedrijf:</strong> ${data.companyName || "Niet opgegeven"}</p>
+    ${data.departmentCostCenter ? `<p><strong>Afdeling/Kostenplaats:</strong> ${data.departmentCostCenter}</p>` : ""}
+    ` : ""}
+    ${data.additionalInfo ? `<p><strong>Aanvullende informatie:</strong> ${data.additionalInfo}</p>` : ""}
   </div>
   
-  <p>De factuur wordt binnenkort verstuurd. Het verzoek is om binnen 14 dagen de factuur te betalen.</p>
-  
-  <p>Het programma vindt plaats gedurende 6 opeenvolgende weken. Op nationale feestdagen zal de cursus niet plaatsvinden. Mocht je onverhoopt een sessie missen dan zal je de opname ontvangen.</p>
+  <div style="background-color: #fff3cd; border-left: 4px solid #ffc107; padding: 15px; margin: 20px 0;">
+    <h3 style="margin-top: 0;">Belangrijke informatie:</h3>
+    <ul style="margin: 0; padding-left: 20px;">
+      <li>De factuur wordt binnenkort verstuurd</li>
+      <li>Betaal de factuur binnen 14 dagen</li>
+      <li>Het programma duurt 6 opeenvolgende weken</li>
+      <li>Op nationale feestdagen vindt geen cursus plaats</li>
+      <li>Bij gemiste sessies ontvang je de opname</li>
+    </ul>
+  </div>
   
   <p>Heb je vragen? Neem gerust contact op via <a href="mailto:bas@innerleaps.nl">bas@innerleaps.nl</a></p>
   
@@ -154,12 +188,11 @@ const handler = async (req: Request): Promise<Response> => {
 
     if (participantEmailError) {
       console.error("Error sending participant email:", participantEmailError);
-      // Continue - don't fail the registration if email fails
     } else {
       console.log("Participant email sent successfully");
     }
 
-    // Email naar bas@innerleaps.nl met volledige aanmeldingsgegevens
+    // Email naar bas (admin) met alle details
     const adminEmailHtml = `
 <!DOCTYPE html>
 <html>
@@ -167,32 +200,20 @@ const handler = async (req: Request): Promise<Response> => {
   <h1 style="color: #1e293b;">Nieuwe Programma Aanmelding</h1>
   
   <div style="background-color: #f8f9fa; padding: 15px; border-radius: 8px; margin: 20px 0;">
-    <h3 style="margin-top: 0;">Programma Details:</h3>
-    <p><strong>Programma:</strong> ${programName}</p>
-    <p><strong>Startdatum:</strong> ${data.selectedTimeslot}</p>
-  </div>
-
-  <div style="background-color: #f8f9fa; padding: 15px; border-radius: 8px; margin: 20px 0;">
-    <h3 style="margin-top: 0;">Persoonlijke Informatie:</h3>
+    <h3 style="margin-top: 0;">Deelnemer Informatie:</h3>
     <p><strong>Naam:</strong> ${data.fullName}</p>
     <p><strong>Email:</strong> ${data.email}</p>
     <p><strong>Telefoon:</strong> ${data.phone}</p>
-    <p><strong>Geboortedatum:</strong> ${new Date(data.birthDate).toLocaleDateString("nl-NL")}</p>
-  </div>
-
-  <div style="background-color: #f8f9fa; padding: 15px; border-radius: 8px; margin: 20px 0;">
-    <h3 style="margin-top: 0;">Registratie Details:</h3>
-    <p><strong>Type aanmelding:</strong> ${registrationTypeText}</p>
+    <p><strong>Geboortedatum:</strong> ${birthDate.toLocaleDateString("nl-NL")}</p>
     <p><strong>Adres:</strong> ${data.address}</p>
-    ${
-      data.registrationType === "zakelijk"
-        ? `
-    <p><strong>Bedrijfsnaam:</strong> ${data.companyName}</p>
+    <p><strong>Programma:</strong> ${programName}</p>
+    <p><strong>Startdatum:</strong> ${data.selectedTimeslot}</p>
+    <p><strong>Type aanmelding:</strong> ${registrationTypeText}</p>
+    ${data.registrationType === "zakelijk" ? `
+    <p><strong>Bedrijf:</strong> ${data.companyName || "Niet opgegeven"}</p>
     ${data.departmentCostCenter ? `<p><strong>Afdeling/Kostenplaats:</strong> ${data.departmentCostCenter}</p>` : ""}
+    ` : ""}
     ${data.additionalInfo ? `<p><strong>Aanvullende informatie:</strong> ${data.additionalInfo}</p>` : ""}
-    `
-        : ""
-    }
   </div>
 </body>
 </html>
@@ -200,14 +221,13 @@ const handler = async (req: Request): Promise<Response> => {
 
     const { error: adminEmailError } = await resend.emails.send({
       from: "InnerLeaps Aanmeldingen <onboarding@resend.dev>",
-      to: ["bas@innerleaps.nl"],
-      subject: `Nieuwe aanmelding: ${programName} - ${data.fullName}`,
+      to: ["b.ter.haar.romenij@gmail.com"],
+      subject: `[ADMIN] Nieuwe aanmelding: ${programName} - ${data.fullName}`,
       html: adminEmailHtml,
     });
 
     if (adminEmailError) {
       console.error("Error sending admin email:", adminEmailError);
-      // Continue - don't fail the registration if email fails
     } else {
       console.log("Admin email sent successfully");
     }
