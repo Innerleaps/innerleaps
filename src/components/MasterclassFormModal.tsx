@@ -12,12 +12,10 @@ import { toast } from "@/hooks/use-toast";
 import vgzLogo from "@/assets/Vitaliteitprogramma_herkent_door_vgz.png";
 import oxfordLogo from "@/assets/Vitaliteitsprogramma_ontwikkeld_door_oxford.jpg";
 import vmbLogo from "@/assets/Geaccrediteerde_vitaliteitstrainers_bij_Innerleaps.png";
-
 interface MasterclassFormModalProps {
   isOpen: boolean;
   onClose: () => void;
 }
-
 interface FormData {
   naam: string;
   email: string;
@@ -25,19 +23,15 @@ interface FormData {
   functie_titel: string;
   selected_timeslot: string;
 }
-
-const timeslots = [
-  {
-    id: '2024-11-12T16:00:00',
-    display: 'Woensdag, 12 november 16:00 – 17:00',
-    calendarUrl: 'https://calendar.google.com/calendar/event?action=TEMPLATE&tmeid=NGFjNmZhYWdzcmQyZzllOXB0cjJvZTlidjIgYmFzQGlubmVybGVhcHMubmw&tmsrc=bas%40innerleaps.nl'
-  },
-  {
-    id: '2024-11-12T19:30:00',
-    display: 'Woensdag, 12 november 19:30 – 20:30',
-    calendarUrl: 'https://calendar.google.com/calendar/event?action=TEMPLATE&tmeid=NTlnanZndWsyOTk1Zmw4cTBkNTl1N2ZvcTEgYmFzQGlubmVybGVhcHMubmw&tmsrc=bas%40innerleaps.nl'
-  }
-];
+const timeslots = [{
+  id: '2024-11-12T16:00:00',
+  display: 'Woensdag, 12 november 16:00 – 17:00',
+  calendarUrl: 'https://calendar.google.com/calendar/event?action=TEMPLATE&tmeid=NGFjNmZhYWdzcmQyZzllOXB0cjJvZTlidjIgYmFzQGlubmVybGVhcHMubmw&tmsrc=bas%40innerleaps.nl'
+}, {
+  id: '2024-11-12T19:30:00',
+  display: 'Woensdag, 12 november 19:30 – 20:30',
+  calendarUrl: 'https://calendar.google.com/calendar/event?action=TEMPLATE&tmeid=NTlnanZndWsyOTk1Zmw4cTBkNTl1N2ZvcTEgYmFzQGlubmVybGVhcHMubmw&tmsrc=bas%40innerleaps.nl'
+}];
 
 // Declare gtag for Google Analytics
 declare global {
@@ -45,8 +39,10 @@ declare global {
     gtag?: (command: string, eventName: string, params?: Record<string, any>) => void;
   }
 }
-
-const MasterclassFormModal = ({ isOpen, onClose }: MasterclassFormModalProps) => {
+const MasterclassFormModal = ({
+  isOpen,
+  onClose
+}: MasterclassFormModalProps) => {
   const navigate = useNavigate();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState<FormData>({
@@ -54,40 +50,59 @@ const MasterclassFormModal = ({ isOpen, onClose }: MasterclassFormModalProps) =>
     email: "",
     is_leidinggevende: null,
     functie_titel: "",
-    selected_timeslot: "",
+    selected_timeslot: ""
   });
-
   const handleInputChange = (field: keyof FormData, value: string | boolean) => {
-    setFormData(prev => ({ ...prev, [field]: value }));
+    setFormData(prev => ({
+      ...prev,
+      [field]: value
+    }));
   };
-
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
     // Validation
     if (!formData.naam.trim()) {
-      toast({ title: "Fout", description: "Vul je naam in", variant: "destructive" });
+      toast({
+        title: "Fout",
+        description: "Vul je naam in",
+        variant: "destructive"
+      });
       return;
     }
     if (!formData.email.trim()) {
-      toast({ title: "Fout", description: "Vul je email in", variant: "destructive" });
+      toast({
+        title: "Fout",
+        description: "Vul je email in",
+        variant: "destructive"
+      });
       return;
     }
     if (formData.is_leidinggevende === null) {
-      toast({ title: "Fout", description: "Geef aan of je leidinggevende bent", variant: "destructive" });
+      toast({
+        title: "Fout",
+        description: "Geef aan of je leidinggevende bent",
+        variant: "destructive"
+      });
       return;
     }
     if (!formData.functie_titel.trim()) {
-      toast({ title: "Fout", description: "Vul je functie titel in", variant: "destructive" });
+      toast({
+        title: "Fout",
+        description: "Vul je functie titel in",
+        variant: "destructive"
+      });
       return;
     }
     if (!formData.selected_timeslot) {
-      toast({ title: "Fout", description: "Kies een masterclass tijdstip", variant: "destructive" });
+      toast({
+        title: "Fout",
+        description: "Kies een masterclass tijdstip",
+        variant: "destructive"
+      });
       return;
     }
-
     setIsSubmitting(true);
-
     try {
       const selectedTimeslot = timeslots.find(t => t.id === formData.selected_timeslot);
       if (!selectedTimeslot) {
@@ -105,7 +120,9 @@ const MasterclassFormModal = ({ isOpen, onClose }: MasterclassFormModalProps) =>
       }
 
       // Submit to edge function
-      const { error } = await supabase.functions.invoke('submit-masterclass-registration', {
+      const {
+        error
+      } = await supabase.functions.invoke('submit-masterclass-registration', {
         body: {
           naam: formData.naam,
           email: formData.email,
@@ -113,16 +130,15 @@ const MasterclassFormModal = ({ isOpen, onClose }: MasterclassFormModalProps) =>
           functie_titel: formData.functie_titel,
           selected_timeslot: formData.selected_timeslot,
           timeslot_display: selectedTimeslot.display,
-          calendar_url: selectedTimeslot.calendarUrl,
+          calendar_url: selectedTimeslot.calendarUrl
         }
       });
-
       if (error) {
         console.error("Submission error:", error);
-        toast({ 
-          title: "Fout", 
-          description: "Er ging iets mis. Probeer het opnieuw.", 
-          variant: "destructive" 
+        toast({
+          title: "Fout",
+          description: "Er ging iets mis. Probeer het opnieuw.",
+          variant: "destructive"
         });
         return;
       }
@@ -135,21 +151,18 @@ const MasterclassFormModal = ({ isOpen, onClose }: MasterclassFormModalProps) =>
           naam: formData.naam
         }
       });
-
     } catch (error) {
       console.error("Unexpected error:", error);
-      toast({ 
-        title: "Fout", 
-        description: "Er ging iets mis. Probeer het opnieuw.", 
-        variant: "destructive" 
+      toast({
+        title: "Fout",
+        description: "Er ging iets mis. Probeer het opnieuw.",
+        variant: "destructive"
       });
     } finally {
       setIsSubmitting(false);
     }
   };
-
-  return (
-    <Dialog open={isOpen} onOpenChange={onClose}>
+  return <Dialog open={isOpen} onOpenChange={onClose}>
       <DialogContent className="max-w-2xl max-h-[90vh] overflow-y-auto">
         <DialogHeader>
           <DialogTitle className="text-2xl md:text-3xl font-bold text-brand-purple text-center">
@@ -157,14 +170,12 @@ const MasterclassFormModal = ({ isOpen, onClose }: MasterclassFormModalProps) =>
           </DialogTitle>
         </DialogHeader>
 
-        <div className="space-y-6 py-4">
+        <div className="space-y-6 py-0">
           {/* Review Badge */}
           <div className="bg-brand-blue-light/30 p-4 rounded-lg">
             <div className="flex items-center gap-2 mb-2 justify-center">
               <div className="flex gap-0.5">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-4 h-4 fill-amber-400 text-amber-400" />
-                ))}
+                {[...Array(5)].map((_, i) => <Star key={i} className="w-4 h-4 fill-amber-400 text-amber-400" />)}
               </div>
               <span className="font-semibold text-brand-gray-dark">4,7 / 5</span>
             </div>
@@ -180,15 +191,7 @@ const MasterclassFormModal = ({ isOpen, onClose }: MasterclassFormModalProps) =>
               <Label htmlFor="naam" className="text-base font-semibold">
                 Naam <span className="text-red-500">*</span>
               </Label>
-              <input
-                id="naam"
-                type="text"
-                value={formData.naam}
-                onChange={(e) => handleInputChange('naam', e.target.value)}
-                placeholder="Volledige naam"
-                className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-brand-orange"
-                required
-              />
+              <input id="naam" type="text" value={formData.naam} onChange={e => handleInputChange('naam', e.target.value)} placeholder="Volledige naam" className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-brand-orange" required />
             </div>
 
             {/* Email */}
@@ -196,15 +199,7 @@ const MasterclassFormModal = ({ isOpen, onClose }: MasterclassFormModalProps) =>
               <Label htmlFor="email" className="text-base font-semibold">
                 Email <span className="text-red-500">*</span>
               </Label>
-              <input
-                id="email"
-                type="email"
-                value={formData.email}
-                onChange={(e) => handleInputChange('email', e.target.value)}
-                placeholder="je.email@voorbeeld.nl"
-                className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-brand-orange"
-                required
-              />
+              <input id="email" type="email" value={formData.email} onChange={e => handleInputChange('email', e.target.value)} placeholder="je.email@voorbeeld.nl" className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-brand-orange" required />
             </div>
 
             {/* Leidinggevende */}
@@ -212,11 +207,7 @@ const MasterclassFormModal = ({ isOpen, onClose }: MasterclassFormModalProps) =>
               <Label className="text-base font-semibold">
                 Leidinggevende functie? <span className="text-red-500">*</span>
               </Label>
-              <RadioGroup
-                value={formData.is_leidinggevende === null ? undefined : formData.is_leidinggevende.toString()}
-                onValueChange={(value) => handleInputChange('is_leidinggevende', value === 'true')}
-                className="flex gap-6"
-              >
+              <RadioGroup value={formData.is_leidinggevende === null ? undefined : formData.is_leidinggevende.toString()} onValueChange={value => handleInputChange('is_leidinggevende', value === 'true')} className="flex gap-6">
                 <div className="flex items-center space-x-2">
                   <RadioGroupItem value="true" id="leader-yes" />
                   <Label htmlFor="leader-yes" className="cursor-pointer font-normal">Ja</Label>
@@ -233,15 +224,7 @@ const MasterclassFormModal = ({ isOpen, onClose }: MasterclassFormModalProps) =>
               <Label htmlFor="functie" className="text-base font-semibold">
                 Functie titel <span className="text-red-500">*</span>
               </Label>
-              <input
-                id="functie"
-                type="text"
-                value={formData.functie_titel}
-                onChange={(e) => handleInputChange('functie_titel', e.target.value)}
-                placeholder="Bijv. HR Manager, Developer, etc."
-                className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-brand-orange"
-                required
-              />
+              <input id="functie" type="text" value={formData.functie_titel} onChange={e => handleInputChange('functie_titel', e.target.value)} placeholder="Bijv. HR Manager, Developer, etc." className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-brand-orange" required />
             </div>
 
             {/* Timeslot Selection */}
@@ -249,28 +232,18 @@ const MasterclassFormModal = ({ isOpen, onClose }: MasterclassFormModalProps) =>
               <Label className="text-base font-semibold">
                 Kies je masterclass tijdstip <span className="text-red-500">*</span>
               </Label>
-              <RadioGroup
-                value={formData.selected_timeslot}
-                onValueChange={(value) => handleInputChange('selected_timeslot', value)}
-                className="space-y-3"
-              >
-                {timeslots.map((timeslot) => (
-                  <div key={timeslot.id} className="flex items-center space-x-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors">
+              <RadioGroup value={formData.selected_timeslot} onValueChange={value => handleInputChange('selected_timeslot', value)} className="space-y-3">
+                {timeslots.map(timeslot => <div key={timeslot.id} className="flex items-center space-x-3 p-3 border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors">
                     <RadioGroupItem value={timeslot.id} id={timeslot.id} />
                     <Label htmlFor={timeslot.id} className="cursor-pointer font-normal flex-1">
                       {timeslot.display}
                     </Label>
-                  </div>
-                ))}
+                  </div>)}
               </RadioGroup>
             </div>
 
             {/* Submit Button */}
-            <Button
-              type="submit"
-              disabled={isSubmitting}
-              className="w-full bg-brand-orange hover:bg-brand-orange/90 text-white py-4 px-8 rounded-lg text-lg font-semibold shadow-xl"
-            >
+            <Button type="submit" disabled={isSubmitting} className="w-full bg-brand-orange hover:bg-brand-orange/90 text-white py-4 px-8 rounded-lg text-lg font-semibold shadow-xl">
               {isSubmitting ? 'Bezig met aanmelden...' : 'Aanmelden gratis masterclass'}
             </Button>
           </form>
@@ -309,8 +282,6 @@ const MasterclassFormModal = ({ isOpen, onClose }: MasterclassFormModalProps) =>
           </div>
         </div>
       </DialogContent>
-    </Dialog>
-  );
+    </Dialog>;
 };
-
 export default MasterclassFormModal;
