@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { ChevronDown, ChevronUp, ArrowDown } from "lucide-react";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
+import { Link } from "react-router-dom";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import raadselImage from "@/assets/9_stippen_raadsel.png";
@@ -156,12 +157,18 @@ const NegenStippen = () => {
             <div className="text-center pt-8">
               <h3 className="text-2xl md:text-3xl font-bold text-brand-purple mb-6">Waar ben jij naar op zoek?</h3>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="px-8 py-4 bg-brand-purple text-white text-lg font-semibold rounded-lg hover:bg-brand-purple/90 transition-colors shadow-md">
+                <Link 
+                  to="/stressmanagement-programma"
+                  className="px-8 py-4 bg-brand-purple text-white text-lg font-semibold rounded-lg hover:bg-brand-purple/90 transition-colors shadow-md text-center"
+                >
                   Minder spanning & druk in mijn leven
-                </button>
-                <button className="px-8 py-4 bg-brand-purple text-white text-lg font-semibold rounded-lg hover:bg-brand-purple/90 transition-colors shadow-md">
+                </Link>
+                <Link 
+                  to="/prestatie-programma"
+                  className="px-8 py-4 bg-brand-purple text-white text-lg font-semibold rounded-lg hover:bg-brand-purple/90 transition-colors shadow-md text-center"
+                >
                   Met meer focus beter presteren
-                </button>
+                </Link>
               </div>
             </div>
           </div>
