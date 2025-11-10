@@ -239,6 +239,9 @@ const handler = async (req: Request): Promise<Response> => {
 
     const results = submission.calculationResults;
 
+    // PDF attachment URL
+    const pdfUrl = `${Deno.env.get("SUPABASE_URL")?.replace('.supabase.co', '')}.supabase.co/storage/v1/object/public/documents/business-case-awareness-interventions.pdf`;
+
     // Confirmation email to lead
     const confirmationEmailHtml = `
       <!DOCTYPE html>
@@ -537,20 +540,32 @@ const handler = async (req: Request): Promise<Response> => {
 
     // Send emails
     try {
-      // Send confirmation email to lead
+      // Send confirmation email to lead with PDF attachment
       await resend.emails.send({
         from: "InnerLeaps <info@innerleaps.nl>",
         to: submission.email,
         subject: `Jouw kostenbesparingsberekening voor ${submission.company}`,
         html: confirmationEmailHtml,
+        attachments: [
+          {
+            filename: "Business_Case_Awareness_Interventions.pdf",
+            path: pdfUrl,
+          }
+        ]
       });
 
-      // Send notification email to admin
+      // Send notification email to admin with PDF attachment
       await resend.emails.send({
         from: "InnerLeaps <info@innerleaps.nl>",
         to: "bas@innerleaps.nl",
         subject: `Nieuwe Calculator Aanvraag - ${submission.company}`,
         html: notificationEmailHtml,
+        attachments: [
+          {
+            filename: "Business_Case_Awareness_Interventions.pdf",
+            path: pdfUrl,
+          }
+        ]
       });
 
       console.log("Emails sent successfully");

@@ -8,3 +8,9 @@ verify_jwt = false
 
 [functions.submit-program-registration]
 verify_jwt = false
+
+[functions.submit-calculator]
+verify_jwt = false
+
+[functions.submit-scientific-report]
+verify_jwt = false

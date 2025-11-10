@@ -149,6 +149,36 @@ export type Database = {
         }
         Relationships: []
       }
+      scientific_report_requests: {
+        Row: {
+          company: string
+          created_at: string
+          email: string
+          functie: string
+          id: string
+          name: string
+          phone: string | null
+        }
+        Insert: {
+          company: string
+          created_at?: string
+          email: string
+          functie: string
+          id?: string
+          name: string
+          phone?: string | null
+        }
+        Update: {
+          company?: string
+          created_at?: string
+          email?: string
+          functie?: string
+          id?: string
+          name?: string
+          phone?: string | null
+        }
+        Relationships: []
+      }
       stress_questionnaire_submissions: {
         Row: {
           created_at: string
