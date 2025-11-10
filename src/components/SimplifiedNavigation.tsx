@@ -46,11 +46,15 @@ const SimplifiedNavigation = () => {
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-6 xl:space-x-8">
             {/* Voor Medewerkers dropdown - EERST */}
-            <NavigationMenu>
+            <NavigationMenu className="flex-none">
               <NavigationMenuList>
                 <NavigationMenuItem>
-                  <NavigationMenuTrigger className="text-brand-gray-dark hover:text-brand-blue transition-colors duration-300 font-medium text-base bg-transparent hover:bg-transparent data-[state=open]:bg-transparent data-[active]:bg-transparent pointer-events-none">
-                    <span className="pointer-events-auto">Voor Medewerkers</span>
+                  <NavigationMenuTrigger 
+                    className="text-brand-gray-dark hover:text-brand-blue transition-colors duration-300 font-medium text-base bg-transparent hover:bg-transparent data-[state=open]:bg-transparent data-[active]:bg-transparent focus:bg-transparent active:bg-transparent cursor-default select-none"
+                    onClick={(e) => e.preventDefault()}
+                    onPointerDown={(e) => e.preventDefault()}
+                  >
+                    Voor Medewerkers
                   </NavigationMenuTrigger>
                   <NavigationMenuContent className="bg-white border border-gray-200 shadow-lg z-50">
                     <ul className="w-[280px] p-2">
