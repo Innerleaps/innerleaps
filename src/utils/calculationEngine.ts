@@ -14,6 +14,14 @@ export interface BusinessCaseInputs {
   sector: string;
 }
 
+// ROI Calculator Interface (nieuwe berekening voor LandingPage)
+export interface ROIInputs {
+  currentAbsenteeism: number;      // percentage (bijv. 5 voor 5%)
+  employeeTurnover: number;        // percentage (bijv. 10 voor 10%)
+  numberOfEmployees: number;
+  avgGrossAnnualSalary: number;    // per werknemer
+}
+
 // Old interface for existing features
 export interface ScenarioResults {
   name: string;
@@ -32,6 +40,16 @@ export interface BusinessCaseScenarioResults {
   description: string;
   verzuimBesparing: number;
   uitvalReductie: number;
+  productiviteitBesparing: number;
+  totaleBesparing: number;
+  netBesparing: number;
+  roi: number;
+}
+
+// ROI Calculator Scenario Interface
+export interface ROIScenario {
+  verzuimBesparing: number;
+  retentieBesparing: number;
   productiviteitBesparing: number;
   totaleBesparing: number;
   netBesparing: number;
@@ -101,6 +119,16 @@ export interface BusinessCaseResults {
   };
 }
 
+// ROI Calculator Results Interface
+export interface ROIResults {
+  totaleLoonkosten: number;
+  investment: number;
+  scenarios: {
+    conservative: ROIScenario;
+    positive: ROIScenario;
+  };
+}
+
 // Old constants for existing features
 const CALCULATION_CONSTANTS: CalculationConstants = {
   VK: 1.85,
@@ -134,6 +162,23 @@ const BUSINESS_CASE_CONSTANTS: BusinessCaseConstants = {
   POSITIVE_VERZUIM_REDUCTIE: 0.21,
   POSITIVE_UITVAL_REDUCTIE: 0.70,
   POSITIVE_PRODUCTIVITEIT: 0.06,
+};
+
+// ROI Calculator Constants (nieuwe berekening voor LandingPage)
+const ROI_CONSTANTS = {
+  ABSENTEEISM_COST_FACTOR: 1.85,           // 185%
+  EMPLOYEE_REPLACEMENT_COSTS_FACTOR: 1.5,  // 150%
+  INVESTMENT_PER_PARTICIPANT: 575,         // €575
+  
+  // Conservative bounds (minimaal)
+  LOW_BOUND_TURNOVER_IMPACT: 0.05,         // 5%
+  LOW_BOUND_PRODUCTIVITY_GAIN: 0.05,       // 5%
+  LOWER_BOUND_ABSENTEEISM: 0.15,           // 15%
+  
+  // Positive bounds (maximaal)
+  HIGH_BOUND_TURNOVER_IMPACT: 0.08,        // 8%
+  HIGH_BOUND_PRODUCTIVITY_GAIN: 0.08,      // 8%
+  HIGHER_BOUND_ABSENTEEISM: 0.21,          // 21%
 };
 
 // Old calculation function for existing features
@@ -268,6 +313,64 @@ export const calculateBusinessCase = (inputs: BusinessCaseInputs): BusinessCaseR
         totaleBesparing: Math.round(pos_totaleBesparing),
         netBesparing: Math.round(pos_netBesparing),
         roi: Math.round(pos_roi),
+      },
+    },
+  };
+};
+
+// ROI Calculator Function (nieuwe berekening voor LandingPage)
+export const calculateROI = (inputs: ROIInputs): ROIResults => {
+  const { currentAbsenteeism, employeeTurnover, numberOfEmployees, avgGrossAnnualSalary } = inputs;
+  
+  // Basis berekeningen
+  const totaleLoonkosten = numberOfEmployees * avgGrossAnnualSalary;
+  const investment = numberOfEmployees * ROI_CONSTANTS.INVESTMENT_PER_PARTICIPANT;
+  
+  // Conservative Scenario (Minimale Impact)
+  const conservativeRetentie = (employeeTurnover / 100) * totaleLoonkosten * 
+    ROI_CONSTANTS.EMPLOYEE_REPLACEMENT_COSTS_FACTOR * ROI_CONSTANTS.LOW_BOUND_TURNOVER_IMPACT;
+  
+  const conservativeProductiviteit = totaleLoonkosten * ROI_CONSTANTS.LOW_BOUND_PRODUCTIVITY_GAIN;
+  
+  const conservativeVerzuim = (currentAbsenteeism / 100) * totaleLoonkosten * 
+    ROI_CONSTANTS.ABSENTEEISM_COST_FACTOR * ROI_CONSTANTS.LOWER_BOUND_ABSENTEEISM;
+  
+  const conservativeTotaal = conservativeRetentie + conservativeProductiviteit + conservativeVerzuim;
+  const conservativeNet = conservativeTotaal - investment;
+  const conservativeROI = (conservativeTotaal / investment) * 100;
+  
+  // Positive Scenario (Volledige Impact)
+  const positiveRetentie = (employeeTurnover / 100) * totaleLoonkosten * 
+    ROI_CONSTANTS.EMPLOYEE_REPLACEMENT_COSTS_FACTOR * ROI_CONSTANTS.HIGH_BOUND_TURNOVER_IMPACT;
+  
+  const positiveProductiviteit = totaleLoonkosten * ROI_CONSTANTS.HIGH_BOUND_PRODUCTIVITY_GAIN;
+  
+  const positiveVerzuim = (currentAbsenteeism / 100) * totaleLoonkosten * 
+    ROI_CONSTANTS.ABSENTEEISM_COST_FACTOR * ROI_CONSTANTS.HIGHER_BOUND_ABSENTEEISM;
+  
+  const positiveTotaal = positiveRetentie + positiveProductiviteit + positiveVerzuim;
+  const positiveNet = positiveTotaal - investment;
+  const positiveROI = (positiveTotaal / investment) * 100;
+  
+  return {
+    totaleLoonkosten,
+    investment,
+    scenarios: {
+      conservative: {
+        verzuimBesparing: conservativeVerzuim,
+        retentieBesparing: conservativeRetentie,
+        productiviteitBesparing: conservativeProductiviteit,
+        totaleBesparing: conservativeTotaal,
+        netBesparing: conservativeNet,
+        roi: conservativeROI,
+      },
+      positive: {
+        verzuimBesparing: positiveVerzuim,
+        retentieBesparing: positiveRetentie,
+        productiviteitBesparing: positiveProductiviteit,
+        totaleBesparing: positiveTotaal,
+        netBesparing: positiveNet,
+        roi: positiveROI,
       },
     },
   };
