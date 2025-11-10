@@ -1,4 +1,4 @@
-import Navigation from '@/components/Navigation';
+import SimplifiedNavigation from '@/components/SimplifiedNavigation';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Clock, Users, MapPin, Calendar } from 'lucide-react';
@@ -84,7 +84,7 @@ const Programma = () => {
     description: "Deelnemers hebben de intentie om dagelijks te oefenen"
   }];
   return <div className="min-h-screen bg-brand-gray-light">
-      <Navigation />
+      <SimplifiedNavigation />
       <StickyCtaButtons />
       
       <main className="section-padding">

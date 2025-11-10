@@ -1,4 +1,4 @@
-import Navigation from '@/components/Navigation';
+import SimplifiedNavigation from '@/components/SimplifiedNavigation';
 import StickyCtaButtons from '@/components/StickyCtaButtons';
 import ROICalculator from '@/components/ROICalculator';
 import { Button } from '@/components/ui/button';
@@ -89,7 +89,7 @@ const VoorWie = () => {
 
   return (
     <div className="min-h-screen bg-brand-gray-light">
-      <Navigation />
+      <SimplifiedNavigation />
       <StickyCtaButtons />
       
       <main className="section-padding">

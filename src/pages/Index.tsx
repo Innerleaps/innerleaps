@@ -1,4 +1,4 @@
-import Navigation from '@/components/Navigation';
+import SimplifiedNavigation from '@/components/SimplifiedNavigation';
 import HeroSection from '@/components/HeroSection';
 import MethodologySection from '@/components/MethodologySection';
 import YoungProfessionalsSection from '@/components/YoungProfessionalsSection';
@@ -10,7 +10,7 @@ import ROICalculator from '@/components/ROICalculator';
 import Footer from '@/components/Footer';
 const Index = () => {
   return <div className="min-h-screen bg-white">
-      <Navigation />
+      <SimplifiedNavigation />
       <StickyCtaButtons />
       <div id="home">
         <HeroSection />

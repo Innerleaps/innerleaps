@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { ChevronDown, ChevronUp, ArrowDown } from "lucide-react";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
 import { Link } from "react-router-dom";
-import Navigation from "@/components/Navigation";
+import SimplifiedNavigation from "@/components/SimplifiedNavigation";
 import Footer from "@/components/Footer";
 import raadselImage from "@/assets/9_stippen_raadsel.png";
 import oplossingImage from "@/assets/9_stippen_oplossing.png";
@@ -14,7 +14,7 @@ const NegenStippen = () => {
   }, []);
   return (
     <div className="min-h-screen flex flex-col">
-      <Navigation />
+      <SimplifiedNavigation />
 
       {/* Hero Section with Background */}
       <section className="relative min-h-screen flex items-center overflow-hidden">

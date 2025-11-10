@@ -1,4 +1,4 @@
-import Navigation from '@/components/Navigation';
+import SimplifiedNavigation from '@/components/SimplifiedNavigation';
 import StickyCtaButtons from '@/components/StickyCtaButtons';
 import LeadMagnetModal from '@/components/LeadMagnetModal';
 import ROICalculator from '@/components/ROICalculator';
@@ -314,7 +314,7 @@ const Wetenschap = () => {
   }];
   return <TooltipProvider delayDuration={0}>
     <div className="min-h-screen bg-brand-gray-light">
-      <Navigation />
+      <SimplifiedNavigation />
       <StickyCtaButtons />
       
       {/* Hero Section */}
