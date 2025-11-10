@@ -305,7 +305,7 @@ const ROICalculator = () => {
   }
 
   return (
-    <section className="py-20 bg-gradient-to-b from-white to-gray-50">
+    <section className="py-20 bg-brand-blue">
       <div className="container mx-auto px-4">
         <Card className="max-w-4xl mx-auto p-8">
           <div className="text-center mb-8">
@@ -313,10 +313,10 @@ const ROICalculator = () => {
               <Calculator className="h-8 w-8 text-brand-orange" />
             </div>
             <h2 className="text-3xl font-bold text-brand-gray-dark mb-2">
-              Bereken Je ROI
+              Je Potentiële Kostenbesparingen
             </h2>
             <p className="text-brand-gray-medium">
-              Ontdek wat aandachttraining jouw organisatie kan opleveren
+              Op basis van 40 jaar wetenschappelijk onderzoek
             </p>
           </div>
 
