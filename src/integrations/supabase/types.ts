@@ -26,7 +26,7 @@ export type Database = {
           email: string
           employee_turnover: number | null
           employees: number | null
-          functie: string
+          functie: string | null
           id: string
           name: string
           number_of_employees: number | null
@@ -43,7 +43,7 @@ export type Database = {
           email: string
           employee_turnover?: number | null
           employees?: number | null
-          functie: string
+          functie?: string | null
           id?: string
           name: string
           number_of_employees?: number | null
@@ -60,7 +60,7 @@ export type Database = {
           email?: string
           employee_turnover?: number | null
           employees?: number | null
-          functie?: string
+          functie?: string | null
           id?: string
           name?: string
           number_of_employees?: number | null
