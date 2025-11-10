@@ -16,45 +16,54 @@ export type Database = {
     Tables: {
       calculator_submissions: {
         Row: {
-          avg_employee_costs: number
+          avg_employee_costs: number | null
+          avg_gross_annual_salary: number | null
           calculation_results: Json
           company: string
           created_at: string
           current_absenteeism: number
-          current_turnover: number
+          current_turnover: number | null
           email: string
-          employees: number
+          employee_turnover: number | null
+          employees: number | null
           functie: string
           id: string
           name: string
+          number_of_employees: number | null
           phone: string | null
         }
         Insert: {
-          avg_employee_costs: number
+          avg_employee_costs?: number | null
+          avg_gross_annual_salary?: number | null
           calculation_results: Json
           company: string
           created_at?: string
           current_absenteeism: number
-          current_turnover: number
+          current_turnover?: number | null
           email: string
-          employees: number
+          employee_turnover?: number | null
+          employees?: number | null
           functie: string
           id?: string
           name: string
+          number_of_employees?: number | null
           phone?: string | null
         }
         Update: {
-          avg_employee_costs?: number
+          avg_employee_costs?: number | null
+          avg_gross_annual_salary?: number | null
           calculation_results?: Json
           company?: string
           created_at?: string
           current_absenteeism?: number
-          current_turnover?: number
+          current_turnover?: number | null
           email?: string
-          employees?: number
+          employee_turnover?: number | null
+          employees?: number | null
           functie?: string
           id?: string
           name?: string
+          number_of_employees?: number | null
           phone?: string | null
         }
         Relationships: []
