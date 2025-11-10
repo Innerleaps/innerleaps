@@ -18,7 +18,6 @@ const CalculatorModal = ({ isOpen, onClose }: CalculatorModalProps) => {
     naam: '',
     email: '',
     bedrijfsnaam: '',
-    functie: '',
     telefoon: '',
     verzuimPercentage: '',
     verloopPercentage: '',
@@ -52,7 +51,6 @@ const CalculatorModal = ({ isOpen, onClose }: CalculatorModalProps) => {
       formData.naam.trim() !== '' &&
       formData.email.trim() !== '' &&
       formData.bedrijfsnaam.trim() !== '' &&
-      formData.functie.trim() !== '' &&
       formData.verzuimPercentage.trim() !== '' &&
       formData.verloopPercentage.trim() !== '' &&
       formData.aantalWerknemers.trim() !== '' &&
@@ -91,7 +89,6 @@ const CalculatorModal = ({ isOpen, onClose }: CalculatorModalProps) => {
           name: formData.naam,
           email: formData.email,
           company: formData.bedrijfsnaam,
-          functie: formData.functie,
           phone: formData.telefoon || '',
           currentAbsenteeism: parseFloat(formData.verzuimPercentage),
           employeeTurnover: parseFloat(formData.verloopPercentage),
@@ -124,7 +121,6 @@ const CalculatorModal = ({ isOpen, onClose }: CalculatorModalProps) => {
       naam: '',
       email: '',
       bedrijfsnaam: '',
-      functie: '',
       telefoon: '',
       verzuimPercentage: '',
       verloopPercentage: '',
@@ -383,21 +379,6 @@ const CalculatorModal = ({ isOpen, onClose }: CalculatorModalProps) => {
                     onChange={(e) => handleInputChange('bedrijfsnaam', e.target.value)}
                     className="bg-white border-gray-300 text-brand-gray-dark placeholder:text-gray-400"
                     placeholder="Jouw organisatie"
-                    required
-                  />
-                </div>
-
-                <div className="space-y-2">
-                  <Label htmlFor="modal-functie" className="text-brand-gray-dark font-medium">
-                    Functie*
-                  </Label>
-                  <Input
-                    id="modal-functie"
-                    type="text"
-                    value={formData.functie}
-                    onChange={(e) => handleInputChange('functie', e.target.value)}
-                    className="bg-white border-gray-300 text-brand-gray-dark placeholder:text-gray-400"
-                    placeholder="Jouw functie"
                     required
                   />
                 </div>

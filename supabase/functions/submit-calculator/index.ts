@@ -13,7 +13,6 @@ const SubmissionSchema = z.object({
   name: z.string().trim().min(1).max(100),
   email: z.string().trim().email().max(255),
   phone: z.string().trim().max(20).optional().nullable(),
-  functie: z.string().trim().min(1).max(100),
   company: z.string().trim().min(1).max(200),
   numberOfEmployees: z.number().int().positive().max(1000000),
   avgGrossAnnualSalary: z.number().positive().max(10000000),
@@ -47,7 +46,6 @@ interface CalculatorSubmission {
   name: string;
   email: string;
   phone?: string;
-  functie: string;
   company: string;
   numberOfEmployees: number;
   avgGrossAnnualSalary: number;
@@ -204,7 +202,6 @@ const handler = async (req: Request): Promise<Response> => {
         name: submission.name,
         email: submission.email,
         phone: submission.phone || null,
-        functie: submission.functie,
         company: submission.company,
         number_of_employees: submission.numberOfEmployees,
         avg_gross_annual_salary: submission.avgGrossAnnualSalary,
@@ -226,7 +223,6 @@ const handler = async (req: Request): Promise<Response> => {
     const safeName = escapeHtml(submission.name);
     const safeEmail = escapeHtml(submission.email);
     const safePhone = submission.phone ? escapeHtml(submission.phone) : 'Niet opgegeven';
-    const safeFunctie = escapeHtml(submission.functie);
     const safeCompany = escapeHtml(submission.company);
 
     const results = submission.results;
@@ -484,7 +480,6 @@ const handler = async (req: Request): Promise<Response> => {
                       <tr><td style="padding: 5px 0; border-bottom: 1px solid #f3f4f6;"><strong>Naam:</strong> ${safeName}</td></tr>
                       <tr><td style="padding: 5px 0; border-bottom: 1px solid #f3f4f6;"><strong>E-mail:</strong> <a href="mailto:${safeEmail}">${safeEmail}</a></td></tr>
                       <tr><td style="padding: 5px 0; border-bottom: 1px solid #f3f4f6;"><strong>Telefoon:</strong> <a href="tel:${safePhone}">${safePhone}</a></td></tr>
-                      <tr><td style="padding: 5px 0; border-bottom: 1px solid #f3f4f6;"><strong>Functie:</strong> ${safeFunctie}</td></tr>
                       <tr><td style="padding: 5px 0;"><strong>Bedrijf:</strong> ${safeCompany}</td></tr>
                     </table>
                     

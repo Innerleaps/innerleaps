@@ -14,7 +14,6 @@ const ROICalculator = () => {
     naam: '',
     email: '',
     bedrijfsnaam: '',
-    functie: '',
     telefoon: '',
     verzuimPercentage: '',
     verloopPercentage: '',
@@ -48,7 +47,6 @@ const ROICalculator = () => {
       formData.naam.trim() !== '' &&
       formData.email.trim() !== '' &&
       formData.bedrijfsnaam.trim() !== '' &&
-      formData.functie.trim() !== '' &&
       formData.verzuimPercentage.trim() !== '' &&
       formData.verloopPercentage.trim() !== '' &&
       formData.aantalWerknemers.trim() !== '' &&
@@ -85,7 +83,6 @@ const ROICalculator = () => {
           name: formData.naam,
           email: formData.email,
           company: formData.bedrijfsnaam,
-          functie: formData.functie,
           phone: formData.telefoon || '',
           currentAbsenteeism: parseFloat(formData.verzuimPercentage),
           employeeTurnover: parseFloat(formData.verloopPercentage),
@@ -118,7 +115,6 @@ const ROICalculator = () => {
       naam: '',
       email: '',
       bedrijfsnaam: '',
-      functie: '',
       telefoon: '',
       verzuimPercentage: '',
       verloopPercentage: '',
@@ -368,20 +364,6 @@ const ROICalculator = () => {
               </div>
 
               <div>
-                <Label htmlFor="functie" className="text-brand-gray-dark font-medium">
-                  Functie *
-                </Label>
-                <Input
-                  id="functie"
-                  type="text"
-                  value={formData.functie}
-                  onChange={(e) => handleInputChange('functie', e.target.value)}
-                  placeholder="Jouw functie"
-                  className="mt-1 placeholder:text-gray-400"
-                />
-              </div>
-
-              <div>
                 <Label htmlFor="telefoon" className="text-brand-gray-dark font-medium">
                   Telefoon
                 </Label>
@@ -458,11 +440,11 @@ const ROICalculator = () => {
                 />
               </div>
 
-              <div className="pt-6">
+              <div className="pt-6 flex justify-center">
                 <Button 
                   onClick={handleSubmit}
                   disabled={!isFormValid() || isSubmitting}
-                  className="w-full bg-brand-orange hover:bg-brand-orange/90"
+                  className="px-8 bg-brand-orange hover:bg-brand-orange/90"
                 >
                   {isSubmitting ? 'Bezig met berekenen...' : 'Bereken Besparing'}
                 </Button>
