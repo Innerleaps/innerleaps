@@ -140,7 +140,7 @@ const StressManagement = () => {
                   className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight font-heading break-words"
                   style={{ textShadow: "0 2px 8px rgba(0,0,0,0.5)" }}
                 >
-                  Minder <span className="text-brand-orange">spanning </span> en{" "}
+                  Minder <span className="text-brand-orange">spanning </span> en meer{" "}
                   <span className="text-brand-orange">rust </span> in je hoofd
                 </h1>
                 <p
@@ -456,7 +456,7 @@ const StressManagement = () => {
 
           <div className="text-center mt-12">
             <p className="text-xl text-brand-gray-medium mb-6">Wil jij dit ook bereiken?</p>
-            <Button 
+            <Button
               onClick={() => setIsRegistrationModalOpen(true)}
               className="bg-brand-orange hover:bg-brand-orange/90 text-white py-3 px-8 rounded-lg text-lg font-semibold"
             >
@@ -527,7 +527,7 @@ const StressManagement = () => {
 
           <div className="text-center mt-12">
             <p className="text-xl text-brand-gray-medium mb-6">Klaar om ook te starten?</p>
-            <Button 
+            <Button
               onClick={() => setIsRegistrationModalOpen(true)}
               className="bg-brand-orange hover:bg-brand-orange/90 text-white py-3 px-8 rounded-lg text-lg font-semibold"
             >
@@ -620,7 +620,7 @@ const StressManagement = () => {
 
           <div className="text-center mt-12">
             <p className="text-xl text-brand-gray-medium mb-6">Ben je ook zo enthousiast?</p>
-            <Button 
+            <Button
               onClick={() => setIsRegistrationModalOpen(true)}
               className="bg-brand-orange hover:bg-brand-orange/90 text-white py-3 px-8 rounded-lg text-lg font-semibold"
             >
@@ -658,7 +658,7 @@ const StressManagement = () => {
 
           <div className="text-center mt-12">
             <p className="text-xl text-brand-gray-medium mb-6">Wil jij nu een leven met minder spanning en druk?</p>
-            <Button 
+            <Button
               onClick={() => setIsRegistrationModalOpen(true)}
               className="bg-brand-orange hover:bg-brand-orange/90 text-white py-3 px-8 rounded-lg text-lg font-semibold"
             >
