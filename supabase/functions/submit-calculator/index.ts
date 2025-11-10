@@ -8,26 +8,24 @@ const corsHeaders = {
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type",
 };
 
-// Validation schema with strict input validation
+// Validation schema for ROI Calculator
 const SubmissionSchema = z.object({
   name: z.string().trim().min(1).max(100),
   email: z.string().trim().email().max(255),
   phone: z.string().trim().max(20).optional().nullable(),
   functie: z.string().trim().min(1).max(100),
   company: z.string().trim().min(1).max(200),
-  employees: z.number().int().positive().max(1000000),
-  avgSalary: z.number().positive().max(10000000),
+  numberOfEmployees: z.number().int().positive().max(1000000),
+  avgGrossAnnualSalary: z.number().positive().max(10000000),
   currentAbsenteeism: z.number().min(0).max(100),
-  sector: z.string().trim().min(1).max(100),
-  calculationResults: z.object({
+  employeeTurnover: z.number().min(0).max(100),
+  results: z.object({
     totaleLoonkosten: z.number(),
-    huidigeVerzuimkosten: z.number(),
-    numberOfGroups: z.number(),
     investment: z.number(),
     scenarios: z.object({
       conservative: z.object({
         verzuimBesparing: z.number(),
-        uitvalReductie: z.number(),
+        retentieBesparing: z.number(),
         productiviteitBesparing: z.number(),
         totaleBesparing: z.number(),
         netBesparing: z.number(),
@@ -35,7 +33,7 @@ const SubmissionSchema = z.object({
       }),
       positive: z.object({
         verzuimBesparing: z.number(),
-        uitvalReductie: z.number(),
+        retentieBesparing: z.number(),
         productiviteitBesparing: z.number(),
         totaleBesparing: z.number(),
         netBesparing: z.number(),
@@ -51,11 +49,11 @@ interface CalculatorSubmission {
   phone?: string;
   functie: string;
   company: string;
-  employees: number;
-  avgSalary: number;
+  numberOfEmployees: number;
+  avgGrossAnnualSalary: number;
   currentAbsenteeism: number;
-  sector: string;
-  calculationResults: any;
+  employeeTurnover: number;
+  results: any;
 }
 
 // In-memory rate limiting store (resets on function restart)
@@ -199,12 +197,7 @@ const handler = async (req: Request): Promise<Response> => {
       company: submission.company
     });
 
-    // Store in database - include sector in calculation_results
-    const calculationResultsWithSector = {
-      ...submission.calculationResults,
-      sector: submission.sector
-    };
-
+    // Store in database
     const { data, error: dbError } = await supabase
       .from("calculator_submissions")
       .insert({
@@ -213,11 +206,11 @@ const handler = async (req: Request): Promise<Response> => {
         phone: submission.phone || null,
         functie: submission.functie,
         company: submission.company,
-        employees: submission.employees,
-        avg_employee_costs: submission.avgSalary,
+        number_of_employees: submission.numberOfEmployees,
+        avg_gross_annual_salary: submission.avgGrossAnnualSalary,
         current_absenteeism: submission.currentAbsenteeism,
-        current_turnover: 0, // Not used in business case calculator
-        calculation_results: calculationResultsWithSector,
+        employee_turnover: submission.employeeTurnover,
+        calculation_results: submission.results,
       })
       .select()
       .single();
@@ -235,9 +228,8 @@ const handler = async (req: Request): Promise<Response> => {
     const safePhone = submission.phone ? escapeHtml(submission.phone) : 'Niet opgegeven';
     const safeFunctie = escapeHtml(submission.functie);
     const safeCompany = escapeHtml(submission.company);
-    const safeSector = escapeHtml(submission.sector);
 
-    const results = submission.calculationResults;
+    const results = submission.results;
 
     // PDF attachment URL
     const pdfUrl = `${Deno.env.get("SUPABASE_URL")?.replace('.supabase.co', '')}.supabase.co/storage/v1/object/public/documents/business-case-awareness-interventions.pdf`;
@@ -278,19 +270,19 @@ const handler = async (req: Request): Promise<Response> => {
                     <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
                       <tr>
                         <td style="padding: 5px 0; color: #64748b; font-size: 14px;"><strong>Aantal werknemers:</strong></td>
-                        <td style="padding: 5px 0; color: #1e293b; font-size: 14px; font-weight: 600;">${submission.employees}</td>
+                        <td style="padding: 5px 0; color: #1e293b; font-size: 14px; font-weight: 600;">${submission.numberOfEmployees}</td>
                       </tr>
                       <tr>
                         <td style="padding: 5px 0; color: #64748b; font-size: 14px;"><strong>Gemiddeld salaris:</strong></td>
-                        <td style="padding: 5px 0; color: #1e293b; font-size: 14px; font-weight: 600;">${formatCurrency(submission.avgSalary)}</td>
+                        <td style="padding: 5px 0; color: #1e293b; font-size: 14px; font-weight: 600;">${formatCurrency(submission.avgGrossAnnualSalary)}</td>
                       </tr>
                       <tr>
                         <td style="padding: 5px 0; color: #64748b; font-size: 14px;"><strong>Verzuim:</strong></td>
                         <td style="padding: 5px 0; color: #1e293b; font-size: 14px; font-weight: 600;">${submission.currentAbsenteeism}%</td>
                       </tr>
                       <tr>
-                        <td style="padding: 5px 0; color: #64748b; font-size: 14px;"><strong>Sector:</strong></td>
-                        <td style="padding: 5px 0; color: #1e293b; font-size: 14px; font-weight: 600;">${safeSector}</td>
+                        <td style="padding: 5px 0; color: #64748b; font-size: 14px;"><strong>Verloop:</strong></td>
+                        <td style="padding: 5px 0; color: #1e293b; font-size: 14px; font-weight: 600;">${submission.employeeTurnover}%</td>
                       </tr>
                     </table>
                   </td>
@@ -309,15 +301,15 @@ const handler = async (req: Request): Promise<Response> => {
                       
                       <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="font-size: 14px;">
                         <tr>
-                          <td style="padding: 5px 0; color: #64748b;">Verzuimbesparing:</td>
+                          <td style="padding: 5px 0; color: #64748b;">Verzuimbesparing (15%):</td>
                           <td style="padding: 5px 0; color: #059669; font-weight: 600; text-align: right;">${formatCurrency(results.scenarios.conservative.verzuimBesparing)}</td>
                         </tr>
                         <tr>
-                          <td style="padding: 5px 0; color: #64748b;">Uitvalreductie (70%):</td>
-                          <td style="padding: 5px 0; color: #059669; font-weight: 600; text-align: right;">${formatCurrency(results.scenarios.conservative.uitvalReductie)}</td>
+                          <td style="padding: 5px 0; color: #64748b;">Retentiebesparing (5%):</td>
+                          <td style="padding: 5px 0; color: #059669; font-weight: 600; text-align: right;">${formatCurrency(results.scenarios.conservative.retentieBesparing)}</td>
                         </tr>
                         <tr>
-                          <td style="padding: 5px 0; color: #64748b;">Productiviteitswinst (6%):</td>
+                          <td style="padding: 5px 0; color: #64748b;">Productiviteitswinst (5%):</td>
                           <td style="padding: 5px 0; color: #059669; font-weight: 600; text-align: right;">${formatCurrency(results.scenarios.conservative.productiviteitBesparing)}</td>
                         </tr>
                         <tr>
@@ -360,15 +352,15 @@ const handler = async (req: Request): Promise<Response> => {
                       
                       <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="font-size: 14px;">
                         <tr>
-                          <td style="padding: 5px 0; color: #64748b;">Verzuimbesparing:</td>
+                          <td style="padding: 5px 0; color: #64748b;">Verzuimbesparing (21%):</td>
                           <td style="padding: 5px 0; color: #059669; font-weight: 600; text-align: right;">${formatCurrency(results.scenarios.positive.verzuimBesparing)}</td>
                         </tr>
                         <tr>
-                          <td style="padding: 5px 0; color: #64748b;">Uitvalreductie (70%):</td>
-                          <td style="padding: 5px 0; color: #059669; font-weight: 600; text-align: right;">${formatCurrency(results.scenarios.positive.uitvalReductie)}</td>
+                          <td style="padding: 5px 0; color: #64748b;">Retentiebesparing (8%):</td>
+                          <td style="padding: 5px 0; color: #059669; font-weight: 600; text-align: right;">${formatCurrency(results.scenarios.positive.retentieBesparing)}</td>
                         </tr>
                         <tr>
-                          <td style="padding: 5px 0; color: #64748b;">Productiviteitswinst (6%):</td>
+                          <td style="padding: 5px 0; color: #64748b;">Productiviteitswinst (8%):</td>
                           <td style="padding: 5px 0; color: #059669; font-weight: 600; text-align: right;">${formatCurrency(results.scenarios.positive.productiviteitBesparing)}</td>
                         </tr>
                         <tr>
@@ -498,10 +490,10 @@ const handler = async (req: Request): Promise<Response> => {
                     
                     <h3 style="margin: 20px 0 10px 0; color: #374151; font-size: 16px;">Bedrijfsgegevens:</h3>
                     <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin-bottom: 20px;">
-                      <tr><td style="padding: 5px 0; border-bottom: 1px solid #f3f4f6;"><strong>Aantal werknemers:</strong> ${submission.employees}</td></tr>
-                      <tr><td style="padding: 5px 0; border-bottom: 1px solid #f3f4f6;"><strong>Gemiddeld salaris:</strong> ${formatCurrency(submission.avgSalary)}</td></tr>
+                      <tr><td style="padding: 5px 0; border-bottom: 1px solid #f3f4f6;"><strong>Aantal werknemers:</strong> ${submission.numberOfEmployees}</td></tr>
+                      <tr><td style="padding: 5px 0; border-bottom: 1px solid #f3f4f6;"><strong>Gemiddeld salaris:</strong> ${formatCurrency(submission.avgGrossAnnualSalary)}</td></tr>
                       <tr><td style="padding: 5px 0; border-bottom: 1px solid #f3f4f6;"><strong>Verzuimpercentage:</strong> ${submission.currentAbsenteeism}%</td></tr>
-                      <tr><td style="padding: 5px 0;"><strong>Sector:</strong> ${safeSector}</td></tr>
+                      <tr><td style="padding: 5px 0;"><strong>Verlooppercentage:</strong> ${submission.employeeTurnover}%</td></tr>
                     </table>
                     
                     <h3 style="margin: 20px 0 10px 0; color: #374151; font-size: 16px;">Berekende Resultaten:</h3>
