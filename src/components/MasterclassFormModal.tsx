@@ -258,7 +258,7 @@ const MasterclassFormModal = ({
               {/* VGZ */}
               <div className="flex flex-col items-center text-center">
                 <p className="text-sm font-semibold text-brand-gray-dark mb-2">
-                  🏥 Herkend door Nederlandse zorg
+                  🏥 Methode erkend door Nederlandse zorg
                 </p>
                 <img src={vgzLogo} alt="VGZ" className="h-10 object-contain opacity-80" />
               </div>
