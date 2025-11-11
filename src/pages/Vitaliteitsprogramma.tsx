@@ -475,7 +475,7 @@ const Vitaliteitsprogramma = () => {
             6 weken, 6 thema's voor <span className="text-brand-orange">echte verandering</span>
           </h2>
           
-          <p className="text-base md:text-lg text-brand-gray-dark leading-relaxed italic text-center max-w-4xl mx-auto mb-12 bg-brand-orange/5 p-4 md:p-6 rounded-lg border-l-4 border-brand-orange">
+          <p className="text-base md:text-lg text-brand-gray-dark leading-relaxed text-center max-w-4xl mx-auto mb-12">
             Het programma is deels aan te passen naar thema's die spelen zoals: gezond pauzeren, piekeren, 
             perfectionisme, werk-privé balans of communicatie. Vraag naar de mogelijkheden.
           </p>
