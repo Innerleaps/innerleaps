@@ -36,7 +36,7 @@ const programRegistrationSchema = z.object({
   }
   return true;
 }, {
-  message: "Bedrijfsnaam is verplicht bij zakelijke aanmelding",
+  message: "Bedrijfsnaam is verplicht bij aanmelding via werkgever",
   path: ["companyName"]
 }).refine(data => {
   const day = parseInt(data.birthDay);
@@ -95,10 +95,10 @@ const getOrCreateAvailableSpots = (timeslotKey: string): number => {
 
 const getNextProgramDates = (): ProgramDates => {
   const today = new Date();
-  const fourWeeksFromNow = new Date(today);
-  fourWeeksFromNow.setDate(today.getDate() + 28);
+  const fiveWeeksFromNow = new Date(today);
+  fiveWeeksFromNow.setDate(today.getDate() + 35); // 5 weken
 
-  let nextTuesday = new Date(fourWeeksFromNow);
+  let nextTuesday = new Date(fiveWeeksFromNow);
   while (nextTuesday.getDay() !== 2) {
     nextTuesday.setDate(nextTuesday.getDate() + 1);
   }
@@ -350,7 +350,7 @@ const ProgramRegistrationModal = ({
                 <div className="flex items-center space-x-2">
                   <RadioGroupItem value="zakelijk" id="zakelijk" />
                   <Label htmlFor="zakelijk" className="cursor-pointer">
-                    Zakelijk
+                    Via Werkgever
                   </Label>
                 </div>
               </RadioGroup>

@@ -57,7 +57,7 @@ const handler = async (req: Request): Promise<Response> => {
     }
 
     if (data.registrationType === "zakelijk" && !data.companyName) {
-      throw new Error("Bedrijfsnaam is verplicht bij zakelijke aanmelding");
+      throw new Error("Bedrijfsnaam is verplicht bij aanmelding via werkgever");
     }
 
     if (!data.agreedToTerms) {
@@ -128,7 +128,7 @@ const handler = async (req: Request): Promise<Response> => {
 
     // Email naar deelnemer
     const programName = data.programType === "prestatie" ? "Prestatie Programma" : "Stress-Management Programma";
-    const registrationTypeText = data.registrationType === "particulier" ? "Particulier" : "Zakelijk";
+    const registrationTypeText = data.registrationType === "particulier" ? "Particulier" : "Via Werkgever";
 
     const participantEmailHtml = `
 <!DOCTYPE html>
