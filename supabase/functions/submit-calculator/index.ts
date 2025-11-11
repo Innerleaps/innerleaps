@@ -255,7 +255,7 @@ const handler = async (req: Request): Promise<Response> => {
                 <tr>
                   <td style="padding: 30px; text-align: left; border-bottom: 1px solid #e2e8f0;">
                     <h1 style="margin: 0; color: #1e293b; font-size: 24px; font-weight: 600;">
-                      Jouw kostenbesparingsberekening voor ${safeCompany}
+                      Besparing ${safeCompany} met Innerleaps
                     </h1>
                     <p style="margin: 10px 0 0 0; color: #64748b; font-size: 14px;">
                       Bedankt voor het aanvragen van de calculator
@@ -294,12 +294,9 @@ const handler = async (req: Request): Promise<Response> => {
                 <tr>
                   <td style="padding: 30px;">
                     <div style="border-left: 4px solid #3b82f6; padding-left: 20px; margin-bottom: 30px;">
-                      <h2 style="margin: 0 0 5px 0; color: #1e293b; font-size: 18px; font-weight: 600;">
+                      <h2 style="margin: 0 0 15px 0; color: #1e293b; font-size: 18px; font-weight: 600;">
                         Conservative Scenario
                       </h2>
-                      <p style="margin: 0 0 15px 0; color: #64748b; font-size: 14px;">
-                        15% verzuimreductie met minimale effecten
-                      </p>
                       
                       <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="font-size: 14px;">
                         <tr>
@@ -307,7 +304,7 @@ const handler = async (req: Request): Promise<Response> => {
                           <td style="padding: 5px 0; color: #059669; font-weight: 600; text-align: right;">${formatCurrency(results.scenarios.conservative.verzuimBesparing)}</td>
                         </tr>
                         <tr>
-                          <td style="padding: 5px 0; color: #64748b;">Retentiebesparing (5%):</td>
+                          <td style="padding: 5px 0; color: #64748b;">Personeelsverloopbesparing (5%):</td>
                           <td style="padding: 5px 0; color: #059669; font-weight: 600; text-align: right;">${formatCurrency(results.scenarios.conservative.retentieBesparing)}</td>
                         </tr>
                         <tr>
@@ -334,7 +331,7 @@ const handler = async (req: Request): Promise<Response> => {
                         </tr>
                         <tr>
                           <td style="padding: 5px 0; color: #1e293b; font-weight: 700;">ROI:</td>
-                          <td style="padding: 5px 0; color: #2563eb; font-weight: 700; font-size: 16px; text-align: right;">${results.scenarios.conservative.roi}%</td>
+                          <td style="padding: 5px 0; color: #2563eb; font-weight: 700; font-size: 16px; text-align: right;">${Math.round(results.scenarios.conservative.roi)}%</td>
                         </tr>
                       </table>
                     </div>
@@ -345,12 +342,9 @@ const handler = async (req: Request): Promise<Response> => {
                 <tr>
                   <td style="padding: 0 30px 30px 30px;">
                     <div style="border-left: 4px solid #10b981; padding-left: 20px;">
-                      <h2 style="margin: 0 0 5px 0; color: #1e293b; font-size: 18px; font-weight: 600;">
+                      <h2 style="margin: 0 0 15px 0; color: #1e293b; font-size: 18px; font-weight: 600;">
                         Positive Scenario
                       </h2>
-                      <p style="margin: 0 0 15px 0; color: #64748b; font-size: 14px;">
-                        21% verzuimreductie met volledige effecten
-                      </p>
                       
                       <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="font-size: 14px;">
                         <tr>
@@ -358,7 +352,7 @@ const handler = async (req: Request): Promise<Response> => {
                           <td style="padding: 5px 0; color: #059669; font-weight: 600; text-align: right;">${formatCurrency(results.scenarios.positive.verzuimBesparing)}</td>
                         </tr>
                         <tr>
-                          <td style="padding: 5px 0; color: #64748b;">Retentiebesparing (8%):</td>
+                          <td style="padding: 5px 0; color: #64748b;">Personeelsverloopbesparing (8%):</td>
                           <td style="padding: 5px 0; color: #059669; font-weight: 600; text-align: right;">${formatCurrency(results.scenarios.positive.retentieBesparing)}</td>
                         </tr>
                         <tr>
@@ -385,7 +379,7 @@ const handler = async (req: Request): Promise<Response> => {
                         </tr>
                         <tr>
                           <td style="padding: 5px 0; color: #1e293b; font-weight: 700;">ROI:</td>
-                          <td style="padding: 5px 0; color: #2563eb; font-weight: 700; font-size: 16px; text-align: right;">${results.scenarios.positive.roi}%</td>
+                          <td style="padding: 5px 0; color: #2563eb; font-weight: 700; font-size: 16px; text-align: right;">${Math.round(results.scenarios.positive.roi)}%</td>
                         </tr>
                       </table>
                     </div>
@@ -396,12 +390,15 @@ const handler = async (req: Request): Promise<Response> => {
                 <tr>
                   <td style="padding: 20px 30px; background-color: #eff6ff; border-top: 1px solid #bfdbfe;">
                     <h3 style="margin: 0 0 10px 0; color: #1e40af; font-size: 16px; font-weight: 600;">
-                      ✓ Wetenschappelijk bewezen effecten
+                      Wetenschappelijk bewezen effecten
                     </h3>
-                    <ul style="margin: 0; padding-left: 20px; color: #1e40af; font-size: 14px;">
-                      <li style="margin: 5px 0;">15-21% verzuimreductie (Oxford/UMass onderzoek)</li>
-                      <li style="margin: 5px 0;">70% minder kans op uitval door langdurig verzuim</li>
-                      <li style="margin: 5px 0;">6% productiviteitsverbetering per werknemer</li>
+                    <p style="margin: 0 0 15px 0; color: #1e40af; font-size: 14px; line-height: 1.5;">
+                      In de bijlage vind je het wetenschappelijke bewijs voor de besparingen op verzuim, medewerkersverloop en de Productiviteitswinst
+                    </p>
+                    <ul style="margin: 0; padding-left: 20px; color: #1e40af; font-size: 14px; list-style: none;">
+                      <li style="margin: 5px 0;">✓ Verzuimbesparing 15-21%</li>
+                      <li style="margin: 5px 0;">✓ Productiviteitswinst 5-8%</li>
+                      <li style="margin: 5px 0;">✓ Personeelsverloopbesparing 5-8%</li>
                     </ul>
                   </td>
                 </tr>
@@ -502,13 +499,13 @@ const handler = async (req: Request): Promise<Response> => {
                     <div style="background-color: #f8fafc; padding: 15px; margin-bottom: 15px; border-left: 4px solid #3b82f6;">
                       <h4 style="margin: 0 0 10px 0; color: #1e293b;">Conservative Scenario:</h4>
                       <p style="margin: 5px 0;"><strong>Netto winst:</strong> ${formatCurrency(results.scenarios.conservative.netBesparing)}</p>
-                      <p style="margin: 5px 0;"><strong>ROI:</strong> ${results.scenarios.conservative.roi}%</p>
+                      <p style="margin: 5px 0;"><strong>ROI:</strong> ${Math.round(results.scenarios.conservative.roi)}%</p>
                     </div>
                     
                     <div style="background-color: #f0fdf4; padding: 15px; margin-bottom: 20px; border-left: 4px solid #10b981;">
                       <h4 style="margin: 0 0 10px 0; color: #1e293b;">Positive Scenario:</h4>
                       <p style="margin: 5px 0;"><strong>Netto winst:</strong> ${formatCurrency(results.scenarios.positive.netBesparing)}</p>
-                      <p style="margin: 5px 0;"><strong>ROI:</strong> ${results.scenarios.positive.roi}%</p>
+                      <p style="margin: 5px 0;"><strong>ROI:</strong> ${Math.round(results.scenarios.positive.roi)}%</p>
                     </div>
                     
                     <h3 style="margin: 20px 0 10px 0; color: #374151; font-size: 16px;">Acties:</h3>
@@ -537,7 +534,7 @@ const handler = async (req: Request): Promise<Response> => {
       await resend.emails.send({
         from: "InnerLeaps <info@innerleaps.nl>",
         to: submission.email,
-        subject: `Jouw kostenbesparingsberekening voor ${submission.company}`,
+        subject: `Ontdek de besparing voor ${submission.company} met het Innerleaps programma`,
         html: confirmationEmailHtml,
         attachments: [
           {
@@ -547,18 +544,12 @@ const handler = async (req: Request): Promise<Response> => {
         ]
       });
 
-      // Send notification email to admin with PDF attachment
+      // Send notification email to admin (no PDF attachment)
       await resend.emails.send({
         from: "InnerLeaps <info@innerleaps.nl>",
         to: "bas@innerleaps.nl",
         subject: `Nieuwe Calculator Aanvraag - ${submission.company}`,
         html: notificationEmailHtml,
-        attachments: [
-          {
-            filename: "Business_Case_Awareness_Interventions.pdf",
-            path: pdfUrl,
-          }
-        ]
       });
 
       console.log("Emails sent successfully");
