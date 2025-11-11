@@ -75,6 +75,32 @@ function escapeHtml(unsafe: string): string {
     .replace(/'/g, "&#039;");
 }
 
+// Score level classification
+function getScoreLevel(score: number) {
+  if (score >= 0 && score <= 13) {
+    return {
+      level: "Goed",
+      color: "#16a34a", // green-600
+      bgColor: "#f0fdf4", // green-50
+      icon: "✓"
+    };
+  } else if (score >= 14 && score <= 26) {
+    return {
+      level: "Let op, actie aanbevolen",
+      color: "#ea580c", // orange-600
+      bgColor: "#fff7ed", // orange-50
+      icon: "⚠️"
+    };
+  } else {
+    return {
+      level: "Gevaar, actie nodig",
+      color: "#dc2626", // red-600
+      bgColor: "#fef2f2", // red-50
+      icon: "⚠️"
+    };
+  }
+}
+
 const handler = async (req: Request): Promise<Response> => {
   if (req.method === "OPTIONS") {
     return new Response(null, { headers: corsHeaders });
@@ -196,6 +222,8 @@ const handler = async (req: Request): Promise<Response> => {
       const safeEmail = submission.email ? escapeHtml(submission.email) : "";
       const safeOrganisatie = submission.organisatie ? escapeHtml(submission.organisatie) : "";
 
+      const scoreLevel = getScoreLevel(submission.total_score);
+
       const emailResponse = await resend.emails.send({
         from: "InnerLeaps <bas@innerleaps.nl>",
         to: [submission.email],
@@ -206,9 +234,16 @@ const handler = async (req: Request): Promise<Response> => {
             
             <p>${safeName},</p>
             
-            <p>Je score is <strong>${submission.total_score} van de 40 punten</strong>.</p>
-            
-            <p>In de workshop gaan we in op wat deze score betekent.</p>
+            <div style="background-color: ${scoreLevel.bgColor}; border: 2px solid ${scoreLevel.color}; border-radius: 8px; padding: 32px; margin: 20px 0; text-align: center;">
+              <p style="font-size: 16px; margin-bottom: 8px; color: #333;">Je score is</p>
+              <p style="font-size: 48px; font-weight: bold; color: ${scoreLevel.color}; margin: 8px 0;">${submission.total_score}</p>
+              <p style="font-size: 16px; margin-bottom: 20px; color: #333;">van de 40 punten</p>
+              
+              <div style="display: inline-block; background-color: white; border: 2px solid ${scoreLevel.color}; border-radius: 20px; padding: 10px 20px;">
+                <span style="font-size: 20px; margin-right: 8px;">${scoreLevel.icon}</span>
+                <span style="font-weight: bold; color: ${scoreLevel.color}; font-size: 16px;">${scoreLevel.level}</span>
+              </div>
+            </div>
             
             <div style="margin-top: 30px; padding-top: 20px; border-top: 1px solid #ddd;">
               <p style="color: #666;">
