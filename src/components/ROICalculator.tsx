@@ -439,17 +439,17 @@ const ROICalculator = () => {
                   className="mt-1 placeholder:text-gray-400"
                 />
               </div>
-
-              <div className="pt-6 flex justify-center">
-                <Button 
-                  onClick={handleSubmit}
-                  disabled={!isFormValid() || isSubmitting}
-                  className="px-8 bg-brand-orange hover:bg-brand-orange/90"
-                >
-                  {isSubmitting ? 'Bezig met berekenen...' : 'Bereken Besparing'}
-                </Button>
-              </div>
             </div>
+          </div>
+
+          <div className="mt-8 flex justify-center">
+            <Button 
+              onClick={handleSubmit}
+              disabled={!isFormValid() || isSubmitting}
+              className="px-8 bg-brand-orange hover:bg-brand-orange/90"
+            >
+              {isSubmitting ? 'Bezig met berekenen...' : 'Bereken Besparing'}
+            </Button>
           </div>
 
           <div className="mt-6 text-xs text-white/80 text-center">
