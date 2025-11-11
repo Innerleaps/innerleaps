@@ -160,9 +160,9 @@ const handler = async (req: Request): Promise<Response> => {
                 
                 <tr>
                   <td style="padding: 30px; text-align: left; border-bottom: 1px solid #e2e8f0;">
-                    <h1 style="margin: 0; color: #1e293b; font-size: 24px; font-weight: 600;">
-                      Jouw Wetenschappelijk Rapport over Aandachttraining
-                    </h1>
+              <h1 style="margin: 0; color: #1e293b; font-size: 24px; font-weight: 600;">
+                Wetenschappelijk rapport over Aandachttraining
+              </h1>
                     <p style="margin: 10px 0 0 0; color: #64748b; font-size: 14px;">
                       Bedankt voor je interesse, ${safeName}!
                     </p>
@@ -202,10 +202,10 @@ const handler = async (req: Request): Promise<Response> => {
                       <p style="margin: 0 0 20px 0; color: #64748b; font-size: 14px;">
                         Plan een vrijblijvend kennismakingsgesprek met Bas ter Haar Romenij
                       </p>
-                      <a href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ0yOuKvF_kkyuN7VW0l2y8U0V0hxKHQVDPXVBELJ_VB3SDKMC9TVEjT5sK5m4AoEfN8Gc4MqmcY" 
-                         style="display: inline-block; background-color: #FF6B35; color: #ffffff; text-decoration: none; padding: 12px 30px; border-radius: 6px; font-weight: 600; font-size: 16px;">
-                        Plan een gesprek
-                      </a>
+                       <a href="https://innerleaps.nl/Calendar" 
+                          style="display: inline-block; background-color: #FF6B35; color: #ffffff; text-decoration: none; padding: 12px 30px; border-radius: 6px; font-weight: 600; font-size: 16px;">
+                         Plan een gesprek
+                       </a>
                     </div>
                   </td>
                 </tr>
@@ -310,7 +310,7 @@ const handler = async (req: Request): Promise<Response> => {
       const { error: userEmailError } = await resend.emails.send({
         from: "InnerLeaps <info@innerleaps.nl>",
         to: [submission.email],
-        subject: "Jouw Wetenschappelijk Rapport - Aandachttraining",
+        subject: "Rapport: Ontdek de effectiviteit van onze methode",
         html: userEmailHtml,
         attachments: [
           {
