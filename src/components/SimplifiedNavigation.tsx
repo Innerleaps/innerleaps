@@ -11,6 +11,14 @@ import {
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu"
 
+const organisationMenuItems = [
+  {
+    label: 'Vitaliteitsprogramma',
+    href: '/vitaliteitsprogramma',
+    description: 'Voor organisaties en werkgevers'
+  }
+];
+
 const employeeMenuItems = [
   {
     label: 'Stressmanagement',
@@ -26,6 +34,7 @@ const employeeMenuItems = [
 
 const SimplifiedNavigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isOrganisationMenuOpen, setIsOrganisationMenuOpen] = useState(false);
   const [isEmployeeMenuOpen, setIsEmployeeMenuOpen] = useState(false);
 
   return (
@@ -45,7 +54,43 @@ const SimplifiedNavigation = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-6 xl:space-x-8">
-            {/* Voor Medewerkers dropdown - EERST */}
+            {/* Voor Organisaties dropdown - EERST */}
+            <NavigationMenu className="flex-none">
+              <NavigationMenuList>
+                <NavigationMenuItem>
+                  <NavigationMenuTrigger 
+                    className="text-brand-gray-dark hover:text-brand-blue transition-colors duration-300 font-medium text-base bg-transparent hover:bg-transparent data-[state=open]:bg-transparent data-[active]:bg-transparent focus:bg-transparent active:bg-transparent cursor-default select-none"
+                    onClick={(e) => e.preventDefault()}
+                    onPointerDown={(e) => e.preventDefault()}
+                  >
+                    Voor Organisaties
+                  </NavigationMenuTrigger>
+                  <NavigationMenuContent className="bg-white border border-gray-200 shadow-lg z-50">
+                    <ul className="w-[280px] p-2">
+                      {organisationMenuItems.map((subItem) => (
+                        <li key={subItem.label}>
+                          <NavigationMenuLink asChild>
+                            <Link
+                              to={subItem.href}
+                              className="block select-none rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-gray-100 hover:text-brand-blue focus:bg-gray-100"
+                            >
+                              <div className="text-sm font-medium leading-none text-brand-gray-dark">
+                                {subItem.label}
+                              </div>
+                              <p className="line-clamp-2 text-sm leading-snug text-gray-500 mt-1">
+                                {subItem.description}
+                              </p>
+                            </Link>
+                          </NavigationMenuLink>
+                        </li>
+                      ))}
+                    </ul>
+                  </NavigationMenuContent>
+                </NavigationMenuItem>
+              </NavigationMenuList>
+            </NavigationMenu>
+
+            {/* Voor Medewerkers dropdown */}
             <NavigationMenu className="flex-none">
               <NavigationMenuList>
                 <NavigationMenuItem>
@@ -117,7 +162,35 @@ const SimplifiedNavigation = () => {
         {isMenuOpen && (
           <div className="lg:hidden pb-4">
             <div className="flex flex-col space-y-4">
-              {/* Voor Medewerkers - EERST */}
+              {/* Voor Organisaties - EERST */}
+              <div>
+                <button
+                  onClick={() => setIsOrganisationMenuOpen(!isOrganisationMenuOpen)}
+                  className="flex items-center justify-between w-full text-brand-gray-dark hover:text-brand-blue transition-colors duration-300 font-medium py-2 text-left text-base"
+                >
+                  Voor Organisaties
+                  <ChevronDown className={`h-4 w-4 transition-transform ${isOrganisationMenuOpen ? 'rotate-180' : ''}`} />
+                </button>
+                {isOrganisationMenuOpen && (
+                  <div className="pl-4 mt-2 space-y-2">
+                    {organisationMenuItems.map((subItem) => (
+                      <Link
+                        key={subItem.label}
+                        to={subItem.href}
+                        onClick={() => {
+                          setIsMenuOpen(false);
+                          setIsOrganisationMenuOpen(false);
+                        }}
+                        className="block text-brand-gray-medium hover:text-brand-blue transition-colors duration-300 py-2 text-sm"
+                      >
+                        {subItem.label}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
+
+              {/* Voor Medewerkers */}
               <div>
                 <button
                   onClick={() => setIsEmployeeMenuOpen(!isEmployeeMenuOpen)}
