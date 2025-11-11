@@ -280,7 +280,7 @@ const ROICalculator = () => {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button 
-                  className="bg-brand-orange hover:bg-brand-orange/90 text-white"
+                  className="bg-brand-orange hover:bg-brand-orange/90 text-white font-semibold py-3 sm:py-5 px-4 sm:px-10 text-base sm:text-lg rounded-lg shadow-lg"
                   onClick={() => window.open('https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ2z6RN96P7L5QS9W8w-pS6XYBpCrH52I_AvP0R7Y6vxnzQLFXz9VwlGb3XPH4VFzJUyMTa1YTxP', '_blank')}
                 >
                   <ExternalLink className="mr-2 h-4 w-4" />
@@ -288,6 +288,7 @@ const ROICalculator = () => {
                 </Button>
                 <Button 
                   variant="outline"
+                  className="font-semibold py-3 sm:py-5 px-4 sm:px-10 text-base sm:text-lg rounded-lg shadow-lg"
                   onClick={handleReset}
                 >
                   Nieuwe berekening
