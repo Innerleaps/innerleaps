@@ -471,9 +471,14 @@ const Vitaliteitsprogramma = () => {
       {/* 6 Weken Thema's Sectie */}
       <section className="py-16 md:py-24 bg-white">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-purple text-center leading-tight mb-12">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-purple text-center leading-tight mb-6">
             6 weken, 6 thema's voor <span className="text-brand-orange">echte verandering</span>
           </h2>
+          
+          <p className="text-base md:text-lg text-brand-gray-dark leading-relaxed italic text-center max-w-4xl mx-auto mb-12 bg-brand-orange/5 p-4 md:p-6 rounded-lg border-l-4 border-brand-orange">
+            Het programma is deels aan te passen naar thema's die spelen zoals: gezond pauzeren, piekeren, 
+            perfectionisme, werk-privé balans of communicatie. Vraag naar de mogelijkheden.
+          </p>
 
           <div className="max-w-3xl mx-auto space-y-6">
             <div className="bg-brand-off-white p-6 rounded-xl space-y-2">
@@ -749,6 +754,30 @@ const Vitaliteitsprogramma = () => {
                   Deelnemers hebben lifetime toegang tot alle materialen en opnames, zodat gemiste sessies eenvoudig
                   kunnen worden teruggekeken. Voor optimaal resultaat raden we aan om niet meer dan één sessie te
                   missen.
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="item-5" className="bg-white rounded-lg px-6">
+                <AccordionTrigger className="text-left text-lg md:text-xl font-semibold text-brand-gray-dark hover:text-brand-orange">
+                  Hoe zorgen jullie voor veilig en comfortabel leren?
+                </AccordionTrigger>
+                <AccordionContent className="text-base md:text-lg text-brand-gray-medium leading-relaxed">
+                  De training bevat wekelijkse groepsworkshops met maximaal 15 deelnemers. Deelnemers oefenen op een veilige en 
+                  comfortabele manier door te reageren op concrete vragen, zonder dat ze persoonlijke verhalen hoeven te delen. 
+                  Zo ontstaat een omgeving waarin iedereen zich op zijn gemak voelt en volop kan oefenen met aandacht.
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="item-6" className="bg-white rounded-lg px-6">
+                <AccordionTrigger className="text-left text-lg md:text-xl font-semibold text-brand-gray-dark hover:text-brand-orange">
+                  Hoe krijg ik dit programma intern verkocht?
+                </AccordionTrigger>
+                <AccordionContent className="text-base md:text-lg text-brand-gray-medium leading-relaxed">
+                  Het programma draagt bij aan een daling van verzuim en burn-outgevallen, én maakt deelnemers effectiever in hun werk. 
+                  Hierdoor is de business case positief. Onze ervaring leert dat het managementteam vaak vooral geïnteresseerd is in het 
+                  effect op productiviteit. Belangrijk is dat er binnen het managementteam een open houding is ten aanzien van de 
+                  ontwikkeling van soft skills. Om inzicht te krijgen in de impact voor jullie organisatie, kan je onze calculator 
+                  gebruiken of kan je een gesprek met Bas plannen.
                 </AccordionContent>
               </AccordionItem>
             </Accordion>

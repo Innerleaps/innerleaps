@@ -133,7 +133,7 @@ const ROICalculator = () => {
             <div className="text-center mb-8">
               <CheckCircle2 className="h-16 w-16 text-green-500 mx-auto mb-4" />
               <h2 className="text-3xl font-bold text-brand-gray-dark mb-2">
-                Je Potentiële Kostenbesparingen
+                Ontdek de impact voor jullie organisatie
               </h2>
               <p className="text-brand-gray-medium">
                 Op basis van 40 jaar wetenschappelijk onderzoek
@@ -310,7 +310,7 @@ const ROICalculator = () => {
               <Calculator className="h-8 w-8 text-brand-orange" />
             </div>
             <h2 className="text-3xl font-bold text-white mb-2">
-              Je Potentiële Kostenbesparingen
+              Ontdek de impact voor jullie organisatie
             </h2>
             <p className="text-white/90">
               Op basis van 40 jaar wetenschappelijk onderzoek
