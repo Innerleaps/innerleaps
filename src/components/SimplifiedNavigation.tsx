@@ -59,7 +59,7 @@ const SimplifiedNavigation = () => {
               <NavigationMenuList>
                 <NavigationMenuItem>
                   <NavigationMenuTrigger 
-                    className="text-brand-gray-dark hover:text-brand-blue transition-colors duration-300 font-medium text-base bg-transparent hover:bg-transparent data-[state=open]:bg-transparent data-[active]:bg-transparent focus:bg-transparent active:bg-transparent cursor-default select-none"
+                    className="text-brand-gray-dark hover:text-brand-blue transition-colors duration-300 font-medium text-base bg-transparent hover:bg-transparent data-[state=open]:bg-transparent data-[active]:bg-transparent focus:bg-transparent active:bg-transparent cursor-default select-none px-0 py-0 h-auto"
                     onClick={(e) => e.preventDefault()}
                     onPointerDown={(e) => e.preventDefault()}
                   >
@@ -95,7 +95,7 @@ const SimplifiedNavigation = () => {
               <NavigationMenuList>
                 <NavigationMenuItem>
                   <NavigationMenuTrigger 
-                    className="text-brand-gray-dark hover:text-brand-blue transition-colors duration-300 font-medium text-base bg-transparent hover:bg-transparent data-[state=open]:bg-transparent data-[active]:bg-transparent focus:bg-transparent active:bg-transparent cursor-default select-none"
+                    className="text-brand-gray-dark hover:text-brand-blue transition-colors duration-300 font-medium text-base bg-transparent hover:bg-transparent data-[state=open]:bg-transparent data-[active]:bg-transparent focus:bg-transparent active:bg-transparent cursor-default select-none px-0 py-0 h-auto"
                     onClick={(e) => e.preventDefault()}
                     onPointerDown={(e) => e.preventDefault()}
                   >
