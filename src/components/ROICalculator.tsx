@@ -173,21 +173,21 @@ const ROICalculator = () => {
               <div className="space-y-3 mb-4">
                 <div className="flex justify-between text-sm">
                   <span className="text-brand-gray-medium">Verzuimbesparing (15%):</span>
-                  <span className="font-semibold">{formatCurrency(calculationResults.scenarios.conservative.verzuimBesparing)}</span>
+                  <span className="font-semibold text-green-600">{formatCurrency(calculationResults.scenarios.conservative.verzuimBesparing)}</span>
                 </div>
                 <div className="flex justify-between text-sm">
                   <span className="text-brand-gray-medium">Retentiebesparing (5%):</span>
-                  <span className="font-semibold">{formatCurrency(calculationResults.scenarios.conservative.retentieBesparing)}</span>
+                  <span className="font-semibold text-green-600">{formatCurrency(calculationResults.scenarios.conservative.retentieBesparing)}</span>
                 </div>
                 <div className="flex justify-between text-sm">
                   <span className="text-brand-gray-medium">Productiviteitswinst (5%):</span>
-                  <span className="font-semibold">{formatCurrency(calculationResults.scenarios.conservative.productiviteitBesparing)}</span>
+                  <span className="font-semibold text-green-600">{formatCurrency(calculationResults.scenarios.conservative.productiviteitBesparing)}</span>
                 </div>
               </div>
 
               <div className="border-t border-gray-200 pt-3 space-y-2">
                 <div className="flex justify-between font-semibold">
-                  <span>Totale besparing:</span>
+                  <span className="text-brand-gray-dark">Totale besparing:</span>
                   <span className="text-green-600">{formatCurrency(calculationResults.scenarios.conservative.totaleBesparing)}</span>
                 </div>
                 <div className="flex justify-between text-sm text-brand-gray-medium">
@@ -196,19 +196,19 @@ const ROICalculator = () => {
                 </div>
                 <div className="border-t border-gray-300 pt-2 mt-2">
                   <div className="flex justify-between text-lg font-bold">
-                    <span>NETTO WINST:</span>
+                    <span className="text-brand-gray-dark">NETTO WINST:</span>
                     <span className="text-green-600">{formatCurrency(calculationResults.scenarios.conservative.netBesparing)}</span>
                   </div>
                   <div className="flex justify-between text-sm mt-1">
-                    <span>ROI:</span>
-                    <span className="font-bold text-brand-orange">{formatPercentage(calculationResults.scenarios.conservative.roi)}</span>
+                    <span className="text-brand-gray-dark">ROI:</span>
+                    <span className="font-bold text-brand-blue">{formatPercentage(calculationResults.scenarios.conservative.roi)}</span>
                   </div>
                 </div>
               </div>
             </div>
 
             {/* Positive Scenario */}
-            <div className="bg-gradient-to-br from-orange-50 to-orange-100 border-2 border-brand-orange rounded-lg p-6 mb-8">
+            <div className="bg-white border-2 border-brand-orange rounded-lg p-6 mb-8">
               <div className="flex items-center justify-between mb-4">
                 <h3 className="text-xl font-bold text-brand-gray-dark">Positive Scenario</h3>
                 <span className="text-sm text-brand-gray-medium">Volledige Impact</span>
@@ -217,35 +217,35 @@ const ROICalculator = () => {
               <div className="space-y-3 mb-4">
                 <div className="flex justify-between text-sm">
                   <span className="text-brand-gray-medium">Verzuimbesparing (21%):</span>
-                  <span className="font-semibold">{formatCurrency(calculationResults.scenarios.positive.verzuimBesparing)}</span>
+                  <span className="font-semibold text-green-600">{formatCurrency(calculationResults.scenarios.positive.verzuimBesparing)}</span>
                 </div>
                 <div className="flex justify-between text-sm">
                   <span className="text-brand-gray-medium">Retentiebesparing (8%):</span>
-                  <span className="font-semibold">{formatCurrency(calculationResults.scenarios.positive.retentieBesparing)}</span>
+                  <span className="font-semibold text-green-600">{formatCurrency(calculationResults.scenarios.positive.retentieBesparing)}</span>
                 </div>
                 <div className="flex justify-between text-sm">
                   <span className="text-brand-gray-medium">Productiviteitswinst (8%):</span>
-                  <span className="font-semibold">{formatCurrency(calculationResults.scenarios.positive.productiviteitBesparing)}</span>
+                  <span className="font-semibold text-green-600">{formatCurrency(calculationResults.scenarios.positive.productiviteitBesparing)}</span>
                 </div>
               </div>
 
-              <div className="border-t border-orange-300 pt-3 space-y-2">
+              <div className="border-t border-gray-200 pt-3 space-y-2">
                 <div className="flex justify-between font-semibold">
-                  <span>Totale besparing:</span>
+                  <span className="text-brand-gray-dark">Totale besparing:</span>
                   <span className="text-green-600">{formatCurrency(calculationResults.scenarios.positive.totaleBesparing)}</span>
                 </div>
                 <div className="flex justify-between text-sm text-brand-gray-medium">
                   <span>Investering:</span>
                   <span className="text-red-600">-{formatCurrency(calculationResults.investment)}</span>
                 </div>
-                <div className="border-t border-orange-300 pt-2 mt-2">
+                <div className="border-t border-gray-300 pt-2 mt-2">
                   <div className="flex justify-between text-lg font-bold">
-                    <span>NETTO WINST:</span>
+                    <span className="text-brand-gray-dark">NETTO WINST:</span>
                     <span className="text-green-600">{formatCurrency(calculationResults.scenarios.positive.netBesparing)}</span>
                   </div>
                   <div className="flex justify-between text-sm mt-1">
-                    <span>ROI:</span>
-                    <span className="font-bold text-brand-orange">{formatPercentage(calculationResults.scenarios.positive.roi)}</span>
+                    <span className="text-brand-gray-dark">ROI:</span>
+                    <span className="font-bold text-brand-blue">{formatPercentage(calculationResults.scenarios.positive.roi)}</span>
                   </div>
                 </div>
               </div>
