@@ -13,6 +13,7 @@ import Programma from "./pages/Programma";
 import OverOns from "./pages/OverOns";
 import VoorWie from "./pages/VoorWie";
 import Contact from "./pages/Contact";
+import Calendar from "./pages/Calendar";
 import Berekening from "./pages/Berekening";
 import BerekeningDemo from "./pages/BerekeningDemo";
 import LevenVragenlijst from "./pages/LevenVragenlijst";
@@ -41,6 +42,7 @@ const App = () => {
             <Route path="/contact" element={<Contact />} />
             <Route path="/wetenschap" element={<Wetenschap />} />
             <Route path="/over-ons" element={<OverOns />} />
+            <Route path="/calendar" element={<Calendar />} />
             <Route path="/9-stippen" element={<NegenStippen />} />
             <Route path="/stressmanagement-programma" element={<StressManagement />} />
             <Route path="/prestatie-programma" element={<PrestatieProgramma />} />

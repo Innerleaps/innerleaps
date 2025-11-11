@@ -227,8 +227,14 @@ const handler = async (req: Request): Promise<Response> => {
 
     const results = submission.results;
 
-    // PDF attachment URL
-    const pdfUrl = `${Deno.env.get("SUPABASE_URL")?.replace('.supabase.co', '')}.supabase.co/storage/v1/object/public/documents/business-case-awareness-interventions.pdf`;
+    // PDF attachment URL - Supabase Storage
+    const pdfUrl = "https://bvvzmprtuzdvvosaenbs.supabase.co/storage/v1/object/public/documents/business-case-awareness-interventions.pdf";
+    
+    // Bas profile image URL - Supabase Storage
+    const basImageUrl = "https://bvvzmprtuzdvvosaenbs.supabase.co/storage/v1/object/public/images/bas-profile.png";
+    
+    // Calendar redirect URL - innerleaps.nl domain
+    const calendarUrl = "https://innerleaps.nl/calendar";
 
     // Confirmation email to lead
     const confirmationEmailHtml = `
@@ -406,7 +412,7 @@ const handler = async (req: Request): Promise<Response> => {
                     <p style="margin: 0 0 20px 0; color: #1e293b; font-size: 18px; font-weight: 600;">
                       Wil je deze winst realiseren?
                     </p>
-                    <a href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ0yOuKvF_kkyuN7VW0l2y8U0V0hxKHQVDPXVBELJ_VB3SDKMC9TVEjT5sK5m4AoEfN8Gc4MqmcY" 
+                    <a href="${calendarUrl}" 
                        style="display: inline-block; padding: 16px 32px; background-color: #FF6B35; color: #ffffff; text-decoration: none; border-radius: 8px; font-weight: 600; font-size: 16px;">
                       Kennismaken met Bas
                     </a>
@@ -419,7 +425,7 @@ const handler = async (req: Request): Promise<Response> => {
                     <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
                       <tr>
                         <td style="padding-right: 15px; vertical-align: top;">
-                          <img src="https://7f1b052b-e2ee-419a-aec0-e4591c9e4afe.lovableproject.com/lovable-uploads/dea9200c-b881-4007-bd3b-c07db498ca17.png" 
+                          <img src="${basImageUrl}" 
                                alt="Bas Ter Haar Romenij" 
                                style="width: 50px; height: 50px; border-radius: 50%; object-fit: cover; display: block;">
                         </td>
