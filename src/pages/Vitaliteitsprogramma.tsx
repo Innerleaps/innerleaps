@@ -121,14 +121,15 @@ const Vitaliteitsprogramma = () => {
                   className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight font-heading break-words"
                   style={{ textShadow: "0 2px 8px rgba(0,0,0,0.5)" }}
                 >
-                  Het bewezen <span className="text-brand-orange">vitaliteits­programma </span> voor minder{" "}
+                  Het bewezen <span className="text-brand-orange">vitaliteits{"\u00AD"}programma </span> voor minder{" "}
                   <span className="text-brand-orange">verzuim</span>
                 </h1>
                 <p
                   className="text-xl md:text-2xl text-blue-100 leading-relaxed break-words"
                   style={{ textShadow: "0 2px 8px rgba(0,0,0,0.5)" }}
                 >
-                  Wetenschappelijk bewezen vitaliteits­programma. Deelnemers ontwikkelen eigenaarschap over hun eigen stress én verhogen hun veerkracht.
+                  Wetenschappelijk bewezen vitaliteits­programma. Deelnemers ontwikkelen eigenaarschap over hun eigen
+                  stress én verhogen hun veerkracht.
                 </p>
               </div>
             </div>
@@ -150,7 +151,9 @@ const Vitaliteitsprogramma = () => {
                       >
                         Minder verzuim
                       </span>
-                      <span className="text-brand-orange font-bold text-sm sm:text-base md:text-lg shrink-0">15-21%</span>
+                      <span className="text-brand-orange font-bold text-sm sm:text-base md:text-lg shrink-0">
+                        15-21%
+                      </span>
                     </div>
                     <div className="flex items-center justify-between w-full p-2.5 sm:p-3 lg:p-4 bg-brand-purple/90 rounded-lg">
                       <span
@@ -240,9 +243,12 @@ const Vitaliteitsprogramma = () => {
               <div className="p-3 rounded-lg bg-brand-orange/5 w-fit mx-auto">
                 <AlertCircle className="h-8 w-8 text-brand-orange stroke-2" />
               </div>
-              <h3 className="text-xl md:text-2xl font-bold text-brand-gray-dark text-center">Grenzen aangeven is moeilijk</h3>
+              <h3 className="text-xl md:text-2xl font-bold text-brand-gray-dark text-center">
+                Grenzen aangeven is moeilijk
+              </h3>
               <p className="text-base md:text-lg text-brand-gray-medium text-center">
-                Medewerkers zijn enthousiast, maar nemen vaak hun eigen grenzen niet serieus. Ze gaan door tot het te laat is, met stress en uitval als gevolg.
+                Medewerkers zijn enthousiast, maar nemen vaak hun eigen grenzen niet serieus. Ze gaan door tot het te
+                laat is, met stress en uitval als gevolg.
               </p>
             </div>
 
@@ -251,9 +257,12 @@ const Vitaliteitsprogramma = () => {
               <div className="p-3 rounded-lg bg-brand-orange/5 w-fit mx-auto">
                 <Heart className="h-8 w-8 text-brand-orange stroke-2" />
               </div>
-              <h3 className="text-xl md:text-2xl font-bold text-brand-gray-dark text-center">Emoties op de werkvloer</h3>
+              <h3 className="text-xl md:text-2xl font-bold text-brand-gray-dark text-center">
+                Emoties op de werkvloer
+              </h3>
               <p className="text-base md:text-lg text-brand-gray-medium text-center">
-                Dagelijks hebben medewerkers te maken met emotioneel uitdagende situaties. Dit kan leiden tot impulsieve reacties en verminderde samenwerking.
+                Dagelijks hebben medewerkers te maken met emotioneel uitdagende situaties. Dit kan leiden tot impulsieve
+                reacties en verminderde samenwerking.
               </p>
             </div>
 
@@ -262,9 +271,12 @@ const Vitaliteitsprogramma = () => {
               <div className="p-3 rounded-lg bg-brand-orange/5 w-fit mx-auto">
                 <Shield className="h-8 w-8 text-brand-orange stroke-2" />
               </div>
-              <h3 className="text-xl md:text-2xl font-bold text-brand-gray-dark text-center">Sociale veiligheid onder druk</h3>
+              <h3 className="text-xl md:text-2xl font-bold text-brand-gray-dark text-center">
+                Sociale veiligheid onder druk
+              </h3>
               <p className="text-base md:text-lg text-brand-gray-medium text-center">
-                Hiërarchie, culturele verschillen en gebrek aan openheid kunnen leiden tot botsingen, pesterijen of ongemakkelijk gedrag. Niet iedereen durft zich kwetsbaar op te stellen.
+                Hiërarchie, culturele verschillen en gebrek aan openheid kunnen leiden tot botsingen, pesterijen of
+                ongemakkelijk gedrag. Niet iedereen durft zich kwetsbaar op te stellen.
               </p>
             </div>
 
@@ -273,9 +285,12 @@ const Vitaliteitsprogramma = () => {
               <div className="p-3 rounded-lg bg-brand-orange/5 w-fit mx-auto">
                 <Activity className="h-8 w-8 text-brand-orange stroke-2" />
               </div>
-              <h3 className="text-xl md:text-2xl font-bold text-brand-gray-dark text-center">Lastig om talent te behouden</h3>
+              <h3 className="text-xl md:text-2xl font-bold text-brand-gray-dark text-center">
+                Lastig om talent te behouden
+              </h3>
               <p className="text-base md:text-lg text-brand-gray-medium text-center">
-                Door stress en een hoge werkdruk verliezen organisaties waardevol personeel. Betrokkenheid en motivatie nemen af.
+                Door stress en een hoge werkdruk verliezen organisaties waardevol personeel. Betrokkenheid en motivatie
+                nemen af.
               </p>
             </div>
 
@@ -284,11 +299,10 @@ const Vitaliteitsprogramma = () => {
               <div className="p-3 rounded-lg bg-brand-orange/5 w-fit mx-auto">
                 <AlertCircle className="h-8 w-8 text-brand-orange stroke-2" />
               </div>
-              <h3 className="text-xl md:text-2xl font-bold text-brand-gray-dark text-center">
-                Verzuim blijft hoog
-              </h3>
+              <h3 className="text-xl md:text-2xl font-bold text-brand-gray-dark text-center">Verzuim blijft hoog</h3>
               <p className="text-base md:text-lg text-brand-gray-medium text-center">
-                Stress- en burn-outklachten zijn een terugkerend probleem. Medewerkers vallen uit, de werkdruk neemt toe en het team lijdt.
+                Stress- en burn-outklachten zijn een terugkerend probleem. Medewerkers vallen uit, de werkdruk neemt toe
+                en het team lijdt.
               </p>
             </div>
           </div>
@@ -316,7 +330,8 @@ const Vitaliteitsprogramma = () => {
                 <div className="flex items-start gap-2">
                   <CheckCircle className="h-5 w-5 text-brand-orange flex-shrink-0 mt-0.5" />
                   <p className="text-base md:text-lg text-brand-gray-medium">
-                    Medewerkers leren lichaamssignalen opmerken voordat het te laat is. Ze nemen regie over hun eigen stress en kunnen bijsturen voordat uitval optreedt.
+                    Medewerkers leren lichaamssignalen opmerken voordat het te laat is. Ze nemen regie over hun eigen
+                    stress en kunnen bijsturen voordat uitval optreedt.
                   </p>
                 </div>
               </div>
@@ -327,12 +342,15 @@ const Vitaliteitsprogramma = () => {
               <div className="p-3 rounded-lg bg-brand-orange/5 w-fit mx-auto">
                 <Heart className="h-8 w-8 text-brand-orange stroke-2" />
               </div>
-              <h3 className="text-xl md:text-2xl font-bold text-brand-gray-dark text-center">Emotieregulatie trainen</h3>
+              <h3 className="text-xl md:text-2xl font-bold text-brand-gray-dark text-center">
+                Emotieregulatie trainen
+              </h3>
               <div className="space-y-2">
                 <div className="flex items-start gap-2">
                   <CheckCircle className="h-5 w-5 text-brand-orange flex-shrink-0 mt-0.5" />
                   <p className="text-base md:text-lg text-brand-gray-medium">
-                    Drukte en emoties op de werkvloer worden beheersbaar. Impulsiviteit neemt af en het controlecentrum in het brein wordt sterker.
+                    Drukte en emoties op de werkvloer worden beheersbaar. Impulsiviteit neemt af en het controlecentrum
+                    in het brein wordt sterker.
                   </p>
                 </div>
               </div>
@@ -343,12 +361,15 @@ const Vitaliteitsprogramma = () => {
               <div className="p-3 rounded-lg bg-brand-orange/5 w-fit mx-auto">
                 <Shield className="h-8 w-8 text-brand-orange stroke-2" />
               </div>
-              <h3 className="text-xl md:text-2xl font-bold text-brand-gray-dark text-center">Grenzen aangeven wordt makkelijker</h3>
+              <h3 className="text-xl md:text-2xl font-bold text-brand-gray-dark text-center">
+                Grenzen aangeven wordt makkelijker
+              </h3>
               <div className="space-y-2">
                 <div className="flex items-start gap-2">
                   <CheckCircle className="h-5 w-5 text-brand-orange flex-shrink-0 mt-0.5" />
                   <p className="text-base md:text-lg text-brand-gray-medium">
-                    Door meer bewustzijn en eigenaarschap durven medewerkers eerder 'nee' te zeggen. Dit vermindert stress en voorkomt uitval.
+                    Door meer bewustzijn en eigenaarschap durven medewerkers eerder 'nee' te zeggen. Dit vermindert
+                    stress en voorkomt uitval.
                   </p>
                 </div>
               </div>
@@ -359,12 +380,15 @@ const Vitaliteitsprogramma = () => {
               <div className="p-3 rounded-lg bg-brand-orange/5 w-fit mx-auto">
                 <CheckCircle className="h-8 w-8 text-brand-orange stroke-2" />
               </div>
-              <h3 className="text-xl md:text-2xl font-bold text-brand-gray-dark text-center">Sociaal veilig reageren</h3>
+              <h3 className="text-xl md:text-2xl font-bold text-brand-gray-dark text-center">
+                Sociaal veilig reageren
+              </h3>
               <div className="space-y-2">
                 <div className="flex items-start gap-2">
                   <CheckCircle className="h-5 w-5 text-brand-orange flex-shrink-0 mt-0.5" />
                   <p className="text-base md:text-lg text-brand-gray-medium">
-                    Medewerkers weten hoe ze bewust en respectvol kunnen reageren in lastige situaties, waardoor de sociale veiligheid en samenwerking verbeteren.
+                    Medewerkers weten hoe ze bewust en respectvol kunnen reageren in lastige situaties, waardoor de
+                    sociale veiligheid en samenwerking verbeteren.
                   </p>
                 </div>
               </div>
@@ -380,7 +404,8 @@ const Vitaliteitsprogramma = () => {
                 <div className="flex items-start gap-2">
                   <CheckCircle className="h-5 w-5 text-brand-orange flex-shrink-0 mt-0.5" />
                   <p className="text-base md:text-lg text-brand-gray-medium">
-                    Medewerkers ervaren meer werkplezier en betrokkenheid. Dit verhoogt retentie en helpt talent langer aan de organisatie te binden.
+                    Medewerkers ervaren meer werkplezier en betrokkenheid. Dit verhoogt retentie en helpt talent langer
+                    aan de organisatie te binden.
                   </p>
                 </div>
               </div>
@@ -590,7 +615,7 @@ const Vitaliteitsprogramma = () => {
             <Button
               size="lg"
               className="bg-brand-orange hover:bg-brand-orange/90 text-white py-4 px-8 rounded-lg text-lg md:text-xl font-semibold shadow-xl"
-              onClick={() => window.open('https://innerleaps.nl/Calendar', '_blank')}
+              onClick={() => window.open("https://innerleaps.nl/Calendar", "_blank")}
             >
               Kennismaken met Bas
             </Button>
@@ -719,7 +744,11 @@ const Vitaliteitsprogramma = () => {
                   Is het programma online?
                 </AccordionTrigger>
                 <AccordionContent className="text-base md:text-lg text-brand-gray-medium leading-relaxed">
-                  Het programma hoeft niet per se online te zijn, maar een online vorm maakt deelname voor medewerkers makkelijker. Onderzoek laat zien dat online sessies net zo effectief zijn als fysieke bijeenkomsten. Het trainen van aandacht gebeurt vooral door dagelijkse oefening, terwijl de workshops dit proces ondersteunen. Om zoveel mogelijk medewerkers de kans te geven om mee te doen, geven we daarom de voorkeur aan een online programma.
+                  Het programma hoeft niet per se online te zijn, maar een online vorm maakt deelname voor medewerkers
+                  makkelijker. Onderzoek laat zien dat online sessies net zo effectief zijn als fysieke bijeenkomsten.
+                  Het trainen van aandacht gebeurt vooral door dagelijkse oefening, terwijl de workshops dit proces
+                  ondersteunen. Om zoveel mogelijk medewerkers de kans te geven om mee te doen, geven we daarom de
+                  voorkeur aan een online programma.
                 </AccordionContent>
               </AccordionItem>
 
@@ -728,7 +757,10 @@ const Vitaliteitsprogramma = () => {
                   15 minuten oefenen per dag, hoe werkt dat?
                 </AccordionTrigger>
                 <AccordionContent className="text-base md:text-lg text-brand-gray-medium leading-relaxed">
-                  Deelnemers ontvangen bij aanvang een werkboek met per week een stukje theorie en korte oefeningen. Ook krijgen ze audio-opnames van de oefeningen. Een deel van de oefeningen kan worden gedaan tijdens dagelijkse routines, zoals tandenpoetsen, douchen of afwassen, zodat dit geen extra tijd kost. Andere oefeningen vragen ongeveer 12 minuten om rustig zittend de aandacht te trainen.
+                  Deelnemers ontvangen bij aanvang een werkboek met per week een stukje theorie en korte oefeningen. Ook
+                  krijgen ze audio-opnames van de oefeningen. Een deel van de oefeningen kan worden gedaan tijdens
+                  dagelijkse routines, zoals tandenpoetsen, douchen of afwassen, zodat dit geen extra tijd kost. Andere
+                  oefeningen vragen ongeveer 12 minuten om rustig zittend de aandacht te trainen.
                 </AccordionContent>
               </AccordionItem>
 
@@ -737,7 +769,10 @@ const Vitaliteitsprogramma = () => {
                   Wat voor soort oefeningen zijn het?
                 </AccordionTrigger>
                 <AccordionContent className="text-base md:text-lg text-brand-gray-medium leading-relaxed">
-                  Alle oefeningen zijn gericht op het trainen van aandacht. Het doel is dat deelnemers met meer focus en bewustzijn werken en leven. Daarom zijn de oefeningen direct toepasbaar in het dagelijks leven, bijvoorbeeld tijdens tandenpoetsen, eten of lopen. Daarnaast bevat elke week een speciale aandachtstraining van 12 minuten die zittend uitgevoerd wordt.
+                  Alle oefeningen zijn gericht op het trainen van aandacht. Het doel is dat deelnemers met meer focus en
+                  bewustzijn werken en leven. Daarom zijn de oefeningen direct toepasbaar in het dagelijks leven,
+                  bijvoorbeeld tijdens tandenpoetsen, eten of lopen. Daarnaast bevat elke week een speciale
+                  aandachtstraining van 12 minuten die zittend uitgevoerd wordt.
                 </AccordionContent>
               </AccordionItem>
 
@@ -746,7 +781,9 @@ const Vitaliteitsprogramma = () => {
                   Wat als een deelnemer een sessie mist?
                 </AccordionTrigger>
                 <AccordionContent className="text-base md:text-lg text-brand-gray-medium leading-relaxed">
-                  Deelnemers hebben lifetime toegang tot alle materialen en opnames, zodat gemiste sessies eenvoudig kunnen worden teruggekeken. Voor optimaal resultaat raden we aan om niet meer dan één sessie te missen.
+                  Deelnemers hebben lifetime toegang tot alle materialen en opnames, zodat gemiste sessies eenvoudig
+                  kunnen worden teruggekeken. Voor optimaal resultaat raden we aan om niet meer dan één sessie te
+                  missen.
                 </AccordionContent>
               </AccordionItem>
             </Accordion>
