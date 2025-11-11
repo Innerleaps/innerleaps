@@ -205,7 +205,7 @@ const MasterclassFormModal = ({
             {/* Leidinggevende */}
             <div className="space-y-2">
               <Label className="text-base font-semibold">
-                Leidinggevende functie? <span className="text-red-500">*</span>
+                Heb je een leidinggevende functie? <span className="text-red-500">*</span>
               </Label>
               <RadioGroup value={formData.is_leidinggevende === null ? undefined : formData.is_leidinggevende.toString()} onValueChange={value => handleInputChange('is_leidinggevende', value === 'true')} className="flex gap-6">
                 <div className="flex items-center space-x-2">
