@@ -301,17 +301,17 @@ const ROICalculator = () => {
   }
 
   return (
-    <section className="py-20 bg-brand-blue">
+    <section className="py-20 bg-white">
       <div className="container mx-auto px-4">
-        <Card className="max-w-4xl mx-auto p-8">
+        <Card className="max-w-4xl mx-auto p-8 bg-brand-blue">
           <div className="text-center mb-8">
-            <div className="inline-flex items-center justify-center w-16 h-16 bg-brand-orange/10 rounded-full mb-4">
+            <div className="inline-flex items-center justify-center w-16 h-16 bg-white/10 rounded-full mb-4">
               <Calculator className="h-8 w-8 text-brand-orange" />
             </div>
-            <h2 className="text-3xl font-bold text-brand-gray-dark mb-2">
+            <h2 className="text-3xl font-bold text-white mb-2">
               Je Potentiële Kostenbesparingen
             </h2>
-            <p className="text-brand-gray-medium">
+            <p className="text-white/90">
               Op basis van 40 jaar wetenschappelijk onderzoek
             </p>
           </div>
@@ -319,10 +319,10 @@ const ROICalculator = () => {
           <div className="grid md:grid-cols-2 gap-8">
             {/* Linker kolom - Contactgegevens */}
             <div className="space-y-4">
-              <h3 className="text-lg font-semibold text-brand-gray-dark mb-4">Contactgegevens</h3>
+              <h3 className="text-lg font-semibold text-white mb-4">Contactgegevens</h3>
               
               <div>
-                <Label htmlFor="naam" className="text-brand-gray-dark font-medium">
+                <Label htmlFor="naam" className="text-white font-medium">
                   Naam *
                 </Label>
                 <Input
@@ -336,7 +336,7 @@ const ROICalculator = () => {
               </div>
 
               <div>
-                <Label htmlFor="email" className="text-brand-gray-dark font-medium">
+                <Label htmlFor="email" className="text-white font-medium">
                   Email *
                 </Label>
                 <Input
@@ -350,7 +350,7 @@ const ROICalculator = () => {
               </div>
 
               <div>
-                <Label htmlFor="bedrijfsnaam" className="text-brand-gray-dark font-medium">
+                <Label htmlFor="bedrijfsnaam" className="text-white font-medium">
                   Bedrijfsnaam *
                 </Label>
                 <Input
@@ -364,7 +364,7 @@ const ROICalculator = () => {
               </div>
 
               <div>
-                <Label htmlFor="telefoon" className="text-brand-gray-dark font-medium">
+                <Label htmlFor="telefoon" className="text-white font-medium">
                   Telefoon
                 </Label>
                 <Input
@@ -380,10 +380,10 @@ const ROICalculator = () => {
 
             {/* Rechter kolom - Berekeningsgegevens */}
             <div className="space-y-4">
-              <h3 className="text-lg font-semibold text-brand-gray-dark mb-4">Organisatiegegevens</h3>
+              <h3 className="text-lg font-semibold text-white mb-4">Organisatiegegevens</h3>
               
               <div>
-                <Label htmlFor="verzuimPercentage" className="text-brand-gray-dark font-medium">
+                <Label htmlFor="verzuimPercentage" className="text-white font-medium">
                   Huidig verzuimpercentage (%) *
                 </Label>
                 <Input
@@ -398,7 +398,7 @@ const ROICalculator = () => {
               </div>
 
               <div>
-                <Label htmlFor="verloopPercentage" className="text-brand-gray-dark font-medium">
+                <Label htmlFor="verloopPercentage" className="text-white font-medium">
                   Huidig personeelsverloop (%) *
                 </Label>
                 <Input
@@ -413,7 +413,7 @@ const ROICalculator = () => {
               </div>
 
               <div>
-                <Label htmlFor="aantalWerknemers" className="text-brand-gray-dark font-medium">
+                <Label htmlFor="aantalWerknemers" className="text-white font-medium">
                   Aantal werknemers *
                 </Label>
                 <Input
@@ -427,7 +427,7 @@ const ROICalculator = () => {
               </div>
 
               <div>
-                <Label htmlFor="brutoJaarsalaris" className="text-brand-gray-dark font-medium">
+                <Label htmlFor="brutoJaarsalaris" className="text-white font-medium">
                   Gemiddeld bruto jaarsalaris (€) *
                 </Label>
                 <Input
@@ -452,7 +452,7 @@ const ROICalculator = () => {
             </div>
           </div>
 
-          <div className="mt-6 text-xs text-brand-gray-medium text-center">
+          <div className="mt-6 text-xs text-white/80 text-center">
             * Alle velden zijn verplicht. Je gegevens worden vertrouwelijk behandeld.
           </div>
         </Card>
