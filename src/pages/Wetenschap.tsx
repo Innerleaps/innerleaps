@@ -24,7 +24,7 @@ const Wetenschap = () => {
         <div className="container-custom space-y-8 lg:space-y-12">
           {/* Titel over volledige breedte */}
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-center text-brand-gray-dark leading-tight">
-            Train je <span className="text-brand-orange">aandacht</span>, versterk je{" "}
+            Train je <span className="text-brand-orange">concentratie</span>, versterk je{" "}
             <span className="text-brand-orange">brein</span>
           </h2>
 
@@ -32,9 +32,9 @@ const Wetenschap = () => {
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             <div>
               <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
-                In onze programma’s trainen deelnemers hun aandacht. Je kan het vergelijken met het trainen van je
-                spieren in de sportschool. Met onze "push-ups voor het brein" versterken de frontale cortex en
-                fronto-pariëtale netwerken. <br />
+                In onze programma’s trainen deelnemers hun concentratie en herkennening van lichamelijke signalen. Je
+                kan het vergelijken met het trainen van je spieren in de sportschool. Met onze "push-ups voor het brein"
+                versterken de frontale cortex en fronto-pariëtale netwerken. <br />
                 <br />
                 Klinkt misschien ingewikkeld maar simpel gezegd is dit ons "controlecentrum". Hierdoor registreer je
                 signalen en informatie duidelijker waardoor je slimmere en meer gezonde keuzes maakt. Kijk, met een
