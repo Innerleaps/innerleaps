@@ -32,10 +32,10 @@ const Wetenschap = () => {
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             <div>
               <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
-                In ons vitaliteit- en effectiviteit programma trainen deelnemers hun aandacht. Net zoals je spieren
-                traint in de sportschool, train je hier je focus. Hiermee neemt de activiteit in de Frontale cortex en
-                Fronto-pariëtale netwerken toe. Tegelijkertijd vragen deze minder energie. Hierdoor wordt informatie
-                beter verwerkt, gerichter vastgehouden en efficiënter ingezet.
+                In onze programma’s trainen deelnemers hun aandacht. Je kan het vergelijken met het trainen van je
+                spieren in de sportschool. Met onze "push-ups" versterken de Frontale cortex en Fronto-pariëtale
+                netwerken, waardoor deze krachtiger worden en minder energie verbruiken. Het resultaat: informatie wordt
+                beter verwerkt, gerichter onthouden en efficiënter ingezet.
               </p>
             </div>
             <div>
