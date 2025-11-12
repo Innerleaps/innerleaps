@@ -38,7 +38,7 @@ const DeMethode = () => {
               </p>
               <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
                 Klinkt makkelijk? Je geest vindt er niks aan. Binnen een paar seconden denk je aan het avondeten, je
-                to-do's of dat lastige gesprek. Je vergeet volledig wat je aan het doen was.
+                to-do's of dat lastige gesprek. Je vergeet volledig wat je aan het doen was. Probeer het zelf maar.
               </p>
               <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
                 Dit is de crux van de oefening: het moment dat je opmerkt dat je bent afgedwaald, dát is de push-up. Je
