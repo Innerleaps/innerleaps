@@ -33,9 +33,12 @@ const Wetenschap = () => {
             <div>
               <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
                 In onze programma’s trainen deelnemers hun aandacht. Je kan het vergelijken met het trainen van je
-                spieren in de sportschool. Met onze "push-ups voor het brein" versterken de Frontale cortex en
-                Fronto-pariëtale netwerken. Daardoor worden die krachtiger en verbruiken ze minder energie. Het
-                resultaat: informatie wordt beter verwerkt, gerichter onthouden en efficiënter ingezet.
+                spieren in de sportschool. Met onze "push-ups voor het brein" versterken de frontale cortex en
+                fronto-pariëtale netwerken. <br />
+                <br />
+                Klinkt ingewikkeld maar simpel gezegd is dit ons "controlecentrum". Hierdoor registreer je signalen en
+                informatie duidelijker waardoor je betere keuzes kan maken. Kijk, met een sterker controlecentrum
+                versteken deze functies:
               </p>
             </div>
             <div>
