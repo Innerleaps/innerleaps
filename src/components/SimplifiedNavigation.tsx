@@ -125,7 +125,14 @@ const SimplifiedNavigation = () => {
                 </NavigationMenuItem>
               </NavigationMenuList>
             </NavigationMenu>
-
+            
+            <Link 
+              to="/de-methode"
+              className="text-brand-gray-dark hover:text-brand-blue transition-colors duration-300 font-medium text-base whitespace-nowrap"
+            >
+              De Methode
+            </Link>
+            
             <Link 
               to="/wetenschap"
               className="text-brand-gray-dark hover:text-brand-blue transition-colors duration-300 font-medium text-base whitespace-nowrap"
@@ -214,17 +221,25 @@ const SimplifiedNavigation = () => {
                         {subItem.label}
                       </Link>
                     ))}
-                  </div>
-                )}
-              </div>
+            </div>
+          )}
+        </div>
 
-              <Link 
-                to="/wetenschap"
-                onClick={() => setIsMenuOpen(false)}
-                className="text-brand-gray-dark hover:text-brand-blue transition-colors duration-300 font-medium py-2 text-left text-base"
-              >
-                Wetenschap
-              </Link>
+        <Link 
+          to="/de-methode"
+          onClick={() => setIsMenuOpen(false)}
+          className="text-brand-gray-dark hover:text-brand-blue transition-colors duration-300 font-medium py-2 text-left text-base"
+        >
+          De Methode
+        </Link>
+
+        <Link 
+          to="/wetenschap"
+          onClick={() => setIsMenuOpen(false)}
+          className="text-brand-gray-dark hover:text-brand-blue transition-colors duration-300 font-medium py-2 text-left text-base"
+        >
+          Wetenschap
+        </Link>
               <Link 
                 to="/over-ons"
                 onClick={() => setIsMenuOpen(false)}

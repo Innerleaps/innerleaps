@@ -10,6 +10,7 @@ import LandingPage from "./pages/LandingPage";
 import Wetenschap from "./pages/Wetenschap";
 import WetenschapOld from "./pages/WetenschapOld";
 import Programma from "./pages/Programma";
+import DeMethode from "./pages/DeMethode";
 import OverOns from "./pages/OverOns";
 import VoorWie from "./pages/VoorWie";
 import Contact from "./pages/Contact";
@@ -41,6 +42,7 @@ const App = () => {
             <Route path="/leven-vragenlijst" element={<LevenVragenlijst />} />
             <Route path="/leven-vragenlijst/resultaat" element={<LevenVragenlijstResultaat />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/de-methode" element={<DeMethode />} />
             <Route path="/wetenschap" element={<Wetenschap />} />
             <Route path="/over-ons" element={<OverOns />} />
             <Route path="/calendar" element={<Calendar />} />
