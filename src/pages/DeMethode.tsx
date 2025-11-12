@@ -70,7 +70,7 @@ const DeMethode = () => {
               </p>
               <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
                 Scherp zijn bij die belangrijke meeting, met focus dat belangrijke rapport maken of juist even echt
-                kunnen genieten tijdens dat ene momentje en niet denken aan werk of die ruzie.
+                kunnen genieten tijdens dat ene momentje en niet denken aan dat ene vervelende moment.
               </p>
               <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
                 En dat trainen we. Elke week worden deelnemers uitgedaagd hun aandacht bewust te richten op alledaagse
