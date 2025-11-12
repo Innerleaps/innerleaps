@@ -34,7 +34,7 @@ const MethodologySection = () => {
           {/* Wetenschap CTA - Over volledige breedte gecentreerd */}
           <div className="text-center pt-12 space-y-6">
             <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
-              Meer lezen over de wetenschappelijke basis van onze methode?
+              Meer weten over de wetenschappelijke basis van onze methode?
             </p>
             <br />
             <Link to="/wetenschap">
