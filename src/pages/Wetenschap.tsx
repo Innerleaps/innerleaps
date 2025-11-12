@@ -31,13 +31,12 @@ const Wetenschap = () => {
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             <div>
               <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
-                In onze programma’s trainen deelnemers hun aandacht. Je kan het vergelijken met het trainen van je
-                spieren in de sportschool. Met onze "push-ups voor het brein" versterken de frontale cortex en
-                fronto-pariëtale netwerken. <br />
+                In onze programma’s trainen deelnemers hun concentratie en het herkennen van lichamelijke signalen. Je
+                kan het vergelijken met het trainen van je spieren in de sportschool. Met onze "push-ups voor het brein"
+                versterken de frontale cortex en fronto-pariëtale netwerken. <br />
                 <br />
-                Klinkt ingewikkeld maar simpel gezegd is dit ons "controlecentrum". Hierdoor registreer je signalen en
-                informatie duidelijker waardoor je betere keuzes kan maken. Kijk, met een sterker controlecentrum
-                versteken deze functies:
+                Klinkt misschien ingewikkeld maar simpel gezegd is dit ons "controlecentrum". Hiermee maken we bewust
+                keuzes, dit onderscheid ons van dieren. Kijk, met een sterker controlecentrum versteken deze functies:
               </p>
             </div>
             <div>
