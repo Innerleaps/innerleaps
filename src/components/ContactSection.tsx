@@ -1,7 +1,8 @@
+import { memo } from 'react';
 import { Button } from '@/components/ui/button';
 import { Mail, Phone } from 'lucide-react';
 
-const ContactSection = () => {
+const ContactSection = memo(() => {
   return (
     <section className="bg-brand-off-white section-padding">
       <div className="container-custom">
@@ -78,6 +79,8 @@ const ContactSection = () => {
       </div>
     </section>
   );
-};
+});
+
+ContactSection.displayName = 'ContactSection';
 
 export default ContactSection;

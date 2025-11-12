@@ -1,3 +1,4 @@
+import { memo } from "react";
 import { Check } from "lucide-react";
 import vmbLogo from "@/assets/Geaccrediteerde_vitaliteitstrainers_bij_Innerleaps.png";
 import uMassLogo from "@/assets/Vitaliteitsprogramma_ontwikkeld_door_university_of_massachusetts.png";
@@ -7,7 +8,7 @@ import czLogo from "@/assets/Vitaliteitsprogramma_herkend_door_CZ.png";
 import uvaLogo from "@/assets/Aandachttraining_aan_de_universiteit_van_amsterdam_new.png";
 import menzisLogo from "@/assets/Vitaliteitsprogramma_herkend_door_menzis.png";
 
-const TrustSection = () => {
+const TrustSection = memo(() => {
   const trustItems = [
     {
       title: "Onderliggende methode erkend door Nederlandse zorgsysteem",
@@ -77,6 +78,8 @@ const TrustSection = () => {
       </div>
     </section>
   );
-};
+});
+
+TrustSection.displayName = 'TrustSection';
 
 export default TrustSection;

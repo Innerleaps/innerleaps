@@ -1,7 +1,9 @@
+import { memo } from "react";
 import { Clock, Users, Target, Sliders } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-const ProgramOverviewSection = () => {
+
+const ProgramOverviewSection = memo(() => {
   const features = [
     {
       icon: Clock,
@@ -71,5 +73,8 @@ const ProgramOverviewSection = () => {
       </div>
     </section>
   );
-};
+});
+
+ProgramOverviewSection.displayName = 'ProgramOverviewSection';
+
 export default ProgramOverviewSection;

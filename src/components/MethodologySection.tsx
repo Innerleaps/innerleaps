@@ -1,7 +1,9 @@
+import { memo } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import trainingImage from "@/assets/training_voor_betere_prestatie_minder_stress_en_lager_verzuim.png";
-const MethodologySection = () => {
+
+const MethodologySection = memo(() => {
   return (
     <section className="section-padding bg-brand-off-white">
       <div className="container-custom space-y-24 md:space-y-32 lg:space-y-40">
@@ -50,5 +52,8 @@ const MethodologySection = () => {
       </div>
     </section>
   );
-};
+});
+
+MethodologySection.displayName = 'MethodologySection';
+
 export default MethodologySection;

@@ -1,10 +1,11 @@
+import { memo } from 'react';
 import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
 
 interface FooterProps {
   showNavigation?: boolean;
 }
 
-const Footer = ({ showNavigation = true }: FooterProps) => {
+const Footer = memo(({ showNavigation = true }: FooterProps) => {
   return (
     <footer className="bg-gradient-to-br from-brand-blue to-brand-blue-dark text-white py-12">
       <div className="container-custom">
@@ -53,6 +54,8 @@ const Footer = ({ showNavigation = true }: FooterProps) => {
       </div>
     </footer>
   );
-};
+});
+
+Footer.displayName = 'Footer';
 
 export default Footer;
