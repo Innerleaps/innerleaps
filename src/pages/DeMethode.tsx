@@ -6,7 +6,8 @@ const DeMethode = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-  return <div className="min-h-screen bg-white">
+  return (
+    <div className="min-h-screen bg-white">
       <SimplifiedNavigation />
       <StickyCtaButtons />
 
@@ -17,7 +18,8 @@ const DeMethode = () => {
             De <span className="text-brand-orange">Push-ups</span> voor je Brein
           </h1>
           <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed text-center max-w-4xl mx-auto">
-            Op onze wetenschap pagina leggen we uit dat deelnemers hun controlecentrum trainen met pushups voor hun brein. Maar wat zijn die push-ups nou precies? Dat leggen we hier uit.
+            Op onze wetenschap pagina leggen we uit dat deelnemers hun controlecentrum trainen met pushups voor hun
+            brein. Maar wat zijn die push-ups nou precies? Dat leggen we hier uit.
           </p>
         </div>
       </section>
@@ -26,18 +28,22 @@ const DeMethode = () => {
       <section className="section-padding bg-white">
         <div className="container-custom">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-brand-purple text-center mb-12">
-            Geplande training 12 minuten per dag <span className="text-brand-orange">12 minuten</span> per dag
+            Geplande training <span className="text-brand-orange">12 minuten</span> per dag
           </h2>
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             <div className="space-y-6">
               <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
-                Zittend of liggend volgen deelnemers elke dag een begeleidende audio-opname. Deze duurt zo'n 12 minuten. De instructie is simpel: richt je aandacht op je ademhaling of andere lichamelijke ervaringen.
+                Zittend of liggend volgen deelnemers elke dag een begeleidende audio-opname. Deze duurt zo'n 12 minuten.
+                De instructie is simpel: richt je aandacht op je ademhaling of andere lichamelijke ervaringen.
               </p>
               <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
-                Klinkt makkelijk? Je geest vindt er niks aan. Binnen een paar seconden denk je aan het avondeten, je to-do's of dat lastige gesprek. Je vergeet volledig wat je aan het doen was.
+                Klinkt makkelijk? Je geest vindt er niks aan. Binnen een paar seconden denk je aan het avondeten, je
+                to-do's of dat lastige gesprek. Je vergeet volledig wat je aan het doen was.
               </p>
               <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
-                Dit is de crux van de oefening: het moment dat je opmerkt dat je bent afgedwaald, dát is de push-up. Je brengt je focus terug naar je ademhaling. Opnieuw. En opnieuw. Dit versterkt je concentratie en bewustzijn van je lichaamssignalen, zoals push-ups je spieren versterken.
+                Dit is de crux van de oefening: het moment dat je opmerkt dat je bent afgedwaald, dát is de push-up. Je
+                brengt je focus terug naar je ademhaling. Opnieuw. En opnieuw. Dit versterkt je concentratie en
+                bewustzijn van je lichaamssignalen, zoals push-ups je spieren versterken.
               </p>
             </div>
             <div className="aspect-square bg-gray-200 rounded-xl shadow-lg flex items-center justify-center">
@@ -59,10 +65,14 @@ const DeMethode = () => {
             </div>
             <div className="space-y-6 order-1 lg:order-2">
               <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
-                Waar zijn je gedachten terwijl je tanden poetst? Of tijdens die meeting? Ons brein produceert constant gedachten. Soms is dat nuttig maar meestal willen we onze aandacht juist bewust richten. Scherp zijn bij die belangrijke meeting, met focus dat belangrijke rapport maken of juist even echt kunnen genieten tijdens dat ene momentje en niet denken aan werk of die ruzie.
+                Waar zijn je gedachten terwijl je tanden poetst? Of tijdens die meeting? Ons brein produceert constant
+                gedachten. Soms is dat nuttig maar meestal willen we onze aandacht juist bewust richten. Scherp zijn bij
+                die belangrijke meeting, met focus dat belangrijke rapport maken of juist even echt kunnen genieten
+                tijdens dat ene momentje en niet denken aan werk of die ruzie.
               </p>
               <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
-                En dat trainen we. Elke week worden deelnemers uitgedaagd hun aandacht bewust te richten op alledaagse activiteiten.
+                En dat trainen we. Elke week worden deelnemers uitgedaagd hun aandacht bewust te richten op alledaagse
+                activiteiten.
               </p>
             </div>
           </div>
@@ -78,13 +88,17 @@ const DeMethode = () => {
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             <div className="space-y-6">
               <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
-                Echte gedragsverandering gebeurt niet vanzelf. Nieuwe patronen moeten inslijten, en dat kost tijd. Daarom duurt het programma 6 weken.
+                Echte gedragsverandering gebeurt niet vanzelf. Nieuwe patronen moeten inslijten, en dat kost tijd.
+                Daarom duurt het programma 6 weken.
               </p>
               <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
-                In de workshops en het werkboek krijgen deelnemers wetenschappelijke theorie en praktische uitleg. Waarom werkt aandachtstraining? Hoe reageert je brein op stress? Dit versterkt de motivatie.
+                In de workshops en het werkboek krijgen deelnemers wetenschappelijke theorie en praktische uitleg.
+                Waarom werkt aandachtstraining? Hoe reageert je brein op stress? Dit versterkt de motivatie.
               </p>
               <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
-                Door de groepsworkshops reflecteren deelnemers op hun ervaringen. En hier gebeurt iets heel waardevols: ze zien dat anderen ook worstelen met consequent oefenen en tijd vinden. Tegelijk delen ze strategieën die wél werken.
+                Door de groepsworkshops reflecteren deelnemers op hun ervaringen. En hier gebeurt iets heel waardevols:
+                ze zien dat anderen ook worstelen met consequent oefenen en tijd vinden. Tegelijk delen ze strategieën
+                die wél werken.
               </p>
             </div>
             <div className="aspect-square bg-gray-200 rounded-xl shadow-lg flex items-center justify-center">
@@ -95,6 +109,7 @@ const DeMethode = () => {
       </section>
 
       <Footer showNavigation={false} />
-    </div>;
+    </div>
+  );
 };
 export default DeMethode;
