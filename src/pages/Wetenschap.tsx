@@ -24,7 +24,7 @@ const Wetenschap = () => {
         <div className="container-custom space-y-8 lg:space-y-12">
           {/* Titel over volledige breedte */}
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-center text-brand-gray-dark leading-tight">
-            Train je <span className="text-brand-orange">concentratie </span>,versterk je{" "}
+            Train je <span className="text-brand-orange">concentratie</span>, versterk je{" "}
             <span className="text-brand-orange">brein</span>
           </h2>
 
