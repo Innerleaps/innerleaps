@@ -17,7 +17,7 @@ const ProgramOverviewSection = () => {
       icon: Users,
       title: "Veilige setting",
       description:
-        "Deelnemers delen hun ervaring in de groep op een comfortabele manier door te reageren op vragen van de trainer met het opsteken van hun handen. Persoonlijke toelichting is optioneel.".
+        "Deelnemers delen hun ervaring in de groep op een comfortabele manier door te reageren op vragen van de trainer met het opsteken van hun handen. Persoonlijke toelichting is optioneel.",
     },
     {
       icon: Target,
