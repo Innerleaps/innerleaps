@@ -6,8 +6,7 @@ const DeMethode = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-  return (
-    <div className="min-h-screen bg-white">
+  return <div className="min-h-screen bg-white">
       <SimplifiedNavigation />
       <StickyCtaButtons />
 
@@ -28,7 +27,7 @@ const DeMethode = () => {
       <section className="section-padding bg-white">
         <div className="container-custom">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-brand-purple text-center mb-12">
-            Geplande training <span className="text-brand-orange">12 minuten</span> per dag
+            Geplande concentratietraining 12 minuten per dag <span className="text-brand-orange">12 minuten</span> per dag
           </h2>
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             <div className="space-y-6">
@@ -111,7 +110,6 @@ const DeMethode = () => {
       </section>
 
       <Footer showNavigation={false} />
-    </div>
-  );
+    </div>;
 };
 export default DeMethode;
