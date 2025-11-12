@@ -1,4 +1,6 @@
 import { Clock, Users, Target, Sliders } from "lucide-react";
+import { Link } from "react-router-dom";
+import { Button } from "@/components/ui/button";
 
 const ProgramOverviewSection = () => {
   const features = [
@@ -54,8 +56,20 @@ const ProgramOverviewSection = () => {
                 <h3 className="text-2xl font-bold text-brand-purple">{feature.title}</h3>
                 <p className="text-xl text-brand-gray-medium leading-relaxed">{feature.description}</p>
               </div>
-            );
+          );
           })}
+        </div>
+
+        {/* Methode CTA - Over volledige breedte gecentreerd */}
+        <div className="text-center pt-12 space-y-6">
+          <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
+            Wil je nog meer weten over onze methode?
+          </p>
+          <Link to="/de-methode">
+            <Button variant="secondary" className="font-semibold py-3 px-8 rounded-lg text-base md:text-lg">
+              Ontdek de methode
+            </Button>
+          </Link>
         </div>
       </div>
     </section>
