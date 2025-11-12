@@ -31,84 +31,116 @@ import nobelLogo from "@/assets/Vitaliteitsprogramma_nobel_recruitment_light.png
 import hollandColoursLogo from "@/assets/Vitaliteitsprogramma_Holland_Colours_light.png";
 const HeroSection = () => {
   const [isCalculatorOpen, setIsCalculatorOpen] = useState(false);
-  const logos = [{
-    src: oliverLogo,
-    alt: "Oliver Wyman"
-  }, {
-    src: sygnificLogo,
-    alt: "Sygnific"
-  }, {
-    src: cordaanLogo,
-    alt: "Cordaan"
-  }, {
-    src: denHaagLogo,
-    alt: "Gemeente Den Haag"
-  }, {
-    src: spiritLogo,
-    alt: "Spirit"
-  }, {
-    src: vuLogo,
-    alt: "VU Amsterdam"
-  }, {
-    src: leaseplanLogo,
-    alt: "Leaseplan"
-  }, {
-    src: tele2Logo,
-    alt: "Tele2"
-  }, {
-    src: parnassiaLogo,
-    alt: "Parnassia Groep"
-  }, {
-    src: lentizLogo,
-    alt: "Lentiz"
-  }, {
-    src: primoLogo,
-    alt: "Primo"
-  }, {
-    src: justitieLogo,
-    alt: "Ministerie van Justitie en Veiligheid"
-  }, {
-    src: youTalentLogo,
-    alt: "You Talent"
-  }, {
-    src: rijkswaterstaatLogo,
-    alt: "Rijkswaterstaat"
-  }, {
-    src: politieLogo,
-    alt: "Politie"
-  }, {
-    src: dhlLogo,
-    alt: "DHL"
-  }, {
-    src: affiniusLogo,
-    alt: "Affinius Capital"
-  }, {
-    src: ggzLogo,
-    alt: "GGZ Centraal"
-  }, {
-    src: humanitasLogo,
-    alt: "Humanitas"
-  }, {
-    src: plevierLogo,
-    alt: "Plevier"
-  }, {
-    src: carelLogo,
-    alt: "Carel Lurvink"
-  }, {
-    src: paConsultingLogo,
-    alt: "PA Consulting"
-  }, {
-    src: nobelLogo,
-    alt: "Nobel Recruitment"
-  }, {
-    src: hollandColoursLogo,
-    alt: "Holland Colours"
-  }];
-  return <>
+  const logos = [
+    {
+      src: oliverLogo,
+      alt: "Oliver Wyman",
+    },
+    {
+      src: sygnificLogo,
+      alt: "Sygnific",
+    },
+    {
+      src: cordaanLogo,
+      alt: "Cordaan",
+    },
+    {
+      src: denHaagLogo,
+      alt: "Gemeente Den Haag",
+    },
+    {
+      src: spiritLogo,
+      alt: "Spirit",
+    },
+    {
+      src: vuLogo,
+      alt: "VU Amsterdam",
+    },
+    {
+      src: leaseplanLogo,
+      alt: "Leaseplan",
+    },
+    {
+      src: tele2Logo,
+      alt: "Tele2",
+    },
+    {
+      src: parnassiaLogo,
+      alt: "Parnassia Groep",
+    },
+    {
+      src: lentizLogo,
+      alt: "Lentiz",
+    },
+    {
+      src: primoLogo,
+      alt: "Primo",
+    },
+    {
+      src: justitieLogo,
+      alt: "Ministerie van Justitie en Veiligheid",
+    },
+    {
+      src: youTalentLogo,
+      alt: "You Talent",
+    },
+    {
+      src: rijkswaterstaatLogo,
+      alt: "Rijkswaterstaat",
+    },
+    {
+      src: politieLogo,
+      alt: "Politie",
+    },
+    {
+      src: dhlLogo,
+      alt: "DHL",
+    },
+    {
+      src: affiniusLogo,
+      alt: "Affinius Capital",
+    },
+    {
+      src: ggzLogo,
+      alt: "GGZ Centraal",
+    },
+    {
+      src: humanitasLogo,
+      alt: "Humanitas",
+    },
+    {
+      src: plevierLogo,
+      alt: "Plevier",
+    },
+    {
+      src: carelLogo,
+      alt: "Carel Lurvink",
+    },
+    {
+      src: paConsultingLogo,
+      alt: "PA Consulting",
+    },
+    {
+      src: nobelLogo,
+      alt: "Nobel Recruitment",
+    },
+    {
+      src: hollandColoursLogo,
+      alt: "Holland Colours",
+    },
+  ];
+  return (
+    <>
       <section id="home" className="relative min-h-screen flex items-center overflow-hidden text-white">
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
-          <img src={heroBackground} alt="Vitaliteitsprogramma presentatie InnerLeaps" className="w-full h-full object-cover" fetchPriority="high" loading="eager" />
+          <img
+            src={heroBackground}
+            alt="Vitaliteitsprogramma presentatie InnerLeaps"
+            className="w-full h-full object-cover"
+            fetchPriority="high"
+            loading="eager"
+          />
           <div className="absolute inset-0 bg-black/50" />
         </div>
 
@@ -123,25 +155,34 @@ const HeroSection = () => {
                   Wetenschappelijk bewezen programma
                 </div>
 
-                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight font-heading break-words" style={{
-                textShadow: "0 2px 8px rgba(0,0,0,0.5)"
-              }}>
+                <h1
+                  className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight font-heading break-words"
+                  style={{
+                    textShadow: "0 2px 8px rgba(0,0,0,0.5)",
+                  }}
+                >
                   Het <span className="text-brand-orange">vitaliteits{"\u00AD"}programma</span> dat{" "}
-                  <span className="text-brand-orange">prestatie</span> verbeterd{" "}
+                  <span className="text-brand-orange">prestaties</span> versterkt{" "}
                 </h1>
-                <p className="text-xl md:text-2xl text-blue-100 leading-relaxed break-words" style={{
-                textShadow: "0 2px 8px rgba(0,0,0,0.5)"
-              }}>
-                  Wetenschappelijk bewezen vitaliteits{"\u00AD"}programma. Deelnemers ontwikkelen eigenaarschap over hun
-                  eigen stress én verhogen hun veerkracht en productiviteit.
+                <p
+                  className="text-xl md:text-2xl text-blue-100 leading-relaxed break-words"
+                  style={{
+                    textShadow: "0 2px 8px rgba(0,0,0,0.5)",
+                  }}
+                >
+                  Wetenschappelijk onderbouwd en resultaatgericht vitaliteits{"\u00AD"}programma. Deelnemers nemen
+                  eigenaarschap over hun stresslevel, worden veerkrachtiger én productiver.
                 </p>
               </div>
 
               <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 w-full justify-center lg:justify-start">
-                <Button size="lg" className="w-full sm:w-auto bg-brand-orange hover:bg-brand-orange text-white hover:text-white font-semibold py-3 px-4 sm:py-4 sm:px-6 rounded-lg text-sm sm:text-base lg:text-lg shadow-xl" onClick={() => setIsCalculatorOpen(true)}>
+                <Button
+                  size="lg"
+                  className="w-full sm:w-auto bg-brand-orange hover:bg-brand-orange text-white hover:text-white font-semibold py-3 px-4 sm:py-4 sm:px-6 rounded-lg text-sm sm:text-base lg:text-lg shadow-xl"
+                  onClick={() => setIsCalculatorOpen(true)}
+                >
                   Ontdek jullie impact
                 </Button>
-                
               </div>
             </div>
 
@@ -156,44 +197,69 @@ const HeroSection = () => {
 
                   <div className="w-full space-y-3 sm:space-y-4">
                     <div className="flex items-center justify-between w-full p-2.5 sm:p-3 lg:p-4 bg-brand-purple/90 rounded-lg">
-                      <span style={{
-                      textShadow: "0 2px 8px rgba(0,0,0,0.5)"
-                    }} className="text-xs sm:text-sm md:text-base lg:text-lg text-white font-normal">
+                      <span
+                        style={{
+                          textShadow: "0 2px 8px rgba(0,0,0,0.5)",
+                        }}
+                        className="text-xs sm:text-sm md:text-base lg:text-lg text-white font-normal"
+                      >
                         Uitval risico
                       </span>
                       <span className="text-brand-orange font-bold text-sm sm:text-base md:text-lg shrink-0">-70%</span>
                     </div>
                     <div className="flex items-center justify-between w-full p-2.5 sm:p-3 lg:p-4 bg-brand-purple/90 rounded-lg">
-                      <span style={{
-                      textShadow: "0 2px 8px rgba(0,0,0,0.5)"
-                    }} className="text-xs sm:text-sm md:text-base lg:text-lg text-white font-normal">
+                      <span
+                        style={{
+                          textShadow: "0 2px 8px rgba(0,0,0,0.5)",
+                        }}
+                        className="text-xs sm:text-sm md:text-base lg:text-lg text-white font-normal"
+                      >
                         Verzuim
                       </span>
                       <span className="text-brand-orange font-bold text-sm sm:text-base md:text-lg shrink-0">-21%</span>
                     </div>
                     <div className="flex items-center justify-between w-full p-2.5 sm:p-3 lg:p-4 bg-brand-purple/90 rounded-lg">
-                      <span style={{
-                      textShadow: "0 2px 8px rgba(0,0,0,0.5)"
-                    }} className="text-xs sm:text-sm md:text-base lg:text-lg text-white font-normal">
+                      <span
+                        style={{
+                          textShadow: "0 2px 8px rgba(0,0,0,0.5)",
+                        }}
+                        className="text-xs sm:text-sm md:text-base lg:text-lg text-white font-normal"
+                      >
                         Productiviteit
                       </span>
                       <span className="text-brand-orange font-bold text-sm sm:text-base md:text-lg shrink-0">+10%</span>
                     </div>
                     <div className="flex items-center justify-between w-full p-2.5 sm:p-3 lg:p-4 bg-brand-purple/90 rounded-lg">
-                      <span style={{
-                      textShadow: "0 2px 8px rgba(0,0,0,0.5)"
-                    }} className="text-xs sm:text-sm md:text-base lg:text-lg text-white font-normal">Wetenschappelijk
-onderzoek</span>
-                      <span className="text-brand-orange font-bold text-sm sm:text-base md:text-lg shrink-0">40+ jaar</span>
+                      <span
+                        style={{
+                          textShadow: "0 2px 8px rgba(0,0,0,0.5)",
+                        }}
+                        className="text-xs sm:text-sm md:text-base lg:text-lg text-white font-normal"
+                      >
+                        Wetenschappelijk onderzoek
+                      </span>
+                      <span className="text-brand-orange font-bold text-sm sm:text-base md:text-lg shrink-0">
+                        40+ jaar
+                      </span>
                     </div>
                   </div>
 
                   {/* Google Review Badge */}
-                  <a href="https://www.google.com/maps/place/Innerleaps/@52.1909763,5.2795551,7z/data=!4m8!3m7!1s0x41d7861255c94705:0x571bbf751b212eea!8m2!3d52.1909763!4d5.2795551!9m1!1b1!16s%2Fg%2F11y10xf1qm?entry=ttu&g_ep=EgoyMDI1MTAyOS4yIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" className="w-full mt-3 sm:mt-4 block bg-brand-purple/90 backdrop-blur-sm rounded-lg p-2.5 sm:p-3 hover:bg-brand-purple transition-all group">
+                  <a
+                    href="https://www.google.com/maps/place/Innerleaps/@52.1909763,5.2795551,7z/data=!4m8!3m7!1s0x41d7861255c94705:0x571bbf751b212eea!8m2!3d52.1909763!4d5.2795551!9m1!1b1!16s%2Fg%2F11y10xf1qm?entry=ttu&g_ep=EgoyMDI1MTAyOS4yIKXMDSoASAFQAw%3D%3D"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full mt-3 sm:mt-4 block bg-brand-purple/90 backdrop-blur-sm rounded-lg p-2.5 sm:p-3 hover:bg-brand-purple transition-all group"
+                  >
                     <div className="flex items-center justify-center gap-2">
                       <span className="text-white font-semibold text-lg">4,7 / 5</span>
                       <div className="flex gap-0.5">
-                        {[...Array(5)].map((_, i) => <Star key={i} className="w-4 h-4 fill-amber-400 text-amber-400 group-hover:scale-110 transition-transform" />)}
+                        {[...Array(5)].map((_, i) => (
+                          <Star
+                            key={i}
+                            className="w-4 h-4 fill-amber-400 text-amber-400 group-hover:scale-110 transition-transform"
+                          />
+                        ))}
                       </div>
                     </div>
                     <p className="text-amber-100 text-xs text-center mt-1">Google Reviews</p>
@@ -203,14 +269,19 @@ onderzoek</span>
             </div>
           </div>
 
-         {/* Scrolling Logos */}
+          {/* Scrolling Logos */}
           <div className="w-full mt-8 sm:mt-12 lg:mt-16">
             <div className="relative overflow-hidden [mask-image:linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)]">
               <div className="flex gap-8 animate-marquee">
-                {logos.map((logo, index) => <img key={index} src={logo.src} alt={logo.alt} className="h-8 sm:h-10 md:h-12 object-contain flex-shrink-0 opacity-100 transition-all" />)}
+                {logos.map((logo, index) => (
+                  <img
+                    key={index}
+                    src={logo.src}
+                    alt={logo.alt}
+                    className="h-8 sm:h-10 md:h-12 object-contain flex-shrink-0 opacity-100 transition-all"
+                  />
+                ))}
               </div>
-
-              
             </div>
           </div>
 
@@ -221,6 +292,7 @@ onderzoek</span>
       </section>
 
       <CalculatorModal isOpen={isCalculatorOpen} onClose={() => setIsCalculatorOpen(false)} />
-    </>;
+    </>
+  );
 };
 export default HeroSection;
