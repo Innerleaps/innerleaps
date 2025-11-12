@@ -8,7 +8,8 @@ const ProgramOverviewSection = memo(() => {
     {
       icon: Clock,
       title: "Workshops",
-      description: "6 groepworkshops van 60 minuten door één van onze geaccrediteerde trainers.",
+      description:
+        "Elke week een workshop van 60 minuten met andere deelnemers door één van onze geaccrediteerde trainers.",
     },
     {
       icon: Sliders,
@@ -75,6 +76,6 @@ const ProgramOverviewSection = memo(() => {
   );
 });
 
-ProgramOverviewSection.displayName = 'ProgramOverviewSection';
+ProgramOverviewSection.displayName = "ProgramOverviewSection";
 
 export default ProgramOverviewSection;
