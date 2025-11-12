@@ -18,11 +18,11 @@ const MethodologySection = () => {
                 De kern van onze methode is het trainen van de “aandachtsspier”. Zo versterken deelnemers de Neocortex,
                 het breindeel dat fungeert als "controlecentrum" voor rationele keuzes, focus en het bewust opmerken van
                 stresssignalen. Het resultaat is minder stress, lager verzuim en betere prestaties.{" "}
-              </p>p><p>
-                  Het trainen van je brein klinkt bijna te mooi om waar te zijn maar meer dan 40 jaar wetenschappelijk
-                  onderzoek bewijst dat het écht werkt en niet zo’n klein beetje ook.
-                </p>
-              
+              </p>
+              <p>
+                Het trainen van je brein klinkt bijna te mooi om waar te zijn maar meer dan 40 jaar wetenschappelijk
+                onderzoek bewijst dat het écht werkt en niet zo’n klein beetje ook.
+              </p>
             </div>
             <div>
               <img
