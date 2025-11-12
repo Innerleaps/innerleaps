@@ -5,7 +5,7 @@ const ProgramOverviewSection = () => {
     {
       icon: Clock,
       title: "Workshops",
-      description: "6 workshops van 60 minuten door één van onze geaccrediteerde trainers.",
+      description: "6 groepworkshops van 60 minuten door één van onze geaccrediteerde trainers.",
     },
     {
       icon: Sliders,
@@ -17,7 +17,7 @@ const ProgramOverviewSection = () => {
       icon: Users,
       title: "Veilige setting",
       description:
-        "Groepen van maximaal 15 deelnemers. Leren door te reageren op concrete vragen in plaats van persoonlijke verhalen delen.",
+        "Deelnemers houden controle.  Ze reageren op vragen van de trainer met het opsteken van handen.  Persoonlijke toelichting is optioneel.",
     },
     {
       icon: Target,
