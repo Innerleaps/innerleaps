@@ -127,7 +127,7 @@ const DeMethode = () => {
       </section>
 
       {/* Programma's CTA Section */}
-      <section className="section-padding bg-brand-off-white">
+      <section className="section-padding bg-white">
         <div className="container-custom">
           <div className="text-center mb-12">
             <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed max-w-3xl mx-auto">
@@ -141,9 +141,9 @@ const DeMethode = () => {
               to="/vitaliteitsprogramma"
               className="group bg-white hover:bg-brand-blue transition-all duration-300 rounded-xl shadow-lg p-8 text-center"
             >
-              <h3 className="text-2xl font-bold text-brand-purple group-hover:text-white transition-colors duration-300 mb-4">
-                Vitaliteits-programma
-              </h3>
+          <h3 className="text-2xl font-bold text-brand-purple group-hover:text-white transition-colors duration-300 mb-4">
+            Vitaliteitsprogramma
+          </h3>
               <p className="text-brand-gray-medium group-hover:text-white/90 transition-colors duration-300">
                 Voor organisaties en werkgevers
               </p>
@@ -154,12 +154,12 @@ const DeMethode = () => {
               to="/stressmanagement-programma"
               className="group bg-white hover:bg-brand-blue transition-all duration-300 rounded-xl shadow-lg p-8 text-center"
             >
-              <h3 className="text-2xl font-bold text-brand-purple group-hover:text-white transition-colors duration-300 mb-4">
-                Stress-management
-              </h3>
-              <p className="text-brand-gray-medium group-hover:text-white/90 transition-colors duration-300">
-                Minder spanning & druk
-              </p>
+          <h3 className="text-2xl font-bold text-brand-purple group-hover:text-white transition-colors duration-300 mb-4">
+            Stressmanagement
+          </h3>
+          <p className="text-brand-gray-medium group-hover:text-white/90 transition-colors duration-300">
+            Minder spanning & druk voor werknemers
+          </p>
             </Link>
 
             {/* Prestatie Programma Button */}
@@ -167,12 +167,12 @@ const DeMethode = () => {
               to="/prestatie-programma"
               className="group bg-white hover:bg-brand-blue transition-all duration-300 rounded-xl shadow-lg p-8 text-center"
             >
-              <h3 className="text-2xl font-bold text-brand-purple group-hover:text-white transition-colors duration-300 mb-4">
-                Prestatie-programma
-              </h3>
-              <p className="text-brand-gray-medium group-hover:text-white/90 transition-colors duration-300">
-                Met meer focus beter presteren
-              </p>
+          <h3 className="text-2xl font-bold text-brand-purple group-hover:text-white transition-colors duration-300 mb-4">
+            Prestatieprogramma
+          </h3>
+          <p className="text-brand-gray-medium group-hover:text-white/90 transition-colors duration-300">
+            Als werknemer beter presteren met meer focus
+          </p>
             </Link>
           </div>
         </div>
