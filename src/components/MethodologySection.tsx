@@ -8,16 +8,18 @@ const MethodologySection = () => {
         {/* Blok 1 - De Methode */}
         <div className="space-y-8 lg:space-y-12">
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-center text-brand-purple leading-tight">
-            Minder <span className="text-brand-orange">verzuim</span> en betere{" "}
-            <span className="text-brand-orange">prestaties</span> door minder stress en betere focus
+            Verlaag <span className="text-brand-orange">verzuim </span> én boost
+            <span className="text-brand-orange">prestaties</span>
           </h2>
 
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             <div>
               <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
-                In ons wetenschappelijk bewezen programma trainen deelnemers hun "aandachtsspier". Hiermee versterkt de
-                kracht en efficiëntie van de Neocortex. Het "controlecentrum" voor rationele keuzes, focus en het bewust
-                opmerken van stresssignalen. Hierdoor verbeterd prestatie én daalt stress en het bijhorende verzuim.
+                De kern van onze methode is het trainen van de “aandachtsspier”. Zo versterken deelnemers de Neocortex,
+                het breindeel dat fungeert als "controlecentrum" voor rationele keuzes, focus en het bewust opmerken van
+                stresssignalen. Het resultaat is minder stress, lager verzuim en betere prestaties. Het trainen van je
+                brein klinkt bijna te mooi om waar te zijn maar meer dan 40 jaar wetenschappelijk onderzoek bewijst dat
+                het écht werkt en niet zo’n klein beetje ook.
               </p>
             </div>
             <div>
