@@ -36,9 +36,9 @@ const Wetenschap = () => {
                 spieren in de sportschool. Met onze "push-ups voor het brein" versterken de frontale cortex en
                 fronto-pariëtale netwerken. <br />
                 <br />
-                Klinkt ingewikkeld maar simpel gezegd is dit ons "controlecentrum". Hierdoor registreer je signalen en
-                informatie duidelijker waardoor je betere keuzes kan maken. Kijk, met een sterker controlecentrum
-                versteken deze functies:
+                Klinkt misschien ingewikkeld maar simpel gezegd is dit ons "controlecentrum". Hierdoor registreer je
+                signalen en informatie duidelijker waardoor je slimmere en meer gezonde keuzes maakt. Kijk, met een
+                sterker controlecentrum versteken deze functies:
               </p>
             </div>
             <div>
