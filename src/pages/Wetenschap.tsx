@@ -76,7 +76,75 @@ const Wetenschap = () => {
               </div>
             </div>
 
-            {/* Card 2: Executieve Planning (gecentreerd, start kolom 4) */}
+            {/* Card 2: Aandachtscontrole */}
+            <div className="bg-white p-6 rounded-lg space-y-4 md:col-span-2">
+              <div className="p-3 rounded-lg bg-brand-orange/5 w-fit mx-auto">
+                <Target className="h-8 w-8 text-brand-orange stroke-2" />
+              </div>
+              <h3 className="text-xl md:text-2xl font-bold text-brand-gray-dark text-center">
+                Aandachts{"\u00AD"}controle
+              </h3>
+              <div className="space-y-3">
+                <div className="flex items-start gap-3">
+                  <CheckCircle className="h-5 w-5 text-brand-orange stroke-2 flex-shrink-0 mt-1" />
+                  <span className="text-base md:text-lg text-brand-gray-medium">
+                    Aandacht beter richten op wat belangrijk is.
+                  </span>
+                </div>
+                <div className="flex items-start gap-3">
+                  <CheckCircle className="h-5 w-5 text-brand-orange stroke-2 flex-shrink-0 mt-1" />
+                  <span className="text-base md:text-lg text-brand-gray-medium">Aandacht langer vasthouden.</span>
+                </div>
+                <div className="flex items-start gap-3">
+                  <CheckCircle className="h-5 w-5 text-brand-orange stroke-2 flex-shrink-0 mt-1" />
+                  <span className="text-base md:text-lg text-brand-gray-medium">
+                    Minder afgeleid door onbelangrijke informatie.
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            {/* Card 3: Cognitieve Efficiëntie */}
+            <div className="bg-white p-6 rounded-lg space-y-4 md:col-span-2">
+              <div className="p-3 rounded-lg bg-brand-orange/5 w-fit mx-auto">
+                <Zap className="h-8 w-8 text-brand-orange stroke-2" />
+              </div>
+              <h3 className="text-xl md:text-2xl font-bold text-brand-gray-dark text-center">Cognitieve Efficiëntie</h3>
+              <div className="space-y-3">
+                <div className="flex items-start gap-3">
+                  <CheckCircle className="h-5 w-5 text-brand-orange stroke-2 flex-shrink-0 mt-1" />
+                  <span className="text-base md:text-lg text-brand-gray-medium">
+                    Dezelfde taken vragen minder hersenenergie.
+                  </span>
+                </div>
+                <div className="flex items-start gap-3">
+                  <CheckCircle className="h-5 w-5 text-brand-orange stroke-2 flex-shrink-0 mt-1" />
+                  <span className="text-base md:text-lg text-brand-gray-medium">Sneller schakelen tussen taken.</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Card 4: Filteren & onderdrukken (gecentreerd, start kolom 2) */}
+            <div className="bg-white p-6 rounded-lg space-y-4 md:col-span-2 md:col-start-2">
+              <div className="p-3 rounded-lg bg-brand-orange/5 w-fit mx-auto">
+                <Shield className="h-8 w-8 text-brand-orange stroke-2" />
+              </div>
+              <h3 className="text-xl md:text-2xl font-bold text-brand-gray-dark text-center">
+                Filteren & onderdrukken
+              </h3>
+              <div className="space-y-3">
+                <div className="flex items-start gap-3">
+                  <CheckCircle className="h-5 w-5 text-brand-orange stroke-2 flex-shrink-0 mt-1" />
+                  <span className="text-base md:text-lg text-brand-gray-medium">Irrelevante informatie filteren.</span>
+                </div>
+                <div className="flex items-start gap-3">
+                  <CheckCircle className="h-5 w-5 text-brand-orange stroke-2 flex-shrink-0 mt-1" />
+                  <span className="text-base md:text-lg text-brand-gray-medium">Ongewenste reacties onderdrukken.</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Card 5: Executieve Planning (gecentreerd, start kolom 4) */}
             <div className="bg-white p-6 rounded-lg space-y-4 md:col-span-2 md:col-start-4">
               <div className="p-3 rounded-lg bg-brand-orange/5 w-fit mx-auto">
                 <FileText className="h-8 w-8 text-brand-orange stroke-2" />
@@ -96,79 +164,6 @@ const Wetenschap = () => {
                   <span className="text-base md:text-lg text-brand-gray-medium">
                     Strategieën bedenken en prioriteiten bepalen.
                   </span>
-                </div>
-              </div>
-
-              {/* Card 3: Cognitieve Efficiëntie */}
-              <div className="bg-white p-6 rounded-lg space-y-4 md:col-span-2">
-                <div className="p-3 rounded-lg bg-brand-orange/5 w-fit mx-auto">
-                  <Zap className="h-8 w-8 text-brand-orange stroke-2" />
-                </div>
-                <h3 className="text-xl md:text-2xl font-bold text-brand-gray-dark text-center">
-                  Cognitieve Efficiëntie
-                </h3>
-                <div className="space-y-3">
-                  <div className="flex items-start gap-3">
-                    <CheckCircle className="h-5 w-5 text-brand-orange stroke-2 flex-shrink-0 mt-1" />
-                    <span className="text-base md:text-lg text-brand-gray-medium">
-                      Dezelfde taken vragen minder hersenenergie.
-                    </span>
-                  </div>
-                  <div className="flex items-start gap-3">
-                    <CheckCircle className="h-5 w-5 text-brand-orange stroke-2 flex-shrink-0 mt-1" />
-                    <span className="text-base md:text-lg text-brand-gray-medium">Sneller schakelen tussen taken.</span>
-                  </div>
-                </div>
-              </div>
-
-              {/* Card 4: Filteren & onderdrukken (gecentreerd, start kolom 2) */}
-              <div className="bg-white p-6 rounded-lg space-y-4 md:col-span-2 md:col-start-2">
-                <div className="p-3 rounded-lg bg-brand-orange/5 w-fit mx-auto">
-                  <Shield className="h-8 w-8 text-brand-orange stroke-2" />
-                </div>
-                <h3 className="text-xl md:text-2xl font-bold text-brand-gray-dark text-center">
-                  Filteren & onderdrukken
-                </h3>
-                <div className="space-y-3">
-                  <div className="flex items-start gap-3">
-                    <CheckCircle className="h-5 w-5 text-brand-orange stroke-2 flex-shrink-0 mt-1" />
-                    <span className="text-base md:text-lg text-brand-gray-medium">
-                      Irrelevante informatie filteren.
-                    </span>
-                  </div>
-                  <div className="flex items-start gap-3">
-                    <CheckCircle className="h-5 w-5 text-brand-orange stroke-2 flex-shrink-0 mt-1" />
-                    <span className="text-base md:text-lg text-brand-gray-medium">
-                      Ongewenste reacties onderdrukken.
-                    </span>
-                  </div>
-                </div>
-              </div>
-              {/* Card 5: Aandachtscontrole */}
-              <div className="bg-white p-6 rounded-lg space-y-4 md:col-span-2">
-                <div className="p-3 rounded-lg bg-brand-orange/5 w-fit mx-auto">
-                  <Target className="h-8 w-8 text-brand-orange stroke-2" />
-                </div>
-                <h3 className="text-xl md:text-2xl font-bold text-brand-gray-dark text-center">
-                  Aandachts{"\u00AD"}controle
-                </h3>
-                <div className="space-y-3">
-                  <div className="flex items-start gap-3">
-                    <CheckCircle className="h-5 w-5 text-brand-orange stroke-2 flex-shrink-0 mt-1" />
-                    <span className="text-base md:text-lg text-brand-gray-medium">
-                      Aandacht beter richten op wat belangrijk is.
-                    </span>
-                  </div>
-                  <div className="flex items-start gap-3">
-                    <CheckCircle className="h-5 w-5 text-brand-orange stroke-2 flex-shrink-0 mt-1" />
-                    <span className="text-base md:text-lg text-brand-gray-medium">Aandacht langer vasthouden.</span>
-                  </div>
-                  <div className="flex items-start gap-3">
-                    <CheckCircle className="h-5 w-5 text-brand-orange stroke-2 flex-shrink-0 mt-1" />
-                    <span className="text-base md:text-lg text-brand-gray-medium">
-                      Minder afgeleid door onbelangrijke informatie.
-                    </span>
-                  </div>
                 </div>
               </div>
             </div>
