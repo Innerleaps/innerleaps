@@ -66,9 +66,11 @@ const DeMethode = () => {
             <div className="space-y-6 order-1 lg:order-2">
               <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
                 Waar zijn je gedachten terwijl je tanden poetst? Of tijdens die meeting? Ons brein produceert constant
-                gedachten. Soms is dat nuttig maar meestal willen we onze aandacht juist bewust richten. Scherp zijn bij
-                die belangrijke meeting, met focus dat belangrijke rapport maken of juist even echt kunnen genieten
-                tijdens dat ene momentje en niet denken aan werk of die ruzie.
+                gedachten. Soms is dat nuttig maar meestal willen we onze aandacht juist bewust richten.
+              </p>
+              <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
+                Scherp zijn bij die belangrijke meeting, met focus dat belangrijke rapport maken of juist even echt
+                kunnen genieten tijdens dat ene momentje en niet denken aan werk of die ruzie.
               </p>
               <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
                 En dat trainen we. Elke week worden deelnemers uitgedaagd hun aandacht bewust te richten op alledaagse
