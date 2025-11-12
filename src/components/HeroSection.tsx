@@ -2,6 +2,7 @@ import { useState, lazy, Suspense } from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowDown, Award, Star } from "lucide-react";
 import heroBackground from "@/assets/Vitaliteitsprogramma_presentatie_Innerleaps.png";
+import { TEXT_SHADOW_STRONG } from "@/styles/common";
 
 // Lazy load calculator modal for better initial performance
 const CalculatorModal = lazy(() => import("./CalculatorModal"));
@@ -161,18 +162,14 @@ const HeroSection = () => {
 
                 <h1
                   className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight font-heading break-words"
-                  style={{
-                    textShadow: "0 2px 8px rgba(0,0,0,0.5)",
-                  }}
+                  style={TEXT_SHADOW_STRONG}
                 >
                   Het <span className="text-brand-orange">vitaliteits{"\u00AD"}programma</span> dat{" "}
                   <span className="text-brand-orange">prestaties</span> versterkt{" "}
                 </h1>
                 <p
                   className="text-xl md:text-2xl text-blue-100 leading-relaxed break-words"
-                  style={{
-                    textShadow: "0 2px 8px rgba(0,0,0,0.5)",
-                  }}
+                  style={TEXT_SHADOW_STRONG}
                 >
                   Wetenschappelijk onderbouwd en resultaatgericht vitaliteits{"\u00AD"}programma. Deelnemers nemen
                   eigenaarschap over hun stresslevel, worden veerkrachtiger én productiever.
@@ -202,9 +199,7 @@ const HeroSection = () => {
                   <div className="w-full space-y-3 sm:space-y-4">
                     <div className="flex items-center justify-between w-full p-2.5 sm:p-3 lg:p-4 bg-brand-purple/90 rounded-lg">
                       <span
-                        style={{
-                          textShadow: "0 2px 8px rgba(0,0,0,0.5)",
-                        }}
+                        style={TEXT_SHADOW_STRONG}
                         className="text-xs sm:text-sm md:text-base lg:text-lg text-white font-normal"
                       >
                         Uitval risico
@@ -213,9 +208,7 @@ const HeroSection = () => {
                     </div>
                     <div className="flex items-center justify-between w-full p-2.5 sm:p-3 lg:p-4 bg-brand-purple/90 rounded-lg">
                       <span
-                        style={{
-                          textShadow: "0 2px 8px rgba(0,0,0,0.5)",
-                        }}
+                        style={TEXT_SHADOW_STRONG}
                         className="text-xs sm:text-sm md:text-base lg:text-lg text-white font-normal"
                       >
                         Verzuim
@@ -224,9 +217,7 @@ const HeroSection = () => {
                     </div>
                     <div className="flex items-center justify-between w-full p-2.5 sm:p-3 lg:p-4 bg-brand-purple/90 rounded-lg">
                       <span
-                        style={{
-                          textShadow: "0 2px 8px rgba(0,0,0,0.5)",
-                        }}
+                        style={TEXT_SHADOW_STRONG}
                         className="text-xs sm:text-sm md:text-base lg:text-lg text-white font-normal"
                       >
                         Productiviteit
@@ -235,9 +226,7 @@ const HeroSection = () => {
                     </div>
                     <div className="flex items-center justify-between w-full p-2.5 sm:p-3 lg:p-4 bg-brand-purple/90 rounded-lg">
                       <span
-                        style={{
-                          textShadow: "0 2px 8px rgba(0,0,0,0.5)",
-                        }}
+                        style={TEXT_SHADOW_STRONG}
                         className="text-xs sm:text-sm md:text-base lg:text-lg text-white font-normal"
                       >
                         Wetenschappelijk onderzoek
