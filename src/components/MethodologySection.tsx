@@ -5,7 +5,7 @@ import trainingImage from "@/assets/training_voor_betere_prestatie_minder_stress
 
 const MethodologySection = memo(() => {
   return (
-    <section className="section-padding bg-brand-off-white">
+    <section className="section-padding bg-white">
       <div className="container-custom space-y-24 md:space-y-32 lg:space-y-40">
         {/* Blok 1 - De Methode */}
         <div className="space-y-8 lg:space-y-12">
