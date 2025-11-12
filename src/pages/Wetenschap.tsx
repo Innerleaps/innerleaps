@@ -1,12 +1,14 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, lazy, Suspense } from "react";
 import SimplifiedNavigation from "@/components/SimplifiedNavigation";
 import StickyCtaButtons from "@/components/StickyCtaButtons";
-import ROICalculator from "@/components/ROICalculator";
 import Footer from "@/components/Footer";
 import { Brain, Heart, Shield, CheckCircle, Target, Award, TrendingUp, FileText, Zap } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import LeadMagnetModal from "@/components/LeadMagnetModal";
 import brainActivityImage from "@/assets/hersenen_aandachttraining.png";
+
+// Lazy load heavy components
+const ROICalculator = lazy(() => import("@/components/ROICalculator"));
+const LeadMagnetModal = lazy(() => import("@/components/LeadMagnetModal"));
 const Wetenschap = () => {
   const [isLeadMagnetOpen, setIsLeadMagnetOpen] = useState(false);
 
@@ -538,13 +540,19 @@ const Wetenschap = () => {
         </div>
       </section>
 
-      <ROICalculator />
+      <Suspense fallback={<div className="section-padding"><div className="container-custom text-center">Laden...</div></div>}>
+        <ROICalculator />
+      </Suspense>
 
       <div id="contact">
         <Footer />
       </div>
 
-      <LeadMagnetModal isOpen={isLeadMagnetOpen} onClose={() => setIsLeadMagnetOpen(false)} />
+      <Suspense fallback={null}>
+        {isLeadMagnetOpen && (
+          <LeadMagnetModal isOpen={isLeadMagnetOpen} onClose={() => setIsLeadMagnetOpen(false)} />
+        )}
+      </Suspense>
     </div>
   );
 };

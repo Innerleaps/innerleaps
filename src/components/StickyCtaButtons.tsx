@@ -1,8 +1,9 @@
-
-import { useState, useEffect } from 'react';
+import { useState, useEffect, lazy, Suspense } from 'react';
 import { Button } from '@/components/ui/button';
-import CalculatorModal from './CalculatorModal';
 import { useLocation } from 'react-router-dom';
+
+// Lazy load calculator modal
+const CalculatorModal = lazy(() => import('./CalculatorModal'));
 
 const StickyCtaButtons = () => {
   const [isCalculatorOpen, setIsCalculatorOpen] = useState(false);
@@ -63,10 +64,15 @@ const StickyCtaButtons = () => {
         </Button>
       </div>
 
-      <CalculatorModal 
-        isOpen={isCalculatorOpen} 
-        onClose={() => setIsCalculatorOpen(false)} 
-      />
+      {/* Lazy load calculator modal */}
+      <Suspense fallback={null}>
+        {isCalculatorOpen && (
+          <CalculatorModal 
+            isOpen={isCalculatorOpen} 
+            onClose={() => setIsCalculatorOpen(false)} 
+          />
+        )}
+      </Suspense>
     </>
   );
 };
