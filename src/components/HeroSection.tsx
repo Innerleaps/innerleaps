@@ -143,6 +143,7 @@ const HeroSection = () => {
             className="w-full h-full object-cover"
             fetchPriority="high"
             loading="eager"
+            decoding="async"
           />
           <div className="absolute inset-0 bg-black/50" />
         </div>
@@ -282,6 +283,7 @@ const HeroSection = () => {
                     src={logo.src}
                     alt={logo.alt}
                     loading="lazy"
+                    decoding="async"
                     className="h-8 sm:h-10 md:h-12 object-contain flex-shrink-0 opacity-100 transition-all"
                   />
                 ))}
