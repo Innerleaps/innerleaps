@@ -32,7 +32,7 @@ const DeMethode = () => {
       <section className="section-padding bg-white">
         <div className="container-custom">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-brand-purple text-center mb-12">
-            Geplande concentratietraining <span className="text-brand-orange">12 minuten</span> per dag
+            <span className="text-brand-orange">Geplande</span> concentratietraining
           </h2>
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             <div className="space-y-6">
@@ -65,7 +65,7 @@ const DeMethode = () => {
       <section className="section-padding bg-white">
         <div className="container-custom">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-brand-purple text-center mb-12">
-            Training in het <span className="text-brand-orange">dagelijks leven</span>
+            Concentratietraining in het <span className="text-brand-orange">dagelijks leven</span>
           </h2>
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             <div className="rounded-xl shadow-lg overflow-hidden order-2 lg:order-1">
@@ -134,45 +134,45 @@ const DeMethode = () => {
               Klaar om de methode ook echt toe te passen? Bekijk hier onze programma's.
             </p>
           </div>
-          
+
           <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
             {/* Vitaliteitsprogramma Button */}
-            <Link 
+            <Link
               to="/vitaliteitsprogramma"
               className="group bg-white hover:bg-brand-blue transition-all duration-300 rounded-xl shadow-lg p-8 text-center"
             >
-          <h3 className="text-2xl font-bold text-brand-purple group-hover:text-white transition-colors duration-300 mb-4">
-            Vitaliteitsprogramma
-          </h3>
+              <h3 className="text-2xl font-bold text-brand-purple group-hover:text-white transition-colors duration-300 mb-4">
+                Vitaliteitsprogramma
+              </h3>
               <p className="text-brand-gray-medium group-hover:text-white/90 transition-colors duration-300">
                 Voor organisaties en werkgevers
               </p>
             </Link>
 
             {/* Stressmanagement Button */}
-            <Link 
+            <Link
               to="/stressmanagement-programma"
               className="group bg-white hover:bg-brand-blue transition-all duration-300 rounded-xl shadow-lg p-8 text-center"
             >
-          <h3 className="text-2xl font-bold text-brand-purple group-hover:text-white transition-colors duration-300 mb-4">
-            Stressmanagement
-          </h3>
-          <p className="text-brand-gray-medium group-hover:text-white/90 transition-colors duration-300">
-            Minder spanning & druk voor werknemers
-          </p>
+              <h3 className="text-2xl font-bold text-brand-purple group-hover:text-white transition-colors duration-300 mb-4">
+                Stressmanagement
+              </h3>
+              <p className="text-brand-gray-medium group-hover:text-white/90 transition-colors duration-300">
+                Minder spanning & druk voor werknemers
+              </p>
             </Link>
 
             {/* Prestatie Programma Button */}
-            <Link 
+            <Link
               to="/prestatie-programma"
               className="group bg-white hover:bg-brand-blue transition-all duration-300 rounded-xl shadow-lg p-8 text-center"
             >
-          <h3 className="text-2xl font-bold text-brand-purple group-hover:text-white transition-colors duration-300 mb-4">
-            Prestatieprogramma
-          </h3>
-          <p className="text-brand-gray-medium group-hover:text-white/90 transition-colors duration-300">
-            Als werknemer beter presteren met meer focus
-          </p>
+              <h3 className="text-2xl font-bold text-brand-purple group-hover:text-white transition-colors duration-300 mb-4">
+                Prestatieprogramma
+              </h3>
+              <p className="text-brand-gray-medium group-hover:text-white/90 transition-colors duration-300">
+                Als werknemer beter presteren met meer focus
+              </p>
             </Link>
           </div>
         </div>
