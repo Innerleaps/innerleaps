@@ -15,13 +15,14 @@ const MethodologySection = () => {
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             <div className="space-y-6">
               <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
-                De kern van onze methode is het <strong>trainen</strong> van de "<strong>aandachtsspier</strong>". Zo versterken deelnemers de Neocortex,
-                het breindeel dat fungeert als "controlecentrum" voor rationele keuzes, focus en het bewust opmerken van
-                stresssignalen. Het resultaat is minder stress, lager verzuim en betere prestaties.
+                De kern van onze methode is het <strong>trainen</strong> van de "<strong>aandachtsspier</strong>". Zo
+                versterken deelnemers de Neocortex, het breindeel dat fungeert als "<strong>controlecentrum</strong>"
+                voor rationele keuzes, focus en het bewust opmerken van stresssignalen. Het resultaat is{" "}
+                <strong>minder stress</strong>, <strong>lager verzuim</strong> en <strong>betere prestaties</strong>.
               </p>
               <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
-                Het trainen van je brein klinkt bijna te mooi om waar te zijn maar meer dan 40 jaar wetenschappelijk onderzoek bewijst dat
-                het écht werkt en niet zo'n klein beetje ook.
+                Het trainen van je brein klinkt bijna te mooi om waar te zijn maar meer dan 40 jaar wetenschappelijk
+                onderzoek bewijst dat het écht werkt en niet zo'n klein beetje ook.
               </p>
             </div>
             <div>
