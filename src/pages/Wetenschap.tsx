@@ -77,9 +77,7 @@ const Wetenschap = () => {
               <div className="p-3 rounded-lg bg-brand-orange/5 w-fit mx-auto">
                 <Target className="h-8 w-8 text-brand-orange stroke-2" />
               </div>
-              <h3 className="text-xl md:text-2xl font-bold text-brand-gray-dark text-center">
-                Aandachts{"\u00AD"}controle
-              </h3>
+              <h3 className="text-xl md:text-2xl font-bold text-brand-gray-dark text-center">Concentratie</h3>
               <div className="space-y-3">
                 <div className="flex items-start gap-3">
                   <CheckCircle className="h-5 w-5 text-brand-orange stroke-2 flex-shrink-0 mt-1" />
