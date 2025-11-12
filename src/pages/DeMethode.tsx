@@ -6,7 +6,8 @@ const DeMethode = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-  return <div className="min-h-screen bg-white">
+  return (
+    <div className="min-h-screen bg-white">
       <SimplifiedNavigation />
       <StickyCtaButtons />
 
@@ -41,8 +42,8 @@ const DeMethode = () => {
               </p>
               <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
                 Dit is de crux van de oefening: het moment dat je opmerkt dat je bent afgedwaald, dát is de push-up. Je
-                brengt je focus terug naar je ademhaling. Opnieuw. En opnieuw. Dit versterkt je concentratie en
-                bewustzijn van je lichaamssignalen, zoals push-ups je spieren versterken.
+                brengt je focus terug naar de oefening. Opnieuw. En opnieuw. Dit versterkt je concentratie en bewustzijn
+                van je lichaamssignalen, zoals push-ups je spieren versterken.
               </p>
             </div>
             <div className="aspect-square bg-gray-200 rounded-xl shadow-lg flex items-center justify-center">
@@ -108,6 +109,7 @@ const DeMethode = () => {
       </section>
 
       <Footer showNavigation={false} />
-    </div>;
+    </div>
+  );
 };
 export default DeMethode;
