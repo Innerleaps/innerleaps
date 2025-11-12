@@ -153,12 +153,16 @@ const Wetenschap = () => {
               <div className="space-y-3">
                 <div className="flex items-start gap-3">
                   <CheckCircle className="h-5 w-5 text-brand-orange stroke-2 flex-shrink-0 mt-1" />
-                  <span className="text-base md:text-lg text-brand-gray-medium">Beter plannen van handelingen.</span>
+                  <span className="text-base md:text-lg text-brand-gray-medium">Beter plannen en organiseren.</span>
+                </div>
+                <div className="flex items-start gap-3">
+                  <CheckCircle className="h-5 w-5 text-brand-orange stroke-2 flex-shrink-0 mt-1" />
+                  <span className="text-base md:text-lg text-brand-gray-medium">Doelen bepalen en volhouden.</span>
                 </div>
                 <div className="flex items-start gap-3">
                   <CheckCircle className="h-5 w-5 text-brand-orange stroke-2 flex-shrink-0 mt-1" />
                   <span className="text-base md:text-lg text-brand-gray-medium">
-                    Doelen beter bepalen en volhouden.
+                    Strategieën bedenken en prioriteiten bepalen.
                   </span>
                 </div>
               </div>
