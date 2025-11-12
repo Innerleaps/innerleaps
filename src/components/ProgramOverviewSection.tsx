@@ -5,7 +5,7 @@ const ProgramOverviewSection = () => {
     {
       icon: Clock,
       title: "Workshops",
-      description: "6 groepsworkshops van 60 minuten door één van onze geaccrediteerde trainers.",
+      description: "6 workshops van 60 minuten door één van onze geaccrediteerde trainers, op locatie of online.",
     },
     {
       icon: Sliders,
@@ -17,7 +17,7 @@ const ProgramOverviewSection = () => {
       icon: Users,
       title: "Veilige setting",
       description:
-        "Deelnemers houden controle. Ze reageren met het opsteken van handen op vragen van de trainer. Persoonlijke toelichting is optioneel.",
+        "Groepen van maximaal 15 deelnemers. Leren door te reageren op concrete vragen in plaats van persoonlijke verhalen delen.",
     },
     {
       icon: Target,
@@ -31,14 +31,14 @@ const ProgramOverviewSection = () => {
       <div className="container-custom space-y-12">
         {/* Title */}
         <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-center text-brand-purple">
-          Het <span className="text-brand-orange">programma</span> voor échte{" "}
+          Het <span className="text-brand-orange">programma</span> voor echte{" "}
           <span className="text-brand-orange">gedragsverandering</span>
         </h2>
 
         {/* Intro tekst */}
         <div className="max-w-4xl mx-auto">
           <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed text-center">
-            Ons wetenschappelijk bewezen kernprogramma duurt 6 weken. Vraag naar de mogelijkheden voor maatwerk.
+            Ons wetenschappelijke kernprogramma duurt 6 weken. Vraag naar de mogelijkheden voor maatwerk.
           </p>
         </div>
 

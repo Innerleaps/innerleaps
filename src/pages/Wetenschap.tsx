@@ -24,21 +24,17 @@ const Wetenschap = () => {
         <div className="container-custom space-y-8 lg:space-y-12">
           {/* Titel over volledige breedte */}
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-center text-brand-gray-dark leading-tight">
-            Train je <span className="text-brand-orange">aandacht</span>, versterk je{" "}
-            <span className="text-brand-orange">brein</span>
+            Het vitaliteit en performance programma waar we <span className="text-brand-orange">aandacht trainen</span>
           </h2>
 
           {/* Body text links, plaatje rechts */}
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             <div>
               <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
-                In onze programma’s trainen deelnemers hun aandacht. Je kan het vergelijken met het trainen van je
-                spieren in de sportschool. Met onze "push-ups voor het brein" versterken de frontale cortex en
-                fronto-pariëtale netwerken. <br />
-                <br />
-                Klinkt ingewikkeld maar simpel gezegd is dit ons "controlecentrum". Hierdoor registreer je signalen en
-                informatie duidelijker waardoor je betere keuzes kan maken. Kijk, met een sterker controlecentrum
-                versteken deze functies:
+                In ons vitaliteit- en effectiviteit programma trainen deelnemers hun aandacht. Net zoals je spieren
+                traint in de sportschool, train je hier je focus. Hiermee neemt de activiteit in de Frontale cortex en
+                Fronto-pariëtale netwerken toe. Tegelijkertijd vragen deze minder energie. Hierdoor wordt informatie
+                beter verwerkt, gerichter vastgehouden en efficiënter ingezet.
               </p>
             </div>
             <div>
@@ -104,22 +100,26 @@ const Wetenschap = () => {
               </div>
             </div>
 
-            {/* Card 3: Cognitieve Efficiëntie */}
+            {/* Card 3: Executieve Planning */}
             <div className="bg-white p-6 rounded-lg space-y-4 md:col-span-2">
               <div className="p-3 rounded-lg bg-brand-orange/5 w-fit mx-auto">
-                <Zap className="h-8 w-8 text-brand-orange stroke-2" />
+                <FileText className="h-8 w-8 text-brand-orange stroke-2" />
               </div>
-              <h3 className="text-xl md:text-2xl font-bold text-brand-gray-dark text-center">Cognitieve Efficiëntie</h3>
+              <h3 className="text-xl md:text-2xl font-bold text-brand-gray-dark text-center">Executieve Planning</h3>
               <div className="space-y-3">
                 <div className="flex items-start gap-3">
                   <CheckCircle className="h-5 w-5 text-brand-orange stroke-2 flex-shrink-0 mt-1" />
-                  <span className="text-base md:text-lg text-brand-gray-medium">
-                    Dezelfde taken vragen minder hersenenergie.
-                  </span>
+                  <span className="text-base md:text-lg text-brand-gray-medium">Beter plannen en organiseren.</span>
                 </div>
                 <div className="flex items-start gap-3">
                   <CheckCircle className="h-5 w-5 text-brand-orange stroke-2 flex-shrink-0 mt-1" />
-                  <span className="text-base md:text-lg text-brand-gray-medium">Sneller schakelen tussen taken.</span>
+                  <span className="text-base md:text-lg text-brand-gray-medium">Doelen bepalen en volhouden.</span>
+                </div>
+                <div className="flex items-start gap-3">
+                  <CheckCircle className="h-5 w-5 text-brand-orange stroke-2 flex-shrink-0 mt-1" />
+                  <span className="text-base md:text-lg text-brand-gray-medium">
+                    Strategieën bedenken en prioriteiten bepalen.
+                  </span>
                 </div>
               </div>
             </div>
@@ -144,22 +144,22 @@ const Wetenschap = () => {
               </div>
             </div>
 
-            {/* Card 5: Executieve Planning (gecentreerd, start kolom 4) */}
+            {/* Card 5: Cognitieve Efficiëntie (gecentreerd, start kolom 4) */}
             <div className="bg-white p-6 rounded-lg space-y-4 md:col-span-2 md:col-start-4">
               <div className="p-3 rounded-lg bg-brand-orange/5 w-fit mx-auto">
-                <FileText className="h-8 w-8 text-brand-orange stroke-2" />
+                <Zap className="h-8 w-8 text-brand-orange stroke-2" />
               </div>
-              <h3 className="text-xl md:text-2xl font-bold text-brand-gray-dark text-center">Executieve Planning</h3>
+              <h3 className="text-xl md:text-2xl font-bold text-brand-gray-dark text-center">Cognitieve Efficiëntie</h3>
               <div className="space-y-3">
                 <div className="flex items-start gap-3">
                   <CheckCircle className="h-5 w-5 text-brand-orange stroke-2 flex-shrink-0 mt-1" />
-                  <span className="text-base md:text-lg text-brand-gray-medium">Beter plannen van handelingen.</span>
+                  <span className="text-base md:text-lg text-brand-gray-medium">
+                    Dezelfde taken vragen minder hersenenergie.
+                  </span>
                 </div>
                 <div className="flex items-start gap-3">
                   <CheckCircle className="h-5 w-5 text-brand-orange stroke-2 flex-shrink-0 mt-1" />
-                  <span className="text-base md:text-lg text-brand-gray-medium">
-                    Doelen beter bepalen en volhouden.
-                  </span>
+                  <span className="text-base md:text-lg text-brand-gray-medium">Sneller schakelen tussen taken.</span>
                 </div>
               </div>
             </div>
