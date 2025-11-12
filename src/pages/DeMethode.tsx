@@ -1,7 +1,11 @@
 import { useEffect } from "react";
+import { Link } from "react-router-dom";
 import SimplifiedNavigation from "@/components/SimplifiedNavigation";
 import StickyCtaButtons from "@/components/StickyCtaButtons";
 import Footer from "@/components/Footer";
+import concentratieOefening from "@/assets/Concentratietraining_oefening.png";
+import concentratieDagelijks from "@/assets/Concentratietraining_in_het_dagelijks_leven.jpeg";
+import concentratieWorkshop from "@/assets/Concentratietraining_theorie_in_workshop.png";
 const DeMethode = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -46,8 +50,12 @@ const DeMethode = () => {
                 van je lichaamssignalen, zoals push-ups je spieren versterken.
               </p>
             </div>
-            <div className="aspect-square bg-gray-200 rounded-xl shadow-lg flex items-center justify-center">
-              <p className="text-xl text-gray-500 font-medium">Afbeelding komt hier</p>
+            <div className="rounded-xl shadow-lg overflow-hidden">
+              <img
+                src={concentratieOefening}
+                alt="Concentratietraining oefening - Focus terugpakken cyclus"
+                className="w-full h-full object-cover"
+              />
             </div>
           </div>
         </div>
@@ -60,8 +68,12 @@ const DeMethode = () => {
             Training in het <span className="text-brand-orange">dagelijks leven</span>
           </h2>
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-            <div className="aspect-square bg-gray-200 rounded-xl shadow-lg flex items-center justify-center order-2 lg:order-1">
-              <p className="text-xl text-gray-500 font-medium">Afbeelding komt hier</p>
+            <div className="rounded-xl shadow-lg overflow-hidden order-2 lg:order-1">
+              <img
+                src={concentratieDagelijks}
+                alt="Concentratietraining in het dagelijks leven"
+                className="w-full h-full object-cover"
+              />
             </div>
             <div className="space-y-6 order-1 lg:order-2">
               <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
@@ -85,7 +97,7 @@ const DeMethode = () => {
       <section className="section-padding bg-white">
         <div className="container-custom">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-brand-purple text-center mb-12">
-            3) Wekelijkse <span className="text-brand-orange">groepsworkshops</span>, werkboek en theorie
+            Wekelijkse <span className="text-brand-orange">groepsworkshops</span>, werkboek en theorie
           </h2>
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             <div className="space-y-6">
@@ -103,9 +115,65 @@ const DeMethode = () => {
                 die wél werken.
               </p>
             </div>
-            <div className="aspect-square bg-gray-200 rounded-xl shadow-lg flex items-center justify-center">
-              <p className="text-xl text-gray-500 font-medium">Afbeelding komt hier</p>
+            <div className="rounded-xl shadow-lg overflow-hidden">
+              <img
+                src={concentratieWorkshop}
+                alt="Concentratietraining theorie in workshop"
+                className="w-full h-full object-cover"
+              />
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Programma's CTA Section */}
+      <section className="section-padding bg-brand-off-white">
+        <div className="container-custom">
+          <div className="text-center mb-12">
+            <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed max-w-3xl mx-auto">
+              Klaar om de methode ook echt toe te passen? Bekijk hier onze programma's.
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+            {/* Vitaliteitsprogramma Button */}
+            <Link 
+              to="/vitaliteitsprogramma"
+              className="group bg-white hover:bg-brand-blue transition-all duration-300 rounded-xl shadow-lg p-8 text-center"
+            >
+              <h3 className="text-2xl font-bold text-brand-purple group-hover:text-white transition-colors duration-300 mb-4">
+                Vitaliteits-programma
+              </h3>
+              <p className="text-brand-gray-medium group-hover:text-white/90 transition-colors duration-300">
+                Voor organisaties en werkgevers
+              </p>
+            </Link>
+
+            {/* Stressmanagement Button */}
+            <Link 
+              to="/stressmanagement-programma"
+              className="group bg-white hover:bg-brand-blue transition-all duration-300 rounded-xl shadow-lg p-8 text-center"
+            >
+              <h3 className="text-2xl font-bold text-brand-purple group-hover:text-white transition-colors duration-300 mb-4">
+                Stress-management
+              </h3>
+              <p className="text-brand-gray-medium group-hover:text-white/90 transition-colors duration-300">
+                Minder spanning & druk
+              </p>
+            </Link>
+
+            {/* Prestatie Programma Button */}
+            <Link 
+              to="/prestatie-programma"
+              className="group bg-white hover:bg-brand-blue transition-all duration-300 rounded-xl shadow-lg p-8 text-center"
+            >
+              <h3 className="text-2xl font-bold text-brand-purple group-hover:text-white transition-colors duration-300 mb-4">
+                Prestatie-programma
+              </h3>
+              <p className="text-brand-gray-medium group-hover:text-white/90 transition-colors duration-300">
+                Met meer focus beter presteren
+              </p>
+            </Link>
           </div>
         </div>
       </section>
