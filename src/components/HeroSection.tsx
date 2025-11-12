@@ -171,7 +171,7 @@ const HeroSection = () => {
                   }}
                 >
                   Wetenschappelijk onderbouwd en resultaatgericht vitaliteits{"\u00AD"}programma. Deelnemers nemen
-                  eigenaarschap over hun stresslevel, worden veerkrachtiger én productiver.
+                  eigenaarschap over hun stresslevel, worden veerkrachtiger én productiever.
                 </p>
               </div>
 
