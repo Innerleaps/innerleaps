@@ -6,8 +6,7 @@ const DeMethode = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-  return (
-    <div className="min-h-screen bg-white">
+  return <div className="min-h-screen bg-white">
       <SimplifiedNavigation />
       <StickyCtaButtons />
 
@@ -57,7 +56,7 @@ const DeMethode = () => {
       <section className="section-padding bg-white">
         <div className="container-custom">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-brand-purple text-center mb-12">
-            2) Training in het <span className="text-brand-orange">Dagelijks Leven</span>
+            Training in het Dagelijks Leven <span className="text-brand-orange">Dagelijks Leven</span>
           </h2>
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             <div className="aspect-square bg-gray-200 rounded-xl shadow-lg flex items-center justify-center order-2 lg:order-1">
@@ -109,7 +108,6 @@ const DeMethode = () => {
       </section>
 
       <Footer showNavigation={false} />
-    </div>
-  );
+    </div>;
 };
 export default DeMethode;
