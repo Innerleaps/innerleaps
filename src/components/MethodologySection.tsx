@@ -8,7 +8,7 @@ const MethodologySection = () => {
         {/* Blok 1 - De Methode */}
         <div className="space-y-8 lg:space-y-12">
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-center text-brand-purple leading-tight">
-            Verlaag <span className="text-brand-orange">verzuim </span> én boost
+            Verlaag <span className="text-brand-orange">verzuim </span> én boost {""}
             <span className="text-brand-orange">prestaties</span>
           </h2>
 
