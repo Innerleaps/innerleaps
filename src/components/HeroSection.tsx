@@ -1,8 +1,10 @@
-import { useState } from "react";
+import { useState, lazy, Suspense } from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowDown, Award, Star } from "lucide-react";
-import CalculatorModal from "./CalculatorModal";
 import heroBackground from "@/assets/Vitaliteitsprogramma_presentatie_Innerleaps.png";
+
+// Lazy load calculator modal for better initial performance
+const CalculatorModal = lazy(() => import("./CalculatorModal"));
 
 // Client logos - Light versions with transparent backgrounds
 import oliverLogo from "@/assets/Vitaliteitsprogramma_Oliver_Wyman_light-2.png";
@@ -29,6 +31,7 @@ import carelLogo from "@/assets/Vitaliteitsprogramma_Carel_Lurvink_light.png";
 import paConsultingLogo from "@/assets/Vitaliteitsprogramma_PA_consulting_light.png";
 import nobelLogo from "@/assets/Vitaliteitsprogramma_nobel_recruitment_light.png";
 import hollandColoursLogo from "@/assets/Vitaliteitsprogramma_Holland_Colours_light.png";
+
 const HeroSection = () => {
   const [isCalculatorOpen, setIsCalculatorOpen] = useState(false);
   const logos = [
@@ -269,7 +272,7 @@ const HeroSection = () => {
             </div>
           </div>
 
-          {/* Scrolling Logos */}
+          {/* Scrolling Logos - Lazy loaded below the fold */}
           <div className="w-full mt-8 sm:mt-12 lg:mt-16">
             <div className="relative overflow-hidden [mask-image:linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)]">
               <div className="flex gap-8 animate-marquee">
@@ -278,6 +281,7 @@ const HeroSection = () => {
                     key={index}
                     src={logo.src}
                     alt={logo.alt}
+                    loading="lazy"
                     className="h-8 sm:h-10 md:h-12 object-contain flex-shrink-0 opacity-100 transition-all"
                   />
                 ))}
@@ -291,7 +295,15 @@ const HeroSection = () => {
         </div>
       </section>
 
-      <CalculatorModal isOpen={isCalculatorOpen} onClose={() => setIsCalculatorOpen(false)} />
+      {/* Calculator Modal - lazy loaded */}
+      <Suspense fallback={null}>
+        {isCalculatorOpen && (
+          <CalculatorModal 
+            isOpen={isCalculatorOpen} 
+            onClose={() => setIsCalculatorOpen(false)} 
+          />
+        )}
+      </Suspense>
     </>
   );
 };

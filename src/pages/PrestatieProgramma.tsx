@@ -1,9 +1,7 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, lazy, Suspense } from "react";
 import SimplifiedNavigation from "@/components/SimplifiedNavigation";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
-import MasterclassFormModal from "@/components/MasterclassFormModal";
-import ProgramRegistrationModal from "@/components/ProgramRegistrationModal";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import {
   Brain,
@@ -54,6 +52,10 @@ import carelLogo from "@/assets/Vitaliteitsprogramma_Carel_Lurvink_light.png";
 import paConsultingLogo from "@/assets/Vitaliteitsprogramma_PA_consulting_light.png";
 import nobelLogo from "@/assets/Vitaliteitsprogramma_nobel_recruitment_light.png";
 import hollandColoursLogo from "@/assets/Vitaliteitsprogramma_Holland_Colours_light.png";
+
+// Lazy load modals for better performance
+const MasterclassFormModal = lazy(() => import("@/components/MasterclassFormModal"));
+const ProgramRegistrationModal = lazy(() => import("@/components/ProgramRegistrationModal"));
 
 // Trust section logos
 import vmbLogo from "@/assets/Geaccrediteerde_vitaliteitstrainers_bij_Innerleaps.png";
@@ -766,8 +768,12 @@ const PrestatieProgramma = () => {
             </div>
           </div>
 
-          {/* Modal */}
-          <MasterclassFormModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
+          {/* Modal - lazy loaded */}
+          <Suspense fallback={null}>
+            {isModalOpen && (
+              <MasterclassFormModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
+            )}
+          </Suspense>
         </div>
       </section>
 
@@ -958,11 +964,16 @@ const PrestatieProgramma = () => {
         </Button>
       </div>
 
-      <ProgramRegistrationModal
-        isOpen={isRegistrationModalOpen}
-        onClose={() => setIsRegistrationModalOpen(false)}
-        programType="prestatie"
-      />
+      {/* Program Registration Modal - lazy loaded */}
+      <Suspense fallback={null}>
+        {isRegistrationModalOpen && (
+          <ProgramRegistrationModal
+            isOpen={isRegistrationModalOpen}
+            onClose={() => setIsRegistrationModalOpen(false)}
+            programType="prestatie"
+          />
+        )}
+      </Suspense>
 
       <Footer showNavigation={false} />
     </div>

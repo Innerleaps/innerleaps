@@ -59,11 +59,12 @@ const TrustSection = () => {
                   <h3 className="text-2xl font-bold text-brand-purple mb-3">{item.title}</h3>
                   <p className="text-xl text-brand-gray-medium leading-relaxed mb-6">{item.description}</p>
                   <div className="flex flex-row gap-4 items-center flex-wrap">
-                    {item.logos.map((logo, logoIndex) => (
+                     {item.logos.map((logo, logoIndex) => (
                       <img
                         key={logoIndex}
                         src={logo.src}
                         alt={logo.alt}
+                        loading="lazy"
                         className={`object-contain ${logo.className}`}
                       />
                     ))}

@@ -1,8 +1,9 @@
-
 import { Button } from '@/components/ui/button';
 import { Calendar, CheckCircle, Target, TrendingUp, ArrowRight, Handshake, Presentation, UserPlus, Users, BarChart3 } from 'lucide-react';
-import { useState } from 'react';
-import CalculatorModal from './CalculatorModal';
+import { useState, lazy, Suspense } from 'react';
+
+// Lazy load calculator modal
+const CalculatorModal = lazy(() => import('./CalculatorModal'));
 
 const ProcessSection = () => {
   const [isCalculatorOpen, setIsCalculatorOpen] = useState(false);
@@ -104,10 +105,14 @@ const ProcessSection = () => {
         </div>
       </section>
 
-      <CalculatorModal 
-        isOpen={isCalculatorOpen} 
-        onClose={() => setIsCalculatorOpen(false)} 
-      />
+      <Suspense fallback={null}>
+        {isCalculatorOpen && (
+          <CalculatorModal 
+            isOpen={isCalculatorOpen} 
+            onClose={() => setIsCalculatorOpen(false)} 
+          />
+        )}
+      </Suspense>
     </>
   );
 };
