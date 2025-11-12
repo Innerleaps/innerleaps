@@ -100,22 +100,22 @@ const Wetenschap = () => {
               </div>
             </div>
 
-            {/* Card 3: Cognitieve Efficiëntie */}
+            {/* Card 3: Executieve Planning */}
             <div className="bg-white p-6 rounded-lg space-y-4 md:col-span-2">
               <div className="p-3 rounded-lg bg-brand-orange/5 w-fit mx-auto">
-                <Zap className="h-8 w-8 text-brand-orange stroke-2" />
+                <FileText className="h-8 w-8 text-brand-orange stroke-2" />
               </div>
-              <h3 className="text-xl md:text-2xl font-bold text-brand-gray-dark text-center">Cognitieve Efficiëntie</h3>
+              <h3 className="text-xl md:text-2xl font-bold text-brand-gray-dark text-center">Executieve Planning</h3>
               <div className="space-y-3">
                 <div className="flex items-start gap-3">
                   <CheckCircle className="h-5 w-5 text-brand-orange stroke-2 flex-shrink-0 mt-1" />
-                  <span className="text-base md:text-lg text-brand-gray-medium">
-                    Dezelfde taken vragen minder hersenenergie.
-                  </span>
+                  <span className="text-base md:text-lg text-brand-gray-medium">Beter plannen van handelingen.</span>
                 </div>
                 <div className="flex items-start gap-3">
                   <CheckCircle className="h-5 w-5 text-brand-orange stroke-2 flex-shrink-0 mt-1" />
-                  <span className="text-base md:text-lg text-brand-gray-medium">Sneller schakelen tussen taken.</span>
+                  <span className="text-base md:text-lg text-brand-gray-medium">
+                    Doelen beter bepalen en volhouden.
+                  </span>
                 </div>
               </div>
             </div>
@@ -140,22 +140,22 @@ const Wetenschap = () => {
               </div>
             </div>
 
-            {/* Card 5: Executieve Planning (gecentreerd, start kolom 4) */}
+            {/* Card 5: Cognitieve Efficiëntie (gecentreerd, start kolom 4) */}
             <div className="bg-white p-6 rounded-lg space-y-4 md:col-span-2 md:col-start-4">
               <div className="p-3 rounded-lg bg-brand-orange/5 w-fit mx-auto">
-                <FileText className="h-8 w-8 text-brand-orange stroke-2" />
+                <Zap className="h-8 w-8 text-brand-orange stroke-2" />
               </div>
-              <h3 className="text-xl md:text-2xl font-bold text-brand-gray-dark text-center">Executieve Planning</h3>
+              <h3 className="text-xl md:text-2xl font-bold text-brand-gray-dark text-center">Cognitieve Efficiëntie</h3>
               <div className="space-y-3">
                 <div className="flex items-start gap-3">
                   <CheckCircle className="h-5 w-5 text-brand-orange stroke-2 flex-shrink-0 mt-1" />
-                  <span className="text-base md:text-lg text-brand-gray-medium">Beter plannen van handelingen.</span>
+                  <span className="text-base md:text-lg text-brand-gray-medium">
+                    Dezelfde taken vragen minder hersenenergie.
+                  </span>
                 </div>
                 <div className="flex items-start gap-3">
                   <CheckCircle className="h-5 w-5 text-brand-orange stroke-2 flex-shrink-0 mt-1" />
-                  <span className="text-base md:text-lg text-brand-gray-medium">
-                    Doelen beter bepalen en volhouden.
-                  </span>
+                  <span className="text-base md:text-lg text-brand-gray-medium">Sneller schakelen tussen taken.</span>
                 </div>
               </div>
             </div>
