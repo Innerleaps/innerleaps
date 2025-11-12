@@ -20,7 +20,7 @@ const MethodologySection = () => {
                 stresssignalen. Het resultaat is minder stress, lager verzuim en betere prestaties. <br />
                 <br />
                 Het trainen van je brein klinkt bijna te mooi om waar te zijn maar meer dan 40 jaar wetenschappelijk
-                onderzoek bewijst dat het écht werkt en niet zo’n klein beetje ook.
+                onderzoek bewijst dat het écht werkt, en niet zo’n klein beetje ook.
               </p>
             </div>
             <div>
