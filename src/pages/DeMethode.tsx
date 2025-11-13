@@ -48,9 +48,11 @@ const DeMethode = () => {
           </h1>
           <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
             Net zoals je spieren versterkt in de sportschool, train je met onze oefeningen je brein.{" "}
-            <strong>Push ups voor je brein</strong> dus. Je versterkt twee cruciale systemen: je{" "}
-            <strong>controlecentrum</strong> voor focus en bewuste keuzes, én je <strong>signaleringsysteem</strong> dat
-            stress opmerkt voordat het escaleert.
+            <strong>Push ups voor je brein</strong> dus.{" "}
+          </p>
+          <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
+            Je versterkt twee cruciale systemen: je <strong>controlecentrum</strong> voor focus en bewuste keuzes, én je{" "}
+            <strong>signaleringsysteem</strong> dat stress opmerkt voordat het escaleert.
           </p>
         </div>
       </section>
