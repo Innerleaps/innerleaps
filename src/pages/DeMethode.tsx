@@ -5,6 +5,7 @@ import StickyCtaButtons from "@/components/StickyCtaButtons";
 import Footer from "@/components/Footer";
 import { Brain, Target, Lightbulb, Shield, Zap, Heart, AlertCircle, Eye, CheckCircle, Clock, Users, FileText } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Card } from "@/components/ui/card";
 
 // Images
 import controlecentrumImage from "@/assets/Concentratietraining_voor_sterker_executieve_systeem.png";
@@ -215,9 +216,26 @@ const DeMethode = () => {
               <h3 className="text-xl md:text-2xl font-bold text-brand-gray-dark text-center">
                 Lichaamsbewustzijn & Waarneming
               </h3>
-              <p className="text-base md:text-lg text-brand-gray-medium">
-                Vroege waarschuwingssignalen oppikken. Je lichaam waarschuwt je voordat stress escaleert. Spanning in je schouders, een versnelde hartslag, oppervlakkige ademhaling. Door training vang je deze signalen eerder op. Je herkent stress voordat het problematisch wordt en kunt er bewust mee omgaan.
-              </p>
+              <div className="space-y-3">
+                <div className="flex items-start gap-3">
+                  <CheckCircle className="h-5 w-5 text-brand-orange stroke-2 flex-shrink-0 mt-1" />
+                  <span className="text-base md:text-lg text-brand-gray-medium">
+                    Eerder voelen dat je gestrest raakt.
+                  </span>
+                </div>
+                <div className="flex items-start gap-3">
+                  <CheckCircle className="h-5 w-5 text-brand-orange stroke-2 flex-shrink-0 mt-1" />
+                  <span className="text-base md:text-lg text-brand-gray-medium">
+                    Lichamelijke signalen opvangen voordat ze escaleren.
+                  </span>
+                </div>
+                <div className="flex items-start gap-3">
+                  <CheckCircle className="h-5 w-5 text-brand-orange stroke-2 flex-shrink-0 mt-1" />
+                  <span className="text-base md:text-lg text-brand-gray-medium">
+                    Subtiele waarschuwingen van je lichaam herkennen.
+                  </span>
+                </div>
+              </div>
             </div>
 
             {/* Card 2: Emotionele Signalering */}
@@ -228,9 +246,26 @@ const DeMethode = () => {
               <h3 className="text-xl md:text-2xl font-bold text-brand-gray-dark text-center">
                 Emotionele Signalering
               </h3>
-              <p className="text-base md:text-lg text-brand-gray-medium">
-                Herkennen wat aandacht vraagt. Dat ongemakkelijke gevoel tijdens een gesprek, die spanning voor een deadline. Je waarschuwingssysteem signaleert wat belangrijk is. Training versterkt deze alertheid. Je merkt sneller wanneer iets niet goed voelt en begrijpt beter wat je nodig hebt.
-              </p>
+              <div className="space-y-3">
+                <div className="flex items-start gap-3">
+                  <CheckCircle className="h-5 w-5 text-brand-orange stroke-2 flex-shrink-0 mt-1" />
+                  <span className="text-base md:text-lg text-brand-gray-medium">
+                    Merken wat belangrijk is en aandacht nodig heeft.
+                  </span>
+                </div>
+                <div className="flex items-start gap-3">
+                  <CheckCircle className="h-5 w-5 text-brand-orange stroke-2 flex-shrink-0 mt-1" />
+                  <span className="text-base md:text-lg text-brand-gray-medium">
+                    Sneller voelen dat iets niet goed zit.
+                  </span>
+                </div>
+                <div className="flex items-start gap-3">
+                  <CheckCircle className="h-5 w-5 text-brand-orange stroke-2 flex-shrink-0 mt-1" />
+                  <span className="text-base md:text-lg text-brand-gray-medium">
+                    Begrijpen welke emoties je waarschuwen.
+                  </span>
+                </div>
+              </div>
             </div>
 
             {/* Card 3: Zelfmonitoring & Bewustzijn */}
@@ -241,9 +276,26 @@ const DeMethode = () => {
               <h3 className="text-xl md:text-2xl font-bold text-brand-gray-dark text-center">
                 Zelfmonitoring & Bewustzijn
               </h3>
-              <p className="text-base md:text-lg text-brand-gray-medium">
-                Jezelf real-time observeren. Je waarschuwingssysteem houdt bij hoe het met je gaat, zelfs tijdens het werk. Je merkt eerder wanneer je focus verslapt, wanneer irritatie opkomt, of wanneer je lichaam om een pauze vraagt. Training versterkt dit interne alarmsysteem waardoor je fouten en problemen voorkomt.
-              </p>
+              <div className="space-y-3">
+                <div className="flex items-start gap-3">
+                  <CheckCircle className="h-5 w-5 text-brand-orange stroke-2 flex-shrink-0 mt-1" />
+                  <span className="text-base md:text-lg text-brand-gray-medium">
+                    Jezelf observeren terwijl je iets doet.
+                  </span>
+                </div>
+                <div className="flex items-start gap-3">
+                  <CheckCircle className="h-5 w-5 text-brand-orange stroke-2 flex-shrink-0 mt-1" />
+                  <span className="text-base md:text-lg text-brand-gray-medium">
+                    Fouten of problemen eerder signaleren.
+                  </span>
+                </div>
+                <div className="flex items-start gap-3">
+                  <CheckCircle className="h-5 w-5 text-brand-orange stroke-2 flex-shrink-0 mt-1" />
+                  <span className="text-base md:text-lg text-brand-gray-medium">
+                    Opmerken wat je lichaam je waarschuwt.
+                  </span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -387,56 +439,71 @@ const DeMethode = () => {
           <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
             <Link
               to="/vitaliteitsprogramma"
-              className="bg-white border-2 border-brand-blue p-6 rounded-lg hover:shadow-xl transition-all duration-300 group"
+              className="bg-brand-blue border-2 border-brand-blue p-6 rounded-lg hover:bg-brand-blue/90 transition-all duration-300 group"
             >
-              <h3 className="text-xl font-bold text-brand-purple mb-3 group-hover:text-brand-blue transition-colors">
+              <h3 className="text-xl font-bold text-white mb-3 group-hover:text-brand-orange transition-colors">
                 Vitaliteitsprogramma
               </h3>
-              <p className="text-base text-brand-gray-medium">Voor organisaties en werkgevers</p>
+              <p className="text-base text-white/90">Voor organisaties en werkgevers</p>
             </Link>
             <Link
               to="/stressmanagement-programma"
-              className="bg-white border-2 border-brand-blue p-6 rounded-lg hover:shadow-xl transition-all duration-300 group"
+              className="bg-brand-blue border-2 border-brand-blue p-6 rounded-lg hover:bg-brand-blue/90 transition-all duration-300 group"
             >
-              <h3 className="text-xl font-bold text-brand-purple mb-3 group-hover:text-brand-blue transition-colors">
+              <h3 className="text-xl font-bold text-white mb-3 group-hover:text-brand-orange transition-colors">
                 Stressmanagement
               </h3>
-              <p className="text-base text-brand-gray-medium">Minder spanning & druk voor werknemers</p>
+              <p className="text-base text-white/90">Minder spanning & druk voor werknemers</p>
             </Link>
             <Link
               to="/prestatie-programma"
-              className="bg-white border-2 border-brand-orange p-6 rounded-lg hover:shadow-xl transition-all duration-300 group"
+              className="bg-brand-blue border-2 border-brand-blue p-6 rounded-lg hover:bg-brand-blue/90 transition-all duration-300 group"
             >
-              <h3 className="text-xl font-bold text-brand-purple mb-3 group-hover:text-brand-orange transition-colors">
+              <h3 className="text-xl font-bold text-white mb-3 group-hover:text-brand-orange transition-colors">
                 Prestatieprogramma
               </h3>
-              <p className="text-base text-brand-gray-medium">Als werknemer beter presteren met meer focus</p>
+              <p className="text-base text-white/90">Als werknemer beter presteren met meer focus</p>
             </Link>
           </div>
         </div>
       </section>
 
       {/* Wetenschappelijke Bijlage Downloaden Sectie */}
-      <section className="section-padding bg-brand-off-white">
-        <div className="container-custom text-center space-y-8">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-brand-purple">
-            Exclusief wetenschappelijk rapport
-          </h2>
-          <p className="text-xl md:text-2xl text-brand-orange font-semibold max-w-3xl mx-auto">
-            De resultaten van 40 jaar onderzoek naar aandachttraining. Vraag het hier aan.
-          </p>
-          <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed max-w-3xl mx-auto">
-            Zelf de wetenschappelijke details bekijken? Ons academische rapport bundelt de laatste studies, analyses en
-            berekeningen rond de effecten van aandachttraining. Inclusief effectgroottes en pathway-analyses.
-          </p>
-          <Button
-            onClick={() => setIsLeadMagnetOpen(true)}
-            variant="secondary"
-            className="text-lg px-8 py-6 font-semibold"
-          >
-            <FileText className="mr-2 h-5 w-5" />
-            Aanvragen rapport
-          </Button>
+      <section className="section-padding bg-white">
+        <div className="container-custom">
+          <Card className="max-w-4xl mx-auto p-8 bg-brand-blue">
+            <div className="text-center space-y-6">
+              {/* Icon */}
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-white/10 rounded-full">
+                <FileText className="h-8 w-8 text-brand-orange" />
+              </div>
+              
+              {/* Title */}
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white">
+                Exclusief wetenschappelijk rapport
+              </h2>
+              
+              {/* Subtitle */}
+              <p className="text-xl md:text-2xl text-white font-semibold max-w-3xl mx-auto">
+                De resultaten van 40 jaar onderzoek naar aandachttraining. Vraag het hier aan.
+              </p>
+              
+              {/* Body */}
+              <p className="text-xl md:text-2xl text-white/90 leading-relaxed max-w-3xl mx-auto">
+                Zelf de wetenschappelijke details bekijken? Ons academische rapport bundelt de laatste studies, analyses en
+                berekeningen rond de effecten van aandachttraining. Inclusief effectgroottes en pathway-analyses.
+              </p>
+              
+              {/* Button */}
+              <Button
+                onClick={() => setIsLeadMagnetOpen(true)}
+                className="bg-brand-orange hover:bg-brand-orange/90 text-white font-semibold text-lg px-8 py-6"
+              >
+                <FileText className="mr-2 h-5 w-5" />
+                Aanvragen rapport
+              </Button>
+            </div>
+          </Card>
         </div>
       </section>
 
