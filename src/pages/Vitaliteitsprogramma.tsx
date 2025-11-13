@@ -426,7 +426,7 @@ const Vitaliteitsprogramma = () => {
                 <div className="flex items-start gap-2">
                   <CheckCircle className="h-5 w-5 text-brand-orange flex-shrink-0 mt-0.5" />
                   <p className="text-base md:text-lg text-brand-gray-medium">
-                    Medewerkers leren lichaamssignalen opmerken voordat het te laat is. Ze nemen regie over hun eigen
+                    Medewerkers leren stresssignalen opmerken voordat het te laat is. Ze nemen regie over hun eigen
                     stress en kunnen bijsturen voordat uitval optreedt.
                   </p>
                 </div>
@@ -439,14 +439,14 @@ const Vitaliteitsprogramma = () => {
                 <Heart className="h-8 w-8 text-brand-orange stroke-2" />
               </div>
               <h3 className="text-xl md:text-2xl font-bold text-brand-gray-dark text-center">
-                Emotieregulatie trainen
+                Sterkere emotieregulatie
               </h3>
               <div className="space-y-2">
                 <div className="flex items-start gap-2">
                   <CheckCircle className="h-5 w-5 text-brand-orange flex-shrink-0 mt-0.5" />
                   <p className="text-base md:text-lg text-brand-gray-medium">
-                    Drukte en emoties op de werkvloer worden beheersbaar. Impulsiviteit neemt af en het controlecentrum
-                    in het brein wordt sterker.
+                    Drukte en emoties op de werkvloer worden beheersbaar. Impulsiviteit neemt af omdat het
+                    controlecentrum in het brein wordt sterker.
                   </p>
                 </div>
               </div>
@@ -458,14 +458,14 @@ const Vitaliteitsprogramma = () => {
                 <Shield className="h-8 w-8 text-brand-orange stroke-2" />
               </div>
               <h3 className="text-xl md:text-2xl font-bold text-brand-gray-dark text-center">
-                Grenzen aangeven wordt makkelijker
+                Makkelijk grenzen aangeven
               </h3>
               <div className="space-y-2">
                 <div className="flex items-start gap-2">
                   <CheckCircle className="h-5 w-5 text-brand-orange flex-shrink-0 mt-0.5" />
                   <p className="text-base md:text-lg text-brand-gray-medium">
-                    Door meer bewustzijn en eigenaarschap durven medewerkers eerder 'nee' te zeggen. Dit vermindert
-                    stress en voorkomt uitval.
+                    Door sterker stressbewustzijn zeggen medewerkers 'nee' wanneer ze tegen hun grenzen lopen. Dit
+                    vermindert stress en voorkomt uitval.
                   </p>
                 </div>
               </div>
