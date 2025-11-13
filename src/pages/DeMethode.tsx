@@ -215,7 +215,7 @@ const DeMethode = () => {
               <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
                 Door het doen van de "brein push-ups" versterken deelnemers ook hun <strong>anterior insula</strong> en{" "}
                 <strong>anterior cingulate cortex</strong>. Heel simpel gezegd is dit ons{" "}
-                <strong>waarschuwingssysteem</strong>. Door training merk je spanning in je systeem op.
+                <strong>waarschuwingssysteem</strong>. Door training merk je spanning in je systeem sneller op.
               </p>
               <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
                 Die spanning in je schouders voor een belangrijke meeting, die knoop in je maag bij een lastig gesprek.
