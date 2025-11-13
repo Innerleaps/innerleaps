@@ -1,35 +1,256 @@
-import { useEffect } from "react";
+import { useEffect, useState, lazy, Suspense } from "react";
 import { Link } from "react-router-dom";
 import SimplifiedNavigation from "@/components/SimplifiedNavigation";
 import StickyCtaButtons from "@/components/StickyCtaButtons";
 import Footer from "@/components/Footer";
+import { Brain, Target, Lightbulb, Shield, Zap, Heart, AlertCircle, Eye, CheckCircle, Clock, Users, FileText } from "lucide-react";
+import { Button } from "@/components/ui/button";
+
+// Images
+import controlecentrumImage from "@/assets/Concentratietraining_voor_sterker_executieve_systeem.png";
+import waarschuwingssysteemImage from "@/assets/stressmanagementtraining_sterker_waarschuwingssysteem.png";
 import concentratieOefening from "@/assets/Concentratietraining_oefening.png";
 import concentratieDagelijks from "@/assets/Concentratietraining_in_het_dagelijks_leven.jpeg";
-import concentratieWorkshop from "@/assets/Concentratietraining_theorie_in_workshop.png";
+import stressmanagementEnConcentratie from "@/assets/stressmanagement_en_concentratietraining.png";
+
+// Lazy load modal
+const LeadMagnetModal = lazy(() => import("@/components/LeadMagnetModal"));
+
 const DeMethode = () => {
+  const [isLeadMagnetOpen, setIsLeadMagnetOpen] = useState(false);
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
   return (
     <div className="min-h-screen bg-white">
       <SimplifiedNavigation />
       <StickyCtaButtons />
 
-      {/* Hero Section */}
+      {/* Hero Section - Gecentreerd */}
       <section className="section-padding bg-white">
-        <div className="container-custom">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-purple leading-tight text-center mb-8">
-            De <span className="text-brand-orange">Push-ups</span> voor je Brein
+        <div className="container-custom text-center space-y-6 max-w-4xl mx-auto">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-purple leading-tight">
+            Een <span className="text-brand-orange">krachtiger brein</span> door training
           </h1>
-          <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed text-center max-w-4xl mx-auto">
-            Op onze wetenschap pagina leggen we uit dat deelnemers hun controlecentrum trainen met pushups voor hun
-            brein. Maar wat zijn die push-ups nou precies? Dat leggen we hier uit.
+          <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
+            Net zoals je spieren versterkt in de sportschool, train je met onze <strong>push-ups je brein</strong>. Je versterkt twee cruciale systemen: je <strong>controlecentrum</strong> voor focus en bewuste keuzes, én je <strong>signaleringsysteem</strong> dat stress opmerkt voordat het escaleert.
           </p>
         </div>
       </section>
 
-      {/* Section 1: Geplande training */}
+      {/* Sectie: Een krachtiger controlecentrum */}
+      <section className="section-padding bg-brand-off-white">
+        <div className="container-custom space-y-12">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-brand-purple text-center mb-8">
+            Een krachtiger controlecentrum
+          </h2>
+          
+          {/* Grid: Text links, Image rechts */}
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+            <div>
+              <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
+                Met onze "push-ups voor het brein" versterk je de frontale cortex en fronto-pariëtale netwerken. Klinkt misschien ingewikkeld maar simpel gezegd is dit je "controlecentrum". Hiermee maak je bewuste keuzes, blijf je scherp onder druk en signaleer je stress voordat het escaleert.
+              </p>
+            </div>
+            <div className="rounded-xl shadow-lg overflow-hidden">
+              <img
+                src={controlecentrumImage}
+                alt="Concentratietraining voor sterker executieve systeem"
+                className="w-full h-auto object-cover"
+              />
+            </div>
+          </div>
+
+          {/* 5 Feature Cards in 3-2 grid */}
+          <div className="grid md:grid-cols-6 gap-6 lg:gap-8">
+            {/* Card 1: Informatieverwerking */}
+            <div className="bg-white p-6 rounded-lg space-y-4 md:col-span-2">
+              <div className="p-3 rounded-lg bg-brand-orange/10 w-fit mx-auto">
+                <Brain className="h-8 w-8 text-brand-orange stroke-2" />
+              </div>
+              <h3 className="text-xl md:text-2xl font-bold text-brand-gray-dark text-center">
+                Informatieverwerking
+              </h3>
+              <div className="space-y-3">
+                <div className="flex items-start gap-3">
+                  <CheckCircle className="h-5 w-5 text-brand-orange stroke-2 flex-shrink-0 mt-1" />
+                  <span className="text-base md:text-lg text-brand-gray-medium">
+                    Informatie langer vasthouden en beter onthouden.
+                  </span>
+                </div>
+                <div className="flex items-start gap-3">
+                  <CheckCircle className="h-5 w-5 text-brand-orange stroke-2 flex-shrink-0 mt-1" />
+                  <span className="text-base md:text-lg text-brand-gray-medium">
+                    Informatie sneller en beter verwerken.
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            {/* Card 2: Concentratie */}
+            <div className="bg-white p-6 rounded-lg space-y-4 md:col-span-2">
+              <div className="p-3 rounded-lg bg-brand-orange/10 w-fit mx-auto">
+                <Target className="h-8 w-8 text-brand-orange stroke-2" />
+              </div>
+              <h3 className="text-xl md:text-2xl font-bold text-brand-gray-dark text-center">Concentratie</h3>
+              <div className="space-y-3">
+                <div className="flex items-start gap-3">
+                  <CheckCircle className="h-5 w-5 text-brand-orange stroke-2 flex-shrink-0 mt-1" />
+                  <span className="text-base md:text-lg text-brand-gray-medium">
+                    Aandacht beter richten op wat belangrijk is.
+                  </span>
+                </div>
+                <div className="flex items-start gap-3">
+                  <CheckCircle className="h-5 w-5 text-brand-orange stroke-2 flex-shrink-0 mt-1" />
+                  <span className="text-base md:text-lg text-brand-gray-medium">Aandacht langer vasthouden.</span>
+                </div>
+                <div className="flex items-start gap-3">
+                  <CheckCircle className="h-5 w-5 text-brand-orange stroke-2 flex-shrink-0 mt-1" />
+                  <span className="text-base md:text-lg text-brand-gray-medium">
+                    Minder afgeleid door onbelangrijke informatie.
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            {/* Card 3: Denkprocessen */}
+            <div className="bg-white p-6 rounded-lg space-y-4 md:col-span-2">
+              <div className="p-3 rounded-lg bg-brand-orange/10 w-fit mx-auto">
+                <Lightbulb className="h-8 w-8 text-brand-orange stroke-2" />
+              </div>
+              <h3 className="text-xl md:text-2xl font-bold text-brand-gray-dark text-center">Denkprocessen</h3>
+              <div className="space-y-3">
+                <div className="flex items-start gap-3">
+                  <CheckCircle className="h-5 w-5 text-brand-orange stroke-2 flex-shrink-0 mt-1" />
+                  <span className="text-base md:text-lg text-brand-gray-medium">Beter plannen en organiseren.</span>
+                </div>
+                <div className="flex items-start gap-3">
+                  <CheckCircle className="h-5 w-5 text-brand-orange stroke-2 flex-shrink-0 mt-1" />
+                  <span className="text-base md:text-lg text-brand-gray-medium">Doelen bepalen en volhouden.</span>
+                </div>
+                <div className="flex items-start gap-3">
+                  <CheckCircle className="h-5 w-5 text-brand-orange stroke-2 flex-shrink-0 mt-1" />
+                  <span className="text-base md:text-lg text-brand-gray-medium">
+                    Strategieën bedenken en prioriteiten bepalen.
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            {/* Card 4: Filteren & onderdrukken - Centered start */}
+            <div className="bg-white p-6 rounded-lg space-y-4 md:col-span-2 md:col-start-2">
+              <div className="p-3 rounded-lg bg-brand-orange/10 w-fit mx-auto">
+                <Shield className="h-8 w-8 text-brand-orange stroke-2" />
+              </div>
+              <h3 className="text-xl md:text-2xl font-bold text-brand-gray-dark text-center">
+                Filteren & onderdrukken
+              </h3>
+              <div className="space-y-3">
+                <div className="flex items-start gap-3">
+                  <CheckCircle className="h-5 w-5 text-brand-orange stroke-2 flex-shrink-0 mt-1" />
+                  <span className="text-base md:text-lg text-brand-gray-medium">Irrelevante informatie filteren.</span>
+                </div>
+                <div className="flex items-start gap-3">
+                  <CheckCircle className="h-5 w-5 text-brand-orange stroke-2 flex-shrink-0 mt-1" />
+                  <span className="text-base md:text-lg text-brand-gray-medium">Ongewenste reacties onderdrukken.</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Card 5: Makkelijker denken */}
+            <div className="bg-white p-6 rounded-lg space-y-4 md:col-span-2">
+              <div className="p-3 rounded-lg bg-brand-orange/10 w-fit mx-auto">
+                <Zap className="h-8 w-8 text-brand-orange stroke-2" />
+              </div>
+              <h3 className="text-xl md:text-2xl font-bold text-brand-gray-dark text-center">Makkelijker denken</h3>
+              <div className="space-y-3">
+                <div className="flex items-start gap-3">
+                  <CheckCircle className="h-5 w-5 text-brand-orange stroke-2 flex-shrink-0 mt-1" />
+                  <span className="text-base md:text-lg text-brand-gray-medium">
+                    Dezelfde taken vragen minder hersenenergie.
+                  </span>
+                </div>
+                <div className="flex items-start gap-3">
+                  <CheckCircle className="h-5 w-5 text-brand-orange stroke-2 flex-shrink-0 mt-1" />
+                  <span className="text-base md:text-lg text-brand-gray-medium">Sneller schakelen tussen taken.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Sectie: Sterker waarschuwingssysteem */}
       <section className="section-padding bg-white">
+        <div className="container-custom space-y-12">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-brand-purple text-center mb-8">
+            Sterker waarschuwingssysteem
+          </h2>
+          
+          {/* Grid: Text links, Image rechts */}
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+            <div>
+              <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
+                Door het doen van "brein push-ups" versterken deelnemers ook hun anterior insula en anterior cingulate cortex. Heel simpel gezegd is dit ons waarschuwingssysteem. De gevoelsantennes waarmee je voelt wat er in je lichaam gebeurt. Die spanning in je schouders voor een belangrijke meeting, die knoop in je maag bij een lastig gesprek. Deelnemers leren deze signalen eerder opmerken en er bewust mee omgaan.
+              </p>
+            </div>
+            <div className="rounded-xl shadow-lg overflow-hidden">
+              <img
+                src={waarschuwingssysteemImage}
+                alt="Stressmanagementtraining sterker waarschuwingssysteem"
+                className="w-full h-auto object-cover"
+              />
+            </div>
+          </div>
+
+          {/* 3 Feature Cards */}
+          <div className="grid md:grid-cols-3 gap-6 lg:gap-8">
+            {/* Card 1: Lichaamsbewustzijn & Waarneming */}
+            <div className="bg-brand-off-white p-6 rounded-lg space-y-4">
+              <div className="p-3 rounded-lg bg-brand-orange/10 w-fit mx-auto">
+                <Heart className="h-8 w-8 text-brand-orange stroke-2" />
+              </div>
+              <h3 className="text-xl md:text-2xl font-bold text-brand-gray-dark text-center">
+                Lichaamsbewustzijn & Waarneming
+              </h3>
+              <p className="text-base md:text-lg text-brand-gray-medium">
+                Vroege waarschuwingssignalen oppikken. Je lichaam waarschuwt je voordat stress escaleert. Spanning in je schouders, een versnelde hartslag, oppervlakkige ademhaling. Door training vang je deze signalen eerder op. Je herkent stress voordat het problematisch wordt en kunt er bewust mee omgaan.
+              </p>
+            </div>
+
+            {/* Card 2: Emotionele Signalering */}
+            <div className="bg-brand-off-white p-6 rounded-lg space-y-4">
+              <div className="p-3 rounded-lg bg-brand-orange/10 w-fit mx-auto">
+                <AlertCircle className="h-8 w-8 text-brand-orange stroke-2" />
+              </div>
+              <h3 className="text-xl md:text-2xl font-bold text-brand-gray-dark text-center">
+                Emotionele Signalering
+              </h3>
+              <p className="text-base md:text-lg text-brand-gray-medium">
+                Herkennen wat aandacht vraagt. Dat ongemakkelijke gevoel tijdens een gesprek, die spanning voor een deadline. Je waarschuwingssysteem signaleert wat belangrijk is. Training versterkt deze alertheid. Je merkt sneller wanneer iets niet goed voelt en begrijpt beter wat je nodig hebt.
+              </p>
+            </div>
+
+            {/* Card 3: Zelfmonitoring & Bewustzijn */}
+            <div className="bg-brand-off-white p-6 rounded-lg space-y-4">
+              <div className="p-3 rounded-lg bg-brand-orange/10 w-fit mx-auto">
+                <Eye className="h-8 w-8 text-brand-orange stroke-2" />
+              </div>
+              <h3 className="text-xl md:text-2xl font-bold text-brand-gray-dark text-center">
+                Zelfmonitoring & Bewustzijn
+              </h3>
+              <p className="text-base md:text-lg text-brand-gray-medium">
+                Jezelf real-time observeren. Je waarschuwingssysteem houdt bij hoe het met je gaat, zelfs tijdens het werk. Je merkt eerder wanneer je focus verslapt, wanneer irritatie opkomt, of wanneer je lichaam om een pauze vraagt. Training versterkt dit interne alarmsysteem waardoor je fouten en problemen voorkomt.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Push-ups Sectie 1: Geplande concentratietraining */}
+      <section className="section-padding bg-brand-off-white">
         <div className="container-custom">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-brand-purple text-center mb-12">
             <span className="text-brand-orange">Geplande</span> concentratietraining
@@ -61,7 +282,7 @@ const DeMethode = () => {
         </div>
       </section>
 
-      {/* Section 2: Training in Dagelijks Leven */}
+      {/* Push-ups Sectie 2: Training in Dagelijks Leven */}
       <section className="section-padding bg-white">
         <div className="container-custom">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-brand-purple text-center mb-12">
@@ -77,48 +298,79 @@ const DeMethode = () => {
             </div>
             <div className="space-y-6 order-1 lg:order-2">
               <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
-                Waar zijn je gedachten terwijl je tanden poetst? Of tijdens die meeting? Ons brein produceert constant
-                gedachten. Soms is dat nuttig maar meestal willen we onze aandacht juist bewust richten.
+                De tweede vorm van concentratietraining is niet gepland maar direct in het dagelijks leven toepassen van
+                de oefening. Dit kan eigenlijk bij alle activiteiten die je doet. Bijvoorbeeld:
               </p>
+              <ul className="space-y-4">
+                <li className="flex items-start">
+                  <CheckCircle className="h-6 w-6 text-brand-orange stroke-2 flex-shrink-0 mt-1 mr-3" />
+                  <span className="text-xl md:text-2xl text-brand-gray-medium">
+                    Terwijl je je tanden poetst bewust de sensaties van het poetsen opmerken.
+                  </span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle className="h-6 w-6 text-brand-orange stroke-2 flex-shrink-0 mt-1 mr-3" />
+                  <span className="text-xl md:text-2xl text-brand-gray-medium">
+                    Bij een gesprek actief luisteren naar wat de persoon zegt en niet al je weerwoord voorbereiden.
+                  </span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle className="h-6 w-6 text-brand-orange stroke-2 flex-shrink-0 mt-1 mr-3" />
+                  <span className="text-xl md:text-2xl text-brand-gray-medium">
+                    Tijdens het wandelen naar je werk bewust je omgeving waarnemen.
+                  </span>
+                </li>
+              </ul>
               <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
-                Scherp zijn bij die belangrijke meeting, met focus dat belangrijke rapport maken of juist even echt
-                kunnen genieten tijdens dat ene momentje en niet denken aan dat ene vervelende moment.
-              </p>
-              <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
-                En dat trainen we. Elke week worden deelnemers uitgedaagd hun aandacht bewust te richten op alledaagse
-                activiteiten.
+                Deze vorm van training helpt je om tijdens het werk beter te focussen en stress te herkennen voordat het
+                escaleert.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Section 3: Wekelijkse workshops */}
-      <section className="section-padding bg-white">
+      {/* Push-ups Sectie 3: Wekelijkse workshops */}
+      <section className="section-padding bg-brand-off-white">
         <div className="container-custom">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-brand-purple text-center mb-12">
-            Wekelijkse <span className="text-brand-orange">groepsworkshops</span>, werkboek en theorie
+            Wekelijkse groepsworkshops, werkboek en theorie
           </h2>
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             <div className="space-y-6">
               <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
-                Echte gedragsverandering gebeurt niet vanzelf. Nieuwe patronen moeten inslijten, en dat kost tijd.
-                Daarom duurt het programma 6 weken.
+                Het programma duurt 6 weken. Elke week krijgen deelnemers:
               </p>
+              <ul className="space-y-4">
+                <li className="flex items-start">
+                  <Clock className="h-6 w-6 text-brand-orange stroke-2 flex-shrink-0 mt-1 mr-3" />
+                  <span className="text-xl md:text-2xl text-brand-gray-medium">
+                    Een groepssessie van 2 uur waar ze nieuwe vaardigheden leren en ervaringen delen.
+                  </span>
+                </li>
+                <li className="flex items-start">
+                  <FileText className="h-6 w-6 text-brand-orange stroke-2 flex-shrink-0 mt-1 mr-3" />
+                  <span className="text-xl md:text-2xl text-brand-gray-medium">
+                    Een werkboek met achtergrondinformatie en praktische opdrachten voor die week.
+                  </span>
+                </li>
+                <li className="flex items-start">
+                  <Brain className="h-6 w-6 text-brand-orange stroke-2 flex-shrink-0 mt-1 mr-3" />
+                  <span className="text-xl md:text-2xl text-brand-gray-medium">
+                    Wetenschappelijke theorie die uitlegt waarom deze methode werkt.
+                  </span>
+                </li>
+              </ul>
               <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
-                In de workshops en het werkboek krijgen deelnemers wetenschappelijke theorie en praktische uitleg.
-                Waarom werkt aandachtstraining? Hoe reageert je brein op stress? Dit versterkt de motivatie.
-              </p>
-              <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
-                Door de groepsworkshops reflecteren deelnemers op hun ervaringen. En hier gebeurt iets heel waardevols:
-                ze zien dat anderen ook worstelen met consequent oefenen en tijd vinden. Tegelijk delen ze strategieën
-                die wél werken.
+                In de workshops komen deelnemers terug op de oefeningen van die week. Ze bespreken wat ging goed, waar
+                liep je tegenaan? Door deze reflectie in een groep ontstaat er herkenning en leren deelnemers van
+                elkaar.
               </p>
             </div>
             <div className="rounded-xl shadow-lg overflow-hidden">
               <img
-                src={concentratieWorkshop}
-                alt="Concentratietraining theorie in workshop"
+                src={stressmanagementEnConcentratie}
+                alt="Stressmanagement en concentratietraining"
                 className="w-full h-full object-cover"
               />
             </div>
@@ -126,60 +378,75 @@ const DeMethode = () => {
         </div>
       </section>
 
-      {/* Programma's CTA Section */}
+      {/* CTA Sectie met 3 Programma Buttons */}
       <section className="section-padding bg-white">
-        <div className="container-custom">
-          <div className="text-center mb-12">
-            <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed max-w-3xl mx-auto">
-              Klaar om de methode ook echt toe te passen? Bekijk hier onze programma's.
-            </p>
-          </div>
-
+        <div className="container-custom text-center space-y-8">
+          <p className="text-xl md:text-2xl text-brand-gray-medium max-w-3xl mx-auto">
+            Klaar om de methode ook echt toe te passen? Bekijk hier onze programma's.
+          </p>
           <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
-            {/* Vitaliteitsprogramma Button */}
             <Link
               to="/vitaliteitsprogramma"
-              className="group bg-white hover:bg-brand-blue transition-all duration-300 rounded-xl shadow-lg p-8 text-center"
+              className="bg-white border-2 border-brand-blue p-6 rounded-lg hover:shadow-xl transition-all duration-300 group"
             >
-              <h3 className="text-2xl font-bold text-brand-purple group-hover:text-white transition-colors duration-300 mb-4">
+              <h3 className="text-xl font-bold text-brand-purple mb-3 group-hover:text-brand-blue transition-colors">
                 Vitaliteitsprogramma
               </h3>
-              <p className="text-brand-gray-medium group-hover:text-white/90 transition-colors duration-300">
-                Voor organisaties en werkgevers
-              </p>
+              <p className="text-base text-brand-gray-medium">Voor organisaties en werkgevers</p>
             </Link>
-
-            {/* Stressmanagement Button */}
             <Link
               to="/stressmanagement-programma"
-              className="group bg-white hover:bg-brand-blue transition-all duration-300 rounded-xl shadow-lg p-8 text-center"
+              className="bg-white border-2 border-brand-blue p-6 rounded-lg hover:shadow-xl transition-all duration-300 group"
             >
-              <h3 className="text-2xl font-bold text-brand-purple group-hover:text-white transition-colors duration-300 mb-4">
+              <h3 className="text-xl font-bold text-brand-purple mb-3 group-hover:text-brand-blue transition-colors">
                 Stressmanagement
               </h3>
-              <p className="text-brand-gray-medium group-hover:text-white/90 transition-colors duration-300">
-                Minder spanning & druk voor werknemers
-              </p>
+              <p className="text-base text-brand-gray-medium">Minder spanning & druk voor werknemers</p>
             </Link>
-
-            {/* Prestatie Programma Button */}
             <Link
               to="/prestatie-programma"
-              className="group bg-white hover:bg-brand-blue transition-all duration-300 rounded-xl shadow-lg p-8 text-center"
+              className="bg-white border-2 border-brand-orange p-6 rounded-lg hover:shadow-xl transition-all duration-300 group"
             >
-              <h3 className="text-2xl font-bold text-brand-purple group-hover:text-white transition-colors duration-300 mb-4">
+              <h3 className="text-xl font-bold text-brand-purple mb-3 group-hover:text-brand-orange transition-colors">
                 Prestatieprogramma
               </h3>
-              <p className="text-brand-gray-medium group-hover:text-white/90 transition-colors duration-300">
-                Als werknemer beter presteren met meer focus
-              </p>
+              <p className="text-base text-brand-gray-medium">Als werknemer beter presteren met meer focus</p>
             </Link>
           </div>
         </div>
       </section>
 
-      <Footer showNavigation={false} />
+      {/* Wetenschappelijke Bijlage Downloaden Sectie */}
+      <section className="section-padding bg-brand-off-white">
+        <div className="container-custom text-center space-y-8">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-brand-purple">
+            Exclusief wetenschappelijk rapport
+          </h2>
+          <p className="text-xl md:text-2xl text-brand-orange font-semibold max-w-3xl mx-auto">
+            De resultaten van 40 jaar onderzoek naar aandachttraining. Vraag het hier aan.
+          </p>
+          <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed max-w-3xl mx-auto">
+            Zelf de wetenschappelijke details bekijken? Ons academische rapport bundelt de laatste studies, analyses en
+            berekeningen rond de effecten van aandachttraining. Inclusief effectgroottes en pathway-analyses.
+          </p>
+          <Button
+            onClick={() => setIsLeadMagnetOpen(true)}
+            variant="secondary"
+            className="text-lg px-8 py-6 font-semibold"
+          >
+            <FileText className="mr-2 h-5 w-5" />
+            Aanvragen rapport
+          </Button>
+        </div>
+      </section>
+
+      <Footer />
+
+      <Suspense fallback={null}>
+        <LeadMagnetModal isOpen={isLeadMagnetOpen} onClose={() => setIsLeadMagnetOpen(false)} />
+      </Suspense>
     </div>
   );
 };
+
 export default DeMethode;
