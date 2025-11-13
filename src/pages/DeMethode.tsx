@@ -519,9 +519,9 @@ const DeMethode = () => {
                 </li>
               </ul>
               <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
-                Ook deze vorm van training is een <strong>concentratietraining</strong> waarbij focus en aandacht nodig
-                is. Ook hiermee wordt focus versterkt en stress sneller herkent. Het mooie? Het kost geen extra tijd en
-                je <strong>geniet meer</strong> van de activiteiten die je doet!
+                Ook deze vorm van training is een <strong>concentratie{"\u00AD"}training</strong> waarbij focus en
+                aandacht nodig is. Ook hiermee wordt focus versterkt en stress sneller herkent. Het mooie? Het kost geen
+                extra tijd en je <strong>geniet meer</strong> van de activiteiten die je doet!
               </p>
             </div>
           </div>
