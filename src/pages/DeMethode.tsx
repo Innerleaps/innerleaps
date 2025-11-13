@@ -385,11 +385,11 @@ const DeMethode = () => {
               <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
                 Klinkt makkelijk? Je geest vindt er niks aan. Binnen een paar seconden denk je aan het avondeten, je
                 to-do's of dat lastige gesprek. Je vergeet volledig wat je aan het doen was.{" "}
-                <Strong>Probeer het zelf maar</Strong>.
+                <strong>Probeer het zelf maar</strong>.
               </p>
               <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
                 Dit is de crux van de oefening:{" "}
-                <Strong>het moment dat je opmerkt dat je bent afgedwaald, dát is de push-up</Strong>. Je brengt je focus
+                <strong>het moment dat je opmerkt dat je bent afgedwaald, dát is de push-up</strong>. Je brengt je focus
                 terug naar de oefening. Opnieuw en opnieuw. Dit{" "}
                 <strong>versterkt je concentratie en bewustzijn van je lichaamssignalen</strong>, zoals push-ups je
                 spieren versterken.
