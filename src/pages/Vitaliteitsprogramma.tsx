@@ -348,8 +348,8 @@ const Vitaliteitsprogramma = () => {
               </p>
             </div>
 
-            {/* Challenge 3 */}
-            <div className="md:col-span-2 md:col-start-2 bg-white p-6 rounded-lg space-y-4">
+            {/* Challenge 2 */}
+            <div className="md:col-span-2 bg-white p-6 rounded-lg space-y-4">
               <div className="p-3 rounded-lg bg-brand-orange/5 w-fit mx-auto">
                 <Activity className="h-8 w-8 text-brand-orange stroke-2" />
               </div>
@@ -377,7 +377,7 @@ const Vitaliteitsprogramma = () => {
             </div>
 
             {/* Challenge 4 */}
-            <div className="md:col-span-2 bg-white p-6 rounded-lg space-y-4">
+            <div className="md:col-span-2 md:col-start-2 bg-white p-6 rounded-lg space-y-4">
               <div className="p-3 rounded-lg bg-brand-orange/5 w-fit mx-auto">
                 <Heart className="h-8 w-8 text-brand-orange stroke-2" />
               </div>
