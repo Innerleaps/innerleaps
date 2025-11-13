@@ -378,17 +378,21 @@ const DeMethode = () => {
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             <div className="space-y-6">
               <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
-                Zittend of liggend volgen deelnemers elke dag een begeleidende audio-opname. Deze duurt zo'n 12 minuten.
-                De instructie is simpel: richt je aandacht op je ademhaling of andere lichamelijke ervaringen.
+                Zittend of liggend volgen deelnemers elke dag een <strong>begeleidende audio-opname</strong>. Deze duurt
+                zo'n 12 minuten. De instructie is simpel: <strong>richt je aandacht</strong> op je ademhaling of andere{" "}
+                <strong>lichamelijke ervaringen</strong>.
               </p>
               <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
                 Klinkt makkelijk? Je geest vindt er niks aan. Binnen een paar seconden denk je aan het avondeten, je
-                to-do's of dat lastige gesprek. Je vergeet volledig wat je aan het doen was. Probeer het zelf maar.
+                to-do's of dat lastige gesprek. Je vergeet volledig wat je aan het doen was.{" "}
+                <Strong>Probeer het zelf maar</Strong>.
               </p>
               <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
-                Dit is de crux van de oefening: het moment dat je opmerkt dat je bent afgedwaald, dát is de push-up. Je
-                brengt je focus terug naar de oefening. Opnieuw en opnieuw. Dit versterkt je concentratie en bewustzijn
-                van je lichaamssignalen, zoals push-ups je spieren versterken.
+                Dit is de crux van de oefening:{" "}
+                <Strong>het moment dat je opmerkt dat je bent afgedwaald, dát is de push-up</Strong>. Je brengt je focus
+                terug naar de oefening. Opnieuw en opnieuw. Dit{" "}
+                <strong>versterkt je concentratie en bewustzijn van je lichaamssignalen</strong>, zoals push-ups je
+                spieren versterken.
               </p>
             </div>
             <div className="rounded-xl shadow-lg overflow-hidden">
