@@ -498,8 +498,8 @@ const Vitaliteitsprogramma = () => {
                 <div className="flex items-start gap-2">
                   <CheckCircle className="h-5 w-5 text-brand-orange flex-shrink-0 mt-0.5" />
                   <p className="text-base md:text-lg text-brand-gray-medium">
-                    Medewerkers ervaren meer werkplezier en betrokkenheid. Dit verhoogt retentie en helpt talent langer
-                    aan de organisatie te binden.
+                    Medewerkers ervaren minder werkdruk en meer werkplezier en betrokkenheid. Dit verlaagt het
+                    personeelsverloop en helpt talent aan de organisatie te binden.
                   </p>
                 </div>
               </div>
