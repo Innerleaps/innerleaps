@@ -141,7 +141,7 @@ const handler = async (req: Request): Promise<Response> => {
     const safeCompany = escapeHtml(submission.company);
     const safeFunctie = escapeHtml(submission.functie);
 
-    const pdfUrl = `${Deno.env.get("SUPABASE_URL")?.replace('.supabase.co', '')}.supabase.co/storage/v1/object/public/documents/business-case-awareness-interventions.pdf`;
+    const pdfUrl = `${Deno.env.get("SUPABASE_URL")?.replace('.supabase.co', '')}.supabase.co/storage/v1/object/public/documents/effects-of-awareness-interventions.pdf`;
 
     // Email to user with PDF attachment
     const userEmailHtml = `

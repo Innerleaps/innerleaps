@@ -8,7 +8,6 @@ import { ProductionRedirect } from "./components/ProductionRedirect";
 
 // Lazy load all pages for better performance
 const LandingPage = lazy(() => import("./pages/LandingPage"));
-const Wetenschap = lazy(() => import("./pages/Wetenschap"));
 const DeMethode = lazy(() => import("./pages/DeMethode"));
 const OverOns = lazy(() => import("./pages/OverOns"));
 const Contact = lazy(() => import("./pages/Contact"));
@@ -55,7 +54,6 @@ const App = () => {
                 <Route path="/leven-vragenlijst/resultaat" element={<LevenVragenlijstResultaat />} />
                 <Route path="/contact" element={<Contact />} />
                 <Route path="/de-methode" element={<DeMethode />} />
-                <Route path="/wetenschap" element={<Wetenschap />} />
                 <Route path="/over-ons" element={<OverOns />} />
                 <Route path="/calendar" element={<Calendar />} />
                 <Route path="/9-stippen" element={<NegenStippen />} />
