@@ -356,13 +356,13 @@ const DeMethode = () => {
               <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
                 Het getrainde waarschuwingssysteem van deelnemers <strong>vangt stress vroeg op</strong>. Want{" "}
                 <strong>onbewuste stress</strong>? Die
-                <strong>ondermijnt</strong> je <strong>prestaties</strong>: meer fouten, langzamer werken, sneller
+                <strong>ondermijnt </strong> je <strong>prestaties</strong>: meer fouten, langzamer werken, sneller
                 afgeleid.
               </p>
               <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
-                Prestaties verbeteren ook door sterkere concentratie. Door het trainen van het controlecentrum filter je
-                irrelevante informatie, onthoud je wat belangrijk is en schakel je sneller tussen taken. Hetzelfde werk
-                kost simpelweg minder hersenenergie.
+                Prestaties verbeteren ook door <strong>>sterkere concentratie</strong. Door het trainen van het controlecentrum filter je
+                irrelevante informatie, onthoud je wat belangrijk is en schakel je sneller tussen taken. <Strong>Hetzelfde werk
+                kost simpelweg minder hersenenergie.</Strong>
               </p>
             </div>
           </div>
