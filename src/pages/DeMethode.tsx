@@ -218,9 +218,11 @@ const DeMethode = () => {
                 <strong>waarschuwingssysteem</strong>. Door training merk je spanning in je systeem sneller op.
               </p>
               <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
-                Die spanning in je schouders voor een belangrijke meeting, die knoop in je maag bij een lastig gesprek.
-                Omdat deelnemers <strong>stresssignalen eerder opmerken</strong>, kunnen ze{" "}
-                <strong>spanning beter beheersen</strong> en <strong>reguleren</strong>.
+                Die spanning in je schouders voor een belangrijke meeting, benauwdheid voor je presentatie of die knoop
+                in je maag bij een lastig gesprek. Omdat deelnemers <strong>stresssignalen eerder opmerken</strong>,
+                kunnen ze <strong>spanning beter beheersen</strong> en <strong>reguleren</strong>. Hierdoor{" "}
+                <strong>verbeteren prestaties</strong> én door <strong>minder spanning</strong> wordt het er ook echt
+                wat leuker op!
               </p>
             </div>
             <div className="rounded-xl shadow-lg overflow-hidden">
