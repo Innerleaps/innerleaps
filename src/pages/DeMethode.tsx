@@ -329,6 +329,40 @@ const DeMethode = () => {
         </div>
       </section>
 
+      {/* Wetenschappelijke Bijlage Downloaden Sectie */}
+      <section className="section-padding bg-white">
+        <div className="container-custom">
+          <Card className="max-w-4xl mx-auto p-8 bg-brand-blue">
+            <div className="text-center space-y-6">
+              {/* Icon */}
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-white/10 rounded-full">
+                <FileText className="h-8 w-8 text-brand-orange" />
+              </div>
+
+              {/* Title */}
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white">
+                Ontdek zelf de resultaten van 40 jaar onderzoek
+              </h2>
+
+              {/* Body */}
+              <p className="text-xl md:text-2xl text-white/90 leading-relaxed max-w-3xl mx-auto">
+                Zelf de wetenschappelijke details bekijken? Ons academische rapport bundelt de laatste studies, analyses
+                en berekeningen rond de effecten van aandachttraining. Inclusief effectgroottes en pathway-analyses.
+              </p>
+
+              {/* Button */}
+              <Button
+                onClick={() => setIsLeadMagnetOpen(true)}
+                className="bg-brand-orange hover:bg-brand-orange/90 text-white font-semibold text-lg px-8 py-6"
+              >
+                <FileText className="mr-2 h-5 w-5" />
+                Rapport ontvangen
+              </Button>
+            </div>
+          </Card>
+        </div>
+      </section>
+
       {/* Sectie: Betere prestaties door minder stress en meer focus */}
       <section className="section-padding bg-white">
         <div className="container-custom space-y-12">
@@ -611,45 +645,6 @@ const DeMethode = () => {
               <p className="text-base text-white/90">Als werknemer beter presteren met meer focus</p>
             </Link>
           </div>
-        </div>
-      </section>
-
-      {/* Wetenschappelijke Bijlage Downloaden Sectie */}
-      <section className="section-padding bg-white">
-        <div className="container-custom">
-          <Card className="max-w-4xl mx-auto p-8 bg-brand-blue">
-            <div className="text-center space-y-6">
-              {/* Icon */}
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-white/10 rounded-full">
-                <FileText className="h-8 w-8 text-brand-orange" />
-              </div>
-
-              {/* Title */}
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white">
-                Exclusief wetenschappelijk rapport
-              </h2>
-
-              {/* Subtitle */}
-              <p className="text-xl md:text-2xl text-white font-semibold max-w-3xl mx-auto">
-                De resultaten van 40 jaar onderzoek naar aandachttraining.    
-              </p>
-
-              {/* Body */}
-              <p className="text-xl md:text-2xl text-white/90 leading-relaxed max-w-3xl mx-auto">
-                Zelf de wetenschappelijke details bekijken? Ons academische rapport bundelt de laatste studies, analyses
-                en berekeningen rond de effecten van aandachttraining. Inclusief effectgroottes en pathway-analyses.
-              </p>
-
-              {/* Button */}
-              <Button
-                onClick={() => setIsLeadMagnetOpen(true)}
-                className="bg-brand-orange hover:bg-brand-orange/90 text-white font-semibold text-lg px-8 py-6"
-              >
-                <FileText className="mr-2 h-5 w-5" />
-                Aanvragen rapport
-              </Button>
-            </div>
-          </Card>
         </div>
       </section>
 
