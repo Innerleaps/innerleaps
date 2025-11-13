@@ -19,7 +19,7 @@ const ProgramOverviewSection = memo(() => {
     },
     {
       icon: Users,
-      title: "Veilige leersetting",
+      title: "Veilige en comfortabel leren",
       description: "Deelnemers houden controle.  Ze reageren op vragen van de trainer met het opsteken van handen.",
     },
     {
