@@ -87,7 +87,7 @@ const DeMethode = () => {
           {/* 5 Feature Cards in 3-2 grid */}
           <div className="grid md:grid-cols-6 gap-6 lg:gap-8">
             {/* Card 1: Informatieverwerking */}
-            <div className="bg-white p-6 rounded-lg space-y-4 md:col-span-2">
+            <div className="bg-brand-off-white p-6 rounded-lg space-y-4 md:col-span-2">
               <div className="p-3 rounded-lg bg-brand-orange/10 w-fit mx-auto">
                 <Brain className="h-8 w-8 text-brand-orange stroke-2" />
               </div>
@@ -109,7 +109,7 @@ const DeMethode = () => {
             </div>
 
             {/* Card 2: Concentratie */}
-            <div className="bg-white p-6 rounded-lg space-y-4 md:col-span-2">
+            <div className="bg-brand-off-white p-6 rounded-lg space-y-4 md:col-span-2">
               <div className="p-3 rounded-lg bg-brand-orange/10 w-fit mx-auto">
                 <Target className="h-8 w-8 text-brand-orange stroke-2" />
               </div>
@@ -135,7 +135,7 @@ const DeMethode = () => {
             </div>
 
             {/* Card 3: Denkprocessen */}
-            <div className="bg-white p-6 rounded-lg space-y-4 md:col-span-2">
+            <div className="bg-brand-off-white p-6 rounded-lg space-y-4 md:col-span-2">
               <div className="p-3 rounded-lg bg-brand-orange/10 w-fit mx-auto">
                 <Lightbulb className="h-8 w-8 text-brand-orange stroke-2" />
               </div>
@@ -159,7 +159,7 @@ const DeMethode = () => {
             </div>
 
             {/* Card 4: Filteren & onderdrukken - Centered start */}
-            <div className="bg-white p-6 rounded-lg space-y-4 md:col-span-2 md:col-start-2">
+            <div className="bg-brand-off-white p-6 rounded-lg space-y-4 md:col-span-2 md:col-start-2">
               <div className="p-3 rounded-lg bg-brand-orange/10 w-fit mx-auto">
                 <Shield className="h-8 w-8 text-brand-orange stroke-2" />
               </div>
@@ -179,7 +179,7 @@ const DeMethode = () => {
             </div>
 
             {/* Card 5: Makkelijker denken */}
-            <div className="bg-white p-6 rounded-lg space-y-4 md:col-span-2">
+            <div className="bg-brand-off-white p-6 rounded-lg space-y-4 md:col-span-2">
               <div className="p-3 rounded-lg bg-brand-orange/10 w-fit mx-auto">
                 <Zap className="h-8 w-8 text-brand-orange stroke-2" />
               </div>
@@ -234,7 +234,7 @@ const DeMethode = () => {
           {/* 3 Feature Cards */}
           <div className="grid md:grid-cols-3 gap-6 lg:gap-8">
             {/* Card 1: Lichaamsbewustzijn & Waarneming */}
-            <div className="bg-white shadow-sm p-6 rounded-lg space-y-4">
+            <div className="bg-brand-off-white p-6 rounded-lg space-y-4">
               <div className="p-3 rounded-lg bg-brand-orange/10 w-fit mx-auto">
                 <Heart className="h-8 w-8 text-brand-orange stroke-2" />
               </div>
@@ -264,7 +264,7 @@ const DeMethode = () => {
             </div>
 
             {/* Card 2: Emotionele Signalering */}
-            <div className="bg-white shadow-sm p-6 rounded-lg space-y-4">
+            <div className="bg-brand-off-white p-6 rounded-lg space-y-4">
               <div className="p-3 rounded-lg bg-brand-orange/10 w-fit mx-auto">
                 <AlertCircle className="h-8 w-8 text-brand-orange stroke-2" />
               </div>
@@ -292,7 +292,7 @@ const DeMethode = () => {
             </div>
 
             {/* Card 3: Zelfmonitoring & Bewustzijn */}
-            <div className="bg-white shadow-sm p-6 rounded-lg space-y-4">
+            <div className="bg-brand-off-white p-6 rounded-lg space-y-4">
               <div className="p-3 rounded-lg bg-brand-orange/10 w-fit mx-auto">
                 <Eye className="h-8 w-8 text-brand-orange stroke-2" />
               </div>
