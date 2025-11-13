@@ -7,7 +7,7 @@ const ProgramOverviewSection = memo(() => {
   const features = [
     {
       icon: Clock,
-      title: "Wekelijkse workshops",
+      title: "Wekelijkse groepsworkshops",
       description:
         "Elke week een workshop van 60 minuten met andere deelnemers door één van onze geaccrediteerde trainers.",
     },
