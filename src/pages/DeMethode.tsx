@@ -220,9 +220,8 @@ const DeMethode = () => {
 
               <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
                 Omdat deelnemers <strong>stresssignalen eerder opmerken</strong>, kunnen ze{" "}
-                <strong>spanning beter beheersen</strong> en <strong>reguleren</strong>. Hierdoor{" "}
-                <strong>verbeteren prestaties</strong> én door <strong>minder spanning</strong> wordt het er allemaal
-                ook wat <strong>leuker</strong> op!
+                <strong>spanning beter beheersen</strong> en <strong>reguleren</strong>. Hierdoor verbeteren prestaties
+                én door <strong>minder spanning</strong> wordt het er allemaal ook wat <strong>leuker</strong> op!
               </p>
             </div>
             <div className="rounded-xl shadow-lg overflow-hidden">
