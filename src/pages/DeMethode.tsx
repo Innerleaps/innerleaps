@@ -429,7 +429,11 @@ const DeMethode = () => {
           </div>
 
           <div className="text-center">
-            <Button size="lg" className="bg-brand-orange hover:bg-brand-orange/90 text-white py-4 px-8 rounded-lg text-lg md:text-xl font-semibold shadow-xl" onClick={() => window.open("https://innerleaps.nl/Calendar", "_blank")}>
+            <Button
+              size="lg"
+              className="bg-brand-orange hover:bg-brand-orange/90 text-white py-4 px-8 rounded-lg text-lg md:text-xl font-semibold shadow-xl"
+              onClick={() => window.open("https://innerleaps.nl/Calendar", "_blank")}
+            >
               Kennismaken met Bas
             </Button>
           </div>
@@ -489,32 +493,35 @@ const DeMethode = () => {
             </div>
             <div className="space-y-6 order-1 lg:order-2">
               <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
-                De tweede vorm van concentratietraining is niet gepland maar direct in het dagelijks leven toepassen van
-                de oefening. Dit kan eigenlijk bij alle activiteiten die je doet. Bijvoorbeeld:
+                De tweede vorm van de"brein push-ups" doen deelnemers in het dagelijks leven. Deelnemers richten hun{" "}
+                <strong>aandacht</strong> op de <strong>dagelijkse activiteit</strong>. Dit kan eigenlijk bij alle
+                activiteiten. Bijvoorbeeld:
               </p>
               <ul className="space-y-4">
                 <li className="flex items-start">
                   <CheckCircle className="h-6 w-6 text-brand-orange stroke-2 flex-shrink-0 mt-1 mr-3" />
                   <span className="text-xl md:text-2xl text-brand-gray-medium">
-                    Terwijl je je tanden poetst bewust de sensaties van het poetsen opmerken.
+                    Terwijl je je <strong>tanden poetst</strong> bewust de sensaties van het poetsen opmerken.
                   </span>
                 </li>
                 <li className="flex items-start">
                   <CheckCircle className="h-6 w-6 text-brand-orange stroke-2 flex-shrink-0 mt-1 mr-3" />
                   <span className="text-xl md:text-2xl text-brand-gray-medium">
-                    Bij een gesprek actief luisteren naar wat de persoon zegt en niet al je weerwoord voorbereiden.
+                    Bij een <strong>gesprek</strong> actief luisteren naar wat de persoon zegt en niet al je weerwoord
+                    voorbereiden.
                   </span>
                 </li>
                 <li className="flex items-start">
                   <CheckCircle className="h-6 w-6 text-brand-orange stroke-2 flex-shrink-0 mt-1 mr-3" />
                   <span className="text-xl md:text-2xl text-brand-gray-medium">
-                    Tijdens het wandelen naar je werk bewust je omgeving waarnemen.
+                    Tijdens het <strong>wandelen</strong> naar je werk bewust je omgeving waarnemen.
                   </span>
                 </li>
               </ul>
               <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
-                Deze vorm van training helpt je om tijdens het werk beter te focussen en stress te herkennen voordat het
-                escaleert.
+                Ook deze vorm van training is een <strong>concentratietraining</strong> waarbij focus en aandacht nodig
+                is. Ook hiermee wordt focus versterkt en stress sneller herkent. Het mooie? Het kost geen extra tijd en
+                je <strong>geniet meer</strong> van de activiteiten die je doet!
               </p>
             </div>
           </div>
