@@ -21,7 +21,7 @@ const ProgramOverviewSection = memo(() => {
       icon: Target,
       title: "Dagelijks 15 min oefenen",
       description:
-        "Dagelijks zo'n 15 minuten oefenen. Deels gepland, deels verweven met het dagelijks leven voor échte gedragsverandering.",
+        "Dagelijks zo'n 15 minuten oefenen. Deels gepland, deels verweven met het dagelijks leven voor échte gedrag${'\u00AD'}verandering.",
     },
     {
       icon: Sliders,
