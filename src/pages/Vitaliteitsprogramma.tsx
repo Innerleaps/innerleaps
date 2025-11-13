@@ -330,7 +330,7 @@ const Vitaliteitsprogramma = () => {
             Herken je een van deze <span className="text-brand-orange">uitdagingen</span>?
           </h2>
           <p className="text-xl md:text-2xl text-brand-gray-medium text-center leading-relaxed mb-12">
-            Herken jij een van deze <strong>uitdagingen</strong>?
+            Deze organisatie uitdagingen pakken wij aan met onze methode.
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-6 gap-8 max-w-6xl mx-auto">
