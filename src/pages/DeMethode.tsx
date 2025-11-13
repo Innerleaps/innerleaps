@@ -361,8 +361,8 @@ const DeMethode = () => {
               <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
                 Prestaties verbeteren ook door <strong>sterkere concentratie</strong>. Door het trainen van het
                 controlecentrum <strong>filter</strong> je irrelevante informatie, <strong>onthoud</strong> je wat
-                belangrijk is en <strong>schakel</strong> je sneller tussen taken.{" "}
-                <strong>Hetzelfde werk kost simpelweg minder hersenenergie.</strong>
+                belangrijk is en <strong>schakel</strong> je sneller tussen taken. Hetzelfde werk kost simpelweg
+                <strong> minder hersenenergie.</strong>
               </p>
             </div>
           </div>
