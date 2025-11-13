@@ -59,7 +59,7 @@ import uvaLogo from "@/assets/Aandachttraining_aan_de_universiteit_van_amsterdam
 import menzisLogo from "@/assets/Vitaliteitsprogramma_herkend_door_menzis.png";
 
 // Lazy load calculator modal
-const CalculatorModal = lazy(() => import('@/components/CalculatorModal'));
+const CalculatorModal = lazy(() => import("@/components/CalculatorModal"));
 
 const Vitaliteitsprogramma = () => {
   const [isCalculatorOpen, setIsCalculatorOpen] = useState(false);
@@ -343,8 +343,8 @@ const Vitaliteitsprogramma = () => {
                 Grenzen aangeven is moeilijk
               </h3>
               <p className="text-base md:text-lg text-brand-gray-medium text-center">
-                Medewerkers zijn enthousiast maar nemen vaak hun eigen grenzen niet serieus. Ze gaan door tot het te
-                laat is, met stress en uitval als gevolg.
+                Medewerkers zijn enthousiast maar nemen vaak hun eigen grenzen niet serieus. Soms gaan ze zelfs door tot
+                het te laat is met stress uitval als gevolg.
               </p>
             </div>
 
@@ -925,12 +925,7 @@ const Vitaliteitsprogramma = () => {
 
       {/* Lazy load calculator modal */}
       <Suspense fallback={null}>
-        {isCalculatorOpen && (
-          <CalculatorModal 
-            isOpen={isCalculatorOpen} 
-            onClose={() => setIsCalculatorOpen(false)} 
-          />
-        )}
+        {isCalculatorOpen && <CalculatorModal isOpen={isCalculatorOpen} onClose={() => setIsCalculatorOpen(false)} />}
       </Suspense>
     </div>
   );
