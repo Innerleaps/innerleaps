@@ -315,7 +315,7 @@ const Vitaliteitsprogramma = () => {
             Medewerkers ervaren <span className="text-brand-orange">druk</span>
           </h2>
           <p className="text-xl md:text-2xl text-brand-gray-medium text-center leading-relaxed mb-12">
-            Weinig veerkracht en mentale rust. Herken je dit?
+            Medewerkers missen veerkracht en mentale rust.
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-6 gap-8 max-w-6xl mx-auto">
