@@ -475,14 +475,14 @@ const Vitaliteitsprogramma = () => {
                 <CheckCircle className="h-8 w-8 text-brand-orange stroke-2" />
               </div>
               <h3 className="text-xl md:text-2xl font-bold text-brand-gray-dark text-center">
-                Sociaal veilig reageren
+                Sociaal veilige werkplek
               </h3>
               <div className="space-y-2">
                 <div className="flex items-start gap-2">
                   <CheckCircle className="h-5 w-5 text-brand-orange flex-shrink-0 mt-0.5" />
                   <p className="text-base md:text-lg text-brand-gray-medium">
-                    Medewerkers weten hoe ze bewust en respectvol kunnen reageren in lastige situaties, waardoor de
-                    sociale veiligheid en samenwerking verbeteren.
+                    Medewerkers kunnen ongepaste reacties onderdrukken. Hierdoor wordt de kennis over sociale veiligheid
+                    ook echt toegepast. De sociale veiligheid en samenwerking verbeterd.
                   </p>
                 </div>
               </div>
