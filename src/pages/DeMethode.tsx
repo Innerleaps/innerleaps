@@ -225,7 +225,7 @@ const DeMethode = () => {
                 Omdat deelnemers <strong>stresssignalen eerder opmerken</strong>, kunnen ze{" "}
                 <strong>spanning beter beheersen</strong> en <strong>reguleren</strong>. Hierdoor{" "}
                 <strong>verbeteren prestaties</strong> én door <strong>minder spanning</strong> wordt het er allemaal
-                ook wat leuker op!
+                ook wat <strong>leuker</strong> op!
               </p>
             </div>
             <div className="rounded-xl shadow-lg overflow-hidden">
