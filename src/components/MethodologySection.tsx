@@ -18,8 +18,8 @@ const MethodologySection = memo(() => {
             <div className="space-y-6">
               <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
                 De kern van onze methode is het <strong>trainen</strong> van de "<strong>aandachtsspier</strong>". Zo
-                versterken deelnemers de Neocortex, het breindeel dat fungeert als "<strong>controlecentrum</strong>"
-                voor rationele keuzes, focus en het bewust opmerken van stresssignalen. Het resultaat is{" "}
+                versterken deelnemers hun Neocortex, het "<strong>controlecentrum</strong>" van ons brein voor rationele
+                keuzes, focus en bewust opmerken en handelen naar stresssignalen. Het resultaat is{" "}
                 <strong>minder stress</strong>, <strong>lager verzuim</strong> en <strong>betere prestaties</strong>.
               </p>
               <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
@@ -54,6 +54,6 @@ const MethodologySection = memo(() => {
   );
 });
 
-MethodologySection.displayName = 'MethodologySection';
+MethodologySection.displayName = "MethodologySection";
 
 export default MethodologySection;
