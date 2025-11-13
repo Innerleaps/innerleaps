@@ -26,6 +26,7 @@ import waarschuwingssysteemImage from "@/assets/stressmanagementtraining_sterker
 import concentratieOefening from "@/assets/Concentratietraining_oefening.png";
 import concentratieDagelijks from "@/assets/Concentratietraining_in_het_dagelijks_leven.jpeg";
 import stressmanagementEnConcentratie from "@/assets/stressmanagement_en_concentratietraining.png";
+import stressPrestatieImage from "@/assets/stress_prestatie_curve.png";
 
 // Lazy load modal
 const LeadMagnetModal = lazy(() => import("@/components/LeadMagnetModal"));
@@ -54,7 +55,7 @@ const DeMethode = () => {
       </section>
 
       {/* Sectie: Een krachtiger controlecentrum */}
-      <section className="section-padding bg-brand-off-white">
+      <section className="section-padding bg-white">
         <div className="container-custom space-y-12">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-brand-purple text-center mb-8">
             Een krachtiger <span className="text-brand-orange">controlecentrum</span>
@@ -233,7 +234,7 @@ const DeMethode = () => {
           {/* 3 Feature Cards */}
           <div className="grid md:grid-cols-3 gap-6 lg:gap-8">
             {/* Card 1: Lichaamsbewustzijn & Waarneming */}
-            <div className="bg-brand-off-white p-6 rounded-lg space-y-4">
+            <div className="bg-white shadow-sm p-6 rounded-lg space-y-4">
               <div className="p-3 rounded-lg bg-brand-orange/10 w-fit mx-auto">
                 <Heart className="h-8 w-8 text-brand-orange stroke-2" />
               </div>
@@ -263,7 +264,7 @@ const DeMethode = () => {
             </div>
 
             {/* Card 2: Emotionele Signalering */}
-            <div className="bg-brand-off-white p-6 rounded-lg space-y-4">
+            <div className="bg-white shadow-sm p-6 rounded-lg space-y-4">
               <div className="p-3 rounded-lg bg-brand-orange/10 w-fit mx-auto">
                 <AlertCircle className="h-8 w-8 text-brand-orange stroke-2" />
               </div>
@@ -291,7 +292,7 @@ const DeMethode = () => {
             </div>
 
             {/* Card 3: Zelfmonitoring & Bewustzijn */}
-            <div className="bg-brand-off-white p-6 rounded-lg space-y-4">
+            <div className="bg-white shadow-sm p-6 rounded-lg space-y-4">
               <div className="p-3 rounded-lg bg-brand-orange/10 w-fit mx-auto">
                 <Eye className="h-8 w-8 text-brand-orange stroke-2" />
               </div>
@@ -323,8 +324,45 @@ const DeMethode = () => {
         </div>
       </section>
 
+      {/* Sectie: Betere prestaties door minder stress en meer focus */}
+      <section className="section-padding bg-white">
+        <div className="container-custom space-y-12">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-brand-purple text-center mb-8">
+            Betere prestaties door minder stress en meer <span className="text-brand-orange">focus</span>
+          </h2>
+
+          {/* Grid: Image links, Text rechts */}
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+            {/* Afbeelding LINKS */}
+            <div className="rounded-xl shadow-lg overflow-hidden order-2 lg:order-1">
+              <img
+                src={stressPrestatieImage}
+                alt="Wat is de relatie tussen stress en prestatie"
+                className="w-full h-auto object-cover"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+
+            {/* Tekst RECHTS */}
+            <div className="space-y-6 order-1 lg:order-2">
+              <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
+                Een beetje stress werkt. Die deadline die je aanzet, die presentatie die je scherp houdt. Maar stress 
+                escaleert snel. Het getrainde waarschuwingssysteem vangt stress vroeg op. Want onbewuste stress? Die 
+                ondermijnt je prestaties: meer fouten, langzamer werken, sneller afgeleid.
+              </p>
+              <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
+                Prestaties verbeteren ook door sterkere concentratie. Door het trainen van het controlecentrum filter 
+                je irrelevante informatie, onthoud je wat belangrijk is en schakel je sneller tussen taken. Hetzelfde 
+                werk kost simpelweg minder hersenenergie.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Push-ups Sectie 1: Geplande concentratietraining */}
-      <section className="section-padding bg-brand-off-white">
+      <section className="section-padding bg-white">
         <div className="container-custom">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-brand-purple text-center mb-12">
             <span className="text-brand-orange">Geplande</span> concentratietraining
@@ -405,7 +443,7 @@ const DeMethode = () => {
       </section>
 
       {/* Push-ups Sectie 3: Wekelijkse workshops */}
-      <section className="section-padding bg-brand-off-white">
+      <section className="section-padding bg-white">
         <div className="container-custom">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-brand-purple text-center mb-12">
             Wekelijkse groepsworkshops, werkboek en theorie
