@@ -1,4 +1,5 @@
 import { memo } from 'react';
+import { Link } from 'react-router-dom';
 import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
 
 interface FooterProps {
@@ -35,9 +36,12 @@ const Footer = memo(({ showNavigation = true }: FooterProps) => {
                 <button onClick={() => document.getElementById('home')?.scrollIntoView({
                   behavior: 'smooth'
                 })} className="block text-gray-300 hover:text-white transition-colors text-left">Home</button>
-                <button onClick={() => document.getElementById('wetenschap')?.scrollIntoView({
-                  behavior: 'smooth'
-                })} className="block text-gray-300 hover:text-white transition-colors text-left">De Wetenschap</button>
+            <Link 
+              to="/de-methode"
+              className="block text-gray-300 hover:text-white transition-colors text-left"
+            >
+              De Methode
+            </Link>
                 <button onClick={() => document.getElementById('programma')?.scrollIntoView({
                   behavior: 'smooth'
                 })} className="block text-gray-300 hover:text-white transition-colors text-left">Programma</button>
