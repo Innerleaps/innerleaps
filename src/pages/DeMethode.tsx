@@ -3,7 +3,23 @@ import { Link } from "react-router-dom";
 import SimplifiedNavigation from "@/components/SimplifiedNavigation";
 import StickyCtaButtons from "@/components/StickyCtaButtons";
 import Footer from "@/components/Footer";
-import { Brain, Target, Lightbulb, Shield, Zap, Heart, AlertCircle, Eye, CheckCircle, Clock, Users, FileText, Activity, BookOpen, Award } from "lucide-react";
+import {
+  Brain,
+  Target,
+  Lightbulb,
+  Shield,
+  Zap,
+  Heart,
+  AlertCircle,
+  Eye,
+  CheckCircle,
+  Clock,
+  Users,
+  FileText,
+  Activity,
+  BookOpen,
+  Award,
+} from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 
@@ -22,7 +38,8 @@ const DeMethode = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-  return <div className="min-h-screen bg-white">
+  return (
+    <div className="min-h-screen bg-white">
       <SimplifiedNavigation />
       <StickyCtaButtons />
 
@@ -63,7 +80,11 @@ const DeMethode = () => {
               </p>
             </div>
             <div className="rounded-xl shadow-lg overflow-hidden">
-              <img src={controlecentrumImage} alt="Concentratietraining voor sterker executieve systeem" className="w-full h-auto object-cover" />
+              <img
+                src={controlecentrumImage}
+                alt="Concentratietraining voor sterker executieve systeem"
+                className="w-full h-auto object-cover"
+              />
             </div>
           </div>
 
@@ -207,7 +228,11 @@ const DeMethode = () => {
               </p>
             </div>
             <div className="rounded-xl shadow-lg overflow-hidden">
-              <img src={waarschuwingssysteemImage} alt="Stressmanagementtraining sterker waarschuwingssysteem" className="w-full h-auto object-cover" />
+              <img
+                src={waarschuwingssysteemImage}
+                alt="Stressmanagementtraining sterker waarschuwingssysteem"
+                className="w-full h-auto object-cover"
+              />
             </div>
           </div>
 
@@ -321,11 +346,15 @@ const DeMethode = () => {
 
               {/* Body */}
               <p className="text-xl md:text-2xl text-white/90 leading-relaxed max-w-3xl mx-auto">
-                Zelf de wetenschappelijke details bekijken? Ons academische rapport bundelt de laatste studies, analyses en berekeningen rond de effecten van aandachttraining. Inclusief effectgroottes. 
+                Zelf de wetenschappelijke details bekijken? Ons academische rapport bundelt de laatste studies, analyses
+                en berekeningen rond de effecten van aandachttraining. Inclusief effectgroottes. 
               </p>
 
               {/* Button */}
-              <Button onClick={() => setIsLeadMagnetOpen(true)} className="bg-brand-orange hover:bg-brand-orange/90 text-white font-semibold text-lg px-8 py-6">
+              <Button
+                onClick={() => setIsLeadMagnetOpen(true)}
+                className="bg-brand-orange hover:bg-brand-orange/90 text-white font-semibold text-lg px-8 py-6"
+              >
                 <FileText className="mr-2 h-5 w-5" />
                 Rapport ontvangen
               </Button>
@@ -346,7 +375,13 @@ const DeMethode = () => {
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             {/* Afbeelding LINKS */}
             <div className="rounded-xl shadow-lg overflow-hidden order-2 lg:order-1">
-              <img src={stressPrestatieImage} alt="Wat is de relatie tussen stress en prestatie" className="w-full h-auto object-cover" loading="lazy" decoding="async" />
+              <img
+                src={stressPrestatieImage}
+                alt="Wat is de relatie tussen stress en prestatie"
+                className="w-full h-auto object-cover"
+                loading="lazy"
+                decoding="async"
+              />
             </div>
 
             {/* Tekst RECHTS */}
@@ -428,7 +463,11 @@ const DeMethode = () => {
           </div>
 
           <div className="text-center">
-            <Button size="lg" className="bg-brand-orange hover:bg-brand-orange/90 text-white py-4 px-8 rounded-lg text-lg md:text-xl font-semibold shadow-xl" onClick={() => window.open("https://innerleaps.nl/Calendar", "_blank")}>
+            <Button
+              size="lg"
+              className="bg-brand-orange hover:bg-brand-orange/90 text-white py-4 px-8 rounded-lg text-lg md:text-xl font-semibold shadow-xl"
+              onClick={() => window.open("https://innerleaps.nl/Calendar", "_blank")}
+            >
               Kennismaken met Bas
             </Button>
           </div>
@@ -462,7 +501,11 @@ const DeMethode = () => {
               </p>
             </div>
             <div className="rounded-xl shadow-lg overflow-hidden">
-              <img src={concentratieOefening} alt="Concentratietraining oefening - Focus terugpakken cyclus" className="w-full h-full object-cover" />
+              <img
+                src={concentratieOefening}
+                alt="Concentratietraining oefening - Focus terugpakken cyclus"
+                className="w-full h-full object-cover"
+              />
             </div>
           </div>
         </div>
@@ -476,7 +519,11 @@ const DeMethode = () => {
           </h2>
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             <div className="rounded-xl shadow-lg overflow-hidden order-2 lg:order-1">
-              <img src={concentratieDagelijks} alt="Concentratietraining in het dagelijks leven" className="w-full h-full object-cover" />
+              <img
+                src={concentratieDagelijks}
+                alt="Concentratietraining in het dagelijks leven"
+                className="w-full h-full object-cover"
+              />
             </div>
             <div className="space-y-6 order-1 lg:order-2">
               <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
@@ -524,36 +571,36 @@ const DeMethode = () => {
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             <div className="space-y-6">
               <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
-                Het programma duurt 6 weken. Elke week krijgen deelnemers:
+                6 weken. Niet korter. Echte gedragsverandering kost tijd. Nieuwe patronen in je brein ontstaan niet in
+                een weekend. Elke week krijgen deelnemers:
               </p>
               <ul className="space-y-4">
                 <li className="flex items-start">
                   <Clock className="h-6 w-6 text-brand-orange stroke-2 flex-shrink-0 mt-1 mr-3" />
                   <span className="text-xl md:text-2xl text-brand-gray-medium">
-                    Een groepssessie van 2 uur waar ze nieuwe vaardigheden leren en ervaringen delen.
+                    Groepsworkshop van 60 minuten. Nieuwe vaardigheden, theorie en ervaringen delen over het zelf
+                    oefenen.
                   </span>
                 </li>
                 <li className="flex items-start">
                   <FileText className="h-6 w-6 text-brand-orange stroke-2 flex-shrink-0 mt-1 mr-3" />
                   <span className="text-xl md:text-2xl text-brand-gray-medium">
-                    Een werkboek met achtergrondinformatie en praktische opdrachten voor die week.
-                  </span>
-                </li>
-                <li className="flex items-start">
-                  <Brain className="h-6 w-6 text-brand-orange stroke-2 flex-shrink-0 mt-1 mr-3" />
-                  <span className="text-xl md:text-2xl text-brand-gray-medium">
-                    Wetenschappelijke theorie die uitlegt waarom deze methode werkt.
+                    Werkboek met wetenschappelijke achtergrond en praktische opdrachten.
                   </span>
                 </li>
               </ul>
               <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
-                In de workshops komen deelnemers terug op de oefeningen van die week. Ze bespreken wat ging goed, waar
-                liep je tegenaan? Door deze reflectie in een groep ontstaat er herkenning en leren deelnemers van
-                elkaar.
+                In de workshops kijk je terug: wat werkte? Waar liep je vast? De groep herkent het, je bent niet de
+                enige die worstelt met terugdwalende gedachten. Deelnemers leren van elkaar. De wekelijkse afspraken
+                houden je scherp.
               </p>
             </div>
             <div className="rounded-xl shadow-lg overflow-hidden">
-              <img src={stressmanagementEnConcentratie} alt="Stressmanagement en concentratietraining" className="w-full h-full object-cover" />
+              <img
+                src={stressmanagementEnConcentratie}
+                alt="Stressmanagement en concentratietraining"
+                className="w-full h-full object-cover"
+              />
             </div>
           </div>
         </div>
@@ -566,19 +613,28 @@ const DeMethode = () => {
             Klaar om de methode ook echt toe te passen? Bekijk hier onze programma's.
           </p>
           <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
-            <Link to="/vitaliteitsprogramma" className="bg-brand-blue border-2 border-brand-blue p-6 rounded-lg hover:bg-brand-blue/90 transition-all duration-300 group">
+            <Link
+              to="/vitaliteitsprogramma"
+              className="bg-brand-blue border-2 border-brand-blue p-6 rounded-lg hover:bg-brand-blue/90 transition-all duration-300 group"
+            >
               <h3 className="text-xl font-bold text-white mb-3 group-hover:text-brand-orange transition-colors">
                 Vitaliteitsprogramma
               </h3>
               <p className="text-base text-white/90">Voor organisaties en werkgevers</p>
             </Link>
-            <Link to="/stressmanagement-programma" className="bg-brand-blue border-2 border-brand-blue p-6 rounded-lg hover:bg-brand-blue/90 transition-all duration-300 group">
+            <Link
+              to="/stressmanagement-programma"
+              className="bg-brand-blue border-2 border-brand-blue p-6 rounded-lg hover:bg-brand-blue/90 transition-all duration-300 group"
+            >
               <h3 className="text-xl font-bold text-white mb-3 group-hover:text-brand-orange transition-colors">
                 Stressmanagement
               </h3>
               <p className="text-base text-white/90">Minder spanning & druk voor werknemers</p>
             </Link>
-            <Link to="/prestatie-programma" className="bg-brand-blue border-2 border-brand-blue p-6 rounded-lg hover:bg-brand-blue/90 transition-all duration-300 group">
+            <Link
+              to="/prestatie-programma"
+              className="bg-brand-blue border-2 border-brand-blue p-6 rounded-lg hover:bg-brand-blue/90 transition-all duration-300 group"
+            >
               <h3 className="text-xl font-bold text-white mb-3 group-hover:text-brand-orange transition-colors">
                 Prestatieprogramma
               </h3>
@@ -593,6 +649,7 @@ const DeMethode = () => {
       <Suspense fallback={null}>
         <LeadMagnetModal isOpen={isLeadMagnetOpen} onClose={() => setIsLeadMagnetOpen(false)} />
       </Suspense>
-    </div>;
+    </div>
+  );
 };
 export default DeMethode;
