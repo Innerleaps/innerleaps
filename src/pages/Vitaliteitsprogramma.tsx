@@ -385,8 +385,8 @@ const Vitaliteitsprogramma = () => {
                 Emoties op de werkvloer
               </h3>
               <p className="text-base md:text-lg text-brand-gray-medium text-center">
-                Dagelijks hebben medewerkers te maken met emotioneel uitdagende situaties. Dit kan leiden tot impulsieve
-                reacties en verminderde samenwerking.
+                Medewerkers kunnen te maken hebben met emotioneel uitdagende situaties. Dit kan leiden tot stress,
+                impulsieve reacties en verminderde samenwerking.
               </p>
             </div>
 
