@@ -360,9 +360,9 @@ const DeMethode = () => {
                 afgeleid.
               </p>
               <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
-                Prestaties verbeteren ook door <strong>>sterkere concentratie</strong. Door het trainen van het controlecentrum filter je
-                irrelevante informatie, onthoud je wat belangrijk is en schakel je sneller tussen taken. <Strong>Hetzelfde werk
-                kost simpelweg minder hersenenergie.</Strong>
+                Prestaties verbeteren ook door <strong>sterkere concentratie</strong>. Door het trainen van het controlecentrum filter je
+                irrelevante informatie, onthoud je wat belangrijk is en schakel je sneller tussen taken. <strong>Hetzelfde werk
+                kost simpelweg minder hersenenergie.</strong>
               </p>
             </div>
           </div>
