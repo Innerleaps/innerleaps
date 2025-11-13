@@ -330,7 +330,8 @@ const DeMethode = () => {
       <section className="section-padding bg-white">
         <div className="container-custom space-y-12">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-brand-purple text-center mb-8">
-            Betere prestaties door minder stress en meer <span className="text-brand-orange">focus</span>
+            <span className="text-brand-orange">Betere prestaties</span> door minder stress en meer{" "}
+            <span className="text-brand-orange">focus</span>
           </h2>
 
           {/* Grid: Image links, Text rechts */}
