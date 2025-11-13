@@ -330,7 +330,7 @@ const Vitaliteitsprogramma = () => {
             Medewerkers ervaren <span className="text-brand-orange">druk</span>
           </h2>
           <p className="text-xl md:text-2xl text-brand-gray-medium text-center leading-relaxed mb-12">
-            Herken jij deze <strong>uitdagingen</strong>?
+            Herken jij een van deze <strong>uitdagingen</strong>?
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-6 gap-8 max-w-6xl mx-auto">
@@ -395,10 +395,10 @@ const Vitaliteitsprogramma = () => {
               <div className="p-3 rounded-lg bg-brand-orange/5 w-fit mx-auto">
                 <AlertCircle className="h-8 w-8 text-brand-orange stroke-2" />
               </div>
-              <h3 className="text-xl md:text-2xl font-bold text-brand-gray-dark text-center">Verzuim blijft hoog</h3>
+              <h3 className="text-xl md:text-2xl font-bold text-brand-gray-dark text-center">Verzuim is te hoog</h3>
               <p className="text-base md:text-lg text-brand-gray-medium text-center">
-                Stress- en burn-outklachten zijn een terugkerend probleem. Medewerkers vallen uit, de werkdruk neemt toe
-                en het team lijdt.
+                Stress- en burn-outklachten zijn een terugkerend probleem. Medewerkers vallen uit en daardoor neemt de
+                werkdruk verder toe.
               </p>
             </div>
           </div>
