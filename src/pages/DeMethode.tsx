@@ -62,7 +62,7 @@ const DeMethode = () => {
 
           {/* Grid: Text links, Image rechts */}
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-            <div>
+            <div className="space-y-6">
               <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
                 Met onze "push-ups voor het brein" versterk je de <strong>frontale cortex</strong> en{" "}
                 <strong>fronto-pariëtale netwerken</strong>.
