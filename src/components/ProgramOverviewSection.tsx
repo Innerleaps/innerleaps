@@ -13,9 +13,9 @@ const ProgramOverviewSection = memo(() => {
     },
     {
       icon: Sliders,
-      title: "Opbouw",
+      title: "Systematische opbouw",
       description:
-        "Systematische opbouw van automatische patronen herkennen naar bewust handelen en integratie in het dagelijks leven.",
+        "Deelnemers starten met het herkennen van automatische patronen. Hierna volgt bewust handelen en het einde is gericht op integratie in het dagelijks leven.",
     },
     {
       icon: Users,
