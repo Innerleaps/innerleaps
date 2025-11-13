@@ -7,24 +7,24 @@ const ProgramOverviewSection = memo(() => {
   const features = [
     {
       icon: Clock,
-      title: "Workshops",
+      title: "Wekelijkse workshops",
       description:
         "Elke week een workshop van 60 minuten met andere deelnemers door één van onze geaccrediteerde trainers.",
     },
     {
       icon: Sliders,
-      title: "Systematische opbouw",
+      title: "Systematische programmaopbouw",
       description:
         "Deelnemers starten met het herkennen van automatische patronen. Hierna volgt bewust handelen en het einde is gericht op integratie in het dagelijks leven.",
     },
     {
       icon: Users,
-      title: "Veilige setting",
+      title: "Veilige leersetting",
       description: "Deelnemers houden controle.  Ze reageren op vragen van de trainer met het opsteken van handen.",
     },
     {
       icon: Target,
-      title: "Dagelijks oefenen",
+      title: "Dagelijks 15 min oefenen",
       description: "Deelnemers oefenen dagelijks zo'n 15 minuten om echte gedragsverandering te realiseren.",
     },
   ];
