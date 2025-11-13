@@ -373,7 +373,7 @@ const DeMethode = () => {
       <section className="section-padding bg-white">
         <div className="container-custom">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-brand-purple text-center mb-12">
-            De <span className="text-brand-orange">geplande</span> "brein push-ups"
+            <span className="text-brand-orange">Geplande</span> "brein push-ups"
           </h2>
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             <div className="space-y-6">
@@ -406,7 +406,7 @@ const DeMethode = () => {
       <section className="section-padding bg-white">
         <div className="container-custom">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-brand-purple text-center mb-12">
-            De "brein push-ups" in het <span className="text-brand-orange">dagelijks leven</span>
+            "Brein push-ups" in het <span className="text-brand-orange">dagelijks leven</span>
           </h2>
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             <div className="rounded-xl shadow-lg overflow-hidden order-2 lg:order-1">
