@@ -458,7 +458,7 @@ const Vitaliteitsprogramma = () => {
                 <Shield className="h-8 w-8 text-brand-orange stroke-2" />
               </div>
               <h3 className="text-xl md:text-2xl font-bold text-brand-gray-dark text-center">
-                Makkelijk grenzen aangeven
+                Eigenaarschap over werkdruk
               </h3>
               <div className="space-y-2">
                 <div className="flex items-start gap-2">
