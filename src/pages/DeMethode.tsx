@@ -47,9 +47,10 @@ const DeMethode = () => {
             Een <span className="text-brand-orange">krachtiger brein</span> door training
           </h1>
           <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
-            Net zoals je spieren versterkt in de sportschool, train je met onze <strong>push-ups je brein</strong>. Je
-            versterkt twee cruciale systemen: je <strong>controlecentrum</strong> voor focus en bewuste keuzes, én je{" "}
-            <strong>signaleringsysteem</strong> dat stress opmerkt voordat het escaleert.
+            Net zoals je spieren versterkt in de sportschool, train je met onze oefeningen je brein.{" "}
+            <strong>Push ups voor je brein</strong> dus. Je versterkt twee cruciale systemen: je{" "}
+            <strong>controlecentrum</strong> voor focus en bewuste keuzes, én je <strong>signaleringsysteem</strong> dat
+            stress opmerkt voordat het escaleert.
           </p>
         </div>
       </section>
@@ -347,14 +348,14 @@ const DeMethode = () => {
             {/* Tekst RECHTS */}
             <div className="space-y-6 order-1 lg:order-2">
               <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
-                Een beetje stress werkt. Die deadline die je aanzet, die presentatie die je scherp houdt. Maar stress 
-                escaleert snel. Het getrainde waarschuwingssysteem vangt stress vroeg op. Want onbewuste stress? Die 
+                Een beetje stress werkt. Die deadline die je aanzet, die presentatie die je scherp houdt. Maar stress
+                escaleert snel. Het getrainde waarschuwingssysteem vangt stress vroeg op. Want onbewuste stress? Die
                 ondermijnt je prestaties: meer fouten, langzamer werken, sneller afgeleid.
               </p>
               <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
-                Prestaties verbeteren ook door sterkere concentratie. Door het trainen van het controlecentrum filter 
-                je irrelevante informatie, onthoud je wat belangrijk is en schakel je sneller tussen taken. Hetzelfde 
-                werk kost simpelweg minder hersenenergie.
+                Prestaties verbeteren ook door sterkere concentratie. Door het trainen van het controlecentrum filter je
+                irrelevante informatie, onthoud je wat belangrijk is en schakel je sneller tussen taken. Hetzelfde werk
+                kost simpelweg minder hersenenergie.
               </p>
             </div>
           </div>
