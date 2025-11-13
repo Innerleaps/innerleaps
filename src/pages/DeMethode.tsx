@@ -350,9 +350,14 @@ const DeMethode = () => {
             {/* Tekst RECHTS */}
             <div className="space-y-6 order-1 lg:order-2">
               <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
-                Een beetje stress werkt. Die deadline die je aanzet, die presentatie die je scherp houdt. Maar stress
-                escaleert snel. Het getrainde waarschuwingssysteem vangt stress vroeg op. Want onbewuste stress? Die
-                ondermijnt je prestaties: meer fouten, langzamer werken, sneller afgeleid.
+                Een beetje stress werkt. Die deadline die je aanzet, die presentatie die je scherp houdt. Maar{" "}
+                <strong>stress escaleert snel</strong>.
+              </p>
+              <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
+                Het getrainde waarschuwingssysteem van deelnemers <strong>vangt stress vroeg op</strong>. Want{" "}
+                <strong>onbewuste stress</strong>? Die
+                <strong>ondermijnt</strong> je <strong>prestaties</strong>: meer fouten, langzamer werken, sneller
+                afgeleid.
               </p>
               <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
                 Prestaties verbeteren ook door sterkere concentratie. Door het trainen van het controlecentrum filter je
