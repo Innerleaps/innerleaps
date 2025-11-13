@@ -65,7 +65,10 @@ const DeMethode = () => {
             <div>
               <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
                 Met onze "push-ups voor het brein" versterk je de <strong>frontale cortex</strong> en{" "}
-                <strong>fronto-pariëtale netwerken</strong>. Klinkt misschien ingewikkeld maar simpel gezegd is dit je
+                <strong>fronto-pariëtale netwerken</strong>.
+              </p>
+              <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
+                Klinkt misschien ingewikkeld maar simpel gezegd is dit je
                 "controlecentrum". Hiermee maak je bewuste keuzes, blijf je scherp onder druk en signaleer je stress
                 voordat het escaleert.
               </p>
