@@ -12,20 +12,21 @@ const ProgramOverviewSection = memo(() => {
         "Elke week een workshop van 60 minuten met andere deelnemers door één van onze geaccrediteerde trainers.",
     },
     {
-      icon: Sliders,
-      title: "Systematische programmaopbouw",
-      description:
-        "Deelnemers starten met het herkennen van automatische patronen. Hierna volgt bewust handelen en het einde is gericht op integratie in het dagelijks leven.",
-    },
-    {
       icon: Users,
       title: "Veilig en comfortabel leren",
-      description: "Deelnemers houden controle.  Ze reageren op vragen van de trainer met het opsteken van handen.",
+      description:
+        "Deelnemers houden controle. In de groep reageren ze op vragen van de trainer met het opsteken van handen. Persoonlijke toelichting is optioneel.",
     },
     {
       icon: Target,
       title: "Dagelijks 15 min oefenen",
       description: "Deelnemers oefenen dagelijks zo'n 15 minuten om echte gedragsverandering te realiseren.",
+    },
+    {
+      icon: Sliders,
+      title: "Systematische programmaopbouw",
+      description:
+        "Deelnemers starten met het herkennen van automatische patronen. Hierna volgt bewust handelen en het einde is gericht op integratie in het dagelijks leven.",
     },
   ];
   return (
