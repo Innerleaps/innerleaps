@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState, lazy, Suspense } from "react";
 import SimplifiedNavigation from "@/components/SimplifiedNavigation";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -57,7 +57,12 @@ import vgzLogo from "@/assets/Vitaliteitprogramma_herkent_door_vgz.png";
 import czLogo from "@/assets/Vitaliteitsprogramma_herkend_door_CZ.png";
 import uvaLogo from "@/assets/Aandachttraining_aan_de_universiteit_van_amsterdam_new.png";
 import menzisLogo from "@/assets/Vitaliteitsprogramma_herkend_door_menzis.png";
+
+// Lazy load calculator modal
+const CalculatorModal = lazy(() => import('@/components/CalculatorModal'));
+
 const Vitaliteitsprogramma = () => {
+  const [isCalculatorOpen, setIsCalculatorOpen] = useState(false);
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -204,6 +209,16 @@ const Vitaliteitsprogramma = () => {
                   Wetenschappelijk bewezen vitaliteits­programma. Deelnemers ontwikkelen eigenaarschap over hun eigen
                   stress, kunnen emoties beter reguleren én verhogen hun veerkracht.
                 </p>
+              </div>
+
+              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 w-full justify-center lg:justify-start">
+                <Button
+                  size="lg"
+                  className="w-full sm:w-auto bg-brand-orange hover:bg-brand-orange text-white hover:text-white font-semibold py-3 px-4 sm:py-4 sm:px-6 rounded-lg text-sm sm:text-base lg:text-lg shadow-xl"
+                  onClick={() => setIsCalculatorOpen(true)}
+                >
+                  Wat levert dit jullie op?
+                </Button>
               </div>
             </div>
 
@@ -907,6 +922,16 @@ const Vitaliteitsprogramma = () => {
       <ROICalculator />
 
       <Footer showNavigation={false} />
+
+      {/* Lazy load calculator modal */}
+      <Suspense fallback={null}>
+        {isCalculatorOpen && (
+          <CalculatorModal 
+            isOpen={isCalculatorOpen} 
+            onClose={() => setIsCalculatorOpen(false)} 
+          />
+        )}
+      </Suspense>
     </div>
   );
 };

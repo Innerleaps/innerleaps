@@ -43,8 +43,8 @@ const StickyCtaButtons = () => {
           onClick={() => setIsCalculatorOpen(true)}
           className="font-semibold py-3 sm:py-5 px-4 sm:px-10 rounded-lg text-base sm:text-lg shadow-lg whitespace-nowrap"
         >
-          <span className="hidden sm:inline">Ontdek jullie impact</span>
-          <span className="sm:hidden">Ontdek impact</span>
+          <span className="hidden sm:inline">Bereken jullie impact</span>
+          <span className="sm:hidden">Bereken impact</span>
         </Button>
         <Button 
           variant="secondary"
