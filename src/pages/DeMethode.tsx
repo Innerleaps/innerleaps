@@ -204,17 +204,21 @@ const DeMethode = () => {
       <section className="section-padding bg-white">
         <div className="container-custom space-y-12">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-brand-purple text-center mb-8">
-            Sterker waarschuwingssysteem
+            Duidelijker waarschuwingssysteem
           </h2>
 
           {/* Grid: Text links, Image rechts */}
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             <div>
               <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
-                Door het doen van "brein push-ups" versterken deelnemers ook hun anterior insula en anterior cingulate
-                cortex. Heel simpel gezegd is dit ons waarschuwingssysteem. De gevoelsantennes waarmee je voelt wat er
-                in je lichaam gebeurt. Die spanning in je schouders voor een belangrijke meeting, die knoop in je maag
-                bij een lastig gesprek. Deelnemers leren deze signalen eerder opmerken en er bewust mee omgaan.
+                Door het doen van de "brein push-ups" versterken deelnemers ook hun <strong>anterior insula</strong> en{" "}
+                <strong>anterior cingulate cortex</strong>. Heel simpel gezegd is dit ons{" "}
+                <strong>waarschuwingssysteem</strong>. Door training merk je sneller spanning in je systeem op.
+              </p>
+              <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
+                Die spanning in je schouders voor een belangrijke meeting, die knoop in je maag bij een lastig gesprek.
+                Omdat deelnemers <strong>stresssignalen eerder opmerken</strong>, kunnen ze{" "}
+                <strong>spanning beter beheersen</strong> en <strong>reguleren</strong>.
               </p>
             </div>
             <div className="rounded-xl shadow-lg overflow-hidden">
