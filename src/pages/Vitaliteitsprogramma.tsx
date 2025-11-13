@@ -371,8 +371,8 @@ const Vitaliteitsprogramma = () => {
                 Sociale veiligheid onder druk
               </h3>
               <p className="text-base md:text-lg text-brand-gray-medium text-center">
-                Hiërarchie, culturele verschillen en gebrek aan openheid kunnen leiden tot botsingen, pesterijen of
-                ongemakkelijk gedrag. Niet iedereen durft zich kwetsbaar op te stellen.
+                Hiërarchie, culturele verschillen of verschillende waardes kunnen leiden tot botsingen, ongemakkelijk
+                gedrag of zelfs een onveilige sfeer.
               </p>
             </div>
 
