@@ -204,12 +204,12 @@ const DeMethode = () => {
       <section className="section-padding bg-white">
         <div className="container-custom space-y-12">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-brand-purple text-center mb-8">
-            Duidelijker waarschuwingssysteem
+            Duidelijker <span className="text-brand-orange">waarschuwingssysteem</span>
           </h2>
 
           {/* Grid: Text links, Image rechts */}
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-            <div>
+            <div className="space-y-6">
               <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
                 Door het doen van de "brein push-ups" versterken deelnemers ook hun <strong>anterior insula</strong> en{" "}
                 <strong>anterior cingulate cortex</strong>. Heel simpel gezegd is dit ons{" "}
