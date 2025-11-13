@@ -202,7 +202,7 @@ const Vitaliteitsprogramma = () => {
                   }}
                 >
                   Wetenschappelijk bewezen vitaliteits­programma. Deelnemers ontwikkelen eigenaarschap over hun eigen
-                  stress én verhogen hun veerkracht.
+                  stress, kunnen emoties beter reguleren én verhogen hun veerkracht.
                 </p>
               </div>
             </div>
