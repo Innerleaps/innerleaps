@@ -217,10 +217,7 @@ const DeMethode = () => {
                 <strong>anterior cingulate cortex</strong>. Heel simpel gezegd is dit ons{" "}
                 <strong>waarschuwingssysteem</strong>.
               </p>
-              <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
-                Door training merk je spanning in je systeem sneller op. De benauwdheid voor je presentatie, gespannen
-                schouders voor een belangrijke meeting of die knoop in je maag bij een lastig gesprek.
-              </p>
+
               <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
                 Omdat deelnemers <strong>stresssignalen eerder opmerken</strong>, kunnen ze{" "}
                 <strong>spanning beter beheersen</strong> en <strong>reguleren</strong>. Hierdoor{" "}
