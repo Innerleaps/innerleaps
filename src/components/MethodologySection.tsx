@@ -23,9 +23,9 @@ const MethodologySection = memo(() => {
                 <strong>minder stress</strong>, <strong>lager verzuim</strong> en <strong>betere prestaties</strong>.
               </p>
               <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
-                Het trainen van je brein klinkt bijna te mooi om waar te zijn maar meer dan{" "}
-                <strong>40 jaar wetenschappelijk onderzoek</strong> bewijst dat het écht werkt en niet zo'n klein beetje
-                ook.
+                Het trainen van je brein klinkt bijna te mooi om waar te zijn. Toch laat meer dan{" "}
+                <strong>40 jaar wetenschappelijk onderzoek</strong> zien dat het écht werkt, en niet zo'n klein beetje
+                ook!
               </p>
             </div>
             <div>
