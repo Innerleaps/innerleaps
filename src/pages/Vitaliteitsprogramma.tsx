@@ -13,13 +13,14 @@ import {
   CheckCircle,
   AlertCircle,
   Activity,
-  Calendar,
   Clock,
-  Laptop,
   Award,
   BookOpen,
   Star,
   Check,
+  Users,
+  Target,
+  Sliders,
 } from "lucide-react";
 import heroBackground from "@/assets/Vitaliteitsprogramma_presentatie_Innerleaps.png";
 
@@ -522,43 +523,41 @@ const Vitaliteitsprogramma = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
             <div className="bg-white p-6 rounded-xl space-y-4">
               <div className="p-3 rounded-lg bg-brand-orange/10 w-fit mx-auto">
-                <Calendar className="h-10 w-10 text-brand-orange stroke-2" />
-              </div>
-              <h3 className="text-xl md:text-2xl font-bold text-brand-gray-dark text-center">6 wekelijkse workshops</h3>
-              <p className="text-base md:text-lg text-brand-gray-medium text-center leading-relaxed">
-                1 keer per week een 60 min durende workshop.
-              </p>
-            </div>
-
-            <div className="bg-white p-6 rounded-xl space-y-4">
-              <div className="p-3 rounded-lg bg-brand-orange/10 w-fit mx-auto">
                 <Clock className="h-10 w-10 text-brand-orange stroke-2" />
               </div>
-              <h3 className="text-xl md:text-2xl font-bold text-brand-gray-dark text-center">15 minuten per dag</h3>
+              <h3 className="text-xl md:text-2xl font-bold text-brand-gray-dark text-center">Wekelijkse groepsworkshops</h3>
               <p className="text-base md:text-lg text-brand-gray-medium text-center leading-relaxed">
-                Audio-opnames en werkboek met concrete oefeningen die je direct in je leven toepast. Nauwelijks extra
-                tijd nodig. Oefen tijdens tandenpoetsen, douchen of afwassen.
+                Elke week een workshop van 60 minuten met andere deelnemers door één van onze geaccrediteerde trainers.
               </p>
             </div>
 
             <div className="bg-white p-6 rounded-xl space-y-4">
               <div className="p-3 rounded-lg bg-brand-orange/10 w-fit mx-auto">
-                <Laptop className="h-10 w-10 text-brand-orange stroke-2" />
+                <Users className="h-10 w-10 text-brand-orange stroke-2" />
               </div>
-              <h3 className="text-xl md:text-2xl font-bold text-brand-gray-dark text-center">Online workshops</h3>
+              <h3 className="text-xl md:text-2xl font-bold text-brand-gray-dark text-center">Veilig en comfortabel leren</h3>
               <p className="text-base md:text-lg text-brand-gray-medium text-center leading-relaxed">
-                Onderzoek toont aan dat het online programma even effectief is. Om het je extra makkelijk te maken zijn
-                daardoor alle workshops online.
+                Deelnemers houden controle. In de groep reageren ze op vragen van de trainer met het opsteken van handen. Persoonlijke toelichting is optioneel.
               </p>
             </div>
 
             <div className="bg-white p-6 rounded-xl space-y-4">
               <div className="p-3 rounded-lg bg-brand-orange/10 w-fit mx-auto">
-                <Award className="h-10 w-10 text-brand-orange stroke-2" />
+                <Target className="h-10 w-10 text-brand-orange stroke-2" />
               </div>
-              <h3 className="text-xl md:text-2xl font-bold text-brand-gray-dark text-center">Lifetime toegang</h3>
+              <h3 className="text-xl md:text-2xl font-bold text-brand-gray-dark text-center">Dagelijks 15 min oefenen</h3>
               <p className="text-base md:text-lg text-brand-gray-medium text-center leading-relaxed">
-                Ook na het programma toegang tot alle materialen en de community.
+                Dagelijks zo'n 15 minuten oefenen. Deels gepland, deels verweven met het dagelijks leven voor échte gedragverandering.
+              </p>
+            </div>
+
+            <div className="bg-white p-6 rounded-xl space-y-4">
+              <div className="p-3 rounded-lg bg-brand-orange/10 w-fit mx-auto">
+                <Sliders className="h-10 w-10 text-brand-orange stroke-2" />
+              </div>
+              <h3 className="text-xl md:text-2xl font-bold text-brand-gray-dark text-center">Systematische programmaopbouw</h3>
+              <p className="text-base md:text-lg text-brand-gray-medium text-center leading-relaxed">
+                Deelnemers starten met het herkennen van automatische patronen. Hierna volgt bewust handelen en het einde is gericht op integratie in het dagelijks leven.
               </p>
             </div>
           </div>
