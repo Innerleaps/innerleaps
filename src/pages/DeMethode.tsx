@@ -69,7 +69,8 @@ const DeMethode = () => {
                 "controlecentrum".
               </p>
               <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
-                Dit breindeel maakt ons mens en onderscheid ons van dieren. Hiermee maken we bewuste keuzes.
+                Dit breindeel maakt ons mens en onderscheid ons van dieren. Hiermee verwerken we{" "}
+                <strong>informatie</strong> tot <strong>plannen</strong> en voeren we deze <strong>bewust</strong> uit.
               </p>
             </div>
             <div className="rounded-xl shadow-lg overflow-hidden">
