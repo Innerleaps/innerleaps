@@ -65,12 +65,11 @@ const DeMethode = () => {
             <div className="space-y-6">
               <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
                 Met onze "push-ups voor het brein" versterk je de <strong>frontale cortex</strong> en{" "}
-                <strong>fronto-pariëtale netwerken</strong>.
+                <strong>fronto-pariëtale netwerken</strong>. Klinkt misschien ingewikkeld maar simpel gezegd is dit je
+                "controlecentrum".
               </p>
               <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
-                Klinkt misschien ingewikkeld maar simpel gezegd is dit je
-                "controlecentrum". Hiermee maak je bewuste keuzes, blijf je scherp onder druk en signaleer je stress
-                voordat het escaleert.
+                Dit breindeel maakt ons mens en onderscheid ons van dieren. Hiermee maken we bewuste keuzes.
               </p>
             </div>
             <div className="rounded-xl shadow-lg overflow-hidden">
