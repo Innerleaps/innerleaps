@@ -516,7 +516,7 @@ const Vitaliteitsprogramma = () => {
             <br />
           </h2>
           <p className="text-xl md:text-2xl text-brand-gray-medium text-center leading-relaxed mb-12">
-            Wat krijgen deelnemers in het programma?
+            Hoe is het vitaliteitsprogramma opgebouwd?
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
@@ -526,7 +526,7 @@ const Vitaliteitsprogramma = () => {
               </div>
               <h3 className="text-xl md:text-2xl font-bold text-brand-gray-dark text-center">6 wekelijkse workshops</h3>
               <p className="text-base md:text-lg text-brand-gray-medium text-center leading-relaxed">
-                1 keer per week een 1,5 uur durende workshop. Keuze uit 3 vaste tijdsloten.
+                1 keer per week een 60 min durende workshop.
               </p>
             </div>
 
