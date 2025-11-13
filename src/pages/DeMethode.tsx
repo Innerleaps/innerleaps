@@ -3,7 +3,20 @@ import { Link } from "react-router-dom";
 import SimplifiedNavigation from "@/components/SimplifiedNavigation";
 import StickyCtaButtons from "@/components/StickyCtaButtons";
 import Footer from "@/components/Footer";
-import { Brain, Target, Lightbulb, Shield, Zap, Heart, AlertCircle, Eye, CheckCircle, Clock, Users, FileText } from "lucide-react";
+import {
+  Brain,
+  Target,
+  Lightbulb,
+  Shield,
+  Zap,
+  Heart,
+  AlertCircle,
+  Eye,
+  CheckCircle,
+  Clock,
+  Users,
+  FileText,
+} from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 
@@ -21,7 +34,8 @@ const DeMethode = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-  return <div className="min-h-screen bg-white">
+  return (
+    <div className="min-h-screen bg-white">
       <SimplifiedNavigation />
       <StickyCtaButtons />
 
@@ -32,7 +46,9 @@ const DeMethode = () => {
             Een <span className="text-brand-orange">krachtiger brein</span> door training
           </h1>
           <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
-            Net zoals je spieren versterkt in de sportschool, train je met onze <strong>push-ups je brein</strong>. Je versterkt twee cruciale systemen: je <strong>controlecentrum</strong> voor focus en bewuste keuzes, én je <strong>signaleringsysteem</strong> dat stress opmerkt voordat het escaleert.
+            Net zoals je spieren versterkt in de sportschool, train je met onze <strong>push-ups je brein</strong>. Je
+            versterkt twee cruciale systemen: je <strong>controlecentrum</strong> voor focus en bewuste keuzes, én je{" "}
+            <strong>signaleringsysteem</strong> dat stress opmerkt voordat het escaleert.
           </p>
         </div>
       </section>
@@ -41,18 +57,27 @@ const DeMethode = () => {
       <section className="section-padding bg-brand-off-white">
         <div className="container-custom space-y-12">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-brand-purple text-center mb-8">
-            Een krachtiger controlecentrum
+            Een krachtiger <span className="text-brand-orange">controlecentrum</span>
           </h2>
-          
+
           {/* Grid: Text links, Image rechts */}
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             <div>
               <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
-                Met onze "push-ups voor het brein" versterk je de frontale cortex en fronto-pariëtale netwerken. Klinkt misschien ingewikkeld maar simpel gezegd is dit je "controlecentrum". Hiermee maak je bewuste keuzes, blijf je scherp onder druk en signaleer je stress voordat het escaleert.
+                Met onze "push-ups voor het brein" versterk je de <strong>frontale cortex</strong> en{" "}
+                <strong>fronto-pariëtale netwerken</strong>.{" "}
+                <p>
+                  Klinkt misschien ingewikkeld maar simpel gezegd is dit je "controlecentrum". Hiermee maak je bewuste
+                  keuzes, blijf je scherp onder druk en signaleer je stress voordat het escaleert.
+                </p>
               </p>
             </div>
             <div className="rounded-xl shadow-lg overflow-hidden">
-              <img src={controlecentrumImage} alt="Concentratietraining voor sterker executieve systeem" className="w-full h-auto object-cover" />
+              <img
+                src={controlecentrumImage}
+                alt="Concentratietraining voor sterker executieve systeem"
+                className="w-full h-auto object-cover"
+              />
             </div>
           </div>
 
@@ -63,9 +88,7 @@ const DeMethode = () => {
               <div className="p-3 rounded-lg bg-brand-orange/10 w-fit mx-auto">
                 <Brain className="h-8 w-8 text-brand-orange stroke-2" />
               </div>
-              <h3 className="text-xl md:text-2xl font-bold text-brand-gray-dark text-center">
-                Informatieverwerking
-              </h3>
+              <h3 className="text-xl md:text-2xl font-bold text-brand-gray-dark text-center">Informatieverwerking</h3>
               <div className="space-y-3">
                 <div className="flex items-start gap-3">
                   <CheckCircle className="h-5 w-5 text-brand-orange stroke-2 flex-shrink-0 mt-1" />
@@ -181,16 +204,23 @@ const DeMethode = () => {
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-brand-purple text-center mb-8">
             Sterker waarschuwingssysteem
           </h2>
-          
+
           {/* Grid: Text links, Image rechts */}
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             <div>
               <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
-                Door het doen van "brein push-ups" versterken deelnemers ook hun anterior insula en anterior cingulate cortex. Heel simpel gezegd is dit ons waarschuwingssysteem. De gevoelsantennes waarmee je voelt wat er in je lichaam gebeurt. Die spanning in je schouders voor een belangrijke meeting, die knoop in je maag bij een lastig gesprek. Deelnemers leren deze signalen eerder opmerken en er bewust mee omgaan.
+                Door het doen van "brein push-ups" versterken deelnemers ook hun anterior insula en anterior cingulate
+                cortex. Heel simpel gezegd is dit ons waarschuwingssysteem. De gevoelsantennes waarmee je voelt wat er
+                in je lichaam gebeurt. Die spanning in je schouders voor een belangrijke meeting, die knoop in je maag
+                bij een lastig gesprek. Deelnemers leren deze signalen eerder opmerken en er bewust mee omgaan.
               </p>
             </div>
             <div className="rounded-xl shadow-lg overflow-hidden">
-              <img src={waarschuwingssysteemImage} alt="Stressmanagementtraining sterker waarschuwingssysteem" className="w-full h-auto object-cover" />
+              <img
+                src={waarschuwingssysteemImage}
+                alt="Stressmanagementtraining sterker waarschuwingssysteem"
+                className="w-full h-auto object-cover"
+              />
             </div>
           </div>
 
@@ -231,9 +261,7 @@ const DeMethode = () => {
               <div className="p-3 rounded-lg bg-brand-orange/10 w-fit mx-auto">
                 <AlertCircle className="h-8 w-8 text-brand-orange stroke-2" />
               </div>
-              <h3 className="text-xl md:text-2xl font-bold text-brand-gray-dark text-center">
-                Emotionele Signalering
-              </h3>
+              <h3 className="text-xl md:text-2xl font-bold text-brand-gray-dark text-center">Emotionele Signalering</h3>
               <div className="space-y-3">
                 <div className="flex items-start gap-3">
                   <CheckCircle className="h-5 w-5 text-brand-orange stroke-2 flex-shrink-0 mt-1" />
@@ -312,7 +340,11 @@ const DeMethode = () => {
               </p>
             </div>
             <div className="rounded-xl shadow-lg overflow-hidden">
-              <img src={concentratieOefening} alt="Concentratietraining oefening - Focus terugpakken cyclus" className="w-full h-full object-cover" />
+              <img
+                src={concentratieOefening}
+                alt="Concentratietraining oefening - Focus terugpakken cyclus"
+                className="w-full h-full object-cover"
+              />
             </div>
           </div>
         </div>
@@ -326,7 +358,11 @@ const DeMethode = () => {
           </h2>
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             <div className="rounded-xl shadow-lg overflow-hidden order-2 lg:order-1">
-              <img src={concentratieDagelijks} alt="Concentratietraining in het dagelijks leven" className="w-full h-full object-cover" />
+              <img
+                src={concentratieDagelijks}
+                alt="Concentratietraining in het dagelijks leven"
+                className="w-full h-full object-cover"
+              />
             </div>
             <div className="space-y-6 order-1 lg:order-2">
               <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
@@ -400,7 +436,11 @@ const DeMethode = () => {
               </p>
             </div>
             <div className="rounded-xl shadow-lg overflow-hidden">
-              <img src={stressmanagementEnConcentratie} alt="Stressmanagement en concentratietraining" className="w-full h-full object-cover" />
+              <img
+                src={stressmanagementEnConcentratie}
+                alt="Stressmanagement en concentratietraining"
+                className="w-full h-full object-cover"
+              />
             </div>
           </div>
         </div>
@@ -413,19 +453,28 @@ const DeMethode = () => {
             Klaar om de methode ook echt toe te passen? Bekijk hier onze programma's.
           </p>
           <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
-            <Link to="/vitaliteitsprogramma" className="bg-brand-blue border-2 border-brand-blue p-6 rounded-lg hover:bg-brand-blue/90 transition-all duration-300 group">
+            <Link
+              to="/vitaliteitsprogramma"
+              className="bg-brand-blue border-2 border-brand-blue p-6 rounded-lg hover:bg-brand-blue/90 transition-all duration-300 group"
+            >
               <h3 className="text-xl font-bold text-white mb-3 group-hover:text-brand-orange transition-colors">
                 Vitaliteitsprogramma
               </h3>
               <p className="text-base text-white/90">Voor organisaties en werkgevers</p>
             </Link>
-            <Link to="/stressmanagement-programma" className="bg-brand-blue border-2 border-brand-blue p-6 rounded-lg hover:bg-brand-blue/90 transition-all duration-300 group">
+            <Link
+              to="/stressmanagement-programma"
+              className="bg-brand-blue border-2 border-brand-blue p-6 rounded-lg hover:bg-brand-blue/90 transition-all duration-300 group"
+            >
               <h3 className="text-xl font-bold text-white mb-3 group-hover:text-brand-orange transition-colors">
                 Stressmanagement
               </h3>
               <p className="text-base text-white/90">Minder spanning & druk voor werknemers</p>
             </Link>
-            <Link to="/prestatie-programma" className="bg-brand-blue border-2 border-brand-blue p-6 rounded-lg hover:bg-brand-blue/90 transition-all duration-300 group">
+            <Link
+              to="/prestatie-programma"
+              className="bg-brand-blue border-2 border-brand-blue p-6 rounded-lg hover:bg-brand-blue/90 transition-all duration-300 group"
+            >
               <h3 className="text-xl font-bold text-white mb-3 group-hover:text-brand-orange transition-colors">
                 Prestatieprogramma
               </h3>
@@ -444,25 +493,28 @@ const DeMethode = () => {
               <div className="inline-flex items-center justify-center w-16 h-16 bg-white/10 rounded-full">
                 <FileText className="h-8 w-8 text-brand-orange" />
               </div>
-              
+
               {/* Title */}
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white">
                 Exclusief wetenschappelijk rapport
               </h2>
-              
+
               {/* Subtitle */}
               <p className="text-xl md:text-2xl text-white font-semibold max-w-3xl mx-auto">
                 De resultaten van 40 jaar onderzoek naar aandachttraining.    
               </p>
-              
+
               {/* Body */}
               <p className="text-xl md:text-2xl text-white/90 leading-relaxed max-w-3xl mx-auto">
-                Zelf de wetenschappelijke details bekijken? Ons academische rapport bundelt de laatste studies, analyses en
-                berekeningen rond de effecten van aandachttraining. Inclusief effectgroottes en pathway-analyses.
+                Zelf de wetenschappelijke details bekijken? Ons academische rapport bundelt de laatste studies, analyses
+                en berekeningen rond de effecten van aandachttraining. Inclusief effectgroottes en pathway-analyses.
               </p>
-              
+
               {/* Button */}
-              <Button onClick={() => setIsLeadMagnetOpen(true)} className="bg-brand-orange hover:bg-brand-orange/90 text-white font-semibold text-lg px-8 py-6">
+              <Button
+                onClick={() => setIsLeadMagnetOpen(true)}
+                className="bg-brand-orange hover:bg-brand-orange/90 text-white font-semibold text-lg px-8 py-6"
+              >
                 <FileText className="mr-2 h-5 w-5" />
                 Aanvragen rapport
               </Button>
@@ -476,6 +528,7 @@ const DeMethode = () => {
       <Suspense fallback={null}>
         <LeadMagnetModal isOpen={isLeadMagnetOpen} onClose={() => setIsLeadMagnetOpen(false)} />
       </Suspense>
-    </div>;
+    </div>
+  );
 };
 export default DeMethode;
