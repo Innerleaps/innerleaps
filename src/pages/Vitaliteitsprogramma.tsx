@@ -351,20 +351,6 @@ const Vitaliteitsprogramma = () => {
             {/* Challenge 2 */}
             <div className="md:col-span-2 bg-white p-6 rounded-lg space-y-4">
               <div className="p-3 rounded-lg bg-brand-orange/5 w-fit mx-auto">
-                <Heart className="h-8 w-8 text-brand-orange stroke-2" />
-              </div>
-              <h3 className="text-xl md:text-2xl font-bold text-brand-gray-dark text-center">
-                Emoties op de werkvloer
-              </h3>
-              <p className="text-base md:text-lg text-brand-gray-medium text-center">
-                Dagelijks hebben medewerkers te maken met emotioneel uitdagende situaties. Dit kan leiden tot impulsieve
-                reacties en verminderde samenwerking.
-              </p>
-            </div>
-
-            {/* Challenge 3 */}
-            <div className="md:col-span-2 bg-white p-6 rounded-lg space-y-4">
-              <div className="p-3 rounded-lg bg-brand-orange/5 w-fit mx-auto">
                 <Shield className="h-8 w-8 text-brand-orange stroke-2" />
               </div>
               <h3 className="text-xl md:text-2xl font-bold text-brand-gray-dark text-center">
@@ -376,7 +362,7 @@ const Vitaliteitsprogramma = () => {
               </p>
             </div>
 
-            {/* Challenge 4 */}
+            {/* Challenge 3 */}
             <div className="md:col-span-2 md:col-start-2 bg-white p-6 rounded-lg space-y-4">
               <div className="p-3 rounded-lg bg-brand-orange/5 w-fit mx-auto">
                 <Activity className="h-8 w-8 text-brand-orange stroke-2" />
@@ -389,7 +375,19 @@ const Vitaliteitsprogramma = () => {
                 nemen af.
               </p>
             </div>
-
+            {/* Challenge 4 */}
+            <div className="md:col-span-2 bg-white p-6 rounded-lg space-y-4">
+              <div className="p-3 rounded-lg bg-brand-orange/5 w-fit mx-auto">
+                <Heart className="h-8 w-8 text-brand-orange stroke-2" />
+              </div>
+              <h3 className="text-xl md:text-2xl font-bold text-brand-gray-dark text-center">
+                Emoties op de werkvloer
+              </h3>
+              <p className="text-base md:text-lg text-brand-gray-medium text-center">
+                Dagelijks hebben medewerkers te maken met emotioneel uitdagende situaties. Dit kan leiden tot impulsieve
+                reacties en verminderde samenwerking.
+              </p>
+            </div>
             {/* Challenge 5 */}
             <div className="md:col-span-2 bg-white p-6 rounded-lg space-y-4">
               <div className="p-3 rounded-lg bg-brand-orange/5 w-fit mx-auto">
