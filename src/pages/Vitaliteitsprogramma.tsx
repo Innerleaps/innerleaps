@@ -354,11 +354,11 @@ const Vitaliteitsprogramma = () => {
                 <Activity className="h-8 w-8 text-brand-orange stroke-2" />
               </div>
               <h3 className="text-xl md:text-2xl font-bold text-brand-gray-dark text-center">
-                Lastig om talent te behouden
+                Kernspelers en talent behouden is uitdagend
               </h3>
               <p className="text-base md:text-lg text-brand-gray-medium text-center">
-                Door stress en een hoge werkdruk verliezen organisaties waardevol personeel. Betrokkenheid en motivatie
-                nemen af.
+                Belangrijk personeel wil je graag betrokken houden. Door de drukte op de arbeidsmarkt is dat extra
+                lastig.
               </p>
             </div>
 
