@@ -15,6 +15,7 @@ import jacquelinePhoto from "@/assets/Vitaliteitstrainer_Jacqueline_Henock.png";
 
 // Badges
 import vmbnBadge from "@/assets/Aaccreditatie_voor_Vitaliteitsprogramma.png";
+import waaromWijAfbeelding from "@/assets/waarom_wij_dit_werk_doen.png";
 
 // Wineke's logos
 import winekeOliverLogo from "@/assets/Vitaliteitsprogramma_Oliver_Wyman.png";
@@ -160,12 +161,23 @@ const OverOns = () => {
                 </p>
               </div>
 
-              {/* Rechts: Oranje blok met missie */}
+            {/* Rechts: Oranje blok met missie + afbeelding */}
+            <div className="space-y-8">
               <div className="bg-brand-orange text-white rounded-xl p-8 lg:p-10 shadow-lg">
                 <p className="text-2xl md:text-3xl lg:text-4xl font-bold leading-tight">
                   Wij creëren ruimte voor innerlijke sprongen, zodat mensen met rust, focus en lef hun potentieel leven.
                 </p>
               </div>
+              
+              <img 
+                src={waaromWijAfbeelding}
+                alt="Bas ter Haar Romenij geeft presentatie over vitaliteit en stressmanagement bij InnerLeaps"
+                className="w-full h-auto rounded-xl shadow-lg"
+                loading="lazy"
+                width="608"
+                height="405"
+              />
+            </div>
             </div>
           </div>
         </section>
