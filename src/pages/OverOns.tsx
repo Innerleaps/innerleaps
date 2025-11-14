@@ -141,17 +141,17 @@ const OverOns = () => {
               {/* Links: Body tekst */}
               <div className="space-y-6 text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
                 <p>
-                  Waar zijn je gedachten tijdens je werk? Bij je volgende meeting, je to-do lijst, dat lastige gesprek.
-                  Je werkgeheugen loopt vol. Spanning stapelt zich op. Vaak merk je het niet eens. Zo schakelt het
-                  grootste deel van ons gedrag over op de <strong>automatische piloot</strong>. Je overschrijdt je
-                  grenzen zonder het door te hebben. Je verliest contact met wat je echt nodig hebt om effectief te
-                  zijn.
+                  Waar zijn je <strong>gedachten</strong> tijdens je werk of dat momentje waar je wilde ontspannen? Bij
+                  je volgende meeting, je to-do lijst, dat lastige gesprek. Je werkgeheugen loopt vol. Spanning stapelt
+                  zich op. Onbewust, zo schakelt het grootste deel van ons gedrag over op de{" "}
+                  <strong>automatische piloot</strong>. Je overschrijdt je grenzen zonder het door te hebben. Je
+                  verliest contact met wat je echt nodig hebt om effectief te zijn.
                 </p>
 
                 <p>
-                  Wij geloven dat dit anders kan. Door je <strong>controlecentrum</strong> en{" "}
+                  Wij én de wetenschap weten dat dit anders kan. Door je <strong>controlecentrum</strong> en{" "}
                   <strong>waarschuwingssysteem</strong> te trainen, herken je stressignalen voordat ze escaleren. Je
-                  doorbreekt de automatische piloot. Je pakt controle.
+                  doorbreekt de automatische piloot. Je neemt de controle terug.
                 </p>
 
                 <p>
