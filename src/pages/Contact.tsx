@@ -36,8 +36,8 @@ const Contact = () => {
                     />
                     <div className="text-center">
                       <p className="text-brand-gray-dark italic mb-4 text-lg leading-relaxed">
-                        "Hoi! Wat leuk dat je hier bent. Zullen we even kennismaken? Dan hoor ik graag wat jullie nodig
-                        hebben."
+                        "Hoi! Wat leuk dat je hier bent. Zullen we even kennismaken? Ik luister graag naar jullie
+                        uitdagingen.
                       </p>
                       <p className="text-brand-gray-medium font-medium">— Bas Ter Haar Romenij, Oprichter InnerLeaps</p>
                     </div>
