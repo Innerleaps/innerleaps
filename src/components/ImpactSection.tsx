@@ -60,7 +60,7 @@ Dat zegt <span className="text-brand-orange">De Wetenschap</span>.</h2>
                     </div>
                     <Tooltip>
                       <TooltipTrigger asChild>
-                        <span className="text-xs bg-brand-orange/5 text-brand-orange/70 px-2 py-1 rounded-full font-normal cursor-help hover:bg-brand-orange/10 hover:text-brand-orange transition-colors duration-200">
+                        <span className="text-sm bg-brand-orange/5 text-brand-orange/70 px-2 py-1 rounded-full font-normal cursor-help hover:bg-brand-orange/10 hover:text-brand-orange transition-colors duration-200">
                           {impact.tag}
                         </span>
                       </TooltipTrigger>
