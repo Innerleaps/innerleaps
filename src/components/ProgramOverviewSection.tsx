@@ -63,7 +63,7 @@ const ProgramOverviewSection = memo(() => {
         </div>
 
         {/* Methode CTA - Over volledige breedte gecentreerd */}
-        <div className="text-center pt-12 space-y-6">
+        <div className="text-center pt-4 lg:pt-12 space-y-6">
           <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed py-[16px] px-0">
             Wil je nog meer weten over onze methode?
           </p>
