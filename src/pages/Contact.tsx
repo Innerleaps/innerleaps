@@ -4,7 +4,7 @@ import { Calendar, Mail, Phone } from 'lucide-react';
 import StickyCtaButtons from '@/components/StickyCtaButtons';
 import ROICalculator from '@/components/ROICalculator';
 import { useEffect } from 'react';
-import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
+import Footer from '@/components/Footer';
 const Contact = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -92,43 +92,7 @@ const Contact = () => {
 
       <ROICalculator />
 
-      {/* Footer */}
-      <footer className="bg-gradient-to-br from-brand-blue to-brand-blue-dark text-white py-12">
-        <div className="container-custom">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div>
-              <div className="text-2xl font-bold mb-4">Innerleaps</div>
-              <p className="text-gray-300 leading-relaxed">InnerLeaps transformeert teams met wetenschappelijk bewezen stress management voor duurzaam succes. Geen quick fixes, wel echte gedragsverandering.</p>
-            </div>
-            <div>
-              <h3 className="text-lg font-semibold mb-4">Contact</h3>
-              <div className="space-y-2 text-gray-300">
-                <p>Email: bas@innerleaps.nl</p>
-                <p>Telefoon: 06 23 45 34 77</p>
-                <p>KVK nummer: 98136925</p>
-                <div className="mt-4 flex justify-start">
-                  <Avatar className="w-24 h-24">
-                    <AvatarImage src="/lovable-uploads/eaa7a159-2f85-4fa3-b487-4855426f2c14.png" alt="Bas Ter Haar Romenij" />
-                    <AvatarFallback className="text-white text-xl font-bold bg-brand-blue">BtH</AvatarFallback>
-                  </Avatar>
-                </div>
-              </div>
-            </div>
-            <div>
-              <h3 className="text-lg font-semibold mb-4">Snel naar</h3>
-              <div className="space-y-2">
-                <button onClick={() => window.location.href = '/'} className="block text-gray-300 hover:text-white transition-colors text-left">Home</button>
-                <button onClick={() => window.location.href = '/wetenschap'} className="block text-gray-300 hover:text-white transition-colors text-left">De Wetenschap</button>
-                <button onClick={() => window.location.href = '/programma'} className="block text-gray-300 hover:text-white transition-colors text-left">Programma</button>
-                <button onClick={() => window.location.href = '/contact'} className="block text-gray-300 hover:text-white transition-colors text-left">Contact</button>
-              </div>
-            </div>
-          </div>
-          <div className="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
-            <p>&copy; 2024 Innerleaps. Alle rechten voorbehouden.</p>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>;
 };
 export default Contact;
