@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import SimplifiedNavigation from "@/components/SimplifiedNavigation";
 import StickyCtaButtons from "@/components/StickyCtaButtons";
 import Footer from "@/components/Footer";
+import { useIntersectionObserver } from "@/hooks/useIntersectionObserver";
 import {
   Brain,
   Target,
@@ -35,6 +36,14 @@ import stressPrestatieImage from "@/assets/stress_prestatie_curve.png";
 const LeadMagnetModal = lazy(() => import("@/components/LeadMagnetModal"));
 const DeMethode = () => {
   const [isLeadMagnetOpen, setIsLeadMagnetOpen] = useState(false);
+  const heroRef = useIntersectionObserver({ threshold: 0.1 });
+  const controleRef = useIntersectionObserver({ threshold: 0.1 });
+  const waarschuwingRef = useIntersectionObserver({ threshold: 0.1 });
+  const rapportRef = useIntersectionObserver({ threshold: 0.1 });
+  const prestatieRef = useIntersectionObserver({ threshold: 0.1 });
+  const masterclassRef = useIntersectionObserver({ threshold: 0.1 });
+  const pushUpsRef = useIntersectionObserver({ threshold: 0.1 });
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -44,7 +53,12 @@ const DeMethode = () => {
       <StickyCtaButtons />
 
       {/* Hero Section - Gecentreerd */}
-      <section className="section-padding bg-white">
+      <section 
+        ref={heroRef.ref}
+        className={`section-padding bg-white transition-opacity duration-1000 ${
+          heroRef.isIntersecting ? 'opacity-100' : 'opacity-0'
+        }`}
+      >
         <div className="container-custom text-center space-y-6 max-w-4xl mx-auto">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-purple leading-tight">
             Een <span className="text-brand-orange">krachtiger brein</span> door "brein push-ups"
@@ -59,7 +73,12 @@ const DeMethode = () => {
       </section>
 
       {/* Sectie: Een krachtiger controlecentrum */}
-      <section className="section-padding bg-white">
+      <section 
+        ref={controleRef.ref}
+        className={`section-padding bg-white transition-all duration-1000 ${
+          controleRef.isIntersecting ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+        }`}
+      >
         <div className="container-custom space-y-12">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-brand-purple text-center mb-8">
             Een krachtiger <span className="text-brand-orange">controlecentrum</span>
@@ -206,7 +225,12 @@ const DeMethode = () => {
       </section>
 
       {/* Sectie: Sterker waarschuwingssysteem */}
-      <section className="section-padding bg-white">
+      <section 
+        ref={waarschuwingRef.ref}
+        className={`section-padding bg-white transition-all duration-1000 ${
+          waarschuwingRef.isIntersecting ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+        }`}
+      >
         <div className="container-custom space-y-12">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-brand-purple text-center mb-8">
             Duidelijker <span className="text-brand-orange">waarschuwingssysteem</span>
@@ -232,6 +256,10 @@ const DeMethode = () => {
                 src={waarschuwingssysteemImage}
                 alt="Stressmanagementtraining sterker waarschuwingssysteem"
                 className="w-full h-auto object-cover"
+                loading="lazy"
+                decoding="async"
+                width={800}
+                height={600}
               />
             </div>
           </div>
@@ -330,7 +358,12 @@ const DeMethode = () => {
       </section>
 
       {/* Wetenschappelijke Bijlage Downloaden Sectie */}
-      <section className="section-padding bg-white">
+      <section 
+        ref={rapportRef.ref}
+        className={`section-padding bg-white transition-all duration-1000 ${
+          rapportRef.isIntersecting ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+        }`}
+      >
         <div className="container-custom">
           <Card className="max-w-4xl mx-auto p-8 bg-brand-blue">
             <div className="text-center space-y-6">
@@ -364,7 +397,12 @@ const DeMethode = () => {
       </section>
 
       {/* Sectie: Betere prestaties door minder stress en meer focus */}
-      <section className="section-padding bg-white">
+      <section 
+        ref={prestatieRef.ref}
+        className={`section-padding bg-white transition-all duration-1000 ${
+          prestatieRef.isIntersecting ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+        }`}
+      >
         <div className="container-custom space-y-12">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-brand-purple text-center mb-8">
             <span className="text-brand-orange">Betere prestaties</span> door minder stress en meer{" "}
@@ -381,6 +419,8 @@ const DeMethode = () => {
                 className="w-full h-auto object-cover"
                 loading="lazy"
                 decoding="async"
+                width={800}
+                height={600}
               />
             </div>
 
@@ -407,7 +447,12 @@ const DeMethode = () => {
       </section>
 
       {/* Masterclass Sectie */}
-      <section className="py-16 md:py-24 bg-brand-off-white">
+      <section 
+        ref={masterclassRef.ref}
+        className={`py-16 md:py-24 bg-brand-off-white transition-all duration-1000 ${
+          masterclassRef.isIntersecting ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+        }`}
+      >
         <div className="container mx-auto px-4">
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-purple text-center leading-tight mb-6">
             Ervaar het zelf, <span className="text-brand-orange">gratis</span> met onze{" "}
@@ -475,7 +520,12 @@ const DeMethode = () => {
       </section>
 
       {/* Push-ups Sectie 1: Geplande concentratietraining */}
-      <section className="section-padding bg-white">
+      <section 
+        ref={pushUpsRef.ref}
+        className={`section-padding bg-white transition-all duration-1000 ${
+          pushUpsRef.isIntersecting ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+        }`}
+      >
         <div className="container-custom">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-brand-purple text-center mb-12">
             <span className="text-brand-orange">Geplande</span> "brein push-ups"
@@ -505,6 +555,10 @@ const DeMethode = () => {
                 src={concentratieOefening}
                 alt="Concentratietraining oefening - Focus terugpakken cyclus"
                 className="w-full h-full object-cover"
+                loading="lazy"
+                decoding="async"
+                width={600}
+                height={400}
               />
             </div>
           </div>
@@ -523,6 +577,10 @@ const DeMethode = () => {
                 src={concentratieDagelijks}
                 alt="Concentratietraining in het dagelijks leven"
                 className="w-full h-full object-cover"
+                loading="lazy"
+                decoding="async"
+                width={600}
+                height={400}
               />
             </div>
             <div className="space-y-6 order-1 lg:order-2">
@@ -600,6 +658,10 @@ const DeMethode = () => {
                 src={stressmanagementEnConcentratie}
                 alt="Stressmanagement en concentratietraining"
                 className="w-full h-full object-cover"
+                loading="lazy"
+                decoding="async"
+                width={800}
+                height={600}
               />
             </div>
           </div>
