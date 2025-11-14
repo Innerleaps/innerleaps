@@ -27,6 +27,7 @@ import {
 } from "lucide-react";
 import heroBackground from "@/assets/Vitaliteitsprogramma_presentatie_Innerleaps.png";
 import masterclassImage from "@/assets/Stressmanagement_masterclass.png";
+import breinTrainingImg from "@/assets/6_weken_brein_trainen.png";
 
 // Client logos
 import oliverLogo from "@/assets/Vitaliteitsprogramma_Oliver_Wyman_light-2.png";
@@ -543,26 +544,36 @@ const StressManagement = () => {
       {/* 6 Weken Thema's Sectie */}
       <section className="py-16 md:py-24 bg-white">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-purple text-center leading-tight mb-6">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-purple text-center leading-tight mb-12">
             <span className="text-brand-orange">6 weken</span> je brein trainen
           </h2>
           
-          <div className="max-w-4xl mx-auto space-y-6 text-xl md:text-2xl text-brand-gray-medium leading-relaxed mb-12">
-            <p>Dit programma werkt met dagelijkse <strong>"push-ups voor je brein"</strong>. Tijdens deze push-ups breng jij je focus telkens terug naar de oefening of huidige activiteit. Hierdoor versterken twee cruciale <strong>hersensystemen</strong>.</p>
+          <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center mb-16">
+            <div className="space-y-6 text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
+              <p>Dit programma werkt met dagelijkse <strong>"push-ups voor je brein"</strong>. Tijdens deze push-ups breng jij je focus telkens terug naar de oefening of huidige activiteit. Hierdoor versterken twee cruciale <strong>hersensystemen</strong>.</p>
 
-            <p>Je <strong>controlecentrum</strong> wordt sterker. Je onderdrukt impulsieve automatische reacties beter, doorbreekt piekergedachten en creëert rust in je hoofd.</p>
+              <p>Je <strong>controlecentrum</strong> wordt sterker. Je onderdrukt impulsieve automatische reacties beter, doorbreekt piekergedachten en creëert rust in je hoofd.</p>
 
-            <p>Je <strong>waarschuwingssysteem</strong> wordt gevoeliger. Je merkt spanning, een vol hoofd of onrustige gedachten op tijd op. Zo leer je stressignalen vroeg herkennen en krijg je controle over je gedachten in plaats van andersom.</p>
+              <p>Je <strong>waarschuwingssysteem</strong> wordt gevoeliger. Je merkt spanning, een vol hoofd of onrustige gedachten op tijd op. Zo leer je stressignalen vroeg herkennen en krijg je controle over je gedachten in plaats van andersom.</p>
 
-            <p className="text-center font-semibold mt-8">Meer weten over onze methode?</p>
-          </div>
-
-          <div className="text-center mb-16">
-            <Link to="/de-methode">
-              <Button className="bg-brand-orange hover:bg-brand-orange/90 text-white py-3 px-8 rounded-lg text-lg font-semibold">
-                Ontdek de methode
-              </Button>
-            </Link>
+              <p className="text-center">Meer weten over onze methode?</p>
+              
+              <div className="text-center">
+                <Link to="/de-methode">
+                  <Button className="bg-brand-orange hover:bg-brand-orange/90 text-white py-3 px-8 rounded-lg text-lg font-semibold">
+                    Ontdek de methode
+                  </Button>
+                </Link>
+              </div>
+            </div>
+            
+            <div className="relative">
+              <img 
+                src={breinTrainingImg} 
+                alt="Mensen tijdens een aandacht- en concentratietraining voor betere prestaties en minder stress" 
+                className="w-full h-auto rounded-2xl shadow-lg"
+              />
+            </div>
           </div>
 
           <div className="max-w-3xl mx-auto space-y-6">
