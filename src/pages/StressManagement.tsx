@@ -540,14 +540,14 @@ const StressManagement = () => {
         </div>
       </section>
 
-      {/* Brein Training Intro Sectie */}
-      <section className="py-16 md:py-24 bg-brand-off-white">
+      {/* 6 Weken Thema's Sectie */}
+      <section className="py-16 md:py-24 bg-white">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-purple text-center leading-tight mb-6">
             <span className="text-brand-orange">6 weken</span> je brein trainen
           </h2>
           
-          <div className="max-w-4xl mx-auto space-y-6 text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
+          <div className="max-w-4xl mx-auto space-y-6 text-xl md:text-2xl text-brand-gray-medium leading-relaxed mb-12">
             <p>Dit programma werkt met dagelijkse <strong>"push-ups voor je brein"</strong>. Tijdens deze push-ups breng jij je focus telkens terug naar de oefening of huidige activiteit. Hierdoor versterken twee cruciale <strong>hersensystemen</strong>.</p>
 
             <p>Je <strong>controlecentrum</strong> wordt sterker. Je onderdrukt impulsieve automatische reacties beter, doorbreekt piekergedachten en creëert rust in je hoofd.</p>
@@ -557,22 +557,13 @@ const StressManagement = () => {
             <p className="text-center font-semibold mt-8">Meer weten over onze methode?</p>
           </div>
 
-          <div className="text-center mt-8">
+          <div className="text-center mb-16">
             <Link to="/de-methode">
               <Button className="bg-brand-orange hover:bg-brand-orange/90 text-white py-3 px-8 rounded-lg text-lg font-semibold">
                 Ontdek de methode
               </Button>
             </Link>
           </div>
-        </div>
-      </section>
-
-      {/* 6 Weken Thema's Sectie */}
-      <section className="py-16 md:py-24 bg-white">
-        <div className="container mx-auto px-4">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-purple text-center leading-tight mb-12">
-            6 weken, 6 thema's voor <span className="text-brand-orange">echte verandering</span>
-          </h2>
 
           <div className="max-w-3xl mx-auto space-y-6">
             <div className="bg-brand-off-white p-6 rounded-xl space-y-3">
