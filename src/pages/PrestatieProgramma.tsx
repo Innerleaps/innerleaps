@@ -461,7 +461,7 @@ const PrestatieProgramma = () => {
 
           <div className="text-center mt-12">
             <p className="text-xl text-brand-gray-medium mb-6">Wil jij dit ook bereiken?</p>
-            <Button 
+            <Button
               onClick={() => setIsRegistrationModalOpen(true)}
               className="bg-brand-orange hover:bg-brand-orange/90 text-white py-3 px-8 rounded-lg text-lg font-semibold"
             >
@@ -475,7 +475,7 @@ const PrestatieProgramma = () => {
       <section className="py-16 md:py-24 bg-brand-off-white">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-purple text-center leading-tight mb-6">
-            Het 6-weekse <span className="text-brand-orange">prestatie</span> programma. Van potentieel naar performance
+            Het 6-weekse <span className="text-brand-orange">prestatie</span> programma.
           </h2>
           <p className="text-xl md:text-2xl text-brand-gray-medium text-center leading-relaxed mb-12">
             Wetenschappelijk bewezen. Praktisch toepasbaar. Meetbare resultaten.
@@ -532,7 +532,7 @@ const PrestatieProgramma = () => {
 
           <div className="text-center mt-12">
             <p className="text-xl text-brand-gray-medium mb-6">Klaar om ook te starten?</p>
-            <Button 
+            <Button
               onClick={() => setIsRegistrationModalOpen(true)}
               className="bg-brand-orange hover:bg-brand-orange/90 text-white py-3 px-8 rounded-lg text-lg font-semibold"
             >
@@ -548,20 +548,31 @@ const PrestatieProgramma = () => {
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-purple text-center leading-tight mb-12">
             <span className="text-brand-orange">6 weken</span> je brein trainen
           </h2>
-          
+
           <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center mb-16">
             <div className="space-y-6 text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
-              <p>Dit programma werkt met dagelijkse <strong>"push-ups voor je brein"</strong>. Tijdens deze push-ups breng jij je focus en concentratie steeds terug naar de oefening of huidige activiteit. Hierdoor versterken twee cruciale <strong>hersensystemen</strong>.</p>
+              <p>
+                Dit programma werkt met dagelijkse <strong>"push-ups voor je brein"</strong>. Tijdens deze push-ups
+                breng jij je focus en concentratie steeds terug naar de oefening of huidige activiteit. Hierdoor
+                versterken twee cruciale <strong>hersensystemen</strong>.
+              </p>
 
-              <p>Je <strong>controlecentrum</strong> wordt sterker. Je filtert afleidingen beter, schakelt sneller tussen taken en houdt focus langer vast. Hetzelfde werk kost simpelweg minder energie.</p>
+              <p>
+                Je <strong>controlecentrum</strong> wordt sterker. Je filtert afleidingen beter, schakelt sneller tussen
+                taken en houdt focus langer vast. Hetzelfde werk kost simpelweg minder energie.
+              </p>
 
-              <p>Je <strong>waarschuwingssysteem</strong> wordt gevoeliger. Je merkt op tijd wanneer druk je prestaties ondermijnt. Meer fouten, trager werken, sneller afgeleid. Zo versterk je je concentratie en pak je controle over onbewuste stress die je prestaties ondermijnt.</p>
+              <p>
+                Je <strong>waarschuwingssysteem</strong> wordt gevoeliger. Je merkt op tijd wanneer druk je prestaties
+                ondermijnt. Meer fouten, trager werken, sneller afgeleid. Zo versterk je je concentratie en pak je
+                controle over onbewuste stress die je prestaties ondermijnt.
+              </p>
             </div>
-            
+
             <div className="relative">
-              <img 
-                src={breinTrainingImg} 
-                alt="Mensen tijdens een aandacht- en concentratietraining voor betere prestaties en minder stress" 
+              <img
+                src={breinTrainingImg}
+                alt="Mensen tijdens een aandacht- en concentratietraining voor betere prestaties en minder stress"
                 className="w-full h-auto rounded-2xl shadow-lg"
               />
             </div>
@@ -586,11 +597,11 @@ const PrestatieProgramma = () => {
                   Controlecentrum
                 </span>
               </div>
-              <h3 className="text-xl font-bold text-brand-gray-dark">
-                De automatische piloot doorbreken
-              </h3>
+              <h3 className="text-xl font-bold text-brand-gray-dark">De automatische piloot doorbreken</h3>
               <p className="text-lg text-brand-gray-medium leading-relaxed">
-                Waar zijn je gedachten terwijl je tanden poetst? Waarschijnlijk bij je eerste meeting of je to-do lijst. Leer herkennen wanneer je gedachten afdwalen en breng je aandacht terug naar wat je nu doet. Je traint je controlecentrum door telkens bewust aandacht te geven aan je huidige activiteit.
+                Waar zijn je gedachten terwijl je tanden poetst? Waarschijnlijk bij je eerste meeting of je to-do lijst.
+                Leer herkennen wanneer je gedachten afdwalen en breng je aandacht terug naar wat je nu doet. Je traint
+                je controlecentrum door telkens bewust aandacht te geven aan je huidige activiteit.
               </p>
             </div>
 
@@ -603,11 +614,10 @@ const PrestatieProgramma = () => {
                   Waarschuwingssysteem
                 </span>
               </div>
-              <h3 className="text-xl font-bold text-brand-gray-dark">
-                Vroege waarschuwingssignalen herkennen
-              </h3>
+              <h3 className="text-xl font-bold text-brand-gray-dark">Vroege waarschuwingssignalen herkennen</h3>
               <p className="text-lg text-brand-gray-medium leading-relaxed">
-                Train je waarschuwingssysteem zodat je gespannen schouders, een strakke kaak of oppervlakkige ademhaling opmerkt voordat spanning je overneemt. Jij pakt de controle omdat je gevoelsantennes scherper worden.
+                Train je waarschuwingssysteem zodat je gespannen schouders, een strakke kaak of oppervlakkige ademhaling
+                opmerkt voordat spanning je overneemt. Jij pakt de controle omdat je gevoelsantennes scherper worden.
               </p>
             </div>
 
@@ -620,11 +630,10 @@ const PrestatieProgramma = () => {
                   Controlecentrum
                 </span>
               </div>
-              <h3 className="text-xl font-bold text-brand-gray-dark">
-                Stoppen met piekeren
-              </h3>
+              <h3 className="text-xl font-bold text-brand-gray-dark">Stoppen met piekeren</h3>
               <p className="text-lg text-brand-gray-medium leading-relaxed">
-                Gedachten zijn geen feiten. Leer de 3-step reset: een pauze-knop die voorkomt dat piekeren de controle krijgt. Krijg je focus waar jij die wil hebben.
+                Gedachten zijn geen feiten. Leer de 3-step reset: een pauze-knop die voorkomt dat piekeren de controle
+                krijgt. Krijg je focus waar jij die wil hebben.
               </p>
             </div>
 
@@ -640,11 +649,10 @@ const PrestatieProgramma = () => {
                   Waarschuwingssysteem
                 </span>
               </div>
-              <h3 className="text-xl font-bold text-brand-gray-dark">
-                Ruimte tussen gedachte en reactie
-              </h3>
+              <h3 className="text-xl font-bold text-brand-gray-dark">Ruimte tussen gedachte en reactie</h3>
               <p className="text-lg text-brand-gray-medium leading-relaxed">
-                Laat je niet meeslepen door gedachten. Zie ze als mentale gebeurtenissen die komen en gaan. Krijg controle en bepaal zelf hoe je wil reageren in plaats van automatisch te handelen.
+                Laat je niet meeslepen door gedachten. Zie ze als mentale gebeurtenissen die komen en gaan. Krijg
+                controle en bepaal zelf hoe je wil reageren in plaats van automatisch te handelen.
               </p>
             </div>
 
@@ -657,11 +665,10 @@ const PrestatieProgramma = () => {
                   Waarschuwingssysteem
                 </span>
               </div>
-              <h3 className="text-xl font-bold text-brand-gray-dark">
-                Naar moeilijkheden toe in plaats van eromheen
-              </h3>
+              <h3 className="text-xl font-bold text-brand-gray-dark">Naar moeilijkheden toe in plaats van eromheen</h3>
               <p className="text-lg text-brand-gray-medium leading-relaxed">
-                Wat je vermijdt wordt sterker. Leer moeilijke emoties en sensaties toe te laten zonder automatisch te reageren. Neem de controle.
+                Wat je vermijdt wordt sterker. Leer moeilijke emoties en sensaties toe te laten zonder automatisch te
+                reageren. Neem de controle.
               </p>
             </div>
 
@@ -677,18 +684,17 @@ const PrestatieProgramma = () => {
                   Waarschuwingssysteem
                 </span>
               </div>
-              <h3 className="text-xl font-bold text-brand-gray-dark">
-                Duurzame integratie in je leven
-              </h3>
+              <h3 className="text-xl font-bold text-brand-gray-dark">Duurzame integratie in je leven</h3>
               <p className="text-lg text-brand-gray-medium leading-relaxed">
-                Herken je gedachtepatronen en maak de geleerde technieken blijvend onderdeel van je dagelijkse routine. Bouw je eigen toolbox voor alle situaties.
+                Herken je gedachtepatronen en maak de geleerde technieken blijvend onderdeel van je dagelijkse routine.
+                Bouw je eigen toolbox voor alle situaties.
               </p>
             </div>
           </div>
 
           <div className="text-center mt-12">
             <p className="text-xl text-brand-gray-medium mb-6">Ben je ook zo enthousiast?</p>
-            <Button 
+            <Button
               onClick={() => setIsRegistrationModalOpen(true)}
               className="bg-brand-orange hover:bg-brand-orange/90 text-white py-3 px-8 rounded-lg text-lg font-semibold"
             >
@@ -726,7 +732,7 @@ const PrestatieProgramma = () => {
 
           <div className="text-center mt-12">
             <p className="text-xl text-brand-gray-medium mb-6">Wil jij nu een leven met meer prestatie en focus?</p>
-            <Button 
+            <Button
               onClick={() => setIsRegistrationModalOpen(true)}
               className="bg-brand-orange hover:bg-brand-orange/90 text-white py-3 px-8 rounded-lg text-lg font-semibold"
             >
@@ -835,9 +841,7 @@ const PrestatieProgramma = () => {
 
           {/* Modal - lazy loaded */}
           <Suspense fallback={null}>
-            {isModalOpen && (
-              <MasterclassFormModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
-            )}
+            {isModalOpen && <MasterclassFormModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />}
           </Suspense>
         </div>
       </section>
