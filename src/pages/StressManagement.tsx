@@ -151,7 +151,7 @@ const StressManagement = () => {
                   className="text-xl md:text-2xl text-blue-100 leading-relaxed break-words"
                   style={{ textShadow: "0 2px 8px rgba(0,0,0,0.5)" }}
                 >
-                  Wetenschappelijk bewezen stressmanagement programma voor een rust in je hoofd en meer levensplezier.
+                  Wetenschappelijk bewezen stressmanagement programma voor een rust in je hoofd en meer levensplezier
                 </p>
               </div>
 
@@ -183,7 +183,9 @@ const StressManagement = () => {
                       >
                         Minder spanning & stress
                       </span>
-                      <span className="text-brand-orange font-bold text-base sm:text-lg md:text-xl lg:text-2xl shrink-0">50%</span>
+                      <span className="text-brand-orange font-bold text-base sm:text-lg md:text-xl lg:text-2xl shrink-0">
+                        50%
+                      </span>
                     </div>
                     <div className="flex items-center justify-between w-full p-2.5 sm:p-3 lg:p-4 bg-brand-purple/90 rounded-lg">
                       <span
@@ -192,7 +194,9 @@ const StressManagement = () => {
                       >
                         Meer focus
                       </span>
-                      <span className="text-brand-orange font-bold text-base sm:text-lg md:text-xl lg:text-2xl shrink-0">25%</span>
+                      <span className="text-brand-orange font-bold text-base sm:text-lg md:text-xl lg:text-2xl shrink-0">
+                        25%
+                      </span>
                     </div>
                     <div className="flex items-center justify-between w-full p-2.5 sm:p-3 lg:p-4 bg-brand-purple/90 rounded-lg">
                       <span
@@ -201,7 +205,9 @@ const StressManagement = () => {
                       >
                         Meer tevreden over het leven
                       </span>
-                      <span className="text-brand-orange font-bold text-base sm:text-lg md:text-xl lg:text-2xl shrink-0">15%</span>
+                      <span className="text-brand-orange font-bold text-base sm:text-lg md:text-xl lg:text-2xl shrink-0">
+                        15%
+                      </span>
                     </div>
                     <div className="flex items-center justify-between w-full p-2.5 sm:p-3 lg:p-4 bg-brand-purple/90 rounded-lg">
                       <span
