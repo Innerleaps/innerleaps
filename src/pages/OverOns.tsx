@@ -136,9 +136,16 @@ const OverOns = () => {
             {/* Links: Body tekst */}
             <div className="space-y-6 text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
               <p>
-                Door het drukke leven dat veel van ons vraagt, verliezen we soms het contact met wat we echt nodig hebben om effectief te zijn. Ons werkgeheugen raakt vol en spanningen lopen op in ons systeem, vaak zonder dat we het echt merken. Daardoor schakelen we vaak op de automatische piloot: zo'n 65% tot 90% van ons gedrag gebeurt onbewust. Zo overschrijden we onze grenzen, wat leidt tot lagere productiviteit en een toenemend verzuim.
+                Waar zijn je gedachten tijdens je werk? Bij je volgende meeting, je to-do lijst, dat lastige gesprek. Je werkgeheugen loopt vol. Spanning stapelt zich op. Vaak merk je het niet eens. Zo schakelt het grootste deel van ons gedrag over op de <strong>automatische piloot</strong>. Je overschrijdt je grenzen zonder het door te hebben. Je verliest contact met wat je echt nodig hebt om effectief te zijn.
               </p>
               
+              <p>
+                Wij geloven dat dit anders kan. Door je <strong>controlecentrum</strong> en <strong>waarschuwingssysteem</strong> te trainen, herken je stressignalen voordat ze escaleren. Je doorbreekt de automatische piloot. Je pakt controle.
+              </p>
+              
+              <p>
+                Zo creëren we <strong>ruimte voor innerlijke sprongen</strong>. Ruimte waarin mensen met rust, focus en lef hun potentieel leven. Waarin bewuste keuzes de plek innemen van automatische reacties. Dat is waarom we dit werk doen.
+              </p>
             </div>
             
             {/* Rechts: Oranje blok met missie */}
