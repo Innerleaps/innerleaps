@@ -860,7 +860,7 @@ const Vitaliteitsprogramma = () => {
       {/* ROI Calculator Section */}
       <ROICalculator />
 
-      <Footer showNavigation={false} />
+      <Footer />
 
       {/* Lazy load calculator modal */}
       <Suspense fallback={null}>

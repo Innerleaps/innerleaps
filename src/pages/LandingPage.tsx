@@ -24,7 +24,7 @@ const LandingPage = () => {
       <Suspense fallback={<div className="section-padding"><div className="container-custom text-center">Laden...</div></div>}>
         <ROICalculator />
       </Suspense>
-      <Footer showNavigation={false} />
+      <Footer />
     </div>
   );
 };

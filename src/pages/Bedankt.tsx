@@ -151,7 +151,7 @@ const Bedankt = () => {
         </div>
       </div>
     </div>
-    <Footer showNavigation={false} />
+    <Footer />
     </>
   );
 };
