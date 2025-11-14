@@ -140,7 +140,7 @@ const Vitaliteitsprogramma = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-12 items-start w-full overflow-hidden">
             <div className="w-full space-y-6 animate-fade-in text-center lg:text-left">
               <div className="w-full space-y-4 sm:space-y-6">
-                <div className="inline-flex items-center gap-2 bg-white/50 text-brand-purple px-3 py-1.5 sm:px-4 sm:py-2 rounded-full text-xs sm:text-sm md:text-base font-medium backdrop-blur-sm">
+                <div className="inline-flex items-center gap-2 bg-white/50 text-brand-purple px-3 py-1.5 sm:px-4 sm:py-2 rounded-full text-sm sm:text-base md:text-lg font-medium backdrop-blur-sm">
                   <Award className="h-4 w-4" />
                   Wetenschappelijk bewezen programma
                 </div>
@@ -179,36 +179,36 @@ const Vitaliteitsprogramma = () => {
                     <div className="flex items-center justify-between w-full p-2.5 sm:p-3 lg:p-4 bg-brand-purple/90 rounded-lg">
                       <span style={{
                       textShadow: "0 2px 8px rgba(0,0,0,0.5)"
-                    }} className="text-xs sm:text-sm md:text-base lg:text-lg text-white font-normal">
+                    }} className="text-sm sm:text-base md:text-lg lg:text-xl text-white font-normal">
                         Minder verzuim
                       </span>
-                      <span className="text-brand-orange font-bold text-sm sm:text-base md:text-lg shrink-0">
+                      <span className="text-brand-orange font-bold text-base sm:text-lg md:text-xl lg:text-2xl shrink-0">
                         15-21%
                       </span>
                     </div>
                     <div className="flex items-center justify-between w-full p-2.5 sm:p-3 lg:p-4 bg-brand-purple/90 rounded-lg">
                       <span style={{
                       textShadow: "0 2px 8px rgba(0,0,0,0.5)"
-                    }} className="text-xs sm:text-sm md:text-base lg:text-lg text-white font-normal">
+                    }} className="text-sm sm:text-base md:text-lg lg:text-xl text-white font-normal">
                         Minder burn-out risico
                       </span>
-                      <span className="text-brand-orange font-bold text-sm sm:text-base md:text-lg shrink-0">70%</span>
+                      <span className="text-brand-orange font-bold text-base sm:text-lg md:text-xl lg:text-2xl shrink-0">70%</span>
                     </div>
                     <div className="flex items-center justify-between w-full p-2.5 sm:p-3 lg:p-4 bg-brand-purple/90 rounded-lg">
                       <span style={{
                       textShadow: "0 2px 8px rgba(0,0,0,0.5)"
-                    }} className="text-xs sm:text-sm md:text-base lg:text-lg text-white font-normal">
+                    }} className="text-sm sm:text-base md:text-lg lg:text-xl text-white font-normal">
                         Meer tevreden over het leven
                       </span>
-                      <span className="text-brand-orange font-bold text-sm sm:text-base md:text-lg shrink-0">15%</span>
+                      <span className="text-brand-orange font-bold text-base sm:text-lg md:text-xl lg:text-2xl shrink-0">15%</span>
                     </div>
                     <div className="flex items-center justify-between w-full p-2.5 sm:p-3 lg:p-4 bg-brand-purple/90 rounded-lg">
                       <span style={{
                       textShadow: "0 2px 8px rgba(0,0,0,0.5)"
-                    }} className="text-xs sm:text-sm md:text-base lg:text-lg text-white font-normal">
+                    }} className="text-sm sm:text-base md:text-lg lg:text-xl text-white font-normal">
                         Wetenschappelijk onderzoek
                       </span>
-                      <span className="text-brand-orange font-bold text-sm sm:text-base md:text-lg shrink-0">
+                      <span className="text-brand-orange font-bold text-base sm:text-lg md:text-xl lg:text-2xl shrink-0">
                         40+ jaar
                       </span>
                     </div>
@@ -221,7 +221,7 @@ const Vitaliteitsprogramma = () => {
                         {[...Array(5)].map((_, i) => <Star key={i} className="w-4 h-4 fill-amber-400 text-amber-400 group-hover:scale-110 transition-transform" />)}
                       </div>
                     </div>
-                    <p className="text-amber-100 text-xs text-center mt-1">Google Reviews</p>
+                    <p className="text-amber-100 text-sm text-center mt-1">Google Reviews</p>
                   </a>
                 </div>
               </div>
