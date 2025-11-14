@@ -142,10 +142,10 @@ const OverOns = () => {
               <div className="space-y-6 text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
                 <p>
                   Waar zijn je <strong>gedachten</strong> tijdens je werk of dat momentje waar je wilde ontspannen? Bij
-                  je volgende meeting, je to-do lijst, dat lastige gesprek. Je werkgeheugen loopt vol. Spanning stapelt
-                  zich op. Onbewust, zo schakelt het grootste deel van ons gedrag over op de{" "}
-                  <strong>automatische piloot</strong>. Je overschrijdt je grenzen zonder het door te hebben. Je
-                  verliest contact met wat je echt nodig hebt om effectief te zijn.
+                  je volgende meeting, je to-do lijst, dat lastige gesprek. Je werkgeheugen loopt vol.{" "}
+                  <strong>Spanning</strong> stapelt zich op. Onbewust, zo schakelt het grootste deel van ons gedrag over
+                  op de <strong>automatische piloot</strong>. Je overschrijdt je grenzen zonder het door te hebben. Je
+                  verliest contact met wat je echt nodig hebt om <strong>effectief</strong> te zijn.
                 </p>
 
                 <p>
