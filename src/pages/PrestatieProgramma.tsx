@@ -1040,7 +1040,7 @@ const PrestatieProgramma = () => {
         )}
       </Suspense>
 
-      <Footer showNavigation={false} />
+      <Footer />
     </div>
   );
 };

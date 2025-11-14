@@ -1,6 +1,5 @@
 import { memo } from "react";
 import { Link } from "react-router-dom";
-import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 
 interface FooterProps {
   showNavigation?: boolean;
@@ -25,15 +24,6 @@ const Footer = memo(({ showNavigation = true }: FooterProps) => {
               <p>Email: bas@innerleaps.nl</p>
               <p>Telefoon: 06 23 45 34 77</p>
               <p>KVK nummer: 98136925</p>
-              <div className="mt-4 flex justify-start">
-                <Avatar className="w-24 h-24">
-                  <AvatarImage
-                    src="/lovable-uploads/eaa7a159-2f85-4fa3-b487-4855426f2c14.png"
-                    alt="Bas Ter Haar Romenij"
-                  />
-                  <AvatarFallback className="text-white text-xl font-bold bg-brand-blue">BtH</AvatarFallback>
-                </Avatar>
-              </div>
             </div>
           </div>
           {showNavigation && (

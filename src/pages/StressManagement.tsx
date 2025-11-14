@@ -1039,7 +1039,7 @@ const StressManagement = () => {
         )}
       </Suspense>
 
-      <Footer showNavigation={false} />
+      <Footer />
     </div>
   );
 };
