@@ -51,7 +51,7 @@ const DeMethode = () => {
           </h1>
           <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
             Net zoals je spieren versterkt in de <strong>sportschool</strong>, train je met onze oefeningen je{" "}
-            <strong>brein</strong>. Push ups voor je brein dus. Je versterkt twee cruciale systemen: je{" "}
+            <strong>brein</strong>. Push ups voor je brein dus. Je <strong>versterkt</strong> twee cruciale systemen: je{" "}
             <strong>controlecentrum</strong> voor focus en bewuste keuzes, én je <strong>signaleringsysteem</strong> dat
             stress opmerkt voordat het escaleert.
           </p>
