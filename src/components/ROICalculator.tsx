@@ -302,9 +302,9 @@ const ROICalculator = () => {
   }
 
   return (
-    <section className="py-20 bg-brand-blue">
+    <section className="py-20 bg-white">
       <div className="container-custom">
-        <Card className="p-8 bg-transparent border-0 shadow-none">
+        <div className="bg-brand-blue rounded-xl p-8 shadow-lg">
           <div className="text-center mb-8">
             <div className="inline-flex items-center justify-center w-16 h-16 bg-white/10 rounded-full mb-4">
               <Calculator className="h-8 w-8 text-brand-orange" />
@@ -456,7 +456,7 @@ const ROICalculator = () => {
           <div className="mt-6 text-xs text-white/80 text-center">
             * Alle velden zijn verplicht. Je gegevens worden vertrouwelijk behandeld.
           </div>
-        </Card>
+        </div>
       </div>
     </section>
   );
