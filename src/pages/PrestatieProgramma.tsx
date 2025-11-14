@@ -1,4 +1,5 @@
 import { useState, useEffect, lazy, Suspense } from "react";
+import { Link } from "react-router-dom";
 import SimplifiedNavigation from "@/components/SimplifiedNavigation";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -540,6 +541,33 @@ const PrestatieProgramma = () => {
         </div>
       </section>
 
+      {/* Brein Training Intro Sectie */}
+      <section className="py-16 md:py-24 bg-brand-off-white">
+        <div className="container mx-auto px-4">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-purple text-center leading-tight mb-6">
+            <span className="text-brand-orange">6 weken</span> je brein trainen
+          </h2>
+          
+          <div className="max-w-4xl mx-auto space-y-6 text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
+            <p>Dit programma werkt met dagelijkse <strong>"push-ups voor je brein"</strong>. Tijdens deze push-ups breng jij je focus en concentratie steeds terug naar de oefening of huidige activiteit. Hierdoor versterken twee cruciale <strong>hersensystemen</strong>.</p>
+
+            <p>Je <strong>controlecentrum</strong> wordt sterker. Je filtert afleidingen beter, schakelt sneller tussen taken en houdt focus langer vast. Hetzelfde werk kost simpelweg minder energie.</p>
+
+            <p>Je <strong>waarschuwingssysteem</strong> wordt gevoeliger. Je merkt op tijd wanneer druk je prestaties ondermijnt. Meer fouten, trager werken, sneller afgeleid. Zo versterk je je concentratie en pak je controle over onbewuste stress die je prestaties ondermijnt.</p>
+
+            <p className="text-center font-semibold mt-8">Meer weten over onze methode?</p>
+          </div>
+
+          <div className="text-center mt-8">
+            <Link to="/de-methode">
+              <Button className="bg-brand-orange hover:bg-brand-orange/90 text-white py-3 px-8 rounded-lg text-lg font-semibold">
+                Ontdek de methode
+              </Button>
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* 6 Weken Thema's Sectie */}
       <section className="py-16 md:py-24 bg-white">
         <div className="container mx-auto px-4">
@@ -548,75 +576,111 @@ const PrestatieProgramma = () => {
           </h2>
 
           <div className="max-w-3xl mx-auto space-y-6">
-            <div className="bg-brand-off-white p-6 rounded-xl space-y-2">
-              <div className="flex items-center gap-3">
+            <div className="bg-brand-off-white p-6 rounded-xl space-y-3">
+              <div className="flex items-center gap-2 flex-wrap">
                 <span className="bg-brand-orange text-white px-3 py-1 rounded-full text-sm font-semibold whitespace-nowrap">
                   Week 1
                 </span>
-                <h3 className="text-xl font-bold text-brand-gray-dark">Loskomen van de automatische piloot</h3>
+                <span className="bg-brand-purple text-white px-3 py-1 rounded-full text-sm font-semibold whitespace-nowrap">
+                  Controlecentrum
+                </span>
               </div>
+              <h3 className="text-xl font-bold text-brand-gray-dark">
+                De automatische piloot doorbreken
+              </h3>
               <p className="text-lg text-brand-gray-medium leading-relaxed">
-                Herken wanneer je op de automatische piloot zit en leer je aandacht terug te pakken.
+                Waar zijn je gedachten terwijl je tanden poetst? Waarschijnlijk bij je eerste meeting of je to-do lijst. Leer herkennen wanneer je gedachten afdwalen en breng je aandacht terug naar wat je nu doet. Je traint je controlecentrum door telkens bewust aandacht te geven aan je huidige activiteit.
               </p>
             </div>
 
-            <div className="bg-brand-off-white p-6 rounded-xl space-y-2">
-              <div className="flex items-center gap-3">
+            <div className="bg-brand-off-white p-6 rounded-xl space-y-3">
+              <div className="flex items-center gap-2 flex-wrap">
                 <span className="bg-brand-orange text-white px-3 py-1 rounded-full text-sm font-semibold whitespace-nowrap">
                   Week 2
                 </span>
-                <h3 className="text-xl font-bold text-brand-gray-dark">Stress signalen van het lichaam herkennen</h3>
+                <span className="bg-brand-purple text-white px-3 py-1 rounded-full text-sm font-semibold whitespace-nowrap">
+                  Waarschuwingssysteem
+                </span>
               </div>
+              <h3 className="text-xl font-bold text-brand-gray-dark">
+                Vroege waarschuwingssignalen herkennen
+              </h3>
               <p className="text-lg text-brand-gray-medium leading-relaxed">
-                Je lichaam geeft signalen. Leer ze tijdig herkennen voordat spanning escaleert.
+                Train je waarschuwingssysteem zodat je gespannen schouders, een strakke kaak of oppervlakkige ademhaling opmerkt voordat spanning je overneemt. Jij pakt de controle omdat je gevoelsantennes scherper worden.
               </p>
             </div>
 
-            <div className="bg-brand-off-white p-6 rounded-xl space-y-2">
-              <div className="flex items-center gap-3">
+            <div className="bg-brand-off-white p-6 rounded-xl space-y-3">
+              <div className="flex items-center gap-2 flex-wrap">
                 <span className="bg-brand-orange text-white px-3 py-1 rounded-full text-sm font-semibold whitespace-nowrap">
                   Week 3
                 </span>
-                <h3 className="text-xl font-bold text-brand-gray-dark">Met aandacht door het dagelijkse leven</h3>
+                <span className="bg-brand-purple text-white px-3 py-1 rounded-full text-sm font-semibold whitespace-nowrap">
+                  Controlecentrum
+                </span>
               </div>
+              <h3 className="text-xl font-bold text-brand-gray-dark">
+                Stoppen met piekeren
+              </h3>
               <p className="text-lg text-brand-gray-medium leading-relaxed">
-                Integreer aandacht in je dagelijkse routines. Praktisch en toepasbaar.
+                Gedachten zijn geen feiten. Leer de 3-step reset: een pauze-knop die voorkomt dat piekeren de controle krijgt. Krijg je focus waar jij die wil hebben.
               </p>
             </div>
 
-            <div className="bg-brand-off-white p-6 rounded-xl space-y-2">
-              <div className="flex items-center gap-3">
+            <div className="bg-brand-off-white p-6 rounded-xl space-y-3">
+              <div className="flex items-center gap-2 flex-wrap">
                 <span className="bg-brand-orange text-white px-3 py-1 rounded-full text-sm font-semibold whitespace-nowrap">
                   Week 4
                 </span>
-                <h3 className="text-xl font-bold text-brand-gray-dark">Omgaan met stressvolle gedachten</h3>
+                <span className="bg-brand-purple text-white px-3 py-1 rounded-full text-sm font-semibold whitespace-nowrap">
+                  Controlecentrum
+                </span>
+                <span className="bg-brand-purple text-white px-3 py-1 rounded-full text-sm font-semibold whitespace-nowrap">
+                  Waarschuwingssysteem
+                </span>
               </div>
+              <h3 className="text-xl font-bold text-brand-gray-dark">
+                Ruimte tussen gedachte en reactie
+              </h3>
               <p className="text-lg text-brand-gray-medium leading-relaxed">
-                Gedachten zijn geen feiten. Leer ruimte te creëren tussen gedachte en reactie.
+                Laat je niet meeslepen door gedachten. Zie ze als mentale gebeurtenissen die komen en gaan. Krijg controle en bepaal zelf hoe je wil reageren in plaats van automatisch te handelen.
               </p>
             </div>
 
-            <div className="bg-brand-off-white p-6 rounded-xl space-y-2">
-              <div className="flex items-center gap-3">
+            <div className="bg-brand-off-white p-6 rounded-xl space-y-3">
+              <div className="flex items-center gap-2 flex-wrap">
                 <span className="bg-brand-orange text-white px-3 py-1 rounded-full text-sm font-semibold whitespace-nowrap">
                   Week 5
                 </span>
-                <h3 className="text-xl font-bold text-brand-gray-dark">Samenwerken en luisteren met aandacht</h3>
+                <span className="bg-brand-purple text-white px-3 py-1 rounded-full text-sm font-semibold whitespace-nowrap">
+                  Waarschuwingssysteem
+                </span>
               </div>
+              <h3 className="text-xl font-bold text-brand-gray-dark">
+                Naar moeilijkheden toe in plaats van eromheen
+              </h3>
               <p className="text-lg text-brand-gray-medium leading-relaxed">
-                Betere communicatie door bewuste aandacht in gesprekken en samenwerking.
+                Wat je vermijdt wordt sterker. Leer moeilijke emoties en sensaties toe te laten zonder automatisch te reageren. Neem de controle.
               </p>
             </div>
 
-            <div className="bg-brand-off-white p-6 rounded-xl space-y-2">
-              <div className="flex items-center gap-3">
+            <div className="bg-brand-off-white p-6 rounded-xl space-y-3">
+              <div className="flex items-center gap-2 flex-wrap">
                 <span className="bg-brand-orange text-white px-3 py-1 rounded-full text-sm font-semibold whitespace-nowrap">
                   Week 6
                 </span>
-                <h3 className="text-xl font-bold text-brand-gray-dark">Implementatie in het dagelijks leven</h3>
+                <span className="bg-brand-purple text-white px-3 py-1 rounded-full text-sm font-semibold whitespace-nowrap">
+                  Controlecentrum
+                </span>
+                <span className="bg-brand-purple text-white px-3 py-1 rounded-full text-sm font-semibold whitespace-nowrap">
+                  Waarschuwingssysteem
+                </span>
               </div>
+              <h3 className="text-xl font-bold text-brand-gray-dark">
+                Duurzame integratie in je leven
+              </h3>
               <p className="text-lg text-brand-gray-medium leading-relaxed">
-                Maak het blijvend. Integreer de geleerde technieken in je dagelijkse routine.
+                Herken je gedachtepatronen en maak de geleerde technieken blijvend onderdeel van je dagelijkse routine. Bouw je eigen toolbox voor alle situaties.
               </p>
             </div>
           </div>
