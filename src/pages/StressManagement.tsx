@@ -555,16 +555,6 @@ const StressManagement = () => {
               <p>Je <strong>controlecentrum</strong> wordt sterker. Je onderdrukt impulsieve automatische reacties beter, doorbreekt piekergedachten en creëert rust in je hoofd.</p>
 
               <p>Je <strong>waarschuwingssysteem</strong> wordt gevoeliger. Je merkt spanning, een vol hoofd of onrustige gedachten op tijd op. Zo leer je stressignalen vroeg herkennen en krijg je controle over je gedachten in plaats van andersom.</p>
-
-              <p className="text-center">Meer weten over onze methode?</p>
-              
-              <div className="text-center">
-                <Link to="/de-methode">
-                  <Button className="bg-brand-orange hover:bg-brand-orange/90 text-white py-3 px-8 rounded-lg text-lg font-semibold">
-                    Ontdek de methode
-                  </Button>
-                </Link>
-              </div>
             </div>
             
             <div className="relative">
@@ -574,6 +564,15 @@ const StressManagement = () => {
                 className="w-full h-auto rounded-2xl shadow-lg"
               />
             </div>
+          </div>
+
+          <div className="text-center mb-16">
+            <p className="text-xl md:text-2xl text-brand-gray-medium mb-4">Meer weten over onze methode?</p>
+            <Link to="/de-methode">
+              <Button className="bg-brand-orange hover:bg-brand-orange/90 text-white py-3 px-8 rounded-lg text-lg font-semibold">
+                Ontdek de methode
+              </Button>
+            </Link>
           </div>
 
           <div className="max-w-3xl mx-auto space-y-6">

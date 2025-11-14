@@ -494,16 +494,6 @@ const Vitaliteitsprogramma = () => {
               <p>Het <strong>controlecentrum</strong> wordt sterker. Medewerkers onderdrukken impulsieve automatische reacties beter, filteren irrelevante informatie en nemen bewustere beslissingen over hun werkdruk.</p>
 
               <p>Het <strong>waarschuwingssysteem</strong> wordt gevoeliger. Deelnemers herkennen stressignalen zoals spanning, een vol hoofd of verminderde concentratie op tijd. Zo ontwikkelen medewerkers eigenaarschap over hun eigen stress en kunnen ze op tijd grenzen aangeven.</p>
-
-              <p className="text-center">Meer weten over onze methode?</p>
-              
-              <div className="text-center">
-                <Link to="/de-methode">
-                  <Button className="bg-brand-orange hover:bg-brand-orange/90 text-white py-3 px-8 rounded-lg text-lg font-semibold">
-                    Ontdek de methode
-                  </Button>
-                </Link>
-              </div>
             </div>
             
             <div className="relative">
@@ -513,6 +503,15 @@ const Vitaliteitsprogramma = () => {
                 className="w-full h-auto rounded-2xl shadow-lg"
               />
             </div>
+          </div>
+
+          <div className="text-center mb-16">
+            <p className="text-xl md:text-2xl text-brand-gray-medium mb-4">Meer weten over onze methode?</p>
+            <Link to="/de-methode">
+              <Button className="bg-brand-orange hover:bg-brand-orange/90 text-white py-3 px-8 rounded-lg text-lg font-semibold">
+                Ontdek de methode
+              </Button>
+            </Link>
           </div>
 
           <div className="max-w-3xl mx-auto space-y-6">
