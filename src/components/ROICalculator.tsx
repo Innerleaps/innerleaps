@@ -302,9 +302,9 @@ const ROICalculator = () => {
   }
 
   return (
-    <section className="py-20 bg-white">
-      <div className="container mx-auto px-4">
-        <Card className="max-w-4xl mx-auto p-8 bg-brand-blue">
+    <section className="py-20 bg-brand-blue">
+      <div className="container-custom">
+        <Card className="p-8 bg-transparent border-0 shadow-none">
           <div className="text-center mb-8">
             <div className="inline-flex items-center justify-center w-16 h-16 bg-white/10 rounded-full mb-4">
               <Calculator className="h-8 w-8 text-brand-orange" />

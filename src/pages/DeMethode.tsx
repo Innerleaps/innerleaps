@@ -75,7 +75,7 @@ const DeMethode = () => {
       {/* Sectie: Een krachtiger controlecentrum */}
       <section 
         ref={controleRef.ref}
-        className={`section-padding bg-white transition-all duration-1000 ${
+        className={`pt-8 pb-16 md:pb-20 lg:pb-28 bg-white transition-all duration-1000 ${
           controleRef.isIntersecting ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
         }`}
       >
@@ -360,12 +360,12 @@ const DeMethode = () => {
       {/* Wetenschappelijke Bijlage Downloaden Sectie */}
       <section 
         ref={rapportRef.ref}
-        className={`section-padding bg-white transition-all duration-1000 ${
+        className={`section-padding bg-brand-blue transition-all duration-1000 ${
           rapportRef.isIntersecting ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
         }`}
       >
         <div className="container-custom">
-          <Card className="max-w-4xl mx-auto p-8 bg-brand-blue">
+          <Card className="p-8 bg-transparent border-0 shadow-none">
             <div className="text-center space-y-6">
               {/* Icon */}
               <div className="inline-flex items-center justify-center w-16 h-16 bg-white/10 rounded-full">
@@ -373,7 +373,7 @@ const DeMethode = () => {
               </div>
 
               {/* Title */}
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white">
+              <h2 className="text-3xl font-bold text-white mb-2">
                 Ontdek zelf de resultaten van 40 jaar onderzoek
               </h2>
 
