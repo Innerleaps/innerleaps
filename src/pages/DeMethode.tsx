@@ -360,12 +360,12 @@ const DeMethode = () => {
       {/* Wetenschappelijke Bijlage Downloaden Sectie */}
       <section 
         ref={rapportRef.ref}
-        className={`section-padding bg-brand-blue transition-all duration-1000 ${
+        className={`section-padding bg-white transition-all duration-1000 ${
           rapportRef.isIntersecting ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
         }`}
       >
         <div className="container-custom">
-          <Card className="p-8 bg-transparent border-0 shadow-none">
+          <div className="bg-brand-blue rounded-xl p-8 shadow-lg">
             <div className="text-center space-y-6">
               {/* Icon */}
               <div className="inline-flex items-center justify-center w-16 h-16 bg-white/10 rounded-full">
@@ -392,7 +392,7 @@ const DeMethode = () => {
                 Rapport ontvangen
               </Button>
             </div>
-          </Card>
+          </div>
         </div>
       </section>
 
