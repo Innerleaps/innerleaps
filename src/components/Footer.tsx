@@ -15,8 +15,8 @@ const Footer = memo(({ showNavigation = true }: FooterProps) => {
             <div className="text-2xl font-bold mb-4">Innerleaps</div>
             <p className="text-gray-300 leading-relaxed">
               Wetenschappelijk bewezen vitaliteitsprogramma voor effectief stressmanagement en verhoogde prestaties.
-              Train je controlecentrum met brein push-ups voor je brein: 15-21% minder verzuim, 70% lager uitvalrisico
-              en 10% hogere productiviteit.
+              Train je controlecentrum met push-ups voor je brein: 15-21% minder verzuim, 70% lager uitvalrisico en 10%
+              hogere productiviteit.
             </p>
           </div>
           <div>
