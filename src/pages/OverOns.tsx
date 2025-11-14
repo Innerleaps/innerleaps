@@ -161,23 +161,24 @@ const OverOns = () => {
                 </p>
               </div>
 
-            {/* Rechts: Oranje blok met missie + afbeelding */}
-            <div className="space-y-8">
-              <div className="bg-brand-orange text-white rounded-xl p-8 lg:p-10 shadow-lg">
-                <p className="text-2xl md:text-3xl lg:text-4xl font-bold leading-tight">
-                  Wij creëren ruimte voor innerlijke sprongen, zodat mensen met rust, focus en lef hun potentieel leven.
-                </p>
+              {/* Rechts: Oranje blok met missie + afbeelding */}
+              <div className="space-y-8">
+                <div className="bg-brand-orange text-white rounded-xl p-8 lg:p-10 shadow-lg">
+                  <p className="text-2xl md:text-3xl lg:text-4xl font-bold leading-tight">
+                    Wij creëren ruimte voor innerlijke sprongen, zodat mensen met rust, focus en lef hun potentieel
+                    leven.
+                  </p>
+                </div>
+
+                <img
+                  src={waaromWijAfbeelding}
+                  alt="Bas ter Haar Romenij geeft presentatie over vitaliteit en stressmanagement bij InnerLeaps"
+                  className="w-full h-auto rounded-xl shadow-lg"
+                  loading="lazy"
+                  width="608"
+                  height="405"
+                />
               </div>
-              
-              <img 
-                src={waaromWijAfbeelding}
-                alt="Bas ter Haar Romenij geeft presentatie over vitaliteit en stressmanagement bij InnerLeaps"
-                className="w-full h-auto rounded-xl shadow-lg"
-                loading="lazy"
-                width="608"
-                height="405"
-              />
-            </div>
             </div>
           </div>
         </section>
@@ -261,20 +262,21 @@ const OverOns = () => {
               {/* Links: Body */}
               <div className="space-y-4 text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
                 <p>
-                  Hoi, ik ben Bas. Na mijn master Design for Interaction aan de TU Delft werkte ik in consultancy en als
-                  productmanager bij een SaaS-bedrijf.
+                  Hoi, ik ben Bas. Na mijn <strong>universitaire master</strong> Design for Interaction aan de{" "}
+                  <strong>TU Delft</strong> werkte ik in consultancy en als productmanager bij een SaaS-bedrijf.
                 </p>
                 <p>
                   Naast mijn werk met grote ambities houd ik van sporten. Helaas niet zonder gevaren, want mijn
-                  snowboardvakantie eindigde met een fikse hersenschudding.
+                  snowboardvakantie eindigde met een fikse <strong>hersenschudding</strong>.
                 </p>
                 <p>
                   Tijdens mijn herstel verdiepte ik mij in de hersenen en ontdekte ik dat ik die kan trainen. Het was
-                  bizar, ik stuite op een berg van 40 jaar wetenschappelijk onderzoek.
+                  bizar, ik stuite op een berg van <strong>40 jaar wetenschappelijk onderzoek</strong>.
                 </p>
                 <p>
-                  Terug op werk merkte ik het verschil: minder stress, betere concentratie, meer controle over gedrag en
-                  gedachten, en een productiviteit die ik nooit eerder kende. Die ervaring wil ik delen. Daarom richtte
+                  Terug op werk merkte ik het verschil:{" "}
+                  <strong>minder stress, betere concentratie, meer controle</strong> over gedrag en gedachten, en een
+                  productiviteit die ik nooit eerder kende. <strong>Die ervaring wil ik delen</strong>. Daarom richtte
                   ik InnerLeaps op.
                 </p>
               </div>
