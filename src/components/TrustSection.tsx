@@ -28,7 +28,7 @@ const TrustSection = memo(() => {
         {
           src: oxfordLogo,
           alt: "Vitaliteits\u00ADprogramma ontwikkeld door Oxford University",
-          className: "h-24 rounded border border-border",
+          className: "h-24 rounded",
         },
         { src: uMassLogo, alt: "Vitaliteits\u00ADprogramma ontwikkeld door University of Massachusetts", className: "h-24" },
         { src: uvaLogo, alt: "Aandacht\u00ADtraining aan de Universiteit van Amsterdam", className: "h-24" },

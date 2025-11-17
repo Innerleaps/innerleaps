@@ -37,15 +37,15 @@
 
     --radius: 0.75rem;
 
-    /* InnerLeaps brand colors - Correct HSL values */
-    --brand-orange: 16 89 60;
-    --brand-off-white: 30 33 96;
-    --brand-blue: 249 51 36;
-    --brand-blue-dark: 259 52 19;
-    --brand-purple: 259 68 16;
-    --brand-gray-dark: 214 28 28;
-    --brand-gray-medium: 215 16 47;
-    --brand-gray-light: 210 40 96;
+    /* InnerLeaps brand colors - RGB values */
+    --brand-orange: 244 115 64;
+    --brand-off-white: 247 245 242;
+    --brand-blue: 53 45 140;
+    --brand-blue-dark: 30 11 50;
+    --brand-purple: 35 12 71;
+    --brand-gray-dark: 51 65 85;
+    --brand-gray-medium: 100 116 139;
+    --brand-gray-light: 248 250 252;
   }
 
   .dark {
@@ -119,30 +119,30 @@
   }
 
   /* Brand color utilities */
-  .bg-brand-orange { background-color: hsl(var(--brand-orange)); }
-  .bg-brand-off-white { background-color: hsl(var(--brand-off-white)); }
-  .bg-brand-blue { background-color: hsl(var(--brand-blue)); }
-  .bg-brand-blue-dark { background-color: hsl(var(--brand-blue-dark)); }
-  .bg-brand-purple { background-color: hsl(var(--brand-purple)); }
-  .bg-brand-gray-dark { background-color: hsl(var(--brand-gray-dark)); }
-  .bg-brand-gray-medium { background-color: hsl(var(--brand-gray-medium)); }
-  .bg-brand-gray-light { background-color: hsl(var(--brand-gray-light)); }
+  .bg-brand-orange { background-color: rgb(var(--brand-orange)); }
+  .bg-brand-off-white { background-color: rgb(var(--brand-off-white)); }
+  .bg-brand-blue { background-color: rgb(var(--brand-blue)); }
+  .bg-brand-blue-dark { background-color: rgb(var(--brand-blue-dark)); }
+  .bg-brand-purple { background-color: rgb(var(--brand-purple)); }
+  .bg-brand-gray-dark { background-color: rgb(var(--brand-gray-dark)); }
+  .bg-brand-gray-medium { background-color: rgb(var(--brand-gray-medium)); }
+  .bg-brand-gray-light { background-color: rgb(var(--brand-gray-light)); }
 
-  .text-brand-orange { color: hsl(var(--brand-orange)); }
-  .text-brand-off-white { color: hsl(var(--brand-off-white)); }
-  .text-brand-blue { color: hsl(var(--brand-blue)); }
-  .text-brand-blue-dark { color: hsl(var(--brand-blue-dark)); }
-  .text-brand-purple { color: hsl(var(--brand-purple)); }
-  .text-brand-gray-dark { color: hsl(var(--brand-gray-dark)); }
-  .text-brand-gray-medium { color: hsl(var(--brand-gray-medium)); }
-  .text-brand-gray-light { color: hsl(var(--brand-gray-light)); }
+  .text-brand-orange { color: rgb(var(--brand-orange)); }
+  .text-brand-off-white { color: rgb(var(--brand-off-white)); }
+  .text-brand-blue { color: rgb(var(--brand-blue)); }
+  .text-brand-blue-dark { color: rgb(var(--brand-blue-dark)); }
+  .text-brand-purple { color: rgb(var(--brand-purple)); }
+  .text-brand-gray-dark { color: rgb(var(--brand-gray-dark)); }
+  .text-brand-gray-medium { color: rgb(var(--brand-gray-medium)); }
+  .text-brand-gray-light { color: rgb(var(--brand-gray-light)); }
 
-  .border-brand-orange { border-color: hsl(var(--brand-orange)); }
-  .border-brand-blue { border-color: hsl(var(--brand-blue)); }
-  .border-brand-purple { border-color: hsl(var(--brand-purple)); }
+  .border-brand-orange { border-color: rgb(var(--brand-orange)); }
+  .border-brand-blue { border-color: rgb(var(--brand-blue)); }
+  .border-brand-purple { border-color: rgb(var(--brand-purple)); }
   
-  .hover\:bg-brand-orange:hover { background-color: hsl(var(--brand-orange)); }
-  .hover\:bg-brand-blue-dark:hover { background-color: hsl(var(--brand-blue-dark)); }
+  .hover\:bg-brand-orange:hover { background-color: rgb(var(--brand-orange)); }
+  .hover\:bg-brand-blue-dark:hover { background-color: rgb(var(--brand-blue-dark)); }
 }
 
 @layer components {
