@@ -1005,9 +1005,14 @@ const PrestatieProgramma = () => {
                   Wat voor soort oefeningen zijn het?
                 </AccordionTrigger>
                 <AccordionContent className="text-base md:text-lg text-brand-gray-medium leading-relaxed">
-                  Het doel is om minder spanning in je leven te krijgen. Daarom zijn de oefeningen ook echt toegepast op
-                  je leven. Denk aan aandachtsoefeningen tijdens dagelijkse activiteiten zoals tandenpoetsen, eten,
-                  lopen. Daarnaast probeer je elke dag een aandachttraining te doen van 12 minuten.
+                  Wat voor soort oefeningen zijn het? Brein push-ups die je controlecentrum versterken. Het programma
+                  bestaat uit twee delen: Geplande training (12 minuten per dag) Dagelijkse audio-oefeningen waarin je
+                  je aandacht richt op je ademhaling of lichaam. Klinkt makkelijk? Je geest vindt er niks aan. Binnen
+                  seconden denk je aan je to-do's of die meeting. Elk moment dat je je focus terugbrengt? Dat is de
+                  push-up die je controlecentrum versterkt. Training in je dagelijks leven Je brengt bewuste aandacht
+                  naar alledaagse activiteiten. Tijdens je ochtendkoffie, op weg naar je werk, of voordat je een
+                  belangrijke meeting ingaat. Je traint je brein om scherp te zijn wanneer het ertoe doet. Het kost geen
+                  extra tijd en je wordt productiever in wat je doet.
                 </AccordionContent>
               </AccordionItem>
 
