@@ -1005,13 +1005,11 @@ const PrestatieProgramma = () => {
                   Wat voor soort oefeningen zijn het?
                 </AccordionTrigger>
                 <AccordionContent className="text-base md:text-lg text-brand-gray-medium leading-relaxed">
-                  <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
-                    Wat voor soort oefeningen zijn het? Brein push-ups die je controlecentrum versterken. Het programma
-                    bestaat uit twee delen: Geplande training (12 minuten per dag) Dagelijkse audio-oefeningen waarin je
-                    je aandacht richt op je ademhaling of lichaam. Klinkt makkelijk? Je geest vindt er niks aan. Binnen
-                    seconden denk je aan je to-do's of die meeting. Elk moment dat je je focus terugbrengt? Dat is de
-                    push-up die je controlecentrum versterkt.{" "}
-                  </p>
+                  Deelnemers doen doen op twee manieren hun "Brein push-ups"
+                  <strong>Geplande training (12 minuten per dag)</strong>
+                  Dagelijkse audio-oefeningen waarin je je aandacht richt op je ademhaling of lichaam. Klinkt makkelijk?
+                  Je geest vindt er niks aan. Binnen seconden denk je aan je to-do's of die meeting. Elk moment dat je
+                  je focus terugbrengt? Dat is de push-up die je controlecentrum versterkt.{" "}
                   <strong>Training in je dagelijks leven</strong>
                   Je brengt bewuste aandacht naar alledaagse activiteiten. Tijdens je ochtendkoffie, op weg naar je
                   werk, of voordat je een belangrijke meeting ingaat. Je traint je brein om scherp te zijn wanneer het
