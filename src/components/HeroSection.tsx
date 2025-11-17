@@ -167,10 +167,7 @@ const HeroSection = () => {
                   Het <span className="text-brand-orange">vitaliteits{"\u00AD"}programma</span> dat{" "}
                   <span className="text-brand-orange">prestaties</span> versterkt{" "}
                 </h1>
-                <p
-                  className="text-xl md:text-2xl text-blue-100 leading-relaxed break-words"
-                  style={TEXT_SHADOW_STRONG}
-                >
+                <p className="text-xl md:text-2xl text-blue-100 leading-relaxed break-words" style={TEXT_SHADOW_STRONG}>
                   Wetenschappelijk onderbouwd en resultaatgericht vitaliteits{"\u00AD"}programma. Deelnemers nemen
                   eigenaarschap over hun stresslevel, worden veerkrachtiger én productiever.
                 </p>
@@ -204,7 +201,9 @@ const HeroSection = () => {
                       >
                         Uitval risico
                       </span>
-                      <span className="text-brand-orange font-bold text-base sm:text-lg md:text-xl lg:text-2xl shrink-0">-70%</span>
+                      <span className="text-brand-orange font-bold text-base sm:text-lg md:text-xl lg:text-2xl shrink-0">
+                        -70%
+                      </span>
                     </div>
                     <div className="flex items-center justify-between w-full p-2.5 sm:p-3 lg:p-4 bg-brand-purple/90 rounded-lg">
                       <span
@@ -213,7 +212,9 @@ const HeroSection = () => {
                       >
                         Verzuim
                       </span>
-                      <span className="text-brand-orange font-bold text-base sm:text-lg md:text-xl lg:text-2xl shrink-0">-21%</span>
+                      <span className="text-brand-orange font-bold text-base sm:text-lg md:text-xl lg:text-2xl shrink-0">
+                        -21%
+                      </span>
                     </div>
                     <div className="flex items-center justify-between w-full p-2.5 sm:p-3 lg:p-4 bg-brand-purple/90 rounded-lg">
                       <span
@@ -222,14 +223,16 @@ const HeroSection = () => {
                       >
                         Productiviteit
                       </span>
-                      <span className="text-brand-orange font-bold text-base sm:text-lg md:text-xl lg:text-2xl shrink-0">+10%</span>
+                      <span className="text-brand-orange font-bold text-base sm:text-lg md:text-xl lg:text-2xl shrink-0">
+                        +10%
+                      </span>
                     </div>
                     <div className="flex items-center justify-between w-full p-2.5 sm:p-3 lg:p-4 bg-brand-purple/90 rounded-lg">
                       <span
                         style={TEXT_SHADOW_STRONG}
                         className="text-sm sm:text-base md:text-lg lg:text-xl text-white font-normal"
                       >
-                        Wetenschappelijk onderzoek
+                        Wetenschap
                       </span>
                       <span className="text-brand-orange font-bold text-base sm:text-lg md:text-xl lg:text-2xl shrink-0">
                         40+ jaar
@@ -288,12 +291,7 @@ const HeroSection = () => {
 
       {/* Calculator Modal - lazy loaded */}
       <Suspense fallback={null}>
-        {isCalculatorOpen && (
-          <CalculatorModal 
-            isOpen={isCalculatorOpen} 
-            onClose={() => setIsCalculatorOpen(false)} 
-          />
-        )}
+        {isCalculatorOpen && <CalculatorModal isOpen={isCalculatorOpen} onClose={() => setIsCalculatorOpen(false)} />}
       </Suspense>
     </>
   );
