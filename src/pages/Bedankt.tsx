@@ -127,7 +127,7 @@ const Bedankt = () => {
             <img
               src={oxfordLogo}
               alt="Oxford University"
-              className="h-12 sm:h-16 object-contain rounded border border-border"
+              className="h-12 sm:h-16 object-contain rounded"
             />
             <img src={uMassLogo} alt="University of Massachusetts" className="h-12 sm:h-16 object-contain" />
             <img src={uvaLogo} alt="Universiteit van Amsterdam" className="h-12 sm:h-16 object-contain" />

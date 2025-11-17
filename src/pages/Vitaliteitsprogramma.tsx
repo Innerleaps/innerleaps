@@ -730,7 +730,7 @@ const Vitaliteitsprogramma = () => {
                     Gebaseerd op de wetenschappelijke MBSR-methode, een van de best onderzochte interventies wereldwijd.
                   </p>
                   <div className="flex flex-row gap-4 items-center flex-wrap">
-                    <img src={oxfordLogo} alt="Vitaliteitsprogramma ontwikkeld door Oxford University" className="h-24 rounded border border-border object-contain" />
+                    <img src={oxfordLogo} alt="Vitaliteitsprogramma ontwikkeld door Oxford University" className="h-24 rounded object-contain" />
                     <img src={uMassLogo} alt="Vitaliteitsprogramma ontwikkeld door University of Massachusetts" className="h-24 object-contain" />
                     <img src={uvaLogo} alt="Aandachttraining aan de Universiteit van Amsterdam" className="h-24 object-contain" />
                   </div>
