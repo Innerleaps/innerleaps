@@ -1005,11 +1005,33 @@ const StressManagement = () => {
                 <AccordionTrigger className="text-left text-lg md:text-xl font-semibold text-brand-gray-dark hover:text-brand-orange">
                   Wat voor soort oefeningen zijn het?
                 </AccordionTrigger>
-                <AccordionContent className="text-base md:text-lg text-brand-gray-medium leading-relaxed">
-                  Het doel is om minder spanning in je leven te krijgen. Daarom zijn de oefeningen ook echt toegepast op
-                  je leven. Denk aan aandachtsoefeningen tijdens dagelijkse activiteiten zoals tandenpoetsen, eten,
-                  lopen. Daarnaast probeer je elke dag een aandachttraining te doen van 12 minuten.
-                </AccordionContent>
+            <AccordionContent className="text-base md:text-lg text-brand-gray-medium leading-relaxed space-y-4">
+              <p>
+                Deelnemers doen op twee manieren hun "Brein push-ups"
+              </p>
+              
+              <div className="space-y-2">
+                <p className="font-semibold text-brand-gray-dark">
+                  Geplande training (12 minuten per dag)
+                </p>
+                <p>
+                  Dagelijkse audio-oefeningen waarin je je aandacht richt op je ademhaling of lichaam. Klinkt makkelijk? 
+                  Je geest vindt er niks aan. Binnen seconden denk je aan je to-do's of die meeting. Elk moment dat je 
+                  je focus terugbrengt? Dat is de push-up die je controlecentrum versterkt.
+                </p>
+              </div>
+
+              <div className="space-y-2">
+                <p className="font-semibold text-brand-gray-dark">
+                  Training in je dagelijks leven
+                </p>
+                <p>
+                  Je brengt bewuste aandacht naar alledaagse activiteiten. Tijdens je ochtendkoffie, op weg naar je werk, 
+                  of voordat je een belangrijke meeting ingaat. Je traint je brein om scherp te zijn wanneer het ertoe doet. 
+                  Het kost geen extra tijd en je wordt productiever in wat je doet.
+                </p>
+              </div>
+            </AccordionContent>
               </AccordionItem>
 
               <AccordionItem value="item-5" className="bg-brand-off-white rounded-lg px-6">
