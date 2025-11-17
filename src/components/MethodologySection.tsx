@@ -20,8 +20,7 @@ const MethodologySection = memo(() => {
                 De kern van onze methode is het <strong>trainen</strong> van de "<strong>aandachtsspier</strong>". Zo
                 versterken deelnemers twee cruciale hersensystemen: hun <strong>controlecentrum</strong> voor rationele
                 keuzes, focus en bewuste acties, én hun <strong>waarschuwingssysteem</strong> dat stresssignalen eerder
-                opmerkt. Door stress te signaleren voordat het escaleert, nemen deelnemers betere én gezondere keuzes
-                met meer plezier. Het resultaat is <strong>minder stress</strong>, <strong>lager verzuim</strong> en{" "}
+                opmerkt. Het resultaat is <strong>minder stress</strong>, <strong>lager verzuim</strong> en{" "}
                 <strong>betere prestaties</strong>.
               </p>
               <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
