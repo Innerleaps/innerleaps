@@ -128,21 +128,22 @@ const LeadMagnetModal = ({ isOpen, onClose }: LeadMagnetModalProps) => {
 
   return (
     <Dialog open={isOpen} onOpenChange={handleClose}>
-      <DialogContent className="sm:max-w-lg max-h-[90vh] overflow-y-auto">
-        <DialogHeader>
-          <DialogTitle className="text-2xl font-bold text-brand-gray-dark">
-            Vraag het Wetenschappelijk Rapport aan
-          </DialogTitle>
-        </DialogHeader>
+      <DialogContent className="sm:max-w-lg max-h-[90vh] overflow-y-auto bg-white">
+        <div className="bg-brand-blue p-6 rounded-xl">
+          <DialogHeader>
+            <DialogTitle className="text-2xl font-bold text-white">
+              Vraag het Wetenschappelijk Rapport aan
+            </DialogTitle>
+          </DialogHeader>
         
-        <div className="space-y-6">
-          <p className="text-brand-gray-medium text-sm">
+          <div className="space-y-6">
+          <p className="text-white/90 text-sm">
             Ontvang ons uitgebreide academische rapport met 40 jaar onderzoeksresultaten, effectgroottes en ROI analyses.
           </p>
           
           <div className="space-y-4">
             <div>
-              <Label htmlFor="naam" className="text-brand-gray-dark">
+              <Label htmlFor="naam" className="text-white">
                 Naam *
               </Label>
               <Input
@@ -156,7 +157,7 @@ const LeadMagnetModal = ({ isOpen, onClose }: LeadMagnetModalProps) => {
             </div>
 
             <div>
-              <Label htmlFor="email" className="text-brand-gray-dark">
+              <Label htmlFor="email" className="text-white">
                 Email *
               </Label>
               <Input
@@ -170,7 +171,7 @@ const LeadMagnetModal = ({ isOpen, onClose }: LeadMagnetModalProps) => {
             </div>
 
             <div>
-              <Label htmlFor="telefoon" className="text-brand-gray-dark">
+              <Label htmlFor="telefoon" className="text-white">
                 Telefoon (optioneel)
               </Label>
               <Input
@@ -184,7 +185,7 @@ const LeadMagnetModal = ({ isOpen, onClose }: LeadMagnetModalProps) => {
             </div>
 
             <div>
-              <Label htmlFor="bedrijfsnaam" className="text-brand-gray-dark">
+              <Label htmlFor="bedrijfsnaam" className="text-white">
                 Bedrijfsnaam *
               </Label>
               <Input
@@ -198,7 +199,7 @@ const LeadMagnetModal = ({ isOpen, onClose }: LeadMagnetModalProps) => {
             </div>
 
             <div>
-              <Label htmlFor="functie" className="text-brand-gray-dark">
+              <Label htmlFor="functie" className="text-white">
                 Functie *
               </Label>
               <Input
@@ -215,14 +216,15 @@ const LeadMagnetModal = ({ isOpen, onClose }: LeadMagnetModalProps) => {
           <Button
             onClick={handleSubmit}
             disabled={!isFormValid || isSubmitting}
-            className="w-full bg-brand-blue hover:bg-brand-blue-dark text-white"
+            className="w-full bg-brand-orange hover:bg-brand-orange/90 text-white"
           >
             {isSubmitting ? 'Versturen...' : 'Vraag rapport aan'}
           </Button>
 
-          <p className="text-xs text-brand-gray-medium text-center">
+          <p className="text-xs text-white/80 text-center">
             Je ontvangt het rapport direct per email. We behandelen je gegevens vertrouwelijk.
           </p>
+        </div>
         </div>
       </DialogContent>
     </Dialog>
