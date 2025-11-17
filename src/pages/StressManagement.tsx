@@ -1,6 +1,7 @@
 import { useState, useEffect, lazy, Suspense } from "react";
 import { Link } from "react-router-dom";
 import SimplifiedNavigation from "@/components/SimplifiedNavigation";
+import StickyCtaButtons from "@/components/StickyCtaButtons";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
@@ -159,9 +160,9 @@ const StressManagement = () => {
                 <Button
                   size="lg"
                   className="w-full sm:w-auto bg-brand-orange hover:bg-brand-orange/90 text-white font-semibold py-3 px-4 sm:py-4 sm:px-6 rounded-lg text-sm sm:text-base lg:text-lg shadow-xl"
-                  onClick={scrollToMasterclass}
+                  onClick={() => setIsRegistrationModalOpen(true)}
                 >
-                  Gratis Masterclass
+                  Aanmelden programma
                 </Button>
               </div>
             </div>
@@ -1070,6 +1071,11 @@ const StressManagement = () => {
           />
         )}
       </Suspense>
+
+      <StickyCtaButtons 
+        onMasterclassClick={scrollToMasterclass}
+        onProgramRegistrationClick={() => setIsRegistrationModalOpen(true)}
+      />
 
       <Footer />
     </div>
