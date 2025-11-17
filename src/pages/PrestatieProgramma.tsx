@@ -968,7 +968,7 @@ const PrestatieProgramma = () => {
             <Accordion type="single" collapsible className="space-y-4">
               <AccordionItem value="item-1" className="bg-brand-off-white rounded-lg px-6">
                 <AccordionTrigger className="text-left text-lg md:text-xl font-semibold text-brand-gray-dark hover:text-brand-orange">
-                  Waarom is de masterclass en het programma online?
+                  Waarom zijn de masterclass en het programma online?
                 </AccordionTrigger>
                 <AccordionContent className="text-base md:text-lg text-brand-gray-medium leading-relaxed">
                   Wetenschappelijk is bewezen dat online even effectief is als fysiek. Omdat het even effectief is,
