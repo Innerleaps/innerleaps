@@ -1049,18 +1049,6 @@ const StressManagement = () => {
         </div>
       </section>
 
-      {/* Sticky CTA Button */}
-      <div className="fixed bottom-4 sm:bottom-6 right-4 sm:right-6 z-50 animate-scale-in">
-        <Button
-          size="lg"
-          className="bg-brand-orange hover:bg-brand-orange/90 text-white font-semibold py-3 sm:py-5 px-4 sm:px-10 rounded-lg text-base sm:text-lg shadow-2xl whitespace-nowrap"
-          onClick={scrollToMasterclass}
-        >
-          <span className="hidden sm:inline">Gratis Masterclass</span>
-          <span className="sm:hidden">Masterclass</span>
-        </Button>
-      </div>
-
       {/* Program Registration Modal - lazy loaded */}
       <Suspense fallback={null}>
         {isRegistrationModalOpen && (
