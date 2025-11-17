@@ -899,7 +899,7 @@ const StressManagement = () => {
                     <img
                       src={oxfordLogo}
                       alt="Vitaliteitsprogramma ontwikkeld door Oxford University"
-                      className="h-24 rounded border border-border object-contain"
+                      className="h-24 rounded object-contain"
                     />
                     <img
                       src={uMassLogo}

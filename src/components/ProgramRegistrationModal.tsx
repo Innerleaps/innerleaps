@@ -246,7 +246,7 @@ const ProgramRegistrationModal = ({
   const prevStep = () => setStep(prev => Math.max(prev - 1, 1));
 
   return <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="max-w-2xl max-h-[90vh] overflow-y-auto">
+      <DialogContent className="max-w-2xl max-h-[90vh] overflow-y-auto bg-white">
         <DialogHeader>
           <DialogTitle className="text-2xl font-bold text-brand-purple">
             Aanmelden {programType === "prestatie" ? "Prestatie Programma" : "Stress-Management Programma"}

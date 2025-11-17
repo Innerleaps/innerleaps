@@ -187,7 +187,7 @@ const MasterclassQR = () => {
               <img
                 src={oxfordLogo}
                 alt="Oxford University"
-                className="h-16 sm:h-20 object-contain rounded border border-border"
+                className="h-16 sm:h-20 object-contain rounded"
               />
               <img src={uMassLogo} alt="University of Massachusetts" className="h-16 sm:h-20 object-contain" />
               <img src={uvaLogo} alt="Universiteit van Amsterdam" className="h-16 sm:h-20 object-contain" />

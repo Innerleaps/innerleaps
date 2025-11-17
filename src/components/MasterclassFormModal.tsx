@@ -163,7 +163,7 @@ const MasterclassFormModal = ({
     }
   };
   return <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="max-w-2xl max-h-[90vh] overflow-y-auto">
+      <DialogContent className="max-w-2xl max-h-[90vh] overflow-y-auto bg-white">
         <DialogHeader>
           <DialogTitle className="text-2xl md:text-3xl font-bold text-brand-purple text-center">
             Aanmelden Gratis Masterclass
@@ -191,7 +191,7 @@ const MasterclassFormModal = ({
               <Label htmlFor="naam" className="text-base font-semibold">
                 Naam <span className="text-red-500">*</span>
               </Label>
-              <input id="naam" type="text" value={formData.naam} onChange={e => handleInputChange('naam', e.target.value)} placeholder="Volledige naam" className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-brand-orange" required />
+              <input id="naam" type="text" value={formData.naam} onChange={e => handleInputChange('naam', e.target.value)} placeholder="Volledige naam" className="w-full px-4 py-3 rounded-lg border border-gray-300 bg-white focus:outline-none focus:ring-2 focus:ring-brand-orange placeholder:text-gray-400" required />
             </div>
 
             {/* Email */}
@@ -199,7 +199,7 @@ const MasterclassFormModal = ({
               <Label htmlFor="email" className="text-base font-semibold">
                 Email <span className="text-red-500">*</span>
               </Label>
-              <input id="email" type="email" value={formData.email} onChange={e => handleInputChange('email', e.target.value)} placeholder="je.email@voorbeeld.nl" className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-brand-orange" required />
+              <input id="email" type="email" value={formData.email} onChange={e => handleInputChange('email', e.target.value)} placeholder="je.email@voorbeeld.nl" className="w-full px-4 py-3 rounded-lg border border-gray-300 bg-white focus:outline-none focus:ring-2 focus:ring-brand-orange placeholder:text-gray-400" required />
             </div>
 
             {/* Leidinggevende */}
@@ -224,7 +224,7 @@ const MasterclassFormModal = ({
               <Label htmlFor="functie" className="text-base font-semibold">
                 Functie titel <span className="text-red-500">*</span>
               </Label>
-              <input id="functie" type="text" value={formData.functie_titel} onChange={e => handleInputChange('functie_titel', e.target.value)} placeholder="Bijv. HR Manager, Developer, etc." className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-brand-orange" required />
+              <input id="functie" type="text" value={formData.functie_titel} onChange={e => handleInputChange('functie_titel', e.target.value)} placeholder="Bijv. HR Manager, Developer, etc." className="w-full px-4 py-3 rounded-lg border border-gray-300 bg-white focus:outline-none focus:ring-2 focus:ring-brand-orange placeholder:text-gray-400" required />
             </div>
 
             {/* Timeslot Selection */}
