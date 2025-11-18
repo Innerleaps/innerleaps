@@ -53,19 +53,28 @@ const Vitaliteitsprogramma = () => {
   const location = useLocation();
 
   useEffect(() => {
+    const openCalculatorParam = searchParams.get('openCalculator');
+    
     // Check for openCalculator URL parameter
-    if (searchParams.get('openCalculator') === 'true') {
-      setIsCalculatorOpen(true);
+    if (openCalculatorParam === 'true') {
+      // Small delay to ensure modal is ready
+      setTimeout(() => {
+        setIsCalculatorOpen(true);
+      }, 100);
     }
     // Check for #calculator anchor
     else if (location.hash === '#calculator') {
+      // Longer delay to wait for lazy-loaded ROICalculator to mount
       setTimeout(() => {
-        document.getElementById('calculator')?.scrollIntoView({ behavior: 'smooth' });
-      }, 100);
+        const element = document.getElementById('calculator');
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }, 500);
     } else {
       window.scrollTo(0, 0);
     }
-  }, [searchParams, location.hash]);
+  }, [location.search, location.hash]);
   const logos = [{
     src: oliverLogo,
     alt: "Oliver Wyman"
