@@ -71,6 +71,16 @@ const Vitaliteitsprogramma = () => {
           element.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
       }, 500);
+    }
+    // Check for #masterclass anchor
+    else if (location.hash === '#masterclass') {
+      // Delay to wait for page to fully mount
+      setTimeout(() => {
+        const element = document.getElementById('masterclass');
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }, 300);
     } else {
       window.scrollTo(0, 0);
     }
@@ -649,7 +659,7 @@ const Vitaliteitsprogramma = () => {
       </section>
 
       {/* Masterclass Sectie */}
-      <section className="py-16 md:py-24 bg-brand-off-white">
+      <section id="masterclass" className="py-16 md:py-24 bg-brand-off-white">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-purple text-center leading-tight mb-6">
             Ervaar het zelf, <span className="text-brand-orange">gratis</span> met onze{" "}
