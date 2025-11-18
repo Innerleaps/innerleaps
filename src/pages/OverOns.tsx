@@ -141,11 +141,12 @@ const OverOns = () => {
               {/* Links: Body tekst */}
               <div className="space-y-6 text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
                 <p>
-                  Waar zijn je <strong>gedachten</strong> tijdens je werk of dat momentje waar je wilde ontspannen? Bij
-                  je volgende meeting, je to-do lijst, dat lastige gesprek. Je werkgeheugen loopt vol.{" "}
-                  <strong>Spanning</strong> stapelt zich op. Onbewust, zo schakelt het grootste deel van ons gedrag over
-                  op de <strong>automatische piloot</strong>. Je overschrijdt je grenzen zonder het door te hebben. Je
-                  verliest contact met wat je echt nodig hebt om <strong>effectief</strong> te zijn.
+                  In ons drukke leven zijn we <Strong>constant bezig</Strong>. Het <strong>aandachtssysteem</strong>{" "}
+                  verzwakt. Het <strong>werkgeheugen</strong> raakt vol. <strong>Focus</strong> vervaagt.{" "}
+                  <strong>Stress</strong> stapelt zich op. Onbewust vallen we terug op de{" "}
+                  <strong>automatische piloot</strong> en maken we fouten. We <strong>overschrijden</strong> onze{" "}
+                  <strong>grenzen</strong> zonder het door te hebben en verliezen contact met wat we echt nodig hebben
+                  om <strong>effectief</strong> te zijn.
                 </p>
 
                 <p>
