@@ -141,7 +141,7 @@ const OverOns = () => {
               {/* Links: Body tekst */}
               <div className="space-y-6 text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
                 <p>
-                  In ons drukke leven zijn we <Strong>constant bezig</Strong>. Het <strong>aandachtssysteem</strong>{" "}
+                  In ons drukke leven zijn we <strong>constant bezig</strong>. Het <strong>aandachtssysteem</strong>{" "}
                   verzwakt. Het <strong>werkgeheugen</strong> raakt vol. <strong>Focus</strong> vervaagt.{" "}
                   <strong>Stress</strong> stapelt zich op. Onbewust vallen we terug op de{" "}
                   <strong>automatische piloot</strong> en maken we fouten. We <strong>overschrijden</strong> onze{" "}
