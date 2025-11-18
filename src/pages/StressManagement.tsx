@@ -249,7 +249,7 @@ const StressManagement = () => {
 
           <div className="w-full mt-8 sm:mt-12 lg:mt-16">
             <div className="relative overflow-hidden [mask-image:linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)]">
-              <div className="flex gap-8 animate-marquee">
+              <div className="flex gap-8 animate-marquee-mobile md:animate-marquee-tablet">
                 {logos.map((logo, index) => (
                   <img
                     key={index}

@@ -1,5 +1,5 @@
 import { useEffect, useState, lazy, Suspense } from "react";
-import { Link } from "react-router-dom";
+import { Link, useSearchParams, useLocation } from "react-router-dom";
 import SimplifiedNavigation from "@/components/SimplifiedNavigation";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -49,9 +49,23 @@ import menzisLogo from "@/assets/Vitaliteitsprogramma_herkend_door_menzis.png";
 const CalculatorModal = lazy(() => import("@/components/CalculatorModal"));
 const Vitaliteitsprogramma = () => {
   const [isCalculatorOpen, setIsCalculatorOpen] = useState(false);
+  const [searchParams] = useSearchParams();
+  const location = useLocation();
+
   useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
+    // Check for openCalculator URL parameter
+    if (searchParams.get('openCalculator') === 'true') {
+      setIsCalculatorOpen(true);
+    }
+    // Check for #calculator anchor
+    else if (location.hash === '#calculator') {
+      setTimeout(() => {
+        document.getElementById('calculator')?.scrollIntoView({ behavior: 'smooth' });
+      }, 100);
+    } else {
+      window.scrollTo(0, 0);
+    }
+  }, [searchParams, location.hash]);
   const logos = [{
     src: oliverLogo,
     alt: "Oliver Wyman"
@@ -230,7 +244,7 @@ const Vitaliteitsprogramma = () => {
 
           <div className="w-full mt-8 sm:mt-12 lg:mt-16">
             <div className="relative overflow-hidden [mask-image:linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)]">
-              <div className="flex gap-8 animate-marquee">
+              <div className="flex gap-8 animate-marquee-mobile md:animate-marquee-tablet">
                 {logos.map((logo, index) => <img key={index} src={logo.src} alt={logo.alt} className="h-8 sm:h-10 md:h-12 object-contain flex-shrink-0 opacity-100 transition-all" />)}
               </div>
             </div>
@@ -857,7 +871,9 @@ const Vitaliteitsprogramma = () => {
       </section>
 
       {/* ROI Calculator Section */}
-      <ROICalculator />
+      <div id="calculator">
+        <ROICalculator />
+      </div>
 
       <Footer />
 
