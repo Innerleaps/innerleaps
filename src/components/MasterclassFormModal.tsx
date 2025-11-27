@@ -4,14 +4,14 @@ import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Label } from "@/components/ui/label";
-import { Star } from "lucide-react";
+import { Star, Award } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "@/hooks/use-toast";
 
 // Trust logos
 import vgzLogo from "@/assets/Vitaliteitprogramma_herkent_door_vgz.png";
 import oxfordLogo from "@/assets/Vitaliteitsprogramma_ontwikkeld_door_oxford.jpg";
-import vmbLogo from "@/assets/Geaccrediteerde_vitaliteitstrainers_bij_Innerleaps.png";
+
 interface MasterclassFormModalProps {
   isOpen: boolean;
   onClose: () => void;
@@ -271,12 +271,14 @@ const MasterclassFormModal = ({
                 <img src={oxfordLogo} alt="Oxford University" className="h-10 object-contain opacity-80" />
               </div>
 
-              {/* VMBN */}
+              {/* Geaccrediteerde Trainers */}
               <div className="flex flex-col items-center text-center">
                 <p className="text-sm font-semibold text-brand-gray-dark mb-2">
-                  ✅ VMBN gecertificeerd
+                  ✅ Geaccrediteerde Trainers
                 </p>
-                <img src={vmbLogo} alt="VMBN Gecertificeerd" className="h-10 object-contain opacity-80" />
+                <div className="p-2 rounded-lg bg-brand-orange/10">
+                  <Award className="h-8 w-8 text-brand-orange stroke-[1.5]" />
+                </div>
               </div>
             </div>
           </div>

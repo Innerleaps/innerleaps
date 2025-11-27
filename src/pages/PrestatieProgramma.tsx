@@ -61,7 +61,6 @@ const MasterclassFormModal = lazy(() => import("@/components/MasterclassFormModa
 const ProgramRegistrationModal = lazy(() => import("@/components/ProgramRegistrationModal"));
 
 // Trust section logos
-import vmbLogo from "@/assets/Geaccrediteerde_vitaliteitstrainers_bij_Innerleaps.png";
 import uMassLogo from "@/assets/Vitaliteitsprogramma_ontwikkeld_door_university_of_massachusetts.png";
 import oxfordLogo from "@/assets/Vitaliteitsprogramma_ontwikkeld_door_oxford.jpg";
 import vgzLogo from "@/assets/Vitaliteitprogramma_herkent_door_vgz.png";
@@ -922,18 +921,16 @@ const PrestatieProgramma = () => {
                   <Check className="h-6 w-6 text-brand-orange stroke-[3]" />
                 </div>
                 <div className="flex-1">
-                  <h3 className="text-2xl font-bold text-brand-purple mb-3">VMBN gecertificeerd</h3>
+                  <h3 className="text-2xl font-bold text-brand-purple mb-3">Geaccrediteerde Trainers</h3>
                   <p className="text-xl text-brand-gray-medium leading-relaxed mb-6">
                     Al onze trainers zijn VMBN categorie 1 gecertificeerd, de hoogste erkenning binnen de VMBN. Dit
                     betekent dat zij voldoen aan de strengste kwaliteitseisen op het gebied van opleiding, ervaring en
                     professionaliteit.
                   </p>
                   <div className="flex flex-row gap-4 items-center flex-wrap">
-                    <img
-                      src={vmbLogo}
-                      alt="Geaccrediteerde vitaliteitstrainers bij InnerLeaps"
-                      className="h-32 object-contain"
-                    />
+                    <div className="p-4 rounded-lg bg-brand-orange/10">
+                      <Award className="h-16 w-16 text-brand-orange stroke-[1.5]" />
+                    </div>
                   </div>
                 </div>
               </div>
@@ -1039,8 +1036,9 @@ const PrestatieProgramma = () => {
                   Wat als ik een week mis?
                 </AccordionTrigger>
                 <AccordionContent className="text-base md:text-lg text-brand-gray-medium leading-relaxed">
-                  Je krijgt lifetime toegang tot alle materialen en opnames. Gemiste sessies kun je terug kijken. We
-                  raden wel aan maximaal 1 sessie te missen voor optimaal resultaat.
+                  Bij het missen van een sessie kunnen deelnemers contact opnemen met de trainer zodat ze toch alle 
+                  nodige informatie ontvangen. Daarnaast staat alle benodigde informatie in het werkboek. Voor 
+                  optimaal resultaat is het belangrijk om niet meer dan één sessie te missen.
                 </AccordionContent>
               </AccordionItem>
             </Accordion>
