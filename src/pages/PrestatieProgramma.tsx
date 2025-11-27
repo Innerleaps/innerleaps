@@ -945,8 +945,9 @@ const PrestatieProgramma = () => {
                   Wat als ik een week mis?
                 </AccordionTrigger>
                 <AccordionContent className="text-base md:text-lg text-brand-gray-medium leading-relaxed">
-                  Je krijgt lifetime toegang tot alle materialen en opnames. Gemiste sessies kun je terug kijken. We
-                  raden wel aan maximaal 1 sessie te missen voor optimaal resultaat.
+                  Bij het missen van een sessie kunnen deelnemers contact opnemen met de trainer zodat ze toch alle 
+                  nodige informatie ontvangen. Daarnaast staat alle benodigde informatie in het werkboek. Voor 
+                  optimaal resultaat is het belangrijk om niet meer dan één sessie te missen.
                 </AccordionContent>
               </AccordionItem>
             </Accordion>
