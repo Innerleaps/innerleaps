@@ -787,9 +787,9 @@ const Vitaliteitsprogramma = () => {
                   Wat als een deelnemer een sessie mist?
                 </AccordionTrigger>
                 <AccordionContent className="text-base md:text-lg text-brand-gray-medium leading-relaxed">
-                  Deelnemers hebben lifetime toegang tot alle materialen en opnames, zodat gemiste sessies eenvoudig
-                  kunnen worden teruggekeken. Voor optimaal resultaat raden we aan om niet meer dan één sessie te
-                  missen.
+                  Bij het missen van een sessie kunnen deelnemers contact opnemen met de trainer zodat ze toch alle 
+                  nodige informatie ontvangen. Daarnaast staat alle benodigde informatie in het werkboek. Voor 
+                  optimaal resultaat is het belangrijk om niet meer dan één sessie te missen.
                 </AccordionContent>
               </AccordionItem>
 
