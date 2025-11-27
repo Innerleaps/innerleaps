@@ -1,6 +1,5 @@
 import { memo } from "react";
-import { Check } from "lucide-react";
-import vmbLogo from "@/assets/Geaccrediteerde_vitaliteitstrainers_bij_Innerleaps.png";
+import { Check, Award } from "lucide-react";
 import uMassLogo from "@/assets/Vitaliteitsprogramma_ontwikkeld_door_university_of_massachusetts.png";
 import oxfordLogo from "@/assets/Vitaliteitsprogramma_ontwikkeld_door_oxford.jpg";
 import vgzLogo from "@/assets/Vitaliteitprogramma_herkent_door_vgz.png";
@@ -35,10 +34,10 @@ const TrustSection = memo(() => {
       ],
     },
     {
-      title: "VMBN gecertificeerd",
+      title: "Geaccrediteerde Trainers",
       description:
         "Al onze trainers zijn VMBN categorie 1 gecertificeerd, de hoogste erkenning binnen de VMBN. Dit betekent dat zij voldoen aan de strengste kwaliteitseisen op het gebied van opleiding, ervaring en professionaliteit.",
-      logos: [{ src: vmbLogo, alt: "Geaccrediteerde vitaliteitstrainers bij InnerLeaps", className: "h-32" }],
+      icon: Award,
     },
   ];
 
@@ -59,8 +58,9 @@ const TrustSection = memo(() => {
                 <div className="flex-1">
                   <h3 className="text-2xl font-bold text-brand-purple mb-3">{item.title}</h3>
                   <p className="text-xl text-brand-gray-medium leading-relaxed mb-6">{item.description}</p>
-                  <div className="flex flex-row gap-4 items-center flex-wrap">
-                     {item.logos.map((logo, logoIndex) => (
+                <div className="flex flex-row gap-4 items-center flex-wrap">
+                  {item.logos ? (
+                    item.logos.map((logo, logoIndex) => (
                       <img
                         key={logoIndex}
                         src={logo.src}
@@ -68,8 +68,13 @@ const TrustSection = memo(() => {
                         loading="lazy"
                         className={`object-contain ${logo.className}`}
                       />
-                    ))}
-                  </div>
+                    ))
+                  ) : item.icon ? (
+                    <div className="p-4 rounded-lg bg-brand-orange/10">
+                      <item.icon className="h-16 w-16 text-brand-orange stroke-[1.5]" />
+                    </div>
+                  ) : null}
+                </div>
                 </div>
               </div>
             </div>
