@@ -853,11 +853,11 @@ const Vitaliteitsprogramma = () => {
                 <AccordionTrigger className="text-left text-lg md:text-xl font-semibold text-brand-gray-dark hover:text-brand-orange">
                   Wat als een deelnemer een sessie mist?
                 </AccordionTrigger>
-                <AccordionContent className="text-base md:text-lg text-brand-gray-medium leading-relaxed">
-                  Bij het missen van een sessie kunnen deelnemers contact opnemen met de trainer zodat ze toch alle 
-                  nodige informatie ontvangen. Daarnaast staat alle benodigde informatie in het werkboek. Voor 
-                  optimaal resultaat is het belangrijk om niet meer dan één sessie te missen.
-                </AccordionContent>
+            <AccordionContent className="text-base md:text-lg text-brand-gray-medium leading-relaxed">
+              Bij het missen van een sessie kunnen deelnemers de trainer bellen om toch alle informatie te 
+              ontvangen. Daarnaast staat alle benodigde informatie in het werkboek. Voor optimaal resultaat 
+              is het belangrijk om niet meer dan één sessie te missen.
+            </AccordionContent>
               </AccordionItem>
 
               <AccordionItem value="item-5" className="bg-white rounded-lg px-6">
