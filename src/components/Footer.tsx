@@ -30,39 +30,30 @@ const Footer = memo(({ showNavigation = true }: FooterProps) => {
             <div>
               <h3 className="text-lg font-semibold mb-4">Snel naar</h3>
               <div className="space-y-2">
-                <button
-                  onClick={() =>
-                    document.getElementById("home")?.scrollIntoView({
-                      behavior: "smooth",
-                    })
-                  }
+                <Link 
+                  to="/vitaliteitsprogramma" 
                   className="block text-gray-300 hover:text-white transition-colors text-left"
                 >
-                  Home
-                </button>
-                <Link to="/de-methode" className="block text-gray-300 hover:text-white transition-colors text-left">
-                  De Methode
+                  Vitaliteitsprogramma
                 </Link>
-                <button
-                  onClick={() =>
-                    document.getElementById("programma")?.scrollIntoView({
-                      behavior: "smooth",
-                    })
-                  }
+                <Link 
+                  to="/stressmanagement-programma" 
                   className="block text-gray-300 hover:text-white transition-colors text-left"
                 >
-                  Programma
-                </button>
-                <button
-                  onClick={() =>
-                    document.getElementById("contact")?.scrollIntoView({
-                      behavior: "smooth",
-                    })
-                  }
+                  Stressmanagement programma
+                </Link>
+                <Link 
+                  to="/prestatie-programma" 
                   className="block text-gray-300 hover:text-white transition-colors text-left"
                 >
-                  Contact
-                </button>
+                  Prestatie en concentratie verbeteren
+                </Link>
+                <Link 
+                  to="/blog" 
+                  className="block text-gray-300 hover:text-white transition-colors text-left"
+                >
+                  Blog
+                </Link>
               </div>
             </div>
           )}

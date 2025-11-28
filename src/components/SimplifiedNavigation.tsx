@@ -145,6 +145,12 @@ const SimplifiedNavigation = () => {
             >
               Contact
             </Link>
+            <Link 
+              to="/blog"
+              className="text-brand-gray-dark hover:text-brand-blue transition-colors duration-300 font-medium text-base whitespace-nowrap"
+            >
+              Blog
+            </Link>
           </div>
 
           {/* Mobile menu button */}
@@ -240,6 +246,13 @@ const SimplifiedNavigation = () => {
                 className="text-brand-gray-dark hover:text-brand-blue transition-colors duration-300 font-medium py-2 text-left text-base"
               >
                 Contact
+              </Link>
+              <Link 
+                to="/blog"
+                onClick={() => setIsMenuOpen(false)}
+                className="text-brand-gray-dark hover:text-brand-blue transition-colors duration-300 font-medium py-2 text-left text-base"
+              >
+                Blog
               </Link>
             </div>
           </div>
