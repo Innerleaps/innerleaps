@@ -18,6 +18,7 @@ const StressManagement = lazy(() => import("./pages/StressManagement"));
 const PrestatieProgramma = lazy(() => import("./pages/PrestatieProgramma"));
 const Vitaliteitsprogramma = lazy(() => import("./pages/Vitaliteitsprogramma"));
 const Blog = lazy(() => import("./pages/Blog"));
+const ZiekteverzuimVerlagen = lazy(() => import("./pages/blog/ZiekteverzuimVerlagen"));
 const MasterclassQR = lazy(() => import("./pages/MasterclassQR"));
 const Bedankt = lazy(() => import("./pages/Bedankt"));
 const NegenStippen = lazy(() => import("./pages/NegenStippen"));
@@ -62,6 +63,7 @@ const App = () => {
                 <Route path="/prestatie-programma" element={<PrestatieProgramma />} />
                 <Route path="/vitaliteitsprogramma" element={<Vitaliteitsprogramma />} />
                 <Route path="/blog" element={<Blog />} />
+                <Route path="/blog/ziekteverzuim-verlagen-wetenschappelijk-bewezen-aanpak-2025" element={<ZiekteverzuimVerlagen />} />
                 
                 {/* Feature-flag routes - visible in Lovable editor, but redirect in production */}
                 <Route path="/masterclass-stress-qr" element={

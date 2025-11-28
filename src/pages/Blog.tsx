@@ -2,16 +2,16 @@ import SimplifiedNavigation from '@/components/SimplifiedNavigation';
 import Footer from '@/components/Footer';
 import { Card, CardContent } from '@/components/ui/card';
 import { Calendar } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Blog = () => {
-  // Placeholder blog posts - later te vervangen door echte data
   const blogPosts = [
     {
       id: 1,
-      title: "Binnenkort meer artikelen",
-      excerpt: "We werken aan nieuwe content over stressmanagement, concentratie en vitaliteit.",
-      date: "28 november 2024",
-      slug: "#"
+      title: "Ziekteverzuim Verlagen: De Wetenschappelijk Bewezen Aanpak voor 2025",
+      excerpt: "Ziekteverzuim verlagen met 15-21% door wetenschappelijk bewezen aandachtstraining. ROI 497-775%. Ontdek hoe 40 jaar onderzoek verzuimkosten structureel verlaagt.",
+      date: "28 november 2025",
+      slug: "/blog/ziekteverzuim-verlagen-wetenschappelijk-bewezen-aanpak-2025"
     }
   ];
 
@@ -37,20 +37,22 @@ const Blog = () => {
         <div className="container-custom">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {blogPosts.map((post) => (
-              <Card key={post.id} className="bg-white hover:shadow-lg transition-shadow">
-                <CardContent className="p-6">
-                  <div className="flex items-center text-brand-gray-medium text-sm mb-4">
-                    <Calendar className="h-4 w-4 mr-2" />
-                    {post.date}
-                  </div>
-                  <h2 className="text-xl font-bold text-brand-purple mb-3">
-                    {post.title}
-                  </h2>
-                  <p className="text-brand-gray-medium mb-4">
-                    {post.excerpt}
-                  </p>
-                </CardContent>
-              </Card>
+              <Link key={post.id} to={post.slug}>
+                <Card className="bg-white hover:shadow-lg transition-shadow h-full">
+                  <CardContent className="p-6">
+                    <div className="flex items-center text-brand-gray-medium text-sm mb-4">
+                      <Calendar className="h-4 w-4 mr-2" />
+                      {post.date}
+                    </div>
+                    <h2 className="text-xl font-bold text-brand-purple mb-3">
+                      {post.title}
+                    </h2>
+                    <p className="text-brand-gray-medium mb-4">
+                      {post.excerpt}
+                    </p>
+                  </CardContent>
+                </Card>
+              </Link>
             ))}
           </div>
         </div>
