@@ -74,12 +74,12 @@ const ZiekteverzuimVerlagen = () => {
         <article className="py-12 md:py-16">
           <div className="container mx-auto px-4 max-w-4xl">
             {/* Breadcrumb */}
-            <nav className="mb-6 text-sm text-muted-foreground">
+            <nav className="mb-6 text-sm text-brand-gray-medium">
               <Link to="/" className="hover:text-brand-blue transition-colors">Home</Link>
               <span className="mx-2">/</span>
               <Link to="/blog" className="hover:text-brand-blue transition-colors">Blog</Link>
               <span className="mx-2">/</span>
-              <span className="text-foreground">Ziekteverzuim Verlagen</span>
+              <span className="text-brand-gray-dark">Ziekteverzuim Verlagen</span>
             </nav>
 
             {/* Title and Meta */}
