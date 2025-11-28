@@ -1,7 +1,7 @@
 import { Helmet } from 'react-helmet-async';
 import SimplifiedNavigation from '@/components/SimplifiedNavigation';
 import Footer from '@/components/Footer';
-import { Calendar, User } from 'lucide-react';
+import BlogAuthor from '@/components/BlogAuthor';
 import { Link } from 'react-router-dom';
 import breinTrainenImage from '@/assets/6_weken_brein_trainen.png';
 
@@ -88,20 +88,12 @@ const ZiekteverzuimVerlagen = () => {
                 Ziekteverzuim Verlagen: De Wetenschappelijk Bewezen Aanpak voor 2025
               </h1>
               
-              <div className="flex flex-wrap items-center gap-4 text-muted-foreground mb-6">
-                <div className="flex items-center gap-2">
-                  <User className="h-4 w-4" />
-                  <span>Bas Ter Haar Romenij</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <Calendar className="h-4 w-4" />
-                  <time dateTime="2025-11-28">28 november 2025</time>
-                </div>
-              </div>
-
-              <p className="text-lg text-muted-foreground italic">
-                Laatst bijgewerkt: november 2025
-              </p>
+              <BlogAuthor 
+                authorName="Bas Ter Haar Romenij"
+                authorLinkedIn="https://www.linkedin.com/in/basterhaarromenij/"
+                publishDate="2025-11-28"
+                lastUpdated="2025-11-28"
+              />
             </header>
 
             {/* Featured Image */}
