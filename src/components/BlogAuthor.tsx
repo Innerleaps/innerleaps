@@ -26,7 +26,6 @@ const BlogAuthor = ({
           year: 'numeric'
         })}</time>
       </div>
-      {lastUpdated}
     </div>;
 };
 export default BlogAuthor;
