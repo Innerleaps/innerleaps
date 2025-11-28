@@ -118,7 +118,7 @@ const ZiekteverzuimVerlagen = () => {
                 Verzuim raakt verder dan zichtbare loonkosten. Sazas berekende in 2024 dat de totale verzuimkosten 185% van het brutosalaris bedragen wanneer je vervangingskosten, productiviteitsverlies en administratieve lasten meeneemt. Dit betekent dat elke verzuimdag een organisatie €285 kost bij een modaal salaris.
               </p>
 
-              <p>
+              <p className="mt-8">
                 Maar er is meer. Wanneer medewerkers wél aanwezig zijn maar door stress of overbelasting ondermaats presteren, spreek je van presenteïsme. Dit fenomeen is moeilijker meetbaar maar kost organisaties naar schatting nog meer dan het daadwerkelijke verzuim. Dr Amishi Jha, neurowetenschapper en professor aan de universiteit van Miami, toonde aan dat na slechts 10 minuten onder verhoogde druk prestaties al beginnen te dalen.
               </p>
 
@@ -128,11 +128,11 @@ const ZiekteverzuimVerlagen = () => {
                 De meeste organisaties pakken verzuim reactief aan. Een medewerker valt uit, de bedrijfsarts wordt ingeschakeld, er komt een re-integratietraject. Op dat moment is het probleem al ontstaan. De kosten zijn al gemaakt, het team heeft de klap opgevangen, productiviteit is gedaald.
               </p>
 
-              <p>
+              <p className="mt-8">
                 Employee Assistance Programs (EAP's) bereiken gemiddeld 4-5% van medewerkers, terwijl 31% van niet-gebruikers aangeeft wél hulp nodig te hebben. Mindfulness-apps hebben een retentie van slechts 4,7% na 30 dagen. Bedrijfsfitnessregelingen worden door 67% van houders nooit of zeer zelden gebruikt.
               </p>
 
-              <p>
+              <p className="mt-8">
                 Het probleem? Deze interventies missen structuur, sociale steun en wetenschappelijke fundering. Ze vragen te veel van individuele motivatie zonder systematische begeleiding.
               </p>
 
@@ -142,11 +142,11 @@ const ZiekteverzuimVerlagen = () => {
                 Sinds de jaren tachtig onderzoeken wetenschappers de effecten van <Link to="/de-methode" className="text-brand-blue hover:text-brand-orange font-medium transition-colors">aandachtstraining</Link> op werknemers. Meta-analyses van Vonderlin (2020), Bartlett (2018) en Michaelsen (2023) bundelen resultaten van duizenden deelnemers wereldwijd. De conclusies zijn helder: gestructureerde aandachtstraining vermindert stressgerelateerd verzuim met 15-21%.
               </p>
 
-              <p>
+              <p className="mt-8">
                 Het mechanisme is neurobiologisch. Door dagelijks je aandacht te trainen, versterk je fysiek twee hersensystemen. Het controlecentrum, gelegen in de frontale cortex en fronto-pariëtale netwerken, wordt sterker. Dit hersengebied reguleert bewuste keuzes, filtert irrelevante informatie en onderdrukt impulsieve reacties. Tegelijkertijd wordt het waarschuwingssysteem, de anterior insula en anterior cingulate cortex, gevoeliger. Deze systemen detecteren vroege stresssignalen in je lichaam voordat ze escaleren.
               </p>
 
-              <p>
+              <p className="mt-8">
                 Neurowetenschapper Dr. Amishi Jha van de Universiteit van Miami onderzocht dit fenomeen jarenlang bij militairen, chirurgen en andere professionals onder extreme druk. Haar bevindingen tonen aan dat 12 minuten dagelijkse training voldoende is om het werkgeheugen te stabiliseren en de foutenlast met 25% te verminderen.
               </p>
 
@@ -156,11 +156,11 @@ const ZiekteverzuimVerlagen = () => {
                 De Unilever-studie uit 2018, uitgevoerd door De Bruin en collega's aan de Universiteit van Amsterdam, toonde indrukwekkende resultaten. Medewerkers met verhoogd uitvalrisico (54,4% kans op langdurig ziekteverzuim) daalde naar 16,4% na een <Link to="/vitaliteitsprogramma" className="text-brand-blue hover:text-brand-orange font-medium transition-colors">6-weeks aandachtstrainingsprogramma</Link>. Dit is een risicoreductie van 70%, blijvend na 6 maanden.
               </p>
 
-              <p>
+              <p className="mt-8">
                 Vergelijkbaar onderzoek van Żołnierczyk-Zreda (2016) bij managers toonde 21% verzuimdaling en verbeterde zelfeffectiviteit die bleef bestaan bij 3-maands follow-up. Lensen's studie (2024) bij basisschoolleraren rapporteerde verbeterde werksfeer, emotieregulatie en zelfvertrouwen, alle factoren die verzuim voorspellen.
               </p>
 
-              <p>
+              <p className="mt-8">
                 Vertaling naar een Nederlandse organisatie met 100 medewerkers en €3.970.000 totale loonkosten: een investering van €57.500 in een wetenschappelijk bewezen aandachtstrainingsprogramma levert een besparing van €57.287 tot €80.202 op ziekteverzuim alleen. Tel daar productiviteitswinst (5-8%) en retentieverbetering (5-8% lager verloop) bij op, en de totale besparing loopt op tot €285.562 conservatief, €445.442 in een positief scenario. Dit vertaalt zich naar een ROI van 497-775% binnen het eerste jaar.
               </p>
 
@@ -196,7 +196,7 @@ const ZiekteverzuimVerlagen = () => {
                 In 2020 nam het Amerikaanse leger aandachtstraining op in officiële doctrine (Army Field Manual 7-22: Holistic Health and Fitness). De reden: meetbare prestatieverbetering onder extreme stress, sneller herstel na missies, en verminderde PTSS-symptomen.
               </p>
 
-              <p>
+              <p className="mt-8">
                 Google, Apple, Microsoft, Facebook, Nestlé en Unilever implementeerden vergelijkbare programma's om dezelfde reden. Het gaat niet om welzijn als leuk extraatje. Het gaat om operationele effectiviteit, lagere kosten en competitief voordeel door een scherpere, veerkrachtigere workforce.
               </p>
 
@@ -282,7 +282,7 @@ const ZiekteverzuimVerlagen = () => {
                 Voorbeeld: Een zorgorganisatie met 200 medewerkers, 6,5% verzuim waarvan 40% stressgerelateerd, en gemiddeld salaris €42.000. Investering: €115.000 voor twee groepen van 100 deelnemers. Conservatieve berekening (15% verzuimreductie, 5% productiviteitswinst, 5% retentieverbetering): €571.124 besparing eerste jaar. ROI: 596%.
               </p>
 
-              <p className="bg-brand-off-white p-6 rounded-lg border-l-4 border-brand-orange">
+              <p className="bg-brand-off-white p-6 rounded-lg border-l-4 border-brand-orange mt-8"">
                 💡 <strong>Bereken de ROI voor jouw organisatie:</strong> Gebruik <a href="/?openCalculator=true" className="text-brand-blue hover:text-brand-orange font-medium transition-colors">onze ROI calculator</a> om te zien wat aandachtstraining voor jouw specifieke situatie kan betekenen.
               </p>
 
@@ -314,7 +314,7 @@ const ZiekteverzuimVerlagen = () => {
                 De uitgebreide variant van aandachtstraining, Mindfulness-Based Stress Reduction (MBSR), wordt vergoed vanuit de basisverzekering door Nederlandse zorgverzekeraars. Dit reflecteert de erkenning binnen het zorgsysteem van de evidence base en kosteneffectiviteit.
               </p>
 
-              <p>
+              <p className="mt-8">
                 Voor organisaties betekent dit dat de drempel voor individuele deelnemers laag is. Medewerkers die intensievere begeleiding nodig hebben, kunnen doorstromen naar vergoed MBSR via hun huisarts, terwijl de werkgever een preventief programma aanbiedt voor de bredere populatie.
               </p>
 
@@ -350,11 +350,11 @@ const ZiekteverzuimVerlagen = () => {
                 Ziekteverzuim verlagen vereist een systematische, evidence-based aanpak. Traditionele interventies falen omdat ze reactief zijn, lage participatie hebben, of wetenschappelijke fundering missen. Aandachtstraining adresseert de onderliggende neurobiologische mechanismen van stress en cognitieve overbelasting.
               </p>
 
-              <p>
+              <p className="mt-8">
                 Met 40 jaar onderzoek, consistente effecten van 15-21% verzuimreductie, en ROI's tussen 497-775%, is de business case overweldigend. Organisaties die hun verzuimcijfers structureel willen verlagen, vinden in wetenschappelijk bewezen aandachtstraining een interventie die daadwerkelijk werkt.
               </p>
 
-              <p className="text-lg font-medium">
+              <p className="text-lg font-medium mt-8">
                 De vraag is niet meer óf je moet investeren in preventie, maar welke aanpak je kiest. Kies voor wetenschap. Kies voor meetbare resultaten. Kies voor duurzame gedragsverandering die je organisatie structureel versterkt.
               </p>
 
