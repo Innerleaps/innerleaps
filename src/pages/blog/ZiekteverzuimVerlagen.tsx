@@ -282,7 +282,7 @@ const ZiekteverzuimVerlagen = () => {
                 Voorbeeld: Een zorgorganisatie met 200 medewerkers, 6,5% verzuim waarvan 40% stressgerelateerd, en gemiddeld salaris €42.000. Investering: €115.000 voor twee groepen van 100 deelnemers. Conservatieve berekening (15% verzuimreductie, 5% productiviteitswinst, 5% retentieverbetering): €571.124 besparing eerste jaar. ROI: 596%.
               </p>
 
-              <p className="bg-brand-off-white p-6 rounded-lg border-l-4 border-brand-orange mt-8"">
+              <p className="bg-brand-off-white p-6 rounded-lg border-l-4 border-brand-orange mt-8">
                 💡 <strong>Bereken de ROI voor jouw organisatie:</strong> Gebruik <a href="/?openCalculator=true" className="text-brand-blue hover:text-brand-orange font-medium transition-colors">onze ROI calculator</a> om te zien wat aandachtstraining voor jouw specifieke situatie kan betekenen.
               </p>
 
