@@ -77,7 +77,8 @@ const LifeQuestionnaire = () => {
           <h1 className="text-3xl font-bold mb-4 text-center">
             How do you handle your daily life?
           </h1>
-          <p className="text-center text-foreground/80 mb-6">Answer the questions based on the last month. Learn about your result in the masterclass.<br />
+          <p className="text-center text-foreground/80 mb-6">Answer the questions based on the last month. Learn about your result in the masterclass.
+          <br />
             Answer the questions based on the last month. Learn about your result in the masterclass.
           </p>
 
