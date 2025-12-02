@@ -231,16 +231,14 @@ const handler = async (req: Request): Promise<Response> => {
         title: "Thank you for completing the questionnaire",
         scoreText: "Your score is",
         outOfText: "out of 40 points",
-        ctaText: "More info in the masterclass!",
-        ctaButton: "Join free masterclass",
+        masterclassText: "Join the masterclass for more information",
         closing: "Best regards,<br><strong>InnerLeaps</strong>"
       } : {
         subject: "Jouw vragenlijst resultaat",
         title: "Bedankt voor het invullen",
         scoreText: "Je score is",
         outOfText: "van de 40 punten",
-        ctaText: "Meer info in de masterclass!",
-        ctaButton: "Meld je aan voor de gratis masterclass",
+        masterclassText: "Meld je aan voor de masterclass voor meer informatie",
         closing: "Met vriendelijke groet,<br><strong>InnerLeaps</strong>"
       };
 
@@ -259,15 +257,12 @@ const handler = async (req: Request): Promise<Response> => {
               <p style="font-size: 48px; font-weight: bold; color: ${scoreLevel.color}; margin: 8px 0;">${submission.total_score}</p>
               <p style="font-size: 16px; margin-bottom: 20px; color: #333;">${emailContent.outOfText}</p>
               
-              <div style="display: inline-block; background-color: white; border: 2px solid ${scoreLevel.color}; border-radius: 20px; padding: 10px 20px;">
+              <div style="display: inline-block; background-color: white; border: 2px solid ${scoreLevel.color}; border-radius: 20px; padding: 10px 20px; margin-bottom: 20px;">
                 <span style="font-size: 20px; margin-right: 8px;">${scoreLevel.icon}</span>
                 <span style="font-weight: bold; color: ${scoreLevel.color}; font-size: 16px;">${scoreLevel.level}</span>
               </div>
-            </div>
-            
-            <div style="background-color: #f8f9fa; border-radius: 8px; padding: 24px; margin: 24px 0; text-align: center;">
-              <p style="font-size: 18px; font-weight: bold; color: #333; margin-bottom: 16px;">${emailContent.ctaText}</p>
-              <a href="https://innerleaps.nl/Calendar" style="display: inline-block; background-color: #F47340; color: white; text-decoration: none; padding: 12px 32px; border-radius: 6px; font-weight: bold; font-size: 16px;">${emailContent.ctaButton}</a>
+              
+              <p style="font-size: 16px; color: #333; margin-top: 20px;">${emailContent.masterclassText}</p>
             </div>
             
             <div style="margin-top: 30px; padding-top: 20px; border-top: 1px solid #ddd;">
