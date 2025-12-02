@@ -90,7 +90,8 @@ const LifeQuestionnaire = () => {
             How do you handle your daily life?
           </h1>
           <p className="text-center text-foreground/80 mb-6">
-            Answer the questions based on the last month. This gives you insight into how you handle stress.
+            How do you handle your daily life?<br />
+            Answer the questions based on the last month. Learn about your result in the masterclass.
           </p>
 
           <form onSubmit={handleSubmit} className="space-y-6">
