@@ -193,6 +193,7 @@ export type Database = {
           created_at: string
           email: string | null
           id: string
+          language: string | null
           naam: string | null
           organisatie: string | null
           q1: number
@@ -211,6 +212,7 @@ export type Database = {
           created_at?: string
           email?: string | null
           id?: string
+          language?: string | null
           naam?: string | null
           organisatie?: string | null
           q1: number
@@ -229,6 +231,7 @@ export type Database = {
           created_at?: string
           email?: string | null
           id?: string
+          language?: string | null
           naam?: string | null
           organisatie?: string | null
           q1?: number
