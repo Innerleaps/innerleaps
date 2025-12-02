@@ -13,6 +13,7 @@ const StressQuestionnaireSchema = z.object({
   naam: z.string().trim().max(100, "Name must be less than 100 characters").optional().default(""),
   email: z.string().trim().email("Invalid email address").max(255, "Email must be less than 255 characters").optional().or(z.literal("")),
   organisatie: z.string().trim().max(200, "Organization must be less than 200 characters").optional().default(""),
+  language: z.enum(["nl", "en"]).optional().default("nl"),
   q1: z.number().int().min(0).max(4, "Question 1 must be between 0 and 4"),
   q2: z.number().int().min(0).max(4, "Question 2 must be between 0 and 4"),
   q3: z.number().int().min(0).max(4, "Question 3 must be between 0 and 4"),
@@ -76,24 +77,24 @@ function escapeHtml(unsafe: string): string {
 }
 
 // Score level classification
-function getScoreLevel(score: number) {
+function getScoreLevel(score: number, language: "nl" | "en" = "nl") {
   if (score >= 0 && score <= 13) {
     return {
-      level: "Goed",
+      level: language === "en" ? "Good" : "Goed",
       color: "#16a34a", // green-600
       bgColor: "#f0fdf4", // green-50
       icon: "✓"
     };
   } else if (score >= 14 && score <= 26) {
     return {
-      level: "Let op, actie aanbevolen",
+      level: language === "en" ? "Caution, action recommended" : "Let op, actie aanbevolen",
       color: "#ea580c", // orange-600
       bgColor: "#fff7ed", // orange-50
       icon: "⚠️"
     };
   } else {
     return {
-      level: "Gevaar, actie nodig",
+      level: language === "en" ? "Danger, action needed" : "Gevaar, actie nodig",
       color: "#dc2626", // red-600
       bgColor: "#fef2f2", // red-50
       icon: "⚠️"
@@ -218,26 +219,41 @@ const handler = async (req: Request): Promise<Response> => {
       // Escape all user-controlled fields for HTML to prevent XSS
       const safeName = submission.naam && submission.naam.trim() !== "" 
         ? escapeHtml(submission.naam) 
-        : "Beste deelnemer";
+        : (submission.language === "en" ? "Dear participant" : "Beste deelnemer");
       const safeEmail = submission.email ? escapeHtml(submission.email) : "";
       const safeOrganisatie = submission.organisatie ? escapeHtml(submission.organisatie) : "";
 
-      const scoreLevel = getScoreLevel(submission.total_score);
+      const scoreLevel = getScoreLevel(submission.total_score, submission.language);
+
+      // Email content based on language
+      const emailContent = submission.language === "en" ? {
+        subject: "Your stress questionnaire result",
+        title: "Thank you for completing the questionnaire",
+        scoreText: "Your score is",
+        outOfText: "out of 40 points",
+        closing: "Best regards,<br><strong>InnerLeaps</strong>"
+      } : {
+        subject: "Jouw vragenlijst resultaat",
+        title: "Bedankt voor het invullen",
+        scoreText: "Je score is",
+        outOfText: "van de 40 punten",
+        closing: "Met vriendelijke groet,<br><strong>InnerLeaps</strong>"
+      };
 
       const emailResponse = await resend.emails.send({
         from: "InnerLeaps <bas@innerleaps.nl>",
         to: [submission.email],
-        subject: "Jouw vragenlijst resultaat",
+        subject: emailContent.subject,
         html: `
           <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;">
-            <h1 style="color: #333;">Bedankt voor het invullen</h1>
+            <h1 style="color: #333;">${emailContent.title}</h1>
             
             <p>${safeName},</p>
             
             <div style="background-color: ${scoreLevel.bgColor}; border: 2px solid ${scoreLevel.color}; border-radius: 8px; padding: 32px; margin: 20px 0; text-align: center;">
-              <p style="font-size: 16px; margin-bottom: 8px; color: #333;">Je score is</p>
+              <p style="font-size: 16px; margin-bottom: 8px; color: #333;">${emailContent.scoreText}</p>
               <p style="font-size: 48px; font-weight: bold; color: ${scoreLevel.color}; margin: 8px 0;">${submission.total_score}</p>
-              <p style="font-size: 16px; margin-bottom: 20px; color: #333;">van de 40 punten</p>
+              <p style="font-size: 16px; margin-bottom: 20px; color: #333;">${emailContent.outOfText}</p>
               
               <div style="display: inline-block; background-color: white; border: 2px solid ${scoreLevel.color}; border-radius: 20px; padding: 10px 20px;">
                 <span style="font-size: 20px; margin-right: 8px;">${scoreLevel.icon}</span>
@@ -247,8 +263,7 @@ const handler = async (req: Request): Promise<Response> => {
             
             <div style="margin-top: 30px; padding-top: 20px; border-top: 1px solid #ddd;">
               <p style="color: #666;">
-                Met vriendelijke groet,<br>
-                <strong>InnerLeaps</strong>
+                ${emailContent.closing}
               </p>
             </div>
           </div>
