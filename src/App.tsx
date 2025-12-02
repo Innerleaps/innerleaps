@@ -12,6 +12,7 @@ const DeMethode = lazy(() => import("./pages/DeMethode"));
 const OverOns = lazy(() => import("./pages/OverOns"));
 const Contact = lazy(() => import("./pages/Contact"));
 const Calendar = lazy(() => import("./pages/Calendar"));
+const Signup = lazy(() => import("./pages/Signup"));
 const LevenVragenlijst = lazy(() => import("./pages/LevenVragenlijst"));
 const LevenVragenlijstResultaat = lazy(() => import("./pages/LevenVragenlijstResultaat"));
 const LifeQuestionnaire = lazy(() => import("./pages/LifeQuestionnaire"));
@@ -62,6 +63,7 @@ const App = () => {
                 <Route path="/de-methode" element={<DeMethode />} />
                 <Route path="/over-ons" element={<OverOns />} />
                 <Route path="/calendar" element={<Calendar />} />
+                <Route path="/signup" element={<Signup />} />
                 <Route path="/9-stippen" element={<NegenStippen />} />
                 <Route path="/stressmanagement-programma" element={<StressManagement />} />
                 <Route path="/prestatie-programma" element={<PrestatieProgramma />} />
