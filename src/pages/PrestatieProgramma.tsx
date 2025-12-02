@@ -1,5 +1,6 @@
 import { useState, useEffect, lazy, Suspense } from "react";
 import { Link } from "react-router-dom";
+import { EXTERNAL_URLS } from "@/constants/externalUrls";
 import SimplifiedNavigation from "@/components/SimplifiedNavigation";
 import StickyCtaButtons from "@/components/StickyCtaButtons";
 import Footer from "@/components/Footer";
@@ -87,6 +88,10 @@ const PrestatieProgramma = () => {
     setIsModalOpen(true);
   };
 
+  const openGoogleForm = () => {
+    window.open(EXTERNAL_URLS.PRESTATIE_PROGRAM_SIGNUP, '_blank', 'noopener,noreferrer');
+  };
+
   const logos = [
     { src: oliverLogo, alt: "Oliver Wyman" },
     { src: sygnificLogo, alt: "Sygnific" },
@@ -159,7 +164,7 @@ const PrestatieProgramma = () => {
                 <Button
                   size="lg"
                   className="w-full sm:w-auto bg-brand-orange hover:bg-brand-orange/90 text-white font-semibold py-3 px-4 sm:py-4 sm:px-6 rounded-lg text-sm sm:text-base lg:text-lg shadow-xl"
-                  onClick={() => setIsRegistrationModalOpen(true)}
+                  onClick={openGoogleForm}
                 >
                   Aanmelden programma
                 </Button>
@@ -537,7 +542,7 @@ const PrestatieProgramma = () => {
           <div className="text-center mt-12">
             <p className="text-xl text-brand-gray-medium mb-6">Klaar om ook te starten?</p>
             <Button
-              onClick={() => setIsRegistrationModalOpen(true)}
+              onClick={openGoogleForm}
               className="bg-brand-orange hover:bg-brand-orange/90 text-white py-3 px-8 rounded-lg text-lg font-semibold"
             >
               Aanmelden Programma
@@ -699,7 +704,7 @@ const PrestatieProgramma = () => {
           <div className="text-center mt-12">
             <p className="text-xl text-brand-gray-medium mb-6">Ben je ook zo enthousiast?</p>
             <Button
-              onClick={() => setIsRegistrationModalOpen(true)}
+              onClick={openGoogleForm}
               className="bg-brand-orange hover:bg-brand-orange/90 text-white py-3 px-8 rounded-lg text-lg font-semibold"
             >
               Aanmelden Programma
@@ -737,7 +742,7 @@ const PrestatieProgramma = () => {
           <div className="text-center mt-12">
             <p className="text-xl text-brand-gray-medium mb-6">Wil jij nu een leven met meer prestatie en focus?</p>
             <Button
-              onClick={() => setIsRegistrationModalOpen(true)}
+              onClick={openGoogleForm}
               className="bg-brand-orange hover:bg-brand-orange/90 text-white py-3 px-8 rounded-lg text-lg font-semibold"
             >
               Aanmelden Programma
@@ -1059,7 +1064,7 @@ const PrestatieProgramma = () => {
 
       <StickyCtaButtons 
         onMasterclassClick={scrollToMasterclass}
-        onProgramRegistrationClick={() => setIsRegistrationModalOpen(true)}
+        onProgramRegistrationClick={openGoogleForm}
       />
 
       <Footer />
