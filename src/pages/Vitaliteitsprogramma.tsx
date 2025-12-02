@@ -6,7 +6,22 @@ import { Button } from "@/components/ui/button";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import ROICalculator from "@/components/ROICalculator";
 import StickyCtaButtons from "@/components/StickyCtaButtons";
-import { Brain, Heart, Shield, Smile, CheckCircle, AlertCircle, Activity, Calendar, Clock, Laptop, Award, BookOpen, Star, Check } from "lucide-react";
+import {
+  Brain,
+  Heart,
+  Shield,
+  Smile,
+  CheckCircle,
+  AlertCircle,
+  Activity,
+  Calendar,
+  Clock,
+  Laptop,
+  Award,
+  BookOpen,
+  Star,
+  Check,
+} from "lucide-react";
 import heroBackground from "@/assets/Vitaliteitsprogramma_presentatie_Innerleaps.png";
 import breinTrainingImg from "@/assets/6_weken_brein_trainen.png";
 
@@ -52,119 +67,151 @@ const Vitaliteitsprogramma = () => {
   const location = useLocation();
 
   useEffect(() => {
-    const openCalculatorParam = searchParams.get('openCalculator');
-    
+    const openCalculatorParam = searchParams.get("openCalculator");
+
     // Check for openCalculator URL parameter
-    if (openCalculatorParam === 'true') {
+    if (openCalculatorParam === "true") {
       // Small delay to ensure modal is ready
       setTimeout(() => {
         setIsCalculatorOpen(true);
       }, 100);
     }
     // Check for #calculator anchor
-    else if (location.hash === '#calculator') {
+    else if (location.hash === "#calculator") {
       // Longer delay to wait for lazy-loaded ROICalculator to mount
       setTimeout(() => {
-        const element = document.getElementById('calculator');
+        const element = document.getElementById("calculator");
         if (element) {
-          element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          element.scrollIntoView({ behavior: "smooth", block: "start" });
         }
       }, 500);
     }
     // Check for #masterclass anchor
-    else if (location.hash === '#masterclass') {
+    else if (location.hash === "#masterclass") {
       // Delay to wait for page to fully mount
       setTimeout(() => {
-        const element = document.getElementById('masterclass');
+        const element = document.getElementById("masterclass");
         if (element) {
-          element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          element.scrollIntoView({ behavior: "smooth", block: "start" });
         }
       }, 300);
     } else {
       window.scrollTo(0, 0);
     }
   }, [location.search, location.hash]);
-  const logos = [{
-    src: oliverLogo,
-    alt: "Oliver Wyman"
-  }, {
-    src: sygnificLogo,
-    alt: "Sygnific"
-  }, {
-    src: cordaanLogo,
-    alt: "Cordaan"
-  }, {
-    src: denHaagLogo,
-    alt: "Gemeente Den Haag"
-  }, {
-    src: spiritLogo,
-    alt: "Spirit"
-  }, {
-    src: vuLogo,
-    alt: "VU Amsterdam"
-  }, {
-    src: leaseplanLogo,
-    alt: "Leaseplan"
-  }, {
-    src: tele2Logo,
-    alt: "Tele2"
-  }, {
-    src: parnassiaLogo,
-    alt: "Parnassia Groep"
-  }, {
-    src: lentizLogo,
-    alt: "Lentiz"
-  }, {
-    src: primoLogo,
-    alt: "Primo"
-  }, {
-    src: justitieLogo,
-    alt: "Ministerie van Justitie en Veiligheid"
-  }, {
-    src: youTalentLogo,
-    alt: "You Talent"
-  }, {
-    src: rijkswaterstaatLogo,
-    alt: "Rijkswaterstaat"
-  }, {
-    src: politieLogo,
-    alt: "Politie"
-  }, {
-    src: dhlLogo,
-    alt: "DHL"
-  }, {
-    src: affiniusLogo,
-    alt: "Affinius Capital"
-  }, {
-    src: ggzLogo,
-    alt: "GGZ Centraal"
-  }, {
-    src: humanitasLogo,
-    alt: "Humanitas"
-  }, {
-    src: plevierLogo,
-    alt: "Plevier"
-  }, {
-    src: carelLogo,
-    alt: "Carel Lurvink"
-  }, {
-    src: paConsultingLogo,
-    alt: "PA Consulting"
-  }, {
-    src: nobelLogo,
-    alt: "Nobel Recruitment"
-  }, {
-    src: hollandColoursLogo,
-    alt: "Holland Colours"
-  }];
-  return <div className="min-h-screen">
+  const logos = [
+    {
+      src: oliverLogo,
+      alt: "Oliver Wyman",
+    },
+    {
+      src: sygnificLogo,
+      alt: "Sygnific",
+    },
+    {
+      src: cordaanLogo,
+      alt: "Cordaan",
+    },
+    {
+      src: denHaagLogo,
+      alt: "Gemeente Den Haag",
+    },
+    {
+      src: spiritLogo,
+      alt: "Spirit",
+    },
+    {
+      src: vuLogo,
+      alt: "VU Amsterdam",
+    },
+    {
+      src: leaseplanLogo,
+      alt: "Leaseplan",
+    },
+    {
+      src: tele2Logo,
+      alt: "Tele2",
+    },
+    {
+      src: parnassiaLogo,
+      alt: "Parnassia Groep",
+    },
+    {
+      src: lentizLogo,
+      alt: "Lentiz",
+    },
+    {
+      src: primoLogo,
+      alt: "Primo",
+    },
+    {
+      src: justitieLogo,
+      alt: "Ministerie van Justitie en Veiligheid",
+    },
+    {
+      src: youTalentLogo,
+      alt: "You Talent",
+    },
+    {
+      src: rijkswaterstaatLogo,
+      alt: "Rijkswaterstaat",
+    },
+    {
+      src: politieLogo,
+      alt: "Politie",
+    },
+    {
+      src: dhlLogo,
+      alt: "DHL",
+    },
+    {
+      src: affiniusLogo,
+      alt: "Affinius Capital",
+    },
+    {
+      src: ggzLogo,
+      alt: "GGZ Centraal",
+    },
+    {
+      src: humanitasLogo,
+      alt: "Humanitas",
+    },
+    {
+      src: plevierLogo,
+      alt: "Plevier",
+    },
+    {
+      src: carelLogo,
+      alt: "Carel Lurvink",
+    },
+    {
+      src: paConsultingLogo,
+      alt: "PA Consulting",
+    },
+    {
+      src: nobelLogo,
+      alt: "Nobel Recruitment",
+    },
+    {
+      src: hollandColoursLogo,
+      alt: "Holland Colours",
+    },
+  ];
+  return (
+    <div className="min-h-screen">
       <SimplifiedNavigation />
       <StickyCtaButtons />
 
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-start sm:items-center overflow-hidden text-white">
         <div className="absolute inset-0 z-0">
-          <img src={heroBackground} alt="Vitaliteitsprogramma presentatie" className="w-full h-full object-cover" fetchPriority="high" loading="eager" />
+          <img
+            src={heroBackground}
+            alt="Vitaliteitsprogramma presentatie"
+            className="w-full h-full object-cover"
+            fetchPriority="high"
+            loading="eager"
+          />
           <div className="absolute inset-0 bg-black/50" />
         </div>
 
@@ -177,22 +224,32 @@ const Vitaliteitsprogramma = () => {
                   Wetenschappelijk bewezen programma
                 </div>
 
-                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight font-heading break-words" style={{
-                textShadow: "0 2px 8px rgba(0,0,0,0.5)"
-              }}>
+                <h1
+                  className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight font-heading break-words"
+                  style={{
+                    textShadow: "0 2px 8px rgba(0,0,0,0.5)",
+                  }}
+                >
                   Het bewezen <span className="text-brand-orange">vitaliteits{"\u00AD"}programma </span> voor minder{" "}
                   <span className="text-brand-orange">verzuim</span>
                 </h1>
-                <p className="text-xl md:text-2xl text-blue-100 leading-relaxed break-words" style={{
-                textShadow: "0 2px 8px rgba(0,0,0,0.5)"
-              }}>
+                <p
+                  className="text-xl md:text-2xl text-blue-100 leading-relaxed break-words"
+                  style={{
+                    textShadow: "0 2px 8px rgba(0,0,0,0.5)",
+                  }}
+                >
                   Wetenschappelijk bewezen vitaliteits­programma. Deelnemers ontwikkelen eigenaarschap over hun eigen
                   stress, kunnen emoties beter reguleren én verhogen hun veerkracht.
                 </p>
               </div>
 
               <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 w-full justify-center lg:justify-start">
-                <Button size="lg" className="w-full sm:w-auto bg-brand-orange hover:bg-brand-orange text-white hover:text-white font-semibold py-3 px-4 sm:py-4 sm:px-6 rounded-lg text-sm sm:text-base lg:text-lg shadow-xl" onClick={() => setIsCalculatorOpen(true)}>
+                <Button
+                  size="lg"
+                  className="w-full sm:w-auto bg-brand-orange hover:bg-brand-orange text-white hover:text-white font-semibold py-3 px-4 sm:py-4 sm:px-6 rounded-lg text-sm sm:text-base lg:text-lg shadow-xl"
+                  onClick={() => setIsCalculatorOpen(true)}
+                >
                   Wat levert dit jullie op?
                 </Button>
               </div>
@@ -209,9 +266,12 @@ const Vitaliteitsprogramma = () => {
 
                   <div className="w-full space-y-3 sm:space-y-4">
                     <div className="flex items-center justify-between w-full p-2.5 sm:p-3 lg:p-4 bg-brand-purple/90 rounded-lg">
-                      <span style={{
-                      textShadow: "0 2px 8px rgba(0,0,0,0.5)"
-                    }} className="text-sm sm:text-base md:text-lg lg:text-xl text-white font-normal">
+                      <span
+                        style={{
+                          textShadow: "0 2px 8px rgba(0,0,0,0.5)",
+                        }}
+                        className="text-sm sm:text-base md:text-lg lg:text-xl text-white font-normal"
+                      >
                         Minder verzuim
                       </span>
                       <span className="text-brand-orange font-bold text-base sm:text-lg md:text-xl lg:text-2xl shrink-0">
@@ -219,26 +279,39 @@ const Vitaliteitsprogramma = () => {
                       </span>
                     </div>
                     <div className="flex items-center justify-between w-full p-2.5 sm:p-3 lg:p-4 bg-brand-purple/90 rounded-lg">
-                      <span style={{
-                      textShadow: "0 2px 8px rgba(0,0,0,0.5)"
-                    }} className="text-sm sm:text-base md:text-lg lg:text-xl text-white font-normal">
+                      <span
+                        style={{
+                          textShadow: "0 2px 8px rgba(0,0,0,0.5)",
+                        }}
+                        className="text-sm sm:text-base md:text-lg lg:text-xl text-white font-normal"
+                      >
                         Minder burn-out risico
                       </span>
-                      <span className="text-brand-orange font-bold text-base sm:text-lg md:text-xl lg:text-2xl shrink-0">70%</span>
+                      <span className="text-brand-orange font-bold text-base sm:text-lg md:text-xl lg:text-2xl shrink-0">
+                        70%
+                      </span>
                     </div>
                     <div className="flex items-center justify-between w-full p-2.5 sm:p-3 lg:p-4 bg-brand-purple/90 rounded-lg">
-                      <span style={{
-                      textShadow: "0 2px 8px rgba(0,0,0,0.5)"
-                    }} className="text-sm sm:text-base md:text-lg lg:text-xl text-white font-normal">
+                      <span
+                        style={{
+                          textShadow: "0 2px 8px rgba(0,0,0,0.5)",
+                        }}
+                        className="text-sm sm:text-base md:text-lg lg:text-xl text-white font-normal"
+                      >
                         Meer tevreden over het leven
                       </span>
-                      <span className="text-brand-orange font-bold text-base sm:text-lg md:text-xl lg:text-2xl shrink-0">15%</span>
+                      <span className="text-brand-orange font-bold text-base sm:text-lg md:text-xl lg:text-2xl shrink-0">
+                        15%
+                      </span>
                     </div>
                     <div className="flex items-center justify-between w-full p-2.5 sm:p-3 lg:p-4 bg-brand-purple/90 rounded-lg">
-                      <span style={{
-                      textShadow: "0 2px 8px rgba(0,0,0,0.5)"
-                    }} className="text-sm sm:text-base md:text-lg lg:text-xl text-white font-normal">
-                        Wetenschappelijk onderzoek
+                      <span
+                        style={{
+                          textShadow: "0 2px 8px rgba(0,0,0,0.5)",
+                        }}
+                        className="text-sm sm:text-base md:text-lg lg:text-xl text-white font-normal"
+                      >
+                        Wetenschap
                       </span>
                       <span className="text-brand-orange font-bold text-base sm:text-lg md:text-xl lg:text-2xl shrink-0">
                         40+ jaar
@@ -246,11 +319,21 @@ const Vitaliteitsprogramma = () => {
                     </div>
                   </div>
 
-                  <a href="https://www.google.com/maps/place/Innerleaps/@52.1909763,5.2795551,7z/data=!4m8!3m7!1s0x41d7861255c94705:0x571bbf751b212eea!8m2!3d52.1909763!4d5.2795551!9m1!1b1!16s%2Fg%2F11y10xf1qm?entry=ttu&g_ep=EgoyMDI1MTAyOS4yIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" className="w-full mt-3 sm:mt-4 block bg-brand-purple/90 backdrop-blur-sm rounded-lg p-2.5 sm:p-3 hover:bg-brand-purple transition-all group">
+                  <a
+                    href="https://www.google.com/maps/place/Innerleaps/@52.1909763,5.2795551,7z/data=!4m8!3m7!1s0x41d7861255c94705:0x571bbf751b212eea!8m2!3d52.1909763!4d5.2795551!9m1!1b1!16s%2Fg%2F11y10xf1qm?entry=ttu&g_ep=EgoyMDI1MTAyOS4yIKXMDSoASAFQAw%3D%3D"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full mt-3 sm:mt-4 block bg-brand-purple/90 backdrop-blur-sm rounded-lg p-2.5 sm:p-3 hover:bg-brand-purple transition-all group"
+                  >
                     <div className="flex items-center justify-center gap-2">
                       <span className="text-white font-semibold text-lg">4,7 / 5</span>
                       <div className="flex gap-0.5">
-                        {[...Array(5)].map((_, i) => <Star key={i} className="w-4 h-4 fill-amber-400 text-amber-400 group-hover:scale-110 transition-transform" />)}
+                        {[...Array(5)].map((_, i) => (
+                          <Star
+                            key={i}
+                            className="w-4 h-4 fill-amber-400 text-amber-400 group-hover:scale-110 transition-transform"
+                          />
+                        ))}
                       </div>
                     </div>
                     <p className="text-amber-100 text-sm text-center mt-1">Google Reviews</p>
@@ -263,7 +346,14 @@ const Vitaliteitsprogramma = () => {
           <div className="w-full mt-8 sm:mt-12 lg:mt-16">
             <div className="relative overflow-hidden [mask-image:linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)]">
               <div className="flex gap-8 animate-marquee-mobile md:animate-marquee-tablet">
-                {logos.map((logo, index) => <img key={index} src={logo.src} alt={logo.alt} className="h-8 sm:h-10 md:h-12 object-contain flex-shrink-0 opacity-100 transition-all" />)}
+                {logos.map((logo, index) => (
+                  <img
+                    key={index}
+                    src={logo.src}
+                    alt={logo.alt}
+                    className="h-8 sm:h-10 md:h-12 object-contain flex-shrink-0 opacity-100 transition-all"
+                  />
+                ))}
               </div>
             </div>
           </div>
@@ -470,9 +560,12 @@ const Vitaliteitsprogramma = () => {
               <div className="p-3 rounded-lg bg-brand-orange/10 w-fit mx-auto">
                 <Calendar className="h-10 w-10 text-brand-orange stroke-2" />
               </div>
-              <h3 className="text-xl md:text-2xl font-bold text-brand-gray-dark text-center">6 wekelijkse groepsworkshops</h3>
+              <h3 className="text-xl md:text-2xl font-bold text-brand-gray-dark text-center">
+                6 wekelijkse groepsworkshops
+              </h3>
               <p className="text-base md:text-lg text-brand-gray-medium text-center leading-relaxed">
-                Elke week een workshop van 60 minuten door een geaccrediteerde trainer. Leer van elkaars ervaringen en krijg wetenschappelijke theorie en praktische tools.
+                Elke week een workshop van 60 minuten door een geaccrediteerde trainer. Leer van elkaars ervaringen en
+                krijg wetenschappelijke theorie en praktische tools.
               </p>
             </div>
 
@@ -480,9 +573,12 @@ const Vitaliteitsprogramma = () => {
               <div className="p-3 rounded-lg bg-brand-orange/10 w-fit mx-auto">
                 <Smile className="h-10 w-10 text-brand-orange stroke-2" />
               </div>
-              <h3 className="text-xl md:text-2xl font-bold text-brand-gray-dark text-center">Comfortabel meedoen en leren    </h3>
+              <h3 className="text-xl md:text-2xl font-bold text-brand-gray-dark text-center">
+                Comfortabel meedoen en leren    
+              </h3>
               <p className="text-base md:text-lg text-brand-gray-medium text-center leading-relaxed">
-                Deelnemers houden controle. Reageer op vragen met het opsteken van handen. Persoonlijke toelichting is optioneel. Meedoen op je eigen tempo.
+                Deelnemers houden controle. Reageer op vragen met het opsteken van handen. Persoonlijke toelichting is
+                optioneel. Meedoen op je eigen tempo.
               </p>
             </div>
 
@@ -490,9 +586,12 @@ const Vitaliteitsprogramma = () => {
               <div className="p-3 rounded-lg bg-brand-orange/10 w-fit mx-auto">
                 <Clock className="h-10 w-10 text-brand-orange stroke-2" />
               </div>
-              <h3 className="text-xl md:text-2xl font-bold text-brand-gray-dark text-center">Dagelijks 15 minuten oefenen</h3>
+              <h3 className="text-xl md:text-2xl font-bold text-brand-gray-dark text-center">
+                Dagelijks 15 minuten oefenen
+              </h3>
               <p className="text-base md:text-lg text-brand-gray-medium text-center leading-relaxed">
-                Audio-oefeningen en werkboek met concrete oefeningen die je direct in je leven toepast. Nauwelijks extra tijd nodig. Oefen tijdens tandenpoetsen, douchen of afwassen.
+                Audio-oefeningen en werkboek met concrete oefeningen die je direct in je leven toepast. Nauwelijks extra
+                tijd nodig. Oefen tijdens tandenpoetsen, douchen of afwassen.
               </p>
             </div>
 
@@ -500,9 +599,12 @@ const Vitaliteitsprogramma = () => {
               <div className="p-3 rounded-lg bg-brand-orange/10 w-fit mx-auto">
                 <BookOpen className="h-10 w-10 text-brand-orange stroke-2" />
               </div>
-              <h3 className="text-xl md:text-2xl font-bold text-brand-gray-dark text-center">Systematische programmaopbouw</h3>
+              <h3 className="text-xl md:text-2xl font-bold text-brand-gray-dark text-center">
+                Systematische programmaopbouw
+              </h3>
               <p className="text-base md:text-lg text-brand-gray-medium text-center leading-relaxed">
-                Het programma start met het herkennen van automatische patronen. Hierna volgt bewust handelen. Het einde is gericht op integratie in het dagelijks leven.
+                Het programma start met het herkennen van automatische patronen. Hierna volgt bewust handelen. Het einde
+                is gericht op integratie in het dagelijks leven.
               </p>
             </div>
           </div>
@@ -537,7 +639,11 @@ const Vitaliteitsprogramma = () => {
             </div>
 
             <div className="relative">
-              <img src={breinTrainingImg} alt="Mensen tijdens een aandacht- en concentratietraining voor betere prestaties en minder stress" className="w-full h-auto rounded-2xl shadow-lg" />
+              <img
+                src={breinTrainingImg}
+                alt="Mensen tijdens een aandacht- en concentratietraining voor betere prestaties en minder stress"
+                className="w-full h-auto rounded-2xl shadow-lg"
+              />
             </div>
           </div>
 
@@ -714,7 +820,11 @@ const Vitaliteitsprogramma = () => {
           </div>
 
           <div className="text-center">
-            <Button size="lg" className="bg-brand-orange hover:bg-brand-orange/90 text-white py-4 px-8 rounded-lg text-lg md:text-xl font-semibold shadow-xl" onClick={() => window.open("https://innerleaps.nl/Calendar", "_blank")}>
+            <Button
+              size="lg"
+              className="bg-brand-orange hover:bg-brand-orange/90 text-white py-4 px-8 rounded-lg text-lg md:text-xl font-semibold shadow-xl"
+              onClick={() => window.open("https://innerleaps.nl/Calendar", "_blank")}
+            >
               Kennismaken met Bas
             </Button>
           </div>
@@ -745,7 +855,11 @@ const Vitaliteitsprogramma = () => {
                   <div className="flex flex-row gap-4 items-center flex-wrap">
                     <img src={vgzLogo} alt="Vitaliteitsprogramma herkend door VGZ" className="h-24 object-contain" />
                     <img src={czLogo} alt="Vitaliteitsprogramma herkend door CZ" className="h-24 object-contain" />
-                    <img src={menzisLogo} alt="Vitaliteitsprogramma herkend door Menzis" className="h-20 object-contain" />
+                    <img
+                      src={menzisLogo}
+                      alt="Vitaliteitsprogramma herkend door Menzis"
+                      className="h-20 object-contain"
+                    />
                   </div>
                 </div>
               </div>
@@ -762,9 +876,21 @@ const Vitaliteitsprogramma = () => {
                     Gebaseerd op de wetenschappelijke MBSR-methode, een van de best onderzochte interventies wereldwijd.
                   </p>
                   <div className="flex flex-row gap-4 items-center flex-wrap">
-                    <img src={oxfordLogo} alt="Vitaliteitsprogramma ontwikkeld door Oxford University" className="h-24 rounded object-contain" />
-                    <img src={uMassLogo} alt="Vitaliteitsprogramma ontwikkeld door University of Massachusetts" className="h-24 object-contain" />
-                    <img src={uvaLogo} alt="Aandachttraining aan de Universiteit van Amsterdam" className="h-24 object-contain" />
+                    <img
+                      src={oxfordLogo}
+                      alt="Vitaliteitsprogramma ontwikkeld door Oxford University"
+                      className="h-24 rounded object-contain"
+                    />
+                    <img
+                      src={uMassLogo}
+                      alt="Vitaliteitsprogramma ontwikkeld door University of Massachusetts"
+                      className="h-24 object-contain"
+                    />
+                    <img
+                      src={uvaLogo}
+                      alt="Aandachttraining aan de Universiteit van Amsterdam"
+                      className="h-24 object-contain"
+                    />
                   </div>
                 </div>
               </div>
@@ -793,9 +919,16 @@ const Vitaliteitsprogramma = () => {
           </div>
 
           <div className="text-center mt-12">
-            <a href="https://www.google.com/maps/place/Innerleaps/@52.1909763,5.2795551,7z/data=!4m8!3m7!1s0x41d7861255c94705:0x571bbf751b212eea!8m2!3d52.1909763!4d5.2795551!9m1!1b1!16s%2Fg%2F11y10xf1qm?entry=ttu&g_ep=EgoyMDI1MTAyOS4yIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 hover:opacity-80 transition-opacity">
+            <a
+              href="https://www.google.com/maps/place/Innerleaps/@52.1909763,5.2795551,7z/data=!4m8!3m7!1s0x41d7861255c94705:0x571bbf751b212eea!8m2!3d52.1909763!4d5.2795551!9m1!1b1!16s%2Fg%2F11y10xf1qm?entry=ttu&g_ep=EgoyMDI1MTAyOS4yIKXMDSoASAFQAw%3D%3D"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 hover:opacity-80 transition-opacity"
+            >
               <div className="flex gap-0.5">
-                {[...Array(5)].map((_, i) => <Star key={i} className="w-6 h-6 fill-amber-400 text-amber-400" />)}
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} className="w-6 h-6 fill-amber-400 text-amber-400" />
+                ))}
               </div>
               <span className="text-xl font-semibold text-brand-gray-dark">4,7 / 5 op Google Reviews</span>
             </a>
@@ -853,11 +986,11 @@ const Vitaliteitsprogramma = () => {
                 <AccordionTrigger className="text-left text-lg md:text-xl font-semibold text-brand-gray-dark hover:text-brand-orange">
                   Wat als een deelnemer een sessie mist?
                 </AccordionTrigger>
-            <AccordionContent className="text-base md:text-lg text-brand-gray-medium leading-relaxed">
-              Bij het missen van een sessie kunnen deelnemers de trainer bellen om toch alle informatie te 
-              ontvangen. Daarnaast staat alle benodigde informatie in het werkboek. Voor optimaal resultaat 
-              is het belangrijk om niet meer dan één sessie te missen.
-            </AccordionContent>
+                <AccordionContent className="text-base md:text-lg text-brand-gray-medium leading-relaxed">
+                  Bij het missen van een sessie kunnen deelnemers de trainer bellen om toch alle informatie te
+                  ontvangen. Daarnaast staat alle benodigde informatie in het werkboek. Voor optimaal resultaat is het
+                  belangrijk om niet meer dan één sessie te missen.
+                </AccordionContent>
               </AccordionItem>
 
               <AccordionItem value="item-5" className="bg-white rounded-lg px-6">
@@ -901,6 +1034,7 @@ const Vitaliteitsprogramma = () => {
       <Suspense fallback={null}>
         {isCalculatorOpen && <CalculatorModal isOpen={isCalculatorOpen} onClose={() => setIsCalculatorOpen(false)} />}
       </Suspense>
-    </div>;
+    </div>
+  );
 };
 export default Vitaliteitsprogramma;
