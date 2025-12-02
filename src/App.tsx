@@ -14,6 +14,8 @@ const Contact = lazy(() => import("./pages/Contact"));
 const Calendar = lazy(() => import("./pages/Calendar"));
 const LevenVragenlijst = lazy(() => import("./pages/LevenVragenlijst"));
 const LevenVragenlijstResultaat = lazy(() => import("./pages/LevenVragenlijstResultaat"));
+const LifeQuestionnaire = lazy(() => import("./pages/LifeQuestionnaire"));
+const LifeQuestionnaireResult = lazy(() => import("./pages/LifeQuestionnaireResult"));
 const StressManagement = lazy(() => import("./pages/StressManagement"));
 const PrestatieProgramma = lazy(() => import("./pages/PrestatieProgramma"));
 const Vitaliteitsprogramma = lazy(() => import("./pages/Vitaliteitsprogramma"));
@@ -54,6 +56,8 @@ const App = () => {
                 <Route path="/" element={<LandingPage />} />
                 <Route path="/leven-vragenlijst" element={<LevenVragenlijst />} />
                 <Route path="/leven-vragenlijst/resultaat" element={<LevenVragenlijstResultaat />} />
+                <Route path="/life-questionnaire" element={<LifeQuestionnaire />} />
+                <Route path="/life-questionnaire/result" element={<LifeQuestionnaireResult />} />
                 <Route path="/contact" element={<Contact />} />
                 <Route path="/de-methode" element={<DeMethode />} />
                 <Route path="/over-ons" element={<OverOns />} />
