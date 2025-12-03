@@ -158,4 +158,29 @@
   .container-custom {
     @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
   }
+
+  /* Prose styling for blog posts */
+  .prose ul {
+    @apply list-disc pl-6 my-4 space-y-2;
+  }
+  
+  .prose ul li {
+    @apply text-brand-gray-dark;
+  }
+  
+  .prose ol {
+    @apply list-decimal pl-6 my-4 space-y-2;
+  }
+  
+  .prose ol li {
+    @apply text-brand-gray-dark;
+  }
+  
+  .prose p {
+    @apply text-brand-gray-dark leading-relaxed;
+  }
+  
+  .prose .lead {
+    @apply text-lg md:text-xl text-brand-gray-dark leading-relaxed;
+  }
 }
