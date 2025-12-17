@@ -9,7 +9,7 @@ const HoeVerlaagIkZiekteverzuim = () => {
   return (
     <div className="min-h-screen bg-white">
       <Helmet>
-        <title>Hoe verlaag ik het ziekteverzuim in mijn organisatie | InnerLeaps</title>
+        <title>Hoe verlaag ik het ziekteverzuim in mijn organisatie? | InnerLeaps</title>
         <meta
           name="description"
           content="Ziekteverzuim verlagen met 15-21% door aandachtstraining. Wetenschappelijk bewezen: 70% lager uitvalrisico. Ontdek de evidence-based aanpak met 89,8% adoptie."
@@ -95,7 +95,7 @@ const HoeVerlaagIkZiekteverzuim = () => {
       {/* Article Header */}
       <header className="container-custom py-8">
         <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-brand-purple mb-6">
-          Hoe verlaag ik het ziekteverzuim in mijn organisatie
+          Hoe verlaag ik het ziekteverzuim in mijn organisatie?
         </h1>
         <BlogAuthor
           authorName="Bas Ter Haar Romenij"
