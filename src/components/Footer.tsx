@@ -23,6 +23,7 @@ const Footer = memo(({ showNavigation = true }: FooterProps) => {
             <div className="space-y-2 text-gray-300">
               <p>Email: bas@innerleaps.nl</p>
               <p>Telefoon: 06 23 45 34 77</p>
+              <p>Adres: Olympisch Stadion 24, 28, 1076 DE Amsterdam</p>
               <p>KVK nummer: 98136925</p>
             </div>
           </div>
