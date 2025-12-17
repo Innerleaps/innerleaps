@@ -1,6 +1,6 @@
 import SimplifiedNavigation from "@/components/SimplifiedNavigation";
 import { Button } from "@/components/ui/button";
-import { Calendar, Mail, Phone } from "lucide-react";
+import { Calendar, Mail, Phone, MapPin } from "lucide-react";
 import StickyCtaButtons from "@/components/StickyCtaButtons";
 import ROICalculator from "@/components/ROICalculator";
 import { useEffect } from "react";
@@ -86,6 +86,17 @@ const Contact = () => {
                       <div>
                         <h4 className="font-semibold text-brand-gray-dark text-lg">Telefoon</h4>
                         <p className="text-brand-gray-medium text-lg">06 23 45 34 77</p>
+                      </div>
+                    </div>
+
+                    <div className="flex items-start space-x-4">
+                      <div className="bg-brand-gray-light p-3 rounded-lg shadow-sm">
+                        <MapPin className="h-6 w-6 text-brand-orange stroke-2" />
+                      </div>
+                      <div>
+                        <h4 className="font-semibold text-brand-gray-dark text-lg">Adres</h4>
+                        <p className="text-brand-gray-medium text-lg">Olympisch Stadion 24, 28</p>
+                        <p className="text-brand-gray-medium text-lg">1076 DE Amsterdam</p>
                       </div>
                     </div>
                   </div>
