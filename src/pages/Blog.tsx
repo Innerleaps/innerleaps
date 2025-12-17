@@ -8,13 +8,20 @@ const Blog = () => {
   const blogPosts = [
     {
       id: 1,
+      title: "Hoe verlaag ik het ziekteverzuim in mijn organisatie",
+      excerpt: "Ziekteverzuim verlagen met 15-21% door aandachtstraining. Wetenschappelijk bewezen: 70% lager uitvalrisico. Ontdek de evidence-based aanpak met 89,8% adoptie.",
+      date: "16 december 2024",
+      slug: "/blog/hoe-verlaag-ik-het-ziekteverzuim-in-mijn-organisatie"
+    },
+    {
+      id: 2,
       title: "De verborgen kosten van ziekteverzuim met rekenmodel",
       excerpt: "Ontdek de verborgen kosten van ziekteverzuim. Bereken met ons rekenmodel de échte impact: €438.330 per jaar bij 100 medewerkers. Wetenschappelijk bewezen oplossing met 497-775% ROI.",
       date: "3 december 2024",
       slug: "/blog/verborgen-kosten-ziekteverzuim-rekenmodel"
     },
     {
-      id: 2,
+      id: 3,
       title: "Ziekteverzuim Verlagen: De Wetenschappelijk Bewezen Aanpak voor 2025",
       excerpt: "Ziekteverzuim verlagen met 15-21% door wetenschappelijk bewezen aandachtstraining. ROI 497-775%. Ontdek hoe 40 jaar onderzoek verzuimkosten structureel verlaagt.",
       date: "28 november 2025",
