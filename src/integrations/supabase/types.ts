@@ -68,6 +68,24 @@ export type Database = {
         }
         Relationships: []
       }
+      keep_alive_logs: {
+        Row: {
+          created_at: string
+          id: string
+          status: string
+        }
+        Insert: {
+          created_at?: string
+          id?: string
+          status?: string
+        }
+        Update: {
+          created_at?: string
+          id?: string
+          status?: string
+        }
+        Relationships: []
+      }
       masterclass_registrations: {
         Row: {
           calendar_url: string | null

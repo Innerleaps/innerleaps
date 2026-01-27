@@ -13,17 +13,29 @@ Deno.serve(async (req) => {
   try {
     const supabase = createClient(
       Deno.env.get('SUPABASE_URL') ?? '',
-      Deno.env.get('SUPABASE_ANON_KEY') ?? ''
+      Deno.env.get('SUPABASE_SERVICE_ROLE_KEY') ?? ''
     )
 
-    // Minimale database activiteit
-    const { data, error } = await supabase.from('stress_questionnaire_submissions').select('id').limit(1)
-    
     const timestamp = new Date().toISOString()
-    console.log(`Keep-alive ping: ${timestamp}`, { success: !error })
+
+    // INSERT activity to keep database active
+    const { error: insertError } = await supabase
+      .from('keep_alive_logs')
+      .insert({ status: 'alive' })
+
+    // DELETE old logs (older than 30 days) to prevent table bloat
+    const { error: deleteError } = await supabase
+      .from('keep_alive_logs')
+      .delete()
+      .lt('created_at', new Date(Date.now() - 30 * 24 * 60 * 60 * 1000).toISOString())
+
+    console.log(`Keep-alive ping: ${timestamp}`, { 
+      insertSuccess: !insertError, 
+      cleanupSuccess: !deleteError 
+    })
 
     return new Response(
-      JSON.stringify({ status: 'alive', timestamp }),
+      JSON.stringify({ status: 'alive', timestamp, inserted: !insertError }),
       { headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
     )
   } catch (error) {
