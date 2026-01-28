@@ -332,7 +332,7 @@ const handler = async (req: Request): Promise<Response> => {
 
   } catch (error) {
     console.error("Error:", error);
-    return new Response(JSON.stringify({ error: String(error) }), {
+    return new Response(JSON.stringify({ error: "Er is een fout opgetreden. Probeer het later opnieuw." }), {
       status: 500,
       headers: { "Content-Type": "application/json", ...corsHeaders },
     });

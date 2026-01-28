@@ -260,8 +260,7 @@ const handler = async (req: Request): Promise<Response> => {
     console.error("Unexpected error in submit-masterclass-registration:", error);
     return new Response(
       JSON.stringify({ 
-        error: "Er is een fout opgetreden", 
-        details: error.message 
+        error: "Er is een fout opgetreden. Probeer het later opnieuw."
       }),
       {
         status: 500,

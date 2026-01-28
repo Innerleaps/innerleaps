@@ -214,7 +214,7 @@ const handler = async (req: Request): Promise<Response> => {
 
     if (dbError) {
       console.error("Database error:", dbError);
-      throw new Error(`Database error: ${dbError.message}`);
+      throw new Error("Er is een fout opgetreden bij het opslaan van uw gegevens. Probeer het later opnieuw.");
     }
 
     console.log("Successfully stored submission in database:", data);
