@@ -37,6 +37,7 @@ const LifeQuestionnaireResult = () => {
   const location = useLocation();
   const navigate = useNavigate();
   const score = location.state?.score;
+  const answers = location.state?.answers as Record<number, number> | undefined;
   const [email, setEmail] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [emailSent, setEmailSent] = useState(false);
@@ -72,8 +73,16 @@ const LifeQuestionnaireResult = () => {
           email,
           language: "en",
           total_score: score,
-          // We don't have individual answers, so we'll pass minimal data
-          q1: 0, q2: 0, q3: 0, q4: 0, q5: 0, q6: 0, q7: 0, q8: 0, q9: 0, q10: 0
+          q1: answers?.[0] ?? 0,
+          q2: answers?.[1] ?? 0,
+          q3: answers?.[2] ?? 0,
+          q4: answers?.[3] ?? 0,
+          q5: answers?.[4] ?? 0,
+          q6: answers?.[5] ?? 0,
+          q7: answers?.[6] ?? 0,
+          q8: answers?.[7] ?? 0,
+          q9: answers?.[8] ?? 0,
+          q10: answers?.[9] ?? 0,
         }
       });
 
