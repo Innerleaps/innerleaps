@@ -81,10 +81,11 @@ const LifeQuestionnaire = () => {
     setIsSubmitting(true);
     const totalScore = calculateTotalScore();
 
-    // Navigate to result page with score
+    // Navigate to result page with score and answers
     navigate("/life-questionnaire/result", {
       state: {
         score: totalScore,
+        answers,
       },
     });
   };
