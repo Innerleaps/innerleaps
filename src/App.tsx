@@ -77,6 +77,7 @@ const App = () => {
                 <Route path="/blog/verborgen-kosten-ziekteverzuim-rekenmodel" element={<VerborgenKostenZiekteverzuim />} />
                 <Route path="/blog/hoe-verlaag-ik-het-ziekteverzuim-in-mijn-organisatie" element={<HoeVerlaagIkZiekteverzuim />} />
                 <Route path="/algemene-voorwaarden" element={<AlgemeneVoorwaarden />} />
+                <Route path="/privacy" element={<PrivacyNotice />} />
                 
                 {/* Feature-flag routes - visible in Lovable editor, but redirect in production */}
                 <Route path="/masterclass-stress-qr" element={
