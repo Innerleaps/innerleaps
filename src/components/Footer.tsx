@@ -61,6 +61,11 @@ const Footer = memo(({ showNavigation = true }: FooterProps) => {
         </div>
         <div className="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
           <p>&copy; 2024 Innerleaps. Alle rechten voorbehouden.</p>
+          <div className="mt-3">
+            <Link to="/algemene-voorwaarden" className="text-gray-400 hover:text-white transition-colors text-sm">
+              Algemene voorwaarden
+            </Link>
+          </div>
         </div>
       </div>
     </footer>

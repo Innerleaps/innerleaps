@@ -27,6 +27,7 @@ const HoeVerlaagIkZiekteverzuim = lazy(() => import("./pages/blog/HoeVerlaagIkZi
 const MasterclassQR = lazy(() => import("./pages/MasterclassQR"));
 const Bedankt = lazy(() => import("./pages/Bedankt"));
 const NegenStippen = lazy(() => import("./pages/NegenStippen"));
+const AlgemeneVoorwaarden = lazy(() => import("./pages/AlgemeneVoorwaarden"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 
 const queryClient = new QueryClient();
@@ -74,6 +75,7 @@ const App = () => {
                 <Route path="/blog/ziekteverzuim-verlagen-wetenschappelijk-bewezen-aanpak-2025" element={<ZiekteverzuimVerlagen />} />
                 <Route path="/blog/verborgen-kosten-ziekteverzuim-rekenmodel" element={<VerborgenKostenZiekteverzuim />} />
                 <Route path="/blog/hoe-verlaag-ik-het-ziekteverzuim-in-mijn-organisatie" element={<HoeVerlaagIkZiekteverzuim />} />
+                <Route path="/algemene-voorwaarden" element={<AlgemeneVoorwaarden />} />
                 
                 {/* Feature-flag routes - visible in Lovable editor, but redirect in production */}
                 <Route path="/masterclass-stress-qr" element={
