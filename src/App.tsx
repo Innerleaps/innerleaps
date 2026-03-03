@@ -28,6 +28,7 @@ const MasterclassQR = lazy(() => import("./pages/MasterclassQR"));
 const Bedankt = lazy(() => import("./pages/Bedankt"));
 const NegenStippen = lazy(() => import("./pages/NegenStippen"));
 const AlgemeneVoorwaarden = lazy(() => import("./pages/AlgemeneVoorwaarden"));
+const PrivacyNotice = lazy(() => import("./pages/PrivacyNotice"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 
 const queryClient = new QueryClient();
