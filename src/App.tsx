@@ -27,6 +27,7 @@ const HoeVerlaagIkZiekteverzuim = lazy(() => import("./pages/blog/HoeVerlaagIkZi
 const MasterclassQR = lazy(() => import("./pages/MasterclassQR"));
 const Bedankt = lazy(() => import("./pages/Bedankt"));
 const NegenStippen = lazy(() => import("./pages/NegenStippen"));
+const AlgemeneVoorwaarden = lazy(() => import("./pages/AlgemeneVoorwaarden"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 
 const queryClient = new QueryClient();
