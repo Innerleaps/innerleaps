@@ -18,7 +18,7 @@ const AlgemeneVoorwaarden = memo(() => {
             General Terms and Conditions
           </h1>
           <p className="text-brand-gray-medium text-xl mb-12">
-            <strong>Innerleaps</strong> — Version 1.5 | 5 March 2026
+            <strong>Innerleaps</strong> — Version 1.6 | 5 March 2026
           </p>
 
           <div className="prose max-w-none space-y-8 text-brand-gray-dark leading-relaxed">
@@ -80,7 +80,7 @@ const AlgemeneVoorwaarden = memo(() => {
                 <li><strong>4.3</strong> Innerleaps delivers services either in person or online, depending on what has been agreed with the Client. Innerleaps may engage qualified freelance trainers to deliver sessions on its behalf. The specific trainer may vary per assignment. Innerleaps remains fully responsible for the quality and delivery of all services regardless of who delivers them. All freelance trainers engaged by Innerleaps are contractually bound to confidentiality and data protection obligations equivalent to those applicable to Innerleaps under these Terms and the Data Processing Agreement, before being permitted to deliver any sessions. In the event that a scheduled trainer is unexpectedly unavailable, Innerleaps will arrange an alternative trainer or schedule an additional session to ensure the full program is delivered as agreed. No financial compensation will be provided in such cases.</li>
                 <li><strong>4.4</strong> Innerleaps will make every effort to deliver the services with due care and in accordance with the standards that may reasonably be expected of a professional in this field.</li>
                 <li><strong>4.5</strong> The Client is responsible for creating the conditions necessary for the successful delivery of the training, including communicating the program to employees, facilitating Participant registration, and ensuring employees can attend scheduled sessions. If the Client's failure to meet these obligations results in one or more sessions not being delivered as planned, Innerleaps' delivery obligation is considered fulfilled for those sessions and no refund applies.</li>
-                <li><strong>4.6</strong> The training program is not a form of healthcare or psychotherapy and Innerleaps is not a healthcare provider. The program is designed as a professional development and wellness intervention. If during the intake assessment or the training program a Participant discloses or displays signs of acute mental health distress, Innerleaps may refer that Participant to appropriate professional support. Such referral does not constitute a breach of contract and may result in exclusion from the program in accordance with Article 5.4. Innerleaps is not liable for the mental health outcomes of Participants.</li>
+                <li><strong>4.6</strong> The training program is not a form of healthcare or psychotherapy and Innerleaps is not a healthcare provider. The program is designed as a professional development and wellness intervention. If during the intake assessment or the training program a Participant discloses or displays signs of acute mental health distress, Innerleaps may refer that Participant to appropriate professional support. Such referral does not constitute a breach of contract and may result in exclusion from the program in accordance with Article 5.4. Innerleaps is not liable for the mental health outcomes of Participants. Innerleaps' obligation with respect to participant safety is fulfilled through the intake assessment process. Innerleaps does not assume any ongoing duty of care with respect to the physical or mental health of Participants beyond what is required to deliver the program with reasonable professional skill.</li>
                 <li><strong>4.7</strong> The Client agrees not to directly engage, hire, or contract any trainer introduced by Innerleaps in the context of an Agreement, whether as an employee, contractor, or in any other capacity, for a period of 12 months following the end of the Agreement in which that trainer was introduced. A breach of this clause entitles Innerleaps to claim a fixed compensation of €30,000 per trainer engaged in breach of this clause, without prejudice to Innerleaps' right to claim additional damages where actual loss exceeds this amount.</li>
               </ul>
             </section>
@@ -171,6 +171,7 @@ const AlgemeneVoorwaarden = memo(() => {
                 <li><strong>11.5</strong> Innerleaps is not liable for damages resulting from inaccurate or incomplete information provided by the Client or its employees, including information provided via the intake form.</li>
                 <li><strong>11.6</strong> Innerleaps is not liable for the outcome of any participation decision made on the basis of the intake assessment. Recommendations and decisions regarding participant suitability are made with due professional care but do not constitute medical advice.</li>
                 <li><strong>11.7</strong> Any claim for damages must be submitted to Innerleaps in writing within 6 months of the Client becoming aware of the damage, failing which the right to compensation lapses.</li>
+                <li><strong>11.8</strong> Innerleaps accepts no liability for any physical, psychological, professional or other personal outcomes experienced by Participants in connection with the training program, including but not limited to stress-related illness, burnout, reexperiencing of trauma, or aggravation of pre-existing physical or mental health conditions. The training program is a professional development and wellness intervention, not a form of healthcare or medical treatment, and does not replace professional medical or psychological care. The Client is responsible for the occupational health and wellbeing of its employees and for ensuring that Participants are in a suitable condition to participate in a voluntary professional development program. The Client is further responsible for ensuring that Participants are made aware of the nature of the program and that individual outcomes may vary, prior to their participation. Any claim by a Participant arising from their participation in the program is a matter between the Participant and their employer.</li>
               </ul>
             </section>
 
@@ -225,7 +226,7 @@ const AlgemeneVoorwaarden = memo(() => {
 
             {/* Footer */}
             <div className="border-t border-border pt-8 mt-12 text-brand-gray-medium text-lg">
-              <p><strong>Document Version:</strong> 1.5</p>
+              <p><strong>Document Version:</strong> 1.6</p>
               <p><strong>Date:</strong> 5 March 2026</p>
               <p><strong>Prepared by:</strong> Innerleaps</p>
               <p><strong>Status:</strong> Published</p>
