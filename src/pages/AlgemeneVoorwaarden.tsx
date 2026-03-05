@@ -225,9 +225,10 @@ const AlgemeneVoorwaarden = memo(() => {
 
             {/* Footer */}
             <div className="border-t border-border pt-8 mt-12 text-brand-gray-medium text-lg">
-              <p><strong>Document Version:</strong> 1.4</p>
-              <p><strong>Date:</strong> 3 March 2026</p>
+              <p><strong>Document Version:</strong> 1.5</p>
+              <p><strong>Date:</strong> 5 March 2026</p>
               <p><strong>Prepared by:</strong> Innerleaps</p>
+              <p><strong>Status:</strong> Published</p>
             </div>
           </div>
         </div>

@@ -202,8 +202,8 @@ const PrivacyNotice = memo(() => {
 
             {/* Version info */}
             <div className="border-t border-gray-200 pt-8 mt-8 text-brand-gray-medium text-lg space-y-1">
-              <p>Document Version: 1.1</p>
-              <p>Date: 3 March 2026</p>
+              <p>Document Version: 1.2</p>
+              <p>Date: 5 March 2026</p>
               <p>Prepared by: Innerleaps</p>
               <p>Status: Published</p>
             </div>
