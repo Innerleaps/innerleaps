@@ -84,7 +84,7 @@ const PrivacyNotice = memo(() => {
               </ul>
               <p className="text-xl"><strong>Purpose:</strong> Measuring the impact of the training program on wellness, productivity and work performance.</p>
               <p className="text-xl"><strong>Legal basis:</strong> Legitimate interest of the Client organisation (GDPR Article 6(1)(f)) and consent (GDPR Article 6(1)(a)).</p>
-              <p className="text-xl mb-6"><strong>Important:</strong> Your individual responses are never shared with your employer. Management receives only anonymised, aggregated results with a minimum group size of 5 persons.</p>
+              <p className="text-xl mb-6"><strong>Important:</strong> Your individual responses are never shared with your employer. Management receives only anonymised, aggregated results. Results are only reported when both the training group and the control group each contain a minimum of 10 persons. Salary data is never included in management reports; it is used solely by Innerleaps to calculate ROI figures.</p>
 
               {/* 4. Evaluation */}
               <h3 className="text-xl md:text-2xl font-semibold text-brand-purple mb-3">4. Course evaluation</h3>
