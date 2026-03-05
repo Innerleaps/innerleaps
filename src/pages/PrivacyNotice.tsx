@@ -144,7 +144,7 @@ const PrivacyNotice = memo(() => {
               <p className="text-xl mb-4">Only Bas ter Haar Romenij has access to the full dataset. Freelance trainers engaged by Innerleaps receive only the data strictly necessary for the delivery of their sessions, limited to your name, telephone number and email address. This data is shared on the basis of the principle of data minimisation (GDPR Article 5(1)(c)) and is used solely to contact participants in the event of scheduling changes or session-related communications. All trainers are contractually bound to confidentiality and data protection obligations before being permitted to deliver any sessions.</p>
 
               <h3 className="text-xl md:text-2xl font-semibold text-brand-purple mb-3">Your employer</h3>
-              <p className="text-xl mb-4">Your employer receives only anonymised, aggregated results. Individual data is never shared with your employer.</p>
+              <p className="text-xl mb-4">Your employer receives only anonymised, aggregated results. Individual data is never shared with your employer. Salary data you provide is used solely by Innerleaps to calculate ROI figures and is never included in any report shared with your employer.</p>
 
               <h3 className="text-xl md:text-2xl font-semibold text-brand-purple mb-3">Sub-processors</h3>
               <p className="text-xl mb-3">We use the following sub-processors:</p>
