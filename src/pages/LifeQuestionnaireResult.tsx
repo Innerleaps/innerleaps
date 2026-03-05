@@ -68,7 +68,7 @@ const LifeQuestionnaireResult = () => {
               <NotebookPen className="text-primary mt-0.5 shrink-0" size={22} />
               <div>
                 <h2 className="font-semibold text-foreground mb-1">Save your score for the masterclass</h2>
-                <p className="text-sm text-muted-foreground">
+                <p className="text-sm text-foreground/70">
                   Write down or screenshot your score — we'll discuss what it means during the masterclass.
                 </p>
               </div>
