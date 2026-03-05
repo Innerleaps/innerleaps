@@ -1,9 +1,7 @@
 import { useLocation, useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { useEffect, useState } from "react";
-import { supabase } from "@/integrations/supabase/client";
-import { toast } from "sonner";
+import { useEffect } from "react";
+import { NotebookPen } from "lucide-react";
 
 const getScoreLevel = (score: number) => {
   if (score >= 0 && score <= 13) {
@@ -37,13 +35,8 @@ const LifeQuestionnaireResult = () => {
   const location = useLocation();
   const navigate = useNavigate();
   const score = location.state?.score;
-  const answers = location.state?.answers as Record<number, number> | undefined;
-  const [email, setEmail] = useState("");
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [emailSent, setEmailSent] = useState(false);
 
   useEffect(() => {
-    // Redirect to questionnaire if no score is available
     if (score === undefined) {
       navigate('/life-questionnaire');
     }
@@ -54,49 +47,6 @@ const LifeQuestionnaireResult = () => {
   }
 
   const scoreLevel = getScoreLevel(score);
-
-  const handleEmailSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    
-    if (!email) {
-      toast.error("Please enter your email address");
-      return;
-    }
-
-    setIsSubmitting(true);
-
-    try {
-      // Reconstruct the questionnaire answers based on score
-      // This is a simplified version - we're just sending the total score
-      const { error } = await supabase.functions.invoke('submit-stress-questionnaire', {
-        body: {
-          email,
-          language: "en",
-          total_score: score,
-          q1: answers?.[0] ?? 0,
-          q2: answers?.[1] ?? 0,
-          q3: answers?.[2] ?? 0,
-          q4: answers?.[3] ?? 0,
-          q5: answers?.[4] ?? 0,
-          q6: answers?.[5] ?? 0,
-          q7: answers?.[6] ?? 0,
-          q8: answers?.[7] ?? 0,
-          q9: answers?.[8] ?? 0,
-          q10: answers?.[9] ?? 0,
-        }
-      });
-
-      if (error) throw error;
-
-      setEmailSent(true);
-      toast.success("Score sent to your email!");
-    } catch (error) {
-      console.error('Error sending email:', error);
-      toast.error("Failed to send email. Please try again.");
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-background to-secondary/20 py-12 px-4">
@@ -113,37 +63,17 @@ const LifeQuestionnaireResult = () => {
             </div>
           </div>
 
-          {!emailSent ? (
-            <div className="mb-6 space-y-4">
-              <h2 className="text-xl font-semibold">Want to receive your score?</h2>
-              <p className="text-sm text-foreground/70">
-                Enter your email here. We will never share your information with your employer!
-              </p>
-              
-              <form onSubmit={handleEmailSubmit} className="space-y-4">
-                <Input
-                  type="email"
-                  placeholder="your.email@example.com"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  className="max-w-md mx-auto bg-white placeholder:text-gray-400"
-                  required
-                />
-                
-                <Button
-                  type="submit"
-                  disabled={!email || isSubmitting}
-                  className="w-full sm:w-auto"
-                >
-                  {isSubmitting ? "Sending..." : "Receive score"}
-                </Button>
-              </form>
+          <div className="bg-muted/50 border border-border rounded-lg p-6 mb-6 text-left">
+            <div className="flex items-start gap-3">
+              <NotebookPen className="text-primary mt-0.5 shrink-0" size={22} />
+              <div>
+                <h2 className="font-semibold text-foreground mb-1">Save your score for the masterclass</h2>
+                <p className="text-sm text-muted-foreground">
+                  Write down or screenshot your score — we'll discuss what it means during the masterclass.
+                </p>
+              </div>
             </div>
-          ) : (
-            <p className="text-sm text-foreground/60 mb-6">
-              You will receive an email with your results.
-            </p>
-          )}
+          </div>
 
           <Button onClick={() => navigate('/')} variant="outline" size="lg">
             Back to home
