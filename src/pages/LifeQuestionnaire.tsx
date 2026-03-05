@@ -85,7 +85,6 @@ const LifeQuestionnaire = () => {
     navigate("/life-questionnaire/result", {
       state: {
         score: totalScore,
-        answers,
       },
     });
   };
