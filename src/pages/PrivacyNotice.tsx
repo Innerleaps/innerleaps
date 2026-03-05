@@ -18,7 +18,7 @@ const PrivacyNotice = memo(() => {
             Privacy Notice
           </h1>
           <p className="text-brand-gray-medium text-xl mb-12">
-            <strong>Innerleaps</strong> — Version 1.1 | 3 March 2026
+            <strong>Innerleaps</strong> — Version 1.2 | 5 March 2026
           </p>
 
           <div className="prose max-w-none space-y-8 text-brand-gray-dark leading-relaxed">
@@ -84,7 +84,7 @@ const PrivacyNotice = memo(() => {
               </ul>
               <p className="text-xl"><strong>Purpose:</strong> Measuring the impact of the training program on wellness, productivity and work performance.</p>
               <p className="text-xl"><strong>Legal basis:</strong> Legitimate interest of the Client organisation (GDPR Article 6(1)(f)) and consent (GDPR Article 6(1)(a)).</p>
-              <p className="text-xl mb-6"><strong>Important:</strong> Your individual responses are never shared with your employer. Management receives only anonymised, aggregated results with a minimum group size of 5 persons.</p>
+              <p className="text-xl mb-6"><strong>Important:</strong> Your individual responses are never shared with your employer. Management receives only anonymised, aggregated results. Results are only reported when both the training group and the control group each contain a minimum of 10 persons. Salary data is never included in management reports; it is used solely by Innerleaps to calculate ROI figures.</p>
 
               {/* 4. Evaluation */}
               <h3 className="text-xl md:text-2xl font-semibold text-brand-purple mb-3">4. Course evaluation</h3>
@@ -144,7 +144,7 @@ const PrivacyNotice = memo(() => {
               <p className="text-xl mb-4">Only Bas ter Haar Romenij has access to the full dataset. Freelance trainers engaged by Innerleaps receive only the data strictly necessary for the delivery of their sessions, limited to your name, telephone number and email address. This data is shared on the basis of the principle of data minimisation (GDPR Article 5(1)(c)) and is used solely to contact participants in the event of scheduling changes or session-related communications. All trainers are contractually bound to confidentiality and data protection obligations before being permitted to deliver any sessions.</p>
 
               <h3 className="text-xl md:text-2xl font-semibold text-brand-purple mb-3">Your employer</h3>
-              <p className="text-xl mb-4">Your employer receives only anonymised, aggregated results. Individual data is never shared with your employer.</p>
+              <p className="text-xl mb-4">Your employer receives only anonymised, aggregated results. Individual data is never shared with your employer. Salary data you provide is used solely by Innerleaps to calculate ROI figures and is never included in any report shared with your employer.</p>
 
               <h3 className="text-xl md:text-2xl font-semibold text-brand-purple mb-3">Sub-processors</h3>
               <p className="text-xl mb-3">We use the following sub-processors:</p>
@@ -202,8 +202,8 @@ const PrivacyNotice = memo(() => {
 
             {/* Version info */}
             <div className="border-t border-gray-200 pt-8 mt-8 text-brand-gray-medium text-lg space-y-1">
-              <p>Document Version: 1.1</p>
-              <p>Date: 3 March 2026</p>
+              <p>Document Version: 1.2</p>
+              <p>Date: 5 March 2026</p>
               <p>Prepared by: Innerleaps</p>
               <p>Status: Published</p>
             </div>
