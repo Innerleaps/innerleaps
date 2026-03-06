@@ -29,7 +29,7 @@ const roiAnalysisSchema = z.object({
   bedrijfsnaam: z.string(),
   verzuimPercentage: z.string().optional(),
   verloopPercentage: z.string().optional(),
-  aantalDeelnemers: z.string(),
+  aantalDeelnemers: z.string().regex(/^\d+$/).max(7),
   brutoJaarsalaris: z.string(),
   calculationResults: z.object({
     totaleLoonkosten: z.number(),
