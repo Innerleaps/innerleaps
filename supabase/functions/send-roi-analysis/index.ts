@@ -122,7 +122,7 @@ const generateEmailHTML = (data: ROIAnalysisRequest): string => {
           <tr>
             <td style="padding: 40px 30px;">
               <p style="margin: 0 0 20px 0; font-size: 16px;">Beste ${safeNaam},</p>
-              <p style="margin: 0 0 30px 0; font-size: 16px;">Hieronder vind je drie scenario's voor ${safeBedrijfsnaam} met ${data.aantalDeelnemers} deelnemers (${numberOfGroups} groep${numberOfGroups !== 1 ? 'en' : ''}).</p>
+              <p style="margin: 0 0 30px 0; font-size: 16px;">Hieronder vind je drie scenario's voor ${safeBedrijfsnaam} met ${safeAantalDeelnemers} deelnemers (${numberOfGroups} groep${numberOfGroups !== 1 ? 'en' : ''}).</p>
 
               <!-- Three Scenarios Side by Side -->
               <table role="presentation" style="width: 100%; border-collapse: collapse; margin: 0 0 40px 0;">
