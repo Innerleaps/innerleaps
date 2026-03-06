@@ -53,9 +53,8 @@ const PrivacyNotice = memo(() => {
               <ul className="list-disc ml-6 space-y-1 text-xl mb-3">
                 <li>Name</li>
                 <li>Email address</li>
-                <li>Job title</li>
               </ul>
-              <p className="text-xl"><strong>Purpose:</strong> Following up on your interest and gaining insight into which professional profiles participate in the program.</p>
+              <p className="text-xl"><strong>Purpose:</strong> Following up on your interest in the program.</p>
               <p className="text-xl mb-6"><strong>Legal basis:</strong> Consent (GDPR Article 6(1)(a)).</p>
 
               {/* 2. Intake */}
