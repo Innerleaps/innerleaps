@@ -95,6 +95,7 @@ const generateEmailHTML = (data: ROIAnalysisRequest): string => {
   
   const safeNaam = escapeHtml(naam);
   const safeBedrijfsnaam = escapeHtml(bedrijfsnaam);
+  const safeAantalDeelnemers = escapeHtml(data.aantalDeelnemers);
 
   return `
 <!DOCTYPE html>
