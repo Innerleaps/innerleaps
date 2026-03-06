@@ -18,7 +18,7 @@ const PrivacyNotice = memo(() => {
             Privacy Notice
           </h1>
           <p className="text-brand-gray-medium text-xl mb-12">
-            <strong>Innerleaps</strong> — Version 1.2 | 5 March 2026
+            <strong>Innerleaps</strong> — Version 1.3 | 6 March 2026
           </p>
 
           <div className="prose max-w-none space-y-8 text-brand-gray-dark leading-relaxed">
@@ -53,16 +53,15 @@ const PrivacyNotice = memo(() => {
               <ul className="list-disc ml-6 space-y-1 text-xl mb-3">
                 <li>Name</li>
                 <li>Email address</li>
-                <li>Job title</li>
               </ul>
-              <p className="text-xl"><strong>Purpose:</strong> Following up on your interest and gaining insight into which professional profiles participate in the program.</p>
+              <p className="text-xl"><strong>Purpose:</strong> Following up on your interest in the program.</p>
               <p className="text-xl mb-6"><strong>Legal basis:</strong> Consent (GDPR Article 6(1)(a)).</p>
 
               {/* 2. Intake */}
               <h3 className="text-xl md:text-2xl font-semibold text-brand-purple mb-3">2. Participant intake and qualification</h3>
               <p className="text-xl mb-2">Via the intake form we collect:</p>
               <ul className="list-disc ml-6 space-y-1 text-xl mb-3">
-                <li>Name, email address, phone number and motivation</li>
+                <li>Name, email address, phone number, job title and motivation</li>
                 <li>Health data: information about mental health, medication use, trauma history and substance use</li>
               </ul>
               <p className="text-xl"><strong>Purpose:</strong> Assessing whether participation in the program is suitable and safe for you. Based on your answers, Innerleaps may determine that participation is not advisable for you at this time.</p>
@@ -202,8 +201,8 @@ const PrivacyNotice = memo(() => {
 
             {/* Version info */}
             <div className="border-t border-gray-200 pt-8 mt-8 text-brand-gray-medium text-lg space-y-1">
-              <p>Document Version: 1.2</p>
-              <p>Date: 5 March 2026</p>
+              <p>Document Version: 1.3</p>
+              <p>Date: 6 March 2026</p>
               <p>Prepared by: Innerleaps</p>
               <p>Status: Published</p>
             </div>
