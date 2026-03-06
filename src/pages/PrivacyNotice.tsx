@@ -61,7 +61,7 @@ const PrivacyNotice = memo(() => {
               <h3 className="text-xl md:text-2xl font-semibold text-brand-purple mb-3">2. Participant intake and qualification</h3>
               <p className="text-xl mb-2">Via the intake form we collect:</p>
               <ul className="list-disc ml-6 space-y-1 text-xl mb-3">
-                <li>Name, email address, phone number and motivation</li>
+                <li>Name, email address, phone number, job title and motivation</li>
                 <li>Health data: information about mental health, medication use, trauma history and substance use</li>
               </ul>
               <p className="text-xl"><strong>Purpose:</strong> Assessing whether participation in the program is suitable and safe for you. Based on your answers, Innerleaps may determine that participation is not advisable for you at this time.</p>
