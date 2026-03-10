@@ -18,7 +18,7 @@ const AlgemeneVoorwaarden = memo(() => {
             General Terms and Conditions
           </h1>
           <p className="text-brand-gray-medium text-xl mb-12">
-            <strong>Innerleaps</strong> — Version 1.6 | 5 March 2026
+            <strong>Innerleaps</strong> — Version 1.7 | 10 March 2026
           </p>
 
           <div className="prose max-w-none space-y-8 text-brand-gray-dark leading-relaxed">
