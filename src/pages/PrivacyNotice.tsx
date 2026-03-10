@@ -66,7 +66,7 @@ const PrivacyNotice = memo(() => {
               </ul>
               <p className="text-xl"><strong>Purpose:</strong> Assessing whether participation in the program is suitable and safe for you. Based on your answers, Innerleaps may determine that participation is not advisable for you at this time.</p>
               <p className="text-xl"><strong>Legal basis:</strong> Explicit consent (GDPR Article 6(1)(a) and Article 9(2)(a)).</p>
-              <p className="text-xl mb-6"><strong>Please note:</strong> This concerns special category personal data within the meaning of the GDPR. We process this data with extra care and solely for the purpose stated above.</p>
+              <p className="text-xl mb-6"><strong>Please note:</strong> This concerns special category personal data within the meaning of the GDPR. We process this data with extra care and solely for the purpose stated above. The Innerleaps training program is a professional development and wellness intervention, not a form of healthcare or psychotherapy. It does not replace professional medical or psychological care.</p>
 
               {/* 3. Impact */}
               <h3 className="text-xl md:text-2xl font-semibold text-brand-purple mb-3">3. Impact measurement</h3>
