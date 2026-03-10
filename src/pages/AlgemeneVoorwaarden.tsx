@@ -18,7 +18,7 @@ const AlgemeneVoorwaarden = memo(() => {
             General Terms and Conditions
           </h1>
           <p className="text-brand-gray-medium text-xl mb-12">
-            <strong>Innerleaps</strong> — Version 1.6 | 5 March 2026
+            <strong>Innerleaps</strong> — Version 1.7 | 10 March 2026
           </p>
 
           <div className="prose max-w-none space-y-8 text-brand-gray-dark leading-relaxed">
@@ -101,7 +101,7 @@ const AlgemeneVoorwaarden = memo(() => {
               <h2 className="text-2xl md:text-3xl font-bold text-brand-purple mb-4">Article 6: Cancellation and Masterclass Fee</h2>
               <ul className="space-y-3 text-xl">
                 <li><strong>6.1</strong> The Client may cancel a scheduled Masterclass free of charge provided cancellation is communicated to Innerleaps in writing at least 3 calendar days before the scheduled Masterclass date. If the Client cancels within 3 calendar days of the scheduled date, or if the Masterclass cannot take place as planned due to circumstances attributable to the Client, including but not limited to insufficient time being allocated to Innerleaps to deliver the Masterclass due to overrun in the Client's own program, the Client owes Innerleaps a cancellation fee of €950. Cancellation of the Agreement itself prior to any Masterclass being scheduled remains free of charge.</li>
-                <li><strong>6.2</strong> If the Masterclass has taken place but an insufficient number of Participants have registered for the training to proceed, the following applies:
+                <li><strong>6.2</strong> If the Masterclass has taken place but the minimum number of Participants required for the training to proceed, as stated in the Agreement in accordance with Article 5.3, has not been reached, the following applies:
                   <ul className="mt-2 ml-4 space-y-2">
                     <li><strong>a)</strong> Innerleaps and the Client will work together in good faith to plan a second Masterclass within 1 month of establishing that registration numbers are insufficient.</li>
                     <li><strong>b)</strong> A maximum of 2 Masterclasses will be delivered under a single Agreement. If after the second Masterclass the minimum number of Participants has still not been reached, the Client owes Innerleaps a Masterclass fee of €950, unless the Client and Innerleaps mutually agree in writing to extend the Agreement.</li>
@@ -226,8 +226,8 @@ const AlgemeneVoorwaarden = memo(() => {
 
             {/* Footer */}
             <div className="border-t border-border pt-8 mt-12 text-brand-gray-medium text-lg">
-              <p><strong>Document Version:</strong> 1.6</p>
-              <p><strong>Date:</strong> 5 March 2026</p>
+              <p><strong>Document Version:</strong> 1.7</p>
+              <p><strong>Date:</strong> 10 March 2026</p>
               <p><strong>Prepared by:</strong> Innerleaps</p>
               <p><strong>Status:</strong> Published</p>
             </div>
