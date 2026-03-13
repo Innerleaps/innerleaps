@@ -18,7 +18,7 @@ const AlgemeneVoorwaarden = memo(() => {
             General Terms and Conditions
           </h1>
           <p className="text-brand-gray-medium text-xl mb-12">
-            <strong>Innerleaps</strong> — Version 1.7 | 10 March 2026
+            <strong>Innerleaps</strong> — Version 1.8 | 13 March 2026
           </p>
 
           <div className="prose max-w-none space-y-8 text-brand-gray-dark leading-relaxed">
@@ -143,7 +143,7 @@ const AlgemeneVoorwaarden = memo(() => {
               <ul className="space-y-3 text-xl">
                 <li><strong>9.1</strong> Innerleaps treats all information shared by the Client and its employees in the context of the training program as confidential. This includes organisational information, internal challenges, team dynamics and any other information that is reasonably understood to be confidential in nature. This obligation applies to all persons acting on behalf of Innerleaps, including its owner, any employees, freelance trainers, and other subcontractors engaged in the delivery of services.</li>
                 <li><strong>9.2</strong> Innerleaps will not disclose such information to third parties without the prior written consent of the Client, except where required by law or court order.</li>
-                <li><strong>9.3</strong> Innerleaps may publicly reference the Client by name as a customer and may state aggregated, anonymised impact results from the training program for marketing and professional purposes, including percentage-based changes in wellness and productivity metrics and ROI figures, provided such results are based on a minimum of 10 persons in the training group and 10 persons in the control group. Underlying salary data, absolute figures and individual information will never be disclosed publicly. This right is subject to any specific arrangements agreed in the Data Processing Agreement between the parties.</li>
+                <li><strong>9.3</strong> Innerleaps may publicly reference the Client by name as a customer and may state aggregated, anonymised impact results from the training program for marketing and professional purposes, including percentage-based changes in wellness and productivity metrics and ROI figures, provided such results are based on a full comparative report in which both the training group and the control group each contain a minimum of 8 persons. Compensation data provided by the Client, absolute figures and individual information will never be disclosed publicly. This right is subject to any specific arrangements agreed in the Data Processing Agreement between the parties.</li>
                 <li><strong>9.4</strong> The Client agrees to treat information about Innerleaps' methodology and pricing as confidential and will not share this with third parties without Innerleaps' prior written consent. Working practices may be shared freely.</li>
                 <li><strong>9.5</strong> Confidentiality obligations survive termination of the Agreement for a period of 5 years.</li>
               </ul>
@@ -226,8 +226,8 @@ const AlgemeneVoorwaarden = memo(() => {
 
             {/* Footer */}
             <div className="border-t border-border pt-8 mt-12 text-brand-gray-medium text-lg">
-              <p><strong>Document Version:</strong> 1.7</p>
-              <p><strong>Date:</strong> 10 March 2026</p>
+              <p><strong>Document Version:</strong> 1.8</p>
+              <p><strong>Date:</strong> 13 March 2026</p>
               <p><strong>Prepared by:</strong> Innerleaps</p>
               <p><strong>Status:</strong> Published</p>
             </div>
