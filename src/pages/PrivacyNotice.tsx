@@ -18,7 +18,7 @@ const PrivacyNotice = memo(() => {
             Privacy Notice
           </h1>
           <p className="text-brand-gray-medium text-xl mb-12">
-            <strong>Innerleaps</strong> — Version 1.5 | 13 March 2026
+            <strong>Innerleaps</strong> — Version 1.6 | March 2026
           </p>
 
           <div className="prose max-w-none space-y-8 text-brand-gray-dark leading-relaxed">
@@ -28,8 +28,26 @@ const PrivacyNotice = memo(() => {
               <p className="text-xl mb-6">
                 Innerleaps is a training company specialising in brain training for professionals. We deliver training programs at companies, executed by qualified trainers.
               </p>
+            </section>
+
+            {/* Who is responsible */}
+            <section>
+              <h2 className="text-2xl md:text-3xl font-bold text-brand-purple mb-4">Who is responsible for your data?</h2>
+              <p className="text-xl mb-4">
+                Your employer is the data controller for the personal data collected in the context of the Innerleaps training program. Your employer has decided to offer this program to employees and has engaged Innerleaps to deliver it.
+              </p>
+              <p className="text-xl mb-4">
+                Innerleaps is the data processor, processing your personal data on behalf of your employer in accordance with a data processing agreement.
+              </p>
+              <p className="text-xl mb-4">
+                For questions about your privacy or to exercise your rights, you can contact:
+              </p>
+              <ul className="list-disc ml-6 space-y-1 text-xl mb-6">
+                <li>Your employer (HR department), or</li>
+                <li>Innerleaps: <strong>privacy@innerleaps.nl</strong></li>
+              </ul>
               <div className="bg-brand-off-white p-6 rounded-xl text-xl space-y-1">
-                <p className="!text-brand-gray-dark font-semibold">Data Controller:</p>
+                <p className="!text-brand-gray-dark font-semibold">Innerleaps contact details:</p>
                 <p className="!text-brand-gray-dark">Innerleaps</p>
                 <p className="!text-brand-gray-dark">Bas ter Haar Romenij</p>
                 <p className="!text-brand-gray-dark">Koningin Wilhelminaplein 454</p>
@@ -80,7 +98,7 @@ const PrivacyNotice = memo(() => {
                 <li>Turnover intention</li>
               </ul>
               <p className="text-xl"><strong>Purpose:</strong> Measuring the impact of the training program on wellness, productivity and work performance.</p>
-              <p className="text-xl"><strong>Legal basis:</strong> Legitimate interest of the Client organisation (GDPR Article 6(1)(f)) and consent (GDPR Article 6(1)(a)).</p>
+              <p className="text-xl"><strong>Legal basis:</strong> Legitimate interest of your employer (GDPR Article 6(1)(f)) and consent (GDPR Article 6(1)(a)).</p>
               <p className="text-xl mb-6"><strong>Important:</strong> Your individual responses are never shared with your employer. Management receives only anonymised, aggregated results. A management report is issued only when the training group contains a minimum of 8 persons; where a qualifying control group of at least 8 persons is also available, a full comparative report is issued. No salary data is collected from you individually; ROI figures are calculated using an organisational average provided by your employer.</p>
 
               {/* 4. Evaluation */}
@@ -93,7 +111,13 @@ const PrivacyNotice = memo(() => {
               <p className="text-xl mb-2">The evaluation form does not collect your name or email address.</p>
               <p className="text-xl"><strong>Purpose:</strong> Evaluating and improving the training program.</p>
               <p className="text-xl"><strong>Legal basis:</strong> Legitimate interest (GDPR Article 6(1)(f)). Innerleaps has a legitimate interest in evaluating trainer performance and program quality. Your individual responses are seen only by Innerleaps and are never shared with your employer, trainers or any third party. Management receives only average scores.</p>
-              <p className="text-xl"><strong>Please note:</strong> Anonymised and aggregated insights from evaluations may be used for marketing purposes.</p>
+              <p className="text-xl mb-6"><strong>Please note:</strong> Anonymised and aggregated insights from evaluations may be used for marketing purposes.</p>
+            </section>
+
+            {/* Voluntary participation */}
+            <section>
+              <h2 className="text-2xl md:text-3xl font-bold text-brand-purple mb-4">Voluntary participation</h2>
+              <p className="text-xl">Participation in the Innerleaps training program is entirely voluntary. Your employer offers the program, but you decide whether to participate. You can withdraw your consent at any time without consequences for your employment relationship.</p>
             </section>
 
             {/* Retention */}
@@ -139,7 +163,7 @@ const PrivacyNotice = memo(() => {
               <h2 className="text-2xl md:text-3xl font-bold text-brand-purple mb-4">Who has access to your data?</h2>
 
               <h3 className="text-xl md:text-2xl font-semibold text-brand-purple mb-3">Innerleaps itself</h3>
-              <p className="text-xl mb-4">Only Bas ter Haar Romenij has access to the full dataset. Freelance trainers engaged by Innerleaps receive only the data strictly necessary for the delivery of their sessions, limited to your name, telephone number and email address. This data is shared on the basis of the principle of data minimisation (GDPR Article 5(1)(c)) and is used solely to contact participants in the event of scheduling changes or session-related communications. All trainers are contractually bound to confidentiality and data protection obligations before being permitted to deliver any sessions.</p>
+              <p className="text-xl mb-4">Only Bas ter Haar Romenij (owner) has access to the full dataset. Freelance trainers engaged by Innerleaps receive only the data strictly necessary for the delivery of their sessions, limited to your name, telephone number and email address. This data is shared on the basis of the principle of data minimisation (GDPR Article 5(1)(c)) and is used solely to contact participants in the event of scheduling changes or session-related communications. All trainers are contractually bound to confidentiality and data protection obligations before being permitted to deliver any sessions.</p>
 
               <h3 className="text-xl md:text-2xl font-semibold text-brand-purple mb-3">Your employer</h3>
               <p className="text-xl mb-4">Your employer receives only anonymised, aggregated results. Individual data is never shared with your employer. No salary data is collected from you individually; ROI figures are calculated using an organisational average provided by your employer, which is never included in any report shared with management.</p>
@@ -147,8 +171,8 @@ const PrivacyNotice = memo(() => {
               <h3 className="text-xl md:text-2xl font-semibold text-brand-purple mb-3">Sub-processors</h3>
               <p className="text-xl mb-3">We use the following sub-processors:</p>
               <ul className="list-disc ml-6 space-y-3 text-xl mb-4">
-                <li><strong>Google Workspace (Google LLC):</strong> used to collect and store data via Google Forms and Google Sheets. Google LLC is based in the United States. Data transfers to the US take place on the basis of Standard Contractual Clauses (SCCs) as established by the European Commission.</li>
-                <li><strong>n8n:</strong> used for automated workflow processing of form data. n8n is bound by a data processing agreement with Innerleaps.</li>
+                <li><strong>Google Workspace (Google LLC):</strong> used to collect and store data via Google Forms, Google Sheets and Gmail. Google LLC is based in the United States. Data transfers to the US take place on the basis of the EU-US Data Privacy Framework and Standard Contractual Clauses (SCCs).</li>
+                <li><strong>n8n:</strong> used for automated workflow processing of form data. n8n GmbH is based in Germany (EU) and is bound by a data processing agreement with Innerleaps.</li>
               </ul>
               <p className="text-xl">All sub-processors are required to process data in accordance with GDPR requirements and are bound by data processing agreements with Innerleaps.</p>
             </section>
@@ -156,7 +180,7 @@ const PrivacyNotice = memo(() => {
             {/* International transfers */}
             <section>
               <h2 className="text-2xl md:text-3xl font-bold text-brand-purple mb-4">International data transfers</h2>
-              <p className="text-xl">Innerleaps works with clients and participants inside and outside the European Union. Where personal data is transferred outside the EEA, Innerleaps ensures appropriate safeguards are in place, including Standard Contractual Clauses (SCCs), in accordance with GDPR Chapter V.</p>
+              <p className="text-xl">Innerleaps works with clients and participants inside and outside the European Union. Where personal data is transferred outside the EEA, Innerleaps ensures appropriate safeguards are in place, including Standard Contractual Clauses (SCCs) and adequacy decisions, in accordance with GDPR Chapter V.</p>
             </section>
 
             {/* Your rights */}
@@ -172,7 +196,7 @@ const PrivacyNotice = memo(() => {
                 <li><strong>Right to object</strong> (Article 21): you can object to processing based on legitimate interest.</li>
                 <li><strong>Right to withdraw consent</strong>: you can withdraw your consent at any time, without giving reasons. Withdrawal does not have retroactive effect but may affect your ability to participate in the program.</li>
               </ul>
-              <p className="text-xl mt-4">To submit a request, contact us at <strong>privacy@innerleaps.nl</strong>. We will respond within 30 days.</p>
+              <p className="text-xl mt-4">To submit a request, you can contact your employer's HR department or contact Innerleaps directly at <strong>privacy@innerleaps.nl</strong>. We will respond within 30 days.</p>
               <p className="text-xl mt-2">You also have the right to lodge a complaint with the Dutch Data Protection Authority (Autoriteit Persoonsgegevens) at autoriteitpersoonsgegevens.nl, or with the supervisory authority in your country of residence.</p>
             </section>
 
@@ -200,8 +224,8 @@ const PrivacyNotice = memo(() => {
 
             {/* Version info */}
             <div className="border-t border-gray-200 pt-8 mt-8 text-brand-gray-medium text-lg space-y-1">
-              <p>Document Version: 1.5</p>
-              <p>Date: 13 March 2026</p>
+              <p>Document Version: 1.6</p>
+              <p>Date: March 2026</p>
               <p>Prepared by: Innerleaps</p>
               <p>Status: Published</p>
             </div>
