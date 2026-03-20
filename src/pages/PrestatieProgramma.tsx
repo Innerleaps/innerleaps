@@ -1,4 +1,5 @@
 import { useState, useEffect, lazy, Suspense } from "react";
+import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { EXTERNAL_URLS } from "@/constants/externalUrls";
 import SimplifiedNavigation from "@/components/SimplifiedNavigation";
