@@ -1,4 +1,5 @@
 import { useState, useEffect, lazy, Suspense } from "react";
+import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { EXTERNAL_URLS } from "@/constants/externalUrls";
 import SimplifiedNavigation from "@/components/SimplifiedNavigation";
@@ -121,6 +122,9 @@ const PrestatieProgramma = () => {
 
   return (
     <div className="min-h-screen">
+      <Helmet>
+        <meta name="description" content="Innerleaps verbetert prestaties onder druk via gerichte breintraining. Medewerkers trainen focus en aandacht in 6 weken. Gebaseerd op de methode gebruikt door top sporters en world class CEO's." />
+      </Helmet>
       <SimplifiedNavigation />
 
       {/* Hero Section */}

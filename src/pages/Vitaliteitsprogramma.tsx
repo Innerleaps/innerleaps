@@ -1,4 +1,5 @@
 import { useEffect, useState, lazy, Suspense } from "react";
+import { Helmet } from "react-helmet-async";
 import { Link, useSearchParams, useLocation } from "react-router-dom";
 import SimplifiedNavigation from "@/components/SimplifiedNavigation";
 import Footer from "@/components/Footer";
@@ -199,6 +200,9 @@ const Vitaliteitsprogramma = () => {
   ];
   return (
     <div className="min-h-screen">
+      <Helmet>
+        <meta name="description" content="Innerleaps biedt organisaties een 6-weeks vitaliteitsprogramma met 42% deelname, versus 3-8% bij standaard EAP's. Preventief, wetenschappelijk onderbouwd, betaal alleen voor deelnemers." />
+      </Helmet>
       <SimplifiedNavigation />
       <StickyCtaButtons />
 

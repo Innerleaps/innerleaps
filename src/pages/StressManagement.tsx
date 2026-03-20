@@ -1,4 +1,5 @@
 import { useState, useEffect, lazy, Suspense } from "react";
+import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import SimplifiedNavigation from "@/components/SimplifiedNavigation";
 import StickyCtaButtons from "@/components/StickyCtaButtons";
@@ -116,6 +117,9 @@ const StressManagement = () => {
 
   return (
     <div className="min-h-screen">
+      <Helmet>
+        <meta name="description" content="Innerleaps verlaagt stress bij medewerkers door breintraining: herken stresssignalen eerder, herstel sneller. 6 weken, gebaseerd op neurowetenschappelijk onderzoek. Resultaat: 25% minder fouten onder druk." />
+      </Helmet>
       <SimplifiedNavigation />
 
       {/* Hero Section */}

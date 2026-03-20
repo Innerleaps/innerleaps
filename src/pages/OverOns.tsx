@@ -5,6 +5,7 @@ import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { useEffect } from "react";
+import { Helmet } from "react-helmet-async";
 
 // Trainer photos
 import basPhoto from "@/assets/Vitaliteitstrainer_Bas_Ter_Haar_Romenij.png";
@@ -124,6 +125,9 @@ const OverOns = () => {
 
   return (
     <div className="min-h-screen bg-white">
+      <Helmet>
+        <meta name="description" content="Innerleaps is opgericht door Bas Ter Haar Romenij om burn-out te voorkomen voordat het escaleert. Onze geaccrediteerde trainers werken met een vaste methode, geen variatie, wel bewezen resultaat." />
+      </Helmet>
       <SimplifiedNavigation />
       <StickyCtaButtons />
 

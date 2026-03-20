@@ -5,12 +5,16 @@ import StickyCtaButtons from "@/components/StickyCtaButtons";
 import ROICalculator from "@/components/ROICalculator";
 import { useEffect } from "react";
 import Footer from "@/components/Footer";
+import { Helmet } from "react-helmet-async";
 const Contact = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
   return (
     <div className="min-h-screen bg-brand-gray-light">
+      <Helmet>
+        <meta name="description" content="Plan een gratis masterclass voor uw organisatie of stel uw vraag aan Innerleaps. Bereikbaar via Bas@innerleaps.nl of 06 23 45 34 77. Reactie binnen één werkdag." />
+      </Helmet>
       <SimplifiedNavigation />
       <StickyCtaButtons />
 
