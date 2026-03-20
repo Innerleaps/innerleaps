@@ -117,6 +117,9 @@ const StressManagement = () => {
 
   return (
     <div className="min-h-screen">
+      <Helmet>
+        <meta name="description" content="Innerleaps verlaagt stress bij medewerkers door breintraining: herken stresssignalen eerder, herstel sneller. 6 weken, gebaseerd op neurowetenschappelijk onderzoek. Resultaat: 25% minder fouten onder druk." />
+      </Helmet>
       <SimplifiedNavigation />
 
       {/* Hero Section */}

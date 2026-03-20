@@ -125,6 +125,9 @@ const OverOns = () => {
 
   return (
     <div className="min-h-screen bg-white">
+      <Helmet>
+        <meta name="description" content="Innerleaps is opgericht door Bas Ter Haar Romenij om burn-out te voorkomen voordat het escaleert. Onze geaccrediteerde trainers werken met een vaste methode, geen variatie, wel bewezen resultaat." />
+      </Helmet>
       <SimplifiedNavigation />
       <StickyCtaButtons />
 

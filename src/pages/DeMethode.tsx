@@ -50,6 +50,9 @@ const DeMethode = () => {
   }, []);
   return (
     <div className="min-h-screen bg-white">
+      <Helmet>
+        <meta name="description" content="Innerleaps bouwt op 40 jaar aandachtsonderzoek van Dr. Amishi Jha. De methode traint het waarschuwingssysteem en controlecentrum van het brein, bewezen effectief in meta-analyses en militaire toepassingen." />
+      </Helmet>
       <SimplifiedNavigation />
       <StickyCtaButtons />
 

@@ -12,6 +12,9 @@ const Contact = () => {
   }, []);
   return (
     <div className="min-h-screen bg-brand-gray-light">
+      <Helmet>
+        <meta name="description" content="Plan een gratis masterclass voor uw organisatie of stel uw vraag aan Innerleaps. Bereikbaar via Bas@innerleaps.nl of 06 23 45 34 77. Reactie binnen één werkdag." />
+      </Helmet>
       <SimplifiedNavigation />
       <StickyCtaButtons />
 
