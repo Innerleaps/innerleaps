@@ -19,13 +19,13 @@ const ProgramOverviewSection = memo(() => {
       icon: Target,
       title: "Dagelijks 15 minuten oefenen",
       description:
-        "Deelnemers proberen dagelijks zo'n 15 minuten te oefenen. Deels gepland, deels verweven met het dagelijks leven.",
+        "Deelnemers proberen dagelijks zo'n 15 minuten te oefenen. Deels gepland, deels verweven met dagelijkse leven.",
     },
     {
       icon: Sliders,
-      title: "Systematische programmaopbouw",
+      title: "Geaccrediteerde trainers",
       description:
-        "Deelnemers starten met het herkennen van automatische patronen. Hierna volgt bewust handelen en het einde is gericht op integratie in het dagelijks leven.",
+        "Al onze trainers zijn geaccrediteerd voor categorie 1 aandachtstraining door VMBN".
     },
   ];
   return (
