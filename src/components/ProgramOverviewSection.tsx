@@ -17,15 +17,15 @@ const ProgramOverviewSection = memo(() => {
     },
     {
       icon: Target,
-      title: "Dagelijks 15 minuten oefenen",
+      title: "15 minuten oefenen",
       description:
-        "Deelnemers proberen dagelijks zo'n 15 minuten te oefenen. Deels gepland, deels verweven met dagelijkse leven.",
+        "Deelnemers proberen 5 dagen per week zo'n 15 minuten te oefenen met ons werkboek en audio opnames.",
     },
     {
       icon: Sliders,
       title: "Geaccrediteerde trainers",
       description:
-        "Al onze trainers zijn geaccrediteerd voor categorie 1 aandachtstraining door VMBN.",
+        "Al onze trainers zijn geaccrediteerd voor categorie 1 aandachtstraining door VMBN".
     },
   ];
   return (
