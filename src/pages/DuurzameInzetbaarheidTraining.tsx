@@ -232,8 +232,8 @@ const DuurzameInzetbaarheidTraining = () => {
                     textShadow: "0 2px 8px rgba(0,0,0,0.5)",
                   }}
                 >
-                  Beter <span className="text-brand-orange">presteren</span> onder{" "}
-                  <span className="text-brand-orange">druk</span>
+                  Het bewezen <span className="text-brand-orange">vitaliteits{"\u00AD"}programma </span> voor minder{" "}
+                  <span className="text-brand-orange">verzuim</span>
                 </h1>
                 <p
                   className="text-xl md:text-2xl text-blue-100 leading-relaxed break-words"
@@ -241,8 +241,8 @@ const DuurzameInzetbaarheidTraining = () => {
                     textShadow: "0 2px 8px rgba(0,0,0,0.5)",
                   }}
                 >
-                  Wetenschappelijk bewezen vitaliteits­programma. Deelnemers ontwikkelen eigenaarschap over hun eigen
-                  stress, kunnen emoties beter reguleren én verhogen hun veerkracht.
+                  Meer focus, minder fouten en een team dat vaker en scherper kan leveren. Een 6-weekse evidence-based
+                  breintraining voor teams die het verschil willen maken.
                 </p>
               </div>
 
