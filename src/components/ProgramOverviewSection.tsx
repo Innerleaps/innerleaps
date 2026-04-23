@@ -11,10 +11,10 @@ const ProgramOverviewSection = memo(() => {
       description: "Elke week een groepsworkshop van 60 minuten door één van onze geaccrediteerde trainers.",
     },
     {
-      icon: Sliders,
+      icon: User,
       title: "Geaccrediteerde trainers",
       description:
-        "Al onze trainers zijn geaccrediteerd voor categorie 1 aandachtstraining door VMBN.",
+        "Al onze trainers zijn geaccrediteerd voor categorie 1 aandachtstraining door VMBN".
     },
     {
       icon: Target,
