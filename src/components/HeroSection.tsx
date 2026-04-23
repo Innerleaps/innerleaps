@@ -165,7 +165,7 @@ const HeroSection = () => {
                   style={TEXT_SHADOW_STRONG}
                 >
                   Voorkom <span className="text-brand-orange">verzuim </span>, ontwikkel{" "}
-                  <span className="text-brand-orange">duuurzaame inzetbaar{"\u00AD"}heid</span>
+                  <span className="text-brand-orange">duurzaame inzetbaar{"\u00AD"}heid</span>
                 </h1>
                 <p className="text-xl md:text-2xl text-blue-100 leading-relaxed break-words" style={TEXT_SHADOW_STRONG}>
                   Wetenschappelijk onderbouwd en resultaatgericht vitaliteits{"\u00AD"}programma. Deelnemers nemen
