@@ -232,8 +232,8 @@ const DuurzameInzetbaarheidTraining = () => {
                     textShadow: "0 2px 8px rgba(0,0,0,0.5)",
                   }}
                 >
-                  Het bewezen <span className="text-brand-orange">vitaliteits{"\u00AD"}programma </span> voor minder{" "}
-                  <span className="text-brand-orange">verzuim</span>
+                  Beter <span className="text-brand-orange">presteren</span> onder{" "}
+                  <span className="text-brand-orange">druk</span>
                 </h1>
                 <p
                   className="text-xl md:text-2xl text-blue-100 leading-relaxed break-words"
