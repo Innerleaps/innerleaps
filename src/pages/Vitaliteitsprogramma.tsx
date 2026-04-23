@@ -622,20 +622,18 @@ const Vitaliteitsprogramma = () => {
           <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center mb-16">
             <div className="space-y-6 text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
               <p>
-                In ons programma trainen deelnemers hun brein met onze"push-ups voor het brein". Tijdens deze push-ups
-                brengen medewerkers hun focus telkens terug naar de oefening of huidige activiteit. Hierdoor versterken
-                twee cruciale hersensystemen.
+                Met onze"push-ups voor het brein" trainen deelnemers hun brein. Hiermee versterken ze twee cruciale
+                hersensystemen.
               </p>
 
               <p>
-                Het controlecentrum wordt sterker. Medewerkers onderdrukken impulsieve automatische reacties beter,
-                filteren irrelevante informatie en nemen bewustere beslissingen over hun werkdruk.
+                Het controlecentrum wordt sterker. Medewerkers onderdrukken impulsieve automatische reacties, filteren
+                irrelevante informatie en nemen bewustere beslissingen over hun werkdruk.
               </p>
 
               <p>
-                Het waarschuwingssysteem wordt gevoeliger. Deelnemers herkennen stressignalen zoals spanning, een vol
-                hoofd of verminderde concentratie op tijd. Zo ontwikkelen medewerkers eigenaarschap over hun eigen
-                stress en kunnen ze op tijd grenzen aangeven.
+                Het waarschuwingssysteem wordt gevoeliger. Deelnemers herkennen stressignalen zoals spanning of
+                verminderde concentratie op tijd.
               </p>
             </div>
 
