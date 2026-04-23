@@ -164,8 +164,8 @@ const HeroSection = () => {
                   className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight font-heading break-words"
                   style={TEXT_SHADOW_STRONG}
                 >
-                  Het <span className="text-brand-orange">vitaliteits{"\u00AD"}programma</span> dat{" "}
-                  <span className="text-brand-orange">prestaties</span> versterkt{" "}
+                  Voorkom <span className="text-brand-orange">verzuim </span> , ontwikkel{" "}
+                  <span className="text-brand-orange">duuurzaame inzetbaarheid </span>
                 </h1>
                 <p className="text-xl md:text-2xl text-blue-100 leading-relaxed break-words" style={TEXT_SHADOW_STRONG}>
                   Wetenschappelijk onderbouwd en resultaatgericht vitaliteits{"\u00AD"}programma. Deelnemers nemen
