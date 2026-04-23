@@ -7,7 +7,13 @@ import czLogo from "@/assets/Vitaliteitsprogramma_herkend_door_CZ.png";
 import uvaLogo from "@/assets/Aandachttraining_aan_de_universiteit_van_amsterdam_new.png";
 import menzisLogo from "@/assets/Vitaliteitsprogramma_herkend_door_menzis.png";
 
-const TrustSection = memo(() => {
+interface TrustSectionProps {
+  variant?: "white" | "off-white";
+}
+
+const TrustSection = memo(({ variant = "white" }: TrustSectionProps) => {
+  const sectionBg = variant === "off-white" ? "bg-brand-off-white" : "bg-white";
+  const cardBg = variant === "off-white" ? "bg-white" : "bg-brand-off-white";
   const trustItems = [
     {
       title: "Onderliggende methode erkend door Nederlandse zorgsysteem",
@@ -42,7 +48,7 @@ const TrustSection = memo(() => {
   ];
 
   return (
-    <section className="bg-white section-padding">
+    <section className={`${sectionBg} section-padding`}>
       <div className="container-custom">
         <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-purple text-center leading-tight mb-12">
           Waarom organisaties voor <span className="text-brand-orange">ons kiezen</span>
@@ -50,7 +56,7 @@ const TrustSection = memo(() => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {trustItems.map((item, index) => (
-            <div key={index} className="bg-brand-off-white p-8 rounded-xl shadow-lg">
+            <div key={index} className={`${cardBg} p-8 rounded-xl shadow-lg`}>
               <div className="flex items-start space-x-3 mb-4">
                 <div className="flex-shrink-0 mt-1">
                   <Check className="h-6 w-6 text-brand-orange stroke-[3]" />
