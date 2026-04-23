@@ -494,8 +494,8 @@ const StressManagement = () => {
               </div>
               <h3 className="text-xl md:text-2xl font-bold text-brand-gray-dark text-center">6 workshops</h3>
               <p className="text-base md:text-lg text-brand-gray-medium text-center leading-relaxed">
-                Elke week 60 minuten live training met gecertificeerde trainers. Je zit in een groep met anderen omdat
-                je hiervan het meeste leert. We creëren een veilige setting en je hoeft nooit verplicht mee te doen.
+                Elke week 60 minuten live training met gecertificeerde trainers samen met andere deelnemers omdat jij
+                hiervan het meeste leert.
               </p>
             </div>
 
