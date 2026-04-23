@@ -25,7 +25,6 @@ import {
   RotateCcw,
   BookOpen,
   Star,
-  
   Gift,
 } from "lucide-react";
 import heroBackground from "@/assets/Vitaliteitsprogramma_presentatie_Innerleaps.png";
@@ -113,7 +112,10 @@ const StressManagement = () => {
   return (
     <div className="min-h-screen">
       <Helmet>
-        <meta name="description" content="Innerleaps verlaagt stress bij medewerkers door breintraining: herken stresssignalen eerder, herstel sneller. 6 weken, gebaseerd op neurowetenschappelijk onderzoek. Resultaat: 25% minder fouten onder druk." />
+        <meta
+          name="description"
+          content="Innerleaps verlaagt stress bij medewerkers door breintraining: herken stresssignalen eerder, herstel sneller. 6 weken, gebaseerd op neurowetenschappelijk onderzoek. Resultaat: 25% minder fouten onder druk."
+        />
       </Helmet>
       <SimplifiedNavigation />
 
@@ -490,9 +492,7 @@ const StressManagement = () => {
               <div className="p-3 rounded-lg bg-brand-orange/10 w-fit mx-auto">
                 <Calendar className="h-10 w-10 text-brand-orange stroke-2" />
               </div>
-              <h3 className="text-xl md:text-2xl font-bold text-brand-gray-dark text-center">
-                6 wekelijkse online workshops
-              </h3>
+              <h3 className="text-xl md:text-2xl font-bold text-brand-gray-dark text-center">6 workshops</h3>
               <p className="text-base md:text-lg text-brand-gray-medium text-center leading-relaxed">
                 Elke week 60 minuten live training met gecertificeerde trainers. Je zit in een groep met anderen omdat
                 je hiervan het meeste leert. We creëren een veilige setting en je hoeft nooit verplicht mee te doen.
@@ -503,9 +503,7 @@ const StressManagement = () => {
               <div className="p-3 rounded-lg bg-brand-orange/10 w-fit mx-auto">
                 <Clock className="h-10 w-10 text-brand-orange stroke-2" />
               </div>
-              <h3 className="text-xl md:text-2xl font-bold text-brand-gray-dark text-center">
-                Dagelijks 15 minuten oefenen
-              </h3>
+              <h3 className="text-xl md:text-2xl font-bold text-brand-gray-dark text-center">15 minuten oefenen</h3>
               <p className="text-base md:text-lg text-brand-gray-medium text-center leading-relaxed">
                 Audio-opnames en werkboek met concrete oefeningen die je direct in je leven toepast. Nauwelijks extra
                 tijd nodig. Oefen tijdens tandenpoetsen, douchen of afwassen.
