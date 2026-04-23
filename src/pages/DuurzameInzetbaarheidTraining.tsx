@@ -223,7 +223,7 @@ const DuurzameInzetbaarheidTraining = () => {
               <div className="w-full space-y-4 sm:space-y-6">
                 <div className="inline-flex items-center gap-2 bg-white/50 text-brand-purple px-3 py-1.5 sm:px-4 sm:py-2 rounded-full text-sm sm:text-base md:text-lg font-medium backdrop-blur-sm">
                   <Award className="h-4 w-4" />
-                  Wetenschappelijk bewezen programma
+                  Wetenschappelijk bewezen methode
                 </div>
 
                 <h1
@@ -583,7 +583,6 @@ const DuurzameInzetbaarheidTraining = () => {
               />
             </div>
           </div>
-
 
           <div className="max-w-3xl mx-auto space-y-6">
             <div className="bg-brand-off-white p-6 rounded-xl space-y-3">
