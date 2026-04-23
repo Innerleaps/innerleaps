@@ -372,72 +372,56 @@ const DuurzameInzetbaarheidTraining = () => {
             Deze organisatie uitdagingen pakken wij aan met onze methode.
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-6 gap-8 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
             {/* Challenge 1 */}
-            <div className="md:col-span-2 bg-white p-6 rounded-lg space-y-4">
-              <div className="p-3 rounded-lg bg-brand-orange/5 w-fit mx-auto">
-                <AlertCircle className="h-8 w-8 text-brand-orange stroke-2" />
-              </div>
-              <h3 className="text-xl md:text-2xl font-bold text-brand-gray-dark text-center">
-                Grenzen aangeven is moeilijk
-              </h3>
-              <p className="text-base md:text-lg text-brand-gray-medium text-center">
-                Medewerkers zijn enthousiast maar nemen vaak hun eigen grenzen niet serieus. Soms gaan ze zelfs door tot
-                het te laat is met stress uitval als gevolg.
-              </p>
-            </div>
-
-            {/* Challenge 2 */}
-            <div className="md:col-span-2 bg-white p-6 rounded-lg space-y-4">
+            <div className="bg-white p-6 rounded-lg space-y-4">
               <div className="p-3 rounded-lg bg-brand-orange/5 w-fit mx-auto">
                 <Activity className="h-8 w-8 text-brand-orange stroke-2" />
               </div>
               <h3 className="text-xl md:text-2xl font-bold text-brand-gray-dark text-center">
-                Kernspelers en talent behouden is uitdagend
+                Targets onder druk
               </h3>
               <p className="text-base md:text-lg text-brand-gray-medium text-center">
-                Belangrijk personeel wil je graag betrokken houden. Door de drukte op de arbeidsmarkt is dat extra
-                lastig.
+                Je team moet leveren, maar de druk stapelt zich op. Output blijft achter bij de ambitie.
+              </p>
+            </div>
+
+            {/* Challenge 2 */}
+            <div className="bg-white p-6 rounded-lg space-y-4">
+              <div className="p-3 rounded-lg bg-brand-orange/5 w-fit mx-auto">
+                <AlertCircle className="h-8 w-8 text-brand-orange stroke-2" />
+              </div>
+              <h3 className="text-xl md:text-2xl font-bold text-brand-gray-dark text-center">
+                Fouten kosten tijd en geld
+              </h3>
+              <p className="text-base md:text-lg text-brand-gray-medium text-center">
+                Onder druk daalt de scherpte. Kleine missers leiden tot herstelwerk, frustratie en gemiste kansen.
               </p>
             </div>
 
             {/* Challenge 3 */}
-            <div className="md:col-span-2 bg-white p-6 rounded-lg space-y-4">
-              <div className="p-3 rounded-lg bg-brand-orange/5 w-fit mx-auto">
-                <Shield className="h-8 w-8 text-brand-orange stroke-2" />
-              </div>
-              <h3 className="text-xl md:text-2xl font-bold text-brand-gray-dark text-center">
-                Sociale veiligheid onder druk
-              </h3>
-              <p className="text-base md:text-lg text-brand-gray-medium text-center">
-                Hiërarchie, culturele verschillen of verschillende waardes kunnen leiden tot botsingen, ongemakkelijk
-                gedrag of zelfs een onveilige sfeer.
-              </p>
-            </div>
-
-            {/* Challenge 4 */}
-            <div className="md:col-span-2 md:col-start-2 bg-white p-6 rounded-lg space-y-4">
+            <div className="bg-white p-6 rounded-lg space-y-4">
               <div className="p-3 rounded-lg bg-brand-orange/5 w-fit mx-auto">
                 <Heart className="h-8 w-8 text-brand-orange stroke-2" />
               </div>
               <h3 className="text-xl md:text-2xl font-bold text-brand-gray-dark text-center">
-                Emoties op de werkvloer
+                Verzuim loopt op
               </h3>
               <p className="text-base md:text-lg text-brand-gray-medium text-center">
-                Medewerkers kunnen te maken hebben met emotioneel uitdagende situaties. Dit kan leiden tot stress,
-                impulsieve reacties en verminderde samenwerking.
+                Stressklachten en uitval maken je team minder beschikbaar — precies wanneer je ze hard nodig hebt.
               </p>
             </div>
 
-            {/* Challenge 5 */}
-            <div className="md:col-span-2 bg-white p-6 rounded-lg space-y-4">
+            {/* Challenge 4 */}
+            <div className="bg-white p-6 rounded-lg space-y-4">
               <div className="p-3 rounded-lg bg-brand-orange/5 w-fit mx-auto">
-                <AlertCircle className="h-8 w-8 text-brand-orange stroke-2" />
+                <Shield className="h-8 w-8 text-brand-orange stroke-2" />
               </div>
-              <h3 className="text-xl md:text-2xl font-bold text-brand-gray-dark text-center">Verzuim is te hoog</h3>
+              <h3 className="text-xl md:text-2xl font-bold text-brand-gray-dark text-center">
+                Talent vasthouden wordt lastiger
+              </h3>
               <p className="text-base md:text-lg text-brand-gray-medium text-center">
-                Stress- en burn-outklachten zijn een terugkerend probleem. Medewerkers vallen uit en daardoor neemt de
-                werkdruk verder toe.
+                Je beste mensen zijn schaars en worden gevraagd. Betrokken en energiek houden vraagt meer dan goede voorwaarden.
               </p>
             </div>
           </div>
