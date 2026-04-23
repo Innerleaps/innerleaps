@@ -21,11 +21,6 @@ const MethodologySection = memo(() => {
                 en bewuste acties, en het "waarschuwingssysteem" dat stresssignalen eerder opmerkt. Het resultaat?
                 Minder stress én een scherpe focus!
               </p>
-              <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
-                Het trainen van je brein klinkt bijna te mooi om waar te zijn. Toch laat meer dan{" "}
-                <strong>40 jaar wetenschappelijk onderzoek</strong> zien dat het écht werkt, en niet zo'n klein beetje
-                ook!
-              </p>
             </div>
             <div>
               <img
