@@ -89,8 +89,7 @@ const LandingPage = () => {
               </div>
               <h3 className="text-xl font-bold text-brand-gray-dark text-center">Aandachtoefening</h3>
               <p className="text-base md:text-lg text-brand-gray-medium text-center leading-relaxed">
-                Ervaar een techniek om controle over je autopiloot te krijgen en focus terug te pakken. Volledig
-                wetenschappelijk onderbouwd.
+                Ervaar een techniek om controle over je autopiloot te krijgen en focus terug te pakken.
               </p>
             </div>
 
