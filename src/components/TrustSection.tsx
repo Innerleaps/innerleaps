@@ -7,7 +7,13 @@ import czLogo from "@/assets/Vitaliteitsprogramma_herkend_door_CZ.png";
 import uvaLogo from "@/assets/Aandachttraining_aan_de_universiteit_van_amsterdam_new.png";
 import menzisLogo from "@/assets/Vitaliteitsprogramma_herkend_door_menzis.png";
 
-const TrustSection = memo(() => {
+interface TrustSectionProps {
+  variant?: "white" | "off-white";
+}
+
+const TrustSection = memo(({ variant = "white" }: TrustSectionProps) => {
+  const sectionBg = variant === "off-white" ? "bg-brand-off-white" : "bg-white";
+  const cardBg = variant === "off-white" ? "bg-white" : "bg-brand-off-white";
   const trustItems = [
     {
       title: "Onderliggende methode erkend door Nederlandse zorgsysteem",
