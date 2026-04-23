@@ -1,31 +1,51 @@
 
 
-## Update Meta Descriptions for 7 Pages
+## Footer redesign
 
-**Current state**: Only blog posts, AlgemeneVoorwaarden, and PrivacyNotice use `react-helmet-async` for page-specific meta descriptions. The homepage meta description is set in `index.html`. The other 5 pages (Vitaliteitsprogramma, StressManagement, PrestatieProgramma, DeMethode, OverOns, Contact) have no page-specific meta description — they fall back to the `index.html` default.
+Vervang `src/components/Footer.tsx` door een nieuwe 3-koloms footer in het bestaande brand design system (paars/oranje gradient, off-white tekst, oranje accenten). Update routes voor de Cookies-pagina. Geen nieuwe styling introduceren — uitsluitend bestaande Tailwind brand-tokens.
 
-`HelmetProvider` is already set up in `main.tsx`, so adding `<Helmet>` tags to any page will work.
+### Structuur
 
-### Changes
+**Hoofdsectie (3 kolommen, mobiel gestapeld)**
 
-**1. `index.html`** — Update the default meta description (line 9) to the new homepage copy:
-> "Innerleaps verlaagt ziekteverzuim met 15-21% via wetenschappelijk onderbouwde breintraining. 6 weken, 12 minuten per dag. Gebaseerd op 40 jaar onderzoek."
+Kolom 1 — Brand + social proof
+- "InnerLeaps" wordmark (zelfde stijl als huidige footer, `text-2xl font-bold`)
+- Tagline als `<h3>`: "Vitaliteitstraining die verzuim verlaagt en duurzame inzetbaarheid versterkt"
+- Social proof rij (flex, wrap):
+  - VMBN-logo (`src/assets/vmbn-trainer-categorie-1.png`, `h-16`) met onderschrift "Trainer categorie 1" (`text-xs`)
+  - Google reviews block: Google G-logo (inline SVG met officiële kleuren) + 5 oranje sterren (Lucide `Star` filled, `text-brand-orange`) + "4,7/5"-tekst — wrapped in `<a target="_blank" rel="noopener noreferrer">` naar de door jou aan te leveren Google reviews-URL (placeholder `#` tot je deze geeft)
+- LinkedIn-icoon (Lucide `Linkedin`, `h-6 w-6`) onderaan, link naar `https://www.linkedin.com/company/innerleaps`, `target="_blank" rel="noopener noreferrer"`, `aria-label="InnerLeaps op LinkedIn"`
 
-**2-7. Add `<Helmet>` tags** to each page component with a `<meta name="description">` override:
+Kolom 2 — Programma's (titel `<h3>`)
+- Vitaliteitsprogramma → `/vitaliteitsprogramma`
+- Stressmanagement programma → `/stressmanagement-programma` (bestaande route)
+- Prestatie en concentratie verbeteren → `/prestatie-programma` (bestaande route)
+- Blog → `/blog`
+- Contact → `/contact`
 
-| File | Description |
-|------|-------------|
-| `src/pages/Vitaliteitsprogramma.tsx` | "Innerleaps biedt organisaties een 6-weeks vitaliteitsprogramma met 42% deelname, versus 3-8% bij standaard EAP's. Preventief, wetenschappelijk onderbouwd, betaal alleen voor deelnemers." |
-| `src/pages/StressManagement.tsx` | "Innerleaps verlaagt stress bij medewerkers door breintraining: herken stresssignalen eerder, herstel sneller. 6 weken, gebaseerd op neurowetenschappelijk onderzoek. Resultaat: 25% minder fouten onder druk." |
-| `src/pages/PrestatieProgramma.tsx` | "Innerleaps verbetert prestaties onder druk via gerichte breintraining. Medewerkers trainen focus en aandacht in 6 weken. Gebaseerd op de methode gebruikt door top sporters en world class CEO's." |
-| `src/pages/DeMethode.tsx` | "Innerleaps bouwt op 40 jaar aandachtsonderzoek van Dr. Amishi Jha. De methode traint het waarschuwingssysteem en controlecentrum van het brein, bewezen effectief in meta-analyses en militaire toepassingen." |
-| `src/pages/OverOns.tsx` | "Innerleaps is opgericht door Bas Ter Haar Romenij om burn-out te voorkomen voordat het escaleert. Onze geaccrediteerde trainers werken met een vaste methode, geen variatie, wel bewezen resultaat." |
-| `src/pages/Contact.tsx` | "Plan een gratis masterclass voor uw organisatie of stel uw vraag aan Innerleaps. Bereikbaar via Bas@innerleaps.nl of 06 23 45 34 77. Reactie binnen één werkdag." |
+Kolom 3 — Contact (titel `<h3>`, `<address>` met schema.org `PostalAddress`)
+- "Bas Ter Haar Romenij" + "Oprichter" (kleine tekst)
+- Email: `mailto:bas@innerleaps.nl`
+- Telefoon: `tel:+31623453477` (weergave: 06 23 45 34 77)
+- Adres: Olympisch Stadion 24-28, 1076 DE Amsterdam (met `itemProp` street/postal/locality)
+- KvK: 98136925
 
-Each page will import `Helmet` from `react-helmet-async` and add a `<Helmet>` block at the top of its JSX return, following the existing pattern from AlgemeneVoorwaarden/PrivacyNotice.
+**Bottom bar** (boven gescheiden door `border-t border-white/15`, flex row op desktop, gestapeld op mobiel)
+- Links: © 2026 InnerLeaps
+- Rechts: Privacybeleid (`/privacy`) · Cookiebeleid (`/cookies`) · Algemene voorwaarden (`/algemene-voorwaarden`)
 
-### Technical detail
-- `index.html` meta description serves as fallback for pages without Helmet
-- `react-helmet-async` overrides `index.html` head tags at runtime per page
-- 8 files modified total: `index.html` + 6 page components + `LandingPage.tsx` (to explicitly set the homepage description via Helmet so it doesn't rely on index.html fallback during client-side navigation)
+### Wijzigingen in andere bestanden
+
+- `src/pages/Cookies.tsx` — nieuwe lazy-loaded placeholder pagina met `SimplifiedNavigation` + `Footer` en korte cookie-uitleg, in dezelfde stijl als `PrivacyNotice.tsx`
+- `src/App.tsx` — voeg `lazy` route `/cookies` toe
+
+### Styling / SEO
+- Behoud huidige gradient `bg-gradient-to-br from-brand-blue to-brand-blue-dark`, `py-12`, `container-custom`
+- Tekst `text-gray-300`, hover `text-white`, kolomtitels `text-white font-semibold text-lg`
+- `<footer>` element met `itemScope itemType="https://schema.org/Organization"` met `name`, `address` (PostalAddress nested), `vatID`/`identifier` voor KvK, `url`, `sameAs` LinkedIn
+- WCAG: gray-300 op brand-blue voldoet (AA); icon-links krijgen `aria-label`
+- Volledig responsive via `grid-cols-1 md:grid-cols-3 gap-8`
+
+### Open punt
+Zodra je de Google reviews-URL aanlevert wordt de placeholder (`#`) vervangen. Je kunt deze meegeven bij goedkeuring of in de volgende boodschap.
 
