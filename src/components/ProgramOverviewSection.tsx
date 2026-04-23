@@ -1,5 +1,5 @@
 import { memo } from "react";
-import { Clock, Users, Target, User } from "lucide-react";
+import { Clock, Users, Target, Sliders } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 
@@ -11,9 +11,10 @@ const ProgramOverviewSection = memo(() => {
       description: "Elke week een groepsworkshop van 60 minuten door één van onze geaccrediteerde trainers.",
     },
     {
-      icon: Users,
-      title: "Veilig en comfortabel leren",
-      description: "In de groep reageren deelnemers op vragen van de trainer, persoonlijke toelichting is optioneel.",
+      icon: Sliders,
+      title: "Geaccrediteerde trainers",
+      description:
+        "Al onze trainers zijn geaccrediteerd voor categorie 1 aandachtstraining door VMBN".
     },
     {
       icon: Target,
@@ -22,10 +23,9 @@ const ProgramOverviewSection = memo(() => {
         "Deelnemers proberen 5 dagen per week zo'n 15 minuten te oefenen met ons werkboek en audio opnames.",
     },
     {
-      icon: User,
-      title: "Geaccrediteerde trainers",
-      description:
-        "Al onze trainers zijn geaccrediteerd voor categorie 1 aandachtstraining door VMBN.",
+      icon: Users,
+      title: "Veilig en comfortabel leren",
+      description: "In de groep reageren deelnemers op vragen van de trainer, persoonlijke toelichting is optioneel.",
     },
   ];
   return (
