@@ -15,7 +15,12 @@ const organisationMenuItems = [
   {
     label: 'Vitaliteitsprogramma',
     href: '/vitaliteitsprogramma',
-    description: 'Voor organisaties en werkgevers'
+    description: 'Vitaal en veerkrachtig team'
+  },
+  {
+    label: 'Inzetbaarheid',
+    href: '/duurzame-inzetbaarheid-training',
+    description: 'Productief team met minder uitval'
   }
 ];
 
