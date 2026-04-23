@@ -201,7 +201,10 @@ const Vitaliteitsprogramma = () => {
   return (
     <div className="min-h-screen">
       <Helmet>
-        <meta name="description" content="Innerleaps biedt organisaties een 6-weeks vitaliteitsprogramma met 42% deelname, versus 3-8% bij standaard EAP's. Preventief, wetenschappelijk onderbouwd, betaal alleen voor deelnemers." />
+        <meta
+          name="description"
+          content="Innerleaps biedt organisaties een 6-weeks vitaliteitsprogramma met 42% deelname, versus 3-8% bij standaard EAP's. Preventief, wetenschappelijk onderbouwd, betaal alleen voor deelnemers."
+        />
       </Helmet>
       <SimplifiedNavigation />
       <StickyCtaButtons />
@@ -368,7 +371,7 @@ const Vitaliteitsprogramma = () => {
       <section className="py-16 md:py-24 bg-brand-off-white">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-purple text-center leading-tight mb-6">
-            Herken je een van deze <span className="text-brand-orange">uitdagingen</span>?
+            Herken je één van deze <span className="text-brand-orange">uitdagingen</span>?
           </h2>
           <p className="text-xl md:text-2xl text-brand-gray-medium text-center leading-relaxed mb-12">
             Deze organisatie uitdagingen pakken wij aan met onze methode.
