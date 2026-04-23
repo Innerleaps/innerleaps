@@ -126,7 +126,7 @@ const LandingPage = () => {
         </div>
       </section>
       
-      <TrustSection />
+      <TrustSection variant="off-white" />
       <Suspense fallback={<div className="section-padding"><div className="container-custom text-center">Laden...</div></div>}>
         <ROICalculator />
       </Suspense>
