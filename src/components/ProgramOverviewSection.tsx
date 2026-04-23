@@ -1,5 +1,5 @@
 import { memo } from "react";
-import { Clock, Users, Target, Sliders } from "lucide-react";
+import { Clock, Users, Target, User } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 
@@ -14,7 +14,7 @@ const ProgramOverviewSection = memo(() => {
       icon: User,
       title: "Geaccrediteerde trainers",
       description:
-        "Al onze trainers zijn geaccrediteerd voor categorie 1 aandachtstraining door VMBN".
+        "Al onze trainers zijn geaccrediteerd voor categorie 1 aandachtstraining door VMBN.",
     },
     {
       icon: Target,
