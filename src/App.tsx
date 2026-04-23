@@ -20,6 +20,7 @@ const LifeQuestionnaireResult = lazy(() => import("./pages/LifeQuestionnaireResu
 const StressManagement = lazy(() => import("./pages/StressManagement"));
 const PrestatieProgramma = lazy(() => import("./pages/PrestatieProgramma"));
 const Vitaliteitsprogramma = lazy(() => import("./pages/Vitaliteitsprogramma"));
+const DuurzameInzetbaarheidTraining = lazy(() => import("./pages/DuurzameInzetbaarheidTraining"));
 const Blog = lazy(() => import("./pages/Blog"));
 const ZiekteverzuimVerlagen = lazy(() => import("./pages/blog/ZiekteverzuimVerlagen"));
 const VerborgenKostenZiekteverzuim = lazy(() => import("./pages/blog/VerborgenKostenZiekteverzuim"));
@@ -73,6 +74,7 @@ const App = () => {
                 <Route path="/stressmanagement-programma" element={<StressManagement />} />
                 <Route path="/prestatie-programma" element={<PrestatieProgramma />} />
                 <Route path="/vitaliteitsprogramma" element={<Vitaliteitsprogramma />} />
+                <Route path="/duurzame-inzetbaarheid-training" element={<DuurzameInzetbaarheidTraining />} />
                 <Route path="/blog" element={<Blog />} />
                 <Route path="/blog/ziekteverzuim-verlagen-wetenschappelijk-bewezen-aanpak-2025" element={<ZiekteverzuimVerlagen />} />
                 <Route path="/blog/verborgen-kosten-ziekteverzuim-rekenmodel" element={<VerborgenKostenZiekteverzuim />} />

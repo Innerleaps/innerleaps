@@ -57,7 +57,7 @@ import hollandColoursLogo from "@/assets/Vitaliteitsprogramma_Holland_Colours_li
 
 // Lazy load calculator modal
 const CalculatorModal = lazy(() => import("@/components/CalculatorModal"));
-const Vitaliteitsprogramma = () => {
+const DuurzameInzetbaarheidTraining = () => {
   const [isCalculatorOpen, setIsCalculatorOpen] = useState(false);
   const [searchParams] = useSearchParams();
   const location = useLocation();
@@ -863,4 +863,4 @@ const Vitaliteitsprogramma = () => {
     </div>
   );
 };
-export default Vitaliteitsprogramma;
+export default DuurzameInzetbaarheidTraining;
