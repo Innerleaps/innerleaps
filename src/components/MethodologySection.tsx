@@ -31,7 +31,7 @@ const MethodologySection = memo(() => {
                 </Button>
               </Link>
             </div>
-            
+          </div>
         </div>
       </div>
     </section>
