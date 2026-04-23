@@ -8,8 +8,7 @@ const ProgramOverviewSection = memo(() => {
     {
       icon: Clock,
       title: "Wekelijkse groepsworkshops",
-      description:
-        "Elke week een workshop van 60 minuten met andere deelnemers door één van onze geaccrediteerde trainers.",
+      description: "Elke week een groepsworkshop van 60 minuten door één van onze geaccrediteerde trainers.",
     },
     {
       icon: Users,
