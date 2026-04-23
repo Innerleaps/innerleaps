@@ -1,5 +1,6 @@
 import { memo } from "react";
-import { Check, Award } from "lucide-react";
+import { Check } from "lucide-react";
+import vmbnLogo from "@/assets/vmbn-trainer-categorie-1.png";
 import uMassLogo from "@/assets/Vitaliteitsprogramma_ontwikkeld_door_university_of_massachusetts.png";
 import oxfordLogo from "@/assets/Vitaliteitsprogramma_ontwikkeld_door_oxford.jpg";
 import vgzLogo from "@/assets/Vitaliteitprogramma_herkent_door_vgz.png";
