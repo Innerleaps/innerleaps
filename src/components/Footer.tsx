@@ -1,73 +1,171 @@
 import { memo } from "react";
 import { Link } from "react-router-dom";
+import { Linkedin, Star } from "lucide-react";
+import vmbnLogo from "@/assets/vmbn-trainer-categorie-1.png";
 
 interface FooterProps {
   showNavigation?: boolean;
 }
 
+const GOOGLE_REVIEWS_URL = "#";
+const LINKEDIN_URL = "https://www.linkedin.com/company/innerleaps";
+
+const GoogleG = () => (
+  <svg viewBox="0 0 48 48" className="h-5 w-5" aria-hidden="true">
+    <path fill="#FFC107" d="M43.6 20.5H42V20H24v8h11.3c-1.6 4.7-6.1 8-11.3 8-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.9 1.2 8 3.1l5.7-5.7C34 6.5 29.3 4.5 24 4.5 13.2 4.5 4.5 13.2 4.5 24S13.2 43.5 24 43.5 43.5 34.8 43.5 24c0-1.2-.1-2.3-.4-3.5z"/>
+    <path fill="#FF3D00" d="M6.3 14.7l6.6 4.8C14.7 15.6 19 12.5 24 12.5c3.1 0 5.9 1.2 8 3.1l5.7-5.7C34 6.5 29.3 4.5 24 4.5 16.3 4.5 9.7 8.9 6.3 14.7z"/>
+    <path fill="#4CAF50" d="M24 43.5c5.2 0 9.9-2 13.4-5.2l-6.2-5.2c-2 1.5-4.5 2.4-7.2 2.4-5.2 0-9.6-3.3-11.3-8l-6.5 5C9.6 39 16.2 43.5 24 43.5z"/>
+    <path fill="#1976D2" d="M43.6 20.5H42V20H24v8h11.3c-.8 2.3-2.3 4.3-4.1 5.6l6.2 5.2c-.4.4 6.6-4.8 6.6-14.8 0-1.2-.1-2.3-.4-3.5z"/>
+  </svg>
+);
+
 const Footer = memo(({ showNavigation = true }: FooterProps) => {
+  void showNavigation;
+
   return (
-    <footer className="bg-gradient-to-br from-brand-blue to-brand-blue-dark text-white py-12">
+    <footer
+      className="bg-gradient-to-br from-brand-blue to-brand-blue-dark text-white py-12"
+      itemScope
+      itemType="https://schema.org/Organization"
+    >
+      <meta itemProp="name" content="InnerLeaps" />
+      <meta itemProp="url" content="https://innerleaps.nl" />
+      <meta itemProp="sameAs" content={LINKEDIN_URL} />
+      <meta itemProp="identifier" content="KvK 98136925" />
+
       <div className="container-custom">
-        <div className={`grid grid-cols-1 ${showNavigation ? "md:grid-cols-3" : "md:grid-cols-2"} gap-8`}>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {/* Column 1 — Brand + social proof */}
           <div>
-            <div className="text-2xl font-bold mb-4">Innerleaps</div>
-            <p className="text-gray-300 leading-relaxed">
-              Wetenschappelijk bewezen vitaliteitsprogramma voor effectief stressmanagement en verhoogde prestaties.
-              Train je controlecentrum met push-ups voor je brein: 15-21% minder verzuim, 70% lager uitvalrisico en 10%
-              hogere productiviteit.
-            </p>
-          </div>
-          <div>
-            <h3 className="text-lg font-semibold mb-4">Contact</h3>
-            <div className="space-y-2 text-gray-300">
-              <p>Email: bas@innerleaps.nl</p>
-              <p>Telefoon: 06 23 45 34 77</p>
-              <p>Adres: Olympisch Stadion 24, 28, 1076 DE Amsterdam</p>
-              <p>KVK nummer: 98136925</p>
-            </div>
-          </div>
-          {showNavigation && (
-            <div>
-              <h3 className="text-lg font-semibold mb-4">Snel naar</h3>
-              <div className="space-y-2">
-                <Link 
-                  to="/vitaliteitsprogramma" 
-                  className="block text-gray-300 hover:text-white transition-colors text-left"
-                >
-                  Vitaliteitsprogramma
-                </Link>
-                <Link 
-                  to="/stressmanagement-programma" 
-                  className="block text-gray-300 hover:text-white transition-colors text-left"
-                >
-                  Stressmanagement programma
-                </Link>
-                <Link 
-                  to="/prestatie-programma" 
-                  className="block text-gray-300 hover:text-white transition-colors text-left"
-                >
-                  Prestatie en concentratie verbeteren
-                </Link>
-                <Link 
-                  to="/blog" 
-                  className="block text-gray-300 hover:text-white transition-colors text-left"
-                >
-                  Blog
-                </Link>
+            <div className="text-2xl font-bold mb-4">InnerLeaps</div>
+            <h3 className="text-gray-300 leading-relaxed mb-6">
+              Vitaliteitstraining die verzuim verlaagt en duurzame inzetbaarheid versterkt
+            </h3>
+
+            <div className="flex flex-wrap items-start gap-6 mb-6">
+              <div className="flex flex-col items-center">
+                <img
+                  src={vmbnLogo}
+                  alt="VMBN trainer categorie 1"
+                  className="h-16 w-auto bg-white rounded p-1"
+                  loading="lazy"
+                />
+                <span className="text-xs text-gray-300 mt-1">Trainer categorie 1</span>
               </div>
+
+              <a
+                href={GOOGLE_REVIEWS_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Bekijk onze Google reviews (4,7 van 5 sterren)"
+                className="flex flex-col items-center group"
+              >
+                <div className="bg-white rounded p-2 flex items-center gap-2">
+                  <GoogleG />
+                  <div className="flex">
+                    {Array.from({ length: 5 }).map((_, i) => (
+                      <Star key={i} className="h-4 w-4 text-brand-orange fill-brand-orange" />
+                    ))}
+                  </div>
+                </div>
+                <span className="text-xs text-gray-300 mt-1 group-hover:text-white transition-colors">
+                  4,7/5 op Google
+                </span>
+              </a>
             </div>
-          )}
+
+            <a
+              href={LINKEDIN_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="InnerLeaps op LinkedIn"
+              className="inline-flex items-center justify-center h-10 w-10 rounded-full bg-white/10 hover:bg-white/20 transition-colors"
+            >
+              <Linkedin className="h-5 w-5 text-white" />
+            </a>
+          </div>
+
+          {/* Column 2 — Programma's */}
+          <div>
+            <h3 className="text-white font-semibold text-lg mb-4">Programma's</h3>
+            <nav aria-label="Programma's">
+              <ul className="space-y-2">
+                <li>
+                  <Link to="/vitaliteitsprogramma" className="block text-gray-300 hover:text-white transition-colors">
+                    Vitaliteitsprogramma
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/stressmanagement-programma" className="block text-gray-300 hover:text-white transition-colors">
+                    Stressmanagement programma
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/prestatie-programma" className="block text-gray-300 hover:text-white transition-colors">
+                    Prestatie en concentratie verbeteren
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/blog" className="block text-gray-300 hover:text-white transition-colors">
+                    Blog
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/contact" className="block text-gray-300 hover:text-white transition-colors">
+                    Contact
+                  </Link>
+                </li>
+              </ul>
+            </nav>
+          </div>
+
+          {/* Column 3 — Contact */}
+          <div>
+            <h3 className="text-white font-semibold text-lg mb-4">Contact</h3>
+            <address
+              className="not-italic space-y-2 text-gray-300"
+              itemProp="address"
+              itemScope
+              itemType="https://schema.org/PostalAddress"
+            >
+              <div>
+                <div className="text-white">Bas Ter Haar Romenij</div>
+                <div className="text-xs text-gray-400">Oprichter</div>
+              </div>
+              <p>
+                <a href="mailto:bas@innerleaps.nl" className="hover:text-white transition-colors">
+                  bas@innerleaps.nl
+                </a>
+              </p>
+              <p>
+                <a href="tel:+31623453477" className="hover:text-white transition-colors">
+                  06 23 45 34 77
+                </a>
+              </p>
+              <p>
+                <span itemProp="streetAddress">Olympisch Stadion 24-28</span>,{" "}
+                <span itemProp="postalCode">1076 DE</span>{" "}
+                <span itemProp="addressLocality">Amsterdam</span>
+              </p>
+              <p>KvK: 98136925</p>
+            </address>
+          </div>
         </div>
-        <div className="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
-          <p>&copy; 2024 Innerleaps. Alle rechten voorbehouden.</p>
-          <div className="mt-3 flex items-center justify-center gap-4">
-            <Link to="/algemene-voorwaarden" className="text-gray-400 hover:text-white transition-colors text-sm">
-              Algemene voorwaarden
+
+        {/* Bottom bar */}
+        <div className="border-t border-white/15 mt-8 pt-6 flex flex-col md:flex-row md:items-center md:justify-between gap-3 text-sm text-gray-400">
+          <p>&copy; 2026 InnerLeaps</p>
+          <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
+            <Link to="/privacy" className="hover:text-white transition-colors">
+              Privacybeleid
             </Link>
-            <span className="text-gray-600">|</span>
-            <Link to="/privacy" className="text-gray-400 hover:text-white transition-colors text-sm">
-              Privacy
+            <span className="text-gray-600" aria-hidden="true">·</span>
+            <Link to="/cookies" className="hover:text-white transition-colors">
+              Cookiebeleid
+            </Link>
+            <span className="text-gray-600" aria-hidden="true">·</span>
+            <Link to="/algemene-voorwaarden" className="hover:text-white transition-colors">
+              Algemene voorwaarden
             </Link>
           </div>
         </div>
