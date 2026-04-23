@@ -107,10 +107,10 @@ const LandingPage = () => {
               <div className="p-3 rounded-lg bg-brand-orange/10 w-fit mx-auto">
                 <Award className="h-10 w-10 text-brand-orange stroke-2" />
               </div>
-              <h3 className="text-xl font-bold text-brand-gray-dark text-center">Gratis</h3>
+              <h3 className="text-xl font-bold text-brand-gray-dark text-center">Vrijblijvend</h3>
               <p className="text-base md:text-lg text-brand-gray-medium text-center leading-relaxed">
                 Wij geloven dat iedereen onze effectieve techniek moet kunnen proberen. Daarom is onze masterclass
-                volledig gratis en vrijblijvend.
+                vrijblijvend.
               </p>
             </div>
           </div>
