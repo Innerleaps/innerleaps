@@ -68,21 +68,15 @@ const TrustSection = memo(({ variant = "white" }: TrustSectionProps) => {
                   <h3 className="text-2xl font-bold text-brand-purple mb-3">{item.title}</h3>
                   <p className="text-xl text-brand-gray-medium leading-relaxed mb-6">{item.description}</p>
                 <div className="flex flex-row gap-4 items-center flex-wrap">
-                  {item.logos ? (
-                    item.logos.map((logo, logoIndex) => (
-                      <img
-                        key={logoIndex}
-                        src={logo.src}
-                        alt={logo.alt}
-                        loading="lazy"
-                        className={`object-contain ${logo.className}`}
-                      />
-                    ))
-                  ) : item.icon ? (
-                    <div className="p-4 rounded-lg bg-brand-orange/10">
-                      <item.icon className="h-16 w-16 text-brand-orange stroke-[1.5]" />
-                    </div>
-                  ) : null}
+                  {item.logos.map((logo, logoIndex) => (
+                    <img
+                      key={logoIndex}
+                      src={logo.src}
+                      alt={logo.alt}
+                      loading="lazy"
+                      className={`object-contain ${logo.className}`}
+                    />
+                  ))}
                 </div>
                 </div>
               </div>
