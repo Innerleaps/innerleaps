@@ -408,7 +408,7 @@ const DuurzameInzetbaarheidTraining = () => {
                 Verzuim loopt op
               </h3>
               <p className="text-base md:text-lg text-brand-gray-medium text-center">
-                Stressklachten en uitval maken je team minder beschikbaar — precies wanneer je ze hard nodig hebt.
+                Stressklachten en uitval maken je team minder beschikbaar, precies wanneer je ze hard nodig hebt.
               </p>
             </div>
 
