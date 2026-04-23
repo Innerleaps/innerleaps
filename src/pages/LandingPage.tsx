@@ -59,7 +59,7 @@ const LandingPage = () => {
       <ProgramOverviewSection />
       
       {/* Masterclass Sectie */}
-      <section id="masterclass" className="py-16 md:py-24 bg-brand-off-white">
+      <section id="masterclass" className="py-16 md:py-24 bg-white">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-purple text-center leading-tight mb-6">
             Ervaar het zelf, <span className="text-brand-orange">gratis</span> met onze{" "}
