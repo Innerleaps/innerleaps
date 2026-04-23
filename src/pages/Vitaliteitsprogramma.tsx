@@ -8,7 +8,6 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import ROICalculator from "@/components/ROICalculator";
 import StickyCtaButtons from "@/components/StickyCtaButtons";
 import TrustSection from "@/components/TrustSection";
-import ProgramOverviewSection from "@/components/ProgramOverviewSection";
 import {
   Brain,
   Heart,
@@ -547,33 +546,96 @@ const Vitaliteitsprogramma = () => {
         </div>
       </section>
 
-      {/* Programma Overview Sectie */}
-      <ProgramOverviewSection />
+      {/* Programma Features Sectie */}
+      <section className="py-16 md:py-24 bg-brand-off-white">
+        <div className="container mx-auto px-4">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-purple text-center leading-tight mb-6">
+            Didactische methode voor <span className="text-brand-orange">échte gedragsverandering</span>
+          </h2>
+          <p className="text-xl md:text-2xl text-brand-gray-medium text-center leading-relaxed mb-12">
+            Het programma is slim opgezet zodat deelnemers maximaal leren en de verandering blijft.
+          </p>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
+            <div className="bg-white p-6 rounded-xl space-y-4">
+              <div className="p-3 rounded-lg bg-brand-orange/10 w-fit mx-auto">
+                <Calendar className="h-10 w-10 text-brand-orange stroke-2" />
+              </div>
+              <h3 className="text-xl md:text-2xl font-bold text-brand-gray-dark text-center">
+                6 wekelijkse groepsworkshops
+              </h3>
+              <p className="text-base md:text-lg text-brand-gray-medium text-center leading-relaxed">
+                Elke week een workshop van 60 minuten door een geaccrediteerde trainer. Leer van elkaars ervaringen en
+                krijg wetenschappelijke theorie en praktische tools.
+              </p>
+            </div>
+
+            <div className="bg-white p-6 rounded-xl space-y-4">
+              <div className="p-3 rounded-lg bg-brand-orange/10 w-fit mx-auto">
+                <Smile className="h-10 w-10 text-brand-orange stroke-2" />
+              </div>
+              <h3 className="text-xl md:text-2xl font-bold text-brand-gray-dark text-center">
+                Comfortabel meedoen en leren    
+              </h3>
+              <p className="text-base md:text-lg text-brand-gray-medium text-center leading-relaxed">
+                Deelnemers houden controle. Reageer op vragen met het opsteken van handen. Persoonlijke toelichting is
+                optioneel. Meedoen op je eigen tempo.
+              </p>
+            </div>
+
+            <div className="bg-white p-6 rounded-xl space-y-4">
+              <div className="p-3 rounded-lg bg-brand-orange/10 w-fit mx-auto">
+                <Clock className="h-10 w-10 text-brand-orange stroke-2" />
+              </div>
+              <h3 className="text-xl md:text-2xl font-bold text-brand-gray-dark text-center">
+                Dagelijks 15 minuten oefenen
+              </h3>
+              <p className="text-base md:text-lg text-brand-gray-medium text-center leading-relaxed">
+                Audio-oefeningen en werkboek met concrete oefeningen die je direct in je leven toepast. Nauwelijks extra
+                tijd nodig. Oefen tijdens tandenpoetsen, douchen of afwassen.
+              </p>
+            </div>
+
+            <div className="bg-white p-6 rounded-xl space-y-4">
+              <div className="p-3 rounded-lg bg-brand-orange/10 w-fit mx-auto">
+                <BookOpen className="h-10 w-10 text-brand-orange stroke-2" />
+              </div>
+              <h3 className="text-xl md:text-2xl font-bold text-brand-gray-dark text-center">
+                Systematische programmaopbouw
+              </h3>
+              <p className="text-base md:text-lg text-brand-gray-medium text-center leading-relaxed">
+                Het programma start met het herkennen van automatische patronen. Hierna volgt bewust handelen. Het einde
+                is gericht op integratie in het dagelijks leven.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* 6 Weken Thema's Sectie */}
       <section className="py-16 md:py-24 bg-white">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-purple text-center leading-tight mb-12">
-            <span className="text-brand-orange">6 weken</span> je brein trainen
+            <span className="text-brand-orange">6 weken</span> breintraining
           </h2>
 
           <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center mb-16">
             <div className="space-y-6 text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
               <p>
-                Dit programma werkt met dagelijkse <strong>"push-ups voor het brein"</strong>. Tijdens deze push-ups
+                In ons programma trainen deelnemers hun brein met onze"push-ups voor het brein". Tijdens deze push-ups
                 brengen medewerkers hun focus telkens terug naar de oefening of huidige activiteit. Hierdoor versterken
-                twee cruciale <strong>hersensystemen</strong>.
+                twee cruciale hersensystemen.
               </p>
 
               <p>
-                Het <strong>controlecentrum</strong> wordt sterker. Medewerkers onderdrukken impulsieve automatische
-                reacties beter, filteren irrelevante informatie en nemen bewustere beslissingen over hun werkdruk.
+                Het controlecentrum wordt sterker. Medewerkers onderdrukken impulsieve automatische reacties beter,
+                filteren irrelevante informatie en nemen bewustere beslissingen over hun werkdruk.
               </p>
 
               <p>
-                Het <strong>waarschuwingssysteem</strong> wordt gevoeliger. Deelnemers herkennen stressignalen zoals
-                spanning, een vol hoofd of verminderde concentratie op tijd. Zo ontwikkelen medewerkers eigenaarschap
-                over hun eigen stress en kunnen ze op tijd grenzen aangeven.
+                Het waarschuwingssysteem wordt gevoeliger. Deelnemers herkennen stressignalen zoals spanning, een vol
+                hoofd of verminderde concentratie op tijd. Zo ontwikkelen medewerkers eigenaarschap over hun eigen
+                stress en kunnen ze op tijd grenzen aangeven.
               </p>
             </div>
 
