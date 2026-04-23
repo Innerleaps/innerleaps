@@ -71,7 +71,7 @@ const LandingPage = () => {
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto mb-12">
-            <div className="bg-white p-6 rounded-xl space-y-4">
+            <div className="bg-brand-off-white p-6 rounded-xl space-y-4">
               <div className="p-3 rounded-lg bg-brand-orange/10 w-fit mx-auto">
                 <Activity className="h-10 w-10 text-brand-orange stroke-2" />
               </div>
@@ -81,7 +81,7 @@ const LandingPage = () => {
               </p>
             </div>
 
-            <div className="bg-white p-6 rounded-xl space-y-4">
+            <div className="bg-brand-off-white p-6 rounded-xl space-y-4">
               <div className="p-3 rounded-lg bg-brand-orange/10 w-fit mx-auto">
                 <Brain className="h-10 w-10 text-brand-orange stroke-2" />
               </div>
@@ -92,7 +92,7 @@ const LandingPage = () => {
               </p>
             </div>
 
-            <div className="bg-white p-6 rounded-xl space-y-4">
+            <div className="bg-brand-off-white p-6 rounded-xl space-y-4">
               <div className="p-3 rounded-lg bg-brand-orange/10 w-fit mx-auto">
                 <BookOpen className="h-10 w-10 text-brand-orange stroke-2" />
               </div>
@@ -102,7 +102,7 @@ const LandingPage = () => {
               </p>
             </div>
 
-            <div className="bg-white p-6 rounded-xl space-y-4">
+            <div className="bg-brand-off-white p-6 rounded-xl space-y-4">
               <div className="p-3 rounded-lg bg-brand-orange/10 w-fit mx-auto">
                 <Award className="h-10 w-10 text-brand-orange stroke-2" />
               </div>
