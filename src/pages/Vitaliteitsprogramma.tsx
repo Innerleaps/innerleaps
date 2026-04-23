@@ -22,7 +22,7 @@ import {
   Award,
   BookOpen,
   Star,
-  Check,
+  
 } from "lucide-react";
 import heroBackground from "@/assets/Vitaliteitsprogramma_presentatie_Innerleaps.png";
 import breinTrainingImg from "@/assets/6_weken_brein_trainen.png";

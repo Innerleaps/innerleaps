@@ -26,7 +26,7 @@ import {
   RotateCcw,
   BookOpen,
   Star,
-  Check,
+  
   Gift,
 } from "lucide-react";
 import heroBackground from "@/assets/Vitaliteitsprogramma_presentatie_Innerleaps.png";
