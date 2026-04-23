@@ -44,7 +44,9 @@ const TrustSection = memo(({ variant = "white" }: TrustSectionProps) => {
       title: "Geaccrediteerde Trainers",
       description:
         "Al onze trainers zijn VMBN categorie 1 gecertificeerd, de hoogste erkenning binnen de VMBN. Dit betekent dat zij voldoen aan de strengste kwaliteitseisen op het gebied van opleiding, ervaring en professionaliteit.",
-      icon: Award,
+      logos: [
+        { src: vmbnLogo, alt: "VMBN Trainer categorie 1", className: "h-28" },
+      ],
     },
   ];
 
