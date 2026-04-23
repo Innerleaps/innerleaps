@@ -164,8 +164,8 @@ const HeroSection = () => {
                   className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight font-heading break-words"
                   style={TEXT_SHADOW_STRONG}
                 >
-                  Ontwikkel <span className="text-brand-orange">duurzaame inzetbaar{"\u00AD"}heid</span> en voorkom{" "}
-                  <span className="text-brand-orange">verzuim</span>.
+                  Voorkom <span className="text-brand-orange">verzuim</span>. Bouw aan
+                  <span className="text-brand-orange">duurzame inzetbaarheid</span>.
                 </h1>
                 <p className="text-xl md:text-2xl text-blue-100 leading-relaxed break-words" style={TEXT_SHADOW_STRONG}>
                   Verlaag verzuim, voorkom burn-outs en verbeter de focus van je team met onze evidence based
