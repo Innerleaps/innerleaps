@@ -21,6 +21,15 @@ const MethodologySection = memo(() => {
                 en bewuste acties, en het "waarschuwingssysteem" dat stresssignalen eerder opmerkt. Het resultaat?
                 Minder stress én een scherpe focus!
               </p>
+              <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
+                Wil je weten hoe de methode precies werkt?
+              </p>
+              <br></br>
+              <Link to="/de-methode">
+                <Button variant="secondary" className="font-semibold py-3 px-8 rounded-lg text-base md:text-lg">
+                  Ontdek de methode
+                </Button>
+              </Link>
             </div>
             <div>
               <img
