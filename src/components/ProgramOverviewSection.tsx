@@ -1,5 +1,5 @@
 import { memo } from "react";
-import { Clock, Users, Target, Sliders } from "lucide-react";
+import { Clock, Users, Target, User } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 
@@ -22,7 +22,7 @@ const ProgramOverviewSection = memo(() => {
         "Deelnemers proberen 5 dagen per week zo'n 15 minuten te oefenen met ons werkboek en audio opnames.",
     },
     {
-      icon: Sliders,
+      icon: User,
       title: "Geaccrediteerde trainers",
       description:
         "Al onze trainers zijn geaccrediteerd voor categorie 1 aandachtstraining door VMBN.",
