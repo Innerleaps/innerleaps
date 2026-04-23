@@ -42,7 +42,7 @@ const ProgramOverviewSection = memo(() => {
         {/* Intro tekst */}
         <div className="max-w-4xl mx-auto">
           <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed text-center">
-            Ons wetenschappelijke kernprogramma duurt 6 weken. Vraag naar de mogelijkheden voor maatwerk.
+            Ons kernprogramma duurt 6 weken. Vraag naar de mogelijkheden voor maatwerk.
           </p>
         </div>
 
