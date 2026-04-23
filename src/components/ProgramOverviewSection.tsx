@@ -1,5 +1,5 @@
 import { memo } from "react";
-import { Clock, Users, Target, Sliders } from "lucide-react";
+import { Clock, Users, Target, User } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 
