@@ -157,19 +157,19 @@ const HeroSection = () => {
                 {/* Research Badge */}
                 <div className="inline-flex items-center gap-2 bg-white/50 text-brand-purple px-3 py-1.5 sm:px-4 sm:py-2 rounded-full text-sm sm:text-base md:text-lg font-medium backdrop-blur-sm">
                   <Award className="h-4 w-4" />
-                  Wetenschappelijk bewezen programma
+                  Wetenschappelijk bewezen methode
                 </div>
 
                 <h1
                   className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight font-heading break-words"
                   style={TEXT_SHADOW_STRONG}
                 >
-                  Voorkom <span className="text-brand-orange">verzuim</span>. Ontwikkel{" "}
-                  <span className="text-brand-orange">duurzaame inzetbaar{"\u00AD"}heid</span>
+                  Ontwikkel <span className="text-brand-orange">duurzaame inzetbaar{"\u00AD"}heid</span> en voorkom{" "}
+                  <span className="text-brand-orange">verzuim</span>.
                 </h1>
                 <p className="text-xl md:text-2xl text-blue-100 leading-relaxed break-words" style={TEXT_SHADOW_STRONG}>
-                  Wetenschappelijk onderbouwd en resultaatgericht vitaliteits{"\u00AD"}programma. Deelnemers nemen
-                  eigenaarschap over hun stresslevel, worden veerkrachtiger én productiever.
+                  Verlaag verzuim, voorkom burn-outs en verbeter de focus van je team met onze evidence based
+                  breintraining
                 </p>
               </div>
 
