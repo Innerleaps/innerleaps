@@ -25,7 +25,7 @@ const ProgramOverviewSection = memo(() => {
       icon: Sliders,
       title: "Geaccrediteerde trainers",
       description:
-        "Al onze trainers zijn geaccrediteerd voor categorie 1 aandachtstraining door VMBN".
+        "Al onze trainers zijn geaccrediteerd voor categorie 1 aandachtstraining door VMBN.",
     },
   ];
   return (
