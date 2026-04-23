@@ -65,7 +65,7 @@ const LandingPage = () => {
       <section id="masterclass" className="py-16 md:py-24 bg-white">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-purple text-center leading-tight mb-6">
-            Ervaar het met onze <span className="text-brand-orange">vrijblijvende masterclass </span>.
+            Ervaar het met onze <span className="text-brand-orange">vrijblijvende masterclass</span>.
           </h2>
           <p className="text-xl md:text-2xl text-brand-gray-medium text-center leading-relaxed mb-12 max-w-4xl mx-auto">
             Ben je enthousiast maar wil je eerst ervaren hoe aandachtstraining werkt? In 60 minuten maak je op speelse
