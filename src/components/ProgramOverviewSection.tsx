@@ -14,8 +14,7 @@ const ProgramOverviewSection = memo(() => {
     {
       icon: Users,
       title: "Veilig en comfortabel leren",
-      description:
-        "Deelnemers houden controle. In de groep reageren ze op vragen van de trainer met het opsteken van handen. Persoonlijke toelichting is optioneel.",
+      description: "In de groep reageren deelnemers op vragen van de trainer, persoonlijke toelichting is optioneel.",
     },
     {
       icon: Target,
