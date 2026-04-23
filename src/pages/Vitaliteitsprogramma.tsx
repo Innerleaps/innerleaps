@@ -8,6 +8,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import ROICalculator from "@/components/ROICalculator";
 import StickyCtaButtons from "@/components/StickyCtaButtons";
 import TrustSection from "@/components/TrustSection";
+import ProgramOverviewSection from "@/components/ProgramOverviewSection";
 import {
   Brain,
   Heart,
