@@ -48,7 +48,7 @@ const TrustSection = memo(({ variant = "white" }: TrustSectionProps) => {
   ];
 
   return (
-    <section className="bg-white section-padding">
+    <section className={`${sectionBg} section-padding`}>
       <div className="container-custom">
         <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-purple text-center leading-tight mb-12">
           Waarom organisaties voor <span className="text-brand-orange">ons kiezen</span>
