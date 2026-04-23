@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import ROICalculator from "@/components/ROICalculator";
 import StickyCtaButtons from "@/components/StickyCtaButtons";
+import TrustSection from "@/components/TrustSection";
 import {
   Brain,
   Heart,
@@ -53,12 +54,6 @@ import nobelLogo from "@/assets/Vitaliteitsprogramma_nobel_recruitment_light.png
 import hollandColoursLogo from "@/assets/Vitaliteitsprogramma_Holland_Colours_light.png";
 
 // Trust section logos
-import uMassLogo from "@/assets/Vitaliteitsprogramma_ontwikkeld_door_university_of_massachusetts.png";
-import oxfordLogo from "@/assets/Vitaliteitsprogramma_ontwikkeld_door_oxford.jpg";
-import vgzLogo from "@/assets/Vitaliteitprogramma_herkent_door_vgz.png";
-import czLogo from "@/assets/Vitaliteitsprogramma_herkend_door_CZ.png";
-import uvaLogo from "@/assets/Aandachttraining_aan_de_universiteit_van_amsterdam_new.png";
-import menzisLogo from "@/assets/Vitaliteitsprogramma_herkend_door_menzis.png";
 
 // Lazy load calculator modal
 const CalculatorModal = lazy(() => import("@/components/CalculatorModal"));

@@ -3,6 +3,7 @@ import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import SimplifiedNavigation from "@/components/SimplifiedNavigation";
 import StickyCtaButtons from "@/components/StickyCtaButtons";
+import TrustSection from "@/components/TrustSection";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
@@ -62,12 +63,6 @@ const MasterclassFormModal = lazy(() => import("@/components/MasterclassFormModa
 const ProgramRegistrationModal = lazy(() => import("@/components/ProgramRegistrationModal"));
 
 // Trust section logos
-import uMassLogo from "@/assets/Vitaliteitsprogramma_ontwikkeld_door_university_of_massachusetts.png";
-import oxfordLogo from "@/assets/Vitaliteitsprogramma_ontwikkeld_door_oxford.jpg";
-import vgzLogo from "@/assets/Vitaliteitprogramma_herkent_door_vgz.png";
-import czLogo from "@/assets/Vitaliteitsprogramma_herkend_door_CZ.png";
-import uvaLogo from "@/assets/Aandachttraining_aan_de_universiteit_van_amsterdam_new.png";
-import menzisLogo from "@/assets/Vitaliteitsprogramma_herkend_door_menzis.png";
 
 const StressManagement = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
