@@ -425,6 +425,36 @@ const DuurzameInzetbaarheidTraining = () => {
               </p>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Values Sectie */}
+      <section className="py-16 md:py-24 bg-white">
+        <div className="container mx-auto px-4">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-purple text-center leading-tight mb-6">
+            Het <span className="text-brand-orange">resultaat </span> van ons programma
+          </h2>
+          <p className="text-xl md:text-2xl text-brand-gray-medium text-center leading-relaxed mb-12">
+            De wetenschappelijk bewezen effecten van ons programma.
+          </p>
+
+          <div className="grid grid-cols-1 md:grid-cols-6 gap-8 max-w-6xl mx-auto">
+            {/* Value 1 */}
+            <div className="md:col-span-2 bg-brand-off-white p-6 rounded-lg space-y-4">
+              <div className="p-3 rounded-lg bg-brand-orange/5 w-fit mx-auto">
+                <Brain className="h-8 w-8 text-brand-orange stroke-2" />
+              </div>
+              <h3 className="text-xl md:text-2xl font-bold text-brand-gray-dark text-center">Stress vroeg herkennen</h3>
+              <div className="space-y-2">
+                <div className="flex items-start gap-2">
+                  <CheckCircle className="h-5 w-5 text-brand-orange flex-shrink-0 mt-0.5" />
+                  <p className="text-base md:text-lg text-brand-gray-medium">
+                    Medewerkers leren stresssignalen opmerken voordat het te laat is. Ze nemen regie over hun eigen
+                    stress en kunnen bijsturen voordat uitval optreedt.
+                  </p>
+                </div>
+              </div>
+            </div>
 
             {/* Value 2 */}
             <div className="md:col-span-2 bg-brand-off-white p-6 rounded-lg space-y-4">
