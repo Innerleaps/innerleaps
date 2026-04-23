@@ -38,9 +38,9 @@ const Footer = memo(({ showNavigation = true }: FooterProps) => {
           {/* Column 1 — Brand + social proof */}
           <div>
             <div className="text-2xl font-bold mb-4">InnerLeaps</div>
-            <h3 className="text-gray-300 leading-relaxed mb-6">
+            <p className="text-gray-300 leading-relaxed mb-6">
               Vitaliteitstraining die verzuim verlaagt en duurzame inzetbaarheid versterkt
-            </h3>
+            </p>
 
             <div className="flex flex-wrap items-start gap-6 mb-6">
               <div className="flex flex-col items-center">
@@ -53,13 +53,7 @@ const Footer = memo(({ showNavigation = true }: FooterProps) => {
                 <span className="text-xs text-gray-300 mt-1">Trainer categorie 1</span>
               </div>
 
-              <a
-                href={GOOGLE_REVIEWS_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Bekijk onze Google reviews (4,7 van 5 sterren)"
-                className="flex flex-col items-center group"
-              >
+              <div className="flex flex-col items-center">
                 <div className="bg-white rounded p-2 flex items-center gap-2">
                   <GoogleG />
                   <div className="flex">
@@ -68,10 +62,8 @@ const Footer = memo(({ showNavigation = true }: FooterProps) => {
                     ))}
                   </div>
                 </div>
-                <span className="text-xs text-gray-300 mt-1 group-hover:text-white transition-colors">
-                  4,7/5 op Google
-                </span>
-              </a>
+                <span className="text-xs text-gray-300 mt-1">4,7/5 op Google</span>
+              </div>
             </div>
 
             <a
@@ -128,13 +120,9 @@ const Footer = memo(({ showNavigation = true }: FooterProps) => {
               itemScope
               itemType="https://schema.org/PostalAddress"
             >
-              <div>
-                <div className="text-white">Bas Ter Haar Romenij</div>
-                <div className="text-xs text-gray-400">Oprichter</div>
-              </div>
               <p>
-                <a href="mailto:bas@innerleaps.nl" className="hover:text-white transition-colors">
-                  bas@innerleaps.nl
+                <a href="mailto:info@innerleaps.nl" className="hover:text-white transition-colors">
+                  info@innerleaps.nl
                 </a>
               </p>
               <p>
