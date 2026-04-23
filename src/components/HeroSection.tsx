@@ -164,12 +164,12 @@ const HeroSection = () => {
                   className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight font-heading break-words"
                   style={TEXT_SHADOW_STRONG}
                 >
-                  Voorkom <span className="text-brand-orange">verzuim</span>. Bouw aan{" "}
-                  <span className="text-brand-orange">duurzame inzetbaarheid</span>.
+                  Voorkom <span className="text-brand-orange">verzuim</span> met onze{" "}
+                  <span className="text-brand-orange">vitaliteitstaining</span>.
                 </h1>
                 <p className="text-xl md:text-2xl text-blue-100 leading-relaxed break-words" style={TEXT_SHADOW_STRONG}>
                   Verlaag verzuim, voorkom burn-outs en verbeter de focus van je team met onze evidence based
-                  breintraining
+                  vitaliteitstaining
                 </p>
               </div>
 
