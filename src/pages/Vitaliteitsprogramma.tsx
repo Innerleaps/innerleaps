@@ -232,7 +232,7 @@ const Vitaliteitsprogramma = () => {
                     textShadow: "0 2px 8px rgba(0,0,0,0.5)",
                   }}
                 >
-                  Het bewezen <span className="text-brand-orange">vitaliteits{"\u00AD"}programma </span> voor minder{" "}
+                  Het bewezen <span className="text-brand-orange">vitaliteits{"\u00AD"}training</span> voor minder{" "}
                   <span className="text-brand-orange">verzuim</span>
                 </h1>
                 <p
