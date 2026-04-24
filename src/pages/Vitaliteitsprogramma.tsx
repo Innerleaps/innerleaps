@@ -627,6 +627,9 @@ const Vitaliteitsprogramma = () => {
                 <span className="bg-brand-purple text-white px-3 py-1 rounded-full text-sm font-semibold whitespace-nowrap">
                   Controlecentrum
                 </span>
+                <span className="bg-brand-purple text-white px-3 py-1 rounded-full text-sm font-semibold whitespace-nowrap">
+                  Waarschuwingssysteem
+                </span>
               </div>
               <h3 className="text-xl font-bold text-brand-gray-dark">Stoppen met piekeren</h3>
               <p className="text-lg text-brand-gray-medium leading-relaxed">
