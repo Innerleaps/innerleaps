@@ -108,7 +108,7 @@ const HoeVerlaagIkZiekteverzuim = () => {
       <div className="container-custom mb-12">
         <img
           src={breinTrainingImage}
-          alt="6 weken brein training programma voor ziekteverzuim reductie"
+          alt="6 weken brein training training voor ziekteverzuim reductie"
           className="w-full max-w-3xl rounded-lg shadow-lg"
         />
       </div>
@@ -124,7 +124,7 @@ const HoeVerlaagIkZiekteverzuim = () => {
               aandachtstraining
             </Link>{" "}
             het verzuim met 15-21% verlaagt door werknemers te leren stresssignalen vroeg te herkennen. Innerleaps'
-            6-weekse programma bereikt 89,8% blijvende deelname door dagelijkse 'push-ups voor je brein' te combineren
+            6-weekse training bereikt 89,8% blijvende deelname door dagelijkse 'push-ups voor je brein' te combineren
             met wekelijkse begeleiding door VMBN categorie 1 geaccrediteerde trainers. De methode traint het
             controlecentrum en waarschuwingssysteem in de hersenen, waardoor werknemers stress reguleren voordat uitval
             optreedt. Het resultaat: 70% lager uitvalrisico en meetbare reductie in stress-gerelateerd verzuim binnen 6
@@ -155,7 +155,7 @@ const HoeVerlaagIkZiekteverzuim = () => {
 
           <h2 className="text-2xl font-bold text-brand-purple mt-12 mb-4">Waarom traditionele aanpakken falen</h2>
           <p className="text-brand-gray-dark mb-4">
-            Veel organisaties investeren in welzijn programma's zoals Employee Assistance Programs (EAP), mindfulness
+            Veel organisaties investeren in welzijn trainingen zoals Employee Assistance Programs (EAP), mindfulness
             apps of bedrijfsfitness. De adoptiecijfers zijn echter teleurstellend:
           </p>
           <ul className="list-disc pl-6 mb-4 text-brand-gray-dark">
@@ -229,9 +229,9 @@ const HoeVerlaagIkZiekteverzuim = () => {
             werknemers stress in een vroeg stadium. Ze kunnen bijsturen voordat problemen escaleren.
           </p>
           <p className="text-brand-gray-dark mb-4">
-            Deze mechanismen verklaren waarom Innerleaps' programma 89,8% blijvende adoptie bereikt. Deelnemers ervaren
+            Deze mechanismen verklaren waarom Innerleaps' training 89,8% blijvende adoptie bereikt. Deelnemers ervaren
             concrete voordelen in hun dagelijks functioneren, wat motivatie creëert om door te gaan met oefenen. Dit
-            staat in schril contrast met de 4,7% adoptie van mindfulness apps of 4-5% gebruik van EAP programma's.
+            staat in schril contrast met de 4,7% adoptie van mindfulness apps of 4-5% gebruik van EAP trainingen.
           </p>
 
           <h2 className="text-2xl font-bold text-brand-purple mt-12 mb-4">De business case voor aandachtstraining</h2>
@@ -270,7 +270,7 @@ const HoeVerlaagIkZiekteverzuim = () => {
           </p>
 
           <h2 className="text-2xl font-bold text-brand-purple mt-12 mb-4">
-            Waarom het programma van Innerleaps anders is
+            Waarom de training van Innerleaps anders is
           </h2>
           <p className="text-brand-gray-dark mb-4">
             Innerleaps hanteert een gestructureerde 6-weekse aanpak die drie cruciale elementen combineert:
@@ -294,7 +294,7 @@ const HoeVerlaagIkZiekteverzuim = () => {
             blijven gemotiveerd door wekelijkse accountability.
           </p>
           <p className="text-brand-gray-dark mb-4">
-            Deze combinatie verklaart de 89,8% blijvende deelname. Het programma is gebaseerd op de MBSR-methode
+            Deze combinatie verklaart de 89,8% blijvende deelname. De training is gebaseerd op de MBSR-methode
             (Mindfulness-Based Stress Reduction), een interventie met 40 jaar wetenschappelijk onderzoek die erkend
             wordt door Nederlandse zorgverzekeraars. De basisverzekering vergoedt zelfs de uitgebreide 8-weekse variant.
           </p>
@@ -325,13 +325,13 @@ const HoeVerlaagIkZiekteverzuim = () => {
 
           <h2 className="text-2xl font-bold text-brand-purple mt-12 mb-4">Implementatie in de praktijk</h2>
           <p className="text-brand-gray-dark mb-4">
-            Succesvolle implementatie vraagt meer dan alleen een goed programma. Het vereist commitment van de
+            Succesvolle implementatie vraagt meer dan alleen een goed training. Het vereist commitment van de
             organisatie en heldere communicatie naar werknemers.
           </p>
           <p className="text-brand-gray-dark mb-4">
-            <strong>Managementsupport</strong>: Leidinggevenden moeten het programma actief ondersteunen. Dit betekent
+            <strong>Managementsupport</strong>: Leidinggevenden moeten de training actief ondersteunen. Dit betekent
             tijd vrijmaken voor wekelijkse workshops, deelname aanmoedigen en zelf modelgedrag tonen. Onderzoek toont
-            dat deelname significant hoger is wanneer direct leidinggevenden het programma bespreken en waarderen
+            dat deelname significant hoger is wanneer direct leidinggevenden de training bespreken en waarderen
             (Vonderlin et al., 2020).
           </p>
           <p className="text-brand-gray-dark mb-4">
@@ -341,7 +341,7 @@ const HoeVerlaagIkZiekteverzuim = () => {
             prestatie en welzijn.
           </p>
           <p className="text-brand-gray-dark mb-4">
-            <strong>Meten en monitoren</strong>: Verzuimcijfers voor, tijdens en na het programma bijhouden maakt impact
+            <strong>Meten en monitoren</strong>: Verzuimcijfers voor, tijdens en na de training bijhouden maakt impact
             zichtbaar. Ook kwalitatieve feedback van deelnemers geeft inzicht in ervaringen en verbeterpunten. Deze data
             versterken de business case en motiveren doorlopende investering.
           </p>
@@ -374,7 +374,7 @@ const HoeVerlaagIkZiekteverzuim = () => {
           </p>
 
           <p className="text-brand-gray-dark mb-2">
-            <strong>Wat als werknemers stoppen met oefenen na het programma?</strong>
+            <strong>Wat als werknemers stoppen met oefenen na de training?</strong>
           </p>
           <p className="text-brand-gray-dark mb-4">
             De 89,8% blijvende deelname bij Innerleaps' aanpak toont dat werknemers gemotiveerd blijven oefenen. Dit
@@ -419,7 +419,7 @@ const HoeVerlaagIkZiekteverzuim = () => {
           <ul className="list-disc pl-6 mb-4 text-brand-gray-dark">
             <li>15-21% verzuimreductie door stressregulatie en vroege signaalherkenning</li>
             <li>70% lager burn-outrisico binnen 6 maanden, effect blijft behouden</li>
-            <li>89,8% blijvende deelname door gestructureerd 6-weeks programma</li>
+            <li>89,8% blijvende deelname door gestructureerd 6-weeks training</li>
             <li>ROI van 497-775% in eerste jaar door combinatie van verzuimreductie, retentie en productiviteit</li>
           </ul>
           <p className="text-brand-gray-dark mb-4">

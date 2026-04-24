@@ -77,10 +77,10 @@ const Footer = memo(({ showNavigation = true }: FooterProps) => {
             </a>
           </div>
 
-          {/* Column 2 — Programma's */}
+          {/* Column 2 — Trainingen */}
           <div>
-            <h3 className="text-white font-semibold text-lg mb-4">Programma's</h3>
-            <nav aria-label="Programma's">
+            <h3 className="text-white font-semibold text-lg mb-4">Trainingen</h3>
+            <nav aria-label="Trainingen">
               <ul className="space-y-2">
                 <li>
                   <Link to="/vitaliteitstraining" className="block text-gray-300 hover:text-white transition-colors">

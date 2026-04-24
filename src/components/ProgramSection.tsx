@@ -20,12 +20,12 @@ const ProgramSection = () => {
     description: "Intensieve dag voor bewegingsoefeningen en praktische integratie van alle geleerde technieken"
   }, {
     weeks: "8-9",
-    title: "Ontwikkeling eigen programma en integratie",
+    title: "Ontwikkeling eigen training en integratie",
     description: "Ontwikkeling van een persoonlijke toolkit voor dagelijkse toepassing in werk en leven"
   }];
   const programFeatures = [{
     icon: Clock,
-    title: "6 tot 9 weken programma",
+    title: "6 tot 9 weken training",
     description: "Meerdere weken training voor echte gedragsverandering."
   }, {
     icon: Users,
@@ -46,7 +46,7 @@ const ProgramSection = () => {
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-gray-dark">Een wetenschappelijk training in<br />
           <span className="text-brand-orange">
 Persoonlijk Leiderschap</span></h2>
-          <p className="text-xl md:text-2xl text-brand-gray-medium max-w-4xl mx-auto leading-relaxed">Meer dan 40 jaar onderzoek toont keer op keer aan, onze training werkt echt. Afhankelijk van jullie beschikbare tijd kunnen we het programma op jullie organisatie afstemmen. </p>
+          <p className="text-xl md:text-2xl text-brand-gray-medium max-w-4xl mx-auto leading-relaxed">Meer dan 40 jaar onderzoek toont keer op keer aan, onze training werkt echt. Afhankelijk van jullie beschikbare tijd kunnen we de training op jullie organisatie afstemmen. </p>
         </div>
 
         {/* Program Features */}
@@ -68,7 +68,7 @@ Persoonlijk Leiderschap</span></h2>
         </div>
 
         <div className="text-center mt-12">
-          <Link to="/programma">
+          <Link to="/training">
             <Button size="lg" className="bg-brand-blue hover:bg-brand-blue text-white hover:text-white font-semibold py-4 px-8 rounded-lg text-xl shadow-xl">
               Persoonlijk Leiderschap voor Young Professionals
             </Button>

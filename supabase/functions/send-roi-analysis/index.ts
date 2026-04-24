@@ -214,7 +214,7 @@ const generateEmailHTML = (data: ROIAnalysisRequest): string => {
           <!-- Footer -->
           <tr>
             <td style="background-color: #f9fafb; padding: 20px 30px; text-align: center; border-top: 1px solid #e5e7eb;">
-              <p style="margin: 0; font-size: 13px; color: #6b7280;">InnerLeaps - Vitaliteitsprogramma's voor duurzame inzetbaarheid</p>
+              <p style="margin: 0; font-size: 13px; color: #6b7280;">InnerLeaps - Vitaliteitstraining's voor duurzame inzetbaarheid</p>
             </td>
           </tr>
 
@@ -288,7 +288,7 @@ WETENSCHAPPELIJKE BRONNEN
 Met vriendelijke groet,
 Het InnerLeaps Team
 
-InnerLeaps - Vitaliteitsprogramma's voor duurzame inzetbaarheid
+InnerLeaps - Vitaliteitstraining's voor duurzame inzetbaarheid
 `;
 };
 

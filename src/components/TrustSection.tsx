@@ -19,7 +19,7 @@ const TrustSection = memo(({ variant = "white" }: TrustSectionProps) => {
     {
       title: "Onderliggende methode erkend door Nederlandse zorgsysteem",
       description:
-        "De uitgebreide variant van ons programma wordt vergoed vanuit basisverzekering door Nederlandse zorgverzekeraars.",
+        "De uitgebreide variant van onze training wordt vergoed vanuit basisverzekering door Nederlandse zorgverzekeraars.",
       logos: [
         { src: vgzLogo, alt: "Vitaliteits\u00ADprogramma herkend door VGZ", className: "h-24" },
         { src: czLogo, alt: "Vitaliteits\u00ADprogramma herkend door CZ", className: "h-24" },

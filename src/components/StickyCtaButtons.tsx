@@ -65,7 +65,7 @@ const StickyCtaButtons = ({ onMasterclassClick, onProgramRegistrationClick }: St
               onClick={onProgramRegistrationClick}
               className="font-semibold py-3 sm:py-5 px-4 sm:px-10 rounded-lg text-base sm:text-lg shadow-lg whitespace-nowrap"
             >
-              <span className="hidden sm:inline">Aanmelden programma</span>
+              <span className="hidden sm:inline">Aanmelden training</span>
               <span className="sm:hidden">Aanmelden</span>
             </Button>
           </>

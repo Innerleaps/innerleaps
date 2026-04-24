@@ -672,7 +672,7 @@ const DeMethode = () => {
         </div>
       </section>
 
-      {/* CTA Sectie met 3 Programma Buttons */}
+      {/* CTA Sectie met 3 Training Buttons */}
       <section className="section-padding bg-white">
         <div className="container-custom text-center space-y-8">
           <p className="text-xl md:text-2xl text-brand-gray-medium max-w-3xl mx-auto">

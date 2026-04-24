@@ -249,7 +249,7 @@ const ProgramRegistrationModal = ({
       <DialogContent className="max-w-2xl max-h-[90vh] overflow-y-auto bg-white">
         <DialogHeader>
           <DialogTitle className="text-2xl font-bold text-brand-purple">
-            Aanmelden {programType === "prestatie" ? "Prestatie Programma" : "Stress-Management Programma"}
+            Aanmelden {programType === "prestatie" ? "Prestatie Training" : "Stress-Management Training"}
           </DialogTitle>
           <div className="flex items-center gap-2 mt-4">
             {[1, 2, 3, 4].map(s => <div key={s} className={`h-2 flex-1 rounded-full ${s <= step ? "bg-brand-orange" : "bg-gray-200"}`} />)}
@@ -424,7 +424,7 @@ const ProgramRegistrationModal = ({
           {step === 3 && <div className="space-y-4">
               <h3 className="text-lg font-semibold text-brand-purple">Startdatum</h3>
               <p className="text-sm text-brand-gray-medium">
-                Dit is de startdatum van het programma. De cursus vindt plaats gedurende 6 opeenvolgende weken. Op
+                Dit is de startdatum van de training. De cursus vindt plaats gedurende 6 opeenvolgende weken. Op
                 nationale feestdagen zal de cursus niet plaatsvinden. Mocht je onverhoopt een sessie missen dan zal je
                 de opname ontvangen.
               </p>

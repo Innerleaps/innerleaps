@@ -118,7 +118,7 @@ const DeMethodeOld = () => {
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             <div className="space-y-6">
               <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
-                Het programma duurt 6 weken. Elke week krijgen deelnemers:
+                De training duurt 6 weken. Elke week krijgen deelnemers:
               </p>
               <ul className="space-y-4">
                 <li className="flex items-start">

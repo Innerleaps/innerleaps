@@ -23,8 +23,8 @@ const ProcessSection = () => {
     },
     {
       icon: Presentation,
-      title: "Stap 3: Masterclass om programma te ervaren",
-      description: "Praktische ervaring van het programma waar werknemers zich kunnen aanmelden",
+      title: "Stap 3: Masterclass om training te ervaren",
+      description: "Praktische ervaring van de training waar werknemers zich kunnen aanmelden",
       color: "bg-brand-orange"
     },
     {
@@ -35,8 +35,8 @@ const ProcessSection = () => {
     },
     {
       icon: CheckCircle,
-      title: "Stap 5: Start programma",
-      description: "Start van het 9-weekse programma met alle ingeschreven medewerkers",
+      title: "Stap 5: Start training",
+      description: "Start van het 9-weekse training met alle ingeschreven medewerkers",
       color: "bg-brand-orange"
     },
     {

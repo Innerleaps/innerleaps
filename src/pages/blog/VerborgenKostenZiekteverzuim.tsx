@@ -322,7 +322,7 @@ const VerborgenKostenZiekteverzuim = () => {
               <h3 className="text-xl md:text-2xl font-bold text-brand-purple mt-8 mb-4">ROI van 497% tot 775% binnen eerste jaar</h3>
               
               <p>
-                Wetenschappelijke data uit 40 jaar onderzoek vormt de basis voor ROI-berekeningen. Voor een organisatie met 100 deelnemers aan een aandachtstrainingsprogramma:
+                Wetenschappelijke data uit 40 jaar onderzoek vormt de basis voor ROI-berekeningen. Voor een organisatie met 100 deelnemers aan een aandachtstraining:
               </p>
 
               <p className="font-semibold mt-8">Conservatief scenario (497% ROI):</p>
@@ -356,7 +356,7 @@ const VerborgenKostenZiekteverzuim = () => {
               <h3 className="text-xl md:text-2xl font-bold text-brand-purple mt-8 mb-4">Vergelijking met andere interventies</h3>
               
               <p>
-                EAP-programma's (Employee Assistance Programs) kennen een gebruiksgraad van slechts 4-5%. Mindfulness apps houden 4,7% van gebruikers na 30 dagen. Bedrijfsfitness trekt 8% regelmatige deelname. Deze interventies falen niet door slechte kwaliteit. Ze falen door gebrek aan structuur en begeleiding.
+                EAP-trainingen (Employee Assistance Programs) kennen een gebruiksgraad van slechts 4-5%. Mindfulness apps houden 4,7% van gebruikers na 30 dagen. Bedrijfsfitness trekt 8% regelmatige deelname. Deze interventies falen niet door slechte kwaliteit. Ze falen door gebrek aan structuur en begeleiding.
               </p>
 
               <p className="mt-8">
@@ -370,17 +370,17 @@ const VerborgenKostenZiekteverzuim = () => {
               </ul>
 
               <p className="mt-8">
-                Wetenschappelijke studies naar vergelijkbare awareness interventies tonen: 89,8% van deelnemers geeft aan door te willen gaan met beoefening na het programma. De effecten blijven minimaal 12 maanden behouden volgens vervolgmetingen.
+                Wetenschappelijke studies naar vergelijkbare awareness interventies tonen: 89,8% van deelnemers geeft aan door te willen gaan met beoefening na de training. De effecten blijven minimaal 12 maanden behouden volgens vervolgmetingen.
               </p>
 
               <h3 className="text-xl md:text-2xl font-bold text-brand-purple mt-8 mb-4">De neurologische basis van duurzame verandering</h3>
               
               <p>
-                Het programma werkt met "push-ups voor je brein". Elke keer dat deelnemers hun afdwalende aandacht terugbrengen naar de oefening, activeren ze hun prefrontale cortex. Net als spiertraining: hoe vaker je oefent, hoe sterker het wordt. Na 6 weken dagelijkse training is het controlecentrum letterlijk dikker en beter verbonden, meetbaar op hersenscans.
+                De training werkt met "push-ups voor je brein". Elke keer dat deelnemers hun afdwalende aandacht terugbrengen naar de oefening, activeren ze hun prefrontale cortex. Net als spiertraining: hoe vaker je oefent, hoe sterker het wordt. Na 6 weken dagelijkse training is het controlecentrum letterlijk dikker en beter verbonden, meetbaar op hersenscans.
               </p>
 
               <p className="mt-8">
-                Dit verklaart waarom korte programma's of incidentele oefeningen niet werken. Neuroplasticiteit (het vermogen van de hersenen om te veranderen) vereist consistente herhaling. 12 minuten per dag gedurende 6 weken is het wetenschappelijk vastgestelde minimum voor blijvende verandering.
+                Dit verklaart waarom korte trainingen of incidentele oefeningen niet werken. Neuroplasticiteit (het vermogen van de hersenen om te veranderen) vereist consistente herhaling. 12 minuten per dag gedurende 6 weken is het wetenschappelijk vastgestelde minimum voor blijvende verandering.
               </p>
 
               <h2 className="text-2xl md:text-3xl font-bold text-brand-purple mt-12 mb-6">Bereken de impact voor jouw organisatie</h2>
@@ -436,7 +436,7 @@ const VerborgenKostenZiekteverzuim = () => {
               <ul className="mt-2">
                 <li>EAP: 4-5% gebruiksgraad</li>
                 <li>Mindfulness apps: 4,7% blijft oefenen na 30 dagen</li>
-                <li>Gestructureerde programma's: 89,8% intentie tot doortrainen</li>
+                <li>Gestructureerde trainingen: 89,8% intentie tot doortrainen</li>
               </ul>
             </div>
           </div>

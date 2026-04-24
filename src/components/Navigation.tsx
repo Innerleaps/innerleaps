@@ -55,8 +55,8 @@ const Navigation = () => {
       isLink: true
     },
     {
-      label: 'Programma',
-      href: '/programma',
+      label: 'Training',
+      href: '/training',
       isLink: true
     },
     {

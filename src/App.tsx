@@ -19,7 +19,7 @@ const LifeQuestionnaire = lazy(() => import("./pages/LifeQuestionnaire"));
 const LifeQuestionnaireResult = lazy(() => import("./pages/LifeQuestionnaireResult"));
 const StressManagement = lazy(() => import("./pages/StressManagement"));
 const PrestatieProgramma = lazy(() => import("./pages/PrestatieProgramma"));
-const Vitaliteitsprogramma = lazy(() => import("./pages/Vitaliteitsprogramma"));
+const Vitaliteitstraining = lazy(() => import("./pages/Vitaliteitsprogramma"));
 const DuurzameInzetbaarheidTraining = lazy(() => import("./pages/DuurzameInzetbaarheidTraining"));
 const Blog = lazy(() => import("./pages/Blog"));
 const ZiekteverzuimVerlagen = lazy(() => import("./pages/blog/ZiekteverzuimVerlagen"));
@@ -73,12 +73,12 @@ const App = () => {
                 <Route path="/9-stippen" element={<NegenStippen />} />
                 <Route path="/stressmanagement-training" element={<StressManagement />} />
                 <Route path="/prestatie-training" element={<PrestatieProgramma />} />
-                <Route path="/vitaliteitstraining" element={<Vitaliteitsprogramma />} />
+                <Route path="/vitaliteitstraining" element={<Vitaliteitstraining />} />
                 <Route path="/duurzame-inzetbaarheid-training" element={<DuurzameInzetbaarheidTraining />} />
-                {/* Legacy URL redirects (programma -> training) */}
-                <Route path="/stressmanagement-programma" element={<Navigate to="/stressmanagement-training" replace />} />
-                <Route path="/prestatie-programma" element={<Navigate to="/prestatie-training" replace />} />
-                <Route path="/vitaliteitsprogramma" element={<Navigate to="/vitaliteitstraining" replace />} />
+                {/* Legacy URL redirects (training -> training) */}
+                <Route path="/stressmanagement-training" element={<Navigate to="/stressmanagement-training" replace />} />
+                <Route path="/prestatie-training" element={<Navigate to="/prestatie-training" replace />} />
+                <Route path="/vitaliteitstraining" element={<Navigate to="/vitaliteitstraining" replace />} />
                 <Route path="/blog" element={<Blog />} />
                 <Route path="/blog/ziekteverzuim-verlagen-wetenschappelijk-bewezen-aanpak-2025" element={<ZiekteverzuimVerlagen />} />
                 <Route path="/blog/verborgen-kosten-ziekteverzuim-rekenmodel" element={<VerborgenKostenZiekteverzuim />} />
