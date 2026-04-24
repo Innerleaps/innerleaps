@@ -609,13 +609,13 @@ const DuurzameInzetbaarheidTraining = () => {
                   Week 5
                 </span>
                 <span className="bg-brand-purple text-white px-3 py-1 rounded-full text-sm font-semibold whitespace-nowrap">
-                  Waarschuwingssysteem
+                  Controlecentrum
                 </span>
               </div>
-              <h3 className="text-xl font-bold text-brand-gray-dark">Naar moeilijkheden toe in plaats van eromheen</h3>
+              <h3 className="text-xl font-bold text-brand-gray-dark">Beter samenwerken door bewust luisteren</h3>
               <p className="text-lg text-brand-gray-medium leading-relaxed">
-                Wat je vermijdt wordt sterker. Leer moeilijke emoties en sensaties toe te laten zonder automatisch te
-                reageren. Neem de controle.
+                Onder druk formuleer je vaak je antwoord al terwijl de ander nog praat. Leer écht luisteren, perspectief
+                nemen en reageren vanuit begrip in plaats van reflex.
               </p>
             </div>
 
