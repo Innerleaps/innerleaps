@@ -3,6 +3,7 @@ import { Helmet } from "react-helmet-async";
 import { Link, useSearchParams, useLocation } from "react-router-dom";
 import SimplifiedNavigation from "@/components/SimplifiedNavigation";
 import Footer from "@/components/Footer";
+import MasterclassSection from "@/components/MasterclassSection";
 import { Button } from "@/components/ui/button";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import ROICalculator from "@/components/ROICalculator";

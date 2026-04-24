@@ -6,6 +6,7 @@ import SimplifiedNavigation from "@/components/SimplifiedNavigation";
 import StickyCtaButtons from "@/components/StickyCtaButtons";
 import TrustSection from "@/components/TrustSection";
 import Footer from "@/components/Footer";
+import MasterclassSection from "@/components/MasterclassSection";
 import { Button } from "@/components/ui/button";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import {

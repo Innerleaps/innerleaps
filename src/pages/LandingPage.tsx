@@ -8,6 +8,7 @@ import ProgramOverviewSection from "@/components/ProgramOverviewSection";
 import TrustSection from "@/components/TrustSection";
 import StickyCtaButtons from "@/components/StickyCtaButtons";
 import Footer from "@/components/Footer";
+import MasterclassSection from "@/components/MasterclassSection";
 import { Button } from "@/components/ui/button";
 import { Activity, BookOpen, Award, Brain } from "lucide-react";
 
