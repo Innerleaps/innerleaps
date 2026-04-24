@@ -666,10 +666,10 @@ const Vitaliteitsprogramma = () => {
                   Waarschuwingssysteem
                 </span>
               </div>
-              <h3 className="text-xl font-bold text-brand-gray-dark">Naar moeilijkheden toe in plaats van eromheen</h3>
+              <h3 className="text-xl font-bold text-brand-gray-dark">Stressherstel door vriendelijkheid</h3>
               <p className="text-lg text-brand-gray-medium leading-relaxed">
-                Wat je vermijdt wordt sterker. Leer moeilijke emoties en sensaties toe te laten zonder automatisch te
-                reageren. Neem de controle.
+                De innerlijke criticus werkt harder onder druk. Leer jezelf met vriendelijkheid te behandelen. De
+                schakelaar om je zenuwstelsel tot rust te brengen en ruimte te maken voor helder denken.
               </p>
             </div>
 
