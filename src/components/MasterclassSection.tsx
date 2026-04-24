@@ -78,7 +78,7 @@ const MasterclassSection = ({ variant }: MasterclassSectionProps) => {
           {cards.map(({ icon: Icon, title, text }) => (
             <div
               key={title}
-              className="bg-white border border-border p-6 rounded-xl space-y-4 shadow-lg"
+              className="bg-white/70 backdrop-blur-sm border border-white/40 p-6 rounded-xl space-y-4 shadow-lg"
             >
               <div className="p-3 rounded-lg bg-brand-orange w-fit mx-auto">
                 <Icon className="h-10 w-10 text-white stroke-2" />
