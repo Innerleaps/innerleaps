@@ -560,20 +560,18 @@ const PrestatieProgramma = () => {
           <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center mb-16">
             <div className="space-y-6 text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
               <p>
-                Dit programma werkt met dagelijkse <strong>"push-ups voor je brein"</strong>. Tijdens deze push-ups
-                breng jij je focus en concentratie steeds terug naar de oefening of huidige activiteit. Hierdoor
-                versterken twee cruciale <strong>hersensystemen</strong>.
+                Met onze <strong>"push-ups voor je brein"</strong> train je je brein. Hiermee versterk je twee cruciale{" "}
+                <strong>hersensystemen</strong>.
               </p>
 
               <p>
-                Je <strong>controlecentrum</strong> wordt sterker. Je filtert afleidingen beter, schakelt sneller tussen
-                taken en houdt focus langer vast. Hetzelfde werk kost simpelweg minder energie.
+                Je <strong>controlecentrum</strong> wordt sterker. Je onderdrukt impulsieve automatische reacties,
+                filtert irrelevante informatie en neemt bewustere beslissingen over je werkdruk.
               </p>
 
               <p>
-                Je <strong>waarschuwingssysteem</strong> wordt gevoeliger. Je merkt op tijd wanneer druk je prestaties
-                ondermijnt. Meer fouten, trager werken, sneller afgeleid. Zo versterk je je concentratie en pak je
-                controle over onbewuste stress die je prestaties ondermijnt.
+                Je <strong>waarschuwingssysteem</strong> wordt gevoeliger. Je herkent stressignalen zoals spanning of
+                verminderde concentratie op tijd.
               </p>
             </div>
 

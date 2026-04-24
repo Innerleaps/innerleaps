@@ -507,18 +507,18 @@ const DuurzameInzetbaarheidTraining = () => {
           <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center mb-16">
             <div className="space-y-6 text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
               <p>
-                Met onze<strong>"push-ups voor het brein"</strong> trainen deelnemers hun brein. Hiermee versterken ze twee cruciale
-                hersensystemen.
+                Met onze <strong>"push-ups voor het brein"</strong> trainen deelnemers hun brein. Hiermee versterken ze
+                twee cruciale <strong>hersensystemen</strong>.
               </p>
 
               <p>
-                Het controlecentrum wordt sterker. Medewerkers onderdrukken impulsieve automatische reacties, filteren
-                irrelevante informatie en nemen bewustere beslissingen over hun werkdruk.
+                Het <strong>controlecentrum</strong> wordt sterker. Medewerkers onderdrukken impulsieve automatische
+                reacties, filteren irrelevante informatie en nemen bewustere beslissingen over hun werkdruk.
               </p>
 
               <p>
-                Het waarschuwingssysteem wordt gevoeliger. Deelnemers herkennen stressignalen zoals spanning of
-                verminderde concentratie op tijd.
+                Het <strong>waarschuwingssysteem</strong> wordt gevoeliger. Deelnemers herkennen stressignalen zoals
+                spanning of verminderde concentratie op tijd.
               </p>
             </div>
 

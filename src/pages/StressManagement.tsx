@@ -554,20 +554,18 @@ const StressManagement = () => {
           <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center mb-16">
             <div className="space-y-6 text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
               <p>
-                Dit programma werkt met dagelijkse <strong>"push-ups voor je brein"</strong>. Tijdens deze push-ups
-                breng jij je focus telkens terug naar de oefening of huidige activiteit. Hierdoor versterken twee
-                cruciale <strong>hersensystemen</strong>.
+                Met onze <strong>"push-ups voor je brein"</strong> train je je brein. Hiermee versterk je twee cruciale{" "}
+                <strong>hersensystemen</strong>.
               </p>
 
               <p>
-                Je <strong>controlecentrum</strong> wordt sterker. Je onderdrukt impulsieve automatische reacties beter,
-                doorbreekt piekergedachten en creëert rust in je hoofd.
+                Je <strong>controlecentrum</strong> wordt sterker. Je onderdrukt impulsieve automatische reacties,
+                filtert irrelevante informatie en neemt bewustere beslissingen over je werkdruk.
               </p>
 
               <p>
-                Je <strong>waarschuwingssysteem</strong> wordt gevoeliger. Je merkt spanning, een vol hoofd of onrustige
-                gedachten op tijd op. Zo leer je stressignalen vroeg herkennen en krijg je controle over je gedachten in
-                plaats van andersom.
+                Je <strong>waarschuwingssysteem</strong> wordt gevoeliger. Je herkent stressignalen zoals spanning of
+                verminderde concentratie op tijd.
               </p>
             </div>
 
