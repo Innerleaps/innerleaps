@@ -707,43 +707,7 @@ const StressManagement = () => {
         </div>
       </section>
 
-      {/* Prijs Sectie */}
-      <section className="py-16 md:py-24 bg-brand-off-white">
-        <div className="container mx-auto px-4">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-purple text-center leading-tight mb-6">
-            Laat je <span className="text-brand-orange">werkgever</span> jou deelname{" "}
-            <span className="text-brand-orange">vergoeden</span>
-          </h2>
-          <p className="text-xl md:text-2xl text-brand-gray-medium text-center leading-relaxed mb-12 max-w-4xl mx-auto">
-            Veel werkgevers vergoeden deze training vanuit het persoonlijk ontwikkelingsbudget. Wij leveren een brochure
-            om het gesprek met je werkgever makkelijk te maken.
-          </p>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            <div className="bg-white p-8 rounded-xl text-center space-y-4 shadow-lg">
-              <h3 className="text-2xl font-bold text-brand-gray-dark">Betaald door werkgever</h3>
-              <p className="text-4xl font-bold text-brand-orange">€695</p>
-              <p className="text-lg text-brand-gray-medium">ex BTW</p>
-            </div>
-
-            <div className="bg-white p-8 rounded-xl text-center space-y-4 shadow-lg">
-              <h3 className="text-2xl font-bold text-brand-gray-dark">Particulier</h3>
-              <p className="text-4xl font-bold text-brand-orange">€695</p>
-              <p className="text-lg text-brand-gray-medium">incl BTW</p>
-            </div>
-          </div>
-
-          <div className="text-center mt-12">
-            <p className="text-xl text-brand-gray-medium mb-6">Wil jij nu een leven met minder spanning en druk?</p>
-            <Button
-              onClick={() => setIsRegistrationModalOpen(true)}
-              className="bg-brand-orange hover:bg-brand-orange/90 text-white py-3 px-8 rounded-lg text-lg font-semibold"
-            >
-              Aanmelden Training
-            </Button>
-          </div>
-        </div>
-      </section>
+      {/* Prijs Sectie verwijderd */}
 
       {/* Masterclass Sectie */}
       <MasterclassSection variant="employee" />
