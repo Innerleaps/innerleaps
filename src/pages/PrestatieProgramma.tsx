@@ -149,7 +149,7 @@ const PrestatieProgramma = () => {
                   className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight font-heading break-words"
                   style={{ textShadow: "0 2px 8px rgba(0,0,0,0.5)" }}
                 >
-                  <span className="text-brand-orange">Prestaties</span> verbeteren door een krachtiger <span className="text-brand-orange">brein</span>
+                  <span className="text-brand-orange">Prestaties</span> verbeteren met een krachtiger <span className="text-brand-orange">brein</span>
                 </h1>
                 <p
                   className="text-xl md:text-2xl text-blue-100 leading-relaxed break-words"
