@@ -379,7 +379,7 @@ const DuurzameInzetbaarheidTraining = () => {
                 <Activity className="h-8 w-8 text-brand-orange stroke-2" />
               </div>
               <h3 className="text-xl md:text-2xl font-bold text-brand-gray-dark text-center">
-                Targets onder druk
+                Targets staan onder druk
               </h3>
               <p className="text-base md:text-lg text-brand-gray-medium text-center">
                 Je team moet leveren, maar de druk stapelt zich op. Output blijft achter bij de ambitie.
@@ -405,10 +405,10 @@ const DuurzameInzetbaarheidTraining = () => {
                 <Heart className="h-8 w-8 text-brand-orange stroke-2" />
               </div>
               <h3 className="text-xl md:text-2xl font-bold text-brand-gray-dark text-center">
-                Verzuim loopt op
+                Verzuim en uitval is te hoog
               </h3>
               <p className="text-base md:text-lg text-brand-gray-medium text-center">
-                Stressklachten en uitval maken je team minder beschikbaar, precies wanneer je ze hard nodig hebt.
+                Door uitval of ziekte is je team is minder beschikbaar, precies wanneer je ze hard nodig hebt.
               </p>
             </div>
 
@@ -418,10 +418,10 @@ const DuurzameInzetbaarheidTraining = () => {
                 <Shield className="h-8 w-8 text-brand-orange stroke-2" />
               </div>
               <h3 className="text-xl md:text-2xl font-bold text-brand-gray-dark text-center">
-                Talent vasthouden wordt lastiger
+                Talent vasthouden is moeilijk
               </h3>
               <p className="text-base md:text-lg text-brand-gray-medium text-center">
-                Je beste mensen zijn schaars en worden gevraagd. Betrokken en energiek houden vraagt meer dan goede voorwaarden.
+                Je beste mensen zijn essentieel. Talent behouden vraagt meer dan goede voorwaarden.
               </p>
             </div>
           </div>
