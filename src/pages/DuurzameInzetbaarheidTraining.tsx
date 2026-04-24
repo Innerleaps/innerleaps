@@ -544,8 +544,8 @@ const DuurzameInzetbaarheidTraining = () => {
               <h3 className="text-xl font-bold text-brand-gray-dark">De automatische piloot doorbreken</h3>
               <p className="text-lg text-brand-gray-medium leading-relaxed">
                 Waar zijn je gedachten terwijl je tanden poetst? Waarschijnlijk bij je eerste meeting of je to-do lijst.
-                Leer herkennen wanneer je gedachten afdwalen en breng je aandacht terug naar wat je nu doet. Je traint
-                je controlecentrum door telkens bewust aandacht te geven aan je huidige activiteit.
+                Medewerkers leren herkennen wanneer hun gedachten afdwalen en brengen hun aandacht terug naar wat ze nu
+                doen. Ze trainen hun controlecentrum door telkens bewust aandacht te geven aan hun huidige activiteit.
               </p>
             </div>
 
@@ -560,8 +560,9 @@ const DuurzameInzetbaarheidTraining = () => {
               </div>
               <h3 className="text-xl font-bold text-brand-gray-dark">Vroege waarschuwingssignalen herkennen</h3>
               <p className="text-lg text-brand-gray-medium leading-relaxed">
-                Train je waarschuwingssysteem zodat je gespannen schouders, een strakke kaak of oppervlakkige ademhaling
-                opmerkt voordat spanning je overneemt. Jij pakt de controle in plaats van de spanning, omdat je stress-antennes scherper zijn.
+                Medewerkers trainen hun waarschuwingssysteem zodat ze gespannen schouders, een strakke kaak of
+                oppervlakkige ademhaling opmerken voordat spanning hen overneemt. Ze pakken de controle in plaats van de
+                spanning, omdat hun stress-antennes scherper zijn.
               </p>
             </div>
 
@@ -579,8 +580,8 @@ const DuurzameInzetbaarheidTraining = () => {
               </div>
               <h3 className="text-xl font-bold text-brand-gray-dark">Stoppen met piekeren</h3>
               <p className="text-lg text-brand-gray-medium leading-relaxed">
-                Gedachten zijn geen feiten. Leer de 3-step reset: een pauze-knop die voorkomt dat piekeren de controle
-                krijgt. Krijg je focus waar jij die wil hebben.
+                Gedachten zijn geen feiten. Medewerkers leren de 3-step reset: een pauze-knop die voorkomt dat piekeren
+                de controle krijgt. Ze krijgen hun focus waar ze die willen hebben.
               </p>
             </div>
 
@@ -598,8 +599,9 @@ const DuurzameInzetbaarheidTraining = () => {
               </div>
               <h3 className="text-xl font-bold text-brand-gray-dark">Ruimte tussen gedachte en reactie</h3>
               <p className="text-lg text-brand-gray-medium leading-relaxed">
-                Laat je niet meeslepen door gedachten. Zie ze als mentale gebeurtenissen die komen en gaan. Krijg
-                controle en bepaal zelf hoe je wil reageren in plaats van automatisch te handelen.
+                Medewerkers laten zich niet meeslepen door gedachten. Ze zien gedachten als mentale gebeurtenissen die
+                komen en gaan. Ze krijgen controle en bepalen zelf hoe ze willen reageren in plaats van automatisch te
+                handelen.
               </p>
             </div>
 
@@ -614,8 +616,8 @@ const DuurzameInzetbaarheidTraining = () => {
               </div>
               <h3 className="text-xl font-bold text-brand-gray-dark">Beter samenwerken door bewust luisteren</h3>
               <p className="text-lg text-brand-gray-medium leading-relaxed">
-                Onder druk formuleer je vaak je antwoord al terwijl de ander nog praat. Leer écht luisteren, perspectief
-                nemen en reageren vanuit begrip in plaats van reflex.
+                Onder druk formuleren medewerkers vaak hun antwoord al terwijl de ander nog praat. Ze leren écht
+                luisteren, perspectief nemen en reageren vanuit begrip in plaats van reflex.
               </p>
             </div>
 
@@ -633,8 +635,8 @@ const DuurzameInzetbaarheidTraining = () => {
               </div>
               <h3 className="text-xl font-bold text-brand-gray-dark">Duurzame integratie in je leven</h3>
               <p className="text-lg text-brand-gray-medium leading-relaxed">
-                Herken je gedachtepatronen en maak de geleerde technieken blijvend onderdeel van je dagelijkse routine.
-                Bouw je eigen toolbox voor alle situaties.
+                Medewerkers herkennen hun gedachtepatronen en maken de geleerde technieken blijvend onderdeel van hun
+                dagelijkse routine. Ze bouwen hun eigen toolbox voor alle situaties.
               </p>
             </div>
           </div>
