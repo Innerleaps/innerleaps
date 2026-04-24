@@ -78,21 +78,15 @@ const MasterclassSection = ({ variant }: MasterclassSectionProps) => {
           {cards.map(({ icon: Icon, title, text }) => (
             <div
               key={title}
-              className="bg-white/10 backdrop-blur-sm border border-white/20 p-6 rounded-xl space-y-4"
+              className="bg-white border border-border p-6 rounded-xl space-y-4 shadow-lg"
             >
-              <div className="p-3 rounded-lg bg-brand-orange/20 w-fit mx-auto">
-                <Icon className="h-10 w-10 text-brand-orange stroke-2" />
+              <div className="p-3 rounded-lg bg-brand-orange w-fit mx-auto">
+                <Icon className="h-10 w-10 text-white stroke-2" />
               </div>
-              <h3
-                className="text-xl font-bold text-white text-center"
-                style={TEXT_SHADOW_STRONG}
-              >
+              <h3 className="text-xl font-bold text-foreground text-center">
                 {title}
               </h3>
-              <p
-                className="text-base md:text-lg text-white/95 text-center leading-relaxed"
-                style={TEXT_SHADOW_STRONG}
-              >
+              <p className="text-base md:text-lg text-muted-foreground text-center leading-relaxed">
                 {text}
               </p>
             </div>
