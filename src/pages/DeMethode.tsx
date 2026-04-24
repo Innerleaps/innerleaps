@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import SimplifiedNavigation from "@/components/SimplifiedNavigation";
 import StickyCtaButtons from "@/components/StickyCtaButtons";
 import Footer from "@/components/Footer";
+import MasterclassSection from "@/components/MasterclassSection";
 import { useIntersectionObserver } from "@/hooks/useIntersectionObserver";
 import {
   Brain,
