@@ -560,8 +560,7 @@ const PrestatieProgramma = () => {
           <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center mb-16">
             <div className="space-y-6 text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
               <p>
-                Met onze <strong>"push-ups voor je brein"</strong> train je je brein. Hiermee versterk je twee cruciale{" "}
-                <strong>hersensystemen</strong>.
+                Met onze <strong>"push-ups voor je brein"</strong> train jij je brein. Hiermee versterk je twee cruciale hersensystemen.
               </p>
 
               <p>
