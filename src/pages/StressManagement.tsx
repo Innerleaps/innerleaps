@@ -554,18 +554,17 @@ const StressManagement = () => {
           <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center mb-16">
             <div className="space-y-6 text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
               <p>
-                Met onze <strong>"push-ups voor je brein"</strong> train je je brein. Hiermee versterk je twee cruciale{" "}
-                <strong>hersensystemen</strong>.
+                Met onze <strong>"push-ups voor je brein"</strong> train jij je brein. Hiermee versterk je twee cruciale hersensystemen.
               </p>
 
               <p>
-                Je <strong>controlecentrum</strong> wordt sterker. Je onderdrukt impulsieve automatische reacties,
-                filtert irrelevante informatie en neemt bewustere beslissingen over je werkdruk.
+                Je controlecentrum wordt sterker. Je onderdrukt impulsieve automatische reacties, filtert irrelevante
+                informatie en neemt bewustere beslissingen over je werkdruk.
               </p>
 
               <p>
-                Je <strong>waarschuwingssysteem</strong> wordt gevoeliger. Je herkent stressignalen zoals spanning of
-                verminderde concentratie op tijd.
+                Je waarschuwingssysteem wordt gevoeliger. Je herkent stresssignalen op tijd en reguleert spanning bewust,
+                waardoor je meer rust ervaart en gelukkiger in je werk en leven staat.
               </p>
             </div>
 
