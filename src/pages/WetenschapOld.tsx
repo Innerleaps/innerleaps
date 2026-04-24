@@ -34,7 +34,7 @@ const WetenschapOld = () => {
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             <div>
               <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
-                In onze programma's trainen deelnemers hun concentratie en het herkennen van lichamelijke signalen. Je
+                In onze trainingen trainen deelnemers hun concentratie en het herkennen van lichamelijke signalen. Je
                 kan het vergelijken met het trainen van je spieren in de sportschool. Met onze "push-ups voor het brein"
                 versterken de frontale cortex en fronto-pariëtale netwerken. <br />
                 <br />

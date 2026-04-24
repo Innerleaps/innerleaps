@@ -2,7 +2,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { lazy, Suspense, Profiler } from "react";
 import { ProductionRedirect } from "./components/ProductionRedirect";
 
@@ -19,7 +19,7 @@ const LifeQuestionnaire = lazy(() => import("./pages/LifeQuestionnaire"));
 const LifeQuestionnaireResult = lazy(() => import("./pages/LifeQuestionnaireResult"));
 const StressManagement = lazy(() => import("./pages/StressManagement"));
 const PrestatieProgramma = lazy(() => import("./pages/PrestatieProgramma"));
-const Vitaliteitsprogramma = lazy(() => import("./pages/Vitaliteitsprogramma"));
+const Vitaliteitstraining = lazy(() => import("./pages/Vitaliteitsprogramma"));
 const DuurzameInzetbaarheidTraining = lazy(() => import("./pages/DuurzameInzetbaarheidTraining"));
 const Blog = lazy(() => import("./pages/Blog"));
 const ZiekteverzuimVerlagen = lazy(() => import("./pages/blog/ZiekteverzuimVerlagen"));
@@ -71,10 +71,14 @@ const App = () => {
                 <Route path="/calendar" element={<Calendar />} />
                 <Route path="/signup" element={<Signup />} />
                 <Route path="/9-stippen" element={<NegenStippen />} />
-                <Route path="/stressmanagement-programma" element={<StressManagement />} />
-                <Route path="/prestatie-programma" element={<PrestatieProgramma />} />
-                <Route path="/vitaliteitsprogramma" element={<Vitaliteitsprogramma />} />
+                <Route path="/stressmanagement-training" element={<StressManagement />} />
+                <Route path="/prestatie-training" element={<PrestatieProgramma />} />
+                <Route path="/vitaliteitstraining" element={<Vitaliteitstraining />} />
                 <Route path="/duurzame-inzetbaarheid-training" element={<DuurzameInzetbaarheidTraining />} />
+                {/* Legacy URL redirects (training -> training) */}
+                <Route path="/stressmanagement-training" element={<Navigate to="/stressmanagement-training" replace />} />
+                <Route path="/prestatie-training" element={<Navigate to="/prestatie-training" replace />} />
+                <Route path="/vitaliteitstraining" element={<Navigate to="/vitaliteitstraining" replace />} />
                 <Route path="/blog" element={<Blog />} />
                 <Route path="/blog/ziekteverzuim-verlagen-wetenschappelijk-bewezen-aanpak-2025" element={<ZiekteverzuimVerlagen />} />
                 <Route path="/blog/verborgen-kosten-ziekteverzuim-rekenmodel" element={<VerborgenKostenZiekteverzuim />} />

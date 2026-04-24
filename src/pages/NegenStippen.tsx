@@ -158,13 +158,13 @@ const NegenStippen = () => {
               <h3 className="text-2xl md:text-3xl font-bold text-brand-purple mb-6">Waar ben jij naar op zoek?</h3>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link 
-                  to="/stressmanagement-programma"
+                  to="/stressmanagement-training"
                   className="px-8 py-4 bg-brand-purple text-white text-lg font-semibold rounded-lg hover:bg-brand-purple/90 transition-colors shadow-md text-center"
                 >
                   Minder spanning & druk in mijn leven
                 </Link>
                 <Link 
-                  to="/prestatie-programma"
+                  to="/prestatie-training"
                   className="px-8 py-4 bg-brand-purple text-white text-lg font-semibold rounded-lg hover:bg-brand-purple/90 transition-colors shadow-md text-center"
                 >
                   Met meer focus beter presteren

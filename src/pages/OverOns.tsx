@@ -64,14 +64,14 @@ const OverOns = () => {
       quote:
         "Wineke heeft een praktische, nuchtere aanpak met concrete handvatten. Ik kan nu afstand nemen, stresssignalen sneller herkennen, efficiënter werken en ben meer tevreden over mijn resultaten.",
       logos: [
-        { src: winekeOliverLogo, alt: "Vitaliteitsprogramma Oliver Wyman" },
-        { src: winekeSygnificLogo, alt: "Vitaliteitsprogramma Sygnific" },
-        { src: winekeCordaanLogo, alt: "Vitaliteitsprogramma Cordaan" },
-        { src: winekeGemeenteLogo, alt: "Vitaliteitsprogramma Gemeente Den Haag" },
-        { src: winekeSpiritLogo, alt: "Vitaliteitsprogramma Spirit" },
-        { src: winekeVULogo, alt: "Vitaliteitsprogramma VU Amsterdam" },
-        { src: winekeLeaseLogo, alt: "Vitaliteitsprogramma Leaseplan" },
-        { src: winekeTele2Logo, alt: "Vitaliteitsprogramma Tele2" },
+        { src: winekeOliverLogo, alt: "Vitaliteitstraining Oliver Wyman" },
+        { src: winekeSygnificLogo, alt: "Vitaliteitstraining Sygnific" },
+        { src: winekeCordaanLogo, alt: "Vitaliteitstraining Cordaan" },
+        { src: winekeGemeenteLogo, alt: "Vitaliteitstraining Gemeente Den Haag" },
+        { src: winekeSpiritLogo, alt: "Vitaliteitstraining Spirit" },
+        { src: winekeVULogo, alt: "Vitaliteitstraining VU Amsterdam" },
+        { src: winekeLeaseLogo, alt: "Vitaliteitstraining Leaseplan" },
+        { src: winekeTele2Logo, alt: "Vitaliteitstraining Tele2" },
       ],
     },
     {
@@ -82,13 +82,13 @@ const OverOns = () => {
       quote:
         "betrokken, open en vriendelijk, met duidelijke uitleg. Doordat hij zijn eigen ervaringen deelt, voelt de training toegankelijk en mag ik 'fouten maken'.",
       logos: [
-        { src: daveParnassiaLogo, alt: "Vitaliteitsprogramma Parnassia Groep" },
-        { src: daveLentizLogo, alt: "Vitaliteitsprogramma Lentiz" },
-        { src: davePrimoLogo, alt: "Vitaliteitsprogramma Primo" },
-        { src: daveMinisterieLogo, alt: "Vitaliteitsprogramma Ministerie van Justitie en Veiligheid" },
-        { src: daveYouTalentLogo, alt: "Vitaliteitsprogramma You Talent" },
-        { src: daveRijksLogo, alt: "Vitaliteitsprogramma Rijkswaterstaat" },
-        { src: davePolitieLogo, alt: "Vitaliteitsprogramma Politie" },
+        { src: daveParnassiaLogo, alt: "Vitaliteitstraining Parnassia Groep" },
+        { src: daveLentizLogo, alt: "Vitaliteitstraining Lentiz" },
+        { src: davePrimoLogo, alt: "Vitaliteitstraining Primo" },
+        { src: daveMinisterieLogo, alt: "Vitaliteitstraining Ministerie van Justitie en Veiligheid" },
+        { src: daveYouTalentLogo, alt: "Vitaliteitstraining You Talent" },
+        { src: daveRijksLogo, alt: "Vitaliteitstraining Rijkswaterstaat" },
+        { src: davePolitieLogo, alt: "Vitaliteitstraining Politie" },
       ],
     },
     {
@@ -100,8 +100,8 @@ const OverOns = () => {
         "Anne begrijpt mij echt. Haar kennis weet ze op een leuke en makkelijke manier uit te leggen. Ik voel mij productiver en gelukkiger dan ooit!",
 
       logos: [
-        { src: dhlLogo, alt: "Vitaliteitsprogramma DHL" },
-        { src: affiniusLogo, alt: "Vitaliteitsprogramma Affinius Capital" },
+        { src: dhlLogo, alt: "Vitaliteitstraining DHL" },
+        { src: affiniusLogo, alt: "Vitaliteitstraining Affinius Capital" },
       ],
     },
     {
@@ -112,13 +112,13 @@ const OverOns = () => {
       quote:
         "Jacqueline weet precies hoe ze theorie en ervaring laat samenkomen. Haar begeleiding is persoonlijk, doordacht en professioneel.",
       logos: [
-        { src: jacquelineGGZLogo, alt: "Vitaliteitsprogramma GGZ Centraal" },
-        { src: jacquelineHumanitasLogo, alt: "Vitaliteitsprogramma Humanitas" },
-        { src: jacquelinePlevierLogo, alt: "Vitaliteitsprogramma Plevier Speciaal Onderwijs" },
-        { src: jacquelineCarelLogo, alt: "Vitaliteitsprogramma Carel Lurvink Industry" },
-        { src: jacquelinePALogo, alt: "Vitaliteitsprogramma PA Consulting" },
-        { src: jacquelineNobelLogo, alt: "Vitaliteitsprogramma Nobel Recruitment" },
-        { src: jacquelineHollandLogo, alt: "Vitaliteitsprogramma Holland Colours" },
+        { src: jacquelineGGZLogo, alt: "Vitaliteitstraining GGZ Centraal" },
+        { src: jacquelineHumanitasLogo, alt: "Vitaliteitstraining Humanitas" },
+        { src: jacquelinePlevierLogo, alt: "Vitaliteitstraining Plevier Speciaal Onderwijs" },
+        { src: jacquelineCarelLogo, alt: "Vitaliteitstraining Carel Lurvink Industry" },
+        { src: jacquelinePALogo, alt: "Vitaliteitstraining PA Consulting" },
+        { src: jacquelineNobelLogo, alt: "Vitaliteitstraining Nobel Recruitment" },
+        { src: jacquelineHollandLogo, alt: "Vitaliteitstraining Holland Colours" },
       ],
     },
   ];

@@ -672,24 +672,24 @@ const DeMethode = () => {
         </div>
       </section>
 
-      {/* CTA Sectie met 3 Programma Buttons */}
+      {/* CTA Sectie met 3 Training Buttons */}
       <section className="section-padding bg-white">
         <div className="container-custom text-center space-y-8">
           <p className="text-xl md:text-2xl text-brand-gray-medium max-w-3xl mx-auto">
-            Klaar om de methode ook echt toe te passen? Bekijk hier onze programma's.
+            Klaar om de methode ook echt toe te passen? Bekijk hier onze trainingen.
           </p>
           <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
             <Link
-              to="/vitaliteitsprogramma"
+              to="/vitaliteitstraining"
               className="bg-brand-blue border-2 border-brand-blue p-6 rounded-lg hover:bg-brand-blue/90 transition-all duration-300 group"
             >
               <h3 className="text-xl font-bold text-white mb-3 group-hover:text-brand-orange transition-colors">
-                Vitaliteitsprogramma
+                Vitaliteitstraining
               </h3>
               <p className="text-base text-white/90">Voor organisaties en werkgevers</p>
             </Link>
             <Link
-              to="/stressmanagement-programma"
+              to="/stressmanagement-training"
               className="bg-brand-blue border-2 border-brand-blue p-6 rounded-lg hover:bg-brand-blue/90 transition-all duration-300 group"
             >
               <h3 className="text-xl font-bold text-white mb-3 group-hover:text-brand-orange transition-colors">
@@ -698,11 +698,11 @@ const DeMethode = () => {
               <p className="text-base text-white/90">Minder spanning & druk voor werknemers</p>
             </Link>
             <Link
-              to="/prestatie-programma"
+              to="/prestatie-training"
               className="bg-brand-blue border-2 border-brand-blue p-6 rounded-lg hover:bg-brand-blue/90 transition-all duration-300 group"
             >
               <h3 className="text-xl font-bold text-white mb-3 group-hover:text-brand-orange transition-colors">
-                Prestatieprogramma
+                Prestatietraining
               </h3>
               <p className="text-base text-white/90">Als werknemer beter presteren met meer focus</p>
             </Link>

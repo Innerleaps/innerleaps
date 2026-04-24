@@ -8,7 +8,7 @@ const PrivacyNotice = memo(() => {
     <>
       <Helmet>
         <title>Privacy Notice | Innerleaps</title>
-        <meta name="description" content="Privacy notice van Innerleaps. Lees hoe wij omgaan met persoonsgegevens van deelnemers aan onze trainingsprogramma's." />
+        <meta name="description" content="Privacy notice van Innerleaps. Lees hoe wij omgaan met persoonsgegevens van deelnemers aan onze trainingen." />
         <meta name="robots" content="noindex, follow" />
       </Helmet>
       <SimplifiedNavigation />

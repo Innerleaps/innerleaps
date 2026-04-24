@@ -77,23 +77,23 @@ const Footer = memo(({ showNavigation = true }: FooterProps) => {
             </a>
           </div>
 
-          {/* Column 2 — Programma's */}
+          {/* Column 2 — Trainingen */}
           <div>
-            <h3 className="text-white font-semibold text-lg mb-4">Programma's</h3>
-            <nav aria-label="Programma's">
+            <h3 className="text-white font-semibold text-lg mb-4">Trainingen</h3>
+            <nav aria-label="Trainingen">
               <ul className="space-y-2">
                 <li>
-                  <Link to="/vitaliteitsprogramma" className="block text-gray-300 hover:text-white transition-colors">
-                    Vitaliteitsprogramma
+                  <Link to="/vitaliteitstraining" className="block text-gray-300 hover:text-white transition-colors">
+                    Vitaliteitstraining
                   </Link>
                 </li>
                 <li>
-                  <Link to="/stressmanagement-programma" className="block text-gray-300 hover:text-white transition-colors">
-                    Stressmanagement programma
+                  <Link to="/stressmanagement-training" className="block text-gray-300 hover:text-white transition-colors">
+                    Stressmanagement training
                   </Link>
                 </li>
                 <li>
-                  <Link to="/prestatie-programma" className="block text-gray-300 hover:text-white transition-colors">
+                  <Link to="/prestatie-training" className="block text-gray-300 hover:text-white transition-colors">
                     Prestatie en concentratie verbeteren
                   </Link>
                 </li>

@@ -124,7 +124,7 @@ const StressManagement = () => {
         <div className="absolute inset-0 z-0">
           <img
             src={heroBackground}
-            alt="Stressmanagement programma presentatie"
+            alt="Stressmanagement training presentatie"
             className="w-full h-full object-cover"
             fetchPriority="high"
             loading="eager"
@@ -138,7 +138,7 @@ const StressManagement = () => {
               <div className="w-full space-y-4 sm:space-y-6">
                 <div className="inline-flex items-center gap-2 bg-white/50 text-brand-purple px-3 py-1.5 sm:px-4 sm:py-2 rounded-full text-sm sm:text-base md:text-lg font-medium backdrop-blur-sm">
                   <Award className="h-4 w-4" />
-                  Wetenschappelijk bewezen programma
+                  Wetenschappelijk bewezen training
                 </div>
 
                 <h1
@@ -152,7 +152,7 @@ const StressManagement = () => {
                   className="text-xl md:text-2xl text-blue-100 leading-relaxed break-words"
                   style={{ textShadow: "0 2px 8px rgba(0,0,0,0.5)" }}
                 >
-                  Wetenschappelijk bewezen stressmanagement programma voor een rust in je hoofd en meer levensplezier
+                  Wetenschappelijk bewezen stressmanagement training voor een rust in je hoofd en meer levensplezier
                 </p>
               </div>
 
@@ -162,7 +162,7 @@ const StressManagement = () => {
                   className="w-full sm:w-auto bg-brand-orange hover:bg-brand-orange/90 text-white font-semibold py-3 px-4 sm:py-4 sm:px-6 rounded-lg text-sm sm:text-base lg:text-lg shadow-xl"
                   onClick={() => setIsRegistrationModalOpen(true)}
                 >
-                  Aanmelden programma
+                  Aanmelden training
                 </Button>
               </div>
             </div>
@@ -471,17 +471,17 @@ const StressManagement = () => {
               onClick={() => setIsRegistrationModalOpen(true)}
               className="bg-brand-orange hover:bg-brand-orange/90 text-white py-3 px-8 rounded-lg text-lg font-semibold"
             >
-              Aanmelden Programma
+              Aanmelden Training
             </Button>
           </div>
         </div>
       </section>
 
-      {/* Programma Features Sectie */}
+      {/* Training Features Sectie */}
       <section className="py-16 md:py-24 bg-brand-off-white">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-purple text-center leading-tight mb-6">
-            Het 6-weekse <span className="text-brand-orange">stressmanagement</span> programma.
+            De 6-weekse <span className="text-brand-orange">stressmanagement</span> training.
           </h2>
           <p className="text-xl md:text-2xl text-brand-gray-medium text-center leading-relaxed mb-12">
             Wetenschappelijk bewezen. Praktisch toepasbaar. Meetbare resultaten.
@@ -516,7 +516,7 @@ const StressManagement = () => {
               </div>
               <h3 className="text-xl md:text-2xl font-bold text-brand-gray-dark text-center">Online workshops</h3>
               <p className="text-base md:text-lg text-brand-gray-medium text-center leading-relaxed">
-                Onderzoek toont aan dat het online programma even effectief is. Om het je extra makkelijk te maken zijn
+                Onderzoek toont aan dat het online training even effectief is. Om het je extra makkelijk te maken zijn
                 daardoor alle workshops online.
               </p>
             </div>
@@ -527,7 +527,7 @@ const StressManagement = () => {
               </div>
               <h3 className="text-xl md:text-2xl font-bold text-brand-gray-dark text-center">Lifetime toegang</h3>
               <p className="text-base md:text-lg text-brand-gray-medium text-center leading-relaxed">
-                Ook na het programma toegang tot alle materialen en de community.
+                Ook na de training toegang tot alle materialen en de community.
               </p>
             </div>
           </div>
@@ -538,7 +538,7 @@ const StressManagement = () => {
               onClick={() => setIsRegistrationModalOpen(true)}
               className="bg-brand-orange hover:bg-brand-orange/90 text-white py-3 px-8 rounded-lg text-lg font-semibold"
             >
-              Aanmelden Programma
+              Aanmelden Training
             </Button>
           </div>
         </div>
@@ -548,7 +548,7 @@ const StressManagement = () => {
       <section className="py-16 md:py-24 bg-white">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-purple text-center leading-tight mb-12">
-            Ons <span className="text-brand-orange">6-weekse</span> Vitaliteitsplusprogramma
+            Ons <span className="text-brand-orange">6-weekse</span> Vitaliteitsplus-programma
           </h2>
 
           <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center mb-16">
@@ -700,7 +700,7 @@ const StressManagement = () => {
               onClick={() => setIsRegistrationModalOpen(true)}
               className="bg-brand-orange hover:bg-brand-orange/90 text-white py-3 px-8 rounded-lg text-lg font-semibold"
             >
-              Aanmelden Programma
+              Aanmelden Training
             </Button>
           </div>
         </div>
@@ -714,7 +714,7 @@ const StressManagement = () => {
             <span className="text-brand-orange">vergoeden</span>
           </h2>
           <p className="text-xl md:text-2xl text-brand-gray-medium text-center leading-relaxed mb-12 max-w-4xl mx-auto">
-            Veel werkgevers vergoeden dit programma vanuit het persoonlijk ontwikkelingsbudget. Wij leveren een brochure
+            Veel werkgevers vergoeden deze training vanuit het persoonlijk ontwikkelingsbudget. Wij leveren een brochure
             om het gesprek met je werkgever makkelijk te maken.
           </p>
 
@@ -738,7 +738,7 @@ const StressManagement = () => {
               onClick={() => setIsRegistrationModalOpen(true)}
               className="bg-brand-orange hover:bg-brand-orange/90 text-white py-3 px-8 rounded-lg text-lg font-semibold"
             >
-              Aanmelden Programma
+              Aanmelden Training
             </Button>
           </div>
         </div>
@@ -862,7 +862,7 @@ const StressManagement = () => {
             <Accordion type="single" collapsible className="space-y-4">
               <AccordionItem value="item-1" className="bg-brand-off-white rounded-lg px-6">
                 <AccordionTrigger className="text-left text-lg md:text-xl font-semibold text-brand-gray-dark hover:text-brand-orange">
-                  Waarom zijn de masterclass en het programma online?
+                  Waarom zijn de masterclass en de training online?
                 </AccordionTrigger>
                 <AccordionContent className="text-base md:text-lg text-brand-gray-medium leading-relaxed">
                   Wetenschappelijk is bewezen dat online even effectief is als fysiek. Omdat het even effectief is,
@@ -873,7 +873,7 @@ const StressManagement = () => {
 
               <AccordionItem value="item-2" className="bg-brand-off-white rounded-lg px-6">
                 <AccordionTrigger className="text-left text-lg md:text-xl font-semibold text-brand-gray-dark hover:text-brand-orange">
-                  Waarom wil mijn werkgever het programma vergoeden?
+                  Waarom wil mijn werkgever de training vergoeden?
                 </AccordionTrigger>
                 <AccordionContent className="text-base md:text-lg text-brand-gray-medium leading-relaxed">
                   Stress kost werkgevers enorm veel geld. Zowel in verzuim als in verminderde prestatie. Werkgevers

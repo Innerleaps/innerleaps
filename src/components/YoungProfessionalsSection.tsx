@@ -14,7 +14,7 @@ En jij ziet het.</h2>
           </div>
 
           <div className="pt-4">
-            <Link to="/programma">
+            <Link to="/training">
               <Button size="lg" className="bg-brand-blue hover:bg-brand-blue text-white hover:text-white font-semibold py-4 px-8 rounded-lg text-xl shadow-xl">
                 Persoonlijk Leiderschap voor Young Professionals
               </Button>

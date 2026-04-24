@@ -57,7 +57,7 @@ import hollandColoursLogo from "@/assets/Vitaliteitsprogramma_Holland_Colours_li
 
 // Lazy load calculator modal
 const CalculatorModal = lazy(() => import("@/components/CalculatorModal"));
-const Vitaliteitsprogramma = () => {
+const Vitaliteitstraining = () => {
   const [isCalculatorOpen, setIsCalculatorOpen] = useState(false);
   const [searchParams] = useSearchParams();
   const location = useLocation();
@@ -198,7 +198,7 @@ const Vitaliteitsprogramma = () => {
       <Helmet>
         <meta
           name="description"
-          content="Innerleaps biedt organisaties een 6-weeks vitaliteitsprogramma met 42% deelname, versus 3-8% bij standaard EAP's. Preventief, wetenschappelijk onderbouwd, betaal alleen voor deelnemers."
+          content="Innerleaps biedt organisaties een 6-weeks vitaliteitstraining met 42% deelname, versus 3-8% bij standaard EAP's. Preventief, wetenschappelijk onderbouwd, betaal alleen voor deelnemers."
         />
       </Helmet>
       <SimplifiedNavigation />
@@ -209,7 +209,7 @@ const Vitaliteitsprogramma = () => {
         <div className="absolute inset-0 z-0">
           <img
             src={heroBackground}
-            alt="Vitaliteitsprogramma presentatie"
+            alt="Vitaliteitstraining presentatie"
             className="w-full h-full object-cover"
             fetchPriority="high"
             loading="eager"
@@ -223,7 +223,7 @@ const Vitaliteitsprogramma = () => {
               <div className="w-full space-y-4 sm:space-y-6">
                 <div className="inline-flex items-center gap-2 bg-white/50 text-brand-purple px-3 py-1.5 sm:px-4 sm:py-2 rounded-full text-sm sm:text-base md:text-lg font-medium backdrop-blur-sm">
                   <Award className="h-4 w-4" />
-                  Wetenschappelijk bewezen programma
+                  Wetenschappelijk bewezen training
                 </div>
 
                 <h1
@@ -241,7 +241,7 @@ const Vitaliteitsprogramma = () => {
                     textShadow: "0 2px 8px rgba(0,0,0,0.5)",
                   }}
                 >
-                  Wetenschappelijk bewezen vitaliteits­programma. Deelnemers ontwikkelen eigenaarschap over hun eigen
+                  Wetenschappelijk bewezen vitaliteits­training. Deelnemers ontwikkelen eigenaarschap over hun eigen
                   stress, kunnen emoties beter reguleren én verhogen hun veerkracht.
                 </p>
               </div>
@@ -448,10 +448,10 @@ const Vitaliteitsprogramma = () => {
       <section className="py-16 md:py-24 bg-white">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-purple text-center leading-tight mb-6">
-            Het <span className="text-brand-orange">resultaat </span> van ons programma
+            Het <span className="text-brand-orange">resultaat </span> van onze training
           </h2>
           <p className="text-xl md:text-2xl text-brand-gray-medium text-center leading-relaxed mb-12">
-            De wetenschappelijk bewezen effecten van ons programma.
+            De wetenschappelijk bewezen effecten van onze training.
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-6 gap-8 max-w-6xl mx-auto">
@@ -547,14 +547,14 @@ const Vitaliteitsprogramma = () => {
         </div>
       </section>
 
-      {/* Programma Features Sectie */}
+      {/* Training Features Sectie */}
       <ProgramOverviewSection />
 
       {/* 6 Weken Thema's Sectie */}
       <section className="py-16 md:py-24 bg-white">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-purple text-center leading-tight mb-12">
-            Ons <span className="text-brand-orange">6-weekse</span> Vitaliteitsplusprogramma
+            Ons <span className="text-brand-orange">6-weekse</span> Vitaliteitsplus-programma
           </h2>
 
           <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center mb-16">
@@ -778,14 +778,14 @@ const Vitaliteitsprogramma = () => {
             <Accordion type="single" collapsible className="space-y-4">
               <AccordionItem value="item-1" className="bg-white rounded-lg px-6">
                 <AccordionTrigger className="text-left text-lg md:text-xl font-semibold text-brand-gray-dark hover:text-brand-orange">
-                  Is het programma online?
+                  Is de training online?
                 </AccordionTrigger>
                 <AccordionContent className="text-base md:text-lg text-brand-gray-medium leading-relaxed">
-                  Het programma hoeft niet per se online te zijn, maar een online vorm maakt deelname voor medewerkers
+                  De training hoeft niet per se online te zijn, maar een online vorm maakt deelname voor medewerkers
                   makkelijker. Onderzoek laat zien dat online sessies net zo effectief zijn als fysieke bijeenkomsten.
                   Het trainen van aandacht gebeurt vooral door dagelijkse oefening, terwijl de workshops dit proces
                   ondersteunen. Om zoveel mogelijk medewerkers de kans te geven om mee te doen, geven we daarom de
-                  voorkeur aan een online programma.
+                  voorkeur aan een online training.
                 </AccordionContent>
               </AccordionItem>
 
@@ -838,10 +838,10 @@ const Vitaliteitsprogramma = () => {
 
               <AccordionItem value="item-6" className="bg-white rounded-lg px-6">
                 <AccordionTrigger className="text-left text-lg md:text-xl font-semibold text-brand-gray-dark hover:text-brand-orange">
-                  Hoe krijg ik dit programma intern verkocht?
+                  Hoe krijg ik deze training intern verkocht?
                 </AccordionTrigger>
                 <AccordionContent className="text-base md:text-lg text-brand-gray-medium leading-relaxed">
-                  Het programma draagt bij aan een daling van verzuim en burn-outgevallen, én maakt deelnemers
+                  De training draagt bij aan een daling van verzuim en burn-outgevallen, én maakt deelnemers
                   effectiever in hun werk. Hierdoor is de business case positief. Onze ervaring leert dat het
                   managementteam vaak vooral geïnteresseerd is in het effect op productiviteit. Belangrijk is dat er
                   binnen het managementteam een open houding is ten aanzien van de ontwikkeling van soft skills. Om
@@ -868,4 +868,4 @@ const Vitaliteitsprogramma = () => {
     </div>
   );
 };
-export default Vitaliteitsprogramma;
+export default Vitaliteitstraining;

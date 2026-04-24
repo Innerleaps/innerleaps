@@ -322,7 +322,7 @@ const CalculatorModal = ({ isOpen, onClose }: CalculatorModalProps) => {
             </div>
             
             <DialogTitle className="text-3xl font-bold mb-6 text-brand-gray-dark">
-              Bereken wat ons programma oplevert
+              Bereken wat onze training oplevert
             </DialogTitle>
             
             <p className="text-xl leading-relaxed mb-8 text-brand-gray-medium">

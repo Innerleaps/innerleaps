@@ -121,7 +121,7 @@ const handler = async (req: Request): Promise<Response> => {
     }
 
     if (duplicates && duplicates.length > 0) {
-      throw new Error("Je bent al aangemeld voor dit programma in de afgelopen 24 uur");
+      throw new Error("Je bent al aangemeld voor deze training in de afgelopen 24 uur");
     }
 
     // Data opslaan in database
@@ -158,7 +158,7 @@ const handler = async (req: Request): Promise<Response> => {
     const safeSelectedTimeslot = escapeHtml(data.selectedTimeslot);
 
     // Email naar deelnemer
-    const programName = data.programType === "prestatie" ? "Prestatie Programma" : "Stress-Management Programma";
+    const programName = data.programType === "prestatie" ? "Prestatie Training" : "Stress-Management Training";
     const registrationTypeText = data.registrationType === "particulier" ? "Particulier" : "Via Werkgever";
 
     const participantEmailHtml = `
@@ -185,7 +185,7 @@ const handler = async (req: Request): Promise<Response> => {
   
   <p>De factuur wordt binnenkort verstuurd. Het verzoek is om binnen 14 dagen de factuur te betalen.</p>
   
-  <p>Het programma vindt plaats gedurende 6 opeenvolgende weken. Op nationale feestdagen zal de cursus niet plaatsvinden. Mocht je onverhoopt een sessie missen dan zal je de opname ontvangen.</p>
+  <p>De training vindt plaats gedurende 6 opeenvolgende weken. Op nationale feestdagen zal de cursus niet plaatsvinden. Mocht je onverhoopt een sessie missen dan zal je de opname ontvangen.</p>
   
   <p>Heb je vragen? Neem gerust contact op via <a href="mailto:bas@innerleaps.nl">bas@innerleaps.nl</a></p>
   
@@ -213,7 +213,7 @@ const handler = async (req: Request): Promise<Response> => {
 <!DOCTYPE html>
 <html>
 <body style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;">
-  <h1 style="color: #1e293b;">Nieuwe Programma Aanmelding</h1>
+  <h1 style="color: #1e293b;">Nieuwe Training Aanmelding</h1>
   
   <div style="background-color: #f8f9fa; padding: 15px; border-radius: 8px; margin: 20px 0;">
     <h3 style="margin-top: 0;">Deelnemer Informatie:</h3>
@@ -222,7 +222,7 @@ const handler = async (req: Request): Promise<Response> => {
     <p><strong>Telefoon:</strong> ${safePhone}</p>
     <p><strong>Geboortedatum:</strong> ${birthDate.toLocaleDateString("nl-NL")}</p>
     <p><strong>Adres:</strong> ${safeAddress}</p>
-    <p><strong>Programma:</strong> ${programName}</p>
+    <p><strong>Training:</strong> ${programName}</p>
     <p><strong>Startdatum:</strong> ${safeSelectedTimeslot}</p>
     <p><strong>Type aanmelding:</strong> ${registrationTypeText}</p>
     ${data.registrationType === "zakelijk" ? `

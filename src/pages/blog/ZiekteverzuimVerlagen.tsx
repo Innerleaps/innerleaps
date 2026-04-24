@@ -60,7 +60,7 @@ const ZiekteverzuimVerlagen = () => {
             },
             "datePublished": "2025-11-28",
             "dateModified": "2025-11-28",
-            "keywords": "ziekteverzuim verlagen, aandachtstraining, stressmanagement, werknemers, ROI, verzuimkosten, preventie, mindfulness, vitaliteitsprogramma",
+            "keywords": "ziekteverzuim verlagen, aandachtstraining, stressmanagement, werknemers, ROI, verzuimkosten, preventie, mindfulness, vitaliteitstraining",
             "articleSection": "Organisatievitaliteit",
             "inLanguage": "nl-NL"
           })}
@@ -153,7 +153,7 @@ const ZiekteverzuimVerlagen = () => {
               <h2 className="text-2xl md:text-3xl font-bold text-brand-purple mt-12 mb-6">Concrete Impact: Van Theorie naar Resultaat</h2>
               
               <p>
-                De Unilever-studie uit 2018, uitgevoerd door De Bruin en collega's aan de Universiteit van Amsterdam, toonde indrukwekkende resultaten. Medewerkers met verhoogd uitvalrisico (54,4% kans op langdurig ziekteverzuim) daalde naar 16,4% na een <Link to="/vitaliteitsprogramma" className="text-brand-blue hover:text-brand-orange font-medium transition-colors">6-weeks aandachtstrainingsprogramma</Link>. Dit is een risicoreductie van 70%, blijvend na 6 maanden.
+                De Unilever-studie uit 2018, uitgevoerd door De Bruin en collega's aan de Universiteit van Amsterdam, toonde indrukwekkende resultaten. Medewerkers met verhoogd uitvalrisico (54,4% kans op langdurig ziekteverzuim) daalde naar 16,4% na een <Link to="/vitaliteitstraining" className="text-brand-blue hover:text-brand-orange font-medium transition-colors">6-weekse aandachtstraining</Link>. Dit is een risicoreductie van 70%, blijvend na 6 maanden.
               </p>
 
               <p className="mt-8">
@@ -161,7 +161,7 @@ const ZiekteverzuimVerlagen = () => {
               </p>
 
               <p className="mt-8">
-                Vertaling naar een Nederlandse organisatie met 100 medewerkers en €3.970.000 totale loonkosten: een investering van €57.500 in een wetenschappelijk bewezen aandachtstrainingsprogramma levert een besparing van €57.287 tot €80.202 op ziekteverzuim alleen. Tel daar productiviteitswinst (5-8%) en retentieverbetering (5-8% lager verloop) bij op, en de totale besparing loopt op tot €285.562 conservatief, €445.442 in een positief scenario. Dit vertaalt zich naar een ROI van 497-775% binnen het eerste jaar.
+                Vertaling naar een Nederlandse organisatie met 100 medewerkers en €3.970.000 totale loonkosten: een investering van €57.500 in een wetenschappelijk bewezen aandachtstraining levert een besparing van €57.287 tot €80.202 op ziekteverzuim alleen. Tel daar productiviteitswinst (5-8%) en retentieverbetering (5-8% lager verloop) bij op, en de totale besparing loopt op tot €285.562 conservatief, €445.442 in een positief scenario. Dit vertaalt zich naar een ROI van 497-775% binnen het eerste jaar.
               </p>
 
               <h2 className="text-2xl md:text-3xl font-bold text-brand-purple mt-12 mb-6">Het Mechanisme Achter Verzuimreductie</h2>
@@ -182,7 +182,7 @@ const ZiekteverzuimVerlagen = () => {
 
               <h3 className="text-xl md:text-2xl font-bold text-brand-purple mt-8 mb-4">3. Cognitieve veerkracht</h3>
               <p>
-                Een versterkt controlecentrum betekent beter werkgeheugen, sneller schakelen tussen taken en minder fouten onder druk. Mrazek's onderzoek (2013) toonde aan dat na 4 weken training het werkgeheugen stabiliseert, terwijl het normaal met leeftijd afneemt. Studenten scoorden 16% hoger op GRE-testen na het programma.
+                Een versterkt controlecentrum betekent beter werkgeheugen, sneller schakelen tussen taken en minder fouten onder druk. Mrazek's onderzoek (2013) toonde aan dat na 4 weken training het werkgeheugen stabiliseert, terwijl het normaal met leeftijd afneemt. Studenten scoorden 16% hoger op GRE-testen na de training.
               </p>
 
               <h3 className="text-xl md:text-2xl font-bold text-brand-purple mt-8 mb-4">4. Gedragsverandering via eigenaarschap</h3>
@@ -197,13 +197,13 @@ const ZiekteverzuimVerlagen = () => {
               </p>
 
               <p className="mt-8">
-                Google, Apple, Microsoft, Facebook, Nestlé en Unilever implementeerden vergelijkbare programma's om dezelfde reden. Het gaat niet om welzijn als leuk extraatje. Het gaat om operationele effectiviteit, lagere kosten en competitief voordeel door een scherpere, veerkrachtigere workforce.
+                Google, Apple, Microsoft, Facebook, Nestlé en Unilever implementeerden vergelijkbare trainingen om dezelfde reden. Het gaat niet om welzijn als leuk extraatje. Het gaat om operationele effectiviteit, lagere kosten en competitief voordeel door een scherpere, veerkrachtigere workforce.
               </p>
 
               <h2 className="text-2xl md:text-3xl font-bold text-brand-purple mt-12 mb-6">De Kritieke Succesfactoren</h2>
               
               <p>
-                Niet elk aandachtstrainingsprogramma levert deze resultaten. Analyse van effectieve programma's toont vijf essentiële elementen:
+                Niet elk aandachtstraining levert deze resultaten. Analyse van effectieve trainingen toont vijf essentiële elementen:
               </p>
 
               <h3 className="text-xl md:text-2xl font-bold text-brand-purple mt-8 mb-4">Dagelijkse praktijk van minimaal 12 minuten</h3>
@@ -223,7 +223,7 @@ const ZiekteverzuimVerlagen = () => {
 
               <h3 className="text-xl md:text-2xl font-bold text-brand-purple mt-8 mb-4">Minimale tijdsinvestering voor deelnemers</h3>
               <p>
-                Succesvolle programma's vragen 15 minuten eigen tijd per dag, terwijl wekelijkse workshops tijdens werktijd plaatsvinden. Dit verlaagt de drempel voor deelname drastisch vergeleken met interventies die avonden of weekenden opeisen.
+                Succesvolle trainingen vragen 15 minuten eigen tijd per dag, terwijl wekelijkse workshops tijdens werktijd plaatsvinden. Dit verlaagt de drempel voor deelname drastisch vergeleken met interventies die avonden of weekenden opeisen.
               </p>
 
               <h3 className="text-xl md:text-2xl font-bold text-brand-purple mt-8 mb-4">Wetenschappelijke geloofwaardigheid</h3>
@@ -239,7 +239,7 @@ const ZiekteverzuimVerlagen = () => {
 
               <h3 className="text-xl md:text-2xl font-bold text-brand-purple mt-8 mb-4">Fase 1: Pilot met risicogroep (8-12 weken)</h3>
               <p>
-                Start met medewerkers die verhoogd stressrisico tonen in verzuimcijfers, exit interviews of medewerkerstevredenheidsonderzoeken. Meet baseline stress, verzuim en zelfgerapporteerde productiviteit. Run het 6-weeks programma en meet opnieuw na 3 en 6 maanden.
+                Start met medewerkers die verhoogd stressrisico tonen in verzuimcijfers, exit interviews of medewerkerstevredenheidsonderzoeken. Meet baseline stress, verzuim en zelfgerapporteerde productiviteit. Run het 6-weeks training en meet opnieuw na 3 en 6 maanden.
               </p>
 
               <h3 className="text-xl md:text-2xl font-bold text-brand-purple mt-8 mb-4">Fase 2: Analyse en aanpassing (4 weken)</h3>
@@ -249,7 +249,7 @@ const ZiekteverzuimVerlagen = () => {
 
               <h3 className="text-xl md:text-2xl font-bold text-brand-purple mt-8 mb-4">Fase 3: Uitrol naar vrijwilligers (6 maanden)</h3>
               <p>
-                Open het programma voor alle medewerkers op vrijwillige basis. Gebruik pilotdeelnemers als ambassadeurs die authentiek hun ervaring delen. Dit vergroot geloofwaardigheid enorm.
+                Open de training voor alle medewerkers op vrijwillige basis. Gebruik pilotdeelnemers als ambassadeurs die authentiek hun ervaring delen. Dit vergroot geloofwaardigheid enorm.
               </p>
 
               <h3 className="text-xl md:text-2xl font-bold text-brand-purple mt-8 mb-4">Fase 4: Strategische integratie (1 jaar)</h3>
@@ -288,9 +288,9 @@ const ZiekteverzuimVerlagen = () => {
 
               <h2 className="text-2xl md:text-3xl font-bold text-brand-purple mt-12 mb-6">Veelvoorkomende Bezwaren Weerlegd</h2>
               
-              <h3 className="text-xl md:text-2xl font-bold text-brand-purple mt-8 mb-4">"Onze mensen hebben geen tijd voor nog een programma"</h3>
+              <h3 className="text-xl md:text-2xl font-bold text-brand-purple mt-8 mb-4">"Onze mensen hebben geen tijd voor nog een training"</h3>
               <p>
-                Het programma kost 15 minuten per dag eigen tijd, waarvan het grootste deel geïntegreerd wordt in bestaande activiteiten. Wekelijkse workshops vinden tijdens werktijd plaats. De tijdsinvestering weegt niet op tegen 4-7 verzuimdagen per FTE per jaar. Bovendien rapporteren deelnemers 10% productiviteitswinst, wat de tijdsinvestering ruimschoots terugverdient.
+                De training kost 15 minuten per dag eigen tijd, waarvan het grootste deel geïntegreerd wordt in bestaande activiteiten. Wekelijkse workshops vinden tijdens werktijd plaats. De tijdsinvestering weegt niet op tegen 4-7 verzuimdagen per FTE per jaar. Bovendien rapporteren deelnemers 10% productiviteitswinst, wat de tijdsinvestering ruimschoots terugverdient.
               </p>
 
               <h3 className="text-xl md:text-2xl font-bold text-brand-purple mt-8 mb-4">"We hebben al een EAP en bedrijfsfitness"</h3>
@@ -303,7 +303,7 @@ const ZiekteverzuimVerlagen = () => {
                 De data zijn glashelder. Meta-analyses van duizenden deelnemers tonen consistente effecten met effect sizes tussen d=0.49-1.06 voor veerkracht, d=-0.53 tot -0.84 voor stress, en d=-0.37 tot -1.43 voor burnout. Deze cijfers zijn vergelijkbaar met medicamenteuze interventies bij klinische aandoeningen. Het Amerikaanse leger implementeert dit niet op basis van soft skills, maar op operationele noodzaak.
               </p>
 
-              <h3 className="text-xl md:text-2xl font-bold text-brand-purple mt-8 mb-4">"Wat als mensen stoppen na het programma?"</h3>
+              <h3 className="text-xl md:text-2xl font-bold text-brand-purple mt-8 mb-4">"Wat als mensen stoppen na de training?"</h3>
               <p>
                 Onderzoek toont dat 89,8% van deelnemers aangeeft door te willen gaan met de praktijk na afloop (De Bruin, 2018). Effecten blijven behouden tot minimaal 12 maanden, ook bij deelnemers die minder frequent oefenen. De vaardigheden worden geautomatiseerd zoals fietsen: eenmaal geleerd, niet meer volledig verleerd.
               </p>
@@ -315,7 +315,7 @@ const ZiekteverzuimVerlagen = () => {
               </p>
 
               <p className="mt-8">
-                Voor organisaties betekent dit dat de drempel voor individuele deelnemers laag is. Medewerkers die intensievere begeleiding nodig hebben, kunnen doorstromen naar vergoed MBSR via hun huisarts, terwijl de werkgever een preventief programma aanbiedt voor de bredere populatie.
+                Voor organisaties betekent dit dat de drempel voor individuele deelnemers laag is. Medewerkers die intensievere begeleiding nodig hebben, kunnen doorstromen naar vergoed MBSR via hun huisarts, terwijl de werkgever een preventief training aanbiedt voor de bredere populatie.
               </p>
 
               <h2 className="text-2xl md:text-3xl font-bold text-brand-purple mt-12 mb-6">Praktische Eerste Stappen</h2>
@@ -336,7 +336,7 @@ const ZiekteverzuimVerlagen = () => {
 
               <h3 className="text-xl md:text-2xl font-bold text-brand-purple mt-8 mb-4">3. Kies gecertificeerde aanbieder</h3>
               <p>
-                Verifieer dat trainers VMBN categorie 1 gecertificeerd zijn, het programma minimaal 6 weken duurt, dagelijkse oefening bevat, en follow-up metingen plant.
+                Verifieer dat trainers VMBN categorie 1 gecertificeerd zijn, de training minimaal 6 weken duurt, dagelijkse oefening bevat, en follow-up metingen plant.
               </p>
 
               <h3 className="text-xl md:text-2xl font-bold text-brand-purple mt-8 mb-4">4. Communiceer transparant</h3>

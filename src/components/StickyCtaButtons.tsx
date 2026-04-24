@@ -18,10 +18,10 @@ const StickyCtaButtons = ({ onMasterclassClick, onProgramRegistrationClick }: St
   const location = useLocation();
   const isHomePage = location.pathname === '/';
   const isLandingPage = location.pathname === '/landing';
-  const isProgramPage = location.pathname === '/prestatie-programma' || location.pathname === '/stressmanagement-programma';
+  const isProgramPage = location.pathname === '/prestatie-training' || location.pathname === '/stressmanagement-training';
   
   // Determine program type for modal
-  const programType = location.pathname === '/prestatie-programma' ? 'prestatie' : 'stress-management';
+  const programType = location.pathname === '/prestatie-training' ? 'prestatie' : 'stress-management';
 
   useEffect(() => {
     if (!isHomePage) {
@@ -65,7 +65,7 @@ const StickyCtaButtons = ({ onMasterclassClick, onProgramRegistrationClick }: St
               onClick={onProgramRegistrationClick}
               className="font-semibold py-3 sm:py-5 px-4 sm:px-10 rounded-lg text-base sm:text-lg shadow-lg whitespace-nowrap"
             >
-              <span className="hidden sm:inline">Aanmelden programma</span>
+              <span className="hidden sm:inline">Aanmelden training</span>
               <span className="sm:hidden">Aanmelden</span>
             </Button>
           </>
