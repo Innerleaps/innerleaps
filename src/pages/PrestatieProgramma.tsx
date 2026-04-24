@@ -564,13 +564,13 @@ const PrestatieProgramma = () => {
               </p>
 
               <p>
-                Je <strong>controlecentrum</strong> wordt sterker. Je onderdrukt impulsieve automatische reacties,
-                filtert irrelevante informatie en neemt bewustere beslissingen over je werkdruk.
+                Je controlecentrum wordt sterker. Je onderdrukt impulsieve automatische reacties, filtert irrelevante
+                informatie en neemt bewustere beslissingen over je werkdruk.
               </p>
 
               <p>
-                Je <strong>waarschuwingssysteem</strong> wordt gevoeliger. Je herkent stressignalen zoals spanning of
-                verminderde concentratie op tijd.
+                Je waarschuwingssysteem wordt gevoeliger. Je herkent stresssignalen op tijd en reguleert spanning,
+                waardoor werkgeheugen vrijkomt om te presteren en uitval wordt voorkomen.
               </p>
             </div>
 
