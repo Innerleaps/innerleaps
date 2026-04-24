@@ -554,7 +554,7 @@ const Vitaliteitsprogramma = () => {
       <section className="py-16 md:py-24 bg-white">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-purple text-center leading-tight mb-12">
-            <span className="text-brand-orange">6 weken</span> breintraining
+            Ons <span className="text-brand-orange">6-weekse</span> Vitaliteitsplusprogramma
           </h2>
 
           <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center mb-16">
