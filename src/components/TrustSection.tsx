@@ -21,9 +21,9 @@ const TrustSection = memo(({ variant = "white" }: TrustSectionProps) => {
       description:
         "De uitgebreide variant van onze training wordt vergoed vanuit basisverzekering door Nederlandse zorgverzekeraars.",
       logos: [
-        { src: vgzLogo, alt: "Vitaliteits\u00ADprogramma herkend door VGZ", className: "h-24" },
-        { src: czLogo, alt: "Vitaliteits\u00ADprogramma herkend door CZ", className: "h-24" },
-        { src: menzisLogo, alt: "Vitaliteits\u00ADprogramma herkend door Menzis", className: "h-20" },
+        { src: vgzLogo, alt: "Vitaliteits\u00ADtraining herkend door VGZ", className: "h-24" },
+        { src: czLogo, alt: "Vitaliteits\u00ADtraining herkend door CZ", className: "h-24" },
+        { src: menzisLogo, alt: "Vitaliteits\u00ADtraining herkend door Menzis", className: "h-20" },
       ],
     },
     {
@@ -33,10 +33,10 @@ const TrustSection = memo(({ variant = "white" }: TrustSectionProps) => {
       logos: [
         {
           src: oxfordLogo,
-          alt: "Vitaliteits\u00ADprogramma ontwikkeld door Oxford University",
+          alt: "Vitaliteits\u00ADtraining ontwikkeld door Oxford University",
           className: "h-24 rounded",
         },
-        { src: uMassLogo, alt: "Vitaliteits\u00ADprogramma ontwikkeld door University of Massachusetts", className: "h-24" },
+        { src: uMassLogo, alt: "Vitaliteits\u00ADtraining ontwikkeld door University of Massachusetts", className: "h-24" },
         { src: uvaLogo, alt: "Aandacht\u00ADtraining aan de Universiteit van Amsterdam", className: "h-24" },
       ],
     },
