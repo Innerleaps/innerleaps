@@ -18,10 +18,10 @@ const StickyCtaButtons = ({ onMasterclassClick, onProgramRegistrationClick }: St
   const location = useLocation();
   const isHomePage = location.pathname === '/';
   const isLandingPage = location.pathname === '/landing';
-  const isProgramPage = location.pathname === '/prestatie-programma' || location.pathname === '/stressmanagement-programma';
+  const isProgramPage = location.pathname === '/prestatie-training' || location.pathname === '/stressmanagement-training';
   
   // Determine program type for modal
-  const programType = location.pathname === '/prestatie-programma' ? 'prestatie' : 'stress-management';
+  const programType = location.pathname === '/prestatie-training' ? 'prestatie' : 'stress-management';
 
   useEffect(() => {
     if (!isHomePage) {
