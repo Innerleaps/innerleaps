@@ -445,7 +445,7 @@ const DuurzameInzetbaarheidTraining = () => {
                 <Brain className="h-8 w-8 text-brand-orange stroke-2" />
               </div>
               <h3 className="text-xl md:text-2xl font-bold text-brand-gray-dark text-center">
-                Scherpere focus en concentratie onder druk
+                Scherpere focus onder druk
               </h3>
               <p className="text-base md:text-lg text-brand-gray-medium text-center">
                 Je team leert aandacht bewust sturen en vasthouden. Minder afleiding, meer voortgang op wat écht telt. Targets worden haalbaar, ook als de druk oploopt.
@@ -471,7 +471,7 @@ const DuurzameInzetbaarheidTraining = () => {
                 <Shield className="h-8 w-8 text-brand-orange stroke-2" />
               </div>
               <h3 className="text-xl md:text-2xl font-bold text-brand-gray-dark text-center">
-                Hogere inzetbaarheid van je team
+                Hogere team inzetbaarheid
               </h3>
               <p className="text-base md:text-lg text-brand-gray-medium text-center">
                 Medewerkers herkennen stress eerder en sturen bij voordat uitval optreedt. Minder verzuim, minder langdurige uitval. Een team dat beschikbaar is.
@@ -487,7 +487,7 @@ const DuurzameInzetbaarheidTraining = () => {
                 Tevredener team, lagere uitstroom
               </h3>
               <p className="text-base md:text-lg text-brand-gray-medium text-center">
-                Medewerkers ervaren meer rust, werkplezier en tevredenheid met hun leven. Wie zich goed voelt op zijn plek, gaat minder snel op zoek naar iets anders. Talent blijft, ook in een krappe markt.
+                Medewerkers ervaren meer rust, werkplezier en tevredenheid met hun leven. Wie zich goed voelt op zijn plek, gaat minder snel op zoek naar iets anders. 
               </p>
             </div>
           </div>
