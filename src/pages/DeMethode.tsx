@@ -97,7 +97,7 @@ const DeMethode = () => {
                 <strong>fronto-pariëtale netwerken</strong>, simpel gezegd je "controlecentrum".
               </p>
               <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
-                Met onze frontale cortex concentreren we ons, verwerken we informatie en bedenken we strategieën.
+                Met onze frontale cortex concentreren we ons, verwerken we informatie en bedenken we strategien.
               </p>
             </div>
             <div className="rounded-xl shadow-lg overflow-hidden">
@@ -177,7 +177,7 @@ const DeMethode = () => {
                 <div className="flex items-start gap-3">
                   <CheckCircle className="h-5 w-5 text-brand-orange stroke-2 flex-shrink-0 mt-1" />
                   <span className="text-base md:text-lg text-brand-gray-medium">
-                    Strategieën bedenken en prioriteiten bepalen.
+                    Strategien bedenken en prioriteiten bepalen.
                   </span>
                 </div>
               </div>

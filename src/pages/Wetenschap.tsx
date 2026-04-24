@@ -38,7 +38,7 @@ const Wetenschap = () => {
                 kan het vergelijken met het trainen van je spieren in de sportschool. Met onze "push-ups voor het brein"
                 versterken de frontale cortex en fronto-pariëtale netwerken, simpel gezegd je "controlecentrum". <br />
                 <br />
-                Met onze frontale cortex concentreren we ons, verwerken we informatie en bedenken we strategieën. Kijk, met een sterker controlecentrum versteken deze functies:
+                Met onze frontale cortex concentreren we ons, verwerken we informatie en bedenken we strategien. Kijk, met een sterker controlecentrum versteken deze functies:
               </p>
             </div>
             <div>
@@ -120,7 +120,7 @@ const Wetenschap = () => {
                 <div className="flex items-start gap-3">
                   <CheckCircle className="h-5 w-5 text-brand-orange stroke-2 flex-shrink-0 mt-1" />
                   <span className="text-base md:text-lg text-brand-gray-medium">
-                    Strategieën bedenken en prioriteiten bepalen.
+                    Strategien bedenken en prioriteiten bepalen.
                   </span>
                 </div>
               </div>
