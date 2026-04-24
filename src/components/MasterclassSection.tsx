@@ -65,7 +65,7 @@ const MasterclassSection = ({ variant }: MasterclassSectionProps) => {
           className="text-4xl md:text-5xl lg:text-6xl font-bold text-white text-center leading-tight mb-6"
           style={TEXT_SHADOW_STRONG}
         >
-          Ervaar het met onze <span className="text-brand-orange">vrijblijvende masterclass</span>.
+          Ervaar het met onze <span className="text-brand-orange">vrijblijvende masterclass</span>
         </h2>
         <p
           className="text-xl md:text-2xl text-white text-center leading-relaxed mb-12 max-w-4xl mx-auto"
