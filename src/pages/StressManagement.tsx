@@ -481,7 +481,7 @@ const StressManagement = () => {
       <section className="py-16 md:py-24 bg-brand-off-white">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-purple text-center leading-tight mb-6">
-            Het 6-weekse <span className="text-brand-orange">stressmanagement</span> training.
+            De 6-weekse <span className="text-brand-orange">stressmanagement</span> training.
           </h2>
           <p className="text-xl md:text-2xl text-brand-gray-medium text-center leading-relaxed mb-12">
             Wetenschappelijk bewezen. Praktisch toepasbaar. Meetbare resultaten.
@@ -548,7 +548,7 @@ const StressManagement = () => {
       <section className="py-16 md:py-24 bg-white">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-purple text-center leading-tight mb-12">
-            Ons <span className="text-brand-orange">6-weekse</span> Vitaliteitsplus-training
+            Ons <span className="text-brand-orange">6-weekse</span> Vitaliteitsplus-programma
           </h2>
 
           <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center mb-16">
