@@ -94,13 +94,10 @@ const DeMethode = () => {
             <div className="space-y-6">
               <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
                 Met onze "push-ups voor het brein" versterk je onder andere de <strong>frontale cortex</strong> en{" "}
-                <strong>fronto-pariëtale netwerken</strong>. Klinkt misschien ingewikkeld maar simpel gezegd is dit je
-                "controlecentrum".
+                <strong>fronto-pariëtale netwerken</strong>, simpel gezegd je "controlecentrum".
               </p>
               <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
-                Dit breindeel <strong>maakt ons mens</strong> en onderscheid ons van de meeste dieren. Hiermee verwerken
-                we <strong>informatie</strong> tot <strong>plannen</strong> en voeren we deze <strong>bewust</strong>{" "}
-                uit.
+                Met onze frontale cortex concentreren we ons, verwerken we informatie en bedenken we strategieën.
               </p>
             </div>
             <div className="rounded-xl shadow-lg overflow-hidden">
@@ -246,8 +243,7 @@ const DeMethode = () => {
             <div className="space-y-6">
               <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
                 Door het doen van de "brein push-ups" versterken deelnemers ook hun <strong>anterior insula</strong> en{" "}
-                <strong>anterior cingulate cortex</strong>. Heel simpel gezegd is dit ons{" "}
-                <strong>waarschuwingssysteem</strong>.
+                <strong>anterior cingulate cortex</strong>, ons "waarschuwingssysteem".
               </p>
 
               <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
