@@ -183,7 +183,7 @@ const StressManagement = () => {
                         style={{ textShadow: "0 2px 8px rgba(0,0,0,0.5)" }}
                         className="text-sm sm:text-base md:text-lg lg:text-xl text-white font-normal"
                       >
-                        Minder spanning & stress
+                        Spanning & stress
                       </span>
                       <span className="text-brand-orange font-bold text-base sm:text-lg md:text-xl lg:text-2xl shrink-0">
                         50%
@@ -194,7 +194,7 @@ const StressManagement = () => {
                         style={{ textShadow: "0 2px 8px rgba(0,0,0,0.5)" }}
                         className="text-sm sm:text-base md:text-lg lg:text-xl text-white font-normal"
                       >
-                        Meer focus
+                        Focus
                       </span>
                       <span className="text-brand-orange font-bold text-base sm:text-lg md:text-xl lg:text-2xl shrink-0">
                         +25%
@@ -205,7 +205,7 @@ const StressManagement = () => {
                         style={{ textShadow: "0 2px 8px rgba(0,0,0,0.5)" }}
                         className="text-sm sm:text-base md:text-lg lg:text-xl text-white font-normal"
                       >
-                        Meer tevreden over het leven
+                        Tevreden over het leven
                       </span>
                       <span className="text-brand-orange font-bold text-base sm:text-lg md:text-xl lg:text-2xl shrink-0">
                         +15%
