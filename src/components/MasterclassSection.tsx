@@ -83,10 +83,10 @@ const MasterclassSection = ({ variant }: MasterclassSectionProps) => {
               <div className="p-3 rounded-lg bg-brand-orange w-fit mx-auto">
                 <Icon className="h-10 w-10 text-white stroke-2" />
               </div>
-              <h3 className="text-xl font-bold text-foreground text-center">
+              <h3 className="text-xl font-bold text-brand-purple text-center">
                 {title}
               </h3>
-              <p className="text-base md:text-lg text-muted-foreground text-center leading-relaxed">
+              <p className="text-base md:text-lg text-brand-gray-medium text-center leading-relaxed">
                 {text}
               </p>
             </div>
