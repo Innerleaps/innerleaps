@@ -5,6 +5,7 @@ import SimplifiedNavigation from "@/components/SimplifiedNavigation";
 import StickyCtaButtons from "@/components/StickyCtaButtons";
 import TrustSection from "@/components/TrustSection";
 import Footer from "@/components/Footer";
+import MasterclassSection from "@/components/MasterclassSection";
 import { Button } from "@/components/ui/button";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import {
@@ -745,108 +746,7 @@ const StressManagement = () => {
       </section>
 
       {/* Masterclass Sectie */}
-      <section id="masterclass" className="py-16 md:py-24 bg-white">
-        <div className="container mx-auto px-4">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-purple text-center leading-tight mb-6">
-            Ervaar het zelf, <span className="text-brand-orange">gratis</span> met onze{" "}
-            <span className="text-brand-orange">online masterclass</span>
-          </h2>
-          <p className="text-xl md:text-2xl text-brand-gray-medium text-center leading-relaxed mb-12 max-w-4xl mx-auto">
-            Ben je enthousiast maar wil je eerst ervaren hoe aandachtstraining werkt? In 60 minuten maak je op speelse
-            wijze kennis met onze aanpak. Wat krijg je in de masterclass?
-          </p>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto mb-12">
-            <div className="bg-brand-off-white p-6 rounded-xl space-y-4">
-              <div className="p-3 rounded-lg bg-brand-orange/10 w-fit mx-auto">
-                <Activity className="h-10 w-10 text-brand-orange stroke-2" />
-              </div>
-              <h3 className="text-xl font-bold text-brand-gray-dark text-center">Stress level</h3>
-              <p className="text-base md:text-lg text-brand-gray-medium text-center leading-relaxed">
-                Krijg inzicht in jouw stress level. Volledig wetenschappelijk onderbouwd.
-              </p>
-            </div>
-
-            <div className="bg-brand-off-white p-6 rounded-xl space-y-4">
-              <div className="p-3 rounded-lg bg-brand-orange/10 w-fit mx-auto">
-                <Brain className="h-10 w-10 text-brand-orange stroke-2" />
-              </div>
-              <h3 className="text-xl font-bold text-brand-gray-dark text-center">Aandachtoefening</h3>
-              <p className="text-base md:text-lg text-brand-gray-medium text-center leading-relaxed">
-                Ervaar een techniek om controle over je autopiloot te krijgen en focus terug te pakken. Volledig
-                wetenschappelijk onderbouwd.
-              </p>
-            </div>
-
-            <div className="bg-brand-off-white p-6 rounded-xl space-y-4">
-              <div className="p-3 rounded-lg bg-brand-orange/10 w-fit mx-auto">
-                <RotateCcw className="h-10 w-10 text-brand-orange stroke-2" />
-              </div>
-              <h3 className="text-xl font-bold text-brand-gray-dark text-center">Reset tool</h3>
-              <p className="text-base md:text-lg text-brand-gray-medium text-center leading-relaxed">
-                Leer een tool om je werkgeheugen te resetten en aandacht direct terug te pakken.
-              </p>
-            </div>
-
-            <div className="bg-brand-off-white p-6 rounded-xl space-y-4">
-              <div className="p-3 rounded-lg bg-brand-orange/10 w-fit mx-auto">
-                <Gift className="h-10 w-10 text-brand-orange stroke-2" />
-              </div>
-              <h3 className="text-xl font-bold text-brand-gray-dark text-center">Gratis</h3>
-              <p className="text-base md:text-lg text-brand-gray-medium text-center leading-relaxed">
-                Wij geloven dat iedereen onze effectieve techniek moet kunnen proberen. Daarom is onze masterclass
-                volledig gratis en vrijblijvend.
-              </p>
-            </div>
-          </div>
-
-          {/* CTA Section - 4 Column Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-6 md:gap-8 max-w-7xl mx-auto">
-            {/* Column 1-2: Quote and CTA */}
-            <div className="md:col-span-2 flex flex-col gap-6 justify-center">
-              {/* Review Quote */}
-              <div className="bg-white/95 backdrop-blur-sm p-6 rounded-lg shadow-lg">
-                <div className="flex items-center gap-2 mb-3 justify-center">
-                  <div className="flex gap-0.5">
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="w-5 h-5 fill-amber-400 text-amber-400" />
-                    ))}
-                  </div>
-                  <span className="font-semibold text-brand-gray-dark text-lg">4,7 / 5</span>
-                </div>
-                <p className="text-base text-brand-gray-dark italic leading-relaxed text-center">
-                  "Deze workshop laat je duidelijk het belang zien van het trainen van je aandachtsspier. De workshop
-                  bestaat uit een mooie mix tussen oefeningen en theorie, waardoor je gelijk al wat ervaring opdoet.
-                  Denk dat iedereen hier wat aan heeft, dus kan dit zeker aanbevelen."
-                </p>
-              </div>
-
-              {/* CTA Button */}
-              <Button
-                size="lg"
-                className="bg-brand-orange hover:bg-brand-orange/90 text-white py-4 px-8 rounded-lg text-lg md:text-xl font-semibold shadow-xl w-full"
-                onClick={handleModalOpen}
-              >
-                Aanmelden gratis masterclass
-              </Button>
-            </div>
-
-            {/* Column 3-4: Masterclass Photo */}
-            <div className="md:col-span-2">
-              <img
-                src={masterclassImage}
-                alt="Stressmanagement masterclass bij Innerleaps"
-                className="w-full h-full object-cover rounded-xl shadow-lg"
-              />
-            </div>
-          </div>
-
-          {/* Modal - lazy loaded */}
-          <Suspense fallback={null}>
-            {isModalOpen && <MasterclassFormModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />}
-          </Suspense>
-        </div>
-      </section>
+      <MasterclassSection variant="employee" />
 
       {/* Trust Sectie */}
       <TrustSection variant="off-white" />
