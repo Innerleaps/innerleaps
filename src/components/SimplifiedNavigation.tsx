@@ -13,8 +13,8 @@ import {
 
 const organisationMenuItems = [
   {
-    label: 'Vitaliteitsprogramma',
-    href: '/vitaliteitsprogramma',
+    label: 'Vitaliteitstraining',
+    href: '/vitaliteitstraining',
     description: 'Vitaal en veerkrachtig team'
   },
   {
@@ -27,12 +27,12 @@ const organisationMenuItems = [
 const employeeMenuItems = [
   {
     label: 'Stressmanagement',
-    href: '/stressmanagement-programma',
+    href: '/stressmanagement-training',
     description: 'Verminder spanning en druk'
   },
   {
     label: 'Prestatie Verbeteren',
-    href: '/prestatie-programma',
+    href: '/prestatie-training',
     description: 'Verbeter focus en prestaties'
   }
 ];

@@ -83,17 +83,17 @@ const Footer = memo(({ showNavigation = true }: FooterProps) => {
             <nav aria-label="Programma's">
               <ul className="space-y-2">
                 <li>
-                  <Link to="/vitaliteitsprogramma" className="block text-gray-300 hover:text-white transition-colors">
-                    Vitaliteitsprogramma
+                  <Link to="/vitaliteitstraining" className="block text-gray-300 hover:text-white transition-colors">
+                    Vitaliteitstraining
                   </Link>
                 </li>
                 <li>
-                  <Link to="/stressmanagement-programma" className="block text-gray-300 hover:text-white transition-colors">
-                    Stressmanagement programma
+                  <Link to="/stressmanagement-training" className="block text-gray-300 hover:text-white transition-colors">
+                    Stressmanagement training
                   </Link>
                 </li>
                 <li>
-                  <Link to="/prestatie-programma" className="block text-gray-300 hover:text-white transition-colors">
+                  <Link to="/prestatie-training" className="block text-gray-300 hover:text-white transition-colors">
                     Prestatie en concentratie verbeteren
                   </Link>
                 </li>

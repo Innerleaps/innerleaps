@@ -163,7 +163,7 @@ const DeMethodeOld = () => {
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-brand-purple">Waar ben jij naar op zoek?</h2>
           <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
             <Link
-              to="/stressmanagement-programma"
+              to="/stressmanagement-training"
               className="bg-white border-2 border-brand-blue p-8 rounded-lg hover:shadow-xl transition-all duration-300 group"
             >
               <h3 className="text-2xl font-bold text-brand-purple mb-4 group-hover:text-brand-blue transition-colors">
@@ -172,7 +172,7 @@ const DeMethodeOld = () => {
               <p className="text-lg text-brand-gray-medium">Leer stress herkennen voordat het escaleert</p>
             </Link>
             <Link
-              to="/prestatie-programma"
+              to="/prestatie-training"
               className="bg-white border-2 border-brand-orange p-8 rounded-lg hover:shadow-xl transition-all duration-300 group"
             >
               <h3 className="text-2xl font-bold text-brand-purple mb-4 group-hover:text-brand-orange transition-colors">
