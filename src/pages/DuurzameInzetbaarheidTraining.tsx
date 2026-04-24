@@ -444,13 +444,12 @@ const DuurzameInzetbaarheidTraining = () => {
               <div className="p-3 rounded-lg bg-brand-orange/5 w-fit mx-auto">
                 <Brain className="h-8 w-8 text-brand-orange stroke-2" />
               </div>
-              <h3 className="text-xl md:text-2xl font-bold text-brand-gray-dark text-center">Stress vroeg herkennen</h3>
+              <h3 className="text-xl md:text-2xl font-bold text-brand-gray-dark text-center">Scherpere focus en concentratie onder druk</h3>
               <div className="space-y-2">
                 <div className="flex items-start gap-2">
                   <CheckCircle className="h-5 w-5 text-brand-orange flex-shrink-0 mt-0.5" />
                   <p className="text-base md:text-lg text-brand-gray-medium">
-                    Medewerkers leren stresssignalen opmerken voordat het te laat is. Ze nemen regie over hun eigen
-                    stress en kunnen bijsturen voordat uitval optreedt.
+                    Je team leert aandacht bewust sturen en vasthouden. Minder afleiding, meer voortgang op wat écht telt. Targets worden haalbaar, ook als de druk oploopt.
                   </p>
                 </div>
               </div>
@@ -462,14 +461,13 @@ const DuurzameInzetbaarheidTraining = () => {
                 <Heart className="h-8 w-8 text-brand-orange stroke-2" />
               </div>
               <h3 className="text-xl md:text-2xl font-bold text-brand-gray-dark text-center">
-                Sterkere emotieregulatie
+                Minder fouten, betere output
               </h3>
               <div className="space-y-2">
                 <div className="flex items-start gap-2">
                   <CheckCircle className="h-5 w-5 text-brand-orange flex-shrink-0 mt-0.5" />
                   <p className="text-base md:text-lg text-brand-gray-medium">
-                    Drukte en emoties op de werkvloer worden beheersbaar. Impulsiviteit neemt af omdat het
-                    controlecentrum in het brein wordt sterker.
+                    Een getraind brein maakt onder druk minder onnodige missers. Onderzoek laat een daling van 25% minder fouten zien. Minder herstelwerk, betere output.
                   </p>
                 </div>
               </div>
@@ -480,13 +478,12 @@ const DuurzameInzetbaarheidTraining = () => {
               <div className="p-3 rounded-lg bg-brand-orange/5 w-fit mx-auto">
                 <Shield className="h-8 w-8 text-brand-orange stroke-2" />
               </div>
-              <h3 className="text-xl md:text-2xl font-bold text-brand-gray-dark text-center">Regie over werkdruk</h3>
+              <h3 className="text-xl md:text-2xl font-bold text-brand-gray-dark text-center">Hogere inzetbaarheid van je team</h3>
               <div className="space-y-2">
                 <div className="flex items-start gap-2">
                   <CheckCircle className="h-5 w-5 text-brand-orange flex-shrink-0 mt-0.5" />
                   <p className="text-base md:text-lg text-brand-gray-medium">
-                    Door sterker stressbewustzijn zeggen medewerkers 'nee' wanneer ze tegen hun grenzen lopen.
-                    Eigenaarschap vermindert stress en voorkomt uitval.
+                    Medewerkers herkennen stress eerder en sturen bij voordat uitval optreedt. Minder verzuim, minder langdurige uitval. Een team dat beschikbaar is.
                   </p>
                 </div>
               </div>
@@ -498,14 +495,13 @@ const DuurzameInzetbaarheidTraining = () => {
                 <CheckCircle className="h-8 w-8 text-brand-orange stroke-2" />
               </div>
               <h3 className="text-xl md:text-2xl font-bold text-brand-gray-dark text-center">
-                Sociaal veilige werkplek
+                Tevredener team, lagere uitstroom
               </h3>
               <div className="space-y-2">
                 <div className="flex items-start gap-2">
                   <CheckCircle className="h-5 w-5 text-brand-orange flex-shrink-0 mt-0.5" />
                   <p className="text-base md:text-lg text-brand-gray-medium">
-                    Medewerkers kunnen ongepaste reacties onderdrukken. Hierdoor wordt de kennis over sociale veiligheid
-                    ook echt toegepast. De sociale veiligheid en samenwerking verbeterd.
+                    Medewerkers ervaren meer rust, werkplezier and tevredenheid met hun leven. Wie zich goed voelt op zijn plek, gaat minder snel op zoek naar iets anders. Talent blijf, ook in een krappe markt.
                   </p>
                 </div>
               </div>
