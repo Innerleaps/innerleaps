@@ -33,7 +33,7 @@ const ProgramOverviewSection = memo(() => {
       <div className="container-custom space-y-12">
         {/* Title */}
         <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-center text-brand-purple">
-          De <span className="text-brand-orange">vitaliteitstaining</span> voor échte{" "}
+          De <span className="text-brand-orange">training</span> voor échte{" "}
           <span className="text-brand-orange">gedragsverandering</span>
         </h2>
 
