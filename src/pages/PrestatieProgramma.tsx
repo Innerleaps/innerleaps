@@ -186,7 +186,7 @@ const PrestatieProgramma = () => {
                         style={{ textShadow: "0 2px 8px rgba(0,0,0,0.5)" }}
                         className="text-sm sm:text-base md:text-lg lg:text-xl text-white font-normal"
                       >
-                        Meer focus, minder fouten
+                        Focus, minder fouten
                       </span>
                       <span className="text-brand-orange font-bold text-base sm:text-lg md:text-xl lg:text-2xl shrink-0">
                         +25%
@@ -197,7 +197,7 @@ const PrestatieProgramma = () => {
                         style={{ textShadow: "0 2px 8px rgba(0,0,0,0.5)" }}
                         className="text-sm sm:text-base md:text-lg lg:text-xl text-white font-normal"
                       >
-                        Betere prestatie
+                        Prestatie
                       </span>
                       <span className="text-brand-orange font-bold text-base sm:text-lg md:text-xl lg:text-2xl shrink-0">
                         +10%
