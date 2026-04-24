@@ -561,7 +561,7 @@ const DuurzameInzetbaarheidTraining = () => {
               <h3 className="text-xl font-bold text-brand-gray-dark">Vroege waarschuwingssignalen herkennen</h3>
               <p className="text-lg text-brand-gray-medium leading-relaxed">
                 Train je waarschuwingssysteem zodat je gespannen schouders, een strakke kaak of oppervlakkige ademhaling
-                opmerkt voordat spanning je overneemt. Jij pakt de controle en in plaats van de spanning, omdat je stress-antennes scherper zijn.
+                opmerkt voordat spanning je overneemt. Jij pakt de controle in plaats van de spanning, omdat je stress-antennes scherper zijn.
               </p>
             </div>
 
