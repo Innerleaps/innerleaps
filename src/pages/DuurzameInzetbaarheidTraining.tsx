@@ -438,90 +438,57 @@ const DuurzameInzetbaarheidTraining = () => {
             De wetenschappelijk bewezen effecten van ons programma.
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-6 gap-8 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
             {/* Value 1 */}
-            <div className="md:col-span-2 bg-brand-off-white p-6 rounded-lg space-y-4">
+            <div className="bg-brand-off-white p-6 rounded-lg space-y-4">
               <div className="p-3 rounded-lg bg-brand-orange/5 w-fit mx-auto">
                 <Brain className="h-8 w-8 text-brand-orange stroke-2" />
               </div>
-              <h3 className="text-xl md:text-2xl font-bold text-brand-gray-dark text-center">Scherpere focus en concentratie onder druk</h3>
-              <div className="space-y-2">
-                <div className="flex items-start gap-2">
-                  <CheckCircle className="h-5 w-5 text-brand-orange flex-shrink-0 mt-0.5" />
-                  <p className="text-base md:text-lg text-brand-gray-medium">
-                    Je team leert aandacht bewust sturen en vasthouden. Minder afleiding, meer voortgang op wat écht telt. Targets worden haalbaar, ook als de druk oploopt.
-                  </p>
-                </div>
-              </div>
+              <h3 className="text-xl md:text-2xl font-bold text-brand-gray-dark text-center">
+                Scherpere focus en concentratie onder druk
+              </h3>
+              <p className="text-base md:text-lg text-brand-gray-medium text-center">
+                Je team leert aandacht bewust sturen en vasthouden. Minder afleiding, meer voortgang op wat écht telt. Targets worden haalbaar, ook als de druk oploopt.
+              </p>
             </div>
 
             {/* Value 2 */}
-            <div className="md:col-span-2 bg-brand-off-white p-6 rounded-lg space-y-4">
+            <div className="bg-brand-off-white p-6 rounded-lg space-y-4">
               <div className="p-3 rounded-lg bg-brand-orange/5 w-fit mx-auto">
                 <Heart className="h-8 w-8 text-brand-orange stroke-2" />
               </div>
               <h3 className="text-xl md:text-2xl font-bold text-brand-gray-dark text-center">
                 Minder fouten, betere output
               </h3>
-              <div className="space-y-2">
-                <div className="flex items-start gap-2">
-                  <CheckCircle className="h-5 w-5 text-brand-orange flex-shrink-0 mt-0.5" />
-                  <p className="text-base md:text-lg text-brand-gray-medium">
-                    Een getraind brein maakt onder druk minder onnodige missers. Onderzoek laat een daling van 25% minder fouten zien. Minder herstelwerk, betere output.
-                  </p>
-                </div>
-              </div>
+              <p className="text-base md:text-lg text-brand-gray-medium text-center">
+                Een getraind brein maakt onder druk minder onnodige missers. Onderzoek laat een daling van 25% minder fouten zien. Minder herstelwerk, betere output.
+              </p>
             </div>
 
             {/* Value 3 */}
-            <div className="md:col-span-2 bg-brand-off-white p-6 rounded-lg space-y-4">
+            <div className="bg-brand-off-white p-6 rounded-lg space-y-4">
               <div className="p-3 rounded-lg bg-brand-orange/5 w-fit mx-auto">
                 <Shield className="h-8 w-8 text-brand-orange stroke-2" />
               </div>
-              <h3 className="text-xl md:text-2xl font-bold text-brand-gray-dark text-center">Hogere inzetbaarheid van je team</h3>
-              <div className="space-y-2">
-                <div className="flex items-start gap-2">
-                  <CheckCircle className="h-5 w-5 text-brand-orange flex-shrink-0 mt-0.5" />
-                  <p className="text-base md:text-lg text-brand-gray-medium">
-                    Medewerkers herkennen stress eerder en sturen bij voordat uitval optreedt. Minder verzuim, minder langdurige uitval. Een team dat beschikbaar is.
-                  </p>
-                </div>
-              </div>
+              <h3 className="text-xl md:text-2xl font-bold text-brand-gray-dark text-center">
+                Hogere inzetbaarheid van je team
+              </h3>
+              <p className="text-base md:text-lg text-brand-gray-medium text-center">
+                Medewerkers herkennen stress eerder en sturen bij voordat uitval optreedt. Minder verzuim, minder langdurige uitval. Een team dat beschikbaar is.
+              </p>
             </div>
 
             {/* Value 4 */}
-            <div className="md:col-span-2 md:col-start-2 bg-brand-off-white p-6 rounded-lg space-y-4">
+            <div className="bg-brand-off-white p-6 rounded-lg space-y-4">
               <div className="p-3 rounded-lg bg-brand-orange/5 w-fit mx-auto">
                 <CheckCircle className="h-8 w-8 text-brand-orange stroke-2" />
               </div>
               <h3 className="text-xl md:text-2xl font-bold text-brand-gray-dark text-center">
                 Tevredener team, lagere uitstroom
               </h3>
-              <div className="space-y-2">
-                <div className="flex items-start gap-2">
-                  <CheckCircle className="h-5 w-5 text-brand-orange flex-shrink-0 mt-0.5" />
-                  <p className="text-base md:text-lg text-brand-gray-medium">
-                    Medewerkers ervaren meer rust, werkplezier and tevredenheid met hun leven. Wie zich goed voelt op zijn plek, gaat minder snel op zoek naar iets anders. Talent blijf, ook in een krappe markt.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            {/* Value 5 */}
-            <div className="md:col-span-2 bg-brand-off-white p-6 rounded-lg space-y-4">
-              <div className="p-3 rounded-lg bg-brand-orange/5 w-fit mx-auto">
-                <Smile className="h-8 w-8 text-brand-orange stroke-2" />
-              </div>
-              <h3 className="text-xl md:text-2xl font-bold text-brand-gray-dark text-center">Talent behouden</h3>
-              <div className="space-y-2">
-                <div className="flex items-start gap-2">
-                  <CheckCircle className="h-5 w-5 text-brand-orange flex-shrink-0 mt-0.5" />
-                  <p className="text-base md:text-lg text-brand-gray-medium">
-                    Medewerkers ervaren minder werkdruk en meer werkplezier en betrokkenheid. Dit verlaagt het
-                    personeelsverloop en helpt talent aan de organisatie te binden.
-                  </p>
-                </div>
-              </div>
+              <p className="text-base md:text-lg text-brand-gray-medium text-center">
+                Medewerkers ervaren meer rust, werkplezier en tevredenheid met hun leven. Wie zich goed voelt op zijn plek, gaat minder snel op zoek naar iets anders. Talent blijft, ook in een krappe markt.
+              </p>
             </div>
           </div>
         </div>
