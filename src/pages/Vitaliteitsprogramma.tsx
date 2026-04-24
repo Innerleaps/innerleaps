@@ -701,9 +701,6 @@ const Vitaliteitstraining = () => {
       {/* Masterclass Sectie */}
       <MasterclassSection variant="employer" />
 
-      {/* Trust Sectie */}
-      <TrustSection variant="white" />
-
       {/* FAQ Sectie */}
       <section className="py-16 md:py-24 bg-brand-off-white">
         <div className="container mx-auto px-4">
@@ -790,6 +787,9 @@ const Vitaliteitstraining = () => {
           </div>
         </div>
       </section>
+
+      {/* Trust Sectie */}
+      <TrustSection variant="white" />
 
       {/* ROI Calculator Section */}
       <div id="calculator">

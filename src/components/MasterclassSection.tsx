@@ -93,25 +93,29 @@ const MasterclassSection = ({ variant }: MasterclassSectionProps) => {
           ))}
         </div>
 
-        {/* Employee-only review */}
-        {isEmployee && (
-          <div className="max-w-3xl mx-auto mb-10 text-center">
-            <div className="flex justify-center gap-1 mb-4">
-              {[...Array(5)].map((_, i) => (
-                <Star key={i} className="w-6 h-6 fill-brand-orange text-brand-orange" />
-              ))}
-            </div>
-            <p
-              className="text-lg md:text-xl text-white italic leading-relaxed"
-              style={TEXT_SHADOW_STRONG}
-            >
-              "Deze workshop laat je duidelijk het belang zien van het trainen van je aandachtsspier.
-              De workshop bestaat uit een mooie mix tussen oefeningen en theorie, waardoor je gelijk
-              al wat ervaring opdoet. Denk dat iedereen hier wat aan heeft, dus kan dit zeker
-              aanbevelen."
-            </p>
+        {/* Review */}
+        <div className="max-w-3xl mx-auto mb-10 text-center">
+          <div className="flex justify-center gap-1 mb-4">
+            {[...Array(5)].map((_, i) => (
+              <Star key={i} className="w-6 h-6 fill-brand-orange text-brand-orange" />
+            ))}
           </div>
-        )}
+          <p
+            className="text-lg md:text-xl text-white italic leading-relaxed"
+            style={TEXT_SHADOW_STRONG}
+          >
+            "Deze workshop laat je duidelijk het belang zien van het trainen van je aandachtsspier.
+            De workshop bestaat uit een mooie mix tussen oefeningen en theorie, waardoor je gelijk
+            al wat ervaring opdoet. Denk dat iedereen hier wat aan heeft, dus kan dit zeker
+            aanbevelen."
+          </p>
+          <p
+            className="mt-4 text-base md:text-lg text-white font-semibold"
+            style={TEXT_SHADOW_STRONG}
+          >
+            — Jeroen
+          </p>
+        </div>
 
         <div className="text-center">
           {isEmployee ? (
