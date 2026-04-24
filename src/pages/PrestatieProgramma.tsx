@@ -754,9 +754,6 @@ const PrestatieProgramma = () => {
       {/* Masterclass Sectie */}
       <MasterclassSection variant="employee" />
 
-      {/* Trust Sectie */}
-      <TrustSection variant="off-white" />
-
       {/* FAQ Sectie */}
       <section className="py-16 md:py-24 bg-white">
         <div className="container mx-auto px-4">
@@ -841,6 +838,9 @@ const PrestatieProgramma = () => {
           </div>
         </div>
       </section>
+
+      {/* Trust Sectie */}
+      <TrustSection variant="off-white" />
 
       {/* Program Registration Modal - lazy loaded */}
       <Suspense fallback={null}>
