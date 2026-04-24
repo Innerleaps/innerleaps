@@ -507,7 +507,7 @@ const DuurzameInzetbaarheidTraining = () => {
           <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center mb-16">
             <div className="space-y-6 text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
               <p>
-                Met onze"push-ups voor het brein" trainen deelnemers hun brein. Hiermee versterken ze twee cruciale
+                Met onze<strong>"push-ups voor het brein"</strong> trainen deelnemers hun brein. Hiermee versterken ze twee cruciale
                 hersensystemen.
               </p>
 
