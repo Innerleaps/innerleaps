@@ -189,7 +189,7 @@ const PrestatieProgramma = () => {
                         Meer focus, minder fouten
                       </span>
                       <span className="text-brand-orange font-bold text-base sm:text-lg md:text-xl lg:text-2xl shrink-0">
-                        25%
+                        +25%
                       </span>
                     </div>
                     <div className="flex items-center justify-between w-full p-2.5 sm:p-3 lg:p-4 bg-brand-purple/90 rounded-lg">
@@ -200,7 +200,18 @@ const PrestatieProgramma = () => {
                         Betere prestatie
                       </span>
                       <span className="text-brand-orange font-bold text-base sm:text-lg md:text-xl lg:text-2xl shrink-0">
-                        10%
+                        +10%
+                      </span>
+                    </div>
+                    <div className="flex items-center justify-between w-full p-2.5 sm:p-3 lg:p-4 bg-brand-purple/90 rounded-lg">
+                      <span
+                        style={{ textShadow: "0 2px 8px rgba(0,0,0,0.5)" }}
+                        className="text-sm sm:text-base md:text-lg lg:text-xl text-white font-normal"
+                      >
+                        Slaap
+                      </span>
+                      <span className="text-brand-orange font-bold text-base sm:text-lg md:text-xl lg:text-2xl shrink-0">
+                        +28%
                       </span>
                     </div>
                     <div className="flex items-center justify-between w-full p-2.5 sm:p-3 lg:p-4 bg-brand-purple/90 rounded-lg">
