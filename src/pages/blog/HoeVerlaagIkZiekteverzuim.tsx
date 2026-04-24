@@ -424,8 +424,8 @@ const HoeVerlaagIkZiekteverzuim = () => {
           </ul>
           <p className="text-brand-gray-dark mb-4">
             Innerleaps'{" "}
-            <Link to="/vitaliteitsprogramma" className="text-brand-blue hover:underline">
-              programma
+            <Link to="/vitaliteitstraining" className="text-brand-blue hover:underline">
+              training
             </Link>{" "}
             combineert dagelijkse geplande oefeningen met integratie in het dagelijks leven, ondersteund door wekelijkse
             workshops van VMBN categorie 1 geaccrediteerde trainers. De methode is gebaseerd op 40 jaar MBSR-onderzoek

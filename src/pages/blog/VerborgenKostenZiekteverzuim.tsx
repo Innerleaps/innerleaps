@@ -360,7 +360,7 @@ const VerborgenKostenZiekteverzuim = () => {
               </p>
 
               <p className="mt-8">
-                InnerLeaps' <Link to="/vitaliteitsprogramma" className="text-brand-blue hover:text-brand-orange font-medium transition-colors">6-weekse vitaliteitsprogramma</Link> lost deze problemen op:
+                InnerLeaps' <Link to="/vitaliteitstraining" className="text-brand-blue hover:text-brand-orange font-medium transition-colors">6-weekse vitaliteitstraining</Link> lost deze problemen op:
               </p>
               <ul className="mt-4">
                 <li>Wekelijkse workshops van 60 minuten tijdens werktijd</li>
@@ -406,7 +406,7 @@ const VerborgenKostenZiekteverzuim = () => {
               </ul>
 
               <p className="mt-8">
-                Voor organisaties die structurele verandering willen bereiken, biedt <Link to="/vitaliteitsprogramma" className="text-brand-blue hover:text-brand-orange font-medium transition-colors">het 6-weekse vitaliteitsprogramma van InnerLeaps</Link> een bewezen aanpak. Deelnemers nemen eigenaarschap over hun stress, worden veerkrachtiger en productiever.
+                Voor organisaties die structurele verandering willen bereiken, biedt <Link to="/vitaliteitstraining" className="text-brand-blue hover:text-brand-orange font-medium transition-colors">de 6-weekse vitaliteitstraining van InnerLeaps</Link> een bewezen aanpak. Deelnemers nemen eigenaarschap over hun stress, worden veerkrachtiger en productiever.
               </p>
 
               <h2 className="text-2xl md:text-3xl font-bold text-brand-purple mt-12 mb-6">Key Takeaways</h2>
