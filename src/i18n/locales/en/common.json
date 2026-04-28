@@ -12,22 +12,10 @@
     "switchToDutch": "Wissel naar Nederlands"
   },
   "menuItems": {
-    "vitality": {
-      "label": "Vitality Training",
-      "description": "A vital and resilient team"
-    },
-    "employability": {
-      "label": "Employability",
-      "description": "A productive team with less absenteeism"
-    },
-    "stress": {
-      "label": "Stress Management",
-      "description": "Reduce tension and pressure"
-    },
-    "performance": {
-      "label": "Improve Performance",
-      "description": "Sharpen focus and performance"
-    }
+    "vitality": { "label": "Vitality Training", "description": "A vital and resilient team" },
+    "employability": { "label": "Employability", "description": "A productive team with less sick leave" },
+    "stress": { "label": "Stress Management", "description": "Reduce tension and pressure" },
+    "performance": { "label": "Improve Performance", "description": "Sharpen focus and performance" }
   },
   "cta": {
     "scheduleCall": "Schedule a call with Bas",
@@ -38,11 +26,19 @@
     "register": "Register",
     "signUp": "Sign up",
     "discoverImpact": "Discover your impact",
-    "discoverMethod": "Discover the method"
+    "discoverMethod": "Discover the method",
+    "calculateImpactLong": "Calculate your impact",
+    "calculateImpactShort": "Calculate impact",
+    "scheduleCallShort": "Schedule a call with Bas",
+    "contactShort": "Contact",
+    "freeMasterclassLong": "Free masterclass",
+    "freeMasterclassShort": "Masterclass",
+    "registerTrainingLong": "Register for training",
+    "registerTrainingShort": "Register"
   },
   "loading": "Loading...",
   "footer": {
-    "tagline": "Brain training that reduces absenteeism and strengthens long-term employability",
+    "tagline": "Brain training that reduces sick leave and strengthens long-term employability",
     "trainerCategory": "Trainer Category 1",
     "googleRating": "4.7/5 on Google",
     "linkedinAria": "Innerleaps on LinkedIn",
@@ -56,7 +52,7 @@
     "terms": "Terms and conditions"
   },
   "contactSection": {
-    "title": "Ask Bas your questions",
+    "title": "Questions? Plan a call with Bas",
     "quote": "\"Hi! Great to have you here. Shall we get to know each other? I'd love to hear what your team needs.\"",
     "founderLabel": "— Bas Ter Haar Romenij, Founder of Innerleaps",
     "directContactTitle": "Or reach out directly",
@@ -66,15 +62,15 @@
   },
   "hero": {
     "badge": "Scientifically proven method",
-    "headlinePart1": "Prevent",
-    "headlinePart2": "absenteeism",
-    "headlinePart3": "with our",
+    "headlinePart1": "Reduce",
+    "headlinePart2": "sick leave",
+    "headlinePart3": "with science-based",
     "headlinePart4": "vitality training",
-    "subtitle": "Lower absenteeism, prevent burnout, and sharpen your team's focus with our evidence-based vitality training",
+    "subtitle": "Lower sick leave, prevent burnout, and sharpen your team's focus with our evidence-based vitality training",
     "whyChooseUs": "Why organizations choose us",
     "stats": {
       "dropoutRisk": "Drop-out risk",
-      "absenteeism": "Absenteeism",
+      "absenteeism": "Sick leave",
       "focus": "Focus & concentration",
       "science": "Science",
       "scienceValue": "40+ years"
@@ -84,11 +80,95 @@
   },
   "methodology": {
     "headlinePart1": "Reduce",
-    "headlinePart2": "absenteeism",
+    "headlinePart2": "sick leave",
     "headlinePart3": "and boost",
     "headlinePart4": "performance",
     "body1": "The core of our brain training is strengthening the \"control center\" for rational choices, focus, and conscious action — and the \"warning system\" that catches stress signals earlier. The result? Less stress and sharper focus.",
     "body2": "Want to know exactly how the method works?",
-    "imageAlt": "Training for better performance, less stress, and lower absenteeism"
+    "imageAlt": "Training for better performance, less stress, and lower sick leave"
+  },
+  "programOverview": {
+    "headlinePart1": "Brain training",
+    "headlinePart2": "for real",
+    "headlinePart3": "behavior change",
+    "intro": "Our core program runs for 6 weeks. Ask us about tailored options for your team.",
+    "outroQuestion": "Want to learn more about how our method works?",
+    "features": {
+      "weeklyWorkshops": {
+        "title": "Weekly group workshops",
+        "description": "A 60-minute group workshop every week, led by one of our accredited trainers."
+      },
+      "accreditedTrainers": {
+        "title": "Accredited trainers",
+        "description": "All our trainers are VMBN-accredited at category 1 for attention training — the highest standard in the Netherlands."
+      },
+      "practice": {
+        "title": "15 minutes of practice",
+        "description": "Participants aim to practice about 15 minutes a day, 5 days a week, using our workbook and audio recordings."
+      },
+      "safeLearning": {
+        "title": "A safe space to learn",
+        "description": "Participants respond to the trainer's questions in the group; sharing personal context is always optional."
+      }
+    }
+  },
+  "masterclass": {
+    "imageAlt": "Participants in an Innerleaps masterclass",
+    "headlinePart1": "Try it yourself in our",
+    "headlinePart2": "free masterclass",
+    "subcopyEmployee": "Curious but want to experience our method first? You can. In our 60-minute masterclass you'll get a real taste of how we work.",
+    "subcopyEmployer": "Curious but want to check whether the method fits your team first? You can. In our 60-minute masterclass your organization gets a real taste of how we work.",
+    "cards": {
+      "stress": {
+        "title": "Stress level",
+        "employee": "Get insight into your own stress level. Fully grounded in science.",
+        "employer": "Employees get insight into their own stress level. Fully grounded in science."
+      },
+      "attention": {
+        "title": "Attention exercise",
+        "employee": "Experience a technique to take back control from autopilot and reclaim your focus.",
+        "employer": "Employees experience a technique to take back control from autopilot and reclaim their focus."
+      },
+      "reset": {
+        "title": "Reset tool",
+        "employee": "Learn a tool to reset your working memory and instantly bring your attention back.",
+        "employer": "Employees learn a tool to reset their working memory and instantly bring their attention back."
+      },
+      "noCommitment": {
+        "title": "No commitment",
+        "text": "We believe everyone should be able to try this technique. That's why our masterclass is completely commitment-free."
+      }
+    },
+    "review": "\"This workshop really shows you why training your attention muscle matters. It's a great mix of theory and exercises, so you immediately get to experience what it's like. I think anyone can benefit from this — highly recommended.\"",
+    "reviewer": "- Jeroen",
+    "ctaEmployee": "Request a masterclass from Bas",
+    "ctaEmployer": "Get to know Bas"
+  },
+  "trust": {
+    "headlinePart1": "Why organizations",
+    "headlinePart2": "choose us",
+    "items": {
+      "healthcareSystem": {
+        "title": "Method recognized by the Dutch healthcare system",
+        "description": "The full version of our training is reimbursed under basic Dutch health insurance by major insurers."
+      },
+      "research": {
+        "title": "40 years of scientific research",
+        "description": "Built on the MBSR method — one of the most thoroughly researched interventions in the world."
+      },
+      "trainers": {
+        "title": "Accredited trainers",
+        "description": "All our trainers are VMBN category 1 certified — the highest accreditation within VMBN. This means they meet the strictest standards for training, experience, and professionalism."
+      }
+    },
+    "altPrefix": {
+      "vgz": "Innerleaps recognized by VGZ health insurance",
+      "cz": "Innerleaps recognized by CZ health insurance",
+      "menzis": "Innerleaps recognized by Menzis health insurance",
+      "oxford": "Method developed at Oxford University",
+      "umass": "Method developed at the University of Massachusetts",
+      "uva": "Attention training studied at the University of Amsterdam",
+      "vmbn": "VMBN Trainer category 1"
+    }
   }
 }
