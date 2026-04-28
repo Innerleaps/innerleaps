@@ -36,7 +36,59 @@
     "readMore": "Lees meer",
     "send": "Verstuur",
     "register": "Inschrijven",
-    "signUp": "Aanmelden"
+    "signUp": "Aanmelden",
+    "discoverImpact": "Ontdek jullie impact",
+    "discoverMethod": "Ontdek de methode"
   },
-  "loading": "Laden..."
+  "loading": "Laden...",
+  "footer": {
+    "tagline": "Vitaliteitstraining die verzuim verlaagt en duurzame inzetbaarheid versterkt",
+    "trainerCategory": "Trainer categorie 1",
+    "googleRating": "4,7/5 op Google",
+    "linkedinAria": "Innerleaps op LinkedIn",
+    "trainingsHeading": "Trainingen",
+    "trainingsAria": "Trainingen",
+    "performanceLink": "Prestatie en concentratie verbeteren",
+    "contactHeading": "Contact",
+    "copyright": "© 2026 Innerleaps",
+    "privacy": "Privacybeleid",
+    "cookies": "Cookiebeleid",
+    "terms": "Algemene voorwaarden"
+  },
+  "contactSection": {
+    "title": "Stel je vragen aan Bas",
+    "quote": "\"Hoi! Wat leuk dat je hier bent. Zullen we even kennismaken? Dan hoor ik graag wat jullie nodig hebben.\"",
+    "founderLabel": "— Bas Ter Haar Romenij, Oprichter Innerleaps",
+    "directContactTitle": "Of neem direct zelf contact op",
+    "emailLabel": "Email",
+    "phoneLabel": "Telefoon",
+    "addressLabel": "Adres"
+  },
+  "hero": {
+    "badge": "Wetenschappelijk bewezen methode",
+    "headlinePart1": "Voorkom",
+    "headlinePart2": "verzuim",
+    "headlinePart3": "met onze",
+    "headlinePart4": "vitaliteitstraining",
+    "subtitle": "Verlaag verzuim, voorkom burn-outs en verbeter de focus van je team met onze evidence based vitaliteitstraining",
+    "whyChooseUs": "Waarom organisaties ons kiezen",
+    "stats": {
+      "dropoutRisk": "Uitval risico",
+      "absenteeism": "Verzuim",
+      "focus": "Focus & concentratie",
+      "science": "Wetenschap",
+      "scienceValue": "40+ jaar"
+    },
+    "googleReviews": "Google Reviews",
+    "heroImageAlt": "Vitaliteitstraining presentatie Innerleaps"
+  },
+  "methodology": {
+    "headlinePart1": "Verlaag",
+    "headlinePart2": "verzuim",
+    "headlinePart3": "én boost",
+    "headlinePart4": "prestaties",
+    "body1": "De kern van onze breintraining is het versterken van het \"controlecentrum\" voor rationele keuzes, focus en bewuste acties, en het \"waarschuwingssysteem\" dat stresssignalen eerder opmerkt. Het resultaat? Minder stress én een scherpe focus!",
+    "body2": "Wil je weten hoe de methode precies werkt?",
+    "imageAlt": "Training voor betere prestatie, minder stress en lager verzuim"
+  }
 }
