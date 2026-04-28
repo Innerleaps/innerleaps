@@ -4,6 +4,8 @@ import LanguageDetector from "i18next-browser-languagedetector";
 
 import nlCommon from "./locales/nl/common.json";
 import enCommon from "./locales/en/common.json";
+import nlMethode from "./locales/nl/methode.json";
+import enMethode from "./locales/en/methode.json";
 
 export const SUPPORTED_LANGUAGES = ["nl", "en"] as const;
 export type SupportedLanguage = (typeof SUPPORTED_LANGUAGES)[number];
@@ -65,13 +67,13 @@ i18n
   .use(initReactI18next)
   .init({
     resources: {
-      nl: { common: nlCommon },
-      en: { common: enCommon },
+      nl: { common: nlCommon, methode: nlMethode },
+      en: { common: enCommon, methode: enMethode },
     },
     fallbackLng: "nl",
     supportedLngs: SUPPORTED_LANGUAGES,
     nonExplicitSupportedLngs: true, // treat "en-US", "en-GB" etc. as "en"
-    ns: ["common"],
+    ns: ["common", "methode"],
     defaultNS: "common",
     interpolation: { escapeValue: false },
     detection: {
