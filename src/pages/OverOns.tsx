@@ -249,9 +249,9 @@ const OverOns = () => {
               {/* Links: Body */}
               <div className="space-y-4 text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
                 <p>
-                  Bas richtte InnerLeaps op na zijn herstel van een hersenschudding. Met een master Design for
-                  Interaction aan de TU Delft en ervaring in consultancy en als productmanager bij een SaaS-bedrijf,
-                  was hij gewend om onder druk te presteren. Tot een snowboardongeval hem tot stilstand dwong.
+                  Bas richtte InnerLeaps op na zijn herstel van een hersenschudding. Als consultant en lead
+                  productmanager was hij gewend om onder druk te presteren. Tot een snowboardongeval hem tot stilstand
+                  dwong.
                 </p>
                 <p>
                   Tijdens zijn herstel verdiepte hij zich in de werking van de hersenen en stuitte op veertig jaar
