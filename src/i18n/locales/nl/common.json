@@ -1,0 +1,42 @@
+{
+  "nav": {
+    "forOrganizations": "Voor Organisaties",
+    "forEmployees": "Voor Medewerkers",
+    "method": "Methode",
+    "aboutUs": "Over Ons",
+    "contact": "Contact",
+    "blog": "Blog",
+    "openMenu": "Open menu",
+    "closeMenu": "Sluit menu",
+    "switchToEnglish": "Switch to English",
+    "switchToDutch": "Wissel naar Nederlands"
+  },
+  "menuItems": {
+    "vitality": {
+      "label": "Vitaliteitstraining",
+      "description": "Vitaal en veerkrachtig team"
+    },
+    "employability": {
+      "label": "Inzetbaarheid",
+      "description": "Productief team met minder uitval"
+    },
+    "stress": {
+      "label": "Stressmanagement",
+      "description": "Verminder spanning en druk"
+    },
+    "performance": {
+      "label": "Prestatie Verbeteren",
+      "description": "Verbeter focus en prestaties"
+    }
+  },
+  "cta": {
+    "scheduleCall": "Plan een gesprek met Bas",
+    "bookCall": "Plan een gesprek",
+    "learnMore": "Meer informatie",
+    "readMore": "Lees meer",
+    "send": "Verstuur",
+    "register": "Inschrijven",
+    "signUp": "Aanmelden"
+  },
+  "loading": "Laden..."
+}

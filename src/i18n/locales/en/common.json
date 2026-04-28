@@ -1,0 +1,42 @@
+{
+  "nav": {
+    "forOrganizations": "For Organizations",
+    "forEmployees": "For Employees",
+    "method": "Method",
+    "aboutUs": "About Us",
+    "contact": "Contact",
+    "blog": "Blog",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "switchToEnglish": "Switch to English",
+    "switchToDutch": "Wissel naar Nederlands"
+  },
+  "menuItems": {
+    "vitality": {
+      "label": "Vitality Training",
+      "description": "A vital and resilient team"
+    },
+    "employability": {
+      "label": "Employability",
+      "description": "A productive team with less absenteeism"
+    },
+    "stress": {
+      "label": "Stress Management",
+      "description": "Reduce tension and pressure"
+    },
+    "performance": {
+      "label": "Improve Performance",
+      "description": "Sharpen focus and performance"
+    }
+  },
+  "cta": {
+    "scheduleCall": "Schedule a call with Bas",
+    "bookCall": "Book a call",
+    "learnMore": "Learn more",
+    "readMore": "Read more",
+    "send": "Send",
+    "register": "Register",
+    "signUp": "Sign up"
+  },
+  "loading": "Loading..."
+}
