@@ -143,12 +143,15 @@ const OverOns = () => {
             {/* Grid met 2 kolommen: Links body, rechts afbeelding */}
             <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
               {/* Links: Body tekst */}
-              <div className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
+              <div className="space-y-4 text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
                 <p>
                   Bij Innerleaps geloven we in het duurzame succes van bewuste aandacht. Met die aandacht leven
                   deelnemers met meer rust, focus en lef. Ze worden er niet alleen een mooier mens van, ze zullen ook
-                  hun ware potentieel benutten. Hierdoor krijgen organisaties een team dat niet alleen inzetbaar is,
-                  maar ook nog eens met plezier maximaal presteert. Dat is de innerlijke sprong waar wij in geloven.
+                  hun ware potentieel benutten.
+                </p>
+                <p>
+                  Hierdoor krijgen organisaties een team dat niet alleen inzetbaar is, maar ook nog eens met plezier
+                  maximaal presteert. Dat is de innerlijke sprong waar wij in geloven.
                 </p>
               </div>
 
