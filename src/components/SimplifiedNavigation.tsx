@@ -135,7 +135,7 @@ const SimplifiedNavigation = () => {
               to="/breintraining-methode"
               className="text-brand-gray-dark hover:text-brand-blue transition-colors duration-300 font-medium text-base whitespace-nowrap"
             >
-              De Methode
+              Methode
             </Link>
             
             <Link 
@@ -235,7 +235,7 @@ const SimplifiedNavigation = () => {
           onClick={() => setIsMenuOpen(false)}
           className="text-brand-gray-dark hover:text-brand-blue transition-colors duration-300 font-medium py-2 text-left text-base"
         >
-          De Methode
+          Methode
         </Link>
 
               <Link 
