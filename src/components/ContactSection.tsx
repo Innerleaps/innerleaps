@@ -24,7 +24,7 @@ const ContactSection = memo(() => {
                     "Hoi! Wat leuk dat je hier bent. Zullen we even kennismaken? Dan hoor ik graag wat jullie nodig hebben."
                   </p>
                   <p className="text-brand-gray-medium font-medium">
-                    — Bas Ter Haar Romenij, Oprichter InnerLeaps
+                    — Bas Ter Haar Romenij, Oprichter Innerleaps
                   </p>
                 </div>
               </div>

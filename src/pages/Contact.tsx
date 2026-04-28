@@ -43,7 +43,7 @@ const Contact = () => {
                         "Hoi! Wat leuk dat je hier bent. Zullen we even kennismaken? Ik luister graag naar jullie
                         uitdagingen.
                       </p>
-                      <p className="text-brand-gray-medium font-medium">— Bas Ter Haar Romenij, Oprichter InnerLeaps</p>
+                      <p className="text-brand-gray-medium font-medium">— Bas Ter Haar Romenij, Oprichter Innerleaps</p>
                     </div>
                   </div>
 

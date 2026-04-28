@@ -1,7 +1,10 @@
 import { useState } from 'react';
 import { Menu, X, ChevronDown } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
+import LanguageSwitcher from '@/components/LanguageSwitcher';
+import { detectLanguageFromPath } from '@/i18n/config';
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -11,33 +14,34 @@ import {
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu"
 
-const organisationMenuItems = [
-  {
-    label: 'Vitaliteitstraining',
-    href: '/vitaliteitstraining',
-    description: 'Vitaal en veerkrachtig team'
-  },
-  {
-    label: 'Inzetbaarheid',
-    href: '/duurzame-inzetbaarheid-training',
-    description: 'Productief team met minder uitval'
-  }
-];
-
-const employeeMenuItems = [
-  {
-    label: 'Stressmanagement',
-    href: '/stressmanagement-training',
-    description: 'Verminder spanning en druk'
-  },
-  {
-    label: 'Prestatie Verbeteren',
-    href: '/prestatie-training',
-    description: 'Verbeter focus en prestaties'
-  }
-];
-
 const SimplifiedNavigation = () => {
+  const { t } = useTranslation();
+  const { pathname } = useLocation();
+  const lang = detectLanguageFromPath(pathname);
+
+  // Resolve hrefs based on active language
+  const href = {
+    home: lang === 'en' ? '/en' : '/',
+    method: lang === 'en' ? '/en/method' : '/breintraining-methode',
+    aboutUs: lang === 'en' ? '/en/about-us' : '/over-ons',
+    contact: lang === 'en' ? '/en/contact' : '/contact',
+    blog: lang === 'en' ? '/en/blog' : '/blog',
+    vitality: lang === 'en' ? '/en/vitality-training' : '/vitaliteitstraining',
+    employability: lang === 'en' ? '/en/sustainable-employability-training' : '/duurzame-inzetbaarheid-training',
+    stress: lang === 'en' ? '/en/stress-management-training' : '/stressmanagement-training',
+    performance: lang === 'en' ? '/en/performance-training' : '/prestatie-training',
+  };
+
+  const organisationMenuItems = [
+    { label: t('menuItems.vitality.label'), href: href.vitality, description: t('menuItems.vitality.description') },
+    { label: t('menuItems.employability.label'), href: href.employability, description: t('menuItems.employability.description') },
+  ];
+
+  const employeeMenuItems = [
+    { label: t('menuItems.stress.label'), href: href.stress, description: t('menuItems.stress.description') },
+    { label: t('menuItems.performance.label'), href: href.performance, description: t('menuItems.performance.description') },
+  ];
+
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isOrganisationMenuOpen, setIsOrganisationMenuOpen] = useState(false);
   const [isEmployeeMenuOpen, setIsEmployeeMenuOpen] = useState(false);
@@ -48,10 +52,10 @@ const SimplifiedNavigation = () => {
         <div className="flex items-center gap-4 sm:gap-8 py-4">
           {/* Logo */}
           <div className="flex flex-col items-start min-w-0 flex-shrink-0">
-            <Link to="/" className="hover:opacity-80 transition-opacity">
-              <img 
-                src="/lovable-uploads/06d0112b-b23b-4ce0-b028-68ac939b2b2b.png" 
-                alt="InnerLeaps Logo" 
+            <Link to={href.home} className="hover:opacity-80 transition-opacity">
+              <img
+                src="/lovable-uploads/06d0112b-b23b-4ce0-b028-68ac939b2b2b.png"
+                alt="Innerleaps Logo"
                 className="h-16 w-auto"
               />
             </Link>
@@ -59,16 +63,15 @@ const SimplifiedNavigation = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-6 xl:space-x-8">
-            {/* Voor Organisaties dropdown - EERST */}
             <NavigationMenu className="flex-none">
               <NavigationMenuList>
                 <NavigationMenuItem>
-                  <NavigationMenuTrigger 
+                  <NavigationMenuTrigger
                     className="text-brand-gray-dark hover:text-brand-blue transition-colors duration-300 font-medium text-base bg-transparent hover:bg-transparent data-[state=open]:bg-transparent data-[active]:bg-transparent focus:bg-transparent active:bg-transparent cursor-default select-none px-0 py-0 h-auto"
                     onClick={(e) => e.preventDefault()}
                     onPointerDown={(e) => e.preventDefault()}
                   >
-                    Voor Organisaties
+                    {t('nav.forOrganizations')}
                   </NavigationMenuTrigger>
                   <NavigationMenuContent className="bg-white border border-gray-200 shadow-lg z-50">
                     <ul className="w-[280px] p-2">
@@ -95,16 +98,15 @@ const SimplifiedNavigation = () => {
               </NavigationMenuList>
             </NavigationMenu>
 
-            {/* Voor Medewerkers dropdown */}
             <NavigationMenu className="flex-none">
               <NavigationMenuList>
                 <NavigationMenuItem>
-                  <NavigationMenuTrigger 
+                  <NavigationMenuTrigger
                     className="text-brand-gray-dark hover:text-brand-blue transition-colors duration-300 font-medium text-base bg-transparent hover:bg-transparent data-[state=open]:bg-transparent data-[active]:bg-transparent focus:bg-transparent active:bg-transparent cursor-default select-none px-0 py-0 h-auto"
                     onClick={(e) => e.preventDefault()}
                     onPointerDown={(e) => e.preventDefault()}
                   >
-                    Voor Medewerkers
+                    {t('nav.forEmployees')}
                   </NavigationMenuTrigger>
                   <NavigationMenuContent className="bg-white border border-gray-200 shadow-lg z-50">
                     <ul className="w-[280px] p-2">
@@ -130,43 +132,49 @@ const SimplifiedNavigation = () => {
                 </NavigationMenuItem>
               </NavigationMenuList>
             </NavigationMenu>
-            
-            <Link 
-              to="/breintraining-methode"
+
+            <Link
+              to={href.method}
               className="text-brand-gray-dark hover:text-brand-blue transition-colors duration-300 font-medium text-base whitespace-nowrap"
             >
-              Methode
+              {t('nav.method')}
             </Link>
-            
-            <Link 
-              to="/over-ons"
+
+            <Link
+              to={href.aboutUs}
               className="text-brand-gray-dark hover:text-brand-blue transition-colors duration-300 font-medium text-base whitespace-nowrap"
             >
-              Over Ons
+              {t('nav.aboutUs')}
             </Link>
-            <Link 
-              to="/contact"
+            <Link
+              to={href.contact}
               className="text-brand-gray-dark hover:text-brand-blue transition-colors duration-300 font-medium text-base whitespace-nowrap"
             >
-              Contact
+              {t('nav.contact')}
             </Link>
-            <Link 
-              to="/blog"
+            <Link
+              to={href.blog}
               className="text-brand-gray-dark hover:text-brand-blue transition-colors duration-300 font-medium text-base whitespace-nowrap"
             >
-              Blog
+              {t('nav.blog')}
             </Link>
           </div>
 
-          {/* Mobile menu button */}
-          <div className="lg:hidden ml-auto">
-            <Button 
-              variant="ghost" 
-              size="sm" 
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-            >
-              {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-            </Button>
+          {/* Right side: language switcher (desktop) + mobile menu button */}
+          <div className="ml-auto flex items-center gap-4">
+            <div className="hidden lg:block">
+              <LanguageSwitcher />
+            </div>
+            <div className="lg:hidden">
+              <Button
+                variant="ghost"
+                size="sm"
+                onClick={() => setIsMenuOpen(!isMenuOpen)}
+                aria-label={isMenuOpen ? t('nav.closeMenu') : t('nav.openMenu')}
+              >
+                {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+              </Button>
+            </div>
           </div>
         </div>
 
@@ -174,13 +182,17 @@ const SimplifiedNavigation = () => {
         {isMenuOpen && (
           <div className="lg:hidden pb-4">
             <div className="flex flex-col space-y-4">
-              {/* Voor Organisaties - EERST */}
+              {/* Language switcher at top of mobile menu */}
+              <div className="pb-2 border-b border-gray-200">
+                <LanguageSwitcher variant="block" onSwitch={() => setIsMenuOpen(false)} />
+              </div>
+
               <div>
                 <button
                   onClick={() => setIsOrganisationMenuOpen(!isOrganisationMenuOpen)}
                   className="flex items-center justify-between w-full text-brand-gray-dark hover:text-brand-blue transition-colors duration-300 font-medium py-2 text-left text-base"
                 >
-                  Voor Organisaties
+                  {t('nav.forOrganizations')}
                   <ChevronDown className={`h-4 w-4 transition-transform ${isOrganisationMenuOpen ? 'rotate-180' : ''}`} />
                 </button>
                 {isOrganisationMenuOpen && (
@@ -202,13 +214,12 @@ const SimplifiedNavigation = () => {
                 )}
               </div>
 
-              {/* Voor Medewerkers */}
               <div>
                 <button
                   onClick={() => setIsEmployeeMenuOpen(!isEmployeeMenuOpen)}
                   className="flex items-center justify-between w-full text-brand-gray-dark hover:text-brand-blue transition-colors duration-300 font-medium py-2 text-left text-base"
                 >
-                  Voor Medewerkers
+                  {t('nav.forEmployees')}
                   <ChevronDown className={`h-4 w-4 transition-transform ${isEmployeeMenuOpen ? 'rotate-180' : ''}`} />
                 </button>
                 {isEmployeeMenuOpen && (
@@ -226,38 +237,38 @@ const SimplifiedNavigation = () => {
                         {subItem.label}
                       </Link>
                     ))}
-            </div>
-          )}
-        </div>
+                  </div>
+                )}
+              </div>
 
-        <Link 
-          to="/breintraining-methode"
-          onClick={() => setIsMenuOpen(false)}
-          className="text-brand-gray-dark hover:text-brand-blue transition-colors duration-300 font-medium py-2 text-left text-base"
-        >
-          Methode
-        </Link>
+              <Link
+                to={href.method}
+                onClick={() => setIsMenuOpen(false)}
+                className="text-brand-gray-dark hover:text-brand-blue transition-colors duration-300 font-medium py-2 text-left text-base"
+              >
+                {t('nav.method')}
+              </Link>
 
-              <Link 
-                to="/over-ons"
+              <Link
+                to={href.aboutUs}
                 onClick={() => setIsMenuOpen(false)}
                 className="text-brand-gray-dark hover:text-brand-blue transition-colors duration-300 font-medium py-2 text-left text-base"
               >
-                Over Ons
+                {t('nav.aboutUs')}
               </Link>
-              <Link 
-                to="/contact"
+              <Link
+                to={href.contact}
                 onClick={() => setIsMenuOpen(false)}
                 className="text-brand-gray-dark hover:text-brand-blue transition-colors duration-300 font-medium py-2 text-left text-base"
               >
-                Contact
+                {t('nav.contact')}
               </Link>
-              <Link 
-                to="/blog"
+              <Link
+                to={href.blog}
                 onClick={() => setIsMenuOpen(false)}
                 className="text-brand-gray-dark hover:text-brand-blue transition-colors duration-300 font-medium py-2 text-left text-base"
               >
-                Blog
+                {t('nav.blog')}
               </Link>
             </div>
           </div>

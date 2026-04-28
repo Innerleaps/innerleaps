@@ -9,7 +9,7 @@ const HoeVerlaagIkZiekteverzuim = () => {
   return (
     <div className="min-h-screen bg-white">
       <Helmet>
-        <title>Hoe verlaag ik het ziekteverzuim in mijn organisatie? | InnerLeaps</title>
+        <title>Hoe verlaag ik het ziekteverzuim in mijn organisatie? | Innerleaps</title>
         <meta
           name="description"
           content="Ziekteverzuim verlagen met 15-21% door aandachtstraining. Wetenschappelijk bewezen: 70% lager uitvalrisico. Ontdek de evidence-based aanpak met 89,8% adoptie."
@@ -17,7 +17,7 @@ const HoeVerlaagIkZiekteverzuim = () => {
         <link rel="canonical" href="https://innerleaps.nl/blog/hoe-verlaag-ik-het-ziekteverzuim-in-mijn-organisatie" />
 
         {/* Open Graph */}
-        <meta property="og:title" content="Hoe verlaag ik het ziekteverzuim in mijn organisatie? | InnerLeaps" />
+        <meta property="og:title" content="Hoe verlaag ik het ziekteverzuim in mijn organisatie? | Innerleaps" />
         <meta
           property="og:description"
           content="Ziekteverzuim verlagen met 15-21% door aandachtstraining. Wetenschappelijk bewezen: 70% lager uitvalrisico. Ontdek de evidence-based aanpak met 89,8% adoptie."
@@ -31,7 +31,7 @@ const HoeVerlaagIkZiekteverzuim = () => {
 
         {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Hoe verlaag ik het ziekteverzuim in mijn organisatie? | InnerLeaps" />
+        <meta name="twitter:title" content="Hoe verlaag ik het ziekteverzuim in mijn organisatie? | Innerleaps" />
         <meta
           name="twitter:description"
           content="Ziekteverzuim verlagen met 15-21% door aandachtstraining. Wetenschappelijk bewezen: 70% lager uitvalrisico. Ontdek de evidence-based aanpak met 89,8% adoptie."
@@ -59,7 +59,7 @@ const HoeVerlaagIkZiekteverzuim = () => {
             },
             publisher: {
               "@type": "Organization",
-              name: "InnerLeaps",
+              name: "Innerleaps",
               logo: {
                 "@type": "ImageObject",
                 url: "https://7f1b052b-e2ee-419a-aec0-e4591c9e4afe.lovableproject.com/lovable-uploads/06d0112b-b23b-4ce0-b028-68ac939b2b2b.png",

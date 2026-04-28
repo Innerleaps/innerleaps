@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <!-- Home -->
+  <url>
+    <loc>https://innerleaps.nl/</loc>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://innerleaps.nl/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://innerleaps.nl/en" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://innerleaps.nl/" />
+  </url>
+  <url>
+    <loc>https://innerleaps.nl/en</loc>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://innerleaps.nl/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://innerleaps.nl/en" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://innerleaps.nl/" />
+  </url>
+
+  <!-- Method -->
+  <url>
+    <loc>https://innerleaps.nl/breintraining-methode</loc>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://innerleaps.nl/breintraining-methode" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://innerleaps.nl/en/method" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://innerleaps.nl/breintraining-methode" />
+  </url>
+  <url>
+    <loc>https://innerleaps.nl/en/method</loc>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://innerleaps.nl/breintraining-methode" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://innerleaps.nl/en/method" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://innerleaps.nl/breintraining-methode" />
+  </url>
+
+  <!-- About Us -->
+  <url>
+    <loc>https://innerleaps.nl/over-ons</loc>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://innerleaps.nl/over-ons" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://innerleaps.nl/en/about-us" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://innerleaps.nl/over-ons" />
+  </url>
+  <url>
+    <loc>https://innerleaps.nl/en/about-us</loc>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://innerleaps.nl/over-ons" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://innerleaps.nl/en/about-us" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://innerleaps.nl/over-ons" />
+  </url>
+
+  <!-- Contact -->
+  <url>
+    <loc>https://innerleaps.nl/contact</loc>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://innerleaps.nl/contact" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://innerleaps.nl/en/contact" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://innerleaps.nl/contact" />
+  </url>
+  <url>
+    <loc>https://innerleaps.nl/en/contact</loc>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://innerleaps.nl/contact" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://innerleaps.nl/en/contact" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://innerleaps.nl/contact" />
+  </url>
+
+  <!-- Vitality Training -->
+  <url>
+    <loc>https://innerleaps.nl/vitaliteitstraining</loc>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://innerleaps.nl/vitaliteitstraining" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://innerleaps.nl/en/vitality-training" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://innerleaps.nl/vitaliteitstraining" />
+  </url>
+  <url>
+    <loc>https://innerleaps.nl/en/vitality-training</loc>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://innerleaps.nl/vitaliteitstraining" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://innerleaps.nl/en/vitality-training" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://innerleaps.nl/vitaliteitstraining" />
+  </url>
+
+  <!-- Sustainable Employability -->
+  <url>
+    <loc>https://innerleaps.nl/duurzame-inzetbaarheid-training</loc>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://innerleaps.nl/duurzame-inzetbaarheid-training" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://innerleaps.nl/en/sustainable-employability-training" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://innerleaps.nl/duurzame-inzetbaarheid-training" />
+  </url>
+  <url>
+    <loc>https://innerleaps.nl/en/sustainable-employability-training</loc>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://innerleaps.nl/duurzame-inzetbaarheid-training" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://innerleaps.nl/en/sustainable-employability-training" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://innerleaps.nl/duurzame-inzetbaarheid-training" />
+  </url>
+
+  <!-- Stress Management -->
+  <url>
+    <loc>https://innerleaps.nl/stressmanagement-training</loc>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://innerleaps.nl/stressmanagement-training" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://innerleaps.nl/en/stress-management-training" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://innerleaps.nl/stressmanagement-training" />
+  </url>
+  <url>
+    <loc>https://innerleaps.nl/en/stress-management-training</loc>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://innerleaps.nl/stressmanagement-training" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://innerleaps.nl/en/stress-management-training" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://innerleaps.nl/stressmanagement-training" />
+  </url>
+
+  <!-- Performance Training -->
+  <url>
+    <loc>https://innerleaps.nl/prestatie-training</loc>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://innerleaps.nl/prestatie-training" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://innerleaps.nl/en/performance-training" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://innerleaps.nl/prestatie-training" />
+  </url>
+  <url>
+    <loc>https://innerleaps.nl/en/performance-training</loc>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://innerleaps.nl/prestatie-training" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://innerleaps.nl/en/performance-training" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://innerleaps.nl/prestatie-training" />
+  </url>
+
+  <!-- Blog index -->
+  <url>
+    <loc>https://innerleaps.nl/blog</loc>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://innerleaps.nl/blog" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://innerleaps.nl/en/blog" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://innerleaps.nl/blog" />
+  </url>
+  <url>
+    <loc>https://innerleaps.nl/en/blog</loc>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://innerleaps.nl/blog" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://innerleaps.nl/en/blog" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://innerleaps.nl/blog" />
+  </url>
+
+  <!-- Legal (EN-only) -->
+  <url><loc>https://innerleaps.nl/algemene-voorwaarden</loc></url>
+  <url><loc>https://innerleaps.nl/privacy</loc></url>
+  <url><loc>https://innerleaps.nl/cookies</loc></url>
+
+</urlset>
