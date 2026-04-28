@@ -25,11 +25,11 @@ interface FormData {
 }
 const timeslots = [{
   id: '2024-11-12T16:00:00',
-  display: 'Woensdag, 12 november 16:00 – 17:00',
+  display: 'Woensdag, 12 november 16:00 - 17:00',
   calendarUrl: 'https://calendar.google.com/calendar/event?action=TEMPLATE&tmeid=NGFjNmZhYWdzcmQyZzllOXB0cjJvZTlidjIgYmFzQGlubmVybGVhcHMubmw&tmsrc=bas%40innerleaps.nl'
 }, {
   id: '2024-11-12T19:30:00',
-  display: 'Woensdag, 12 november 19:30 – 20:30',
+  display: 'Woensdag, 12 november 19:30 - 20:30',
   calendarUrl: 'https://calendar.google.com/calendar/event?action=TEMPLATE&tmeid=NTlnanZndWsyOTk1Zmw4cTBkNTl1N2ZvcTEgYmFzQGlubmVybGVhcHMubmw&tmsrc=bas%40innerleaps.nl'
 }];
 
