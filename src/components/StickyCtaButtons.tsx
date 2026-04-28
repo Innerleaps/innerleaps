@@ -1,8 +1,9 @@
 import { useState, useEffect, lazy, Suspense } from 'react';
+import { useTranslation } from 'react-i18next';
 import { Button } from '@/components/ui/button';
 import { useLocation } from 'react-router-dom';
+import { detectLanguageFromPath } from '@/i18n/config';
 
-// Lazy load modals
 const CalculatorModal = lazy(() => import('./CalculatorModal'));
 const ProgramRegistrationModal = lazy(() => import('./ProgramRegistrationModal'));
 
@@ -12,74 +13,70 @@ interface StickyCtaButtonsProps {
 }
 
 const StickyCtaButtons = ({ onMasterclassClick, onProgramRegistrationClick }: StickyCtaButtonsProps) => {
+  const { t } = useTranslation();
   const [isCalculatorOpen, setIsCalculatorOpen] = useState(false);
   const [isRegistrationModalOpen, setIsRegistrationModalOpen] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
   const location = useLocation();
-  const isHomePage = location.pathname === '/';
+  const lang = detectLanguageFromPath(location.pathname);
+
+  const isHomePage = location.pathname === '/' || location.pathname === '/en';
   const isLandingPage = location.pathname === '/landing';
-  const isProgramPage = location.pathname === '/prestatie-training' || location.pathname === '/stressmanagement-training';
-  
-  // Determine program type for modal
-  const programType = location.pathname === '/prestatie-training' ? 'prestatie' : 'stress-management';
+  const isProgramPage =
+    location.pathname === '/prestatie-training' ||
+    location.pathname === '/stressmanagement-training' ||
+    location.pathname === '/en/performance-training' ||
+    location.pathname === '/en/stress-management-training';
+
+  const programType =
+    location.pathname === '/prestatie-training' || location.pathname === '/en/performance-training'
+      ? 'prestatie'
+      : 'stress-management';
 
   useEffect(() => {
     if (!isHomePage) {
       setIsVisible(true);
       return;
     }
-
-    const handleScroll = () => {
-      // Show sticky buttons as soon as user starts scrolling
-      setIsVisible(window.scrollY > 50);
-    };
-
-    handleScroll(); // Check initial scroll position
+    const handleScroll = () => setIsVisible(window.scrollY > 50);
+    handleScroll();
     window.addEventListener('scroll', handleScroll);
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
+    return () => window.removeEventListener('scroll', handleScroll);
   }, [isHomePage]);
 
-  // Don't show sticky buttons if not visible or on landing page
-  if (!isVisible || isLandingPage) {
-    return null;
-  }
+  if (!isVisible || isLandingPage) return null;
 
   return (
     <>
       <div className="fixed bottom-4 sm:bottom-6 right-4 sm:right-6 z-40 flex flex-col gap-2 sm:gap-3 max-w-[calc(100vw-2rem)] sm:max-w-none">
         {isProgramPage ? (
           <>
-            {/* Program pages: Blue masterclass button on top, Orange registration button below */}
-            <Button 
+            <Button
               variant="secondary"
               onClick={onMasterclassClick}
               className="font-semibold py-3 sm:py-5 px-4 sm:px-10 rounded-lg text-base sm:text-lg shadow-lg whitespace-nowrap"
             >
-              <span className="hidden sm:inline">Gratis masterclass</span>
-              <span className="sm:hidden">Masterclass</span>
+              <span className="hidden sm:inline">{t('cta.freeMasterclassLong')}</span>
+              <span className="sm:hidden">{t('cta.freeMasterclassShort')}</span>
             </Button>
-            <Button 
+            <Button
               onClick={onProgramRegistrationClick}
               className="font-semibold py-3 sm:py-5 px-4 sm:px-10 rounded-lg text-base sm:text-lg shadow-lg whitespace-nowrap"
             >
-              <span className="hidden sm:inline">Aanmelden training</span>
-              <span className="sm:hidden">Aanmelden</span>
+              <span className="hidden sm:inline">{t('cta.registerTrainingLong')}</span>
+              <span className="sm:hidden">{t('cta.registerTrainingShort')}</span>
             </Button>
           </>
         ) : (
           <>
-            {/* Homepage: Orange calculator button on top, Blue contact button below */}
-            <Button 
+            <Button
               onClick={() => setIsCalculatorOpen(true)}
               className="font-semibold py-3 sm:py-5 px-4 sm:px-10 rounded-lg text-base sm:text-lg shadow-lg whitespace-nowrap"
             >
-              <span className="hidden sm:inline">Bereken jullie impact</span>
-              <span className="sm:hidden">Bereken impact</span>
+              <span className="hidden sm:inline">{t('cta.calculateImpactLong')}</span>
+              <span className="sm:hidden">{t('cta.calculateImpactShort')}</span>
             </Button>
-            <Button 
+            <Button
               variant="secondary"
               className="font-semibold py-3 sm:py-5 px-4 sm:px-10 rounded-lg text-base sm:text-lg shadow-lg whitespace-nowrap"
               onClick={() => {
@@ -92,24 +89,20 @@ const StickyCtaButtons = ({ onMasterclassClick, onProgramRegistrationClick }: St
                 document.body.removeChild(link);
               }}
             >
-              <span className="hidden sm:inline">Gesprek met Bas plannen</span>
-              <span className="sm:hidden">Contact</span>
+              <span className="hidden sm:inline">{t('cta.scheduleCallShort')}</span>
+              <span className="sm:hidden">{t('cta.contactShort')}</span>
             </Button>
           </>
         )}
       </div>
 
-      {/* Lazy load modals */}
       <Suspense fallback={null}>
         {isCalculatorOpen && (
-          <CalculatorModal 
-            isOpen={isCalculatorOpen} 
-            onClose={() => setIsCalculatorOpen(false)} 
-          />
+          <CalculatorModal isOpen={isCalculatorOpen} onClose={() => setIsCalculatorOpen(false)} />
         )}
         {isProgramPage && isRegistrationModalOpen && (
-          <ProgramRegistrationModal 
-            isOpen={isRegistrationModalOpen} 
+          <ProgramRegistrationModal
+            isOpen={isRegistrationModalOpen}
             onClose={() => setIsRegistrationModalOpen(false)}
             programType={programType}
           />

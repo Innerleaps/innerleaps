@@ -12,22 +12,10 @@
     "switchToDutch": "Wissel naar Nederlands"
   },
   "menuItems": {
-    "vitality": {
-      "label": "Vitaliteitstraining",
-      "description": "Vitaal en veerkrachtig team"
-    },
-    "employability": {
-      "label": "Inzetbaarheid",
-      "description": "Productief team met minder uitval"
-    },
-    "stress": {
-      "label": "Stressmanagement",
-      "description": "Verminder spanning en druk"
-    },
-    "performance": {
-      "label": "Prestatie Verbeteren",
-      "description": "Verbeter focus en prestaties"
-    }
+    "vitality": { "label": "Vitaliteitstraining", "description": "Vitaal en veerkrachtig team" },
+    "employability": { "label": "Inzetbaarheid", "description": "Productief team met minder uitval" },
+    "stress": { "label": "Stressmanagement", "description": "Verminder spanning en druk" },
+    "performance": { "label": "Prestatie Verbeteren", "description": "Verbeter focus en prestaties" }
   },
   "cta": {
     "scheduleCall": "Plan een gesprek met Bas",
@@ -38,11 +26,19 @@
     "register": "Inschrijven",
     "signUp": "Aanmelden",
     "discoverImpact": "Ontdek jullie impact",
-    "discoverMethod": "Ontdek de methode"
+    "discoverMethod": "Ontdek de methode",
+    "calculateImpactLong": "Bereken jullie impact",
+    "calculateImpactShort": "Bereken impact",
+    "scheduleCallShort": "Gesprek met Bas plannen",
+    "contactShort": "Contact",
+    "freeMasterclassLong": "Gratis masterclass",
+    "freeMasterclassShort": "Masterclass",
+    "registerTrainingLong": "Aanmelden training",
+    "registerTrainingShort": "Aanmelden"
   },
   "loading": "Laden...",
   "footer": {
-    "tagline": "Vitaliteitstraining die verzuim verlaagt en duurzame inzetbaarheid versterkt",
+    "tagline": "Breintraining die verzuim verlaagt en duurzame inzetbaarheid versterkt",
     "trainerCategory": "Trainer categorie 1",
     "googleRating": "4,7/5 op Google",
     "linkedinAria": "Innerleaps op LinkedIn",
@@ -56,7 +52,7 @@
     "terms": "Algemene voorwaarden"
   },
   "contactSection": {
-    "title": "Stel je vragen aan Bas",
+    "title": "Vragen? Plan een gesprek met Bas",
     "quote": "\"Hoi! Wat leuk dat je hier bent. Zullen we even kennismaken? Dan hoor ik graag wat jullie nodig hebben.\"",
     "founderLabel": "— Bas Ter Haar Romenij, Oprichter Innerleaps",
     "directContactTitle": "Of neem direct zelf contact op",
@@ -90,5 +86,89 @@
     "body1": "De kern van onze breintraining is het versterken van het \"controlecentrum\" voor rationele keuzes, focus en bewuste acties, en het \"waarschuwingssysteem\" dat stresssignalen eerder opmerkt. Het resultaat? Minder stress én een scherpe focus!",
     "body2": "Wil je weten hoe de methode precies werkt?",
     "imageAlt": "Training voor betere prestatie, minder stress en lager verzuim"
+  },
+  "programOverview": {
+    "headlinePart1": "Breintraining",
+    "headlinePart2": "voor échte",
+    "headlinePart3": "gedragsverandering",
+    "intro": "Ons kernprogramma duurt 6 weken. Vraag naar de mogelijkheden voor maatwerk.",
+    "outroQuestion": "Wil je nog meer weten over onze methode?",
+    "features": {
+      "weeklyWorkshops": {
+        "title": "Wekelijkse groepsworkshops",
+        "description": "Elke week een groepsworkshop van 60 minuten door één van onze geaccrediteerde trainers."
+      },
+      "accreditedTrainers": {
+        "title": "Geaccrediteerde trainers",
+        "description": "Al onze trainers zijn geaccrediteerd voor categorie 1 aandachtstraining door VMBN."
+      },
+      "practice": {
+        "title": "15 minuten oefenen",
+        "description": "Deelnemers proberen 5 dagen per week zo'n 15 minuten te oefenen met ons werkboek en audio opnames."
+      },
+      "safeLearning": {
+        "title": "Veilig en comfortabel leren",
+        "description": "In de groep reageren deelnemers op vragen van de trainer, persoonlijke toelichting is optioneel."
+      }
+    }
+  },
+  "masterclass": {
+    "imageAlt": "Deelnemers tijdens een Innerleaps masterclass",
+    "headlinePart1": "Ervaar het met onze",
+    "headlinePart2": "vrijblijvende masterclass",
+    "subcopyEmployee": "Ben je geïnteresseerd maar wil je eerst onze methode ervaren? Dat kan! Met onze Masterclass maak je in 60 minuten kennis met onze aanpak.",
+    "subcopyEmployer": "Ben je geïnteresseerd maar wil je eerst checken of de methode aansluit bij jullie team? Dat kan! Met onze Masterclass maakt jouw organisatie in 60 minuten kennis met onze aanpak.",
+    "cards": {
+      "stress": {
+        "title": "Stress level",
+        "employee": "Krijg inzicht in jouw stress level. Volledig wetenschappelijk onderbouwd.",
+        "employer": "Medewerkers krijgen inzicht in hun stress level. Volledig wetenschappelijk onderbouwd."
+      },
+      "attention": {
+        "title": "Aandachtoefening",
+        "employee": "Ervaar een techniek om controle over je autopiloot te krijgen en focus terug te pakken.",
+        "employer": "Medewerkers ervaren een techniek om controle over hun autopiloot te krijgen en focus terug te pakken."
+      },
+      "reset": {
+        "title": "Reset tool",
+        "employee": "Leer een tool om je werkgeheugen te resetten en aandacht direct terug te pakken.",
+        "employer": "Medewerkers leren een tool om hun werkgeheugen te resetten en aandacht direct terug te pakken."
+      },
+      "noCommitment": {
+        "title": "Vrijblijvend",
+        "text": "Wij geloven dat iedereen onze effectieve techniek moet kunnen proberen. Daarom is onze masterclass vrijblijvend."
+      }
+    },
+    "review": "\"Deze workshop laat je duidelijk het belang zien van het trainen van je aandachtsspier. De workshop bestaat uit een mooie mix tussen oefeningen en theorie, waardoor je gelijk al wat ervaring opdoet. Denk dat iedereen hier wat aan heeft, dus kan dit zeker aanbevelen.\"",
+    "reviewer": "- Jeroen",
+    "ctaEmployee": "Masterclass aanvragen bij Bas",
+    "ctaEmployer": "Kennismaken met Bas"
+  },
+  "trust": {
+    "headlinePart1": "Waarom organisaties voor",
+    "headlinePart2": "ons kiezen",
+    "items": {
+      "healthcareSystem": {
+        "title": "Onderliggende methode erkend door Nederlandse zorgsysteem",
+        "description": "De uitgebreide variant van onze training wordt vergoed vanuit basisverzekering door Nederlandse zorgverzekeraars."
+      },
+      "research": {
+        "title": "40 jaar wetenschappelijk onderzoek",
+        "description": "Gebaseerd op de wetenschappelijke MBSR-methode, een van de best onderzochte interventies wereldwijd."
+      },
+      "trainers": {
+        "title": "Geaccrediteerde Trainers",
+        "description": "Al onze trainers zijn VMBN categorie 1 gecertificeerd, de hoogste erkenning binnen de VMBN. Dit betekent dat zij voldoen aan de strengste kwaliteitseisen op het gebied van opleiding, ervaring en professionaliteit."
+      }
+    },
+    "altPrefix": {
+      "vgz": "Vitaliteitstraining herkend door VGZ",
+      "cz": "Vitaliteitstraining herkend door CZ",
+      "menzis": "Vitaliteitstraining herkend door Menzis",
+      "oxford": "Vitaliteitstraining ontwikkeld door Oxford University",
+      "umass": "Vitaliteitstraining ontwikkeld door University of Massachusetts",
+      "uva": "Aandachttraining aan de Universiteit van Amsterdam",
+      "vmbn": "VMBN Trainer categorie 1"
+    }
   }
 }
