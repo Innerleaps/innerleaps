@@ -28,7 +28,7 @@ const Footer = memo(({ showNavigation = true }: FooterProps) => {
       itemScope
       itemType="https://schema.org/Organization"
     >
-      <meta itemProp="name" content="InnerLeaps" />
+      <meta itemProp="name" content="Innerleaps" />
       <meta itemProp="url" content="https://innerleaps.nl" />
       <meta itemProp="sameAs" content={LINKEDIN_URL} />
       <meta itemProp="identifier" content="KvK 98136925" />
@@ -37,7 +37,7 @@ const Footer = memo(({ showNavigation = true }: FooterProps) => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Column 1 — Brand + social proof */}
           <div>
-            <div className="text-2xl font-bold mb-4">InnerLeaps</div>
+            <div className="text-2xl font-bold mb-4">Innerleaps</div>
             <p className="text-gray-300 leading-relaxed mb-6">
               Vitaliteitstraining die verzuim verlaagt en duurzame inzetbaarheid versterkt
             </p>
@@ -70,7 +70,7 @@ const Footer = memo(({ showNavigation = true }: FooterProps) => {
               href={LINKEDIN_URL}
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="InnerLeaps op LinkedIn"
+              aria-label="Innerleaps op LinkedIn"
               className="inline-flex items-center justify-center h-10 w-10 rounded-full bg-white/10 hover:bg-white/20 transition-colors"
             >
               <Linkedin className="h-5 w-5 text-white" />
@@ -142,7 +142,7 @@ const Footer = memo(({ showNavigation = true }: FooterProps) => {
 
         {/* Bottom bar */}
         <div className="border-t border-white/15 mt-8 pt-6 flex flex-col md:flex-row md:items-center md:justify-between gap-3 text-sm text-gray-400">
-          <p>&copy; 2026 InnerLeaps</p>
+          <p>&copy; 2026 Innerleaps</p>
           <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
             <Link to="/privacy" className="hover:text-white transition-colors">
               Privacybeleid

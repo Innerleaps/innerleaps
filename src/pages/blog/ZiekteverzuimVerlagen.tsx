@@ -9,7 +9,7 @@ const ZiekteverzuimVerlagen = () => {
   return (
     <>
       <Helmet>
-        <title>Ziekteverzuim Verlagen: De Wetenschappelijk Bewezen Aanpak voor 2025 | InnerLeaps</title>
+        <title>Ziekteverzuim Verlagen: De Wetenschappelijk Bewezen Aanpak voor 2025 | Innerleaps</title>
         <meta name="description" content="Ziekteverzuim verlagen met 15-21% door wetenschappelijk bewezen aandachtstraining. ROI 497-775%. Ontdek hoe 40 jaar onderzoek verzuimkosten structureel verlaagt." />
         
         {/* Open Graph / Facebook */}
@@ -52,7 +52,7 @@ const ZiekteverzuimVerlagen = () => {
             },
             "publisher": {
               "@type": "Organization",
-              "name": "InnerLeaps",
+              "name": "Innerleaps",
               "logo": {
                 "@type": "ImageObject",
                 "url": "https://innerleaps.nl/lovable-uploads/06d0112b-b23b-4ce0-b028-68ac939b2b2b.png"

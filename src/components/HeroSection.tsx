@@ -140,7 +140,7 @@ const HeroSection = () => {
         <div className="absolute inset-0 z-0">
           <img
             src={heroBackground}
-            alt="Vitaliteitstraining presentatie InnerLeaps"
+            alt="Vitaliteitstraining presentatie Innerleaps"
             className="w-full h-full object-cover"
             fetchPriority="high"
             loading="eager"

@@ -326,7 +326,7 @@ const CalculatorModal = ({ isOpen, onClose }: CalculatorModalProps) => {
             </DialogTitle>
             
             <p className="text-xl leading-relaxed mb-8 text-brand-gray-medium">
-              Vul de gegevens in en ontvang een gepersonaliseerde ROI-analyse. Deze is gebaseerd op het kernprogramma van InnerLeaps en wetenschappelijk onderzoek.
+              Vul de gegevens in en ontvang een gepersonaliseerde ROI-analyse. Deze is gebaseerd op het kernprogramma van Innerleaps en wetenschappelijk onderzoek.
             </p>
           </div>
         </DialogHeader>

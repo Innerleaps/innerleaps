@@ -159,7 +159,7 @@ const OverOns = () => {
               <div>
                 <img
                   src={waaromWijAfbeelding}
-                  alt="Bas ter Haar Romenij geeft presentatie over vitaliteit en stressmanagement bij InnerLeaps"
+                  alt="Bas ter Haar Romenij geeft presentatie over vitaliteit en stressmanagement bij Innerleaps"
                   className="w-full h-auto rounded-xl shadow-lg"
                   loading="lazy"
                   width="608"
@@ -243,13 +243,13 @@ const OverOns = () => {
         <section className="section-padding bg-brand-off-white">
           <div className="container-custom">
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-purple leading-tight mb-12 text-center">
-              Het verhaal achter <span className="text-brand-orange">InnerLeaps</span>
+              Het verhaal achter <span className="text-brand-orange">Innerleaps</span>
             </h2>
             <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-start">
               {/* Links: Body */}
               <div className="space-y-4 text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
                 <p>
-                  Bas richtte InnerLeaps op na zijn herstel van een hersenschudding. Als consultant en lead
+                  Bas richtte Innerleaps op na zijn herstel van een hersenschudding. Als consultant en lead
                   productmanager was hij gewend om onder druk te presteren. Tot een snowboardongeval hem tot stilstand
                   dwong.
                 </p>
@@ -260,7 +260,7 @@ const OverOns = () => {
                   kende.
                 </p>
                 <p className="italic">
-                  "Die ervaring wil ik delen. Daarom ben ik InnerLeaps begonnen."
+                  "Die ervaring wil ik delen. Daarom ben ik Innerleaps begonnen."
                 </p>
               </div>
 
@@ -268,7 +268,7 @@ const OverOns = () => {
               <div className="flex flex-col items-center space-y-6">
                 <img
                   src={basPhoto}
-                  alt="Vitaliteitstrainer Bas ter Haar Romenij | Oprichter InnerLeaps"
+                  alt="Vitaliteitstrainer Bas ter Haar Romenij | Oprichter Innerleaps"
                   className="rounded-full w-64 h-64 object-cover shadow-xl"
                 />
                 <p className="text-xl md:text-2xl font-semibold text-brand-purple text-center">

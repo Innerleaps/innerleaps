@@ -9,7 +9,7 @@ const VerborgenKostenZiekteverzuim = () => {
   return (
     <>
       <Helmet>
-        <title>De verborgen kosten van ziekteverzuim met rekenmodel | InnerLeaps</title>
+        <title>De verborgen kosten van ziekteverzuim met rekenmodel | Innerleaps</title>
         <meta name="description" content="Ontdek de verborgen kosten van ziekteverzuim. Bereken met ons rekenmodel de échte impact: €438.330 per jaar bij 100 medewerkers. Wetenschappelijk bewezen oplossing met 497-775% ROI." />
         
         {/* Open Graph / Facebook */}
@@ -52,7 +52,7 @@ const VerborgenKostenZiekteverzuim = () => {
             },
             "publisher": {
               "@type": "Organization",
-              "name": "InnerLeaps",
+              "name": "Innerleaps",
               "logo": {
                 "@type": "ImageObject",
                 "url": "https://7f1b052b-e2ee-419a-aec0-e4591c9e4afe.lovableproject.com/lovable-uploads/06d0112b-b23b-4ce0-b028-68ac939b2b2b.png"
@@ -351,7 +351,7 @@ const VerborgenKostenZiekteverzuim = () => {
                 Deze berekeningen gebruiken conservatieve schattingen. Alle cijfers zijn gebaseerd op gepubliceerde meta-analyses en systematische reviews.
               </p>
 
-              <h2 className="text-2xl md:text-3xl font-bold text-brand-purple mt-12 mb-6">Waarom InnerLeaps effectiever is dan traditionele oplossingen</h2>
+              <h2 className="text-2xl md:text-3xl font-bold text-brand-purple mt-12 mb-6">Waarom Innerleaps effectiever is dan traditionele oplossingen</h2>
 
               <h3 className="text-xl md:text-2xl font-bold text-brand-purple mt-8 mb-4">Vergelijking met andere interventies</h3>
               
@@ -360,7 +360,7 @@ const VerborgenKostenZiekteverzuim = () => {
               </p>
 
               <p className="mt-8">
-                InnerLeaps' <Link to="/vitaliteitstraining" className="text-brand-blue hover:text-brand-orange font-medium transition-colors">6-weekse vitaliteitstraining</Link> lost deze problemen op:
+                Innerleaps' <Link to="/vitaliteitstraining" className="text-brand-blue hover:text-brand-orange font-medium transition-colors">6-weekse vitaliteitstraining</Link> lost deze problemen op:
               </p>
               <ul className="mt-4">
                 <li>Wekelijkse workshops van 60 minuten tijdens werktijd</li>
@@ -406,7 +406,7 @@ const VerborgenKostenZiekteverzuim = () => {
               </ul>
 
               <p className="mt-8">
-                Voor organisaties die structurele verandering willen bereiken, biedt <Link to="/vitaliteitstraining" className="text-brand-blue hover:text-brand-orange font-medium transition-colors">de 6-weekse vitaliteitstraining van InnerLeaps</Link> een bewezen aanpak. Deelnemers nemen eigenaarschap over hun stress, worden veerkrachtiger en productiever.
+                Voor organisaties die structurele verandering willen bereiken, biedt <Link to="/vitaliteitstraining" className="text-brand-blue hover:text-brand-orange font-medium transition-colors">de 6-weekse vitaliteitstraining van Innerleaps</Link> een bewezen aanpak. Deelnemers nemen eigenaarschap over hun stress, worden veerkrachtiger en productiever.
               </p>
 
               <h2 className="text-2xl md:text-3xl font-bold text-brand-purple mt-12 mb-6">Key Takeaways</h2>
