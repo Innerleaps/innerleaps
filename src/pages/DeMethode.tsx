@@ -460,7 +460,7 @@ const DeMethode = () => {
             6 weken voor echte <span className="text-brand-orange">gedragsverandering</span>
           </h2>
 
-          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-stretch">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             <div className="space-y-6">
               <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
                 Elke week is er een groepssessie met een geaccrediteerde trainer, waarin werknemers reflecteren op hun
@@ -490,15 +490,15 @@ const DeMethode = () => {
                 maanden na de training nog steeds zichtbaar (Vonderlin et al., 2020; Michaelsen et al., 2023).
               </p>
             </div>
-            <div className="rounded-xl shadow-lg overflow-hidden h-full">
+            <div className="rounded-xl shadow-lg overflow-hidden">
               <img
                 src={zesWekenBreintraining}
                 alt="6 weken breintraining voor gedragsverandering"
-                className="w-full h-full object-cover"
+                className="w-full h-auto object-cover"
                 loading="lazy"
                 decoding="async"
-                width={800}
-                height={1200}
+                width={600}
+                height={500}
               />
             </div>
           </div>
