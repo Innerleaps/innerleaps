@@ -1,6 +1,5 @@
 import { useEffect, useState, lazy, Suspense } from "react";
 import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
 import SimplifiedNavigation from "@/components/SimplifiedNavigation";
 import StickyCtaButtons from "@/components/StickyCtaButtons";
 import Footer from "@/components/Footer";
@@ -16,72 +15,137 @@ import {
   AlertCircle,
   Eye,
   CheckCircle,
-  Clock,
   Users,
   FileText,
   Activity,
-  BookOpen,
-  Award,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Card } from "@/components/ui/card";
 
 // Images
 import controlecentrumImage from "@/assets/Concentratietraining_voor_sterker_executieve_systeem.png";
 import waarschuwingssysteemImage from "@/assets/stressmanagementtraining_sterker_waarschuwingssysteem.png";
-import concentratieOefening from "@/assets/Concentratietraining_oefening.png";
-import concentratieDagelijks from "@/assets/Concentratietraining_in_het_dagelijks_leven.jpeg";
 import stressmanagementEnConcentratie from "@/assets/stressmanagement_en_concentratietraining.png";
 import stressPrestatieImage from "@/assets/stress_prestatie_curve.png";
+import breintrainingAandachtoefening from "@/assets/Breintraining_aandachtoefening.jpeg";
+import zesWekenBreintraining from "@/assets/6_weken_breintraining_voor_gedragsverandering.jpg";
 
 // Lazy load modal
 const LeadMagnetModal = lazy(() => import("@/components/LeadMagnetModal"));
+
 const DeMethode = () => {
   const [isLeadMagnetOpen, setIsLeadMagnetOpen] = useState(false);
   const heroRef = useIntersectionObserver({ threshold: 0.1 });
+  const spanningRef = useIntersectionObserver({ threshold: 0.1 });
+  const pushUpsRef = useIntersectionObserver({ threshold: 0.1 });
   const controleRef = useIntersectionObserver({ threshold: 0.1 });
   const waarschuwingRef = useIntersectionObserver({ threshold: 0.1 });
   const rapportRef = useIntersectionObserver({ threshold: 0.1 });
   const prestatieRef = useIntersectionObserver({ threshold: 0.1 });
-  const masterclassRef = useIntersectionObserver({ threshold: 0.1 });
-  const pushUpsRef = useIntersectionObserver({ threshold: 0.1 });
+  const zesWekenRef = useIntersectionObserver({ threshold: 0.1 });
 
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
   return (
     <div className="min-h-screen bg-white">
       <Helmet>
-        <meta name="description" content="Innerleaps bouwt op 40 jaar aandachtsonderzoek van Dr. Amishi Jha. De methode traint het waarschuwingssysteem en controlecentrum van het brein, bewezen effectief in meta-analyses en militaire toepassingen." />
+        <meta
+          name="description"
+          content="Innerleaps bouwt op 40 jaar aandachtsonderzoek van Dr. Amishi Jha. De methode traint het waarschuwingssysteem en controlecentrum van het brein, bewezen effectief in meta-analyses en militaire toepassingen."
+        />
       </Helmet>
       <SimplifiedNavigation />
       <StickyCtaButtons />
 
-      {/* Hero Section - Gecentreerd */}
-      <section 
+      {/* Hero */}
+      <section
         ref={heroRef.ref}
         className={`section-padding bg-white transition-opacity duration-1000 ${
-          heroRef.isIntersecting ? 'opacity-100' : 'opacity-0'
+          heroRef.isIntersecting ? "opacity-100" : "opacity-0"
         }`}
       >
         <div className="container-custom text-center space-y-6 max-w-4xl mx-auto">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-purple leading-tight">
-            Push-ups voor je brein
+            <span className="text-brand-orange">Push-ups</span> voor je brein
           </h1>
-          <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
-            Net zoals je spieren versterkt in de sportschool, train je met onze oefeningen je{" "}
-            brein. Push-ups dus. Je versterkt twee cruciale systemen: je{" "}
-            controlecentrum voor focus en bewuste keuzes, én je waarschuwingssysteem dat
-            stress opmerkt voordat het escaleert.
-          </p>
+        </div>
+      </section>
+
+      {/* Sectie: Continue spanning door het drukke leven */}
+      <section
+        ref={spanningRef.ref}
+        className={`section-padding bg-white transition-all duration-1000 ${
+          spanningRef.isIntersecting ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+        }`}
+      >
+        <div className="container-custom space-y-12">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-brand-purple text-center mb-8">
+            <span className="text-brand-orange">Continue spanning</span> door het drukke leven
+          </h2>
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+            <div className="space-y-6">
+              <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
+                Druk kan erg effectief zijn. Zo zet een deadline ons aan het werk. Maar door alle ballen die we hoog
+                houden, zowel in ons werk als privé leven, worden we continue blootgesteld aan spanning. En die stress
+                die slaat zich op in zowel ons lichaam als ons werkgeheugen.
+              </p>
+            </div>
+            <div className="rounded-xl shadow-lg overflow-hidden">
+              <img
+                src={stressmanagementEnConcentratie}
+                alt="Continue spanning door het drukke leven"
+                className="w-full h-auto object-cover"
+                loading="lazy"
+                decoding="async"
+                width={800}
+                height={600}
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Sectie: Push-ups voor je brein */}
+      <section
+        ref={pushUpsRef.ref}
+        className={`section-padding bg-white transition-all duration-1000 ${
+          pushUpsRef.isIntersecting ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+        }`}
+      >
+        <div className="container-custom space-y-12">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-brand-purple text-center mb-8">
+            <span className="text-brand-orange">Push-ups</span> voor je brein
+          </h2>
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+            <div className="rounded-xl shadow-lg overflow-hidden order-2 lg:order-1">
+              <img
+                src={breintrainingAandachtoefening}
+                alt="Breintraining aandachtoefening"
+                className="w-full h-auto object-cover"
+                loading="lazy"
+                decoding="async"
+                width={800}
+                height={600}
+              />
+            </div>
+            <div className="space-y-6 order-1 lg:order-2">
+              <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
+                Met onze methode trainen werknemers hun brein. Net zoals je spieren versterkt in de sportschool, trainen
+                deelnemers twee cruciale systemen met onze "brein push-ups". Zowel het "controlecentrum" voor betere
+                concentratie en een efficiënter werkgeheugen, als het "waarschuwingssysteem" zodat spanning niet
+                opstapelt.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 
       {/* Sectie: Een krachtiger controlecentrum */}
-      <section 
+      <section
         ref={controleRef.ref}
         className={`pt-8 pb-16 md:pb-20 lg:pb-28 bg-white transition-all duration-1000 ${
-          controleRef.isIntersecting ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+          controleRef.isIntersecting ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
         }`}
       >
         <div className="container-custom space-y-12">
@@ -89,15 +153,12 @@ const DeMethode = () => {
             Een krachtiger <span className="text-brand-orange">controlecentrum</span>
           </h2>
 
-          {/* Grid: Text links, Image rechts */}
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             <div className="space-y-6">
               <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
-                Met onze "push-ups voor het brein" versterk je onder andere de frontale cortex en{" "}
-                fronto-pariëtale netwerken, simpel gezegd je "controlecentrum".
-              </p>
-              <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
-                Met onze frontale cortex concentreren we ons, verwerken we informatie en bedenken we strategien.
+                Door het oefenen verterkt onder andere de frontale cortex en fronto-pariëtale netwerken, ook wel ons
+                "controlecentrum". Werknemers ontwikkelen als het ware een mentaalschild voor druk en afleiding.
+                Prestaties verbetert omdat spanning minder werkgeheugen inneemt en het concentratievermogen sterker is.
               </p>
             </div>
             <div className="rounded-xl shadow-lg overflow-hidden">
@@ -109,9 +170,8 @@ const DeMethode = () => {
             </div>
           </div>
 
-          {/* 5 Feature Cards in 3-2 grid */}
+          {/* 5 Feature Cards */}
           <div className="grid md:grid-cols-6 gap-6 lg:gap-8">
-            {/* Card 1: Informatieverwerking */}
             <div className="bg-brand-off-white p-6 rounded-lg space-y-4 md:col-span-2">
               <div className="p-3 rounded-lg bg-brand-orange/10 w-fit mx-auto">
                 <Brain className="h-8 w-8 text-brand-orange stroke-2" />
@@ -133,7 +193,6 @@ const DeMethode = () => {
               </div>
             </div>
 
-            {/* Card 2: Concentratie */}
             <div className="bg-brand-off-white p-6 rounded-lg space-y-4 md:col-span-2">
               <div className="p-3 rounded-lg bg-brand-orange/10 w-fit mx-auto">
                 <Target className="h-8 w-8 text-brand-orange stroke-2" />
@@ -159,7 +218,6 @@ const DeMethode = () => {
               </div>
             </div>
 
-            {/* Card 3: Denkprocessen */}
             <div className="bg-brand-off-white p-6 rounded-lg space-y-4 md:col-span-2">
               <div className="p-3 rounded-lg bg-brand-orange/10 w-fit mx-auto">
                 <Lightbulb className="h-8 w-8 text-brand-orange stroke-2" />
@@ -183,7 +241,6 @@ const DeMethode = () => {
               </div>
             </div>
 
-            {/* Card 4: Filteren & onderdrukken - Centered start */}
             <div className="bg-brand-off-white p-6 rounded-lg space-y-4 md:col-span-2 md:col-start-2">
               <div className="p-3 rounded-lg bg-brand-orange/10 w-fit mx-auto">
                 <Shield className="h-8 w-8 text-brand-orange stroke-2" />
@@ -203,7 +260,6 @@ const DeMethode = () => {
               </div>
             </div>
 
-            {/* Card 5: Makkelijker denken */}
             <div className="bg-brand-off-white p-6 rounded-lg space-y-4 md:col-span-2">
               <div className="p-3 rounded-lg bg-brand-orange/10 w-fit mx-auto">
                 <Zap className="h-8 w-8 text-brand-orange stroke-2" />
@@ -226,11 +282,11 @@ const DeMethode = () => {
         </div>
       </section>
 
-      {/* Sectie: Sterker waarschuwingssysteem */}
-      <section 
+      {/* Sectie: Een scherper waarschuwingssysteem */}
+      <section
         ref={waarschuwingRef.ref}
         className={`section-padding bg-white transition-all duration-1000 ${
-          waarschuwingRef.isIntersecting ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+          waarschuwingRef.isIntersecting ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
         }`}
       >
         <div className="container-custom space-y-12">
@@ -238,18 +294,13 @@ const DeMethode = () => {
             Een scherper <span className="text-brand-orange">waarschuwingssysteem</span>
           </h2>
 
-          {/* Grid: Text links, Image rechts */}
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             <div className="space-y-6">
               <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
-                Door het doen van de "brein push-ups" versterken deelnemers ook hun anterior insula en{" "}
-                anterior cingulate cortex, ons "waarschuwingssysteem".
-              </p>
-
-              <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
-                Omdat deelnemers stresssignalen eerder opmerken, kunnen ze{" "}
-                spanning beter beheersen en reguleren. Hierdoor verbeteren prestaties
-                én door minder spanning wordt het er allemaal ook wat leuker op!
+                Door de training versterkt ook de anterior insula en anterior cingulate cortex, ons
+                "waarschuwingssysteem". Hierdoor merken werknemers stresssignalen eerder op. In de 6 weekse training
+                ontwikkelen deelnemers nieuwe, gezonde patronen om die stresssignalen te reguleren. Echte
+                gedragsverandering die de vitaliteit en inzetbaarheid van je team versterkt.
               </p>
             </div>
             <div className="rounded-xl shadow-lg overflow-hidden">
@@ -267,7 +318,6 @@ const DeMethode = () => {
 
           {/* 3 Feature Cards */}
           <div className="grid md:grid-cols-3 gap-6 lg:gap-8">
-            {/* Card 1: Lichaamsbewustzijn & Waarneming */}
             <div className="bg-brand-off-white p-6 rounded-lg space-y-4">
               <div className="p-3 rounded-lg bg-brand-orange/10 w-fit mx-auto">
                 <Heart className="h-8 w-8 text-brand-orange stroke-2" />
@@ -297,7 +347,6 @@ const DeMethode = () => {
               </div>
             </div>
 
-            {/* Card 2: Emotionele Signalering */}
             <div className="bg-brand-off-white p-6 rounded-lg space-y-4">
               <div className="p-3 rounded-lg bg-brand-orange/10 w-fit mx-auto">
                 <AlertCircle className="h-8 w-8 text-brand-orange stroke-2" />
@@ -325,7 +374,6 @@ const DeMethode = () => {
               </div>
             </div>
 
-            {/* Card 3: Zelfmonitoring & Bewustzijn */}
             <div className="bg-brand-off-white p-6 rounded-lg space-y-4">
               <div className="p-3 rounded-lg bg-brand-orange/10 w-fit mx-auto">
                 <Eye className="h-8 w-8 text-brand-orange stroke-2" />
@@ -340,7 +388,6 @@ const DeMethode = () => {
                     Jezelf observeren terwijl je iets doet.
                   </span>
                 </div>
-                
                 <div className="flex items-start gap-3">
                   <CheckCircle className="h-5 w-5 text-brand-orange stroke-2 flex-shrink-0 mt-1" />
                   <span className="text-base md:text-lg text-brand-gray-medium">
@@ -353,33 +400,26 @@ const DeMethode = () => {
         </div>
       </section>
 
-      {/* Wetenschappelijke Bijlage Downloaden Sectie */}
-      <section 
+      {/* Wetenschappelijk rapport */}
+      <section
         ref={rapportRef.ref}
         className={`section-padding bg-white transition-all duration-1000 ${
-          rapportRef.isIntersecting ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+          rapportRef.isIntersecting ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
         }`}
       >
         <div className="container-custom">
           <div className="bg-brand-blue rounded-xl p-8 shadow-lg">
             <div className="text-center space-y-6">
-              {/* Icon */}
               <div className="inline-flex items-center justify-center w-16 h-16 bg-white/10 rounded-full">
                 <FileText className="h-8 w-8 text-brand-orange" />
               </div>
-
-              {/* Title */}
               <h2 className="text-3xl font-bold text-white mb-2">
                 Ontdek zelf de resultaten van 40 jaar onderzoek
               </h2>
-
-              {/* Body */}
               <p className="text-xl md:text-2xl text-white/90 leading-relaxed max-w-3xl mx-auto">
                 Zelf de wetenschappelijke details bekijken? Ons academische rapport bundelt de laatste studies, analyses
-                en berekeningen rond de effecten van aandachttraining. Inclusief effectgroottes. 
+                en berekeningen rond de effecten van aandachttraining. Inclusief effectgroottes.
               </p>
-
-              {/* Button */}
               <Button
                 onClick={() => setIsLeadMagnetOpen(true)}
                 className="bg-brand-orange hover:bg-brand-orange/90 text-white font-semibold text-lg px-8 py-6"
@@ -392,22 +432,19 @@ const DeMethode = () => {
         </div>
       </section>
 
-      {/* Sectie: Betere prestaties door minder stress en meer focus */}
-      <section 
+      {/* Sectie: Verbeteren van prestaties */}
+      <section
         ref={prestatieRef.ref}
         className={`section-padding bg-white transition-all duration-1000 ${
-          prestatieRef.isIntersecting ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+          prestatieRef.isIntersecting ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
         }`}
       >
         <div className="container-custom space-y-12">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-brand-purple text-center mb-8">
-            <span className="text-brand-orange">Betere prestaties</span> door minder stress en meer{" "}
-            <span className="text-brand-orange">focus</span>
+            Verbeteren van <span className="text-brand-orange">prestaties</span>
           </h2>
 
-          {/* Grid: Image links, Text rechts */}
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-            {/* Afbeelding LINKS */}
             <div className="rounded-xl shadow-lg overflow-hidden order-2 lg:order-1">
               <img
                 src={stressPrestatieImage}
@@ -419,171 +456,72 @@ const DeMethode = () => {
                 height={600}
               />
             </div>
-
-            {/* Tekst RECHTS */}
             <div className="space-y-6 order-1 lg:order-2">
               <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
-                Een beetje stress werkt. Die deadline die je aanzet, die presentatie die je scherp houdt. Maar{" "}
-                stress escaleert snel.
+                Prestaties van werknemers verbeteren door optimalisatie van het werkgeheugen. Relevante informatie wordt
+                sneller geselecteerd en irrelevante informatie beter onderdrukt. De concentratie neemt toe, terwijl
+                afleiding afneemt. Onderzoek laat tot 24% verbetering zien op aandachtstaken (Jha et al., 2021).
               </p>
               <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
-                Het getrainde waarschuwingssysteem van deelnemers vangt stress vroeg op. Want{" "}
-                onbewuste stress? Die ondermijnt  je prestaties: meer
-                fouten, langzamer werken, sneller afgeleid.
-              </p>
-              <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
-                Prestaties verbeteren ook door sterkere concentratie. Door het trainen van het
-                controlecentrum filter je irrelevante informatie, onthoud je wat
-                belangrijk is en schakel je sneller tussen taken. Hetzelfde werk kost simpelweg
-                 minder hersenenergie.
+                Daarnaast nemen spanning en druk het werkgeheugen in beslag. Wanneer die spanning afneemt, komt er
+                capaciteit vrij voor de taak zelf. Tot slot wordt het werkgeheugen efficiënter: het levert betere
+                resultaten met minder neurale inspanning (Bailey et al., 2020).
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Masterclass Sectie */}
-      <MasterclassSection variant="employer" />
-
-      {/* Push-ups Sectie 1: Geplande concentratietraining */}
-      <section 
-        ref={pushUpsRef.ref}
+      {/* Sectie: 6 weken voor echte gedragsverandering */}
+      <section
+        ref={zesWekenRef.ref}
         className={`section-padding bg-white transition-all duration-1000 ${
-          pushUpsRef.isIntersecting ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+          zesWekenRef.isIntersecting ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
         }`}
       >
-        <div className="container-custom">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-brand-purple text-center mb-12">
-            <span className="text-brand-orange">Geplande</span> "brein push-ups"
+        <div className="container-custom space-y-12">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-brand-purple text-center mb-8">
+            6 weken voor echte <span className="text-brand-orange">gedragsverandering</span>
           </h2>
+
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             <div className="space-y-6">
               <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
-                Zittend of liggend volgen deelnemers elke dag een begeleidende audio-opname. Deze duurt
-                zo'n 12 minuten. De instructie is simpel: richt je aandacht op je ademhaling of andere{" "}
-                lichamelijke ervaringen.
-              </p>
-              <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
-                Klinkt makkelijk? Je geest vindt er niks aan. Binnen een paar seconden denk je aan het avondeten, je
-                to-do's of dat lastige gesprek. Je vergeet volledig wat je aan het doen was.{" "}
-                Probeer het zelf maar.
-              </p>
-              <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
-                Dit is de crux van de oefening:{" "}
-                het moment dat je opmerkt dat je bent afgedwaald, dát is de push-up. Je brengt je focus
-                terug naar de oefening. Opnieuw en opnieuw. Dit{" "}
-                versterkt je concentratie en bewustzijn van je lichaamssignalen, zoals push-ups je
-                spieren versterken.
-              </p>
-            </div>
-            <div className="rounded-xl shadow-lg overflow-hidden">
-              <img
-                src={concentratieOefening}
-                alt="Concentratietraining oefening - Focus terugpakken cyclus"
-                className="w-full h-full object-cover"
-                loading="lazy"
-                decoding="async"
-                width={600}
-                height={400}
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Push-ups Sectie 2: Training in Dagelijks Leven */}
-      <section className="section-padding bg-white">
-        <div className="container-custom">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-brand-purple text-center mb-12">
-            "Brein push-ups" in het <span className="text-brand-orange">dagelijks leven</span>
-          </h2>
-          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-            <div className="rounded-xl shadow-lg overflow-hidden order-2 lg:order-1">
-              <img
-                src={concentratieDagelijks}
-                alt="Concentratietraining in het dagelijks leven"
-                className="w-full h-full object-cover"
-                loading="lazy"
-                decoding="async"
-                width={600}
-                height={400}
-              />
-            </div>
-            <div className="space-y-6 order-1 lg:order-2">
-              <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
-                De tweede vorm van de"brein push-ups" doen deelnemers in het dagelijks leven. Deelnemers richten hun{" "}
-                aandacht op de dagelijkse activiteit. Dit kan eigenlijk bij alle
-                activiteiten. Bijvoorbeeld:
+                Elke week is er een groepssessie met een geaccrediteerde trainer, waarin werknemers reflecteren op hun
+                oefeningen en uitdagingen. Zo komen deelnemers steeds opnieuw in contact met hun eigen doel, en dat
+                motiveert. De sessies zijn bovendien als een stok achter de deur. Ook wie een week niet heeft geoefend
+                komt, en begint dan opnieuw.
               </p>
               <ul className="space-y-4">
                 <li className="flex items-start">
-                  <CheckCircle className="h-6 w-6 text-brand-orange stroke-2 flex-shrink-0 mt-1 mr-3" />
+                  <Users className="h-6 w-6 text-brand-orange stroke-2 flex-shrink-0 mt-1 mr-3" />
                   <span className="text-xl md:text-2xl text-brand-gray-medium">
-                    Terwijl je je tanden poetst bewust de sensaties van het poetsen opmerken.
-                  </span>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle className="h-6 w-6 text-brand-orange stroke-2 flex-shrink-0 mt-1 mr-3" />
-                  <span className="text-xl md:text-2xl text-brand-gray-medium">
-                    Bij een gesprek actief luisteren naar wat de persoon zegt en niet al je weerwoord
-                    voorbereiden.
-                  </span>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle className="h-6 w-6 text-brand-orange stroke-2 flex-shrink-0 mt-1 mr-3" />
-                  <span className="text-xl md:text-2xl text-brand-gray-medium">
-                    Tijdens het wandelen naar je werk bewust je omgeving waarnemen.
-                  </span>
-                </li>
-              </ul>
-              <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
-                Ook deze vorm van training is een concentratie{"\u00AD"}training waarbij focus en
-                aandacht nodig is. Ook hiermee wordt focus versterkt en stress sneller herkent. Het mooie? Het kost geen
-                extra tijd en je geniet meer van de activiteiten die je doet!
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Push-ups Sectie 3: Wekelijkse workshops */}
-      <section className="section-padding bg-white">
-        <div className="container-custom">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-brand-purple text-center mb-12">
-            Wekelijkse groepsworkshops, werkboek en theorie
-          </h2>
-          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-            <div className="space-y-6">
-              <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
-                6 weken. Niet korter. Echte gedragsverandering kost tijd. Nieuwe patronen in je brein ontstaan niet in
-                een weekend. Elke week krijgen deelnemers:
-              </p>
-              <ul className="space-y-4">
-                <li className="flex items-start">
-                  <Clock className="h-6 w-6 text-brand-orange stroke-2 flex-shrink-0 mt-1 mr-3" />
-                  <span className="text-xl md:text-2xl text-brand-gray-medium">
-                    Groepsworkshop van 60 minuten. Nieuwe vaardigheden, theorie en ervaringen delen over het zelf
-                    oefenen.
+                    6 groepsworkshops van 60 minuten
                   </span>
                 </li>
                 <li className="flex items-start">
                   <FileText className="h-6 w-6 text-brand-orange stroke-2 flex-shrink-0 mt-1 mr-3" />
                   <span className="text-xl md:text-2xl text-brand-gray-medium">
-                    Werkboek met wetenschappelijke achtergrond en praktische opdrachten.
+                    Werkboek met achtergrondinformatie en opdrachten
+                  </span>
+                </li>
+                <li className="flex items-start">
+                  <Activity className="h-6 w-6 text-brand-orange stroke-2 flex-shrink-0 mt-1 mr-3" />
+                  <span className="text-xl md:text-2xl text-brand-gray-medium">
+                    Audio-opnames voor dagelijkse oefening
                   </span>
                 </li>
               </ul>
               <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
-                In de workshops kijk je terug: wat werkte? Waar liep je vast? De groep herkent het, je bent niet de
-                enige die worstelt met terugdwalende gedachten. Deelnemers leren van elkaar. De wekelijkse afspraken
-                houden je scherp.
+                Het resultaat? Gedrag dat blijft. De effecten op stress, burn-out en productiviteit zijn 6 tot 12
+                maanden na de training nog steeds zichtbaar (Vonderlin et al., 2020; Michaelsen et al., 2023).
               </p>
             </div>
             <div className="rounded-xl shadow-lg overflow-hidden">
               <img
-                src={stressmanagementEnConcentratie}
-                alt="Stressmanagement en concentratietraining"
-                className="w-full h-full object-cover"
+                src={zesWekenBreintraining}
+                alt="6 weken breintraining voor gedragsverandering"
+                className="w-full h-auto object-cover"
                 loading="lazy"
                 decoding="async"
                 width={800}
@@ -594,43 +532,8 @@ const DeMethode = () => {
         </div>
       </section>
 
-      {/* CTA Sectie met 3 Training Buttons */}
-      <section className="section-padding bg-white">
-        <div className="container-custom text-center space-y-8">
-          <p className="text-xl md:text-2xl text-brand-gray-medium max-w-3xl mx-auto">
-            Klaar om de methode ook echt toe te passen? Bekijk hier onze trainingen.
-          </p>
-          <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
-            <Link
-              to="/vitaliteitstraining"
-              className="bg-brand-blue border-2 border-brand-blue p-6 rounded-lg hover:bg-brand-blue/90 transition-all duration-300 group"
-            >
-              <h3 className="text-xl font-bold text-white mb-3 group-hover:text-brand-orange transition-colors">
-                Vitaliteitstraining
-              </h3>
-              <p className="text-base text-white/90">Voor organisaties en werkgevers</p>
-            </Link>
-            <Link
-              to="/stressmanagement-training"
-              className="bg-brand-blue border-2 border-brand-blue p-6 rounded-lg hover:bg-brand-blue/90 transition-all duration-300 group"
-            >
-              <h3 className="text-xl font-bold text-white mb-3 group-hover:text-brand-orange transition-colors">
-                Stressmanagement
-              </h3>
-              <p className="text-base text-white/90">Minder spanning & druk voor werknemers</p>
-            </Link>
-            <Link
-              to="/prestatie-training"
-              className="bg-brand-blue border-2 border-brand-blue p-6 rounded-lg hover:bg-brand-blue/90 transition-all duration-300 group"
-            >
-              <h3 className="text-xl font-bold text-white mb-3 group-hover:text-brand-orange transition-colors">
-                Prestatietraining
-              </h3>
-              <p className="text-base text-white/90">Als werknemer beter presteren met meer focus</p>
-            </Link>
-          </div>
-        </div>
-      </section>
+      {/* Masterclass Sectie */}
+      <MasterclassSection variant="employer" />
 
       <Footer />
 
@@ -640,4 +543,5 @@ const DeMethode = () => {
     </div>
   );
 };
+
 export default DeMethode;
