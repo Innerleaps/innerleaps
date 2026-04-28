@@ -1,13 +1,14 @@
 import { memo } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import { Linkedin, Star } from "lucide-react";
 import vmbnLogo from "@/assets/vmbn-trainer-categorie-1.png";
+import { detectLanguageFromPath } from "@/i18n/config";
 
 interface FooterProps {
   showNavigation?: boolean;
 }
 
-const GOOGLE_REVIEWS_URL = "#";
 const LINKEDIN_URL = "https://www.linkedin.com/company/innerleaps";
 
 const GoogleG = () => (
@@ -21,6 +22,17 @@ const GoogleG = () => (
 
 const Footer = memo(({ showNavigation = true }: FooterProps) => {
   void showNavigation;
+  const { t } = useTranslation();
+  const { pathname } = useLocation();
+  const lang = detectLanguageFromPath(pathname);
+
+  const href = {
+    vitality: lang === 'en' ? '/en/vitality-training' : '/vitaliteitstraining',
+    stress: lang === 'en' ? '/en/stress-management-training' : '/stressmanagement-training',
+    performance: lang === 'en' ? '/en/performance-training' : '/prestatie-training',
+    blog: lang === 'en' ? '/en/blog' : '/blog',
+    contact: lang === 'en' ? '/en/contact' : '/contact',
+  };
 
   return (
     <footer
@@ -39,7 +51,7 @@ const Footer = memo(({ showNavigation = true }: FooterProps) => {
           <div>
             <div className="text-2xl font-bold mb-4">Innerleaps</div>
             <p className="text-gray-300 leading-relaxed mb-6">
-              Vitaliteitstraining die verzuim verlaagt en duurzame inzetbaarheid versterkt
+              {t('footer.tagline')}
             </p>
 
             <div className="flex flex-wrap items-start gap-6 mb-6">
@@ -50,7 +62,7 @@ const Footer = memo(({ showNavigation = true }: FooterProps) => {
                   className="h-16 w-auto bg-white rounded p-1"
                   loading="lazy"
                 />
-                <span className="text-xs text-gray-300 mt-1">Trainer categorie 1</span>
+                <span className="text-xs text-gray-300 mt-1">{t('footer.trainerCategory')}</span>
               </div>
 
               <div className="flex flex-col items-center">
@@ -62,7 +74,7 @@ const Footer = memo(({ showNavigation = true }: FooterProps) => {
                     ))}
                   </div>
                 </div>
-                <span className="text-xs text-gray-300 mt-1">4,7/5 op Google</span>
+                <span className="text-xs text-gray-300 mt-1">{t('footer.googleRating')}</span>
               </div>
             </div>
 
@@ -70,41 +82,41 @@ const Footer = memo(({ showNavigation = true }: FooterProps) => {
               href={LINKEDIN_URL}
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="Innerleaps op LinkedIn"
+              aria-label={t('footer.linkedinAria')}
               className="inline-flex items-center justify-center h-10 w-10 rounded-full bg-white/10 hover:bg-white/20 transition-colors"
             >
               <Linkedin className="h-5 w-5 text-white" />
             </a>
           </div>
 
-          {/* Column 2 — Trainingen */}
+          {/* Column 2 — Trainings */}
           <div>
-            <h3 className="text-white font-semibold text-lg mb-4">Trainingen</h3>
-            <nav aria-label="Trainingen">
+            <h3 className="text-white font-semibold text-lg mb-4">{t('footer.trainingsHeading')}</h3>
+            <nav aria-label={t('footer.trainingsAria')}>
               <ul className="space-y-2">
                 <li>
-                  <Link to="/vitaliteitstraining" className="block text-gray-300 hover:text-white transition-colors">
-                    Vitaliteitstraining
+                  <Link to={href.vitality} className="block text-gray-300 hover:text-white transition-colors">
+                    {t('menuItems.vitality.label')}
                   </Link>
                 </li>
                 <li>
-                  <Link to="/stressmanagement-training" className="block text-gray-300 hover:text-white transition-colors">
-                    Stressmanagement training
+                  <Link to={href.stress} className="block text-gray-300 hover:text-white transition-colors">
+                    {t('menuItems.stress.label')}
                   </Link>
                 </li>
                 <li>
-                  <Link to="/prestatie-training" className="block text-gray-300 hover:text-white transition-colors">
-                    Prestatie en concentratie verbeteren
+                  <Link to={href.performance} className="block text-gray-300 hover:text-white transition-colors">
+                    {t('footer.performanceLink')}
                   </Link>
                 </li>
                 <li>
-                  <Link to="/blog" className="block text-gray-300 hover:text-white transition-colors">
-                    Blog
+                  <Link to={href.blog} className="block text-gray-300 hover:text-white transition-colors">
+                    {t('nav.blog')}
                   </Link>
                 </li>
                 <li>
-                  <Link to="/contact" className="block text-gray-300 hover:text-white transition-colors">
-                    Contact
+                  <Link to={href.contact} className="block text-gray-300 hover:text-white transition-colors">
+                    {t('nav.contact')}
                   </Link>
                 </li>
               </ul>
@@ -113,7 +125,7 @@ const Footer = memo(({ showNavigation = true }: FooterProps) => {
 
           {/* Column 3 — Contact */}
           <div>
-            <h3 className="text-white font-semibold text-lg mb-4">Contact</h3>
+            <h3 className="text-white font-semibold text-lg mb-4">{t('footer.contactHeading')}</h3>
             <address
               className="not-italic space-y-2 text-gray-300"
               itemProp="address"
@@ -142,18 +154,18 @@ const Footer = memo(({ showNavigation = true }: FooterProps) => {
 
         {/* Bottom bar */}
         <div className="border-t border-white/15 mt-8 pt-6 flex flex-col md:flex-row md:items-center md:justify-between gap-3 text-sm text-gray-400">
-          <p>&copy; 2026 Innerleaps</p>
+          <p>{t('footer.copyright')}</p>
           <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
             <Link to="/privacy" className="hover:text-white transition-colors">
-              Privacybeleid
+              {t('footer.privacy')}
             </Link>
             <span className="text-gray-600" aria-hidden="true">·</span>
             <Link to="/cookies" className="hover:text-white transition-colors">
-              Cookiebeleid
+              {t('footer.cookies')}
             </Link>
             <span className="text-gray-600" aria-hidden="true">·</span>
             <Link to="/algemene-voorwaarden" className="hover:text-white transition-colors">
-              Algemene voorwaarden
+              {t('footer.terms')}
             </Link>
           </div>
         </div>
