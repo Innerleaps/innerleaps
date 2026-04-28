@@ -340,12 +340,7 @@ const DeMethode = () => {
                     Jezelf observeren terwijl je iets doet.
                   </span>
                 </div>
-                <div className="flex items-start gap-3">
-                  <CheckCircle className="h-5 w-5 text-brand-orange stroke-2 flex-shrink-0 mt-1" />
-                  <span className="text-base md:text-lg text-brand-gray-medium">
-                    Fouten of problemen eerder signaleren.
-                  </span>
-                </div>
+                
                 <div className="flex items-start gap-3">
                   <CheckCircle className="h-5 w-5 text-brand-orange stroke-2 flex-shrink-0 mt-1" />
                   <span className="text-base md:text-lg text-brand-gray-medium">
