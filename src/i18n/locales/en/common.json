@@ -54,7 +54,7 @@
   "contactSection": {
     "title": "Questions? Plan a call with Bas",
     "quote": "\"Hi! Great to have you here. Shall we get to know each other? I'd love to hear what your team needs.\"",
-    "founderLabel": "— Bas Ter Haar Romenij, Founder of Innerleaps",
+    "founderLabel": "Bas Ter Haar Romenij, Founder of Innerleaps",
     "directContactTitle": "Or reach out directly",
     "emailLabel": "Email",
     "phoneLabel": "Phone",
@@ -83,7 +83,7 @@
     "headlinePart2": "sick leave",
     "headlinePart3": "and boost",
     "headlinePart4": "performance",
-    "body1": "The core of our brain training is strengthening the \"control center\" for rational choices, focus and conscious action — and the \"warning system\" that catches stress signals earlier. The result? Less stress and sharper focus.",
+    "body1": "The core of our brain training is strengthening the \"control center\" for rational choices, focus and conscious action, and the \"warning system\" that catches stress signals earlier. The result? Less stress and a sharper focus!",
     "body2": "Want to know exactly how the method works?",
     "imageAlt": "Training for better performance, less stress and lower sick leave"
   },
@@ -100,7 +100,7 @@
       },
       "accreditedTrainers": {
         "title": "Accredited trainers",
-        "description": "All our trainers are VMBN-accredited at category 1 for attention training — the highest standard in the Netherlands."
+        "description": "All our trainers are VMBN-accredited at category 1 for attention training, the highest standard in the Netherlands."
       },
       "practice": {
         "title": "15 minutes of practice",
@@ -139,7 +139,7 @@
         "text": "We believe everyone should be able to try this technique. That's why our masterclass is completely commitment-free."
       }
     },
-    "review": "\"This workshop really shows you why training your attention muscle matters. It's a great mix of theory and exercises, so you immediately get to experience what it's like. I think anyone can benefit from this — highly recommended.\"",
+    "review": "\"This workshop really shows you why training your attention muscle matters. It's a great mix of theory and exercises, so you immediately get to experience what it's like. I think anyone can benefit from this, so I can definitely recommend it.\"",
     "reviewer": "- Jeroen",
     "ctaEmployee": "Request a masterclass from Bas",
     "ctaEmployer": "Get to know Bas"
@@ -154,11 +154,11 @@
       },
       "research": {
         "title": "40 years of scientific research",
-        "description": "Built on the MBSR method — one of the most thoroughly researched interventions in the world."
+        "description": "Built on the scientific MBSR method, one of the most thoroughly researched interventions in the world."
       },
       "trainers": {
         "title": "Accredited trainers",
-        "description": "All our trainers are VMBN category 1 certified — the highest accreditation within VMBN. This means they meet the strictest standards for training, experience and professionalism."
+        "description": "All our trainers are VMBN category 1 certified, the highest accreditation within VMBN. This means they meet the strictest quality standards for training, experience and professionalism."
       }
     },
     "altPrefix": {
