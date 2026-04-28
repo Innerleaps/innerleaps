@@ -5,6 +5,8 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { lazy, Suspense, Profiler } from "react";
 import { ProductionRedirect } from "./components/ProductionRedirect";
+import LanguageSync from "./i18n/LanguageSync";
+import InitialLanguageRedirect from "./i18n/InitialLanguageRedirect";
 
 // Lazy load all pages for better performance
 const LandingPage = lazy(() => import("./pages/LandingPage"));
@@ -59,8 +61,23 @@ const App = () => {
             </div>
           }>
             <Profiler id="App" onRender={onRenderCallback}>
+              <LanguageSync />
+              <InitialLanguageRedirect />
               <Routes>
                 <Route path="/" element={<LandingPage />} />
+                {/* English routes (mirror of NL pages) */}
+                <Route path="/en" element={<LandingPage />} />
+                <Route path="/en/method" element={<DeMethode />} />
+                <Route path="/en/about-us" element={<OverOns />} />
+                <Route path="/en/contact" element={<Contact />} />
+                <Route path="/en/vitality-training" element={<Vitaliteitstraining />} />
+                <Route path="/en/sustainable-employability-training" element={<DuurzameInzetbaarheidTraining />} />
+                <Route path="/en/stress-management-training" element={<StressManagement />} />
+                <Route path="/en/performance-training" element={<PrestatieProgramma />} />
+                <Route path="/en/blog" element={<Blog />} />
+                <Route path="/en/blog/reducing-absenteeism-evidence-based-approach-2025" element={<ZiekteverzuimVerlagen />} />
+                <Route path="/en/blog/hidden-costs-of-absenteeism-calculator" element={<VerborgenKostenZiekteverzuim />} />
+                <Route path="/en/blog/how-to-reduce-absenteeism-in-my-organization" element={<HoeVerlaagIkZiekteverzuim />} />
                 <Route path="/leven-vragenlijst" element={<LevenVragenlijst />} />
                 <Route path="/leven-vragenlijst/resultaat" element={<LevenVragenlijstResultaat />} />
                 <Route path="/life-questionnaire" element={<LifeQuestionnaire />} />
