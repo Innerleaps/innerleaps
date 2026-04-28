@@ -23,7 +23,7 @@ const Cookies = memo(() => {
             Cookie Policy
           </h1>
           <p className="text-brand-gray-medium text-xl mb-12">
-            <strong>Innerleaps</strong> — Last updated: April 2026
+            <strong>Innerleaps</strong>, Last updated: April 2026
           </p>
 
           <div className="prose max-w-none space-y-8 text-brand-gray-dark leading-relaxed">
@@ -43,11 +43,11 @@ const Cookies = memo(() => {
               </h2>
               <ul className="text-xl list-disc pl-6 space-y-2">
                 <li>
-                  <strong>Functional cookies</strong> — necessary for the website to work
+                  <strong>Functional cookies</strong>, necessary for the website to work
                   correctly.
                 </li>
                 <li>
-                  <strong>Analytical cookies</strong> — to gain anonymized insight into how the
+                  <strong>Analytical cookies</strong>, to gain anonymized insight into how the
                   website is used so we can improve it.
                 </li>
               </ul>

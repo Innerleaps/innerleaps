@@ -18,7 +18,7 @@ const PrivacyNotice = memo(() => {
             Privacy Notice
           </h1>
           <p className="text-brand-gray-medium text-xl mb-12">
-            <strong>Innerleaps</strong> — Version 1.6 | March 2026
+            <strong>Innerleaps</strong>, Version 1.6 | March 2026
           </p>
 
           <div className="prose max-w-none space-y-8 text-brand-gray-dark leading-relaxed">
@@ -155,7 +155,7 @@ const PrivacyNotice = memo(() => {
                   </tbody>
                 </table>
               </div>
-              <p className="text-xl mt-4">After the agreement ends, all personal data is deleted. Your employer never receives personal data — only anonymised results.</p>
+              <p className="text-xl mt-4">After the agreement ends, all personal data is deleted. Your employer never receives personal data, only anonymised results.</p>
             </section>
 
             {/* Access */}

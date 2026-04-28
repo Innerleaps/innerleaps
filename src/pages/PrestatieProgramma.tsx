@@ -767,7 +767,7 @@ const PrestatieProgramma = () => {
                 <AccordionContent className="text-base md:text-lg text-brand-gray-medium leading-relaxed">
                   Als je start krijg je van ons een werkboek. Daar staat voor elke week een stukje theorie in en korte
                   oefeningen. Tevens ontvang je audio-opnames van de oefeningen. Sommige oefeningen doe je tijdens
-                  dagelijkse activiteiten zoals tandenpoetsen, douchen of afwassen – dus geen extra tijd. Andere
+                  dagelijkse activiteiten zoals tandenpoetsen, douchen of afwassen, dus geen extra tijd. Andere
                   oefeningen vragen 12 minuten stilzitten in een stoel.
                 </AccordionContent>
               </AccordionItem>
