@@ -1,50 +1,37 @@
 import { memo } from "react";
 import { Clock, Users, Target, User } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import { Button } from "@/components/ui/button";
+import { detectLanguageFromPath } from "@/i18n/config";
 
 const ProgramOverviewSection = memo(() => {
+  const { t } = useTranslation();
+  const { pathname } = useLocation();
+  const lang = detectLanguageFromPath(pathname);
+  const methodHref = lang === 'en' ? '/en/method' : '/breintraining-methode';
+
   const features = [
-    {
-      icon: Clock,
-      title: "Wekelijkse groepsworkshops",
-      description: "Elke week een groepsworkshop van 60 minuten door één van onze geaccrediteerde trainers.",
-    },
-    {
-      icon: User,
-      title: "Geaccrediteerde trainers",
-      description:
-        "Al onze trainers zijn geaccrediteerd voor categorie 1 aandachtstraining door VMBN.",
-    },
-    {
-      icon: Target,
-      title: "15 minuten oefenen",
-      description:
-        "Deelnemers proberen 5 dagen per week zo'n 15 minuten te oefenen met ons werkboek en audio opnames.",
-    },
-    {
-      icon: Users,
-      title: "Veilig en comfortabel leren",
-      description: "In de groep reageren deelnemers op vragen van de trainer, persoonlijke toelichting is optioneel.",
-    },
+    { icon: Clock, title: t('programOverview.features.weeklyWorkshops.title'), description: t('programOverview.features.weeklyWorkshops.description') },
+    { icon: User, title: t('programOverview.features.accreditedTrainers.title'), description: t('programOverview.features.accreditedTrainers.description') },
+    { icon: Target, title: t('programOverview.features.practice.title'), description: t('programOverview.features.practice.description') },
+    { icon: Users, title: t('programOverview.features.safeLearning.title'), description: t('programOverview.features.safeLearning.description') },
   ];
+
   return (
     <section className="section-padding bg-brand-off-white">
       <div className="container-custom space-y-12">
-        {/* Title */}
         <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-center text-brand-purple">
-          <span className="text-brand-orange">Breintraining</span> voor échte{" "}
-          <span className="text-brand-orange">gedragsverandering</span>
+          <span className="text-brand-orange">{t('programOverview.headlinePart1')}</span> {t('programOverview.headlinePart2')}{" "}
+          <span className="text-brand-orange">{t('programOverview.headlinePart3')}</span>
         </h2>
 
-        {/* Intro tekst */}
         <div className="max-w-4xl mx-auto">
           <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed text-center">
-            Ons kernprogramma duurt 6 weken. Vraag naar de mogelijkheden voor maatwerk.
+            {t('programOverview.intro')}
           </p>
         </div>
 
-        {/* Features grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
           {features.map((feature, index) => {
             const Icon = feature.icon;
@@ -60,14 +47,13 @@ const ProgramOverviewSection = memo(() => {
           })}
         </div>
 
-        {/* Methode CTA - Over volledige breedte gecentreerd */}
         <div className="text-center pt-4 lg:pt-12 space-y-6">
           <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed py-[16px] px-0">
-            Wil je nog meer weten over onze methode?
+            {t('programOverview.outroQuestion')}
           </p>
-          <Link to="/breintraining-methode">
+          <Link to={methodHref}>
             <Button variant="secondary" className="font-semibold py-3 px-8 rounded-lg text-base md:text-lg">
-              Ontdek de methode
+              {t('cta.discoverMethod')}
             </Button>
           </Link>
         </div>
