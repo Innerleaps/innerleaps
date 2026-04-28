@@ -77,40 +77,6 @@ const DeMethode = () => {
         </div>
       </section>
 
-      {/* Sectie: Continue spanning door het drukke leven */}
-      <section
-        ref={spanningRef.ref}
-        className={`section-padding bg-white transition-all duration-1000 ${
-          spanningRef.isIntersecting ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-        }`}
-      >
-        <div className="container-custom space-y-12">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-brand-purple text-center mb-8">
-            <span className="text-brand-orange">Continue spanning</span> door het drukke leven
-          </h2>
-          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-            <div className="space-y-6">
-              <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
-                Druk kan erg effectief zijn. Zo zet een deadline ons aan het werk. Maar door alle ballen die we hoog
-                houden, zowel in ons werk als privé leven, worden we continue blootgesteld aan spanning. En die stress
-                die slaat zich op in zowel ons lichaam als ons werkgeheugen.
-              </p>
-            </div>
-            <div className="rounded-xl shadow-lg overflow-hidden">
-              <img
-                src={stressmanagementEnConcentratie}
-                alt="Continue spanning door het drukke leven"
-                className="w-full h-auto object-cover"
-                loading="lazy"
-                decoding="async"
-                width={800}
-                height={600}
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Sectie: Push-ups voor je brein */}
       <section
         ref={pushUpsRef.ref}
@@ -125,8 +91,8 @@ const DeMethode = () => {
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             <div className="rounded-xl shadow-lg overflow-hidden order-2 lg:order-1">
               <img
-                src={breintrainingAandachtoefening}
-                alt="Breintraining aandachtoefening"
+                src={stressmanagementEnConcentratie}
+                alt="Push-ups voor je brein"
                 className="w-full h-auto object-cover"
                 loading="lazy"
                 decoding="async"
