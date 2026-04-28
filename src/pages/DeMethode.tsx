@@ -35,7 +35,7 @@ const LeadMagnetModal = lazy(() => import("@/components/LeadMagnetModal"));
 const DeMethode = () => {
   const [isLeadMagnetOpen, setIsLeadMagnetOpen] = useState(false);
   const heroRef = useIntersectionObserver({ threshold: 0.1 });
-  
+
   const pushUpsRef = useIntersectionObserver({ threshold: 0.1 });
   const controleRef = useIntersectionObserver({ threshold: 0.1 });
   const waarschuwingRef = useIntersectionObserver({ threshold: 0.1 });
@@ -70,9 +70,9 @@ const DeMethode = () => {
             <span className="text-brand-orange">Continue spanning</span> door het drukke leven
           </h1>
           <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
-            Druk kan erg effectief zijn. Zo zet een deadline ons aan het werk. Maar door alle ballen die we hoog
-            houden, zowel in ons werk als privé leven, worden we continue blootgesteld aan spanning. En die stress
-            die slaat zich op in zowel ons lichaam als ons werkgeheugen.
+            Druk kan erg effectief zijn. Zo zet een deadline ons aan het werk. Maar door alle ballen die we hoog houden,
+            zowel in ons werk als privé leven, worden we continue blootgesteld aan spanning. En die stress die slaat
+            zich op in zowel ons lichaam als ons werkgeheugen.
           </p>
         </div>
       </section>
@@ -133,7 +133,7 @@ const DeMethode = () => {
                 "controlecentrum".
               </p>
               <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
-                Werknemers ontwikkelen als het ware een mentaalschild voor druk en afleiding. Prestaties verbetert
+                Werknemers ontwikkelen als het ware een mentaalschild voor druk en afleiding. Prestaties verbeteren
                 omdat spanning minder werkgeheugen inneemt en het concentratievermogen sterker is.
               </p>
             </div>
@@ -389,9 +389,7 @@ const DeMethode = () => {
               <div className="inline-flex items-center justify-center w-16 h-16 bg-white/10 rounded-full">
                 <FileText className="h-8 w-8 text-brand-orange" />
               </div>
-              <h2 className="text-3xl font-bold text-white mb-2">
-                Ontdek zelf de resultaten van 40 jaar onderzoek
-              </h2>
+              <h2 className="text-3xl font-bold text-white mb-2">Ontdek zelf de resultaten van 40 jaar onderzoek</h2>
               <p className="text-xl md:text-2xl text-white/90 leading-relaxed max-w-3xl mx-auto">
                 Zelf de wetenschappelijke details bekijken? Ons academische rapport bundelt de laatste studies, analyses
                 en berekeningen rond de effecten van aandachttraining. Inclusief effectgroottes.
@@ -470,9 +468,7 @@ const DeMethode = () => {
               <ul className="space-y-4">
                 <li className="flex items-start">
                   <Users className="h-6 w-6 text-brand-orange stroke-2 flex-shrink-0 mt-1 mr-3" />
-                  <span className="text-xl md:text-2xl text-brand-gray-medium">
-                    6 groepsworkshops van 60 minuten
-                  </span>
+                  <span className="text-xl md:text-2xl text-brand-gray-medium">6 groepsworkshops van 60 minuten</span>
                 </li>
                 <li className="flex items-start">
                   <FileText className="h-6 w-6 text-brand-orange stroke-2 flex-shrink-0 mt-1 mr-3" />
