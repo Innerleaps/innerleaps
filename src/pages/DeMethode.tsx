@@ -103,9 +103,11 @@ const DeMethode = () => {
             <div className="space-y-6 order-1 lg:order-2">
               <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
                 Met onze methode trainen werknemers hun brein. Net zoals je spieren versterkt in de sportschool, trainen
-                deelnemers twee cruciale systemen met onze "brein push-ups". Zowel het "controlecentrum" voor betere
-                concentratie en een efficiënter werkgeheugen, als het "waarschuwingssysteem" zodat spanning niet
-                opstapelt.
+                deelnemers twee cruciale systemen met onze "brein push-ups".
+              </p>
+              <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
+                Zowel het "controlecentrum" voor betere concentratie en een efficiënter werkgeheugen, als het
+                "waarschuwingssysteem" zodat spanning niet opstapelt.
               </p>
             </div>
           </div>
