@@ -67,8 +67,13 @@ const DeMethode = () => {
       >
         <div className="container-custom text-center space-y-6 max-w-4xl mx-auto">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-purple leading-tight">
-            <span className="text-brand-orange">Push-ups</span> voor je brein
+            <span className="text-brand-orange">Continue spanning</span> door het drukke leven
           </h1>
+          <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
+            Druk kan erg effectief zijn. Zo zet een deadline ons aan het werk. Maar door alle ballen die we hoog
+            houden, zowel in ons werk als privé leven, worden we continue blootgesteld aan spanning. En die stress
+            die slaat zich op in zowel ons lichaam als ons werkgeheugen.
+          </p>
         </div>
       </section>
 
