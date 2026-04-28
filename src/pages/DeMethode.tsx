@@ -1,5 +1,6 @@
 import { useEffect, useState, lazy, Suspense } from "react";
 import { Helmet } from "react-helmet-async";
+import { useTranslation } from "react-i18next";
 import SimplifiedNavigation from "@/components/SimplifiedNavigation";
 import StickyCtaButtons from "@/components/StickyCtaButtons";
 import Footer from "@/components/Footer";
@@ -26,16 +27,18 @@ import controlecentrumImage from "@/assets/Concentratietraining_voor_sterker_exe
 import waarschuwingssysteemImage from "@/assets/stressmanagementtraining_sterker_waarschuwingssysteem.png";
 import stressmanagementEnConcentratie from "@/assets/stressmanagement_en_concentratietraining.png";
 import stressPrestatieImage from "@/assets/stress_prestatie_curve.png";
-
 import zesWekenBreintraining from "@/assets/6_weken_breintraining_voor_gedragsverandering.jpg";
 
 // Lazy load modal
 const LeadMagnetModal = lazy(() => import("@/components/LeadMagnetModal"));
 
+const CARD_ICONS_CONTROL = [Brain, Target, Lightbulb, Shield, Zap] as const;
+const CARD_ICONS_WARNING = [Heart, AlertCircle, Eye] as const;
+
 const DeMethode = () => {
+  const { t } = useTranslation("methode");
   const [isLeadMagnetOpen, setIsLeadMagnetOpen] = useState(false);
   const heroRef = useIntersectionObserver({ threshold: 0.1 });
-
   const pushUpsRef = useIntersectionObserver({ threshold: 0.1 });
   const controleRef = useIntersectionObserver({ threshold: 0.1 });
   const waarschuwingRef = useIntersectionObserver({ threshold: 0.1 });
@@ -47,13 +50,13 @@ const DeMethode = () => {
     window.scrollTo(0, 0);
   }, []);
 
+  const controlCardKeys = ["info", "focus", "thinking", "filter", "easier"] as const;
+  const warningCardKeys = ["body", "emotion", "self"] as const;
+
   return (
     <div className="min-h-screen bg-white">
       <Helmet>
-        <meta
-          name="description"
-          content="Innerleaps bouwt op 40 jaar aandachtsonderzoek van Dr. Amishi Jha. De methode traint het waarschuwingssysteem en controlecentrum van het brein, bewezen effectief in meta-analyses en militaire toepassingen."
-        />
+        <meta name="description" content={t("meta.description")} />
       </Helmet>
       <SimplifiedNavigation />
       <StickyCtaButtons />
@@ -67,17 +70,13 @@ const DeMethode = () => {
       >
         <div className="container-custom text-center space-y-6 max-w-4xl mx-auto">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-purple leading-tight">
-            <span className="text-brand-orange">Continue spanning</span> door het drukke leven
+            <span className="text-brand-orange">{t("hero.titlePart1")}</span> {t("hero.titlePart2")}
           </h1>
-          <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
-            Druk kan erg effectief zijn. Zo zet een deadline ons aan het werk. Maar door alle ballen die we hoog houden,
-            zowel in ons werk als privé leven, worden we continue blootgesteld aan spanning. En die stress die slaat
-            zich op in zowel ons lichaam als ons werkgeheugen.
-          </p>
+          <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">{t("hero.body")}</p>
         </div>
       </section>
 
-      {/* Sectie: Push-ups voor je brein */}
+      {/* Push-ups voor je brein */}
       <section
         ref={pushUpsRef.ref}
         className={`section-padding bg-white transition-all duration-1000 ${
@@ -86,13 +85,13 @@ const DeMethode = () => {
       >
         <div className="container-custom space-y-12">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-brand-purple text-center mb-8">
-            <span className="text-brand-orange">Push-ups</span> voor je brein
+            <span className="text-brand-orange">{t("pushUps.titlePart1")}</span> {t("pushUps.titlePart2")}
           </h2>
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             <div className="rounded-xl shadow-lg overflow-hidden order-2 lg:order-1">
               <img
                 src={stressmanagementEnConcentratie}
-                alt="Push-ups voor je brein"
+                alt={t("pushUps.imageAlt")}
                 className="w-full h-auto object-cover"
                 loading="lazy"
                 decoding="async"
@@ -101,20 +100,14 @@ const DeMethode = () => {
               />
             </div>
             <div className="space-y-6 order-1 lg:order-2">
-              <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
-                Met onze methode trainen werknemers hun brein. Net zoals je spieren versterkt in de sportschool, trainen
-                deelnemers twee cruciale systemen met onze "brein push-ups".
-              </p>
-              <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
-                Zowel het "controlecentrum" voor betere concentratie en een efficiënter werkgeheugen, als het
-                "waarschuwingssysteem" zodat spanning niet opstapelt.
-              </p>
+              <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">{t("pushUps.body1")}</p>
+              <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">{t("pushUps.body2")}</p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Sectie: Een krachtiger controlecentrum */}
+      {/* Krachtiger controlecentrum */}
       <section
         ref={controleRef.ref}
         className={`pt-8 pb-16 md:pb-20 lg:pb-28 bg-white transition-all duration-1000 ${
@@ -123,142 +116,50 @@ const DeMethode = () => {
       >
         <div className="container-custom space-y-12">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-brand-purple text-center mb-8">
-            Een krachtiger <span className="text-brand-orange">controlecentrum</span>
+            {t("control.titlePart1")} <span className="text-brand-orange">{t("control.titlePart2")}</span>
           </h2>
 
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             <div className="space-y-6">
-              <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
-                Door het oefenen verterkt onder andere de frontale cortex en fronto-pariëtale netwerken, ook wel ons
-                "controlecentrum".
-              </p>
-              <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
-                Werknemers ontwikkelen als het ware een mentaalschild voor druk en afleiding. Prestaties verbeteren
-                omdat spanning minder werkgeheugen inneemt en het concentratievermogen sterker is.
-              </p>
+              <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">{t("control.body1")}</p>
+              <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">{t("control.body2")}</p>
             </div>
             <div className="rounded-xl shadow-lg overflow-hidden">
-              <img
-                src={controlecentrumImage}
-                alt="Concentratietraining voor sterker executieve systeem"
-                className="w-full h-auto object-cover"
-              />
+              <img src={controlecentrumImage} alt={t("control.imageAlt")} className="w-full h-auto object-cover" />
             </div>
           </div>
 
           {/* 5 Feature Cards */}
           <div className="grid md:grid-cols-6 gap-6 lg:gap-8">
-            <div className="bg-brand-off-white p-6 rounded-lg space-y-4 md:col-span-2">
-              <div className="p-3 rounded-lg bg-brand-orange/10 w-fit mx-auto">
-                <Brain className="h-8 w-8 text-brand-orange stroke-2" />
-              </div>
-              <h3 className="text-xl md:text-2xl font-bold text-brand-gray-dark text-center">Informatieverwerking</h3>
-              <div className="space-y-3">
-                <div className="flex items-start gap-3">
-                  <CheckCircle className="h-5 w-5 text-brand-orange stroke-2 flex-shrink-0 mt-1" />
-                  <span className="text-base md:text-lg text-brand-gray-medium">
-                    Informatie langer vasthouden en beter onthouden.
-                  </span>
+            {controlCardKeys.map((key, idx) => {
+              const Icon = CARD_ICONS_CONTROL[idx];
+              const items = t(`control.cards.${key}.items`, { returnObjects: true }) as string[];
+              const colSpanClass =
+                key === "filter" ? "md:col-span-2 md:col-start-2" : "md:col-span-2";
+              return (
+                <div key={key} className={`bg-brand-off-white p-6 rounded-lg space-y-4 ${colSpanClass}`}>
+                  <div className="p-3 rounded-lg bg-brand-orange/10 w-fit mx-auto">
+                    <Icon className="h-8 w-8 text-brand-orange stroke-2" />
+                  </div>
+                  <h3 className="text-xl md:text-2xl font-bold text-brand-gray-dark text-center">
+                    {t(`control.cards.${key}.title`)}
+                  </h3>
+                  <div className="space-y-3">
+                    {items.map((item, i) => (
+                      <div key={i} className="flex items-start gap-3">
+                        <CheckCircle className="h-5 w-5 text-brand-orange stroke-2 flex-shrink-0 mt-1" />
+                        <span className="text-base md:text-lg text-brand-gray-medium">{item}</span>
+                      </div>
+                    ))}
+                  </div>
                 </div>
-                <div className="flex items-start gap-3">
-                  <CheckCircle className="h-5 w-5 text-brand-orange stroke-2 flex-shrink-0 mt-1" />
-                  <span className="text-base md:text-lg text-brand-gray-medium">
-                    Informatie sneller en beter verwerken.
-                  </span>
-                </div>
-              </div>
-            </div>
-
-            <div className="bg-brand-off-white p-6 rounded-lg space-y-4 md:col-span-2">
-              <div className="p-3 rounded-lg bg-brand-orange/10 w-fit mx-auto">
-                <Target className="h-8 w-8 text-brand-orange stroke-2" />
-              </div>
-              <h3 className="text-xl md:text-2xl font-bold text-brand-gray-dark text-center">Concentratie</h3>
-              <div className="space-y-3">
-                <div className="flex items-start gap-3">
-                  <CheckCircle className="h-5 w-5 text-brand-orange stroke-2 flex-shrink-0 mt-1" />
-                  <span className="text-base md:text-lg text-brand-gray-medium">
-                    Aandacht beter richten op wat belangrijk is.
-                  </span>
-                </div>
-                <div className="flex items-start gap-3">
-                  <CheckCircle className="h-5 w-5 text-brand-orange stroke-2 flex-shrink-0 mt-1" />
-                  <span className="text-base md:text-lg text-brand-gray-medium">Aandacht langer vasthouden.</span>
-                </div>
-                <div className="flex items-start gap-3">
-                  <CheckCircle className="h-5 w-5 text-brand-orange stroke-2 flex-shrink-0 mt-1" />
-                  <span className="text-base md:text-lg text-brand-gray-medium">
-                    Minder afgeleid door onbelangrijke informatie.
-                  </span>
-                </div>
-              </div>
-            </div>
-
-            <div className="bg-brand-off-white p-6 rounded-lg space-y-4 md:col-span-2">
-              <div className="p-3 rounded-lg bg-brand-orange/10 w-fit mx-auto">
-                <Lightbulb className="h-8 w-8 text-brand-orange stroke-2" />
-              </div>
-              <h3 className="text-xl md:text-2xl font-bold text-brand-gray-dark text-center">Denkprocessen</h3>
-              <div className="space-y-3">
-                <div className="flex items-start gap-3">
-                  <CheckCircle className="h-5 w-5 text-brand-orange stroke-2 flex-shrink-0 mt-1" />
-                  <span className="text-base md:text-lg text-brand-gray-medium">Beter plannen en organiseren.</span>
-                </div>
-                <div className="flex items-start gap-3">
-                  <CheckCircle className="h-5 w-5 text-brand-orange stroke-2 flex-shrink-0 mt-1" />
-                  <span className="text-base md:text-lg text-brand-gray-medium">Doelen bepalen en volhouden.</span>
-                </div>
-                <div className="flex items-start gap-3">
-                  <CheckCircle className="h-5 w-5 text-brand-orange stroke-2 flex-shrink-0 mt-1" />
-                  <span className="text-base md:text-lg text-brand-gray-medium">
-                    Strategien bedenken en prioriteiten bepalen.
-                  </span>
-                </div>
-              </div>
-            </div>
-
-            <div className="bg-brand-off-white p-6 rounded-lg space-y-4 md:col-span-2 md:col-start-2">
-              <div className="p-3 rounded-lg bg-brand-orange/10 w-fit mx-auto">
-                <Shield className="h-8 w-8 text-brand-orange stroke-2" />
-              </div>
-              <h3 className="text-xl md:text-2xl font-bold text-brand-gray-dark text-center">
-                Filteren & onderdrukken
-              </h3>
-              <div className="space-y-3">
-                <div className="flex items-start gap-3">
-                  <CheckCircle className="h-5 w-5 text-brand-orange stroke-2 flex-shrink-0 mt-1" />
-                  <span className="text-base md:text-lg text-brand-gray-medium">Irrelevante informatie filteren.</span>
-                </div>
-                <div className="flex items-start gap-3">
-                  <CheckCircle className="h-5 w-5 text-brand-orange stroke-2 flex-shrink-0 mt-1" />
-                  <span className="text-base md:text-lg text-brand-gray-medium">Ongewenste reacties onderdrukken.</span>
-                </div>
-              </div>
-            </div>
-
-            <div className="bg-brand-off-white p-6 rounded-lg space-y-4 md:col-span-2">
-              <div className="p-3 rounded-lg bg-brand-orange/10 w-fit mx-auto">
-                <Zap className="h-8 w-8 text-brand-orange stroke-2" />
-              </div>
-              <h3 className="text-xl md:text-2xl font-bold text-brand-gray-dark text-center">Makkelijker denken</h3>
-              <div className="space-y-3">
-                <div className="flex items-start gap-3">
-                  <CheckCircle className="h-5 w-5 text-brand-orange stroke-2 flex-shrink-0 mt-1" />
-                  <span className="text-base md:text-lg text-brand-gray-medium">
-                    Dezelfde taken vragen minder hersenenergie.
-                  </span>
-                </div>
-                <div className="flex items-start gap-3">
-                  <CheckCircle className="h-5 w-5 text-brand-orange stroke-2 flex-shrink-0 mt-1" />
-                  <span className="text-base md:text-lg text-brand-gray-medium">Sneller schakelen tussen taken.</span>
-                </div>
-              </div>
-            </div>
+              );
+            })}
           </div>
         </div>
       </section>
 
-      {/* Sectie: Een scherper waarschuwingssysteem */}
+      {/* Scherper waarschuwingssysteem */}
       <section
         ref={waarschuwingRef.ref}
         className={`section-padding bg-white transition-all duration-1000 ${
@@ -267,24 +168,18 @@ const DeMethode = () => {
       >
         <div className="container-custom space-y-12">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-brand-purple text-center mb-8">
-            Een scherper <span className="text-brand-orange">waarschuwingssysteem</span>
+            {t("warning.titlePart1")} <span className="text-brand-orange">{t("warning.titlePart2")}</span>
           </h2>
 
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             <div className="space-y-6">
-              <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
-                Door de training versterkt ook de anterior insula en anterior cingulate cortex, ons
-                "waarschuwingssysteem". Hierdoor merken werknemers stresssignalen eerder op.
-              </p>
-              <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
-                In de 6 weekse training ontwikkelen deelnemers nieuwe, gezonde patronen om die stresssignalen te
-                reguleren. Echte gedragsverandering die de vitaliteit en inzetbaarheid van je team versterkt.
-              </p>
+              <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">{t("warning.body1")}</p>
+              <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">{t("warning.body2")}</p>
             </div>
             <div className="rounded-xl shadow-lg overflow-hidden">
               <img
                 src={waarschuwingssysteemImage}
-                alt="Stressmanagementtraining sterker waarschuwingssysteem"
+                alt={t("warning.imageAlt")}
                 className="w-full h-auto object-cover"
                 loading="lazy"
                 decoding="async"
@@ -296,84 +191,28 @@ const DeMethode = () => {
 
           {/* 3 Feature Cards */}
           <div className="grid md:grid-cols-3 gap-6 lg:gap-8">
-            <div className="bg-brand-off-white p-6 rounded-lg space-y-4">
-              <div className="p-3 rounded-lg bg-brand-orange/10 w-fit mx-auto">
-                <Heart className="h-8 w-8 text-brand-orange stroke-2" />
-              </div>
-              <h3 className="text-xl md:text-2xl font-bold text-brand-gray-dark text-center">
-                Lichaamsbewustzijn & Waarneming
-              </h3>
-              <div className="space-y-3">
-                <div className="flex items-start gap-3">
-                  <CheckCircle className="h-5 w-5 text-brand-orange stroke-2 flex-shrink-0 mt-1" />
-                  <span className="text-base md:text-lg text-brand-gray-medium">
-                    Eerder voelen dat je gestrest raakt.
-                  </span>
+            {warningCardKeys.map((key, idx) => {
+              const Icon = CARD_ICONS_WARNING[idx];
+              const items = t(`warning.cards.${key}.items`, { returnObjects: true }) as string[];
+              return (
+                <div key={key} className="bg-brand-off-white p-6 rounded-lg space-y-4">
+                  <div className="p-3 rounded-lg bg-brand-orange/10 w-fit mx-auto">
+                    <Icon className="h-8 w-8 text-brand-orange stroke-2" />
+                  </div>
+                  <h3 className="text-xl md:text-2xl font-bold text-brand-gray-dark text-center">
+                    {t(`warning.cards.${key}.title`)}
+                  </h3>
+                  <div className="space-y-3">
+                    {items.map((item, i) => (
+                      <div key={i} className="flex items-start gap-3">
+                        <CheckCircle className="h-5 w-5 text-brand-orange stroke-2 flex-shrink-0 mt-1" />
+                        <span className="text-base md:text-lg text-brand-gray-medium">{item}</span>
+                      </div>
+                    ))}
+                  </div>
                 </div>
-                <div className="flex items-start gap-3">
-                  <CheckCircle className="h-5 w-5 text-brand-orange stroke-2 flex-shrink-0 mt-1" />
-                  <span className="text-base md:text-lg text-brand-gray-medium">
-                    Lichamelijke signalen opvangen voordat ze escaleren.
-                  </span>
-                </div>
-                <div className="flex items-start gap-3">
-                  <CheckCircle className="h-5 w-5 text-brand-orange stroke-2 flex-shrink-0 mt-1" />
-                  <span className="text-base md:text-lg text-brand-gray-medium">
-                    Subtiele waarschuwingen van je lichaam herkennen.
-                  </span>
-                </div>
-              </div>
-            </div>
-
-            <div className="bg-brand-off-white p-6 rounded-lg space-y-4">
-              <div className="p-3 rounded-lg bg-brand-orange/10 w-fit mx-auto">
-                <AlertCircle className="h-8 w-8 text-brand-orange stroke-2" />
-              </div>
-              <h3 className="text-xl md:text-2xl font-bold text-brand-gray-dark text-center">Emotionele Signalering</h3>
-              <div className="space-y-3">
-                <div className="flex items-start gap-3">
-                  <CheckCircle className="h-5 w-5 text-brand-orange stroke-2 flex-shrink-0 mt-1" />
-                  <span className="text-base md:text-lg text-brand-gray-medium">
-                    Merken wat belangrijk is en aandacht nodig heeft.
-                  </span>
-                </div>
-                <div className="flex items-start gap-3">
-                  <CheckCircle className="h-5 w-5 text-brand-orange stroke-2 flex-shrink-0 mt-1" />
-                  <span className="text-base md:text-lg text-brand-gray-medium">
-                    Sneller voelen dat iets niet goed zit.
-                  </span>
-                </div>
-                <div className="flex items-start gap-3">
-                  <CheckCircle className="h-5 w-5 text-brand-orange stroke-2 flex-shrink-0 mt-1" />
-                  <span className="text-base md:text-lg text-brand-gray-medium">
-                    Begrijpen welke emoties je waarschuwen.
-                  </span>
-                </div>
-              </div>
-            </div>
-
-            <div className="bg-brand-off-white p-6 rounded-lg space-y-4">
-              <div className="p-3 rounded-lg bg-brand-orange/10 w-fit mx-auto">
-                <Eye className="h-8 w-8 text-brand-orange stroke-2" />
-              </div>
-              <h3 className="text-xl md:text-2xl font-bold text-brand-gray-dark text-center">
-                Zelfmonitoring & Bewustzijn
-              </h3>
-              <div className="space-y-3">
-                <div className="flex items-start gap-3">
-                  <CheckCircle className="h-5 w-5 text-brand-orange stroke-2 flex-shrink-0 mt-1" />
-                  <span className="text-base md:text-lg text-brand-gray-medium">
-                    Jezelf observeren terwijl je iets doet.
-                  </span>
-                </div>
-                <div className="flex items-start gap-3">
-                  <CheckCircle className="h-5 w-5 text-brand-orange stroke-2 flex-shrink-0 mt-1" />
-                  <span className="text-base md:text-lg text-brand-gray-medium">
-                    Opmerken wat je lichaam je waarschuwt.
-                  </span>
-                </div>
-              </div>
-            </div>
+              );
+            })}
           </div>
         </div>
       </section>
@@ -391,24 +230,21 @@ const DeMethode = () => {
               <div className="inline-flex items-center justify-center w-16 h-16 bg-white/10 rounded-full">
                 <FileText className="h-8 w-8 text-brand-orange" />
               </div>
-              <h2 className="text-3xl font-bold text-white mb-2">Ontdek zelf de resultaten van 40 jaar onderzoek</h2>
-              <p className="text-xl md:text-2xl text-white/90 leading-relaxed max-w-3xl mx-auto">
-                Zelf de wetenschappelijke details bekijken? Ons academische rapport bundelt de laatste studies, analyses
-                en berekeningen rond de effecten van aandachttraining. Inclusief effectgroottes.
-              </p>
+              <h2 className="text-3xl font-bold text-white mb-2">{t("report.title")}</h2>
+              <p className="text-xl md:text-2xl text-white/90 leading-relaxed max-w-3xl mx-auto">{t("report.body")}</p>
               <Button
                 onClick={() => setIsLeadMagnetOpen(true)}
                 className="bg-brand-orange hover:bg-brand-orange/90 text-white font-semibold text-lg px-8 py-6"
               >
                 <FileText className="mr-2 h-5 w-5" />
-                Rapport ontvangen
+                {t("report.cta")}
               </Button>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Sectie: Verbeteren van prestaties */}
+      {/* Verbeteren van prestaties */}
       <section
         ref={prestatieRef.ref}
         className={`section-padding bg-white transition-all duration-1000 ${
@@ -417,14 +253,14 @@ const DeMethode = () => {
       >
         <div className="container-custom space-y-12">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-brand-purple text-center mb-8">
-            Verbeteren van <span className="text-brand-orange">prestaties</span>
+            {t("performance.titlePart1")} <span className="text-brand-orange">{t("performance.titlePart2")}</span>
           </h2>
 
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             <div className="rounded-xl shadow-lg overflow-hidden order-2 lg:order-1">
               <img
                 src={stressPrestatieImage}
-                alt="Wat is de relatie tussen stress en prestatie"
+                alt={t("performance.imageAlt")}
                 className="w-full h-auto object-cover"
                 loading="lazy"
                 decoding="async"
@@ -433,22 +269,14 @@ const DeMethode = () => {
               />
             </div>
             <div className="space-y-6 order-1 lg:order-2">
-              <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
-                Prestaties van werknemers verbeteren door optimalisatie van het werkgeheugen. Relevante informatie wordt
-                sneller geselecteerd én irrelevante informatie beter onderdrukt. De concentratie neemt toe, terwijl
-                afleiding afneemt. Onderzoek laat tot 24% verbetering zien op aandachtstaken (Jha et al., 2021).
-              </p>
-              <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
-                Daarnaast nemen spanning en druk het werkgeheugen in beslag. Wanneer die spanning afneemt, komt er
-                capaciteit vrij voor de taak zelf. Tot slot wordt het werkgeheugen efficiënter: het levert betere
-                resultaten met minder neurale inspanning (Bailey et al., 2020).
-              </p>
+              <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">{t("performance.body1")}</p>
+              <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">{t("performance.body2")}</p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Sectie: 6 weken voor echte gedragsverandering */}
+      {/* 6 weken voor gedragsverandering */}
       <section
         ref={zesWekenRef.ref}
         className={`section-padding bg-white transition-all duration-1000 ${
@@ -457,42 +285,32 @@ const DeMethode = () => {
       >
         <div className="container-custom space-y-12">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-brand-purple text-center mb-8">
-            6 weken voor echte <span className="text-brand-orange">gedragsverandering</span>
+            {t("sixWeeks.titlePart1")} <span className="text-brand-orange">{t("sixWeeks.titlePart2")}</span>
           </h2>
 
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             <div className="space-y-6">
-              <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
-                Elke week is er een groepssessie met een geaccrediteerde trainer, waarin werknemers reflecteren op hun
-                oefeningen en uitdagingen.
-              </p>
+              <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">{t("sixWeeks.intro")}</p>
               <ul className="space-y-4">
                 <li className="flex items-start">
                   <Users className="h-6 w-6 text-brand-orange stroke-2 flex-shrink-0 mt-1 mr-3" />
-                  <span className="text-xl md:text-2xl text-brand-gray-medium">6 groepsworkshops van 60 minuten</span>
+                  <span className="text-xl md:text-2xl text-brand-gray-medium">{t("sixWeeks.items.workshops")}</span>
                 </li>
                 <li className="flex items-start">
                   <FileText className="h-6 w-6 text-brand-orange stroke-2 flex-shrink-0 mt-1 mr-3" />
-                  <span className="text-xl md:text-2xl text-brand-gray-medium">
-                    Werkboek met achtergrondinformatie en opdrachten
-                  </span>
+                  <span className="text-xl md:text-2xl text-brand-gray-medium">{t("sixWeeks.items.workbook")}</span>
                 </li>
                 <li className="flex items-start">
                   <Activity className="h-6 w-6 text-brand-orange stroke-2 flex-shrink-0 mt-1 mr-3" />
-                  <span className="text-xl md:text-2xl text-brand-gray-medium">
-                    Audio-opnames voor dagelijkse oefening
-                  </span>
+                  <span className="text-xl md:text-2xl text-brand-gray-medium">{t("sixWeeks.items.audio")}</span>
                 </li>
               </ul>
-              <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
-                Het resultaat? Gedrag dat blijft. De effecten op stress, burn-out en productiviteit zijn 6 tot 12
-                maanden na de training nog steeds zichtbaar (Vonderlin et al., 2020; Michaelsen et al., 2023).
-              </p>
+              <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">{t("sixWeeks.outro")}</p>
             </div>
             <div className="rounded-xl shadow-lg overflow-hidden">
               <img
                 src={zesWekenBreintraining}
-                alt="6 weken breintraining voor gedragsverandering"
+                alt={t("sixWeeks.imageAlt")}
                 className="w-full h-auto object-cover"
                 loading="lazy"
                 decoding="async"
