@@ -1,7 +1,7 @@
 import SimplifiedNavigation from "@/components/SimplifiedNavigation";
 import StickyCtaButtons from "@/components/StickyCtaButtons";
 import TrustSection from "@/components/TrustSection";
-import ContactSection from "@/components/ContactSection";
+
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { useEffect } from "react";
@@ -140,41 +140,20 @@ const OverOns = () => {
               <span className="text-brand-orange">Waarom</span> wij dit werk doen
             </h1>
 
-            {/* Grid met 2 kolommen: Links body, rechts oranje blok */}
-            <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-start">
+            {/* Grid met 2 kolommen: Links body, rechts afbeelding */}
+            <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
               {/* Links: Body tekst */}
-              <div className="space-y-6 text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
+              <div className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
                 <p>
-                  In ons drukke leven zijn we <strong>constant bezig</strong>. Het <strong>aandachtssysteem</strong>{" "}
-                  verzwakt. Het <strong>werkgeheugen</strong> raakt vol. <strong>Focus</strong> vervaagt.{" "}
-                  <strong>Stress</strong> stapelt zich op. Onbewust vallen we terug op de{" "}
-                  <strong>automatische piloot</strong> en maken we fouten. We <strong>overschrijden</strong> onze{" "}
-                  <strong>grenzen</strong> zonder het door te hebben en verliezen contact met wat we echt nodig hebben
-                  om <strong>effectief</strong> te zijn.
-                </p>
-
-                <p>
-                  Wij én de wetenschap weten dat dit anders kan. Door je <strong>controlecentrum</strong> en{" "}
-                  <strong>waarschuwingssysteem</strong> te trainen, herken je stressignalen voordat ze escaleren. Je
-                  doorbreekt de automatische piloot. Je neemt de controle terug.
-                </p>
-
-                <p>
-                  Zo creëren we <strong>ruimte voor innerlijke sprongen</strong>. Ruimte waarin mensen met rust, focus
-                  en lef hun potentieel leven. Waarin bewuste keuzes de plek innemen van automatische reacties. Dat is
-                  waarom we dit werk doen.
+                  Bij Innerleaps geloven we in het duurzame succes van bewuste aandacht. Met die aandacht leven
+                  deelnemers met meer rust, focus en lef. Ze worden er niet alleen een mooier mens van, ze zullen ook
+                  hun ware potentieel benutten. Hierdoor krijgen organisaties een team dat niet alleen inzetbaar is,
+                  maar ook nog eens met plezier maximaal presteert. Dat is de innerlijke sprong waar wij in geloven.
                 </p>
               </div>
 
-              {/* Rechts: Oranje blok met missie + afbeelding */}
-              <div className="space-y-8">
-                <div className="bg-brand-orange text-white rounded-xl p-8 lg:p-10 shadow-lg">
-                  <p className="text-2xl md:text-3xl lg:text-4xl font-bold leading-tight">
-                    Wij creëren ruimte voor innerlijke sprongen, zodat mensen met rust, focus en lef hun potentieel
-                    leven.
-                  </p>
-                </div>
-
+              {/* Rechts: Afbeelding */}
+              <div>
                 <img
                   src={waaromWijAfbeelding}
                   alt="Bas ter Haar Romenij geeft presentatie over vitaliteit en stressmanagement bij InnerLeaps"
@@ -261,28 +240,24 @@ const OverOns = () => {
         <section className="section-padding bg-brand-off-white">
           <div className="container-custom">
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-purple leading-tight mb-12 text-center">
-              Waarom Bas <span className="text-brand-orange">InnerLeaps</span> is begonnen
+              Het verhaal achter <span className="text-brand-orange">InnerLeaps</span>
             </h2>
             <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-start">
               {/* Links: Body */}
               <div className="space-y-4 text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
                 <p>
-                  Hoi, ik ben Bas. Na mijn <strong>universitaire master</strong> Design for Interaction aan de{" "}
-                  <strong>TU Delft</strong> werkte ik in consultancy en als productmanager bij een SaaS-bedrijf.
+                  Bas richtte InnerLeaps op na zijn herstel van een hersenschudding. Met een master Design for
+                  Interaction aan de TU Delft en ervaring in consultancy en als productmanager bij een SaaS-bedrijf,
+                  was hij gewend om onder druk te presteren. Tot een snowboardongeval hem tot stilstand dwong.
                 </p>
                 <p>
-                  Naast mijn werk met grote ambities houd ik van sporten. Helaas niet zonder gevaren, want mijn
-                  snowboardvakantie eindigde met een fikse <strong>hersenschudding</strong>.
+                  Tijdens zijn herstel verdiepte hij zich in de werking van de hersenen en stuitte op veertig jaar
+                  wetenschappelijk onderzoek: aandacht is trainbaar. Terug op werk merkte hij het verschil. Minder
+                  stress, scherpere focus, meer controle over zijn gedachten en een productiviteit die hij niet eerder
+                  kende.
                 </p>
-                <p>
-                  Tijdens mijn herstel verdiepte ik mij in de hersenen en ontdekte ik dat ik die kan trainen. Het was
-                  bizar, ik stuite op een berg van <strong>40 jaar wetenschappelijk onderzoek</strong>.
-                </p>
-                <p>
-                  Terug op werk merkte ik het verschil:{" "}
-                  <strong>minder stress, betere concentratie, meer controle</strong> over gedrag en gedachten, en een
-                  productiviteit die ik nooit eerder kende. <strong>Die ervaring wil ik delen</strong>. Daarom richtte
-                  ik InnerLeaps op.
+                <p className="italic">
+                  "Die ervaring wil ik delen. Daarom ben ik InnerLeaps begonnen."
                 </p>
               </div>
 
@@ -318,10 +293,7 @@ const OverOns = () => {
       {/* Sectie 4: Trust */}
       <TrustSection />
 
-      {/* Sectie 5: Contact */}
-      <ContactSection />
-
-      {/* Sectie 6: Footer */}
+      {/* Sectie 5: Footer */}
       <Footer />
     </div>
   );
