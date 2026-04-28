@@ -435,7 +435,7 @@ const DeMethode = () => {
             <div className="space-y-6 order-1 lg:order-2">
               <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
                 Prestaties van werknemers verbeteren door optimalisatie van het werkgeheugen. Relevante informatie wordt
-                sneller geselecteerd en irrelevante informatie beter onderdrukt. De concentratie neemt toe, terwijl
+                sneller geselecteerd én irrelevante informatie beter onderdrukt. De concentratie neemt toe, terwijl
                 afleiding afneemt. Onderzoek laat tot 24% verbetering zien op aandachtstaken (Jha et al., 2021).
               </p>
               <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
