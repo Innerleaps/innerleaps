@@ -1,0 +1,119 @@
+{
+  "meta": {
+    "description": "Innerleaps builds on 40 years of attention research by Dr. Amishi Jha. The method trains the brain's warning system and control center — proven effective in meta-analyses and military applications."
+  },
+  "hero": {
+    "titlePart1": "Constant tension",
+    "titlePart2": "from a busy life",
+    "body": "Pressure can be very effective — a deadline gets us moving. But with all the balls we keep in the air at work and at home, we're constantly exposed to tension. And that stress builds up in both our body and our working memory."
+  },
+  "pushUps": {
+    "titlePart1": "Push-ups",
+    "titlePart2": "for your brain",
+    "imageAlt": "Push-ups for your brain",
+    "body1": "With our method, employees train their brain. Just like you build muscles at the gym, participants train two crucial systems with our \"brain push-ups\".",
+    "body2": "Both the \"control center\" — for better focus and a more efficient working memory — and the \"warning system\" so that tension doesn't pile up."
+  },
+  "control": {
+    "titlePart1": "A stronger",
+    "titlePart2": "control center",
+    "imageAlt": "Focus training for a stronger executive system",
+    "body1": "Through practice, the frontal cortex and fronto-parietal networks — what we call the \"control center\" — get stronger.",
+    "body2": "Employees develop a kind of mental shield against pressure and distraction. Performance improves because tension takes up less working memory and the ability to focus is sharper.",
+    "cards": {
+      "info": {
+        "title": "Information processing",
+        "items": [
+          "Hold on to information longer and remember it better.",
+          "Process information faster and more accurately."
+        ]
+      },
+      "focus": {
+        "title": "Concentration",
+        "items": [
+          "Better direct attention to what matters.",
+          "Sustain attention for longer.",
+          "Less distracted by unimportant information."
+        ]
+      },
+      "thinking": {
+        "title": "Thinking processes",
+        "items": [
+          "Plan and organize more effectively.",
+          "Set goals and stick with them.",
+          "Develop strategies and set priorities."
+        ]
+      },
+      "filter": {
+        "title": "Filter & inhibit",
+        "items": [
+          "Filter out irrelevant information.",
+          "Suppress unwanted reactions."
+        ]
+      },
+      "easier": {
+        "title": "Easier thinking",
+        "items": [
+          "The same tasks require less mental energy.",
+          "Switch faster between tasks."
+        ]
+      }
+    }
+  },
+  "warning": {
+    "titlePart1": "A sharper",
+    "titlePart2": "warning system",
+    "imageAlt": "Stress management training for a stronger warning system",
+    "body1": "The training also strengthens the anterior insula and anterior cingulate cortex — our \"warning system\". As a result, employees notice stress signals earlier.",
+    "body2": "Over 6 weeks, participants build new healthy patterns to regulate those stress signals. Real behavior change that strengthens the vitality and employability of your team.",
+    "cards": {
+      "body": {
+        "title": "Body awareness & perception",
+        "items": [
+          "Sense earlier when you're getting stressed.",
+          "Catch physical signals before they escalate.",
+          "Recognize subtle warnings from your body."
+        ]
+      },
+      "emotion": {
+        "title": "Emotional signaling",
+        "items": [
+          "Notice what matters and needs attention.",
+          "Sense more quickly when something feels off.",
+          "Understand which emotions are warning you."
+        ]
+      },
+      "self": {
+        "title": "Self-monitoring & awareness",
+        "items": [
+          "Observe yourself while doing something.",
+          "Notice what your body is warning you about."
+        ]
+      }
+    }
+  },
+  "report": {
+    "title": "See for yourself: the results of 40 years of research",
+    "body": "Want to dive into the scientific details yourself? Our academic report brings together the latest studies, analyses and calculations on the effects of attention training — including effect sizes.",
+    "cta": "Get the report"
+  },
+  "performance": {
+    "titlePart1": "Improving",
+    "titlePart2": "performance",
+    "imageAlt": "What is the relationship between stress and performance",
+    "body1": "Employee performance improves through optimization of working memory. Relevant information is selected faster and irrelevant information is better suppressed. Concentration goes up while distraction goes down. Research shows up to 24% improvement on attention tasks (Jha et al., 2021).",
+    "body2": "On top of that, tension and pressure take up working memory. When that tension drops, capacity is freed up for the task itself. Working memory also becomes more efficient: it delivers better results with less neural effort (Bailey et al., 2020)."
+  },
+  "sixWeeks": {
+    "titlePart1": "6 weeks for real",
+    "titlePart2": "behavior change",
+    "imageAlt": "6 weeks of brain training for behavior change",
+    "intro": "Each week there's a group session with an accredited trainer, where employees reflect on their exercises and challenges.",
+    "items": {
+      "workshops": "6 group workshops of 60 minutes",
+      "workbook": "Workbook with background and assignments",
+      "audio": "Audio recordings for daily practice"
+    },
+    "outro": "The result? Behavior that sticks. The effects on stress, burnout and productivity are still visible 6 to 12 months after the training (Vonderlin et al., 2020; Michaelsen et al., 2023)."
+  }
+}
