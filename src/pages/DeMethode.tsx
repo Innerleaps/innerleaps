@@ -69,9 +69,9 @@ const DeMethode = () => {
             Een <span className="text-brand-orange">krachtiger brein</span> door "brein push-ups"
           </h1>
           <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
-            Net zoals je spieren versterkt in de <strong>sportschool</strong>, train je met onze oefeningen je{" "}
-            <strong>brein</strong>. Push ups voor je brein dus. Je <strong>versterkt</strong> twee cruciale systemen: je{" "}
-            <strong>controlecentrum</strong> voor focus en bewuste keuzes, én je <strong>signaleringsysteem</strong> dat
+            Net zoals je spieren versterkt in de sportschool, train je met onze oefeningen je{" "}
+            brein. Push ups voor je brein dus. Je versterkt twee cruciale systemen: je{" "}
+            controlecentrum voor focus en bewuste keuzes, én je signaleringsysteem dat
             stress opmerkt voordat het escaleert.
           </p>
         </div>
@@ -93,8 +93,8 @@ const DeMethode = () => {
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             <div className="space-y-6">
               <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
-                Met onze "push-ups voor het brein" versterk je onder andere de <strong>frontale cortex</strong> en{" "}
-                <strong>fronto-pariëtale netwerken</strong>, simpel gezegd je "controlecentrum".
+                Met onze "push-ups voor het brein" versterk je onder andere de frontale cortex en{" "}
+                fronto-pariëtale netwerken, simpel gezegd je "controlecentrum".
               </p>
               <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
                 Met onze frontale cortex concentreren we ons, verwerken we informatie en bedenken we strategien.
@@ -242,14 +242,14 @@ const DeMethode = () => {
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             <div className="space-y-6">
               <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
-                Door het doen van de "brein push-ups" versterken deelnemers ook hun <strong>anterior insula</strong> en{" "}
-                <strong>anterior cingulate cortex</strong>, ons "waarschuwingssysteem".
+                Door het doen van de "brein push-ups" versterken deelnemers ook hun anterior insula en{" "}
+                anterior cingulate cortex, ons "waarschuwingssysteem".
               </p>
 
               <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
-                Omdat deelnemers <strong>stresssignalen eerder opmerken</strong>, kunnen ze{" "}
-                <strong>spanning beter beheersen</strong> en <strong>reguleren</strong>. Hierdoor verbeteren prestaties
-                én door <strong>minder spanning</strong> wordt het er allemaal ook wat <strong>leuker</strong> op!
+                Omdat deelnemers stresssignalen eerder opmerken, kunnen ze{" "}
+                spanning beter beheersen en reguleren. Hierdoor verbeteren prestaties
+                én door minder spanning wordt het er allemaal ook wat leuker op!
               </p>
             </div>
             <div className="rounded-xl shadow-lg overflow-hidden">
@@ -429,18 +429,18 @@ const DeMethode = () => {
             <div className="space-y-6 order-1 lg:order-2">
               <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
                 Een beetje stress werkt. Die deadline die je aanzet, die presentatie die je scherp houdt. Maar{" "}
-                <strong>stress escaleert snel</strong>.
+                stress escaleert snel.
               </p>
               <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
-                Het getrainde waarschuwingssysteem van deelnemers <strong>vangt stress vroeg op</strong>. Want{" "}
-                <strong>onbewuste stress</strong>? Die <strong>ondermijnt </strong> je <strong>prestaties</strong>: meer
+                Het getrainde waarschuwingssysteem van deelnemers vangt stress vroeg op. Want{" "}
+                onbewuste stress? Die ondermijnt  je prestaties: meer
                 fouten, langzamer werken, sneller afgeleid.
               </p>
               <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
-                Prestaties verbeteren ook door <strong>sterkere concentratie</strong>. Door het trainen van het
-                controlecentrum <strong>filter</strong> je irrelevante informatie, <strong>onthoud</strong> je wat
-                belangrijk is en <strong>schakel</strong> je sneller tussen taken. Hetzelfde werk kost simpelweg
-                <strong> minder hersenenergie.</strong>
+                Prestaties verbeteren ook door sterkere concentratie. Door het trainen van het
+                controlecentrum filter je irrelevante informatie, onthoud je wat
+                belangrijk is en schakel je sneller tussen taken. Hetzelfde werk kost simpelweg
+                 minder hersenenergie.
               </p>
             </div>
           </div>
@@ -464,20 +464,20 @@ const DeMethode = () => {
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             <div className="space-y-6">
               <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
-                Zittend of liggend volgen deelnemers elke dag een <strong>begeleidende audio-opname</strong>. Deze duurt
-                zo'n 12 minuten. De instructie is simpel: <strong>richt je aandacht</strong> op je ademhaling of andere{" "}
-                <strong>lichamelijke ervaringen</strong>.
+                Zittend of liggend volgen deelnemers elke dag een begeleidende audio-opname. Deze duurt
+                zo'n 12 minuten. De instructie is simpel: richt je aandacht op je ademhaling of andere{" "}
+                lichamelijke ervaringen.
               </p>
               <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
                 Klinkt makkelijk? Je geest vindt er niks aan. Binnen een paar seconden denk je aan het avondeten, je
                 to-do's of dat lastige gesprek. Je vergeet volledig wat je aan het doen was.{" "}
-                <strong>Probeer het zelf maar</strong>.
+                Probeer het zelf maar.
               </p>
               <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
                 Dit is de crux van de oefening:{" "}
-                <strong>het moment dat je opmerkt dat je bent afgedwaald, dát is de push-up</strong>. Je brengt je focus
+                het moment dat je opmerkt dat je bent afgedwaald, dát is de push-up. Je brengt je focus
                 terug naar de oefening. Opnieuw en opnieuw. Dit{" "}
-                <strong>versterkt je concentratie en bewustzijn van je lichaamssignalen</strong>, zoals push-ups je
+                versterkt je concentratie en bewustzijn van je lichaamssignalen, zoals push-ups je
                 spieren versterken.
               </p>
             </div>
@@ -517,34 +517,34 @@ const DeMethode = () => {
             <div className="space-y-6 order-1 lg:order-2">
               <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
                 De tweede vorm van de"brein push-ups" doen deelnemers in het dagelijks leven. Deelnemers richten hun{" "}
-                <strong>aandacht</strong> op de <strong>dagelijkse activiteit</strong>. Dit kan eigenlijk bij alle
+                aandacht op de dagelijkse activiteit. Dit kan eigenlijk bij alle
                 activiteiten. Bijvoorbeeld:
               </p>
               <ul className="space-y-4">
                 <li className="flex items-start">
                   <CheckCircle className="h-6 w-6 text-brand-orange stroke-2 flex-shrink-0 mt-1 mr-3" />
                   <span className="text-xl md:text-2xl text-brand-gray-medium">
-                    Terwijl je je <strong>tanden poetst</strong> bewust de sensaties van het poetsen opmerken.
+                    Terwijl je je tanden poetst bewust de sensaties van het poetsen opmerken.
                   </span>
                 </li>
                 <li className="flex items-start">
                   <CheckCircle className="h-6 w-6 text-brand-orange stroke-2 flex-shrink-0 mt-1 mr-3" />
                   <span className="text-xl md:text-2xl text-brand-gray-medium">
-                    Bij een <strong>gesprek</strong> actief luisteren naar wat de persoon zegt en niet al je weerwoord
+                    Bij een gesprek actief luisteren naar wat de persoon zegt en niet al je weerwoord
                     voorbereiden.
                   </span>
                 </li>
                 <li className="flex items-start">
                   <CheckCircle className="h-6 w-6 text-brand-orange stroke-2 flex-shrink-0 mt-1 mr-3" />
                   <span className="text-xl md:text-2xl text-brand-gray-medium">
-                    Tijdens het <strong>wandelen</strong> naar je werk bewust je omgeving waarnemen.
+                    Tijdens het wandelen naar je werk bewust je omgeving waarnemen.
                   </span>
                 </li>
               </ul>
               <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
-                Ook deze vorm van training is een <strong>concentratie{"\u00AD"}training</strong> waarbij focus en
+                Ook deze vorm van training is een concentratie{"\u00AD"}training waarbij focus en
                 aandacht nodig is. Ook hiermee wordt focus versterkt en stress sneller herkent. Het mooie? Het kost geen
-                extra tijd en je <strong>geniet meer</strong> van de activiteiten die je doet!
+                extra tijd en je geniet meer van de activiteiten die je doet!
               </p>
             </div>
           </div>

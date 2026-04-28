@@ -25,7 +25,7 @@ const MethodologySection = memo(() => {
                 Wil je weten hoe de methode precies werkt?
               </p>
               <br></br>
-              <Link to="/de-methode">
+              <Link to="/breintraining-methode">
                 <Button variant="secondary" className="font-semibold py-3 px-8 rounded-lg text-base md:text-lg">
                   Ontdek de methode
                 </Button>

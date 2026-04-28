@@ -132,7 +132,7 @@ const SimplifiedNavigation = () => {
             </NavigationMenu>
             
             <Link 
-              to="/de-methode"
+              to="/breintraining-methode"
               className="text-brand-gray-dark hover:text-brand-blue transition-colors duration-300 font-medium text-base whitespace-nowrap"
             >
               De Methode
@@ -231,7 +231,7 @@ const SimplifiedNavigation = () => {
         </div>
 
         <Link 
-          to="/de-methode"
+          to="/breintraining-methode"
           onClick={() => setIsMenuOpen(false)}
           className="text-brand-gray-dark hover:text-brand-blue transition-colors duration-300 font-medium py-2 text-left text-base"
         >
