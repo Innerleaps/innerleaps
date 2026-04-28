@@ -26,7 +26,7 @@ import controlecentrumImage from "@/assets/Concentratietraining_voor_sterker_exe
 import waarschuwingssysteemImage from "@/assets/stressmanagementtraining_sterker_waarschuwingssysteem.png";
 import stressmanagementEnConcentratie from "@/assets/stressmanagement_en_concentratietraining.png";
 import stressPrestatieImage from "@/assets/stress_prestatie_curve.png";
-import breintrainingAandachtoefening from "@/assets/Breintraining_aandachtoefening.jpeg";
+
 import zesWekenBreintraining from "@/assets/6_weken_breintraining_voor_gedragsverandering.jpg";
 
 // Lazy load modal
@@ -35,7 +35,7 @@ const LeadMagnetModal = lazy(() => import("@/components/LeadMagnetModal"));
 const DeMethode = () => {
   const [isLeadMagnetOpen, setIsLeadMagnetOpen] = useState(false);
   const heroRef = useIntersectionObserver({ threshold: 0.1 });
-  const spanningRef = useIntersectionObserver({ threshold: 0.1 });
+  
   const pushUpsRef = useIntersectionObserver({ threshold: 0.1 });
   const controleRef = useIntersectionObserver({ threshold: 0.1 });
   const waarschuwingRef = useIntersectionObserver({ threshold: 0.1 });
@@ -67,42 +67,13 @@ const DeMethode = () => {
       >
         <div className="container-custom text-center space-y-6 max-w-4xl mx-auto">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-purple leading-tight">
-            <span className="text-brand-orange">Push-ups</span> voor je brein
-          </h1>
-        </div>
-      </section>
-
-      {/* Sectie: Continue spanning door het drukke leven */}
-      <section
-        ref={spanningRef.ref}
-        className={`section-padding bg-white transition-all duration-1000 ${
-          spanningRef.isIntersecting ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-        }`}
-      >
-        <div className="container-custom space-y-12">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-brand-purple text-center mb-8">
             <span className="text-brand-orange">Continue spanning</span> door het drukke leven
-          </h2>
-          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-            <div className="space-y-6">
-              <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
-                Druk kan erg effectief zijn. Zo zet een deadline ons aan het werk. Maar door alle ballen die we hoog
-                houden, zowel in ons werk als privé leven, worden we continue blootgesteld aan spanning. En die stress
-                die slaat zich op in zowel ons lichaam als ons werkgeheugen.
-              </p>
-            </div>
-            <div className="rounded-xl shadow-lg overflow-hidden">
-              <img
-                src={stressmanagementEnConcentratie}
-                alt="Continue spanning door het drukke leven"
-                className="w-full h-auto object-cover"
-                loading="lazy"
-                decoding="async"
-                width={800}
-                height={600}
-              />
-            </div>
-          </div>
+          </h1>
+          <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
+            Druk kan erg effectief zijn. Zo zet een deadline ons aan het werk. Maar door alle ballen die we hoog
+            houden, zowel in ons werk als privé leven, worden we continue blootgesteld aan spanning. En die stress
+            die slaat zich op in zowel ons lichaam als ons werkgeheugen.
+          </p>
         </div>
       </section>
 
@@ -120,8 +91,8 @@ const DeMethode = () => {
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             <div className="rounded-xl shadow-lg overflow-hidden order-2 lg:order-1">
               <img
-                src={breintrainingAandachtoefening}
-                alt="Breintraining aandachtoefening"
+                src={stressmanagementEnConcentratie}
+                alt="Push-ups voor je brein"
                 className="w-full h-auto object-cover"
                 loading="lazy"
                 decoding="async"
