@@ -26,7 +26,7 @@ import controlecentrumImage from "@/assets/Concentratietraining_voor_sterker_exe
 import waarschuwingssysteemImage from "@/assets/stressmanagementtraining_sterker_waarschuwingssysteem.png";
 import stressmanagementEnConcentratie from "@/assets/stressmanagement_en_concentratietraining.png";
 import stressPrestatieImage from "@/assets/stress_prestatie_curve.png";
-import breintrainingAandachtoefening from "@/assets/Breintraining_aandachtoefening.jpeg";
+
 import zesWekenBreintraining from "@/assets/6_weken_breintraining_voor_gedragsverandering.jpg";
 
 // Lazy load modal
@@ -35,7 +35,7 @@ const LeadMagnetModal = lazy(() => import("@/components/LeadMagnetModal"));
 const DeMethode = () => {
   const [isLeadMagnetOpen, setIsLeadMagnetOpen] = useState(false);
   const heroRef = useIntersectionObserver({ threshold: 0.1 });
-  const spanningRef = useIntersectionObserver({ threshold: 0.1 });
+  
   const pushUpsRef = useIntersectionObserver({ threshold: 0.1 });
   const controleRef = useIntersectionObserver({ threshold: 0.1 });
   const waarschuwingRef = useIntersectionObserver({ threshold: 0.1 });
