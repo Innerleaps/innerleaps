@@ -120,7 +120,7 @@ const HoeVerlaagIkZiekteverzuim = () => {
           <p className="text-xl text-brand-gray-dark leading-relaxed mb-8">
             Ziekteverzuim verlagen begint bij het aanpakken van de onderliggende oorzaak: stress. Onderzoek over 40 jaar
             toont dat{" "}
-            <Link to="/de-methode" className="text-brand-blue hover:underline">
+            <Link to="/breintraining-methode" className="text-brand-blue hover:underline">
               aandachtstraining
             </Link>{" "}
             het verzuim met 15-21% verlaagt door werknemers te leren stresssignalen vroeg te herkennen. Innerleaps'

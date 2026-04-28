@@ -65,7 +65,7 @@ const ProgramOverviewSection = memo(() => {
           <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed py-[16px] px-0">
             Wil je nog meer weten over onze methode?
           </p>
-          <Link to="/de-methode">
+          <Link to="/breintraining-methode">
             <Button variant="secondary" className="font-semibold py-3 px-8 rounded-lg text-base md:text-lg">
               Ontdek de methode
             </Button>

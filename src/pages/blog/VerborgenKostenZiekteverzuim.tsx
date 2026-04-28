@@ -233,7 +233,7 @@ const VerborgenKostenZiekteverzuim = () => {
               </p>
 
               <p className="mt-8">
-                Wetenschappelijk onderzoek toont: mensen die hun <Link to="/de-methode" className="text-brand-blue hover:text-brand-orange font-medium transition-colors">waarschuwingssysteem trainen</Link>, herkennen stresssignalen 70% eerder. Ze grijpen in voordat het escaleert. Dit verklaart waarom preventieve interventies zo effectief zijn.
+                Wetenschappelijk onderzoek toont: mensen die hun <Link to="/breintraining-methode" className="text-brand-blue hover:text-brand-orange font-medium transition-colors">waarschuwingssysteem trainen</Link>, herkennen stresssignalen 70% eerder. Ze grijpen in voordat het escaleert. Dit verklaart waarom preventieve interventies zo effectief zijn.
               </p>
 
               <h2 className="text-2xl md:text-3xl font-bold text-brand-purple mt-12 mb-6">Het complete rekenmodel voor ziekteverzuim</h2>

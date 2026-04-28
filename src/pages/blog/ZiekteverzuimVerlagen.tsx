@@ -139,7 +139,7 @@ const ZiekteverzuimVerlagen = () => {
               <h2 className="text-2xl md:text-3xl font-bold text-brand-purple mt-12 mb-6">De Wetenschappelijke Basis: 40 Jaar Onderzoek naar Aandachtstraining</h2>
               
               <p>
-                Sinds de jaren tachtig onderzoeken wetenschappers de effecten van <Link to="/de-methode" className="text-brand-blue hover:text-brand-orange font-medium transition-colors">aandachtstraining</Link> op werknemers. Meta-analyses van Vonderlin (2020), Bartlett (2018) en Michaelsen (2023) bundelen resultaten van duizenden deelnemers wereldwijd. De conclusies zijn helder: gestructureerde aandachtstraining vermindert stressgerelateerd verzuim met 15-21%.
+                Sinds de jaren tachtig onderzoeken wetenschappers de effecten van <Link to="/breintraining-methode" className="text-brand-blue hover:text-brand-orange font-medium transition-colors">aandachtstraining</Link> op werknemers. Meta-analyses van Vonderlin (2020), Bartlett (2018) en Michaelsen (2023) bundelen resultaten van duizenden deelnemers wereldwijd. De conclusies zijn helder: gestructureerde aandachtstraining vermindert stressgerelateerd verzuim met 15-21%.
               </p>
 
               <p className="mt-8">
