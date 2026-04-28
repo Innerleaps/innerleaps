@@ -68,7 +68,7 @@ const LandingPage = () => {
       <Suspense
         fallback={
           <div className="section-padding">
-            <div className="container-custom text-center">Laden...</div>
+            <div className="container-custom text-center">{location.pathname.startsWith('/en') ? 'Loading...' : 'Laden...'}</div>
           </div>
         }
       >
