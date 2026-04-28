@@ -1,40 +1,44 @@
 import { memo } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import { Button } from "@/components/ui/button";
 import trainingImage from "@/assets/training_voor_betere_prestatie_minder_stress_en_lager_verzuim.png";
+import { detectLanguageFromPath } from "@/i18n/config";
 
 const MethodologySection = memo(() => {
+  const { t } = useTranslation();
+  const { pathname } = useLocation();
+  const lang = detectLanguageFromPath(pathname);
+  const methodHref = lang === 'en' ? '/en/method' : '/breintraining-methode';
+
   return (
     <section className="section-padding bg-white">
       <div className="container-custom space-y-24 md:space-y-32 lg:space-y-40">
-        {/* Blok 1 - De Methode */}
         <div className="space-y-8 lg:space-y-12">
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-center text-brand-purple leading-tight">
-            Verlaag <span className="text-brand-orange">verzuim </span> én boost {""}
-            <span className="text-brand-orange">prestaties</span>
+            {t('methodology.headlinePart1')} <span className="text-brand-orange">{t('methodology.headlinePart2')} </span> {t('methodology.headlinePart3')}{" "}
+            <span className="text-brand-orange">{t('methodology.headlinePart4')}</span>
           </h2>
 
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             <div className="space-y-6">
               <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
-                De kern van onze breintraning is het versterken van het "controlecentrum" voor rationele keuzes, focus
-                en bewuste acties, en het "waarschuwingssysteem" dat stresssignalen eerder opmerkt. Het resultaat?
-                Minder stress én een scherpe focus!
+                {t('methodology.body1')}
               </p>
               <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
-                Wil je weten hoe de methode precies werkt?
+                {t('methodology.body2')}
               </p>
-              <br></br>
-              <Link to="/breintraining-methode">
+              <br />
+              <Link to={methodHref}>
                 <Button variant="secondary" className="font-semibold py-3 px-8 rounded-lg text-base md:text-lg">
-                  Ontdek de methode
+                  {t('cta.discoverMethod')}
                 </Button>
               </Link>
             </div>
             <div>
               <img
                 src={trainingImage}
-                alt="Training voor betere prestatie minder stress en lager verzuim"
+                alt={t('methodology.imageAlt')}
                 className="w-full h-auto rounded-lg"
               />
             </div>

@@ -36,7 +36,59 @@
     "readMore": "Read more",
     "send": "Send",
     "register": "Register",
-    "signUp": "Sign up"
+    "signUp": "Sign up",
+    "discoverImpact": "Discover your impact",
+    "discoverMethod": "Discover the method"
   },
-  "loading": "Loading..."
+  "loading": "Loading...",
+  "footer": {
+    "tagline": "Brain training that reduces absenteeism and strengthens long-term employability",
+    "trainerCategory": "Trainer Category 1",
+    "googleRating": "4.7/5 on Google",
+    "linkedinAria": "Innerleaps on LinkedIn",
+    "trainingsHeading": "Trainings",
+    "trainingsAria": "Trainings",
+    "performanceLink": "Improve performance and focus",
+    "contactHeading": "Contact",
+    "copyright": "© 2026 Innerleaps",
+    "privacy": "Privacy notice",
+    "cookies": "Cookie policy",
+    "terms": "Terms and conditions"
+  },
+  "contactSection": {
+    "title": "Ask Bas your questions",
+    "quote": "\"Hi! Great to have you here. Shall we get to know each other? I'd love to hear what your team needs.\"",
+    "founderLabel": "— Bas Ter Haar Romenij, Founder of Innerleaps",
+    "directContactTitle": "Or reach out directly",
+    "emailLabel": "Email",
+    "phoneLabel": "Phone",
+    "addressLabel": "Address"
+  },
+  "hero": {
+    "badge": "Scientifically proven method",
+    "headlinePart1": "Prevent",
+    "headlinePart2": "absenteeism",
+    "headlinePart3": "with our",
+    "headlinePart4": "vitality training",
+    "subtitle": "Lower absenteeism, prevent burnout, and sharpen your team's focus with our evidence-based vitality training",
+    "whyChooseUs": "Why organizations choose us",
+    "stats": {
+      "dropoutRisk": "Drop-out risk",
+      "absenteeism": "Absenteeism",
+      "focus": "Focus & concentration",
+      "science": "Science",
+      "scienceValue": "40+ years"
+    },
+    "googleReviews": "Google Reviews",
+    "heroImageAlt": "Innerleaps vitality training session"
+  },
+  "methodology": {
+    "headlinePart1": "Reduce",
+    "headlinePart2": "absenteeism",
+    "headlinePart3": "and boost",
+    "headlinePart4": "performance",
+    "body1": "The core of our brain training is strengthening the \"control center\" for rational choices, focus, and conscious action — and the \"warning system\" that catches stress signals earlier. The result? Less stress and sharper focus.",
+    "body2": "Want to know exactly how the method works?",
+    "imageAlt": "Training for better performance, less stress, and lower absenteeism"
+  }
 }

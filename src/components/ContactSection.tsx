@@ -1,14 +1,17 @@
 import { memo } from 'react';
+import { useTranslation } from 'react-i18next';
 import { Button } from '@/components/ui/button';
 import { Mail, Phone, MapPin } from 'lucide-react';
 
 const ContactSection = memo(() => {
+  const { t } = useTranslation();
+
   return (
     <section className="bg-brand-off-white section-padding">
       <div className="container-custom">
         <div className="text-center space-y-6 mb-16">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-gray-dark">
-            Stel je vragen aan Bas
+            {t('contactSection.title')}
           </h1>
         </div>
 
@@ -21,16 +24,16 @@ const ContactSection = memo(() => {
                 <img src="/lovable-uploads/eaa7a159-2f85-4fa3-b487-4855426f2c14.png" alt="Bas Ter Haar Romenij" className="w-36 h-36 rounded-full object-cover" />
                 <div className="text-center">
                   <p className="text-brand-gray-dark italic mb-4 text-lg leading-relaxed">
-                    "Hoi! Wat leuk dat je hier bent. Zullen we even kennismaken? Dan hoor ik graag wat jullie nodig hebben."
+                    {t('contactSection.quote')}
                   </p>
                   <p className="text-brand-gray-medium font-medium">
-                    — Bas Ter Haar Romenij, Oprichter Innerleaps
+                    {t('contactSection.founderLabel')}
                   </p>
                 </div>
               </div>
-              
+
               <div className="text-center">
-                <Button 
+                <Button
                   variant="secondary"
                   className="font-semibold py-5 px-10 rounded-lg text-lg"
                   onClick={() => {
@@ -43,32 +46,34 @@ const ContactSection = memo(() => {
                     document.body.removeChild(link);
                   }}
                 >
-                  Plan een gesprek met Bas
+                  {t('cta.scheduleCall')}
                 </Button>
               </div>
             </div>
 
             {/* Contact Information */}
             <div className="bg-white p-8 rounded-xl">
-              <h3 className="text-xl md:text-2xl lg:text-3xl font-semibold text-brand-gray-dark mb-6">Of neem direct zelf contact op</h3>
-              
+              <h3 className="text-xl md:text-2xl lg:text-3xl font-semibold text-brand-gray-dark mb-6">
+                {t('contactSection.directContactTitle')}
+              </h3>
+
               <div className="space-y-6">
                 <div className="flex items-start space-x-4">
                   <div className="bg-brand-gray-light p-3 rounded-lg shadow-sm">
                     <Mail className="h-6 w-6 text-brand-orange stroke-2" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-brand-gray-dark text-lg">Email</h4>
+                    <h4 className="font-semibold text-brand-gray-dark text-lg">{t('contactSection.emailLabel')}</h4>
                     <p className="text-brand-gray-medium text-lg">bas@innerleaps.nl</p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-start space-x-4">
                   <div className="bg-brand-gray-light p-3 rounded-lg shadow-sm">
                     <Phone className="h-6 w-6 text-brand-orange stroke-2" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-brand-gray-dark text-lg">Telefoon</h4>
+                    <h4 className="font-semibold text-brand-gray-dark text-lg">{t('contactSection.phoneLabel')}</h4>
                     <p className="text-brand-gray-medium text-lg">06 23 45 34 77</p>
                   </div>
                 </div>
@@ -78,7 +83,7 @@ const ContactSection = memo(() => {
                     <MapPin className="h-6 w-6 text-brand-orange stroke-2" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-brand-gray-dark text-lg">Adres</h4>
+                    <h4 className="font-semibold text-brand-gray-dark text-lg">{t('contactSection.addressLabel')}</h4>
                     <p className="text-brand-gray-medium text-lg">Olympisch Stadion 24, 28</p>
                     <p className="text-brand-gray-medium text-lg">1076 DE Amsterdam</p>
                   </div>
