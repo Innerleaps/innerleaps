@@ -130,8 +130,11 @@ const DeMethode = () => {
             <div className="space-y-6">
               <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
                 Door het oefenen verterkt onder andere de frontale cortex en fronto-pariëtale netwerken, ook wel ons
-                "controlecentrum". Werknemers ontwikkelen als het ware een mentaalschild voor druk en afleiding.
-                Prestaties verbetert omdat spanning minder werkgeheugen inneemt en het concentratievermogen sterker is.
+                "controlecentrum".
+              </p>
+              <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
+                Werknemers ontwikkelen als het ware een mentaalschild voor druk en afleiding. Prestaties verbetert
+                omdat spanning minder werkgeheugen inneemt en het concentratievermogen sterker is.
               </p>
             </div>
             <div className="rounded-xl shadow-lg overflow-hidden">
