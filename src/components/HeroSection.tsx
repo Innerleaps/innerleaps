@@ -1,4 +1,5 @@
 import { useState, lazy, Suspense } from "react";
+import { useTranslation } from "react-i18next";
 import { Button } from "@/components/ui/button";
 import { ArrowDown, Award, Star } from "lucide-react";
 import heroBackground from "@/assets/Vitaliteitsprogramma_presentatie_Innerleaps.png";
@@ -34,6 +35,7 @@ import nobelLogo from "@/assets/Vitaliteitsprogramma_nobel_recruitment_light.png
 import hollandColoursLogo from "@/assets/Vitaliteitsprogramma_Holland_Colours_light.png";
 
 const HeroSection = () => {
+  const { t } = useTranslation();
   const [isCalculatorOpen, setIsCalculatorOpen] = useState(false);
   const logos = [
     {
@@ -140,7 +142,7 @@ const HeroSection = () => {
         <div className="absolute inset-0 z-0">
           <img
             src={heroBackground}
-            alt="Vitaliteitstraining presentatie Innerleaps"
+            alt={t('hero.heroImageAlt')}
             className="w-full h-full object-cover"
             fetchPriority="high"
             loading="eager"
@@ -157,19 +159,18 @@ const HeroSection = () => {
                 {/* Research Badge */}
                 <div className="inline-flex items-center gap-2 bg-white/50 text-brand-purple px-3 py-1.5 sm:px-4 sm:py-2 rounded-full text-sm sm:text-base md:text-lg font-medium backdrop-blur-sm">
                   <Award className="h-4 w-4" />
-                  Wetenschappelijk bewezen methode
+                  {t('hero.badge')}
                 </div>
 
                 <h1
                   className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight font-heading break-words"
                   style={TEXT_SHADOW_STRONG}
                 >
-                  Voorkom <span className="text-brand-orange">verzuim</span> met onze{" "}
-                  <span className="text-brand-orange">vitaliteitstraining</span>
+                  {t('hero.headlinePart1')} <span className="text-brand-orange">{t('hero.headlinePart2')}</span> {t('hero.headlinePart3')}{" "}
+                  <span className="text-brand-orange">{t('hero.headlinePart4')}</span>
                 </h1>
                 <p className="text-xl md:text-2xl text-blue-100 leading-relaxed break-words" style={TEXT_SHADOW_STRONG}>
-                  Verlaag verzuim, voorkom burn-outs en verbeter de focus van je team met onze evidence based
-                  vitaliteitstraining
+                  {t('hero.subtitle')}
                 </p>
               </div>
 
@@ -179,7 +180,7 @@ const HeroSection = () => {
                   className="w-full sm:w-auto bg-brand-orange hover:bg-brand-orange text-white hover:text-white font-semibold py-3 px-4 sm:py-4 sm:px-6 rounded-lg text-sm sm:text-base lg:text-lg shadow-xl"
                   onClick={() => setIsCalculatorOpen(true)}
                 >
-                  Ontdek jullie impact
+                  {t('cta.discoverImpact')}
                 </Button>
               </div>
             </div>
@@ -189,54 +190,34 @@ const HeroSection = () => {
                 <div className="space-y-6">
                   <div className="text-center">
                     <h3 className="text-base sm:text-lg md:text-xl lg:text-2xl font-semibold mb-2 text-brand-purple">
-                      Waarom organisaties ons kiezen
+                      {t('hero.whyChooseUs')}
                     </h3>
                   </div>
 
                   <div className="w-full space-y-3 sm:space-y-4">
                     <div className="flex items-center justify-between w-full p-2.5 sm:p-3 lg:p-4 bg-brand-purple/90 rounded-lg">
-                      <span
-                        style={TEXT_SHADOW_STRONG}
-                        className="text-sm sm:text-base md:text-lg lg:text-xl text-white font-normal"
-                      >
-                        Uitval risico
+                      <span style={TEXT_SHADOW_STRONG} className="text-sm sm:text-base md:text-lg lg:text-xl text-white font-normal">
+                        {t('hero.stats.dropoutRisk')}
                       </span>
-                      <span className="text-brand-orange font-bold text-base sm:text-lg md:text-xl lg:text-2xl shrink-0">
-                        -70%
-                      </span>
+                      <span className="text-brand-orange font-bold text-base sm:text-lg md:text-xl lg:text-2xl shrink-0">-70%</span>
                     </div>
                     <div className="flex items-center justify-between w-full p-2.5 sm:p-3 lg:p-4 bg-brand-purple/90 rounded-lg">
-                      <span
-                        style={TEXT_SHADOW_STRONG}
-                        className="text-sm sm:text-base md:text-lg lg:text-xl text-white font-normal"
-                      >
-                        Verzuim
+                      <span style={TEXT_SHADOW_STRONG} className="text-sm sm:text-base md:text-lg lg:text-xl text-white font-normal">
+                        {t('hero.stats.absenteeism')}
                       </span>
-                      <span className="text-brand-orange font-bold text-base sm:text-lg md:text-xl lg:text-2xl shrink-0">
-                        -21%
-                      </span>
+                      <span className="text-brand-orange font-bold text-base sm:text-lg md:text-xl lg:text-2xl shrink-0">-21%</span>
                     </div>
                     <div className="flex items-center justify-between w-full p-2.5 sm:p-3 lg:p-4 bg-brand-purple/90 rounded-lg">
-                      <span
-                        style={TEXT_SHADOW_STRONG}
-                        className="text-sm sm:text-base md:text-lg lg:text-xl text-white font-normal"
-                      >
-                        Focus & concentratie
+                      <span style={TEXT_SHADOW_STRONG} className="text-sm sm:text-base md:text-lg lg:text-xl text-white font-normal">
+                        {t('hero.stats.focus')}
                       </span>
-                      <span className="text-brand-orange font-bold text-base sm:text-lg md:text-xl lg:text-2xl shrink-0">
-                        +24%
-                      </span>
+                      <span className="text-brand-orange font-bold text-base sm:text-lg md:text-xl lg:text-2xl shrink-0">+24%</span>
                     </div>
                     <div className="flex items-center justify-between w-full p-2.5 sm:p-3 lg:p-4 bg-brand-purple/90 rounded-lg">
-                      <span
-                        style={TEXT_SHADOW_STRONG}
-                        className="text-sm sm:text-base md:text-lg lg:text-xl text-white font-normal"
-                      >
-                        Wetenschap
+                      <span style={TEXT_SHADOW_STRONG} className="text-sm sm:text-base md:text-lg lg:text-xl text-white font-normal">
+                        {t('hero.stats.science')}
                       </span>
-                      <span className="text-brand-orange font-bold text-base sm:text-lg md:text-xl lg:text-2xl shrink-0">
-                        40+ jaar
-                      </span>
+                      <span className="text-brand-orange font-bold text-base sm:text-lg md:text-xl lg:text-2xl shrink-0">{t('hero.stats.scienceValue')}</span>
                     </div>
                   </div>
 
@@ -251,14 +232,11 @@ const HeroSection = () => {
                       <span className="text-white font-semibold text-lg">4,7 / 5</span>
                       <div className="flex gap-0.5">
                         {[...Array(5)].map((_, i) => (
-                          <Star
-                            key={i}
-                            className="w-4 h-4 fill-amber-400 text-amber-400 group-hover:scale-110 transition-transform"
-                          />
+                          <Star key={i} className="w-4 h-4 fill-amber-400 text-amber-400 group-hover:scale-110 transition-transform" />
                         ))}
                       </div>
                     </div>
-                    <p className="text-amber-100 text-sm text-center mt-1">Google Reviews</p>
+                    <p className="text-amber-100 text-sm text-center mt-1">{t('hero.googleReviews')}</p>
                   </a>
                 </div>
               </div>
