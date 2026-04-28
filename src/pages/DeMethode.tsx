@@ -235,7 +235,7 @@ const DeMethode = () => {
       >
         <div className="container-custom space-y-12">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-brand-purple text-center mb-8">
-            Duidelijker <span className="text-brand-orange">waarschuwingssysteem</span>
+            Een scherper <span className="text-brand-orange">waarschuwingssysteem</span>
           </h2>
 
           {/* Grid: Text links, Image rechts */}
