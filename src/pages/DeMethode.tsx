@@ -489,8 +489,7 @@ const DeMethode = () => {
               <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
                 Elke week is er een groepssessie met een geaccrediteerde trainer, waarin werknemers reflecteren op hun
                 oefeningen en uitdagingen. Zo komen deelnemers steeds opnieuw in contact met hun eigen doel, en dat
-                motiveert. De sessies zijn bovendien als een stok achter de deur. Ook wie een week niet heeft geoefend
-                komt, en begint dan opnieuw.
+                motiveert.
               </p>
               <ul className="space-y-4">
                 <li className="flex items-start">
