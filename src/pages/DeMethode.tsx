@@ -274,9 +274,11 @@ const DeMethode = () => {
             <div className="space-y-6">
               <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
                 Door de training versterkt ook de anterior insula en anterior cingulate cortex, ons
-                "waarschuwingssysteem". Hierdoor merken werknemers stresssignalen eerder op. In de 6 weekse training
-                ontwikkelen deelnemers nieuwe, gezonde patronen om die stresssignalen te reguleren. Echte
-                gedragsverandering die de vitaliteit en inzetbaarheid van je team versterkt.
+                "waarschuwingssysteem". Hierdoor merken werknemers stresssignalen eerder op.
+              </p>
+              <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
+                In de 6 weekse training ontwikkelen deelnemers nieuwe, gezonde patronen om die stresssignalen te
+                reguleren. Echte gedragsverandering die de vitaliteit en inzetbaarheid van je team versterkt.
               </p>
             </div>
             <div className="rounded-xl shadow-lg overflow-hidden">
