@@ -5,7 +5,7 @@ import { useTranslation } from "react-i18next";
 import { Button } from "@/components/ui/button";
 import { detectLanguageFromPath } from "@/i18n/config";
 
-const ProgramOverviewSection = memo(() => {
+const ProgramOverviewSection = memo(({ hideOutroCta = false }: { hideOutroCta?: boolean }) => {
   const { t } = useTranslation();
   const { pathname } = useLocation();
   const lang = detectLanguageFromPath(pathname);
@@ -47,16 +47,18 @@ const ProgramOverviewSection = memo(() => {
           })}
         </div>
 
-        <div className="text-center pt-4 lg:pt-12 space-y-6">
-          <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed py-[16px] px-0">
-            {t('programOverview.outroQuestion')}
-          </p>
-          <Link to={methodHref}>
-            <Button variant="secondary" className="font-semibold py-3 px-8 rounded-lg text-base md:text-lg">
-              {t('cta.discoverMethod')}
-            </Button>
-          </Link>
-        </div>
+        {!hideOutroCta && (
+          <div className="text-center pt-4 lg:pt-12 space-y-6">
+            <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed py-[16px] px-0">
+              {t('programOverview.outroQuestion')}
+            </p>
+            <Link to={methodHref}>
+              <Button variant="secondary" className="font-semibold py-3 px-8 rounded-lg text-base md:text-lg">
+                {t('cta.discoverMethod')}
+              </Button>
+            </Link>
+          </div>
+        )}
       </div>
     </section>
   );

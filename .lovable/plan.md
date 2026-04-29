@@ -1,121 +1,76 @@
-## Engelse versie van de website — gefaseerd plan (v2)
+# Final polish — 5 fixes
 
-Aanpak: `react-i18next` met JSON-bestanden, EN onder URL-prefix `/en/`, browserdetectie (alles behalve `nl*` → EN), handmatige taalwissel rechtsboven met vlag + EN/NL.
+## 1. Menu dropdown UX fix (yellow flash / disappearing items)
 
-**Glossary-afspraken tot nu toe (vastgelegd):**
-- Merknaam is **Innerleaps** (nooit "InnerLeaps" met hoofdletter L), in NL én EN. Ik corrigeer dit ook overal in bestaande NL-content waar nu nog "InnerLeaps" staat.
-- "Waarschuwingssysteem" → **warning system**.
+**Root cause:** Radix `NavigationMenuLink` applies a `data-[active]` state to the link matching the current route. The default shadcn styles for that state use `bg-accent` / `text-accent-foreground` tokens, which on this project resolve to a near-yellow / off-white background, so the active item visually merges with the menu background. The brief yellow flash is the same accent color appearing on hover/focus before the link disappears against the menu.
 
-We werken in **4 fasen**. Na elke fase pauze voor jouw review.
+**Fix:** In `src/components/SimplifiedNavigation.tsx`, mark the currently-active page in the dropdown explicitly using `useLocation()`, and override the `data-active` / `data-state=open` styles on the dropdown links so they always use a readable color. Concretely:
 
----
+- For each dropdown item, compute `isActive = pathname === subItem.href`.
+- On the `Link`, replace the current className with one that:
+  - Always renders `text-brand-gray-dark` for the title (never collapses to background color).
+  - On hover/focus uses `bg-gray-100 text-brand-blue` (already there — keep).
+  - On the active route adds a left accent bar + `bg-brand-off-white` and `text-brand-purple` for the title, so the user can see which page they're on without it ever turning yellow / invisible.
+- Add `data-[active]:bg-brand-off-white data-[active]:text-brand-purple` overrides on the `Link` so any Radix-applied active class is neutralised.
+- Also add a small "Current page" visual cue (e.g. a filled left border `border-l-4 border-brand-orange` when active).
 
-### Fase 1 — Glossary ter goedkeuring (ZONDER code)
+This is the simpler, more standard UX choice the user asked for: keep the dropdown working, but show the active page clearly instead of fighting Radix's active styling.
 
-Ik lever `docs/translation-glossary.md` met voorgestelde EN-vertalingen voor alle kerntermen. Reeds vastgelegde keuzes zijn meegenomen; voor de rest stel ik voor (jij keurt goed/wijzigt):
+Apply the same active-state styling in the **mobile menu** sublists too.
 
-| Nederlands | Voorstel EN | Toelichting |
-|---|---|---|
-| Innerleaps | Innerleaps | merknaam, kleine `l` — overal afdwingen |
-| Breintraining | Brain training | |
-| De Methode / Breintraining-methode | The Method / Brain Training Method | |
-| Innerlijke sprong | Inner leap | merkconcept, woordspeling met merknaam |
-| Aandachtssysteem | Attention system | |
-| Controlecentrum | Control center | US-spelling |
-| Waarschuwingssysteem | **Warning system** | vastgelegd |
-| Werkgeheugen | Working memory | wetenschappelijke term |
-| Automatische piloot | Autopilot | |
-| Vitaliteitsprogramma / -training | Vitality Program | US-spelling |
-| Prestatieprogramma / -training | Performance Program | |
-| Stressmanagement training | Stress Management Training | |
-| Duurzame inzetbaarheid | Sustainable employability | EU-standaardterm |
-| Via Werkgever | Via Employer | |
-| Geaccrediteerd / VMBN | Accredited / VMBN-certified | VMBN onvertaald |
-| Ziekteverzuim | Sick leave / Absenteeism | per context kiezen |
-| Werknemers / Medewerkers | Employees | |
-| Voor Organisaties / Voor Medewerkers | For Organizations / For Employees | |
-| Plan een gesprek met Bas | Schedule a call with Bas | |
-| Over Ons | About Us | |
-| Methode | Method | menu-item |
+## 2. Rename CTA "Wat levert dit jullie op?" → "Bereken de ROI" / "Calculate your ROI"
 
-Plus expliciete twijfelgevallen die ik je voorleg:
-- US- vs UK-Engels (voorstel: US — internationaal bredere doelgroep).
-- Tone of voice: formeel "you" of casual? (voorstel: casual, sluit aan bij NL-tone.)
-- "Innerlijke sprong" letterlijk vertalen (`inner leap`) of als merkconcept onvertaald laten?
-- "Stress" vs "stressmanagement": ENG-term "stress management" of "stress reduction"?
+Replace in:
 
-**Deliverable fase 1:** glossary-document. Geen code-wijzigingen.
+- `src/i18n/locales/nl/training.json` lines 10 and 591: `"cta": "Wat levert dit jullie op?"` → `"cta": "Bereken de ROI"`.
+- `src/i18n/locales/en/training.json` line 591: `"cta": "What does this deliver for you?"` → `"cta": "Calculate your ROI"`.
+- Check `en/training.json` line ~10 (vitality hero cta) and update to `"Calculate your ROI"` if currently the deliver phrasing.
+- Search the home page (`HeroSection.tsx`, `LandingPage.tsx`, `common.json`) for any remaining "Wat levert" / "deliver for you" copy used as the home hero ROI CTA and replace with the same strings. (Will grep at edit time and update wherever it appears.)
 
----
+This covers home + both organisation pages (Vitality + Sustainable Employability + Performance org variant) in both languages.
 
-### Fase 2 — i18n-infrastructuur opzetten
+## 3. Center the 4th card on Sustainable Employability — Challenges & Results
 
-Pas na jouw glossary-akkoord:
+The challenges + results sections in `src/components/TrainingPageLayout.tsx` already center a 4th card when there are exactly **5** items (`challenges.length === 5 && i === 3`). Sustainable Employability has **4** items, so no offset triggers and the 4th card sits on the right.
 
-1. Installeer `react-i18next`, `i18next`, `i18next-browser-languagedetector`, `react-helmet-async`.
-2. `src/i18n/config.ts`: fallback `nl`, supported `['nl', 'en']`. Detectie: pad → localStorage → `navigator.language` (alles dat niet met `nl` begint → `en`).
-3. `src/i18n/locales/{nl,en}/` met namespaces: `common.json`, `home.json`, `methode.json`, `over-ons.json`, `contact.json`, `vitaliteit.json`, `inzetbaarheid.json`, `stressmanagement.json`, `prestatie.json`, `blog.json`, `legal.json`.
-4. Routing in `App.tsx`:
-   - NL-routes blijven exact zoals nu.
-   - EN-equivalenten onder `/en/` met EN-slugs (bv. `/en/about-us`, `/en/method`, `/en/contact`, `/en/vitality-training`, `/en/sustainable-employability`, `/en/stress-management`, `/en/performance-training`, `/en/blog/...`).
-   - Wrapper zet `i18n.changeLanguage()` op basis van pad.
-   - Root-redirect: niet-NL browser op `/` → `/en/` (eenmalig; localStorage respecteert latere keuze).
-5. **Taalwisselaar** rechtsboven in `SimplifiedNavigation`: 🇳🇱 NL / 🇬🇧 EN, huidige taal vet, wisselt naar equivalente URL via slug-mapping. Op mobiel bovenin uitgeklapt menu.
-6. **SEO** per pagina: `<html lang>` dynamisch, `hreflang` `nl` / `en` / `x-default` (NL), vertaalde `<title>` + `<meta description>`.
-7. `sitemap.xml` met beide taalversies + hreflang-entries; update `robots.txt`.
-8. **Branding-correctie**: in dezelfde fase alle voorkomens van "InnerLeaps" → "Innerleaps" doorvoeren in NL-content (search/replace, exclusief assets/bestandsnamen).
+**Fix:** generalise the offset rule: when the items count is `4`, render the grid as 3 columns of 2 spans each on the first row and center the 4th below.
 
-**Deliverable fase 2:** werkende infra met taalwissel + branding-correctie. EN-strings nog placeholder waar nog niet vertaald. Geen visuele regressies op NL.
+Implementation in `TrainingPageLayout.tsx` (apply to both `challenges` and `results` blocks):
 
----
+```tsx
+const total = challenges.length;
+const offset =
+  total === 5 && i === 3 ? "md:col-start-2"
+  : total === 4 && i === 3 ? "md:col-start-3"
+  : "";
+```
 
-### Fase 3 — Vertaling van menupagina's
+With the existing `md:grid-cols-6` + `md:col-span-2`, `md:col-start-3` places the 4th card centered (cols 3–4) on the second row. Same change for the `results` map.
 
-In volgorde (met review-pauze na elke 2-3 pagina's):
-1. Common/Navigation/Footer — menu, knoppen, contactblok.
-2. **Home** (`LandingPage`).
-3. **Methode** (`DeMethode`).
-4. **Over Ons** (`OverOns`).
-5. **Contact** (`Contact` + `ContactSection`).
-6. **Voor Organisaties:** `Vitaliteitstraining`, `DuurzameInzetbaarheidTraining`.
-7. **Voor Medewerkers:** `StressManagement`, `PrestatieProgramma`.
-8. Modals & forms op die pagina's (ROI-calculator, registratiemodals, lead-magnet, masterclass-form, vragenlijst).
-9. **Juridisch** (Algemene Voorwaarden, Privacy, Cookies): voorstel = EN-samenvatting + link naar bindende NL-versie (juridisch veiliger). Kies ik graag met jou voor we beginnen.
+No changes needed to translations — only layout logic.
 
-Werkwijze per pagina: strings extraheren naar JSON, contextueel vertalen (geen woord-voor-woord), bij twijfel pauzeren met één gerichte vraag.
+## 4. Move "Discover the method" CTA to after the weeks block on Vitality + Sustainable Employability
 
-**Deliverable fase 3:** volledige EN-versie van het menu en alles daaronder.
+`TrainingPageLayout.tsx` already supports this via the `showMethodCtaAfterWeeks` prop (currently used by Stress + Performance). Enable it on the two organisation pages:
 
----
+- `src/pages/Vitaliteitsprogramma.tsx`: add `showMethodCtaAfterWeeks` to the `<TrainingPageLayout ... />` props.
+- `src/pages/DuurzameInzetbaarheidTraining.tsx`: same.
 
-### Fase 4 — Blogs (3 stuks) + SEO
+Also remove the duplicate "Discover the method" CTA at the bottom of `ProgramOverviewSection` **only on these training pages** to avoid showing it twice. Two options:
+- Add a `hideOutroCta` prop to `ProgramOverviewSection` and pass it from `TrainingPageLayout` whenever `showMethodCtaAfterWeeks` is true.
+- Or keep `ProgramOverviewSection` as-is on the homepage (where it's also used) and gate via the prop.
 
-Per artikel een EN-component in `src/pages/blog/en/` met EN-slug. Vertaling contextueel + **lokalisatie van cijfers**:
-- NL CBS/Arbo-cijfers vervangen door Eurostat / OECD / Eurofound waar mogelijk.
-- NL-wetgeving (Wet Verbetering Poortwachter, loondoorbetaling 2 jaar): per artikel kies ik met jou tussen "in the Netherlands…"-context óf vervangen door algemene EU-context.
-- Bronvermelding aanpassen.
+Will go with the prop approach so the homepage is unaffected.
 
-**SEO per blog:**
-- Eigen vertaalde `<title>`, `<meta description>`, JSON-LD `Article` met juiste `inLanguage`.
-- Wederkerige `hreflang`-koppeling NL ↔ EN per artikel-paar + `x-default` op NL.
-- Beide versies in `sitemap.xml` met `<xhtml:link rel="alternate" hreflang>` per entry.
-- Geen automatische machinevertaling indexeerbaar (Google straft dit).
-- Submit beide via Google Search Console.
+## 5. Rename FAQ exercise question
 
-Blog-index (`Blog.tsx`) toont in EN-modus alleen EN-artikelen.
+Update all 4 occurrences in each language file:
 
-**Deliverable fase 4:** 3 EN-blogartikelen + werkende EN-blogindex + volledige hreflang-dekking.
+- `src/i18n/locales/nl/training.json` lines 177, 379, 573, 750: `"Wat voor soort oefeningen zijn het?"` → `"Wat zijn de oefeningen?"`
+- `src/i18n/locales/en/training.json` lines 177, 379, 573, 750: `"What kind of exercises are they?"` → `"What are the exercises?"`
 
----
+## Verification after changes
 
-### Buiten scope (bewust)
-
-- E-mailtemplates in edge functions (`send-roi-analysis` etc.) — losse fase 5 indien gewenst.
-- Valuta/datum-format wijzigen (we houden EUR + dd/mm).
-- Niet-menu pagina's (`9-stippen`, `MasterclassQR`, `Bedankt`, oude `Wetenschap`).
-
----
-
-### Volgende actie
-
-Bij akkoord start ik met **Fase 1**: `docs/translation-glossary.md` voor jouw review. Geen andere wijzigingen tot je goedkeurt.
+- Section background alternation rule still holds on Vitality + Sustainable Employability (Weeks `bg-white` → Masterclass purple → FAQ off-white). Adding the in-section CTA after weeks doesn't change section backgrounds. Confirm by viewing both pages in NL + EN.
+- Click each dropdown item from its own page in dev preview to confirm no yellow flash and the active item is clearly highlighted.
+- Confirm the 4-card grid on `/en/sustainable-employability-training` and `/duurzame-inzetbaarheid-training` shows the 4th card centered on desktop.

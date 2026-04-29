@@ -92,6 +92,7 @@ const DuurzameInzetbaarheidTraining = () => {
         logos={logos}
         weeksImage={breinTrainingImg}
         masterclassVariant="employer"
+        showMethodCtaAfterWeeks
         belowFaqSection={
           <div id="calculator">
             <ROICalculator />

@@ -32,6 +32,8 @@ const SimplifiedNavigation = () => {
     performance: lang === 'en' ? '/en/performance-training' : '/prestatie-training',
   };
 
+  const isActiveRoute = (href: string) => pathname === href;
+
   const organisationMenuItems = [
     { label: t('menuItems.vitality.label'), href: href.vitality, description: t('menuItems.vitality.description') },
     { label: t('menuItems.employability.label'), href: href.employability, description: t('menuItems.employability.description') },
@@ -75,23 +77,31 @@ const SimplifiedNavigation = () => {
                   </NavigationMenuTrigger>
                   <NavigationMenuContent className="bg-white border border-gray-200 shadow-lg z-50">
                     <ul className="w-[280px] p-2">
-                      {organisationMenuItems.map((subItem) => (
-                        <li key={subItem.label}>
-                          <NavigationMenuLink asChild>
-                            <Link
-                              to={subItem.href}
-                              className="block select-none rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-gray-100 hover:text-brand-blue focus:bg-gray-100"
-                            >
-                              <div className="text-sm font-medium leading-none text-brand-gray-dark">
-                                {subItem.label}
-                              </div>
-                              <p className="line-clamp-2 text-sm leading-snug text-gray-500 mt-1">
-                                {subItem.description}
-                              </p>
-                            </Link>
-                          </NavigationMenuLink>
-                        </li>
-                      ))}
+                      {organisationMenuItems.map((subItem) => {
+                        const active = isActiveRoute(subItem.href);
+                        return (
+                          <li key={subItem.label}>
+                            <NavigationMenuLink asChild active={active}>
+                              <Link
+                                to={subItem.href}
+                                aria-current={active ? 'page' : undefined}
+                                className={`block select-none rounded-md p-3 leading-none no-underline outline-none transition-colors border-l-4 ${
+                                  active
+                                    ? 'bg-brand-off-white border-brand-orange'
+                                    : 'border-transparent hover:bg-gray-100 focus:bg-gray-100'
+                                } data-[active]:bg-brand-off-white`}
+                              >
+                                <div className={`text-sm font-medium leading-none ${active ? 'text-brand-purple' : 'text-brand-gray-dark'}`}>
+                                  {subItem.label}
+                                </div>
+                                <p className="line-clamp-2 text-sm leading-snug text-gray-500 mt-1">
+                                  {subItem.description}
+                                </p>
+                              </Link>
+                            </NavigationMenuLink>
+                          </li>
+                        );
+                      })}
                     </ul>
                   </NavigationMenuContent>
                 </NavigationMenuItem>
@@ -110,23 +120,31 @@ const SimplifiedNavigation = () => {
                   </NavigationMenuTrigger>
                   <NavigationMenuContent className="bg-white border border-gray-200 shadow-lg z-50">
                     <ul className="w-[280px] p-2">
-                      {employeeMenuItems.map((subItem) => (
-                        <li key={subItem.label}>
-                          <NavigationMenuLink asChild>
-                            <Link
-                              to={subItem.href}
-                              className="block select-none rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-gray-100 hover:text-brand-blue focus:bg-gray-100"
-                            >
-                              <div className="text-sm font-medium leading-none text-brand-gray-dark">
-                                {subItem.label}
-                              </div>
-                              <p className="line-clamp-2 text-sm leading-snug text-gray-500 mt-1">
-                                {subItem.description}
-                              </p>
-                            </Link>
-                          </NavigationMenuLink>
-                        </li>
-                      ))}
+                      {employeeMenuItems.map((subItem) => {
+                        const active = isActiveRoute(subItem.href);
+                        return (
+                          <li key={subItem.label}>
+                            <NavigationMenuLink asChild active={active}>
+                              <Link
+                                to={subItem.href}
+                                aria-current={active ? 'page' : undefined}
+                                className={`block select-none rounded-md p-3 leading-none no-underline outline-none transition-colors border-l-4 ${
+                                  active
+                                    ? 'bg-brand-off-white border-brand-orange'
+                                    : 'border-transparent hover:bg-gray-100 focus:bg-gray-100'
+                                } data-[active]:bg-brand-off-white`}
+                              >
+                                <div className={`text-sm font-medium leading-none ${active ? 'text-brand-purple' : 'text-brand-gray-dark'}`}>
+                                  {subItem.label}
+                                </div>
+                                <p className="line-clamp-2 text-sm leading-snug text-gray-500 mt-1">
+                                  {subItem.description}
+                                </p>
+                              </Link>
+                            </NavigationMenuLink>
+                          </li>
+                        );
+                      })}
                     </ul>
                   </NavigationMenuContent>
                 </NavigationMenuItem>
@@ -197,19 +215,27 @@ const SimplifiedNavigation = () => {
                 </button>
                 {isOrganisationMenuOpen && (
                   <div className="pl-4 mt-2 space-y-2">
-                    {organisationMenuItems.map((subItem) => (
-                      <Link
-                        key={subItem.label}
-                        to={subItem.href}
-                        onClick={() => {
-                          setIsMenuOpen(false);
-                          setIsOrganisationMenuOpen(false);
-                        }}
-                        className="block text-brand-gray-medium hover:text-brand-blue transition-colors duration-300 py-2 text-sm"
-                      >
-                        {subItem.label}
-                      </Link>
-                    ))}
+                    {organisationMenuItems.map((subItem) => {
+                      const active = isActiveRoute(subItem.href);
+                      return (
+                        <Link
+                          key={subItem.label}
+                          to={subItem.href}
+                          aria-current={active ? 'page' : undefined}
+                          onClick={() => {
+                            setIsMenuOpen(false);
+                            setIsOrganisationMenuOpen(false);
+                          }}
+                          className={`block transition-colors duration-300 py-2 text-sm border-l-4 pl-2 ${
+                            active
+                              ? 'border-brand-orange text-brand-purple font-semibold'
+                              : 'border-transparent text-brand-gray-medium hover:text-brand-blue'
+                          }`}
+                        >
+                          {subItem.label}
+                        </Link>
+                      );
+                    })}
                   </div>
                 )}
               </div>
@@ -224,19 +250,27 @@ const SimplifiedNavigation = () => {
                 </button>
                 {isEmployeeMenuOpen && (
                   <div className="pl-4 mt-2 space-y-2">
-                    {employeeMenuItems.map((subItem) => (
-                      <Link
-                        key={subItem.label}
-                        to={subItem.href}
-                        onClick={() => {
-                          setIsMenuOpen(false);
-                          setIsEmployeeMenuOpen(false);
-                        }}
-                        className="block text-brand-gray-medium hover:text-brand-blue transition-colors duration-300 py-2 text-sm"
-                      >
-                        {subItem.label}
-                      </Link>
-                    ))}
+                    {employeeMenuItems.map((subItem) => {
+                      const active = isActiveRoute(subItem.href);
+                      return (
+                        <Link
+                          key={subItem.label}
+                          to={subItem.href}
+                          aria-current={active ? 'page' : undefined}
+                          onClick={() => {
+                            setIsMenuOpen(false);
+                            setIsEmployeeMenuOpen(false);
+                          }}
+                          className={`block transition-colors duration-300 py-2 text-sm border-l-4 pl-2 ${
+                            active
+                              ? 'border-brand-orange text-brand-purple font-semibold'
+                              : 'border-transparent text-brand-gray-medium hover:text-brand-blue'
+                          }`}
+                        >
+                          {subItem.label}
+                        </Link>
+                      );
+                    })}
                   </div>
                 )}
               </div>
