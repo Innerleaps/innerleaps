@@ -1,0 +1,22 @@
+{
+  "meta": {
+    "description": "Book a free masterclass for your organisation or send your question to Innerleaps. Reach us at Bas@innerleaps.nl or +31 6 23 45 34 77. Reply within one working day."
+  },
+  "hero": {
+    "titlePrefix": "Ask Bas your",
+    "titleAccent": "questions",
+    "titleSuffix": ""
+  },
+  "quote": {
+    "text": "\"Hi! Great to have you here. Shall we get to know each other? I would love to hear about your challenges.",
+    "role": "Bas Ter Haar Romenij, Founder of Innerleaps",
+    "cta": "Schedule a call with Bas",
+    "photoAlt": "Bas Ter Haar Romenij"
+  },
+  "info": {
+    "title": "Or reach out directly",
+    "emailLabel": "Email",
+    "phoneLabel": "Phone",
+    "addressLabel": "Address"
+  }
+}

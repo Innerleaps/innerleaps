@@ -1,0 +1,50 @@
+{
+  "meta": {
+    "description": "Innerleaps is opgericht door Bas Ter Haar Romenij om burn-out te voorkomen voordat het escaleert. Onze geaccrediteerde trainers werken met een vaste methode, geen variatie, wel bewezen resultaat."
+  },
+  "vision": {
+    "title1": "Waarom",
+    "titleAccent": "wij dit werk doen",
+    "body1": "Bij Innerleaps geloven we in het duurzame succes van bewuste aandacht. Met die aandacht leven deelnemers met meer rust, focus en lef. Ze worden er niet alleen een mooier mens van, ze zullen ook hun ware potentieel benutten.",
+    "body2": "Hierdoor krijgen organisaties een team dat niet alleen inzetbaar is, maar ook nog eens met plezier maximaal presteert. Dat is de innerlijke sprong waar wij in geloven.",
+    "imageAlt": "Bas ter Haar Romenij geeft presentatie over vitaliteit en stressmanagement bij Innerleaps"
+  },
+  "trainersSection": {
+    "titlePrefix": "Onze",
+    "titleAccent": "geaccrediteerde",
+    "titleSuffix": "trainers",
+    "vmbnAlt": "VMBN Geaccrediteerde Vitaliteitstrainer"
+  },
+  "languages": {
+    "nl": "Nederlands",
+    "en": "Engels"
+  },
+  "trainers": {
+    "wineke": {
+      "body": "Wineke is al 15 jaar actief als trainer en heeft in die rol trainingen gegeven bij onder andere Tele2 Leaseplan, VU en Gemeente Den Haag. Voordat Wineke trainer werd, werkte zij 17 jaar in commerciële en zakelijke functies, waaronder als projectmanager, marketing- en communicatieadviseur en consultant.",
+      "quote": "Wineke heeft een praktische, nuchtere aanpak met concrete handvatten. Ik kan nu afstand nemen, stresssignalen sneller herkennen, efficiënter werken en ben meer tevreden over mijn resultaten."
+    },
+    "dave": {
+      "body": "Dave trainer met 8 jaar ervaring en gaf trainingen bij o.a. Rijkswaterstaat, Nationale Politie, het Ministerie van Justitie en Veiligheid, Parnassia Groep en diverse onderwijs- en talentorganisaties. Daarvoor werkte hij 15 jaar als redacteur en contentmanager.",
+      "quote": "betrokken, open en vriendelijk, met duidelijke uitleg. Doordat hij zijn eigen ervaringen deelt, voelt de training toegankelijk en mag ik 'fouten maken'."
+    },
+    "anne": {
+      "body": "Anne is een ervaren en gecertificeerde trainer met 8 jaar ervaring en heeft trainingen gegeven bij onder andere DHL en Affinius Capital. Daarvoor werkte ze 15 jaar in marketing- en communicatiefuncties bij BAT en Ziggo.",
+      "quote": "Anne begrijpt mij echt. Haar kennis weet ze op een leuke en makkelijke manier uit te leggen. Ik voel mij productiver en gelukkiger dan ooit!"
+    },
+    "jacqueline": {
+      "body": "Jacqueline is begonnen als trainer in 2017 en werkte onder andere met Holland Colours, Carel Lurvink, PA Consulting, Nobel Recruitment, Humanitas en GGZ Centraal. Haar eerdere carrière omvat o.a. rollen als eigenaar van een automatiseringsbedrijf en HR-manager, manager zorgprocessen én freelance organisatieadviseur.",
+      "quote": "Jacqueline weet precies hoe ze theorie en ervaring laat samenkomen. Haar begeleiding is persoonlijk, doordacht en professioneel."
+    }
+  },
+  "story": {
+    "titlePrefix": "Het verhaal achter",
+    "titleAccent": "Innerleaps",
+    "body1": "Bas richtte Innerleaps op na zijn herstel van een hersenschudding. Als consultant en lead productmanager was hij gewend om onder druk te presteren. Tot een snowboardongeval hem tot stilstand dwong.",
+    "body2": "Tijdens zijn herstel verdiepte hij zich in de werking van de hersenen en stuitte op veertig jaar wetenschappelijk onderzoek: aandacht is trainbaar. Terug op werk merkte hij het verschil. Minder stress, scherpere focus, meer controle over zijn gedachten en een productiviteit die hij niet eerder kende.",
+    "quote": "\"Die ervaring wil ik delen. Daarom ben ik Innerleaps begonnen.\"",
+    "role": "Bas ter Haar Romenij | Oprichter",
+    "cta": "Plan gesprek met Bas",
+    "photoAlt": "Vitaliteitstrainer Bas ter Haar Romenij | Oprichter Innerleaps"
+  }
+}
