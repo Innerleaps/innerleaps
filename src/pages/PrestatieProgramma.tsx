@@ -536,14 +536,6 @@ const PrestatieProgramma = () => {
             </div>
           </div>
 
-          <div className="text-center mb-16">
-            <p className="text-xl md:text-2xl text-brand-gray-medium mb-4">Meer weten over onze methode?</p>
-            <Link to="/breintraining-methode">
-              <Button className="bg-brand-orange hover:bg-brand-orange/90 text-white py-3 px-8 rounded-lg text-lg font-semibold">
-                Ontdek de methode
-              </Button>
-            </Link>
-          </div>
 
           <div className="max-w-3xl mx-auto space-y-6">
             <div className="bg-brand-off-white p-6 rounded-xl space-y-3">
