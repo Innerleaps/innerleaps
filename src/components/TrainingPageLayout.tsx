@@ -445,7 +445,7 @@ const TrainingPageLayout = ({
                   <AccordionTrigger className="text-left text-lg md:text-xl font-semibold text-brand-gray-dark hover:text-brand-orange">
                     {item.q}
                   </AccordionTrigger>
-                  <AccordionContent className="text-base md:text-lg text-brand-gray-medium leading-relaxed">
+                  <AccordionContent className="text-base md:text-lg text-brand-gray-medium leading-relaxed whitespace-pre-line">
                     {item.a}
                   </AccordionContent>
                 </AccordionItem>
