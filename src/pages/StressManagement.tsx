@@ -1,4 +1,4 @@
-import { useEffect, useState, lazy, Suspense } from "react";
+import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import TrainingPageLayout from "@/components/TrainingPageLayout";
 import heroBackground from "@/assets/Vitaliteitsprogramma_presentatie_Innerleaps.png";
@@ -30,8 +30,6 @@ import paConsultingLogo from "@/assets/Vitaliteitsprogramma_PA_consulting_light.
 import nobelLogo from "@/assets/Vitaliteitsprogramma_nobel_recruitment_light.png";
 import hollandColoursLogo from "@/assets/Vitaliteitsprogramma_Holland_Colours_light.png";
 
-const ProgramRegistrationModal = lazy(() => import("@/components/ProgramRegistrationModal"));
-
 const logos = [
   { src: oliverLogo, alt: "Oliver Wyman" },
   { src: sygnificLogo, alt: "Sygnific" },
@@ -60,42 +58,27 @@ const logos = [
 ];
 
 const StressManagement = () => {
-  const [isRegistrationModalOpen, setIsRegistrationModalOpen] = useState(false);
   const location = useLocation();
 
   useEffect(() => {
-    if (location.hash === "#masterclass") {
-      setTimeout(() => {
-        document.getElementById("masterclass")?.scrollIntoView({ behavior: "smooth", block: "start" });
-      }, 300);
-    } else {
-      window.scrollTo(0, 0);
-    }
-  }, [location.hash]);
+    window.scrollTo(0, 0);
+  }, [location.pathname]);
 
+  // NOTE: B2X registration flow (training signup, masterclass CTA, sticky CTAs) is
+  // intentionally disabled. To restore, re-enable the heroCtaOnClick / hideMasterclass /
+  // hideStickyCtas props and lazy-load ProgramRegistrationModal again.
   return (
-    <>
-      <TrainingPageLayout
-        tKey="stress"
-        heroImage={heroBackground}
-        heroImageAlt="Stressmanagement training presentatie"
-        heroCtaOnClick={() => setIsRegistrationModalOpen(true)}
-        logos={logos}
-        weeksImage={breinTrainingImg}
-        masterclassVariant="employee"
-        trustVariant="off-white"
-      />
-
-      <Suspense fallback={null}>
-        {isRegistrationModalOpen && (
-          <ProgramRegistrationModal
-            isOpen={isRegistrationModalOpen}
-            onClose={() => setIsRegistrationModalOpen(false)}
-            programType="stress-management"
-          />
-        )}
-      </Suspense>
-    </>
+    <TrainingPageLayout
+      tKey="stress"
+      heroImage={heroBackground}
+      heroImageAlt="Stressmanagement training presentatie"
+      logos={logos}
+      weeksImage={breinTrainingImg}
+      hideMasterclass
+      hideStickyCtas
+      showMethodCtaAfterWeeks
+      trustVariant="off-white"
+    />
   );
 };
 
