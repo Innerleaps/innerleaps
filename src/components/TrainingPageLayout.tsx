@@ -131,6 +131,7 @@ const TrainingPageLayout = ({
   const results = t(`${tKey}.results.items`, { returnObjects: true }) as TrainingResult[];
   const weeks = t(`${tKey}.weeks.items`, { returnObjects: true }) as TrainingWeek[];
   const weekIntro = t(`${tKey}.weeks.intro`, { returnObjects: true }) as string[];
+  const faqItems = t(`${tKey}.faq.items`, { returnObjects: true }) as TrainingFaq[];
   const metaTitle = t(`${tKey}.meta.title`, { defaultValue: "" });
   const metaDescription = t(`${tKey}.meta.description`);
   const canonicalUrl = `${SITE_URL}${pathname}`;
