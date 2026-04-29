@@ -10,10 +10,22 @@
       "cta": "Wat levert dit jullie op?",
       "statsTitle": "Waarom organisaties ons kiezen",
       "stats": [
-        { "label": "Verzuim", "value": "-21%" },
-        { "label": "Burn-out risico", "value": "-70%" },
-        { "label": "Tevreden over het leven", "value": "+15%" },
-        { "label": "Wetenschap", "value": "40+ jaar" }
+        {
+          "label": "Verzuim",
+          "value": "-21%"
+        },
+        {
+          "label": "Burn-out risico",
+          "value": "-70%"
+        },
+        {
+          "label": "Tevreden over het leven",
+          "value": "+15%"
+        },
+        {
+          "label": "Wetenschap",
+          "value": "40+ jaar"
+        }
       ]
     },
     "challenges": {
@@ -54,27 +66,37 @@
         {
           "icon": "Brain",
           "title": "Stress vroeg herkennen",
-          "bullets": ["Medewerkers leren stresssignalen opmerken voordat het te laat is. Ze nemen regie over hun eigen stress en kunnen bijsturen voordat uitval optreedt."]
+          "bullets": [
+            "Medewerkers leren stresssignalen opmerken voordat het te laat is. Ze nemen regie over hun eigen stress en kunnen bijsturen voordat uitval optreedt."
+          ]
         },
         {
           "icon": "Heart",
           "title": "Sterkere emotieregulatie",
-          "bullets": ["Drukte en emoties op de werkvloer worden beheersbaar. Impulsiviteit neemt af omdat het controlecentrum in het brein wordt sterker."]
+          "bullets": [
+            "Drukte en emoties op de werkvloer worden beheersbaar. Impulsiviteit neemt af omdat het controlecentrum in het brein wordt sterker."
+          ]
         },
         {
           "icon": "Shield",
           "title": "Regie over werkdruk",
-          "bullets": ["Door sterker stressbewustzijn zeggen medewerkers 'nee' wanneer ze tegen hun grenzen lopen. Eigenaarschap vermindert stress en voorkomt uitval."]
+          "bullets": [
+            "Door sterker stressbewustzijn zeggen medewerkers 'nee' wanneer ze tegen hun grenzen lopen. Eigenaarschap vermindert stress en voorkomt uitval."
+          ]
         },
         {
           "icon": "CheckCircle",
           "title": "Sociaal veilige werkplek",
-          "bullets": ["Medewerkers kunnen ongepaste reacties onderdrukken. Hierdoor wordt de kennis over sociale veiligheid ook echt toegepast. De sociale veiligheid en samenwerking verbeterd."]
+          "bullets": [
+            "Medewerkers kunnen ongepaste reacties onderdrukken. Hierdoor wordt de kennis over sociale veiligheid ook echt toegepast. De sociale veiligheid en samenwerking verbeterd."
+          ]
         },
         {
           "icon": "Smile",
           "title": "Talent behouden",
-          "bullets": ["Medewerkers ervaren minder werkdruk en meer werkplezier en betrokkenheid. Dit verlaagt het personeelsverloop en helpt talent aan de organisatie te binden."]
+          "bullets": [
+            "Medewerkers ervaren minder werkdruk en meer werkplezier en betrokkenheid. Dit verlaagt het personeelsverloop en helpt talent aan de organisatie te binden."
+          ]
         }
       ]
     },
@@ -89,37 +111,52 @@
       "items": [
         {
           "week": "Week 1",
-          "tags": ["Controlecentrum"],
+          "tags": [
+            "Controlecentrum"
+          ],
           "title": "De automatische piloot doorbreken",
           "text": "Waar zijn je gedachten terwijl je tanden poetst? Waarschijnlijk bij je eerste meeting of je to-do lijst. Medewerkers leren herkennen wanneer hun gedachten afdwalen en brengen hun aandacht terug naar wat ze nu doen. Ze trainen hun controlecentrum door telkens bewust aandacht te geven aan hun huidige activiteit."
         },
         {
           "week": "Week 2",
-          "tags": ["Waarschuwingssysteem"],
+          "tags": [
+            "Waarschuwingssysteem"
+          ],
           "title": "Vroege waarschuwingssignalen herkennen",
           "text": "Medewerkers trainen hun waarschuwingssysteem zodat ze gespannen schouders, een strakke kaak of oppervlakkige ademhaling opmerken voordat spanning hen overneemt. Ze pakken de controle omdat hun gevoelsantennes scherper worden."
         },
         {
           "week": "Week 3",
-          "tags": ["Controlecentrum", "Waarschuwingssysteem"],
+          "tags": [
+            "Controlecentrum",
+            "Waarschuwingssysteem"
+          ],
           "title": "Werken met druk en spanning",
           "text": "Onder druk slaat het werkgeheugen van medewerkers vaak op tilt. Ze leren een korte oefening van 3 minuten waarmee ze hun hoofd snel weer rustig en helder krijgen. Ook ontdekken ze hoe ze pauzes slim inplannen, zodat ze de hele dag scherp blijven."
         },
         {
           "week": "Week 4",
-          "tags": ["Controlecentrum", "Waarschuwingssysteem"],
+          "tags": [
+            "Controlecentrum",
+            "Waarschuwingssysteem"
+          ],
           "title": "Mentale helderheid",
           "text": "Niet elke gedachte is een feit. Medewerkers leren het verschil herkennen tussen productief nadenken en blijven malen. Ook leren ze hun gedachten te observeren in plaats van erin mee te gaan. Het resultaat: meer rust in hun hoofd en minder gepieker."
         },
         {
           "week": "Week 5",
-          "tags": ["Waarschuwingssysteem"],
+          "tags": [
+            "Waarschuwingssysteem"
+          ],
           "title": "Stressherstel door vriendelijkheid",
           "text": "De innerlijke criticus werkt harder onder druk. Medewerkers leren zichzelf met vriendelijkheid te behandelen. De schakelaar om hun zenuwstelsel tot rust te brengen en ruimte te maken voor helder denken."
         },
         {
           "week": "Week 6",
-          "tags": ["Controlecentrum", "Waarschuwingssysteem"],
+          "tags": [
+            "Controlecentrum",
+            "Waarschuwingssysteem"
+          ],
           "title": "Duurzame integratie in je leven",
           "text": "Medewerkers herkennen hun gedachtepatronen en maken de geleerde technieken blijvend onderdeel van hun dagelijkse routine. Ze bouwen hun eigen toolbox voor alle situaties."
         }
@@ -166,10 +203,22 @@
       "cta": "Aanmelden training",
       "statsTitle": "Waarom deelnemers ons kiezen",
       "stats": [
-        { "label": "Spanning & stress", "value": "-50%" },
-        { "label": "Focus", "value": "+24%" },
-        { "label": "Tevreden over het leven", "value": "+15%" },
-        { "label": "Wetenschap", "value": "40+ jaar" }
+        {
+          "label": "Spanning & stress",
+          "value": "-50%"
+        },
+        {
+          "label": "Focus",
+          "value": "+24%"
+        },
+        {
+          "label": "Tevreden over het leven",
+          "value": "+15%"
+        },
+        {
+          "label": "Wetenschap",
+          "value": "40+ jaar"
+        }
       ]
     },
     "challenges": {
@@ -260,37 +309,52 @@
       "items": [
         {
           "week": "Week 1",
-          "tags": ["Controlecentrum"],
+          "tags": [
+            "Controlecentrum"
+          ],
           "title": "De automatische piloot doorbreken",
           "text": "Waar zijn je gedachten terwijl je tanden poetst? Waarschijnlijk bij je eerste meeting of je to-do lijst. Leer herkennen wanneer je gedachten afdwalen en breng je aandacht terug naar wat je nu doet. Je traint je controlecentrum door telkens bewust aandacht te geven aan je huidige activiteit."
         },
         {
           "week": "Week 2",
-          "tags": ["Waarschuwingssysteem"],
+          "tags": [
+            "Waarschuwingssysteem"
+          ],
           "title": "Vroege waarschuwingssignalen herkennen",
           "text": "Train je waarschuwingssysteem zodat je gespannen schouders, een strakke kaak of oppervlakkige ademhaling opmerkt voordat spanning je overneemt. Jij pakt de controle omdat je gevoelsantennes scherper worden."
         },
         {
           "week": "Week 3",
-          "tags": ["Controlecentrum", "Waarschuwingssysteem"],
+          "tags": [
+            "Controlecentrum",
+            "Waarschuwingssysteem"
+          ],
           "title": "Werken met druk en spanning",
           "text": "Onder druk slaat je werkgeheugen vaak op tilt. In deze week leer je een korte oefening van 3 minuten waarmee je je hoofd snel weer rustig en helder krijgt. Je ontdekt ook hoe je pauzes slim inplant, zodat je de hele dag scherp blijft."
         },
         {
           "week": "Week 4",
-          "tags": ["Controlecentrum", "Waarschuwingssysteem"],
+          "tags": [
+            "Controlecentrum",
+            "Waarschuwingssysteem"
+          ],
           "title": "Mentale helderheid",
           "text": "Niet elke gedachte is een feit. Je leert het verschil herkennen tussen productief nadenken en blijven malen. Ook leer jij je gedachten te observeren in plaats van erin mee te gaan. Het resultaat: meer rust in je hoofd en minder gepieker."
         },
         {
           "week": "Week 5",
-          "tags": ["Waarschuwingssysteem"],
+          "tags": [
+            "Waarschuwingssysteem"
+          ],
           "title": "Stressherstel door vriendelijkheid",
           "text": "De innerlijke criticus werkt harder onder druk. Leer jezelf met vriendelijkheid te behandelen. De schakelaar om je zenuwstelsel tot rust te brengen en ruimte te maken voor helder denken."
         },
         {
           "week": "Week 6",
-          "tags": ["Controlecentrum", "Waarschuwingssysteem"],
+          "tags": [
+            "Controlecentrum",
+            "Waarschuwingssysteem"
+          ],
           "title": "Duurzame integratie in je leven",
           "text": "Herken je gedachtepatronen en maak de geleerde technieken blijvend onderdeel van je dagelijkse routine. Bouw je eigen toolbox voor alle situaties."
         }
@@ -318,6 +382,385 @@
         {
           "q": "Wat als ik een week mis?",
           "a": "Bij het missen van een sessie kun je de trainer bellen om toch alle informatie te ontvangen. Daarnaast staat alle benodigde informatie in het werkboek. Voor optimaal resultaat is het belangrijk om niet meer dan één sessie te missen."
+        }
+      ]
+    }
+  },
+  "performance": {
+    "meta": {
+      "description": "Innerleaps verbetert prestaties onder druk via gerichte breintraining. Medewerkers trainen focus en aandacht in 6 weken. Gebaseerd op de methode gebruikt door top sporters en world class CEO's."
+    },
+    "hero": {
+      "badge": "Wetenschappelijk bewezen training",
+      "title": "<0>Prestaties</0> verbeteren met een krachtiger <0>brein</0>",
+      "subtitle": "Wetenschappelijk bewezen training om prestaties te verbeteren. Mentale scherpte met meer focus voor betere performance.",
+      "cta": "Aanmelden training",
+      "statsTitle": "Waarom deelnemers ons kiezen",
+      "stats": [
+        {
+          "label": "Focus, minder fouten",
+          "value": "+24%"
+        },
+        {
+          "label": "Prestatie",
+          "value": "+10%"
+        },
+        {
+          "label": "Slaap",
+          "value": "+28%"
+        },
+        {
+          "label": "Wetenschap",
+          "value": "40+ jaar"
+        }
+      ]
+    },
+    "challenges": {
+      "title": "Je wil beter kunnen <0>presteren</0>",
+      "subtitle": "Herken je dit?",
+      "items": [
+        {
+          "icon": "Brain",
+          "title": "Afleiding kost je focus",
+          "text": "Je wordt makkelijk uit je concentratie gehaald. Diep werk kost meer moeite dan vroeger, je zweeft sneller af."
+        },
+        {
+          "icon": "AlertCircle",
+          "title": "Mentale vermoeidheid gedurende de dag",
+          "text": "Halverwege de dag voelt je hoofd al vol. Beslissingen kosten meer energie, je scherpte neemt af."
+        },
+        {
+          "icon": "Activity",
+          "title": "Niet optimaal presteren",
+          "text": "Je weet dat er meer in zit. Je haalt je targets, maar het voelt alsof je potentieel niet volledig wordt benut."
+        },
+        {
+          "icon": "AlertCircle",
+          "title": "Veel bezig, niet altijd effectief",
+          "text": "Je werkt hard, maar niet alles wat je doet levert evenveel op. Prioriteren lukt niet altijd even goed."
+        },
+        {
+          "icon": "BedDouble",
+          "title": "Niet optimaal herstellen",
+          "text": "Ook als je ligt te slapen, blijft je hoofd soms aanstaan. Daardoor word je niet echt uitgerust wakker en merk je dat je dingen sneller vergeet of minder goed kunt onthouden."
+        }
+      ]
+    },
+    "results": {
+      "title": "Beter <0>presteren</0> met meer <0>focus</0>",
+      "subtitle": "Wetenschappelijk bewezen effecten:",
+      "items": [
+        {
+          "icon": "Brain",
+          "title": "Scherpere focus",
+          "bullets": [
+            "Je aandacht is waar jij hem wil hebben. Diep werken gaat makkelijker, afleidingen hebben minder grip.",
+            "In aandachttesten maken deelnemers minder fouten door de training."
+          ]
+        },
+        {
+          "icon": "Activity",
+          "title": "Meer mentale energie",
+          "bullets": [
+            "Je hoofd blijft helder gedurende de dag. Beslissingen kosten minder kracht, je eindigt je werkdag met energie over.",
+            "Verminderde mentale vermoeidheid door efficiënter breingebruik."
+          ]
+        },
+        {
+          "icon": "CheckCircle",
+          "title": "Verhoogde productiviteit",
+          "bullets": [
+            "Je haalt meer uit je dag. Betere focus betekent betere output in minder tijd.",
+            "Wetenschappelijk bewezen: deelnemers presteren beter."
+          ]
+        },
+        {
+          "icon": "Brain",
+          "title": "Helder prioriteren",
+          "bullets": [
+            "Je maakt sneller de juiste keuzes. Verhoogde awareness geeft inzicht in wat écht belangrijk is.",
+            "Betere besluitvorming door training van jouw neocortex."
+          ]
+        },
+        {
+          "icon": "BedDouble",
+          "title": "Beter slapen en sterker geheugen",
+          "bullets": [
+            "Je komt écht tot rust in je hoofd voordat je gaat slapen. Je wordt uitgeruster wakker en merkt dat je dingen makkelijker onthoudt.",
+            "Deelnemers slapen beter en onthouden informatie makkelijker."
+          ]
+        }
+      ]
+    },
+    "weeks": {
+      "title": "Ons <0>6-weekse</0> kernprogramma",
+      "intro": [
+        "Met onze <0>\"push-ups voor je brein\"</0> train jij je brein. Hiermee versterk je twee cruciale hersensystemen.",
+        "Je controlecentrum wordt sterker. Je onderdrukt impulsieve automatische reacties, filtert irrelevante informatie en neemt bewustere beslissingen over je werkdruk.",
+        "Je waarschuwingssysteem wordt gevoeliger. Je herkent stresssignalen op tijd en reguleert spanning, waardoor werkgeheugen vrijkomt om te presteren en uitval wordt voorkomen."
+      ],
+      "imageAlt": "Mensen tijdens een aandacht- en concentratietraining voor betere prestaties en minder stress",
+      "items": [
+        {
+          "week": "Week 1",
+          "tags": [
+            "Controlecentrum"
+          ],
+          "title": "De automatische piloot doorbreken",
+          "text": "Waar zijn je gedachten terwijl je tanden poetst? Waarschijnlijk bij je eerste meeting of je to-do lijst. Leer herkennen wanneer je gedachten afdwalen en breng je aandacht terug naar wat je nu doet. Je traint je controlecentrum door telkens bewust aandacht te geven aan je huidige activiteit."
+        },
+        {
+          "week": "Week 2",
+          "tags": [
+            "Waarschuwingssysteem"
+          ],
+          "title": "Vroege waarschuwingssignalen herkennen",
+          "text": "Train je waarschuwingssysteem zodat je gespannen schouders, een strakke kaak of oppervlakkige ademhaling opmerkt voordat spanning je overneemt. Jij pakt de controle omdat je gevoelsantennes scherper worden."
+        },
+        {
+          "week": "Week 3",
+          "tags": [
+            "Controlecentrum",
+            "Waarschuwingssysteem"
+          ],
+          "title": "Werken met druk en spanning",
+          "text": "Onder druk slaat je werkgeheugen vaak op tilt. In deze week leer je een korte oefening van 3 minuten waarmee je je hoofd snel weer rustig en helder krijgt. Je ontdekt ook hoe je pauzes slim inplant, zodat je de hele dag scherp blijft."
+        },
+        {
+          "week": "Week 4",
+          "tags": [
+            "Controlecentrum",
+            "Waarschuwingssysteem"
+          ],
+          "title": "Mentale helderheid",
+          "text": "Niet elke gedachte is een feit. Je leert het verschil herkennen tussen productief nadenken en blijven malen. Ook leer jij je gedachten te observeren in plaats van erin mee te gaan. Het resultaat: meer rust in je hoofd en minder gepieker."
+        },
+        {
+          "week": "Week 5",
+          "tags": [
+            "Controlecentrum"
+          ],
+          "title": "Beter samenwerken door bewust luisteren",
+          "text": "Onder druk formuleer je vaak je antwoord al terwijl de ander nog praat. Leer écht luisteren, perspectief nemen en reageren vanuit begrip in plaats van reflex."
+        },
+        {
+          "week": "Week 6",
+          "tags": [
+            "Controlecentrum",
+            "Waarschuwingssysteem"
+          ],
+          "title": "Duurzame integratie in je leven",
+          "text": "Herken je gedachtepatronen en maak de geleerde technieken blijvend onderdeel van je dagelijkse routine. Bouw je eigen toolbox voor alle situaties."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Veelgestelde vragen",
+      "items": [
+        {
+          "q": "Waarom zijn de masterclass en de training online?",
+          "a": "Wetenschappelijk is bewezen dat online even effectief is als fysiek. Omdat het even effectief is, kiezen we voor de optie die de minste tijd kost voor deelnemers. Geen reistijd, gewoon vanuit huis of kantoor."
+        },
+        {
+          "q": "Waarom wil mijn werkgever de training vergoeden?",
+          "a": "Stress kost werkgevers enorm veel geld. Zowel in verzuim als in verminderde prestatie. Werkgevers willen je graag helpen om dit te verbeteren. Wij overhandigen je een brochure waardoor je werkgever dit makkelijk kan begrijpen en goedkeuren."
+        },
+        {
+          "q": "15 minuten oefenen per dag, hoe werkt dat?",
+          "a": "Als je start krijg je van ons een werkboek. Daar staat voor elke week een stukje theorie in en korte oefeningen. Tevens ontvang je audio-opnames van de oefeningen. Sommige oefeningen doe je tijdens dagelijkse activiteiten zoals tandenpoetsen, douchen of afwassen, dus geen extra tijd. Andere oefeningen vragen 12 minuten stilzitten in een stoel."
+        },
+        {
+          "q": "Wat voor soort oefeningen zijn het?",
+          "a": "Deelnemers doen op twee manieren hun \"brein push-ups\". Geplande training (12 minuten per dag): dagelijkse audio-oefeningen waarin je je aandacht richt op je ademhaling of lichaam. Klinkt makkelijk? Je geest vindt er niks aan. Binnen seconden denk je aan je to-do's of die meeting. Elk moment dat je je focus terugbrengt is de push-up die je controlecentrum versterkt. Training in je dagelijks leven: je brengt bewuste aandacht naar alledaagse activiteiten. Tijdens je ochtendkoffie, op weg naar je werk, of voordat je een belangrijke meeting ingaat. Je traint je brein om scherp te zijn wanneer het ertoe doet. Het kost geen extra tijd en je wordt productiever in wat je doet."
+        },
+        {
+          "q": "Wat als ik een week mis?",
+          "a": "Bij het missen van een sessie kan je de trainer bellen om toch alle informatie te ontvangen. Daarnaast staat alle benodigde informatie in het werkboek. Voor optimaal resultaat is het belangrijk om niet meer dan één sessie te missen."
+        }
+      ]
+    }
+  },
+  "sustainability": {
+    "meta": {
+      "description": "Innerleaps biedt organisaties een 6-weekse vitaliteitstraining met 42% deelname, versus 3-8% bij standaard EAP's. Preventief, wetenschappelijk onderbouwd, betaal alleen voor deelnemers."
+    },
+    "hero": {
+      "badge": "Wetenschappelijk bewezen methode",
+      "title": "Beter <0>presteren</0> onder <0>druk</0>",
+      "subtitle": "Meer focus, minder fouten en een team dat vaker en scherper kan leveren. Een 6-weekse evidence-based breintraining voor teams die het verschil willen maken.",
+      "cta": "Wat levert dit jullie op?",
+      "statsTitle": "Waarom organisaties ons kiezen",
+      "stats": [
+        {
+          "label": "Focus en concentratie",
+          "value": "+24%"
+        },
+        {
+          "label": "Productiviteit",
+          "value": "+8%"
+        },
+        {
+          "label": "Verzuim",
+          "value": "-21%"
+        },
+        {
+          "label": "Wetenschap",
+          "value": "40+ jaar"
+        }
+      ]
+    },
+    "challenges": {
+      "title": "Herken je één van deze <0>uitdagingen</0>?",
+      "subtitle": "Deze organisatie uitdagingen pakken wij aan met onze methode.",
+      "items": [
+        {
+          "icon": "Activity",
+          "title": "Targets staan onder druk",
+          "text": "Je team moet leveren, maar de druk stapelt zich op. Output blijft achter bij de ambitie."
+        },
+        {
+          "icon": "AlertCircle",
+          "title": "Fouten kosten tijd en geld",
+          "text": "Onder druk daalt de scherpte. Kleine missers leiden tot herstelwerk, frustratie en gemiste kansen."
+        },
+        {
+          "icon": "Heart",
+          "title": "Verzuim en uitval is te hoog",
+          "text": "Door uitval of ziekte is je team minder beschikbaar, precies wanneer je ze hard nodig hebt."
+        },
+        {
+          "icon": "Shield",
+          "title": "Talent vasthouden is moeilijk",
+          "text": "Je beste mensen zijn essentieel. Talent behouden vraagt meer dan goede voorwaarden."
+        }
+      ]
+    },
+    "results": {
+      "title": "Het <0>resultaat</0> van onze training",
+      "subtitle": "De wetenschappelijk bewezen effecten van onze training.",
+      "items": [
+        {
+          "icon": "Brain",
+          "title": "Scherpere focus onder druk",
+          "bullets": [
+            "Je team leert aandacht bewust sturen en vasthouden. Minder afleiding, meer voortgang op wat écht telt.",
+            "Targets worden haalbaar, ook als de druk oploopt."
+          ]
+        },
+        {
+          "icon": "Heart",
+          "title": "Minder fouten, betere output",
+          "bullets": [
+            "Een getraind brein maakt onder druk minder onnodige missers.",
+            "Onderzoek laat een duidelijke daling van fouten zien. Minder herstelwerk, betere output."
+          ]
+        },
+        {
+          "icon": "Shield",
+          "title": "Hogere team inzetbaarheid",
+          "bullets": [
+            "Medewerkers herkennen stress eerder en sturen bij voordat uitval optreedt.",
+            "Minder verzuim, minder langdurige uitval. Een team dat beschikbaar is."
+          ]
+        },
+        {
+          "icon": "CheckCircle",
+          "title": "Tevredener team, lagere uitstroom",
+          "bullets": [
+            "Medewerkers ervaren meer rust, werkplezier en tevredenheid met hun leven.",
+            "Wie zich goed voelt op zijn plek, gaat minder snel op zoek naar iets anders."
+          ]
+        }
+      ]
+    },
+    "weeks": {
+      "title": "Ons <0>6-weekse</0> kernprogramma",
+      "intro": [
+        "Met onze <0>\"push-ups voor het brein\"</0> trainen medewerkers hun brein. Hiermee versterken ze twee cruciale hersensystemen.",
+        "Het controlecentrum wordt sterker. Medewerkers onderdrukken impulsieve automatische reacties, filteren irrelevante informatie en nemen bewustere beslissingen over hun werkdruk.",
+        "Het waarschuwingssysteem wordt gevoeliger. Medewerkers herkennen stresssignalen op tijd en reguleren spanning, waardoor werkgeheugen vrijkomt om te presteren en uitval wordt voorkomen."
+      ],
+      "imageAlt": "Mensen tijdens een aandacht- en concentratietraining voor betere prestaties en minder stress",
+      "items": [
+        {
+          "week": "Week 1",
+          "tags": [
+            "Controlecentrum"
+          ],
+          "title": "De automatische piloot doorbreken",
+          "text": "Waar zijn je gedachten terwijl je tanden poetst? Waarschijnlijk bij je eerste meeting of je to-do lijst. Medewerkers leren herkennen wanneer hun gedachten afdwalen en brengen hun aandacht terug naar wat ze nu doen. Ze trainen hun controlecentrum door telkens bewust aandacht te geven aan hun huidige activiteit."
+        },
+        {
+          "week": "Week 2",
+          "tags": [
+            "Waarschuwingssysteem"
+          ],
+          "title": "Vroege waarschuwingssignalen herkennen",
+          "text": "Medewerkers trainen hun waarschuwingssysteem zodat ze gespannen schouders, een strakke kaak of oppervlakkige ademhaling opmerken voordat spanning hen overneemt. Ze pakken de controle in plaats van de spanning, omdat hun stress-antennes scherper zijn."
+        },
+        {
+          "week": "Week 3",
+          "tags": [
+            "Controlecentrum",
+            "Waarschuwingssysteem"
+          ],
+          "title": "Werken met druk en spanning",
+          "text": "Onder druk slaat het werkgeheugen van medewerkers vaak op tilt. Ze leren een korte oefening van 3 minuten waarmee ze hun hoofd snel weer rustig en helder krijgen. Ook ontdekken ze hoe ze pauzes slim inplannen, zodat ze de hele dag scherp blijven."
+        },
+        {
+          "week": "Week 4",
+          "tags": [
+            "Controlecentrum",
+            "Waarschuwingssysteem"
+          ],
+          "title": "Mentale helderheid",
+          "text": "Niet elke gedachte is een feit. Medewerkers leren het verschil herkennen tussen productief nadenken en blijven malen. Ook leren ze hun gedachten te observeren in plaats van erin mee te gaan. Het resultaat: meer rust in hun hoofd en minder gepieker."
+        },
+        {
+          "week": "Week 5",
+          "tags": [
+            "Controlecentrum"
+          ],
+          "title": "Beter samenwerken door bewust luisteren",
+          "text": "Onder druk formuleren medewerkers vaak hun antwoord al terwijl de ander nog praat. Ze leren écht luisteren, perspectief nemen en reageren vanuit begrip in plaats van reflex."
+        },
+        {
+          "week": "Week 6",
+          "tags": [
+            "Controlecentrum",
+            "Waarschuwingssysteem"
+          ],
+          "title": "Duurzame integratie in je leven",
+          "text": "Medewerkers herkennen hun gedachtepatronen en maken de geleerde technieken blijvend onderdeel van hun dagelijkse routine. Ze bouwen hun eigen toolbox voor alle situaties."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Veelgestelde vragen",
+      "items": [
+        {
+          "q": "Is de training online?",
+          "a": "De training hoeft niet per se online te zijn, maar een online vorm maakt deelname voor medewerkers makkelijker. Onderzoek laat zien dat online sessies net zo effectief zijn als fysieke bijeenkomsten. Het trainen van aandacht gebeurt vooral door dagelijkse oefening, terwijl de workshops dit proces ondersteunen. Om zoveel mogelijk medewerkers de kans te geven om mee te doen, geven we daarom de voorkeur aan een online training."
+        },
+        {
+          "q": "15 minuten oefenen per dag, hoe werkt dat?",
+          "a": "Deelnemers ontvangen bij aanvang een werkboek met per week een stukje theorie en korte oefeningen. Ook krijgen ze audio-opnames van de oefeningen. Een deel van de oefeningen kan worden gedaan tijdens dagelijkse routines, zoals tandenpoetsen, douchen of afwassen, zodat dit geen extra tijd kost. Andere oefeningen vragen ongeveer 12 minuten om rustig zittend de aandacht te trainen."
+        },
+        {
+          "q": "Wat voor soort oefeningen zijn het?",
+          "a": "Alle oefeningen zijn gericht op het trainen van aandacht. Het doel is dat deelnemers met meer focus en bewustzijn werken en leven. Daarom zijn de oefeningen direct toepasbaar in het dagelijks leven, bijvoorbeeld tijdens tandenpoetsen, eten of lopen. Daarnaast bevat elke week een speciale aandachtstraining van 12 minuten die zittend uitgevoerd wordt."
+        },
+        {
+          "q": "Wat als een deelnemer een sessie mist?",
+          "a": "Bij het missen van een sessie kunnen deelnemers de trainer bellen om toch alle informatie te ontvangen. Daarnaast staat alle benodigde informatie in het werkboek. Voor optimaal resultaat is het belangrijk om niet meer dan één sessie te missen."
+        },
+        {
+          "q": "Hoe zorgen jullie voor veilig en comfortabel leren?",
+          "a": "De training bevat wekelijkse groepsworkshops met maximaal 15 deelnemers. Deelnemers oefenen op een veilige en comfortabele manier door te reageren op concrete vragen, zonder dat ze persoonlijke verhalen hoeven te delen. Zo ontstaat een omgeving waarin iedereen zich op zijn gemak voelt en volop kan oefenen met aandacht."
+        },
+        {
+          "q": "Hoe krijg ik deze training intern verkocht?",
+          "a": "De training draagt bij aan een daling van verzuim en burn-outgevallen, en maakt deelnemers effectiever in hun werk. Hierdoor is de business case positief. Onze ervaring leert dat het managementteam vaak vooral geïnteresseerd is in het effect op productiviteit. Belangrijk is dat er binnen het managementteam een open houding is ten aanzien van de ontwikkeling van soft skills. Om inzicht te krijgen in de impact voor jullie organisatie, kan je onze calculator gebruiken of een gesprek met Bas plannen."
         }
       ]
     }
