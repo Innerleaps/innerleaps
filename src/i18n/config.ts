@@ -6,6 +6,10 @@ import nlCommon from "./locales/nl/common.json";
 import enCommon from "./locales/en/common.json";
 import nlMethode from "./locales/nl/methode.json";
 import enMethode from "./locales/en/methode.json";
+import nlOverons from "./locales/nl/overons.json";
+import enOverons from "./locales/en/overons.json";
+import nlContact from "./locales/nl/contact.json";
+import enContact from "./locales/en/contact.json";
 
 export const SUPPORTED_LANGUAGES = ["nl", "en"] as const;
 export type SupportedLanguage = (typeof SUPPORTED_LANGUAGES)[number];
@@ -67,13 +71,13 @@ i18n
   .use(initReactI18next)
   .init({
     resources: {
-      nl: { common: nlCommon, methode: nlMethode },
-      en: { common: enCommon, methode: enMethode },
+      nl: { common: nlCommon, methode: nlMethode, overons: nlOverons, contact: nlContact },
+      en: { common: enCommon, methode: enMethode, overons: enOverons, contact: enContact },
     },
     fallbackLng: "nl",
     supportedLngs: SUPPORTED_LANGUAGES,
     nonExplicitSupportedLngs: true, // treat "en-US", "en-GB" etc. as "en"
-    ns: ["common", "methode"],
+    ns: ["common", "methode", "overons", "contact"],
     defaultNS: "common",
     interpolation: { escapeValue: false },
     detection: {
