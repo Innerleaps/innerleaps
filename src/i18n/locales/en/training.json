@@ -10,10 +10,22 @@
       "cta": "What's the impact for your team?",
       "statsTitle": "Why organizations choose us",
       "stats": [
-        { "label": "Sick leave", "value": "-21%" },
-        { "label": "Burn-out risk", "value": "-70%" },
-        { "label": "Life satisfaction", "value": "+15%" },
-        { "label": "Science", "value": "40+ years" }
+        {
+          "label": "Sick leave",
+          "value": "-21%"
+        },
+        {
+          "label": "Burn-out risk",
+          "value": "-70%"
+        },
+        {
+          "label": "Life satisfaction",
+          "value": "+15%"
+        },
+        {
+          "label": "Science",
+          "value": "40+ years"
+        }
       ]
     },
     "challenges": {
@@ -54,27 +66,37 @@
         {
           "icon": "Brain",
           "title": "Spot stress early",
-          "bullets": ["Employees learn to notice stress signals before it's too late. They take charge of their own stress and can adjust before they drop out."]
+          "bullets": [
+            "Employees learn to notice stress signals before it's too late. They take charge of their own stress and can adjust before they drop out."
+          ]
         },
         {
           "icon": "Heart",
           "title": "Stronger emotion regulation",
-          "bullets": ["Pressure and emotions in the workplace become manageable. Impulsiveness goes down because the control center in the brain gets stronger."]
+          "bullets": [
+            "Pressure and emotions in the workplace become manageable. Impulsiveness goes down because the control center in the brain gets stronger."
+          ]
         },
         {
           "icon": "Shield",
           "title": "Control over workload",
-          "bullets": ["With sharper stress awareness, employees say 'no' when they're hitting their limits. Ownership reduces stress and prevents dropout."]
+          "bullets": [
+            "With sharper stress awareness, employees say 'no' when they're hitting their limits. Ownership reduces stress and prevents dropout."
+          ]
         },
         {
           "icon": "CheckCircle",
           "title": "A socially safe workplace",
-          "bullets": ["Employees can hold back inappropriate reactions. This way, what they know about social safety is actually applied. Social safety and collaboration both improve."]
+          "bullets": [
+            "Employees can hold back inappropriate reactions. This way, what they know about social safety is actually applied. Social safety and collaboration both improve."
+          ]
         },
         {
           "icon": "Smile",
           "title": "Hold on to talent",
-          "bullets": ["Employees feel less workload and more joy and engagement. This lowers staff turnover and helps you keep talent inside the organization."]
+          "bullets": [
+            "Employees feel less workload and more joy and engagement. This lowers staff turnover and helps you keep talent inside the organization."
+          ]
         }
       ]
     },
@@ -89,37 +111,52 @@
       "items": [
         {
           "week": "Week 1",
-          "tags": ["Control center"],
+          "tags": [
+            "Control center"
+          ],
           "title": "Breaking through autopilot",
           "text": "Where are your thoughts while brushing your teeth? Probably already in your first meeting or your to-do list. Employees learn to notice when their thoughts wander off and bring their attention back to what they're doing right now. They train their control center by consciously paying attention to their current activity, again and again."
         },
         {
           "week": "Week 2",
-          "tags": ["Warning system"],
+          "tags": [
+            "Warning system"
+          ],
           "title": "Spotting early warning signals",
           "text": "Employees train their warning system so they notice tense shoulders, a tight jaw or shallow breathing before tension takes over. They take back control because their feeling antennas get sharper."
         },
         {
           "week": "Week 3",
-          "tags": ["Control center", "Warning system"],
+          "tags": [
+            "Control center",
+            "Warning system"
+          ],
           "title": "Working with pressure and stress",
           "text": "Under pressure, employees' working memory often gets overloaded. They learn a short 3-minute exercise to quickly bring their head back to a calm and clear state. They also discover how to plan smart breaks so they stay sharp throughout the day."
         },
         {
           "week": "Week 4",
-          "tags": ["Control center", "Warning system"],
+          "tags": [
+            "Control center",
+            "Warning system"
+          ],
           "title": "Mental clarity",
           "text": "Not every thought is a fact. Employees learn to recognize the difference between productive thinking and getting stuck in rumination. They also learn to observe their thoughts instead of going along with them. The result: more rest in their head and less worrying."
         },
         {
           "week": "Week 5",
-          "tags": ["Warning system"],
+          "tags": [
+            "Warning system"
+          ],
           "title": "Stress recovery through kindness",
           "text": "The inner critic works harder under pressure. Employees learn to treat themselves with kindness. It's the switch that calms their nervous system and creates space for clear thinking."
         },
         {
           "week": "Week 6",
-          "tags": ["Control center", "Warning system"],
+          "tags": [
+            "Control center",
+            "Warning system"
+          ],
           "title": "Lasting integration into your life",
           "text": "Employees recognize their thought patterns and make the techniques they've learned a lasting part of their daily routine. They build their own toolbox for any situation."
         }
@@ -166,10 +203,22 @@
       "cta": "Sign up for the training",
       "statsTitle": "Why participants choose us",
       "stats": [
-        { "label": "Pressure & stress", "value": "-50%" },
-        { "label": "Focus", "value": "+24%" },
-        { "label": "Life satisfaction", "value": "+15%" },
-        { "label": "Science", "value": "40+ years" }
+        {
+          "label": "Pressure & stress",
+          "value": "-50%"
+        },
+        {
+          "label": "Focus",
+          "value": "+24%"
+        },
+        {
+          "label": "Life satisfaction",
+          "value": "+15%"
+        },
+        {
+          "label": "Science",
+          "value": "40+ years"
+        }
       ]
     },
     "challenges": {
@@ -260,37 +309,52 @@
       "items": [
         {
           "week": "Week 1",
-          "tags": ["Control center"],
+          "tags": [
+            "Control center"
+          ],
           "title": "Breaking through autopilot",
           "text": "Where are your thoughts while you're brushing your teeth? Probably already in your first meeting or your to-do list. Learn to notice when your thoughts wander off and bring your attention back to what you're doing right now. You train your control center by consciously paying attention to your current activity, again and again."
         },
         {
           "week": "Week 2",
-          "tags": ["Warning system"],
+          "tags": [
+            "Warning system"
+          ],
           "title": "Spotting early warning signals",
           "text": "Train your warning system so you notice tense shoulders, a tight jaw or shallow breathing before pressure takes over. You take back control because your feeling antennas get sharper."
         },
         {
           "week": "Week 3",
-          "tags": ["Control center", "Warning system"],
+          "tags": [
+            "Control center",
+            "Warning system"
+          ],
           "title": "Working with pressure and stress",
           "text": "Under pressure your working memory often gets overloaded. This week you learn a short 3-minute exercise that quickly brings your head back to a calm and clear state. You also discover how to plan smart breaks. So you stay sharp throughout the day."
         },
         {
           "week": "Week 4",
-          "tags": ["Control center", "Warning system"],
+          "tags": [
+            "Control center",
+            "Warning system"
+          ],
           "title": "Mental clarity",
           "text": "Not every thought is a fact. You learn to recognize the difference between productive thinking and getting stuck in rumination. You also learn to observe your thoughts instead of going along with them. The result: more peace of mind and less worrying."
         },
         {
           "week": "Week 5",
-          "tags": ["Warning system"],
+          "tags": [
+            "Warning system"
+          ],
           "title": "Stress recovery through kindness",
           "text": "The inner critic works harder under pressure. Learn to treat yourself with kindness. It's the switch that calms your nervous system and creates space for clear thinking."
         },
         {
           "week": "Week 6",
-          "tags": ["Control center", "Warning system"],
+          "tags": [
+            "Control center",
+            "Warning system"
+          ],
           "title": "Lasting integration into your life",
           "text": "Recognize your thought patterns and make the techniques you've learned a lasting part of your daily routine. Build your own toolbox for any situation."
         }
@@ -318,6 +382,385 @@
         {
           "q": "What if I miss a week?",
           "a": "If you miss a session you can call the trainer to still get all the information. The workbook also contains everything you need. For the best result it's important not to miss more than one session."
+        }
+      ]
+    }
+  },
+  "performance": {
+    "meta": {
+      "description": "Innerleaps improves performance under pressure with focused brain training. Employees train focus and attention in 6 weeks. Based on the method used by top athletes and world-class CEOs."
+    },
+    "hero": {
+      "badge": "Scientifically proven training",
+      "title": "Improve <0>performance</0> with a stronger <0>brain</0>",
+      "subtitle": "Scientifically proven training to improve performance. Mental sharpness with more focus for better performance.",
+      "cta": "Sign up for the training",
+      "statsTitle": "Why participants choose us",
+      "stats": [
+        {
+          "label": "Focus, fewer mistakes",
+          "value": "+24%"
+        },
+        {
+          "label": "Performance",
+          "value": "+10%"
+        },
+        {
+          "label": "Sleep",
+          "value": "+28%"
+        },
+        {
+          "label": "Science",
+          "value": "40+ years"
+        }
+      ]
+    },
+    "challenges": {
+      "title": "You want to <0>perform</0> better",
+      "subtitle": "Sound familiar?",
+      "items": [
+        {
+          "icon": "Brain",
+          "title": "Distraction costs you focus",
+          "text": "You get pulled out of concentration easily. Deep work takes more effort than it used to and you drift off faster."
+        },
+        {
+          "icon": "AlertCircle",
+          "title": "Mental fatigue throughout the day",
+          "text": "By midday your head already feels full. Decisions cost more energy and your sharpness drops."
+        },
+        {
+          "icon": "Activity",
+          "title": "Not performing at your best",
+          "text": "You know there is more in you. You hit your targets, but it feels like your full potential is not being used."
+        },
+        {
+          "icon": "AlertCircle",
+          "title": "Busy but not always effective",
+          "text": "You work hard, but not everything you do delivers the same result. Setting priorities does not always work well."
+        },
+        {
+          "icon": "BedDouble",
+          "title": "Not recovering well",
+          "text": "Even while you sleep, your head sometimes stays on. As a result you do not really wake up rested and you notice that you forget things faster or remember less well."
+        }
+      ]
+    },
+    "results": {
+      "title": "Perform <0>better</0> with more <0>focus</0>",
+      "subtitle": "Scientifically proven effects:",
+      "items": [
+        {
+          "icon": "Brain",
+          "title": "Sharper focus",
+          "bullets": [
+            "Your attention is where you want it. Deep work becomes easier and distractions have less grip on you.",
+            "In attention tests participants make fewer mistakes after the training."
+          ]
+        },
+        {
+          "icon": "Activity",
+          "title": "More mental energy",
+          "bullets": [
+            "Your head stays clear throughout the day. Decisions take less effort and you finish your workday with energy to spare.",
+            "Reduced mental fatigue thanks to more efficient brain use."
+          ]
+        },
+        {
+          "icon": "CheckCircle",
+          "title": "Higher productivity",
+          "bullets": [
+            "You get more out of your day. Better focus means better output in less time.",
+            "Scientifically proven: participants perform better."
+          ]
+        },
+        {
+          "icon": "Brain",
+          "title": "Clear prioritising",
+          "bullets": [
+            "You make the right choices faster. Higher awareness gives insight into what really matters.",
+            "Better decision-making by training your neocortex."
+          ]
+        },
+        {
+          "icon": "BedDouble",
+          "title": "Better sleep and stronger memory",
+          "bullets": [
+            "You really calm your mind before going to sleep. You wake up more rested and notice that you remember things more easily.",
+            "Participants sleep better and remember information more easily."
+          ]
+        }
+      ]
+    },
+    "weeks": {
+      "title": "Our <0>6-week</0> core programme",
+      "intro": [
+        "With our <0>\"push-ups for your brain\"</0> you train your brain. With this you strengthen two crucial brain systems.",
+        "Your control center becomes stronger. You suppress impulsive automatic reactions, filter out irrelevant information and make more conscious decisions about your workload.",
+        "Your warning system becomes more sensitive. You recognise stress signals in time and regulate tension, freeing up working memory to perform and preventing dropout."
+      ],
+      "imageAlt": "People during an attention and concentration training for better performance and less stress",
+      "items": [
+        {
+          "week": "Week 1",
+          "tags": [
+            "Control center"
+          ],
+          "title": "Breaking through autopilot",
+          "text": "Where are your thoughts while you brush your teeth? Probably already in your first meeting or your to-do list. Learn to notice when your thoughts wander off and bring your attention back to what you are doing right now. You train your control center by consciously paying attention to your current activity, again and again."
+        },
+        {
+          "week": "Week 2",
+          "tags": [
+            "Warning system"
+          ],
+          "title": "Recognising early warning signals",
+          "text": "Train your warning system so you notice tense shoulders, a tight jaw or shallow breathing before tension takes over. You take back control because your sensors get sharper."
+        },
+        {
+          "week": "Week 3",
+          "tags": [
+            "Control center",
+            "Warning system"
+          ],
+          "title": "Working with pressure and stress",
+          "text": "Under pressure your working memory often goes haywire. This week you learn a short 3-minute exercise that quickly brings calm and clarity back to your head. You also discover how to plan smart breaks, so you stay sharp throughout the day."
+        },
+        {
+          "week": "Week 4",
+          "tags": [
+            "Control center",
+            "Warning system"
+          ],
+          "title": "Mental clarity",
+          "text": "Not every thought is a fact. You learn to recognise the difference between productive thinking and rumination. You also learn to observe your thoughts instead of getting carried away by them. The result: more peace of mind and less worrying."
+        },
+        {
+          "week": "Week 5",
+          "tags": [
+            "Control center"
+          ],
+          "title": "Better collaboration through conscious listening",
+          "text": "Under pressure you often start formulating your reply while the other person is still talking. Learn to truly listen, take perspective and respond from understanding instead of reflex."
+        },
+        {
+          "week": "Week 6",
+          "tags": [
+            "Control center",
+            "Warning system"
+          ],
+          "title": "Lasting integration in your life",
+          "text": "Recognise your thought patterns and make the techniques you learned a lasting part of your daily routine. Build your own toolbox for every situation."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Frequently asked questions",
+      "items": [
+        {
+          "q": "Why are the masterclass and training online?",
+          "a": "Research has shown that online is just as effective as in-person. Because it is just as effective, we choose the option that takes the least time for participants. No travel time, just from home or the office."
+        },
+        {
+          "q": "Why would my employer want to cover the training?",
+          "a": "Stress costs employers a lot of money. In absenteeism as well as in reduced performance. Employers want to help you improve this. We give you a brochure that makes it easy for your employer to understand and approve."
+        },
+        {
+          "q": "15 minutes of practice per day, how does that work?",
+          "a": "When you start, you receive a workbook from us. It contains a piece of theory for each week and short exercises. You also receive audio recordings of the exercises. Some exercises you do during daily activities like brushing your teeth, showering or doing the dishes, so no extra time. Other exercises ask 12 minutes of sitting still in a chair."
+        },
+        {
+          "q": "What kind of exercises are they?",
+          "a": "Participants do their \"brain push-ups\" in two ways. Planned training (12 minutes per day): daily audio exercises in which you focus your attention on your breathing or your body. Sounds easy? Your mind hates it. Within seconds you are thinking about your to-dos or that meeting. Every moment you bring your focus back is the push-up that strengthens your control center. Training in your daily life: you bring conscious attention to everyday activities. During your morning coffee, on the way to work, or before an important meeting. You train your brain to be sharp when it matters. It costs no extra time and you become more productive in what you do."
+        },
+        {
+          "q": "What if I miss a week?",
+          "a": "If you miss a session you can call the trainer to receive all the information anyway. All necessary information is also in the workbook. For the best result it is important not to miss more than one session."
+        }
+      ]
+    }
+  },
+  "sustainability": {
+    "meta": {
+      "description": "Innerleaps offers organisations a 6-week vitality training with 42% participation, versus 3-8% for standard EAPs. Preventive, scientifically grounded, pay only for participants."
+    },
+    "hero": {
+      "badge": "Scientifically proven method",
+      "title": "Perform <0>better</0> under <0>pressure</0>",
+      "subtitle": "More focus, fewer mistakes and a team that can deliver more often and with sharper results. A 6-week evidence-based brain training for teams that want to make a difference.",
+      "cta": "What does this deliver for you?",
+      "statsTitle": "Why organisations choose us",
+      "stats": [
+        {
+          "label": "Focus and concentration",
+          "value": "+24%"
+        },
+        {
+          "label": "Productivity",
+          "value": "+8%"
+        },
+        {
+          "label": "Absenteeism",
+          "value": "-21%"
+        },
+        {
+          "label": "Science",
+          "value": "40+ years"
+        }
+      ]
+    },
+    "challenges": {
+      "title": "Do you recognise one of these <0>challenges</0>?",
+      "subtitle": "We tackle these organisational challenges with our method.",
+      "items": [
+        {
+          "icon": "Activity",
+          "title": "Targets are under pressure",
+          "text": "Your team has to deliver, but the pressure keeps stacking up. Output is falling behind ambition."
+        },
+        {
+          "icon": "AlertCircle",
+          "title": "Mistakes cost time and money",
+          "text": "Under pressure sharpness drops. Small slips lead to rework, frustration and missed opportunities."
+        },
+        {
+          "icon": "Heart",
+          "title": "Absenteeism and dropout are too high",
+          "text": "Through dropout or illness your team is less available, exactly when you need them most."
+        },
+        {
+          "icon": "Shield",
+          "title": "Holding on to talent is hard",
+          "text": "Your best people are essential. Keeping talent takes more than good conditions."
+        }
+      ]
+    },
+    "results": {
+      "title": "The <0>result</0> of our training",
+      "subtitle": "The scientifically proven effects of our training.",
+      "items": [
+        {
+          "icon": "Brain",
+          "title": "Sharper focus under pressure",
+          "bullets": [
+            "Your team learns to consciously direct and hold attention. Less distraction, more progress on what really matters.",
+            "Targets become achievable, even when pressure rises."
+          ]
+        },
+        {
+          "icon": "Heart",
+          "title": "Fewer mistakes, better output",
+          "bullets": [
+            "A trained brain makes fewer unnecessary slips under pressure.",
+            "Research shows a clear drop in mistakes. Less rework, better output."
+          ]
+        },
+        {
+          "icon": "Shield",
+          "title": "Higher team availability",
+          "bullets": [
+            "Employees recognise stress earlier and adjust before dropout occurs.",
+            "Less absenteeism, less long-term dropout. A team that is available."
+          ]
+        },
+        {
+          "icon": "CheckCircle",
+          "title": "Happier team, lower turnover",
+          "bullets": [
+            "Employees experience more calm, more joy at work and more life satisfaction.",
+            "People who feel good in their place are less likely to look elsewhere."
+          ]
+        }
+      ]
+    },
+    "weeks": {
+      "title": "Our <0>6-week</0> core programme",
+      "intro": [
+        "With our <0>\"push-ups for the brain\"</0> employees train their brain. With this they strengthen two crucial brain systems.",
+        "The control center becomes stronger. Employees suppress impulsive automatic reactions, filter out irrelevant information and make more conscious decisions about their workload.",
+        "The warning system becomes more sensitive. Employees recognise stress signals in time and regulate tension, freeing up working memory to perform and preventing dropout."
+      ],
+      "imageAlt": "People during an attention and concentration training for better performance and less stress",
+      "items": [
+        {
+          "week": "Week 1",
+          "tags": [
+            "Control center"
+          ],
+          "title": "Breaking through autopilot",
+          "text": "Where are your thoughts while you brush your teeth? Probably already in your first meeting or your to-do list. Employees learn to notice when their thoughts wander off and bring their attention back to what they are doing right now. They train their control center by consciously paying attention to their current activity, again and again."
+        },
+        {
+          "week": "Week 2",
+          "tags": [
+            "Warning system"
+          ],
+          "title": "Recognising early warning signals",
+          "text": "Employees train their warning system so they notice tense shoulders, a tight jaw or shallow breathing before tension takes over. They take back control instead of the tension, because their stress sensors are sharper."
+        },
+        {
+          "week": "Week 3",
+          "tags": [
+            "Control center",
+            "Warning system"
+          ],
+          "title": "Working with pressure and stress",
+          "text": "Under pressure employees' working memory often goes haywire. They learn a short 3-minute exercise that quickly brings calm and clarity back to their head. They also discover how to plan smart breaks, so they stay sharp throughout the day."
+        },
+        {
+          "week": "Week 4",
+          "tags": [
+            "Control center",
+            "Warning system"
+          ],
+          "title": "Mental clarity",
+          "text": "Not every thought is a fact. Employees learn to recognise the difference between productive thinking and rumination. They also learn to observe their thoughts instead of getting carried away by them. The result: more peace of mind and less worrying."
+        },
+        {
+          "week": "Week 5",
+          "tags": [
+            "Control center"
+          ],
+          "title": "Better collaboration through conscious listening",
+          "text": "Under pressure employees often start formulating their reply while the other person is still talking. They learn to truly listen, take perspective and respond from understanding instead of reflex."
+        },
+        {
+          "week": "Week 6",
+          "tags": [
+            "Control center",
+            "Warning system"
+          ],
+          "title": "Lasting integration in your life",
+          "text": "Employees recognise their thought patterns and make the techniques they learned a lasting part of their daily routine. They build their own toolbox for every situation."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Frequently asked questions",
+      "items": [
+        {
+          "q": "Is the training online?",
+          "a": "The training does not have to be online, but an online format makes participation easier for employees. Research shows that online sessions are just as effective as in-person meetings. Training attention happens mainly through daily practice, while the workshops support that process. To give as many employees as possible the chance to take part, we therefore prefer an online training."
+        },
+        {
+          "q": "15 minutes of practice per day, how does that work?",
+          "a": "Participants receive a workbook at the start with a piece of theory and short exercises for each week. They also get audio recordings of the exercises. Some exercises can be done during daily routines like brushing teeth, showering or doing the dishes, so they cost no extra time. Other exercises ask about 12 minutes of sitting calmly to train attention."
+        },
+        {
+          "q": "What kind of exercises are they?",
+          "a": "All exercises are aimed at training attention. The goal is for participants to work and live with more focus and awareness. That is why the exercises are directly applicable in daily life, for example while brushing teeth, eating or walking. Each week also contains a special attention training of 12 minutes that is done seated."
+        },
+        {
+          "q": "What if a participant misses a session?",
+          "a": "If a participant misses a session they can call the trainer to receive all the information anyway. All necessary information is also in the workbook. For the best result it is important not to miss more than one session."
+        },
+        {
+          "q": "How do you ensure safe and comfortable learning?",
+          "a": "The training contains weekly group workshops with a maximum of 15 participants. Participants practise in a safe and comfortable way by responding to concrete questions, without having to share personal stories. This creates an environment in which everyone feels at ease and can practise attention fully."
+        },
+        {
+          "q": "How do I get this training approved internally?",
+          "a": "The training contributes to a drop in absenteeism and burnout cases, and makes participants more effective in their work. This makes the business case positive. Our experience is that the management team is often most interested in the effect on productivity. What matters is that there is an open attitude within the management team toward developing soft skills. To get insight into the impact for your organisation, you can use our calculator or schedule a conversation with Bas."
         }
       ]
     }
