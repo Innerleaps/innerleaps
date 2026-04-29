@@ -1,0 +1,158 @@
+{
+  "vitality": {
+    "meta": {
+      "description": "Innerleaps offers organizations a 6-week vitality training with 42% participation, versus 3-8% for standard EAPs. Preventive, science-based, pay only for actual participants."
+    },
+    "hero": {
+      "badge": "Scientifically proven training",
+      "title": "The proven <0>vitality training</0> for less <0>sick leave</0>",
+      "subtitle": "Scientifically proven vitality training. Participants take ownership of their own stress, regulate emotions better and build stronger resilience.",
+      "cta": "What's the impact for your team?",
+      "statsTitle": "Why organizations choose us",
+      "stats": [
+        { "label": "Sick leave", "value": "-21%" },
+        { "label": "Burn-out risk", "value": "-70%" },
+        { "label": "Life satisfaction", "value": "+15%" },
+        { "label": "Science", "value": "40+ years" }
+      ]
+    },
+    "challenges": {
+      "title": "Do you recognize one of these <0>challenges</0>?",
+      "subtitle": "These are the organizational challenges we tackle with our method.",
+      "items": [
+        {
+          "icon": "AlertCircle",
+          "title": "Setting boundaries is hard",
+          "text": "Employees are enthusiastic but often don't take their own limits seriously. Sometimes they keep going until it's too late, with stress-related dropout as a result."
+        },
+        {
+          "icon": "Activity",
+          "title": "Holding on to key talent is tough",
+          "text": "You want to keep important people engaged. With today's tight job market that's even harder than before."
+        },
+        {
+          "icon": "Shield",
+          "title": "Social safety under pressure",
+          "text": "Hierarchy, cultural differences or different values can lead to friction, awkward behavior or even an unsafe atmosphere."
+        },
+        {
+          "icon": "Heart",
+          "title": "Emotions in the workplace",
+          "text": "Employees can run into emotionally challenging situations. This can lead to stress, impulsive reactions and weaker collaboration."
+        },
+        {
+          "icon": "AlertCircle",
+          "title": "Sick leave is too high",
+          "text": "Stress and burn-out complaints keep coming back. People drop out and the workload for everyone else only grows."
+        }
+      ]
+    },
+    "results": {
+      "title": "The <0>results</0> of our training",
+      "subtitle": "The scientifically proven effects of our training.",
+      "items": [
+        {
+          "icon": "Brain",
+          "title": "Spot stress early",
+          "bullets": ["Employees learn to notice stress signals before it's too late. They take charge of their own stress and can adjust before they drop out."]
+        },
+        {
+          "icon": "Heart",
+          "title": "Stronger emotion regulation",
+          "bullets": ["Pressure and emotions in the workplace become manageable. Impulsiveness goes down because the control center in the brain gets stronger."]
+        },
+        {
+          "icon": "Shield",
+          "title": "Control over workload",
+          "bullets": ["With sharper stress awareness, employees say 'no' when they're hitting their limits. Ownership reduces stress and prevents dropout."]
+        },
+        {
+          "icon": "CheckCircle",
+          "title": "A socially safe workplace",
+          "bullets": ["Employees can hold back inappropriate reactions. This way, what they know about social safety is actually applied. Social safety and collaboration both improve."]
+        },
+        {
+          "icon": "Smile",
+          "title": "Hold on to talent",
+          "bullets": ["Employees feel less workload and more joy and engagement. This lowers staff turnover and helps you keep talent inside the organization."]
+        }
+      ]
+    },
+    "weeks": {
+      "title": "Our <0>6-week</0> Vitality Plus program",
+      "intro": [
+        "With our <0>\"push-ups for the brain\"</0> employees train their brain. This way they strengthen two crucial brain systems.",
+        "The control center gets stronger. Employees suppress impulsive automatic reactions, filter out irrelevant information and make more conscious decisions about their workload.",
+        "The warning system becomes more sensitive. Employees notice stress signals on time and regulate tension consciously. So they feel more rest and find more joy in their work and life."
+      ],
+      "imageAlt": "People during attention and concentration training for better performance and less stress",
+      "items": [
+        {
+          "week": "Week 1",
+          "tags": ["Control center"],
+          "title": "Breaking through autopilot",
+          "text": "Where are your thoughts while brushing your teeth? Probably already in your first meeting or your to-do list. Employees learn to notice when their thoughts wander off and bring their attention back to what they're doing right now. They train their control center by consciously paying attention to their current activity, again and again."
+        },
+        {
+          "week": "Week 2",
+          "tags": ["Warning system"],
+          "title": "Spotting early warning signals",
+          "text": "Employees train their warning system so they notice tense shoulders, a tight jaw or shallow breathing before tension takes over. They take back control because their feeling antennas get sharper."
+        },
+        {
+          "week": "Week 3",
+          "tags": ["Control center", "Warning system"],
+          "title": "Stop overthinking",
+          "text": "Thoughts are not facts. Employees learn the 3-step reset: a pause button that prevents overthinking from taking control. They put their focus where they want it to be."
+        },
+        {
+          "week": "Week 4",
+          "tags": ["Control center", "Warning system"],
+          "title": "Space between thought and reaction",
+          "text": "Employees no longer get carried away by their thoughts. They see thoughts as mental events that come and go. They get control and decide for themselves how they want to react instead of acting on autopilot."
+        },
+        {
+          "week": "Week 5",
+          "tags": ["Warning system"],
+          "title": "Stress recovery through kindness",
+          "text": "The inner critic works harder under pressure. Employees learn to treat themselves with kindness. It's the switch that calms their nervous system and creates space for clear thinking."
+        },
+        {
+          "week": "Week 6",
+          "tags": ["Control center", "Warning system"],
+          "title": "Lasting integration into your life",
+          "text": "Employees recognize their thought patterns and make the techniques they've learned a lasting part of their daily routine. They build their own toolbox for any situation."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Frequently asked questions",
+      "items": [
+        {
+          "q": "Is the training online?",
+          "a": "The training doesn't have to be online, but an online format makes it easier for employees to take part. Research shows online sessions are just as effective as in-person ones. Training attention happens mostly through daily practice, while the workshops support that process. To give as many employees as possible the chance to join, we prefer an online training."
+        },
+        {
+          "q": "15 minutes of practice a day, how does that work?",
+          "a": "Participants get a workbook at the start with a piece of theory and short exercises for each week. They also receive audio recordings of the exercises. Some exercises can be done during daily routines like brushing your teeth, showering or doing the dishes. So it doesn't cost any extra time. Other exercises take about 12 minutes to train attention while sitting quietly."
+        },
+        {
+          "q": "What kind of exercises are they?",
+          "a": "All exercises are aimed at training attention. The goal is for participants to work and live with more focus and awareness. That's why the exercises are directly applicable in daily life, for example while brushing teeth, eating or walking. Each week also includes a special 12-minute attention training done while sitting."
+        },
+        {
+          "q": "What if a participant misses a session?",
+          "a": "If someone misses a session they can call the trainer to still get all the information. The workbook also contains everything they need. For the best result it's important not to miss more than one session."
+        },
+        {
+          "q": "How do you make sure the learning environment is safe and comfortable?",
+          "a": "The training has weekly group workshops with up to 15 participants. People practice in a safe and comfortable way by responding to concrete questions, without having to share personal stories. So everyone feels at ease and can fully practice with attention."
+        },
+        {
+          "q": "How do I get this training approved internally?",
+          "a": "The training contributes to lower sick leave and fewer burn-out cases and makes participants more effective at work. So the business case is positive. Our experience shows the management team is often most interested in the impact on productivity. What matters is that there's an open attitude in the management team toward developing soft skills. To get insight into the impact for your organization, you can use our calculator or schedule a call with Bas."
+        }
+      ]
+    }
+  }
+}

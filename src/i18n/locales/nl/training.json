@@ -1,0 +1,158 @@
+{
+  "vitality": {
+    "meta": {
+      "description": "Innerleaps biedt organisaties een 6-weekse vitaliteitstraining met 42% deelname, versus 3-8% bij standaard EAP's. Preventief, wetenschappelijk onderbouwd, betaal alleen voor deelnemers."
+    },
+    "hero": {
+      "badge": "Wetenschappelijk bewezen training",
+      "title": "Het bewezen <0>vitaliteits­training</0> voor minder <0>verzuim</0>",
+      "subtitle": "Wetenschappelijk bewezen vitaliteits­training. Deelnemers ontwikkelen eigenaarschap over hun eigen stress, kunnen emoties beter reguleren én verhogen hun veerkracht.",
+      "cta": "Wat levert dit jullie op?",
+      "statsTitle": "Waarom organisaties ons kiezen",
+      "stats": [
+        { "label": "Verzuim", "value": "-21%" },
+        { "label": "Burn-out risico", "value": "-70%" },
+        { "label": "Tevreden over het leven", "value": "+15%" },
+        { "label": "Wetenschap", "value": "40+ jaar" }
+      ]
+    },
+    "challenges": {
+      "title": "Herken je één van deze <0>uitdagingen</0>?",
+      "subtitle": "Deze organisatie uitdagingen pakken wij aan met onze methode.",
+      "items": [
+        {
+          "icon": "AlertCircle",
+          "title": "Grenzen aangeven is moeilijk",
+          "text": "Medewerkers zijn enthousiast maar nemen vaak hun eigen grenzen niet serieus. Soms gaan ze zelfs door tot het te laat is met stress uitval als gevolg."
+        },
+        {
+          "icon": "Activity",
+          "title": "Kernspelers en talent behouden is uitdagend",
+          "text": "Belangrijk personeel wil je graag betrokken houden. Door de drukte op de arbeidsmarkt is dat extra lastig."
+        },
+        {
+          "icon": "Shield",
+          "title": "Sociale veiligheid onder druk",
+          "text": "Hiërarchie, culturele verschillen of verschillende waardes kunnen leiden tot botsingen, ongemakkelijk gedrag of zelfs een onveilige sfeer."
+        },
+        {
+          "icon": "Heart",
+          "title": "Emoties op de werkvloer",
+          "text": "Medewerkers kunnen te maken hebben met emotioneel uitdagende situaties. Dit kan leiden tot stress, impulsieve reacties en verminderde samenwerking."
+        },
+        {
+          "icon": "AlertCircle",
+          "title": "Verzuim is te hoog",
+          "text": "Stress- en burn-outklachten zijn een terugkerend probleem. Medewerkers vallen uit en daardoor neemt de werkdruk verder toe."
+        }
+      ]
+    },
+    "results": {
+      "title": "Het <0>resultaat</0> van onze training",
+      "subtitle": "De wetenschappelijk bewezen effecten van onze training.",
+      "items": [
+        {
+          "icon": "Brain",
+          "title": "Stress vroeg herkennen",
+          "bullets": ["Medewerkers leren stresssignalen opmerken voordat het te laat is. Ze nemen regie over hun eigen stress en kunnen bijsturen voordat uitval optreedt."]
+        },
+        {
+          "icon": "Heart",
+          "title": "Sterkere emotieregulatie",
+          "bullets": ["Drukte en emoties op de werkvloer worden beheersbaar. Impulsiviteit neemt af omdat het controlecentrum in het brein wordt sterker."]
+        },
+        {
+          "icon": "Shield",
+          "title": "Regie over werkdruk",
+          "bullets": ["Door sterker stressbewustzijn zeggen medewerkers 'nee' wanneer ze tegen hun grenzen lopen. Eigenaarschap vermindert stress en voorkomt uitval."]
+        },
+        {
+          "icon": "CheckCircle",
+          "title": "Sociaal veilige werkplek",
+          "bullets": ["Medewerkers kunnen ongepaste reacties onderdrukken. Hierdoor wordt de kennis over sociale veiligheid ook echt toegepast. De sociale veiligheid en samenwerking verbeterd."]
+        },
+        {
+          "icon": "Smile",
+          "title": "Talent behouden",
+          "bullets": ["Medewerkers ervaren minder werkdruk en meer werkplezier en betrokkenheid. Dit verlaagt het personeelsverloop en helpt talent aan de organisatie te binden."]
+        }
+      ]
+    },
+    "weeks": {
+      "title": "Ons <0>6-weekse</0> Vitaliteitsplus-programma",
+      "intro": [
+        "Met onze <0>\"push-ups voor het brein\"</0> trainen medewerkers hun brein. Hiermee versterken ze twee cruciale hersensystemen.",
+        "Het controlecentrum wordt sterker. Medewerkers onderdrukken impulsieve automatische reacties, filteren irrelevante informatie en nemen bewustere beslissingen over hun werkdruk.",
+        "Het waarschuwingssysteem wordt gevoeliger. Medewerkers herkennen stresssignalen op tijd en reguleren spanning bewust, waardoor ze meer rust ervaren en gelukkiger in hun werk en leven staan."
+      ],
+      "imageAlt": "Mensen tijdens een aandacht- en concentratietraining voor betere prestaties en minder stress",
+      "items": [
+        {
+          "week": "Week 1",
+          "tags": ["Controlecentrum"],
+          "title": "De automatische piloot doorbreken",
+          "text": "Waar zijn je gedachten terwijl je tanden poetst? Waarschijnlijk bij je eerste meeting of je to-do lijst. Medewerkers leren herkennen wanneer hun gedachten afdwalen en brengen hun aandacht terug naar wat ze nu doen. Ze trainen hun controlecentrum door telkens bewust aandacht te geven aan hun huidige activiteit."
+        },
+        {
+          "week": "Week 2",
+          "tags": ["Waarschuwingssysteem"],
+          "title": "Vroege waarschuwingssignalen herkennen",
+          "text": "Medewerkers trainen hun waarschuwingssysteem zodat ze gespannen schouders, een strakke kaak of oppervlakkige ademhaling opmerken voordat spanning hen overneemt. Ze pakken de controle omdat hun gevoelsantennes scherper worden."
+        },
+        {
+          "week": "Week 3",
+          "tags": ["Controlecentrum", "Waarschuwingssysteem"],
+          "title": "Stoppen met piekeren",
+          "text": "Gedachten zijn geen feiten. Medewerkers leren de 3-step reset: een pauze-knop die voorkomt dat piekeren de controle krijgt. Ze krijgen hun focus waar ze die willen hebben."
+        },
+        {
+          "week": "Week 4",
+          "tags": ["Controlecentrum", "Waarschuwingssysteem"],
+          "title": "Ruimte tussen gedachte en reactie",
+          "text": "Medewerkers laten zich niet meeslepen door gedachten. Ze zien gedachten als mentale gebeurtenissen die komen en gaan. Ze krijgen controle en bepalen zelf hoe ze willen reageren in plaats van automatisch te handelen."
+        },
+        {
+          "week": "Week 5",
+          "tags": ["Waarschuwingssysteem"],
+          "title": "Stressherstel door vriendelijkheid",
+          "text": "De innerlijke criticus werkt harder onder druk. Medewerkers leren zichzelf met vriendelijkheid te behandelen. De schakelaar om hun zenuwstelsel tot rust te brengen en ruimte te maken voor helder denken."
+        },
+        {
+          "week": "Week 6",
+          "tags": ["Controlecentrum", "Waarschuwingssysteem"],
+          "title": "Duurzame integratie in je leven",
+          "text": "Medewerkers herkennen hun gedachtepatronen en maken de geleerde technieken blijvend onderdeel van hun dagelijkse routine. Ze bouwen hun eigen toolbox voor alle situaties."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Veelgestelde vragen",
+      "items": [
+        {
+          "q": "Is de training online?",
+          "a": "De training hoeft niet per se online te zijn, maar een online vorm maakt deelname voor medewerkers makkelijker. Onderzoek laat zien dat online sessies net zo effectief zijn als fysieke bijeenkomsten. Het trainen van aandacht gebeurt vooral door dagelijkse oefening, terwijl de workshops dit proces ondersteunen. Om zoveel mogelijk medewerkers de kans te geven om mee te doen, geven we daarom de voorkeur aan een online training."
+        },
+        {
+          "q": "15 minuten oefenen per dag, hoe werkt dat?",
+          "a": "Deelnemers ontvangen bij aanvang een werkboek met per week een stukje theorie en korte oefeningen. Ook krijgen ze audio-opnames van de oefeningen. Een deel van de oefeningen kan worden gedaan tijdens dagelijkse routines, zoals tandenpoetsen, douchen of afwassen, zodat dit geen extra tijd kost. Andere oefeningen vragen ongeveer 12 minuten om rustig zittend de aandacht te trainen."
+        },
+        {
+          "q": "Wat voor soort oefeningen zijn het?",
+          "a": "Alle oefeningen zijn gericht op het trainen van aandacht. Het doel is dat deelnemers met meer focus en bewustzijn werken en leven. Daarom zijn de oefeningen direct toepasbaar in het dagelijks leven, bijvoorbeeld tijdens tandenpoetsen, eten of lopen. Daarnaast bevat elke week een speciale aandachtstraining van 12 minuten die zittend uitgevoerd wordt."
+        },
+        {
+          "q": "Wat als een deelnemer een sessie mist?",
+          "a": "Bij het missen van een sessie kunnen deelnemers de trainer bellen om toch alle informatie te ontvangen. Daarnaast staat alle benodigde informatie in het werkboek. Voor optimaal resultaat is het belangrijk om niet meer dan één sessie te missen."
+        },
+        {
+          "q": "Hoe zorgen jullie voor veilig en comfortabel leren?",
+          "a": "De training bevat wekelijkse groepsworkshops met maximaal 15 deelnemers. Deelnemers oefenen op een veilige en comfortabele manier door te reageren op concrete vragen, zonder dat ze persoonlijke verhalen hoeven te delen. Zo ontstaat een omgeving waarin iedereen zich op zijn gemak voelt en volop kan oefenen met aandacht."
+        },
+        {
+          "q": "Hoe krijg ik deze training intern verkocht?",
+          "a": "De training draagt bij aan een daling van verzuim en burn-outgevallen, én maakt deelnemers effectiever in hun werk. Hierdoor is de business case positief. Onze ervaring leert dat het managementteam vaak vooral geïnteresseerd is in het effect op productiviteit. Belangrijk is dat er binnen het managementteam een open houding is ten aanzien van de ontwikkeling van soft skills. Om inzicht te krijgen in de impact voor jullie organisatie, kan je onze calculator gebruiken of kan je een gesprek met Bas plannen."
+        }
+      ]
+    }
+  }
+}
