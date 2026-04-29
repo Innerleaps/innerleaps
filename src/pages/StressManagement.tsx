@@ -77,7 +77,6 @@ const StressManagement = () => {
       hideMasterclass
       hideStickyCtas
       showMethodCtaAfterWeeks
-      trustVariant="off-white"
     />
   );
 };

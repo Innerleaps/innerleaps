@@ -99,8 +99,6 @@ export interface TrainingPageLayoutProps {
   extraSection?: ReactNode;
   /** Optional extra section after Footer (e.g. ROICalculator wrapper) */
   belowFaqSection?: ReactNode;
-  /** Trust section background variant */
-  trustVariant?: "white" | "off-white";
 }
 
 const TrainingPageLayout = ({
@@ -117,7 +115,6 @@ const TrainingPageLayout = ({
   showMethodCtaAfterWeeks = false,
   extraSection,
   belowFaqSection,
-  trustVariant = "white",
 }: TrainingPageLayoutProps) => {
   const { t } = useTranslation("training");
   const { t: tCommon } = useTranslation();
@@ -450,7 +447,7 @@ const TrainingPageLayout = ({
         </div>
       </section>
 
-      <TrustSection variant={trustVariant} />
+      <TrustSection variant="white" />
 
       {belowFaqSection}
 
