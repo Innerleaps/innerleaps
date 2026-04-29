@@ -215,19 +215,27 @@ const SimplifiedNavigation = () => {
                 </button>
                 {isOrganisationMenuOpen && (
                   <div className="pl-4 mt-2 space-y-2">
-                    {organisationMenuItems.map((subItem) => (
-                      <Link
-                        key={subItem.label}
-                        to={subItem.href}
-                        onClick={() => {
-                          setIsMenuOpen(false);
-                          setIsOrganisationMenuOpen(false);
-                        }}
-                        className="block text-brand-gray-medium hover:text-brand-blue transition-colors duration-300 py-2 text-sm"
-                      >
-                        {subItem.label}
-                      </Link>
-                    ))}
+                    {organisationMenuItems.map((subItem) => {
+                      const active = isActiveRoute(subItem.href);
+                      return (
+                        <Link
+                          key={subItem.label}
+                          to={subItem.href}
+                          aria-current={active ? 'page' : undefined}
+                          onClick={() => {
+                            setIsMenuOpen(false);
+                            setIsOrganisationMenuOpen(false);
+                          }}
+                          className={`block transition-colors duration-300 py-2 text-sm border-l-4 pl-2 ${
+                            active
+                              ? 'border-brand-orange text-brand-purple font-semibold'
+                              : 'border-transparent text-brand-gray-medium hover:text-brand-blue'
+                          }`}
+                        >
+                          {subItem.label}
+                        </Link>
+                      );
+                    })}
                   </div>
                 )}
               </div>
@@ -242,19 +250,27 @@ const SimplifiedNavigation = () => {
                 </button>
                 {isEmployeeMenuOpen && (
                   <div className="pl-4 mt-2 space-y-2">
-                    {employeeMenuItems.map((subItem) => (
-                      <Link
-                        key={subItem.label}
-                        to={subItem.href}
-                        onClick={() => {
-                          setIsMenuOpen(false);
-                          setIsEmployeeMenuOpen(false);
-                        }}
-                        className="block text-brand-gray-medium hover:text-brand-blue transition-colors duration-300 py-2 text-sm"
-                      >
-                        {subItem.label}
-                      </Link>
-                    ))}
+                    {employeeMenuItems.map((subItem) => {
+                      const active = isActiveRoute(subItem.href);
+                      return (
+                        <Link
+                          key={subItem.label}
+                          to={subItem.href}
+                          aria-current={active ? 'page' : undefined}
+                          onClick={() => {
+                            setIsMenuOpen(false);
+                            setIsEmployeeMenuOpen(false);
+                          }}
+                          className={`block transition-colors duration-300 py-2 text-sm border-l-4 pl-2 ${
+                            active
+                              ? 'border-brand-orange text-brand-purple font-semibold'
+                              : 'border-transparent text-brand-gray-medium hover:text-brand-blue'
+                          }`}
+                        >
+                          {subItem.label}
+                        </Link>
+                      );
+                    })}
                   </div>
                 )}
               </div>
