@@ -485,9 +485,9 @@ const TrainingPageLayout = ({
       {extraSection}
 
       {/* FAQ */}
-      <section className="py-16 md:py-24 bg-brand-off-white">
+      <section className="py-16 md:py-24 bg-brand-off-white" aria-labelledby="faq-title">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-purple text-center leading-tight mb-12">
+          <h2 id="faq-title" className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-purple text-center leading-tight mb-12">
             {t(`${tKey}.faq.title`)}
           </h2>
 
