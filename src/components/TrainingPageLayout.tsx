@@ -288,8 +288,12 @@ const TrainingPageLayout = ({
 
           <div className="grid grid-cols-1 md:grid-cols-6 gap-8 max-w-6xl mx-auto">
             {challenges.map((c, i) => {
-              // Center the 4th card when 5 items (2-2-1 layout requires offset)
-              const offset = challenges.length === 5 && i === 3 ? "md:col-start-2" : "";
+              // Center last card on the second row when 4 or 5 items
+              const total = challenges.length;
+              const offset =
+                total === 5 && i === 3 ? "md:col-start-2"
+                : total === 4 && i === 3 ? "md:col-start-3"
+                : "";
               return (
                 <div key={i} className={`md:col-span-2 ${offset} bg-white p-6 rounded-lg space-y-4`}>
                   <div className="p-3 rounded-lg bg-brand-orange/5 w-fit mx-auto">
@@ -320,7 +324,11 @@ const TrainingPageLayout = ({
 
           <div className="grid grid-cols-1 md:grid-cols-6 gap-8 max-w-6xl mx-auto">
             {results.map((r, i) => {
-              const offset = results.length === 5 && i === 3 ? "md:col-start-2" : "";
+              const total = results.length;
+              const offset =
+                total === 5 && i === 3 ? "md:col-start-2"
+                : total === 4 && i === 3 ? "md:col-start-3"
+                : "";
               return (
                 <div key={i} className={`md:col-span-2 ${offset} bg-brand-off-white p-6 rounded-lg space-y-4`}>
                   <div className="p-3 rounded-lg bg-brand-orange/5 w-fit mx-auto">
