@@ -1,8 +1,10 @@
 import { ReactNode } from "react";
 import { Trans, useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet-async";
+import { Link, useLocation } from "react-router-dom";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Button } from "@/components/ui/button";
+import { detectLanguageFromPath } from "@/i18n/config";
 import {
   Brain,
   Heart,
@@ -77,7 +79,8 @@ export interface TrainingPageLayoutProps {
   tKey: string;
   heroImage: string;
   heroImageAlt: string;
-  heroCtaOnClick: () => void;
+  /** Optional hero CTA. Omit to hide the button entirely. */
+  heroCtaOnClick?: () => void;
   /** Optional second CTA for hero */
   heroSecondaryCta?: { label: string; onClick: () => void };
   /** Logos for the marquee */
@@ -86,6 +89,12 @@ export interface TrainingPageLayoutProps {
   weeksImage?: string;
   /** Variant for the MasterclassSection */
   masterclassVariant?: "employer" | "employee";
+  /** Hide the MasterclassSection entirely */
+  hideMasterclass?: boolean;
+  /** Hide the floating sticky CTAs (StickyCtaButtons) */
+  hideStickyCtas?: boolean;
+  /** Show "Discover the method" CTA at the bottom of the weeks block */
+  showMethodCtaAfterWeeks?: boolean;
   /** Optional extra section rendered just before the FAQ */
   extraSection?: ReactNode;
   /** Optional extra section after Footer (e.g. ROICalculator wrapper) */
@@ -103,11 +112,18 @@ const TrainingPageLayout = ({
   logos,
   weeksImage,
   masterclassVariant = "employer",
+  hideMasterclass = false,
+  hideStickyCtas = false,
+  showMethodCtaAfterWeeks = false,
   extraSection,
   belowFaqSection,
   trustVariant = "white",
 }: TrainingPageLayoutProps) => {
   const { t } = useTranslation("training");
+  const { t: tCommon } = useTranslation();
+  const { pathname } = useLocation();
+  const lang = detectLanguageFromPath(pathname);
+  const methodHref = lang === "en" ? "/en/method" : "/breintraining-methode";
 
   // Helper to get array data
   const stats = t(`${tKey}.hero.stats`, { returnObjects: true }) as TrainingStat[];
@@ -123,7 +139,7 @@ const TrainingPageLayout = ({
         <meta name="description" content={t(`${tKey}.meta.description`)} />
       </Helmet>
       <SimplifiedNavigation />
-      <StickyCtaButtons />
+      {!hideStickyCtas && <StickyCtaButtons />}
 
       {/* Hero */}
       <section className="relative min-h-screen flex items-start sm:items-center overflow-hidden text-white">
@@ -165,25 +181,29 @@ const TrainingPageLayout = ({
                 </p>
               </div>
 
-              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 w-full justify-center lg:justify-start">
-                <Button
-                  size="lg"
-                  className="w-full sm:w-auto bg-brand-orange hover:bg-brand-orange text-white hover:text-white font-semibold py-3 px-4 sm:py-4 sm:px-6 rounded-lg text-sm sm:text-base lg:text-lg shadow-xl"
-                  onClick={heroCtaOnClick}
-                >
-                  {t(`${tKey}.hero.cta`)}
-                </Button>
-                {heroSecondaryCta && (
-                  <Button
-                    size="lg"
-                    variant="outline"
-                    className="w-full sm:w-auto bg-white/10 backdrop-blur-sm border-white text-white hover:bg-white hover:text-brand-purple font-semibold py-3 px-4 sm:py-4 sm:px-6 rounded-lg text-sm sm:text-base lg:text-lg shadow-xl"
-                    onClick={heroSecondaryCta.onClick}
-                  >
-                    {heroSecondaryCta.label}
-                  </Button>
-                )}
-              </div>
+              {(heroCtaOnClick || heroSecondaryCta) && (
+                <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 w-full justify-center lg:justify-start">
+                  {heroCtaOnClick && (
+                    <Button
+                      size="lg"
+                      className="w-full sm:w-auto bg-brand-orange hover:bg-brand-orange text-white hover:text-white font-semibold py-3 px-4 sm:py-4 sm:px-6 rounded-lg text-sm sm:text-base lg:text-lg shadow-xl"
+                      onClick={heroCtaOnClick}
+                    >
+                      {t(`${tKey}.hero.cta`)}
+                    </Button>
+                  )}
+                  {heroSecondaryCta && (
+                    <Button
+                      size="lg"
+                      variant="outline"
+                      className="w-full sm:w-auto bg-white/10 backdrop-blur-sm border-white text-white hover:bg-white hover:text-brand-purple font-semibold py-3 px-4 sm:py-4 sm:px-6 rounded-lg text-sm sm:text-base lg:text-lg shadow-xl"
+                      onClick={heroSecondaryCta.onClick}
+                    >
+                      {heroSecondaryCta.label}
+                    </Button>
+                  )}
+                </div>
+              )}
             </div>
 
             <div className="w-full relative animate-scale-in mt-6 lg:mt-0">
@@ -384,12 +404,25 @@ const TrainingPageLayout = ({
                 </div>
               ))}
             </div>
+
+            {showMethodCtaAfterWeeks && (
+              <div className="text-center mt-12">
+                <p className="text-xl text-brand-gray-medium mb-6">
+                  {tCommon("programOverview.outroQuestion")}
+                </p>
+                <Link to={methodHref}>
+                  <Button className="bg-brand-orange hover:bg-brand-orange/90 text-white py-3 px-8 rounded-lg text-lg font-semibold">
+                    {tCommon("cta.discoverMethod")}
+                  </Button>
+                </Link>
+              </div>
+            )}
           </div>
         </section>
       )}
 
       {/* Masterclass */}
-      <MasterclassSection variant={masterclassVariant} />
+      {!hideMasterclass && <MasterclassSection variant={masterclassVariant} />}
 
       {extraSection}
 

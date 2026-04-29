@@ -1,37 +1,25 @@
-import { useState, useEffect, lazy, Suspense } from "react";
+import { useEffect } from "react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-import { EXTERNAL_URLS } from "@/constants/externalUrls";
 import SimplifiedNavigation from "@/components/SimplifiedNavigation";
-import StickyCtaButtons from "@/components/StickyCtaButtons";
 import TrustSection from "@/components/TrustSection";
 import Footer from "@/components/Footer";
-import MasterclassSection from "@/components/MasterclassSection";
 import { Button } from "@/components/ui/button";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import {
   Brain,
-  Heart,
-  Shield,
-  Smile,
-  Moon,
   CheckCircle,
   AlertCircle,
-  Frown,
   BedDouble,
   Calendar,
   Clock,
   Laptop,
   Award,
   Activity,
-  RotateCcw,
   BookOpen,
   Star,
-  
-  Gift,
 } from "lucide-react";
 import heroBackground from "@/assets/Vitaliteitsprogramma_presentatie_Innerleaps.png";
-import masterclassImage from "@/assets/Stressmanagement_masterclass.png";
 import breinTrainingImg from "@/assets/6_weken_brein_trainen.png";
 
 // Client logos
@@ -60,34 +48,14 @@ import paConsultingLogo from "@/assets/Vitaliteitsprogramma_PA_consulting_light.
 import nobelLogo from "@/assets/Vitaliteitsprogramma_nobel_recruitment_light.png";
 import hollandColoursLogo from "@/assets/Vitaliteitsprogramma_Holland_Colours_light.png";
 
-// Lazy load modals for better performance
-const MasterclassFormModal = lazy(() => import("@/components/MasterclassFormModal"));
-const ProgramRegistrationModal = lazy(() => import("@/components/ProgramRegistrationModal"));
-
-// Trust section logos
+// NOTE: B2X registration flow (Aanmelden Training CTAs, MasterclassSection, StickyCtaButtons,
+// ProgramRegistrationModal, MasterclassFormModal) is intentionally disabled on this page.
+// See mem://features/training-page-b2x-flow.md for the removed snippets and how to restore.
 
 const PrestatieProgramma = () => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const [isRegistrationModalOpen, setIsRegistrationModalOpen] = useState(false);
-
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-
-  const scrollToMasterclass = () => {
-    const element = document.getElementById("masterclass");
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
-  };
-
-  const handleModalOpen = () => {
-    setIsModalOpen(true);
-  };
-
-  const openGoogleForm = () => {
-    window.open(EXTERNAL_URLS.PRESTATIE_PROGRAM_SIGNUP, "_blank", "noopener,noreferrer");
-  };
 
   const logos = [
     { src: oliverLogo, alt: "Oliver Wyman" },
@@ -160,15 +128,6 @@ const PrestatieProgramma = () => {
                 </p>
               </div>
 
-              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 w-full justify-center lg:justify-start">
-                <Button
-                  size="lg"
-                  className="w-full sm:w-auto bg-brand-orange hover:bg-brand-orange/90 text-white font-semibold py-3 px-4 sm:py-4 sm:px-6 rounded-lg text-sm sm:text-base lg:text-lg shadow-xl"
-                  onClick={openGoogleForm}
-                >
-                  Aanmelden training
-                </Button>
-              </div>
             </div>
 
             <div className="w-full relative animate-scale-in mt-6 lg:mt-0">
@@ -479,15 +438,6 @@ const PrestatieProgramma = () => {
             </div>
           </div>
 
-          <div className="text-center mt-12">
-            <p className="text-xl text-brand-gray-medium mb-6">Wil jij dit ook bereiken?</p>
-            <Button
-              onClick={() => setIsRegistrationModalOpen(true)}
-              className="bg-brand-orange hover:bg-brand-orange/90 text-white py-3 px-8 rounded-lg text-lg font-semibold"
-            >
-              Aanmelden Training
-            </Button>
-          </div>
         </div>
       </section>
 
@@ -550,15 +500,6 @@ const PrestatieProgramma = () => {
             </div>
           </div>
 
-          <div className="text-center mt-12">
-            <p className="text-xl text-brand-gray-medium mb-6">Klaar om ook te starten?</p>
-            <Button
-              onClick={openGoogleForm}
-              className="bg-brand-orange hover:bg-brand-orange/90 text-white py-3 px-8 rounded-lg text-lg font-semibold"
-            >
-              Aanmelden Training
-            </Button>
-          </div>
         </div>
       </section>
 
@@ -595,14 +536,6 @@ const PrestatieProgramma = () => {
             </div>
           </div>
 
-          <div className="text-center mb-16">
-            <p className="text-xl md:text-2xl text-brand-gray-medium mb-4">Meer weten over onze methode?</p>
-            <Link to="/breintraining-methode">
-              <Button className="bg-brand-orange hover:bg-brand-orange/90 text-white py-3 px-8 rounded-lg text-lg font-semibold">
-                Ontdek de methode
-              </Button>
-            </Link>
-          </div>
 
           <div className="max-w-3xl mx-auto space-y-6">
             <div className="bg-brand-off-white p-6 rounded-xl space-y-3">
@@ -715,21 +648,18 @@ const PrestatieProgramma = () => {
           </div>
 
           <div className="text-center mt-12">
-            <p className="text-xl text-brand-gray-medium mb-6">Ben je ook zo enthousiast?</p>
-            <Button
-              onClick={openGoogleForm}
-              className="bg-brand-orange hover:bg-brand-orange/90 text-white py-3 px-8 rounded-lg text-lg font-semibold"
-            >
-              Aanmelden Training
-            </Button>
+            <p className="text-xl text-brand-gray-medium mb-6">Meer weten over onze methode?</p>
+            <Link to="/breintraining-methode">
+              <Button className="bg-brand-orange hover:bg-brand-orange/90 text-white py-3 px-8 rounded-lg text-lg font-semibold">
+                Ontdek de methode
+              </Button>
+            </Link>
           </div>
         </div>
       </section>
 
       {/* Prijs Sectie verwijderd */}
 
-      {/* Masterclass Sectie */}
-      <MasterclassSection variant="employee" />
 
       {/* FAQ Sectie */}
       <section className="py-16 md:py-24 bg-white">
@@ -819,22 +749,10 @@ const PrestatieProgramma = () => {
       {/* Trust Sectie */}
       <TrustSection variant="off-white" />
 
-      {/* Program Registration Modal - lazy loaded */}
-      <Suspense fallback={null}>
-        {isRegistrationModalOpen && (
-          <ProgramRegistrationModal
-            isOpen={isRegistrationModalOpen}
-            onClose={() => setIsRegistrationModalOpen(false)}
-            programType="prestatie"
-          />
-        )}
-      </Suspense>
-
-      <StickyCtaButtons onMasterclassClick={scrollToMasterclass} onProgramRegistrationClick={openGoogleForm} />
-
       <Footer />
     </div>
   );
 };
 
 export default PrestatieProgramma;
+
