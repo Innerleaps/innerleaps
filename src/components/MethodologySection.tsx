@@ -38,7 +38,7 @@ const MethodologySection = memo(() => {
             </div>
             <div>
               <img
-                src={trainingImage}
+                src={lang === 'en' ? trainingImageEn : trainingImage}
                 alt={t('methodology.imageAlt')}
                 className="w-full h-auto rounded-lg"
               />
