@@ -1,6 +1,7 @@
 {
   "vitality": {
     "meta": {
+      "title": "Vitality training for organisations | Innerleaps",
       "description": "Innerleaps offers organizations a 6-week vitality training with 42% participation, versus 3-8% for standard EAPs. Preventive, science-based, pay only for actual participants."
     },
     "hero": {
@@ -202,6 +203,7 @@
   },
   "stress": {
     "meta": {
+      "title": "Stress management training | Innerleaps",
       "description": "Innerleaps lowers stress through brain training: spot stress signals earlier and recover faster. 6 weeks, based on neuroscience research."
     },
     "hero": {
@@ -396,22 +398,19 @@
           "a": "Innerleaps' awareness trainings build on evidence-based programs such as MBSR, MBCT and WorkplaceMT. The foundation rests on 12 scientific studies, including multiple meta-analyses and randomized controlled trials. The evidence is strong enough that the U.S. military has incorporated attention training into its official doctrine (U.S. Army Field Manual 7-22), and organizations like Google, Apple, Microsoft, Nestlé and Unilever have implemented similar programs."
         },
         {
-          "q": "What does an Innerleaps program deliver for our employees?",
+          "q": "What does an Innerleaps program deliver?",
           "a": "Innerleaps participants show measurable improvements in exactly the areas where most organizations feel the pain:\n\n65 to 72% experience less stress\n60 to 84% show a reduction in burn-out symptoms\n64 to 77% become more resilient\n58 to 60% are more productive at work\n57 to 78% sleep better\nThe risk of long-term sick leave drops by 70% (from 54.4% to 16.4%)\n\nImportantly, these effects are sustained for at least 12 months after the training. This is not a temporary boost, but lasting behavioral change."
         },
         {
-          "q": "What is the ROI of an investment in Innerleaps?",
-          "a": "Based on conservative calculations, ROI ranges between 497% and 775% within the first year. For a group of 15 participants, this yields annual cost savings of €42,834 to €66,816. The returns come from three sources: 15 to 21% reduction in absenteeism, 5 to 8% productivity gains and 5 to 8% lower turnover. Want a calculation for your own organization? Innerleaps provides an ROI calculator where you can input your specific absenteeism, salary and turnover figures."
-        },
-        {
-          "q": "How does Innerleaps improve employee performance?",
-          "a": "Innerleaps improves performance by optimizing working memory, the mental \"workspace\" where thinking, deciding and acting take place. This happens through three mechanisms:\n\nFirst, relevant information is selected faster and irrelevant information is suppressed more effectively. Focus increases, distraction decreases. Research shows up to 24% improvement on attention tasks (Jha et al., 2021).\n\nSecond, stress and pressure normally occupy a large share of working memory. When that pressure decreases, capacity is freed up for the task itself.\n\nThird, working memory becomes more efficient: better results with less neural effort (Bailey et al., 2020). Employees perform sharper and have energy left at the end of the day."
+          "q": "How does innerleaps improve my performance?",
+          "a": "Innerleaps improves your performance by optimising working memory, the mental \"workbench\" where thinking, deciding and acting happen. This works through three mechanisms:\n\nFirst, relevant information is selected faster and irrelevant information is suppressed better. Your concentration increases, distraction decreases. Research shows up to 24% improvement on attention tasks (Jha et al., 2021).\n\nSecond, stress and pressure normally occupy a large share of working memory. When that pressure decreases, capacity is freed up for the task itself.\n\nThird, working memory becomes more efficient: better results with less neural effort (Bailey et al., 2020). You perform sharper and have energy left at the end of the day."
         }
       ]
     }
   },
   "performance": {
     "meta": {
+      "title": "Performance training for focus and productivity | Innerleaps",
       "description": "Innerleaps improves performance under pressure with focused brain training. Employees train focus and attention in 6 weeks. Based on the method used by top athletes and world-class CEOs."
     },
     "hero": {
@@ -606,22 +605,19 @@
           "a": "Innerleaps' awareness trainings build on evidence-based programs such as MBSR, MBCT and WorkplaceMT. The foundation rests on 12 scientific studies, including multiple meta-analyses and randomized controlled trials. The evidence is strong enough that the U.S. military has incorporated attention training into its official doctrine (U.S. Army Field Manual 7-22), and organizations like Google, Apple, Microsoft, Nestlé and Unilever have implemented similar programs."
         },
         {
-          "q": "What does an Innerleaps program deliver for our employees?",
+          "q": "What does an Innerleaps program deliver?",
           "a": "Innerleaps participants show measurable improvements in exactly the areas where most organizations feel the pain:\n\n65 to 72% experience less stress\n60 to 84% show a reduction in burn-out symptoms\n64 to 77% become more resilient\n58 to 60% are more productive at work\n57 to 78% sleep better\nThe risk of long-term sick leave drops by 70% (from 54.4% to 16.4%)\n\nImportantly, these effects are sustained for at least 12 months after the training. This is not a temporary boost, but lasting behavioral change."
         },
         {
-          "q": "What is the ROI of an investment in Innerleaps?",
-          "a": "Based on conservative calculations, ROI ranges between 497% and 775% within the first year. For a group of 15 participants, this yields annual cost savings of €42,834 to €66,816. The returns come from three sources: 15 to 21% reduction in absenteeism, 5 to 8% productivity gains and 5 to 8% lower turnover. Want a calculation for your own organization? Innerleaps provides an ROI calculator where you can input your specific absenteeism, salary and turnover figures."
-        },
-        {
-          "q": "How does Innerleaps improve employee performance?",
-          "a": "Innerleaps improves performance by optimizing working memory, the mental \"workspace\" where thinking, deciding and acting take place. This happens through three mechanisms:\n\nFirst, relevant information is selected faster and irrelevant information is suppressed more effectively. Focus increases, distraction decreases. Research shows up to 24% improvement on attention tasks (Jha et al., 2021).\n\nSecond, stress and pressure normally occupy a large share of working memory. When that pressure decreases, capacity is freed up for the task itself.\n\nThird, working memory becomes more efficient: better results with less neural effort (Bailey et al., 2020). Employees perform sharper and have energy left at the end of the day."
+          "q": "How does innerleaps improve my performance?",
+          "a": "Innerleaps improves your performance by optimising working memory, the mental \"workbench\" where thinking, deciding and acting happen. This works through three mechanisms:\n\nFirst, relevant information is selected faster and irrelevant information is suppressed better. Your concentration increases, distraction decreases. Research shows up to 24% improvement on attention tasks (Jha et al., 2021).\n\nSecond, stress and pressure normally occupy a large share of working memory. When that pressure decreases, capacity is freed up for the task itself.\n\nThird, working memory becomes more efficient: better results with less neural effort (Bailey et al., 2020). You perform sharper and have energy left at the end of the day."
         }
       ]
     }
   },
   "sustainability": {
     "meta": {
+      "title": "Sustainable employability training | Innerleaps",
       "description": "Innerleaps offers organisations a 6-week vitality training with 42% participation, versus 3-8% for standard EAPs. Preventive, scientifically grounded, pay only for participants."
     },
     "hero": {
