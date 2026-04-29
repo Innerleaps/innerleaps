@@ -131,13 +131,62 @@ const TrainingPageLayout = ({
   const results = t(`${tKey}.results.items`, { returnObjects: true }) as TrainingResult[];
   const weeks = t(`${tKey}.weeks.items`, { returnObjects: true }) as TrainingWeek[];
   const weekIntro = t(`${tKey}.weeks.intro`, { returnObjects: true }) as string[];
-  const faqItems = t(`${tKey}.faq.items`, { returnObjects: true }) as TrainingFaq[];
+  const metaTitle = t(`${tKey}.meta.title`, { defaultValue: "" });
+  const metaDescription = t(`${tKey}.meta.description`);
+  const canonicalUrl = `${SITE_URL}${pathname}`;
+  const ogImage = typeof heroImage === "string" ? heroImage : "";
+  const absOgImage = ogImage.startsWith("http") ? ogImage : `${SITE_URL}${ogImage}`;
+
+  const faqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqItems.map((item) => ({
+      "@type": "Question",
+      name: item.q,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: item.a,
+      },
+    })),
+  };
+
+  const courseJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Course",
+    name: metaTitle || t(`${tKey}.hero.title`, { defaultValue: "Innerleaps training" }),
+    description: metaDescription,
+    inLanguage: lang === "en" ? "en" : "nl",
+    url: canonicalUrl,
+    provider: {
+      "@type": "Organization",
+      name: "Innerleaps",
+      url: SITE_URL,
+    },
+  };
 
   return (
     <div className="min-h-screen">
       <Helmet>
-        <meta name="description" content={t(`${tKey}.meta.description`)} />
+        {metaTitle && <title>{metaTitle}</title>}
+        <meta name="description" content={metaDescription} />
+        <html lang={lang === "en" ? "en" : "nl"} />
+        {/* Open Graph */}
+        {metaTitle && <meta property="og:title" content={metaTitle} />}
+        <meta property="og:description" content={metaDescription} />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={canonicalUrl} />
+        {absOgImage && <meta property="og:image" content={absOgImage} />}
+        <meta property="og:site_name" content="Innerleaps" />
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        {metaTitle && <meta name="twitter:title" content={metaTitle} />}
+        <meta name="twitter:description" content={metaDescription} />
+        {absOgImage && <meta name="twitter:image" content={absOgImage} />}
+        {/* Structured data */}
+        <script type="application/ld+json">{JSON.stringify(faqJsonLd)}</script>
+        <script type="application/ld+json">{JSON.stringify(courseJsonLd)}</script>
       </Helmet>
+      <HreflangTags />
       <SimplifiedNavigation />
       {!hideStickyCtas && <StickyCtaButtons />}
 
