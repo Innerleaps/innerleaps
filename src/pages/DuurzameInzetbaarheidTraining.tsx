@@ -579,10 +579,11 @@ const DuurzameInzetbaarheidTraining = () => {
                   Waarschuwingssysteem
                 </span>
               </div>
-              <h3 className="text-xl font-bold text-brand-gray-dark">Stoppen met piekeren</h3>
+              <h3 className="text-xl font-bold text-brand-gray-dark">Werken met druk en spanning</h3>
               <p className="text-lg text-brand-gray-medium leading-relaxed">
-                Gedachten zijn geen feiten. Medewerkers leren de 3-step reset: een pauze-knop die voorkomt dat piekeren
-                de controle krijgt. Ze krijgen hun focus waar ze die willen hebben.
+                Onder druk slaat het werkgeheugen van medewerkers vaak op tilt. Ze leren een korte oefening van 3
+                minuten waarmee ze hun hoofd snel weer rustig en helder krijgen. Ook ontdekken ze hoe ze pauzes slim
+                inplannen, zodat ze de hele dag scherp blijven.
               </p>
             </div>
 
@@ -598,11 +599,11 @@ const DuurzameInzetbaarheidTraining = () => {
                   Waarschuwingssysteem
                 </span>
               </div>
-              <h3 className="text-xl font-bold text-brand-gray-dark">Ruimte tussen gedachte en reactie</h3>
+              <h3 className="text-xl font-bold text-brand-gray-dark">Mentale helderheid</h3>
               <p className="text-lg text-brand-gray-medium leading-relaxed">
-                Medewerkers laten zich niet meeslepen door gedachten. Ze zien gedachten als mentale gebeurtenissen die
-                komen en gaan. Ze krijgen controle en bepalen zelf hoe ze willen reageren in plaats van automatisch te
-                handelen.
+                Niet elke gedachte is een feit. Medewerkers leren het verschil herkennen tussen productief nadenken en
+                blijven malen. Ook leren ze hun gedachten te observeren in plaats van erin mee te gaan. Het resultaat:
+                meer rust in hun hoofd en minder gepieker.
               </p>
             </div>
 

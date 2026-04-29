@@ -650,10 +650,11 @@ const PrestatieProgramma = () => {
                   Waarschuwingssysteem
                 </span>
               </div>
-              <h3 className="text-xl font-bold text-brand-gray-dark">Stoppen met piekeren</h3>
+              <h3 className="text-xl font-bold text-brand-gray-dark">Werken met druk en spanning</h3>
               <p className="text-lg text-brand-gray-medium leading-relaxed">
-                Gedachten zijn geen feiten. Leer de 3-step reset: een pauze-knop die voorkomt dat piekeren de controle
-                krijgt. Krijg je focus waar jij die wil hebben.
+                Onder druk slaat je werkgeheugen vaak op tilt. In deze week leer je een korte oefening van 3 minuten
+                waarmee je je hoofd snel weer rustig en helder krijgt. Je ontdekt ook hoe je pauzes slim inplant,
+                zodat je de hele dag scherp blijft.
               </p>
             </div>
 
@@ -669,10 +670,11 @@ const PrestatieProgramma = () => {
                   Waarschuwingssysteem
                 </span>
               </div>
-              <h3 className="text-xl font-bold text-brand-gray-dark">Ruimte tussen gedachte en reactie</h3>
+              <h3 className="text-xl font-bold text-brand-gray-dark">Mentale helderheid</h3>
               <p className="text-lg text-brand-gray-medium leading-relaxed">
-                Laat je niet meeslepen door gedachten. Zie ze als mentale gebeurtenissen die komen en gaan. Krijg
-                controle en bepaal zelf hoe je wil reageren in plaats van automatisch te handelen.
+                Niet elke gedachte is een feit. Je leert het verschil herkennen tussen productief nadenken en blijven
+                malen. Ook leer jij je gedachten te observeren in plaats van erin mee te gaan. Het resultaat: meer rust
+                in je hoofd en minder gepieker.
               </p>
             </div>
 
