@@ -32,6 +32,8 @@ const SimplifiedNavigation = () => {
     performance: lang === 'en' ? '/en/performance-training' : '/prestatie-training',
   };
 
+  const isActiveRoute = (href: string) => pathname === href;
+
   const organisationMenuItems = [
     { label: t('menuItems.vitality.label'), href: href.vitality, description: t('menuItems.vitality.description') },
     { label: t('menuItems.employability.label'), href: href.employability, description: t('menuItems.employability.description') },
