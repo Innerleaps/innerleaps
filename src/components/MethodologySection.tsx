@@ -3,6 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { Button } from "@/components/ui/button";
 import trainingImage from "@/assets/training_voor_betere_prestatie_minder_stress_en_lager_verzuim.png";
+import trainingImageEn from "@/assets/braintraining_for_optimal_performance.png";
 import { detectLanguageFromPath } from "@/i18n/config";
 
 const MethodologySection = memo(() => {
