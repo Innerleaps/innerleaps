@@ -656,21 +656,18 @@ const PrestatieProgramma = () => {
           </div>
 
           <div className="text-center mt-12">
-            <p className="text-xl text-brand-gray-medium mb-6">Ben je ook zo enthousiast?</p>
-            <Button
-              onClick={openGoogleForm}
-              className="bg-brand-orange hover:bg-brand-orange/90 text-white py-3 px-8 rounded-lg text-lg font-semibold"
-            >
-              Aanmelden Training
-            </Button>
+            <p className="text-xl text-brand-gray-medium mb-6">Meer weten over onze methode?</p>
+            <Link to="/breintraining-methode">
+              <Button className="bg-brand-orange hover:bg-brand-orange/90 text-white py-3 px-8 rounded-lg text-lg font-semibold">
+                Ontdek de methode
+              </Button>
+            </Link>
           </div>
         </div>
       </section>
 
       {/* Prijs Sectie verwijderd */}
 
-      {/* Masterclass Sectie */}
-      <MasterclassSection variant="employee" />
 
       {/* FAQ Sectie */}
       <section className="py-16 md:py-24 bg-white">
@@ -760,22 +757,10 @@ const PrestatieProgramma = () => {
       {/* Trust Sectie */}
       <TrustSection variant="off-white" />
 
-      {/* Program Registration Modal - lazy loaded */}
-      <Suspense fallback={null}>
-        {isRegistrationModalOpen && (
-          <ProgramRegistrationModal
-            isOpen={isRegistrationModalOpen}
-            onClose={() => setIsRegistrationModalOpen(false)}
-            programType="prestatie"
-          />
-        )}
-      </Suspense>
-
-      <StickyCtaButtons onMasterclassClick={scrollToMasterclass} onProgramRegistrationClick={openGoogleForm} />
-
       <Footer />
     </div>
   );
 };
 
 export default PrestatieProgramma;
+
