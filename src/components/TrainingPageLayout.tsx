@@ -404,12 +404,25 @@ const TrainingPageLayout = ({
                 </div>
               ))}
             </div>
+
+            {showMethodCtaAfterWeeks && (
+              <div className="text-center mt-12">
+                <p className="text-xl text-brand-gray-medium mb-6">
+                  {tCommon("programOverview.outroQuestion")}
+                </p>
+                <Link to={methodHref}>
+                  <Button className="bg-brand-orange hover:bg-brand-orange/90 text-white py-3 px-8 rounded-lg text-lg font-semibold">
+                    {tCommon("cta.discoverMethod")}
+                  </Button>
+                </Link>
+              </div>
+            )}
           </div>
         </section>
       )}
 
       {/* Masterclass */}
-      <MasterclassSection variant={masterclassVariant} />
+      {!hideMasterclass && <MasterclassSection variant={masterclassVariant} />}
 
       {extraSection}
 
