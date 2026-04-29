@@ -351,7 +351,7 @@ const TrainingPageLayout = ({
       </section>
 
       {/* Program Overview (shared, already i18n) */}
-      <ProgramOverviewSection />
+      <ProgramOverviewSection hideOutroCta={showMethodCtaAfterWeeks} />
 
       {/* Weeks */}
       {weeks && weeks.length > 0 && (
