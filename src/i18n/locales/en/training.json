@@ -161,8 +161,8 @@
     },
     "hero": {
       "badge": "Scientifically proven training",
-      "title": "Less <0>pressure</0> and more <0>calm</0> in your head",
-      "subtitle": "Scientifically proven stress management training for a calm head and more joy in your life.",
+      "title": "Less <0>pressure</0> and more <0>peace of mind</0>",
+      "subtitle": "Scientifically proven stress management training for peace of mind and more joy in your life.",
       "cta": "Sign up for the training",
       "statsTitle": "Why participants choose us",
       "stats": [
@@ -173,12 +173,12 @@
       ]
     },
     "challenges": {
-      "title": "<0>A lot of pressure</0> in your life. <0>Little calm</0> in your head",
+      "title": "<0>A lot of pressure</0> and <0>little peace of mind</0>",
       "subtitle": "Does this sound familiar?",
       "items": [
         {
           "icon": "Brain",
-          "title": "Little mental rest",
+          "title": "Little peace of mind",
           "text": "Your head is often full. Even in the evening all sorts of things keep playing through your mind."
         },
         {
@@ -204,15 +204,15 @@
       ]
     },
     "results": {
-      "title": "<0>Calm</0> in your head. More <0>joy</0> in your life",
+      "title": "<0>Peace of mind</0> with a life full of <0>joy</0>",
       "subtitle": "Scientifically proven effects:",
       "items": [
         {
           "icon": "Brain",
           "title": "Quiet thoughts",
           "bullets": [
-            "Your thoughts are where you want them to be. You feel calm in your head.",
-            "Scientifically proven: 65-72% feel measurably less pressure."
+            "Your thoughts are where you want them to be. You feel peace of mind.",
+            "Scientifically proven to measurably reduce pressure."
           ]
         },
         {
@@ -244,7 +244,7 @@
           "title": "Better sleep quality",
           "bullets": [
             "Your head settles down before you go to sleep. You fall asleep more easily and wake up more rested.",
-            "57-78% of participants sleep noticeably better."
+            "Participants sleep noticeably better."
           ]
         }
       ]
@@ -254,7 +254,7 @@
       "intro": [
         "With our <0>\"push-ups for your brain\"</0> you train your brain. This way you strengthen two crucial brain systems.",
         "Your control center gets stronger. You suppress impulsive automatic reactions, filter out irrelevant information and make more conscious decisions about your workload.",
-        "Your warning system becomes more sensitive. You notice stress signals on time and regulate pressure consciously. So you feel more calm and find more joy in your work and life."
+        "Your warning system becomes more sensitive. You notice stress signals on time and regulate pressure consciously. So you feel more peace of mind and find more joy in your work and life."
       ],
       "imageAlt": "People during attention and concentration training for better performance and less stress",
       "items": [
@@ -280,7 +280,7 @@
           "week": "Week 4",
           "tags": ["Control center", "Warning system"],
           "title": "Mental clarity",
-          "text": "Not every thought is a fact. You learn to recognize the difference between productive thinking and getting stuck in rumination. You also learn to observe your thoughts instead of going along with them. The result: more calm in your head and less worrying."
+          "text": "Not every thought is a fact. You learn to recognize the difference between productive thinking and getting stuck in rumination. You also learn to observe your thoughts instead of going along with them. The result: more peace of mind and less worrying."
         },
         {
           "week": "Week 5",
