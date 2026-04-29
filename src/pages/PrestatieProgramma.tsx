@@ -3,6 +3,7 @@ import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import SimplifiedNavigation from "@/components/SimplifiedNavigation";
 import TrustSection from "@/components/TrustSection";
+import MasterclassSection from "@/components/MasterclassSection";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
@@ -658,8 +659,8 @@ const PrestatieProgramma = () => {
         </div>
       </section>
 
-      {/* Prijs Sectie verwijderd */}
-
+      {/* Masterclass Sectie */}
+      <MasterclassSection variant="employee" />
 
       {/* FAQ Sectie */}
       <section className="py-16 md:py-24 bg-white">
