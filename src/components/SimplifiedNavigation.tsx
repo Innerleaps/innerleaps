@@ -9,7 +9,6 @@ import {
   NavigationMenu,
   NavigationMenuContent,
   NavigationMenuItem,
-  NavigationMenuLink,
   NavigationMenuList,
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu"
@@ -81,24 +80,31 @@ const SimplifiedNavigation = () => {
                         const active = isActiveRoute(subItem.href);
                         return (
                           <li key={subItem.label}>
-                            <NavigationMenuLink asChild active={active}>
+                            {active ? (
+                              <span
+                                aria-current="page"
+                                className="block select-none rounded-md p-3 leading-none no-underline outline-none transition-colors border-l-4 bg-brand-off-white border-brand-orange cursor-default"
+                              >
+                                <div className="text-sm font-medium leading-none text-brand-purple">
+                                  {subItem.label}
+                                </div>
+                                <p className="line-clamp-2 text-sm leading-snug text-gray-500 mt-1">
+                                  {subItem.description}
+                                </p>
+                              </span>
+                            ) : (
                               <Link
                                 to={subItem.href}
-                                aria-current={active ? 'page' : undefined}
-                                className={`block select-none rounded-md p-3 leading-none no-underline outline-none transition-colors border-l-4 ${
-                                  active
-                                    ? 'bg-brand-off-white border-brand-orange'
-                                    : 'border-transparent hover:bg-gray-100 focus:bg-gray-100'
-                                } data-[active]:bg-brand-off-white`}
+                                className="block select-none rounded-md p-3 leading-none no-underline outline-none transition-colors border-l-4 border-transparent hover:bg-gray-100 focus:bg-gray-100"
                               >
-                                <div className={`text-sm font-medium leading-none ${active ? 'text-brand-purple' : 'text-brand-gray-dark'}`}>
+                                <div className="text-sm font-medium leading-none text-brand-gray-dark">
                                   {subItem.label}
                                 </div>
                                 <p className="line-clamp-2 text-sm leading-snug text-gray-500 mt-1">
                                   {subItem.description}
                                 </p>
                               </Link>
-                            </NavigationMenuLink>
+                            )}
                           </li>
                         );
                       })}
@@ -124,24 +130,31 @@ const SimplifiedNavigation = () => {
                         const active = isActiveRoute(subItem.href);
                         return (
                           <li key={subItem.label}>
-                            <NavigationMenuLink asChild active={active}>
+                            {active ? (
+                              <span
+                                aria-current="page"
+                                className="block select-none rounded-md p-3 leading-none no-underline outline-none transition-colors border-l-4 bg-brand-off-white border-brand-orange cursor-default"
+                              >
+                                <div className="text-sm font-medium leading-none text-brand-purple">
+                                  {subItem.label}
+                                </div>
+                                <p className="line-clamp-2 text-sm leading-snug text-gray-500 mt-1">
+                                  {subItem.description}
+                                </p>
+                              </span>
+                            ) : (
                               <Link
                                 to={subItem.href}
-                                aria-current={active ? 'page' : undefined}
-                                className={`block select-none rounded-md p-3 leading-none no-underline outline-none transition-colors border-l-4 ${
-                                  active
-                                    ? 'bg-brand-off-white border-brand-orange'
-                                    : 'border-transparent hover:bg-gray-100 focus:bg-gray-100'
-                                } data-[active]:bg-brand-off-white`}
+                                className="block select-none rounded-md p-3 leading-none no-underline outline-none transition-colors border-l-4 border-transparent hover:bg-gray-100 focus:bg-gray-100"
                               >
-                                <div className={`text-sm font-medium leading-none ${active ? 'text-brand-purple' : 'text-brand-gray-dark'}`}>
+                                <div className="text-sm font-medium leading-none text-brand-gray-dark">
                                   {subItem.label}
                                 </div>
                                 <p className="line-clamp-2 text-sm leading-snug text-gray-500 mt-1">
                                   {subItem.description}
                                 </p>
                               </Link>
-                            </NavigationMenuLink>
+                            )}
                           </li>
                         );
                       })}
@@ -217,20 +230,23 @@ const SimplifiedNavigation = () => {
                   <div className="pl-4 mt-2 space-y-2">
                     {organisationMenuItems.map((subItem) => {
                       const active = isActiveRoute(subItem.href);
-                      return (
+                      return active ? (
+                        <span
+                          key={subItem.label}
+                          aria-current="page"
+                          className="block transition-colors duration-300 py-2 text-sm border-l-4 pl-2 border-brand-orange text-brand-purple font-semibold cursor-default"
+                        >
+                          {subItem.label}
+                        </span>
+                      ) : (
                         <Link
                           key={subItem.label}
                           to={subItem.href}
-                          aria-current={active ? 'page' : undefined}
                           onClick={() => {
                             setIsMenuOpen(false);
                             setIsOrganisationMenuOpen(false);
                           }}
-                          className={`block transition-colors duration-300 py-2 text-sm border-l-4 pl-2 ${
-                            active
-                              ? 'border-brand-orange text-brand-purple font-semibold'
-                              : 'border-transparent text-brand-gray-medium hover:text-brand-blue'
-                          }`}
+                          className="block transition-colors duration-300 py-2 text-sm border-l-4 pl-2 border-transparent text-brand-gray-medium hover:text-brand-blue"
                         >
                           {subItem.label}
                         </Link>
@@ -252,20 +268,23 @@ const SimplifiedNavigation = () => {
                   <div className="pl-4 mt-2 space-y-2">
                     {employeeMenuItems.map((subItem) => {
                       const active = isActiveRoute(subItem.href);
-                      return (
+                      return active ? (
+                        <span
+                          key={subItem.label}
+                          aria-current="page"
+                          className="block transition-colors duration-300 py-2 text-sm border-l-4 pl-2 border-brand-orange text-brand-purple font-semibold cursor-default"
+                        >
+                          {subItem.label}
+                        </span>
+                      ) : (
                         <Link
                           key={subItem.label}
                           to={subItem.href}
-                          aria-current={active ? 'page' : undefined}
                           onClick={() => {
                             setIsMenuOpen(false);
                             setIsEmployeeMenuOpen(false);
                           }}
-                          className={`block transition-colors duration-300 py-2 text-sm border-l-4 pl-2 ${
-                            active
-                              ? 'border-brand-orange text-brand-purple font-semibold'
-                              : 'border-transparent text-brand-gray-medium hover:text-brand-blue'
-                          }`}
+                          className="block transition-colors duration-300 py-2 text-sm border-l-4 pl-2 border-transparent text-brand-gray-medium hover:text-brand-blue"
                         >
                           {subItem.label}
                         </Link>

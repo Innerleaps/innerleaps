@@ -243,12 +243,12 @@ const TrainingPageLayout = ({
                         {[...Array(5)].map((_, i) => (
                           <Star
                             key={i}
-                            className="w-4 h-4 fill-amber-400 text-amber-400 group-hover:scale-110 transition-transform"
+                            className="w-4 h-4 fill-brand-orange text-brand-orange group-hover:scale-110 transition-transform"
                           />
                         ))}
                       </div>
                     </div>
-                    <p className="text-amber-100 text-sm text-center mt-1">Google Reviews</p>
+                    <p className="text-white text-sm text-center mt-1">Google Reviews</p>
                   </a>
                 </div>
               </div>
@@ -445,7 +445,7 @@ const TrainingPageLayout = ({
                   <AccordionTrigger className="text-left text-lg md:text-xl font-semibold text-brand-gray-dark hover:text-brand-orange">
                     {item.q}
                   </AccordionTrigger>
-                  <AccordionContent className="text-base md:text-lg text-brand-gray-medium leading-relaxed">
+                  <AccordionContent className="text-base md:text-lg text-brand-gray-medium leading-relaxed whitespace-pre-line">
                     {item.a}
                   </AccordionContent>
                 </AccordionItem>
