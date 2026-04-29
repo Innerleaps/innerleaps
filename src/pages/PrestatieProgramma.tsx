@@ -1,37 +1,25 @@
-import { useState, useEffect, lazy, Suspense } from "react";
+import { useEffect } from "react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-import { EXTERNAL_URLS } from "@/constants/externalUrls";
 import SimplifiedNavigation from "@/components/SimplifiedNavigation";
-import StickyCtaButtons from "@/components/StickyCtaButtons";
 import TrustSection from "@/components/TrustSection";
 import Footer from "@/components/Footer";
-import MasterclassSection from "@/components/MasterclassSection";
 import { Button } from "@/components/ui/button";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import {
   Brain,
-  Heart,
-  Shield,
-  Smile,
-  Moon,
   CheckCircle,
   AlertCircle,
-  Frown,
   BedDouble,
   Calendar,
   Clock,
   Laptop,
   Award,
   Activity,
-  RotateCcw,
   BookOpen,
   Star,
-  
-  Gift,
 } from "lucide-react";
 import heroBackground from "@/assets/Vitaliteitsprogramma_presentatie_Innerleaps.png";
-import masterclassImage from "@/assets/Stressmanagement_masterclass.png";
 import breinTrainingImg from "@/assets/6_weken_brein_trainen.png";
 
 // Client logos
@@ -60,34 +48,14 @@ import paConsultingLogo from "@/assets/Vitaliteitsprogramma_PA_consulting_light.
 import nobelLogo from "@/assets/Vitaliteitsprogramma_nobel_recruitment_light.png";
 import hollandColoursLogo from "@/assets/Vitaliteitsprogramma_Holland_Colours_light.png";
 
-// Lazy load modals for better performance
-const MasterclassFormModal = lazy(() => import("@/components/MasterclassFormModal"));
-const ProgramRegistrationModal = lazy(() => import("@/components/ProgramRegistrationModal"));
-
-// Trust section logos
+// NOTE: B2X registration flow (Aanmelden Training CTAs, MasterclassSection, StickyCtaButtons,
+// ProgramRegistrationModal, MasterclassFormModal) is intentionally disabled on this page.
+// See mem://features/training-page-b2x-flow.md for the removed snippets and how to restore.
 
 const PrestatieProgramma = () => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const [isRegistrationModalOpen, setIsRegistrationModalOpen] = useState(false);
-
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-
-  const scrollToMasterclass = () => {
-    const element = document.getElementById("masterclass");
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
-  };
-
-  const handleModalOpen = () => {
-    setIsModalOpen(true);
-  };
-
-  const openGoogleForm = () => {
-    window.open(EXTERNAL_URLS.PRESTATIE_PROGRAM_SIGNUP, "_blank", "noopener,noreferrer");
-  };
 
   const logos = [
     { src: oliverLogo, alt: "Oliver Wyman" },
