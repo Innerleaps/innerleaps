@@ -230,20 +230,23 @@ const SimplifiedNavigation = () => {
                   <div className="pl-4 mt-2 space-y-2">
                     {organisationMenuItems.map((subItem) => {
                       const active = isActiveRoute(subItem.href);
-                      return (
+                      return active ? (
+                        <span
+                          key={subItem.label}
+                          aria-current="page"
+                          className="block transition-colors duration-300 py-2 text-sm border-l-4 pl-2 border-brand-orange text-brand-purple font-semibold cursor-default"
+                        >
+                          {subItem.label}
+                        </span>
+                      ) : (
                         <Link
                           key={subItem.label}
                           to={subItem.href}
-                          aria-current={active ? 'page' : undefined}
                           onClick={() => {
                             setIsMenuOpen(false);
                             setIsOrganisationMenuOpen(false);
                           }}
-                          className={`block transition-colors duration-300 py-2 text-sm border-l-4 pl-2 ${
-                            active
-                              ? 'border-brand-orange text-brand-purple font-semibold'
-                              : 'border-transparent text-brand-gray-medium hover:text-brand-blue'
-                          }`}
+                          className="block transition-colors duration-300 py-2 text-sm border-l-4 pl-2 border-transparent text-brand-gray-medium hover:text-brand-blue"
                         >
                           {subItem.label}
                         </Link>
@@ -265,20 +268,23 @@ const SimplifiedNavigation = () => {
                   <div className="pl-4 mt-2 space-y-2">
                     {employeeMenuItems.map((subItem) => {
                       const active = isActiveRoute(subItem.href);
-                      return (
+                      return active ? (
+                        <span
+                          key={subItem.label}
+                          aria-current="page"
+                          className="block transition-colors duration-300 py-2 text-sm border-l-4 pl-2 border-brand-orange text-brand-purple font-semibold cursor-default"
+                        >
+                          {subItem.label}
+                        </span>
+                      ) : (
                         <Link
                           key={subItem.label}
                           to={subItem.href}
-                          aria-current={active ? 'page' : undefined}
                           onClick={() => {
                             setIsMenuOpen(false);
                             setIsEmployeeMenuOpen(false);
                           }}
-                          className={`block transition-colors duration-300 py-2 text-sm border-l-4 pl-2 ${
-                            active
-                              ? 'border-brand-orange text-brand-purple font-semibold'
-                              : 'border-transparent text-brand-gray-medium hover:text-brand-blue'
-                          }`}
+                          className="block transition-colors duration-300 py-2 text-sm border-l-4 pl-2 border-transparent text-brand-gray-medium hover:text-brand-blue"
                         >
                           {subItem.label}
                         </Link>
