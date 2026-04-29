@@ -139,7 +139,7 @@ const TrainingPageLayout = ({
         <meta name="description" content={t(`${tKey}.meta.description`)} />
       </Helmet>
       <SimplifiedNavigation />
-      <StickyCtaButtons />
+      {!hideStickyCtas && <StickyCtaButtons />}
 
       {/* Hero */}
       <section className="relative min-h-screen flex items-start sm:items-center overflow-hidden text-white">
@@ -181,25 +181,29 @@ const TrainingPageLayout = ({
                 </p>
               </div>
 
-              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 w-full justify-center lg:justify-start">
-                <Button
-                  size="lg"
-                  className="w-full sm:w-auto bg-brand-orange hover:bg-brand-orange text-white hover:text-white font-semibold py-3 px-4 sm:py-4 sm:px-6 rounded-lg text-sm sm:text-base lg:text-lg shadow-xl"
-                  onClick={heroCtaOnClick}
-                >
-                  {t(`${tKey}.hero.cta`)}
-                </Button>
-                {heroSecondaryCta && (
-                  <Button
-                    size="lg"
-                    variant="outline"
-                    className="w-full sm:w-auto bg-white/10 backdrop-blur-sm border-white text-white hover:bg-white hover:text-brand-purple font-semibold py-3 px-4 sm:py-4 sm:px-6 rounded-lg text-sm sm:text-base lg:text-lg shadow-xl"
-                    onClick={heroSecondaryCta.onClick}
-                  >
-                    {heroSecondaryCta.label}
-                  </Button>
-                )}
-              </div>
+              {(heroCtaOnClick || heroSecondaryCta) && (
+                <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 w-full justify-center lg:justify-start">
+                  {heroCtaOnClick && (
+                    <Button
+                      size="lg"
+                      className="w-full sm:w-auto bg-brand-orange hover:bg-brand-orange text-white hover:text-white font-semibold py-3 px-4 sm:py-4 sm:px-6 rounded-lg text-sm sm:text-base lg:text-lg shadow-xl"
+                      onClick={heroCtaOnClick}
+                    >
+                      {t(`${tKey}.hero.cta`)}
+                    </Button>
+                  )}
+                  {heroSecondaryCta && (
+                    <Button
+                      size="lg"
+                      variant="outline"
+                      className="w-full sm:w-auto bg-white/10 backdrop-blur-sm border-white text-white hover:bg-white hover:text-brand-purple font-semibold py-3 px-4 sm:py-4 sm:px-6 rounded-lg text-sm sm:text-base lg:text-lg shadow-xl"
+                      onClick={heroSecondaryCta.onClick}
+                    >
+                      {heroSecondaryCta.label}
+                    </Button>
+                  )}
+                </div>
+              )}
             </div>
 
             <div className="w-full relative animate-scale-in mt-6 lg:mt-0">
