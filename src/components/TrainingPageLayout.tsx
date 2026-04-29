@@ -26,6 +26,9 @@ import StickyCtaButtons from "@/components/StickyCtaButtons";
 import TrustSection from "@/components/TrustSection";
 import ProgramOverviewSection from "@/components/ProgramOverviewSection";
 import MasterclassSection from "@/components/MasterclassSection";
+import HreflangTags from "@/i18n/HreflangTags";
+
+const SITE_URL = "https://innerleaps.nl";
 
 const ICON_MAP: Record<string, LucideIcon> = {
   Brain,
