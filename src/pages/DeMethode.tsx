@@ -19,6 +19,7 @@ import {
   Users,
   FileText,
   Activity,
+  Play,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -301,7 +302,7 @@ const DeMethode = () => {
                   <span className="text-xl md:text-2xl text-brand-gray-medium">{t("sixWeeks.items.workbook")}</span>
                 </li>
                 <li className="flex items-start">
-                  <Activity className="h-6 w-6 text-brand-orange stroke-2 flex-shrink-0 mt-1 mr-3" />
+                  <Play className="h-6 w-6 text-brand-orange stroke-2 flex-shrink-0 mt-1 mr-3" />
                   <span className="text-xl md:text-2xl text-brand-gray-medium">{t("sixWeeks.items.audio")}</span>
                 </li>
               </ul>
