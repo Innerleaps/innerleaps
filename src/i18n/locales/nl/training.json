@@ -161,7 +161,7 @@
     },
     "hero": {
       "badge": "Wetenschappelijk bewezen training",
-      "title": "Minder <0>spanning</0> en meer <0>rust</0> in je hoofd",
+      "title": "Minder <0>druk</0> en meer <0>rust in je hoofd</0>",
       "subtitle": "Wetenschappelijk bewezen stressmanagement training voor rust in je hoofd en meer levensplezier.",
       "cta": "Aanmelden training",
       "statsTitle": "Waarom deelnemers ons kiezen",
@@ -173,7 +173,7 @@
       ]
     },
     "challenges": {
-      "title": "<0>Veel druk</0> in je leven. <0>Weinig rust</0> in je hoofd",
+      "title": "<0>Veel druk</0> en <0>weinig rust</0> in je hoofd",
       "subtitle": "Herken je dit?",
       "items": [
         {
@@ -204,7 +204,7 @@
       ]
     },
     "results": {
-      "title": "<0>Rust</0> in je hoofd. Meer <0>genieten</0> van je leven",
+      "title": "<0>Geniet</0> van je leven met <0>rust</0> in je hoofd",
       "subtitle": "Wetenschappelijk bewezen effecten:",
       "items": [
         {
@@ -212,7 +212,7 @@
           "title": "Rustige gedachten",
           "bullets": [
             "Je gedachten zijn waar jij ze wil hebben. Je ervaart rust in je hoofd.",
-            "Wetenschappelijk bewezen: 65-72% ervaart meetbaar minder spanning."
+            "Wetenschappelijk bewezen om spanning meetbaar te verminderen."
           ]
         },
         {
@@ -228,7 +228,7 @@
           "title": "Emoties onder controle",
           "bullets": [
             "Kleine irritaties pakken je minder snel. Je reageert bewuster in plaats van automatisch.",
-            "70% ontwikkelt betere controle over reacties."
+            "Deelnemers ontwikkelen betere controle over hun reacties."
           ]
         },
         {
@@ -244,7 +244,7 @@
           "title": "Betere slaapkwaliteit",
           "bullets": [
             "Je hoofd komt tot rust voordat je gaat slapen. Je valt makkelijker in slaap en wordt uitgeruster wakker.",
-            "57-78% van deelnemers slaapt aantoonbaar beter."
+            "Deelnemers slapen aantoonbaar beter."
           ]
         }
       ]
