@@ -1,8 +1,10 @@
 import { ReactNode } from "react";
 import { Trans, useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet-async";
+import { Link, useLocation } from "react-router-dom";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Button } from "@/components/ui/button";
+import { detectLanguageFromPath } from "@/i18n/config";
 import {
   Brain,
   Heart,
@@ -77,7 +79,8 @@ export interface TrainingPageLayoutProps {
   tKey: string;
   heroImage: string;
   heroImageAlt: string;
-  heroCtaOnClick: () => void;
+  /** Optional hero CTA. Omit to hide the button entirely. */
+  heroCtaOnClick?: () => void;
   /** Optional second CTA for hero */
   heroSecondaryCta?: { label: string; onClick: () => void };
   /** Logos for the marquee */
@@ -86,6 +89,12 @@ export interface TrainingPageLayoutProps {
   weeksImage?: string;
   /** Variant for the MasterclassSection */
   masterclassVariant?: "employer" | "employee";
+  /** Hide the MasterclassSection entirely */
+  hideMasterclass?: boolean;
+  /** Hide the floating sticky CTAs (StickyCtaButtons) */
+  hideStickyCtas?: boolean;
+  /** Show "Discover the method" CTA at the bottom of the weeks block */
+  showMethodCtaAfterWeeks?: boolean;
   /** Optional extra section rendered just before the FAQ */
   extraSection?: ReactNode;
   /** Optional extra section after Footer (e.g. ROICalculator wrapper) */
@@ -103,11 +112,18 @@ const TrainingPageLayout = ({
   logos,
   weeksImage,
   masterclassVariant = "employer",
+  hideMasterclass = false,
+  hideStickyCtas = false,
+  showMethodCtaAfterWeeks = false,
   extraSection,
   belowFaqSection,
   trustVariant = "white",
 }: TrainingPageLayoutProps) => {
   const { t } = useTranslation("training");
+  const { t: tCommon } = useTranslation();
+  const { pathname } = useLocation();
+  const lang = detectLanguageFromPath(pathname);
+  const methodHref = lang === "en" ? "/en/method" : "/breintraining-methode";
 
   // Helper to get array data
   const stats = t(`${tKey}.hero.stats`, { returnObjects: true }) as TrainingStat[];
