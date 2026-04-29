@@ -74,9 +74,9 @@ const StressManagement = () => {
       heroImageAlt="Stressmanagement training presentatie"
       logos={logos}
       weeksImage={breinTrainingImg}
-      hideMasterclass
       hideStickyCtas
       showMethodCtaAfterWeeks
+      masterclassVariant="employee"
     />
   );
 };
