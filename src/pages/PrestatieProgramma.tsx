@@ -128,15 +128,6 @@ const PrestatieProgramma = () => {
                 </p>
               </div>
 
-              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 w-full justify-center lg:justify-start">
-                <Button
-                  size="lg"
-                  className="w-full sm:w-auto bg-brand-orange hover:bg-brand-orange/90 text-white font-semibold py-3 px-4 sm:py-4 sm:px-6 rounded-lg text-sm sm:text-base lg:text-lg shadow-xl"
-                  onClick={openGoogleForm}
-                >
-                  Aanmelden training
-                </Button>
-              </div>
             </div>
 
             <div className="w-full relative animate-scale-in mt-6 lg:mt-0">
