@@ -154,5 +154,172 @@
         }
       ]
     }
+  },
+  "stress": {
+    "meta": {
+      "description": "Innerleaps verlaagt stress door breintraining: herken stresssignalen eerder en herstel sneller. 6 weken, gebaseerd op neurowetenschappelijk onderzoek."
+    },
+    "hero": {
+      "badge": "Wetenschappelijk bewezen training",
+      "title": "Minder <0>spanning</0> en meer <0>rust</0> in je hoofd",
+      "subtitle": "Wetenschappelijk bewezen stressmanagement training voor rust in je hoofd en meer levensplezier.",
+      "cta": "Aanmelden training",
+      "statsTitle": "Waarom deelnemers ons kiezen",
+      "stats": [
+        { "label": "Spanning & stress", "value": "-50%" },
+        { "label": "Focus", "value": "+24%" },
+        { "label": "Tevreden over het leven", "value": "+15%" },
+        { "label": "Wetenschap", "value": "40+ jaar" }
+      ]
+    },
+    "challenges": {
+      "title": "<0>Veel druk</0> in je leven. <0>Weinig rust</0> in je hoofd",
+      "subtitle": "Herken je dit?",
+      "items": [
+        {
+          "icon": "Brain",
+          "title": "Weinig mentale rust",
+          "text": "Je hoofd zit vaak vol. Zelfs 's avonds speelt zich van alles af in je hoofd."
+        },
+        {
+          "icon": "Moon",
+          "title": "Moeite met ontspannen",
+          "text": "Tijdens vrije momenten of vakantie lukt het niet om echt los te laten. Je bent aanwezig maar niet écht aanwezig."
+        },
+        {
+          "icon": "AlertCircle",
+          "title": "Snel geïrriteerd",
+          "text": "Kleine dingen kunnen je uit je evenwicht brengen. Drukte in huis, een collega die iets vraagt, file. Het kost je meer energie dan je zou willen."
+        },
+        {
+          "icon": "Frown",
+          "title": "Minder genieten",
+          "text": "Je merkt dat je niet meer volledig geniet van leuke momenten. Je bent er maar je hoofd is vaak ergens anders."
+        },
+        {
+          "icon": "BedDouble",
+          "title": "'s Avonds moeilijk uitschakelen",
+          "text": "Jij wil slapen maar je hoofd is nog druk. Je verlangt naar een goede nachtrust."
+        }
+      ]
+    },
+    "results": {
+      "title": "<0>Rust</0> in je hoofd. Meer <0>genieten</0> van je leven",
+      "subtitle": "Wetenschappelijk bewezen effecten:",
+      "items": [
+        {
+          "icon": "Brain",
+          "title": "Rustige gedachten",
+          "bullets": [
+            "Je gedachten zijn waar jij ze wil hebben. Je ervaart rust in je hoofd.",
+            "Wetenschappelijk bewezen: 65-72% ervaart meetbaar minder spanning."
+          ]
+        },
+        {
+          "icon": "Heart",
+          "title": "Bewust genieten",
+          "bullets": [
+            "Je bent écht aanwezig bij wat je doet. Momenten met familie, vrienden of voor jezelf worden weer volwaardig.",
+            "Aandachtstraining maakt mensen meer tevreden over hun leven."
+          ]
+        },
+        {
+          "icon": "Shield",
+          "title": "Emoties onder controle",
+          "bullets": [
+            "Kleine irritaties pakken je minder snel. Je reageert bewuster in plaats van automatisch.",
+            "70% ontwikkelt betere controle over reacties."
+          ]
+        },
+        {
+          "icon": "Smile",
+          "title": "Meer levensplezier",
+          "bullets": [
+            "Je pikt details weer op die je eerder miste. Eten smaakt beter, gesprekken zijn intenser, wandelingen geven energie.",
+            "Duurzame gedragsverandering, geen tijdelijk effect."
+          ]
+        },
+        {
+          "icon": "Moon",
+          "title": "Betere slaapkwaliteit",
+          "bullets": [
+            "Je hoofd komt tot rust voordat je gaat slapen. Je valt makkelijker in slaap en wordt uitgeruster wakker.",
+            "57-78% van deelnemers slaapt aantoonbaar beter."
+          ]
+        }
+      ]
+    },
+    "weeks": {
+      "title": "Ons <0>6-weekse</0> Vitaliteitsplus-programma",
+      "intro": [
+        "Met onze <0>\"push-ups voor je brein\"</0> train jij je brein. Hiermee versterk je twee cruciale hersensystemen.",
+        "Je controlecentrum wordt sterker. Je onderdrukt impulsieve automatische reacties, filtert irrelevante informatie en neemt bewustere beslissingen over je werkdruk.",
+        "Je waarschuwingssysteem wordt gevoeliger. Je herkent stresssignalen op tijd en reguleert spanning bewust, waardoor je meer rust ervaart en gelukkiger in je werk en leven staat."
+      ],
+      "imageAlt": "Mensen tijdens een aandacht- en concentratietraining voor betere prestaties en minder stress",
+      "items": [
+        {
+          "week": "Week 1",
+          "tags": ["Controlecentrum"],
+          "title": "De automatische piloot doorbreken",
+          "text": "Waar zijn je gedachten terwijl je tanden poetst? Waarschijnlijk bij je eerste meeting of je to-do lijst. Leer herkennen wanneer je gedachten afdwalen en breng je aandacht terug naar wat je nu doet. Je traint je controlecentrum door telkens bewust aandacht te geven aan je huidige activiteit."
+        },
+        {
+          "week": "Week 2",
+          "tags": ["Waarschuwingssysteem"],
+          "title": "Vroege waarschuwingssignalen herkennen",
+          "text": "Train je waarschuwingssysteem zodat je gespannen schouders, een strakke kaak of oppervlakkige ademhaling opmerkt voordat spanning je overneemt. Jij pakt de controle omdat je gevoelsantennes scherper worden."
+        },
+        {
+          "week": "Week 3",
+          "tags": ["Controlecentrum", "Waarschuwingssysteem"],
+          "title": "Werken met druk en spanning",
+          "text": "Onder druk slaat je werkgeheugen vaak op tilt. In deze week leer je een korte oefening van 3 minuten waarmee je je hoofd snel weer rustig en helder krijgt. Je ontdekt ook hoe je pauzes slim inplant, zodat je de hele dag scherp blijft."
+        },
+        {
+          "week": "Week 4",
+          "tags": ["Controlecentrum", "Waarschuwingssysteem"],
+          "title": "Mentale helderheid",
+          "text": "Niet elke gedachte is een feit. Je leert het verschil herkennen tussen productief nadenken en blijven malen. Ook leer jij je gedachten te observeren in plaats van erin mee te gaan. Het resultaat: meer rust in je hoofd en minder gepieker."
+        },
+        {
+          "week": "Week 5",
+          "tags": ["Waarschuwingssysteem"],
+          "title": "Stressherstel door vriendelijkheid",
+          "text": "De innerlijke criticus werkt harder onder druk. Leer jezelf met vriendelijkheid te behandelen. De schakelaar om je zenuwstelsel tot rust te brengen en ruimte te maken voor helder denken."
+        },
+        {
+          "week": "Week 6",
+          "tags": ["Controlecentrum", "Waarschuwingssysteem"],
+          "title": "Duurzame integratie in je leven",
+          "text": "Herken je gedachtepatronen en maak de geleerde technieken blijvend onderdeel van je dagelijkse routine. Bouw je eigen toolbox voor alle situaties."
+        }
+      ]
+    },
+    "faq": {
+      "title": "Veelgestelde vragen",
+      "items": [
+        {
+          "q": "Waarom zijn de masterclass en de training online?",
+          "a": "Wetenschappelijk is bewezen dat online even effectief is als fysiek. Omdat het even effectief is, kiezen we voor de optie die de minste tijd kost voor deelnemers. Geen reistijd, gewoon vanuit huis of kantoor."
+        },
+        {
+          "q": "Waarom wil mijn werkgever de training vergoeden?",
+          "a": "Stress kost werkgevers enorm veel geld. Zowel in verzuim als in verminderde prestatie. Werkgevers willen je graag helpen om dit te verbeteren. Wij overhandigen je een brochure waardoor je werkgever dit makkelijk kan begrijpen en goedkeuren."
+        },
+        {
+          "q": "15 minuten oefenen per dag, hoe werkt dat?",
+          "a": "Als je start krijg je van ons een werkboek. Daar staat voor elke week een stukje theorie in en korte oefeningen. Tevens ontvang je audio-opnames van de oefeningen. Sommige oefeningen doe je tijdens dagelijkse activiteiten zoals tandenpoetsen, douchen of afwassen, dus geen extra tijd. Andere oefeningen vragen 12 minuten stilzitten in een stoel."
+        },
+        {
+          "q": "Wat voor soort oefeningen zijn het?",
+          "a": "Deelnemers doen op twee manieren hun \"Brein push-ups\". Bij de geplande training doe je 12 minuten per dag een audio-oefening waarin je je aandacht richt op je ademhaling of lichaam. Klinkt makkelijk? Je geest vindt er niks aan. Binnen seconden denk je aan je to-do's of die meeting. Elk moment dat je je focus terugbrengt is de push-up die je controlecentrum versterkt. Daarnaast train je in je dagelijks leven door bewuste aandacht te brengen naar alledaagse activiteiten. Tijdens je ochtendkoffie, op weg naar je werk of voordat je een belangrijke meeting ingaat. Het kost geen extra tijd en je wordt productiever in wat je doet."
+        },
+        {
+          "q": "Wat als ik een week mis?",
+          "a": "Bij het missen van een sessie kun je de trainer bellen om toch alle informatie te ontvangen. Daarnaast staat alle benodigde informatie in het werkboek. Voor optimaal resultaat is het belangrijk om niet meer dan één sessie te missen."
+        }
+      ]
+    }
   }
 }
