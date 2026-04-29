@@ -1,6 +1,7 @@
 {
   "vitality": {
     "meta": {
+      "title": "Vitality training for organisations | Innerleaps",
       "description": "Innerleaps offers organizations a 6-week vitality training with 42% participation, versus 3-8% for standard EAPs. Preventive, science-based, pay only for actual participants."
     },
     "hero": {
@@ -202,6 +203,7 @@
   },
   "stress": {
     "meta": {
+      "title": "Stress management training | Innerleaps",
       "description": "Innerleaps lowers stress through brain training: spot stress signals earlier and recover faster. 6 weeks, based on neuroscience research."
     },
     "hero": {
@@ -408,6 +410,7 @@
   },
   "performance": {
     "meta": {
+      "title": "Performance training for focus and productivity | Innerleaps",
       "description": "Innerleaps improves performance under pressure with focused brain training. Employees train focus and attention in 6 weeks. Based on the method used by top athletes and world-class CEOs."
     },
     "hero": {
@@ -614,6 +617,7 @@
   },
   "sustainability": {
     "meta": {
+      "title": "Sustainable employability training | Innerleaps",
       "description": "Innerleaps offers organisations a 6-week vitality training with 42% participation, versus 3-8% for standard EAPs. Preventive, scientifically grounded, pay only for participants."
     },
     "hero": {

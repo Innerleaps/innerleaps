@@ -1,6 +1,7 @@
 {
   "vitality": {
     "meta": {
+      "title": "Vitaliteitstraining voor organisaties | Innerleaps",
       "description": "Innerleaps biedt organisaties een 6-weekse vitaliteitstraining met 42% deelname, versus 3-8% bij standaard EAP's. Preventief, wetenschappelijk onderbouwd, betaal alleen voor deelnemers."
     },
     "hero": {
@@ -202,6 +203,7 @@
   },
   "stress": {
     "meta": {
+      "title": "Stressmanagement training | Innerleaps",
       "description": "Innerleaps verlaagt stress door breintraining: herken stresssignalen eerder en herstel sneller. 6 weken, gebaseerd op neurowetenschappelijk onderzoek."
     },
     "hero": {
@@ -408,6 +410,7 @@
   },
   "performance": {
     "meta": {
+      "title": "Prestatie training voor focus en productiviteit | Innerleaps",
       "description": "Innerleaps verbetert prestaties onder druk via gerichte breintraining. Medewerkers trainen focus en aandacht in 6 weken. Gebaseerd op de methode gebruikt door top sporters en world class CEO's."
     },
     "hero": {
@@ -614,6 +617,7 @@
   },
   "sustainability": {
     "meta": {
+      "title": "Duurzame inzetbaarheid training | Innerleaps",
       "description": "Innerleaps biedt organisaties een 6-weekse vitaliteitstraining met 42% deelname, versus 3-8% bij standaard EAP's. Preventief, wetenschappelijk onderbouwd, betaal alleen voor deelnemers."
     },
     "hero": {
