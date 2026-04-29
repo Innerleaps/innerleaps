@@ -438,15 +438,6 @@ const PrestatieProgramma = () => {
             </div>
           </div>
 
-          <div className="text-center mt-12">
-            <p className="text-xl text-brand-gray-medium mb-6">Wil jij dit ook bereiken?</p>
-            <Button
-              onClick={() => setIsRegistrationModalOpen(true)}
-              className="bg-brand-orange hover:bg-brand-orange/90 text-white py-3 px-8 rounded-lg text-lg font-semibold"
-            >
-              Aanmelden Training
-            </Button>
-          </div>
         </div>
       </section>
 
@@ -509,15 +500,6 @@ const PrestatieProgramma = () => {
             </div>
           </div>
 
-          <div className="text-center mt-12">
-            <p className="text-xl text-brand-gray-medium mb-6">Klaar om ook te starten?</p>
-            <Button
-              onClick={openGoogleForm}
-              className="bg-brand-orange hover:bg-brand-orange/90 text-white py-3 px-8 rounded-lg text-lg font-semibold"
-            >
-              Aanmelden Training
-            </Button>
-          </div>
         </div>
       </section>
 
