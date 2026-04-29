@@ -6,6 +6,7 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { useEffect } from "react";
 import { Helmet } from "react-helmet-async";
+import { useTranslation } from "react-i18next";
 
 // Trainer photos
 import basPhoto from "@/assets/Vitaliteitstrainer_Bas_Ter_Haar_Romenij.png";
@@ -51,18 +52,18 @@ import jacquelineNobelLogo from "@/assets/Vitaliteitsprogramma_nobel_recruitment
 import jacquelineHollandLogo from "@/assets/Vitaliteitsprogramma_Holland_Colours-3.png";
 
 const OverOns = () => {
+  const { t } = useTranslation("overons");
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
   const trainers = [
     {
+      key: "wineke",
       name: "Wineke van Aken",
       photo: winekePhoto,
-      languages: ["Nederlands", "Engels"],
-      body: "Wineke is al 15 jaar actief als trainer en heeft in die rol trainingen gegeven bij onder andere Tele2 Leaseplan, VU en Gemeente Den Haag. Voordat Wineke trainer werd, werkte zij 17 jaar in commerciële en zakelijke functies, waaronder als projectmanager, marketing- en communicatieadviseur en consultant.",
-      quote:
-        "Wineke heeft een praktische, nuchtere aanpak met concrete handvatten. Ik kan nu afstand nemen, stresssignalen sneller herkennen, efficiënter werken en ben meer tevreden over mijn resultaten.",
+      languages: [t("languages.nl"), t("languages.en")],
       logos: [
         { src: winekeOliverLogo, alt: "Vitaliteitstraining Oliver Wyman" },
         { src: winekeSygnificLogo, alt: "Vitaliteitstraining Sygnific" },
@@ -75,12 +76,10 @@ const OverOns = () => {
       ],
     },
     {
+      key: "dave",
       name: "Dave Hoppema",
       photo: davePhoto,
-      languages: ["Nederlands", "Engels"],
-      body: "Dave trainer met 8 jaar ervaring en gaf trainingen bij o.a. Rijkswaterstaat, Nationale Politie, het Ministerie van Justitie en Veiligheid, Parnassia Groep en diverse onderwijs- en talentorganisaties. Daarvoor werkte hij 15 jaar als redacteur en contentmanager.",
-      quote:
-        "betrokken, open en vriendelijk, met duidelijke uitleg. Doordat hij zijn eigen ervaringen deelt, voelt de training toegankelijk en mag ik 'fouten maken'.",
+      languages: [t("languages.nl"), t("languages.en")],
       logos: [
         { src: daveParnassiaLogo, alt: "Vitaliteitstraining Parnassia Groep" },
         { src: daveLentizLogo, alt: "Vitaliteitstraining Lentiz" },
@@ -92,25 +91,20 @@ const OverOns = () => {
       ],
     },
     {
+      key: "anne",
       name: "Anne Linnebank",
       photo: annePhoto,
-      languages: ["Nederlands", "Engels"],
-      body: "Anne is een ervaren en gecertificeerde trainer met 8 jaar ervaring en heeft trainingen gegeven bij onder andere DHL en Affinius Capital. Daarvoor werkte ze 15 jaar in marketing- en communicatiefuncties bij BAT en Ziggo.",
-      quote:
-        "Anne begrijpt mij echt. Haar kennis weet ze op een leuke en makkelijke manier uit te leggen. Ik voel mij productiver en gelukkiger dan ooit!",
-
+      languages: [t("languages.nl"), t("languages.en")],
       logos: [
         { src: dhlLogo, alt: "Vitaliteitstraining DHL" },
         { src: affiniusLogo, alt: "Vitaliteitstraining Affinius Capital" },
       ],
     },
     {
+      key: "jacqueline",
       name: "Jacqueline Henock",
       photo: jacquelinePhoto,
-      languages: ["Nederlands"],
-      body: "Jacqueline is begonnen als trainer in 2017 en werkte onder andere met Holland Colours, Carel Lurvink, PA Consulting, Nobel Recruitment, Humanitas en GGZ Centraal. Haar eerdere carrière omvat o.a. rollen als eigenaar van een automatiseringsbedrijf en HR-manager, manager zorgprocessen én freelance organisatieadviseur.",
-      quote:
-        "Jacqueline weet precies hoe ze theorie en ervaring laat samenkomen. Haar begeleiding is persoonlijk, doordacht en professioneel.",
+      languages: [t("languages.nl")],
       logos: [
         { src: jacquelineGGZLogo, alt: "Vitaliteitstraining GGZ Centraal" },
         { src: jacquelineHumanitasLogo, alt: "Vitaliteitstraining Humanitas" },
@@ -126,7 +120,7 @@ const OverOns = () => {
   return (
     <div className="min-h-screen bg-white">
       <Helmet>
-        <meta name="description" content="Innerleaps is opgericht door Bas Ter Haar Romenij om burn-out te voorkomen voordat het escaleert. Onze geaccrediteerde trainers werken met een vaste methode, geen variatie, wel bewezen resultaat." />
+        <meta name="description" content={t("meta.description")} />
       </Helmet>
       <SimplifiedNavigation />
       <StickyCtaButtons />
@@ -135,31 +129,20 @@ const OverOns = () => {
         {/* Sectie 1: Visie & Missie */}
         <section className="section-padding bg-brand-off-white">
           <div className="container-custom">
-            {/* Titel bovenaan, volle breedte */}
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-purple leading-tight mb-8 text-center">
-              <span className="text-brand-orange">Waarom</span> wij dit werk doen
+              <span className="text-brand-orange">{t("vision.title1")}</span> {t("vision.titleAccent")}
             </h1>
 
-            {/* Grid met 2 kolommen: Links body, rechts afbeelding */}
             <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-              {/* Links: Body tekst */}
               <div className="space-y-4 text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
-                <p>
-                  Bij Innerleaps geloven we in het duurzame succes van bewuste aandacht. Met die aandacht leven
-                  deelnemers met meer rust, focus en lef. Ze worden er niet alleen een mooier mens van, ze zullen ook
-                  hun ware potentieel benutten.
-                </p>
-                <p>
-                  Hierdoor krijgen organisaties een team dat niet alleen inzetbaar is, maar ook nog eens met plezier
-                  maximaal presteert. Dat is de innerlijke sprong waar wij in geloven.
-                </p>
+                <p>{t("vision.body1")}</p>
+                <p>{t("vision.body2")}</p>
               </div>
 
-              {/* Rechts: Afbeelding */}
               <div>
                 <img
                   src={waaromWijAfbeelding}
-                  alt="Bas ter Haar Romenij geeft presentatie over vitaliteit en stressmanagement bij Innerleaps"
+                  alt={t("vision.imageAlt")}
                   className="w-full h-auto rounded-xl shadow-lg"
                   loading="lazy"
                   width="608"
@@ -174,17 +157,14 @@ const OverOns = () => {
         <section className="section-padding bg-white">
           <div className="container-custom">
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-purple leading-tight mb-12 text-center">
-              Onze <span className="text-brand-orange">geaccrediteerde</span> trainers
+              {t("trainersSection.titlePrefix")} <span className="text-brand-orange">{t("trainersSection.titleAccent")}</span> {t("trainersSection.titleSuffix")}
             </h2>
             <div className="grid md:grid-cols-1 lg:grid-cols-2 gap-8">
               {trainers.map((trainer, index) => (
                 <div key={index} className="bg-white rounded-xl shadow-lg p-8 space-y-6">
-                  {/* Naam - full width */}
                   <h3 className="text-2xl md:text-3xl font-bold text-brand-purple text-center">{trainer.name}</h3>
 
-                  {/* Grid layout: foto links, quote rechts */}
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                    {/* Linker kolom: Foto + Badge & Talen horizontaal */}
                     <div className="space-y-4 flex flex-col items-center">
                       <img
                         src={trainer.photo}
@@ -192,11 +172,10 @@ const OverOns = () => {
                         className="rounded-full w-40 h-40 object-cover shadow-md"
                       />
 
-                      {/* VMBN Badge en Talen naast elkaar */}
                       <div className="flex gap-4 items-center justify-center flex-wrap">
                         <img
                           src={vmbnBadge}
-                          alt="VMBN Geaccrediteerde Vitaliteitstrainer"
+                          alt={t("trainersSection.vmbnAlt")}
                           className="h-16 object-contain"
                         />
                         <div className="flex gap-2 flex-wrap">
@@ -212,22 +191,19 @@ const OverOns = () => {
                       </div>
                     </div>
 
-                    {/* Rechter kolom: Quote */}
                     <div className="flex items-start">
                       <div className="bg-brand-off-white p-4 rounded-lg border-l-4 border-brand-orange h-full flex items-center">
                         <p className="text-base md:text-lg italic text-brand-gray-medium leading-snug">
-                          "{trainer.quote}"
+                          "{t(`trainers.${trainer.key}.quote`)}"
                         </p>
                       </div>
                     </div>
                   </div>
 
-                  {/* Body tekst - full width onder de grid */}
                   <div className="pt-4 border-t border-brand-gray-light">
-                    <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">{trainer.body}</p>
+                    <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">{t(`trainers.${trainer.key}.body`)}</p>
                   </div>
 
-                  {/* Client logos - full width */}
                   <div className="flex gap-5 items-center justify-center pt-4 border-t border-brand-gray-light flex-wrap">
                     {trainer.logos.map((logo, i) => (
                       <img key={i} src={logo.src} alt={logo.alt} className="h-[50px] object-contain" />
@@ -243,36 +219,23 @@ const OverOns = () => {
         <section className="section-padding bg-brand-off-white">
           <div className="container-custom">
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-purple leading-tight mb-12 text-center">
-              Het verhaal achter <span className="text-brand-orange">Innerleaps</span>
+              {t("story.titlePrefix")} <span className="text-brand-orange">{t("story.titleAccent")}</span>
             </h2>
             <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-start">
-              {/* Links: Body */}
               <div className="space-y-4 text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
-                <p>
-                  Bas richtte Innerleaps op na zijn herstel van een hersenschudding. Als consultant en lead
-                  productmanager was hij gewend om onder druk te presteren. Tot een snowboardongeval hem tot stilstand
-                  dwong.
-                </p>
-                <p>
-                  Tijdens zijn herstel verdiepte hij zich in de werking van de hersenen en stuitte op veertig jaar
-                  wetenschappelijk onderzoek: aandacht is trainbaar. Terug op werk merkte hij het verschil. Minder
-                  stress, scherpere focus, meer controle over zijn gedachten en een productiviteit die hij niet eerder
-                  kende.
-                </p>
-                <p className="italic">
-                  "Die ervaring wil ik delen. Daarom ben ik Innerleaps begonnen."
-                </p>
+                <p>{t("story.body1")}</p>
+                <p>{t("story.body2")}</p>
+                <p className="italic">{t("story.quote")}</p>
               </div>
 
-              {/* Rechts: Foto + Functie + CTA */}
               <div className="flex flex-col items-center space-y-6">
                 <img
                   src={basPhoto}
-                  alt="Vitaliteitstrainer Bas ter Haar Romenij | Oprichter Innerleaps"
+                  alt={t("story.photoAlt")}
                   className="rounded-full w-64 h-64 object-cover shadow-xl"
                 />
                 <p className="text-xl md:text-2xl font-semibold text-brand-purple text-center">
-                  Bas ter Haar Romenij | Oprichter
+                  {t("story.role")}
                 </p>
                 <Button
                   variant="secondary"
@@ -285,7 +248,7 @@ const OverOns = () => {
                     )
                   }
                 >
-                  Plan gesprek met Bas
+                  {t("story.cta")}
                 </Button>
               </div>
             </div>
@@ -293,10 +256,7 @@ const OverOns = () => {
         </section>
       </main>
 
-      {/* Sectie 4: Trust */}
       <TrustSection />
-
-      {/* Sectie 5: Footer */}
       <Footer />
     </div>
   );

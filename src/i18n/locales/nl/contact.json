@@ -1,0 +1,22 @@
+{
+  "meta": {
+    "description": "Plan een gratis masterclass voor uw organisatie of stel uw vraag aan Innerleaps. Bereikbaar via Bas@innerleaps.nl of 06 23 45 34 77. Reactie binnen één werkdag."
+  },
+  "hero": {
+    "titlePrefix": "Stel je",
+    "titleAccent": "vragen",
+    "titleSuffix": "aan Bas"
+  },
+  "quote": {
+    "text": "\"Hoi! Wat leuk dat je hier bent. Zullen we even kennismaken? Ik luister graag naar jullie uitdagingen.",
+    "role": "Bas Ter Haar Romenij, Oprichter Innerleaps",
+    "cta": "Plan een gesprek met Bas",
+    "photoAlt": "Bas Ter Haar Romenij"
+  },
+  "info": {
+    "title": "Of neem direct zelf contact op",
+    "emailLabel": "Email",
+    "phoneLabel": "Telefoon",
+    "addressLabel": "Adres"
+  }
+}

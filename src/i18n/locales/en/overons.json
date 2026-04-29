@@ -1,0 +1,50 @@
+{
+  "meta": {
+    "description": "Innerleaps was founded by Bas Ter Haar Romenij to prevent burnout before it escalates. Our accredited trainers work with one proven method. No variation just consistent results."
+  },
+  "vision": {
+    "title1": "Why",
+    "titleAccent": "we do this work",
+    "body1": "At Innerleaps we believe in the lasting power of mindful attention. With that attention, participants live with more calm, focus and courage. They become better versions of themselves and start to tap into their true potential.",
+    "body2": "As a result, organisations get a team that is not only resilient and available, but also performs at its best with genuine enjoyment. That is the inner leap we believe in.",
+    "imageAlt": "Bas ter Haar Romenij giving a presentation on vitality and stress management at Innerleaps"
+  },
+  "trainersSection": {
+    "titlePrefix": "Our",
+    "titleAccent": "accredited",
+    "titleSuffix": "trainers",
+    "vmbnAlt": "VMBN Accredited Vitality Trainer"
+  },
+  "languages": {
+    "nl": "Dutch",
+    "en": "English"
+  },
+  "trainers": {
+    "wineke": {
+      "body": "Wineke has been working as a trainer for 15 years and has delivered trainings at Tele2, Leaseplan, VU and the Municipality of The Hague among others. Before becoming a trainer she spent 17 years in commercial and corporate roles, including project manager, marketing and communications advisor and consultant.",
+      "quote": "Wineke has a practical, down to earth approach with concrete tools. I can now take a step back, spot stress signals sooner, work more efficiently and I am happier with my results."
+    },
+    "dave": {
+      "body": "Dave is a trainer with 8 years of experience and has delivered trainings at Rijkswaterstaat, the National Police, the Ministry of Justice and Security, Parnassia Group and various education and talent organisations. Before that he worked for 15 years as an editor and content manager.",
+      "quote": "engaged, open and friendly, with clear explanations. Because he shares his own experiences, the training feels approachable and I am allowed to 'make mistakes'."
+    },
+    "anne": {
+      "body": "Anne is an experienced and certified trainer with 8 years of experience and has given trainings at DHL and Affinius Capital among others. Before that she spent 15 years in marketing and communications roles at BAT and Ziggo.",
+      "quote": "Anne really gets me. She explains her knowledge in a fun and easy to follow way. I feel more productive and happier than ever!"
+    },
+    "jacqueline": {
+      "body": "Jacqueline started as a trainer in 2017 and has worked with Holland Colours, Carel Lurvink, PA Consulting, Nobel Recruitment, Humanitas and GGZ Centraal among others. Her earlier career includes roles as owner of an IT company and HR manager, manager of care processes and freelance organisational consultant.",
+      "quote": "Jacqueline knows exactly how to bring theory and experience together. Her guidance is personal, thoughtful and professional."
+    }
+  },
+  "story": {
+    "titlePrefix": "The story behind",
+    "titleAccent": "Innerleaps",
+    "body1": "Bas founded Innerleaps after recovering from a concussion. As a consultant and lead product manager he was used to performing under pressure. Until a snowboarding accident forced him to a standstill.",
+    "body2": "During his recovery he dived into how the brain works and came across forty years of scientific research: attention can be trained. Back at work he noticed the difference. Less stress, sharper focus, more control over his thoughts and a level of productivity he had never experienced before.",
+    "quote": "\"I want to share that experience. That is why I started Innerleaps.\"",
+    "role": "Bas ter Haar Romenij | Founder",
+    "cta": "Schedule a call with Bas",
+    "photoAlt": "Vitality trainer Bas ter Haar Romenij | Founder of Innerleaps"
+  }
+}
