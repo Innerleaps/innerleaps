@@ -145,79 +145,122 @@ const handler = async (req: Request): Promise<Response> => {
 
     const pdfUrl = `${Deno.env.get("SUPABASE_URL")?.replace('.supabase.co', '')}.supabase.co/storage/v1/object/public/documents/effects-of-awareness-interventions.pdf`;
 
+    const lang = submission.language === "en" ? "en" : "nl";
+    const userCopy = lang === "en"
+      ? {
+          htmlLang: "en",
+          titleTag: "Your Scientific Report - Innerleaps",
+          h1: "Scientific report on Awareness Training",
+          intro: (n: string) => `Thanks for your interest, ${n}!`,
+          attached: "In the attachment you'll find the comprehensive scientific report:",
+          docTitle: "The Business Case for Awareness Interventions",
+          docSub: "An analysis of 40 years of scientific research",
+          whatYouFind: "What you'll find in this report:",
+          bullets: [
+            "📊 <strong>Effect sizes</strong> of awareness training on absenteeism, productivity and retention",
+            "🧠 <strong>Pathway analyses</strong> showing how awareness training works",
+            "💰 <strong>ROI calculations</strong> based on scientific research",
+            "📚 <strong>References</strong> to all key studies and sources",
+            "🏛️ <strong>Academic basis</strong> from Oxford and the University of Massachusetts",
+          ],
+          ctaQuestion: (c: string) => `Want to discuss what this means for ${c}?`,
+          ctaSub: "Schedule a no-obligation introductory call with Bas ter Haar Romenij",
+          ctaButton: "Schedule a call",
+          regards: "Kind regards,",
+          subject: "Report: Discover the effectiveness of our method",
+        }
+      : {
+          htmlLang: "nl",
+          titleTag: "Jouw Wetenschappelijk Rapport - Innerleaps",
+          h1: "Wetenschappelijk rapport over Aandachttraining",
+          intro: (n: string) => `Bedankt voor je interesse, ${n}!`,
+          attached: "In de bijlage vind je het uitgebreide wetenschappelijke rapport:",
+          docTitle: "The Business Case for Awareness Interventions",
+          docSub: "Een analyse van 40 jaar wetenschappelijk onderzoek",
+          whatYouFind: "Wat je vindt in dit rapport:",
+          bullets: [
+            "📊 <strong>Effectgroottes</strong> van aandachttraining op verzuim, productiviteit en retentie",
+            "🧠 <strong>Pathway-analyses</strong> die laten zien hoe aandachttraining werkt",
+            "💰 <strong>ROI berekeningen</strong> gebaseerd op wetenschappelijk onderzoek",
+            "📚 <strong>Referenties</strong> naar alle belangrijke studies en bronnen",
+            "🏛️ <strong>Academische onderbouwing</strong> van Oxford en University of Massachusetts",
+          ],
+          ctaQuestion: (c: string) => `Wil je bespreken wat dit voor ${c} betekent?`,
+          ctaSub: "Plan een vrijblijvend kennismakingsgesprek met Bas ter Haar Romenij",
+          ctaButton: "Plan een gesprek",
+          regards: "Met vriendelijke groet,",
+          subject: "Rapport: Ontdek de effectiviteit van onze methode",
+        };
+
     // Email to user with PDF attachment
     const userEmailHtml = `
       <!DOCTYPE html>
-      <html lang="nl">
+      <html lang="${userCopy.htmlLang}">
       <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Jouw Wetenschappelijk Rapport - InnerLeaps</title>
+        <title>${userCopy.titleTag}</title>
       </head>
       <body style="margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333333; background-color: #ffffff;">
         <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="background-color: #ffffff;">
           <tr>
             <td align="center" style="padding: 20px 0;">
               <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="600" style="max-width: 600px; background-color: #ffffff; border: 1px solid #e2e8f0;">
-                
+
                 <tr>
                   <td style="padding: 30px; text-align: left; border-bottom: 1px solid #e2e8f0;">
-              <h1 style="margin: 0; color: #1e293b; font-size: 24px; font-weight: 600;">
-                Wetenschappelijk rapport over Aandachttraining
-              </h1>
+                    <h1 style="margin: 0; color: #1e293b; font-size: 24px; font-weight: 600;">
+                      ${userCopy.h1}
+                    </h1>
                     <p style="margin: 10px 0 0 0; color: #64748b; font-size: 14px;">
-                      Bedankt voor je interesse, ${safeName}!
+                      ${userCopy.intro(safeName)}
                     </p>
                   </td>
                 </tr>
-                
+
                 <tr>
                   <td style="padding: 30px;">
                     <p style="margin: 0 0 15px 0; color: #1e293b; font-size: 16px;">
-                      In de bijlage vind je het uitgebreide wetenschappelijke rapport:
+                      ${userCopy.attached}
                     </p>
-                    
+
                     <div style="background-color: #f0f9ff; border-left: 4px solid #3b82f6; padding: 20px; margin: 20px 0;">
                       <h2 style="margin: 0 0 10px 0; color: #1e293b; font-size: 18px; font-weight: 600;">
-                        The Business Case for Awareness Interventions
+                        ${userCopy.docTitle}
                       </h2>
                       <p style="margin: 0; color: #64748b; font-size: 14px;">
-                        Een analyse van 40 jaar wetenschappelijk onderzoek
+                        ${userCopy.docSub}
                       </p>
                     </div>
-                    
+
                     <h3 style="margin: 25px 0 15px 0; color: #1e293b; font-size: 16px; font-weight: 600;">
-                      Wat je vindt in dit rapport:
+                      ${userCopy.whatYouFind}
                     </h3>
                     <ul style="margin: 0 0 20px 0; padding-left: 20px; color: #1e293b; font-size: 14px;">
-                      <li style="margin-bottom: 8px;">📊 <strong>Effectgroottes</strong> van aandachttraining op verzuim, productiviteit en retentie</li>
-                      <li style="margin-bottom: 8px;">🧠 <strong>Pathway-analyses</strong> die laten zien hoe aandachttraining werkt</li>
-                      <li style="margin-bottom: 8px;">💰 <strong>ROI berekeningen</strong> gebaseerd op wetenschappelijk onderzoek</li>
-                      <li style="margin-bottom: 8px;">📚 <strong>Referenties</strong> naar alle belangrijke studies en bronnen</li>
-                      <li style="margin-bottom: 8px;">🏛️ <strong>Academische onderbouwing</strong> van Oxford en University of Massachusetts</li>
+                      ${userCopy.bullets.map((b) => `<li style="margin-bottom: 8px;">${b}</li>`).join("")}
                     </ul>
-                    
+
                     <div style="background-color: #f8fafc; border-radius: 8px; padding: 20px; margin: 25px 0;">
                       <p style="margin: 0 0 15px 0; color: #1e293b; font-size: 16px; font-weight: 600;">
-                        Wil je bespreken wat dit voor ${safeCompany} betekent?
+                        ${userCopy.ctaQuestion(safeCompany)}
                       </p>
                       <p style="margin: 0 0 20px 0; color: #64748b; font-size: 14px;">
-                        Plan een vrijblijvend kennismakingsgesprek met Bas ter Haar Romenij
+                        ${userCopy.ctaSub}
                       </p>
-                       <a href="https://innerleaps.nl/Calendar" 
-                          style="display: inline-block; background-color: #FF6B35; color: #ffffff; text-decoration: none; padding: 12px 30px; border-radius: 6px; font-weight: 600; font-size: 16px;">
-                         Plan een gesprek
-                       </a>
+                      <a href="https://innerleaps.nl/Calendar"
+                         style="display: inline-block; background-color: #FF6B35; color: #ffffff; text-decoration: none; padding: 12px 30px; border-radius: 6px; font-weight: 600; font-size: 16px;">
+                        ${userCopy.ctaButton}
+                      </a>
                     </div>
                   </td>
                 </tr>
-                
+
                 <tr>
                   <td style="padding: 20px 30px; background-color: #f8fafc; border-top: 1px solid #e2e8f0;">
                     <p style="margin: 0; color: #64748b; font-size: 12px; text-align: center;">
-                      Met vriendelijke groet,<br>
+                      ${userCopy.regards}<br>
                       <strong style="color: #1e293b;">Bas ter Haar Romenij</strong><br>
-                      InnerLeaps<br>
+                      Innerleaps<br>
                       <a href="https://innerleaps.nl" style="color: #3b82f6; text-decoration: none;">www.innerleaps.nl</a>
                     </p>
                   </td>
