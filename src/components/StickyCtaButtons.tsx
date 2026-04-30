@@ -81,7 +81,7 @@ const StickyCtaButtons = ({ onMasterclassClick, onProgramRegistrationClick }: St
               className="font-semibold py-3 sm:py-5 px-4 sm:px-10 rounded-lg text-base sm:text-lg shadow-lg whitespace-nowrap"
               onClick={() => {
                 const link = document.createElement('a');
-                link.href = 'https://calendar.app.google/BgGy8cVUSk4w5Zzg8';
+                link.href = 'https://calendar.app.google/rcVmbswDsKFXRfmUA';
                 link.target = '_blank';
                 link.rel = 'noopener noreferrer';
                 document.body.appendChild(link);
