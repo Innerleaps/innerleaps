@@ -295,204 +295,207 @@ const handler = async (req: Request): Promise<Response> => {
     const safeCompany = escapeHtml(submission.company);
 
     const results = submission.results;
+    const lang = submission.language === "en" ? "en" : "nl";
+    const copy = EMAIL_COPY[lang];
+    const fmt = (n: number) => formatCurrency(n, lang);
 
     // PDF attachment URL - Supabase Storage
     const pdfUrl = "https://bvvzmprtuzdvvosaenbs.supabase.co/storage/v1/object/public/documents/business-case-awareness-interventions.pdf";
-    
+
     // Bas profile image URL - Supabase Storage
     const basImageUrl = "https://bvvzmprtuzdvvosaenbs.supabase.co/storage/v1/object/public/images/bas-profile.png";
-    
+
     // Calendar redirect URL - innerleaps.nl domain
     const calendarUrl = "https://innerleaps.nl/calendar";
 
-    // Confirmation email to lead
+    // Confirmation email to lead (localized)
     const confirmationEmailHtml = `
       <!DOCTYPE html>
-      <html lang="nl">
+      <html lang="${copy.htmlLang}">
       <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Jouw Business Case Calculator Resultaten - Innerleaps</title>
+        <title>${copy.titleTag}</title>
       </head>
       <body style="margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333333; background-color: #ffffff;">
         <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="background-color: #ffffff;">
           <tr>
             <td align="center" style="padding: 20px 0;">
               <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="600" style="max-width: 600px; background-color: #ffffff; border: 1px solid #e2e8f0;">
-                
+
                 <!-- Header -->
                 <tr>
                   <td style="padding: 30px; text-align: left; border-bottom: 1px solid #e2e8f0;">
                     <h1 style="margin: 0; color: #1e293b; font-size: 24px; font-weight: 600;">
-                      Besparing ${safeCompany} met Innerleaps
+                      ${copy.headerTitle(safeCompany)}
                     </h1>
                     <p style="margin: 10px 0 0 0; color: #64748b; font-size: 14px;">
-                      Bedankt voor het aanvragen van de calculator
+                      ${copy.headerSub}
                     </p>
                   </td>
                 </tr>
-                
-                <!-- Bedrijfsgegevens samenvatting -->
+
+                <!-- Organization summary -->
                 <tr>
                   <td style="padding: 30px; background-color: #f8fafc;">
                     <h2 style="margin: 0 0 15px 0; color: #1e293b; font-size: 18px; font-weight: 600;">
-                      Jouw organisatie
+                      ${copy.yourOrg}
                     </h2>
                     <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
                       <tr>
-                        <td style="padding: 5px 0; color: #64748b; font-size: 14px;"><strong>Aantal werknemers:</strong></td>
+                        <td style="padding: 5px 0; color: #64748b; font-size: 14px;"><strong>${copy.employees}:</strong></td>
                         <td style="padding: 5px 0; color: #1e293b; font-size: 14px; font-weight: 600;">${submission.numberOfEmployees}</td>
                       </tr>
                       <tr>
-                        <td style="padding: 5px 0; color: #64748b; font-size: 14px;"><strong>Gemiddeld salaris:</strong></td>
-                        <td style="padding: 5px 0; color: #1e293b; font-size: 14px; font-weight: 600;">${formatCurrency(submission.avgGrossAnnualSalary)}</td>
+                        <td style="padding: 5px 0; color: #64748b; font-size: 14px;"><strong>${copy.avgSalary}:</strong></td>
+                        <td style="padding: 5px 0; color: #1e293b; font-size: 14px; font-weight: 600;">${fmt(submission.avgGrossAnnualSalary)}</td>
                       </tr>
                       <tr>
-                        <td style="padding: 5px 0; color: #64748b; font-size: 14px;"><strong>Verzuim:</strong></td>
+                        <td style="padding: 5px 0; color: #64748b; font-size: 14px;"><strong>${copy.absenteeism}:</strong></td>
                         <td style="padding: 5px 0; color: #1e293b; font-size: 14px; font-weight: 600;">${submission.currentAbsenteeism}%</td>
                       </tr>
                       <tr>
-                        <td style="padding: 5px 0; color: #64748b; font-size: 14px;"><strong>Verloop:</strong></td>
+                        <td style="padding: 5px 0; color: #64748b; font-size: 14px;"><strong>${copy.turnover}:</strong></td>
                         <td style="padding: 5px 0; color: #1e293b; font-size: 14px; font-weight: 600;">${submission.employeeTurnover}%</td>
                       </tr>
                     </table>
                   </td>
                 </tr>
-                
+
                 <!-- Conservative Scenario -->
                 <tr>
                   <td style="padding: 30px;">
                     <div style="border-left: 4px solid #3b82f6; padding-left: 20px; margin-bottom: 30px;">
                       <h2 style="margin: 0 0 15px 0; color: #1e293b; font-size: 18px; font-weight: 600;">
-                        Conservative Scenario
+                        ${copy.conservative}
                       </h2>
-                      
+
                       <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="font-size: 14px;">
                         <tr>
-                          <td style="padding: 5px 0; color: #64748b;">Verzuimbesparing (15%):</td>
-                          <td style="padding: 5px 0; color: #059669; font-weight: 600; text-align: right;">${formatCurrency(results.scenarios.conservative.verzuimBesparing)}</td>
+                          <td style="padding: 5px 0; color: #64748b;">${copy.absenteeismSaving} (15%):</td>
+                          <td style="padding: 5px 0; color: #059669; font-weight: 600; text-align: right;">${fmt(results.scenarios.conservative.verzuimBesparing)}</td>
                         </tr>
                         <tr>
-                          <td style="padding: 5px 0; color: #64748b;">Personeelsverloopbesparing (5%):</td>
-                          <td style="padding: 5px 0; color: #059669; font-weight: 600; text-align: right;">${formatCurrency(results.scenarios.conservative.retentieBesparing)}</td>
+                          <td style="padding: 5px 0; color: #64748b;">${copy.retentionSaving} (5%):</td>
+                          <td style="padding: 5px 0; color: #059669; font-weight: 600; text-align: right;">${fmt(results.scenarios.conservative.retentieBesparing)}</td>
                         </tr>
                         <tr>
-                          <td style="padding: 5px 0; color: #64748b;">Productiviteitswinst (5%):</td>
-                          <td style="padding: 5px 0; color: #059669; font-weight: 600; text-align: right;">${formatCurrency(results.scenarios.conservative.productiviteitBesparing)}</td>
-                        </tr>
-                        <tr>
-                          <td colspan="2" style="padding: 10px 0; border-top: 1px solid #e5e7eb;"></td>
-                        </tr>
-                        <tr>
-                          <td style="padding: 5px 0; color: #1e293b; font-weight: 600;">Totale besparing:</td>
-                          <td style="padding: 5px 0; color: #059669; font-weight: 700; text-align: right;">${formatCurrency(results.scenarios.conservative.totaleBesparing)}</td>
-                        </tr>
-                        <tr>
-                          <td style="padding: 5px 0; color: #64748b;">Investering:</td>
-                          <td style="padding: 5px 0; color: #dc2626; font-weight: 600; text-align: right;">-${formatCurrency(results.investment)}</td>
+                          <td style="padding: 5px 0; color: #64748b;">${copy.productivityGain} (5%):</td>
+                          <td style="padding: 5px 0; color: #059669; font-weight: 600; text-align: right;">${fmt(results.scenarios.conservative.productiviteitBesparing)}</td>
                         </tr>
                         <tr>
                           <td colspan="2" style="padding: 10px 0; border-top: 1px solid #e5e7eb;"></td>
                         </tr>
                         <tr>
-                          <td style="padding: 5px 0; color: #1e293b; font-weight: 700; font-size: 16px;">Netto winst:</td>
-                          <td style="padding: 5px 0; color: #059669; font-weight: 700; font-size: 18px; text-align: right;">${formatCurrency(results.scenarios.conservative.netBesparing)}</td>
+                          <td style="padding: 5px 0; color: #1e293b; font-weight: 600;">${copy.totalSaving}:</td>
+                          <td style="padding: 5px 0; color: #059669; font-weight: 700; text-align: right;">${fmt(results.scenarios.conservative.totaleBesparing)}</td>
                         </tr>
                         <tr>
-                          <td style="padding: 5px 0; color: #1e293b; font-weight: 700;">ROI:</td>
+                          <td style="padding: 5px 0; color: #64748b;">${copy.investment}:</td>
+                          <td style="padding: 5px 0; color: #dc2626; font-weight: 600; text-align: right;">-${fmt(results.investment)}</td>
+                        </tr>
+                        <tr>
+                          <td colspan="2" style="padding: 10px 0; border-top: 1px solid #e5e7eb;"></td>
+                        </tr>
+                        <tr>
+                          <td style="padding: 5px 0; color: #1e293b; font-weight: 700; font-size: 16px;">${copy.netProfit}:</td>
+                          <td style="padding: 5px 0; color: #059669; font-weight: 700; font-size: 18px; text-align: right;">${fmt(results.scenarios.conservative.netBesparing)}</td>
+                        </tr>
+                        <tr>
+                          <td style="padding: 5px 0; color: #1e293b; font-weight: 700;">${copy.roi}:</td>
                           <td style="padding: 5px 0; color: #2563eb; font-weight: 700; font-size: 16px; text-align: right;">${Math.round(results.scenarios.conservative.roi)}%</td>
                         </tr>
                       </table>
                     </div>
                   </td>
                 </tr>
-                
+
                 <!-- Positive Scenario -->
                 <tr>
                   <td style="padding: 0 30px 30px 30px;">
                     <div style="border-left: 4px solid #10b981; padding-left: 20px;">
                       <h2 style="margin: 0 0 15px 0; color: #1e293b; font-size: 18px; font-weight: 600;">
-                        Positive Scenario
+                        ${copy.positive}
                       </h2>
-                      
+
                       <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="font-size: 14px;">
                         <tr>
-                          <td style="padding: 5px 0; color: #64748b;">Verzuimbesparing (21%):</td>
-                          <td style="padding: 5px 0; color: #059669; font-weight: 600; text-align: right;">${formatCurrency(results.scenarios.positive.verzuimBesparing)}</td>
+                          <td style="padding: 5px 0; color: #64748b;">${copy.absenteeismSaving} (21%):</td>
+                          <td style="padding: 5px 0; color: #059669; font-weight: 600; text-align: right;">${fmt(results.scenarios.positive.verzuimBesparing)}</td>
                         </tr>
                         <tr>
-                          <td style="padding: 5px 0; color: #64748b;">Personeelsverloopbesparing (8%):</td>
-                          <td style="padding: 5px 0; color: #059669; font-weight: 600; text-align: right;">${formatCurrency(results.scenarios.positive.retentieBesparing)}</td>
+                          <td style="padding: 5px 0; color: #64748b;">${copy.retentionSaving} (8%):</td>
+                          <td style="padding: 5px 0; color: #059669; font-weight: 600; text-align: right;">${fmt(results.scenarios.positive.retentieBesparing)}</td>
                         </tr>
                         <tr>
-                          <td style="padding: 5px 0; color: #64748b;">Productiviteitswinst (8%):</td>
-                          <td style="padding: 5px 0; color: #059669; font-weight: 600; text-align: right;">${formatCurrency(results.scenarios.positive.productiviteitBesparing)}</td>
-                        </tr>
-                        <tr>
-                          <td colspan="2" style="padding: 10px 0; border-top: 1px solid #e5e7eb;"></td>
-                        </tr>
-                        <tr>
-                          <td style="padding: 5px 0; color: #1e293b; font-weight: 600;">Totale besparing:</td>
-                          <td style="padding: 5px 0; color: #059669; font-weight: 700; text-align: right;">${formatCurrency(results.scenarios.positive.totaleBesparing)}</td>
-                        </tr>
-                        <tr>
-                          <td style="padding: 5px 0; color: #64748b;">Investering:</td>
-                          <td style="padding: 5px 0; color: #dc2626; font-weight: 600; text-align: right;">-${formatCurrency(results.investment)}</td>
+                          <td style="padding: 5px 0; color: #64748b;">${copy.productivityGain} (8%):</td>
+                          <td style="padding: 5px 0; color: #059669; font-weight: 600; text-align: right;">${fmt(results.scenarios.positive.productiviteitBesparing)}</td>
                         </tr>
                         <tr>
                           <td colspan="2" style="padding: 10px 0; border-top: 1px solid #e5e7eb;"></td>
                         </tr>
                         <tr>
-                          <td style="padding: 5px 0; color: #1e293b; font-weight: 700; font-size: 16px;">Netto winst:</td>
-                          <td style="padding: 5px 0; color: #059669; font-weight: 700; font-size: 18px; text-align: right;">${formatCurrency(results.scenarios.positive.netBesparing)}</td>
+                          <td style="padding: 5px 0; color: #1e293b; font-weight: 600;">${copy.totalSaving}:</td>
+                          <td style="padding: 5px 0; color: #059669; font-weight: 700; text-align: right;">${fmt(results.scenarios.positive.totaleBesparing)}</td>
                         </tr>
                         <tr>
-                          <td style="padding: 5px 0; color: #1e293b; font-weight: 700;">ROI:</td>
+                          <td style="padding: 5px 0; color: #64748b;">${copy.investment}:</td>
+                          <td style="padding: 5px 0; color: #dc2626; font-weight: 600; text-align: right;">-${fmt(results.investment)}</td>
+                        </tr>
+                        <tr>
+                          <td colspan="2" style="padding: 10px 0; border-top: 1px solid #e5e7eb;"></td>
+                        </tr>
+                        <tr>
+                          <td style="padding: 5px 0; color: #1e293b; font-weight: 700; font-size: 16px;">${copy.netProfit}:</td>
+                          <td style="padding: 5px 0; color: #059669; font-weight: 700; font-size: 18px; text-align: right;">${fmt(results.scenarios.positive.netBesparing)}</td>
+                        </tr>
+                        <tr>
+                          <td style="padding: 5px 0; color: #1e293b; font-weight: 700;">${copy.roi}:</td>
                           <td style="padding: 5px 0; color: #2563eb; font-weight: 700; font-size: 16px; text-align: right;">${Math.round(results.scenarios.positive.roi)}%</td>
                         </tr>
                       </table>
                     </div>
                   </td>
                 </tr>
-                
-                <!-- Wetenschappelijke onderbouwing -->
+
+                <!-- Scientific basis -->
                 <tr>
                   <td style="padding: 20px 30px; background-color: #eff6ff; border-top: 1px solid #bfdbfe;">
                     <h3 style="margin: 0 0 10px 0; color: #1e40af; font-size: 16px; font-weight: 600;">
-                      Wetenschappelijk bewezen effecten
+                      ${copy.scientificTitle}
                     </h3>
                     <p style="margin: 0 0 15px 0; color: #1e40af; font-size: 14px; line-height: 1.5;">
-                      In de bijlage vind je het wetenschappelijke bewijs voor de besparingen op verzuim, medewerkersverloop en de Productiviteitswinst
+                      ${copy.scientificIntro}
                     </p>
                     <ul style="margin: 0; padding-left: 20px; color: #1e40af; font-size: 14px; list-style: none;">
-                      <li style="margin: 5px 0;">✓ Verzuimbesparing 15-21%</li>
-                      <li style="margin: 5px 0;">✓ Productiviteitswinst 5-8%</li>
-                      <li style="margin: 5px 0;">✓ Personeelsverloopbesparing 5-8%</li>
+                      <li style="margin: 5px 0;">✓ ${copy.bullet1}</li>
+                      <li style="margin: 5px 0;">✓ ${copy.bullet2}</li>
+                      <li style="margin: 5px 0;">✓ ${copy.bullet3}</li>
                     </ul>
                   </td>
                 </tr>
-                
+
                 <!-- CTA -->
                 <tr>
                   <td style="padding: 30px; text-align: center; background-color: #f8fafc;">
                     <p style="margin: 0 0 20px 0; color: #1e293b; font-size: 18px; font-weight: 600;">
-                      Wil je deze winst realiseren?
+                      ${copy.ctaQuestion}
                     </p>
-                    <a href="${calendarUrl}" 
+                    <a href="${calendarUrl}"
                        style="display: inline-block; padding: 16px 32px; background-color: #FF6B35; color: #ffffff; text-decoration: none; border-radius: 8px; font-weight: 600; font-size: 16px;">
-                      Kennismaken met Bas
+                      ${copy.ctaButton}
                     </a>
                   </td>
                 </tr>
-                
+
                 <!-- Contact Section -->
                 <tr>
                   <td style="padding: 20px 30px; border-top: 1px solid #e2e8f0;">
                     <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
                       <tr>
                         <td style="padding-right: 15px; vertical-align: top;">
-                          <img src="${basImageUrl}" 
-                               alt="Bas Ter Haar Romenij" 
+                          <img src="${basImageUrl}"
+                               alt="Bas Ter Haar Romenij"
                                style="width: 50px; height: 50px; border-radius: 50%; object-fit: cover; display: block;">
                         </td>
                         <td style="vertical-align: top;">
@@ -505,21 +508,21 @@ const handler = async (req: Request): Promise<Response> => {
                           <p style="margin: 5px 0 0 0; font-size: 13px;">
                             <a href="mailto:bas@innerleaps.nl" style="color: #2563eb; text-decoration: none;">bas@innerleaps.nl</a>
                             <span style="color: #64748b;"> | </span>
-                            <a href="tel:+31623453477" style="color: #2563eb; text-decoration: none;">06 23453477</a>
+                            <a href="tel:+31623453477" style="color: #2563eb; text-decoration: none;">+31 6 23453477</a>
                           </p>
                         </td>
                       </tr>
                     </table>
                   </td>
                 </tr>
-                
+
                 <!-- Footer -->
                 <tr>
                   <td style="padding: 15px 30px; text-align: center; font-size: 12px; color: #64748b; border-top: 1px solid #e2e8f0;">
                     Innerleaps - ${new Date().getFullYear()}
                   </td>
                 </tr>
-                
+
               </table>
             </td>
           </tr>
