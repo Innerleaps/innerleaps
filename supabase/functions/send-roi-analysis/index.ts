@@ -190,7 +190,7 @@ const generateEmailHTML = (data: ROIAnalysisRequest): string => {
                 <tr>
                   <td style="text-align: center;">
                     <p style="margin: 0 0 20px 0; font-size: 16px; color: #4b5563;">Wil je kijken hoe ${safeBedrijfsnaam} deze resultaten kan behalen?</p>
-                    <a href="https://calendar.app.google/BgGy8cVUSk4w5Zzg8" style="display: inline-block; background-color: #ea580c; color: #ffffff; padding: 16px 40px; text-decoration: none; border-radius: 8px; font-weight: 600; font-size: 16px;">Maak vrijblijvend kennis met Bas</a>
+                    <a href="https://calendar.app.google/rcVmbswDsKFXRfmUA" style="display: inline-block; background-color: #ea580c; color: #ffffff; padding: 16px 40px; text-decoration: none; border-radius: 8px; font-weight: 600; font-size: 16px;">Maak vrijblijvend kennis met Bas</a>
                   </td>
                 </tr>
               </table>
@@ -272,7 +272,7 @@ ROI: ${formatPercentage(scenarios.scenario3.roi)}
 Wil je kijken hoe ${bedrijfsnaam} deze resultaten kan behalen?
 
 MAAK VRIJBLIJVEND KENNIS MET BAS
-https://calendar.app.google/BgGy8cVUSk4w5Zzg8
+https://calendar.app.google/rcVmbswDsKFXRfmUA
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 

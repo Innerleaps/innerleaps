@@ -56,7 +56,7 @@ const Contact = () => {
                       className="font-semibold py-5 px-10 rounded-lg text-lg"
                       onClick={() => {
                         const link = document.createElement("a");
-                        link.href = "https://calendar.app.google/BgGy8cVUSk4w5Zzg8";
+                        link.href = "https://calendar.app.google/rcVmbswDsKFXRfmUA";
                         link.target = "_blank";
                         link.rel = "noopener noreferrer";
                         document.body.appendChild(link);

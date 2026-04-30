@@ -4,7 +4,7 @@ import { Navigate } from "react-router-dom";
 const Calendar = () => {
   useEffect(() => {
     // Redirect to Google Calendar
-    window.location.href = "https://calendar.app.google/RdDQsYo9uaGSbUdC9";
+    window.location.href = "https://calendar.app.google/rcVmbswDsKFXRfmUA";
   }, []);
 
   return <Navigate to="/" replace />;
