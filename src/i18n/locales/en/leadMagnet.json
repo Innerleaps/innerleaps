@@ -1,0 +1,32 @@
+{
+  "title": "Request the Scientific Report",
+  "intro": "Receive our comprehensive academic report with 40 years of research findings, effect sizes and ROI analyses.",
+  "fields": {
+    "name": "Name",
+    "namePlaceholder": "Your full name",
+    "email": "Email",
+    "emailPlaceholder": "you@company.com",
+    "phone": "Phone (optional)",
+    "phonePlaceholder": "+31 6 12345678",
+    "company": "Company name",
+    "companyPlaceholder": "Your organisation's name",
+    "role": "Job title",
+    "rolePlaceholder": "e.g. HR Manager"
+  },
+  "submit": {
+    "idle": "Request report",
+    "loading": "Sending..."
+  },
+  "validation": "Please fill in all required fields",
+  "success": {
+    "toastTitle": "Report requested!",
+    "toastDescription": "You'll receive the scientific report by email within a few minutes.",
+    "title": "Thanks for your request!",
+    "body": "You'll receive the scientific report within a few minutes at"
+  },
+  "error": {
+    "title": "Something went wrong",
+    "description": "Please try again later or get in touch."
+  },
+  "privacy": "You'll receive the report by email. We treat your details confidentially."
+}

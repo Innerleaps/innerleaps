@@ -1,0 +1,75 @@
+{
+  "badge": "ROI Calculator",
+  "title": "Calculate what our training delivers",
+  "subtitle": "Fill in the details and receive a personalised ROI analysis. It's based on the core Innerleaps programme and scientific research.",
+  "header": {
+    "title": "Discover the impact for your organisation",
+    "subtitle": "Based on 40 years of scientific research"
+  },
+  "sections": {
+    "contact": "Contact details",
+    "organization": "Organisation details"
+  },
+  "fields": {
+    "name": "Name",
+    "namePlaceholder": "Your name",
+    "email": "Email",
+    "emailPlaceholder": "you@email.com",
+    "company": "Company name",
+    "companyPlaceholder": "Your organisation",
+    "phone": "Phone",
+    "phonePlaceholder": "+31 6 12345678",
+    "absenteeism": "Current absenteeism rate (%)",
+    "absenteeismPlaceholder": "5.2",
+    "turnover": "Employee turnover rate (%)",
+    "turnoverPlaceholder": "10",
+    "employees": "Number of employees",
+    "employeesPlaceholder": "15",
+    "salary": "Average gross annual salary per employee (€)",
+    "salaryPlaceholder": "39700"
+  },
+  "submit": {
+    "idle": "Calculate savings",
+    "loading": "Calculating..."
+  },
+  "validation": {
+    "title": "Please fill in all required fields",
+    "description": "All fields marked with * are required.",
+    "missing": "Please fill in all required fields (*)"
+  },
+  "success": {
+    "title": "Calculation sent!",
+    "description": "We've emailed your ROI analysis."
+  },
+  "error": {
+    "title": "Something went wrong",
+    "description": "Please try again later."
+  },
+  "footnote": "* All fields are required. Your details are treated confidentially.",
+  "results": {
+    "yourOrg": "Your organisation",
+    "employees": "Employees",
+    "avgSalary": "Avg. salary",
+    "absenteeism": "Absenteeism",
+    "turnover": "Turnover",
+    "conservative": "Conservative scenario",
+    "conservativeTag": "Minimum impact",
+    "positive": "Positive scenario",
+    "positiveTag": "Full impact",
+    "absenteeismSaving": "Absenteeism saving",
+    "retentionSaving": "Retention saving",
+    "productivityGain": "Productivity gain",
+    "totalSaving": "Total saving",
+    "investment": "Investment",
+    "netProfit": "NET PROFIT",
+    "roi": "ROI",
+    "scientificTitle": "Scientific basis",
+    "scientificIntro": "These figures are based on 40 years of scientific research into awareness training:",
+    "scientific1": "15-21% reduction in absenteeism (meta-analyses of 200+ studies)",
+    "scientific2": "5-8% retention improvement (Harvard Business Review, 2019)",
+    "scientific3": "5-8% productivity improvement (Oxford University, 2022)",
+    "ctaQuestion": "Want to realise these gains?",
+    "ctaPrimary": "Meet Bas",
+    "ctaSecondary": "New calculation"
+  }
+}
