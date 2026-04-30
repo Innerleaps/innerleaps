@@ -1,58 +1,47 @@
-## Plan: FAQ medewerker-pagina's + SEO/LLM optimalisatie
+# Plan: Automatische taaldetectie op basis van browsertaal
 
-### Deel 1 — FAQ-content op de 2 "voor medewerkers" pagina's
+## Huidige situatie
 
-Van toepassing op `/stressmanagement-training` en `/prestatie-training` (NL + EN), dus secties `stress` en `performance` in `src/i18n/locales/nl/training.json` en `src/i18n/locales/en/training.json`.
+De gewenste logica bestaat al grotendeels in `src/i18n/InitialLanguageRedirect.tsx`:
 
-1. **Hernoem vraag** "Wat levert een Innerleaps-traject concreet op voor onze medewerkers?" → "Wat levert een Innerleaps-traject concreet op?"
-   - EN equivalent: "What does an Innerleaps program deliver for our employees?" → "What does an Innerleaps program deliver?"
-2. **Verwijder** de ROI-FAQ ("Wat is de ROI van een investering in Innerleaps?" / "What is the ROI of an investment in Innerleaps?") — past niet bij medewerker-doelgroep.
-3. **Hernoem** "Hoe verbetert Innerleaps de prestaties van medewerkers?" → "Hoe verbetert innerleaps mijn prestaties?"
-   - EN: "How does Innerleaps improve employee performance?" → "How does innerleaps improve my performance?"
-   - Antwoord blijft inhoudelijk hetzelfde, maar lichte herformulering naar "je/jouw" tone-of-voice (matchen met andere medewerker-FAQ's die "je" gebruiken).
+- Bij eerste bezoek (geen opgeslagen voorkeur in localStorage) wordt `navigator.language` gecontroleerd.
+- Begint deze met `nl` → bezoeker blijft op de Nederlandse (default) versie.
+- Begint deze met iets anders → bezoeker wordt doorgestuurd naar de Engelse equivalent (`/en/...`).
+- De keuze wordt onthouden in `localStorage` zodat hij niet bij elke navigatie opnieuw wordt geforceerd.
+- De handmatige taalswitcher (`LanguageSwitcher.tsx`) overschrijft deze voorkeur.
 
-De org-pagina's (`vitality` en `sustainable`) blijven ongewijzigd — die houden ROI + werkgever-framing.
+Dit dekt jouw verzoek al: NL-browsers krijgen NL als default, niet-NL-browsers krijgen EN.
 
-### Deel 2 — SEO & LLM-indexeerbaarheid
+## Wat ik wil verbeteren
 
-Doel: betere ranking in Google én betere ophaling door ChatGPT, Perplexity, Claude.
+Er zijn drie kleine zwakke plekken die ik wil aanpakken zodat het gedrag betrouwbaar werkt op álle pagina's en bij álle browsers:
 
-1. **FAQPage JSON-LD schema** toevoegen aan `TrainingPageLayout.tsx`
-   - Genereer `Question`/`Answer` structured data uit `faqItems` en injecteer als `<script type="application/ld+json">` binnen `<Helmet>`.
-   - Dit is dé grootste winst: Google rich-results + LLM's kunnen Q&A direct extraheren.
+1. **Werkt nu alleen op pagina's die in `ROUTE_MAP` staan.** Bezoek je een NL-pagina zonder mapping (bv. `/calendar`, `/signup`, een blog-detailpagina die nog niet in de map staat), dan gebeurt er niets. Ik laat de redirect óók werken voor de root `/` als fallback wanneer de huidige pagina geen NL→EN-mapping heeft, zodat een Engelstalige bezoeker tenminste op de Engelse homepagina landt.
+2. **`navigator.languages` (lijst) wordt genegeerd.** Sommige browsers (vooral Chrome) zetten `navigator.language` op een primaire taal terwijl `navigator.languages` een uitgebreidere voorkeurslijst bevat. Ik check beide: als `nl` érgens in de voorkeurslijst staat → NL tonen; anders → EN.
+3. **`<html lang>` en i18next worden pas na de redirect gesynchroniseerd.** `LanguageSync.tsx` doet dit al correct na navigatie, dus geen extra werk nodig — alleen verifiëren.
 
-2. **Volledige meta-tags** in `TrainingPageLayout.tsx` (nu alleen `description`):
-   - `<title>` uit `${tKey}.meta.title`
-   - Canonical URL (per pad, met taalvariant)
-   - `og:title`, `og:description`, `og:type=website`, `og:url`, `og:image` (hero image)
-   - `twitter:card=summary_large_image` + bijbehorende tags
-   - `<html lang>` via Helmet op basis van `detectLanguageFromPath`
+## Concrete wijzigingen
 
-3. **Course/Service schema** per training (lichtgewicht) — naast FAQPage een `Course` JSON-LD met `name`, `description`, `provider: Innerleaps`, `inLanguage`, `url`. Geeft LLM's directe context over wat de pagina aanbiedt.
+**`src/i18n/InitialLanguageRedirect.tsx`**
 
-4. **Semantische HTML-verbetering in FAQ-sectie**
-   - Wrap FAQ in `<section aria-labelledby="faq-title">` met id op de h2.
-   - Vraag wordt al `<button>` (Accordion) — voeg `itemScope itemType="https://schema.org/Question"` micro-data fallback NIET toe (JSON-LD volstaat en is cleaner). Geen dubbele markup.
+- Bouw een lijst `[navigator.language, ...navigator.languages]` (gededupliceerd, lowercase).
+- `prefersDutch = list.some(l => l.startsWith("nl"))`.
+- Als `prefersDutch` → niets doen (NL is default).
+- Als niet en bezoeker is op een NL-pad:
+  - Probeer eerst de exacte EN-equivalent via `ROUTE_MAP`.
+  - Lukt dat niet → val terug op `/en` (Engelse homepagina).
+  - Sla `"en"` op in `localStorage` en navigeer met `replace: true`.
+- Als bezoeker al op `/en/...` staat → niets doen.
 
-5. **`robots.txt` uitbreiden** zodat AI-crawlers expliciet welkom zijn (sommige defaulten naar block):
-   - `GPTBot`, `OAI-SearchBot`, `ChatGPT-User`, `PerplexityBot`, `ClaudeBot`, `Claude-Web`, `Google-Extended` → `Allow: /`
-   - Behoud de bestaande regels.
+**Niets anders hoeft te wijzigen.** De bestaande `LanguageSwitcher` blijft de gebruikersvoorkeur overschrijven en `LanguageSync` blijft i18next + `<html lang>` syncen.
 
-6. **Sitemap-check** — verifieer dat alle 4 trainingspagina's (NL + EN paths) in `public/sitemap.xml` staan met `lastmod`. Aanvullen waar nodig.
+## Te bewerken bestanden
 
-7. **Hreflang** — controleer of `HreflangTags` ook op trainingspagina's gemount is; zo niet, toevoegen via TrainingPageLayout (wijst NL ↔ EN equivalenten naar elkaar). Belangrijk voor beide ranking en LLM-taaldetectie.
+- `src/i18n/InitialLanguageRedirect.tsx`
 
-### Bestanden die wijzigen
+## Edge cases die gedekt blijven
 
-- `src/i18n/locales/nl/training.json` (stress + performance FAQ)
-- `src/i18n/locales/en/training.json` (stress + performance FAQ)
-- `src/components/TrainingPageLayout.tsx` (Helmet uitbreiding + FAQPage + Course JSON-LD + semantiek)
-- `public/robots.txt` (AI-crawler allowlist)
-- `public/sitemap.xml` (verificatie/aanvulling)
-- Eventueel `src/i18n/HreflangTags.tsx` mounten in layout.
-
-### Notities
-
-- Geen em-dashes in nieuwe copy; geen Oxford comma in EN.
-- Brand: "innerleaps" met kleine l in vraagteksten waar de gebruiker dat expliciet vroeg; binnen lopende antwoorden behouden we "Innerleaps" zoals nu (consistent met de rest van de FAQ).
-- Achtergrond-alternatie blijft intact (FAQ off-white → Trust white, ongewijzigd).
+- Gebruiker heeft eerder handmatig NL of EN gekozen → keuze wordt gerespecteerd (localStorage).
+- Gebruiker landt direct op `/en/...` → blijft op EN, voorkeur wordt niet overschreven.
+- SSR/no-window → guard blijft staan.
+- Browsers zonder `navigator.languages` → fallback op `navigator.language`.
