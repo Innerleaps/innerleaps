@@ -6,7 +6,7 @@ import {
   type SupportedLanguage,
 } from "@/i18n/config";
 
-const STORAGE_KEY = "innerleaps-lang";
+const STORAGE_KEY = "innerleaps-lang-v2";
 
 interface LanguageSwitcherProps {
   /** Compact horizontal layout for desktop nav (default), or stacked for mobile */

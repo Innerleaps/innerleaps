@@ -1,47 +1,57 @@
-# Plan: Automatische taaldetectie op basis van browsertaal
+# Fix: browser-language auto-redirect doesn't work
 
-## Huidige situatie
+## What's broken
 
-De gewenste logica bestaat al grotendeels in `src/i18n/InitialLanguageRedirect.tsx`:
+When a visitor with an English browser opens `innerleaps.nl/`, they should be redirected to `/en`. They aren't. Root cause:
 
-- Bij eerste bezoek (geen opgeslagen voorkeur in localStorage) wordt `navigator.language` gecontroleerd.
-- Begint deze met `nl` → bezoeker blijft op de Nederlandse (default) versie.
-- Begint deze met iets anders → bezoeker wordt doorgestuurd naar de Engelse equivalent (`/en/...`).
-- De keuze wordt onthouden in `localStorage` zodat hij niet bij elke navigatie opnieuw wordt geforceerd.
-- De handmatige taalswitcher (`LanguageSwitcher.tsx`) overschrijft deze voorkeur.
+1. `src/i18n/config.ts` initialises `i18next-browser-languagedetector` with:
+   ```
+   caches: ["localStorage"],
+   lookupLocalStorage: "innerleaps-lang",
+   ```
+   On first visit, i18next detects the browser language, sets `i18n.language`, and **immediately writes that value to `localStorage["innerleaps-lang"]`**. This happens at module-load time, before any React component mounts.
 
-Dit dekt jouw verzoek al: NL-browsers krijgen NL als default, niet-NL-browsers krijgen EN.
+2. `InitialLanguageRedirect.tsx` then runs, reads `localStorage["innerleaps-lang"]`, sees it's already set, treats it as "user already has a preference", and returns without redirecting.
 
-## Wat ik wil verbeteren
+3. Net effect: the redirect logic is dead code on every fresh visit.
 
-Er zijn drie kleine zwakke plekken die ik wil aanpakken zodat het gedrag betrouwbaar werkt op álle pagina's en bij álle browsers:
+A secondary issue: people who have visited the site before this fix already have a stale value in `localStorage` (often `"nl"` because the URL is NL). They'll continue to never get redirected unless we invalidate that old key.
 
-1. **Werkt nu alleen op pagina's die in `ROUTE_MAP` staan.** Bezoek je een NL-pagina zonder mapping (bv. `/calendar`, `/signup`, een blog-detailpagina die nog niet in de map staat), dan gebeurt er niets. Ik laat de redirect óók werken voor de root `/` als fallback wanneer de huidige pagina geen NL→EN-mapping heeft, zodat een Engelstalige bezoeker tenminste op de Engelse homepagina landt.
-2. **`navigator.languages` (lijst) wordt genegeerd.** Sommige browsers (vooral Chrome) zetten `navigator.language` op een primaire taal terwijl `navigator.languages` een uitgebreidere voorkeurslijst bevat. Ik check beide: als `nl` érgens in de voorkeurslijst staat → NL tonen; anders → EN.
-3. **`<html lang>` en i18next worden pas na de redirect gesynchroniseerd.** `LanguageSync.tsx` doet dit al correct na navigatie, dus geen extra werk nodig — alleen verifiëren.
+## Fix
 
-## Concrete wijzigingen
+### 1. Stop i18next from writing to our redirect-decision key
 
-**`src/i18n/InitialLanguageRedirect.tsx`**
+In `src/i18n/config.ts`, change the detector config so it does not cache to (or even read from) the same key our redirect logic owns:
 
-- Bouw een lijst `[navigator.language, ...navigator.languages]` (gededupliceerd, lowercase).
-- `prefersDutch = list.some(l => l.startsWith("nl"))`.
-- Als `prefersDutch` → niets doen (NL is default).
-- Als niet en bezoeker is op een NL-pad:
-  - Probeer eerst de exacte EN-equivalent via `ROUTE_MAP`.
-  - Lukt dat niet → val terug op `/en` (Engelse homepagina).
-  - Sla `"en"` op in `localStorage` en navigeer met `replace: true`.
-- Als bezoeker al op `/en/...` staat → niets doen.
+- Remove `caches: ["localStorage"]` (set to `caches: []`) so i18next never auto-writes the key.
+- Remove `"localStorage"` from the `order` array — language is already driven by the URL (`LanguageSync` syncs i18n to the path on every navigation), so i18next doesn't need its own persistence.
+- Keep `lookupLocalStorage` removed/irrelevant since we no longer cache.
 
-**Niets anders hoeft te wijzigen.** De bestaande `LanguageSwitcher` blijft de gebruikersvoorkeur overschrijven en `LanguageSync` blijft i18next + `<html lang>` syncen.
+This makes `localStorage["innerleaps-lang"]` exclusively owned by our two components:
+- `InitialLanguageRedirect` writes it once on first visit.
+- `LanguageSwitcher` writes it when the user explicitly switches.
 
-## Te bewerken bestanden
+### 2. Invalidate stale values from before the fix
 
-- `src/i18n/InitialLanguageRedirect.tsx`
+In `InitialLanguageRedirect.tsx`, bump the storage key to a new name (e.g. `innerleaps-lang-v2`). Anyone with the old `innerleaps-lang` key will be treated as a fresh visitor exactly once and get the correct redirect. Update `LanguageSwitcher.tsx` to use the same new key.
 
-## Edge cases die gedekt blijven
+(Alternative considered: a one-shot migration that deletes the old key. Bumping the key name is simpler and equally effective.)
 
-- Gebruiker heeft eerder handmatig NL of EN gekozen → keuze wordt gerespecteerd (localStorage).
-- Gebruiker landt direct op `/en/...` → blijft op EN, voorkeur wordt niet overschreven.
-- SSR/no-window → guard blijft staan.
-- Browsers zonder `navigator.languages` → fallback op `navigator.language`.
+### 3. Verify the redirect actually fires
+
+After the change, test in the browser tool with a fresh session (no localStorage):
+- Navigate to `/` with default (English) browser language → should land on `/en`.
+- Navigate to `/breintraining-methode` → should land on `/en/method`.
+- Reload `/en` → should stay on `/en` (no loop).
+- Manually switch to NL via the switcher, reload `/en` → should redirect to `/` (no, actually: switcher sets storage to `nl` and navigates; reload of `/en` should keep them on `/en` because URL is authoritative and storage is set, so no auto-redirect runs — confirm this is the desired behaviour, it matches current logic).
+
+## Files to edit
+
+- `src/i18n/config.ts` — remove localStorage from detector `order` and `caches`.
+- `src/i18n/InitialLanguageRedirect.tsx` — bump `STORAGE_KEY` to `innerleaps-lang-v2`.
+- `src/components/LanguageSwitcher.tsx` — bump `STORAGE_KEY` to `innerleaps-lang-v2`.
+
+## Out of scope
+
+- No changes to `ROUTE_MAP` or `LanguageSync`.
+- No changes to UI or copy.

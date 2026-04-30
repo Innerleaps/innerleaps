@@ -2,7 +2,9 @@ import { useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { detectLanguageFromPath, ROUTE_MAP } from "@/i18n/config";
 
-const STORAGE_KEY = "innerleaps-lang";
+// v2: bumped to invalidate stale values written by the old i18next localStorage
+// cache, which prevented the first-visit browser-language redirect from running.
+const STORAGE_KEY = "innerleaps-lang-v2";
 
 /**
  * On the very first visit (no stored choice), check the browser language(s).

@@ -83,11 +83,13 @@ i18n
     defaultNS: "common",
     interpolation: { escapeValue: false },
     detection: {
-      // Order matters: URL path > previous user choice > browser
-      order: ["path", "localStorage", "navigator", "htmlTag"],
+      // URL is authoritative (LanguageSync keeps i18n in sync with the path).
+      // Do NOT cache to localStorage here — that key is owned by
+      // InitialLanguageRedirect / LanguageSwitcher and writing it from i18next
+      // would short-circuit the first-visit browser-language redirect.
+      order: ["path", "navigator", "htmlTag"],
       lookupFromPathIndex: 0,
-      caches: ["localStorage"],
-      lookupLocalStorage: "innerleaps-lang",
+      caches: [],
     },
     react: { useSuspense: false },
   });
