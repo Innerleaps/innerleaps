@@ -102,15 +102,82 @@ function escapeHtml(unsafe: string): string {
     .replace(/'/g, "&#039;");
 }
 
-// Format currency helper
-function formatCurrency(amount: number): string {
-  return new Intl.NumberFormat('nl-NL', {
-    style: 'currency',
-    currency: 'EUR',
+// Format currency helper (locale-aware)
+function formatCurrency(amount: number, language: "nl" | "en" = "nl"): string {
+  const locale = language === "en" ? "en-US" : "nl-NL";
+  return new Intl.NumberFormat(locale, {
+    style: "currency",
+    currency: "EUR",
     minimumFractionDigits: 0,
     maximumFractionDigits: 0,
   }).format(amount);
 }
+
+// Localized copy for the user-facing confirmation email
+const EMAIL_COPY = {
+  nl: {
+    htmlLang: "nl",
+    titleTag: "Jouw Business Case Calculator Resultaten - Innerleaps",
+    headerTitle: (company: string) => `Besparing ${company} met Innerleaps`,
+    headerSub: "Bedankt voor het aanvragen van de calculator",
+    yourOrg: "Jouw organisatie",
+    employees: "Aantal werknemers",
+    avgSalary: "Gemiddeld salaris",
+    absenteeism: "Verzuim",
+    turnover: "Verloop",
+    conservative: "Conservative Scenario",
+    positive: "Positive Scenario",
+    absenteeismSaving: "Verzuimbesparing",
+    retentionSaving: "Personeelsverloopbesparing",
+    productivityGain: "Productiviteitswinst",
+    totalSaving: "Totale besparing",
+    investment: "Investering",
+    netProfit: "Netto winst",
+    roi: "ROI",
+    scientificTitle: "Wetenschappelijk bewezen effecten",
+    scientificIntro:
+      "In de bijlage vind je het wetenschappelijke bewijs voor de besparingen op verzuim, medewerkersverloop en de productiviteitswinst",
+    bullet1: "Verzuimbesparing 15-21%",
+    bullet2: "Productiviteitswinst 5-8%",
+    bullet3: "Personeelsverloopbesparing 5-8%",
+    ctaQuestion: "Wil je deze winst realiseren?",
+    ctaButton: "Kennismaken met Bas",
+    subject: (company: string) =>
+      `Ontdek de besparing voor ${company} met de Innerleaps training`,
+    pdfFilename: "Business_Case_Awareness_Interventions.pdf",
+  },
+  en: {
+    htmlLang: "en",
+    titleTag: "Your Business Case Calculator Results - Innerleaps",
+    headerTitle: (company: string) => `Savings for ${company} with Innerleaps`,
+    headerSub: "Thanks for requesting the calculator",
+    yourOrg: "Your organisation",
+    employees: "Number of employees",
+    avgSalary: "Average salary",
+    absenteeism: "Absenteeism",
+    turnover: "Turnover",
+    conservative: "Conservative scenario",
+    positive: "Positive scenario",
+    absenteeismSaving: "Absenteeism saving",
+    retentionSaving: "Retention saving",
+    productivityGain: "Productivity gain",
+    totalSaving: "Total saving",
+    investment: "Investment",
+    netProfit: "Net profit",
+    roi: "ROI",
+    scientificTitle: "Scientifically proven effects",
+    scientificIntro:
+      "In the attachment you'll find the scientific evidence for the savings on absenteeism, employee turnover and the productivity gain",
+    bullet1: "Absenteeism saving 15-21%",
+    bullet2: "Productivity gain 5-8%",
+    bullet3: "Retention saving 5-8%",
+    ctaQuestion: "Want to realise these gains?",
+    ctaButton: "Meet Bas",
+    subject: (company: string) =>
+      `Discover the savings for ${company} with the Innerleaps training`,
+    pdfFilename: "Business_Case_Awareness_Interventions.pdf",
+  },
+} as const;
 
 const handler = async (req: Request): Promise<Response> => {
   // Handle CORS preflight requests
