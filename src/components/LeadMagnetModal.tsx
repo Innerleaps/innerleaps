@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -21,6 +22,7 @@ interface FormData {
 }
 
 const LeadMagnetModal = ({ isOpen, onClose }: LeadMagnetModalProps) => {
+  const { t, i18n } = useTranslation('leadMagnet');
   const [formData, setFormData] = useState<FormData>({
     naam: '',
     email: '',
@@ -41,23 +43,24 @@ const LeadMagnetModal = ({ isOpen, onClose }: LeadMagnetModalProps) => {
     }));
   };
 
-  const isFormValid = 
-    formData.naam && 
-    formData.email && 
-    formData.bedrijfsnaam && 
+  const isFormValid =
+    formData.naam &&
+    formData.email &&
+    formData.bedrijfsnaam &&
     formData.functie;
 
   const handleSubmit = async () => {
     if (!isFormValid) {
-      toast({ 
-        title: "Vul alle verplichte velden in", 
-        variant: "destructive" 
+      toast({
+        title: t('validation'),
+        variant: "destructive"
       });
       return;
     }
 
     setIsSubmitting(true);
     try {
+      const language = i18n.language?.startsWith('en') ? 'en' : 'nl';
       const { error } = await supabase.functions.invoke('submit-scientific-report', {
         body: {
           name: formData.naam,
@@ -65,6 +68,7 @@ const LeadMagnetModal = ({ isOpen, onClose }: LeadMagnetModalProps) => {
           phone: formData.telefoon || null,
           company: formData.bedrijfsnaam,
           functie: formData.functie,
+          language,
         }
       });
 
@@ -72,8 +76,8 @@ const LeadMagnetModal = ({ isOpen, onClose }: LeadMagnetModalProps) => {
 
       setIsSubmitted(true);
       toast({
-        title: "Rapport aangevraagd!",
-        description: "Je ontvangt het wetenschappelijk rapport binnen enkele minuten per email.",
+        title: t('success.toastTitle'),
+        description: t('success.toastDescription'),
       });
 
       // Auto-close after 2 seconds
@@ -83,8 +87,8 @@ const LeadMagnetModal = ({ isOpen, onClose }: LeadMagnetModalProps) => {
     } catch (error) {
       console.error('Submit error:', error);
       toast({
-        title: "Er ging iets mis",
-        description: "Probeer het later opnieuw of neem contact op.",
+        title: t('error.title'),
+        description: t('error.description'),
         variant: "destructive",
       });
     } finally {
@@ -109,16 +113,16 @@ const LeadMagnetModal = ({ isOpen, onClose }: LeadMagnetModalProps) => {
   if (isSubmitted) {
     return (
       <Dialog open={isOpen} onOpenChange={handleClose}>
-        <DialogContent className="sm:max-w-md">
+        <DialogContent className="sm:max-w-md bg-white">
           <div className="text-center py-6">
             <div className="mx-auto flex items-center justify-center w-12 h-12 rounded-full bg-green-100 mb-4">
               <CheckCircle className="w-6 h-6 text-green-600" />
             </div>
             <h3 className="text-xl font-semibold text-brand-gray-dark mb-2">
-              Bedankt voor je aanvraag!
+              {t('success.title')}
             </h3>
             <p className="text-brand-gray-medium">
-              Je ontvangt het wetenschappelijk rapport binnen enkele minuten op <strong>{formData.email}</strong>
+              {t('success.body')} <strong>{formData.email}</strong>
             </p>
           </div>
         </DialogContent>
@@ -132,99 +136,99 @@ const LeadMagnetModal = ({ isOpen, onClose }: LeadMagnetModalProps) => {
         <div className="bg-brand-blue p-6 rounded-xl">
           <DialogHeader>
             <DialogTitle className="text-2xl font-bold text-white">
-              Vraag het Wetenschappelijk Rapport aan
+              {t('title')}
             </DialogTitle>
           </DialogHeader>
-        
+
           <div className="space-y-6">
-          <p className="text-white/90 text-sm">
-            Ontvang ons uitgebreide academische rapport met 40 jaar onderzoeksresultaten, effectgroottes en ROI analyses.
-          </p>
-          
-          <div className="space-y-4">
-            <div>
-              <Label htmlFor="naam" className="text-white">
-                Naam *
-              </Label>
-              <Input
-                id="naam"
-                type="text"
-                value={formData.naam}
-                onChange={handleInputChange('naam')}
-                placeholder="Je volledige naam"
-                className="mt-1 placeholder:text-gray-400"
-              />
+            <p className="text-white/90 text-sm">
+              {t('intro')}
+            </p>
+
+            <div className="space-y-4">
+              <div>
+                <Label htmlFor="naam" className="text-white">
+                  {t('fields.name')} *
+                </Label>
+                <Input
+                  id="naam"
+                  type="text"
+                  value={formData.naam}
+                  onChange={handleInputChange('naam')}
+                  placeholder={t('fields.namePlaceholder')}
+                  className="mt-1 placeholder:text-gray-400"
+                />
+              </div>
+
+              <div>
+                <Label htmlFor="email" className="text-white">
+                  {t('fields.email')} *
+                </Label>
+                <Input
+                  id="email"
+                  type="email"
+                  value={formData.email}
+                  onChange={handleInputChange('email')}
+                  placeholder={t('fields.emailPlaceholder')}
+                  className="mt-1 placeholder:text-gray-400"
+                />
+              </div>
+
+              <div>
+                <Label htmlFor="telefoon" className="text-white">
+                  {t('fields.phone')}
+                </Label>
+                <Input
+                  id="telefoon"
+                  type="tel"
+                  value={formData.telefoon}
+                  onChange={handleInputChange('telefoon')}
+                  placeholder={t('fields.phonePlaceholder')}
+                  className="mt-1 placeholder:text-gray-400"
+                />
+              </div>
+
+              <div>
+                <Label htmlFor="bedrijfsnaam" className="text-white">
+                  {t('fields.company')} *
+                </Label>
+                <Input
+                  id="bedrijfsnaam"
+                  type="text"
+                  value={formData.bedrijfsnaam}
+                  onChange={handleInputChange('bedrijfsnaam')}
+                  placeholder={t('fields.companyPlaceholder')}
+                  className="mt-1 placeholder:text-gray-400"
+                />
+              </div>
+
+              <div>
+                <Label htmlFor="functie" className="text-white">
+                  {t('fields.role')} *
+                </Label>
+                <Input
+                  id="functie"
+                  type="text"
+                  value={formData.functie}
+                  onChange={handleInputChange('functie')}
+                  placeholder={t('fields.rolePlaceholder')}
+                  className="mt-1 placeholder:text-gray-400"
+                />
+              </div>
             </div>
 
-            <div>
-              <Label htmlFor="email" className="text-white">
-                Email *
-              </Label>
-              <Input
-                id="email"
-                type="email"
-                value={formData.email}
-                onChange={handleInputChange('email')}
-                placeholder="je.email@bedrijf.nl"
-                className="mt-1 placeholder:text-gray-400"
-              />
-            </div>
+            <Button
+              onClick={handleSubmit}
+              disabled={!isFormValid || isSubmitting}
+              className="w-full bg-brand-orange hover:bg-brand-orange/90 text-white"
+            >
+              {isSubmitting ? t('submit.loading') : t('submit.idle')}
+            </Button>
 
-            <div>
-              <Label htmlFor="telefoon" className="text-white">
-                Telefoon (optioneel)
-              </Label>
-              <Input
-                id="telefoon"
-                type="tel"
-                value={formData.telefoon}
-                onChange={handleInputChange('telefoon')}
-                placeholder="06 12345678"
-                className="mt-1 placeholder:text-gray-400"
-              />
-            </div>
-
-            <div>
-              <Label htmlFor="bedrijfsnaam" className="text-white">
-                Bedrijfsnaam *
-              </Label>
-              <Input
-                id="bedrijfsnaam"
-                type="text"
-                value={formData.bedrijfsnaam}
-                onChange={handleInputChange('bedrijfsnaam')}
-                placeholder="Naam van je organisatie"
-                className="mt-1 placeholder:text-gray-400"
-              />
-            </div>
-
-            <div>
-              <Label htmlFor="functie" className="text-white">
-                Functie *
-              </Label>
-              <Input
-                id="functie"
-                type="text"
-                value={formData.functie}
-                onChange={handleInputChange('functie')}
-                placeholder="Bijv. HR Manager"
-                className="mt-1 placeholder:text-gray-400"
-              />
-            </div>
+            <p className="text-xs text-white/80 text-center">
+              {t('privacy')}
+            </p>
           </div>
-
-          <Button
-            onClick={handleSubmit}
-            disabled={!isFormValid || isSubmitting}
-            className="w-full bg-brand-orange hover:bg-brand-orange/90 text-white"
-          >
-            {isSubmitting ? 'Versturen...' : 'Vraag rapport aan'}
-          </Button>
-
-          <p className="text-xs text-white/80 text-center">
-            Je ontvangt het rapport direct per email. We behandelen je gegevens vertrouwelijk.
-          </p>
-        </div>
         </div>
       </DialogContent>
     </Dialog>
