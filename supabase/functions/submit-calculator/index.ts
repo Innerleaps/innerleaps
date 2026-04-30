@@ -606,11 +606,11 @@ const handler = async (req: Request): Promise<Response> => {
       await resend.emails.send({
         from: "InnerLeaps <info@innerleaps.nl>",
         to: submission.email,
-        subject: `Ontdek de besparing voor ${submission.company} met het Innerleaps training`,
+        subject: copy.subject(submission.company),
         html: confirmationEmailHtml,
         attachments: [
           {
-            filename: "Business_Case_Awareness_Interventions.pdf",
+            filename: copy.pdfFilename,
             path: pdfUrl,
           }
         ]
