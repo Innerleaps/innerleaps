@@ -355,7 +355,7 @@ const handler = async (req: Request): Promise<Response> => {
       const { error: userEmailError } = await resend.emails.send({
         from: "InnerLeaps <info@innerleaps.nl>",
         to: [submission.email],
-        subject: "Rapport: Ontdek de effectiviteit van onze methode",
+        subject: userCopy.subject,
         html: userEmailHtml,
         attachments: [
           {
