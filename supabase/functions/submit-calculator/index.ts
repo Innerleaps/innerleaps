@@ -18,6 +18,7 @@ const SubmissionSchema = z.object({
   avgGrossAnnualSalary: z.number().positive().max(10000000),
   currentAbsenteeism: z.number().min(0).max(100),
   employeeTurnover: z.number().min(0).max(100),
+  language: z.enum(["nl", "en"]).optional().default("nl"),
   results: z.object({
     totaleLoonkosten: z.number(),
     investment: z.number(),
@@ -51,6 +52,7 @@ interface CalculatorSubmission {
   avgGrossAnnualSalary: number;
   currentAbsenteeism: number;
   employeeTurnover: number;
+  language: "nl" | "en";
   results: any;
 }
 
