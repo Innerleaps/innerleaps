@@ -1,0 +1,75 @@
+{
+  "badge": "ROI Calculator",
+  "title": "Bereken wat onze training oplevert",
+  "subtitle": "Vul de gegevens in en ontvang een gepersonaliseerde ROI-analyse. Deze is gebaseerd op het kernprogramma van Innerleaps en wetenschappelijk onderzoek.",
+  "header": {
+    "title": "Ontdek de impact voor jullie organisatie",
+    "subtitle": "Op basis van 40 jaar wetenschappelijk onderzoek"
+  },
+  "sections": {
+    "contact": "Contactgegevens",
+    "organization": "Organisatiegegevens"
+  },
+  "fields": {
+    "name": "Naam",
+    "namePlaceholder": "Jouw naam",
+    "email": "Email",
+    "emailPlaceholder": "jouw@email.nl",
+    "company": "Bedrijfsnaam",
+    "companyPlaceholder": "Jouw organisatie",
+    "phone": "Telefoon",
+    "phonePlaceholder": "06 12345678",
+    "absenteeism": "Huidig verzuimpercentage (%)",
+    "absenteeismPlaceholder": "5.2",
+    "turnover": "Personeelsverloop percentage (%)",
+    "turnoverPlaceholder": "10",
+    "employees": "Aantal werknemers",
+    "employeesPlaceholder": "15",
+    "salary": "Gemiddeld bruto jaarsalaris per werknemer (€)",
+    "salaryPlaceholder": "39700"
+  },
+  "submit": {
+    "idle": "Bereken Besparing",
+    "loading": "Bezig met berekenen..."
+  },
+  "validation": {
+    "title": "Vul alle verplichte velden in",
+    "description": "Alle velden met een * zijn verplicht.",
+    "missing": "Vul alle verplichte velden (*) in"
+  },
+  "success": {
+    "title": "Berekening verstuurd!",
+    "description": "We hebben je ROI analyse naar je email gestuurd."
+  },
+  "error": {
+    "title": "Er ging iets mis",
+    "description": "Probeer het later opnieuw."
+  },
+  "footnote": "* Alle velden zijn verplicht. Je gegevens worden vertrouwelijk behandeld.",
+  "results": {
+    "yourOrg": "Jouw Organisatie",
+    "employees": "Werknemers",
+    "avgSalary": "Gem. salaris",
+    "absenteeism": "Verzuim",
+    "turnover": "Verloop",
+    "conservative": "Conservative Scenario",
+    "conservativeTag": "Minimale Impact",
+    "positive": "Positive Scenario",
+    "positiveTag": "Volledige Impact",
+    "absenteeismSaving": "Verzuimbesparing",
+    "retentionSaving": "Retentiebesparing",
+    "productivityGain": "Productiviteitswinst",
+    "totalSaving": "Totale besparing",
+    "investment": "Investering",
+    "netProfit": "NETTO WINST",
+    "roi": "ROI",
+    "scientificTitle": "Wetenschappelijke Onderbouwing",
+    "scientificIntro": "Deze cijfers zijn gebaseerd op 40 jaar wetenschappelijk onderzoek naar aandachttraining:",
+    "scientific1": "15-21% verzuimreductie (meta-analyses van 200+ studies)",
+    "scientific2": "5-8% retentieverbetering (Harvard Business Review, 2019)",
+    "scientific3": "5-8% productiviteitsverbetering (Oxford University, 2022)",
+    "ctaQuestion": "Wil je deze winst realiseren?",
+    "ctaPrimary": "Kennismaken met Bas",
+    "ctaSecondary": "Nieuwe berekening"
+  }
+}

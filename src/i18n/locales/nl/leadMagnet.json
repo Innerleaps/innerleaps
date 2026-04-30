@@ -1,0 +1,32 @@
+{
+  "title": "Vraag het Wetenschappelijk Rapport aan",
+  "intro": "Ontvang ons uitgebreide academische rapport met 40 jaar onderzoeksresultaten, effectgroottes en ROI analyses.",
+  "fields": {
+    "name": "Naam",
+    "namePlaceholder": "Je volledige naam",
+    "email": "Email",
+    "emailPlaceholder": "je.email@bedrijf.nl",
+    "phone": "Telefoon (optioneel)",
+    "phonePlaceholder": "06 12345678",
+    "company": "Bedrijfsnaam",
+    "companyPlaceholder": "Naam van je organisatie",
+    "role": "Functie",
+    "rolePlaceholder": "Bijv. HR Manager"
+  },
+  "submit": {
+    "idle": "Vraag rapport aan",
+    "loading": "Versturen..."
+  },
+  "validation": "Vul alle verplichte velden in",
+  "success": {
+    "toastTitle": "Rapport aangevraagd!",
+    "toastDescription": "Je ontvangt het wetenschappelijk rapport binnen enkele minuten per email.",
+    "title": "Bedankt voor je aanvraag!",
+    "body": "Je ontvangt het wetenschappelijk rapport binnen enkele minuten op"
+  },
+  "error": {
+    "title": "Er ging iets mis",
+    "description": "Probeer het later opnieuw of neem contact op."
+  },
+  "privacy": "Je ontvangt het rapport direct per email. We behandelen je gegevens vertrouwelijk."
+}
