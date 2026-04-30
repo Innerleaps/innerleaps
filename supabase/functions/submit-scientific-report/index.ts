@@ -14,6 +14,7 @@ const SubmissionSchema = z.object({
   phone: z.string().trim().max(20).optional().nullable(),
   company: z.string().trim().min(1).max(200),
   functie: z.string().trim().min(1).max(100),
+  language: z.enum(["nl", "en"]).optional().default("nl"),
 });
 
 interface ScientificReportRequest {
@@ -22,6 +23,7 @@ interface ScientificReportRequest {
   phone?: string | null;
   company: string;
   functie: string;
+  language: "nl" | "en";
 }
 
 // Rate limiting: 1 request per 5 minutes per email
