@@ -1,5 +1,6 @@
 import { lazy, Suspense, useState, useEffect } from "react";
-import { Helmet } from "react-helmet-async";
+import { useTranslation } from "react-i18next";
+import PageSeo from "@/components/PageSeo";
 import { useSearchParams, useLocation } from "react-router-dom";
 import SimplifiedNavigation from "@/components/SimplifiedNavigation";
 import HeroSection from "@/components/HeroSection";
