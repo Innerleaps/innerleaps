@@ -12,10 +12,22 @@
     "switchToDutch": "Wissel naar Nederlands"
   },
   "menuItems": {
-    "vitality": { "label": "Vitaliteitstraining", "description": "Vitaal en veerkrachtig team" },
-    "employability": { "label": "Inzetbaarheid", "description": "Productief team met minder uitval" },
-    "stress": { "label": "Stressmanagement", "description": "Verminder spanning en druk" },
-    "performance": { "label": "Prestatie Verbeteren", "description": "Verbeter focus en prestaties" }
+    "vitality": {
+      "label": "Vitaliteitstraining",
+      "description": "Vitaal en veerkrachtig team"
+    },
+    "employability": {
+      "label": "Inzetbaarheid",
+      "description": "Productief team met minder uitval"
+    },
+    "stress": {
+      "label": "Stressmanagement",
+      "description": "Verminder spanning en druk"
+    },
+    "performance": {
+      "label": "Prestatie Verbeteren",
+      "description": "Verbeter focus en prestaties"
+    }
   },
   "cta": {
     "scheduleCall": "Plan een gesprek met Bas",
@@ -169,6 +181,16 @@
       "umass": "Vitaliteitstraining ontwikkeld door University of Massachusetts",
       "uva": "Aandachttraining aan de Universiteit van Amsterdam",
       "vmbn": "VMBN Trainer categorie 1"
+    }
+  },
+  "seo": {
+    "landing": {
+      "title": "Innerleaps: minder verzuim en burn-outpreventie via breintraining",
+      "description": "Innerleaps verlaagt ziekteverzuim met 15-21% via wetenschappelijk onderbouwde breintraining. 6 weken, 12 minuten per dag. Gebaseerd op 40 jaar onderzoek."
+    },
+    "blog": {
+      "title": "Blog over verzuim, stress en breintraining | Innerleaps",
+      "description": "Inzichten en wetenschappelijke kennis over ziekteverzuim, stressmanagement, concentratie en mentale vitaliteit op de werkvloer."
     }
   }
 }
