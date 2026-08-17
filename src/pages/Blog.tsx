@@ -1,10 +1,13 @@
 import SimplifiedNavigation from '@/components/SimplifiedNavigation';
+import PageSeo from '@/components/PageSeo';
+import { useTranslation } from 'react-i18next';
 import Footer from '@/components/Footer';
 import { Card, CardContent } from '@/components/ui/card';
 import { Calendar } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const Blog = () => {
+  const { t } = useTranslation('common');
   const blogPosts = [
     {
       id: 1,
@@ -31,6 +34,7 @@ const Blog = () => {
 
   return (
     <div className="min-h-screen bg-white">
+      <PageSeo title={t('seo.blog.title')} description={t('seo.blog.description')} />
       <SimplifiedNavigation />
       
       {/* Hero Section */}
