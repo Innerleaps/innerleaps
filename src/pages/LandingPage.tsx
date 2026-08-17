@@ -18,6 +18,7 @@ const ROICalculator = lazy(() => import("@/components/ROICalculator"));
 const CalculatorModal = lazy(() => import("@/components/CalculatorModal"));
 
 const LandingPage = () => {
+  const { t } = useTranslation("common");
   const [searchParams] = useSearchParams();
   const location = useLocation();
   const [isCalculatorOpen, setIsCalculatorOpen] = useState(false);
