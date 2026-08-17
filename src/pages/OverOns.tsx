@@ -5,7 +5,7 @@ import TrustSection from "@/components/TrustSection";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { useEffect } from "react";
-import { Helmet } from "react-helmet-async";
+import PageSeo from "@/components/PageSeo";
 import { useTranslation } from "react-i18next";
 
 // Trainer photos
@@ -119,9 +119,7 @@ const OverOns = () => {
 
   return (
     <div className="min-h-screen bg-white">
-      <Helmet>
-        <meta name="description" content={t("meta.description")} />
-      </Helmet>
+      <PageSeo title={t("meta.title")} description={t("meta.description")} />
       <SimplifiedNavigation />
       <StickyCtaButtons />
 
