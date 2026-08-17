@@ -48,12 +48,7 @@ const LandingPage = () => {
 
   return (
     <div className="min-h-screen bg-white">
-      <Helmet>
-        <meta
-          name="description"
-          content="Innerleaps verlaagt ziekteverzuim met 15-21% via wetenschappelijk onderbouwde breintraining. 6 weken, 12 minuten per dag. Gebaseerd op 40 jaar onderzoek."
-        />
-      </Helmet>
+      <PageSeo title={t("seo.landing.title")} description={t("seo.landing.description")} />
       <SimplifiedNavigation />
       <StickyCtaButtons />
       <div id="home">
