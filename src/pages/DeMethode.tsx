@@ -1,5 +1,5 @@
 import { useEffect, useState, lazy, Suspense } from "react";
-import { Helmet } from "react-helmet-async";
+import PageSeo from "@/components/PageSeo";
 import { useTranslation } from "react-i18next";
 import SimplifiedNavigation from "@/components/SimplifiedNavigation";
 import StickyCtaButtons from "@/components/StickyCtaButtons";
@@ -56,9 +56,7 @@ const DeMethode = () => {
 
   return (
     <div className="min-h-screen bg-white">
-      <Helmet>
-        <meta name="description" content={t("meta.description")} />
-      </Helmet>
+      <PageSeo title={t("meta.title")} description={t("meta.description")} />
       <SimplifiedNavigation />
       <StickyCtaButtons />
 

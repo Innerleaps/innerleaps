@@ -12,10 +12,22 @@
     "switchToDutch": "Wissel naar Nederlands"
   },
   "menuItems": {
-    "vitality": { "label": "Vitality Training", "description": "A vital and resilient team" },
-    "employability": { "label": "Employability", "description": "A productive team with less sick leave" },
-    "stress": { "label": "Stress Management", "description": "Reduce tension and pressure" },
-    "performance": { "label": "Improve Performance", "description": "Sharpen focus and performance" }
+    "vitality": {
+      "label": "Vitality Training",
+      "description": "A vital and resilient team"
+    },
+    "employability": {
+      "label": "Employability",
+      "description": "A productive team with less sick leave"
+    },
+    "stress": {
+      "label": "Stress Management",
+      "description": "Reduce tension and pressure"
+    },
+    "performance": {
+      "label": "Improve Performance",
+      "description": "Sharpen focus and performance"
+    }
   },
   "cta": {
     "scheduleCall": "Schedule a call with Bas",
@@ -169,6 +181,16 @@
       "umass": "Method developed at the University of Massachusetts",
       "uva": "Attention training studied at the University of Amsterdam",
       "vmbn": "VMBN Trainer category 1"
+    }
+  },
+  "seo": {
+    "landing": {
+      "title": "Innerleaps: cut absenteeism and prevent burnout with brain training",
+      "description": "Innerleaps reduces absenteeism by 15-21% with evidence-based brain training. Six weeks, 12 minutes a day, built on 40 years of research."
+    },
+    "blog": {
+      "title": "Blog on absenteeism, stress and brain training | Innerleaps",
+      "description": "Insights and scientific knowledge about absenteeism, stress management, focus and mental vitality at work."
     }
   }
 }

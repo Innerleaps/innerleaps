@@ -1,5 +1,6 @@
 import { lazy, Suspense, useState, useEffect } from "react";
-import { Helmet } from "react-helmet-async";
+import { useTranslation } from "react-i18next";
+import PageSeo from "@/components/PageSeo";
 import { useSearchParams, useLocation } from "react-router-dom";
 import SimplifiedNavigation from "@/components/SimplifiedNavigation";
 import HeroSection from "@/components/HeroSection";
@@ -17,6 +18,7 @@ const ROICalculator = lazy(() => import("@/components/ROICalculator"));
 const CalculatorModal = lazy(() => import("@/components/CalculatorModal"));
 
 const LandingPage = () => {
+  const { t } = useTranslation("common");
   const [searchParams] = useSearchParams();
   const location = useLocation();
   const [isCalculatorOpen, setIsCalculatorOpen] = useState(false);
@@ -48,12 +50,7 @@ const LandingPage = () => {
 
   return (
     <div className="min-h-screen bg-white">
-      <Helmet>
-        <meta
-          name="description"
-          content="Innerleaps verlaagt ziekteverzuim met 15-21% via wetenschappelijk onderbouwde breintraining. 6 weken, 12 minuten per dag. Gebaseerd op 40 jaar onderzoek."
-        />
-      </Helmet>
+      <PageSeo title={t("seo.landing.title")} description={t("seo.landing.description")} />
       <SimplifiedNavigation />
       <StickyCtaButtons />
       <div id="home">

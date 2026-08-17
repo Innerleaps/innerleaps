@@ -5,7 +5,7 @@ import StickyCtaButtons from "@/components/StickyCtaButtons";
 import ROICalculator from "@/components/ROICalculator";
 import { useEffect } from "react";
 import Footer from "@/components/Footer";
-import { Helmet } from "react-helmet-async";
+import PageSeo from "@/components/PageSeo";
 import { useTranslation } from "react-i18next";
 
 const Contact = () => {
@@ -17,9 +17,7 @@ const Contact = () => {
 
   return (
     <div className="min-h-screen bg-brand-gray-light">
-      <Helmet>
-        <meta name="description" content={t("meta.description")} />
-      </Helmet>
+      <PageSeo title={t("meta.title")} description={t("meta.description")} />
       <SimplifiedNavigation />
       <StickyCtaButtons />
 

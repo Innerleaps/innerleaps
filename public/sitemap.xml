@@ -128,9 +128,4 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://innerleaps.nl/blog" />
   </url>
 
-  <!-- Legal (EN-only) -->
-  <url><loc>https://innerleaps.nl/algemene-voorwaarden</loc></url>
-  <url><loc>https://innerleaps.nl/privacy</loc></url>
-  <url><loc>https://innerleaps.nl/cookies</loc></url>
-
 </urlset>
