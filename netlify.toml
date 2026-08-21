@@ -2,7 +2,12 @@
 # Zie MIGRATIE-PLAN.md voor de context.
 
 [build]
-  command = "npm run build"
+  # Chrome expliciet ophalen voordat we bouwen. Het prerenderen heeft hem
+  # nodig. Normaal haalt puppeteer hem binnen via een install-script, maar
+  # er staan drie lockfiles in deze repo en Netlify kiest bun zodra hij
+  # bun.lockb ziet. Bun draait die install-scripts standaard niet, en dan
+  # ontbreekt Chrome. Zo werkt het ongeacht welke pakketbeheerder hij kiest.
+  command = "npx --yes puppeteer browsers install chrome && npm run build"
   publish = "dist"
 
 [build.environment]
