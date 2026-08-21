@@ -85,8 +85,8 @@ want in mei draaide de ping gewoon en pauzeerde het project alsnog.
       zodat het zichtbaar is in de Netlify-logs
 - [x] Migratie geschreven die de Supabase-cron opruimt:
       `20260821140000_remove_keep_alive_cron.sql`
-- [ ] Die migratie draaien in de Supabase SQL Editor
-- [ ] Controleren op Database Webhooks voordat pg_net eventueel weg mag
+- [x] Migratie gedraaid in de Supabase SQL Editor
+- [x] Geen Database Webhooks gevonden, dus pg_cron en pg_net allebei verwijderd
 - [ ] Na de eerste geplande run de Netlify-logs bekijken
 - [ ] Een week meekijken of het project wakker blijft
 
@@ -102,25 +102,34 @@ zit in die edge function en blijft dus ook werken.
 
 ## Stap 4. Prerendering aanzetten
 
-Dit is de grootste winst voor SEO en GEO. Nu levert de site 0 woorden aan
-crawlers die geen JavaScript draaien. Dat zijn GPTBot, PerplexityBot, ClaudeBot
-en CCBot. Zie `GEO-ANALYSIS.md` voor de meting.
+Voor de fix leverde de site 0 woorden aan crawlers die geen JavaScript draaien.
+Dat zijn GPTBot, PerplexityBot, ClaudeBot en CCBot. Zie `GEO-ANALYSIS.md`.
 
-Eerst twee codefixes, want deze code draait meteen bij het laden en kan niet
-buiten de browser:
+### Hoe we het hebben opgelost
 
-- [ ] `src/i18n/config.ts:102` gebruikt `window.location.pathname` op
-      moduleniveau
-- [ ] `src/integrations/supabase/client.ts` gebruikt `localStorage` op
-      moduleniveau
+Niet door de app in Node te renderen, want daar is hij niet op gebouwd:
+pagina's worden lazy geladen, de router zit vast in `App.tsx` en er staat
+browsercode op moduleniveau. Dat verbouwen op een live site is te riskant.
 
-Daarna:
+In plaats daarvan draait na `vite build` het script `scripts/prerender.mjs`.
+Dat start een servertje op de gebouwde site, laat een echte browser elke
+pagina bezoeken en slaat op wat die browser ziet. Inclusief de titel en
+description die react-helmet-async per pagina zet.
 
-- [ ] Prerender-plugin toevoegen aan `vite.config.ts`
-- [ ] Alle routes prerenderen
-- [ ] Controleren met `curl -A "GPTBot/1.0" https://innerleaps.nl/` dat er echt
-      tekst uitkomt
-- [ ] Controleren dat elke pagina zijn eigen titel en description meekrijgt
+- [x] `scripts/prerender.mjs` geschreven
+- [x] Aan `npm run build` gekoppeld, draait dus ook op Netlify
+- [x] Routes komen uit `ROUTE_MAP` in `src/i18n/config.ts`, één lijst
+- [x] Faalt hard bij een lege pagina, zodat half werk niet doorglipt
+- [x] Puppeteer-cache in de repo-map, zodat Netlify hem bewaart
+- [x] Alle 24 pagina's vastgelegd, 153 tot 2083 woorden per pagina
+- [x] Zes ontbrekende blogartikelen aan `sitemap.xml` toegevoegd
+- [ ] Na deploy controleren met `curl -A "GPTBot/1.0" https://innerleaps.nl/`
+
+### Nog te doen
+
+De Engelse blogartikelen tonen Nederlandse titels. `/en/blog/hidden-costs-...`
+geeft "De verborgen kosten van ziekteverzuim met rekenmodel". De drie
+blogcomponenten hebben hun tekst hardcoded en kijken niet naar de taal.
 
 ## Stap 5. URL's hernoemen met echte 301's
 

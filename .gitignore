@@ -12,6 +12,9 @@ dist
 dist-ssr
 *.local
 
+# Chrome die puppeteer binnenhaalt voor het prerenderen
+.cache
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
