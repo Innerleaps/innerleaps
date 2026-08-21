@@ -87,11 +87,16 @@ i18n
     defaultNS: "common",
     interpolation: { escapeValue: false },
     detection: {
-      // URL is authoritative (LanguageSync keeps i18n in sync with the path).
-      // Do NOT cache to localStorage here — that key is owned by
-      // InitialLanguageRedirect / LanguageSwitcher and writing it from i18next
-      // would short-circuit the first-visit browser-language redirect.
-      order: ["path", "navigator", "htmlTag"],
+      // De URL bepaalt de taal, verder niets. LanguageSync houdt i18n gelijk
+      // aan het pad, en de taalschakelaar rechtsboven navigeert gewoon naar
+      // de andere URL.
+      //
+      // De browsertaal staat hier bewust niet meer bij. Die stuurde bezoekers
+      // met een Engelse browser automatisch door naar /en, en Googlebot is
+      // ook zo'n bezoeker. Daardoor dreigde de Nederlandse homepage uit de
+      // index te vallen, terwijl dat juist de pagina is die moet ranken.
+      // Nederlands is nu de standaard, zie fallbackLng hierboven.
+      order: ["path"],
       lookupFromPathIndex: 0,
       caches: [],
     },

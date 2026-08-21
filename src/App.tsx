@@ -6,7 +6,6 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { lazy, Suspense, Profiler } from "react";
 import { ProductionRedirect } from "./components/ProductionRedirect";
 import LanguageSync from "./i18n/LanguageSync";
-import InitialLanguageRedirect from "./i18n/InitialLanguageRedirect";
 
 // Lazy load all pages for better performance
 const LandingPage = lazy(() => import("./pages/LandingPage"));
@@ -62,7 +61,6 @@ const App = () => {
           }>
             <Profiler id="App" onRender={onRenderCallback}>
               <LanguageSync />
-              <InitialLanguageRedirect />
               <Routes>
                 <Route path="/" element={<LandingPage />} />
                 {/* English routes (mirror of NL pages) */}

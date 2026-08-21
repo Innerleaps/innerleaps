@@ -6,8 +6,6 @@ import {
   type SupportedLanguage,
 } from "@/i18n/config";
 
-const STORAGE_KEY = "innerleaps-lang-v2";
-
 interface LanguageSwitcherProps {
   /** Compact horizontal layout for desktop nav (default), or stacked for mobile */
   variant?: "inline" | "block";
@@ -29,10 +27,6 @@ const LanguageSwitcher = ({ variant = "inline", onSwitch }: LanguageSwitcherProp
   const handleSwitch = (lang: SupportedLanguage) => {
     if (lang === current) return;
     const target = getEquivalentPath(pathname, lang);
-    // Persist the user's explicit choice so we don't auto-redirect on next visit.
-    if (typeof window !== "undefined") {
-      window.localStorage.setItem(STORAGE_KEY, lang);
-    }
     void i18n.changeLanguage(lang);
     // Fall back to language home if no mapping exists for this page
     navigate(target ?? (lang === "en" ? "/en" : "/"));
