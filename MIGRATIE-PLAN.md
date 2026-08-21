@@ -48,39 +48,57 @@ testen we met npm. Gaat de build stuk, dan zit het waarschijnlijk hier.
 
 ## Stap 3. Keep-alive van Supabase repareren
 
-Dit is het probleem waardoor je lead gen automations telkens stilvallen.
+### Wat de logs lieten zien
 
-**Wat er nu staat**, in `supabase/migrations/20260220075426_*.sql`:
+`cron.job_run_details` gaf het bewijs:
 
-```sql
-cron.schedule('keep-alive-weekly', '0 12 */5 * *', ...)
+```
+2026-08-21   <- vandaag, na handmatig ingrijpen
+2026-05-16   <- daarvoor
+2026-05-11
+2026-05-06
+2026-05-01
+2026-04-26   ... patroon: dag 1, 6, 11, 16, 21, 26
 ```
 
-**Twee fouten:**
+Alle runs `succeeded`. En toch een gat van **97 dagen** tussen 16 mei en
+21 augustus.
 
-1. `*/5` betekent niet "elke 5 dagen". Het betekent: op dag 1, 6, 11, 16, 21 en
-   26 van de maand. Aan het eind van een maand van 31 dagen zit er 6 dagen
-   tussen. Supabase pauzeert na 7. Gaat er één ping mis, dan ben je alsnog weg.
-2. De cron draait binnen de database die hij wakker moet houden. Pauzeert het
-   project, dan stopt pg_cron ook. De keep-alive kan zichzelf dan nooit meer
-   wekken.
+Twee fouten, allebei bevestigd door die data:
 
-**Wat we ervoor in de plaats zetten:**
+1. `'0 12 */5 * *'` betekent niet "elke 5 dagen" maar dag 1, 6, 11, 16, 21
+   en 26 van de maand. Aan het eind van een lange maand zat er 6 dagen
+   tussen, terwijl Supabase na 7 dagen pauzeert. Eén dag speling.
+2. De cron draaide binnen de database die hij wakker moest houden. Toen het
+   project pauzeerde stopte pg_cron mee. Drie maanden lang kon hij zichzelf
+   niet wekken.
 
-Bas wil dit simpel houden en binnen Supabase oplossen. Dus geen GitHub Action,
-maar dezelfde cron die vaker draait.
+Punt 2 is de echte fout. Vaker pingen vanuit dezelfde plek lost dat niet op,
+want in mei draaide de ping gewoon en pauzeerde het project alsnog.
 
-- [x] Migratie geschreven: `20260821120000_keep_alive_daily.sql`
-- [ ] SQL draaien in de Supabase SQL Editor
-- [ ] `cron.job_run_details` bekijken of de oude job überhaupt afging
+### Wat we hebben gedaan
+
+- [x] Keep-alive verhuisd naar Netlify: `netlify/functions/keep-alive.mjs`
+- [x] Dagelijks om 06:00 UTC, zes dagen speling in plaats van één
+- [x] Lokaal getest, Supabase gaf `{"status":"alive","inserted":true}`
+- [x] Faalt luid: bij een fout logt hij een foutmelding en geeft status 500,
+      zodat het zichtbaar is in de Netlify-logs
+- [x] Migratie geschreven die de Supabase-cron opruimt:
+      `20260821140000_remove_keep_alive_cron.sql`
+- [ ] Die migratie draaien in de Supabase SQL Editor
+- [ ] Controleren op Database Webhooks voordat pg_net eventueel weg mag
+- [ ] Na de eerste geplande run de Netlify-logs bekijken
 - [ ] Een week meekijken of het project wakker blijft
 
-Blijft staan als risico: draait de cron binnen de database die hij wakker moet
-houden. Pauzeert het project toch een keer, dan moet je hem handmatig wekken.
-Met dagelijks pingen is dat onwaarschijnlijk geworden.
+### Wat je moet weten
 
-**Nog uitzoeken:** in de Supabase-logs kijken of die cron überhaupt afgaat.
-Misschien is er nog iets anders aan de hand.
+Een ping **voorkomt** de pauze, maar **heft hem niet op**. Staat een project
+eenmaal uit, dan moet je het handmatig herstellen in het Supabase-dashboard.
+Geen enkele wekker lost dat op.
+
+De tabel `keep_alive_logs` blijft. De Netlify-functie schrijft daar nog steeds
+naartoe, via dezelfde edge function. De opruiming van rijen ouder dan 30 dagen
+zit in die edge function en blijft dus ook werken.
 
 ## Stap 4. Prerendering aanzetten
 
