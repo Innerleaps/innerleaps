@@ -123,7 +123,20 @@ description die react-helmet-async per pagina zet.
 - [x] Puppeteer-cache in de repo-map, zodat Netlify hem bewaart
 - [x] Alle 24 pagina's vastgelegd, 153 tot 2083 woorden per pagina
 - [x] Zes ontbrekende blogartikelen aan `sitemap.xml` toegevoegd
-- [ ] Na deploy controleren met `curl -A "GPTBot/1.0" https://innerleaps.nl/`
+- [x] Live gemeten: 14.303 woorden over 14 pagina's, alles 200, was 0
+
+### Onderweg opgelost
+
+- Netlify zette een schuine streep achter elke URL, want de bestanden stonden
+  als `<route>/index.html`. Nu platte `<route>.html`, dus 200 in plaats van 301.
+- Chrome ontbrak in de Netlify-build. Er staan drie lockfiles in de repo en
+  Netlify koos bun, die geen install-scripts draait. Nu haalt de buildopdracht
+  Chrome expliciet op.
+- De Nederlandse homepage werd als Engelse pagina opgeslagen, omdat de browser
+  in de buildomgeving Engelstalig is en de site toen nog automatisch doorstuurde.
+  Die automatische omleiding is er inmiddels uit, Nederlands is de standaard.
+- De bundelanalyse van rollup stond in `dist` en was dus openbaar op
+  `/stats.html`. Die schrijft nu naar `build-stats/` buiten `dist`.
 
 ### Nog te doen
 
