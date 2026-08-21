@@ -39,7 +39,8 @@ testen we met npm. Gaat de build stuk, dan zit het waarschijnlijk hier.
 - [x] Bij TransIP `@` A van `185.158.133.1` naar `75.2.60.5`
 - [x] `www` van A naar CNAME `innerleaps-website.netlify.app.`
 - [x] Doorgezet, mail en overige records ongewijzigd gecontroleerd
-- [ ] SSL-certificaat: klik "Verify DNS configuration" in Netlify onder HTTPS
+- [x] SSL-certificaat actief: Let's Encrypt, CN=innerleaps.nl, 21 aug 2026
+- [x] www stuurt door naar apex, http stuurt door naar https
 - [ ] Lovable-hosting nog een paar dagen laten staan als terugval
 - [ ] Daarna pas het TransIP-hostingpakket opzeggen
 
