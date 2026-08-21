@@ -98,11 +98,20 @@ function startServer() {
   return new Promise((resolve) => server.listen(PORT, () => resolve(server)));
 }
 
-/** Waar komt het bestand voor deze route terecht? */
+/**
+ * Waar komt het bestand voor deze route terecht?
+ *
+ * Let op: `/vitaliteitstraining.html` en niet `/vitaliteitstraining/index.html`.
+ * Bij die tweede vorm zet Netlify er een schuine streep achter en stuurt hij
+ * `/vitaliteitstraining` met een 301 door naar `/vitaliteitstraining/`. Dat
+ * botst met de canonical en de sitemap, die de versie zonder streep noemen,
+ * en het kost elke bezoeker een extra omleiding. Met een plat .html-bestand
+ * serveert Netlify de pagina direct met een 200.
+ */
 function targetFile(route) {
   return route === "/"
     ? join(DIST, "index.html")
-    : join(DIST, route, "index.html");
+    : join(DIST, `${route.replace(/^\//, "")}.html`);
 }
 
 async function main() {
