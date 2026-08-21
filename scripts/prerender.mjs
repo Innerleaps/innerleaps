@@ -131,8 +131,24 @@ async function main() {
 
   try {
     for (const route of routes) {
-      const page = await browser.newPage();
+      // Elke pagina in een eigen context. Anders delen ze localStorage, en
+      // dan lekt de taalkeuze van de ene pagina naar de volgende.
+      const context = await browser.createBrowserContext();
+      const page = await context.newPage();
       try {
+        // De site stuurt eerste bezoekers door op basis van hun browsertaal.
+        // In een buildomgeving is die taal Engels, waardoor de Nederlandse
+        // homepage als Engelse pagina werd vastgelegd. Daarom zetten we de
+        // taal hier vast op wat bij de route hoort.
+        const locale = route === "/en" || route.startsWith("/en/")
+          ? "en-US"
+          : "nl-NL";
+        await page.setExtraHTTPHeaders({ "Accept-Language": locale });
+        await page.evaluateOnNewDocument((value) => {
+          Object.defineProperty(navigator, "language", { get: () => value });
+          Object.defineProperty(navigator, "languages", { get: () => [value] });
+        }, locale);
+
         await page.goto(`http://localhost:${PORT}${route}`, {
           waitUntil: "networkidle2",
           timeout: 45000,
@@ -147,6 +163,14 @@ async function main() {
           },
           { timeout: 20000 },
         );
+
+        // Is de pagina onderweg omgeleid? Dan zouden we de verkeerde inhoud
+        // opslaan onder deze URL. Dit ving de Nederlandse homepage die als
+        // Engelse pagina werd bewaard.
+        const landed = new URL(page.url()).pathname;
+        if (landed !== route) {
+          throw new Error(`omgeleid naar ${landed}, verwacht ${route}`);
+        }
 
         const html = await page.evaluate(
           () => "<!DOCTYPE html>\n" + document.documentElement.outerHTML,
@@ -168,7 +192,7 @@ async function main() {
         failures.push({ route, message: error.message });
         console.error(`  MISLUKT  ${route}: ${error.message}`);
       } finally {
-        await page.close();
+        await context.close();
       }
     }
   } finally {

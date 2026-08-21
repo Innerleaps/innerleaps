@@ -14,7 +14,9 @@ export default defineConfig(({ mode }) => ({
     react(),
     mode === 'development' && componentTagger(),
     mode === 'production' && visualizer({
-      filename: './dist/stats.html',
+      // Buiten dist, anders wordt deze bundelanalyse meegepubliceerd en is
+      // hij openbaar te bekijken op innerleaps.nl/stats.html.
+      filename: './build-stats/bundle.html',
       open: false,
       gzipSize: true,
       brotliSize: true,
