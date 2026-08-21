@@ -22,11 +22,11 @@ Vink af wat klaar is, zodat er niks blijft liggen.
 
 ## Stap 1. Netlify opzetten
 
-- [ ] Netlify-account maken (doet Bas, ik mag geen accounts aanmaken)
-- [ ] GitHub-repo koppelen aan Netlify
-- [ ] Build checken: `npm run build`, publiceermap `dist`
-- [ ] Testen op het tijdelijke adres van Netlify, bijvoorbeeld `innerleaps.netlify.app`
-- [ ] Alle 24 pagina's langslopen, met name de formulieren en de ROI-calculator
+- [x] Netlify-account maken
+- [x] GitHub-repo koppelen aan Netlify
+- [x] Build checken: `npm run build`, publiceermap `dist`
+- [x] Getest op `innerleaps-website.netlify.app`, alle routes 200
+- [x] Alle 7 Supabase-functies bereikbaar vanaf Netlify (CORS staat op `*`)
 
 **Let op bij de build:** in de repo staan drie lockfiles, `package-lock.json`,
 `bun.lock` en `bun.lockb`. Netlify kiest bun zodra hij `bun.lockb` ziet. Lokaal
@@ -36,10 +36,10 @@ testen we met npm. Gaat de build stuk, dan zit het waarschijnlijk hier.
 
 ## Stap 2. DNS omzetten
 
-- [ ] Bij TransIP het A-record van `185.158.133.1` naar het adres van Netlify
-- [ ] Ook `www` meenemen
-- [ ] Wachten tot het is doorgezet, meestal binnen een uur
-- [ ] Controleren of het SSL-certificaat van Netlify actief is
+- [x] Bij TransIP `@` A van `185.158.133.1` naar `75.2.60.5`
+- [x] `www` van A naar CNAME `innerleaps-website.netlify.app.`
+- [x] Doorgezet, mail en overige records ongewijzigd gecontroleerd
+- [ ] SSL-certificaat: klik "Verify DNS configuration" in Netlify onder HTTPS
 - [ ] Lovable-hosting nog een paar dagen laten staan als terugval
 - [ ] Daarna pas het TransIP-hostingpakket opzeggen
 
@@ -66,10 +66,17 @@ cron.schedule('keep-alive-weekly', '0 12 */5 * *', ...)
 
 **Wat we ervoor in de plaats zetten:**
 
-- [ ] Een GitHub Action die dagelijks `keep-alive` aanroept. Draait op GitHub,
-      dus los van Supabase. Gratis.
-- [ ] De oude pg_cron-job uitzetten met `cron.unschedule('keep-alive-weekly')`
+Bas wil dit simpel houden en binnen Supabase oplossen. Dus geen GitHub Action,
+maar dezelfde cron die vaker draait.
+
+- [x] Migratie geschreven: `20260821120000_keep_alive_daily.sql`
+- [ ] SQL draaien in de Supabase SQL Editor
+- [ ] `cron.job_run_details` bekijken of de oude job überhaupt afging
 - [ ] Een week meekijken of het project wakker blijft
+
+Blijft staan als risico: draait de cron binnen de database die hij wakker moet
+houden. Pauzeert het project toch een keer, dan moet je hem handmatig wekken.
+Met dagelijks pingen is dat onwaarschijnlijk geworden.
 
 **Nog uitzoeken:** in de Supabase-logs kijken of die cron überhaupt afgaat.
 Misschien is er nog iets anders aan de hand.
