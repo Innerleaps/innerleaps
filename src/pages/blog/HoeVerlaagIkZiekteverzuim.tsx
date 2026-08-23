@@ -424,7 +424,7 @@ const HoeVerlaagIkZiekteverzuim = () => {
           </ul>
           <p className="text-brand-gray-dark mb-4">
             Innerleaps'{" "}
-            <Link to="/vitaliteitstraining" className="text-brand-blue hover:underline">
+            <Link to="/duurzame-inzetbaarheid" className="text-brand-blue hover:underline">
               training
             </Link>{" "}
             combineert dagelijkse geplande oefeningen met integratie in het dagelijks leven, ondersteund door wekelijkse

@@ -60,30 +60,30 @@
 
   <!-- Vitality Training -->
   <url>
-    <loc>https://innerleaps.nl/vitaliteitstraining</loc>
-    <xhtml:link rel="alternate" hreflang="nl" href="https://innerleaps.nl/vitaliteitstraining" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://innerleaps.nl/en/vitality-training" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://innerleaps.nl/vitaliteitstraining" />
+    <loc>https://innerleaps.nl/duurzame-inzetbaarheid</loc>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://innerleaps.nl/duurzame-inzetbaarheid" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://innerleaps.nl/en/sustainable-employability" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://innerleaps.nl/duurzame-inzetbaarheid" />
   </url>
   <url>
-    <loc>https://innerleaps.nl/en/vitality-training</loc>
-    <xhtml:link rel="alternate" hreflang="nl" href="https://innerleaps.nl/vitaliteitstraining" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://innerleaps.nl/en/vitality-training" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://innerleaps.nl/vitaliteitstraining" />
+    <loc>https://innerleaps.nl/en/sustainable-employability</loc>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://innerleaps.nl/duurzame-inzetbaarheid" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://innerleaps.nl/en/sustainable-employability" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://innerleaps.nl/duurzame-inzetbaarheid" />
   </url>
 
   <!-- Sustainable Employability -->
   <url>
-    <loc>https://innerleaps.nl/duurzame-inzetbaarheid-training</loc>
-    <xhtml:link rel="alternate" hreflang="nl" href="https://innerleaps.nl/duurzame-inzetbaarheid-training" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://innerleaps.nl/en/sustainable-employability-training" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://innerleaps.nl/duurzame-inzetbaarheid-training" />
+    <loc>https://innerleaps.nl/inzetbaarheid-verbeteren</loc>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://innerleaps.nl/inzetbaarheid-verbeteren" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://innerleaps.nl/en/improve-employability" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://innerleaps.nl/inzetbaarheid-verbeteren" />
   </url>
   <url>
-    <loc>https://innerleaps.nl/en/sustainable-employability-training</loc>
-    <xhtml:link rel="alternate" hreflang="nl" href="https://innerleaps.nl/duurzame-inzetbaarheid-training" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://innerleaps.nl/en/sustainable-employability-training" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://innerleaps.nl/duurzame-inzetbaarheid-training" />
+    <loc>https://innerleaps.nl/en/improve-employability</loc>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://innerleaps.nl/inzetbaarheid-verbeteren" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://innerleaps.nl/en/improve-employability" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://innerleaps.nl/inzetbaarheid-verbeteren" />
   </url>
 
   <!-- Stress Management -->

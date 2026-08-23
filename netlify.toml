@@ -18,8 +18,34 @@
   # een download van ruim 100 MB.
   PUPPETEER_CACHE_DIR = "/opt/build/repo/.cache/puppeteer"
 
+# Hernoemde pagina's, stap 5 uit MIGRATIE-PLAN.md. Echte 301's, zodat Google
+# de opgebouwde waarde meeneemt naar de nieuwe URL. Deze staan bewust boven de
+# catch-all hieronder, want die vangt anders alles af.
+#
+# Geen `force` nodig: na het hernoemen prerendert de build de oude paden niet
+# meer, dus er ligt geen bestand dat de redirect zou overrulen.
+[[redirects]]
+  from = "/vitaliteitstraining"
+  to = "/duurzame-inzetbaarheid"
+  status = 301
+
+[[redirects]]
+  from = "/duurzame-inzetbaarheid-training"
+  to = "/inzetbaarheid-verbeteren"
+  status = 301
+
+[[redirects]]
+  from = "/en/vitality-training"
+  to = "/en/sustainable-employability"
+  status = 301
+
+[[redirects]]
+  from = "/en/sustainable-employability-training"
+  to = "/en/improve-employability"
+  status = 301
+
 # De site is een single page app. Zonder deze regel geeft elke directe link
-# naar een subpagina een 404, bijvoorbeeld innerleaps.nl/vitaliteitstraining.
+# naar een subpagina een 404, bijvoorbeeld innerleaps.nl/duurzame-inzetbaarheid.
 # Status 200 en niet 301, want de URL moet blijven staan zoals hij is.
 # Deze regel hoort altijd als laatste, anders vangt hij echte redirects af.
 [[redirects]]

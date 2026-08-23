@@ -27,7 +27,7 @@ const Footer = memo(({ showNavigation = true }: FooterProps) => {
   const lang = detectLanguageFromPath(pathname);
 
   const href = {
-    vitality: lang === 'en' ? '/en/vitality-training' : '/vitaliteitstraining',
+    vitality: lang === 'en' ? '/en/sustainable-employability' : '/duurzame-inzetbaarheid',
     stress: lang === 'en' ? '/en/stress-management-training' : '/stressmanagement-training',
     performance: lang === 'en' ? '/en/performance-training' : '/prestatie-training',
     blog: lang === 'en' ? '/en/blog' : '/blog',

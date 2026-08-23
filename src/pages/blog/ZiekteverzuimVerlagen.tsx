@@ -153,7 +153,7 @@ const ZiekteverzuimVerlagen = () => {
               <h2 className="text-2xl md:text-3xl font-bold text-brand-purple mt-12 mb-6">Concrete Impact: Van Theorie naar Resultaat</h2>
               
               <p>
-                De Unilever-studie uit 2018, uitgevoerd door De Bruin en collega's aan de Universiteit van Amsterdam, toonde indrukwekkende resultaten. Medewerkers met verhoogd uitvalrisico (54,4% kans op langdurig ziekteverzuim) daalde naar 16,4% na een <Link to="/vitaliteitstraining" className="text-brand-blue hover:text-brand-orange font-medium transition-colors">6-weekse aandachtstraining</Link>. Dit is een risicoreductie van 70%, blijvend na 6 maanden.
+                De Unilever-studie uit 2018, uitgevoerd door De Bruin en collega's aan de Universiteit van Amsterdam, toonde indrukwekkende resultaten. Medewerkers met verhoogd uitvalrisico (54,4% kans op langdurig ziekteverzuim) daalde naar 16,4% na een <Link to="/duurzame-inzetbaarheid" className="text-brand-blue hover:text-brand-orange font-medium transition-colors">6-weekse aandachtstraining</Link>. Dit is een risicoreductie van 70%, blijvend na 6 maanden.
               </p>
 
               <p className="mt-8">

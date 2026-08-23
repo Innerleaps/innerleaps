@@ -155,14 +155,23 @@ Wacht op stap 2, want pas op Netlify kunnen we echte 301's neerzetten.
 | `/en/vitality-training` | `/en/sustainable-employability` |
 | `/en/sustainable-employability-training` | `/en/improve-employability` |
 
-- [ ] 301's in `_redirects` of `netlify.toml`
-- [ ] Routes in `src/App.tsx`
-- [ ] Padkoppelingen in `src/i18n/config.ts`
-- [ ] Menu in `src/components/SimplifiedNavigation.tsx` en `Footer.tsx`
-- [ ] Drie interne links in de blogartikelen
-- [ ] `public/sitemap.xml`
-- [ ] De drie dode redirectregels in `App.tsx:96-99` opruimen, die wijzen naar
-      zichzelf
+- [x] 301's in `netlify.toml`, bewust boven de catch-all
+- [x] Routes in `src/App.tsx`
+- [x] Padkoppelingen in `src/i18n/config.ts`
+- [x] Menu in `src/components/SimplifiedNavigation.tsx` en `Footer.tsx`
+- [x] Interne links in de blogartikelen, het waren er vier en niet drie
+- [x] `public/sitemap.xml`
+- [x] De drie dode redirectregels in `App.tsx` opruimen, die wezen naar zichzelf
+- [x] Build gedraaid: 24 van 24 pagina's geprerenderd, oude .html-bestanden weg,
+      canonical en hreflang volgen mee uit `ROUTE_MAP`
+- [ ] Na de deploy live controleren dat de vier oude URL's een 301 geven
+- [ ] Nieuwe sitemap indienen in Search Console en de oude URL's in de gaten
+      houden tot Google de nieuwe heeft opgepikt
+
+**Let op:** dit was alleen de URL-operatie. De teksten op de pagina's zijn niet
+aangeraakt, dus `/duurzame-inzetbaarheid` heeft nog "vitaliteitstraining" als
+kop en `/en/sustainable-employability` heet nog "Vitality training for
+organisations". Dat hoort bij stap 6.
 
 ## Stap 6. Daarna pas: content
 
