@@ -102,11 +102,9 @@
       ]
     },
     "weeks": {
-      "title": "Ons <0>6-weekse</0> Vitaliteitsplus-programma",
+      "title": "Het <0>6-weekse</0> Vitaliteitsplus-programma",
       "intro": [
-        "Met onze <0>\"push-ups voor het brein\"</0> trainen medewerkers hun brein. Hiermee versterken ze twee cruciale hersensystemen.",
-        "Het controlecentrum wordt sterker. Medewerkers onderdrukken impulsieve automatische reacties, filteren irrelevante informatie en nemen bewustere beslissingen over hun werkdruk.",
-        "Het waarschuwingssysteem wordt gevoeliger. Medewerkers herkennen stresssignalen op tijd en reguleren spanning bewust, waardoor ze meer rust ervaren en gelukkiger in hun werk en leven staan."
+        "In het Vitaliteitsplus-programma wordt elke week een ander thema behandeld. Het programma is zo opgezet om langdurige impact te realiseren."
       ],
       "imageAlt": "Mensen tijdens een aandacht- en concentratietraining voor betere prestaties en minder stress",
       "items": [
@@ -116,7 +114,7 @@
             "Controlecentrum"
           ],
           "title": "De automatische piloot doorbreken",
-          "text": "Waar zijn je gedachten terwijl je tanden poetst? Waarschijnlijk bij je eerste meeting of je to-do lijst. Medewerkers leren herkennen wanneer hun gedachten afdwalen en brengen hun aandacht terug naar wat ze nu doen. Ze trainen hun controlecentrum door telkens bewust aandacht te geven aan hun huidige activiteit."
+          "text": "Of we nu aan het werk zijn, in een meeting zitten of een gesprek met een collega hebben, soms zijn onze gedachten ergens anders. Deelnemers leren sneller te herkennen wanneer ze zijn afgedwaald en versterken hun concentratievermogen."
         },
         {
           "week": "Week 2",
@@ -133,7 +131,7 @@
             "Waarschuwingssysteem"
           ],
           "title": "Werken met druk en spanning",
-          "text": "Onder druk slaat het werkgeheugen van medewerkers vaak op tilt. Ze leren een korte oefening van 3 minuten waarmee ze hun hoofd snel weer rustig en helder krijgen. Ook ontdekken ze hoe ze pauzes slim inplannen, zodat ze de hele dag scherp blijven."
+          "text": "Onder druk slaat het werkgeheugen vaak op tilt. Deelnemers leren een snelle resettechniek. Ook leren ze verschillende manieren om gedurende de hele werkdag effectief en scherp te blijven."
         },
         {
           "week": "Week 4",
@@ -142,7 +140,7 @@
             "Waarschuwingssysteem"
           ],
           "title": "Mentale helderheid",
-          "text": "Niet elke gedachte is een feit. Medewerkers leren het verschil herkennen tussen productief nadenken en blijven malen. Ook leren ze hun gedachten te observeren in plaats van erin mee te gaan. Het resultaat: meer rust in hun hoofd en minder gepieker."
+          "text": "Niet elke gedachte is een feit. Deelnemers leren het verschil herkennen tussen productief nadenken en malen. Ook leren ze hun gedachten te observeren in plaats van erin mee te gaan. Het resultaat: meer rust in hun hoofd en minder gepieker."
         },
         {
           "week": "Week 5",
@@ -159,7 +157,7 @@
             "Waarschuwingssysteem"
           ],
           "title": "Duurzame integratie in je leven",
-          "text": "Medewerkers herkennen hun gedachtepatronen en maken de geleerde technieken blijvend onderdeel van hun dagelijkse routine. Ze bouwen hun eigen toolbox voor alle situaties."
+          "text": "Deelnemers reflecteren op het programma en ontwikkelen hun eigen dagelijkse routine. Precies daarom is het programma een jaar na training nog effectief."
         }
       ]
     },
@@ -309,11 +307,9 @@
       ]
     },
     "weeks": {
-      "title": "Ons <0>6-weekse</0> Vitaliteitsplus-programma",
+      "title": "Het <0>6-weekse</0> Vitaliteitsplus-programma",
       "intro": [
-        "Met onze <0>\"push-ups voor je brein\"</0> train jij je brein. Hiermee versterk je twee cruciale hersensystemen.",
-        "Je controlecentrum wordt sterker. Je onderdrukt impulsieve automatische reacties, filtert irrelevante informatie en neemt bewustere beslissingen over je werkdruk.",
-        "Je waarschuwingssysteem wordt gevoeliger. Je herkent stresssignalen op tijd en reguleert spanning bewust, waardoor je meer rust ervaart en gelukkiger in je werk en leven staat."
+        "In het Vitaliteitsplus-programma wordt elke week een ander thema behandeld. Het programma is zo opgezet om langdurige impact te realiseren."
       ],
       "imageAlt": "Mensen tijdens een aandacht- en concentratietraining voor betere prestaties en minder stress",
       "items": [
@@ -516,11 +512,9 @@
       ]
     },
     "weeks": {
-      "title": "Ons <0>6-weekse</0> kernprogramma",
+      "title": "Het <0>6-weekse</0> kernprogramma",
       "intro": [
-        "Met onze <0>\"push-ups voor je brein\"</0> train jij je brein. Hiermee versterk je twee cruciale hersensystemen.",
-        "Je controlecentrum wordt sterker. Je onderdrukt impulsieve automatische reacties, filtert irrelevante informatie en neemt bewustere beslissingen over je werkdruk.",
-        "Je waarschuwingssysteem wordt gevoeliger. Je herkent stresssignalen op tijd en reguleert spanning, waardoor werkgeheugen vrijkomt om te presteren en uitval wordt voorkomen."
+        "In het kernprogramma wordt elke week een ander thema behandeld. Het programma is zo opgezet om langdurige impact te realiseren."
       ],
       "imageAlt": "Mensen tijdens een aandacht- en concentratietraining voor betere prestaties en minder stress",
       "items": [
@@ -617,13 +611,13 @@
   },
   "sustainability": {
     "meta": {
-      "title": "Inzetbaarheid en productiviteit verbeteren | Innerleaps",
-      "description": "Meer focus en minder fouten onder druk. Innerleaps traint in 6 weken het brein van je team: 24% meer focus en 8% meer productiviteit."
+      "title": "Duurzaam presteren, zelfs onder druk | Innerleaps",
+      "description": "Minder spanning, betere samenwerking en scherpere resultaten, ook bij hoge werkdruk. Innerleaps traint in 6 weken het brein van je team."
     },
     "hero": {
       "badge": "Wetenschappelijk bewezen methode",
-      "title": "Beter <0>presteren</0> onder <0>druk</0>",
-      "subtitle": "Meer focus, minder fouten en een team dat vaker en scherper kan leveren. Een 6-weekse evidence-based breintraining voor teams die het verschil willen maken.",
+      "title": "<0>Duurzaam presteren</0>, zelfs onder druk",
+      "subtitle": "Minder spanning en betere prestaties met onze evidence based breintraining voor jouw team",
       "cta": "Bereken de ROI",
       "statsTitle": "Waarom organisaties ons kiezen",
       "stats": [
@@ -646,75 +640,61 @@
       ]
     },
     "challenges": {
-      "title": "Herken je één van deze <0>uitdagingen</0>?",
-      "subtitle": "Deze organisatie uitdagingen pakken wij aan met onze methode.",
+      "title": "Herken je deze <0>uitdagingen</0> in jouw team?",
+      "subtitle": "Deze uitdagingen pakken wij aan met onze breintraining voor teams.",
       "items": [
         {
           "icon": "Activity",
-          "title": "Targets staan onder druk",
-          "text": "Je team moet leveren, maar de druk stapelt zich op. Output blijft achter bij de ambitie."
+          "title": "Hoge werkdruk",
+          "text": "De hoeveelheid werk en ambities leiden tot spanning en stress."
+        },
+        {
+          "icon": "Frown",
+          "title": "Samenwerking kan beter",
+          "text": "De samenwerking en het begrip voor elkaar kan beter."
         },
         {
           "icon": "AlertCircle",
-          "title": "Fouten kosten tijd en geld",
-          "text": "Onder druk daalt de scherpte. Kleine missers leiden tot herstelwerk, frustratie en gemiste kansen."
-        },
-        {
-          "icon": "Heart",
-          "title": "Verzuim en uitval is te hoog",
-          "text": "Door uitval of ziekte is je team minder beschikbaar, precies wanneer je ze hard nodig hebt."
-        },
-        {
-          "icon": "Shield",
-          "title": "Talent vasthouden is moeilijk",
-          "text": "Je beste mensen zijn essentieel. Talent behouden vraagt meer dan goede voorwaarden."
+          "title": "Veel ballen hoog houden",
+          "text": "Je team heeft niet alleen een drukke baan maar ook een privéleven dat veel aandacht vraagt."
         }
       ]
     },
     "results": {
-      "title": "Het <0>resultaat</0> van onze training",
-      "subtitle": "De wetenschappelijk bewezen effecten van onze training.",
+      "title": "Het <0>effect</0> van onze training op jouw team",
+      "subtitle": "De wetenschappelijk bewezen effecten op jouw team.",
       "items": [
         {
-          "icon": "Brain",
-          "title": "Scherpere focus onder druk",
+          "icon": "TreeDeciduous",
+          "title": "Minder spanning",
           "bullets": [
-            "Je team leert aandacht bewust sturen en vasthouden. Minder afleiding, meer voortgang op wat écht telt.",
-            "Targets worden haalbaar, ook als de druk oploopt."
+            "Jouw team herkent stress eerder en trekt op tijd aan de bel.",
+            "Minder verzuim en minder langdurige uitval."
           ]
         },
         {
-          "icon": "Heart",
-          "title": "Minder fouten, betere output",
+          "icon": "Users",
+          "title": "Betere samenwerking",
           "bullets": [
-            "Een getraind brein maakt onder druk minder onnodige missers.",
-            "Onderzoek laat een duidelijke daling van fouten zien. Minder herstelwerk, betere output."
+            "Er wordt beter geluisterd naar elkaar.",
+            "Teamleden hebben meer begrip voor elkaar.",
+            "Meer werkplezier en tevredenheid."
           ]
         },
         {
-          "icon": "Shield",
-          "title": "Hogere team inzetbaarheid",
+          "icon": "TrendingUp",
+          "title": "Betere resultaten",
           "bullets": [
-            "Medewerkers herkennen stress eerder en sturen bij voordat uitval optreedt.",
-            "Minder verzuim, minder langdurige uitval. Een team dat beschikbaar is."
-          ]
-        },
-        {
-          "icon": "CheckCircle",
-          "title": "Tevredener team, lagere uitstroom",
-          "bullets": [
-            "Medewerkers ervaren meer rust, werkplezier en tevredenheid met hun leven.",
-            "Wie zich goed voelt op zijn plek, gaat minder snel op zoek naar iets anders."
+            "Betere concentratie en minder fouten, ook onder druk.",
+            "De productiviteit stijgt terwijl spanning juist afneemt."
           ]
         }
       ]
     },
     "weeks": {
-      "title": "Ons <0>6-weekse</0> kernprogramma",
+      "title": "Het <0>6-weekse</0> kernprogramma",
       "intro": [
-        "Met onze <0>\"push-ups voor het brein\"</0> trainen medewerkers hun brein. Hiermee versterken ze twee cruciale hersensystemen.",
-        "Het controlecentrum wordt sterker. Medewerkers onderdrukken impulsieve automatische reacties, filteren irrelevante informatie en nemen bewustere beslissingen over hun werkdruk.",
-        "Het waarschuwingssysteem wordt gevoeliger. Medewerkers herkennen stresssignalen op tijd en reguleren spanning, waardoor werkgeheugen vrijkomt om te presteren en uitval wordt voorkomen."
+        "In het kernprogramma wordt elke week een ander thema behandeld. Het programma is zo opgezet om langdurige impact te realiseren."
       ],
       "imageAlt": "Mensen tijdens een aandacht- en concentratietraining voor betere prestaties en minder stress",
       "items": [
@@ -724,7 +704,7 @@
             "Controlecentrum"
           ],
           "title": "De automatische piloot doorbreken",
-          "text": "Waar zijn je gedachten terwijl je tanden poetst? Waarschijnlijk bij je eerste meeting of je to-do lijst. Medewerkers leren herkennen wanneer hun gedachten afdwalen en brengen hun aandacht terug naar wat ze nu doen. Ze trainen hun controlecentrum door telkens bewust aandacht te geven aan hun huidige activiteit."
+          "text": "Of we nu aan het werk zijn, in een meeting zitten of een gesprek met een collega hebben, soms zijn onze gedachten ergens anders. Deelnemers leren sneller te herkennen wanneer ze zijn afgedwaald en versterken hun concentratievermogen."
         },
         {
           "week": "Week 2",
@@ -732,7 +712,7 @@
             "Waarschuwingssysteem"
           ],
           "title": "Vroege waarschuwingssignalen herkennen",
-          "text": "Medewerkers trainen hun waarschuwingssysteem zodat ze gespannen schouders, een strakke kaak of oppervlakkige ademhaling opmerken voordat spanning hen overneemt. Ze pakken de controle in plaats van de spanning, omdat hun stress-antennes scherper zijn."
+          "text": "Deelnemers trainen hun waarschuwingssysteem zodat ze sneller spanning herkennen. Door het trainen van lichamelijke \"stress-antennes\" kan spanning tijdig gereguleerd worden."
         },
         {
           "week": "Week 3",
@@ -741,7 +721,7 @@
             "Waarschuwingssysteem"
           ],
           "title": "Werken met druk en spanning",
-          "text": "Onder druk slaat het werkgeheugen van medewerkers vaak op tilt. Ze leren een korte oefening van 3 minuten waarmee ze hun hoofd snel weer rustig en helder krijgen. Ook ontdekken ze hoe ze pauzes slim inplannen, zodat ze de hele dag scherp blijven."
+          "text": "Onder druk slaat het werkgeheugen vaak op tilt. Deelnemers leren een snelle resettechniek. Ook leren ze verschillende manieren om gedurende de hele werkdag effectief en scherp te blijven."
         },
         {
           "week": "Week 4",
@@ -750,7 +730,7 @@
             "Waarschuwingssysteem"
           ],
           "title": "Mentale helderheid",
-          "text": "Niet elke gedachte is een feit. Medewerkers leren het verschil herkennen tussen productief nadenken en blijven malen. Ook leren ze hun gedachten te observeren in plaats van erin mee te gaan. Het resultaat: meer rust in hun hoofd en minder gepieker."
+          "text": "Niet elke gedachte is een feit. Deelnemers leren het verschil herkennen tussen productief nadenken en malen. Ook leren ze hun gedachten te observeren in plaats van erin mee te gaan. Het resultaat: meer rust in hun hoofd en minder gepieker."
         },
         {
           "week": "Week 5",
@@ -758,7 +738,7 @@
             "Controlecentrum"
           ],
           "title": "Beter samenwerken door bewust luisteren",
-          "text": "Onder druk formuleren medewerkers vaak hun antwoord al terwijl de ander nog praat. Ze leren écht luisteren, perspectief nemen en reageren vanuit begrip in plaats van reflex."
+          "text": "In deze week trainen deelnemers om écht te luisteren, perspectief te nemen en te reageren vanuit begrip in plaats van reflex."
         },
         {
           "week": "Week 6",
@@ -767,7 +747,7 @@
             "Waarschuwingssysteem"
           ],
           "title": "Duurzame integratie in je leven",
-          "text": "Medewerkers herkennen hun gedachtepatronen en maken de geleerde technieken blijvend onderdeel van hun dagelijkse routine. Ze bouwen hun eigen toolbox voor alle situaties."
+          "text": "Deelnemers reflecteren op het programma en ontwikkelen hun eigen dagelijkse routine. Precies daarom is het programma een jaar na training nog effectief."
         }
       ]
     },

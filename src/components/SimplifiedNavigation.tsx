@@ -26,7 +26,7 @@ const SimplifiedNavigation = () => {
     contact: lang === 'en' ? '/en/contact' : '/contact',
     blog: lang === 'en' ? '/en/blog' : '/blog',
     vitality: lang === 'en' ? '/en/sustainable-employability' : '/duurzame-inzetbaarheid',
-    employability: lang === 'en' ? '/en/improve-employability' : '/inzetbaarheid-verbeteren',
+    employability: lang === 'en' ? '/en/sustainable-employability-teams' : '/duurzame-inzetbaarheid-teams',
     stress: lang === 'en' ? '/en/stress-management-training' : '/stressmanagement-training',
     performance: lang === 'en' ? '/en/performance-training' : '/prestatie-training',
   };

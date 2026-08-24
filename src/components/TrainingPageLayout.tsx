@@ -18,6 +18,9 @@ import {
   BedDouble,
   Award,
   Star,
+  TreeDeciduous,
+  Users,
+  TrendingUp,
   type LucideIcon,
 } from "lucide-react";
 import SimplifiedNavigation from "@/components/SimplifiedNavigation";
@@ -41,6 +44,9 @@ const ICON_MAP: Record<string, LucideIcon> = {
   Moon,
   Frown,
   BedDouble,
+  TreeDeciduous,
+  Users,
+  TrendingUp,
 };
 
 const Icon = ({ name }: { name: string }) => {
@@ -90,6 +96,13 @@ export interface TrainingPageLayoutProps {
   logos: { src: string; alt: string }[];
   /** Optional "weeks" / program-detail block (shown above MasterclassSection) */
   weeksImage?: string;
+  /**
+   * Opmaak van de introblok boven de weken. "columns" zet de tekst links en de
+   * afbeelding rechts, "stacked" zet alles onder elkaar en even breed als de
+   * weekblokken. Standaard blijft "columns" zodat bestaande pagina's niet
+   * ongemerkt verspringen.
+   */
+  weeksLayout?: "columns" | "stacked";
   /** Variant for the MasterclassSection */
   masterclassVariant?: "employer" | "employee";
   /** Hide the MasterclassSection entirely */
@@ -112,6 +125,7 @@ const TrainingPageLayout = ({
   heroSecondaryCta,
   logos,
   weeksImage,
+  weeksLayout = "columns",
   masterclassVariant = "employer",
   hideMasterclass = false,
   hideStickyCtas = false,
@@ -404,7 +418,7 @@ const TrainingPageLayout = ({
       </section>
 
       {/* Program Overview (shared, already i18n) */}
-      <ProgramOverviewSection hideOutroCta={showMethodCtaAfterWeeks} />
+      <ProgramOverviewSection hideOutroCta={showMethodCtaAfterWeeks} fourthFeature="workbook" />
 
       {/* Weeks */}
       {weeks && weeks.length > 0 && (
@@ -419,26 +433,48 @@ const TrainingPageLayout = ({
             </h2>
 
             {weeksImage && (
-              <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center mb-16">
-                <div className="space-y-6 text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
-                  {weekIntro.map((p, i) => (
-                    <p key={i}>
-                      <Trans
-                        i18nKey={`${tKey}.weeks.intro.${i}`}
-                        t={t}
-                        components={[<strong />]}
-                      />
-                    </p>
-                  ))}
-                </div>
-                <div className="relative">
+              weeksLayout === "stacked" ? (
+                /* Alles onder elkaar en even breed als de weekblokken eronder. */
+                <div className="max-w-3xl mx-auto mb-16 space-y-8">
+                  <div className="space-y-6 text-xl md:text-2xl text-brand-gray-medium leading-relaxed text-center">
+                    {weekIntro.map((p, i) => (
+                      <p key={i}>
+                        <Trans
+                          i18nKey={`${tKey}.weeks.intro.${i}`}
+                          t={t}
+                          components={[<strong />]}
+                        />
+                      </p>
+                    ))}
+                  </div>
                   <img
                     src={weeksImage}
                     alt={t(`${tKey}.weeks.imageAlt`)}
                     className="w-full h-auto rounded-2xl shadow-lg"
                   />
                 </div>
-              </div>
+              ) : (
+                <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center mb-16">
+                  <div className="space-y-6 text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
+                    {weekIntro.map((p, i) => (
+                      <p key={i}>
+                        <Trans
+                          i18nKey={`${tKey}.weeks.intro.${i}`}
+                          t={t}
+                          components={[<strong />]}
+                        />
+                      </p>
+                    ))}
+                  </div>
+                  <div className="relative">
+                    <img
+                      src={weeksImage}
+                      alt={t(`${tKey}.weeks.imageAlt`)}
+                      className="w-full h-auto rounded-2xl shadow-lg"
+                    />
+                  </div>
+                </div>
+              )
             )}
 
             <div className="max-w-3xl mx-auto space-y-6">

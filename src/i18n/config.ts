@@ -35,7 +35,7 @@ export const ROUTE_MAP: Array<{ nl: string; en: string }> = [
   { nl: "/over-ons", en: "/en/about-us" },
   { nl: "/contact", en: "/en/contact" },
   { nl: "/duurzame-inzetbaarheid", en: "/en/sustainable-employability" },
-  { nl: "/inzetbaarheid-verbeteren", en: "/en/improve-employability" },
+  { nl: "/duurzame-inzetbaarheid-teams", en: "/en/sustainable-employability-teams" },
   { nl: "/stressmanagement-training", en: "/en/stress-management-training" },
   { nl: "/prestatie-training", en: "/en/performance-training" },
   { nl: "/blog", en: "/en/blog" },

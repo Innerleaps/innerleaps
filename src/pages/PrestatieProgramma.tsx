@@ -73,6 +73,7 @@ const PrestatieProgramma = () => {
       heroImageAlt="Prestatie training presentatie"
       logos={logos}
       weeksImage={breinTrainingImg}
+      weeksLayout="stacked"
       hideStickyCtas
       showMethodCtaAfterWeeks
       masterclassVariant="employee"

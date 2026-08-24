@@ -164,14 +164,88 @@ Wacht op stap 2, want pas op Netlify kunnen we echte 301's neerzetten.
 - [x] De drie dode redirectregels in `App.tsx` opruimen, die wezen naar zichzelf
 - [x] Build gedraaid: 24 van 24 pagina's geprerenderd, oude .html-bestanden weg,
       canonical en hreflang volgen mee uit `ROUTE_MAP`
-- [ ] Na de deploy live controleren dat de vier oude URL's een 301 geven
-- [ ] Nieuwe sitemap indienen in Search Console en de oude URL's in de gaten
-      houden tot Google de nieuwe heeft opgepikt
+- [x] Live gemeten na de deploy: alle vier de oude URL's geven een 301 naar het
+      juiste nieuwe pad, in één hop, eindstatus 200. De vier nieuwe URL's geven
+      200 met hun eigen geprerenderde titel, canonical wijst naar zichzelf, en
+      de live sitemap noemt alleen nog de nieuwe URL's, nul oude.
+- [x] Sitemap ingediend in Search Console. Er stond er nog geen enkele: de lijst
+      was leeg. Nu geregistreerd, status `processed`, nul fouten.
+- [ ] Over een week opnieuw inspecteren of Google de 301's heeft verwerkt
+
+### Search Console-toegang
+
+Claude Code kan nu zelf bij Search Console. Niet via een service account, want
+Google Workspace blokkeert het aanmaken van sleutelbestanden met de
+organisatieregel `iam.disableServiceAccountKeyCreation`. In plaats daarvan een
+OAuth-client van het type Desktop app, waarbij je als jezelf inlogt.
+
+- Config: `~/.config/claude-seo/google-api.json`, property `sc-domain:innerleaps.nl`
+- Let op: `python3` is hier 3.9 en de skill eist 3.10+. Draai commando's met
+  `CLAUDE_SEO_PYTHON=/opt/homebrew/bin/python3.12` ervoor.
+- `gsc_query.py` kan sitemaps alleen uitlezen, niet indienen. Het indienen ging
+  met een losse PUT op de Search Console API.
+
+### Wat de URL-inspectie liet zien
+
+| URL | Status bij Google | Laatste crawl |
+|---|---|---|
+| `/vitaliteitstraining` | Crawled, currently not indexed | 6 juni 2026 |
+| `/duurzame-inzetbaarheid-training` | Submitted and indexed | 29 april 2026 |
+| `/duurzame-inzetbaarheid` | URL is unknown to Google | nooit |
+| `/inzetbaarheid-verbeteren` | Discovered, currently not indexed | nooit |
+
+Twee dingen vallen op.
+
+`/inzetbaarheid-verbeteren` stond binnen enkele minuten na het indienen al op
+`Discovered`. De sitemap doet dus zijn werk.
+
+Belangrijker: `/vitaliteitstraining` gaf bij de crawl van 6 juni
+`/en/vitality-training` op als canonical, terwijl Google zelf de Nederlandse URL
+koos. De pagina zei dus "de Engelse versie is de echte". Dat verklaart
+waarschijnlijk waarom hij niet geindexeerd was. Dezelfde fout als de Nederlandse
+homepage die als Engelse pagina werd geprerenderd, zie stap 4. Die is met de
+prerender-fix opgelost: de canonical op de live pagina wijst nu naar zichzelf.
+Google heeft sinds 6 juni alleen niet opnieuw gekeken.
+
+Van de vier oude URL's was er maar een geindexeerd,
+`/duurzame-inzetbaarheid-training`. Daar zit dus de opgebouwde waarde die de
+301 moet overdragen.
+
+### Onderweg gevonden, nog niet opgelost
+
+`/inzetbaarheid-verbeteren` heeft geen enkele interne link die een crawler ziet.
+Niet stuk gegaan bij het hernoemen, dit gold net zo hard voor de oude URL.
+
+Twee oorzaken die op elkaar stapelen:
+
+1. De menulinks zitten in `NavigationMenuContent` van Radix. Die inhoud komt pas
+   in de DOM zodra iemand het menu opent, dus het prerenderen legt hem niet vast.
+2. De footer heeft geen link naar deze pagina. `Footer.tsx` kent wel `vitality`,
+   `stress`, `performance` en `blog`, maar geen `employability`.
+
+Gevolg: `/duurzame-inzetbaarheid` staat op 15 geprerenderde pagina's, en
+`/inzetbaarheid-verbeteren` op nul. Google kan hem via de sitemap vinden, maar
+krijgt geen enkel signaal hoe belangrijk hij is. De kleinste fix is een
+footerlink erbij.
 
 **Let op:** dit was alleen de URL-operatie. De teksten op de pagina's zijn niet
 aangeraakt, dus `/duurzame-inzetbaarheid` heeft nog "vitaliteitstraining" als
 kop en `/en/sustainable-employability` heet nog "Vitality training for
 organisations". Dat hoort bij stap 6.
+
+### Naderhand nog een keer hernoemd
+
+`/inzetbaarheid-verbeteren` heeft het maar een dag uitgehouden. De pagina is
+herpositioneerd naar teams en heet nu `/duurzame-inzetbaarheid-teams`, Engels
+`/en/sustainable-employability-teams`. De tabel hierboven is dus achterhaald
+voor die ene regel.
+
+Belangrijk: `/duurzame-inzetbaarheid-training` wijst nu **direct** naar het
+nieuwe pad, niet via `/inzetbaarheid-verbeteren`. Geen 301 op een 301.
+
+Gevolg voor Search Console: de ingediende sitemap noemt nu URL's die alweer
+veranderd zijn. Na de volgende deploy opnieuw inspecteren, en de sitemap laten
+verversen.
 
 ## Stap 6. Daarna pas: content
 

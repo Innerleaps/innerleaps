@@ -91,6 +91,7 @@ const Vitaliteitstraining = () => {
         heroCtaOnClick={() => setIsCalculatorOpen(true)}
         logos={logos}
         weeksImage={breinTrainingImg}
+        weeksLayout="stacked"
         masterclassVariant="employer"
         showMethodCtaAfterWeeks
         belowFaqSection={

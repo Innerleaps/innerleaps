@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "The Innerleaps brain training method | 40 years of research",
-    "description": "Innerleaps builds on 40 years of attention research by Dr. Amishi Jha. The method trains the brain's warning system and control center, proven effective in meta-analyses and military applications."
+    "description": "Innerleaps builds on 40 years of attention research by Dr. Amishi Jha. The method trains the brain's warning system and control centre, proven effective in meta-analyses and military applications."
   },
   "hero": {
     "titlePart1": "Constant pressure",
@@ -13,13 +13,13 @@
     "titlePart2": "for your brain",
     "imageAlt": "Push-ups for your brain",
     "body1": "With our method, employees train their brain. Just like you build muscles at the gym, participants train two crucial systems with our \"brain push-ups\".",
-    "body2": "The \"control center\" gets stronger, which means better focus and a more efficient working memory. And the \"warning system\" sharpens, so pressure doesn't pile up."
+    "body2": "The \"control centre\" gets stronger, which means better focus and a more efficient working memory. And the \"warning system\" sharpens, so pressure doesn't pile up."
   },
   "control": {
     "titlePart1": "A stronger",
-    "titlePart2": "control center",
+    "titlePart2": "control centre",
     "imageAlt": "Focus training for a stronger executive system",
-    "body1": "Through practice, the frontal cortex and fronto-parietal networks get stronger. This is what we call the \"control center\".",
+    "body1": "Through practice, the frontal cortex and fronto-parietal networks get stronger. This is what we call the \"control centre\".",
     "body2": "Employees develop a kind of mental shield against pressure and distraction. Performance improves because pressure takes up less working memory and the ability to focus gets sharper.",
     "cards": {
       "info": {
@@ -40,7 +40,7 @@
       "thinking": {
         "title": "Thinking processes",
         "items": [
-          "Plan and organize more effectively.",
+          "Plan and organise more effectively.",
           "Set goals and stick with them.",
           "Develop strategies and set priorities."
         ]
@@ -66,14 +66,14 @@
     "titlePart2": "warning system",
     "imageAlt": "Stress management training for a stronger warning system",
     "body1": "The training also strengthens the anterior insula and anterior cingulate cortex, our \"warning system\". This way, employees notice stress signals earlier.",
-    "body2": "Over 6 weeks, participants build new healthy patterns to regulate those stress signals. Real behavior change that strengthens the vitality and employability of your team.",
+    "body2": "Over 6 weeks, participants build new healthy patterns to regulate those stress signals. Real behaviour change that strengthens the vitality and employability of your team.",
     "cards": {
       "body": {
         "title": "Body awareness & perception",
         "items": [
           "Sense earlier when you're getting stressed.",
           "Catch physical signals before they escalate.",
-          "Recognize subtle warnings from your body."
+          "Recognise subtle warnings from your body."
         ]
       },
       "emotion": {
@@ -107,14 +107,14 @@
   },
   "sixWeeks": {
     "titlePart1": "6 weeks for real",
-    "titlePart2": "behavior change",
-    "imageAlt": "6 weeks of brain training for behavior change",
+    "titlePart2": "behaviour change",
+    "imageAlt": "6 weeks of brain training for behaviour change",
     "intro": "Each week there's a group session with an accredited trainer, where employees reflect on their exercises and challenges.",
     "items": {
       "workshops": "6 group workshops of 60 minutes",
       "workbook": "Workbook with background and assignments",
       "audio": "Audio recordings for daily practice"
     },
-    "outro": "The result? Behavior that sticks. The effects on stress, burnout and productivity are still visible 6 to 12 months after the training (Vonderlin et al., 2020; Michaelsen et al., 2023)."
+    "outro": "The result? Behaviour that sticks. The effects on stress, burnout and productivity are still visible 6 to 12 months after the training (Vonderlin et al., 2020; Michaelsen et al., 2023)."
   }
 }

@@ -29,9 +29,18 @@
   to = "/duurzame-inzetbaarheid"
   status = 301
 
+# De teampagina is twee keer hernoemd. Beide oude paden wijzen daarom direct
+# naar het huidige pad. Zou `/duurzame-inzetbaarheid-training` naar
+# `/inzetbaarheid-verbeteren` blijven wijzen, dan kreeg je een 301 op een 301.
+# Dat kost elke bezoeker een extra omleiding en laat waarde weglekken.
 [[redirects]]
   from = "/duurzame-inzetbaarheid-training"
-  to = "/inzetbaarheid-verbeteren"
+  to = "/duurzame-inzetbaarheid-teams"
+  status = 301
+
+[[redirects]]
+  from = "/inzetbaarheid-verbeteren"
+  to = "/duurzame-inzetbaarheid-teams"
   status = 301
 
 [[redirects]]
@@ -41,7 +50,12 @@
 
 [[redirects]]
   from = "/en/sustainable-employability-training"
-  to = "/en/improve-employability"
+  to = "/en/sustainable-employability-teams"
+  status = 301
+
+[[redirects]]
+  from = "/en/improve-employability"
+  to = "/en/sustainable-employability-teams"
   status = 301
 
 # De site is een single page app. Zonder deze regel geeft elke directe link

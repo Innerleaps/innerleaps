@@ -69,7 +69,7 @@ const App = () => {
                 <Route path="/en/about-us" element={<OverOns />} />
                 <Route path="/en/contact" element={<Contact />} />
                 <Route path="/en/sustainable-employability" element={<Vitaliteitstraining />} />
-                <Route path="/en/improve-employability" element={<DuurzameInzetbaarheidTraining />} />
+                <Route path="/en/sustainable-employability-teams" element={<DuurzameInzetbaarheidTraining />} />
                 <Route path="/en/stress-management-training" element={<StressManagement />} />
                 <Route path="/en/performance-training" element={<PrestatieProgramma />} />
                 <Route path="/en/blog" element={<Blog />} />
@@ -90,7 +90,7 @@ const App = () => {
                 <Route path="/stressmanagement-training" element={<StressManagement />} />
                 <Route path="/prestatie-training" element={<PrestatieProgramma />} />
                 <Route path="/duurzame-inzetbaarheid" element={<Vitaliteitstraining />} />
-                <Route path="/inzetbaarheid-verbeteren" element={<DuurzameInzetbaarheidTraining />} />
+                <Route path="/duurzame-inzetbaarheid-teams" element={<DuurzameInzetbaarheidTraining />} />
                 <Route path="/blog" element={<Blog />} />
                 <Route path="/blog/ziekteverzuim-verlagen-wetenschappelijk-bewezen-aanpak-2025" element={<ZiekteverzuimVerlagen />} />
                 <Route path="/blog/verborgen-kosten-ziekteverzuim-rekenmodel" element={<VerborgenKostenZiekteverzuim />} />

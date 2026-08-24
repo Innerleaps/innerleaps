@@ -91,6 +91,7 @@ const DuurzameInzetbaarheidTraining = () => {
         heroCtaOnClick={() => setIsCalculatorOpen(true)}
         logos={logos}
         weeksImage={breinTrainingImg}
+        weeksLayout="stacked"
         masterclassVariant="employer"
         showMethodCtaAfterWeeks
         belowFaqSection={

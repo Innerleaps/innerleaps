@@ -1,6 +1,6 @@
 {
   "nav": {
-    "forOrganizations": "For Organizations",
+    "forOrganizations": "For Organisations",
     "forEmployees": "For Employees",
     "method": "Method",
     "aboutUs": "About Us",
@@ -13,12 +13,12 @@
   },
   "menuItems": {
     "vitality": {
-      "label": "Vitality Training",
-      "description": "A vital and resilient team"
+      "label": "For HR professionals",
+      "description": "Sustainable employability for organisations"
     },
     "employability": {
-      "label": "Employability",
-      "description": "A productive team with less sick leave"
+      "label": "For management",
+      "description": "Sustainable employability for teams"
     },
     "stress": {
       "label": "Stress Management",
@@ -79,7 +79,7 @@
     "headlinePart3": "with science-based",
     "headlinePart4": "vitality training",
     "subtitle": "Lower sick leave, prevent burnout and sharpen your team's focus with our evidence-based vitality training",
-    "whyChooseUs": "Why organizations choose us",
+    "whyChooseUs": "Why organisations choose us",
     "stats": {
       "dropoutRisk": "Drop-out risk",
       "absenteeism": "Sick leave",
@@ -95,15 +95,15 @@
     "headlinePart2": "sick leave",
     "headlinePart3": "and boost",
     "headlinePart4": "performance",
-    "body1": "The core of our brain training is strengthening the \"control center\" for rational choices, focus and conscious action, plus the \"warning system\" that catches stress signals earlier. The result? Less stress and a sharper focus!",
+    "body1": "The core of our brain training is strengthening the \"control centre\" for rational choices, focus and conscious action, plus the \"warning system\" that catches stress signals earlier. The result? Less stress and a sharper focus!",
     "body2": "Want to know exactly how the method works?",
     "imageAlt": "Training for better performance, less stress and lower sick leave"
   },
   "programOverview": {
     "headlinePart1": "Brain training",
     "headlinePart2": "for real",
-    "headlinePart3": "behavior change",
-    "intro": "Our core program runs for 6 weeks. Ask us about tailored options for your team.",
+    "headlinePart3": "behaviour change",
+    "intro": "Our core programme runs for 6 weeks. Ask us about tailored options for your team.",
     "outroQuestion": "Want to learn more about how our method works?",
     "features": {
       "weeklyWorkshops": {
@@ -116,11 +116,15 @@
       },
       "practice": {
         "title": "15 minutes of practice",
-        "description": "Participants aim to practice about 15 minutes a day, 5 days a week, using our workbook and audio recordings."
+        "description": "Participants aim to practise about 15 minutes a day, 5 days a week, using our workbook and audio recordings."
       },
       "safeLearning": {
         "title": "A safe space to learn",
         "description": "Participants respond to the trainer's questions in the group; sharing personal context is always optional."
+      },
+      "workbook": {
+        "title": "Workbook with theory and reflection",
+        "description": "Understanding and impact through a workbook with concise theory and quick reflection questions."
       }
     }
   },
@@ -129,26 +133,26 @@
     "headlinePart1": "Try it yourself in our",
     "headlinePart2": "free masterclass",
     "subcopyEmployee": "Curious but want to experience our method first? You can. In our 60-minute masterclass you'll get a real taste of how we work.",
-    "subcopyEmployer": "Curious but want to check whether the method fits your team first? You can. In our 60-minute masterclass your organization gets a real taste of how we work.",
+    "subcopyEmployer": "Curious but want to check whether the method fits your team first? You can. In our 60-minute masterclass your organisation gets a real taste of how we work.",
     "cards": {
       "stress": {
         "title": "Stress level",
-        "employee": "Get insight into your own stress level. Fully grounded in science.",
-        "employer": "Employees get insight into their own stress level. Fully grounded in science."
+        "employee": "Insight into your personal stress level.",
+        "employer": "Insight into your personal stress level."
       },
       "attention": {
         "title": "Attention exercise",
-        "employee": "Experience a technique to take back control from autopilot and reclaim your focus.",
-        "employer": "Employees experience a technique to take back control from autopilot and reclaim their focus."
+        "employee": "Exercise for less tension and better concentration.",
+        "employer": "Exercise for less tension and better concentration."
       },
       "reset": {
         "title": "Reset tool",
-        "employee": "Learn a tool to reset your working memory and instantly bring your attention back.",
-        "employer": "Employees learn a tool to reset their working memory and instantly bring their attention back."
+        "employee": "Technique to recover quickly and effectively, before or after a tense moment.",
+        "employer": "Technique to recover quickly and effectively, before or after a tense moment."
       },
       "noCommitment": {
         "title": "No commitment",
-        "text": "We believe everyone should be able to try this technique. That's why our masterclass is completely commitment-free."
+        "text": "This masterclass is entirely without obligation."
       }
     },
     "review": "\"This workshop really shows you why training your attention muscle matters. It's a great mix of theory and exercises, so you immediately get to experience what it's like. I think anyone can benefit from this, so I can definitely recommend it.\"",
@@ -157,11 +161,11 @@
     "ctaEmployer": "Get to know Bas"
   },
   "trust": {
-    "headlinePart1": "Why organizations",
+    "headlinePart1": "Why organisations",
     "headlinePart2": "choose us",
     "items": {
       "healthcareSystem": {
-        "title": "Method recognized by the Dutch healthcare system",
+        "title": "Method recognised by the Dutch healthcare system",
         "description": "The full version of our training is reimbursed under basic Dutch health insurance by major insurers."
       },
       "research": {
@@ -174,9 +178,9 @@
       }
     },
     "altPrefix": {
-      "vgz": "Innerleaps recognized by VGZ health insurance",
-      "cz": "Innerleaps recognized by CZ health insurance",
-      "menzis": "Innerleaps recognized by Menzis health insurance",
+      "vgz": "Innerleaps recognised by VGZ health insurance",
+      "cz": "Innerleaps recognised by CZ health insurance",
+      "menzis": "Innerleaps recognised by Menzis health insurance",
       "oxford": "Method developed at Oxford University",
       "umass": "Method developed at the University of Massachusetts",
       "uva": "Attention training studied at the University of Amsterdam",

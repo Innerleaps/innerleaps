@@ -1,11 +1,31 @@
 import { memo } from "react";
-import { Clock, Users, Target, User } from "lucide-react";
+import { BookOpen, Clock, Users, Target, User } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { Button } from "@/components/ui/button";
 import { detectLanguageFromPath } from "@/i18n/config";
 
-const ProgramOverviewSection = memo(({ hideOutroCta = false }: { hideOutroCta?: boolean }) => {
+/**
+ * Het vierde blok verschilt per plek. De homepage houdt "veilig leren", de vier
+ * propositiepagina's tonen het werkboek. Zonder deze schakelaar zouden ze
+ * dezelfde vertaalsleutel delen en kon het niet uit elkaar.
+ */
+type FourthFeature = "safeLearning" | "workbook";
+
+interface ProgramOverviewSectionProps {
+  hideOutroCta?: boolean;
+  fourthFeature?: FourthFeature;
+}
+
+const FOURTH_FEATURE_ICON = {
+  safeLearning: Users,
+  workbook: BookOpen,
+} as const;
+
+const ProgramOverviewSection = memo(({
+  hideOutroCta = false,
+  fourthFeature = "safeLearning",
+}: ProgramOverviewSectionProps) => {
   const { t } = useTranslation();
   const { pathname } = useLocation();
   const lang = detectLanguageFromPath(pathname);
@@ -15,7 +35,7 @@ const ProgramOverviewSection = memo(({ hideOutroCta = false }: { hideOutroCta?: 
     { icon: Clock, title: t('programOverview.features.weeklyWorkshops.title'), description: t('programOverview.features.weeklyWorkshops.description') },
     { icon: User, title: t('programOverview.features.accreditedTrainers.title'), description: t('programOverview.features.accreditedTrainers.description') },
     { icon: Target, title: t('programOverview.features.practice.title'), description: t('programOverview.features.practice.description') },
-    { icon: Users, title: t('programOverview.features.safeLearning.title'), description: t('programOverview.features.safeLearning.description') },
+    { icon: FOURTH_FEATURE_ICON[fourthFeature], title: t(`programOverview.features.${fourthFeature}.title`), description: t(`programOverview.features.${fourthFeature}.description`) },
   ];
 
   return (

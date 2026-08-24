@@ -74,6 +74,7 @@ const StressManagement = () => {
       heroImageAlt="Stressmanagement training presentatie"
       logos={logos}
       weeksImage={breinTrainingImg}
+      weeksLayout="stacked"
       hideStickyCtas
       showMethodCtaAfterWeeks
       masterclassVariant="employee"
