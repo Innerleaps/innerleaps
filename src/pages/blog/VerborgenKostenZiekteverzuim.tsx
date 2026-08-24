@@ -17,7 +17,7 @@ const VerborgenKostenZiekteverzuim = () => {
         <meta property="og:url" content="https://innerleaps.nl/blog/verborgen-kosten-ziekteverzuim-rekenmodel" />
         <meta property="og:title" content="De verborgen kosten van ziekteverzuim met rekenmodel" />
         <meta property="og:description" content="Ontdek de verborgen kosten van ziekteverzuim. Bereken met ons rekenmodel de échte impact: €438.330 per jaar bij 100 medewerkers. Wetenschappelijk bewezen oplossing met 497-775% ROI." />
-        <meta property="og:image" content="https://innerleaps.nl/assets/stressmanagementtraining_sterker_waarschuwingssysteem-Dq0g8d9z.png" />
+        <meta property="og:image" content="https://innerleaps.nl/social/stressmanagement-waarschuwingssysteem.png" />
         <meta property="article:published_time" content="2024-12-03T00:00:00+00:00" />
         <meta property="article:modified_time" content="2024-12-03T00:00:00+00:00" />
         <meta property="article:author" content="Bas Ter Haar Romenij" />
@@ -27,7 +27,7 @@ const VerborgenKostenZiekteverzuim = () => {
         <meta property="twitter:url" content="https://innerleaps.nl/blog/verborgen-kosten-ziekteverzuim-rekenmodel" />
         <meta property="twitter:title" content="De verborgen kosten van ziekteverzuim met rekenmodel" />
         <meta property="twitter:description" content="Ontdek de verborgen kosten van ziekteverzuim. Bereken met ons rekenmodel de échte impact: €438.330 per jaar bij 100 medewerkers. Wetenschappelijk bewezen oplossing met 497-775% ROI." />
-        <meta property="twitter:image" content="https://innerleaps.nl/assets/stressmanagementtraining_sterker_waarschuwingssysteem-Dq0g8d9z.png" />
+        <meta property="twitter:image" content="https://innerleaps.nl/social/stressmanagement-waarschuwingssysteem.png" />
         
         {/* Canonical URL */}
         <link rel="canonical" href="https://innerleaps.nl/blog/verborgen-kosten-ziekteverzuim-rekenmodel" />
@@ -44,7 +44,7 @@ const VerborgenKostenZiekteverzuim = () => {
             "url": "https://innerleaps.nl/blog/verborgen-kosten-ziekteverzuim-rekenmodel",
             "headline": "De verborgen kosten van ziekteverzuim met rekenmodel",
             "description": "Ontdek de verborgen kosten van ziekteverzuim. Bereken met ons rekenmodel de échte impact: €438.330 per jaar bij 100 medewerkers. Wetenschappelijk bewezen oplossing met 497-775% ROI.",
-            "image": "https://innerleaps.nl/assets/stressmanagementtraining_sterker_waarschuwingssysteem-Dq0g8d9z.png",
+            "image": "https://innerleaps.nl/social/stressmanagement-waarschuwingssysteem.png",
             "author": {
               "@type": "Person",
               "name": "Bas Ter Haar Romenij",
@@ -55,7 +55,7 @@ const VerborgenKostenZiekteverzuim = () => {
               "name": "Innerleaps",
               "logo": {
                 "@type": "ImageObject",
-                "url": "https://7f1b052b-e2ee-419a-aec0-e4591c9e4afe.lovableproject.com/lovable-uploads/06d0112b-b23b-4ce0-b028-68ac939b2b2b.png"
+                "url": "https://innerleaps.nl/lovable-uploads/06d0112b-b23b-4ce0-b028-68ac939b2b2b.png"
               }
             },
             "datePublished": "2024-12-03",

@@ -55,6 +55,34 @@ Controleer met:
 grep -roiE "\b(program|programs|organiz\w*|recogniz\w*|center|behavior\w*|analyz\w*|color)\b" src/i18n/locales/en/ | sort | uniq -c
 ```
 
+## Hoe de teksten klinken
+
+**Nooit een kastlijntje (em dash).** Niet in teksten op de site, niet in
+voorstellen, niet in commentaar. Gebruik een punt, een komma, of splits de zin.
+
+**Schrijf zoals mensen praten.** Korte zinnen. Gewone woorden. Lees het hardop
+terug: klinkt het als iets wat je tegen iemand zou zeggen, of als een folder?
+Als het tweede, herschrijf het.
+
+Wat je vermijdt: opsommingen van abstracte begrippen, jargon dat je moet
+uitleggen, en zinnen die met "middels", "dienaangaande" of "in het kader van"
+beginnen. Wat je wel doet: het onderwerp voorop, actieve zinnen, en cijfers
+noemen in plaats van "aanzienlijk" of "significant".
+
+## Zichtbare tekst gaat altijd eerst langs de gebruiker
+
+Alles wat een bezoeker of Google te zien krijgt, dus koppen, lopende tekst,
+knoplabels, meta titles en descriptions, alt-teksten en foutmeldingen, schrijf je
+**nooit zelf definitief**. Kom met **meerdere opties per tekst**, laat de
+gebruiker kiezen of zelf iets typen, en voer pas daarna door.
+
+Dit geldt ook als de wijziging vanzelfsprekend lijkt of als jij hem "beter"
+vindt. De gebruiker bepaalt de stem van de site.
+
+Wat je wél zelf mag doen zonder te vragen: code, opmaak, bestandsformaten,
+omleidingen, schema-structuur, en alles wat niet als tekst op het scherm of in
+een zoekresultaat verschijnt.
+
 ## Blokken die op meerdere pagina's staan
 
 Voordat je een blok aanpast: kijk waar het nog meer verschijnt, en **vraag de
@@ -74,7 +102,7 @@ gebruiker of de wijziging daar ook moet landen.** Nooit stilzwijgend aannemen.
 | Sleutel in `training.json` | NL-pad | EN-pad |
 |---|---|---|
 | `vitality` | `/duurzame-inzetbaarheid` | `/en/sustainable-employability` |
-| `sustainability` | `/duurzame-inzetbaarheid-teams` | `/en/sustainable-employability-teams` |
+| `sustainability` | `/team-prestaties-verbeteren` | `/en/improve-team-performance` |
 | `stress` | `/stressmanagement-training` | `/en/stress-management-training` |
 | `performance` | `/prestatie-training` | `/en/performance-training` |
 

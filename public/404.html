@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="nl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex, follow" />
+    <title>Pagina niet gevonden | Innerleaps</title>
+    <link rel="icon" href="/favicon.png" />
+    <style>
+      :root {
+        --orange: hsl(17 89% 60%);
+        --purple: hsl(263 71% 16%);
+        --off-white: hsl(30 24% 96%);
+        --gray: hsl(215 16% 47%);
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 2rem 1.25rem;
+        background: var(--off-white);
+        color: var(--purple);
+        font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        line-height: 1.6;
+      }
+      main { max-width: 34rem; text-align: center; }
+      .code {
+        font-size: 0.875rem;
+        font-weight: 600;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--orange);
+        margin: 0 0 0.75rem;
+      }
+      h1 {
+        font-size: clamp(1.75rem, 5vw, 2.75rem);
+        line-height: 1.15;
+        margin: 0 0 1rem;
+        font-weight: 700;
+      }
+      p { color: var(--gray); margin: 0 0 2rem; font-size: 1.0625rem; }
+      .actions { display: flex; flex-wrap: wrap; gap: 0.75rem; justify-content: center; }
+      a {
+        display: inline-block;
+        padding: 0.8rem 1.5rem;
+        border-radius: 0.5rem;
+        text-decoration: none;
+        font-weight: 600;
+        transition: opacity 0.15s ease;
+      }
+      a:hover { opacity: 0.88; }
+      .primary { background: var(--orange); color: #fff; }
+      .secondary { background: transparent; color: var(--purple); border: 1px solid rgba(0, 0, 0, 0.15); }
+    </style>
+  </head>
+  <body>
+    <main>
+      <p class="code">404</p>
+      <h1>Deze pagina bestaat niet</h1>
+      <p>
+        Mogelijk is de link verouderd of staat er een typefout in het adres.
+        Vanaf hier kom je wel verder.
+      </p>
+      <div class="actions">
+        <a class="primary" href="/">Naar de homepage</a>
+        <a class="secondary" href="/contact">Contact opnemen</a>
+      </div>
+    </main>
+  </body>
+</html>

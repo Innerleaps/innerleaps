@@ -6,7 +6,7 @@
     },
     "hero": {
       "badge": "Wetenschappelijk bewezen training",
-      "title": "Het bewezen <0>vitaliteits­training</0> voor minder <0>verzuim</0>",
+      "title": "<0>Duurzame inzetbaarheid</0> vergroten en verzuim verlagen",
       "subtitle": "Wetenschappelijk bewezen vitaliteits­training. Deelnemers ontwikkelen eigenaarschap over hun eigen stress, kunnen emoties beter reguleren én verhogen hun veerkracht.",
       "cta": "Bereken de ROI",
       "statsTitle": "Waarom organisaties ons kiezen",
@@ -195,9 +195,30 @@
         {
           "q": "Hoe verbetert Innerleaps de prestaties van medewerkers?",
           "a": "Innerleaps verbetert prestaties door optimalisatie van het werkgeheugen, het mentale \"werkblad\" waarop denken, beslissen en handelen plaatsvinden. Dit gebeurt via drie mechanismen:\n\nTen eerste wordt relevante informatie sneller geselecteerd en irrelevante informatie beter onderdrukt. Concentratie neemt toe, afleiding neemt af. Onderzoek laat tot 24% verbetering zien op aandachtstaken (Jha et al., 2021).\n\nTen tweede nemen spanning en werkdruk normaal gesproken een groot deel van het werkgeheugen in beslag. Wanneer die spanning afneemt, komt er capaciteit vrij voor de taak zelf.\n\nTen derde wordt het werkgeheugen efficiënter: betere resultaten met minder neurale inspanning (Bailey et al., 2020). Medewerkers presteren scherper en houden energie over aan het einde van de dag."
+        },
+        {
+          "q": "Wat is duurzame inzetbaarheid?",
+          "a": "Duurzame inzetbaarheid betekent dat medewerkers hun hele loopbaan gezond, gemotiveerd en productief kunnen blijven werken. In de praktijk struikelt het meestal op hetzelfde punt: langdurige werkstress. Een kwart van het verzuim in Nederland is stressgerelateerd. Innerleaps pakt die oorzaak aan. Medewerkers leren spanning vroeg herkennen en reguleren, zodat uitval wordt voorkomen in plaats van hersteld."
+        },
+        {
+          "q": "Wat is een verzuimreductieprogramma en werkt het?",
+          "a": "Een verzuimreductieprogramma is een gestructureerde aanpak om ziekteverzuim omlaag te brengen. Programma's die alleen op re-integratie sturen komen te laat. Innerleaps zet in op preventie. In zes weken trainen medewerkers hun aandacht en stressregulatie. In een studie onder Unilever-medewerkers daalde het risico op langdurig verzuim van 54,4% naar 16,4% (De Bruin e.a., 2018, Universiteit van Amsterdam)."
+        },
+        {
+          "q": "Verlaagt aandachtstraining ook het personeelsverloop?",
+          "a": "Ja. Medewerkers die minder spanning ervaren en meer werkplezier hebben, vertrekken minder snel. Verloop is bovendien duurder dan verzuim. Iemand vervangen kost al snel een half tot anderhalf jaarsalaris."
+        },
+        {
+          "q": "Hoe kun je verzuim verminderen zonder dat het bij symptoombestrijding blijft?",
+          "a": "Verzuim verminderen lukt structureel alleen als je ingrijpt voordat mensen uitvallen. Een kwart van het verzuim in Nederland is stressgerelateerd. Onze training leert medewerkers stresssignalen vroeg te herkennen, zodat verzuim niet alleen daalt maar ook laag blijft."
+        },
+        {
+          "q": "Hoe snel zien we resultaat?",
+          "a": "Deelnemers merken al na de eerste workshops verschil, en dat effect stapelt op gedurende de zes weken. Direct na afloop van de 6-weekse training geeft 70% aan minder stress te ervaren. Het blijft ook hangen: onderzoek laat zien dat de training een jaar later nog steeds effect heeft."
         }
       ]
-    }
+    },
+    "intro": "Duurzame inzetbaarheid betekent dat je mensen hun hele loopbaan gezond en gemotiveerd blijven werken. Wat daar het vaakst tussen komt is werkstress. Daar begint onze training."
   },
   "stress": {
     "meta": {
@@ -785,6 +806,10 @@
         {
           "q": "Hoe verbetert Innerleaps de prestaties van medewerkers?",
           "a": "Innerleaps verbetert prestaties door optimalisatie van het werkgeheugen, het mentale \"werkblad\" waarop denken, beslissen en handelen plaatsvinden. Dit gebeurt via drie mechanismen:\n\nTen eerste wordt relevante informatie sneller geselecteerd en irrelevante informatie beter onderdrukt. Concentratie neemt toe, afleiding neemt af. Onderzoek laat tot 24% verbetering zien op aandachtstaken (Jha et al., 2021).\n\nTen tweede nemen spanning en werkdruk normaal gesproken een groot deel van het werkgeheugen in beslag. Wanneer die spanning afneemt, komt er capaciteit vrij voor de taak zelf.\n\nTen derde wordt het werkgeheugen efficiënter: betere resultaten met minder neurale inspanning (Bailey et al., 2020). Medewerkers presteren scherper en houden energie over aan het einde van de dag."
+        },
+        {
+          "q": "Wat is duurzame inzetbaarheid?",
+          "a": "Duurzame inzetbaarheid betekent dat een team onder druk kan blijven presteren zonder op te branden. Wat daar meestal aan in de weg staat is opgestapelde spanning. Innerleaps traint teams om die spanning vroeg te herkennen en te reguleren, zodat ze scherp blijven en beschikbaar."
         }
       ]
     }

@@ -28,6 +28,7 @@ const Footer = memo(({ showNavigation = true }: FooterProps) => {
 
   const href = {
     vitality: lang === 'en' ? '/en/sustainable-employability' : '/duurzame-inzetbaarheid',
+    employability: lang === 'en' ? '/en/improve-team-performance' : '/team-prestaties-verbeteren',
     stress: lang === 'en' ? '/en/stress-management-training' : '/stressmanagement-training',
     performance: lang === 'en' ? '/en/performance-training' : '/prestatie-training',
     blog: lang === 'en' ? '/en/blog' : '/blog',
@@ -97,6 +98,15 @@ const Footer = memo(({ showNavigation = true }: FooterProps) => {
                 <li>
                   <Link to={href.vitality} className="block text-gray-300 hover:text-white transition-colors">
                     {t('menuItems.vitality.label')}
+                  </Link>
+                </li>
+                {/* De teampagina ontbrak hier, waardoor hij als enige propositie
+                    geen enkele link had die een crawler zonder JavaScript ziet:
+                    het hoofdmenu is een dropdown die pas na een klik in de DOM
+                    verschijnt. Label komt uit dezelfde sleutel als het menu. */}
+                <li>
+                  <Link to={href.employability} className="block text-gray-300 hover:text-white transition-colors">
+                    {t('menuItems.employability.label')}
                   </Link>
                 </li>
                 <li>

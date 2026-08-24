@@ -26,7 +26,7 @@ const SimplifiedNavigation = () => {
     contact: lang === 'en' ? '/en/contact' : '/contact',
     blog: lang === 'en' ? '/en/blog' : '/blog',
     vitality: lang === 'en' ? '/en/sustainable-employability' : '/duurzame-inzetbaarheid',
-    employability: lang === 'en' ? '/en/sustainable-employability-teams' : '/duurzame-inzetbaarheid-teams',
+    employability: lang === 'en' ? '/en/improve-team-performance' : '/team-prestaties-verbeteren',
     stress: lang === 'en' ? '/en/stress-management-training' : '/stressmanagement-training',
     performance: lang === 'en' ? '/en/performance-training' : '/prestatie-training',
   };
@@ -210,8 +210,13 @@ const SimplifiedNavigation = () => {
         </div>
 
         {/* Mobile Navigation */}
-        {isMenuOpen && (
-          <div className="lg:hidden pb-4">
+        {/* Dit blok staat altijd in de DOM en wordt met CSS verborgen, niet met
+            een voorwaarde. Reden: het desktopmenu is een Radix-dropdown die pas
+            bij openen bestaat, dus zonder dit blok stond er in de geprerenderde
+            HTML geen enkele link naar de vier propositiepagina's. Een crawler
+            zonder JavaScript zag ze daardoor niet. Visueel verandert er niets:
+            op desktop zorgt lg:hidden ervoor dat het blok onzichtbaar blijft. */}
+        <div className={`lg:hidden pb-4 ${isMenuOpen ? "" : "hidden"}`}>
             <div className="flex flex-col space-y-4">
               {/* Language switcher at top of mobile menu */}
               <div className="pb-2 border-b border-gray-200">
@@ -226,8 +231,7 @@ const SimplifiedNavigation = () => {
                   {t('nav.forOrganizations')}
                   <ChevronDown className={`h-4 w-4 transition-transform ${isOrganisationMenuOpen ? 'rotate-180' : ''}`} />
                 </button>
-                {isOrganisationMenuOpen && (
-                  <div className="pl-4 mt-2 space-y-2">
+                <div className={`pl-4 mt-2 space-y-2 ${isOrganisationMenuOpen ? "" : "hidden"}`}>
                     {organisationMenuItems.map((subItem) => {
                       const active = isActiveRoute(subItem.href);
                       return active ? (
@@ -252,8 +256,7 @@ const SimplifiedNavigation = () => {
                         </Link>
                       );
                     })}
-                  </div>
-                )}
+                </div>
               </div>
 
               <div>
@@ -264,8 +267,7 @@ const SimplifiedNavigation = () => {
                   {t('nav.forEmployees')}
                   <ChevronDown className={`h-4 w-4 transition-transform ${isEmployeeMenuOpen ? 'rotate-180' : ''}`} />
                 </button>
-                {isEmployeeMenuOpen && (
-                  <div className="pl-4 mt-2 space-y-2">
+                <div className={`pl-4 mt-2 space-y-2 ${isEmployeeMenuOpen ? "" : "hidden"}`}>
                     {employeeMenuItems.map((subItem) => {
                       const active = isActiveRoute(subItem.href);
                       return active ? (
@@ -290,8 +292,7 @@ const SimplifiedNavigation = () => {
                         </Link>
                       );
                     })}
-                  </div>
-                )}
+                </div>
               </div>
 
               <Link
@@ -325,7 +326,6 @@ const SimplifiedNavigation = () => {
               </Link>
             </div>
           </div>
-        )}
       </div>
     </nav>
   );

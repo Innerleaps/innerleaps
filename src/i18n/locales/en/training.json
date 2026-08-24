@@ -6,7 +6,7 @@
     },
     "hero": {
       "badge": "Scientifically proven training",
-      "title": "The proven <0>vitality training</0> for less <0>sick leave</0>",
+      "title": "Improve <0>sustainable employability</0> and reduce absenteeism",
       "subtitle": "Scientifically proven vitality training. Participants take ownership of their own stress, regulate emotions better and build stronger resilience.",
       "cta": "Calculate your ROI",
       "statsTitle": "Why organisations choose us",
@@ -195,9 +195,30 @@
         {
           "q": "How does Innerleaps improve employee performance?",
           "a": "Innerleaps improves performance by optimizing working memory, the mental \"workspace\" where thinking, deciding and acting take place. This happens through three mechanisms:\n\nFirst, relevant information is selected faster and irrelevant information is suppressed more effectively. Focus increases, distraction decreases. Research shows up to 24% improvement on attention tasks (Jha et al., 2021).\n\nSecond, stress and pressure normally occupy a large share of working memory. When that pressure decreases, capacity is freed up for the task itself.\n\nThird, working memory becomes more efficient: better results with less neural effort (Bailey et al., 2020). Employees perform sharper and have energy left at the end of the day."
+        },
+        {
+          "q": "What is sustainable employability?",
+          "a": "Sustainable employability means employees can keep working in a healthy, motivated and productive way throughout their career. In practice it usually breaks down at the same point: long-term work stress. A quarter of all absenteeism in the Netherlands is stress related. Innerleaps tackles that cause. Employees learn to spot and regulate tension early, so dropout is prevented rather than repaired."
+        },
+        {
+          "q": "What is an absenteeism reduction programme and does it work?",
+          "a": "An absenteeism reduction programme is a structured approach to bringing sick leave down. Programmes that only steer on reintegration arrive too late. Innerleaps focuses on prevention. Over six weeks employees train their attention and stress regulation. In a study among Unilever employees the risk of long-term absence fell from 54.4% to 16.4% (De Bruin et al., 2018, University of Amsterdam)."
+        },
+        {
+          "q": "Does attention training also reduce staff turnover?",
+          "a": "Yes. Employees who feel less tension and enjoy their work more are less likely to leave. Turnover is also more expensive than absenteeism. Replacing someone quickly costs between half and one and a half annual salaries."
+        },
+        {
+          "q": "How do you reduce absenteeism without it staying at symptom relief?",
+          "a": "Reducing absenteeism only works structurally if you step in before people drop out. A quarter of all absenteeism in the Netherlands is stress related. Our training teaches employees to recognise stress signals early, so absenteeism does not just fall but stays low."
+        },
+        {
+          "q": "How quickly do we see results?",
+          "a": "Participants notice a difference after the first workshops, and that effect builds up over the six weeks. Straight after the 6-week training, 70% report experiencing less stress. It also lasts: research shows the training is still effective a year later."
         }
       ]
-    }
+    },
+    "intro": "Sustainable employability means your people stay healthy and motivated throughout their career. What most often gets in the way is work stress. That is where our training starts."
   },
   "stress": {
     "meta": {
@@ -785,6 +806,10 @@
         {
           "q": "How does Innerleaps improve employee performance?",
           "a": "Innerleaps improves performance by optimizing working memory, the mental \"workspace\" where thinking, deciding and acting take place. This happens through three mechanisms:\n\nFirst, relevant information is selected faster and irrelevant information is suppressed more effectively. Focus increases, distraction decreases. Research shows up to 24% improvement on attention tasks (Jha et al., 2021).\n\nSecond, stress and pressure normally occupy a large share of working memory. When that pressure decreases, capacity is freed up for the task itself.\n\nThird, working memory becomes more efficient: better results with less neural effort (Bailey et al., 2020). Employees perform sharper and have energy left at the end of the day."
+        },
+        {
+          "q": "What is sustainable employability?",
+          "a": "Sustainable employability means a team can keep performing under pressure without burning out. What usually gets in the way is tension that piles up. Innerleaps trains teams to spot and regulate that tension early, so they stay sharp and stay available."
         }
       ]
     }

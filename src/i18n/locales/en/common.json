@@ -74,10 +74,10 @@
   },
   "hero": {
     "badge": "Scientifically proven method",
-    "headlinePart1": "Reduce",
-    "headlinePart2": "sick leave",
-    "headlinePart3": "with science-based",
-    "headlinePart4": "vitality training",
+    "headlinePart1": "Prevent",
+    "headlinePart2": "absenteeism and burnout",
+    "headlinePart3": "in your workforce",
+    "headlinePart4": "",
     "subtitle": "Lower sick leave, prevent burnout and sharpen your team's focus with our evidence-based vitality training",
     "whyChooseUs": "Why organisations choose us",
     "stats": {
@@ -166,7 +166,7 @@
     "items": {
       "healthcareSystem": {
         "title": "Method recognised by the Dutch healthcare system",
-        "description": "The full version of our training is reimbursed under basic Dutch health insurance by major insurers."
+        "description": "Our training builds on MBSR, a method Dutch health insurers reimburse under basic health insurance."
       },
       "research": {
         "title": "40 years of scientific research",
@@ -189,7 +189,7 @@
   },
   "seo": {
     "landing": {
-      "title": "Innerleaps: cut absenteeism and prevent burnout with brain training",
+      "title": "Reduce and prevent absenteeism | Innerleaps",
       "description": "Innerleaps reduces absenteeism by 15-21% with evidence-based brain training. Six weeks, 12 minutes a day, built on 40 years of research."
     },
     "blog": {

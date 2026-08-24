@@ -2,8 +2,8 @@ import { useEffect, useState, lazy, Suspense } from "react";
 import { useSearchParams, useLocation } from "react-router-dom";
 import TrainingPageLayout from "@/components/TrainingPageLayout";
 import ROICalculator from "@/components/ROICalculator";
-import heroBackground from "@/assets/Vitaliteitsprogramma_presentatie_Innerleaps.png";
-import breinTrainingImg from "@/assets/6_weken_brein_trainen.png";
+import heroBackground from "@/assets/Vitaliteitsprogramma_presentatie_Innerleaps.webp";
+import breinTrainingImg from "@/assets/6_weken_brein_trainen.webp";
 
 // Client logos
 import oliverLogo from "@/assets/Vitaliteitsprogramma_Oliver_Wyman_light-2.png";

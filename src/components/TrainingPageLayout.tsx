@@ -339,6 +339,19 @@ const TrainingPageLayout = ({
         </div>
       </section>
 
+      {/* Introblok. Alleen tonen als de pagina een `intro` heeft in training.json.
+          Staat bewust vlak onder de hero: een crawler en een AI-antwoordmachine
+          pakken het eerste tekstblok van een pagina het zwaarst mee. */}
+      {t(`${tKey}.intro`, { defaultValue: "" }) && (
+        <section className="pt-16 md:pt-20 bg-white">
+          <div className="container mx-auto px-4">
+            <p className="max-w-3xl mx-auto text-xl md:text-2xl text-brand-gray-medium leading-relaxed text-center">
+              {t(`${tKey}.intro`)}
+            </p>
+          </div>
+        </section>
+      )}
+
       {/* Challenges */}
       <section className="py-16 md:py-24 bg-brand-off-white">
         <div className="container mx-auto px-4">
@@ -534,7 +547,7 @@ const TrainingPageLayout = ({
                   <AccordionTrigger className="text-left text-lg md:text-xl font-semibold text-brand-gray-dark hover:text-brand-orange">
                     {item.q}
                   </AccordionTrigger>
-                  <AccordionContent className="text-base md:text-lg text-brand-gray-medium leading-relaxed whitespace-pre-line">
+                  <AccordionContent alwaysRendered className="text-base md:text-lg text-brand-gray-medium leading-relaxed whitespace-pre-line">
                     {item.a}
                   </AccordionContent>
                 </AccordionItem>

@@ -3,7 +3,7 @@ import SimplifiedNavigation from '@/components/SimplifiedNavigation';
 import Footer from '@/components/Footer';
 import BlogAuthor from '@/components/BlogAuthor';
 import { Link } from 'react-router-dom';
-import breinTrainenImage from '@/assets/6_weken_brein_trainen.png';
+import breinTrainenImage from '@/assets/6_weken_brein_trainen.webp';
 
 const ZiekteverzuimVerlagen = () => {
   return (

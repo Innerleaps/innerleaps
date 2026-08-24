@@ -5,12 +5,14 @@
   <!-- Home -->
   <url>
     <loc>https://innerleaps.nl/</loc>
+    <lastmod>2026-08-24</lastmod>
     <xhtml:link rel="alternate" hreflang="nl" href="https://innerleaps.nl/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://innerleaps.nl/en" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://innerleaps.nl/" />
   </url>
   <url>
     <loc>https://innerleaps.nl/en</loc>
+    <lastmod>2026-08-24</lastmod>
     <xhtml:link rel="alternate" hreflang="nl" href="https://innerleaps.nl/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://innerleaps.nl/en" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://innerleaps.nl/" />
@@ -19,12 +21,14 @@
   <!-- Method -->
   <url>
     <loc>https://innerleaps.nl/breintraining-methode</loc>
+    <lastmod>2026-08-24</lastmod>
     <xhtml:link rel="alternate" hreflang="nl" href="https://innerleaps.nl/breintraining-methode" />
     <xhtml:link rel="alternate" hreflang="en" href="https://innerleaps.nl/en/method" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://innerleaps.nl/breintraining-methode" />
   </url>
   <url>
     <loc>https://innerleaps.nl/en/method</loc>
+    <lastmod>2026-08-24</lastmod>
     <xhtml:link rel="alternate" hreflang="nl" href="https://innerleaps.nl/breintraining-methode" />
     <xhtml:link rel="alternate" hreflang="en" href="https://innerleaps.nl/en/method" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://innerleaps.nl/breintraining-methode" />
@@ -33,12 +37,14 @@
   <!-- About Us -->
   <url>
     <loc>https://innerleaps.nl/over-ons</loc>
+    <lastmod>2026-08-24</lastmod>
     <xhtml:link rel="alternate" hreflang="nl" href="https://innerleaps.nl/over-ons" />
     <xhtml:link rel="alternate" hreflang="en" href="https://innerleaps.nl/en/about-us" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://innerleaps.nl/over-ons" />
   </url>
   <url>
     <loc>https://innerleaps.nl/en/about-us</loc>
+    <lastmod>2026-08-24</lastmod>
     <xhtml:link rel="alternate" hreflang="nl" href="https://innerleaps.nl/over-ons" />
     <xhtml:link rel="alternate" hreflang="en" href="https://innerleaps.nl/en/about-us" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://innerleaps.nl/over-ons" />
@@ -47,12 +53,14 @@
   <!-- Contact -->
   <url>
     <loc>https://innerleaps.nl/contact</loc>
+    <lastmod>2026-08-24</lastmod>
     <xhtml:link rel="alternate" hreflang="nl" href="https://innerleaps.nl/contact" />
     <xhtml:link rel="alternate" hreflang="en" href="https://innerleaps.nl/en/contact" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://innerleaps.nl/contact" />
   </url>
   <url>
     <loc>https://innerleaps.nl/en/contact</loc>
+    <lastmod>2026-08-24</lastmod>
     <xhtml:link rel="alternate" hreflang="nl" href="https://innerleaps.nl/contact" />
     <xhtml:link rel="alternate" hreflang="en" href="https://innerleaps.nl/en/contact" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://innerleaps.nl/contact" />
@@ -61,12 +69,14 @@
   <!-- Vitality Training -->
   <url>
     <loc>https://innerleaps.nl/duurzame-inzetbaarheid</loc>
+    <lastmod>2026-08-24</lastmod>
     <xhtml:link rel="alternate" hreflang="nl" href="https://innerleaps.nl/duurzame-inzetbaarheid" />
     <xhtml:link rel="alternate" hreflang="en" href="https://innerleaps.nl/en/sustainable-employability" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://innerleaps.nl/duurzame-inzetbaarheid" />
   </url>
   <url>
     <loc>https://innerleaps.nl/en/sustainable-employability</loc>
+    <lastmod>2026-08-24</lastmod>
     <xhtml:link rel="alternate" hreflang="nl" href="https://innerleaps.nl/duurzame-inzetbaarheid" />
     <xhtml:link rel="alternate" hreflang="en" href="https://innerleaps.nl/en/sustainable-employability" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://innerleaps.nl/duurzame-inzetbaarheid" />
@@ -74,27 +84,31 @@
 
   <!-- Sustainable Employability -->
   <url>
-    <loc>https://innerleaps.nl/duurzame-inzetbaarheid-teams</loc>
-    <xhtml:link rel="alternate" hreflang="nl" href="https://innerleaps.nl/duurzame-inzetbaarheid-teams" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://innerleaps.nl/en/sustainable-employability-teams" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://innerleaps.nl/duurzame-inzetbaarheid-teams" />
+    <loc>https://innerleaps.nl/team-prestaties-verbeteren</loc>
+    <lastmod>2026-08-24</lastmod>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://innerleaps.nl/team-prestaties-verbeteren" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://innerleaps.nl/en/improve-team-performance" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://innerleaps.nl/team-prestaties-verbeteren" />
   </url>
   <url>
-    <loc>https://innerleaps.nl/en/sustainable-employability-teams</loc>
-    <xhtml:link rel="alternate" hreflang="nl" href="https://innerleaps.nl/duurzame-inzetbaarheid-teams" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://innerleaps.nl/en/sustainable-employability-teams" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://innerleaps.nl/duurzame-inzetbaarheid-teams" />
+    <loc>https://innerleaps.nl/en/improve-team-performance</loc>
+    <lastmod>2026-08-24</lastmod>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://innerleaps.nl/team-prestaties-verbeteren" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://innerleaps.nl/en/improve-team-performance" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://innerleaps.nl/team-prestaties-verbeteren" />
   </url>
 
   <!-- Stress Management -->
   <url>
     <loc>https://innerleaps.nl/stressmanagement-training</loc>
+    <lastmod>2026-08-24</lastmod>
     <xhtml:link rel="alternate" hreflang="nl" href="https://innerleaps.nl/stressmanagement-training" />
     <xhtml:link rel="alternate" hreflang="en" href="https://innerleaps.nl/en/stress-management-training" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://innerleaps.nl/stressmanagement-training" />
   </url>
   <url>
     <loc>https://innerleaps.nl/en/stress-management-training</loc>
+    <lastmod>2026-08-24</lastmod>
     <xhtml:link rel="alternate" hreflang="nl" href="https://innerleaps.nl/stressmanagement-training" />
     <xhtml:link rel="alternate" hreflang="en" href="https://innerleaps.nl/en/stress-management-training" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://innerleaps.nl/stressmanagement-training" />
@@ -103,12 +117,14 @@
   <!-- Performance Training -->
   <url>
     <loc>https://innerleaps.nl/prestatie-training</loc>
+    <lastmod>2026-08-24</lastmod>
     <xhtml:link rel="alternate" hreflang="nl" href="https://innerleaps.nl/prestatie-training" />
     <xhtml:link rel="alternate" hreflang="en" href="https://innerleaps.nl/en/performance-training" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://innerleaps.nl/prestatie-training" />
   </url>
   <url>
     <loc>https://innerleaps.nl/en/performance-training</loc>
+    <lastmod>2026-08-24</lastmod>
     <xhtml:link rel="alternate" hreflang="nl" href="https://innerleaps.nl/prestatie-training" />
     <xhtml:link rel="alternate" hreflang="en" href="https://innerleaps.nl/en/performance-training" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://innerleaps.nl/prestatie-training" />
@@ -117,12 +133,14 @@
   <!-- Blog index -->
   <url>
     <loc>https://innerleaps.nl/blog</loc>
+    <lastmod>2026-08-24</lastmod>
     <xhtml:link rel="alternate" hreflang="nl" href="https://innerleaps.nl/blog" />
     <xhtml:link rel="alternate" hreflang="en" href="https://innerleaps.nl/en/blog" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://innerleaps.nl/blog" />
   </url>
   <url>
     <loc>https://innerleaps.nl/en/blog</loc>
+    <lastmod>2026-08-24</lastmod>
     <xhtml:link rel="alternate" hreflang="nl" href="https://innerleaps.nl/blog" />
     <xhtml:link rel="alternate" hreflang="en" href="https://innerleaps.nl/en/blog" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://innerleaps.nl/blog" />
@@ -131,12 +149,14 @@
   <!-- Blog articles -->
   <url>
     <loc>https://innerleaps.nl/blog/ziekteverzuim-verlagen-wetenschappelijk-bewezen-aanpak-2025</loc>
+    <lastmod>2026-08-24</lastmod>
     <xhtml:link rel="alternate" hreflang="nl" href="https://innerleaps.nl/blog/ziekteverzuim-verlagen-wetenschappelijk-bewezen-aanpak-2025" />
     <xhtml:link rel="alternate" hreflang="en" href="https://innerleaps.nl/en/blog/reducing-absenteeism-evidence-based-approach-2025" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://innerleaps.nl/blog/ziekteverzuim-verlagen-wetenschappelijk-bewezen-aanpak-2025" />
   </url>
   <url>
     <loc>https://innerleaps.nl/en/blog/reducing-absenteeism-evidence-based-approach-2025</loc>
+    <lastmod>2026-08-24</lastmod>
     <xhtml:link rel="alternate" hreflang="nl" href="https://innerleaps.nl/blog/ziekteverzuim-verlagen-wetenschappelijk-bewezen-aanpak-2025" />
     <xhtml:link rel="alternate" hreflang="en" href="https://innerleaps.nl/en/blog/reducing-absenteeism-evidence-based-approach-2025" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://innerleaps.nl/blog/ziekteverzuim-verlagen-wetenschappelijk-bewezen-aanpak-2025" />
@@ -144,12 +164,14 @@
 
   <url>
     <loc>https://innerleaps.nl/blog/verborgen-kosten-ziekteverzuim-rekenmodel</loc>
+    <lastmod>2026-08-24</lastmod>
     <xhtml:link rel="alternate" hreflang="nl" href="https://innerleaps.nl/blog/verborgen-kosten-ziekteverzuim-rekenmodel" />
     <xhtml:link rel="alternate" hreflang="en" href="https://innerleaps.nl/en/blog/hidden-costs-of-absenteeism-calculator" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://innerleaps.nl/blog/verborgen-kosten-ziekteverzuim-rekenmodel" />
   </url>
   <url>
     <loc>https://innerleaps.nl/en/blog/hidden-costs-of-absenteeism-calculator</loc>
+    <lastmod>2026-08-24</lastmod>
     <xhtml:link rel="alternate" hreflang="nl" href="https://innerleaps.nl/blog/verborgen-kosten-ziekteverzuim-rekenmodel" />
     <xhtml:link rel="alternate" hreflang="en" href="https://innerleaps.nl/en/blog/hidden-costs-of-absenteeism-calculator" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://innerleaps.nl/blog/verborgen-kosten-ziekteverzuim-rekenmodel" />
@@ -157,12 +179,14 @@
 
   <url>
     <loc>https://innerleaps.nl/blog/hoe-verlaag-ik-het-ziekteverzuim-in-mijn-organisatie</loc>
+    <lastmod>2026-08-24</lastmod>
     <xhtml:link rel="alternate" hreflang="nl" href="https://innerleaps.nl/blog/hoe-verlaag-ik-het-ziekteverzuim-in-mijn-organisatie" />
     <xhtml:link rel="alternate" hreflang="en" href="https://innerleaps.nl/en/blog/how-to-reduce-absenteeism-in-my-organization" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://innerleaps.nl/blog/hoe-verlaag-ik-het-ziekteverzuim-in-mijn-organisatie" />
   </url>
   <url>
     <loc>https://innerleaps.nl/en/blog/how-to-reduce-absenteeism-in-my-organization</loc>
+    <lastmod>2026-08-24</lastmod>
     <xhtml:link rel="alternate" hreflang="nl" href="https://innerleaps.nl/blog/hoe-verlaag-ik-het-ziekteverzuim-in-mijn-organisatie" />
     <xhtml:link rel="alternate" hreflang="en" href="https://innerleaps.nl/en/blog/how-to-reduce-absenteeism-in-my-organization" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://innerleaps.nl/blog/hoe-verlaag-ik-het-ziekteverzuim-in-mijn-organisatie" />

@@ -2,7 +2,7 @@ import { useState, lazy, Suspense } from "react";
 import { useTranslation } from "react-i18next";
 import { Button } from "@/components/ui/button";
 import { ArrowDown, Award, Star } from "lucide-react";
-import heroBackground from "@/assets/Vitaliteitsprogramma_presentatie_Innerleaps.png";
+import heroBackground from "@/assets/Vitaliteitsprogramma_presentatie_Innerleaps.webp";
 import { TEXT_SHADOW_STRONG } from "@/styles/common";
 
 // Lazy load calculator modal for better initial performance

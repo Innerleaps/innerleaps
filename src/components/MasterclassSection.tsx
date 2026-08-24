@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 import { Activity, Brain, BookOpen, Award, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { TEXT_SHADOW_STRONG } from "@/styles/common";
-import masterclassBg from "@/assets/masterclass-audience.jpg";
+import masterclassBg from "@/assets/masterclass-audience.webp";
 import { detectLanguageFromPath } from "@/i18n/config";
 
 interface MasterclassSectionProps {

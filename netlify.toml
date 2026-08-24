@@ -29,18 +29,28 @@
   to = "/duurzame-inzetbaarheid"
   status = 301
 
-# De teampagina is twee keer hernoemd. Beide oude paden wijzen daarom direct
-# naar het huidige pad. Zou `/duurzame-inzetbaarheid-training` naar
-# `/inzetbaarheid-verbeteren` blijven wijzen, dan kreeg je een 301 op een 301.
-# Dat kost elke bezoeker een extra omleiding en laat waarde weglekken.
+# De teampagina is drie keer hernoemd. Alle oude paden wijzen daarom direct naar
+# het huidige pad, nooit naar een tussenstation. Zou
+# `/duurzame-inzetbaarheid-training` naar `/inzetbaarheid-verbeteren` blijven
+# wijzen, dan kreeg je een 301 op een 301 op een 301. Dat kost elke bezoeker
+# extra omleidingen en laat waarde weglekken.
+#
+# De laatste hernoeming was om kannibalisatie te voorkomen: de vorige naam
+# begon met `duurzame-inzetbaarheid` en concurreerde daarmee met de pagina die
+# op die term moet ranken.
 [[redirects]]
   from = "/duurzame-inzetbaarheid-training"
-  to = "/duurzame-inzetbaarheid-teams"
+  to = "/team-prestaties-verbeteren"
   status = 301
 
 [[redirects]]
   from = "/inzetbaarheid-verbeteren"
-  to = "/duurzame-inzetbaarheid-teams"
+  to = "/team-prestaties-verbeteren"
+  status = 301
+
+[[redirects]]
+  from = "/duurzame-inzetbaarheid-teams"
+  to = "/team-prestaties-verbeteren"
   status = 301
 
 [[redirects]]
@@ -50,22 +60,92 @@
 
 [[redirects]]
   from = "/en/sustainable-employability-training"
-  to = "/en/sustainable-employability-teams"
+  to = "/en/improve-team-performance"
   status = 301
 
 [[redirects]]
   from = "/en/improve-employability"
-  to = "/en/sustainable-employability-teams"
+  to = "/en/improve-team-performance"
   status = 301
 
-# De site is een single page app. Zonder deze regel geeft elke directe link
-# naar een subpagina een 404, bijvoorbeeld innerleaps.nl/duurzame-inzetbaarheid.
-# Status 200 en niet 301, want de URL moet blijven staan zoals hij is.
-# Deze regel hoort altijd als laatste, anders vangt hij echte redirects af.
 [[redirects]]
-  from = "/*"
+  from = "/en/sustainable-employability-teams"
+  to = "/en/improve-team-performance"
+  status = 301
+
+# De 24 pagina's uit ROUTE_MAP worden geprerenderd naar platte .html-bestanden.
+# Die serveert Netlify vanzelf, daar is geen regel voor nodig.
+#
+# Deze veertien routes bestaan wél in de router maar worden niet geprerenderd.
+# Zonder een expliciete regel zouden ze onder de 404 hieronder vallen. Voeg een
+# route toe aan App.tsx zonder hem in ROUTE_MAP te zetten? Dan hoort hij hier ook
+# bij, anders is hij vanaf de volgende deploy onbereikbaar.
+[[redirects]]
+  from = "/de-methode"
   to = "/index.html"
   status = 200
+[[redirects]]
+  from = "/leven-vragenlijst"
+  to = "/index.html"
+  status = 200
+[[redirects]]
+  from = "/leven-vragenlijst/resultaat"
+  to = "/index.html"
+  status = 200
+[[redirects]]
+  from = "/life-questionnaire"
+  to = "/index.html"
+  status = 200
+[[redirects]]
+  from = "/life-questionnaire/result"
+  to = "/index.html"
+  status = 200
+[[redirects]]
+  from = "/calendar"
+  to = "/index.html"
+  status = 200
+[[redirects]]
+  from = "/signup"
+  to = "/index.html"
+  status = 200
+[[redirects]]
+  from = "/9-stippen"
+  to = "/index.html"
+  status = 200
+[[redirects]]
+  from = "/algemene-voorwaarden"
+  to = "/index.html"
+  status = 200
+[[redirects]]
+  from = "/privacy"
+  to = "/index.html"
+  status = 200
+[[redirects]]
+  from = "/cookies"
+  to = "/index.html"
+  status = 200
+[[redirects]]
+  from = "/masterclass-stress-qr"
+  to = "/index.html"
+  status = 200
+[[redirects]]
+  from = "/bedankt"
+  to = "/index.html"
+  status = 200
+[[redirects]]
+  from = "/masterclass-bedankt"
+  to = "/index.html"
+  status = 200
+
+# Alles wat hierboven niet is opgevangen bestaat echt niet. Vroeger ging dit naar
+# /index.html met status 200, waardoor elke typefout een "zachte 404" opleverde:
+# de homepage met een 200-status. Google ziet dat als een kwaliteitsprobleem en
+# verspilt er crawlbudget aan. Nu een echte 404.
+# Deze regel hoort altijd als laatste.
+[[redirects]]
+  from = "/*"
+  to = "/404.html"
+  status = 404
 
 [[headers]]
   for = "/*"

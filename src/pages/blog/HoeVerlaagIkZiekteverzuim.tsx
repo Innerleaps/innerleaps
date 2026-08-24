@@ -3,7 +3,7 @@ import SimplifiedNavigation from "@/components/SimplifiedNavigation";
 import Footer from "@/components/Footer";
 import BlogAuthor from "@/components/BlogAuthor";
 import { Link } from "react-router-dom";
-import breinTrainingImage from "@/assets/6_weken_brein_trainen.png";
+import breinTrainingImage from "@/assets/6_weken_brein_trainen.webp";
 
 const HoeVerlaagIkZiekteverzuim = () => {
   return (
@@ -27,7 +27,7 @@ const HoeVerlaagIkZiekteverzuim = () => {
           content="https://innerleaps.nl/blog/hoe-verlaag-ik-het-ziekteverzuim-in-mijn-organisatie"
         />
         <meta property="og:type" content="article" />
-        <meta property="og:image" content="https://innerleaps.nl/assets/6_weken_brein_trainen-BJxV0yMW.png" />
+        <meta property="og:image" content="https://innerleaps.nl/social/6-weken-brein-trainen.png" />
 
         {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
@@ -36,7 +36,7 @@ const HoeVerlaagIkZiekteverzuim = () => {
           name="twitter:description"
           content="Ziekteverzuim verlagen met 15-21% door aandachtstraining. Wetenschappelijk bewezen: 70% lager uitvalrisico. Ontdek de evidence-based aanpak met 89,8% adoptie."
         />
-        <meta name="twitter:image" content="https://innerleaps.nl/assets/6_weken_brein_trainen-BJxV0yMW.png" />
+        <meta name="twitter:image" content="https://innerleaps.nl/social/6-weken-brein-trainen.png" />
 
         {/* Schema Markup */}
         <script type="application/ld+json">
@@ -51,7 +51,7 @@ const HoeVerlaagIkZiekteverzuim = () => {
             headline: "Hoe verlaag ik het ziekteverzuim in mijn organisatie?",
             description:
               "Ziekteverzuim verlagen met 15-21% door aandachtstraining. Wetenschappelijk bewezen: 70% lager uitvalrisico. Ontdek de evidence-based aanpak met 89,8% adoptie.",
-            image: "https://innerleaps.nl/assets/6_weken_brein_trainen-BJxV0yMW.png",
+            image: "https://innerleaps.nl/social/6-weken-brein-trainen.png",
             author: {
               "@type": "Person",
               name: "Bas Ter Haar Romenij",
@@ -62,7 +62,7 @@ const HoeVerlaagIkZiekteverzuim = () => {
               name: "Innerleaps",
               logo: {
                 "@type": "ImageObject",
-                url: "https://7f1b052b-e2ee-419a-aec0-e4591c9e4afe.lovableproject.com/lovable-uploads/06d0112b-b23b-4ce0-b028-68ac939b2b2b.png",
+                url: "https://innerleaps.nl/lovable-uploads/06d0112b-b23b-4ce0-b028-68ac939b2b2b.png",
               },
             },
             datePublished: "2024-12-16",

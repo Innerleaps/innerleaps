@@ -38,13 +38,32 @@ const AccordionTrigger = React.forwardRef<
 ))
 AccordionTrigger.displayName = AccordionPrimitive.Trigger.displayName
 
+/**
+ * `alwaysRendered` houdt de inhoud altijd in de DOM, ook als het item dicht is.
+ *
+ * Standaard mount Radix de inhoud pas bij openen. Voor een FAQ betekent dat: de
+ * antwoorden staan niet in de geprerenderde HTML, dus een crawler die tekst
+ * leest ziet alleen de vragen. Met deze vlag staat de tekst er wel en verbergt
+ * CSS hem tot iemand klikt. Google indexeert inhoud achter een accordeon
+ * gewoon, en tekstextractors van AI-zoekmachines lezen de HTML-bron.
+ *
+ * Kosten: het dichtklap-animatietje vervalt voor dit item, want `hidden` grijpt
+ * meteen in. Bewuste ruil. Laat de vlag weg waar de animatie belangrijker is
+ * dan vindbaarheid, zoals bij de vragenlijsten.
+ */
 const AccordionContent = React.forwardRef<
   React.ElementRef<typeof AccordionPrimitive.Content>,
-  React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Content>
->(({ className, children, ...props }, ref) => (
+  React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Content> & {
+    alwaysRendered?: boolean
+  }
+>(({ className, children, alwaysRendered, ...props }, ref) => (
   <AccordionPrimitive.Content
     ref={ref}
-    className="overflow-hidden text-sm transition-all data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down"
+    forceMount={alwaysRendered ? true : undefined}
+    className={cn(
+      "overflow-hidden text-sm transition-all data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down",
+      alwaysRendered && "data-[state=closed]:hidden"
+    )}
     {...props}
   >
     <div className={cn("pb-4 pt-0", className)}>{children}</div>

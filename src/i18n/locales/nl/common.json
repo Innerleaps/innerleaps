@@ -75,9 +75,9 @@
   "hero": {
     "badge": "Wetenschappelijk bewezen methode",
     "headlinePart1": "Voorkom",
-    "headlinePart2": "verzuim,",
-    "headlinePart3": "verbeter",
-    "headlinePart4": "duurzame inzetbaarheid",
+    "headlinePart2": "verzuim en burn-out",
+    "headlinePart3": "bij je medewerkers",
+    "headlinePart4": "",
     "subtitle": "Verlaag verzuim, voorkom burn-outs en verbeter de focus van je team met onze evidence based vitaliteitstraining",
     "whyChooseUs": "Waarom organisaties ons kiezen",
     "stats": {
@@ -166,7 +166,7 @@
     "items": {
       "healthcareSystem": {
         "title": "Onderliggende methode erkend door Nederlandse zorgsysteem",
-        "description": "De uitgebreide variant van onze training wordt vergoed vanuit basisverzekering door Nederlandse zorgverzekeraars."
+        "description": "Onze training bouwt voort op MBSR, een methode die Nederlandse zorgverzekeraars vergoeden vanuit de basisverzekering."
       },
       "research": {
         "title": "40 jaar wetenschappelijk onderzoek",
@@ -189,7 +189,7 @@
   },
   "seo": {
     "landing": {
-      "title": "Verzuim voorkomen en verminderen | Innerleaps",
+      "title": "Verzuim verminderen en voorkomen | Innerleaps",
       "description": "Minder verzuim en een team dat duurzaam inzetbaar blijft. Innerleaps traint in 6 weken het brein van je mensen. Gebouwd op 40 jaar onderzoek."
     },
     "blog": {
