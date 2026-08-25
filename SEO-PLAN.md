@@ -153,9 +153,12 @@ Gemeten in de gebouwde HTML:
 
 ### Nog te doen
 
-- [ ] Indexering aanvragen in Search Console, zie de lijst hieronder. Alleen de
-      gebruiker kan dit, de knop zit niet in de API.
-- [ ] Over twee weken meten, zie de tabel onderaan.
+- [x] Indexering aangevraagd in Search Console op 25 augustus 2026, voor de
+      zeven URL's uit de lijst verderop. Dat kan alleen de gebruiker, de knop
+      zit niet in de API.
+- [ ] Over twee weken meten, dus rond 8 september 2026. Zie de tabel onderaan.
+      Draai dan opnieuw een URL-inspectie op dezelfde zeven URL's en vergelijk
+      met de statussen in de tabel "Wat de URL-inspectie liet zien".
 - [ ] De 28 klantlogo's naar WebP. Samen 344 KB, dus kleinere winst dan de drie
       foto's. Bewust uitgesteld.
 - [ ] Person-schema voor de auteur en een auteurspagina met credentials.
