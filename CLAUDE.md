@@ -155,6 +155,83 @@ Daaruit volgen twee regels:
 
 Controleer het verbruik in het Netlify-dashboard onder Credit usage breakdown.
 
+## Boeken van een gesprek loopt via Calendly
+
+Vroeger opende elke "plan een gesprek met Bas"-knop een Google Calendar-link in
+een nieuw venster. Dat is eruit. **Zoek nooit meer naar `calendar.app.google`,
+die hoort er niet meer te zijn.**
+
+Wat er wel staat:
+
+- `src/components/CalendlyWidget.tsx` doet de inline widget. Plak nooit de
+  rauwe embed-code met een `<script>`-tag in JSX, want die voert in React niet
+  uit. Gebruik dit component.
+- `src/lib/booking.ts` bepaalt het knopgedrag: staat de widget op deze pagina,
+  dan scrollen naar het anker `#afspraak`, anders naar de boekingspagina.
+- De widget staat op drie plekken: `/afspraak-plannen` (en `/en/book-a-call`),
+  `/contact` en `/over-ons`. Bewust niet op alle pagina's, want het iframe kost
+  ruim 1 MB en dat zou de laadtijdwinst tenietdoen.
+- Zet de widget **nooit in een modal**. Een iframe dat bij openen en sluiten
+  steeds opnieuw gemount wordt, telt conversies dubbel of mist ze.
+
+De `calendarUrl`-velden in `MasterclassFormModal.tsx` zijn iets anders: dat zijn
+"zet deze masterclass in je agenda"-links voor een bestaand evenement. Afblijven.
+
+## Meten: er staat geen Google Tag Manager
+
+Gemeten op 24 augustus 2026: op de live site staat **geen GTM en geen gtag**.
+Het enige externe script is de Apollo-tracker. Toch staan er al aanroepen van
+`window.gtag` in `MasterclassFormModal.tsx`, `Bedankt.tsx` en
+`MasterclassQR.tsx`. Die doen dus niets.
+
+Zolang die container ontbreekt wordt er geen enkele conversie geregistreerd.
+Meld dat als iemand over conversiemeting begint.
+
+De Calendly-widget is er wel op voorbereid: hij schrijft bij een afgeronde
+boeking naar de dataLayer:
+
+```js
+{ event: "calendly_event_scheduled", calendly: <payload> }
+```
+
+Zodra GTM er staat is er alleen nog een Custom Event trigger op
+`calendly_event_scheduled` nodig. Geen code meer.
+
+## Een route toevoegen
+
+Zet je een route in `App.tsx`, kies dan bewust:
+
+- **Openbare pagina die moet ranken?** Ook in `ROUTE_MAP` in
+  `src/i18n/config.ts`. Dan komt hij automatisch in de prerendering, de
+  canonical, de hreflang, en hoort hij ook in `public/sitemap.xml`.
+- **Niet in ROUTE_MAP?** Dan wordt hij niet geprerenderd, en moet hij
+  **expliciet** in `netlify.toml` als `status = 200`-regel. Anders valt hij
+  onder de 404-catch-all en is hij vanaf de volgende deploy onbereikbaar.
+
+## Achtergronddocumenten
+
+Deze leest een nieuwe sessie niet vanzelf, dus open ze als het onderwerp langskomt:
+
+- `MIGRATIE-PLAN.md`: de verhuizing van Lovable-hosting naar Netlify, in stappen,
+  inclusief wat er misging bij het prerenderen en de keep-alive van Supabase.
+- `SEO-PLAN.md`: de diagnose van augustus 2026 en de meetlat. Kern: tot 21
+  augustus kregen crawlers zonder JavaScript nul woorden, de klikken zakten in
+  90 dagen van 64 naar 23, en er stonden nul vertoningen op de doeltermen.
+- `docs/translation-glossary.md`: vaste vertalingen.
+
+## Search Console
+
+Toegang loopt via OAuth, niet via een service account. Google Workspace
+blokkeert het aanmaken van service-accountsleutels met de organisatieregel
+`iam.disableServiceAccountKeyCreation`.
+
+- Config: `~/.config/claude-seo/google-api.json`, property `sc-domain:innerleaps.nl`
+- Uitlezen: `CLAUDE_SEO_PYTHON=/opt/homebrew/bin/python3.12 "$HOME/.claude/skills/seo/bin/claude-seo" run gsc_query.py ...`
+- **Sitemap indienen kan de skill niet.** Daarvoor is
+  `scripts/submit-sitemap.py`. Draaien met python3.12.
+- Indexering aanvragen kan alleen de gebruiker, via de knop in de interface.
+  Die zit niet in de API.
+
 ## Praktisch
 
 - `python3` is hier 3.9, de seo-skill eist 3.10+. Zet er

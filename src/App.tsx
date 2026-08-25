@@ -12,7 +12,7 @@ const LandingPage = lazy(() => import("./pages/LandingPage"));
 const DeMethode = lazy(() => import("./pages/DeMethode"));
 const OverOns = lazy(() => import("./pages/OverOns"));
 const Contact = lazy(() => import("./pages/Contact"));
-const Calendar = lazy(() => import("./pages/Calendar"));
+const AfspraakPlannen = lazy(() => import("./pages/AfspraakPlannen"));
 const Signup = lazy(() => import("./pages/Signup"));
 const LevenVragenlijst = lazy(() => import("./pages/LevenVragenlijst"));
 const LevenVragenlijstResultaat = lazy(() => import("./pages/LevenVragenlijstResultaat"));
@@ -84,7 +84,10 @@ const App = () => {
                 <Route path="/breintraining-methode" element={<DeMethode />} />
                 <Route path="/de-methode" element={<Navigate to="/breintraining-methode" replace />} />
                 <Route path="/over-ons" element={<OverOns />} />
-                <Route path="/calendar" element={<Calendar />} />
+                {/* /calendar stuurde door naar Google Calendar. Die route is nu
+                    een 301 in netlify.toml naar de pagina hieronder. */}
+                <Route path="/afspraak-plannen" element={<AfspraakPlannen />} />
+                <Route path="/en/book-a-call" element={<AfspraakPlannen />} />
                 <Route path="/signup" element={<Signup />} />
                 <Route path="/9-stippen" element={<NegenStippen />} />
                 <Route path="/stressmanagement-training" element={<StressManagement />} />

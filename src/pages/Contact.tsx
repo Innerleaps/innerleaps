@@ -3,6 +3,8 @@ import { Button } from "@/components/ui/button";
 import { Mail, Phone, MapPin } from "lucide-react";
 import StickyCtaButtons from "@/components/StickyCtaButtons";
 import ROICalculator from "@/components/ROICalculator";
+import CalendlyWidget from "@/components/CalendlyWidget";
+import { scrollToBookingWidget } from "@/lib/booking";
 import { useEffect } from "react";
 import Footer from "@/components/Footer";
 import PageSeo from "@/components/PageSeo";
@@ -10,6 +12,7 @@ import { useTranslation } from "react-i18next";
 
 const Contact = () => {
   const { t } = useTranslation("contact");
+  const { t: tCommon } = useTranslation();
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -52,15 +55,7 @@ const Contact = () => {
                     <Button
                       variant="secondary"
                       className="font-semibold py-5 px-10 rounded-lg text-lg"
-                      onClick={() => {
-                        const link = document.createElement("a");
-                        link.href = "https://calendar.app.google/rcVmbswDsKFXRfmUA";
-                        link.target = "_blank";
-                        link.rel = "noopener noreferrer";
-                        document.body.appendChild(link);
-                        link.click();
-                        document.body.removeChild(link);
-                      }}
+                      onClick={() => scrollToBookingWidget()}
                     >
                       {t("quote.cta")}
                     </Button>
@@ -111,6 +106,20 @@ const Contact = () => {
           </div>
         </section>
       </main>
+
+      {/* Boekingswidget. Bewust hier: wie op de contactpagina komt wil contact
+          opnemen, dus dit is het moment. De ROI-calculator hieronder is een
+          verkennend hulpmiddel en hoort daarna, niet ervoor. */}
+      <section className="section-padding bg-brand-off-white">
+        <div className="container-custom">
+          <h2 className="text-3xl md:text-4xl font-bold text-brand-purple text-center mb-8">
+            {tCommon("booking.title")}
+          </h2>
+          <div className="max-w-3xl mx-auto">
+            <CalendlyWidget />
+          </div>
+        </div>
+      </section>
 
       <ROICalculator />
       <Footer />

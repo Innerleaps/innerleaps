@@ -1,8 +1,9 @@
 import { useState, useEffect, lazy, Suspense } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Button } from '@/components/ui/button';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { detectLanguageFromPath } from '@/i18n/config';
+import { bookingPath, scrollToBookingWidget } from '@/lib/booking';
 
 const CalculatorModal = lazy(() => import('./CalculatorModal'));
 const ProgramRegistrationModal = lazy(() => import('./ProgramRegistrationModal'));
@@ -19,6 +20,14 @@ const StickyCtaButtons = ({ onMasterclassClick, onProgramRegistrationClick }: St
   const [isVisible, setIsVisible] = useState(false);
   const location = useLocation();
   const lang = detectLanguageFromPath(location.pathname);
+  const navigate = useNavigate();
+
+  // Staat de Calendly-widget op deze pagina, dan scrollen we ernaartoe. Zo niet,
+  // dan naar de boekingspagina. Vroeger opende dit Google Calendar in een nieuw
+  // venster, waardoor de bezoeker het domein verliet en een boeking onmeetbaar was.
+  const handleBooking = () => {
+    if (!scrollToBookingWidget()) navigate(bookingPath(lang));
+  };
 
   const isHomePage = location.pathname === '/' || location.pathname === '/en';
   const isLandingPage = location.pathname === '/landing';
@@ -79,15 +88,7 @@ const StickyCtaButtons = ({ onMasterclassClick, onProgramRegistrationClick }: St
             <Button
               variant="secondary"
               className="font-semibold py-3 sm:py-5 px-4 sm:px-10 rounded-lg text-base sm:text-lg shadow-lg whitespace-nowrap"
-              onClick={() => {
-                const link = document.createElement('a');
-                link.href = 'https://calendar.app.google/rcVmbswDsKFXRfmUA';
-                link.target = '_blank';
-                link.rel = 'noopener noreferrer';
-                document.body.appendChild(link);
-                link.click();
-                document.body.removeChild(link);
-              }}
+              onClick={handleBooking}
             >
               <span className="hidden sm:inline">{t('cta.scheduleCallShort')}</span>
               <span className="sm:hidden">{t('cta.contactShort')}</span>

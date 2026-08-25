@@ -102,8 +102,8 @@
   status = 200
 [[redirects]]
   from = "/calendar"
-  to = "/index.html"
-  status = 200
+  to = "/afspraak-plannen"
+  status = 301
 [[redirects]]
   from = "/signup"
   to = "/index.html"

@@ -34,6 +34,7 @@ export const ROUTE_MAP: Array<{ nl: string; en: string }> = [
   { nl: "/breintraining-methode", en: "/en/method" },
   { nl: "/over-ons", en: "/en/about-us" },
   { nl: "/contact", en: "/en/contact" },
+  { nl: "/afspraak-plannen", en: "/en/book-a-call" },
   { nl: "/duurzame-inzetbaarheid", en: "/en/sustainable-employability" },
   { nl: "/team-prestaties-verbeteren", en: "/en/improve-team-performance" },
   { nl: "/stressmanagement-training", en: "/en/stress-management-training" },

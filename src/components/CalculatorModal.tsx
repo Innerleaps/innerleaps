@@ -1,4 +1,7 @@
 import { useState } from 'react';
+import { useLocation, useNavigate } from 'react-router-dom';
+import { detectLanguageFromPath } from '@/i18n/config';
+import { bookingPath, scrollToBookingWidget } from '@/lib/booking';
 import { useTranslation } from 'react-i18next';
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
 import { Button } from '@/components/ui/button';
@@ -15,6 +18,22 @@ interface CalculatorModalProps {
 }
 
 const CalculatorModal = ({ isOpen, onClose }: CalculatorModalProps) => {
+  const location = useLocation();
+  const navigate = useNavigate();
+  /**
+   * Eerst de modal sluiten, dan pas naar de widget. De widget bewust NIET in
+   * deze pop-up zetten: een iframe dat bij openen en sluiten steeds opnieuw
+   * gemount wordt, is een bekende bron van dubbel getelde of gemiste
+   * conversies.
+   */
+  const handleBooking = () => {
+    onClose();
+    setTimeout(() => {
+      if (!scrollToBookingWidget()) {
+        navigate(bookingPath(detectLanguageFromPath(location.pathname)));
+      }
+    }, 150);
+  };
   const { t, i18n } = useTranslation('calculator');
   const [formData, setFormData] = useState({
     naam: '',
@@ -291,7 +310,7 @@ const CalculatorModal = ({ isOpen, onClose }: CalculatorModalProps) => {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button
                   className="bg-brand-orange hover:bg-brand-orange/90 text-white"
-                  onClick={() => window.open('https://calendar.app.google/rcVmbswDsKFXRfmUA', '_blank')}
+                  onClick={handleBooking}
                 >
                   <ExternalLink className="mr-2 h-4 w-4" />
                   {t('results.ctaPrimary')}

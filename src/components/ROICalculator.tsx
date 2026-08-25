@@ -1,4 +1,7 @@
 import { useState } from 'react';
+import { useLocation, useNavigate } from 'react-router-dom';
+import { detectLanguageFromPath } from '@/i18n/config';
+import { bookingPath, scrollToBookingWidget } from '@/lib/booking';
 import { useTranslation } from 'react-i18next';
 import { Card } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
@@ -10,6 +13,14 @@ import { useToast } from '@/hooks/use-toast';
 import { calculateROI, ROIResults } from '@/utils/calculationEngine';
 
 const ROICalculator = () => {
+  const location = useLocation();
+  const navigate = useNavigate();
+  // Widget op deze pagina? Scrollen. Zo niet, naar de boekingspagina.
+  const handleBooking = () => {
+    if (!scrollToBookingWidget()) {
+      navigate(bookingPath(detectLanguageFromPath(location.pathname)));
+    }
+  };
   const { t, i18n } = useTranslation('calculator');
   const { toast } = useToast();
   const [formData, setFormData] = useState({
@@ -285,7 +296,7 @@ const ROICalculator = () => {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button
                   className="bg-brand-orange hover:bg-brand-orange/90 text-white font-semibold py-3 sm:py-5 px-4 sm:px-10 text-base sm:text-lg rounded-lg shadow-lg"
-                  onClick={() => window.open('https://calendar.app.google/rcVmbswDsKFXRfmUA', '_blank')}
+                  onClick={handleBooking}
                 >
                   <ExternalLink className="mr-2 h-4 w-4" />
                   {t('results.ctaPrimary')}

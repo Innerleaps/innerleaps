@@ -1,5 +1,7 @@
 import SimplifiedNavigation from "@/components/SimplifiedNavigation";
 import StickyCtaButtons from "@/components/StickyCtaButtons";
+import CalendlyWidget from "@/components/CalendlyWidget";
+import { scrollToBookingWidget } from "@/lib/booking";
 import TrustSection from "@/components/TrustSection";
 
 import Footer from "@/components/Footer";
@@ -53,6 +55,7 @@ import jacquelineHollandLogo from "@/assets/Vitaliteitsprogramma_Holland_Colours
 
 const OverOns = () => {
   const { t } = useTranslation("overons");
+  const { t: tCommon } = useTranslation();
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -239,12 +242,7 @@ const OverOns = () => {
                   variant="secondary"
                   size="lg"
                   className="w-full sm:w-auto font-semibold py-4 px-6 lg:px-8 rounded-lg text-lg lg:text-xl"
-                  onClick={() =>
-                    window.open(
-                      "https://calendar.app.google/rcVmbswDsKFXRfmUA",
-                      "_blank",
-                    )
-                  }
+                  onClick={() => scrollToBookingWidget()}
                 >
                   {t("story.cta")}
                 </Button>
@@ -253,6 +251,21 @@ const OverOns = () => {
           </div>
         </section>
       </main>
+
+      {/* Boekingswidget direct onder het verhaal van Bas. Dat is het punt waar
+          het vertrouwen op deze pagina het hoogst is, en de knop hierboven staat
+          er vlak bij, zodat de sprong naar het anker klein blijft. TrustSection
+          komt eronder als geruststelling voor wie nog niet klikt. */}
+      <section className="section-padding bg-brand-off-white">
+        <div className="container-custom">
+          <h2 className="text-3xl md:text-4xl font-bold text-brand-purple text-center mb-8">
+            {tCommon("booking.title")}
+          </h2>
+          <div className="max-w-3xl mx-auto">
+            <CalendlyWidget />
+          </div>
+        </div>
+      </section>
 
       <TrustSection />
       <Footer />
