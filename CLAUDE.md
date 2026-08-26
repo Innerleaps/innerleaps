@@ -55,6 +55,17 @@ Controleer met:
 grep -roiE "\b(program|programs|organiz\w*|recogniz\w*|center|behavior\w*|analyz\w*|color)\b" src/i18n/locales/en/ | sort | uniq -c
 ```
 
+## Lettergroottes
+
+`STYLING_GUIDELINES.md` is hierin leidend: body-tekst is minimaal `text-xl`, en
+op de contactpagina staat alles op `text-lg`. **Formuliervelden en labels horen
+even groot als de tekst ernaast.** Ze waren kleiner, omdat de shadcn-componenten
+hun eigen `text-sm` meebrengen.
+
+Let op bij `Input`: die zet `md:text-sm`, en die media query wint van een gewone
+`text-lg`. Je moet er dus `md:text-lg` bij zetten, anders krimpt het veld op
+desktop alsnog.
+
 ## Hoe de teksten klinken
 
 **Nooit een kastlijntje (em dash).** Niet in teksten op de site, niet in
@@ -163,16 +174,70 @@ die hoort er niet meer te zijn.**
 
 Wat er wel staat:
 
-- `src/components/CalendlyWidget.tsx` doet de inline widget. Plak nooit de
-  rauwe embed-code met een `<script>`-tag in JSX, want die voert in React niet
-  uit. Gebruik dit component.
-- `src/lib/booking.ts` bepaalt het knopgedrag: staat de widget op deze pagina,
-  dan scrollen naar het anker `#afspraak`, anders naar de boekingspagina.
-- De widget staat op drie plekken: `/afspraak-plannen` (en `/en/book-a-call`),
-  `/contact` en `/over-ons`. Bewust niet op alle pagina's, want het iframe kost
-  ruim 1 MB en dat zou de laadtijdwinst tenietdoen.
+- `src/components/CalendlyWidget.tsx` doet de inline widget. **Laad nooit
+  `widget.js` van Calendly.** Dat script bouwt alleen een iframe-URL en luistert
+  op berichten, en dat doet dit component zelf. Belangrijker: dat script zoekt
+  maar één keer, bij het laden, naar widgets op de pagina. Bij navigeren binnen
+  de app stond het er al, dus elke widget die daarna in beeld kwam bleef leeg.
+- **De kleuren staan in de URL, niet in Calendly.** URL-parameters winnen van de
+  instellingen in Calendly zelf, dus verander je ze daar, dan zie je niets
+  gebeuren tot je ze hier ook aanpast.
+- **Maak de kalender niet donker.** Geprobeerd en afgeserveerd: Calendly tekent
+  beschikbare dagen als een half-doorzichtige cirkel van `primary_color`, en
+  oranje op donker wordt daarin modderig paars. Precies de dagen die je moet
+  aanklikken werden dan het slechtst zichtbaar. De kalender is dus licht, en het
+  gewicht komt van het blauwe kader eromheen in de pagina.
+- De iframe-URL is **een constante**, met `embed_domain` vast op `innerleaps.nl`.
+  Maak daar nooit `window.location.hostname` van. Dan verschilt de URL per
+  omgeving, staat er iets anders in de voorgebakken HTML dan React ervan maakt,
+  en laadt het iframe twee keer. Calendly controleert dat domein niet.
+- `src/lib/booking.ts` bepaalt het knopgedrag: staat de agenda binnen anderhalf
+  scherm, dan scrollen naar het anker `#afspraak`, anders naar `/contact`. Die
+  afstandsgrens is er met reden: op `/over-ons` staat de agenda ruim 4000 pixels
+  naar beneden, en daar naartoe scrollen is slechter dan doorsturen.
+- De widget staat op **twee** plekken: `/contact` (en `/en/contact`) en
+  `/over-ons`. Bewust niet op alle pagina's, want het iframe kost ruim 1 MB.
+  Op `/over-ons` staat hij diep op de pagina, dus daar met `eager={false}`.
 - Zet de widget **nooit in een modal**. Een iframe dat bij openen en sluiten
   steeds opnieuw gemount wordt, telt conversies dubbel of mist ze.
+
+### `/afspraak-plannen` bestaat niet meer
+
+Die pagina had dezelfde h1 en boven de vouw dezelfde inhoud als `/contact`, en
+dat is voor een zoekmachine een teken dat er één van de twee overbodig is. Hij
+komt in `SEO-PLAN.md` nergens voor en zat niet bij de zeven ingediende URL's, dus
+er ging geen organische waarde verloren.
+
+`/contact` doet nu allebei, in deze volgorde: het afspraakblok, dan zelf contact
+opnemen met het berichtformulier, dan de ROI-calculator. Van meest naar minst
+waardevol. **Draai die volgorde niet om**: een ingepland gesprek is meer waard
+dan een mailtje, en een mailtje meer dan een som.
+
+Er staan 301's van `/afspraak-plannen`, `/en/book-a-call` en `/calendar` naar
+`/contact`. Die laatste wees eerst naar `/afspraak-plannen`; hij is meteen
+doorgezet zodat er geen keten ontstond.
+
+### De onderdelen van het afspraakblok
+
+| Component | Wat het doet |
+|---|---|
+| `BookingIntro.tsx` | Kop met de foto van Bas ernaast. Op mobiel staat zijn naam onder de foto. |
+| `BookingStats.tsx` | De vier cijfers. `variant="row"` is één lage rij voor smalle schermen, `variant="panel"` het paneel voor naast de agenda. |
+| `BookingTrust.tsx` | Google, VMBN en de klantquote van TheyDo. |
+| `ClientLogoMarquee.tsx` | De lopende band met klantlogo's. **Let op:** gebruikt de donkere logo's uit `src/assets`, niet die uit `src/data/clientLogos.ts`. Dat zijn de lichte varianten voor de donkere hero, en die zijn op wit onzichtbaar. |
+| `BookingBlock.tsx` | Cijfers, agenda en bewijs onder elkaar in één wit kader. Voor `/over-ons`. |
+
+Op `/contact` staan die onderdelen bewust **niet** in `BookingBlock` maar in twee
+kolommen: links de kop en de agenda, rechts de cijfers en het bewijs. Reden: alles
+onder elkaar zette de agenda op 688 pixels, en op een laptop van 800 pixels hoog
+zag je dan geen enkele datum. Naast elkaar kost het bewijs de agenda geen hoogte.
+
+### Het berichtformulier
+
+`ContactForm.tsx` staat onder de contactgegevens, met opzet. Het mag de agenda
+niet beconcurreren. Het loopt via de Edge Function `submit-contact-message`, die
+niets opslaat maar een mail stuurt naar `bas@innerleaps.nl` met het adres van de
+afzender als antwoordadres.
 
 De `calendarUrl`-velden in `MasterclassFormModal.tsx` zijn iets anders: dat zijn
 "zet deze masterclass in je agenda"-links voor een bestaand evenement. Afblijven.
@@ -187,15 +252,18 @@ Het enige externe script is de Apollo-tracker. Toch staan er al aanroepen van
 Zolang die container ontbreekt wordt er geen enkele conversie geregistreerd.
 Meld dat als iemand over conversiemeting begint.
 
-De Calendly-widget is er wel op voorbereid: hij schrijft bij een afgeronde
-boeking naar de dataLayer:
+De site is er wel op voorbereid. Er gaan twee gebeurtenissen naar de dataLayer:
 
 ```js
-{ event: "calendly_event_scheduled", calendly: <payload> }
+{ event: "calendly_event_scheduled", calendly: <payload> }   // afgeronde boeking
+{ event: "contact_message_sent" }                            // berichtformulier
 ```
 
-Zodra GTM er staat is er alleen nog een Custom Event trigger op
-`calendly_event_scheduled` nodig. Geen code meer.
+Zodra GTM er staat zijn er alleen nog Custom Event triggers op die twee nodig.
+Geen code meer. Voor telefoon en e-mail is ook niets nodig: die staan op
+`/contact` als `tel:`- en `mailto:`-links, dus een klik erop is een gewone
+gebeurtenis. Ze stonden daar lang als platte tekst, waardoor je op een telefoon
+het nummer moest overtypen om te kunnen bellen.
 
 ## Een route toevoegen
 
@@ -219,6 +287,32 @@ Deze leest een nieuwe sessie niet vanzelf, dus open ze als het onderwerp langsko
   90 dagen van 64 naar 23, en er stonden nul vertoningen op de doeltermen.
 - `docs/translation-glossary.md`: vaste vertalingen.
 
+## Zoekwoorden staan in docs/seo-geo/
+
+**Elk werk aan online vindbaarheid begint in `docs/seo-geo/`.** Dus voordat je
+`/seo`, `/seo-geo`, `/seo-plan`, `/seo-cluster`, `/seo-content-brief`,
+`/seo-dataforseo` of een andere seo-skill inzet, en voordat je zelf volumes
+opzoekt of schat. Die map is de enige plek waar zoekwoorddata van deze site
+staat.
+
+- `docs/seo-geo/README.md`: de spelregels.
+- `docs/seo-geo/zoekwoorden-nl.md`: de gemeten Nederlandse termen met volumes,
+  CPC's en maandreeksen, plus de termen die bewust niet gemeten of verboden zijn.
+- `docs/seo-geo/zoekwoorden.json`: dezelfde data machineleesbaar.
+
+Drie regels die daarbij horen:
+
+1. **Niet opnieuw gaan meten wat er al staat.** Dat kost DataForSEO-credits en
+   levert afwijkende getallen op, waarna er twee waarheden zijn.
+2. **Geen volumes verzinnen.** Staat een term niet in de tabel, dan schrijf je
+   "niet gemeten", geen schatting.
+3. **Nieuwe metingen schrijf je terug in die map**, met datum en bron, in beide
+   bestanden tegelijk. Anders is de meting de volgende sessie weg.
+
+De verboden woorden uit `zoekwoorden-nl.md` (mindfulness, meditatie, wellness,
+self-care, spiritual, therapie, ontspanningscursus, quick fix) zijn ook geen
+kandidaat-zoekwoorden als een tool ze met hoog volume aandraagt.
+
 ## Search Console
 
 Toegang loopt via OAuth, niet via een service account. Google Workspace
@@ -231,6 +325,29 @@ blokkeert het aanmaken van service-accountsleutels met de organisatieregel
   `scripts/submit-sitemap.py`. Draaien met python3.12.
 - Indexering aanvragen kan alleen de gebruiker, via de knop in de interface.
   Die zit niet in de API.
+
+### Na elke deploy die URL's raakt
+
+**Herinner de gebruiker hier actief aan.** Hij kan het alleen zelf doen, en het
+wordt makkelijk vergeten omdat de site er live gewoon goed uitziet.
+
+De volgorde is belangrijk. Google leest de sitemap en de pagina op het moment
+dat je het vraagt, dus alles moet al live staan:
+
+1. **Eerst pushen en de deploy laten aflopen.** Dien je de sitemap eerder in,
+   dan krijgt Google de oude te zien en heb je het voor niets gedaan.
+2. **Sitemap opnieuw indienen** als er URL's bij zijn gekomen of verdwenen, met
+   `scripts/submit-sitemap.py` (python3.12).
+3. **Indexering aanvragen** in Search Console via URL-inspectie, voor elke pagina
+   die nieuw is of waarvan de inhoud wezenlijk veranderd is. Beide talen.
+
+Wat je **niet** doet: indexering aanvragen voor een URL die je zojuist met een
+301 hebt weggestuurd. Die verdwijnt vanzelf uit de index zodra Google de
+omleiding tegenkomt. Wil je het versnellen, inspecteer hem dan wel even, zodat
+Google de 301 ziet, maar vraag geen indexering aan.
+
+Let op: het aantal indexeringsverzoeken per dag is beperkt, dus kies de pagina's
+die er echt toe doen in plaats van alles aan te vragen.
 
 ## Praktisch
 

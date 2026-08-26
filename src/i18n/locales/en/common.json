@@ -85,7 +85,8 @@
       "absenteeism": "Sick leave",
       "focus": "Focus & concentration",
       "science": "Science",
-      "scienceValue": "40+ years"
+      "scienceValue": "40+ years",
+      "productivity": "Productivity"
     },
     "googleReviews": "Google Reviews",
     "heroImageAlt": "Innerleaps vitality training session"
@@ -200,7 +201,21 @@
   "booking": {
     "metaTitle": "Schedule a call with Bas | Innerleaps",
     "metaDescription": "Schedule a free 30-minute call with Bas about reducing absenteeism and sustainable employability. Pick a moment that suits you.",
-    "title": "Fancy a chat about sustainable employability?",
-    "intro": "Pick a moment below that suits you. The call takes 30 minutes and comes without obligation. We look at your situation together and whether our approach fits."
+    "title": "Fancy a <0>chat</0>?",
+    "intro": "Pick a moment below. The call is free of obligation and takes 30 minutes.",
+    "bas": {
+      "role": "Bas Ter Haar Romenij, Founder of Innerleaps",
+      "photoAlt": "Bas Ter Haar Romenij",
+      "shortName": "Bas",
+      "shortRole": "Founder of Innerleaps"
+    }
+  },
+  "bookingTrust": {
+    "quote": "“With their 6-week brain training delivered by accredited trainers, Innerleaps produced measurable results fast: 70% less stress, 40% sharper focus, and a 9.4/10 from our team. Exactly what we needed!”",
+    "author": "Jochem van der Veen",
+    "role": "CEO at TheyDo",
+    "logoAlt": "TheyDo",
+    "photoAlt": "Jochem van der Veen, CEO at TheyDo",
+    "vmbnAlt": "VMBN trainer category 1"
   }
 }

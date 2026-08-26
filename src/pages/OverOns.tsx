@@ -1,7 +1,8 @@
 import SimplifiedNavigation from "@/components/SimplifiedNavigation";
 import StickyCtaButtons from "@/components/StickyCtaButtons";
-import CalendlyWidget from "@/components/CalendlyWidget";
-import { scrollToBookingWidget } from "@/lib/booking";
+import BookingBlock from "@/components/BookingBlock";
+import BookingIntro from "@/components/BookingIntro";
+import { BAS_PHOTO, scrollToBookingWidget } from "@/lib/booking";
 import TrustSection from "@/components/TrustSection";
 
 import Footer from "@/components/Footer";
@@ -11,7 +12,6 @@ import PageSeo from "@/components/PageSeo";
 import { useTranslation } from "react-i18next";
 
 // Trainer photos
-import basPhoto from "@/assets/Vitaliteitstrainer_Bas_Ter_Haar_Romenij.png";
 import winekePhoto from "@/assets/Vitaliteitstrainer_Wineke_van_Aken.png";
 import annePhoto from "@/assets/Vitaliteitstrainer_Anne_Linnebank.png";
 import davePhoto from "@/assets/Vitaliteitstrainer_Dave_Hoppema.png";
@@ -55,7 +55,6 @@ import jacquelineHollandLogo from "@/assets/Vitaliteitsprogramma_Holland_Colours
 
 const OverOns = () => {
   const { t } = useTranslation("overons");
-  const { t: tCommon } = useTranslation();
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -231,7 +230,7 @@ const OverOns = () => {
 
               <div className="flex flex-col items-center space-y-6">
                 <img
-                  src={basPhoto}
+                  src={BAS_PHOTO}
                   alt={t("story.photoAlt")}
                   className="rounded-full w-64 h-64 object-cover shadow-xl"
                 />
@@ -258,12 +257,11 @@ const OverOns = () => {
           komt eronder als geruststelling voor wie nog niet klikt. */}
       <section className="section-padding bg-brand-off-white">
         <div className="container-custom">
-          <h2 className="text-3xl md:text-4xl font-bold text-brand-purple text-center mb-8">
-            {tCommon("booking.title")}
-          </h2>
-          <div className="max-w-3xl mx-auto">
-            <CalendlyWidget />
+          <div className="mx-auto max-w-3xl">
+            <BookingIntro as="h2" className="mb-8" />
           </div>
+          {/* Diep op de pagina, dus de agenda laadt pas als je in de buurt komt. */}
+          <BookingBlock eager={false} />
         </div>
       </section>
 

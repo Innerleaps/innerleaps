@@ -99,20 +99,6 @@
   </url>
 
   <!-- Afspraak plannen -->
-  <url>
-    <loc>https://innerleaps.nl/afspraak-plannen</loc>
-    <lastmod>2026-08-25</lastmod>
-    <xhtml:link rel="alternate" hreflang="nl" href="https://innerleaps.nl/afspraak-plannen" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://innerleaps.nl/en/book-a-call" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://innerleaps.nl/afspraak-plannen" />
-  </url>
-  <url>
-    <loc>https://innerleaps.nl/en/book-a-call</loc>
-    <lastmod>2026-08-25</lastmod>
-    <xhtml:link rel="alternate" hreflang="nl" href="https://innerleaps.nl/afspraak-plannen" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://innerleaps.nl/en/book-a-call" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://innerleaps.nl/afspraak-plannen" />
-  </url>
 
   <!-- Stress Management -->
   <url>

@@ -15,5 +15,8 @@ verify_jwt = false
 [functions.submit-scientific-report]
 verify_jwt = false
 
+[functions.submit-contact-message]
+verify_jwt = false
+
 [functions.keep-alive]
 verify_jwt = false

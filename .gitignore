@@ -28,3 +28,6 @@ dist-ssr
 
 # Bundelanalyse van de build
 build-stats
+
+# Persoonlijke Claude Code-voorkeuren. launch.json gaat wel mee.
+.claude/settings.local.json

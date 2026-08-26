@@ -1,0 +1,114 @@
+{
+  "$comment": "Zoekwoorddata innerleaps.nl. Lees docs/seo-geo/README.md voordat je hiermee werkt. Bij wijziging ook zoekwoorden-nl.md bijwerken.",
+  "bron": {
+    "leverancier": "DataForSEO via Google Ads",
+    "locatie": "Nederland",
+    "taal": "nl",
+    "opgehaald_op": "2026-08-07",
+    "reeks_periode": "2025-07 t/m 2026-06",
+    "opmerking": "September piekt bij alle acht termen tegelijk. Kan seizoen zijn, kan artefact zijn. Niet als bewijs gebruiken zonder tweede meting."
+  },
+  "velden": {
+    "volume_per_maand": "gemiddeld maandvolume zoals teruggegeven door de bron",
+    "concurrentie_index": "0-100, advertentiedruk, niet organische moeilijkheid",
+    "cpc_eur": "null betekent niet opgegeven door de bron",
+    "bod_laag_eur": "null betekent niet opgegeven door de bron",
+    "bod_hoog_eur": "null betekent niet opgegeven door de bron"
+  },
+  "gemeten": [
+    {
+      "term": "duurzame inzetbaarheid",
+      "volume_per_maand": 2400,
+      "concurrentie": "medium",
+      "concurrentie_index": 60,
+      "cpc_eur": 3.70,
+      "bod_laag_eur": 1.74,
+      "bod_hoog_eur": 3.43,
+      "maandvolumes": {"2025-07": 1600, "2025-08": 1300, "2025-09": 5400, "2025-10": 2400, "2025-11": 1900, "2025-12": 1600, "2026-01": 2400, "2026-02": 1900, "2026-03": 2400, "2026-04": 1900, "2026-05": 1900, "2026-06": 1900}
+    },
+    {
+      "term": "preventiemedewerker",
+      "volume_per_maand": 1900,
+      "concurrentie": "medium",
+      "concurrentie_index": 59,
+      "cpc_eur": 5.12,
+      "bod_laag_eur": 0.82,
+      "bod_hoog_eur": 5.15,
+      "maandvolumes": {"2025-07": 1600, "2025-08": 1300, "2025-09": 2400, "2025-10": 2400, "2025-11": 1900, "2025-12": 1600, "2026-01": 1900, "2026-02": 1900, "2026-03": 2400, "2026-04": 1600, "2026-05": 1600, "2026-06": 1600}
+    },
+    {
+      "term": "werkstress",
+      "volume_per_maand": 480,
+      "concurrentie": "laag",
+      "concurrentie_index": 16,
+      "cpc_eur": 5.07,
+      "bod_laag_eur": 0.68,
+      "bod_hoog_eur": 4.28,
+      "maandvolumes": {"2025-07": 140, "2025-08": 110, "2025-09": 1600, "2025-10": 480, "2025-11": 1300, "2025-12": 210, "2026-01": 260, "2026-02": 210, "2026-03": 320, "2026-04": 170, "2026-05": 210, "2026-06": 590}
+    },
+    {
+      "term": "vitaliteitsprogramma",
+      "volume_per_maand": 260,
+      "concurrentie": "medium",
+      "concurrentie_index": 62,
+      "cpc_eur": 10.62,
+      "bod_laag_eur": 2.73,
+      "bod_hoog_eur": 10.20,
+      "maandvolumes": {"2025-07": 140, "2025-08": 140, "2025-09": 1000, "2025-10": 260, "2025-11": 210, "2025-12": 170, "2026-01": 210, "2026-02": 170, "2026-03": 210, "2026-04": 170, "2026-05": 140, "2026-06": 170}
+    },
+    {
+      "term": "ziekteverzuim voorkomen",
+      "volume_per_maand": 170,
+      "concurrentie": "laag",
+      "concurrentie_index": 10,
+      "cpc_eur": 5.07,
+      "bod_laag_eur": null,
+      "bod_hoog_eur": null,
+      "maandvolumes": {"2025-07": 40, "2025-08": 30, "2025-09": 1600, "2025-10": 170, "2025-11": 50, "2025-12": 30, "2026-01": 110, "2026-02": 40, "2026-03": 90, "2026-04": 40, "2026-05": 20, "2026-06": 20}
+    },
+    {
+      "term": "verzuim verlagen",
+      "volume_per_maand": 90,
+      "concurrentie": "laag",
+      "concurrentie_index": 15,
+      "cpc_eur": 44.91,
+      "bod_laag_eur": 7.15,
+      "bod_hoog_eur": 35.73,
+      "maandvolumes": {"2025-07": 20, "2025-08": 10, "2025-09": 590, "2025-10": 90, "2025-11": 10, "2025-12": 40, "2026-01": 70, "2026-02": 50, "2026-03": 70, "2026-04": 20, "2026-05": 10, "2026-06": 20}
+    },
+    {
+      "term": "verzuim terugdringen",
+      "volume_per_maand": 70,
+      "concurrentie": "laag",
+      "concurrentie_index": 17,
+      "cpc_eur": null,
+      "bod_laag_eur": 3.55,
+      "bod_hoog_eur": 13.35,
+      "maandvolumes": {"2025-07": 30, "2025-08": 20, "2025-09": 390, "2025-10": 70, "2025-11": 50, "2025-12": 20, "2026-01": 30, "2026-02": 50, "2026-03": 70, "2026-04": 20, "2026-05": 10, "2026-06": 20}
+    },
+    {
+      "term": "mentale gezondheid werk",
+      "volume_per_maand": 20,
+      "concurrentie": "medium",
+      "concurrentie_index": 43,
+      "cpc_eur": null,
+      "bod_laag_eur": null,
+      "bod_hoog_eur": null,
+      "maandvolumes": {"2025-07": 10, "2025-08": 10, "2025-09": 90, "2025-10": 10, "2025-11": 10, "2025-12": 10, "2026-01": 30, "2026-02": 10, "2026-03": 10, "2026-04": 10, "2026-05": 10, "2026-06": 10}
+    }
+  ],
+  "niet_gemeten": {
+    "merktaal_geparkeerd": ["breintraining", "aandachtstraining", "attention training"],
+    "varianten_uitgesloten": ["duurzame inzetbaarheid verbeteren", "duurzame inzetbaarheid verhogen", "duurzame inzetbaarheid vergroten"],
+    "sectortermen_nog_te_meten": ["duurzame inzetbaarheid onderwijs", "duurzame inzetbaarheid cao", "werkdruk onderwijs", "werkdruk leraren", "verzuim onderwijs", "professionaliseringsbudget mbo", "scholingsbudget mbo"]
+  },
+  "alleen_als_patroon": [
+    "burn-out gecombineerd met medewerkers of bedrijven",
+    "overige termen uit de stress-managementcluster, buiten werkstress"
+  ],
+  "verboden_woorden": ["mindfulness", "meditatie", "wellness", "self-care", "spiritual", "therapie", "ontspanningscursus", "quick fix"],
+  "correcties": [
+    "De aanname dat de stress-managementcluster nul of verwaarloosbaar volume had is onjuist: werkstress meet 480 per maand.",
+    "Mentale gezondheid werk meet 20 per maand, wat de uitsluiting van die term bevestigt."
+  ]
+}

@@ -8,7 +8,7 @@
   },
   "sections": {
     "contact": "Contactgegevens",
-    "organization": "Organisatiegegevens"
+    "organisation": "Organisatiegegevens"
   },
   "fields": {
     "name": "Naam",

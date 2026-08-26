@@ -1,18 +1,34 @@
+import { useEffect } from "react";
+import { useTranslation } from "react-i18next";
+import { Mail, Phone } from "lucide-react";
 import SimplifiedNavigation from "@/components/SimplifiedNavigation";
-import { Button } from "@/components/ui/button";
-import { Mail, Phone, MapPin } from "lucide-react";
 import StickyCtaButtons from "@/components/StickyCtaButtons";
 import ROICalculator from "@/components/ROICalculator";
+import BookingIntro from "@/components/BookingIntro";
+import BookingStats from "@/components/BookingStats";
+import BookingTrust from "@/components/BookingTrust";
 import CalendlyWidget from "@/components/CalendlyWidget";
-import { scrollToBookingWidget } from "@/lib/booking";
-import { useEffect } from "react";
+import ClientLogoMarquee from "@/components/ClientLogoMarquee";
+import ContactForm from "@/components/ContactForm";
 import Footer from "@/components/Footer";
 import PageSeo from "@/components/PageSeo";
-import { useTranslation } from "react-i18next";
 
+/**
+ * De contactpagina, en sinds het opheffen van /afspraak-plannen ook de
+ * boekingspagina. Alle "plan een gesprek"-knoppen op de site komen hier uit.
+ *
+ * De volgorde is de trechter: eerst een moment kiezen, dan zelf contact
+ * opnemen als je liever eerst iets vraagt, dan de rekentool voor wie nog aan
+ * het verkennen is. Van meest naar minst waardevol, want een ingepland gesprek
+ * is meer waard dan een mailtje en een mailtje meer dan een som.
+ *
+ * De indeling van het afspraakdeel draait om één ding: de kalender moet
+ * zichtbaar zijn zonder te scrollen. Daarom staat links alleen wat je nodig
+ * hebt om te klikken en staat rechts het bewijs waarom je dat zou doen, naast
+ * elkaar in plaats van onder elkaar.
+ */
 const Contact = () => {
   const { t } = useTranslation("contact");
-  const { t: tCommon } = useTranslation();
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -24,80 +40,95 @@ const Contact = () => {
       <SimplifiedNavigation />
       <StickyCtaButtons />
 
-      <main className="pt-8">
-        <section className="bg-brand-off-white section-padding">
+      <main>
+        {/* Het afspraakblok */}
+        <section className="bg-brand-off-white py-8 md:py-14 lg:py-16">
           <div className="container-custom">
-            <div className="text-center space-y-6 mb-16">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-gray-dark">
-                {t("hero.titlePrefix")} <span className="text-brand-orange">{t("hero.titleAccent")}</span>{t("hero.titleSuffix") ? ` ${t("hero.titleSuffix")}` : ""}
-              </h1>
+            <div className="grid grid-cols-1 items-start gap-6 lg:grid-cols-2 lg:gap-10">
+              {/* Kolom 1: alles wat je nodig hebt om een moment te kiezen */}
+              <div className="space-y-5">
+                <BookingIntro />
+
+                {/* Op een smal scherm staan de cijfers hier, boven de agenda.
+                    Op een breed scherm staan ze rechts als paneel. */}
+                <BookingStats variant="row" className="lg:hidden" />
+
+                <div className="rounded-xl bg-brand-blue p-4 md:p-5">
+                  <CalendlyWidget eager />
+                </div>
+              </div>
+
+              {/* Kolom 2: waarom je dit zou doen */}
+              <div className="rounded-xl bg-white p-6 md:p-8 lg:sticky lg:top-28">
+                <BookingStats variant="panel" className="hidden lg:block" />
+                <BookingTrust
+                  divider={false}
+                  className="lg:mt-6 lg:pt-6"
+                />
+              </div>
             </div>
 
-            <div className="max-w-6xl mx-auto">
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                {/* Quote section */}
-                <div className="bg-white p-8 rounded-xl">
-                  <div className="flex flex-col items-center space-y-6 mb-8">
-                    <img
-                      src="/lovable-uploads/eaa7a159-2f85-4fa3-b487-4855426f2c14.png"
-                      alt={t("quote.photoAlt")}
-                      className="w-36 h-36 rounded-full object-cover"
-                    />
-                    <div className="text-center">
-                      <p className="text-brand-gray-dark italic mb-4 text-lg leading-relaxed">
-                        {t("quote.text")}
-                      </p>
-                      <p className="text-brand-gray-medium font-medium">{t("quote.role")}</p>
+            {/* De logo's staan onder het afspraakblok en niet erboven. Erboven
+                las de pagina verkeerd: het eerste wat je zag was een rij logo's
+                in plaats van waarom je hier bent. Dat ze hiermee onder de vouw
+                vallen kan, want het paneel met de vier cijfers staat rechts al
+                wél in beeld. */}
+            <div className="mt-10 lg:mt-14">
+              <ClientLogoMarquee />
+            </div>
+          </div>
+        </section>
+
+        {/* Zelf contact opnemen, voor wie liever eerst iets vraagt */}
+        <section className="section-padding">
+          <div className="container-custom">
+            <div className="mx-auto max-w-4xl rounded-xl bg-white p-6 md:p-8">
+              <h2 className="mb-6 text-xl font-semibold text-brand-gray-dark md:text-2xl lg:text-3xl">
+                {t("info.title")}
+              </h2>
+
+              <div className="grid grid-cols-1 gap-8 md:grid-cols-2 md:gap-12">
+                {/* Links: het formulier */}
+                <ContactForm />
+
+                {/* Rechts: rechtstreeks bereikbaar. Mail en telefoon zijn echte
+                    links; ze stonden hier als gewone tekst, dus op een telefoon
+                    moest je het nummer overtypen om te kunnen bellen. Het adres
+                    staat hier niet meer: dat hoort bij een bezoek, niet bij
+                    contact opnemen, en het staat nog wel in de footer met de
+                    schema-opmaak eromheen. */}
+                <div className="space-y-6">
+                  <div className="flex items-start space-x-4">
+                    <div className="rounded-lg bg-brand-gray-light p-3 shadow-sm">
+                      <Mail className="h-6 w-6 stroke-2 text-brand-orange" />
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-semibold text-brand-gray-dark">
+                        {t("info.emailLabel")}
+                      </h3>
+                      <a
+                        href="mailto:bas@innerleaps.nl"
+                        className="text-lg text-brand-gray-medium transition-colors hover:text-brand-orange"
+                      >
+                        bas@innerleaps.nl
+                      </a>
                     </div>
                   </div>
 
-                  <div className="text-center">
-                    <Button
-                      variant="secondary"
-                      className="font-semibold py-5 px-10 rounded-lg text-lg"
-                      onClick={() => scrollToBookingWidget()}
-                    >
-                      {t("quote.cta")}
-                    </Button>
-                  </div>
-                </div>
-
-                {/* Contact Information */}
-                <div className="bg-white p-8 rounded-xl">
-                  <h3 className="text-xl md:text-2xl lg:text-3xl font-semibold text-brand-gray-dark mb-6">
-                    {t("info.title")}
-                  </h3>
-
-                  <div className="space-y-6">
-                    <div className="flex items-start space-x-4">
-                      <div className="bg-brand-gray-light p-3 rounded-lg shadow-sm">
-                        <Mail className="h-6 w-6 text-brand-orange stroke-2" />
-                      </div>
-                      <div>
-                        <h4 className="font-semibold text-brand-gray-dark text-lg">{t("info.emailLabel")}</h4>
-                        <p className="text-brand-gray-medium text-lg">bas@innerleaps.nl</p>
-                      </div>
+                  <div className="flex items-start space-x-4">
+                    <div className="rounded-lg bg-brand-gray-light p-3 shadow-sm">
+                      <Phone className="h-6 w-6 stroke-2 text-brand-orange" />
                     </div>
-
-                    <div className="flex items-start space-x-4">
-                      <div className="bg-brand-gray-light p-3 rounded-lg shadow-sm">
-                        <Phone className="h-6 w-6 text-brand-orange stroke-2" />
-                      </div>
-                      <div>
-                        <h4 className="font-semibold text-brand-gray-dark text-lg">{t("info.phoneLabel")}</h4>
-                        <p className="text-brand-gray-medium text-lg">06 23 45 34 77</p>
-                      </div>
-                    </div>
-
-                    <div className="flex items-start space-x-4">
-                      <div className="bg-brand-gray-light p-3 rounded-lg shadow-sm">
-                        <MapPin className="h-6 w-6 text-brand-orange stroke-2" />
-                      </div>
-                      <div>
-                        <h4 className="font-semibold text-brand-gray-dark text-lg">{t("info.addressLabel")}</h4>
-                        <p className="text-brand-gray-medium text-lg">Olympisch Stadion 24, 28</p>
-                        <p className="text-brand-gray-medium text-lg">1076 DE Amsterdam</p>
-                      </div>
+                    <div>
+                      <h3 className="text-lg font-semibold text-brand-gray-dark">
+                        {t("info.phoneLabel")}
+                      </h3>
+                      <a
+                        href="tel:+31623453477"
+                        className="text-lg text-brand-gray-medium transition-colors hover:text-brand-orange"
+                      >
+                        06 23 45 34 77
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -106,20 +137,6 @@ const Contact = () => {
           </div>
         </section>
       </main>
-
-      {/* Boekingswidget. Bewust hier: wie op de contactpagina komt wil contact
-          opnemen, dus dit is het moment. De ROI-calculator hieronder is een
-          verkennend hulpmiddel en hoort daarna, niet ervoor. */}
-      <section className="section-padding bg-brand-off-white">
-        <div className="container-custom">
-          <h2 className="text-3xl md:text-4xl font-bold text-brand-purple text-center mb-8">
-            {tCommon("booking.title")}
-          </h2>
-          <div className="max-w-3xl mx-auto">
-            <CalendlyWidget />
-          </div>
-        </div>
-      </section>
 
       <ROICalculator />
       <Footer />

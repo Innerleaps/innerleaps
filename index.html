@@ -40,7 +40,16 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
-    
+
+    <!-- De boekingswidget hangt aan calendly.com en trekt zijn eigen bestanden
+         van assets.calendly.com. Door de verbinding alvast op te zetten staat
+         DNS, TLS en de handshake al klaar op het moment dat het iframe begint
+         te laden. Dat scheelt de bezoeker een paar honderd milliseconde voordat
+         hij ook maar een dag kan aanklikken. -->
+    <link rel="preconnect" href="https://calendly.com" crossorigin />
+    <link rel="preconnect" href="https://assets.calendly.com" crossorigin />
+    <link rel="dns-prefetch" href="https://calendly.com" />
+
     <!-- Preload critical fonts for faster rendering -->
     <link 
       rel="preload" 

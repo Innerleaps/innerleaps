@@ -85,7 +85,8 @@
       "absenteeism": "Verzuim",
       "focus": "Focus & concentratie",
       "science": "Wetenschap",
-      "scienceValue": "40+ jaar"
+      "scienceValue": "40+ jaar",
+      "productivity": "Productiviteit"
     },
     "googleReviews": "Google Reviews",
     "heroImageAlt": "Vitaliteitstraining presentatie Innerleaps"
@@ -200,7 +201,21 @@
   "booking": {
     "metaTitle": "Plan een gesprek met Bas | Innerleaps",
     "metaDescription": "Plan een vrijblijvend gesprek van 30 minuten met Bas over verzuim verminderen en duurzame inzetbaarheid. Kies zelf een moment dat uitkomt.",
-    "title": "Even sparren over duurzame inzetbaarheid?",
-    "intro": "Kies hieronder een moment dat jou uitkomt. Het gesprek duurt 30 minuten en is vrijblijvend. We kijken samen naar jouw situatie en of onze aanpak past."
+    "title": "Even <0>sparren</0>?",
+    "intro": "Kies hieronder een moment. Het gesprek is vrijblijvend en duurt 30 minuten.",
+    "bas": {
+      "role": "Bas Ter Haar Romenij, Oprichter Innerleaps",
+      "photoAlt": "Bas Ter Haar Romenij",
+      "shortName": "Bas",
+      "shortRole": "Oprichter Innerleaps"
+    }
+  },
+  "bookingTrust": {
+    "quote": "“Met hun 6-weekse breintraining door geaccrediteerde trainers leverde Innerleaps snel meetbare resultaten: 70% minder stress, 40% scherpere focus, beoordeeld met een 9,4/10 door ons team. Precies wat we nodig hadden!”",
+    "author": "Jochem van der Veen",
+    "role": "CEO bij TheyDo",
+    "logoAlt": "TheyDo",
+    "photoAlt": "Jochem van der Veen, CEO bij TheyDo",
+    "vmbnAlt": "VMBN trainer categorie 1"
   }
 }

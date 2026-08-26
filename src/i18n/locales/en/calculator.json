@@ -8,7 +8,7 @@
   },
   "sections": {
     "contact": "Contact details",
-    "organization": "Organisation details"
+    "organisation": "Organisation details"
   },
   "fields": {
     "name": "Name",

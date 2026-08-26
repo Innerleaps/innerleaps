@@ -418,7 +418,7 @@ const CalculatorModal = ({ isOpen, onClose }: CalculatorModalProps) => {
 
               {/* Right Column - Calculation inputs */}
               <div className="space-y-4">
-                <h3 className="text-xl font-semibold text-brand-gray-dark mb-4">{t('sections.organization')}</h3>
+                <h3 className="text-xl font-semibold text-brand-gray-dark mb-4">{t('sections.organisation')}</h3>
 
                 <div className="space-y-2">
                   <Label htmlFor="modal-verzuim" className="text-brand-gray-dark font-medium">

@@ -396,7 +396,7 @@ const ROICalculator = () => {
 
             {/* Right column - Calculation inputs */}
             <div className="space-y-4">
-              <h3 className="text-lg font-semibold text-white mb-4">{t('sections.organization')}</h3>
+              <h3 className="text-lg font-semibold text-white mb-4">{t('sections.organisation')}</h3>
 
               <div>
                 <Label htmlFor="verzuimPercentage" className="text-white font-medium">

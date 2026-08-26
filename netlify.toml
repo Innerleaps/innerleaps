@@ -100,9 +100,21 @@
   from = "/life-questionnaire/result"
   to = "/index.html"
   status = 200
+# /calendar wees eerst naar /afspraak-plannen. Die pagina is opgeheven, dus
+# deze wijst nu rechtstreeks naar het nieuwe doel. Nooit een keten laten staan.
 [[redirects]]
   from = "/calendar"
-  to = "/afspraak-plannen"
+  to = "/contact"
+  status = 301
+
+[[redirects]]
+  from = "/afspraak-plannen"
+  to = "/contact"
+  status = 301
+
+[[redirects]]
+  from = "/en/book-a-call"
+  to = "/en/contact"
   status = 301
 [[redirects]]
   from = "/signup"
