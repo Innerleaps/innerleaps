@@ -97,7 +97,7 @@ const ContactForm = ({ className = "" }: ContactFormProps) => {
             autoComplete="name"
             maxLength={100}
             placeholder={t("form.namePlaceholder")}
-            className="mt-1 h-12 text-lg placeholder:text-lg md:text-lg"
+            className="mt-1 h-12 border border-input text-lg placeholder:text-lg focus-visible:border-input focus-visible:ring-ring md:text-lg"
           />
         </div>
 
@@ -110,7 +110,7 @@ const ContactForm = ({ className = "" }: ContactFormProps) => {
             autoComplete="email"
             maxLength={255}
             placeholder={t("form.emailPlaceholder")}
-            className="mt-1 h-12 text-lg placeholder:text-lg md:text-lg"
+            className="mt-1 h-12 border border-input text-lg placeholder:text-lg focus-visible:border-input focus-visible:ring-ring md:text-lg"
           />
         </div>
 
@@ -122,7 +122,7 @@ const ContactForm = ({ className = "" }: ContactFormProps) => {
             rows={4}
             maxLength={2000}
             placeholder={t("form.messagePlaceholder")}
-            className="mt-1 h-12 text-lg placeholder:text-lg md:text-lg"
+            className="mt-1 text-lg placeholder:text-lg"
           />
         </div>
 
