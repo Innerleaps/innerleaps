@@ -18,6 +18,22 @@
   # een download van ruim 100 MB.
   PUPPETEER_CACHE_DIR = "/opt/build/repo/.cache/puppeteer"
 
+# Voorvertoningen blijven uit Google.
+#
+# Netlify zet zelf een noindex op deploy previews, maar op branch-deploys niet.
+# En juist naar een branch-deploy stuurt CLAUDE.md je als je iets wilt zien
+# voordat het live gaat, want die kost nul credits. Zonder deze twee blokken
+# staat er dus een tweede, volledige kopie van innerleaps.nl open op een
+# netlify.app-adres, met dezelfde teksten. Dat is precies de dubbele content
+# waar je de rest van de site tegen beschermt.
+#
+# Zelfde build als productie, met scripts/noindex.mjs erachteraan.
+[context.branch-deploy]
+  command = "npx --yes puppeteer browsers install chrome && npm run build:noindex"
+
+[context.deploy-preview]
+  command = "npx --yes puppeteer browsers install chrome && npm run build:noindex"
+
 # Hernoemde pagina's, stap 5 uit MIGRATIE-PLAN.md. Echte 301's, zodat Google
 # de opgebouwde waarde meeneemt naar de nieuwe URL. Deze staan bewust boven de
 # catch-all hieronder, want die vangt anders alles af.
