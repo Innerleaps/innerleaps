@@ -403,6 +403,31 @@ Drie dingen om te weten:
   `.webp` stond, en dan staat er een gat op de pagina dat je pas ziet als
   iemand hem opent.
 
+## Er ligt een SEO-basismeting, gebruik die
+
+Op 27 augustus 2026 is van 16 pagina's een momentopname vastgelegd: de acht
+Nederlandse kernpagina's en hun acht Engelse tegenhangers. Vastgelegd zijn
+title, meta description, canonical, robots, alle koppen, de JSON-LD-schema's,
+de Open Graph-tags en de HTTP-status. Ze staan in
+`~/.cache/claude-seo/drift/baselines.db`.
+
+Waar dat voor is: de site wordt met AI aangepast, en dan is de stille fout het
+gevaarlijkst. Een schema dat wegvalt of een canonical die verschuift zie je
+live niet, en in Search Console pas weken later.
+
+**Na een deploy die pagina's inhoudelijk raakt, draai je de vergelijking:**
+
+```bash
+CLAUDE_SEO_PYTHON=/opt/homebrew/bin/python3.12 "$HOME/.claude/skills/seo/bin/claude-seo" run drift_compare.py https://innerleaps.nl/contact
+```
+
+Vindt hij iets, dan zegt hij er de ernst bij. Klopt de wijziging en is hij
+bedoeld, leg dan een nieuwe basismeting vast met `drift_baseline.py`, anders
+blijft hij bij elke volgende vergelijking opnieuw klagen.
+
+Let op: Core Web Vitals staan niet in deze meting. Daar is een PageSpeed-sleutel
+voor nodig en die is er niet.
+
 ## Werken gaat via een branch, niet rechtstreeks op main
 
 Bouw je iets, doe dat op een eigen branch. Push die, bekijk de branch-deploy op
