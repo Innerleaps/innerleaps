@@ -1,12 +1,12 @@
 import { Star } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import GoogleG from "@/components/GoogleG";
-import vmbnLogo from "@/assets/vmbn-trainer-categorie-1.png";
+import vmbnLogo from "@/assets/vmbn-trainer-categorie-1.webp";
 
 // Bewust uit /public en niet uit src/assets: zo is een logo vervangen een kwestie
 // van een bestand overschrijven, zonder dat er iets opnieuw gebouwd hoeft.
-const THEYDO_LOGO = "/klantervaringen/theydo-logo.png";
-const THEYDO_PORTRET = "/klantervaringen/theydo-directeur.png";
+const THEYDO_LOGO = "/klantervaringen/theydo-logo.webp";
+const THEYDO_PORTRET = "/klantervaringen/theydo-directeur.webp";
 
 /**
  * Het bewijsmateriaal dat bij de afspraakplanner staat, op /contact en op

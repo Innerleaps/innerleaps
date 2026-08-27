@@ -12,46 +12,46 @@ import PageSeo from "@/components/PageSeo";
 import { useTranslation } from "react-i18next";
 
 // Trainer photos
-import winekePhoto from "@/assets/Vitaliteitstrainer_Wineke_van_Aken.png";
-import annePhoto from "@/assets/Vitaliteitstrainer_Anne_Linnebank.png";
-import davePhoto from "@/assets/Vitaliteitstrainer_Dave_Hoppema.png";
-import jacquelinePhoto from "@/assets/Vitaliteitstrainer_Jacqueline_Henock.png";
+import winekePhoto from "@/assets/Vitaliteitstrainer_Wineke_van_Aken.webp";
+import annePhoto from "@/assets/Vitaliteitstrainer_Anne_Linnebank.webp";
+import davePhoto from "@/assets/Vitaliteitstrainer_Dave_Hoppema.webp";
+import jacquelinePhoto from "@/assets/Vitaliteitstrainer_Jacqueline_Henock.webp";
 
 // Badges
-import vmbnBadge from "@/assets/Aaccreditatie_voor_Vitaliteitsprogramma.png";
-import waaromWijAfbeelding from "@/assets/waarom_wij_dit_werk_doen.png";
+import vmbnBadge from "@/assets/Aaccreditatie_voor_Vitaliteitsprogramma.webp";
+import waaromWijAfbeelding from "@/assets/waarom_wij_dit_werk_doen.webp";
 
 // Wineke's logos
-import winekeOliverLogo from "@/assets/Vitaliteitsprogramma_Oliver_Wyman.png";
-import winekeSygnificLogo from "@/assets/Vitaliteitsprogramma_Sygnific.png";
-import winekeCordaanLogo from "@/assets/Vitaliteitsprogramma_Cordaan.png";
-import winekeGemeenteLogo from "@/assets/Vitaliteitsprogramma_Gemeente_Den_Haag.png";
-import winekeSpiritLogo from "@/assets/Vitaliteitsprogramma_Spirit.png";
-import winekeVULogo from "@/assets/Vitaliteitsprogramma_VU_amsterdam.png";
-import winekeLeaseLogo from "@/assets/Vitaliteitsprogramma_Leaseplan.png";
-import winekeTele2Logo from "@/assets/Vitaliteitsprogramma_Tele2.png";
+import winekeOliverLogo from "@/assets/Vitaliteitsprogramma_Oliver_Wyman.webp";
+import winekeSygnificLogo from "@/assets/Vitaliteitsprogramma_Sygnific.webp";
+import winekeCordaanLogo from "@/assets/Vitaliteitsprogramma_Cordaan.webp";
+import winekeGemeenteLogo from "@/assets/Vitaliteitsprogramma_Gemeente_Den_Haag.webp";
+import winekeSpiritLogo from "@/assets/Vitaliteitsprogramma_Spirit.webp";
+import winekeVULogo from "@/assets/Vitaliteitsprogramma_VU_amsterdam.webp";
+import winekeLeaseLogo from "@/assets/Vitaliteitsprogramma_Leaseplan.webp";
+import winekeTele2Logo from "@/assets/Vitaliteitsprogramma_Tele2.webp";
 
 // Dave's logos
-import daveParnassiaLogo from "@/assets/Vitaliteitsprogramma_Parnassia_groep.png";
-import daveLentizLogo from "@/assets/Vitaliteitsprogramma_Lentiz.png";
-import davePrimoLogo from "@/assets/Vitaliteitsprogramma_primo-2.png";
-import daveMinisterieLogo from "@/assets/Vitaliteitsprogramma_Ministerie_van_justitie_en_veiligheid-2.png";
-import daveYouTalentLogo from "@/assets/Vitaliteitsprogramma_You_Talent-3.png";
-import daveRijksLogo from "@/assets/Vitaliteitsprogramma_Rijkswaterstaat-3.png";
-import davePolitieLogo from "@/assets/Vitaliteitsprogramma_Politite-4.png";
+import daveParnassiaLogo from "@/assets/Vitaliteitsprogramma_Parnassia_groep.webp";
+import daveLentizLogo from "@/assets/Vitaliteitsprogramma_Lentiz.webp";
+import davePrimoLogo from "@/assets/Vitaliteitsprogramma_primo-2.webp";
+import daveMinisterieLogo from "@/assets/Vitaliteitsprogramma_Ministerie_van_justitie_en_veiligheid-2.webp";
+import daveYouTalentLogo from "@/assets/Vitaliteitsprogramma_You_Talent-3.webp";
+import daveRijksLogo from "@/assets/Vitaliteitsprogramma_Rijkswaterstaat-3.webp";
+import davePolitieLogo from "@/assets/Vitaliteitsprogramma_Politite-4.webp";
 
 // Anne's logos
-import dhlLogo from "@/assets/Vitaliteitsprogramma_DHL-2.png";
-import affiniusLogo from "@/assets/Vitaliteitsprogramma_Affinius_Capital-2.png";
+import dhlLogo from "@/assets/Vitaliteitsprogramma_DHL-2.webp";
+import affiniusLogo from "@/assets/Vitaliteitsprogramma_Affinius_Capital-2.webp";
 
 // Jacqueline's logos
-import jacquelineGGZLogo from "@/assets/Vitaliteitsprogramma_GGZ_centraal.png";
-import jacquelineHumanitasLogo from "@/assets/Vitaliteitsprogramma_Humanitas.png";
-import jacquelinePlevierLogo from "@/assets/Vitaliteitsprogramma_Plevier.png";
-import jacquelineCarelLogo from "@/assets/Vitaliteitsprogramma_Carel_Lurvink.png";
-import jacquelinePALogo from "@/assets/Vitaliteitsprogramma_PA_consulting-3.png";
-import jacquelineNobelLogo from "@/assets/Vitaliteitsprogramma_nobel_recruitment-3.png";
-import jacquelineHollandLogo from "@/assets/Vitaliteitsprogramma_Holland_Colours-3.png";
+import jacquelineGGZLogo from "@/assets/Vitaliteitsprogramma_GGZ_centraal.webp";
+import jacquelineHumanitasLogo from "@/assets/Vitaliteitsprogramma_Humanitas.webp";
+import jacquelinePlevierLogo from "@/assets/Vitaliteitsprogramma_Plevier.webp";
+import jacquelineCarelLogo from "@/assets/Vitaliteitsprogramma_Carel_Lurvink.webp";
+import jacquelinePALogo from "@/assets/Vitaliteitsprogramma_PA_consulting-3.webp";
+import jacquelineNobelLogo from "@/assets/Vitaliteitsprogramma_nobel_recruitment-3.webp";
+import jacquelineHollandLogo from "@/assets/Vitaliteitsprogramma_Holland_Colours-3.webp";
 
 const OverOns = () => {
   const { t } = useTranslation("overons");

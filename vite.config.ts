@@ -72,6 +72,12 @@ export default defineConfig(({ mode }) => ({
       },
     },
     chunkSizeWarningLimit: 1000,
-    sourcemap: mode === 'production',
+    // Geen source maps in productie. Ze stonden aan, en dat betekende 66
+    // .map-bestanden en 3,7 MB extra op de server, waarmee je hele broncode
+    // publiek leesbaar was op innerleaps.nl. Ze worden alleen opgehaald als
+    // iemand de ontwikkelaarsconsole opent, dus voor bezoekers kostte het geen
+    // laadtijd, maar het levert ook niets op. Lokaal `npm run dev` geeft je
+    // altijd nog volledige source maps.
+    sourcemap: false,
   },
 }));

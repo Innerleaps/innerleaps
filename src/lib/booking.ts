@@ -69,4 +69,4 @@ export const scrollToBookingWidget = (): boolean => {
  * kwestie van dit ene bestand overschrijven, en verandert hij meteen overal
  * mee, zonder dat er iets opnieuw gebouwd hoeft.
  */
-export const BAS_PHOTO = "/team/bas-ter-haar-romenij.png";
+export const BAS_PHOTO = "/team/bas-ter-haar-romenij.webp";

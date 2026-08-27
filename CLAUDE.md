@@ -166,6 +166,25 @@ Daaruit volgen twee regels:
 
 Controleer het verbruik in het Netlify-dashboard onder Credit usage breakdown.
 
+### Voorvertoningen blijven uit Google
+
+Netlify zet zelf een `noindex` op deploy previews, maar **op branch-deploys
+niet**. En daar stuurt regel 2 hierboven je juist naartoe. Zonder maatregel
+staat er dan een volledige tweede kopie van de site op een `netlify.app`-adres,
+met dezelfde teksten. Precies de dubbele content waar de rest van de site tegen
+beschermd is.
+
+Daarom draaien de contexten `branch-deploy` en `deploy-preview` in
+`netlify.toml` een eigen buildcommando, `npm run build:noindex`. Dat is de
+gewone build met `scripts/noindex.mjs` erachteraan, die twee sloten zet:
+`robots.txt` op `Disallow: /` en een `_headers` met `X-Robots-Tag: noindex`.
+Twee, want robots.txt houdt de crawler van de pagina af en de header houdt de
+URL uit de index ook als iemand ernaar linkt.
+
+**Verander je het buildcommando, verander het dan in alle drie de blokken.**
+Staat de puppeteer-regel niet in de contextvariant, dan mist de branch-deploy
+Chrome en faalt het prerenderen.
+
 ## Boeken van een gesprek loopt via Calendly
 
 Vroeger opende elke "plan een gesprek met Bas"-knop een Google Calendar-link in
@@ -348,6 +367,51 @@ Google de 301 ziet, maar vraag geen indexering aan.
 
 Let op: het aantal indexeringsverzoeken per dag is beperkt, dus kies de pagina's
 die er echt toe doen in plaats van alles aan te vragen.
+
+## Afbeeldingen staan in WebP
+
+De site woog veel te veel aan beeld: 19,1 MB aan bronbestanden, met losse
+plaatjes van boven de 2 MB. Alles staat nu in WebP, samen 3,1 MB. Zelfde
+afmetingen, zelfde bestandsnamen op de extensie na.
+
+**Nieuwe afbeelding erbij? Zet hem om voordat je hem gebruikt:**
+
+```bash
+python3.12 scripts/afbeeldingen-naar-webp.py
+```
+
+Het script pakt `src/assets`, `public/lovable-uploads`, `public/team` en
+`public/klantervaringen`, en werkt de verwijzingen in de code meteen bij. Het
+heeft Pillow nodig (`python3.12 -m pip install --user pillow`) en draait nooit
+tijdens de Netlify-build, zodat de productie-build geen extra afhankelijkheid
+krijgt en er dus ook niets aan stuk kan.
+
+Drie dingen om te weten:
+
+- **Foto's gaan op kwaliteit 82, logo's op 94.** Logo's staan op wit met
+  scherpe randen, en daar valt compressie op als vuil rond de letters. Op 82
+  zakte het TheyDo-logo naar PSNR 35, op 94 zit de hele set op 44 tot 46.
+  Volledig lossless is geen optie: die logo's staan op een groot doek met
+  zachte randen, en dan wordt één bestand 1,8 MB.
+- **`public/social/` en `public/og-image.png` blijven PNG.** Dat zijn de
+  voorbeeldjes die LinkedIn en WhatsApp tonen bij een gedeelde link, en die
+  gaan wisselend om met WebP. Een kapot deelvoorbeeld kost meer dan die
+  kilobytes opleveren.
+- **Het script eindigt met een sluitcontrole** en stopt met een foutcode als de
+  code naar een afbeelding wijst die niet bestaat. Die zit er niet voor niets:
+  bij het omzetten werd een logo overgeslagen terwijl de verwijzing al op
+  `.webp` stond, en dan staat er een gat op de pagina dat je pas ziet als
+  iemand hem opent.
+
+## Werken gaat via een branch, niet rechtstreeks op main
+
+Bouw je iets, doe dat op een eigen branch. Push die, bekijk de branch-deploy op
+Netlify, en ga pas naar `main` als het klopt.
+
+Dat kost niets extra: branch-deploys zijn gratis en alleen de productie-deploy
+kost 15 credits. Je betaalt dus evenveel als bij rechtstreeks naar `main`
+pushen, maar je ziet het eerst. En sinds de vorige sectie blijven die
+voorvertoningen ook netjes uit Google.
 
 ## Praktisch
 

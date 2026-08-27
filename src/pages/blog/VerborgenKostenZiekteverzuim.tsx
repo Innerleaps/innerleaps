@@ -3,7 +3,7 @@ import SimplifiedNavigation from '@/components/SimplifiedNavigation';
 import Footer from '@/components/Footer';
 import BlogAuthor from '@/components/BlogAuthor';
 import { Link } from 'react-router-dom';
-import stressmanagementImage from '@/assets/stressmanagementtraining_sterker_waarschuwingssysteem.png';
+import stressmanagementImage from '@/assets/stressmanagementtraining_sterker_waarschuwingssysteem.webp';
 
 const VerborgenKostenZiekteverzuim = () => {
   return (
@@ -55,7 +55,7 @@ const VerborgenKostenZiekteverzuim = () => {
               "name": "Innerleaps",
               "logo": {
                 "@type": "ImageObject",
-                "url": "https://innerleaps.nl/lovable-uploads/06d0112b-b23b-4ce0-b028-68ac939b2b2b.png"
+                "url": "https://innerleaps.nl/lovable-uploads/06d0112b-b23b-4ce0-b028-68ac939b2b2b.webp"
               }
             },
             "datePublished": "2024-12-03",

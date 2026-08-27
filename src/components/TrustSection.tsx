@@ -1,13 +1,13 @@
 import { memo } from "react";
 import { useTranslation } from "react-i18next";
 import { Check } from "lucide-react";
-import vmbnLogo from "@/assets/vmbn-trainer-categorie-1.png";
-import uMassLogo from "@/assets/Vitaliteitsprogramma_ontwikkeld_door_university_of_massachusetts.png";
-import oxfordLogo from "@/assets/Vitaliteitsprogramma_ontwikkeld_door_oxford.jpg";
-import vgzLogo from "@/assets/Vitaliteitprogramma_herkent_door_vgz.png";
-import czLogo from "@/assets/Vitaliteitsprogramma_herkend_door_CZ.png";
-import uvaLogo from "@/assets/Aandachttraining_aan_de_universiteit_van_amsterdam_new.png";
-import menzisLogo from "@/assets/Vitaliteitsprogramma_herkend_door_menzis.png";
+import vmbnLogo from "@/assets/vmbn-trainer-categorie-1.webp";
+import uMassLogo from "@/assets/Vitaliteitsprogramma_ontwikkeld_door_university_of_massachusetts.webp";
+import oxfordLogo from "@/assets/Vitaliteitsprogramma_ontwikkeld_door_oxford.webp";
+import vgzLogo from "@/assets/Vitaliteitprogramma_herkent_door_vgz.webp";
+import czLogo from "@/assets/Vitaliteitsprogramma_herkend_door_CZ.webp";
+import uvaLogo from "@/assets/Aandachttraining_aan_de_universiteit_van_amsterdam_new.webp";
+import menzisLogo from "@/assets/Vitaliteitsprogramma_herkend_door_menzis.webp";
 
 interface TrustSectionProps {
   variant?: "white" | "off-white";

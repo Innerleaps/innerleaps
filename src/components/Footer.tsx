@@ -2,7 +2,7 @@ import { memo } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { Linkedin, Star } from "lucide-react";
-import vmbnLogo from "@/assets/vmbn-trainer-categorie-1.png";
+import vmbnLogo from "@/assets/vmbn-trainer-categorie-1.webp";
 import GoogleG from "@/components/GoogleG";
 import { detectLanguageFromPath } from "@/i18n/config";
 

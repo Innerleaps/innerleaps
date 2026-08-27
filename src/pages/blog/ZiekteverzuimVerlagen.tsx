@@ -55,7 +55,7 @@ const ZiekteverzuimVerlagen = () => {
               "name": "Innerleaps",
               "logo": {
                 "@type": "ImageObject",
-                "url": "https://innerleaps.nl/lovable-uploads/06d0112b-b23b-4ce0-b028-68ac939b2b2b.png"
+                "url": "https://innerleaps.nl/lovable-uploads/06d0112b-b23b-4ce0-b028-68ac939b2b2b.webp"
               }
             },
             "datePublished": "2025-11-28",

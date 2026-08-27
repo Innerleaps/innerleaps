@@ -24,11 +24,11 @@ import {
 import { Button } from "@/components/ui/button";
 
 // Images
-import controlecentrumImage from "@/assets/Concentratietraining_voor_sterker_executieve_systeem.png";
-import waarschuwingssysteemImage from "@/assets/stressmanagementtraining_sterker_waarschuwingssysteem.png";
-import stressmanagementEnConcentratie from "@/assets/stressmanagement_en_concentratietraining.png";
-import stressPrestatieImage from "@/assets/stress_prestatie_curve.png";
-import zesWekenBreintraining from "@/assets/6_weken_breintraining_voor_gedragsverandering.jpg";
+import controlecentrumImage from "@/assets/Concentratietraining_voor_sterker_executieve_systeem.webp";
+import waarschuwingssysteemImage from "@/assets/stressmanagementtraining_sterker_waarschuwingssysteem.webp";
+import stressmanagementEnConcentratie from "@/assets/stressmanagement_en_concentratietraining.webp";
+import stressPrestatieImage from "@/assets/stress_prestatie_curve.webp";
+import zesWekenBreintraining from "@/assets/6_weken_breintraining_voor_gedragsverandering.webp";
 
 // Lazy load modal
 const LeadMagnetModal = lazy(() => import("@/components/LeadMagnetModal"));

@@ -1,13 +1,13 @@
-import oliverWyman from "@/assets/Vitaliteitsprogramma_Oliver_Wyman.png";
-import paConsulting from "@/assets/Vitaliteitsprogramma_PA_consulting-3.png";
-import dhl from "@/assets/Vitaliteitsprogramma_DHL-2.png";
-import rijkswaterstaat from "@/assets/Vitaliteitsprogramma_Rijkswaterstaat-3.png";
-import justitie from "@/assets/Vitaliteitsprogramma_Ministerie_van_justitie_en_veiligheid-2.png";
-import hollandColours from "@/assets/Vitaliteitsprogramma_Holland_Colours-3.png";
-import youTalent from "@/assets/Vitaliteitsprogramma_You_Talent-3.png";
-import nobel from "@/assets/Vitaliteitsprogramma_nobel_recruitment-3.png";
-import politie from "@/assets/Vitaliteitsprogramma_Politite-4.png";
-import leaseplan from "@/assets/Vitaliteitsprogramma_Leaseplan.png";
+import oliverWyman from "@/assets/Vitaliteitsprogramma_Oliver_Wyman.webp";
+import paConsulting from "@/assets/Vitaliteitsprogramma_PA_consulting-3.webp";
+import dhl from "@/assets/Vitaliteitsprogramma_DHL-2.webp";
+import rijkswaterstaat from "@/assets/Vitaliteitsprogramma_Rijkswaterstaat-3.webp";
+import justitie from "@/assets/Vitaliteitsprogramma_Ministerie_van_justitie_en_veiligheid-2.webp";
+import hollandColours from "@/assets/Vitaliteitsprogramma_Holland_Colours-3.webp";
+import youTalent from "@/assets/Vitaliteitsprogramma_You_Talent-3.webp";
+import nobel from "@/assets/Vitaliteitsprogramma_nobel_recruitment-3.webp";
+import politie from "@/assets/Vitaliteitsprogramma_Politite-4.webp";
+import leaseplan from "@/assets/Vitaliteitsprogramma_Leaseplan.webp";
 
 /**
  * De lopende band met klantlogo's, voor een lichte achtergrond.

@@ -9,8 +9,8 @@ import { supabase } from "@/integrations/supabase/client";
 import { toast } from "@/hooks/use-toast";
 
 // Trust logos
-import vgzLogo from "@/assets/Vitaliteitprogramma_herkent_door_vgz.png";
-import oxfordLogo from "@/assets/Vitaliteitsprogramma_ontwikkeld_door_oxford.jpg";
+import vgzLogo from "@/assets/Vitaliteitprogramma_herkent_door_vgz.webp";
+import oxfordLogo from "@/assets/Vitaliteitsprogramma_ontwikkeld_door_oxford.webp";
 
 interface MasterclassFormModalProps {
   isOpen: boolean;

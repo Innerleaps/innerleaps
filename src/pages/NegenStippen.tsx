@@ -4,9 +4,9 @@ import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/component
 import { Link } from "react-router-dom";
 import SimplifiedNavigation from "@/components/SimplifiedNavigation";
 import Footer from "@/components/Footer";
-import raadselImage from "@/assets/9_stippen_raadsel.png";
-import oplossingImage from "@/assets/9_stippen_oplossing.png";
-import kantineImage from "@/assets/druk_en_spanning_stressmanagement.jpg";
+import raadselImage from "@/assets/9_stippen_raadsel.webp";
+import oplossingImage from "@/assets/9_stippen_oplossing.webp";
+import kantineImage from "@/assets/druk_en_spanning_stressmanagement.webp";
 const NegenStippen = () => {
   const [isOpen, setIsOpen] = useState(false);
   useEffect(() => {

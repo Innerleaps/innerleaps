@@ -6,30 +6,30 @@ import heroBackground from "@/assets/Vitaliteitsprogramma_presentatie_Innerleaps
 import breinTrainingImg from "@/assets/6_weken_brein_trainen.webp";
 
 // Client logos
-import oliverLogo from "@/assets/Vitaliteitsprogramma_Oliver_Wyman_light-2.png";
-import sygnificLogo from "@/assets/Vitaliteitsprogramma_Sygnific_light.png";
-import cordaanLogo from "@/assets/Vitaliteitsprogramma_Cordaan_light.png";
-import denHaagLogo from "@/assets/Vitaliteitsprogramma_Gemeente_Den_Haag_light.png";
-import spiritLogo from "@/assets/Vitaliteitsprogramma_Spirit_light.png";
-import vuLogo from "@/assets/Vitaliteitsprogramma_VU_amsterdam_light.png";
-import leaseplanLogo from "@/assets/Vitaliteitsprogramma_Leaseplan_light-2.png";
-import tele2Logo from "@/assets/Vitaliteitsprogramma_Tele2_light-2.png";
-import parnassiaLogo from "@/assets/Vitaliteitsprogramma_Parnassia_groep_light.png";
-import lentizLogo from "@/assets/Vitaliteitsprogramma_Lentiz_light.png";
-import primoLogo from "@/assets/Vitaliteitsprogramma_primo_light.png";
-import justitieLogo from "@/assets/Vitaliteitsprogramma_Ministerie_van_justitie_en_veiligheid_light-2.png";
-import youTalentLogo from "@/assets/Vitaliteitsprogramma_You_Talent_light.png";
-import rijkswaterstaatLogo from "@/assets/Vitaliteitsprogramma_Rijkswaterstaat_light.png";
-import politieLogo from "@/assets/Vitaliteitsprogramma_Politite_light.png";
-import dhlLogo from "@/assets/Vitaliteitsprogramma_DHL_light.png";
-import affiniusLogo from "@/assets/Vitaliteitsprogramma_Affinius_Capital_light.png";
-import ggzLogo from "@/assets/Vitaliteitsprogramma_GGZ_centraal_light.png";
-import humanitasLogo from "@/assets/Vitaliteitsprogramma_Humanitas_light.png";
-import plevierLogo from "@/assets/Vitaliteitsprogramma_Plevier_light.png";
-import carelLogo from "@/assets/Vitaliteitsprogramma_Carel_Lurvink_light.png";
-import paConsultingLogo from "@/assets/Vitaliteitsprogramma_PA_consulting_light.png";
-import nobelLogo from "@/assets/Vitaliteitsprogramma_nobel_recruitment_light.png";
-import hollandColoursLogo from "@/assets/Vitaliteitsprogramma_Holland_Colours_light.png";
+import oliverLogo from "@/assets/Vitaliteitsprogramma_Oliver_Wyman_light-2.webp";
+import sygnificLogo from "@/assets/Vitaliteitsprogramma_Sygnific_light.webp";
+import cordaanLogo from "@/assets/Vitaliteitsprogramma_Cordaan_light.webp";
+import denHaagLogo from "@/assets/Vitaliteitsprogramma_Gemeente_Den_Haag_light.webp";
+import spiritLogo from "@/assets/Vitaliteitsprogramma_Spirit_light.webp";
+import vuLogo from "@/assets/Vitaliteitsprogramma_VU_amsterdam_light.webp";
+import leaseplanLogo from "@/assets/Vitaliteitsprogramma_Leaseplan_light-2.webp";
+import tele2Logo from "@/assets/Vitaliteitsprogramma_Tele2_light-2.webp";
+import parnassiaLogo from "@/assets/Vitaliteitsprogramma_Parnassia_groep_light.webp";
+import lentizLogo from "@/assets/Vitaliteitsprogramma_Lentiz_light.webp";
+import primoLogo from "@/assets/Vitaliteitsprogramma_primo_light.webp";
+import justitieLogo from "@/assets/Vitaliteitsprogramma_Ministerie_van_justitie_en_veiligheid_light-2.webp";
+import youTalentLogo from "@/assets/Vitaliteitsprogramma_You_Talent_light.webp";
+import rijkswaterstaatLogo from "@/assets/Vitaliteitsprogramma_Rijkswaterstaat_light.webp";
+import politieLogo from "@/assets/Vitaliteitsprogramma_Politite_light.webp";
+import dhlLogo from "@/assets/Vitaliteitsprogramma_DHL_light.webp";
+import affiniusLogo from "@/assets/Vitaliteitsprogramma_Affinius_Capital_light.webp";
+import ggzLogo from "@/assets/Vitaliteitsprogramma_GGZ_centraal_light.webp";
+import humanitasLogo from "@/assets/Vitaliteitsprogramma_Humanitas_light.webp";
+import plevierLogo from "@/assets/Vitaliteitsprogramma_Plevier_light.webp";
+import carelLogo from "@/assets/Vitaliteitsprogramma_Carel_Lurvink_light.webp";
+import paConsultingLogo from "@/assets/Vitaliteitsprogramma_PA_consulting_light.webp";
+import nobelLogo from "@/assets/Vitaliteitsprogramma_nobel_recruitment_light.webp";
+import hollandColoursLogo from "@/assets/Vitaliteitsprogramma_Holland_Colours_light.webp";
 
 const CalculatorModal = lazy(() => import("@/components/CalculatorModal"));
 
