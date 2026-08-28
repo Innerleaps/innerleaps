@@ -32,8 +32,13 @@ const ROI_LABEL_PATHS = ['/team-prestaties-verbeteren', '/en/improve-team-perfor
 /** Waar de balk niets te zoeken heeft. */
 const HIDDEN_ON_PATHS = ['/landing'];
 
-/** Onder deze drempel gaan we ervan uit dat de hero voorbij is, als er geen
- *  hero-element te vinden is om op te letten. */
+/** Waar we op letten om te weten dat de bezoeker de hero voorbij is, in deze
+ *  volgorde. Eerst de heroknop zelf: die staat halverwege de hero, dus wachten
+ *  tot de hele hero uit beeld is kostte nog een half scherm scrollen voordat
+ *  de balk verscheen. Staat die knop er niet, dan de hele hero. */
+const HERO_SENTINELS = ['hero-cta', 'hero'];
+
+/** Zonder allebei die elementen valt de balk terug op een scrolldrempel. */
 const SCROLL_FALLBACK = 400;
 
 const StickyCtaButtons = () => {
@@ -51,7 +56,7 @@ const StickyCtaButtons = () => {
   // Pas tonen als de hero uit beeld is. Bij het laden van de pagina zou de
   // balk anders meteen over de hero heen liggen.
   useEffect(() => {
-    const hero = document.getElementById('hero');
+    const hero = HERO_SENTINELS.map((id) => document.getElementById(id)).find(Boolean);
     if (hero && 'IntersectionObserver' in window) {
       const observer = new IntersectionObserver(
         ([entry]) => setIsPastHero(!entry.isIntersecting),

@@ -260,7 +260,8 @@ const TrainingPageLayout = ({
                   {heroCtaOnClick && (
                     <Button
                       size="lg"
-                      className="w-full sm:w-auto bg-brand-orange hover:bg-brand-orange text-white hover:text-white font-semibold py-3 px-4 sm:py-4 sm:px-6 rounded-lg text-sm sm:text-base lg:text-lg shadow-xl"
+                      id="hero-cta"
+                      className="w-full sm:w-auto min-h-[44px] bg-brand-orange hover:bg-brand-orange text-white hover:text-white font-semibold py-3 px-4 sm:py-4 sm:px-6 rounded-lg text-base lg:text-lg shadow-xl"
                       onClick={heroCtaOnClick}
                     >
                       {t(`${tKey}.hero.cta`)}
@@ -270,7 +271,7 @@ const TrainingPageLayout = ({
                     <Button
                       size="lg"
                       variant="outline"
-                      className="w-full sm:w-auto bg-white/10 backdrop-blur-sm border-white text-white hover:bg-white hover:text-brand-purple font-semibold py-3 px-4 sm:py-4 sm:px-6 rounded-lg text-sm sm:text-base lg:text-lg shadow-xl"
+                      className="w-full sm:w-auto min-h-[44px] bg-white/10 backdrop-blur-sm border-white text-white hover:bg-white hover:text-brand-purple font-semibold py-3 px-4 sm:py-4 sm:px-6 rounded-lg text-base lg:text-lg shadow-xl"
                       onClick={heroSecondaryCta.onClick}
                     >
                       {heroSecondaryCta.label}
