@@ -8,18 +8,20 @@ import { detectLanguageFromPath } from "@/i18n/config";
  * De knop "Plan 20 minuten met Bas", zoals hij onder de secties van de twee
  * campagnepagina's staat.
  *
- * Waarom hij standaard `outline` is: op die pagina's is gevuld oranje
- * voorbehouden aan de rekentool. Zou elke sectieknop ook oranje zijn, dan
- * heeft het oog geen richting meer en is er feitelijk geen primaire actie.
- * Alleen in het masterclassblok mag hij oranje, want daar is een gesprek de
- * logische vervolgstap van de sectie zelf.
+ * Gevuld oranje is op die pagina's voorbehouden aan de rekentool, en aan niets
+ * anders. Zou een sectieknop ook oranje zijn, dan heeft het oog geen richting
+ * meer en is er feitelijk geen primaire actie. Deze knop is daarom blauw
+ * gevuld: duidelijk aanklikbaar, maar onmiskenbaar de tweede keus.
+ *
+ * Op het donkere masterclassblok werkt blauw op paars niet, dus daar staat de
+ * variant met witte vulling en blauwe tekst. Ook daar dus niet oranje.
  */
 interface BookingCtaButtonProps {
-  variant?: "primary" | "secondary";
+  variant?: "onLight" | "onDark";
   className?: string;
 }
 
-const BookingCtaButton = ({ variant = "secondary", className = "" }: BookingCtaButtonProps) => {
+const BookingCtaButton = ({ variant = "onLight", className = "" }: BookingCtaButtonProps) => {
   const { t } = useTranslation();
   const { pathname } = useLocation();
   const lang = detectLanguageFromPath(pathname);
@@ -28,7 +30,7 @@ const BookingCtaButton = ({ variant = "secondary", className = "" }: BookingCtaB
     <div className={`text-center ${className}`}>
       <Link to={bookingPath(lang)}>
         <Button
-          variant={variant === "primary" ? "default" : "outline"}
+          variant={variant === "onDark" ? "secondary-on-blue" : "secondary"}
           className="min-h-[44px] font-semibold py-3 px-8 rounded-lg text-base md:text-lg"
         >
           {t("cta.bookCallWithBas")}

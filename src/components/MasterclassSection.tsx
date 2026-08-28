@@ -110,7 +110,8 @@ const MasterclassSection = ({ variant }: MasterclassSectionProps) => {
           <Link to={contactHref}>
             <Button
               size="lg"
-              className="bg-brand-orange hover:bg-brand-orange/90 text-white min-h-[44px] py-4 px-8 rounded-lg text-lg md:text-xl font-semibold shadow-xl"
+              variant={isEmployee ? "default" : "secondary-on-blue"}
+              className="min-h-[44px] py-4 px-8 rounded-lg text-lg md:text-xl font-semibold shadow-xl"
             >
               {isEmployee ? t('masterclass.ctaEmployee') : t('cta.bookCallWithBas')}
             </Button>
