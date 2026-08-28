@@ -8,7 +8,7 @@
       "badge": "Scientifically proven training",
       "title": "Improve <0>sustainable employability</0> and reduce absenteeism",
       "subtitle": "Scientifically proven vitality training. Participants take ownership of their own stress, regulate emotions better and build stronger resilience.",
-      "cta": "Calculate your ROI",
+      "cta": "Calculate your impact",
       "statsTitle": "Why organisations choose us",
       "stats": [
         {
@@ -217,8 +217,7 @@
           "a": "Participants notice a difference after the first workshops, and that effect builds up over the six weeks. Straight after the 6-week training, 70% report experiencing less stress. It also lasts: research shows the training is still effective a year later."
         }
       ]
-    },
-    "intro": "Sustainable employability means your people stay healthy and motivated throughout their career. What most often gets in the way is work stress. That is where our training starts."
+    }
   },
   "stress": {
     "meta": {

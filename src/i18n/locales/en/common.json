@@ -39,14 +39,14 @@
     "signUp": "Sign up",
     "discoverImpact": "Calculate your ROI",
     "discoverMethod": "Discover the method",
-    "calculateImpactLong": "Calculate your impact",
-    "calculateImpactShort": "Calculate impact",
-    "scheduleCallShort": "Schedule a call with Bas",
-    "contactShort": "Contact",
     "freeMasterclassLong": "Free masterclass",
     "freeMasterclassShort": "Masterclass",
     "registerTrainingLong": "Register for training",
-    "registerTrainingShort": "Register"
+    "registerTrainingShort": "Register",
+    "calculateSavings": "Calculate your impact",
+    "calculateRoi": "Calculate your ROI",
+    "bookCallWithBas": "Book 20 minutes with Bas",
+    "bookCallWithBasSticky": "Or book 20 minutes with Bas"
   },
   "loading": "Loading...",
   "footer": {
@@ -158,8 +158,7 @@
     },
     "review": "\"This workshop really shows you why training your attention muscle matters. It's a great mix of theory and exercises, so you immediately get to experience what it's like. I think anyone can benefit from this, so I can definitely recommend it.\"",
     "reviewer": "- Jeroen",
-    "ctaEmployee": "Request a masterclass from Bas",
-    "ctaEmployer": "Get to know Bas"
+    "ctaEmployee": "Request a masterclass from Bas"
   },
   "trust": {
     "headlinePart1": "Why organisations",

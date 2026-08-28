@@ -39,14 +39,14 @@
     "signUp": "Aanmelden",
     "discoverImpact": "Bereken de ROI",
     "discoverMethod": "Ontdek de methode",
-    "calculateImpactLong": "Bereken jullie impact",
-    "calculateImpactShort": "Bereken impact",
-    "scheduleCallShort": "Gesprek met Bas plannen",
-    "contactShort": "Contact",
     "freeMasterclassLong": "Gratis masterclass",
     "freeMasterclassShort": "Masterclass",
     "registerTrainingLong": "Aanmelden training",
-    "registerTrainingShort": "Aanmelden"
+    "registerTrainingShort": "Aanmelden",
+    "calculateSavings": "Bereken wat het jullie oplevert",
+    "calculateRoi": "Bereken jullie ROI",
+    "bookCallWithBas": "Plan 20 minuten met Bas",
+    "bookCallWithBasSticky": "Of plan 20 minuten met Bas"
   },
   "loading": "Laden...",
   "footer": {
@@ -158,8 +158,7 @@
     },
     "review": "\"Deze workshop laat je duidelijk het belang zien van het trainen van je aandachtsspier. De workshop bestaat uit een mooie mix tussen oefeningen en theorie, waardoor je gelijk al wat ervaring opdoet. Denk dat iedereen hier wat aan heeft, dus kan dit zeker aanbevelen.\"",
     "reviewer": "- Jeroen",
-    "ctaEmployee": "Masterclass aanvragen bij Bas",
-    "ctaEmployer": "Kennismaken met Bas"
+    "ctaEmployee": "Masterclass aanvragen bij Bas"
   },
   "trust": {
     "headlinePart1": "Waarom organisaties voor",

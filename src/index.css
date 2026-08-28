@@ -184,3 +184,47 @@
     @apply text-lg md:text-xl text-brand-gray-dark leading-relaxed;
   }
 }
+
+/* Sticky CTA
+   Eén gevulde knop met daaronder een tekstlink. Op mobiel een balk over de
+   volle breedte, op desktop zwevend rechtsonder.
+
+   De body krijgt onderaan ruimte ter hoogte van de balk. Zonder dat verdween
+   er tekst permanent achter de balk, en welke tekst dat was hing af van waar
+   de bezoeker stond te scrollen. De hoogte wordt gemeten in JavaScript en hier
+   ingevuld; de veilige zone van iPhones met home indicator zit in de padding
+   van de balk zelf en telt dus mee in die gemeten hoogte. */
+.sticky-cta {
+  padding-bottom: calc(0.5rem + env(safe-area-inset-bottom));
+  transition: opacity 200ms ease, transform 200ms ease;
+}
+
+.sticky-cta--hidden {
+  opacity: 0;
+  transform: translateY(100%);
+  pointer-events: none;
+}
+
+.sticky-cta--visible {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+@media (min-width: 768px) {
+  .sticky-cta {
+    padding-bottom: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  body.has-sticky-cta {
+    padding-bottom: var(--sticky-cta-height, 0px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sticky-cta {
+    transition: none;
+  }
+}

@@ -101,25 +101,20 @@ const MasterclassSection = ({ variant }: MasterclassSectionProps) => {
           </p>
         </div>
 
+        {/* De werkgeversvariant opende https://innerleaps.nl/Calendar in een
+            nieuw venster. Die pagina bestaat niet, dus elke klik hier liep dood.
+            Nu gaat hij naar /contact, waar de agenda van Bas staat. Oranje mag
+            hier wel: in dit blok is een gesprek de logische vervolgstap van de
+            sectie zelf. */}
         <div className="text-center">
-          {isEmployee ? (
-            <Link to={contactHref}>
-              <Button
-                size="lg"
-                className="bg-brand-orange hover:bg-brand-orange/90 text-white py-4 px-8 rounded-lg text-lg md:text-xl font-semibold shadow-xl"
-              >
-                {t('masterclass.ctaEmployee')}
-              </Button>
-            </Link>
-          ) : (
+          <Link to={contactHref}>
             <Button
               size="lg"
-              className="bg-brand-orange hover:bg-brand-orange/90 text-white py-4 px-8 rounded-lg text-lg md:text-xl font-semibold shadow-xl"
-              onClick={() => window.open("https://innerleaps.nl/Calendar", "_blank")}
+              className="bg-brand-orange hover:bg-brand-orange/90 text-white min-h-[44px] py-4 px-8 rounded-lg text-lg md:text-xl font-semibold shadow-xl"
             >
-              {t('masterclass.ctaEmployer')}
+              {isEmployee ? t('masterclass.ctaEmployee') : t('cta.bookCallWithBas')}
             </Button>
-          )}
+          </Link>
         </div>
       </div>
     </section>

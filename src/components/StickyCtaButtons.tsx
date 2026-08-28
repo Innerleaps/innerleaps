@@ -1,112 +1,143 @@
-import { useState, useEffect, lazy, Suspense } from 'react';
+import { useState, useEffect, useRef, lazy, Suspense } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Button } from '@/components/ui/button';
-import { useLocation, useNavigate } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { detectLanguageFromPath } from '@/i18n/config';
-import { bookingPath, scrollToBookingWidget } from '@/lib/booking';
+import { bookingPath } from '@/lib/booking';
 
 const CalculatorModal = lazy(() => import('./CalculatorModal'));
-const ProgramRegistrationModal = lazy(() => import('./ProgramRegistrationModal'));
 
-interface StickyCtaButtonsProps {
-  onMasterclassClick?: () => void;
-  onProgramRegistrationClick?: () => void;
-}
+/**
+ * Twee even zware gevulde knoppen lezen als een keuzemenu, en een keuzemenu
+ * kost conversie. Daarom staat hier één primaire actie, de rekentool, met
+ * daaronder een rustige tekstlink naar een gesprek.
+ *
+ * Op mobiel is dit een balk over de volle breedte onderaan het scherm. Die
+ * dekte eerder tekst af, dus krijgt de body een padding-bottom ter hoogte van
+ * de balk, plus de veilige zone van iPhones met home indicator. Die hoogte
+ * wordt gemeten in plaats van geraden: de knoptekst verschilt per pagina en
+ * kan over twee regels lopen.
+ *
+ * De balk komt pas in beeld als de hero voorbij is, en verdwijnt zodra het
+ * rekentool-blok in beeld komt. Dat laatste is geen detail: de balk mag niet
+ * de actie afdekken waar hij zelf naartoe verwijst.
+ */
 
-const StickyCtaButtons = ({ onMasterclassClick, onProgramRegistrationClick }: StickyCtaButtonsProps) => {
+/** Het label van de primaire knop verschilt per doelgroep. HR koopt niet
+ *  hetzelfde als een directie en gebruikt niet dezelfde woorden. */
+const ROI_LABEL_PATHS = ['/team-prestaties-verbeteren', '/en/improve-team-performance'];
+
+/** Waar de balk niets te zoeken heeft. */
+const HIDDEN_ON_PATHS = ['/landing'];
+
+/** Onder deze drempel gaan we ervan uit dat de hero voorbij is, als er geen
+ *  hero-element te vinden is om op te letten. */
+const SCROLL_FALLBACK = 400;
+
+const StickyCtaButtons = () => {
   const { t } = useTranslation();
   const [isCalculatorOpen, setIsCalculatorOpen] = useState(false);
-  const [isRegistrationModalOpen, setIsRegistrationModalOpen] = useState(false);
-  const [isVisible, setIsVisible] = useState(false);
+  const [isPastHero, setIsPastHero] = useState(false);
+  const [isCalculatorInView, setIsCalculatorInView] = useState(false);
+  const barRef = useRef<HTMLDivElement>(null);
   const location = useLocation();
   const lang = detectLanguageFromPath(location.pathname);
-  const navigate = useNavigate();
 
-  // Staat de Calendly-widget op deze pagina, dan scrollen we ernaartoe. Zo niet,
-  // dan naar de boekingspagina. Vroeger opende dit Google Calendar in een nieuw
-  // venster, waardoor de bezoeker het domein verliet en een boeking onmeetbaar was.
-  const handleBooking = () => {
-    if (!scrollToBookingWidget()) navigate(bookingPath(lang));
-  };
+  const label = ROI_LABEL_PATHS.includes(location.pathname)
+    ? t('cta.calculateRoi')
+    : t('cta.calculateSavings');
 
-  const isHomePage = location.pathname === '/' || location.pathname === '/en';
-  const isLandingPage = location.pathname === '/landing';
-  const isProgramPage =
-    location.pathname === '/prestatie-training' ||
-    location.pathname === '/stressmanagement-training' ||
-    location.pathname === '/en/performance-training' ||
-    location.pathname === '/en/stress-management-training';
-
-  const programType =
-    location.pathname === '/prestatie-training' || location.pathname === '/en/performance-training'
-      ? 'prestatie'
-      : 'stress-management';
-
+  // Pas tonen als de hero uit beeld is. Bij het laden van de pagina zou de
+  // balk anders meteen over de hero heen liggen.
   useEffect(() => {
-    if (!isHomePage) {
-      setIsVisible(true);
+    const hero = document.getElementById('hero');
+    if (hero && 'IntersectionObserver' in window) {
+      const observer = new IntersectionObserver(
+        ([entry]) => setIsPastHero(!entry.isIntersecting),
+        { threshold: 0 }
+      );
+      observer.observe(hero);
+      return () => observer.disconnect();
+    }
+    const onScroll = () => setIsPastHero(window.scrollY > SCROLL_FALLBACK);
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
+  }, [location.pathname]);
+
+  // Wegblijven zodra het rekentool-blok in beeld staat.
+  useEffect(() => {
+    const calculator = document.getElementById('calculator');
+    if (!calculator || !('IntersectionObserver' in window)) {
+      setIsCalculatorInView(false);
       return;
     }
-    const handleScroll = () => setIsVisible(window.scrollY > 50);
-    handleScroll();
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, [isHomePage]);
+    const observer = new IntersectionObserver(
+      ([entry]) => setIsCalculatorInView(entry.isIntersecting),
+      { threshold: 0 }
+    );
+    observer.observe(calculator);
+    return () => observer.disconnect();
+  }, [location.pathname]);
 
-  if (!isVisible || isLandingPage) return null;
+  const isHidden = HIDDEN_ON_PATHS.includes(location.pathname);
+  const isVisible = isPastHero && !isCalculatorInView && !isHidden;
+
+  // De gemeten hoogte doorgeven aan de body, zodat er onderaan de pagina geen
+  // tekst permanent achter de balk verdwijnt. Meten in plaats van vastleggen,
+  // want een langer label loopt over twee regels.
+  useEffect(() => {
+    const body = document.body;
+    const bar = barRef.current;
+    if (!isVisible || !bar) {
+      body.classList.remove('has-sticky-cta');
+      body.style.removeProperty('--sticky-cta-height');
+      return;
+    }
+    const measure = () => {
+      body.style.setProperty('--sticky-cta-height', `${bar.offsetHeight}px`);
+      body.classList.add('has-sticky-cta');
+    };
+    measure();
+    const observer = new ResizeObserver(measure);
+    observer.observe(bar);
+    return () => {
+      observer.disconnect();
+      body.classList.remove('has-sticky-cta');
+      body.style.removeProperty('--sticky-cta-height');
+    };
+  }, [isVisible, label]);
 
   return (
     <>
-      <div className="fixed bottom-4 sm:bottom-6 right-4 sm:right-6 z-40 flex flex-col gap-2 sm:gap-3 max-w-[calc(100vw-2rem)] sm:max-w-none">
-        {isProgramPage ? (
-          <>
-            <Button
-              variant="secondary"
-              onClick={onMasterclassClick}
-              className="font-semibold py-3 sm:py-5 px-4 sm:px-10 rounded-lg text-base sm:text-lg shadow-lg whitespace-nowrap"
-            >
-              <span className="hidden sm:inline">{t('cta.freeMasterclassLong')}</span>
-              <span className="sm:hidden">{t('cta.freeMasterclassShort')}</span>
-            </Button>
-            <Button
-              onClick={onProgramRegistrationClick}
-              className="font-semibold py-3 sm:py-5 px-4 sm:px-10 rounded-lg text-base sm:text-lg shadow-lg whitespace-nowrap"
-            >
-              <span className="hidden sm:inline">{t('cta.registerTrainingLong')}</span>
-              <span className="sm:hidden">{t('cta.registerTrainingShort')}</span>
-            </Button>
-          </>
-        ) : (
-          <>
-            <Button
-              onClick={() => setIsCalculatorOpen(true)}
-              className="font-semibold py-3 sm:py-5 px-4 sm:px-10 rounded-lg text-base sm:text-lg shadow-lg whitespace-nowrap"
-            >
-              <span className="hidden sm:inline">{t('cta.calculateImpactLong')}</span>
-              <span className="sm:hidden">{t('cta.calculateImpactShort')}</span>
-            </Button>
-            <Button
-              variant="secondary"
-              className="font-semibold py-3 sm:py-5 px-4 sm:px-10 rounded-lg text-base sm:text-lg shadow-lg whitespace-nowrap"
-              onClick={handleBooking}
-            >
-              <span className="hidden sm:inline">{t('cta.scheduleCallShort')}</span>
-              <span className="sm:hidden">{t('cta.contactShort')}</span>
-            </Button>
-          </>
-        )}
+      <div
+        ref={barRef}
+        aria-hidden={!isVisible}
+        className={`sticky-cta fixed bottom-0 left-0 right-0 z-40 flex flex-col gap-1 bg-white/95 backdrop-blur-sm border-t border-gray-200 px-4 pt-3
+          md:left-auto md:bottom-6 md:right-6 md:w-auto md:items-end md:gap-2 md:bg-transparent md:backdrop-blur-none md:border-0 md:px-0 md:pt-0
+          ${isVisible ? 'sticky-cta--visible' : 'sticky-cta--hidden'}`}
+      >
+        <Button
+          onClick={() => setIsCalculatorOpen(true)}
+          tabIndex={isVisible ? undefined : -1}
+          className="w-full md:w-auto min-h-[44px] font-semibold py-3 px-4 md:px-10 rounded-lg text-base md:text-lg shadow-lg whitespace-normal md:whitespace-nowrap"
+        >
+          {label}
+        </Button>
+        <div className="text-center md:pr-1">
+          <Link
+            to={bookingPath(lang)}
+            tabIndex={isVisible ? undefined : -1}
+            className="inline-flex items-center justify-center min-h-[44px] px-2 text-sm md:text-base text-brand-blue underline underline-offset-4 font-medium"
+          >
+            {t('cta.bookCallWithBasSticky')}
+          </Link>
+        </div>
       </div>
 
       <Suspense fallback={null}>
         {isCalculatorOpen && (
           <CalculatorModal isOpen={isCalculatorOpen} onClose={() => setIsCalculatorOpen(false)} />
-        )}
-        {isProgramPage && isRegistrationModalOpen && (
-          <ProgramRegistrationModal
-            isOpen={isRegistrationModalOpen}
-            onClose={() => setIsRegistrationModalOpen(false)}
-            programType={programType}
-          />
         )}
       </Suspense>
     </>

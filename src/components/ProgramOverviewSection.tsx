@@ -4,6 +4,7 @@ import { Link, useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { Button } from "@/components/ui/button";
 import { detectLanguageFromPath } from "@/i18n/config";
+import BookingCtaButton from "@/components/BookingCtaButton";
 
 /**
  * Het vierde blok verschilt per plek. De homepage houdt "veilig leren", de vier
@@ -15,6 +16,8 @@ type FourthFeature = "safeLearning" | "workbook";
 interface ProgramOverviewSectionProps {
   hideOutroCta?: boolean;
   fourthFeature?: FourthFeature;
+  /** Sluit dit blok af met "Plan 20 minuten met Bas" in plaats van niets. */
+  bookingCta?: boolean;
 }
 
 const FOURTH_FEATURE_ICON = {
@@ -25,6 +28,7 @@ const FOURTH_FEATURE_ICON = {
 const ProgramOverviewSection = memo(({
   hideOutroCta = false,
   fourthFeature = "safeLearning",
+  bookingCta = false,
 }: ProgramOverviewSectionProps) => {
   const { t } = useTranslation();
   const { pathname } = useLocation();
@@ -66,6 +70,8 @@ const ProgramOverviewSection = memo(({
             );
           })}
         </div>
+
+        {bookingCta && <BookingCtaButton />}
 
         {!hideOutroCta && (
           <div className="text-center pt-4 lg:pt-12 space-y-6">

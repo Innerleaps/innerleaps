@@ -1,6 +1,7 @@
 import { memo } from "react";
 import { useTranslation } from "react-i18next";
 import { Check } from "lucide-react";
+import BookingCtaButton from "@/components/BookingCtaButton";
 import vmbnLogo from "@/assets/vmbn-trainer-categorie-1.webp";
 import uMassLogo from "@/assets/Vitaliteitsprogramma_ontwikkeld_door_university_of_massachusetts.webp";
 import oxfordLogo from "@/assets/Vitaliteitsprogramma_ontwikkeld_door_oxford.webp";
@@ -11,9 +12,11 @@ import menzisLogo from "@/assets/Vitaliteitsprogramma_herkend_door_menzis.webp";
 
 interface TrustSectionProps {
   variant?: "white" | "off-white";
+  /** Sluit dit blok af met "Plan 20 minuten met Bas". */
+  bookingCta?: boolean;
 }
 
-const TrustSection = memo(({ variant = "white" }: TrustSectionProps) => {
+const TrustSection = memo(({ variant = "white", bookingCta = false }: TrustSectionProps) => {
   const { t } = useTranslation();
   const sectionBg = variant === "off-white" ? "bg-brand-off-white" : "bg-white";
   const cardBg = variant === "off-white" ? "bg-white" : "bg-brand-off-white";
@@ -77,6 +80,8 @@ const TrustSection = memo(({ variant = "white" }: TrustSectionProps) => {
             </div>
           ))}
         </div>
+
+        {bookingCta && <BookingCtaButton className="mt-12" />}
       </div>
     </section>
   );
