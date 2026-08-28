@@ -189,7 +189,7 @@ const CalendlyWidget = ({ id = "afspraak", height = 700, eager = false }: Calend
       // scroll-mt-28 houdt ruimte vrij voor de sticky header. Zonder dat scrollt
       // een ankerlink de bovenkant van de widget precies onder de balk.
       className="relative scroll-mt-28 overflow-hidden rounded-lg bg-white"
-      style={{ minWidth: 320, height: frameHeight }}
+      style={{ minWidth: "min(320px, 100%)", height: frameHeight }}
     >
       {!loaded && <CalendlySkeleton />}
       {visible && (
