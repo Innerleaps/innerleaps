@@ -158,7 +158,7 @@ const ROICalculator = () => {
             {/* Organization summary */}
             <div className="bg-blue-50 border border-blue-200 rounded-lg p-6 mb-8">
               <h3 className="text-lg font-semibold text-brand-gray-dark mb-3">{t('results.yourOrg')}</h3>
-              <div className="grid grid-cols-2 gap-4 text-sm">
+              <div className="grid grid-cols-2 gap-4 text-base">
                 <div>
                   <span className="text-brand-gray-medium">{t('results.employees')}:</span>
                   <span className="ml-2 font-semibold">{formData.aantalWerknemers}</span>
@@ -182,19 +182,19 @@ const ROICalculator = () => {
             <div className="bg-white border-2 border-gray-300 rounded-lg p-6 mb-6">
               <div className="flex items-center justify-between mb-4">
                 <h3 className="text-xl font-bold text-brand-gray-dark">{t('results.conservative')}</h3>
-                <span className="text-sm text-brand-gray-medium">{t('results.conservativeTag')}</span>
+                <span className="text-base text-brand-gray-medium">{t('results.conservativeTag')}</span>
               </div>
 
               <div className="space-y-3 mb-4">
-                <div className="flex justify-between text-sm">
+                <div className="flex justify-between text-base">
                   <span className="text-brand-gray-medium">{t('results.absenteeismSaving')} (15%):</span>
                   <span className="font-semibold text-green-600">{formatCurrency(calculationResults.scenarios.conservative.verzuimBesparing)}</span>
                 </div>
-                <div className="flex justify-between text-sm">
+                <div className="flex justify-between text-base">
                   <span className="text-brand-gray-medium">{t('results.retentionSaving')} (5%):</span>
                   <span className="font-semibold text-green-600">{formatCurrency(calculationResults.scenarios.conservative.retentieBesparing)}</span>
                 </div>
-                <div className="flex justify-between text-sm">
+                <div className="flex justify-between text-base">
                   <span className="text-brand-gray-medium">{t('results.productivityGain')} (5%):</span>
                   <span className="font-semibold text-green-600">{formatCurrency(calculationResults.scenarios.conservative.productiviteitBesparing)}</span>
                 </div>
@@ -205,7 +205,7 @@ const ROICalculator = () => {
                   <span className="text-brand-gray-dark">{t('results.totalSaving')}:</span>
                   <span className="text-green-600">{formatCurrency(calculationResults.scenarios.conservative.totaleBesparing)}</span>
                 </div>
-                <div className="flex justify-between text-sm text-brand-gray-medium">
+                <div className="flex justify-between text-base text-brand-gray-medium">
                   <span>{t('results.investment')}:</span>
                   <span className="text-red-600">-{formatCurrency(calculationResults.investment)}</span>
                 </div>
@@ -214,7 +214,7 @@ const ROICalculator = () => {
                     <span className="text-brand-gray-dark">{t('results.netProfit')}:</span>
                     <span className="text-green-600">{formatCurrency(calculationResults.scenarios.conservative.netBesparing)}</span>
                   </div>
-                  <div className="flex justify-between text-sm mt-1">
+                  <div className="flex justify-between text-base mt-1">
                     <span className="text-brand-gray-dark">{t('results.roi')}:</span>
                     <span className="font-bold text-brand-blue">{formatPercentage(calculationResults.scenarios.conservative.roi)}</span>
                   </div>
@@ -226,19 +226,19 @@ const ROICalculator = () => {
             <div className="bg-white border-2 border-brand-orange rounded-lg p-6 mb-8">
               <div className="flex items-center justify-between mb-4">
                 <h3 className="text-xl font-bold text-brand-gray-dark">{t('results.positive')}</h3>
-                <span className="text-sm text-brand-gray-medium">{t('results.positiveTag')}</span>
+                <span className="text-base text-brand-gray-medium">{t('results.positiveTag')}</span>
               </div>
 
               <div className="space-y-3 mb-4">
-                <div className="flex justify-between text-sm">
+                <div className="flex justify-between text-base">
                   <span className="text-brand-gray-medium">{t('results.absenteeismSaving')} (21%):</span>
                   <span className="font-semibold text-green-600">{formatCurrency(calculationResults.scenarios.positive.verzuimBesparing)}</span>
                 </div>
-                <div className="flex justify-between text-sm">
+                <div className="flex justify-between text-base">
                   <span className="text-brand-gray-medium">{t('results.retentionSaving')} (8%):</span>
                   <span className="font-semibold text-green-600">{formatCurrency(calculationResults.scenarios.positive.retentieBesparing)}</span>
                 </div>
-                <div className="flex justify-between text-sm">
+                <div className="flex justify-between text-base">
                   <span className="text-brand-gray-medium">{t('results.productivityGain')} (8%):</span>
                   <span className="font-semibold text-green-600">{formatCurrency(calculationResults.scenarios.positive.productiviteitBesparing)}</span>
                 </div>
@@ -249,7 +249,7 @@ const ROICalculator = () => {
                   <span className="text-brand-gray-dark">{t('results.totalSaving')}:</span>
                   <span className="text-green-600">{formatCurrency(calculationResults.scenarios.positive.totaleBesparing)}</span>
                 </div>
-                <div className="flex justify-between text-sm text-brand-gray-medium">
+                <div className="flex justify-between text-base text-brand-gray-medium">
                   <span>{t('results.investment')}:</span>
                   <span className="text-red-600">-{formatCurrency(calculationResults.investment)}</span>
                 </div>
@@ -258,7 +258,7 @@ const ROICalculator = () => {
                     <span className="text-brand-gray-dark">{t('results.netProfit')}:</span>
                     <span className="text-green-600">{formatCurrency(calculationResults.scenarios.positive.netBesparing)}</span>
                   </div>
-                  <div className="flex justify-between text-sm mt-1">
+                  <div className="flex justify-between text-base mt-1">
                     <span className="text-brand-gray-dark">{t('results.roi')}:</span>
                     <span className="font-bold text-brand-blue">{formatPercentage(calculationResults.scenarios.positive.roi)}</span>
                   </div>
@@ -269,10 +269,10 @@ const ROICalculator = () => {
             {/* Scientific basis */}
             <div className="bg-blue-50 border border-blue-200 rounded-lg p-6 mb-8">
               <h3 className="text-lg font-semibold text-brand-gray-dark mb-3">{t('results.scientificTitle')}</h3>
-              <p className="text-sm text-brand-gray-medium mb-3">
+              <p className="text-base text-brand-gray-medium mb-3">
                 {t('results.scientificIntro')}
               </p>
-              <ul className="text-sm text-brand-gray-medium space-y-2">
+              <ul className="text-base text-brand-gray-medium space-y-2">
                 <li className="flex items-start">
                   <span className="text-brand-orange mr-2">•</span>
                   <span>{t('results.scientific1')}</span>
@@ -462,13 +462,13 @@ const ROICalculator = () => {
             <Button
               onClick={handleSubmit}
               disabled={!isFormValid() || isSubmitting}
-              className="px-8 bg-brand-orange hover:bg-brand-orange/90"
+              className="min-h-[44px] px-8 text-base md:text-lg font-semibold bg-brand-orange hover:bg-brand-orange/90"
             >
               {isSubmitting ? t('submit.loading') : t('submit.idle')}
             </Button>
           </div>
 
-          <div className="mt-6 text-xs text-white/80 text-center">
+          <div className="mt-6 text-base text-white/80 text-center">
             {t('footnote')}
           </div>
         </div>

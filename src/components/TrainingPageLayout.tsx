@@ -232,7 +232,7 @@ const TrainingPageLayout = ({
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-12 items-start w-full overflow-hidden">
             <div className="w-full space-y-6 animate-fade-in text-center lg:text-left">
               <div className="w-full space-y-4 sm:space-y-6">
-                <div className="inline-flex items-center gap-2 bg-white/50 text-brand-purple px-3 py-1.5 sm:px-4 sm:py-2 rounded-full text-sm sm:text-base md:text-lg font-medium backdrop-blur-sm">
+                <div className="inline-flex items-center gap-2 bg-white/50 text-brand-purple px-3 py-1.5 sm:px-4 sm:py-2 rounded-full text-base md:text-lg font-medium backdrop-blur-sm">
                   <Award className="h-4 w-4" />
                   {t(`${tKey}.hero.badge`)}
                 </div>
@@ -298,11 +298,11 @@ const TrainingPageLayout = ({
                       >
                         <span
                           style={{ textShadow: "0 2px 8px rgba(0,0,0,0.5)" }}
-                          className="text-sm sm:text-base md:text-lg lg:text-xl text-white font-normal"
+                          className="text-base md:text-lg lg:text-xl text-white font-normal"
                         >
                           {stat.label}
                         </span>
-                        <span className="text-brand-orange font-bold text-base sm:text-lg md:text-xl lg:text-2xl shrink-0">
+                        <span className="text-brand-orange font-bold text-lg md:text-xl lg:text-2xl shrink-0">
                           {stat.value}
                         </span>
                       </div>
@@ -326,7 +326,7 @@ const TrainingPageLayout = ({
                         ))}
                       </div>
                     </div>
-                    <p className="text-white text-sm text-center mt-1">Google Reviews</p>
+                    <p className="text-white text-base text-center mt-1">Google Reviews</p>
                   </a>
                 </div>
               </div>
@@ -511,13 +511,13 @@ const TrainingPageLayout = ({
               {weeks.map((w, i) => (
                 <div key={i} className="bg-brand-off-white p-6 rounded-xl space-y-3">
                   <div className="flex items-center gap-2 flex-wrap">
-                    <span className="bg-brand-orange text-white px-3 py-1 rounded-full text-sm font-semibold whitespace-nowrap">
+                    <span className="bg-brand-orange text-white px-3 py-1 rounded-full text-base font-semibold whitespace-nowrap">
                       {w.week}
                     </span>
                     {w.tags.map((tag, j) => (
                       <span
                         key={j}
-                        className="bg-brand-purple text-white px-3 py-1 rounded-full text-sm font-semibold whitespace-nowrap"
+                        className="bg-brand-purple text-white px-3 py-1 rounded-full text-base font-semibold whitespace-nowrap"
                       >
                         {tag}
                       </span>

@@ -56,7 +56,7 @@ const Footer = memo(({ showNavigation = true }: FooterProps) => {
                   className="h-16 w-auto bg-white rounded p-1"
                   loading="lazy"
                 />
-                <span className="text-xs text-gray-300 mt-1">{t('footer.trainerCategory')}</span>
+                <span className="text-base text-gray-300 mt-1">{t('footer.trainerCategory')}</span>
               </div>
 
               <div className="flex flex-col items-center">
@@ -68,7 +68,7 @@ const Footer = memo(({ showNavigation = true }: FooterProps) => {
                     ))}
                   </div>
                 </div>
-                <span className="text-xs text-gray-300 mt-1">{t('footer.googleRating')}</span>
+                <span className="text-base text-gray-300 mt-1">{t('footer.googleRating')}</span>
               </div>
             </div>
 
@@ -156,7 +156,7 @@ const Footer = memo(({ showNavigation = true }: FooterProps) => {
         </div>
 
         {/* Bottom bar */}
-        <div className="border-t border-white/15 mt-8 pt-6 flex flex-col md:flex-row md:items-center md:justify-between gap-3 text-sm text-gray-400">
+        <div className="border-t border-white/15 mt-8 pt-6 flex flex-col md:flex-row md:items-center md:justify-between gap-3 text-base text-gray-400">
           <p>{t('footer.copyright')}</p>
           <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
             <Link to="/privacy" className="hover:text-white transition-colors">
