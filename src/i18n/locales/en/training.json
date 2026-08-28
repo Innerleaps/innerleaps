@@ -63,15 +63,16 @@
           "icon": "TreeDeciduous",
           "title": "Less tension",
           "bullets": [
-            "Employees spot tension earlier and speak up in time.",
-            "More ownership of their own workload."
+            "Employees sense tension earlier and adjust course themselves.",
+            "More ownership of their own workload.",
+            "Employees become more resilient under high pressure and recover faster."
           ]
         },
         {
           "icon": "Shield",
           "title": "Guarding their own limits",
           "bullets": [
-            "Employees say no in time when it becomes too much.",
+            "Employees flag their limit before they cross it.",
             "They adjust before things go wrong."
           ]
         },
@@ -685,7 +686,8 @@
           "icon": "TreeDeciduous",
           "title": "Less tension",
           "bullets": [
-            "Your team recognises stress earlier and speaks up in time."
+            "Your team notices tension earlier and adjusts course itself.",
+            "Your team becomes more resilient under high pressure and recovers faster."
           ]
         },
         {
