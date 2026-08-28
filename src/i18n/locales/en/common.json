@@ -45,8 +45,7 @@
     "registerTrainingShort": "Register",
     "calculateSavings": "Calculate your impact",
     "calculateRoi": "Calculate your ROI",
-    "bookCallWithBas": "Book 20 minutes with Bas",
-    "bookCallWithBasSticky": "Or book 20 minutes with Bas"
+    "bookCallWithBas": "Book 20 minutes with Bas"
   },
   "loading": "Loading...",
   "footer": {

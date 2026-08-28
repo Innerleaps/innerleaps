@@ -1,16 +1,18 @@
 import { useState, useEffect, useRef, lazy, Suspense } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Button } from '@/components/ui/button';
-import { Link, useLocation } from 'react-router-dom';
-import { detectLanguageFromPath } from '@/i18n/config';
-import { bookingPath } from '@/lib/booking';
+import { useLocation } from 'react-router-dom';
 
 const CalculatorModal = lazy(() => import('./CalculatorModal'));
 
 /**
- * Twee even zware gevulde knoppen lezen als een keuzemenu, en een keuzemenu
- * kost conversie. Daarom staat hier één primaire actie, de rekentool, met
- * daaronder een rustige tekstlink naar een gesprek.
+ * Eén knop, één actie: de rekentool. Verder niets.
+ *
+ * Er stonden hier eerst twee even zware gevulde knoppen, en dat leest als een
+ * keuzemenu. Daarna een tekstlink naar een gesprek eronder. Ook die is eruit:
+ * op de campagnepagina's staat "Plan 20 minuten met Bas" vijf keer in de body,
+ * dus die actie is nooit meer dan een halve scroll weg. Een kale onderstreepte
+ * link onder een grote knop maakte de balk alleen maar rommelig.
  *
  * Op mobiel is dit een balk over de volle breedte onderaan het scherm. Die
  * dekte eerder tekst af, dus krijgt de body een padding-bottom ter hoogte van
@@ -41,7 +43,6 @@ const StickyCtaButtons = () => {
   const [isCalculatorInView, setIsCalculatorInView] = useState(false);
   const barRef = useRef<HTMLDivElement>(null);
   const location = useLocation();
-  const lang = detectLanguageFromPath(location.pathname);
 
   const label = ROI_LABEL_PATHS.includes(location.pathname)
     ? t('cta.calculateRoi')
@@ -85,7 +86,7 @@ const StickyCtaButtons = () => {
 
   // De gemeten hoogte doorgeven aan de body, zodat er onderaan de pagina geen
   // tekst permanent achter de balk verdwijnt. Meten in plaats van vastleggen,
-  // want een langer label loopt over twee regels.
+  // want een langer label loopt op een smal scherm over twee regels.
   useEffect(() => {
     const body = document.body;
     const bar = barRef.current;
@@ -113,8 +114,8 @@ const StickyCtaButtons = () => {
       <div
         ref={barRef}
         aria-hidden={!isVisible}
-        className={`sticky-cta fixed bottom-0 left-0 right-0 z-40 flex flex-col gap-1 bg-white/95 backdrop-blur-sm border-t border-gray-200 px-4 pt-3
-          md:left-auto md:bottom-6 md:right-6 md:w-auto md:items-end md:gap-2 md:bg-transparent md:backdrop-blur-none md:border-0 md:px-0 md:pt-0
+        className={`sticky-cta fixed bottom-0 left-0 right-0 z-40 bg-white/95 backdrop-blur-sm border-t border-gray-200 px-4 pt-3
+          md:left-auto md:bottom-6 md:right-6 md:w-auto md:bg-transparent md:backdrop-blur-none md:border-0 md:px-0 md:pt-0
           ${isVisible ? 'sticky-cta--visible' : 'sticky-cta--hidden'}`}
       >
         <Button
@@ -124,15 +125,6 @@ const StickyCtaButtons = () => {
         >
           {label}
         </Button>
-        <div className="text-center md:pr-1">
-          <Link
-            to={bookingPath(lang)}
-            tabIndex={isVisible ? undefined : -1}
-            className="inline-flex items-center justify-center min-h-[44px] px-2 text-sm md:text-base text-brand-blue underline underline-offset-4 font-medium"
-          >
-            {t('cta.bookCallWithBasSticky')}
-          </Link>
-        </div>
       </div>
 
       <Suspense fallback={null}>
