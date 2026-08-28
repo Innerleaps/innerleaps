@@ -37,7 +37,7 @@ const LanguageSwitcher = ({ variant = "inline", onSwitch }: LanguageSwitcherProp
     <div
       className={
         variant === "inline"
-          ? "flex items-center gap-1 text-sm font-medium"
+          ? "flex items-center gap-1 text-base font-medium"
           : "flex items-center gap-2 text-base font-medium py-2"
       }
       role="group"

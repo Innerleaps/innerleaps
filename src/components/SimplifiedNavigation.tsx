@@ -85,10 +85,10 @@ const SimplifiedNavigation = () => {
                                 aria-current="page"
                                 className="block select-none rounded-md p-3 leading-none no-underline outline-none transition-colors border-l-4 bg-brand-off-white border-brand-orange cursor-default"
                               >
-                                <div className="text-sm font-medium leading-none text-brand-purple">
+                                <div className="text-base font-medium leading-none text-brand-purple">
                                   {subItem.label}
                                 </div>
-                                <p className="line-clamp-2 text-sm leading-snug text-gray-500 mt-1">
+                                <p className="line-clamp-2 text-base leading-snug text-gray-500 mt-1">
                                   {subItem.description}
                                 </p>
                               </span>
@@ -97,10 +97,10 @@ const SimplifiedNavigation = () => {
                                 to={subItem.href}
                                 className="block select-none rounded-md p-3 leading-none no-underline outline-none transition-colors border-l-4 border-transparent hover:bg-gray-100 focus:bg-gray-100"
                               >
-                                <div className="text-sm font-medium leading-none text-brand-gray-dark">
+                                <div className="text-base font-medium leading-none text-brand-gray-dark">
                                   {subItem.label}
                                 </div>
-                                <p className="line-clamp-2 text-sm leading-snug text-gray-500 mt-1">
+                                <p className="line-clamp-2 text-base leading-snug text-gray-500 mt-1">
                                   {subItem.description}
                                 </p>
                               </Link>
@@ -135,10 +135,10 @@ const SimplifiedNavigation = () => {
                                 aria-current="page"
                                 className="block select-none rounded-md p-3 leading-none no-underline outline-none transition-colors border-l-4 bg-brand-off-white border-brand-orange cursor-default"
                               >
-                                <div className="text-sm font-medium leading-none text-brand-purple">
+                                <div className="text-base font-medium leading-none text-brand-purple">
                                   {subItem.label}
                                 </div>
-                                <p className="line-clamp-2 text-sm leading-snug text-gray-500 mt-1">
+                                <p className="line-clamp-2 text-base leading-snug text-gray-500 mt-1">
                                   {subItem.description}
                                 </p>
                               </span>
@@ -147,10 +147,10 @@ const SimplifiedNavigation = () => {
                                 to={subItem.href}
                                 className="block select-none rounded-md p-3 leading-none no-underline outline-none transition-colors border-l-4 border-transparent hover:bg-gray-100 focus:bg-gray-100"
                               >
-                                <div className="text-sm font-medium leading-none text-brand-gray-dark">
+                                <div className="text-base font-medium leading-none text-brand-gray-dark">
                                   {subItem.label}
                                 </div>
-                                <p className="line-clamp-2 text-sm leading-snug text-gray-500 mt-1">
+                                <p className="line-clamp-2 text-base leading-snug text-gray-500 mt-1">
                                   {subItem.description}
                                 </p>
                               </Link>
@@ -238,7 +238,7 @@ const SimplifiedNavigation = () => {
                         <span
                           key={subItem.label}
                           aria-current="page"
-                          className="block transition-colors duration-300 py-2 text-sm border-l-4 pl-2 border-brand-orange text-brand-purple font-semibold cursor-default"
+                          className="block transition-colors duration-300 py-2 text-base border-l-4 pl-2 border-brand-orange text-brand-purple font-semibold cursor-default"
                         >
                           {subItem.label}
                         </span>
@@ -250,7 +250,7 @@ const SimplifiedNavigation = () => {
                             setIsMenuOpen(false);
                             setIsOrganisationMenuOpen(false);
                           }}
-                          className="block transition-colors duration-300 py-2 text-sm border-l-4 pl-2 border-transparent text-brand-gray-medium hover:text-brand-blue"
+                          className="block transition-colors duration-300 py-2 text-base border-l-4 pl-2 border-transparent text-brand-gray-medium hover:text-brand-blue"
                         >
                           {subItem.label}
                         </Link>
@@ -274,7 +274,7 @@ const SimplifiedNavigation = () => {
                         <span
                           key={subItem.label}
                           aria-current="page"
-                          className="block transition-colors duration-300 py-2 text-sm border-l-4 pl-2 border-brand-orange text-brand-purple font-semibold cursor-default"
+                          className="block transition-colors duration-300 py-2 text-base border-l-4 pl-2 border-brand-orange text-brand-purple font-semibold cursor-default"
                         >
                           {subItem.label}
                         </span>
@@ -286,7 +286,7 @@ const SimplifiedNavigation = () => {
                             setIsMenuOpen(false);
                             setIsEmployeeMenuOpen(false);
                           }}
-                          className="block transition-colors duration-300 py-2 text-sm border-l-4 pl-2 border-transparent text-brand-gray-medium hover:text-brand-blue"
+                          className="block transition-colors duration-300 py-2 text-base border-l-4 pl-2 border-transparent text-brand-gray-medium hover:text-brand-blue"
                         >
                           {subItem.label}
                         </Link>
