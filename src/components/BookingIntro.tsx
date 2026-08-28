@@ -36,10 +36,10 @@ const BookingIntro = ({ as: Heading = "h1", className = "" }: BookingIntroProps)
           height={320}
         />
         <div className="mt-2 text-center sm:hidden">
-          <div className="text-xs font-semibold text-brand-gray-dark">
+          <div className="text-base font-semibold text-brand-gray-dark">
             {t("booking.bas.shortName")}
           </div>
-          <div className="text-[11px] leading-tight text-brand-gray-medium">
+          <div className="text-base leading-tight text-brand-gray-medium">
             {t("booking.bas.shortRole")}
           </div>
         </div>
@@ -55,7 +55,7 @@ const BookingIntro = ({ as: Heading = "h1", className = "" }: BookingIntroProps)
         <p className="mt-2 text-base leading-relaxed text-brand-gray-medium sm:text-lg">
           {t("booking.intro")}
         </p>
-        <p className="mt-2 hidden text-sm font-medium text-brand-gray-medium sm:block">
+        <p className="mt-2 hidden text-base font-medium text-brand-gray-medium sm:block">
           {t("booking.bas.role")}
         </p>
       </div>
