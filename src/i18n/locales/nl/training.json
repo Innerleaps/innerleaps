@@ -7,7 +7,7 @@
     "hero": {
       "badge": "Wetenschappelijk bewezen training",
       "title": "<0>Duurzame inzetbaarheid</0> vergroten en verzuim verlagen",
-      "subtitle": "Duurzame inzetbaarheid betekent dat je medewerkers hun hele loopbaan gezond en gemotiveerd blijven werken. Wat daar het vaakst tussen komt is werkstress, en dat is precies wat onze training vermindert.",
+      "subtitle": "Duurzame inzetbaarheid begint bij minder werkstress. Onze training leert je medewerkers spanning vroeg herkennen en op tijd bijsturen.",
       "cta": "Bereken wat het jullie oplevert",
       "statsTitle": "Waarom organisaties ons kiezen",
       "stats": [
@@ -31,32 +31,27 @@
     },
     "challenges": {
       "title": "Herken je één van deze <0>uitdagingen</0>?",
-      "subtitle": "Deze organisatie uitdagingen pakken wij aan met onze methode.",
+      "subtitle": "Deze uitdagingen pakken wij aan met onze breintraining.",
       "items": [
         {
-          "icon": "AlertCircle",
-          "title": "Grenzen aangeven is moeilijk",
-          "text": "Medewerkers zijn enthousiast maar nemen vaak hun eigen grenzen niet serieus. Soms gaan ze zelfs door tot het te laat is met stress uitval als gevolg."
-        },
-        {
           "icon": "Activity",
-          "title": "Kernspelers en talent behouden is uitdagend",
-          "text": "Belangrijk personeel wil je graag betrokken houden. Door de drukte op de arbeidsmarkt is dat extra lastig."
-        },
-        {
-          "icon": "Shield",
-          "title": "Sociale veiligheid onder druk",
-          "text": "Hiërarchie, culturele verschillen of verschillende waardes kunnen leiden tot botsingen, ongemakkelijk gedrag of zelfs een onveilige sfeer."
-        },
-        {
-          "icon": "Heart",
-          "title": "Emoties op de werkvloer",
-          "text": "Medewerkers kunnen te maken hebben met emotioneel uitdagende situaties. Dit kan leiden tot stress, impulsieve reacties en verminderde samenwerking."
+          "title": "Hoge werkdruk",
+          "text": "De hoeveelheid werk en ambities leiden tot spanning en druk."
         },
         {
           "icon": "AlertCircle",
-          "title": "Verzuim is te hoog",
-          "text": "Stress- en burn-outklachten zijn een terugkerend probleem. Medewerkers vallen uit en daardoor neemt de werkdruk verder toe."
+          "title": "Moeilijk grenzen aangeven",
+          "text": "Medewerkers zijn enthousiast, maar vinden het moeilijk om hun eigen grenzen te bewaken."
+        },
+        {
+          "icon": "BedDouble",
+          "title": "Hoog verzuim",
+          "text": "Medewerkers vallen uit omdat stressklachten een terugkerend probleem zijn."
+        },
+        {
+          "icon": "Users",
+          "title": "Verloop van kernspelers",
+          "text": "Je kernspelers zijn gewild, en op deze arbeidsmarkt zijn ze zo weg."
         }
       ]
     },
@@ -65,38 +60,35 @@
       "subtitle": "De wetenschappelijk bewezen effecten van onze training.",
       "items": [
         {
-          "icon": "Brain",
-          "title": "Stress vroeg herkennen",
+          "icon": "TreeDeciduous",
+          "title": "Minder spanning",
           "bullets": [
-            "Medewerkers leren stresssignalen opmerken voordat het te laat is. Ze nemen regie over hun eigen stress en kunnen bijsturen voordat uitval optreedt."
-          ]
-        },
-        {
-          "icon": "Heart",
-          "title": "Sterkere emotieregulatie",
-          "bullets": [
-            "Drukte en emoties op de werkvloer worden beheersbaar. Impulsiviteit neemt af omdat het controlecentrum in het brein wordt sterker."
+            "Medewerkers herkennen spanning eerder en trekken op tijd aan de bel.",
+            "Meer eigenaarschap over de eigen werkdruk."
           ]
         },
         {
           "icon": "Shield",
-          "title": "Regie over werkdruk",
+          "title": "Eigen grenzen bewaken",
           "bullets": [
-            "Door sterker stressbewustzijn zeggen medewerkers 'nee' wanneer ze tegen hun grenzen lopen. Eigenaarschap vermindert stress en voorkomt uitval."
+            "Medewerkers zeggen op tijd nee als het te veel wordt.",
+            "Ze sturen bij voordat het misgaat."
           ]
         },
         {
           "icon": "CheckCircle",
-          "title": "Sociaal veilige werkplek",
+          "title": "Minder verzuim",
           "bullets": [
-            "Medewerkers kunnen ongepaste reacties onderdrukken. Hierdoor wordt de kennis over sociale veiligheid ook echt toegepast. De sociale veiligheid en samenwerking verbeterd."
+            "Stressklachten worden vroeg opgemerkt, vóór de uitval.",
+            "Minder langdurige uitval, dus minder druk op de rest."
           ]
         },
         {
           "icon": "Smile",
-          "title": "Talent behouden",
+          "title": "Talent blijft",
           "bullets": [
-            "Medewerkers ervaren minder werkdruk en meer werkplezier en betrokkenheid. Dit verlaagt het personeelsverloop en helpt talent aan de organisatie te binden."
+            "Meer werkplezier en betrokkenheid.",
+            "Lager verloop, je kernspelers blijven."
           ]
         }
       ]
@@ -677,6 +669,11 @@
           "icon": "AlertCircle",
           "title": "Veel ballen hoog houden",
           "text": "Je team heeft niet alleen een drukke baan maar ook een privéleven dat veel aandacht vraagt."
+        },
+        {
+          "icon": "BedDouble",
+          "title": "Hoge verzuimkosten",
+          "text": "Ziekteverzuim is een hoge, terugkerende kostenpost."
         }
       ]
     },
@@ -688,8 +685,7 @@
           "icon": "TreeDeciduous",
           "title": "Minder spanning",
           "bullets": [
-            "Jouw team herkent stress eerder en trekt op tijd aan de bel.",
-            "Minder verzuim en minder langdurige uitval."
+            "Jouw team herkent stress eerder en trekt op tijd aan de bel."
           ]
         },
         {
@@ -707,6 +703,14 @@
           "bullets": [
             "Betere concentratie en minder fouten, ook onder druk.",
             "De productiviteit stijgt terwijl spanning juist afneemt."
+          ]
+        },
+        {
+          "icon": "CheckCircle",
+          "title": "Minder verzuimkosten",
+          "bullets": [
+            "Minder verzuim en minder langdurige uitval.",
+            "Een kostenpost die structureel omlaag gaat."
           ]
         }
       ]
