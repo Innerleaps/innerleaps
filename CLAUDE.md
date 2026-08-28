@@ -405,8 +405,9 @@ Drie dingen om te weten:
 
 ## Er ligt een SEO-basismeting, gebruik die
 
-Op 27 augustus 2026 is van 16 pagina's een momentopname vastgelegd: de acht
-Nederlandse kernpagina's en hun acht Engelse tegenhangers. Vastgelegd zijn
+Op 28 augustus 2026 is van 16 pagina's een momentopname vastgelegd: de acht
+Nederlandse kernpagina's en hun acht Engelse tegenhangers. Dat is de meting ná
+de WebP-deploy, dus die is de nieuwe nullijn. Vastgelegd zijn
 title, meta description, canonical, robots, alle koppen, de JSON-LD-schema's,
 de Open Graph-tags en de HTTP-status. Ze staan in
 `~/.cache/claude-seo/drift/baselines.db`.
