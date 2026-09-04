@@ -51,6 +51,10 @@ const CalculatorModal = ({ isOpen, onClose }: CalculatorModalProps) => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   // Zie ROICalculator: pas rood na het verlaten van het veld.
   const [emailAangeraakt, setEmailAangeraakt] = useState(false);
+  // De rode regel onder de knop stond er meteen bij het openen, dus voordat de
+  // bezoeker iets had kunnen invullen. Dat leest als een standje voor iets wat
+  // je nog niet gedaan hebt. Nu pas na een poging tot verzenden.
+  const [pogingGedaan, setPogingGedaan] = useState(false);
 
   const isEN = i18n.language?.startsWith('en');
 
@@ -81,6 +85,7 @@ const CalculatorModal = ({ isOpen, onClose }: CalculatorModalProps) => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setPogingGedaan(true);
 
     // Zonder werkend adres is deze lead onbereikbaar. Zie ROICalculator.
     if (!isGeldigEmail(formData.email)) {
@@ -182,7 +187,7 @@ const CalculatorModal = ({ isOpen, onClose }: CalculatorModalProps) => {
 
   return (
     <Dialog open={isOpen} onOpenChange={handleClose}>
-      <DialogContent className="sm:max-w-4xl max-h-[90vh] overflow-y-auto bg-white">
+      <DialogContent className="sm:max-w-4xl sm:max-h-[90vh] overflow-y-auto bg-white">
         <DialogHeader>
           <div className="text-center">
             <div className="inline-flex items-center bg-brand-blue/10 text-brand-blue px-4 py-2 rounded-full text-base font-medium mb-6">
@@ -363,7 +368,7 @@ const CalculatorModal = ({ isOpen, onClose }: CalculatorModalProps) => {
                   {isSubmitting ? t('submit.loading') : t('submit.idle')}
                 </Button>
               </div>
-              {!isFormValid() && (
+              {pogingGedaan && !isFormValid() && (
                 <p className="text-base text-red-600 mt-2">{t('validation.missing')}</p>
               )}
             </div>

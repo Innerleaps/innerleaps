@@ -163,7 +163,7 @@ const MasterclassFormModal = ({
     }
   };
   return <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="max-w-2xl max-h-[90vh] overflow-y-auto bg-white">
+      <DialogContent className="max-w-2xl sm:max-h-[90vh] overflow-y-auto bg-white">
         <DialogHeader>
           <DialogTitle className="text-2xl md:text-3xl font-bold text-brand-purple text-center">
             Aanmelden Gratis Masterclass

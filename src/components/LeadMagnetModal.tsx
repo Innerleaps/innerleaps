@@ -141,7 +141,7 @@ const LeadMagnetModal = ({ isOpen, onClose }: LeadMagnetModalProps) => {
 
   return (
     <Dialog open={isOpen} onOpenChange={handleClose}>
-      <DialogContent className="sm:max-w-lg max-h-[90vh] overflow-y-auto bg-white">
+      <DialogContent className="sm:max-w-lg sm:max-h-[90vh] overflow-y-auto bg-white">
         <div className="bg-brand-blue p-6 rounded-xl">
           <DialogHeader>
             <DialogTitle className="text-2xl font-bold text-white">
