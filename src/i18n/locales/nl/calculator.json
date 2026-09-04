@@ -20,13 +20,11 @@
     "phone": "Telefoon",
     "phonePlaceholder": "06 12345678",
     "absenteeism": "Huidig verzuimpercentage (%)",
-    "absenteeismPlaceholder": "5.2",
-    "turnover": "Personeelsverloop percentage (%)",
-    "turnoverPlaceholder": "10",
+    "absenteeismPlaceholder": "5,2",
     "employees": "Aantal werknemers",
     "employeesPlaceholder": "15",
     "salary": "Gemiddeld bruto jaarsalaris per werknemer (€)",
-    "salaryPlaceholder": "39700"
+    "salaryPlaceholder": "39.700"
   },
   "submit": {
     "idle": "Bereken Besparing",
@@ -48,13 +46,11 @@
     "employees": "Werknemers",
     "avgSalary": "Gem. salaris",
     "absenteeism": "Verzuim",
-    "turnover": "Verloop",
     "conservative": "Voorzichtige berekening",
     "conservativeTag": "Ondergrens",
     "positive": "Positief scenario",
     "positiveTag": "Volledige impact",
     "absenteeismSaving": "Verzuimbesparing",
-    "retentionSaving": "Retentiebesparing",
     "productivityGain": "Productiviteitswinst",
     "totalSaving": "Totale besparing",
     "investment": "Investering",
@@ -63,7 +59,6 @@
     "scientificTitle": "Wetenschappelijke Onderbouwing",
     "scientificIntro": "Deze cijfers zijn gebaseerd op 40 jaar wetenschappelijk onderzoek naar aandachttraining:",
     "scientific1": "15-21% verzuimreductie (meta-analyses van 200+ studies)",
-    "scientific2": "5-8% retentieverbetering (Harvard Business Review, 2019)",
-    "scientific3": "5-8% productiviteitsverbetering (Oxford University, 2022)"
+    "scientific2": "5-8% productiviteitsverbetering (Oxford University, 2022)"
   }
 }

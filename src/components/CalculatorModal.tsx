@@ -11,6 +11,7 @@ import { toast } from '@/hooks/use-toast';
 import { supabase } from '@/integrations/supabase/client';
 import { calculateROI } from '@/utils/calculationEngine';
 import { isGeldigEmail } from '@/lib/email';
+import { naarDecimaal, naarGeheel } from '@/lib/getallen';
 import {
   bewaarRoiOverdracht,
   doelgroepVoorPad,
@@ -43,7 +44,6 @@ const CalculatorModal = ({ isOpen, onClose }: CalculatorModalProps) => {
     bedrijfsnaam: '',
     telefoon: '',
     verzuimPercentage: '',
-    verloopPercentage: '',
     aantalWerknemers: '',
     brutoJaarsalaris: '',
   });
@@ -60,15 +60,22 @@ const CalculatorModal = ({ isOpen, onClose }: CalculatorModalProps) => {
 
   const emailOngeldig = formData.email.trim() !== '' && !isGeldigEmail(formData.email);
 
+  /** Zie ROICalculator: netjes zetten bij het verlaten, niet tijdens het tikken. */
+  const netjesZetten = (veld: 'brutoJaarsalaris' | 'aantalWerknemers') => () => {
+    const getal = naarGeheel(formData[veld]);
+    if (getal !== null) {
+      handleInputChange(veld, getal.toLocaleString(isEN ? 'en-GB' : 'nl-NL'));
+    }
+  };
+
   const isFormValid = () => {
     return (
       formData.naam.trim() !== '' &&
       formData.email.trim() !== '' &&
       formData.bedrijfsnaam.trim() !== '' &&
-      formData.verzuimPercentage.trim() !== '' &&
-      formData.verloopPercentage.trim() !== '' &&
-      formData.aantalWerknemers.trim() !== '' &&
-      formData.brutoJaarsalaris.trim() !== ''
+      naarDecimaal(formData.verzuimPercentage) !== null &&
+      naarGeheel(formData.aantalWerknemers) !== null &&
+      naarGeheel(formData.brutoJaarsalaris) !== null
     );
   };
 
@@ -96,10 +103,9 @@ const CalculatorModal = ({ isOpen, onClose }: CalculatorModalProps) => {
     }
 
     const results = calculateROI({
-      currentAbsenteeism: parseFloat(formData.verzuimPercentage),
-      employeeTurnover: parseFloat(formData.verloopPercentage),
-      numberOfEmployees: parseInt(formData.aantalWerknemers),
-      avgGrossAnnualSalary: parseInt(formData.brutoJaarsalaris),
+      currentAbsenteeism: naarDecimaal(formData.verzuimPercentage)!,
+      numberOfEmployees: naarGeheel(formData.aantalWerknemers)!,
+      avgGrossAnnualSalary: naarGeheel(formData.brutoJaarsalaris)!,
     });
 
     setIsSubmitting(true);
@@ -128,11 +134,19 @@ const CalculatorModal = ({ isOpen, onClose }: CalculatorModalProps) => {
           email: formData.email,
           company: formData.bedrijfsnaam,
           phone: formData.telefoon || '',
-          currentAbsenteeism: parseFloat(formData.verzuimPercentage),
-          employeeTurnover: parseFloat(formData.verloopPercentage),
-          numberOfEmployees: parseInt(formData.aantalWerknemers),
-          avgGrossAnnualSalary: parseInt(formData.brutoJaarsalaris),
-          results,
+          currentAbsenteeism: naarDecimaal(formData.verzuimPercentage)!,
+          numberOfEmployees: naarGeheel(formData.aantalWerknemers)!,
+          avgGrossAnnualSalary: naarGeheel(formData.brutoJaarsalaris)!,
+          // Zie ROICalculator: deze twee staan op nul zolang de oude Edge
+          // Function nog draait.
+          employeeTurnover: 0,
+          results: {
+            ...results,
+            scenarios: {
+              conservative: { ...results.scenarios.conservative, retentieBesparing: 0 },
+              positive: { ...results.scenarios.positive, retentieBesparing: 0 },
+            },
+          },
           language: isEN ? 'en' : 'nl',
         },
       });
@@ -151,7 +165,6 @@ const CalculatorModal = ({ isOpen, onClose }: CalculatorModalProps) => {
         aantalWerknemers: formData.aantalWerknemers,
         brutoJaarsalaris: formData.brutoJaarsalaris,
         verzuimPercentage: formData.verzuimPercentage,
-        verloopPercentage: formData.verloopPercentage,
       },
       emailHash: await hashEmail(formData.email),
       mailVerstuurd,
@@ -200,6 +213,8 @@ const CalculatorModal = ({ isOpen, onClose }: CalculatorModalProps) => {
                   </Label>
                   <Input
                     id="modal-naam"
+                    name="naam"
+                    autoComplete="name"
                     type="text"
                     value={formData.naam}
                     onChange={(e) => handleInputChange('naam', e.target.value)}
@@ -215,6 +230,8 @@ const CalculatorModal = ({ isOpen, onClose }: CalculatorModalProps) => {
                   </Label>
                   <Input
                     id="modal-email"
+                    name="email"
+                    autoComplete="email"
                     type="email"
                     value={formData.email}
                     onChange={(e) => handleInputChange('email', e.target.value)}
@@ -238,6 +255,8 @@ const CalculatorModal = ({ isOpen, onClose }: CalculatorModalProps) => {
                   </Label>
                   <Input
                     id="modal-bedrijfsnaam"
+                    name="bedrijfsnaam"
+                    autoComplete="organization"
                     type="text"
                     value={formData.bedrijfsnaam}
                     onChange={(e) => handleInputChange('bedrijfsnaam', e.target.value)}
@@ -253,6 +272,8 @@ const CalculatorModal = ({ isOpen, onClose }: CalculatorModalProps) => {
                   </Label>
                   <Input
                     id="modal-telefoon"
+                    name="telefoon"
+                    autoComplete="tel"
                     type="tel"
                     value={formData.telefoon}
                     onChange={(e) => handleInputChange('telefoon', e.target.value)}
@@ -272,28 +293,14 @@ const CalculatorModal = ({ isOpen, onClose }: CalculatorModalProps) => {
                   </Label>
                   <Input
                     id="modal-verzuim"
-                    type="number"
-                    step="0.1"
+                    name="verzuimPercentage"
+                    autoComplete="off"
+                    type="text"
+                    inputMode="decimal"
                     value={formData.verzuimPercentage}
                     onChange={(e) => handleInputChange('verzuimPercentage', e.target.value)}
                     className="bg-white border-gray-300 text-brand-gray-dark placeholder:text-gray-400"
                     placeholder={t('fields.absenteeismPlaceholder')}
-                    required
-                  />
-                </div>
-
-                <div className="space-y-2">
-                  <Label htmlFor="modal-verloop" className="text-brand-gray-dark font-medium">
-                    {t('fields.turnover')}*
-                  </Label>
-                  <Input
-                    id="modal-verloop"
-                    type="number"
-                    step="0.1"
-                    value={formData.verloopPercentage}
-                    onChange={(e) => handleInputChange('verloopPercentage', e.target.value)}
-                    className="bg-white border-gray-300 text-brand-gray-dark placeholder:text-gray-400"
-                    placeholder={t('fields.turnoverPlaceholder')}
                     required
                   />
                 </div>
@@ -304,9 +311,13 @@ const CalculatorModal = ({ isOpen, onClose }: CalculatorModalProps) => {
                   </Label>
                   <Input
                     id="modal-werknemers"
-                    type="number"
+                    name="aantalWerknemers"
+                    autoComplete="off"
+                    type="text"
+                    inputMode="numeric"
                     value={formData.aantalWerknemers}
                     onChange={(e) => handleInputChange('aantalWerknemers', e.target.value)}
+                    onBlur={netjesZetten('aantalWerknemers')}
                     className="bg-white border-gray-300 text-brand-gray-dark placeholder:text-gray-400"
                     placeholder={t('fields.employeesPlaceholder')}
                     required
@@ -319,9 +330,13 @@ const CalculatorModal = ({ isOpen, onClose }: CalculatorModalProps) => {
                   </Label>
                   <Input
                     id="modal-salaris"
-                    type="number"
+                    name="brutoJaarsalaris"
+                    autoComplete="off"
+                    type="text"
+                    inputMode="numeric"
                     value={formData.brutoJaarsalaris}
                     onChange={(e) => handleInputChange('brutoJaarsalaris', e.target.value)}
+                    onBlur={netjesZetten('brutoJaarsalaris')}
                     className="bg-white border-gray-300 text-brand-gray-dark placeholder:text-gray-400"
                     placeholder={t('fields.salaryPlaceholder')}
                     required

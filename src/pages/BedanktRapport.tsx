@@ -68,7 +68,7 @@ const BedanktRapport = () => {
                   <Trans i18nKey="rapport.onderzoekTitle" t={t} components={[<span className="text-brand-orange" />]} />
                 </h2>
                 <ul className="space-y-2 text-base text-brand-gray-medium">
-                  {["scientific1", "scientific2", "scientific3"].map((sleutel) => (
+                  {["scientific1", "scientific2"].map((sleutel) => (
                     <li key={sleutel} className="flex items-start">
                       <span className="mr-2 text-brand-orange">•</span>
                       <span>{tCalculator(`results.${sleutel}`)}</span>

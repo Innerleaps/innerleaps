@@ -10,6 +10,7 @@ import { supabase } from '@/integrations/supabase/client';
 import { useToast } from '@/hooks/use-toast';
 import { calculateROI } from '@/utils/calculationEngine';
 import { isGeldigEmail } from '@/lib/email';
+import { naarDecimaal, naarGeheel } from '@/lib/getallen';
 import {
   bewaarRoiOverdracht,
   doelgroepVoorPad,
@@ -37,7 +38,6 @@ const ROICalculator = () => {
     bedrijfsnaam: '',
     telefoon: '',
     verzuimPercentage: '',
-    verloopPercentage: '',
     aantalWerknemers: '',
     brutoJaarsalaris: '',
   });
@@ -54,15 +54,26 @@ const ROICalculator = () => {
   const isEN = i18n.language?.startsWith('en');
   const emailOngeldig = formData.email.trim() !== '' && !isGeldigEmail(formData.email);
 
+  /**
+   * Bij het verlaten van het veld het bedrag netjes zetten, met punten als
+   * duizendtalscheiding. Niet tijdens het tikken: dan verspringt de cursor bij
+   * elk cijfer dat er een scheiding bij duwt.
+   */
+  const netjesZetten = (veld: 'brutoJaarsalaris' | 'aantalWerknemers') => () => {
+    const getal = naarGeheel(formData[veld]);
+    if (getal !== null) {
+      handleInputChange(veld, getal.toLocaleString(isEN ? 'en-GB' : 'nl-NL'));
+    }
+  };
+
   const isFormValid = () => {
     return (
       formData.naam.trim() !== '' &&
       formData.email.trim() !== '' &&
       formData.bedrijfsnaam.trim() !== '' &&
-      formData.verzuimPercentage.trim() !== '' &&
-      formData.verloopPercentage.trim() !== '' &&
-      formData.aantalWerknemers.trim() !== '' &&
-      formData.brutoJaarsalaris.trim() !== ''
+      naarDecimaal(formData.verzuimPercentage) !== null &&
+      naarGeheel(formData.aantalWerknemers) !== null &&
+      naarGeheel(formData.brutoJaarsalaris) !== null
     );
   };
 
@@ -90,10 +101,9 @@ const ROICalculator = () => {
     }
 
     const results = calculateROI({
-      currentAbsenteeism: parseFloat(formData.verzuimPercentage),
-      employeeTurnover: parseFloat(formData.verloopPercentage),
-      numberOfEmployees: parseInt(formData.aantalWerknemers),
-      avgGrossAnnualSalary: parseInt(formData.brutoJaarsalaris),
+      currentAbsenteeism: naarDecimaal(formData.verzuimPercentage)!,
+      numberOfEmployees: naarGeheel(formData.aantalWerknemers)!,
+      avgGrossAnnualSalary: naarGeheel(formData.brutoJaarsalaris)!,
     });
 
     setIsSubmitting(true);
@@ -122,11 +132,20 @@ const ROICalculator = () => {
           email: formData.email,
           company: formData.bedrijfsnaam,
           phone: formData.telefoon || '',
-          currentAbsenteeism: parseFloat(formData.verzuimPercentage),
-          employeeTurnover: parseFloat(formData.verloopPercentage),
-          numberOfEmployees: parseInt(formData.aantalWerknemers),
-          avgGrossAnnualSalary: parseInt(formData.brutoJaarsalaris),
-          results,
+          currentAbsenteeism: naarDecimaal(formData.verzuimPercentage)!,
+          numberOfEmployees: naarGeheel(formData.aantalWerknemers)!,
+          avgGrossAnnualSalary: naarGeheel(formData.brutoJaarsalaris)!,
+          // De Edge Function die nu draait eist deze twee velden nog. Ze staan
+          // hier op nul zodat de site blijft werken tot die functie opnieuw is
+          // uitgerold. Zie het commentaar in supabase/functions/submit-calculator.
+          employeeTurnover: 0,
+          results: {
+            ...results,
+            scenarios: {
+              conservative: { ...results.scenarios.conservative, retentieBesparing: 0 },
+              positive: { ...results.scenarios.positive, retentieBesparing: 0 },
+            },
+          },
           language: isEN ? 'en' : 'nl',
         },
       });
@@ -145,7 +164,6 @@ const ROICalculator = () => {
         aantalWerknemers: formData.aantalWerknemers,
         brutoJaarsalaris: formData.brutoJaarsalaris,
         verzuimPercentage: formData.verzuimPercentage,
-        verloopPercentage: formData.verloopPercentage,
       },
       emailHash: await hashEmail(formData.email),
       mailVerstuurd,
@@ -181,6 +199,8 @@ const ROICalculator = () => {
                 </Label>
                 <Input
                   id="naam"
+                  name="naam"
+                  autoComplete="name"
                   type="text"
                   value={formData.naam}
                   onChange={(e) => handleInputChange('naam', e.target.value)}
@@ -195,6 +215,8 @@ const ROICalculator = () => {
                 </Label>
                 <Input
                   id="email"
+                  name="email"
+                  autoComplete="email"
                   type="email"
                   value={formData.email}
                   onChange={(e) => handleInputChange('email', e.target.value)}
@@ -217,6 +239,8 @@ const ROICalculator = () => {
                 </Label>
                 <Input
                   id="bedrijfsnaam"
+                  name="bedrijfsnaam"
+                  autoComplete="organization"
                   type="text"
                   value={formData.bedrijfsnaam}
                   onChange={(e) => handleInputChange('bedrijfsnaam', e.target.value)}
@@ -231,6 +255,8 @@ const ROICalculator = () => {
                 </Label>
                 <Input
                   id="telefoon"
+                  name="telefoon"
+                  autoComplete="tel"
                   type="tel"
                   value={formData.telefoon}
                   onChange={(e) => handleInputChange('telefoon', e.target.value)}
@@ -250,26 +276,13 @@ const ROICalculator = () => {
                 </Label>
                 <Input
                   id="verzuimPercentage"
-                  type="number"
-                  step="0.1"
+                  name="verzuimPercentage"
+                  autoComplete="off"
+                  type="text"
+                  inputMode="decimal"
                   value={formData.verzuimPercentage}
                   onChange={(e) => handleInputChange('verzuimPercentage', e.target.value)}
                   placeholder={t('fields.absenteeismPlaceholder')}
-                  className="mt-1 placeholder:text-gray-400"
-                />
-              </div>
-
-              <div>
-                <Label htmlFor="verloopPercentage" className="text-white font-medium">
-                  {t('fields.turnover')} *
-                </Label>
-                <Input
-                  id="verloopPercentage"
-                  type="number"
-                  step="0.1"
-                  value={formData.verloopPercentage}
-                  onChange={(e) => handleInputChange('verloopPercentage', e.target.value)}
-                  placeholder={t('fields.turnoverPlaceholder')}
                   className="mt-1 placeholder:text-gray-400"
                 />
               </div>
@@ -280,9 +293,13 @@ const ROICalculator = () => {
                 </Label>
                 <Input
                   id="aantalWerknemers"
-                  type="number"
+                  name="aantalWerknemers"
+                  autoComplete="off"
+                  type="text"
+                  inputMode="numeric"
                   value={formData.aantalWerknemers}
                   onChange={(e) => handleInputChange('aantalWerknemers', e.target.value)}
+                  onBlur={netjesZetten('aantalWerknemers')}
                   placeholder={t('fields.employeesPlaceholder')}
                   className="mt-1 placeholder:text-gray-400"
                 />
@@ -294,9 +311,13 @@ const ROICalculator = () => {
                 </Label>
                 <Input
                   id="brutoJaarsalaris"
-                  type="number"
+                  name="brutoJaarsalaris"
+                  autoComplete="off"
+                  type="text"
+                  inputMode="numeric"
                   value={formData.brutoJaarsalaris}
                   onChange={(e) => handleInputChange('brutoJaarsalaris', e.target.value)}
+                  onBlur={netjesZetten('brutoJaarsalaris')}
                   placeholder={t('fields.salaryPlaceholder')}
                   className="mt-1 placeholder:text-gray-400"
                 />

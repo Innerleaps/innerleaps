@@ -161,6 +161,8 @@ const LeadMagnetModal = ({ isOpen, onClose }: LeadMagnetModalProps) => {
                 </Label>
                 <Input
                   id="naam"
+                  name="naam"
+                  autoComplete="name"
                   type="text"
                   value={formData.naam}
                   onChange={handleInputChange('naam')}
@@ -175,6 +177,8 @@ const LeadMagnetModal = ({ isOpen, onClose }: LeadMagnetModalProps) => {
                 </Label>
                 <Input
                   id="email"
+                  name="email"
+                  autoComplete="email"
                   type="email"
                   value={formData.email}
                   onChange={handleInputChange('email')}
@@ -197,6 +201,8 @@ const LeadMagnetModal = ({ isOpen, onClose }: LeadMagnetModalProps) => {
                 </Label>
                 <Input
                   id="telefoon"
+                  name="telefoon"
+                  autoComplete="tel"
                   type="tel"
                   value={formData.telefoon}
                   onChange={handleInputChange('telefoon')}
@@ -211,6 +217,8 @@ const LeadMagnetModal = ({ isOpen, onClose }: LeadMagnetModalProps) => {
                 </Label>
                 <Input
                   id="bedrijfsnaam"
+                  name="bedrijfsnaam"
+                  autoComplete="organization"
                   type="text"
                   value={formData.bedrijfsnaam}
                   onChange={handleInputChange('bedrijfsnaam')}
@@ -225,6 +233,8 @@ const LeadMagnetModal = ({ isOpen, onClose }: LeadMagnetModalProps) => {
                 </Label>
                 <Input
                   id="functie"
+                  name="functie"
+                  autoComplete="organization-title"
                   type="text"
                   value={formData.functie}
                   onChange={handleInputChange('functie')}

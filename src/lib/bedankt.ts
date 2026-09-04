@@ -81,7 +81,6 @@ export interface RoiOverdracht {
     aantalWerknemers: string;
     brutoJaarsalaris: string;
     verzuimPercentage: string;
-    verloopPercentage: string;
   };
   /** Gehasht, nooit het adres zelf. Voor Enhanced Conversions. */
   emailHash: string | null;

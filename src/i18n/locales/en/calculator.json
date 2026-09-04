@@ -21,12 +21,10 @@
     "phonePlaceholder": "+31 6 12345678",
     "absenteeism": "Current absenteeism rate (%)",
     "absenteeismPlaceholder": "5.2",
-    "turnover": "Employee turnover rate (%)",
-    "turnoverPlaceholder": "10",
     "employees": "Number of employees",
     "employeesPlaceholder": "15",
     "salary": "Average gross annual salary per employee (€)",
-    "salaryPlaceholder": "39700"
+    "salaryPlaceholder": "39,700"
   },
   "submit": {
     "idle": "Calculate savings",
@@ -48,13 +46,11 @@
     "employees": "Employees",
     "avgSalary": "Avg. salary",
     "absenteeism": "Absenteeism",
-    "turnover": "Turnover",
     "conservative": "Cautious calculation",
     "conservativeTag": "Lower bound",
     "positive": "Positive scenario",
     "positiveTag": "Full impact",
     "absenteeismSaving": "Absenteeism saving",
-    "retentionSaving": "Retention saving",
     "productivityGain": "Productivity gain",
     "totalSaving": "Total saving",
     "investment": "Investment",
@@ -63,7 +59,6 @@
     "scientificTitle": "Scientific basis",
     "scientificIntro": "These figures are based on 40 years of scientific research into awareness training:",
     "scientific1": "15-21% reduction in absenteeism (meta-analyses of 200+ studies)",
-    "scientific2": "5-8% retention improvement (Harvard Business Review, 2019)",
-    "scientific3": "5-8% productivity improvement (Oxford University, 2022)"
+    "scientific2": "5-8% productivity improvement (Oxford University, 2022)"
   }
 }
