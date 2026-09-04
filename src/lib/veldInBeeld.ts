@@ -1,40 +1,44 @@
 /**
- * Een veld dat focus krijgt in een pop-up terughalen als het buiten beeld staat.
+ * Voorkomen dat het scherm wegspringt als je een veld in een pop-up aantikt.
  *
- * Waarom dit er is. Op iOS gebeurt er bij het aantikken van een veld veel
- * tegelijk: het toetsenbord schuift omhoog, het zichtbare venster krimpt, en
- * Safari scrolt zelf om het veld in beeld te brengen. In een pop-up met een
- * eigen scrollgebied pakt dat verkeerd uit: het veld met de focus verdween
- * boven beeld en je keek naar de velden eronder.
+ * Het probleem in drie stappen. Je tikt een veld aan, iOS begint het toetsenbord
+ * te tonen, en Safari scrolt vast vooruit om het veld "in beeld te brengen".
+ * Dat gokt hij op het scherm zoals het nu is, niet zoals het straks is, en in
+ * een pop-up met een eigen scrollgebied schiet hij daarbij door. Het veld
+ * verdwijnt uit beeld en je kijkt naar de velden eronder.
  *
- * Twee eerdere pogingen hielpen niet. Ruimte vrijhouden met scroll-margin lost
- * het niet op, want boven een pop-up staat geen menubalk. De pop-up vastplakken
- * aan het zichtbare venster evenmin: dat is een race met Safari en die verloor
- * hij, waarna je onder de pop-up door naar de pagina erachter keek.
+ * De eerste versie hiervan haalde het veld daarna terug. Dat werkte, maar je
+ * zag de fout gebeuren: het scherm sprong weg en kwam weer terug.
  *
- * Dus grijpen we achteraf in, en alleen als het misging.
+ * Nu houden we de scrollpositie vast zodra een veld focus krijgt. Zolang het
+ * toetsenbord bezig is met verschijnen zetten we elke beeldopbouw de scroll
+ * terug op waar hij stond. Safari mag scrollen wat hij wil, je ziet het niet.
+ * Zodra het toetsenbord staat kijken we één keer of het veld werkelijk bedekt
+ * is. Alleen dan bewegen we, en dan in één keer naar de goede plek.
  *
- * Twee regels houden dit veilig. We doen niets zolang het veld gewoon zichtbaar
- * is, dus in het slechtste geval blijft het bij het gedrag van de browser zelf
- * en maken we het nooit erger. En we kijken op meerdere momenten, want wanneer
- * het toetsenbord klaar is met verschijnen verschilt per toestel.
+ * Dus: nul beweging als het niet nodig is, en anders één beweging in plaats van
+ * heen en weer.
  */
 
 /** Alleen op telefoonformaat. Op een groot scherm is er geen toetsenbord dat
  *  de halve pagina opeet en doet de browser het prima. */
 const TELEFOON = "(max-width: 639px)";
 
-/** Momenten waarop we kijken, geteld vanaf de focus. Het toetsenbord is er bij
- *  de een sneller dan bij de ander. */
-const MOMENTEN = [150, 400, 800];
+/**
+ * Hoe lang we de scroll vasthouden als de viewport zich niet meldt.
+ *
+ * Lang genoeg om de sprong van Safari op te vangen, kort genoeg om niet in de
+ * weg te zitten als het toetsenbord al openstond en je gewoon naar het volgende
+ * veld gaat. Meldt de viewport zich wel, dan stoppen we eerder.
+ */
+const MAXIMAAL_VASTHOUDEN = 300;
 
-/** Waar het veld heen gaat als het echt buiten beeld staat: een kwart onder de
- *  bovenkant van het zichtbare deel. Hoog genoeg om het label en het vorige
- *  veld te zien, laag genoeg om niet tegen de rand te plakken. */
+/** Waar het veld heen gaat als het echt bedekt is: een kwart onder de bovenkant
+ *  van het zichtbare deel. Hoog genoeg om het label en het vorige veld te zien,
+ *  laag genoeg om niet tegen de rand te plakken. */
 const AANDEEL_VAN_BOVEN = 0.25;
 
-/** Speling, zodat een veld dat net tegen de rand aan staat niet meteen als
- *  buiten beeld telt. */
+/** Speling, zodat een veld dat net tegen de rand staat niet als bedekt telt. */
 const SPELING = 8;
 
 const zichtbaarVenster = () => {
@@ -44,45 +48,92 @@ const zichtbaarVenster = () => {
     : { top: 0, hoogte: window.innerHeight };
 };
 
-const herstel = (veld: HTMLElement) => {
-  if (!window.matchMedia(TELEFOON).matches) return;
-  if (document.activeElement !== veld) return;
-
-  // Alleen binnen een pop-up. Op een gewone pagina houdt scroll-margin in
-  // index.css al ruimte vrij voor de menubalk.
-  const scrollgebied = veld.closest<HTMLElement>('[role="dialog"]');
-  if (!scrollgebied) return;
-
+const staatInBeeld = (veld: HTMLElement) => {
   const { top, hoogte } = zichtbaarVenster();
   const rand = veld.getBoundingClientRect();
+  return rand.top >= top + SPELING && rand.bottom <= top + hoogte - SPELING;
+};
 
-  // Staat hij gewoon in beeld? Dan afblijven. Dit is de belangrijkste regel:
-  // hij zorgt dat we nooit iets verplaatsen wat al goed stond.
-  if (rand.top >= top + SPELING && rand.bottom <= top + hoogte - SPELING) return;
-
-  const doel = top + hoogte * AANDEEL_VAN_BOVEN;
-  // Direct, niet vloeiend. Een vloeiende beweging kan door de browser
-  // onderbroken worden terwijl hij zelf ook aan het scrollen is.
-  scrollgebied.scrollBy({ top: rand.top - doel });
+/**
+ * Eén keer beslissen, als het toetsenbord staat. Staat het veld gewoon in beeld,
+ * dan gebeurt er niets. Dat is de belangrijkste regel: zo kan dit het nooit
+ * erger maken dan het gedrag van de browser zelf.
+ */
+const beslis = (veld: HTMLElement, gebied: HTMLElement) => {
+  if (document.activeElement !== veld) return;
+  if (staatInBeeld(veld)) return;
+  const { top, hoogte } = zichtbaarVenster();
+  gebied.scrollBy({ top: veld.getBoundingClientRect().top - (top + hoogte * AANDEEL_VAN_BOVEN) });
 };
 
 if (typeof window !== "undefined") {
-  let timers: number[] = [];
+  let stop: (() => void) | null = null;
 
-  const plan = (veld: HTMLElement) => {
-    timers.forEach(window.clearTimeout);
-    timers = MOMENTEN.map((ms) => window.setTimeout(() => herstel(veld), ms));
+  const begeleid = (veld: HTMLElement) => {
+    stop?.();
+
+    if (!window.matchMedia(TELEFOON).matches) return;
+    // Alleen binnen een pop-up. Op een gewone pagina houdt de scroll-margin in
+    // index.css al ruimte vrij voor de menubalk.
+    const gebied = veld.closest<HTMLElement>('[role="dialog"]');
+    if (!gebied) return;
+
+    const vastePositie = gebied.scrollTop;
+    let bezig = true;
+
+    // Elke beeldopbouw de scroll terugzetten. Hierdoor is de sprong die Safari
+    // maakt nooit zichtbaar.
+    const vasthouden = () => {
+      if (!bezig || document.activeElement !== veld) return;
+      if (gebied.scrollTop !== vastePositie) gebied.scrollTop = vastePositie;
+      requestAnimationFrame(vasthouden);
+    };
+    requestAnimationFrame(vasthouden);
+
+    const beeindig = () => {
+      if (!bezig) return;
+      bezig = false;
+      window.clearTimeout(vangnet);
+      window.visualViewport?.removeEventListener("resize", naToetsenbord);
+      document.removeEventListener("touchstart", loslaten);
+      beslis(veld, gebied);
+    };
+
+    // Zodra het toetsenbord er is verandert het zichtbare venster. Dat is het
+    // moment waarop we kunnen zien of het veld echt bedekt is.
+    const naToetsenbord = () => window.setTimeout(beeindig, 60);
+    // Meldt de viewport zich niet, dan stoppen we uit onszelf.
+    const vangnet = window.setTimeout(beeindig, MAXIMAAL_VASTHOUDEN);
+    // Gaat de bezoeker zelf scrollen, dan laten we meteen los.
+    const loslaten = () => {
+      bezig = false;
+      window.clearTimeout(vangnet);
+      window.visualViewport?.removeEventListener("resize", naToetsenbord);
+      document.removeEventListener("touchstart", loslaten);
+    };
+
+    window.visualViewport?.addEventListener("resize", naToetsenbord);
+    document.addEventListener("touchstart", loslaten, { passive: true });
+
+    stop = loslaten;
   };
 
   document.addEventListener("focusin", (e) => {
     const doel = e.target as HTMLElement | null;
-    if (doel?.matches?.("input, textarea, select")) plan(doel);
+    if (doel?.matches?.("input, textarea, select")) begeleid(doel);
   });
 
-  // Het toetsenbord komt pas na de focus, dus het zichtbare venster verandert
-  // daarna. Dan nog een keer kijken.
+  /**
+   * En daarna blijven meekijken. Het toetsenbord kan later alsnog verschijnen of
+   * van hoogte veranderen, bijvoorbeeld als de invulhulp erboven komt of de
+   * emoji-balk verschijnt. `beslis` doet niets zolang het veld gewoon in beeld
+   * staat, dus dit meekijken kan geen kwaad.
+   */
   window.visualViewport?.addEventListener("resize", () => {
-    const actief = document.activeElement as HTMLElement | null;
-    if (actief?.matches?.("input, textarea, select")) plan(actief);
+    if (!window.matchMedia(TELEFOON).matches) return;
+    const veld = document.activeElement as HTMLElement | null;
+    if (!veld?.matches?.("input, textarea, select")) return;
+    const gebied = veld.closest<HTMLElement>('[role="dialog"]');
+    if (gebied) window.setTimeout(() => beslis(veld, gebied), 60);
   });
 }
