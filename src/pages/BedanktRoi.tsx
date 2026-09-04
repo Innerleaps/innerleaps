@@ -1,5 +1,5 @@
-import { useEffect, useMemo, useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Suspense, lazy, useEffect, useMemo, useState } from "react";
+import { useLocation } from "react-router-dom";
 import { Trans, useTranslation } from "react-i18next";
 import type { TFunction } from "i18next";
 import SimplifiedNavigation from "@/components/SimplifiedNavigation";
@@ -7,6 +7,10 @@ import Footer from "@/components/Footer";
 import PageSeo from "@/components/PageSeo";
 import RoiResultaat from "@/components/RoiResultaat";
 import BedanktBooking from "@/components/BedanktBooking";
+
+/** Pas laden als iemand hem echt opent. Zonder berekening is dat een
+ *  uitzondering, dus dit hoeft niet in de eerste lading mee. */
+const CalculatorModal = lazy(() => import("@/components/CalculatorModal"));
 import { Button } from "@/components/ui/button";
 import { detectLanguageFromPath } from "@/i18n/config";
 import { leesRoiOverdracht, type Doelgroep, type RoiOverdracht } from "@/lib/bedankt";
@@ -54,6 +58,7 @@ const BedanktRoi = ({ doelgroep }: BedanktRoiProps) => {
    * er in één keer.
    */
   const [overdracht] = useState<RoiOverdracht | null>(() => leesRoiOverdracht());
+  const [rekentoolOpen, setRekentoolOpen] = useState(false);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -96,7 +101,6 @@ const BedanktRoi = ({ doelgroep }: BedanktRoiProps) => {
       }).format(besparing),
     [besparing, taal],
   );
-  const rekentoolPad = taal === "en" ? "/en" : "/";
 
   return (
     <div className="min-h-screen bg-brand-gray-light">
@@ -153,12 +157,17 @@ const BedanktRoi = ({ doelgroep }: BedanktRoiProps) => {
                   </div>
                 </>
               ) : (
+                /* De rekentool meteen openen in plaats van terug te linken naar
+                   de homepage. Dat was ook een loze verwijzing: het anker
+                   #calculator bestaat daar helemaal niet. Zo hoeft iemand die
+                   zijn berekening kwijt is niet eerst een pagina te laden en
+                   dan zelf de tool op te zoeken. */
                 <div className="mt-8">
                   <Button
-                    asChild
+                    onClick={() => setRekentoolOpen(true)}
                     className="min-h-[44px] bg-brand-orange px-8 text-base font-semibold hover:bg-brand-orange/90 md:text-lg"
                   >
-                    <Link to={`${rekentoolPad}#calculator`}>{t("cta.calculateSavings", { ns: "common" })}</Link>
+                    {t("cta.calculateSavings", { ns: "common" })}
                   </Button>
                 </div>
               )}
@@ -173,6 +182,15 @@ const BedanktRoi = ({ doelgroep }: BedanktRoiProps) => {
       </main>
 
       <Footer />
+
+      {/* De doelgroep van deze pagina staat in DOELGROEP_PER_PAD, dus wie hier
+          opnieuw rekent komt op dezelfde bedanktpagina terug in plaats van op
+          de neutrale. */}
+      <Suspense fallback={null}>
+        {rekentoolOpen && (
+          <CalculatorModal isOpen={rekentoolOpen} onClose={() => setRekentoolOpen(false)} />
+        )}
+      </Suspense>
     </div>
   );
 };

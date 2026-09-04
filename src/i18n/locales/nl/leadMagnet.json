@@ -17,7 +17,10 @@
     "idle": "Vraag rapport aan",
     "loading": "Versturen..."
   },
-  "validation": "Vul alle verplichte velden in",
+  "validation": {
+    "missing": "Vul alle verplichte velden in",
+    "email": "Dit e-mailadres klopt niet. Controleer of er een @ en een punt in staan."
+  },
   "error": {
     "title": "Er ging iets mis",
     "description": "Probeer het later opnieuw of neem contact op."

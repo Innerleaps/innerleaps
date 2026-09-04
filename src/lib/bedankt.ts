@@ -34,6 +34,14 @@ const DOELGROEP_PER_PAD: Record<string, Doelgroep> = {
   "/en/sustainable-employability": "hr",
   "/team-prestaties-verbeteren": "management",
   "/en/improve-team-performance": "management",
+
+  // De bedanktpagina's zelf, want daar kun je opnieuw rekenen als je berekening
+  // weg is. Zonder deze regels kwam iemand die op /bedankt/roi-hr opnieuw rekent
+  // daarna op /bedankt/roi uit, en was zijn doelgroep onderweg verdwenen.
+  "/bedankt/roi-hr": "hr",
+  "/en/thank-you/roi-hr": "hr",
+  "/bedankt/roi-management": "management",
+  "/en/thank-you/roi-management": "management",
 };
 
 /** Van welke pagina kwam de bezoeker, en welke doelgroep hoort daarbij. */

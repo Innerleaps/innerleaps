@@ -9,6 +9,7 @@ import { Calculator } from 'lucide-react';
 import { supabase } from '@/integrations/supabase/client';
 import { useToast } from '@/hooks/use-toast';
 import { calculateROI } from '@/utils/calculationEngine';
+import { isGeldigEmail } from '@/lib/email';
 import {
   bewaarRoiOverdracht,
   doelgroepVoorPad,
@@ -42,12 +43,17 @@ const ROICalculator = () => {
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
+  // Pas een fout tonen als iemand het veld verlaten heeft. Meetikken en meteen
+  // rood zien terwijl je nog bezig bent is vervelend en klopt ook niet.
+  const [emailAangeraakt, setEmailAangeraakt] = useState(false);
 
   const handleInputChange = (field: string, value: string) => {
     setFormData(prev => ({ ...prev, [field]: value }));
   };
 
   const isEN = i18n.language?.startsWith('en');
+  const emailOngeldig = formData.email.trim() !== '' && !isGeldigEmail(formData.email);
+
   const isFormValid = () => {
     return (
       formData.naam.trim() !== '' &&
@@ -61,6 +67,19 @@ const ROICalculator = () => {
   };
 
   const handleSubmit = async () => {
+    // Het e-mailadres is het enige waarmee we deze bezoeker nog kunnen bereiken.
+    // Een typefout betekent geen mail, geen opvolging, en een lead die je wel
+    // betaald hebt maar nooit spreekt.
+    if (!isGeldigEmail(formData.email)) {
+      setEmailAangeraakt(true);
+      toast({
+        title: t('validation.email'),
+        variant: "destructive",
+      });
+      document.getElementById('email')?.focus();
+      return;
+    }
+
     if (!isFormValid()) {
       toast({
         title: t('validation.title'),
@@ -179,9 +198,17 @@ const ROICalculator = () => {
                   type="email"
                   value={formData.email}
                   onChange={(e) => handleInputChange('email', e.target.value)}
+                  onBlur={() => setEmailAangeraakt(true)}
+                  aria-invalid={emailAangeraakt && emailOngeldig}
+                  aria-describedby={emailAangeraakt && emailOngeldig ? 'email-fout' : undefined}
                   placeholder={t('fields.emailPlaceholder')}
                   className="mt-1 placeholder:text-gray-400"
                 />
+                {emailAangeraakt && emailOngeldig && (
+                  <p id="email-fout" className="mt-1 text-base font-medium text-red-200">
+                    {t('validation.email')}
+                  </p>
+                )}
               </div>
 
               <div>

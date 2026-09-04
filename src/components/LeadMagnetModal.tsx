@@ -9,6 +9,7 @@ import { useToast } from '@/hooks/use-toast';
 import { supabase } from '@/integrations/supabase/client';
 import { detectLanguageFromPath } from '@/i18n/config';
 import { bewaarRapportOverdracht, hashEmail, nieuweId, rapportBedanktPad } from '@/lib/bedankt';
+import { isGeldigEmail } from '@/lib/email';
 
 interface LeadMagnetModalProps {
   isOpen: boolean;
@@ -45,6 +46,8 @@ const LeadMagnetModal = ({ isOpen, onClose }: LeadMagnetModalProps) => {
     functie: ''
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
+  // Zie ROICalculator: pas rood na het verlaten van het veld.
+  const [emailAangeraakt, setEmailAangeraakt] = useState(false);
   const { toast } = useToast();
 
   const handleInputChange = (field: keyof FormData) => (
@@ -56,6 +59,8 @@ const LeadMagnetModal = ({ isOpen, onClose }: LeadMagnetModalProps) => {
     }));
   };
 
+  const emailOngeldig = formData.email.trim() !== '' && !isGeldigEmail(formData.email);
+
   const isFormValid =
     formData.naam &&
     formData.email &&
@@ -63,9 +68,21 @@ const LeadMagnetModal = ({ isOpen, onClose }: LeadMagnetModalProps) => {
     formData.functie;
 
   const handleSubmit = async () => {
+    // Het rapport gaat per mail. Klopt het adres niet, dan komt er niets aan en
+    // is de aanvraag voor iedereen verspild.
+    if (!isGeldigEmail(formData.email)) {
+      setEmailAangeraakt(true);
+      toast({
+        title: t('validation.email'),
+        variant: "destructive"
+      });
+      document.getElementById('email')?.focus();
+      return;
+    }
+
     if (!isFormValid) {
       toast({
-        title: t('validation'),
+        title: t('validation.missing'),
         variant: "destructive"
       });
       return;
@@ -161,9 +178,17 @@ const LeadMagnetModal = ({ isOpen, onClose }: LeadMagnetModalProps) => {
                   type="email"
                   value={formData.email}
                   onChange={handleInputChange('email')}
+                  onBlur={() => setEmailAangeraakt(true)}
+                  aria-invalid={emailAangeraakt && emailOngeldig}
+                  aria-describedby={emailAangeraakt && emailOngeldig ? 'rapport-email-fout' : undefined}
                   placeholder={t('fields.emailPlaceholder')}
                   className="mt-1 placeholder:text-gray-400"
                 />
+                {emailAangeraakt && emailOngeldig && (
+                  <p id="rapport-email-fout" className="mt-1 text-base font-medium text-red-200">
+                    {t('validation.email')}
+                  </p>
+                )}
               </div>
 
               <div>

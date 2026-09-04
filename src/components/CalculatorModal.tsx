@@ -10,6 +10,7 @@ import { Calculator } from 'lucide-react';
 import { toast } from '@/hooks/use-toast';
 import { supabase } from '@/integrations/supabase/client';
 import { calculateROI } from '@/utils/calculationEngine';
+import { isGeldigEmail } from '@/lib/email';
 import {
   bewaarRoiOverdracht,
   doelgroepVoorPad,
@@ -48,12 +49,16 @@ const CalculatorModal = ({ isOpen, onClose }: CalculatorModalProps) => {
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
+  // Zie ROICalculator: pas rood na het verlaten van het veld.
+  const [emailAangeraakt, setEmailAangeraakt] = useState(false);
 
   const isEN = i18n.language?.startsWith('en');
 
   const handleInputChange = (field: string, value: string) => {
     setFormData(prev => ({ ...prev, [field]: value }));
   };
+
+  const emailOngeldig = formData.email.trim() !== '' && !isGeldigEmail(formData.email);
 
   const isFormValid = () => {
     return (
@@ -69,6 +74,17 @@ const CalculatorModal = ({ isOpen, onClose }: CalculatorModalProps) => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+
+    // Zonder werkend adres is deze lead onbereikbaar. Zie ROICalculator.
+    if (!isGeldigEmail(formData.email)) {
+      setEmailAangeraakt(true);
+      toast({
+        title: t('validation.email'),
+        variant: "destructive",
+      });
+      document.getElementById('modal-email')?.focus();
+      return;
+    }
 
     if (!isFormValid()) {
       toast({
@@ -202,10 +218,18 @@ const CalculatorModal = ({ isOpen, onClose }: CalculatorModalProps) => {
                     type="email"
                     value={formData.email}
                     onChange={(e) => handleInputChange('email', e.target.value)}
+                    onBlur={() => setEmailAangeraakt(true)}
+                    aria-invalid={emailAangeraakt && emailOngeldig}
+                    aria-describedby={emailAangeraakt && emailOngeldig ? 'modal-email-fout' : undefined}
                     className="bg-white border-gray-300 text-brand-gray-dark placeholder:text-gray-400"
                     placeholder={t('fields.emailPlaceholder')}
                     required
                   />
+                  {emailAangeraakt && emailOngeldig && (
+                    <p id="modal-email-fout" className="text-base font-medium text-red-600">
+                      {t('validation.email')}
+                    </p>
+                  )}
                 </div>
 
                 <div className="space-y-2">

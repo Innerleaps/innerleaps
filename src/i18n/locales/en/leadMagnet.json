@@ -17,7 +17,10 @@
     "idle": "Request report",
     "loading": "Sending..."
   },
-  "validation": "Please fill in all required fields",
+  "validation": {
+    "missing": "Please fill in all required fields",
+    "email": "This email address is not valid. Check that it has an @ and a full stop."
+  },
   "error": {
     "title": "Something went wrong",
     "description": "Please try again later or get in touch."

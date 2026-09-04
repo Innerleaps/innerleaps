@@ -35,7 +35,8 @@
   "validation": {
     "title": "Vul alle verplichte velden in",
     "description": "Alle velden met een * zijn verplicht.",
-    "missing": "Vul alle verplichte velden (*) in"
+    "missing": "Vul alle verplichte velden (*) in",
+    "email": "Dit e-mailadres klopt niet. Controleer of er een @ en een punt in staan."
   },
   "error": {
     "title": "Er ging iets mis",
