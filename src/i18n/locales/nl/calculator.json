@@ -36,7 +36,7 @@
     "title": "Vul alle verplichte velden in",
     "description": "Alle velden met een * zijn verplicht.",
     "missing": "Vul alle verplichte velden (*) in",
-    "email": "Dit e-mailadres klopt niet. Controleer of er een @ en een punt in staan."
+    "email": "Controleer je e-mailadres even. Zonder geldig adres kunnen we je niets sturen."
   },
   "error": {
     "title": "Er ging iets mis",

@@ -36,7 +36,7 @@
     "title": "Please fill in all required fields",
     "description": "All fields marked with * are required.",
     "missing": "Please fill in all required fields (*)",
-    "email": "This email address is not valid. Check that it has an @ and a full stop."
+    "email": "Check your email address. Without a valid one we cannot send you anything."
   },
   "error": {
     "title": "Something went wrong",

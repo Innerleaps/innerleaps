@@ -47,7 +47,8 @@ const Kop = ({ sleutel, t, waarden }: { sleutel: string; t: TFunction; waarden?:
 
 const BedanktRoi = ({ doelgroep }: BedanktRoiProps) => {
   const { t, i18n } = useTranslation("bedankt");
-  const { pathname } = useLocation();
+  const location = useLocation();
+  const { pathname } = location;
   const taal = detectLanguageFromPath(pathname);
   /**
    * Meteen bij de eerste render lezen, niet in een effect.
@@ -57,12 +58,26 @@ const BedanktRoi = ({ doelgroep }: BedanktRoiProps) => {
    * ziet de bezoeker eerst die lege versie en pas daarna zijn bedrag. Zo is het
    * er in één keer.
    */
-  const [overdracht] = useState<RoiOverdracht | null>(() => leesRoiOverdracht());
+  const [overdracht, setOverdracht] = useState<RoiOverdracht | null>(() => leesRoiOverdracht());
   const [rekentoolOpen, setRekentoolOpen] = useState(false);
 
+  /**
+   * Opnieuw lezen bij elke navigatie hiernaartoe, niet alleen bij het opbouwen.
+   *
+   * Wie op deze pagina de rekentool nog eens invult, wordt door zijn doelgroep
+   * naar precies dezelfde pagina gestuurd. React bouwt die dan niet opnieuw op,
+   * dus met alleen een beginwaarde bleef de oude stand staan en zag de bezoeker
+   * de versie zonder berekening. Dat is wat er misging.
+   *
+   * `location.key` verandert wel bij zo'n navigatie, ook naar hetzelfde pad.
+   * Is het dezelfde berekening, dan houden we het bestaande object vast, zodat
+   * de conversiemelding er niet nog een keer overheen gaat.
+   */
   useEffect(() => {
+    const vers = leesRoiOverdracht();
+    setOverdracht((huidig) => (vers?.id === huidig?.id ? huidig : vers));
     window.scrollTo(0, 0);
-  }, []);
+  }, [location.key]);
 
   // De melding gaat pas weg als de berekening er echt is, en maar één keer per
   // invulling. Zonder die rem telt elke verversing als een nieuwe lead.
