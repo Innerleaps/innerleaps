@@ -141,7 +141,7 @@ const LeadMagnetModal = ({ isOpen, onClose }: LeadMagnetModalProps) => {
           </DialogHeader>
 
           <div className="space-y-6">
-            <p className="text-white/90 text-sm">
+            <p className="text-white/90 text-base">
               {t('intro')}
             </p>
 
@@ -225,7 +225,7 @@ const LeadMagnetModal = ({ isOpen, onClose }: LeadMagnetModalProps) => {
               {isSubmitting ? t('submit.loading') : t('submit.idle')}
             </Button>
 
-            <p className="text-xs text-white/80 text-center">
+            <p className="text-base text-white/80 text-center">
               {t('privacy')}
             </p>
           </div>

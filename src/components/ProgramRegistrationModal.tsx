@@ -269,7 +269,7 @@ const ProgramRegistrationModal = ({
                   placeholder="Jan Jansen" 
                   className="bg-white border-gray-300 text-brand-gray-dark placeholder:text-gray-400"
                 />
-                {errors.fullName && <p className="text-sm text-destructive">{errors.fullName.message}</p>}
+                {errors.fullName && <p className="text-base text-destructive">{errors.fullName.message}</p>}
               </div>
 
               <div className="space-y-2">
@@ -281,7 +281,7 @@ const ProgramRegistrationModal = ({
                   placeholder="jan@voorbeeld.nl" 
                   className="bg-white border-gray-300 text-brand-gray-dark placeholder:text-gray-400"
                 />
-                {errors.email && <p className="text-sm text-destructive">{errors.email.message}</p>}
+                {errors.email && <p className="text-base text-destructive">{errors.email.message}</p>}
               </div>
 
               <div className="space-y-2">
@@ -293,7 +293,7 @@ const ProgramRegistrationModal = ({
                   placeholder="06 12345678" 
                   className="bg-white border-gray-300 text-brand-gray-dark placeholder:text-gray-400"
                 />
-                {errors.phone && <p className="text-sm text-destructive">{errors.phone.message}</p>}
+                {errors.phone && <p className="text-base text-destructive">{errors.phone.message}</p>}
               </div>
 
               <div className="space-y-2">
@@ -318,7 +318,7 @@ const ProgramRegistrationModal = ({
                     className="text-center bg-white border-gray-300 text-brand-gray-dark placeholder:text-gray-400"
                   />
                 </div>
-                {errors.birthDay && <p className="text-sm text-destructive">{errors.birthDay.message}</p>}
+                {errors.birthDay && <p className="text-base text-destructive">{errors.birthDay.message}</p>}
               </div>
 
               <Button 
@@ -330,7 +330,7 @@ const ProgramRegistrationModal = ({
                 Volgende <ChevronRight className="ml-2 h-4 w-4" />
               </Button>
               {!isStep1Valid && (
-                <p className="text-sm text-brand-gray-medium text-center mt-2">
+                <p className="text-base text-brand-gray-medium text-center mt-2">
                   Vul alle verplichte velden in om door te gaan
                 </p>
               )}
@@ -363,7 +363,7 @@ const ProgramRegistrationModal = ({
                   placeholder="Straatnaam 123, 1234 AB Plaats" 
                   className="bg-white border-gray-300 text-brand-gray-dark placeholder:text-gray-400"
                 />
-                {errors.address && <p className="text-sm text-destructive">{errors.address.message}</p>}
+                {errors.address && <p className="text-base text-destructive">{errors.address.message}</p>}
               </div>
 
               {registrationType === "zakelijk" && <div className="space-y-2">
@@ -374,7 +374,7 @@ const ProgramRegistrationModal = ({
                     placeholder="Bedrijfsnaam BV" 
                     className="bg-white border-gray-300 text-brand-gray-dark placeholder:text-gray-400"
                   />
-                  {errors.companyName && <p className="text-sm text-destructive">{errors.companyName.message}</p>}
+                  {errors.companyName && <p className="text-base text-destructive">{errors.companyName.message}</p>}
                 </div>}
 
               {registrationType === "zakelijk" && <>
@@ -414,7 +414,7 @@ const ProgramRegistrationModal = ({
                 </Button>
               </div>
               {!isStep2Valid && (
-                <p className="text-sm text-brand-gray-medium text-center mt-2">
+                <p className="text-base text-brand-gray-medium text-center mt-2">
                   Vul alle verplichte velden in om door te gaan
                 </p>
               )}
@@ -423,7 +423,7 @@ const ProgramRegistrationModal = ({
           {/* Stap 3: Startdatum Selectie */}
           {step === 3 && <div className="space-y-4">
               <h3 className="text-lg font-semibold text-brand-purple">Startdatum</h3>
-              <p className="text-sm text-brand-gray-medium">
+              <p className="text-base text-brand-gray-medium">
                 Dit is de startdatum van de training. De cursus vindt plaats gedurende 6 opeenvolgende weken. Op
                 nationale feestdagen zal de cursus niet plaatsvinden. Mocht je onverhoopt een sessie missen dan zal je
                 de opname ontvangen.
@@ -440,7 +440,7 @@ const ProgramRegistrationModal = ({
                   <Label htmlFor="tuesday-afternoon" className="cursor-not-allowed flex-1 line-through">
                     {programDates.tuesdayAfternoon.display}
                   </Label>
-                  <span className="bg-red-500 text-white text-xs font-bold px-2 py-1 rounded">
+                  <span className="bg-red-500 text-white text-base font-bold px-2 py-1 rounded">
                     VOL!
                   </span>
                 </div>
@@ -450,7 +450,7 @@ const ProgramRegistrationModal = ({
                   <Label htmlFor="tuesday" className="cursor-pointer flex-1">
                     {programDates.tuesdayEvening.display}
                   </Label>
-                  <span className="bg-green-500 text-white text-xs font-bold px-2 py-1 rounded">
+                  <span className="bg-green-500 text-white text-base font-bold px-2 py-1 rounded">
                     {programDates.tuesdayEvening.availableSpots} plekken beschikbaar
                   </span>
                 </div>
@@ -460,7 +460,7 @@ const ProgramRegistrationModal = ({
                   <Label htmlFor="wed-afternoon" className="cursor-pointer flex-1">
                     {programDates.wednesdayAfternoon.display}
                   </Label>
-                  <span className="bg-green-500 text-white text-xs font-bold px-2 py-1 rounded">
+                  <span className="bg-green-500 text-white text-base font-bold px-2 py-1 rounded">
                     {programDates.wednesdayAfternoon.availableSpots} plekken beschikbaar
                   </span>
                 </div>
@@ -470,7 +470,7 @@ const ProgramRegistrationModal = ({
                   <Label htmlFor="wed-evening" className="cursor-pointer flex-1">
                     {programDates.wednesdayEvening.display}
                   </Label>
-                  <span className="bg-green-500 text-white text-xs font-bold px-2 py-1 rounded">
+                  <span className="bg-green-500 text-white text-base font-bold px-2 py-1 rounded">
                     {programDates.wednesdayEvening.availableSpots} plekken beschikbaar
                   </span>
                 </div>
@@ -485,12 +485,12 @@ const ProgramRegistrationModal = ({
                   <Label htmlFor="thursday" className="cursor-not-allowed flex-1 line-through">
                     {programDates.thursdayEvening.display}
                   </Label>
-                  <span className="bg-red-500 text-white text-xs font-bold px-2 py-1 rounded">
+                  <span className="bg-red-500 text-white text-base font-bold px-2 py-1 rounded">
                     VOL!
                   </span>
                 </div>
               </RadioGroup>
-              {errors.selectedTimeslot && <p className="text-sm text-destructive">{errors.selectedTimeslot.message}</p>}
+              {errors.selectedTimeslot && <p className="text-base text-destructive">{errors.selectedTimeslot.message}</p>}
 
               <div className="flex gap-2">
                 <Button type="button" variant="outline" onClick={prevStep} className="flex-1">
@@ -506,7 +506,7 @@ const ProgramRegistrationModal = ({
                 </Button>
               </div>
               {!isStep3Valid && (
-                <p className="text-sm text-brand-gray-medium text-center mt-2">
+                <p className="text-base text-brand-gray-medium text-center mt-2">
                   Selecteer een startdatum om door te gaan
                 </p>
               )}
@@ -517,18 +517,18 @@ const ProgramRegistrationModal = ({
               <h3 className="text-lg font-semibold text-brand-purple">Algemene Voorwaarden</h3>
 
               <div className="bg-brand-blue-light/20 p-4 rounded-lg space-y-2 px-0 py-0">
-                <p className="text-sm text-brand-gray-medium">
+                <p className="text-base text-brand-gray-medium">
                   Na aanmelding wordt de factuur verstuurd. Het verzoek is om binnen 14 dagen de factuur te betalen.
                 </p>
               </div>
 
               <div className="flex items-start space-x-2">
                 <Checkbox id="terms" checked={agreedToTerms} onCheckedChange={checked => setValue("agreedToTerms", checked as boolean)} />
-                <Label htmlFor="terms" className="cursor-pointer text-sm">
+                <Label htmlFor="terms" className="cursor-pointer text-base">
                   Ik ga akkoord met de algemene voorwaarden *
                 </Label>
               </div>
-              {errors.agreedToTerms && <p className="text-sm text-destructive">{errors.agreedToTerms.message}</p>}
+              {errors.agreedToTerms && <p className="text-base text-destructive">{errors.agreedToTerms.message}</p>}
 
               <div className="flex gap-2">
                 <Button type="button" variant="outline" onClick={prevStep} className="flex-1">

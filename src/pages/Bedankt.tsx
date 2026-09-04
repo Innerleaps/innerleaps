@@ -65,7 +65,7 @@ const Bedankt = () => {
           {timeslot && (
             <>
               <div className="bg-brand-blue-light/30 rounded-xl p-6 md:p-8 space-y-3">
-                <p className="text-sm text-brand-gray-medium uppercase tracking-wide font-semibold">
+                <p className="text-base text-brand-gray-medium uppercase tracking-wide font-semibold">
                   Jouw gekozen tijdstip:
                 </p>
                 <p className="text-xl md:text-2xl font-bold text-brand-purple">{timeslot}</p>
@@ -83,7 +83,7 @@ const Bedankt = () => {
                     📅 Voeg toe aan mijn agenda
                   </a>
 
-                  <p className="text-sm text-brand-gray-medium max-w-md mx-auto">
+                  <p className="text-base text-brand-gray-medium max-w-md mx-auto">
                     Je ontvangt ook een bevestiging per email met de link naar de agenda en meer informatie over de
                     masterclass.
                   </p>
@@ -140,7 +140,7 @@ const Bedankt = () => {
         </div>
 
         {/* Contact Info */}
-        <div className="mt-8 text-center text-sm text-brand-gray-medium space-y-2">
+        <div className="mt-8 text-center text-base text-brand-gray-medium space-y-2">
           <p>Vragen? Neem contact op:</p>
           <p>
             📧{" "}

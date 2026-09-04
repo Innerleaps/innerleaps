@@ -116,10 +116,10 @@ const Navigation = () => {
                                       to={subItem.href}
                                       className="block select-none rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-gray-100 hover:text-brand-blue focus:bg-gray-100"
                                     >
-                                      <div className="text-sm font-medium leading-none text-brand-gray-dark">
+                                      <div className="text-base font-medium leading-none text-brand-gray-dark">
                                         {subItem.label}
                                       </div>
-                                      <p className="line-clamp-2 text-sm leading-snug text-gray-500 mt-1">
+                                      <p className="line-clamp-2 text-base leading-snug text-gray-500 mt-1">
                                         {subItem.description}
                                       </p>
                                     </Link>
@@ -185,7 +185,7 @@ const Navigation = () => {
                                   setIsMenuOpen(false);
                                   setIsEmployeeMenuOpen(false);
                                 }}
-                                className="block text-brand-gray-medium hover:text-brand-blue transition-colors duration-300 py-2 text-sm"
+                                className="block text-brand-gray-medium hover:text-brand-blue transition-colors duration-300 py-2 text-base"
                               >
                                 {subItem.label}
                               </Link>
