@@ -78,6 +78,24 @@ const ROICalculator = () => {
     });
 
     setIsSubmitting(true);
+
+    /**
+     * De aanvraag versturen, maar er niet van afhangen.
+     *
+     * De functie weigert met opzet in drie gevallen: ongeldige invoer, meer dan
+     * drie aanvragen per adres per uur, en twee keer hetzelfde adres binnen vijf
+     * minuten. Daar loopt een gewone bezoeker tegenaan zodra hij zijn cijfers
+     * bijstelt en nog eens rekent. Een koude start van de functie kan er ook
+     * uit klappen.
+     *
+     * De berekening komt uit de browser en is op dit punt al klaar. Die
+     * achterhouden omdat een limiet aan onze kant aanslaat, straft de bezoeker
+     * voor iets waar hij part noch deel aan heeft. Dus: altijd doorsturen.
+     *
+     * Wat er wel van afhangt: de zin dat de mail onderweg is, en de
+     * conversiemelding. Een geweigerde aanvraag is geen nieuwe lead.
+     */
+    let mailVerstuurd = false;
     try {
       const { error } = await supabase.functions.invoke('submit-calculator', {
         body: {
@@ -93,39 +111,28 @@ const ROICalculator = () => {
           language: isEN ? 'en' : 'nl',
         },
       });
-
       if (error) throw error;
-
-      /**
-       * Pas doorsturen als de mail eruit is. Op de bedanktpagina staat dat de
-       * berekening ook per mail is verstuurd, en dat mag geen loze belofte zijn.
-       * Gaat het mis, dan blijft de bezoeker hier staan met zijn ingevulde
-       * formulier en een foutmelding, in plaats van op een pagina die iets
-       * belooft wat niet gebeurd is.
-       */
-      const doelgroep = doelgroepVoorPad(location.pathname);
-      bewaarRoiOverdracht({
-        id: nieuweId(),
-        doelgroep,
-        resultaten: results,
-        invoer: {
-          aantalWerknemers: formData.aantalWerknemers,
-          brutoJaarsalaris: formData.brutoJaarsalaris,
-          verzuimPercentage: formData.verzuimPercentage,
-          verloopPercentage: formData.verloopPercentage,
-        },
-        emailHash: await hashEmail(formData.email),
-      });
-      navigate(roiBedanktPad(doelgroep, detectLanguageFromPath(location.pathname)));
+      mailVerstuurd = true;
     } catch (error) {
       console.error('Error submitting calculator:', error);
-      toast({
-        title: t('error.title'),
-        description: t('error.description'),
-        variant: "destructive",
-      });
-      setIsSubmitting(false);
     }
+
+    const doelgroep = doelgroepVoorPad(location.pathname);
+    bewaarRoiOverdracht({
+      id: nieuweId(),
+      doelgroep,
+      resultaten: results,
+      invoer: {
+        aantalWerknemers: formData.aantalWerknemers,
+        brutoJaarsalaris: formData.brutoJaarsalaris,
+        verzuimPercentage: formData.verzuimPercentage,
+        verloopPercentage: formData.verloopPercentage,
+      },
+      emailHash: await hashEmail(formData.email),
+      mailVerstuurd,
+    });
+
+    navigate(roiBedanktPad(doelgroep, detectLanguageFromPath(location.pathname)));
   };
 
   return (

@@ -22,8 +22,8 @@ interface BookingIntroProps {
    * aangevraagd, en dan slaat "Even sparren?" de plank mis. Laat je ze weg,
    * dan staat de gewone tekst er, zoals op /contact en /over-ons.
    */
-  title?: string;
-  intro?: string;
+  title?: React.ReactNode;
+  intro?: React.ReactNode;
 }
 
 const BookingIntro = ({

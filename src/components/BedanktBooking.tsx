@@ -3,6 +3,7 @@ import BookingStats from "@/components/BookingStats";
 import BookingTrust from "@/components/BookingTrust";
 import CalendlyWidget from "@/components/CalendlyWidget";
 import ClientLogoMarquee from "@/components/ClientLogoMarquee";
+import { BOOKING_ANCHOR } from "@/lib/booking";
 
 /**
  * Het afspraakblok op de bedanktpagina's.
@@ -22,12 +23,12 @@ import ClientLogoMarquee from "@/components/ClientLogoMarquee";
  * heeft de bezoeker net iets in handen gekregen en gaat het daarover.
  */
 interface BedanktBookingProps {
-  title: string;
-  intro: string;
+  title: React.ReactNode;
+  intro: React.ReactNode;
 }
 
 const BedanktBooking = ({ title, intro }: BedanktBookingProps) => (
-  <section className="bg-brand-off-white py-8 md:py-14 lg:py-16">
+  <section id={BOOKING_ANCHOR} className="bg-brand-off-white py-8 md:py-14 lg:py-16 scroll-mt-24">
     <div className="container-custom">
       <div className="grid grid-cols-1 items-start gap-6 lg:grid-cols-2 lg:gap-10">
         {/* Kolom 1: alles wat je nodig hebt om een moment te kiezen */}

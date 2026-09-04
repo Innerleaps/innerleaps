@@ -32,6 +32,43 @@ export const bookingPath = (lang: "nl" | "en"): string =>
 const SCROLL_LIMIT = 1.5;
 
 /**
+ * Scrollt naar het afspraakblok, zonder afstandsgrens.
+ *
+ * Voor pagina's waar de agenda er gegarandeerd staat en de knop maar één ding
+ * kan betekenen, zoals de bedanktpagina's. Daar staat het afspraakblok onder
+ * het hele resultatenblok, dus ruim buiten de grens die scrollToBookingWidget
+ * hieronder aanhoudt. Die zou dan `false` teruggeven en de knop deed niets.
+ */
+export const scrollNaarAfspraak = (): void => {
+  const el = document.getElementById(BOOKING_ANCHOR);
+  if (!el) return;
+
+  const beginstand = window.scrollY;
+  el.scrollIntoView({ behavior: "smooth", block: "start" });
+
+  /**
+   * Vangnet als vloeiend scrollen niet werkt.
+   *
+   * Niet elke omgeving voert `behavior: "smooth"` uit. Gemeten in een headless
+   * Chrome: de vloeiende variant deed niets, de directe sprong wel. Zonder deze
+   * controle doet de belangrijkste knop van de bedanktpagina dan helemaal
+   * niets, en dat merk je niet want er komt ook geen foutmelding.
+   *
+   * Werkt het wel, dan is er na een halve seconde allang beweging en gebeurt
+   * hier niets meer.
+   */
+  window.setTimeout(() => {
+    if (Math.abs(window.scrollY - beginstand) < 2) {
+      el.scrollIntoView({ block: "start" });
+    }
+  }, 500);
+
+  if (window.history.replaceState) {
+    window.history.replaceState(null, "", `#${BOOKING_ANCHOR}`);
+  }
+};
+
+/**
  * Scrollt naar de widget als die op deze pagina staat én dichtbij genoeg is, en
  * geeft dan `true` terug. Zo niet, dan `false`, en hoort de aanroeper naar de
  * boekingspagina te navigeren.

@@ -6,20 +6,21 @@
       "onbekend": "Bedankt, ROI - Innerleaps"
     },
     "title": "Bespaar ten minste <0>{{bedrag}}</0>",
-    "titleZonderBerekening": "De opbrengst van onze training",
+    "titleZonderBerekening": "De <0>opbrengst</0> van onze training",
     "intro": "De berekening staat hieronder en is ook naar je e-mail verstuurd.",
     "booking": {
-      "title": "Bespreek je resultaat met Bas",
+      "title": "Bespreek je <0>resultaat</0> met Bas",
       "intro": "In 20 minuten beantwoordt Bas je vragen en licht hij de berekening toe."
-    }
+    },
+    "introZonderMail": "De berekening staat hieronder."
   },
   "rapport": {
     "metaTitle": "Je rapport is onderweg - Innerleaps",
-    "title": "Het rapport is onderweg naar je mail",
+    "title": "Het <0>rapport</0> is onderweg naar je mail",
     "intro": "Hij is er binnen een paar minuten. Staat hij er niet, kijk dan in je spam of mail naar bas@innerleaps.nl.",
-    "onderzoekTitle": "Wat 40 jaar onderzoek laat zien",
+    "onderzoekTitle": "Wat <0>40 jaar onderzoek</0> laat zien",
     "booking": {
-      "title": "Wil je weten wat dit voor jouw organisatie betekent?",
+      "title": "Wil je weten wat dit voor <0>jouw organisatie</0> betekent?",
       "intro": "Kies hieronder een moment. Geen verkooppraatje, wel een eerlijk antwoord."
     }
   }

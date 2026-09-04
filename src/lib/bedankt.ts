@@ -77,6 +77,20 @@ export interface RoiOverdracht {
   };
   /** Gehasht, nooit het adres zelf. Voor Enhanced Conversions. */
   emailHash: string | null;
+  /**
+   * Heeft de achterkant de aanvraag aangenomen?
+   *
+   * De rekentool rekent in de browser, dus de uitkomst is er ook als de
+   * functie weigert. En weigeren doet hij regelmatig met opzet: drie
+   * aanvragen per adres per uur, en niet twee keer hetzelfde adres binnen vijf
+   * minuten. Iemand die zijn cijfers bijstelt en opnieuw rekent loopt daar zo
+   * tegenaan.
+   *
+   * De bezoeker krijgt in dat geval gewoon zijn berekening te zien. Wat er wél
+   * van afhangt: de zin dat de mail onderweg is, en de conversiemelding. Een
+   * geweigerde aanvraag is geen nieuwe lead.
+   */
+  mailVerstuurd: boolean;
 }
 
 const ROI_SLEUTEL = "innerleaps.roi-berekening";

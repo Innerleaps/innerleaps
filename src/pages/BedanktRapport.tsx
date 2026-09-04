@@ -1,9 +1,11 @@
 import { useEffect, useState } from "react";
-import { useTranslation } from "react-i18next";
+import { Trans, useTranslation } from "react-i18next";
 import SimplifiedNavigation from "@/components/SimplifiedNavigation";
 import Footer from "@/components/Footer";
 import PageSeo from "@/components/PageSeo";
 import BedanktBooking from "@/components/BedanktBooking";
+import { Button } from "@/components/ui/button";
+import { scrollNaarAfspraak } from "@/lib/booking";
 import { leesRapportOverdracht, type RapportOverdracht } from "@/lib/bedankt";
 import { meldRapportLead } from "@/lib/conversies";
 
@@ -46,15 +48,24 @@ const BedanktRapport = () => {
           <div className="container-custom">
             <div className="mx-auto max-w-4xl">
               <h1 className="text-3xl font-bold leading-tight text-brand-purple md:text-4xl lg:text-5xl">
-                {t("rapport.title")}
+                <Trans i18nKey="rapport.title" t={t} components={[<span className="text-brand-orange" />]} />
               </h1>
               <p className="mt-4 text-lg leading-relaxed text-brand-gray-medium md:text-xl">
                 {t("rapport.intro")}
               </p>
 
+              <div className="mt-6">
+                <Button
+                  onClick={scrollNaarAfspraak}
+                  className="min-h-[44px] bg-brand-orange px-8 text-base font-semibold hover:bg-brand-orange/90 md:text-lg"
+                >
+                  {t("cta.bookCallWithBas", { ns: "common" })}
+                </Button>
+              </div>
+
               <div className="mt-8 rounded-lg border border-blue-200 bg-blue-50 p-6">
                 <h2 className="mb-3 text-lg font-semibold text-brand-gray-dark">
-                  {t("rapport.onderzoekTitle")}
+                  <Trans i18nKey="rapport.onderzoekTitle" t={t} components={[<span className="text-brand-orange" />]} />
                 </h2>
                 <ul className="space-y-2 text-base text-brand-gray-medium">
                   {["scientific1", "scientific2", "scientific3"].map((sleutel) => (
@@ -69,7 +80,10 @@ const BedanktRapport = () => {
           </div>
         </section>
 
-        <BedanktBooking title={t("rapport.booking.title")} intro={t("rapport.booking.intro")} />
+        <BedanktBooking
+          title={<Trans i18nKey="rapport.booking.title" t={t} components={[<span className="text-brand-orange" />]} />}
+          intro={t("rapport.booking.intro")}
+        />
       </main>
 
       <Footer />

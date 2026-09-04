@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Trans, useTranslation } from "react-i18next";
+import type { TFunction } from "i18next";
 import SimplifiedNavigation from "@/components/SimplifiedNavigation";
 import Footer from "@/components/Footer";
 import PageSeo from "@/components/PageSeo";
@@ -9,6 +10,7 @@ import BedanktBooking from "@/components/BedanktBooking";
 import { Button } from "@/components/ui/button";
 import { detectLanguageFromPath } from "@/i18n/config";
 import { leesRoiOverdracht, type Doelgroep, type RoiOverdracht } from "@/lib/bedankt";
+import { scrollNaarAfspraak } from "@/lib/booking";
 import { meldRoiLead } from "@/lib/conversies";
 
 /**
@@ -28,6 +30,16 @@ import { meldRoiLead } from "@/lib/conversies";
 interface BedanktRoiProps {
   doelgroep: Doelgroep;
 }
+
+/** Een kop waarin <0>...</0> uit de vertaling oranje wordt. */
+const Kop = ({ sleutel, t, waarden }: { sleutel: string; t: TFunction; waarden?: Record<string, string> }) => (
+  <Trans
+    i18nKey={sleutel}
+    t={t}
+    values={waarden}
+    components={[<span className="text-brand-orange" />]}
+  />
+);
 
 const BedanktRoi = ({ doelgroep }: BedanktRoiProps) => {
   const { t, i18n } = useTranslation("bedankt");
@@ -102,27 +114,37 @@ const BedanktRoi = ({ doelgroep }: BedanktRoiProps) => {
         <section className="section-padding">
           <div className="container-custom">
             <div className="mx-auto max-w-4xl">
-              {/* Het bedrag oranje. Een accent schrijf je in de JSON als
-                  <0>...</0>, nooit als HTML, zodat de vertaling de opmaak
-                  meeneemt in plaats van hem na te bouwen. */}
+              {/* Een accent schrijf je in de JSON als <0>...</0>, nooit als
+                  HTML, zodat de vertaling de opmaak meeneemt in plaats van hem
+                  na te bouwen. */}
               <h1 className="text-3xl font-bold leading-tight text-brand-purple md:text-4xl lg:text-5xl">
                 {heeftBerekening ? (
-                  <Trans
-                    i18nKey="roi.title"
-                    t={t}
-                    values={{ bedrag }}
-                    components={[<span className="text-brand-orange" />]}
-                  />
+                  <Kop sleutel="roi.title" t={t} waarden={{ bedrag }} />
                 ) : (
-                  t("roi.titleZonderBerekening")
+                  <Kop sleutel="roi.titleZonderBerekening" t={t} />
                 )}
               </h1>
 
               {heeftBerekening ? (
                 <>
+                  {/* De belofte dat de mail onderweg is staat er alleen als hij
+                      er echt uit is. Weigerde de functie, dan blijft de
+                      berekening staan maar zwijgen we over de mail. */}
                   <p className="mt-4 text-lg leading-relaxed text-brand-gray-medium md:text-xl">
-                    {t("roi.intro")}
+                    {overdracht?.mailVerstuurd ? t("roi.intro") : t("roi.introZonderMail")}
                   </p>
+
+                  {/* De hoofdactie, meteen in beeld. Scrollt naar het
+                      afspraakblok onderaan in plaats van een pagina te laden. */}
+                  <div className="mt-6">
+                    <Button
+                      onClick={scrollNaarAfspraak}
+                      className="min-h-[44px] bg-brand-orange px-8 text-base font-semibold hover:bg-brand-orange/90 md:text-lg"
+                    >
+                      {t("cta.bookCallWithBas", { ns: "common" })}
+                    </Button>
+                  </div>
+
                   <div className="mt-8">
                     <RoiResultaat
                       resultaten={overdracht!.resultaten}
@@ -144,7 +166,10 @@ const BedanktRoi = ({ doelgroep }: BedanktRoiProps) => {
           </div>
         </section>
 
-        <BedanktBooking title={t("roi.booking.title")} intro={t("roi.booking.intro")} />
+        <BedanktBooking
+          title={<Kop sleutel="roi.booking.title" t={t} />}
+          intro={t("roi.booking.intro")}
+        />
       </main>
 
       <Footer />
