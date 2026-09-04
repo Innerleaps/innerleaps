@@ -1,41 +1,47 @@
 /**
- * Voorkomen dat het scherm wegspringt als je een veld in een pop-up aantikt.
+ * Het veld met de focus in een pop-up in beeld houden.
  *
- * Het probleem in drie stappen. Je tikt een veld aan, iOS begint het toetsenbord
- * te tonen, en Safari scrolt vast vooruit om het veld "in beeld te brengen".
- * Dat gokt hij op het scherm zoals het nu is, niet zoals het straks is, en in
- * een pop-up met een eigen scrollgebied schiet hij daarbij door. Het veld
- * verdwijnt uit beeld en je kijkt naar de velden eronder.
+ * Wat er misging, vastgelegd op een iPhone met twintig beeldjes per seconde:
  *
- * De eerste versie hiervan haalde het veld daarna terug. Dat werkte, maar je
- * zag de fout gebeuren: het scherm sprong weg en kwam weer terug.
+ *   4,00s  goed, het naamveld heeft focus
+ *   4,05s  al helemaal onderaan, bij de verzendknop
+ *   4,30s  nog steeds onderaan
+ *   4,40s  terug bovenaan, e-mail heeft focus
  *
- * Nu houden we de scrollpositie vast zodra een veld focus krijgt. Zolang het
- * toetsenbord bezig is met verschijnen zetten we elke beeldopbouw de scroll
- * terug op waar hij stond. Safari mag scrollen wat hij wil, je ziet het niet.
- * Zodra het toetsenbord staat kijken we één keer of het veld werkelijk bedekt
- * is. Alleen dan bewegen we, en dan in één keer naar de goede plek.
+ * De sprong komt binnen 50 milliseconde nadat je de invulhulp aantikt, en op dat
+ * moment is er geen focuswissel: het naamveld had de focus al. Safari scrolt het
+ * scrollgebied van de pop-up naar de onderkant en komt daarna zelf terug.
  *
- * Dus: nul beweging als het niet nodig is, en anders één beweging in plaats van
- * heen en weer.
+ * Eerdere pogingen keken alleen in het venstertje vlak na een focuswissel, en
+ * stonden dus al uit tegen de tijd dat dit gebeurde. Vandaar één regel die altijd
+ * geldt:
+ *
+ *   Zolang een veld in een pop-up de focus heeft en de bezoeker niet zelf aan
+ *   het scrollen is, blijft dat veld in beeld. Elke scroll die hem verstopt
+ *   wordt meteen teruggedraaid.
+ *
+ * Daarmee doet het niet uit of de sprong van een focuswissel komt, van de
+ * invulhulp, of van het toetsenbord dat verschijnt.
+ *
+ * Twee dingen houden het veilig. Raakt de bezoeker het scherm aan, dan laten we
+ * los tot het volgende veld focus krijgt, want dan scrolt hij zelf. En staat het
+ * veld gewoon in beeld, dan doen we niets; in het slechtste geval blijft het dus
+ * bij het gedrag van de browser.
+ *
+ * We kijken elke beeldopbouw, niet alleen bij een scroll-melding. Reden: die
+ * melding is niet betrouwbaar. Gemeten in een browser zonder zichtbaar venster
+ * ging er bij een programmatische scroll geen enkele melding af, terwijl de
+ * scroll wel plaatsvond. Wachten op een melding die soms uitblijft is precies
+ * hoe je een zichtbare sprong overhoudt. Deze lus draait alleen zolang er een
+ * veld in een pop-up focus heeft, dus tijdens het invullen van een formulier.
  */
 
-/** Alleen op telefoonformaat. Op een groot scherm is er geen toetsenbord dat
- *  de halve pagina opeet en doet de browser het prima. */
+/** Alleen op telefoonformaat. Op een groot scherm is er geen toetsenbord dat de
+ *  halve pagina opeet en doet de browser het prima. */
 const TELEFOON = "(max-width: 639px)";
 
-/**
- * Hoe lang we de scroll vasthouden als de viewport zich niet meldt.
- *
- * Lang genoeg om de sprong van Safari op te vangen, kort genoeg om niet in de
- * weg te zitten als het toetsenbord al openstond en je gewoon naar het volgende
- * veld gaat. Meldt de viewport zich wel, dan stoppen we eerder.
- */
-const MAXIMAAL_VASTHOUDEN = 300;
-
 /** Waar het veld heen gaat als het echt bedekt is: een kwart onder de bovenkant
- *  van het zichtbare deel. Hoog genoeg om het label en het vorige veld te zien,
- *  laag genoeg om niet tegen de rand te plakken. */
+ *  van het zichtbare deel. */
 const AANDEEL_VAN_BOVEN = 0.25;
 
 /** Speling, zodat een veld dat net tegen de rand staat niet als bedekt telt. */
@@ -54,86 +60,103 @@ const staatInBeeld = (veld: HTMLElement) => {
   return rand.top >= top + SPELING && rand.bottom <= top + hoogte - SPELING;
 };
 
-/**
- * Eén keer beslissen, als het toetsenbord staat. Staat het veld gewoon in beeld,
- * dan gebeurt er niets. Dat is de belangrijkste regel: zo kan dit het nooit
- * erger maken dan het gedrag van de browser zelf.
- */
-const beslis = (veld: HTMLElement, gebied: HTMLElement) => {
-  if (document.activeElement !== veld) return;
-  if (staatInBeeld(veld)) return;
-  const { top, hoogte } = zichtbaarVenster();
-  gebied.scrollBy({ top: veld.getBoundingClientRect().top - (top + hoogte * AANDEEL_VAN_BOVEN) });
+/** Het veld dat nu de focus heeft, als dat een invoerveld in een pop-up is. */
+const actiefVeldInPopup = () => {
+  if (!window.matchMedia(TELEFOON).matches) return null;
+  const veld = document.activeElement as HTMLElement | null;
+  if (!veld?.matches?.("input, textarea, select")) return null;
+  const gebied = veld.closest<HTMLElement>('[role="dialog"]');
+  return gebied ? { veld, gebied } : null;
 };
 
 if (typeof window !== "undefined") {
-  let stop: (() => void) | null = null;
+  /** De laatste scrollpositie waarbij het veld goed stond. Daar zetten we hem
+   *  op terug als er iets ongevraagd scrolt. */
+  let goedePositie: number | null = null;
+  /**
+   * Heeft de bezoeker het scherm aangeraakt? Dan neemt hij het over en blijven
+   * we eraf tot het volgende veld focus krijgt. Ook als hij daarmee het veld uit
+   * beeld scrolt: dat is dan zijn keuze, niet een sprong van de browser.
+   *
+   * Tikt hij een veld aan, dan komt er meteen na de aanraking een focusin, en
+   * daar zetten we de bewaking weer aan.
+   */
+  let bezoekerAanZet = false;
+  document.addEventListener("touchstart", () => { bezoekerAanZet = true; }, { passive: true });
 
-  const begeleid = (veld: HTMLElement) => {
-    stop?.();
+  let lus: number | undefined;
 
-    if (!window.matchMedia(TELEFOON).matches) return;
-    // Alleen binnen een pop-up. Op een gewone pagina houdt de scroll-margin in
-    // index.css al ruimte vrij voor de menubalk.
-    const gebied = veld.closest<HTMLElement>('[role="dialog"]');
-    if (!gebied) return;
+  const bewaak = () => {
+    const nu = actiefVeldInPopup();
+    if (!nu) return;
+    const { veld, gebied } = nu;
 
-    const vastePositie = gebied.scrollTop;
-    let bezig = true;
+    // Is de bezoeker aan zet, of staat het veld gewoon goed? Dan is de huidige
+    // stand de nieuwe goede stand.
+    if (bezoekerAanZet || staatInBeeld(veld)) {
+      goedePositie = gebied.scrollTop;
+      return;
+    }
 
-    // Elke beeldopbouw de scroll terugzetten. Hierdoor is de sprong die Safari
-    // maakt nooit zichtbaar.
-    const vasthouden = () => {
-      if (!bezig || document.activeElement !== veld) return;
-      if (gebied.scrollTop !== vastePositie) gebied.scrollTop = vastePositie;
-      requestAnimationFrame(vasthouden);
-    };
-    requestAnimationFrame(vasthouden);
+    // Het veld is uit beeld geraakt zonder dat iemand erom vroeg. Terugzetten.
+    if (goedePositie !== null && goedePositie !== gebied.scrollTop) {
+      gebied.scrollTop = goedePositie;
+      // Nog steeds bedekt? Dan lag de oude stand ook al niet goed, bijvoorbeeld
+      // omdat het toetsenbord er net overheen kwam. Dan alsnog netjes plaatsen.
+      if (!staatInBeeld(veld)) plaats(veld, gebied);
+      return;
+    }
 
-    const beeindig = () => {
-      if (!bezig) return;
-      bezig = false;
-      window.clearTimeout(vangnet);
-      window.visualViewport?.removeEventListener("resize", naToetsenbord);
-      document.removeEventListener("touchstart", loslaten);
-      beslis(veld, gebied);
-    };
-
-    // Zodra het toetsenbord er is verandert het zichtbare venster. Dat is het
-    // moment waarop we kunnen zien of het veld echt bedekt is.
-    const naToetsenbord = () => window.setTimeout(beeindig, 60);
-    // Meldt de viewport zich niet, dan stoppen we uit onszelf.
-    const vangnet = window.setTimeout(beeindig, MAXIMAAL_VASTHOUDEN);
-    // Gaat de bezoeker zelf scrollen, dan laten we meteen los.
-    const loslaten = () => {
-      bezig = false;
-      window.clearTimeout(vangnet);
-      window.visualViewport?.removeEventListener("resize", naToetsenbord);
-      document.removeEventListener("touchstart", loslaten);
-    };
-
-    window.visualViewport?.addEventListener("resize", naToetsenbord);
-    document.addEventListener("touchstart", loslaten, { passive: true });
-
-    stop = loslaten;
+    plaats(veld, gebied);
   };
 
-  document.addEventListener("focusin", (e) => {
-    const doel = e.target as HTMLElement | null;
-    if (doel?.matches?.("input, textarea, select")) begeleid(doel);
+  const plaats = (veld: HTMLElement, gebied: HTMLElement) => {
+    const { top, hoogte } = zichtbaarVenster();
+    gebied.scrollBy({ top: veld.getBoundingClientRect().top - (top + hoogte * AANDEEL_VAN_BOVEN) });
+    goedePositie = gebied.scrollTop;
+  };
+
+  /** Elke beeldopbouw kijken, zolang er een veld in een pop-up focus heeft. */
+  const draai = () => {
+    if (!actiefVeldInPopup()) { lus = undefined; return; }
+    bewaak();
+    lus = requestAnimationFrame(draai);
+  };
+
+  // Een veld krijgt focus: de bezoeker is niet meer aan zet, onthouden waar we
+  // staan, en de lus starten.
+  document.addEventListener("focusin", () => {
+    const nu = actiefVeldInPopup();
+    if (!nu) return;
+    bezoekerAanZet = false;
+    goedePositie = nu.gebied.scrollTop;
+    bewaak();
+    if (lus === undefined) lus = requestAnimationFrame(draai);
   });
 
   /**
-   * En daarna blijven meekijken. Het toetsenbord kan later alsnog verschijnen of
-   * van hoogte veranderen, bijvoorbeeld als de invulhulp erboven komt of de
-   * emoji-balk verschijnt. `beslis` doet niets zolang het veld gewoon in beeld
-   * staat, dus dit meekijken kan geen kwaad.
+   * Naast de lus ook op een scroll-melding kijken, als extra aanleiding.
+   *
+   * Scroll bubbelt niet, dus in de capture-fase. Twee aanleidingen in plaats van
+   * één, omdat allebei in een omgeving kunnen wegvallen: een browser die de
+   * beeldopbouw stillegt heeft geen lus, en een browser die programmatische
+   * scrolls niet meldt heeft geen melding. Allebei kwam ik tegen tijdens het
+   * testen. Dubbel reageren kan geen kwaad, want de bewaking doet niets zolang
+   * het veld gewoon in beeld staat.
    */
-  window.visualViewport?.addEventListener("resize", () => {
-    if (!window.matchMedia(TELEFOON).matches) return;
-    const veld = document.activeElement as HTMLElement | null;
-    if (!veld?.matches?.("input, textarea, select")) return;
-    const gebied = veld.closest<HTMLElement>('[role="dialog"]');
-    if (gebied) window.setTimeout(() => beslis(veld, gebied), 60);
+  document.addEventListener("scroll", bewaak, true);
+
+  document.addEventListener("focusout", () => {
+    // Even wachten: bij een focuswissel komt focusout vóór de nieuwe focusin.
+    window.setTimeout(() => {
+      if (!actiefVeldInPopup() && lus !== undefined) {
+        cancelAnimationFrame(lus);
+        lus = undefined;
+      }
+    }, 0);
   });
+
+  // Het toetsenbord verschijnt of verandert van hoogte. Dan kan een veld dat
+  // stil stond ineens bedekt zijn, zonder dat er iets gescrold is.
+  window.visualViewport?.addEventListener("resize", () => window.setTimeout(bewaak, 60));
 }
