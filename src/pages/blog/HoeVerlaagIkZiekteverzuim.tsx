@@ -75,7 +75,7 @@ const HoeVerlaagIkZiekteverzuim = () => {
 
       {/* Breadcrumb */}
       <nav className="container-custom py-4" aria-label="Breadcrumb">
-        <ol className="flex items-center space-x-2 text-sm">
+        <ol className="flex items-center space-x-2 text-base">
           <li>
             <Link to="/" className="text-brand-gray-medium hover:text-brand-blue">
               Home
