@@ -84,6 +84,29 @@
     @apply border-border;
   }
 
+  /**
+   * Ruimte vrijhouden rond een veld dat de focus krijgt.
+   *
+   * De menubalk staat sticky bovenaan en is 96 pixels hoog. Krijgt een
+   * invoerveld de focus, dan schuift de browser het naar de bovenkant van het
+   * scherm en dus onder die balk. Op een telefoon met het toetsenbord open valt
+   * dat extra op: je vult je naam in, de invulhulp springt naar het e-mailveld,
+   * en dat staat dan net boven beeld. Je ziet de velden eronder en denkt dat er
+   * te ver gescrold is.
+   *
+   * scroll-margin geldt voor elke manier waarop de browser een element in beeld
+   * brengt, dus ook voor het scrollen dat bij focus hoort. Onderaan hetzelfde
+   * verhaal voor de zwevende knop op mobiel.
+   *
+   * Dezelfde reden als scroll-mt-28 op de Calendly-widget.
+   */
+  input,
+  textarea,
+  select {
+    scroll-margin-top: 7rem;
+    scroll-margin-bottom: 7rem;
+  }
+
   body {
     @apply bg-background text-foreground font-body;
     font-size: 16px; /* Ensure minimum 16px base font size for accessibility */

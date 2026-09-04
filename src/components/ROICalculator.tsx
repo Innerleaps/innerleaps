@@ -77,7 +77,9 @@ const ROICalculator = () => {
     );
   };
 
-  const handleSubmit = async () => {
+  const handleSubmit = async (e?: React.FormEvent) => {
+    e?.preventDefault();
+
     // Het e-mailadres is het enige waarmee we deze bezoeker nog kunnen bereiken.
     // Een typefout betekent geen mail, geen opvolging, en een lead die je wel
     // betaald hebt maar nooit spreekt.
@@ -188,6 +190,14 @@ const ROICalculator = () => {
             </p>
           </div>
 
+          {/* Een echt formulier, geen losse velden in divs.
+              De invulhulp van iOS groepeert velden per formulier. Zonder
+              formulier moet Safari zelf uitzoeken wat bij elkaar hoort, en dat
+              bepaalt naar welk veld hij na een invulling springt en hoe ver hij
+              daarvoor scrolt. Met een formulier eromheen staat die volgorde
+              vast. Het levert bovendien een "volgende"-toets op het toetsenbord
+              op in plaats van een dood enter. */}
+          <form onSubmit={handleSubmit} noValidate>
           <div className="grid md:grid-cols-2 gap-8">
             {/* Left column - Contact details */}
             <div className="space-y-4">
@@ -327,13 +337,14 @@ const ROICalculator = () => {
 
           <div className="mt-8 flex justify-center">
             <Button
-              onClick={handleSubmit}
+              type="submit"
               disabled={!isFormValid() || isSubmitting}
               className="min-h-[44px] px-8 text-base md:text-lg font-semibold bg-brand-orange hover:bg-brand-orange/90"
             >
               {isSubmitting ? t('submit.loading') : t('submit.idle')}
             </Button>
           </div>
+          </form>
 
           <div className="mt-6 text-base text-white/80 text-center">
             {t('footnote')}
