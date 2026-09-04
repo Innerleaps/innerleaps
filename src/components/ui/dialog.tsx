@@ -47,10 +47,13 @@ const DialogContent = React.forwardRef<
          * daar tegenin te scrollen en schoof de inhoud naar de onderkant, zodat
          * het veld met de focus boven beeld verdween.
          *
-         * --zichtbare-hoogte komt uit src/lib/zichtbareHoogte.ts en volgt
-         * window.visualViewport, die wel meekrimpt met het toetsenbord.
+         * De pop-up vult op een telefoon simpelweg het hele scherm en scrollt
+         * van binnen. Hem aan het zichtbare venster plakken is geprobeerd en
+         * afgeserveerd: dat is een race met Safari, en dan zie je onder de
+         * pop-up door de pagina erachter. Het veld op de goede plek zetten doet
+         * src/lib/veldInBeeld.ts, achteraf en dus zonder race.
          */
-        "max-sm:inset-0 max-sm:left-0 max-sm:top-0 max-sm:h-[var(--zichtbare-hoogte,100dvh)] max-sm:max-h-[var(--zichtbare-hoogte,100dvh)] max-sm:w-full max-sm:max-w-none max-sm:translate-x-0 max-sm:translate-y-0 max-sm:rounded-none",
+        "max-sm:inset-0 max-sm:h-auto max-sm:max-h-none max-sm:w-full max-sm:max-w-none max-sm:translate-x-0 max-sm:translate-y-0 max-sm:rounded-none",
         /**
          * En geen zweefanimatie op een schermvullend paneel.
          *

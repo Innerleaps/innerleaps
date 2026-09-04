@@ -187,7 +187,16 @@ const CalculatorModal = ({ isOpen, onClose }: CalculatorModalProps) => {
 
   return (
     <Dialog open={isOpen} onOpenChange={handleClose}>
-      <DialogContent className="sm:max-w-4xl sm:max-h-[90vh] overflow-y-auto bg-white">
+      {/* Meteen in het naamveld staan, zodat de invulhulp van de telefoon er
+          direct bij staat en de bezoeker niet eerst hoeft te tikken. Radix zet
+          de focus standaard op het kader zelf; die overslaan we. */}
+      <DialogContent
+        className="sm:max-w-4xl sm:max-h-[90vh] overflow-y-auto bg-white"
+        onOpenAutoFocus={(e) => {
+          e.preventDefault();
+          document.getElementById('modal-naam')?.focus();
+        }}
+      >
         <DialogHeader>
           <div className="text-center">
             <div className="inline-flex items-center bg-brand-blue/10 text-brand-blue px-4 py-2 rounded-full text-base font-medium mb-6">
