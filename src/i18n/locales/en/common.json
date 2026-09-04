@@ -197,10 +197,8 @@
     }
   },
   "booking": {
-    "metaTitle": "Schedule a call with Bas | Innerleaps",
-    "metaDescription": "Schedule a free 30-minute call with Bas about reducing absenteeism and sustainable employability. Pick a moment that suits you.",
     "title": "Fancy a <0>chat</0>?",
-    "intro": "Pick a moment below. The call is free of obligation and takes 30 minutes.",
+    "intro": "Pick a moment below. The call is free of obligation and takes 20 minutes.",
     "bas": {
       "role": "Bas Ter Haar Romenij, Founder of Innerleaps",
       "photoAlt": "Bas Ter Haar Romenij",

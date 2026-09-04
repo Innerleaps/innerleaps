@@ -37,10 +37,6 @@
     "description": "Alle velden met een * zijn verplicht.",
     "missing": "Vul alle verplichte velden (*) in"
   },
-  "success": {
-    "title": "Berekening verstuurd!",
-    "description": "We hebben je ROI analyse naar je email gestuurd."
-  },
   "error": {
     "title": "Er ging iets mis",
     "description": "Probeer het later opnieuw."
@@ -52,24 +48,21 @@
     "avgSalary": "Gem. salaris",
     "absenteeism": "Verzuim",
     "turnover": "Verloop",
-    "conservative": "Conservative Scenario",
-    "conservativeTag": "Minimale Impact",
-    "positive": "Positive Scenario",
-    "positiveTag": "Volledige Impact",
+    "conservative": "Voorzichtige berekening",
+    "conservativeTag": "Ondergrens",
+    "positive": "Positief scenario",
+    "positiveTag": "Volledige impact",
     "absenteeismSaving": "Verzuimbesparing",
     "retentionSaving": "Retentiebesparing",
     "productivityGain": "Productiviteitswinst",
     "totalSaving": "Totale besparing",
     "investment": "Investering",
-    "netProfit": "NETTO WINST",
+    "netProfit": "Netto winst",
     "roi": "ROI",
     "scientificTitle": "Wetenschappelijke Onderbouwing",
     "scientificIntro": "Deze cijfers zijn gebaseerd op 40 jaar wetenschappelijk onderzoek naar aandachttraining:",
     "scientific1": "15-21% verzuimreductie (meta-analyses van 200+ studies)",
     "scientific2": "5-8% retentieverbetering (Harvard Business Review, 2019)",
-    "scientific3": "5-8% productiviteitsverbetering (Oxford University, 2022)",
-    "ctaQuestion": "Wil je deze winst realiseren?",
-    "ctaPrimary": "Kennismaken met Bas",
-    "ctaSecondary": "Nieuwe berekening"
+    "scientific3": "5-8% productiviteitsverbetering (Oxford University, 2022)"
   }
 }

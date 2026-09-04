@@ -16,9 +16,22 @@ interface BookingIntroProps {
   /** Op de boekingspagina is dit de h1, elders staat er al een h1 boven. */
   as?: "h1" | "h2";
   className?: string;
+  /**
+   * Een eigen kop en tekst, voor de bedanktpagina's. Daar is de aanleiding om
+   * te boeken een andere: iemand heeft net een berekening of een rapport
+   * aangevraagd, en dan slaat "Even sparren?" de plank mis. Laat je ze weg,
+   * dan staat de gewone tekst er, zoals op /contact en /over-ons.
+   */
+  title?: string;
+  intro?: string;
 }
 
-const BookingIntro = ({ as: Heading = "h1", className = "" }: BookingIntroProps) => {
+const BookingIntro = ({
+  as: Heading = "h1",
+  className = "",
+  title,
+  intro,
+}: BookingIntroProps) => {
   const { t } = useTranslation();
 
   return (
@@ -46,14 +59,16 @@ const BookingIntro = ({ as: Heading = "h1", className = "" }: BookingIntroProps)
       </div>
       <div>
         <Heading className="text-2xl font-bold leading-tight text-brand-purple sm:text-3xl md:text-4xl">
-          <Trans
-            i18nKey="booking.title"
-            t={t}
-            components={[<span className="text-brand-orange" />]}
-          />
+          {title ?? (
+            <Trans
+              i18nKey="booking.title"
+              t={t}
+              components={[<span className="text-brand-orange" />]}
+            />
+          )}
         </Heading>
         <p className="mt-2 text-base leading-relaxed text-brand-gray-medium sm:text-lg">
-          {t("booking.intro")}
+          {intro ?? t("booking.intro")}
         </p>
         <p className="mt-2 hidden text-base font-medium text-brand-gray-medium sm:block">
           {t("booking.bas.role")}

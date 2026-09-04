@@ -18,12 +18,6 @@
     "loading": "Versturen..."
   },
   "validation": "Vul alle verplichte velden in",
-  "success": {
-    "toastTitle": "Rapport aangevraagd!",
-    "toastDescription": "Je ontvangt het wetenschappelijk rapport binnen enkele minuten per email.",
-    "title": "Bedankt voor je aanvraag!",
-    "body": "Je ontvangt het wetenschappelijk rapport binnen enkele minuten op"
-  },
   "error": {
     "title": "Er ging iets mis",
     "description": "Probeer het later opnieuw of neem contact op."

@@ -1,0 +1,26 @@
+{
+  "roi": {
+    "metaTitle": {
+      "hr": "Bedankt, ROI HR - Innerleaps",
+      "management": "Bedankt, ROI management - Innerleaps",
+      "onbekend": "Bedankt, ROI - Innerleaps"
+    },
+    "title": "Bespaar ten minste <0>{{bedrag}}</0>",
+    "titleZonderBerekening": "De opbrengst van onze training",
+    "intro": "De berekening staat hieronder en is ook naar je e-mail verstuurd.",
+    "booking": {
+      "title": "Bespreek je resultaat met Bas",
+      "intro": "In 20 minuten beantwoordt Bas je vragen en licht hij de berekening toe."
+    }
+  },
+  "rapport": {
+    "metaTitle": "Je rapport is onderweg - Innerleaps",
+    "title": "Het rapport is onderweg naar je mail",
+    "intro": "Hij is er binnen een paar minuten. Staat hij er niet, kijk dan in je spam of mail naar bas@innerleaps.nl.",
+    "onderzoekTitle": "Wat 40 jaar onderzoek laat zien",
+    "booking": {
+      "title": "Wil je weten wat dit voor jouw organisatie betekent?",
+      "intro": "Kies hieronder een moment. Geen verkooppraatje, wel een eerlijk antwoord."
+    }
+  }
+}

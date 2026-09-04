@@ -37,10 +37,6 @@
     "description": "All fields marked with * are required.",
     "missing": "Please fill in all required fields (*)"
   },
-  "success": {
-    "title": "Calculation sent!",
-    "description": "We've emailed your ROI analysis."
-  },
   "error": {
     "title": "Something went wrong",
     "description": "Please try again later."
@@ -52,8 +48,8 @@
     "avgSalary": "Avg. salary",
     "absenteeism": "Absenteeism",
     "turnover": "Turnover",
-    "conservative": "Conservative scenario",
-    "conservativeTag": "Minimum impact",
+    "conservative": "Cautious calculation",
+    "conservativeTag": "Lower bound",
     "positive": "Positive scenario",
     "positiveTag": "Full impact",
     "absenteeismSaving": "Absenteeism saving",
@@ -61,15 +57,12 @@
     "productivityGain": "Productivity gain",
     "totalSaving": "Total saving",
     "investment": "Investment",
-    "netProfit": "NET PROFIT",
+    "netProfit": "Net profit",
     "roi": "ROI",
     "scientificTitle": "Scientific basis",
     "scientificIntro": "These figures are based on 40 years of scientific research into awareness training:",
     "scientific1": "15-21% reduction in absenteeism (meta-analyses of 200+ studies)",
     "scientific2": "5-8% retention improvement (Harvard Business Review, 2019)",
-    "scientific3": "5-8% productivity improvement (Oxford University, 2022)",
-    "ctaQuestion": "Want to realise these gains?",
-    "ctaPrimary": "Meet Bas",
-    "ctaSecondary": "New calculation"
+    "scientific3": "5-8% productivity improvement (Oxford University, 2022)"
   }
 }

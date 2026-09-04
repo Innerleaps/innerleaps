@@ -1,12 +1,14 @@
 import { useState } from 'react';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { useToast } from '@/hooks/use-toast';
-import { CheckCircle } from 'lucide-react';
 import { supabase } from '@/integrations/supabase/client';
+import { detectLanguageFromPath } from '@/i18n/config';
+import { bewaarRapportOverdracht, hashEmail, nieuweId, rapportBedanktPad } from '@/lib/bedankt';
 
 interface LeadMagnetModalProps {
   isOpen: boolean;
@@ -21,8 +23,20 @@ interface FormData {
   functie: string;
 }
 
+/**
+ * Het formulier voor het wetenschappelijk rapport, op /breintraining-methode.
+ *
+ * Hier stond eerst twee seconden een vinkje, waarna de pop-up zichzelf sloot en
+ * de bezoeker terugstond op de pagina waar hij vandaan kwam, met niets in
+ * handen. Geen URL, dus ook niets te meten, en het drukste moment van de hele
+ * bezoeker ging ongebruikt voorbij.
+ *
+ * Nu gaat hij door naar een eigen bedanktpagina met de agenda erop.
+ */
 const LeadMagnetModal = ({ isOpen, onClose }: LeadMagnetModalProps) => {
   const { t, i18n } = useTranslation('leadMagnet');
+  const location = useLocation();
+  const navigate = useNavigate();
   const [formData, setFormData] = useState<FormData>({
     naam: '',
     email: '',
@@ -31,7 +45,6 @@ const LeadMagnetModal = ({ isOpen, onClose }: LeadMagnetModalProps) => {
     functie: ''
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
   const { toast } = useToast();
 
   const handleInputChange = (field: keyof FormData) => (
@@ -74,16 +87,17 @@ const LeadMagnetModal = ({ isOpen, onClose }: LeadMagnetModalProps) => {
 
       if (error) throw error;
 
-      setIsSubmitted(true);
-      toast({
-        title: t('success.toastTitle'),
-        description: t('success.toastDescription'),
+      /**
+       * Pas doorsturen als het verzoek geslaagd is. De bedanktpagina zegt dat
+       * het rapport onderweg is naar je mail, en dat mag geen loze belofte zijn.
+       */
+      bewaarRapportOverdracht({
+        id: nieuweId(),
+        emailHash: await hashEmail(formData.email),
       });
 
-      // Auto-close after 2 seconds
-      setTimeout(() => {
-        handleClose();
-      }, 2000);
+      onClose();
+      navigate(rapportBedanktPad(detectLanguageFromPath(location.pathname)));
     } catch (error) {
       console.error('Submit error:', error);
       toast({
@@ -91,14 +105,12 @@ const LeadMagnetModal = ({ isOpen, onClose }: LeadMagnetModalProps) => {
         description: t('error.description'),
         variant: "destructive",
       });
-    } finally {
       setIsSubmitting(false);
     }
   };
 
   const handleClose = () => {
     if (!isSubmitting) {
-      setIsSubmitted(false);
       setFormData({
         naam: '',
         email: '',
@@ -109,26 +121,6 @@ const LeadMagnetModal = ({ isOpen, onClose }: LeadMagnetModalProps) => {
       onClose();
     }
   };
-
-  if (isSubmitted) {
-    return (
-      <Dialog open={isOpen} onOpenChange={handleClose}>
-        <DialogContent className="sm:max-w-md bg-white">
-          <div className="text-center py-6">
-            <div className="mx-auto flex items-center justify-center w-12 h-12 rounded-full bg-green-100 mb-4">
-              <CheckCircle className="w-6 h-6 text-green-600" />
-            </div>
-            <h3 className="text-xl font-semibold text-brand-gray-dark mb-2">
-              {t('success.title')}
-            </h3>
-            <p className="text-brand-gray-medium">
-              {t('success.body')} <strong>{formData.email}</strong>
-            </p>
-          </div>
-        </DialogContent>
-      </Dialog>
-    );
-  }
 
   return (
     <Dialog open={isOpen} onOpenChange={handleClose}>

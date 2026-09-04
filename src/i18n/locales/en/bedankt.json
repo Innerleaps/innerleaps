@@ -1,0 +1,26 @@
+{
+  "roi": {
+    "metaTitle": {
+      "hr": "Thank you, ROI HR - Innerleaps",
+      "management": "Thank you, ROI management - Innerleaps",
+      "onbekend": "Thank you, ROI - Innerleaps"
+    },
+    "title": "Save at least <0>{{bedrag}}</0>",
+    "titleZonderBerekening": "What our training delivers",
+    "intro": "Your calculation is below and we have also sent it to your email.",
+    "booking": {
+      "title": "Discuss your result with Bas",
+      "intro": "In 20 minutes Bas answers your questions and talks you through the calculation."
+    }
+  },
+  "rapport": {
+    "metaTitle": "Your report is on its way - Innerleaps",
+    "title": "The report is on its way to your inbox",
+    "intro": "It will arrive within a few minutes. If it does not, check your spam folder or email bas@innerleaps.nl.",
+    "onderzoekTitle": "What 40 years of research shows",
+    "booking": {
+      "title": "Want to know what this means for your organisation?",
+      "intro": "Pick a moment below. No sales pitch, just an honest answer."
+    }
+  }
+}

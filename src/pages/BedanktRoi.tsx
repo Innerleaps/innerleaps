@@ -1,0 +1,155 @@
+import { useEffect, useMemo, useState } from "react";
+import { Link, useLocation } from "react-router-dom";
+import { Trans, useTranslation } from "react-i18next";
+import SimplifiedNavigation from "@/components/SimplifiedNavigation";
+import Footer from "@/components/Footer";
+import PageSeo from "@/components/PageSeo";
+import RoiResultaat from "@/components/RoiResultaat";
+import BedanktBooking from "@/components/BedanktBooking";
+import { Button } from "@/components/ui/button";
+import { detectLanguageFromPath } from "@/i18n/config";
+import { leesRoiOverdracht, type Doelgroep, type RoiOverdracht } from "@/lib/bedankt";
+import { meldRoiLead } from "@/lib/conversies";
+
+/**
+ * De bedanktpagina van de rekentool, in drie smaken.
+ *
+ * Waarom drie adressen voor bijna dezelfde pagina: dit is de conversie waar
+ * Google Ads op stuurt. Een eigen URL per doelgroep geeft een eigen
+ * conversieactie en een eigen remarketinglijst, en dus zicht op welke doelgroep
+ * daadwerkelijk oplevert. Dat gaat niet als HR en directie op hetzelfde adres
+ * uitkomen.
+ *
+ * De pagina moet ook werken zonder berekening. Dat is geen randgeval: je komt
+ * hier terecht na een verversing, via de geschiedenis, via een doorgestuurde
+ * link, en als je zelf komt kijken of de tag vuurt. Dan staat er de kop zonder
+ * bedrag en een knop terug naar de rekentool, in plaats van een leeg scherm.
+ */
+interface BedanktRoiProps {
+  doelgroep: Doelgroep;
+}
+
+const BedanktRoi = ({ doelgroep }: BedanktRoiProps) => {
+  const { t, i18n } = useTranslation("bedankt");
+  const { pathname } = useLocation();
+  const taal = detectLanguageFromPath(pathname);
+  /**
+   * Meteen bij de eerste render lezen, niet in een effect.
+   *
+   * Deze pagina wordt voorgebakken in de versie zonder bedrag, want tijdens het
+   * bouwen is er geen berekening. Leest React de opslag pas in een effect, dan
+   * ziet de bezoeker eerst die lege versie en pas daarna zijn bedrag. Zo is het
+   * er in één keer.
+   */
+  const [overdracht] = useState<RoiOverdracht | null>(() => leesRoiOverdracht());
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  // De melding gaat pas weg als de berekening er echt is, en maar één keer per
+  // invulling. Zonder die rem telt elke verversing als een nieuwe lead.
+  useEffect(() => {
+    if (!overdracht) return;
+    meldRoiLead({
+      id: overdracht.id,
+      doelgroep: overdracht.doelgroep,
+      besparingVoorzichtig: overdracht.resultaten.scenarios.conservative.netBesparing,
+      besparingPositief: overdracht.resultaten.scenarios.positive.netBesparing,
+      aantalWerknemers: parseInt(overdracht.invoer.aantalWerknemers, 10) || 0,
+      emailHash: overdracht.emailHash,
+    });
+  }, [overdracht]);
+
+  const besparing = overdracht?.resultaten.scenarios.conservative.netBesparing ?? 0;
+
+  /**
+   * Het bedrag komt uit het voorzichtige scenario, niet uit het positieve.
+   * "Bespaar ten minste" is dan een ondergrens die je waarmaakt, en twee regels
+   * lager ziet de bezoeker dat er meer in kan zitten. Andersom zou het eerste
+   * getal onder de kop lager zijn dan de kop zelf, en dat leest als terugkrabbelen.
+   *
+   * Bij nul of minder valt hij terug op de kop zonder bedrag. Dat kan alleen bij
+   * onzinnige invoer, maar "Bespaar ten minste € -2.000" wil je nooit zien.
+   */
+  const heeftBerekening = Boolean(overdracht) && besparing > 0;
+
+  const bedrag = useMemo(
+    () =>
+      new Intl.NumberFormat(taal === "en" ? "en-GB" : "nl-NL", {
+        style: "currency",
+        currency: "EUR",
+        minimumFractionDigits: 0,
+        maximumFractionDigits: 0,
+      }).format(besparing),
+    [besparing, taal],
+  );
+  const rekentoolPad = taal === "en" ? "/en" : "/";
+
+  return (
+    <div className="min-h-screen bg-brand-gray-light">
+      {/* noindex: dit zijn vier bijna identieke pagina's achter een formulier.
+          Laat je ze indexeren, dan concurreren ze met de pagina's die wél moeten
+          ranken. "follow" blijft aan, zodat de links eruit gewoon meetellen. */}
+      <PageSeo
+        title={t(`roi.metaTitle.${doelgroep}`)}
+        description={t("roi.intro")}
+        noindex
+      />
+      <SimplifiedNavigation />
+
+      <main>
+        <section className="section-padding">
+          <div className="container-custom">
+            <div className="mx-auto max-w-4xl">
+              {/* Het bedrag oranje. Een accent schrijf je in de JSON als
+                  <0>...</0>, nooit als HTML, zodat de vertaling de opmaak
+                  meeneemt in plaats van hem na te bouwen. */}
+              <h1 className="text-3xl font-bold leading-tight text-brand-purple md:text-4xl lg:text-5xl">
+                {heeftBerekening ? (
+                  <Trans
+                    i18nKey="roi.title"
+                    t={t}
+                    values={{ bedrag }}
+                    components={[<span className="text-brand-orange" />]}
+                  />
+                ) : (
+                  t("roi.titleZonderBerekening")
+                )}
+              </h1>
+
+              {heeftBerekening ? (
+                <>
+                  <p className="mt-4 text-lg leading-relaxed text-brand-gray-medium md:text-xl">
+                    {t("roi.intro")}
+                  </p>
+                  <div className="mt-8">
+                    <RoiResultaat
+                      resultaten={overdracht!.resultaten}
+                      invoer={overdracht!.invoer}
+                    />
+                  </div>
+                </>
+              ) : (
+                <div className="mt-8">
+                  <Button
+                    asChild
+                    className="min-h-[44px] bg-brand-orange px-8 text-base font-semibold hover:bg-brand-orange/90 md:text-lg"
+                  >
+                    <Link to={`${rekentoolPad}#calculator`}>{t("cta.calculateSavings", { ns: "common" })}</Link>
+                  </Button>
+                </div>
+              )}
+            </div>
+          </div>
+        </section>
+
+        <BedanktBooking title={t("roi.booking.title")} intro={t("roi.booking.intro")} />
+      </main>
+
+      <Footer />
+    </div>
+  );
+};
+
+export default BedanktRoi;

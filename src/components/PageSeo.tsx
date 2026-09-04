@@ -24,8 +24,15 @@ const PageSeo = ({ title, description, image, type = "website", noindex, childre
   const otherPath = getEquivalentPath(pathname, currentLang === "nl" ? "en" : "nl");
 
   const canonical = `${SITE_URL}${pathname === "/" ? "/" : pathname.replace(/\/+$/, "")}`;
-  const nlHref = currentLang === "nl" ? canonical : otherPath ? `${SITE_URL}${otherPath}` : null;
-  const enHref = currentLang === "en" ? canonical : otherPath ? `${SITE_URL}${otherPath}` : null;
+
+  /**
+   * Op een noindex-pagina heeft hreflang geen betekenis: je vertelt Google
+   * welke taalversie hij moet tonen voor een pagina die hij niet mag tonen.
+   * Bovendien staan die pagina's niet in ROUTE_MAP, dus er is geen tegenhanger
+   * en bleef er een verwijzing naar zichzelf over.
+   */
+  const nlHref = noindex ? null : currentLang === "nl" ? canonical : otherPath ? `${SITE_URL}${otherPath}` : null;
+  const enHref = noindex ? null : currentLang === "en" ? canonical : otherPath ? `${SITE_URL}${otherPath}` : null;
   const absImage = image ? (image.startsWith("http") ? image : `${SITE_URL}${image}`) : null;
 
   return (

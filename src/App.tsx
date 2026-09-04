@@ -27,6 +27,8 @@ const VerborgenKostenZiekteverzuim = lazy(() => import("./pages/blog/VerborgenKo
 const HoeVerlaagIkZiekteverzuim = lazy(() => import("./pages/blog/HoeVerlaagIkZiekteverzuim"));
 const MasterclassQR = lazy(() => import("./pages/MasterclassQR"));
 const Bedankt = lazy(() => import("./pages/Bedankt"));
+const BedanktRoi = lazy(() => import("./pages/BedanktRoi"));
+const BedanktRapport = lazy(() => import("./pages/BedanktRapport"));
 const NegenStippen = lazy(() => import("./pages/NegenStippen"));
 const AlgemeneVoorwaarden = lazy(() => import("./pages/AlgemeneVoorwaarden"));
 const PrivacyNotice = lazy(() => import("./pages/PrivacyNotice"));
@@ -99,6 +101,23 @@ const App = () => {
                 <Route path="/privacy" element={<PrivacyNotice />} />
                 <Route path="/cookies" element={<Cookies />} />
                 
+                {/* De bedanktpagina's van de twee lead generators.
+                    Bewust vier adressen en niet één: dit is waar Google Ads de
+                    conversie op meet, en per doelgroep een eigen URL geeft een
+                    eigen conversieactie en een eigen remarketinglijst.
+                    Ze staan bewust NIET in ROUTE_MAP: ze worden niet
+                    geprerenderd, krijgen noindex mee en horen niet in de
+                    sitemap. Daarom staan ze wel als status 200 in netlify.toml,
+                    anders vallen ze vanaf de volgende deploy onder de 404. */}
+                <Route path="/bedankt/roi-hr" element={<BedanktRoi doelgroep="hr" />} />
+                <Route path="/bedankt/roi-management" element={<BedanktRoi doelgroep="management" />} />
+                <Route path="/bedankt/roi" element={<BedanktRoi doelgroep="onbekend" />} />
+                <Route path="/bedankt/wetenschappelijk-rapport" element={<BedanktRapport />} />
+                <Route path="/en/thank-you/roi-hr" element={<BedanktRoi doelgroep="hr" />} />
+                <Route path="/en/thank-you/roi-management" element={<BedanktRoi doelgroep="management" />} />
+                <Route path="/en/thank-you/roi" element={<BedanktRoi doelgroep="onbekend" />} />
+                <Route path="/en/thank-you/scientific-report" element={<BedanktRapport />} />
+
                 {/* Feature-flag routes - visible in Lovable editor, but redirect in production */}
                 <Route path="/masterclass-stress-qr" element={
                   <ProductionRedirect>
