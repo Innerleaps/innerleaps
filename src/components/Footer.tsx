@@ -52,6 +52,8 @@ const Footer = memo(({ showNavigation = true }: FooterProps) => {
               <div className="flex flex-col items-center">
                 <img
                   src={vmbnLogo}
+              width={286}
+              height={208}
                   alt="VMBN trainer categorie 1"
                   className="h-16 w-auto bg-white rounded p-1"
                   loading="lazy"

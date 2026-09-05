@@ -49,11 +49,29 @@ const queryClient = new QueryClient();
  * plaats van een korte flits zag je de pagina heel even in een iets andere
  * opmaak staan, en dat valt meer op dan wit.
  */
-const Laadscherm = () => (
-  <div className="min-h-screen bg-white flex items-center justify-center">
-    <div className="animate-pulse text-brand-blue text-lg">Laden...</div>
-  </div>
-);
+/**
+ * Het laadscherm, maar alleen als er niets anders te zien is.
+ *
+ * Staat de voorgebakken pagina er nog (zie main.tsx), dan is die het laadscherm
+ * en tonen we hier niets. Deden we dat wel, dan kwam er onder de zichtbare
+ * pagina een leeg vlak van een volledig scherm bij. De pagina wordt daardoor
+ * twee schermen lang en meteen daarna weer één, en dat zie je op een telefoon
+ * terug als een trilling: de adresbalk van Safari reageert op zo'n verandering
+ * in paginahoogte.
+ *
+ * Bij navigeren binnen de site is die laag er niet, en dan hoort er wel een
+ * laadscherm te komen.
+ */
+const Laadscherm = () => {
+  if (typeof document !== "undefined" && document.getElementById("voorvertoning")) {
+    return null;
+  }
+  return (
+    <div className="min-h-screen bg-white flex items-center justify-center">
+      <div className="animate-pulse text-brand-blue text-lg">Laden...</div>
+    </div>
+  );
+};
 
 /**
  * Haalt de voorgebakken pagina weg zodra React zijn eerste pagina heeft

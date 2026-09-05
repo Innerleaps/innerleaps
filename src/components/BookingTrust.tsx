@@ -54,6 +54,8 @@ const BookingTrust = ({ divider = true, className = "" }: BookingTrustProps) => 
           <div className="flex flex-col items-center text-center">
             <img
               src={vmbnLogo}
+              width={286}
+              height={208}
               alt={t("bookingTrust.vmbnAlt")}
               className="h-12 w-auto"
               loading="lazy"

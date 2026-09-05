@@ -26,24 +26,24 @@ const TrustSection = memo(({ variant = "white", bookingCta = false }: TrustSecti
       title: t('trust.items.healthcareSystem.title'),
       description: t('trust.items.healthcareSystem.description'),
       logos: [
-        { src: vgzLogo, alt: t('trust.altPrefix.vgz'), className: "h-24" },
-        { src: czLogo, alt: t('trust.altPrefix.cz'), className: "h-24" },
-        { src: menzisLogo, alt: t('trust.altPrefix.menzis'), className: "h-20" },
+        { src: vgzLogo, alt: t('trust.altPrefix.vgz'), className: "h-24", width: 950, height: 770 },
+        { src: czLogo, alt: t('trust.altPrefix.cz'), className: "h-24", width: 1268, height: 1116 },
+        { src: menzisLogo, alt: t('trust.altPrefix.menzis'), className: "h-20", width: 624, height: 305 },
       ],
     },
     {
       title: t('trust.items.research.title'),
       description: t('trust.items.research.description'),
       logos: [
-        { src: oxfordLogo, alt: t('trust.altPrefix.oxford'), className: "h-24 rounded" },
-        { src: uMassLogo, alt: t('trust.altPrefix.umass'), className: "h-24" },
-        { src: uvaLogo, alt: t('trust.altPrefix.uva'), className: "h-24" },
+        { src: oxfordLogo, alt: t('trust.altPrefix.oxford'), className: "h-24 rounded", width: 983, height: 614 },
+        { src: uMassLogo, alt: t('trust.altPrefix.umass'), className: "h-24", width: 787, height: 314 },
+        { src: uvaLogo, alt: t('trust.altPrefix.uva'), className: "h-24", width: 1920, height: 572 },
       ],
     },
     {
       title: t('trust.items.trainers.title'),
       description: t('trust.items.trainers.description'),
-      logos: [{ src: vmbnLogo, alt: t('trust.altPrefix.vmbn'), className: "h-28" }],
+      logos: [{ src: vmbnLogo, alt: t('trust.altPrefix.vmbn'), className: "h-28", width: 286, height: 208 }],
     },
   ];
 
@@ -71,6 +71,8 @@ const TrustSection = memo(({ variant = "white", bookingCta = false }: TrustSecti
                         src={logo.src}
                         alt={logo.alt}
                         loading="lazy"
+                        width={logo.width}
+                        height={logo.height}
                         className={`object-contain ${logo.className}`}
                       />
                     ))}

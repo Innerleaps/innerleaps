@@ -56,6 +56,8 @@ const SimplifiedNavigation = () => {
             <Link to={href.home} className="hover:opacity-80 transition-opacity">
               <img
                 src="/lovable-uploads/06d0112b-b23b-4ce0-b028-68ac939b2b2b.webp"
+                width={414}
+                height={140}
                 alt="Innerleaps Logo"
                 className="h-16 w-auto"
               />

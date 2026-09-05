@@ -26,6 +26,20 @@ import {
 import SimplifiedNavigation from "@/components/SimplifiedNavigation";
 import Footer from "@/components/Footer";
 import StickyCtaButtons from "@/components/StickyCtaButtons";
+
+/**
+ * De afmetingen van de weken-afbeelding, zodat de browser er ruimte voor
+ * vrijhoudt voordat hij binnen is.
+ *
+ * Zonder dit was dit vak nul pixels hoog en daarna 253, en schoof alles
+ * eronder tijdens het laden een kwart scherm omlaag. Dat is wat je op een
+ * telefoon als trillen ziet.
+ *
+ * Alle vier de propositiepagina's geven hier hetzelfde bestand mee
+ * (6_weken_brein_trainen.webp, 608 bij 430). Vervang je dat door een plaatje
+ * met een andere verhouding, pas deze getallen dan mee aan.
+ */
+const WEKEN_AFMETING = { width: 608, height: 430 } as const;
 import TrustSection from "@/components/TrustSection";
 import ProgramOverviewSection from "@/components/ProgramOverviewSection";
 import MasterclassSection from "@/components/MasterclassSection";
@@ -480,6 +494,7 @@ const TrainingPageLayout = ({
                   <img
                     src={weeksImage}
                     alt={t(`${tKey}.weeks.imageAlt`)}
+                    {...WEKEN_AFMETING}
                     className="w-full h-auto rounded-2xl shadow-lg"
                   />
                 </div>
@@ -500,6 +515,7 @@ const TrainingPageLayout = ({
                     <img
                       src={weeksImage}
                       alt={t(`${tKey}.weeks.imageAlt`)}
+                      {...WEKEN_AFMETING}
                       className="w-full h-auto rounded-2xl shadow-lg"
                     />
                   </div>
