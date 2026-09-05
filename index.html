@@ -51,13 +51,11 @@
     <link rel="dns-prefetch" href="https://calendly.com" />
 
     <!-- Preload critical fonts for faster rendering -->
-    <link 
-      rel="preload" 
-      href="https://fonts.gstatic.com/s/figtree/v5/uk-mEGe7raEw-HjkzZabDhGfYEk.woff2" 
-      as="font" 
-      type="font/woff2" 
-      crossorigin 
-    />
+    <!-- Hier stond een preload van een Figtree-bestand met een vaste URL op
+         versie 5. Google versienummert die bestanden, staat inmiddels op v9, en
+         die oude URL gaf een 404 bij elke paginalading. Een vaste URL naar een
+         Google-lettertypebestand veroudert dus vanzelf. De preconnect hierboven
+         en de stylesheet hieronder doen het werk. -->
     
     <link
       href="https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600;700&family=Asap+Condensed:wght@400;500;600;700&display=swap"

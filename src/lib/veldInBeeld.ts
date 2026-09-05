@@ -60,11 +60,25 @@ const staatInBeeld = (veld: HTMLElement) => {
   return rand.top >= top + SPELING && rand.bottom <= top + hoogte - SPELING;
 };
 
-/** Het veld dat nu de focus heeft, als dat een invoerveld in een pop-up is. */
-const actiefVeldInPopup = () => {
+/**
+ * Het veld dat we bewaken.
+ *
+ * Bewust niet `document.activeElement`. Tijdens het invullen met de invulhulp
+ * ligt de focus even niet op een invoerveld: Safari geeft hem aan zijn eigen
+ * balk boven het toetsenbord. Een bewaking die op activeElement afgaat stapt er
+ * dan precies op het verkeerde moment uit, en dat is exact wanneer de sprong
+ * gebeurt. Gemeten in een schermopname: het formulier stond ruim 250
+ * milliseconde helemaal onderaan terwijl de bewaking niets deed.
+ *
+ * Daarom onthouden we zelf welk veld als laatste focus kreeg, en blijven we dat
+ * bewaken zolang het nog in een geopende pop-up staat.
+ */
+let bewaaktVeld: HTMLElement | null = null;
+
+const teBewaken = () => {
   if (!window.matchMedia(TELEFOON).matches) return null;
-  const veld = document.activeElement as HTMLElement | null;
-  if (!veld?.matches?.("input, textarea, select")) return null;
+  const veld = bewaaktVeld;
+  if (!veld || !veld.isConnected) return null;
   const gebied = veld.closest<HTMLElement>('[role="dialog"]');
   return gebied ? { veld, gebied } : null;
 };
@@ -87,7 +101,7 @@ if (typeof window !== "undefined") {
   let lus: number | undefined;
 
   const bewaak = () => {
-    const nu = actiefVeldInPopup();
+    const nu = teBewaken();
     if (!nu) return;
     const { veld, gebied } = nu;
 
@@ -116,19 +130,23 @@ if (typeof window !== "undefined") {
     goedePositie = gebied.scrollTop;
   };
 
-  /** Elke beeldopbouw kijken, zolang er een veld in een pop-up focus heeft. */
+  /** Elke beeldopbouw kijken, zolang er een veld in een pop-up bewaakt wordt. */
   const draai = () => {
-    if (!actiefVeldInPopup()) { lus = undefined; return; }
+    if (!teBewaken()) { lus = undefined; return; }
     bewaak();
     lus = requestAnimationFrame(draai);
   };
 
   // Een veld krijgt focus: de bezoeker is niet meer aan zet, onthouden waar we
   // staan, en de lus starten.
-  document.addEventListener("focusin", () => {
-    const nu = actiefVeldInPopup();
-    if (!nu) return;
+  document.addEventListener("focusin", (e) => {
+    const doel = e.target as HTMLElement | null;
+    if (!doel?.matches?.("input, textarea, select")) return;
+    if (!doel.closest('[role="dialog"]')) return;
+    bewaaktVeld = doel;
     bezoekerAanZet = false;
+    const nu = teBewaken();
+    if (!nu) return;
     goedePositie = nu.gebied.scrollTop;
     bewaak();
     if (lus === undefined) lus = requestAnimationFrame(draai);
@@ -146,12 +164,17 @@ if (typeof window !== "undefined") {
    */
   document.addEventListener("scroll", bewaak, true);
 
+  /**
+   * We stoppen pas als het veld echt weg is, dus als de pop-up sluit. Niet bij
+   * focusout: die komt ook af als de invulhulp de focus even overneemt, en juist
+   * dan moeten we blijven kijken.
+   */
   document.addEventListener("focusout", () => {
-    // Even wachten: bij een focuswissel komt focusout vóór de nieuwe focusin.
     window.setTimeout(() => {
-      if (!actiefVeldInPopup() && lus !== undefined) {
+      if (!teBewaken() && lus !== undefined) {
         cancelAnimationFrame(lus);
         lus = undefined;
+        bewaaktVeld = null;
       }
     }, 0);
   });
