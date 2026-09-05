@@ -199,6 +199,25 @@ async function main() {
         const locale = route === "/en" || route.startsWith("/en/")
           ? "en-US"
           : "nl-NL";
+        /**
+         * De Google tag blokkeren tijdens het bouwen.
+         *
+         * Zonder dit stuurt de bouwmachine bij elke deploy 32 nepbezoeken naar
+         * GA4, één per pagina, allemaal vanaf hetzelfde IP. Dat vervuilt je
+         * cijfers precies op het moment dat je ze nodig hebt om campagnes op te
+         * sturen. De scripttag blijft gewoon in de vastgelegde HTML staan, hij
+         * wordt hier alleen niet uitgevoerd.
+         */
+        await page.setRequestInterception(true);
+        page.on("request", (verzoek) => {
+          const url = verzoek.url();
+          if (url.includes("googletagmanager.com") || url.includes("google-analytics.com")) {
+            verzoek.abort();
+            return;
+          }
+          verzoek.continue();
+        });
+
         await page.setExtraHTTPHeaders({ "Accept-Language": locale });
         await page.evaluateOnNewDocument((value) => {
           Object.defineProperty(navigator, "language", { get: () => value });
