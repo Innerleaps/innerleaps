@@ -58,7 +58,7 @@ const Blog = () => {
               <Link key={post.id} to={post.slug}>
                 <Card className="bg-white hover:shadow-lg transition-shadow h-full">
                   <CardContent className="p-6">
-                    <div className="flex items-center text-brand-gray-medium text-sm mb-4">
+                    <div className="flex items-center text-brand-gray-medium text-base mb-4">
                       <Calendar className="h-4 w-4 mr-2" />
                       {post.date}
                     </div>

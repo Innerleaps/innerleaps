@@ -60,12 +60,12 @@ Dat zegt <span className="text-brand-orange">De Wetenschap</span>.</h2>
                     </div>
                     <Tooltip>
                       <TooltipTrigger asChild>
-                        <span className="text-sm bg-brand-orange/5 text-brand-orange/70 px-2 py-1 rounded-full font-normal cursor-help hover:bg-brand-orange/10 hover:text-brand-orange transition-colors duration-200">
+                        <span className="text-base bg-brand-orange/5 text-brand-orange/70 px-2 py-1 rounded-full font-normal cursor-help hover:bg-brand-orange/10 hover:text-brand-orange transition-colors duration-200">
                           {impact.tag}
                         </span>
                       </TooltipTrigger>
                       <TooltipContent className="max-w-sm p-4 bg-white border border-gray-200 shadow-lg rounded-lg z-50" side="top" align="center" sideOffset={8} avoidCollisions={false}>
-                        <p className="text-sm leading-relaxed text-gray-700">{getJdrTooltipContent(impact.tag)}</p>
+                        <p className="text-base leading-relaxed text-gray-700">{getJdrTooltipContent(impact.tag)}</p>
                       </TooltipContent>
                     </Tooltip>
                   </div>

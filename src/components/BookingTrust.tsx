@@ -48,17 +48,19 @@ const BookingTrust = ({ divider = true, className = "" }: BookingTrustProps) => 
                 <Star key={i} className="h-3.5 w-3.5 fill-brand-orange text-brand-orange" />
               ))}
             </div>
-            <span className="mt-1 text-xs text-brand-gray-medium">{t("footer.googleRating")}</span>
+            <span className="mt-1 text-base text-brand-gray-medium">{t("footer.googleRating")}</span>
           </div>
 
           <div className="flex flex-col items-center text-center">
             <img
               src={vmbnLogo}
+              width={286}
+              height={208}
               alt={t("bookingTrust.vmbnAlt")}
               className="h-12 w-auto"
               loading="lazy"
             />
-            <span className="mt-1 text-xs text-brand-gray-medium">
+            <span className="mt-1 text-base text-brand-gray-medium">
               {t("footer.trainerCategory")}
             </span>
           </div>

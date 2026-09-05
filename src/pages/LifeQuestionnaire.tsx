@@ -100,7 +100,7 @@ const LifeQuestionnaire = () => {
 
           <form onSubmit={handleSubmit} className="space-y-6">
             <div className="mb-4">
-              <p className="text-sm text-foreground/60">
+              <p className="text-base text-foreground/60">
                 {answeredCount} of {questions.length} questions answered
               </p>
             </div>
@@ -117,7 +117,7 @@ const LifeQuestionnaire = () => {
                   <AccordionTrigger className="hover:no-underline">
                     <div className="flex items-center gap-3 text-left">
                       <span className="font-semibold">Question {index + 1}</span>
-                      {answers[index] !== undefined && <span className="text-sm text-green-600">✓</span>}
+                      {answers[index] !== undefined && <span className="text-base text-green-600">✓</span>}
                     </div>
                   </AccordionTrigger>
                   <AccordionContent className="pt-4">

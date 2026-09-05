@@ -20,13 +20,11 @@
     "phone": "Telefoon",
     "phonePlaceholder": "06 12345678",
     "absenteeism": "Huidig verzuimpercentage (%)",
-    "absenteeismPlaceholder": "5.2",
-    "turnover": "Personeelsverloop percentage (%)",
-    "turnoverPlaceholder": "10",
+    "absenteeismPlaceholder": "5,2",
     "employees": "Aantal werknemers",
     "employeesPlaceholder": "15",
     "salary": "Gemiddeld bruto jaarsalaris per werknemer (€)",
-    "salaryPlaceholder": "39700"
+    "salaryPlaceholder": "39.700"
   },
   "submit": {
     "idle": "Bereken Besparing",
@@ -35,11 +33,8 @@
   "validation": {
     "title": "Vul alle verplichte velden in",
     "description": "Alle velden met een * zijn verplicht.",
-    "missing": "Vul alle verplichte velden (*) in"
-  },
-  "success": {
-    "title": "Berekening verstuurd!",
-    "description": "We hebben je ROI analyse naar je email gestuurd."
+    "missing": "Vul alle verplichte velden (*) in",
+    "email": "Controleer je e-mailadres even. Zonder geldig adres kunnen we je niets sturen."
   },
   "error": {
     "title": "Er ging iets mis",
@@ -51,25 +46,19 @@
     "employees": "Werknemers",
     "avgSalary": "Gem. salaris",
     "absenteeism": "Verzuim",
-    "turnover": "Verloop",
-    "conservative": "Conservative Scenario",
-    "conservativeTag": "Minimale Impact",
-    "positive": "Positive Scenario",
-    "positiveTag": "Volledige Impact",
+    "conservative": "Voorzichtige berekening",
+    "conservativeTag": "Ondergrens",
+    "positive": "Positief scenario",
+    "positiveTag": "Volledige impact",
     "absenteeismSaving": "Verzuimbesparing",
-    "retentionSaving": "Retentiebesparing",
     "productivityGain": "Productiviteitswinst",
     "totalSaving": "Totale besparing",
     "investment": "Investering",
-    "netProfit": "NETTO WINST",
+    "netProfit": "Netto winst",
     "roi": "ROI",
     "scientificTitle": "Wetenschappelijke Onderbouwing",
     "scientificIntro": "Deze cijfers zijn gebaseerd op 40 jaar wetenschappelijk onderzoek naar aandachttraining:",
     "scientific1": "15-21% verzuimreductie (meta-analyses van 200+ studies)",
-    "scientific2": "5-8% retentieverbetering (Harvard Business Review, 2019)",
-    "scientific3": "5-8% productiviteitsverbetering (Oxford University, 2022)",
-    "ctaQuestion": "Wil je deze winst realiseren?",
-    "ctaPrimary": "Kennismaken met Bas",
-    "ctaSecondary": "Nieuwe berekening"
+    "scientific2": "5-8% productiviteitsverbetering (Oxford University, 2022)"
   }
 }

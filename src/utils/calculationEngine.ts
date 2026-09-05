@@ -15,9 +15,13 @@ export interface BusinessCaseInputs {
 }
 
 // ROI Calculator Interface (nieuwe berekening voor LandingPage)
+// Personeelsverloop zat hier ook in. Dat is eruit: de retentiebesparing rustte
+// op een aanname over hoeveel vertrekkers je met een training vasthoudt, en dat
+// is het zwakste cijfer van de drie. Wat overblijft, minder verzuim en meer
+// productiviteit, kun je wel hard maken. Een som is zo geloofwaardig als zijn
+// zwakste post, dus die eruit halen maakt de uitkomst sterker, niet zwakker.
 export interface ROIInputs {
   currentAbsenteeism: number;      // percentage (bijv. 5 voor 5%)
-  employeeTurnover: number;        // percentage (bijv. 10 voor 10%)
   numberOfEmployees: number;
   avgGrossAnnualSalary: number;    // per werknemer
 }
@@ -49,7 +53,6 @@ export interface BusinessCaseScenarioResults {
 // ROI Calculator Scenario Interface
 export interface ROIScenario {
   verzuimBesparing: number;
-  retentieBesparing: number;
   productiviteitBesparing: number;
   totaleBesparing: number;
   netBesparing: number;
@@ -167,16 +170,13 @@ const BUSINESS_CASE_CONSTANTS: BusinessCaseConstants = {
 // ROI Calculator Constants (nieuwe berekening voor LandingPage)
 const ROI_CONSTANTS = {
   ABSENTEEISM_COST_FACTOR: 1.85,           // 185%
-  EMPLOYEE_REPLACEMENT_COSTS_FACTOR: 1.5,  // 150%
   INVESTMENT_PER_PARTICIPANT: 575,         // €575
-  
+
   // Conservative bounds (minimaal)
-  LOW_BOUND_TURNOVER_IMPACT: 0.05,         // 5%
   LOW_BOUND_PRODUCTIVITY_GAIN: 0.05,       // 5%
   LOWER_BOUND_ABSENTEEISM: 0.15,           // 15%
-  
+
   // Positive bounds (maximaal)
-  HIGH_BOUND_TURNOVER_IMPACT: 0.08,        // 8%
   HIGH_BOUND_PRODUCTIVITY_GAIN: 0.08,      // 8%
   HIGHER_BOUND_ABSENTEEISM: 0.21,          // 21%
 };
@@ -320,58 +320,54 @@ export const calculateBusinessCase = (inputs: BusinessCaseInputs): BusinessCaseR
 
 // ROI Calculator Function (nieuwe berekening voor LandingPage)
 export const calculateROI = (inputs: ROIInputs): ROIResults => {
-  const { currentAbsenteeism, employeeTurnover, numberOfEmployees, avgGrossAnnualSalary } = inputs;
-  
-  // Basis berekeningen
+  const { currentAbsenteeism, numberOfEmployees, avgGrossAnnualSalary } = inputs;
+
   const totaleLoonkosten = numberOfEmployees * avgGrossAnnualSalary;
   const investment = numberOfEmployees * ROI_CONSTANTS.INVESTMENT_PER_PARTICIPANT;
-  
-  // Conservative Scenario (Minimale Impact)
-  const conservativeRetentie = (employeeTurnover / 100) * totaleLoonkosten * 
-    ROI_CONSTANTS.EMPLOYEE_REPLACEMENT_COSTS_FACTOR * ROI_CONSTANTS.LOW_BOUND_TURNOVER_IMPACT;
-  
-  const conservativeProductiviteit = totaleLoonkosten * ROI_CONSTANTS.LOW_BOUND_PRODUCTIVITY_GAIN;
-  
-  const conservativeVerzuim = (currentAbsenteeism / 100) * totaleLoonkosten * 
-    ROI_CONSTANTS.ABSENTEEISM_COST_FACTOR * ROI_CONSTANTS.LOWER_BOUND_ABSENTEEISM;
-  
-  const conservativeTotaal = conservativeRetentie + conservativeProductiviteit + conservativeVerzuim;
-  const conservativeNet = conservativeTotaal - investment;
-  const conservativeROI = (conservativeTotaal / investment) * 100;
-  
-  // Positive Scenario (Volledige Impact)
-  const positiveRetentie = (employeeTurnover / 100) * totaleLoonkosten * 
-    ROI_CONSTANTS.EMPLOYEE_REPLACEMENT_COSTS_FACTOR * ROI_CONSTANTS.HIGH_BOUND_TURNOVER_IMPACT;
-  
-  const positiveProductiviteit = totaleLoonkosten * ROI_CONSTANTS.HIGH_BOUND_PRODUCTIVITY_GAIN;
-  
-  const positiveVerzuim = (currentAbsenteeism / 100) * totaleLoonkosten * 
-    ROI_CONSTANTS.ABSENTEEISM_COST_FACTOR * ROI_CONSTANTS.HIGHER_BOUND_ABSENTEEISM;
-  
-  const positiveTotaal = positiveRetentie + positiveProductiviteit + positiveVerzuim;
-  const positiveNet = positiveTotaal - investment;
-  const positiveROI = (positiveTotaal / investment) * 100;
-  
+
+  /**
+   * Twee posten, geen drie meer.
+   *
+   * Verzuim: het deel van de loonsom dat nu aan verzuim opgaat, maal de
+   * werkelijke kosten daarvan (185% van het loon, want vervanging en
+   * productieverlies komen erbovenop), maal de reductie die het onderzoek laat
+   * zien.
+   *
+   * Productiviteit: een percentage van de totale loonsom.
+   *
+   * De ROI is de totale besparing gedeeld door de investering, dus break-even
+   * ligt op 100% en niet op 0%.
+   */
+  const scenario = (verzuimReductie: number, productiviteitsWinst: number): ROIScenario => {
+    const verzuimBesparing =
+      (currentAbsenteeism / 100) *
+      totaleLoonkosten *
+      ROI_CONSTANTS.ABSENTEEISM_COST_FACTOR *
+      verzuimReductie;
+    const productiviteitBesparing = totaleLoonkosten * productiviteitsWinst;
+    const totaleBesparing = verzuimBesparing + productiviteitBesparing;
+
+    return {
+      verzuimBesparing,
+      productiviteitBesparing,
+      totaleBesparing,
+      netBesparing: totaleBesparing - investment,
+      roi: (totaleBesparing / investment) * 100,
+    };
+  };
+
   return {
     totaleLoonkosten,
     investment,
     scenarios: {
-      conservative: {
-        verzuimBesparing: conservativeVerzuim,
-        retentieBesparing: conservativeRetentie,
-        productiviteitBesparing: conservativeProductiviteit,
-        totaleBesparing: conservativeTotaal,
-        netBesparing: conservativeNet,
-        roi: conservativeROI,
-      },
-      positive: {
-        verzuimBesparing: positiveVerzuim,
-        retentieBesparing: positiveRetentie,
-        productiviteitBesparing: positiveProductiviteit,
-        totaleBesparing: positiveTotaal,
-        netBesparing: positiveNet,
-        roi: positiveROI,
-      },
+      conservative: scenario(
+        ROI_CONSTANTS.LOWER_BOUND_ABSENTEEISM,
+        ROI_CONSTANTS.LOW_BOUND_PRODUCTIVITY_GAIN,
+      ),
+      positive: scenario(
+        ROI_CONSTANTS.HIGHER_BOUND_ABSENTEEISM,
+        ROI_CONSTANTS.HIGH_BOUND_PRODUCTIVITY_GAIN,
+      ),
     },
   };
 };

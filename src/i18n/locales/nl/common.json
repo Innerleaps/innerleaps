@@ -39,14 +39,13 @@
     "signUp": "Aanmelden",
     "discoverImpact": "Bereken de ROI",
     "discoverMethod": "Ontdek de methode",
-    "calculateImpactLong": "Bereken jullie impact",
-    "calculateImpactShort": "Bereken impact",
-    "scheduleCallShort": "Gesprek met Bas plannen",
-    "contactShort": "Contact",
     "freeMasterclassLong": "Gratis masterclass",
     "freeMasterclassShort": "Masterclass",
     "registerTrainingLong": "Aanmelden training",
-    "registerTrainingShort": "Aanmelden"
+    "registerTrainingShort": "Aanmelden",
+    "calculateSavings": "Bereken wat het jullie oplevert",
+    "calculateRoi": "Bereken jullie ROI",
+    "bookCallWithBas": "Plan 20 minuten met Bas"
   },
   "loading": "Laden...",
   "footer": {
@@ -134,7 +133,7 @@
     "headlinePart1": "Ervaar het met onze",
     "headlinePart2": "vrijblijvende masterclass",
     "subcopyEmployee": "Ben je geïnteresseerd maar wil je eerst onze methode ervaren? Dat kan! Met onze Masterclass maak je in 60 minuten kennis met onze aanpak.",
-    "subcopyEmployer": "Ben je geïnteresseerd maar wil je eerst checken of de methode aansluit bij jullie team? Dat kan! Met onze Masterclass maakt jouw organisatie in 60 minuten kennis met onze aanpak.",
+    "subcopyEmployer": "Met onze Masterclass maakt jouw organisatie in 60 minuten kennis met onze aanpak.",
     "cards": {
       "stress": {
         "title": "Stress level",
@@ -158,8 +157,7 @@
     },
     "review": "\"Deze workshop laat je duidelijk het belang zien van het trainen van je aandachtsspier. De workshop bestaat uit een mooie mix tussen oefeningen en theorie, waardoor je gelijk al wat ervaring opdoet. Denk dat iedereen hier wat aan heeft, dus kan dit zeker aanbevelen.\"",
     "reviewer": "- Jeroen",
-    "ctaEmployee": "Masterclass aanvragen bij Bas",
-    "ctaEmployer": "Kennismaken met Bas"
+    "ctaEmployee": "Masterclass aanvragen bij Bas"
   },
   "trust": {
     "headlinePart1": "Waarom organisaties voor",
@@ -199,10 +197,8 @@
     }
   },
   "booking": {
-    "metaTitle": "Plan een gesprek met Bas | Innerleaps",
-    "metaDescription": "Plan een vrijblijvend gesprek van 30 minuten met Bas over verzuim verminderen en duurzame inzetbaarheid. Kies zelf een moment dat uitkomt.",
     "title": "Even <0>sparren</0>?",
-    "intro": "Kies hieronder een moment. Het gesprek is vrijblijvend en duurt 30 minuten.",
+    "intro": "Kies hieronder een moment. Het gesprek is vrijblijvend en duurt 20 minuten.",
     "bas": {
       "role": "Bas Ter Haar Romenij, Oprichter Innerleaps",
       "photoAlt": "Bas Ter Haar Romenij",

@@ -1,12 +1,15 @@
 import { useState } from 'react';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { useToast } from '@/hooks/use-toast';
-import { CheckCircle } from 'lucide-react';
 import { supabase } from '@/integrations/supabase/client';
+import { detectLanguageFromPath } from '@/i18n/config';
+import { bewaarRapportOverdracht, hashEmail, nieuweId, rapportBedanktPad } from '@/lib/bedankt';
+import { isGeldigEmail } from '@/lib/email';
 
 interface LeadMagnetModalProps {
   isOpen: boolean;
@@ -21,8 +24,20 @@ interface FormData {
   functie: string;
 }
 
+/**
+ * Het formulier voor het wetenschappelijk rapport, op /breintraining-methode.
+ *
+ * Hier stond eerst twee seconden een vinkje, waarna de pop-up zichzelf sloot en
+ * de bezoeker terugstond op de pagina waar hij vandaan kwam, met niets in
+ * handen. Geen URL, dus ook niets te meten, en het drukste moment van de hele
+ * bezoeker ging ongebruikt voorbij.
+ *
+ * Nu gaat hij door naar een eigen bedanktpagina met de agenda erop.
+ */
 const LeadMagnetModal = ({ isOpen, onClose }: LeadMagnetModalProps) => {
   const { t, i18n } = useTranslation('leadMagnet');
+  const location = useLocation();
+  const navigate = useNavigate();
   const [formData, setFormData] = useState<FormData>({
     naam: '',
     email: '',
@@ -31,7 +46,8 @@ const LeadMagnetModal = ({ isOpen, onClose }: LeadMagnetModalProps) => {
     functie: ''
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
+  // Zie ROICalculator: pas rood na het verlaten van het veld.
+  const [emailAangeraakt, setEmailAangeraakt] = useState(false);
   const { toast } = useToast();
 
   const handleInputChange = (field: keyof FormData) => (
@@ -43,6 +59,8 @@ const LeadMagnetModal = ({ isOpen, onClose }: LeadMagnetModalProps) => {
     }));
   };
 
+  const emailOngeldig = formData.email.trim() !== '' && !isGeldigEmail(formData.email);
+
   const isFormValid =
     formData.naam &&
     formData.email &&
@@ -50,9 +68,21 @@ const LeadMagnetModal = ({ isOpen, onClose }: LeadMagnetModalProps) => {
     formData.functie;
 
   const handleSubmit = async () => {
+    // Het rapport gaat per mail. Klopt het adres niet, dan komt er niets aan en
+    // is de aanvraag voor iedereen verspild.
+    if (!isGeldigEmail(formData.email)) {
+      setEmailAangeraakt(true);
+      toast({
+        title: t('validation.email'),
+        variant: "destructive"
+      });
+      document.getElementById('email')?.focus();
+      return;
+    }
+
     if (!isFormValid) {
       toast({
-        title: t('validation'),
+        title: t('validation.missing'),
         variant: "destructive"
       });
       return;
@@ -74,16 +104,17 @@ const LeadMagnetModal = ({ isOpen, onClose }: LeadMagnetModalProps) => {
 
       if (error) throw error;
 
-      setIsSubmitted(true);
-      toast({
-        title: t('success.toastTitle'),
-        description: t('success.toastDescription'),
+      /**
+       * Pas doorsturen als het verzoek geslaagd is. De bedanktpagina zegt dat
+       * het rapport onderweg is naar je mail, en dat mag geen loze belofte zijn.
+       */
+      bewaarRapportOverdracht({
+        id: nieuweId(),
+        emailHash: await hashEmail(formData.email),
       });
 
-      // Auto-close after 2 seconds
-      setTimeout(() => {
-        handleClose();
-      }, 2000);
+      onClose();
+      navigate(rapportBedanktPad(detectLanguageFromPath(location.pathname)));
     } catch (error) {
       console.error('Submit error:', error);
       toast({
@@ -91,14 +122,12 @@ const LeadMagnetModal = ({ isOpen, onClose }: LeadMagnetModalProps) => {
         description: t('error.description'),
         variant: "destructive",
       });
-    } finally {
       setIsSubmitting(false);
     }
   };
 
   const handleClose = () => {
     if (!isSubmitting) {
-      setIsSubmitted(false);
       setFormData({
         naam: '',
         email: '',
@@ -110,29 +139,16 @@ const LeadMagnetModal = ({ isOpen, onClose }: LeadMagnetModalProps) => {
     }
   };
 
-  if (isSubmitted) {
-    return (
-      <Dialog open={isOpen} onOpenChange={handleClose}>
-        <DialogContent className="sm:max-w-md bg-white">
-          <div className="text-center py-6">
-            <div className="mx-auto flex items-center justify-center w-12 h-12 rounded-full bg-green-100 mb-4">
-              <CheckCircle className="w-6 h-6 text-green-600" />
-            </div>
-            <h3 className="text-xl font-semibold text-brand-gray-dark mb-2">
-              {t('success.title')}
-            </h3>
-            <p className="text-brand-gray-medium">
-              {t('success.body')} <strong>{formData.email}</strong>
-            </p>
-          </div>
-        </DialogContent>
-      </Dialog>
-    );
-  }
-
   return (
     <Dialog open={isOpen} onOpenChange={handleClose}>
-      <DialogContent className="sm:max-w-lg max-h-[90vh] overflow-y-auto bg-white">
+      {/* Zie CalculatorModal: meteen in het naamveld. */}
+      <DialogContent
+        className="sm:max-w-lg sm:max-h-[90vh] overflow-y-auto bg-white"
+        onOpenAutoFocus={(e) => {
+          e.preventDefault();
+          document.getElementById('naam')?.focus();
+        }}
+      >
         <div className="bg-brand-blue p-6 rounded-xl">
           <DialogHeader>
             <DialogTitle className="text-2xl font-bold text-white">
@@ -141,7 +157,7 @@ const LeadMagnetModal = ({ isOpen, onClose }: LeadMagnetModalProps) => {
           </DialogHeader>
 
           <div className="space-y-6">
-            <p className="text-white/90 text-sm">
+            <p className="text-white/90 text-base">
               {t('intro')}
             </p>
 
@@ -152,6 +168,8 @@ const LeadMagnetModal = ({ isOpen, onClose }: LeadMagnetModalProps) => {
                 </Label>
                 <Input
                   id="naam"
+                  name="naam"
+                  autoComplete="name"
                   type="text"
                   value={formData.naam}
                   onChange={handleInputChange('naam')}
@@ -166,12 +184,22 @@ const LeadMagnetModal = ({ isOpen, onClose }: LeadMagnetModalProps) => {
                 </Label>
                 <Input
                   id="email"
+                  name="email"
+                  autoComplete="email"
                   type="email"
                   value={formData.email}
                   onChange={handleInputChange('email')}
+                  onBlur={() => setEmailAangeraakt(true)}
+                  aria-invalid={emailAangeraakt && emailOngeldig}
+                  aria-describedby={emailAangeraakt && emailOngeldig ? 'rapport-email-fout' : undefined}
                   placeholder={t('fields.emailPlaceholder')}
                   className="mt-1 placeholder:text-gray-400"
                 />
+                {emailAangeraakt && emailOngeldig && (
+                  <p id="rapport-email-fout" className="mt-1 text-base font-medium text-red-200">
+                    {t('validation.email')}
+                  </p>
+                )}
               </div>
 
               <div>
@@ -180,6 +208,8 @@ const LeadMagnetModal = ({ isOpen, onClose }: LeadMagnetModalProps) => {
                 </Label>
                 <Input
                   id="telefoon"
+                  name="telefoon"
+                  autoComplete="tel"
                   type="tel"
                   value={formData.telefoon}
                   onChange={handleInputChange('telefoon')}
@@ -194,6 +224,8 @@ const LeadMagnetModal = ({ isOpen, onClose }: LeadMagnetModalProps) => {
                 </Label>
                 <Input
                   id="bedrijfsnaam"
+                  name="bedrijfsnaam"
+                  autoComplete="organization"
                   type="text"
                   value={formData.bedrijfsnaam}
                   onChange={handleInputChange('bedrijfsnaam')}
@@ -208,6 +240,8 @@ const LeadMagnetModal = ({ isOpen, onClose }: LeadMagnetModalProps) => {
                 </Label>
                 <Input
                   id="functie"
+                  name="functie"
+                  autoComplete="organization-title"
                   type="text"
                   value={formData.functie}
                   onChange={handleInputChange('functie')}
@@ -225,7 +259,7 @@ const LeadMagnetModal = ({ isOpen, onClose }: LeadMagnetModalProps) => {
               {isSubmitting ? t('submit.loading') : t('submit.idle')}
             </Button>
 
-            <p className="text-xs text-white/80 text-center">
+            <p className="text-base text-white/80 text-center">
               {t('privacy')}
             </p>
           </div>

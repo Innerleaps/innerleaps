@@ -16,6 +16,8 @@ import nlCalculator from "./locales/nl/calculator.json";
 import enCalculator from "./locales/en/calculator.json";
 import nlLeadMagnet from "./locales/nl/leadMagnet.json";
 import enLeadMagnet from "./locales/en/leadMagnet.json";
+import nlBedankt from "./locales/nl/bedankt.json";
+import enBedankt from "./locales/en/bedankt.json";
 
 export const SUPPORTED_LANGUAGES = ["nl", "en"] as const;
 export type SupportedLanguage = (typeof SUPPORTED_LANGUAGES)[number];
@@ -77,13 +79,13 @@ i18n
   .use(initReactI18next)
   .init({
     resources: {
-      nl: { common: nlCommon, methode: nlMethode, overons: nlOverons, contact: nlContact, training: nlTraining, calculator: nlCalculator, leadMagnet: nlLeadMagnet },
-      en: { common: enCommon, methode: enMethode, overons: enOverons, contact: enContact, training: enTraining, calculator: enCalculator, leadMagnet: enLeadMagnet },
+      nl: { common: nlCommon, methode: nlMethode, overons: nlOverons, contact: nlContact, training: nlTraining, calculator: nlCalculator, leadMagnet: nlLeadMagnet, bedankt: nlBedankt },
+      en: { common: enCommon, methode: enMethode, overons: enOverons, contact: enContact, training: enTraining, calculator: enCalculator, leadMagnet: enLeadMagnet, bedankt: enBedankt },
     },
     fallbackLng: "nl",
     supportedLngs: SUPPORTED_LANGUAGES,
     nonExplicitSupportedLngs: true, // treat "en-US", "en-GB" etc. as "en"
-    ns: ["common", "methode", "overons", "contact", "training", "calculator", "leadMagnet"],
+    ns: ["common", "methode", "overons", "contact", "training", "calculator", "leadMagnet", "bedankt"],
     defaultNS: "common",
     interpolation: { escapeValue: false },
     detection: {

@@ -37,11 +37,11 @@ const BookingStats = ({ variant = "row", className = "" }: BookingStatsProps) =>
 
   if (variant === "row") {
     return (
-      <div className={`grid grid-cols-4 gap-2 ${className}`}>
+      <div className={`grid grid-cols-2 gap-x-2 gap-y-4 sm:grid-cols-4 ${className}`}>
         {stats.map((stat) => (
           <div key={stat.label} className="text-center">
             <div className="text-xl font-bold text-brand-orange sm:text-2xl">{stat.value}</div>
-            <div className="mt-0.5 text-xs leading-tight text-brand-gray-medium">{stat.label}</div>
+            <div className="mt-0.5 text-base leading-tight text-brand-gray-medium">{stat.label}</div>
           </div>
         ))}
       </div>

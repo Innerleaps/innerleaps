@@ -26,9 +26,24 @@ import {
 import SimplifiedNavigation from "@/components/SimplifiedNavigation";
 import Footer from "@/components/Footer";
 import StickyCtaButtons from "@/components/StickyCtaButtons";
+
+/**
+ * De afmetingen van de weken-afbeelding, zodat de browser er ruimte voor
+ * vrijhoudt voordat hij binnen is.
+ *
+ * Zonder dit was dit vak nul pixels hoog en daarna 253, en schoof alles
+ * eronder tijdens het laden een kwart scherm omlaag. Dat is wat je op een
+ * telefoon als trillen ziet.
+ *
+ * Alle vier de propositiepagina's geven hier hetzelfde bestand mee
+ * (6_weken_brein_trainen.webp, 608 bij 430). Vervang je dat door een plaatje
+ * met een andere verhouding, pas deze getallen dan mee aan.
+ */
+const WEKEN_AFMETING = { width: 608, height: 430 } as const;
 import TrustSection from "@/components/TrustSection";
 import ProgramOverviewSection from "@/components/ProgramOverviewSection";
 import MasterclassSection from "@/components/MasterclassSection";
+import BookingCtaButton from "@/components/BookingCtaButton";
 import HreflangTags from "@/i18n/HreflangTags";
 
 const SITE_URL = "https://innerleaps.nl";
@@ -111,6 +126,14 @@ export interface TrainingPageLayoutProps {
   hideStickyCtas?: boolean;
   /** Show "Discover the method" CTA at the bottom of the weeks block */
   showMethodCtaAfterWeeks?: boolean;
+  /**
+   * Zet onder de secties een knop "Plan 20 minuten met Bas". Staat alleen aan
+   * op de twee pagina's die betaald videoverkeer krijgen. Daar is de rekentool
+   * de enige primaire actie en een gesprek de enige secundaire; verder staat er
+   * niets in de body. Op de deelnemerspagina's zou zo'n knop concurreren met
+   * aanmelden voor de training, dus die blijven zoals ze waren.
+   */
+  showBookingCtas?: boolean;
   /** Optional extra section rendered just before the FAQ */
   extraSection?: ReactNode;
   /** Optional extra section after Footer (e.g. ROICalculator wrapper) */
@@ -130,6 +153,7 @@ const TrainingPageLayout = ({
   hideMasterclass = false,
   hideStickyCtas = false,
   showMethodCtaAfterWeeks = false,
+  showBookingCtas = false,
   extraSection,
   belowFaqSection,
 }: TrainingPageLayoutProps) => {
@@ -206,7 +230,7 @@ const TrainingPageLayout = ({
       {!hideStickyCtas && <StickyCtaButtons />}
 
       {/* Hero */}
-      <section className="relative min-h-screen flex items-start sm:items-center overflow-hidden text-white">
+      <section id="hero" className="relative min-h-screen flex items-start sm:items-center overflow-hidden text-white">
         <div className="absolute inset-0 z-0">
           <img
             src={heroImage}
@@ -222,7 +246,7 @@ const TrainingPageLayout = ({
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-12 items-start w-full overflow-hidden">
             <div className="w-full space-y-6 animate-fade-in text-center lg:text-left">
               <div className="w-full space-y-4 sm:space-y-6">
-                <div className="inline-flex items-center gap-2 bg-white/50 text-brand-purple px-3 py-1.5 sm:px-4 sm:py-2 rounded-full text-sm sm:text-base md:text-lg font-medium backdrop-blur-sm">
+                <div className="inline-flex items-center gap-2 bg-white/50 text-brand-purple px-3 py-1.5 sm:px-4 sm:py-2 rounded-full text-base md:text-lg font-medium backdrop-blur-sm">
                   <Award className="h-4 w-4" />
                   {t(`${tKey}.hero.badge`)}
                 </div>
@@ -250,7 +274,8 @@ const TrainingPageLayout = ({
                   {heroCtaOnClick && (
                     <Button
                       size="lg"
-                      className="w-full sm:w-auto bg-brand-orange hover:bg-brand-orange text-white hover:text-white font-semibold py-3 px-4 sm:py-4 sm:px-6 rounded-lg text-sm sm:text-base lg:text-lg shadow-xl"
+                      id="hero-cta"
+                      className="w-full sm:w-auto min-h-[44px] bg-brand-orange hover:bg-brand-orange text-white hover:text-white font-semibold py-3 px-4 sm:py-4 sm:px-6 rounded-lg text-base lg:text-lg shadow-xl"
                       onClick={heroCtaOnClick}
                     >
                       {t(`${tKey}.hero.cta`)}
@@ -260,7 +285,7 @@ const TrainingPageLayout = ({
                     <Button
                       size="lg"
                       variant="outline"
-                      className="w-full sm:w-auto bg-white/10 backdrop-blur-sm border-white text-white hover:bg-white hover:text-brand-purple font-semibold py-3 px-4 sm:py-4 sm:px-6 rounded-lg text-sm sm:text-base lg:text-lg shadow-xl"
+                      className="w-full sm:w-auto min-h-[44px] bg-white/10 backdrop-blur-sm border-white text-white hover:bg-white hover:text-brand-purple font-semibold py-3 px-4 sm:py-4 sm:px-6 rounded-lg text-base lg:text-lg shadow-xl"
                       onClick={heroSecondaryCta.onClick}
                     >
                       {heroSecondaryCta.label}
@@ -287,11 +312,11 @@ const TrainingPageLayout = ({
                       >
                         <span
                           style={{ textShadow: "0 2px 8px rgba(0,0,0,0.5)" }}
-                          className="text-sm sm:text-base md:text-lg lg:text-xl text-white font-normal"
+                          className="text-base md:text-lg lg:text-xl text-white font-normal"
                         >
                           {stat.label}
                         </span>
-                        <span className="text-brand-orange font-bold text-base sm:text-lg md:text-xl lg:text-2xl shrink-0">
+                        <span className="text-brand-orange font-bold text-lg md:text-xl lg:text-2xl shrink-0">
                           {stat.value}
                         </span>
                       </div>
@@ -315,7 +340,7 @@ const TrainingPageLayout = ({
                         ))}
                       </div>
                     </div>
-                    <p className="text-white text-sm text-center mt-1">Google Reviews</p>
+                    <p className="text-white text-base text-center mt-1">Google Reviews</p>
                   </a>
                 </div>
               </div>
@@ -380,7 +405,7 @@ const TrainingPageLayout = ({
                     <Icon name={c.icon} />
                   </div>
                   <h3 className="text-xl md:text-2xl font-bold text-brand-gray-dark text-center">{c.title}</h3>
-                  <p className="text-base md:text-lg text-brand-gray-medium text-center">{c.text}</p>
+                  <p className="text-xl text-brand-gray-medium leading-relaxed text-center">{c.text}</p>
                 </div>
               );
             })}
@@ -419,7 +444,7 @@ const TrainingPageLayout = ({
                     {r.bullets.map((b, j) => (
                       <div key={j} className="flex items-start gap-2">
                         <CheckCircle className="h-5 w-5 text-brand-orange flex-shrink-0 mt-0.5" />
-                        <p className="text-base md:text-lg text-brand-gray-medium">{b}</p>
+                        <p className="text-xl text-brand-gray-medium leading-relaxed">{b}</p>
                       </div>
                     ))}
                   </div>
@@ -427,11 +452,17 @@ const TrainingPageLayout = ({
               );
             })}
           </div>
+
+          {showBookingCtas && <BookingCtaButton className="mt-12" />}
         </div>
       </section>
 
       {/* Program Overview (shared, already i18n) */}
-      <ProgramOverviewSection hideOutroCta={showMethodCtaAfterWeeks} fourthFeature="workbook" />
+      <ProgramOverviewSection
+        hideOutroCta={showMethodCtaAfterWeeks || showBookingCtas}
+        bookingCta={showBookingCtas}
+        fourthFeature="workbook"
+      />
 
       {/* Weeks */}
       {weeks && weeks.length > 0 && (
@@ -463,6 +494,7 @@ const TrainingPageLayout = ({
                   <img
                     src={weeksImage}
                     alt={t(`${tKey}.weeks.imageAlt`)}
+                    {...WEKEN_AFMETING}
                     className="w-full h-auto rounded-2xl shadow-lg"
                   />
                 </div>
@@ -483,6 +515,7 @@ const TrainingPageLayout = ({
                     <img
                       src={weeksImage}
                       alt={t(`${tKey}.weeks.imageAlt`)}
+                      {...WEKEN_AFMETING}
                       className="w-full h-auto rounded-2xl shadow-lg"
                     />
                   </div>
@@ -494,13 +527,13 @@ const TrainingPageLayout = ({
               {weeks.map((w, i) => (
                 <div key={i} className="bg-brand-off-white p-6 rounded-xl space-y-3">
                   <div className="flex items-center gap-2 flex-wrap">
-                    <span className="bg-brand-orange text-white px-3 py-1 rounded-full text-sm font-semibold whitespace-nowrap">
+                    <span className="bg-brand-orange text-white px-3 py-1 rounded-full text-base font-semibold whitespace-nowrap">
                       {w.week}
                     </span>
                     {w.tags.map((tag, j) => (
                       <span
                         key={j}
-                        className="bg-brand-purple text-white px-3 py-1 rounded-full text-sm font-semibold whitespace-nowrap"
+                        className="bg-brand-purple text-white px-3 py-1 rounded-full text-base font-semibold whitespace-nowrap"
                       >
                         {tag}
                       </span>
@@ -512,7 +545,9 @@ const TrainingPageLayout = ({
               ))}
             </div>
 
-            {showMethodCtaAfterWeeks && (
+            {showBookingCtas && <BookingCtaButton className="mt-12" />}
+
+            {!showBookingCtas && showMethodCtaAfterWeeks && (
               <div className="text-center mt-12">
                 <p className="text-xl text-brand-gray-medium mb-6">
                   {tCommon("programOverview.outroQuestion")}
@@ -532,6 +567,10 @@ const TrainingPageLayout = ({
       {!hideMasterclass && <MasterclassSection variant={masterclassVariant} />}
 
       {extraSection}
+
+      <TrustSection variant="white" bookingCta={showBookingCtas} />
+
+      {belowFaqSection}
 
       {/* FAQ */}
       <section className="py-16 md:py-24 bg-brand-off-white" aria-labelledby="faq-title">
@@ -556,10 +595,6 @@ const TrainingPageLayout = ({
           </div>
         </div>
       </section>
-
-      <TrustSection variant="white" />
-
-      {belowFaqSection}
 
       <Footer />
     </div>

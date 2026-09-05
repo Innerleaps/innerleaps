@@ -188,7 +188,7 @@ const LevenVragenlijst = () => {
             <div className="space-y-6">
               <h2 className="text-2xl font-bold">10 vragen over jouw dagelijkse leven</h2>
 
-              <div className="mb-4 text-sm text-muted-foreground">
+              <div className="mb-4 text-base text-muted-foreground">
                 {Object.keys(answers).length} van {questions.length} vragen beantwoord
               </div>
 
@@ -214,7 +214,7 @@ const LevenVragenlijst = () => {
                             {isAnswered ? (
                               <Check className="h-4 w-4" />
                             ) : (
-                              <span className="text-sm font-medium">{index + 1}</span>
+                              <span className="text-base font-medium">{index + 1}</span>
                             )}
                           </div>
                           <span className="font-medium">Vraag {index + 1}</span>

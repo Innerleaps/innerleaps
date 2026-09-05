@@ -17,12 +17,9 @@
     "idle": "Vraag rapport aan",
     "loading": "Versturen..."
   },
-  "validation": "Vul alle verplichte velden in",
-  "success": {
-    "toastTitle": "Rapport aangevraagd!",
-    "toastDescription": "Je ontvangt het wetenschappelijk rapport binnen enkele minuten per email.",
-    "title": "Bedankt voor je aanvraag!",
-    "body": "Je ontvangt het wetenschappelijk rapport binnen enkele minuten op"
+  "validation": {
+    "missing": "Vul alle verplichte velden in",
+    "email": "Controleer je e-mailadres even. Zonder geldig adres kunnen we je niets sturen."
   },
   "error": {
     "title": "Er ging iets mis",

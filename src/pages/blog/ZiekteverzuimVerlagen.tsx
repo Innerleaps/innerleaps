@@ -74,7 +74,7 @@ const ZiekteverzuimVerlagen = () => {
         <article className="py-12 md:py-16">
           <div className="container mx-auto px-4 max-w-4xl">
             {/* Breadcrumb */}
-            <nav className="mb-6 text-sm text-brand-gray-medium">
+            <nav className="mb-6 text-base text-brand-gray-medium">
               <Link to="/" className="hover:text-brand-blue transition-colors">Home</Link>
               <span className="mx-2">/</span>
               <Link to="/blog" className="hover:text-brand-blue transition-colors">Blog</Link>
@@ -362,7 +362,7 @@ const ZiekteverzuimVerlagen = () => {
 
               <section className="bg-muted/30 p-6 rounded-lg">
                 <h2 className="text-2xl font-bold text-brand-purple mb-4">Bronnen</h2>
-                <ul className="space-y-2 text-sm">
+                <ul className="space-y-2 text-base">
                   <li>Bartlett, L., et al. (2018). A systematic review and meta-analysis of workplace mindfulness training randomized controlled trials. <em>Journal of Occupational Health Psychology</em>.</li>
                   <li>De Bruin, E.I., et al. (2018). The Unilever Study: Positive effects on stress and risk for dropout from work after the Finding Peace in a Frantic World training. <em>Mindfulness</em>, 9(6), 1821-1831.</li>
                   <li>De Vibe, M., et al. (2017). Mindfulness-based stress reduction (MBSR) for improving health, quality of life and social functioning in adults: a systematic review and meta-analysis. <em>Campbell Systematic Reviews</em>.</li>

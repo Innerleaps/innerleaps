@@ -157,7 +157,7 @@ const HeroSection = () => {
             <div className="w-full space-y-6 animate-fade-in text-center lg:text-left">
               <div className="w-full space-y-4 sm:space-y-6">
                 {/* Research Badge */}
-                <div className="inline-flex items-center gap-2 bg-white/50 text-brand-purple px-3 py-1.5 sm:px-4 sm:py-2 rounded-full text-sm sm:text-base md:text-lg font-medium backdrop-blur-sm">
+                <div className="inline-flex items-center gap-2 bg-white/50 text-brand-purple px-3 py-1.5 sm:px-4 sm:py-2 rounded-full text-base md:text-lg font-medium backdrop-blur-sm">
                   <Award className="h-4 w-4" />
                   {t('hero.badge')}
                 </div>
@@ -177,7 +177,7 @@ const HeroSection = () => {
               <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 w-full justify-center lg:justify-start">
                 <Button
                   size="lg"
-                  className="w-full sm:w-auto bg-brand-orange hover:bg-brand-orange text-white hover:text-white font-semibold py-3 px-4 sm:py-4 sm:px-6 rounded-lg text-sm sm:text-base lg:text-lg shadow-xl"
+                  className="w-full sm:w-auto bg-brand-orange hover:bg-brand-orange text-white hover:text-white font-semibold min-h-[44px] py-3 px-4 sm:py-4 sm:px-6 rounded-lg text-base lg:text-lg shadow-xl"
                   onClick={() => setIsCalculatorOpen(true)}
                 >
                   {t('cta.discoverImpact')}
@@ -196,28 +196,28 @@ const HeroSection = () => {
 
                   <div className="w-full space-y-3 sm:space-y-4">
                     <div className="flex items-center justify-between w-full p-2.5 sm:p-3 lg:p-4 bg-brand-purple/90 rounded-lg">
-                      <span style={TEXT_SHADOW_STRONG} className="text-sm sm:text-base md:text-lg lg:text-xl text-white font-normal">
+                      <span style={TEXT_SHADOW_STRONG} className="text-base md:text-lg lg:text-xl text-white font-normal">
                         {t('hero.stats.dropoutRisk')}
                       </span>
-                      <span className="text-brand-orange font-bold text-base sm:text-lg md:text-xl lg:text-2xl shrink-0">-70%</span>
+                      <span className="text-brand-orange font-bold text-lg md:text-xl lg:text-2xl shrink-0">-70%</span>
                     </div>
                     <div className="flex items-center justify-between w-full p-2.5 sm:p-3 lg:p-4 bg-brand-purple/90 rounded-lg">
-                      <span style={TEXT_SHADOW_STRONG} className="text-sm sm:text-base md:text-lg lg:text-xl text-white font-normal">
+                      <span style={TEXT_SHADOW_STRONG} className="text-base md:text-lg lg:text-xl text-white font-normal">
                         {t('hero.stats.absenteeism')}
                       </span>
-                      <span className="text-brand-orange font-bold text-base sm:text-lg md:text-xl lg:text-2xl shrink-0">-21%</span>
+                      <span className="text-brand-orange font-bold text-lg md:text-xl lg:text-2xl shrink-0">-21%</span>
                     </div>
                     <div className="flex items-center justify-between w-full p-2.5 sm:p-3 lg:p-4 bg-brand-purple/90 rounded-lg">
-                      <span style={TEXT_SHADOW_STRONG} className="text-sm sm:text-base md:text-lg lg:text-xl text-white font-normal">
+                      <span style={TEXT_SHADOW_STRONG} className="text-base md:text-lg lg:text-xl text-white font-normal">
                         {t('hero.stats.focus')}
                       </span>
-                      <span className="text-brand-orange font-bold text-base sm:text-lg md:text-xl lg:text-2xl shrink-0">+24%</span>
+                      <span className="text-brand-orange font-bold text-lg md:text-xl lg:text-2xl shrink-0">+24%</span>
                     </div>
                     <div className="flex items-center justify-between w-full p-2.5 sm:p-3 lg:p-4 bg-brand-purple/90 rounded-lg">
-                      <span style={TEXT_SHADOW_STRONG} className="text-sm sm:text-base md:text-lg lg:text-xl text-white font-normal">
+                      <span style={TEXT_SHADOW_STRONG} className="text-base md:text-lg lg:text-xl text-white font-normal">
                         {t('hero.stats.science')}
                       </span>
-                      <span className="text-brand-orange font-bold text-base sm:text-lg md:text-xl lg:text-2xl shrink-0">{t('hero.stats.scienceValue')}</span>
+                      <span className="text-brand-orange font-bold text-lg md:text-xl lg:text-2xl shrink-0">{t('hero.stats.scienceValue')}</span>
                     </div>
                   </div>
 
@@ -236,7 +236,7 @@ const HeroSection = () => {
                         ))}
                       </div>
                     </div>
-                    <p className="text-amber-100 text-sm text-center mt-1">{t('hero.googleReviews')}</p>
+                    <p className="text-amber-100 text-base text-center mt-1">{t('hero.googleReviews')}</p>
                   </a>
                 </div>
               </div>

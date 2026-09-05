@@ -165,6 +165,56 @@
   to = "/index.html"
   status = 200
 
+# De bedanktpagina's van de rekentool en het wetenschappelijk rapport.
+#
+# Vier adressen voor de rekentool, want dit is waar Google Ads de conversie op
+# meet en een eigen URL per doelgroep geeft een eigen conversieactie en een
+# eigen remarketinglijst.
+#
+# Ze staan bewust NIET in ROUTE_MAP: het zijn bijna identieke pagina's achter
+# een formulier, ze dragen een noindex en ze horen niet in de sitemap. Wel
+# worden ze geprerenderd, via EXTRA_ROUTES in scripts/prerender.mjs. Zonder dat
+# kregen ze de titel en de canonical van de homepage, want dan serveert Netlify
+# hier index.html en dat is de voorgebakken homepage.
+#
+# Deze regels zijn daarmee een vangnet en geen noodzaak: een bestaand bestand
+# wint van een regel zonder `force`, dus zolang het prerenderen werkt raakt
+# Netlify ze niet aan. Ze staan er voor het geval iemand die pagina's uit
+# EXTRA_ROUTES haalt, want dan zouden ze zonder deze regels onder de 404
+# hieronder vallen en meteen onbereikbaar zijn.
+[[redirects]]
+  from = "/bedankt/roi-hr"
+  to = "/index.html"
+  status = 200
+[[redirects]]
+  from = "/bedankt/roi-management"
+  to = "/index.html"
+  status = 200
+[[redirects]]
+  from = "/bedankt/roi"
+  to = "/index.html"
+  status = 200
+[[redirects]]
+  from = "/bedankt/wetenschappelijk-rapport"
+  to = "/index.html"
+  status = 200
+[[redirects]]
+  from = "/en/thank-you/roi-hr"
+  to = "/index.html"
+  status = 200
+[[redirects]]
+  from = "/en/thank-you/roi-management"
+  to = "/index.html"
+  status = 200
+[[redirects]]
+  from = "/en/thank-you/roi"
+  to = "/index.html"
+  status = 200
+[[redirects]]
+  from = "/en/thank-you/scientific-report"
+  to = "/index.html"
+  status = 200
+
 # Alles wat hierboven niet is opgevangen bestaat echt niet. Vroeger ging dit naar
 # /index.html met status 200, waardoor elke typefout een "zachte 404" opleverde:
 # de homepage met een 200-status. Google ziet dat als een kwaliteitsprobleem en

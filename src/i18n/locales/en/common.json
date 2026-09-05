@@ -39,14 +39,13 @@
     "signUp": "Sign up",
     "discoverImpact": "Calculate your ROI",
     "discoverMethod": "Discover the method",
-    "calculateImpactLong": "Calculate your impact",
-    "calculateImpactShort": "Calculate impact",
-    "scheduleCallShort": "Schedule a call with Bas",
-    "contactShort": "Contact",
     "freeMasterclassLong": "Free masterclass",
     "freeMasterclassShort": "Masterclass",
     "registerTrainingLong": "Register for training",
-    "registerTrainingShort": "Register"
+    "registerTrainingShort": "Register",
+    "calculateSavings": "Calculate your impact",
+    "calculateRoi": "Calculate your ROI",
+    "bookCallWithBas": "Book 20 minutes with Bas"
   },
   "loading": "Loading...",
   "footer": {
@@ -134,7 +133,7 @@
     "headlinePart1": "Try it yourself in our",
     "headlinePart2": "free masterclass",
     "subcopyEmployee": "Curious but want to experience our method first? You can. In our 60-minute masterclass you'll get a real taste of how we work.",
-    "subcopyEmployer": "Curious but want to check whether the method fits your team first? You can. In our 60-minute masterclass your organisation gets a real taste of how we work.",
+    "subcopyEmployer": "In our 60-minute masterclass your organisation gets a real taste of how we work.",
     "cards": {
       "stress": {
         "title": "Stress level",
@@ -158,8 +157,7 @@
     },
     "review": "\"This workshop really shows you why training your attention muscle matters. It's a great mix of theory and exercises, so you immediately get to experience what it's like. I think anyone can benefit from this, so I can definitely recommend it.\"",
     "reviewer": "- Jeroen",
-    "ctaEmployee": "Request a masterclass from Bas",
-    "ctaEmployer": "Get to know Bas"
+    "ctaEmployee": "Request a masterclass from Bas"
   },
   "trust": {
     "headlinePart1": "Why organisations",
@@ -199,10 +197,8 @@
     }
   },
   "booking": {
-    "metaTitle": "Schedule a call with Bas | Innerleaps",
-    "metaDescription": "Schedule a free 30-minute call with Bas about reducing absenteeism and sustainable employability. Pick a moment that suits you.",
     "title": "Fancy a <0>chat</0>?",
-    "intro": "Pick a moment below. The call is free of obligation and takes 30 minutes.",
+    "intro": "Pick a moment below. The call is free of obligation and takes 20 minutes.",
     "bas": {
       "role": "Bas Ter Haar Romenij, Founder of Innerleaps",
       "photoAlt": "Bas Ter Haar Romenij",

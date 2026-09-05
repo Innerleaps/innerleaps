@@ -7,8 +7,8 @@
     "hero": {
       "badge": "Scientifically proven training",
       "title": "Improve <0>sustainable employability</0> and reduce absenteeism",
-      "subtitle": "Scientifically proven vitality training. Participants take ownership of their own stress, regulate emotions better and build stronger resilience.",
-      "cta": "Calculate your ROI",
+      "subtitle": "Sustainable employability starts with less work stress. Our training teaches your people to spot tension early and adjust in time.",
+      "cta": "Calculate your impact",
       "statsTitle": "Why organisations choose us",
       "stats": [
         {
@@ -20,7 +20,7 @@
           "value": "-70%"
         },
         {
-          "label": "Life satisfaction",
+          "label": "Satisfaction",
           "value": "+15%"
         },
         {
@@ -31,32 +31,27 @@
     },
     "challenges": {
       "title": "Do you recognise one of these <0>challenges</0>?",
-      "subtitle": "These are the organisational challenges we tackle with our method.",
+      "subtitle": "These are the challenges our brain training tackles.",
       "items": [
+        {
+          "icon": "Activity",
+          "title": "High workload",
+          "text": "The amount of work and the ambitions lead to tension and pressure."
+        },
         {
           "icon": "AlertCircle",
           "title": "Setting boundaries is hard",
-          "text": "Employees are enthusiastic but often don't take their own limits seriously. Sometimes they keep going until it's too late, with stress-related dropout as a result."
+          "text": "Employees are enthusiastic, but find it hard to guard their own limits."
         },
         {
-          "icon": "Activity",
-          "title": "Holding on to key talent is tough",
-          "text": "You want to keep important people engaged. With today's tight job market that's even harder than before."
+          "icon": "BedDouble",
+          "title": "High absenteeism",
+          "text": "Employees drop out because stress complaints keep coming back."
         },
         {
-          "icon": "Shield",
-          "title": "Social safety under pressure",
-          "text": "Hierarchy, cultural differences or different values can lead to friction, awkward behaviour or even an unsafe atmosphere."
-        },
-        {
-          "icon": "Heart",
-          "title": "Emotions in the workplace",
-          "text": "Employees can run into emotionally challenging situations. This can lead to stress, impulsive reactions and weaker collaboration."
-        },
-        {
-          "icon": "AlertCircle",
-          "title": "Sick leave is too high",
-          "text": "Stress and burn-out complaints keep coming back. People drop out and the workload for everyone else only grows."
+          "icon": "Users",
+          "title": "Key people leave",
+          "text": "Your key people are in demand, and on this labour market they are gone before you know it."
         }
       ]
     },
@@ -65,38 +60,35 @@
       "subtitle": "The scientifically proven effects of our training.",
       "items": [
         {
-          "icon": "Brain",
-          "title": "Spot stress early",
+          "icon": "TreeDeciduous",
+          "title": "Less tension",
           "bullets": [
-            "Employees learn to notice stress signals before it's too late. They take charge of their own stress and can adjust before they drop out."
-          ]
-        },
-        {
-          "icon": "Heart",
-          "title": "Stronger emotion regulation",
-          "bullets": [
-            "Pressure and emotions in the workplace become manageable. Impulsiveness goes down because the control centre in the brain gets stronger."
+            "Employees sense tension earlier and adjust course themselves.",
+            "Employees become more resilient under high pressure and recover faster."
           ]
         },
         {
           "icon": "Shield",
-          "title": "Control over workload",
+          "title": "Guarding their own limits",
           "bullets": [
-            "With sharper stress awareness, employees say 'no' when they're hitting their limits. Ownership reduces stress and prevents dropout."
+            "Employees flag their limit before they cross it.",
+            "More ownership of their own workload."
           ]
         },
         {
           "icon": "CheckCircle",
-          "title": "A socially safe workplace",
+          "title": "Less absenteeism",
           "bullets": [
-            "Employees can hold back inappropriate reactions. This way, what they know about social safety is actually applied. Social safety and collaboration both improve."
+            "Stress complaints are spotted early, before someone drops out.",
+            "Less long-term absence, so less pressure on the rest."
           ]
         },
         {
           "icon": "Smile",
-          "title": "Hold on to talent",
+          "title": "Talent stays",
           "bullets": [
-            "Employees feel less workload and more joy and engagement. This lowers staff turnover and helps you keep talent inside the organisation."
+            "More enjoyment at work and more engagement.",
+            "Lower turnover, your key people stay."
           ]
         }
       ]
@@ -217,8 +209,7 @@
           "a": "Participants notice a difference after the first workshops, and that effect builds up over the six weeks. Straight after the 6-week training, 70% report experiencing less stress. It also lasts: research shows the training is still effective a year later."
         }
       ]
-    },
-    "intro": "Sustainable employability means your people stay healthy and motivated throughout their career. What most often gets in the way is work stress. That is where our training starts."
+    }
   },
   "stress": {
     "meta": {
@@ -678,6 +669,11 @@
           "icon": "AlertCircle",
           "title": "Juggling many balls",
           "text": "Your team does not only have a demanding job, but also a private life that asks for a lot of attention."
+        },
+        {
+          "icon": "BedDouble",
+          "title": "High absenteeism costs",
+          "text": "Sick leave is a high, recurring cost."
         }
       ]
     },
@@ -689,8 +685,8 @@
           "icon": "TreeDeciduous",
           "title": "Less tension",
           "bullets": [
-            "Your team recognises stress earlier and speaks up in time.",
-            "Less absenteeism and less long-term dropout."
+            "Your team notices tension earlier and adjusts course itself.",
+            "More resilience under high pressure and faster recovery."
           ]
         },
         {
@@ -708,6 +704,14 @@
           "bullets": [
             "Better concentration and fewer mistakes, even under pressure.",
             "Productivity rises while tension actually goes down."
+          ]
+        },
+        {
+          "icon": "CheckCircle",
+          "title": "Lower absenteeism costs",
+          "bullets": [
+            "Less absenteeism and less long-term absence.",
+            "A cost item that structurally comes down."
           ]
         }
       ]

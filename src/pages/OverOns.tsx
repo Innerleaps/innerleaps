@@ -182,7 +182,7 @@ const OverOns = () => {
                           {trainer.languages.map((lang, langIndex) => (
                             <span
                               key={langIndex}
-                              className="px-3 py-1 rounded-full text-sm font-medium bg-brand-orange text-white"
+                              className="px-3 py-1 rounded-full text-base font-medium bg-brand-orange text-white"
                             >
                               {lang}
                             </span>

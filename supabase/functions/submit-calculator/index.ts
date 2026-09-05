@@ -17,7 +17,11 @@ const SubmissionSchema = z.object({
   numberOfEmployees: z.number().int().positive().max(1000000),
   avgGrossAnnualSalary: z.number().positive().max(10000000),
   currentAbsenteeism: z.number().min(0).max(100),
-  employeeTurnover: z.number().min(0).max(100),
+  // Personeelsverloop is uit de rekentool gehaald: de retentiebesparing rustte
+  // op de zwakste aanname van de drie. Het veld blijft hier optioneel staan
+  // zodat een oudere versie van de site, of een tabblad dat al open stond,
+  // gewoon blijft werken.
+  employeeTurnover: z.number().min(0).max(100).optional().default(0),
   language: z.enum(["nl", "en"]).optional().default("nl"),
   results: z.object({
     totaleLoonkosten: z.number(),
@@ -25,7 +29,7 @@ const SubmissionSchema = z.object({
     scenarios: z.object({
       conservative: z.object({
         verzuimBesparing: z.number(),
-        retentieBesparing: z.number(),
+        retentieBesparing: z.number().optional(),
         productiviteitBesparing: z.number(),
         totaleBesparing: z.number(),
         netBesparing: z.number(),
@@ -33,7 +37,7 @@ const SubmissionSchema = z.object({
       }),
       positive: z.object({
         verzuimBesparing: z.number(),
-        retentieBesparing: z.number(),
+        retentieBesparing: z.number().optional(),
         productiviteitBesparing: z.number(),
         totaleBesparing: z.number(),
         netBesparing: z.number(),
@@ -51,7 +55,7 @@ interface CalculatorSubmission {
   numberOfEmployees: number;
   avgGrossAnnualSalary: number;
   currentAbsenteeism: number;
-  employeeTurnover: number;
+  employeeTurnover?: number;
   language: "nl" | "en";
   results: any;
 }
@@ -124,11 +128,9 @@ const EMAIL_COPY = {
     employees: "Aantal werknemers",
     avgSalary: "Gemiddeld salaris",
     absenteeism: "Verzuim",
-    turnover: "Verloop",
     conservative: "Conservative Scenario",
     positive: "Positive Scenario",
     absenteeismSaving: "Verzuimbesparing",
-    retentionSaving: "Personeelsverloopbesparing",
     productivityGain: "Productiviteitswinst",
     totalSaving: "Totale besparing",
     investment: "Investering",
@@ -136,10 +138,9 @@ const EMAIL_COPY = {
     roi: "ROI",
     scientificTitle: "Wetenschappelijk bewezen effecten",
     scientificIntro:
-      "In de bijlage vind je het wetenschappelijke bewijs voor de besparingen op verzuim, medewerkersverloop en de productiviteitswinst",
+      "In de bijlage vind je het wetenschappelijke bewijs voor de besparing op verzuim en de productiviteitswinst",
     bullet1: "Verzuimbesparing 15-21%",
     bullet2: "Productiviteitswinst 5-8%",
-    bullet3: "Personeelsverloopbesparing 5-8%",
     ctaQuestion: "Wil je deze winst realiseren?",
     ctaButton: "Kennismaken met Bas",
     subject: (company: string) =>
@@ -155,11 +156,9 @@ const EMAIL_COPY = {
     employees: "Number of employees",
     avgSalary: "Average salary",
     absenteeism: "Absenteeism",
-    turnover: "Turnover",
     conservative: "Conservative scenario",
     positive: "Positive scenario",
     absenteeismSaving: "Absenteeism saving",
-    retentionSaving: "Retention saving",
     productivityGain: "Productivity gain",
     totalSaving: "Total saving",
     investment: "Investment",
@@ -167,10 +166,9 @@ const EMAIL_COPY = {
     roi: "ROI",
     scientificTitle: "Scientifically proven effects",
     scientificIntro:
-      "In the attachment you'll find the scientific evidence for the savings on absenteeism, employee turnover and the productivity gain",
+      "In the attachment you'll find the scientific evidence for the saving on absenteeism and the productivity gain",
     bullet1: "Absenteeism saving 15-21%",
     bullet2: "Productivity gain 5-8%",
-    bullet3: "Retention saving 5-8%",
     ctaQuestion: "Want to realise these gains?",
     ctaButton: "Meet Bas",
     subject: (company: string) =>
@@ -275,7 +273,7 @@ const handler = async (req: Request): Promise<Response> => {
         number_of_employees: submission.numberOfEmployees,
         avg_gross_annual_salary: submission.avgGrossAnnualSalary,
         current_absenteeism: submission.currentAbsenteeism,
-        employee_turnover: submission.employeeTurnover,
+        employee_turnover: null,
         calculation_results: submission.results,
       })
       .select()
@@ -354,10 +352,6 @@ const handler = async (req: Request): Promise<Response> => {
                         <td style="padding: 5px 0; color: #64748b; font-size: 14px;"><strong>${copy.absenteeism}:</strong></td>
                         <td style="padding: 5px 0; color: #1e293b; font-size: 14px; font-weight: 600;">${submission.currentAbsenteeism}%</td>
                       </tr>
-                      <tr>
-                        <td style="padding: 5px 0; color: #64748b; font-size: 14px;"><strong>${copy.turnover}:</strong></td>
-                        <td style="padding: 5px 0; color: #1e293b; font-size: 14px; font-weight: 600;">${submission.employeeTurnover}%</td>
-                      </tr>
                     </table>
                   </td>
                 </tr>
@@ -376,8 +370,6 @@ const handler = async (req: Request): Promise<Response> => {
                           <td style="padding: 5px 0; color: #059669; font-weight: 600; text-align: right;">${fmt(results.scenarios.conservative.verzuimBesparing)}</td>
                         </tr>
                         <tr>
-                          <td style="padding: 5px 0; color: #64748b;">${copy.retentionSaving} (5%):</td>
-                          <td style="padding: 5px 0; color: #059669; font-weight: 600; text-align: right;">${fmt(results.scenarios.conservative.retentieBesparing)}</td>
                         </tr>
                         <tr>
                           <td style="padding: 5px 0; color: #64748b;">${copy.productivityGain} (5%):</td>
@@ -424,8 +416,6 @@ const handler = async (req: Request): Promise<Response> => {
                           <td style="padding: 5px 0; color: #059669; font-weight: 600; text-align: right;">${fmt(results.scenarios.positive.verzuimBesparing)}</td>
                         </tr>
                         <tr>
-                          <td style="padding: 5px 0; color: #64748b;">${copy.retentionSaving} (8%):</td>
-                          <td style="padding: 5px 0; color: #059669; font-weight: 600; text-align: right;">${fmt(results.scenarios.positive.retentieBesparing)}</td>
                         </tr>
                         <tr>
                           <td style="padding: 5px 0; color: #64748b;">${copy.productivityGain} (8%):</td>
@@ -470,7 +460,6 @@ const handler = async (req: Request): Promise<Response> => {
                     <ul style="margin: 0; padding-left: 20px; color: #1e40af; font-size: 14px; list-style: none;">
                       <li style="margin: 5px 0;">✓ ${copy.bullet1}</li>
                       <li style="margin: 5px 0;">✓ ${copy.bullet2}</li>
-                      <li style="margin: 5px 0;">✓ ${copy.bullet3}</li>
                     </ul>
                   </td>
                 </tr>
@@ -563,7 +552,6 @@ const handler = async (req: Request): Promise<Response> => {
                       <tr><td style="padding: 5px 0; border-bottom: 1px solid #f3f4f6;"><strong>Aantal werknemers:</strong> ${submission.numberOfEmployees}</td></tr>
                       <tr><td style="padding: 5px 0; border-bottom: 1px solid #f3f4f6;"><strong>Gemiddeld salaris:</strong> ${formatCurrency(submission.avgGrossAnnualSalary)}</td></tr>
                       <tr><td style="padding: 5px 0; border-bottom: 1px solid #f3f4f6;"><strong>Verzuimpercentage:</strong> ${submission.currentAbsenteeism}%</td></tr>
-                      <tr><td style="padding: 5px 0;"><strong>Verlooppercentage:</strong> ${submission.employeeTurnover}%</td></tr>
                     </table>
                     
                     <h3 style="margin: 20px 0 10px 0; color: #374151; font-size: 16px;">Berekende Resultaten:</h3>

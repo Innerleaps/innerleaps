@@ -29,11 +29,16 @@ interface BookingBlockProps {
 }
 
 const BookingBlock = ({ eager = true }: BookingBlockProps) => (
-  <div className="mx-auto max-w-3xl rounded-xl bg-white p-6 md:p-8">
+  <div className="mx-auto max-w-3xl rounded-xl bg-white p-4 sm:p-6 md:p-8">
     <BookingStats className="mb-6" />
     {/* Blauw kader om de agenda, zodat het blok gewicht heeft zonder dat de
-        kalender zelf donker en dus slechter leesbaar wordt. Zie CalendlyWidget. */}
-    <div className="rounded-xl bg-brand-blue p-4 md:p-5">
+        kalender zelf donker en dus slechter leesbaar wordt. Zie CalendlyWidget.
+
+        Op mobiel loopt dit kader van rand tot rand van het witte kader. De
+        agenda vraagt 320 pixels, en met de padding van de container, het witte
+        kader en dit kader erbij bleef daar op een scherm van 375 nog 263 van
+        over. Dan steekt de zondagkolom eruit. */}
+    <div className="-mx-4 rounded-none bg-brand-blue p-2 sm:mx-0 sm:rounded-xl sm:p-4 md:p-5">
       <CalendlyWidget eager={eager} />
     </div>
     <BookingTrust />

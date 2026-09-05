@@ -1,6 +1,7 @@
 import { memo } from "react";
 import { useTranslation } from "react-i18next";
 import { Check } from "lucide-react";
+import BookingCtaButton from "@/components/BookingCtaButton";
 import vmbnLogo from "@/assets/vmbn-trainer-categorie-1.webp";
 import uMassLogo from "@/assets/Vitaliteitsprogramma_ontwikkeld_door_university_of_massachusetts.webp";
 import oxfordLogo from "@/assets/Vitaliteitsprogramma_ontwikkeld_door_oxford.webp";
@@ -11,9 +12,11 @@ import menzisLogo from "@/assets/Vitaliteitsprogramma_herkend_door_menzis.webp";
 
 interface TrustSectionProps {
   variant?: "white" | "off-white";
+  /** Sluit dit blok af met "Plan 20 minuten met Bas". */
+  bookingCta?: boolean;
 }
 
-const TrustSection = memo(({ variant = "white" }: TrustSectionProps) => {
+const TrustSection = memo(({ variant = "white", bookingCta = false }: TrustSectionProps) => {
   const { t } = useTranslation();
   const sectionBg = variant === "off-white" ? "bg-brand-off-white" : "bg-white";
   const cardBg = variant === "off-white" ? "bg-white" : "bg-brand-off-white";
@@ -23,24 +26,24 @@ const TrustSection = memo(({ variant = "white" }: TrustSectionProps) => {
       title: t('trust.items.healthcareSystem.title'),
       description: t('trust.items.healthcareSystem.description'),
       logos: [
-        { src: vgzLogo, alt: t('trust.altPrefix.vgz'), className: "h-24" },
-        { src: czLogo, alt: t('trust.altPrefix.cz'), className: "h-24" },
-        { src: menzisLogo, alt: t('trust.altPrefix.menzis'), className: "h-20" },
+        { src: vgzLogo, alt: t('trust.altPrefix.vgz'), className: "h-24", width: 950, height: 770 },
+        { src: czLogo, alt: t('trust.altPrefix.cz'), className: "h-24", width: 1268, height: 1116 },
+        { src: menzisLogo, alt: t('trust.altPrefix.menzis'), className: "h-20", width: 624, height: 305 },
       ],
     },
     {
       title: t('trust.items.research.title'),
       description: t('trust.items.research.description'),
       logos: [
-        { src: oxfordLogo, alt: t('trust.altPrefix.oxford'), className: "h-24 rounded" },
-        { src: uMassLogo, alt: t('trust.altPrefix.umass'), className: "h-24" },
-        { src: uvaLogo, alt: t('trust.altPrefix.uva'), className: "h-24" },
+        { src: oxfordLogo, alt: t('trust.altPrefix.oxford'), className: "h-24 rounded", width: 983, height: 614 },
+        { src: uMassLogo, alt: t('trust.altPrefix.umass'), className: "h-24", width: 787, height: 314 },
+        { src: uvaLogo, alt: t('trust.altPrefix.uva'), className: "h-24", width: 1920, height: 572 },
       ],
     },
     {
       title: t('trust.items.trainers.title'),
       description: t('trust.items.trainers.description'),
-      logos: [{ src: vmbnLogo, alt: t('trust.altPrefix.vmbn'), className: "h-28" }],
+      logos: [{ src: vmbnLogo, alt: t('trust.altPrefix.vmbn'), className: "h-28", width: 286, height: 208 }],
     },
   ];
 
@@ -68,6 +71,8 @@ const TrustSection = memo(({ variant = "white" }: TrustSectionProps) => {
                         src={logo.src}
                         alt={logo.alt}
                         loading="lazy"
+                        width={logo.width}
+                        height={logo.height}
                         className={`object-contain ${logo.className}`}
                       />
                     ))}
@@ -77,6 +82,8 @@ const TrustSection = memo(({ variant = "white" }: TrustSectionProps) => {
             </div>
           ))}
         </div>
+
+        {bookingCta && <BookingCtaButton className="mt-12" />}
       </div>
     </section>
   );

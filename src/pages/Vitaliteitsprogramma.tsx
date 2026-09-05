@@ -93,7 +93,7 @@ const Vitaliteitstraining = () => {
         weeksImage={breinTrainingImg}
         weeksLayout="stacked"
         masterclassVariant="employer"
-        showMethodCtaAfterWeeks
+        showBookingCtas
         belowFaqSection={
           <div id="calculator">
             <ROICalculator />

@@ -52,6 +52,33 @@ const MIME = {
 };
 
 /**
+ * De bedanktpagina's van de twee lead generators.
+ *
+ * Die staan bewust niet in ROUTE_MAP: ze horen niet in de sitemap, hebben geen
+ * hreflang nodig en dragen zelf een noindex. Maar ze moeten wél geprerenderd
+ * worden, en dat is geen SEO-wens maar een noodzaak.
+ *
+ * Zonder dit serveert Netlify voor deze paden `index.html`, en dat bestand is
+ * de voorgebakken homepage. Dan krijgt /bedankt/roi-hr de titel van de
+ * homepage, een canonical naar de homepage, en géén noindex. Precies het
+ * tegenovergestelde van wat de bedoeling is.
+ *
+ * Deze site haalt zijn head-tags volledig uit het prerenderen. React zet ze in
+ * de browser niet alsnog goed, dus een pagina die hier ontbreekt heeft de
+ * verkeerde head. Zet je er een bedanktpagina bij, zet hem dan ook hier.
+ */
+const EXTRA_ROUTES = [
+  "/bedankt/roi-hr",
+  "/bedankt/roi-management",
+  "/bedankt/roi",
+  "/bedankt/wetenschappelijk-rapport",
+  "/en/thank-you/roi-hr",
+  "/en/thank-you/roi-management",
+  "/en/thank-you/roi",
+  "/en/thank-you/scientific-report",
+];
+
+/**
  * Leest de lijst met publieke pagina's uit src/i18n/config.ts. Dat bestand is
  * de enige plek waar alle NL- en EN-paden naast elkaar staan, dus dat houden
  * we aan. Zo hoeft niemand twee lijstjes bij te werken.
@@ -74,16 +101,41 @@ async function collectRoutes() {
   if (routes.size === 0) {
     throw new Error("ROUTE_MAP gevonden maar er stonden geen paden in");
   }
+  for (const route of EXTRA_ROUTES) routes.add(route);
   return [...routes].sort();
 }
+
+/**
+ * De onbewerkte index.html, in het geheugen, van vóór het prerenderen.
+ *
+ * Dit servertje serveert index.html voor elk pad zonder extensie. Maar de
+ * eerste route die we vastleggen is "/", en die schrijft zijn resultaat naar
+ * datzelfde index.html. Alle routes daarna kregen dus de voorgebakken homepage
+ * als onderlaag.
+ *
+ * Dat is niet onschuldig. In die onderlaag staan de modulepreload-regels die
+ * Vite tijdens het renderen toevoegt, en dat waren dus de regels van de
+ * homepage. Elke andere pagina laadde daardoor de code van de homepage vooruit
+ * in plaats van zijn eigen code. Zijn eigen paginacode moest React na het
+ * opstarten alsnog ophalen, en in die tussentijd zag de bezoeker de pagina
+ * opnieuw opbouwen.
+ *
+ * Door de schone versie hier vast te houden krijgt elke pagina dezelfde
+ * onderlaag als een echte bezoeker, en legt hij zijn eigen preloads vast.
+ */
+let schoneShell = null;
 
 function startServer() {
   const server = createServer(async (req, res) => {
     const url = decodeURIComponent((req.url ?? "/").split("?")[0]);
     let file = join(DIST, url);
 
-    if (!extname(file)) file = join(DIST, "index.html");
-    if (!existsSync(file)) file = join(DIST, "index.html");
+    const isShell = !extname(file) || !existsSync(file);
+    if (isShell) {
+      res.writeHead(200, { "Content-Type": MIME[".html"] });
+      res.end(schoneShell);
+      return;
+    }
 
     try {
       const body = await readFile(file);
@@ -119,6 +171,9 @@ async function main() {
   if (!existsSync(join(DIST, "index.html"))) {
     throw new Error("dist/index.html ontbreekt. Draai eerst 'vite build'.");
   }
+
+  // Vasthouden vóór de eerste pagina hem overschrijft.
+  schoneShell = await readFile(join(DIST, "index.html"));
 
   const routes = await collectRoutes();
   const server = await startServer();

@@ -67,7 +67,7 @@ const LevenVragenlijstResultaat = () => {
           </div>
 
           {emailSent && (
-            <p className="text-sm text-foreground/60 mb-6">
+            <p className="text-base text-foreground/60 mb-6">
               Je ontvangt ook een email met je resultaten.
             </p>
           )}

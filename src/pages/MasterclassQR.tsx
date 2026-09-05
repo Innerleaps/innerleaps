@@ -68,7 +68,7 @@ const MasterclassQR = () => {
                 <Star key={i} className="w-4 h-4 fill-amber-400 text-amber-400" />
               ))}
             </div>
-            <span className="text-sm font-semibold">4,7 / 5 Google Reviews</span>
+            <span className="text-base font-semibold">4,7 / 5 Google Reviews</span>
           </div>
         </div>
       </section>
@@ -215,7 +215,7 @@ const MasterclassQR = () => {
                 <span>bas@innerleaps.nl</span>
               </a>
             </div>
-            <p className="text-sm text-brand-gray-medium pt-4">
+            <p className="text-base text-brand-gray-medium pt-4">
               © {new Date().getFullYear()} Innerleaps. Alle rechten voorbehouden.
             </p>
           </div>

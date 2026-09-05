@@ -90,9 +90,46 @@ Secties wisselen af tussen `bg-white` en `bg-brand-off-white` (#F7F5F2):
 ```
 
 - **Size**: `text-xl md:text-2xl` (desktop grotere tekst)
-- **Minimaal**: `text-xl` (20px voor toegankelijkheid)
+- **Minimaal**: `text-xl` (20px) voor lopende tekst
 - **Leading**: `leading-relaxed`
 - **Kleur**: `text-brand-gray-medium`
+
+### Ondergrens: nooit onder 16px
+
+**`text-sm` en `text-xs` gebruik je niet voor tekst die een bezoeker leest.**
+Ook niet in tabellen, cijferpanelen, formulierlabels, badges of voetnoten.
+
+Waarom 16px en niet iets kleiners:
+
+- WCAG schrijft **geen** minimale lettergrootte voor. Dat wordt vaak beweerd
+  maar het klopt niet: succescriterium 1.4.4 eist alleen dat tekst tot 200%
+  vergroot kan worden. De ondergrens komt dus ergens anders vandaan.
+- Apple houdt 11pt aan als absoluut minimum en **17pt** voor body-tekst,
+  Material Design **16sp**. De praktijkstandaard voor mobiel web is 16px, uit
+  leesafstandsonderzoek: een telefoon houd je op 25 tot 35 centimeter.
+- **iOS Safari zoomt vanzelf in** op een invoerveld onder 16px. Dat is Apple
+  die je vertelt dat het te klein is.
+
+De schaal:
+
+| Rol | Mobiel | Desktop | Tailwind |
+|---|---|---|---|
+| Sectiekop | 36px | 48–60px | `text-4xl md:text-5xl lg:text-6xl` |
+| Kaartkop | 20px | 24px | `text-xl md:text-2xl` |
+| Lopende tekst | 20px | 24px | `text-xl md:text-2xl` |
+| Tekst in kaarten en lijsten | 20px | 20px | `text-xl` |
+| Compacte UI en ondergrens | 16px | 16px | `text-base` |
+
+Let op bij de shadcn-componenten: `Input`, `Label`, `Button`, `accordion`,
+`dialog`, `sheet` en `navigation-menu` brachten allemaal hun eigen `text-sm`
+mee. Die staan nu op `text-base`. Zet je een nieuw shadcn-component neer,
+controleer dat dan.
+
+**Groter maken kan de opmaak breken.** Bij het optillen van de vier cijfers in
+`BookingStats` liep "Productiviteit" zijn cel uit: vier kolommen van 85 pixels
+zijn te smal voor 16px. Dat is opgelost in de opmaak, met twee rijen van twee
+op mobiel. Meet dus na, en verklein nooit de tekst om een opmaakprobleem op te
+lossen.
 
 ### Accent/Statistiek Tekst
 

@@ -3,7 +3,7 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
-import { lazy, Suspense, Profiler } from "react";
+import { lazy, Suspense, Profiler, useLayoutEffect } from "react";
 import { ProductionRedirect } from "./components/ProductionRedirect";
 import LanguageSync from "./i18n/LanguageSync";
 
@@ -27,6 +27,8 @@ const VerborgenKostenZiekteverzuim = lazy(() => import("./pages/blog/VerborgenKo
 const HoeVerlaagIkZiekteverzuim = lazy(() => import("./pages/blog/HoeVerlaagIkZiekteverzuim"));
 const MasterclassQR = lazy(() => import("./pages/MasterclassQR"));
 const Bedankt = lazy(() => import("./pages/Bedankt"));
+const BedanktRoi = lazy(() => import("./pages/BedanktRoi"));
+const BedanktRapport = lazy(() => import("./pages/BedanktRapport"));
 const NegenStippen = lazy(() => import("./pages/NegenStippen"));
 const AlgemeneVoorwaarden = lazy(() => import("./pages/AlgemeneVoorwaarden"));
 const PrivacyNotice = lazy(() => import("./pages/PrivacyNotice"));
@@ -34,6 +36,57 @@ const Cookies = lazy(() => import("./pages/Cookies"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 
 const queryClient = new QueryClient();
+
+/**
+ * Wat er te zien is terwijl de pagina nog geladen wordt.
+ *
+ * Hier stond een tijdlang een kopie van de voorgebakken pagina, om een wit gat
+ * te verbergen. Dat gat had een andere oorzaak, en die is nu weg: elke pagina
+ * laadde de code van de homepage vooruit in plaats van zijn eigen code, zodat
+ * React na het opstarten alsnog moest wachten. Zie scripts/prerender.mjs.
+ *
+ * De kopie is er weer uit, want hij loste het niet op maar verplaatste het: in
+ * plaats van een korte flits zag je de pagina heel even in een iets andere
+ * opmaak staan, en dat valt meer op dan wit.
+ */
+/**
+ * Het laadscherm, maar alleen als er niets anders te zien is.
+ *
+ * Staat de voorgebakken pagina er nog (zie main.tsx), dan is die het laadscherm
+ * en tonen we hier niets. Deden we dat wel, dan kwam er onder de zichtbare
+ * pagina een leeg vlak van een volledig scherm bij. De pagina wordt daardoor
+ * twee schermen lang en meteen daarna weer één, en dat zie je op een telefoon
+ * terug als een trilling: de adresbalk van Safari reageert op zo'n verandering
+ * in paginahoogte.
+ *
+ * Bij navigeren binnen de site is die laag er niet, en dan hoort er wel een
+ * laadscherm te komen.
+ */
+const Laadscherm = () => {
+  if (typeof document !== "undefined" && document.getElementById("voorvertoning")) {
+    return null;
+  }
+  return (
+    <div className="min-h-screen bg-white flex items-center justify-center">
+      <div className="animate-pulse text-brand-blue text-lg">Laden...</div>
+    </div>
+  );
+};
+
+/**
+ * Haalt de voorgebakken pagina weg zodra React zijn eerste pagina heeft
+ * neergezet. Zie main.tsx voor waarom die laag er staat.
+ *
+ * Met useLayoutEffect en niet met useEffect: dit moet gebeuren vóór het scherm
+ * opnieuw getekend wordt. Anders staat de pagina er heel even twee keer onder
+ * elkaar.
+ */
+const VoorvertoningWeg = () => {
+  useLayoutEffect(() => {
+    document.getElementById("voorvertoning")?.remove();
+  }, []);
+  return null;
+};
 
 // Performance monitoring callback (development only)
 const onRenderCallback = (
@@ -53,12 +106,12 @@ const App = () => {
         <Toaster />
         <Sonner />
         <BrowserRouter>
-          <Suspense fallback={
-            <div className="min-h-screen bg-white flex items-center justify-center">
-              <div className="animate-pulse text-brand-blue text-lg">Laden...</div>
-            </div>
-          }>
+          {/* Geen laadscherm zolang de voorgebakken pagina er nog staat: die
+              is het laadscherm. Staat hij er niet, bijvoorbeeld bij navigeren
+              binnen de site, dan komt Laadscherm alsnog in beeld. */}
+          <Suspense fallback={<Laadscherm />}>
             <Profiler id="App" onRender={onRenderCallback}>
+              <VoorvertoningWeg />
               <LanguageSync />
               <Routes>
                 <Route path="/" element={<LandingPage />} />
@@ -99,6 +152,23 @@ const App = () => {
                 <Route path="/privacy" element={<PrivacyNotice />} />
                 <Route path="/cookies" element={<Cookies />} />
                 
+                {/* De bedanktpagina's van de twee lead generators.
+                    Bewust vier adressen en niet één: dit is waar Google Ads de
+                    conversie op meet, en per doelgroep een eigen URL geeft een
+                    eigen conversieactie en een eigen remarketinglijst.
+                    Ze staan bewust NIET in ROUTE_MAP: ze worden niet
+                    geprerenderd, krijgen noindex mee en horen niet in de
+                    sitemap. Daarom staan ze wel als status 200 in netlify.toml,
+                    anders vallen ze vanaf de volgende deploy onder de 404. */}
+                <Route path="/bedankt/roi-hr" element={<BedanktRoi doelgroep="hr" />} />
+                <Route path="/bedankt/roi-management" element={<BedanktRoi doelgroep="management" />} />
+                <Route path="/bedankt/roi" element={<BedanktRoi doelgroep="onbekend" />} />
+                <Route path="/bedankt/wetenschappelijk-rapport" element={<BedanktRapport />} />
+                <Route path="/en/thank-you/roi-hr" element={<BedanktRoi doelgroep="hr" />} />
+                <Route path="/en/thank-you/roi-management" element={<BedanktRoi doelgroep="management" />} />
+                <Route path="/en/thank-you/roi" element={<BedanktRoi doelgroep="onbekend" />} />
+                <Route path="/en/thank-you/scientific-report" element={<BedanktRapport />} />
+
                 {/* Feature-flag routes - visible in Lovable editor, but redirect in production */}
                 <Route path="/masterclass-stress-qr" element={
                   <ProductionRedirect>

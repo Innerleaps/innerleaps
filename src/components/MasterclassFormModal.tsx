@@ -163,7 +163,7 @@ const MasterclassFormModal = ({
     }
   };
   return <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="max-w-2xl max-h-[90vh] overflow-y-auto bg-white">
+      <DialogContent className="max-w-2xl sm:max-h-[90vh] overflow-y-auto bg-white">
         <DialogHeader>
           <DialogTitle className="text-2xl md:text-3xl font-bold text-brand-purple text-center">
             Aanmelden Gratis Masterclass
@@ -179,7 +179,7 @@ const MasterclassFormModal = ({
               </div>
               <span className="font-semibold text-brand-gray-dark">4,7 / 5</span>
             </div>
-            <p className="text-sm text-brand-gray-dark italic text-center leading-relaxed">
+            <p className="text-base text-brand-gray-dark italic text-center leading-relaxed">
               "Deze workshop laat je duidelijk het belang zien van het trainen van je aandachtsspier."
             </p>
           </div>
@@ -250,14 +250,14 @@ const MasterclassFormModal = ({
 
           {/* Trust Indicators */}
           <div className="pt-6 border-t border-gray-200">
-            <p className="text-center text-sm text-brand-gray-medium font-semibold mb-6">
+            <p className="text-center text-base text-brand-gray-medium font-semibold mb-6">
               ─── Vertrouwd door ───
             </p>
             
             <div className="space-y-4">
               {/* VGZ */}
               <div className="flex flex-col items-center text-center">
-                <p className="text-sm font-semibold text-brand-gray-dark mb-2">
+                <p className="text-base font-semibold text-brand-gray-dark mb-2">
                   🏥 Methode erkend door Nederlandse zorg
                 </p>
                 <img src={vgzLogo} alt="VGZ" className="h-10 object-contain opacity-80" />
@@ -265,7 +265,7 @@ const MasterclassFormModal = ({
 
               {/* Oxford */}
               <div className="flex flex-col items-center text-center">
-                <p className="text-sm font-semibold text-brand-gray-dark mb-2">
+                <p className="text-base font-semibold text-brand-gray-dark mb-2">
                   🎓 40 jaar wetenschappelijk
                 </p>
                 <img src={oxfordLogo} alt="Oxford University" className="h-10 object-contain opacity-80" />
@@ -273,7 +273,7 @@ const MasterclassFormModal = ({
 
               {/* Geaccrediteerde Trainers */}
               <div className="flex flex-col items-center text-center">
-                <p className="text-sm font-semibold text-brand-gray-dark mb-2">
+                <p className="text-base font-semibold text-brand-gray-dark mb-2">
                   ✅ Geaccrediteerde Trainers
                 </p>
                 <div className="p-2 rounded-lg bg-brand-orange/10">
