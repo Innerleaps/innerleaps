@@ -30,6 +30,30 @@
       });
       gtag('set', 'ads_data_redaction', true);
       gtag('set', 'url_passthrough', true);
+
+      /*
+        Een eerder gemaakte keuze meteen terugzetten, nog voordat gtag.js laadt.
+
+        Dit hoort hier en niet in React. wait_for_update geeft de banner een
+        halve seconde; een component dat na een seconde mount is dan al te laat
+        en de tag heeft dan al zonder toestemming gevuurd. Bij een herhaalbezoek
+        met eerder gegeven toestemming moet de update meteen bij het laden
+        komen, niet pas na een klik.
+
+        De sleutel is dezelfde als in src/lib/toestemming.ts.
+      */
+      try {
+        var keuze = JSON.parse(localStorage.getItem('innerleaps.toestemming'));
+        if (keuze && typeof keuze.analyse === 'boolean') {
+          var ja = function (aan) { return aan ? 'granted' : 'denied'; };
+          gtag('consent', 'update', {
+            'ad_storage': ja(keuze.advertenties),
+            'ad_user_data': ja(keuze.advertenties),
+            'ad_personalization': ja(keuze.advertenties),
+            'analytics_storage': ja(keuze.analyse)
+          });
+        }
+      } catch (e) {}
     </script>
 
     <!--

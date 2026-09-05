@@ -34,11 +34,8 @@ const timeslots = [{
 }];
 
 // Declare gtag for Google Analytics
-declare global {
-  interface Window {
-    gtag?: (command: string, eventName: string, params?: Record<string, any>) => void;
-  }
-}
+// window.gtag staat beschreven in src/lib/toestemming.ts, op één plek.
+
 const MasterclassFormModal = ({
   isOpen,
   onClose

@@ -213,5 +213,25 @@
     "logoAlt": "TheyDo",
     "photoAlt": "Jochem van der Veen, CEO bij TheyDo",
     "vmbnAlt": "VMBN trainer categorie 1"
+  },
+  "cookiebanner": {
+    "title": "Even over <0>cookies</0>",
+    "body": "Om te zien wat werkt op deze site gebruiken we cookies. Die zetten we pas als jij akkoord geeft. In onze <0>privacyverklaring</0> staat precies wat we bewaren.",
+    "accept": "Accepteren",
+    "settings": "Cookie instellingen",
+    "panel": {
+      "title": "Jouw <0>cookievoorkeuren</0>",
+      "intro": "Hieronder kies je zelf wat we mogen meten. Je keuze geldt tot je hem wijzigt.",
+      "necessaryTitle": "Noodzakelijk",
+      "necessaryAlways": "Altijd aan",
+      "necessaryBody": "Nodig om de site te laten werken, bijvoorbeeld om je taalkeuze en deze cookiekeuze te onthouden.",
+      "analyticsTitle": "Analyse",
+      "analyticsBody": "Laat ons zien welke pagina's bezocht worden en waar mensen afhaken, zodat we de site kunnen verbeteren.",
+      "adsTitle": "Advertenties",
+      "adsBody": "Laat ons zien welke advertentie iemand hierheen bracht, zodat we niet betalen voor wat niet werkt.",
+      "save": "Keuze opslaan",
+      "rejectAll": "Alleen noodzakelijk"
+    },
+    "footerLink": "Cookievoorkeuren"
   }
 }
