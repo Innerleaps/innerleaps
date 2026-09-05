@@ -3,8 +3,7 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
-import { lazy, Suspense, Profiler, useEffect } from "react";
-import { eersteSchermHtml, eersteSchermVerbruikt } from "./lib/eersteScherm";
+import { lazy, Suspense, Profiler } from "react";
 import { ProductionRedirect } from "./components/ProductionRedirect";
 import LanguageSync from "./i18n/LanguageSync";
 
@@ -41,31 +40,20 @@ const queryClient = new QueryClient();
 /**
  * Wat er te zien is terwijl de pagina nog geladen wordt.
  *
- * Bij het openen van de site is dat de voorgebakken pagina die er al stond.
- * Zonder dit gooit React die weg en staat er "Laden..." op een leeg scherm,
- * waardoor je de pagina ziet verschijnen, verdwijnen en weer verschijnen.
- * Zie src/lib/eersteScherm.ts voor de meting.
+ * Hier stond een tijdlang een kopie van de voorgebakken pagina, om een wit gat
+ * te verbergen. Dat gat had een andere oorzaak, en die is nu weg: elke pagina
+ * laadde de code van de homepage vooruit in plaats van zijn eigen code, zodat
+ * React na het opstarten alsnog moest wachten. Zie scripts/prerender.mjs.
  *
- * Bij navigeren binnen de site is de opslag leeg en staat er gewoon "Laden...".
+ * De kopie is er weer uit, want hij loste het niet op maar verplaatste het: in
+ * plaats van een korte flits zag je de pagina heel even in een iets andere
+ * opmaak staan, en dat valt meer op dan wit.
  */
-const Laadscherm = () => {
-  const html = eersteSchermHtml();
-  if (html) {
-    return <div aria-busy="true" dangerouslySetInnerHTML={{ __html: html }} />;
-  }
-  return (
-    <div className="min-h-screen bg-white flex items-center justify-center">
-      <div className="animate-pulse text-brand-blue text-lg">Laden...</div>
-    </div>
-  );
-};
-
-/** Meldt dat React zijn eerste pagina heeft neergezet, zodat het laadscherm
- *  vanaf nu weer een gewoon laadscherm is. */
-const EersteRenderKlaar = () => {
-  useEffect(eersteSchermVerbruikt, []);
-  return null;
-};
+const Laadscherm = () => (
+  <div className="min-h-screen bg-white flex items-center justify-center">
+    <div className="animate-pulse text-brand-blue text-lg">Laden...</div>
+  </div>
+);
 
 // Performance monitoring callback (development only)
 const onRenderCallback = (
@@ -88,7 +76,6 @@ const App = () => {
           <Suspense fallback={<Laadscherm />}>
             <Profiler id="App" onRender={onRenderCallback}>
               <LanguageSync />
-              <EersteRenderKlaar />
               <Routes>
                 <Route path="/" element={<LandingPage />} />
                 {/* English routes (mirror of NL pages) */}

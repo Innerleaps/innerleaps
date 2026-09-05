@@ -105,13 +105,37 @@ async function collectRoutes() {
   return [...routes].sort();
 }
 
+/**
+ * De onbewerkte index.html, in het geheugen, van vóór het prerenderen.
+ *
+ * Dit servertje serveert index.html voor elk pad zonder extensie. Maar de
+ * eerste route die we vastleggen is "/", en die schrijft zijn resultaat naar
+ * datzelfde index.html. Alle routes daarna kregen dus de voorgebakken homepage
+ * als onderlaag.
+ *
+ * Dat is niet onschuldig. In die onderlaag staan de modulepreload-regels die
+ * Vite tijdens het renderen toevoegt, en dat waren dus de regels van de
+ * homepage. Elke andere pagina laadde daardoor de code van de homepage vooruit
+ * in plaats van zijn eigen code. Zijn eigen paginacode moest React na het
+ * opstarten alsnog ophalen, en in die tussentijd zag de bezoeker de pagina
+ * opnieuw opbouwen.
+ *
+ * Door de schone versie hier vast te houden krijgt elke pagina dezelfde
+ * onderlaag als een echte bezoeker, en legt hij zijn eigen preloads vast.
+ */
+let schoneShell = null;
+
 function startServer() {
   const server = createServer(async (req, res) => {
     const url = decodeURIComponent((req.url ?? "/").split("?")[0]);
     let file = join(DIST, url);
 
-    if (!extname(file)) file = join(DIST, "index.html");
-    if (!existsSync(file)) file = join(DIST, "index.html");
+    const isShell = !extname(file) || !existsSync(file);
+    if (isShell) {
+      res.writeHead(200, { "Content-Type": MIME[".html"] });
+      res.end(schoneShell);
+      return;
+    }
 
     try {
       const body = await readFile(file);
@@ -147,6 +171,9 @@ async function main() {
   if (!existsSync(join(DIST, "index.html"))) {
     throw new Error("dist/index.html ontbreekt. Draai eerst 'vite build'.");
   }
+
+  // Vasthouden vóór de eerste pagina hem overschrijft.
+  schoneShell = await readFile(join(DIST, "index.html"));
 
   const routes = await collectRoutes();
   const server = await startServer();
