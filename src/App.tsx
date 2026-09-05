@@ -3,7 +3,7 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
-import { lazy, Suspense, Profiler } from "react";
+import { lazy, Suspense, Profiler, useLayoutEffect } from "react";
 import { ProductionRedirect } from "./components/ProductionRedirect";
 import LanguageSync from "./i18n/LanguageSync";
 
@@ -55,6 +55,21 @@ const Laadscherm = () => (
   </div>
 );
 
+/**
+ * Haalt de voorgebakken pagina weg zodra React zijn eerste pagina heeft
+ * neergezet. Zie main.tsx voor waarom die laag er staat.
+ *
+ * Met useLayoutEffect en niet met useEffect: dit moet gebeuren vóór het scherm
+ * opnieuw getekend wordt. Anders staat de pagina er heel even twee keer onder
+ * elkaar.
+ */
+const VoorvertoningWeg = () => {
+  useLayoutEffect(() => {
+    document.getElementById("voorvertoning")?.remove();
+  }, []);
+  return null;
+};
+
 // Performance monitoring callback (development only)
 const onRenderCallback = (
   id: string,
@@ -73,8 +88,12 @@ const App = () => {
         <Toaster />
         <Sonner />
         <BrowserRouter>
+          {/* Geen laadscherm zolang de voorgebakken pagina er nog staat: die
+              is het laadscherm. Staat hij er niet, bijvoorbeeld bij navigeren
+              binnen de site, dan komt Laadscherm alsnog in beeld. */}
           <Suspense fallback={<Laadscherm />}>
             <Profiler id="App" onRender={onRenderCallback}>
+              <VoorvertoningWeg />
               <LanguageSync />
               <Routes>
                 <Route path="/" element={<LandingPage />} />
