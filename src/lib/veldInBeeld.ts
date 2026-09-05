@@ -88,15 +88,38 @@ if (typeof window !== "undefined") {
    *  op terug als er iets ongevraagd scrolt. */
   let goedePositie: number | null = null;
   /**
-   * Heeft de bezoeker het scherm aangeraakt? Dan neemt hij het over en blijven
-   * we eraf tot het volgende veld focus krijgt. Ook als hij daarmee het veld uit
-   * beeld scrolt: dat is dan zijn keuze, niet een sprong van de browser.
+   * Ligt er een vinger op het scherm? Dan scrolt de bezoeker mogelijk zelf en
+   * blijven we eraf.
    *
-   * Tikt hij een veld aan, dan komt er meteen na de aanraking een focusin, en
-   * daar zetten we de bewaking weer aan.
+   * Dit stond eerst aan tot het volgende veld focus kreeg, en dat was fout.
+   * iOS opent het toetsenbord niet bij een focus die uit code komt, dus de
+   * bezoeker tikt het veld dat al focus heeft alsnog aan om te kunnen typen.
+   * Dat tikken zette de vlag aan, en omdat het veld de focus al had kwam er
+   * geen nieuwe focus-gebeurtenis die hem weer uitzette. De bewaking stond
+   * daarna permanent op non-actief. In een schermopname te zien als vier
+   * beeldjes lang exact dezelfde verkeerde stand, zonder enige flikkering.
+   *
+   * Nu geldt de vlag alleen zolang de vinger er echt ligt. Bij het loslaten
+   * kijken we één keer: staat het veld nog in beeld, dan gaan we gewoon verder
+   * met bewaken. Heeft de bezoeker het veld zelf weggescrold, dan is dat zijn
+   * keuze en laten we hem met rust tot hij een volgend veld aantikt.
    */
-  let bezoekerAanZet = false;
-  document.addEventListener("touchstart", () => { bezoekerAanZet = true; }, { passive: true });
+  let vinger = false;
+
+  const losgelaten = () => {
+    vinger = false;
+    const nu = teBewaken();
+    if (!nu) return;
+    if (staatInBeeld(nu.veld)) {
+      goedePositie = nu.gebied.scrollTop;
+    } else {
+      bewaaktVeld = null;
+    }
+  };
+
+  document.addEventListener("touchstart", () => { vinger = true; }, { passive: true });
+  document.addEventListener("touchend", losgelaten, { passive: true });
+  document.addEventListener("touchcancel", losgelaten, { passive: true });
 
   let lus: number | undefined;
 
@@ -105,9 +128,9 @@ if (typeof window !== "undefined") {
     if (!nu) return;
     const { veld, gebied } = nu;
 
-    // Is de bezoeker aan zet, of staat het veld gewoon goed? Dan is de huidige
-    // stand de nieuwe goede stand.
-    if (bezoekerAanZet || staatInBeeld(veld)) {
+    // Ligt er een vinger op het scherm, of staat het veld gewoon goed? Dan is de
+    // huidige stand de nieuwe goede stand.
+    if (vinger || staatInBeeld(veld)) {
       goedePositie = gebied.scrollTop;
       return;
     }
@@ -144,7 +167,6 @@ if (typeof window !== "undefined") {
     if (!doel?.matches?.("input, textarea, select")) return;
     if (!doel.closest('[role="dialog"]')) return;
     bewaaktVeld = doel;
-    bezoekerAanZet = false;
     const nu = teBewaken();
     if (!nu) return;
     goedePositie = nu.gebied.scrollTop;
