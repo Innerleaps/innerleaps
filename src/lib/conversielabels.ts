@@ -33,7 +33,7 @@ export type ConversieNaam =
 const LABELS: Record<ConversieNaam, string> = {
   afspraak: "nHWPCP7PzPAcEOftptRE",  // Afspraak maken
   contactformulier: "oZTqCIHQzPAcEOftptRE",  // Contactformulier verzonden
-  roiHr: "flRJCNTVzPAcEOftptRE",  // Rekentool HR
+  roiHr: "KEZoCM7Q0_AcEOftptRE",  // Rekentool HR 2 (de eerste is per ongeluk verwijderd)
   roiManagement: "8TpMCNfVzPAcEOftptRE",  // Rekentool directie
   roiOnbekend: "66wDCNrVzPAcEOftptRE",  // Rekentool onbekend
   telefoon: "Y24qCN3VzPAcEOftptRE",  // Klik op telefoonnummer
