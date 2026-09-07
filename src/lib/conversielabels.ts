@@ -26,18 +26,19 @@ export type ConversieNaam =
   | "bijlage";
 
 /**
- * Per conversieactie het label. Nog in te vullen zodra Bas ze uit Google Ads
- * heeft gehaald; de namen komen overeen met de namen die hij daar gebruikt.
+ * Per conversieactie het label. De namen in het commentaar zijn precies de
+ * namen zoals ze in Google Ads staan, zodat je ze naast elkaar kunt leggen
+ * zonder in te loggen.
  */
 const LABELS: Record<ConversieNaam, string> = {
-  afspraak: "",          // Afspraak maken
-  contactformulier: "",  // Contactformulier verzonden
-  roiHr: "",             // Rekentool HR
-  roiManagement: "",     // Rekentool directie
-  roiOnbekend: "",       // Rekentool onbekend
-  telefoon: "",          // Klik op telefoonnummer
-  email: "",             // Klik op e-mailadres
-  bijlage: "",           // Wetenschappelijke bijlage
+  afspraak: "nHWPCP7PzPAcEOftptRE",  // Afspraak maken
+  contactformulier: "oZTqCIHQzPAcEOftptRE",  // Contactformulier verzonden
+  roiHr: "flRJCNTVzPAcEOftptRE",  // Rekentool HR
+  roiManagement: "8TpMCNfVzPAcEOftptRE",  // Rekentool directie
+  roiOnbekend: "66wDCNrVzPAcEOftptRE",  // Rekentool onbekend
+  telefoon: "Y24qCN3VzPAcEOftptRE",  // Klik op telefoonnummer
+  email: "uoEmCODVzPAcEOftptRE",  // Klik op e-mailadres
+  bijlage: "SHCFCOPVzPAcEOftptRE",  // Wetenschappelijke bijlage
 };
 
 /** De volledige `send_to`-waarde, of null als het label nog niet bekend is. */
