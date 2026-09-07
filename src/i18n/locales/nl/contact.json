@@ -19,6 +19,7 @@
     "sending": "Bezig met versturen",
     "success": "Dank je, je bericht is binnen. Je hoort binnen één werkdag van ons.",
     "error": "Het versturen lukte niet. Mail ons gerust rechtstreeks op bas@innerleaps.nl.",
-    "required": "Vul je naam, e-mailadres en bericht in."
+    "required": "Vul je naam, e-mailadres en bericht in.",
+    "emailInvalid": "Controleer je e-mailadres even. Zonder geldig adres kunnen we je niets sturen."
   }
 }

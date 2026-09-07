@@ -1,4 +1,6 @@
 import { useEffect, useRef, useState } from "react";
+import { meldAfspraak } from "@/lib/conversies";
+import { nieuweId } from "@/lib/bedankt";
 
 /**
  * De boekingswidget van Calendly, inline in de pagina.
@@ -154,7 +156,13 @@ const CalendlyWidget = ({ id = "afspraak", height = 700, eager = false }: Calend
   useEffect(() => {
     const onMessage = (e: MessageEvent) => {
       const data = e.data as { event?: string; payload?: Record<string, unknown> } | undefined;
-      if (typeof e.origin !== "string" || !e.origin.includes("calendly.com")) return;
+      /**
+       * Precies dit domein, geen `includes`. Met een losse controle op
+       * "calendly.com" komt ook een bericht van bijvoorbeeld
+       * calendly.com.kwaadwillend.nl erdoor, en dan kan elk willekeurig
+       * ingesloten venster een conversie afvuren. De campagne stuurt dan op ruis.
+       */
+      if (e.origin !== "https://calendly.com") return;
 
       // Calendly meldt zijn eigen hoogte. Zonder dit krijg je op mobiel een
       // scrollbalk binnen een scrollbalk.
@@ -171,11 +179,7 @@ const CalendlyWidget = ({ id = "afspraak", height = 700, eager = false }: Calend
 
       // Alleen de afgeronde boeking telt als conversie.
       if (data?.event === "calendly.event_scheduled") {
-        window.dataLayer = window.dataLayer || [];
-        window.dataLayer.push({
-          event: "calendly_event_scheduled",
-          calendly: data.payload,
-        });
+        meldAfspraak(nieuweId(), data.payload);
       }
     };
     window.addEventListener("message", onMessage);

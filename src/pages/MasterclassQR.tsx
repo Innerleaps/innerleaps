@@ -5,11 +5,7 @@ import MasterclassFormModal from "@/components/MasterclassFormModal";
 import masterclassImage from "@/assets/Stressmanagement_masterclass.webp";
 
 // Declare gtag type for Google Analytics
-declare global {
-  interface Window {
-    gtag?: (command: string, eventName: string, params?: Record<string, any>) => void;
-  }
-}
+// window.gtag staat beschreven in src/lib/toestemming.ts, op één plek.
 
 // Trust logos
 import vgzLogo from "@/assets/Vitaliteitprogramma_herkent_door_vgz.webp";

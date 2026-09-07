@@ -45,7 +45,7 @@ const MasterclassSection = ({ variant }: MasterclassSectionProps) => {
   ];
 
   return (
-    <section id="masterclass" className="relative py-16 md:py-24 overflow-hidden">
+    <section id="masterclass" className="relative scroll-mt-28 py-16 md:py-24 overflow-hidden">
       <div className="absolute inset-0 z-0">
         <img
           src={masterclassBg}

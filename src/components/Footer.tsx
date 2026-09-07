@@ -5,6 +5,7 @@ import { Linkedin, Star } from "lucide-react";
 import vmbnLogo from "@/assets/vmbn-trainer-categorie-1.webp";
 import GoogleG from "@/components/GoogleG";
 import { detectLanguageFromPath } from "@/i18n/config";
+import { OPEN_INSTELLINGEN } from "@/lib/toestemming";
 
 interface FooterProps {
   showNavigation?: boolean;
@@ -168,6 +169,17 @@ const Footer = memo(({ showNavigation = true }: FooterProps) => {
             <Link to="/cookies" className="hover:text-white transition-colors">
               {t('footer.cookies')}
             </Link>
+            <span className="text-gray-600" aria-hidden="true">·</span>
+            {/* De bezoeker moet zijn cookiekeuze later kunnen wijzigen. Dit is
+                de enige plek waar dat kan, dus hij hoort in de footer en niet
+                weggestopt op de cookiepagina. */}
+            <button
+              type="button"
+              onClick={() => window.dispatchEvent(new Event(OPEN_INSTELLINGEN))}
+              className="hover:text-white transition-colors underline-offset-2 hover:underline"
+            >
+              {t('cookiebanner.footerLink')}
+            </button>
             <span className="text-gray-600" aria-hidden="true">·</span>
             <Link to="/algemene-voorwaarden" className="hover:text-white transition-colors">
               {t('footer.terms')}

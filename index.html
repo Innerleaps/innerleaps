@@ -1,6 +1,76 @@
 <!DOCTYPE html>
 <html lang="nl">
   <head>
+    <!--
+      Consent Mode v2, als allereerste script en synchroon.
+
+      Volgorde is hier het hele punt: laadt gtag.js eerder dan dit blok, dan
+      vuurt de tag één keer zonder toestemming en is de opzet waardeloos. Dus
+      geen async, geen defer, en niet onderaan de body.
+
+      wait_for_update geeft de cookiebanner een halve seconde om de keuze door
+      te geven voordat de tag zijn eerste ping stuurt. Zonder die regel telt een
+      bezoeker die daarna accepteert alsnog niet mee.
+
+      url_passthrough geeft de gclid via de URL door als cookies geweigerd zijn.
+      Bij lage advertentievolumes is dat een van de weinige gratis manieren om
+      meetverlies te beperken.
+    -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('consent', 'default', {
+        'ad_storage': 'denied',
+        'ad_user_data': 'denied',
+        'ad_personalization': 'denied',
+        'analytics_storage': 'denied',
+        'functionality_storage': 'granted',
+        'security_storage': 'granted',
+        'wait_for_update': 500
+      });
+      gtag('set', 'ads_data_redaction', true);
+      gtag('set', 'url_passthrough', true);
+
+      /*
+        Een eerder gemaakte keuze meteen terugzetten, nog voordat gtag.js laadt.
+
+        Dit hoort hier en niet in React. wait_for_update geeft de banner een
+        halve seconde; een component dat na een seconde mount is dan al te laat
+        en de tag heeft dan al zonder toestemming gevuurd. Bij een herhaalbezoek
+        met eerder gegeven toestemming moet de update meteen bij het laden
+        komen, niet pas na een klik.
+
+        De sleutel is dezelfde als in src/lib/toestemming.ts.
+      */
+      try {
+        var keuze = JSON.parse(localStorage.getItem('innerleaps.toestemming'));
+        if (keuze && typeof keuze.analyse === 'boolean') {
+          var ja = function (aan) { return aan ? 'granted' : 'denied'; };
+          gtag('consent', 'update', {
+            'ad_storage': ja(keuze.advertenties),
+            'ad_user_data': ja(keuze.advertenties),
+            'ad_personalization': ja(keuze.advertenties),
+            'analytics_storage': ja(keuze.analyse)
+          });
+        }
+      } catch (e) {}
+    </script>
+
+    <!--
+      De Google tag. Eén bestand bedient GA4 en Google Ads, dus er komt geen
+      tweede script voor Ads bij.
+
+      Tijdens het prerenderen wordt dit verzoek geblokkeerd, zie
+      scripts/prerender.mjs. Anders stuurt de bouwmachine bij elke deploy 32
+      nepbezoeken naar GA4.
+    -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RGNWZTYB0H"></script>
+    <script>
+      gtag('js', new Date());
+      gtag('config', 'G-RGNWZTYB0H');
+      gtag('config', 'AW-18430408423');
+    </script>
+
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Innerleaps verlaagt verzuim en voorkomt burn-out door vitaliteitstraining</title>

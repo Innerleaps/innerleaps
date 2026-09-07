@@ -10,12 +10,7 @@ import oxfordLogo from "@/assets/Vitaliteitsprogramma_ontwikkeld_door_oxford.web
 import uMassLogo from "@/assets/Vitaliteitsprogramma_ontwikkeld_door_university_of_massachusetts.webp";
 import uvaLogo from "@/assets/Aandachttraining_aan_de_universiteit_van_amsterdam_new.webp";
 
-// Declare gtag for Google Analytics
-declare global {
-  interface Window {
-    gtag?: (command: string, eventName: string, params?: Record<string, any>) => void;
-  }
-}
+// window.gtag staat beschreven in src/lib/toestemming.ts, op één plek.
 
 const Bedankt = () => {
   const location = useLocation();

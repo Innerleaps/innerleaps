@@ -6,6 +6,8 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { lazy, Suspense, Profiler, useLayoutEffect } from "react";
 import { ProductionRedirect } from "./components/ProductionRedirect";
 import LanguageSync from "./i18n/LanguageSync";
+import Cookiebanner from "./components/Cookiebanner";
+import { zetKlikluisteraars } from "./lib/conversies";
 
 // Lazy load all pages for better performance
 const LandingPage = lazy(() => import("./pages/LandingPage"));
@@ -99,6 +101,12 @@ const onRenderCallback = (
   }
 };
 
+/**
+ * De luisteraars voor klikken op het telefoonnummer en het e-mailadres. Eén
+ * keer, hier, en niet per pagina: anders vuurt de gebeurtenis twee keer.
+ */
+zetKlikluisteraars();
+
 const App = () => {
   return (
     <QueryClientProvider client={queryClient}>
@@ -106,6 +114,9 @@ const App = () => {
         <Toaster />
         <Sonner />
         <BrowserRouter>
+          {/* Buiten de Suspense: de keuze moet ook te maken zijn terwijl de
+              pagina nog laadt. */}
+          <Cookiebanner />
           {/* Geen laadscherm zolang de voorgebakken pagina er nog staat: die
               is het laadscherm. Staat hij er niet, bijvoorbeeld bij navigeren
               binnen de site, dan komt Laadscherm alsnog in beeld. */}
