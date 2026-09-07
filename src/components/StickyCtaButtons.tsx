@@ -23,11 +23,6 @@ const CalculatorModal = lazy(() => import('./CalculatorModal'));
  * De balk komt pas in beeld als de hero voorbij is, en verdwijnt zodra het
  * rekentool-blok in beeld komt. Dat laatste is geen detail: de balk mag niet
  * de actie afdekken waar hij zelf naartoe verwijst.
- *
- * De afstand tot de onderrand staat niet hier maar in index.css, bij
- * .sticky-cta. Reden: staat de cookiebalk er, dan gaat deze knop erbovenop,
- * en dat rekent die regel uit met --cookiebanner-height. Zet er dus geen
- * bottom-0 of md:bottom-6 meer bij, dan valt hij weer over de balk heen.
  */
 
 /** Het label van de primaire knop verschilt per doelgroep. HR koopt niet
@@ -124,8 +119,8 @@ const StickyCtaButtons = () => {
       <div
         ref={barRef}
         aria-hidden={!isVisible}
-        className={`sticky-cta fixed left-0 right-0 z-40 bg-white/95 backdrop-blur-sm border-t border-gray-200 px-4 pt-3
-          md:left-auto md:right-6 md:w-auto md:bg-transparent md:backdrop-blur-none md:border-0 md:px-0 md:pt-0
+        className={`sticky-cta fixed bottom-0 left-0 right-0 z-40 bg-white/95 backdrop-blur-sm border-t border-gray-200 px-4 pt-3
+          md:left-auto md:bottom-6 md:right-6 md:w-auto md:bg-transparent md:backdrop-blur-none md:border-0 md:px-0 md:pt-0
           ${isVisible ? 'sticky-cta--visible' : 'sticky-cta--hidden'}`}
       >
         <Button

@@ -218,12 +218,8 @@
    ingevuld; de veilige zone van iPhones met home indicator zit in de padding
    van de balk zelf en telt dus mee in die gemeten hoogte. */
 .sticky-cta {
-  /* Staat op de cookiebalk als die er is, en anders tegen de onderrand. Die
-     balk is tijdelijk en verdwijnt na één klik, deze knop niet, dus de knop
-     wijkt en niet de balk. */
-  bottom: var(--cookiebanner-height, 0px);
   padding-bottom: calc(0.5rem + env(safe-area-inset-bottom));
-  transition: opacity 200ms ease, transform 200ms ease, bottom 200ms ease;
+  transition: opacity 200ms ease, transform 200ms ease;
 }
 
 .sticky-cta--hidden {
@@ -240,15 +236,13 @@
 
 @media (min-width: 768px) {
   .sticky-cta {
-    bottom: calc(1.5rem + var(--cookiebanner-height, 0px));
     padding-bottom: 0;
   }
 }
 
 @media (max-width: 767px) {
-  body.has-sticky-cta,
-  body.has-cookiebanner {
-    padding-bottom: calc(var(--sticky-cta-height, 0px) + var(--cookiebanner-height, 0px));
+  body.has-sticky-cta {
+    padding-bottom: var(--sticky-cta-height, 0px);
   }
 }
 
@@ -256,4 +250,12 @@
   .sticky-cta {
     transition: none;
   }
+}
+
+/* De pagina op slot zolang de cookiemelding openstaat. Zie
+   src/components/Cookiebanner.tsx: zonder dit scrolt de bezoeker er langs en
+   kiest hij nooit. */
+html.cookie-slot,
+body.cookie-slot {
+  overflow: hidden;
 }

@@ -158,8 +158,11 @@
       }
     </script>
 
-    <!-- Apollo.io Website Tracker for cold email campaign tracking -->
-    <script>function initApollo(){var n=Math.random().toString(36).substring(7),o=document.createElement("script");o.src="https://assets.apollo.io/micro/website-tracker/tracker.iife.js?nocache="+n,o.async=!0,o.defer=!0,o.onload=function(){window.trackingFunctions.onLoad({appId:"691354c3d2251c00215e6dae"})},document.head.appendChild(o)}initApollo();</script>
+    <!--
+      De bezoekerstracker van Apollo stond hier en laadde altijd, dus ook
+      voordat de bezoeker de cookiebanner had beantwoord. Hij zit nu in
+      src/lib/apollo.ts en start pas na akkoord op advertentiecookies.
+    -->
   </head>
 
   <body>

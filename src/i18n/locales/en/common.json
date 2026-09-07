@@ -215,10 +215,10 @@
     "vmbnAlt": "VMBN trainer category 1"
   },
   "cookiebanner": {
-    "title": "Cookie notice",
-    "body": "We only store cookies once you agree. Our <0>privacy notice</0> says what we keep.",
-    "accept": "Accept",
-    "settings": "Cookie settings",
+    "title": "About <0>cookies</0>",
+    "body": "We measure what happens on this site: which pages people read, where they drop off and which advert brought them here. That needs cookies. Without those numbers we pay for adverts that lead nowhere.",
+    "accept": "Accept all",
+    "settings": "Set preferences",
     "panel": {
       "title": "Your <0>cookie preferences</0>",
       "intro": "Choose below what we may measure. Your choice stands until you change it.",
@@ -231,6 +231,8 @@
       "adsBody": "Shows us which advert brought someone here, so we do not pay for what does not work.",
       "save": "Confirm"
     },
-    "footerLink": "Cookie preferences"
+    "footerLink": "Cookie preferences",
+    "aria": "Cookie notice",
+    "bodyChoice": "You choose. Accept everything and we measure all of the above. Rather decide yourself, use Set preferences. Nothing hangs on your choice: the site works the same either way, and you can change it at the bottom of any page. Our <0>privacy notice</0> says what we keep."
   }
 }

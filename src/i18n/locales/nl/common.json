@@ -215,10 +215,10 @@
     "vmbnAlt": "VMBN trainer categorie 1"
   },
   "cookiebanner": {
-    "title": "Cookiemelding",
-    "body": "Cookies slaan we op als jij akkoord bent. In onze <0>privacyverklaring</0> staat wat we bewaren.",
-    "accept": "Accepteren",
-    "settings": "Cookie instellingen",
+    "title": "Even over <0>cookies</0>",
+    "body": "We meten wat er op deze site gebeurt: welke pagina's mensen lezen, waar ze afhaken en welke advertentie ze hierheen bracht. Daar hebben we cookies voor nodig. Zonder die cijfers betalen we voor advertenties die niets opleveren.",
+    "accept": "Alles accepteren",
+    "settings": "Zelf instellen",
     "panel": {
       "title": "Jouw <0>cookievoorkeuren</0>",
       "intro": "Hieronder kies je zelf wat we mogen meten. Je keuze geldt tot je hem wijzigt.",
@@ -231,6 +231,8 @@
       "adsBody": "Laat ons zien welke advertentie iemand hierheen bracht, zodat we niet betalen voor wat niet werkt.",
       "save": "Bevestigen"
     },
-    "footerLink": "Cookievoorkeuren"
+    "footerLink": "Cookievoorkeuren",
+    "aria": "Cookiemelding",
+    "bodyChoice": "Jij kiest. Accepteer je alles, dan meten we alles hierboven. Wil je het zelf bepalen, klik dan op Zelf instellen. Aan je keuze zit niets vast: de site werkt hetzelfde, en onderaan elke pagina pas je hem later aan. In onze <0>privacyverklaring</0> staat wat we bewaren."
   }
 }

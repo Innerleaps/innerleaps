@@ -222,6 +222,11 @@ async function main() {
         await page.evaluateOnNewDocument((value) => {
           Object.defineProperty(navigator, "language", { get: () => value });
           Object.defineProperty(navigator, "languages", { get: () => [value] });
+          // De cookiemelding hoort niet in de voorgebakken HTML. Hij zou dan
+          // bij iedereen kort in beeld flitsen, ook bij wie al gekozen heeft,
+          // en zijn scrollslot zou in het bestand belanden. Staat die dan vast
+          // en laadt React niet, dan kan niemand de pagina nog scrollen.
+          window.__PRERENDER__ = true;
         }, locale);
 
         await page.goto(`http://localhost:${PORT}${route}`, {

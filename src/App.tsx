@@ -8,6 +8,7 @@ import { ProductionRedirect } from "./components/ProductionRedirect";
 import LanguageSync from "./i18n/LanguageSync";
 import Cookiebanner from "./components/Cookiebanner";
 import { zetKlikluisteraars } from "./lib/conversies";
+import { startApolloAlsToegestaan } from "./lib/apollo";
 
 // Lazy load all pages for better performance
 const LandingPage = lazy(() => import("./pages/LandingPage"));
@@ -106,6 +107,7 @@ const onRenderCallback = (
  * keer, hier, en niet per pagina: anders vuurt de gebeurtenis twee keer.
  */
 zetKlikluisteraars();
+startApolloAlsToegestaan();
 
 const App = () => {
   return (

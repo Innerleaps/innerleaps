@@ -8,7 +8,7 @@ const PrivacyNotice = memo(() => {
     <>
       <Helmet>
         <title>Privacy Notice | Innerleaps</title>
-        <meta name="description" content="Privacy notice van Innerleaps. Lees hoe wij omgaan met persoonsgegevens van deelnemers aan onze trainingen." />
+        <meta name="description" content="Privacy notice van Innerleaps. Lees hoe wij omgaan met persoonsgegevens van bezoekers van de website en van deelnemers aan onze trainingen." />
         <meta name="robots" content="noindex, follow" />
       </Helmet>
       <SimplifiedNavigation />
@@ -18,7 +18,7 @@ const PrivacyNotice = memo(() => {
             Privacy Notice
           </h1>
           <p className="text-brand-gray-medium text-xl mb-12">
-            <strong>Innerleaps</strong>, Version 1.6 | March 2026
+            <strong>Innerleaps</strong>, Version 1.7 | September 2026
           </p>
 
           <div className="prose max-w-none space-y-8 text-brand-gray-dark leading-relaxed">
@@ -27,6 +27,83 @@ const PrivacyNotice = memo(() => {
               <h2 className="text-2xl md:text-3xl font-bold text-brand-purple mb-4">Who are we?</h2>
               <p className="text-xl mb-6">
                 Innerleaps is a training company specialising in brain training for professionals. We deliver training programs at companies, executed by qualified trainers.
+              </p>
+            </section>
+
+            {/* Website visitors */}
+            <section>
+              <h2 className="text-2xl md:text-3xl font-bold text-brand-purple mb-4">Visiting innerleaps.nl</h2>
+              <p className="text-xl mb-4">
+                This section is about anyone who visits our website. The rest of this notice is about people who take part in a training programme, where your employer decides what happens with your data. For the website it works differently: there, Innerleaps decides, so Innerleaps is the data controller.
+              </p>
+
+              <h3 className="text-xl md:text-2xl font-semibold text-brand-purple mb-3">Cookies and your choice</h3>
+              <p className="text-xl mb-4">
+                We place no analytics or advertising cookies until you agree. When you first arrive, a bar at the bottom of the screen asks you to choose. Until you make that choice, the measurement tools on this site are switched off and store nothing on your device.
+              </p>
+              <p className="text-xl mb-4">
+                Two things are stored regardless, because the site cannot work without them: your language choice and your cookie choice itself. They stay in your own browser, we never see them, and they are not used to follow you.
+              </p>
+              <p className="text-xl mb-4">
+                You can change your mind whenever you like. At the bottom of every page there is a link called <strong>Cookie preferences</strong>. It reopens the same panel, and switching something off stops it straight away.
+              </p>
+
+              <h3 className="text-xl md:text-2xl font-semibold text-brand-purple mb-3">What we measure once you agree</h3>
+              <ul className="list-disc ml-6 space-y-3 text-xl mb-4">
+                <li>
+                  <strong>Google Analytics 4:</strong> which pages get visited, how people move through the site and where they drop off. We use this to improve the site.
+                </li>
+                <li>
+                  <strong>Google Ads:</strong> whether an advert brought you here and what you did afterwards, so we do not keep paying for adverts that lead nowhere.
+                </li>
+                <li>
+                  <strong>Apollo:</strong> recognises which organisation a visit is likely to come from, based on your network address. This is for our own sales follow-up, and it only runs if you accept advertising cookies.
+                </li>
+              </ul>
+              <p className="text-xl mb-4">
+                If you fill in one of our forms and you have accepted advertising cookies, your email address is also sent to Google so it can match your enquiry to the advert you clicked. It is scrambled first, on your own device, using an irreversible calculation called SHA-256. Google receives that scrambled version and never the readable address.
+              </p>
+              <p className="text-xl mb-6">
+                <strong>Legal basis:</strong> your consent (GDPR Article 6(1)(a)) for everything in this list. For the language and cookie choice stored in your browser: our legitimate interest in a site that works (GDPR Article 6(1)(f)).
+              </p>
+
+              <h3 className="text-xl md:text-2xl font-semibold text-brand-purple mb-3">Forms on the website</h3>
+              <p className="text-xl mb-2">You can leave your details in four places. Each one is voluntary, and you always see beforehand what we ask for.</p>
+              <ul className="list-disc ml-6 space-y-3 text-xl mb-4">
+                <li>
+                  <strong>The savings calculator:</strong> your name, work email address, organisation name and the figures you enter about absence, headcount and average salary. We email you the outcome and store your entry so we can follow up.
+                </li>
+                <li>
+                  <strong>The scientific report:</strong> your name, work email address and organisation name. We email you the report and store your request.
+                </li>
+                <li>
+                  <strong>The contact form:</strong> your name, email address and message. This is emailed to us and nothing is stored in a database.
+                </li>
+                <li>
+                  <strong>Booking a call:</strong> handled by Calendly. You give your name, email address and a time. Calendly's own privacy statement applies to that booking.
+                </li>
+              </ul>
+              <p className="text-xl mb-4">
+                <strong>Purpose:</strong> answering you, sending what you asked for, and following up on your interest. We do not sell your details and we do not pass them to anyone outside the suppliers listed below.
+              </p>
+              <p className="text-xl mb-4">
+                <strong>Legal basis:</strong> your consent (GDPR Article 6(1)(a)).
+              </p>
+              <p className="text-xl mb-6">
+                <strong>How long:</strong> for as long as we are still in touch about your enquiry. Ask us to delete it and we will, at any time, at <strong>privacy@innerleaps.nl</strong>.
+              </p>
+
+              <h3 className="text-xl md:text-2xl font-semibold text-brand-purple mb-3">Suppliers behind the website</h3>
+              <ul className="list-disc ml-6 space-y-3 text-xl mb-4">
+                <li><strong>Netlify:</strong> hosts the website. Like any web server it keeps short-lived technical logs, including network addresses, to serve pages and block abuse.</li>
+                <li><strong>Supabase:</strong> runs the database and the code that handles the forms.</li>
+                <li><strong>Resend:</strong> sends the emails those forms trigger.</li>
+                <li><strong>Google (Analytics and Ads):</strong> measurement, only after you agree.</li>
+                <li><strong>Apollo:</strong> organisation recognition, only after you agree to advertising cookies.</li>
+                <li><strong>Calendly:</strong> the appointment calendar on our contact page.</li>
+              </ul>
+              <p className="text-xl">
+                Several of these are based in the United States. Where data reaches them, the transfer relies on the EU-US Data Privacy Framework and Standard Contractual Clauses, the same safeguards described further down under international data transfers.
               </p>
             </section>
 
@@ -224,8 +301,8 @@ const PrivacyNotice = memo(() => {
 
             {/* Version info */}
             <div className="border-t border-gray-200 pt-8 mt-8 text-brand-gray-medium text-lg space-y-1">
-              <p>Document Version: 1.6</p>
-              <p>Date: March 2026</p>
+              <p>Document Version: 1.7</p>
+              <p>Date: September 2026</p>
               <p>Prepared by: Innerleaps</p>
               <p>Status: Published</p>
             </div>
