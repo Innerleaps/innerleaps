@@ -24,11 +24,10 @@ import {
  * dezelfde hoogte die StickyCtaButtons meet. Anders liggen die twee over
  * elkaar heen en kun je geen van beide goed raken.
  *
- * En weigeren staat in het venster, niet op de banner zelf. Dat is een
- * uitdrukkelijke keuze van Bas na overleg. Het betekent dat weigeren twee
- * klikken kost en accepteren één, en dat is precies waar de Autoriteit
- * Persoonsgegevens op handhaaft. De weigerknop staat daarom wel als eerste en
- * even zwaar in dat venster, niet weggestopt onderaan.
+ * En er is geen weigerknop, ook niet in het venster. Weigeren gaat door de
+ * schakelaars zelf uit te zetten en dan te bevestigen, precies als bij het
+ * voorbeeld dat Bas aanwees. Een uitdrukkelijke keuze van hem na overleg over
+ * wat de Autoriteit Persoonsgegevens hierover zegt.
  */
 const Cookiebanner = () => {
   const { t } = useTranslation();
@@ -151,17 +150,14 @@ const Cookiebanner = () => {
               ))}
             </div>
 
-            <div className="mt-6 flex flex-col gap-3 sm:flex-row">
-              <Button
-                variant="outline"
-                onClick={() => afronden({ analyse: false, advertenties: false })}
-                className="min-h-[44px] border-2 px-6 text-base font-semibold"
-              >
-                {t("cookiebanner.panel.rejectAll")}
-              </Button>
+            {/* Eén knop, zoals bij het voorbeeld dat Bas aanwees: weigeren doe
+                je door de schakelaars zelf uit te zetten en dan te bevestigen.
+                De schakelaars staan daarom standaard aan, ook als het
+                voorbeeld. */}
+            <div className="mt-6">
               <Button
                 onClick={() => afronden(keuze)}
-                className="min-h-[44px] bg-brand-orange px-6 text-base font-semibold hover:bg-brand-orange/90"
+                className="min-h-[44px] bg-brand-orange px-8 text-base font-semibold hover:bg-brand-orange/90"
               >
                 {t("cookiebanner.panel.save")}
               </Button>

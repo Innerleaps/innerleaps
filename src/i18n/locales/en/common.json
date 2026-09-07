@@ -229,8 +229,7 @@
       "analyticsBody": "Shows us which pages get visited and where people drop off, so we can improve the site.",
       "adsTitle": "Advertising",
       "adsBody": "Shows us which advert brought someone here, so we do not pay for what does not work.",
-      "save": "Save choice",
-      "rejectAll": "Necessary only"
+      "save": "Confirm"
     },
     "footerLink": "Cookie preferences"
   }
