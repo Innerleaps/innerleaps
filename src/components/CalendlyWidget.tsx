@@ -1,4 +1,6 @@
 import { useEffect, useRef, useState } from "react";
+import { meldAfspraak } from "@/lib/conversies";
+import { nieuweId } from "@/lib/bedankt";
 
 /**
  * De boekingswidget van Calendly, inline in de pagina.
@@ -177,11 +179,7 @@ const CalendlyWidget = ({ id = "afspraak", height = 700, eager = false }: Calend
 
       // Alleen de afgeronde boeking telt als conversie.
       if (data?.event === "calendly.event_scheduled") {
-        window.dataLayer = window.dataLayer || [];
-        window.dataLayer.push({
-          event: "calendly_event_scheduled",
-          calendly: data.payload,
-        });
+        meldAfspraak(nieuweId(), data.payload);
       }
     };
     window.addEventListener("message", onMessage);

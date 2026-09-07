@@ -7,6 +7,7 @@ import { lazy, Suspense, Profiler, useLayoutEffect } from "react";
 import { ProductionRedirect } from "./components/ProductionRedirect";
 import LanguageSync from "./i18n/LanguageSync";
 import Cookiebanner from "./components/Cookiebanner";
+import { zetKlikluisteraars } from "./lib/conversies";
 
 // Lazy load all pages for better performance
 const LandingPage = lazy(() => import("./pages/LandingPage"));
@@ -99,6 +100,12 @@ const onRenderCallback = (
     console.log(`[Profiler] ${id} (${phase}) took ${actualDuration.toFixed(2)}ms`);
   }
 };
+
+/**
+ * De luisteraars voor klikken op het telefoonnummer en het e-mailadres. Eén
+ * keer, hier, en niet per pagina: anders vuurt de gebeurtenis twee keer.
+ */
+zetKlikluisteraars();
 
 const App = () => {
   return (

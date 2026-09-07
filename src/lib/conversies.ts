@@ -23,12 +23,7 @@
  */
 
 import type { Doelgroep } from "@/lib/bedankt";
-
-declare global {
-  interface Window {
-    dataLayer?: unknown[];
-  }
-}
+import { stuurNaar, type ConversieNaam } from "@/lib/conversielabels";
 
 const VERZONDEN_SLEUTEL = "innerleaps.verzonden-conversies";
 
@@ -54,11 +49,53 @@ const onthoudId = (id: string): void => {
   }
 };
 
-const duwen = (id: string, gebeurtenis: Record<string, unknown>): void => {
-  if (verzondenIds().includes(id)) return;
+/** Is deze lead al gemeld? Geldt voor Google Ads én Analytics tegelijk. */
+const alGemeld = (id: string): boolean => verzondenIds().includes(id);
+
+const duwen = (gebeurtenis: Record<string, unknown>): void => {
   window.dataLayer = window.dataLayer || [];
   window.dataLayer.push(gebeurtenis);
-  onthoudId(id);
+};
+
+/**
+ * De conversie naar Google Ads, en de gebeurtenis naar Analytics.
+ *
+ * Drie dingen die hier bewust zo staan.
+ *
+ * Er gaat geen `value` mee. Dat lijkt onlogisch, want de conversies hébben een
+ * waarde, maar die staat in Google Ads zelf. Een waarde die de site meestuurt
+ * overschrijft die, en een meegestuurde nul maakt elke conversie nul euro waard.
+ * Zo kan Bas de bedragen bijstellen zonder dat er code aan te pas komt.
+ *
+ * Het e-mailadres gaat gehasht mee, als `user_data`. Dat is wat Google
+ * verwacht voor Enhanced Conversions, en het scheelt bij lage volumes het
+ * verschil tussen een campagne die leert en een die stilvalt. Nooit het adres
+ * zelf: er staat een tracker van Apollo op de site die bij window kan.
+ *
+ * En `transaction_id` gaat mee, zodat Google Ads dezelfde lead niet twee keer
+ * telt als er onverhoopt toch een tweede melding komt.
+ */
+const naarGoogle = (
+  naam: ConversieNaam,
+  id: string,
+  gaEvent: string,
+  gaParams: Record<string, unknown>,
+  emailHash: string | null,
+): void => {
+  if (typeof window.gtag !== "function") return;
+
+  if (emailHash) {
+    window.gtag("set", "user_data", { sha256_email_address: emailHash });
+  }
+
+  const doel = stuurNaar(naam);
+  if (doel) {
+    window.gtag("event", "conversion", { send_to: doel, transaction_id: id });
+  }
+
+  // Deze gaat altijd, ook zonder label. Zo staat je Analytics-rapportage vol
+  // terwijl de kant van Google Ads nog wacht op de labels.
+  window.gtag("event", gaEvent, gaParams);
 };
 
 interface RoiMelding {
@@ -89,7 +126,17 @@ export const meldRoiLead = ({
   aantalWerknemers,
   emailHash,
 }: RoiMelding): void => {
-  duwen(id, {
+  if (alGemeld(id)) return;
+
+  naarGoogle(
+    doelgroep === "hr" ? "roiHr" : doelgroep === "management" ? "roiManagement" : "roiOnbekend",
+    id,
+    "generate_lead",
+    { doelgroep },
+    emailHash,
+  );
+
+  duwen({
     event: "roi_calculator_lead",
     transaction_id: id,
     doelgroep,
@@ -99,6 +146,7 @@ export const meldRoiLead = ({
     // Google Ads verwacht deze naam letterlijk voor Enhanced Conversions.
     user_data: emailHash ? { sha256_email_address: emailHash } : undefined,
   });
+  onthoudId(id);
 };
 
 /** Het wetenschappelijk rapport is aangevraagd. */
@@ -109,9 +157,64 @@ export const meldRapportLead = ({
   id: string;
   emailHash: string | null;
 }): void => {
-  duwen(id, {
+  if (alGemeld(id)) return;
+
+  naarGoogle("bijlage", id, "generate_lead", { type: "bijlage" }, emailHash);
+
+  duwen({
     event: "wetenschappelijk_rapport_lead",
     transaction_id: id,
     user_data: emailHash ? { sha256_email_address: emailHash } : undefined,
+  });
+  onthoudId(id);
+};
+
+/** Een afgeronde boeking in de agenda. */
+export const meldAfspraak = (id: string, payload?: unknown): void => {
+  if (alGemeld(id)) return;
+  naarGoogle("afspraak", id, "book_appointment", {}, null);
+  duwen({ event: "calendly_event_scheduled", transaction_id: id, calendly: payload });
+  onthoudId(id);
+};
+
+/** Een verzonden bericht via het contactformulier. */
+export const meldContactformulier = (id: string, emailHash: string | null): void => {
+  if (alGemeld(id)) return;
+  naarGoogle("contactformulier", id, "generate_lead", { type: "contactformulier" }, emailHash);
+  duwen({ event: "contact_message_sent", transaction_id: id });
+  onthoudId(id);
+};
+
+/**
+ * Klikken op het telefoonnummer en het e-mailadres.
+ *
+ * Eén luisteraar op document, met `closest`, zodat hij ook werkt bij links die
+ * pas na het laden in de pagina komen. En één keer, niet per pagina: anders
+ * vuurt de gebeurtenis twee keer.
+ *
+ * Elke klik telt hier als een eigen conversie, dus geen rem op herhaling. Dat
+ * is met opzet: iemand die twee keer op je nummer tikt heeft twee keer de
+ * intentie om te bellen, en deze twee staan in Google Ads als secundair, dus ze
+ * sturen het bieden niet.
+ */
+let luisteraarsGezet = false;
+
+export const zetKlikluisteraars = (): void => {
+  if (luisteraarsGezet || typeof document === "undefined") return;
+  luisteraarsGezet = true;
+
+  document.addEventListener("click", (e) => {
+    const doel = e.target as HTMLElement | null;
+    const link = doel?.closest?.("a[href^='tel:'], a[href^='mailto:']") as HTMLAnchorElement | null;
+    if (!link) return;
+
+    const isTelefoon = link.getAttribute("href")!.startsWith("tel:");
+    naarGoogle(
+      isTelefoon ? "telefoon" : "email",
+      `${isTelefoon ? "tel" : "mail"}-${Date.now()}`,
+      isTelefoon ? "contact_phone" : "contact_email",
+      {},
+      null,
+    );
   });
 };

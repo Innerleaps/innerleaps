@@ -6,6 +6,8 @@ import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { supabase } from "@/integrations/supabase/client";
 import { isGeldigEmail } from "@/lib/email";
+import { meldContactformulier } from "@/lib/conversies";
+import { hashEmail, nieuweId } from "@/lib/bedankt";
 
 /**
  * Het berichtformulier onderaan de contactpagina.
@@ -100,8 +102,9 @@ const ContactForm = ({ className = "" }: ContactFormProps) => {
       });
       if (error) throw error;
 
-      window.dataLayer = window.dataLayer || [];
-      window.dataLayer.push({ event: "contact_message_sent" });
+      // Melden vóór form.reset(), want daarna is het adres weg en hebben we
+      // niets meer om gehasht mee te sturen voor Enhanced Conversions.
+      meldContactformulier(nieuweId(), await hashEmail(ingevuldEmail));
 
       setStatus("sent");
       setMessage(t("form.success"));
