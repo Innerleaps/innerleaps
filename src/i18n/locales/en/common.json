@@ -215,8 +215,8 @@
     "vmbnAlt": "VMBN trainer category 1"
   },
   "cookiebanner": {
-    "title": "About <0>cookies</0>",
-    "body": "To see what works on this site we use cookies. We only set them once you agree. Our <0>privacy notice</0> explains exactly what we keep.",
+    "title": "Cookie notice",
+    "body": "We only store cookies once you agree. Our <0>privacy notice</0> says what we keep.",
     "accept": "Accept",
     "settings": "Cookie settings",
     "panel": {
