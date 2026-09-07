@@ -5,6 +5,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { supabase } from "@/integrations/supabase/client";
+import { isGeldigEmail } from "@/lib/email";
 
 /**
  * Het berichtformulier onderaan de contactpagina.
@@ -34,6 +35,23 @@ const ContactForm = ({ className = "" }: ContactFormProps) => {
   const { t, i18n } = useTranslation("contact");
   const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">("idle");
   const [message, setMessage] = useState("");
+  /**
+   * Het e-mailadres, apart bijgehouden om het te kunnen controleren.
+   *
+   * Het formulier staat op noValidate, dus de browser kijkt nergens naar, en de
+   * enige controle die er was keek of het veld niet leeg was. Daarmee kwam
+   * "jan" er net zo goed doorheen als "jan@bedrijf". Dat laatste haalt ook de
+   * ingebouwde controle van de browser trouwens, want die eist geen punt achter
+   * het apenstaartje.
+   *
+   * Dat is hier duurder dan elders: dit formulier is de enige manier waarop
+   * iemand jou een bericht stuurt, en het antwoordadres van die mail is precies
+   * dit veld. Klopt het niet, dan lees je een vraag die je nooit kunt
+   * beantwoorden.
+   */
+  const [email, setEmail] = useState("");
+  const [emailAangeraakt, setEmailAangeraakt] = useState(false);
+  const emailOngeldig = email.trim() !== "" && !isGeldigEmail(email);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -48,12 +66,20 @@ const ContactForm = ({ className = "" }: ContactFormProps) => {
     }
 
     const naam = (data.get("naam") as string)?.trim();
-    const email = (data.get("email") as string)?.trim();
+    const ingevuldEmail = (data.get("email") as string)?.trim();
     const bericht = (data.get("bericht") as string)?.trim();
 
-    if (!naam || !email || !bericht) {
+    if (!naam || !ingevuldEmail || !bericht) {
       setStatus("error");
       setMessage(t("form.required"));
+      return;
+    }
+
+    if (!isGeldigEmail(ingevuldEmail)) {
+      setEmailAangeraakt(true);
+      setStatus("error");
+      setMessage(t("form.emailInvalid"));
+      document.getElementById("contact-email")?.focus();
       return;
     }
 
@@ -80,6 +106,8 @@ const ContactForm = ({ className = "" }: ContactFormProps) => {
       setStatus("sent");
       setMessage(t("form.success"));
       form.reset();
+      setEmail("");
+      setEmailAangeraakt(false);
     } catch {
       setStatus("error");
       setMessage(t("form.error"));
@@ -109,9 +137,19 @@ const ContactForm = ({ className = "" }: ContactFormProps) => {
             type="email"
             autoComplete="email"
             maxLength={255}
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            onBlur={() => setEmailAangeraakt(true)}
+            aria-invalid={emailAangeraakt && emailOngeldig}
+            aria-describedby={emailAangeraakt && emailOngeldig ? "contact-email-fout" : undefined}
             placeholder={t("form.emailPlaceholder")}
             className="mt-1 h-12 border border-input text-lg placeholder:text-lg focus-visible:border-input focus-visible:ring-ring md:text-lg"
           />
+          {emailAangeraakt && emailOngeldig && (
+            <p id="contact-email-fout" className="mt-1 text-lg font-medium text-red-600">
+              {t("form.emailInvalid")}
+            </p>
+          )}
         </div>
 
         <div>

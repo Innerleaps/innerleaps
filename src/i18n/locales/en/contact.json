@@ -19,6 +19,7 @@
     "sending": "Sending",
     "success": "Thank you, your message has arrived. You will hear from us within one working day.",
     "error": "Sending failed. Feel free to email us directly at bas@innerleaps.nl.",
-    "required": "Please fill in your name, email address and message."
+    "required": "Please fill in your name, email address and message.",
+    "emailInvalid": "Check your email address. Without a valid one we cannot send you anything."
   }
 }
