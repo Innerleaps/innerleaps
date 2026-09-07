@@ -30,6 +30,7 @@ import carelLogo from "@/assets/Vitaliteitsprogramma_Carel_Lurvink_light.webp";
 import paConsultingLogo from "@/assets/Vitaliteitsprogramma_PA_consulting_light.webp";
 import nobelLogo from "@/assets/Vitaliteitsprogramma_nobel_recruitment_light.webp";
 import hollandColoursLogo from "@/assets/Vitaliteitsprogramma_Holland_Colours_light.webp";
+import { scrollNaarAnkerUitUrl } from "@/lib/anker";
 
 const CalculatorModal = lazy(() => import("@/components/CalculatorModal"));
 
@@ -69,15 +70,7 @@ const DuurzameInzetbaarheidTraining = () => {
     const openCalculatorParam = searchParams.get("openCalculator");
     if (openCalculatorParam === "true") {
       setTimeout(() => setIsCalculatorOpen(true), 100);
-    } else if (location.hash === "#calculator") {
-      setTimeout(() => {
-        document.getElementById("calculator")?.scrollIntoView({ behavior: "smooth", block: "start" });
-      }, 500);
-    } else if (location.hash === "#masterclass") {
-      setTimeout(() => {
-        document.getElementById("masterclass")?.scrollIntoView({ behavior: "smooth", block: "start" });
-      }, 300);
-    } else {
+    } else if (!scrollNaarAnkerUitUrl(location.hash)) {
       window.scrollTo(0, 0);
     }
   }, [location.search, location.hash, searchParams]);

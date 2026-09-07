@@ -466,7 +466,11 @@ const TrainingPageLayout = ({
 
       {/* Weeks */}
       {weeks && weeks.length > 0 && (
-        <section className="py-16 md:py-24 bg-white">
+        /* Het anker #programma wordt als sitelink in Google Ads gebruikt, dus
+           die naam ligt vast zodra er advertenties op draaien. scroll-mt houdt
+           ruimte vrij voor de menubalk, die 96 pixels hoog is en sticky staat;
+           zonder dat verdwijnt de kop erachter. */
+        <section id="programma" className="scroll-mt-28 py-16 md:py-24 bg-white">
           <div className="container mx-auto px-4">
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-purple text-center leading-tight mb-12">
               <Trans
@@ -573,7 +577,11 @@ const TrainingPageLayout = ({
       {belowFaqSection}
 
       {/* FAQ */}
-      <section className="py-16 md:py-24 bg-brand-off-white" aria-labelledby="faq-title">
+      <section
+        id="veelgestelde-vragen"
+        className="scroll-mt-28 py-16 md:py-24 bg-brand-off-white"
+        aria-labelledby="faq-title"
+      >
         <div className="container mx-auto px-4">
           <h2 id="faq-title" className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-purple text-center leading-tight mb-12">
             {t(`${tKey}.faq.title`)}
