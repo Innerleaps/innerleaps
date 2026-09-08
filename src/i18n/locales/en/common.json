@@ -216,9 +216,9 @@
   },
   "cookiebanner": {
     "title": "About <0>cookies</0>",
-    "body": "To see what works on this site we use cookies. We only set them once you agree. Our <0>privacy notice</0> explains exactly what we keep.",
-    "accept": "Accept",
-    "settings": "Cookie settings",
+    "body": "Innerleaps uses cookies and similar techniques when you visit the website. Not the kind you eat, but small (temporary) text files and scripts. They save you filling in the same details twice or downloading the same things again. Handy! Besides functional cookies, which keep the website working, we use analytics cookies to understand how you use the site. That is how we make it better and clearer. We also use marketing cookies for personalised adverts that match your interests. For that we sometimes share data with our partners.",
+    "accept": "Accept all",
+    "settings": "Set preferences",
     "panel": {
       "title": "Your <0>cookie preferences</0>",
       "intro": "Choose below what we may measure. Your choice stands until you change it.",
@@ -231,6 +231,8 @@
       "adsBody": "Shows us which advert brought someone here, so we do not pay for what does not work.",
       "save": "Confirm"
     },
-    "footerLink": "Cookie preferences"
+    "footerLink": "Cookie preferences",
+    "aria": "Cookie notice",
+    "bodyChoice": "Want to know more? It is all in our <0>cookie notice</0> and <1>privacy notice</1>. Below you say whether you accept everything, or set your cookies yourself. Change your mind later? No problem, you can adjust your preferences at the bottom of any page."
   }
 }

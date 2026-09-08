@@ -162,11 +162,11 @@ const Footer = memo(({ showNavigation = true }: FooterProps) => {
         <div className="border-t border-white/15 mt-8 pt-6 flex flex-col md:flex-row md:items-center md:justify-between gap-3 text-base text-gray-400">
           <p>{t('footer.copyright')}</p>
           <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
-            <Link to="/privacy" className="hover:text-white transition-colors">
+            <Link to={lang === "en" ? "/en/privacy" : "/privacy"} className="hover:text-white transition-colors">
               {t('footer.privacy')}
             </Link>
             <span className="text-gray-600" aria-hidden="true">·</span>
-            <Link to="/cookies" className="hover:text-white transition-colors">
+            <Link to={lang === "en" ? "/en/cookies" : "/cookies"} className="hover:text-white transition-colors">
               {t('footer.cookies')}
             </Link>
             <span className="text-gray-600" aria-hidden="true">·</span>

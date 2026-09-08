@@ -8,6 +8,7 @@ import { ProductionRedirect } from "./components/ProductionRedirect";
 import LanguageSync from "./i18n/LanguageSync";
 import Cookiebanner from "./components/Cookiebanner";
 import { zetKlikluisteraars } from "./lib/conversies";
+import { startApolloAlsToegestaan } from "./lib/apollo";
 
 // Lazy load all pages for better performance
 const LandingPage = lazy(() => import("./pages/LandingPage"));
@@ -106,6 +107,7 @@ const onRenderCallback = (
  * keer, hier, en niet per pagina: anders vuurt de gebeurtenis twee keer.
  */
 zetKlikluisteraars();
+startApolloAlsToegestaan();
 
 const App = () => {
   return (
@@ -161,7 +163,9 @@ const App = () => {
                 <Route path="/blog/hoe-verlaag-ik-het-ziekteverzuim-in-mijn-organisatie" element={<HoeVerlaagIkZiekteverzuim />} />
                 <Route path="/algemene-voorwaarden" element={<AlgemeneVoorwaarden />} />
                 <Route path="/privacy" element={<PrivacyNotice />} />
+                <Route path="/en/privacy" element={<PrivacyNotice />} />
                 <Route path="/cookies" element={<Cookies />} />
+                <Route path="/en/cookies" element={<Cookies />} />
                 
                 {/* De bedanktpagina's van de twee lead generators.
                     Bewust vier adressen en niet één: dit is waar Google Ads de

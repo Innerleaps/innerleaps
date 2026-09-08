@@ -54,6 +54,13 @@ export const ROUTE_MAP: Array<{ nl: string; en: string }> = [
     nl: "/blog/hoe-verlaag-ik-het-ziekteverzuim-in-mijn-organisatie",
     en: "/en/blog/how-to-reduce-absenteeism-in-my-organization",
   },
+
+  // De juridische pagina's. Ze staan hier zodat de taalknop werkt en zodat ze
+  // geprerenderd worden, maar ze dragen zelf een noindex en horen daarom
+  // bewust NIET in public/sitemap.xml. De cookiemelding linkt ernaartoe, dus
+  // ze moeten wel in de taal van de bezoeker te lezen zijn.
+  { nl: "/privacy", en: "/en/privacy" },
+  { nl: "/cookies", en: "/en/cookies" },
 ];
 
 /** Returns the equivalent path in the target language, or null if no mapping exists. */

@@ -251,3 +251,11 @@
     transition: none;
   }
 }
+
+/* De pagina op slot zolang de cookiemelding openstaat. Zie
+   src/components/Cookiebanner.tsx: zonder dit scrolt de bezoeker er langs en
+   kiest hij nooit. */
+html.cookie-slot,
+body.cookie-slot {
+  overflow: hidden;
+}

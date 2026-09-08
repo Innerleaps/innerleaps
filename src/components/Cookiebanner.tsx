@@ -1,9 +1,11 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState, type ReactNode } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Trans, useTranslation } from "react-i18next";
 import { Button } from "@/components/ui/button";
 import { Switch } from "@/components/ui/switch";
+import LanguageSwitcher from "@/components/LanguageSwitcher";
 import { detectLanguageFromPath } from "@/i18n/config";
+import { startApolloAlsToegestaan } from "@/lib/apollo";
 import {
   bewaarToestemming,
   leesToestemming,
@@ -12,33 +14,49 @@ import {
 } from "@/lib/toestemming";
 
 /**
- * De cookiebanner.
+ * De cookiemelding, als venster midden op het scherm.
  *
- * Vorm is die van holiepizza.nl, op verzoek: een wit kaartje linksonder, niet
- * schermvullend, met een gevulde knop "Accepteren" en een omlijnde
- * "Cookie instellingen" die een venster opent met schakelaars per categorie.
+ * Het was eerst een kaartje linksonder en daarna een lage balk onderaan. Beide
+ * hadden hetzelfde probleem: je kunt eromheen. Wie de balk niet ziet kiest
+ * niets, en wie niets kiest wordt niet gemeten. Bij lage advertentievolumes is
+ * dat het verschil tussen een campagne die leert en een die blind biedt.
  *
- * Twee dingen die hier bewust anders zijn dan bij dat voorbeeld.
+ * Deze vorm komt van coolblue.nl, op verzoek van Bas: een witte kaart in het
+ * midden, geen kruisje, en de pagina eronder op slot tot er een keuze ligt.
+ * Coolblue zet daarvoor overflow op hidden, en dat doet dit venster ook.
  *
- * De banner gaat op een telefoon boven de zwevende knop staan, met behulp van
- * dezelfde hoogte die StickyCtaButtons meet. Anders liggen die twee over
- * elkaar heen en kun je geen van beide goed raken.
+ * Drie dingen die daarbij horen.
  *
- * En er is geen weigerknop, ook niet in het venster. Weigeren gaat door de
- * schakelaars zelf uit te zetten en dan te bevestigen, precies als bij het
- * voorbeeld dat Bas aanwees. Een uitdrukkelijke keuze van hem na overleg over
- * wat de Autoriteit Persoonsgegevens hierover zegt.
+ * Het venster verschijnt niet tijdens het prerenderen. Anders staat het in de
+ * voorgebakken HTML van alle 32 pagina's, flitst het ook bij wie allang
+ * gekozen heeft, en zit het scrollslot in het bestand. Laadt React dan niet,
+ * dan kan niemand de pagina meer scrollen. Zie window.__PRERENDER__ in
+ * scripts/prerender.mjs.
+ *
+ * Escape sluit het niet en er is geen kruisje. Wegklikken zonder keuze zou
+ * hetzelfde zijn als weigeren, maar dan zonder dat de bezoeker het weet.
+ *
+ * En er is geen weigerknop. Weigeren gaat via "Zelf instellen", daar de
+ * schakelaars uitzetten en bevestigen. Een uitdrukkelijke keuze van Bas, na
+ * overleg over wat de Autoriteit Persoonsgegevens hierover zegt. Coolblue doet
+ * het net iets anders: bij hen staat het persoonlijke deel standaard uit, dus
+ * daar is "Zelf instellen" wél een weigerknop in één klik.
  */
 const Cookiebanner = () => {
   const { t } = useTranslation();
   const { pathname } = useLocation();
-  const privacyPad = detectLanguageFromPath(pathname) === "en" ? "/privacy" : "/privacy";
+  const engels = detectLanguageFromPath(pathname) === "en";
+  const privacyPad = engels ? "/en/privacy" : "/privacy";
+  const cookiePad = engels ? "/en/cookies" : "/cookies";
 
   const [zichtbaar, setZichtbaar] = useState(false);
   const [venster, setVenster] = useState(false);
   const [keuze, setKeuze] = useState<Toestemming>({ analyse: true, advertenties: true });
+  const eersteKnop = useRef<HTMLButtonElement>(null);
 
   useEffect(() => {
+    if ((window as unknown as { __PRERENDER__?: boolean }).__PRERENDER__) return;
+
     const eerder = leesToestemming();
     if (!eerder) {
       setZichtbaar(true);
@@ -55,8 +73,26 @@ const Cookiebanner = () => {
     return () => window.removeEventListener(OPEN_INSTELLINGEN, opnieuw);
   }, []);
 
-  const afronden = (gekozen: Toestemming) => {
+  // De pagina op slot zolang het venster openstaat, en de knop meteen onder de
+  // vinger. Het slot gaat via een klasse en niet via een losse stijl, zodat er
+  // niets blijft hangen als dit component onverwacht verdwijnt.
+  useEffect(() => {
+    if (!zichtbaar) return;
+    // Op allebei: zet je het alleen op body, dan blijft html de scrollende
+    // laag en schuift de pagina er alsnog onderdoor.
+    document.documentElement.classList.add("cookie-slot");
+    document.body.classList.add("cookie-slot");
+    eersteKnop.current?.focus();
+    return () => {
+      document.documentElement.classList.remove("cookie-slot");
+      document.body.classList.remove("cookie-slot");
+    };
+  }, [zichtbaar]);
+
+  const afrondenMet = (gekozen: Toestemming) => {
     bewaarToestemming(gekozen);
+    // Meteen na het akkoord, niet pas bij de volgende pagina.
+    startApolloAlsToegestaan();
     setKeuze(gekozen);
     setVenster(false);
     setZichtbaar(false);
@@ -65,107 +101,136 @@ const Cookiebanner = () => {
   if (!zichtbaar) return null;
 
   const privacyLink = <Link to={privacyPad} className="underline hover:no-underline" />;
+  const cookieLink = <Link to={cookiePad} className="underline hover:no-underline" />;
   const oranje = <span className="text-brand-orange" />;
 
-  return (
-    <div
-      role="dialog"
-      aria-label={t("cookiebanner.title")}
-      /* Boven de zwevende knop, en met dezelfde hoogte als afstand zodat ze
-         elkaar op een telefoon niet overlappen. */
-      className="fixed bottom-[calc(var(--sticky-cta-height,0px)+1rem)] left-4 right-4 z-[60] sm:left-8 sm:right-auto sm:bottom-8 sm:max-w-xl"
-    >
-      <div className="rounded-xl bg-white p-6 shadow-2xl ring-1 ring-black/5 md:p-8">
-        {!venster ? (
-          <>
-            <h2 className="text-xl font-bold text-brand-purple md:text-2xl">
-              <Trans i18nKey="cookiebanner.title" t={t} components={[oranje]} />
-            </h2>
-            <p className="mt-3 text-base leading-relaxed text-brand-gray-medium">
-              <Trans i18nKey="cookiebanner.body" t={t} components={[privacyLink]} />
-            </p>
-            <div className="mt-6 flex flex-col gap-3 sm:flex-row">
-              <Button
-                onClick={() => afronden({ analyse: true, advertenties: true })}
-                className="min-h-[44px] bg-brand-orange px-8 text-base font-semibold hover:bg-brand-orange/90"
-              >
-                {t("cookiebanner.accept")}
-              </Button>
-              <Button
-                variant="outline"
-                onClick={() => setVenster(true)}
-                className="min-h-[44px] border-2 px-8 text-base font-semibold"
-              >
-                {t("cookiebanner.settings")}
-              </Button>
-            </div>
-          </>
-        ) : (
-          <>
-            <h2 className="text-xl font-bold text-brand-purple md:text-2xl">
-              <Trans i18nKey="cookiebanner.panel.title" t={t} components={[oranje]} />
-            </h2>
-            <p className="mt-3 text-base leading-relaxed text-brand-gray-medium">
-              {t("cookiebanner.panel.intro")}
-            </p>
+  /* Drie lagen, en die verdeling is het hele punt op een telefoon.
 
-            <div className="mt-5 space-y-4">
-              <div className="flex items-start justify-between gap-4">
-                <div>
-                  <div className="text-base font-semibold text-brand-gray-dark">
-                    {t("cookiebanner.panel.necessaryTitle")}
-                  </div>
-                  <p className="text-base text-brand-gray-medium">
-                    {t("cookiebanner.panel.necessaryBody")}
-                  </p>
-                </div>
-                <span className="shrink-0 pt-1 text-base font-medium text-brand-gray-medium">
-                  {t("cookiebanner.panel.necessaryAlways")}
-                </span>
-              </div>
+     De kaart is nooit hoger dan het scherm. De kop met de taalknop staat
+     vast bovenaan, de knoppen staan vast onderaan, en alleen de tekst
+     ertussen schuift. Zo zie je altijd waar je bent en wat je kunt kiezen,
+     ook als de tekst lang is of iemand een grote letter heeft ingesteld.
+     Alleen de tekst kleiner maken lost dat niet op: dan valt het bij de
+     volgende tekstwijziging of op een kleiner toestel opnieuw om.
 
-              {([
-                ["analyse", "analyticsTitle", "analyticsBody"],
-                ["advertenties", "adsTitle", "adsBody"],
-              ] as const).map(([sleutel, kop, uitleg]) => (
-                <div key={sleutel} className="flex items-start justify-between gap-4">
-                  <div>
-                    <label
-                      htmlFor={`cookie-${sleutel}`}
-                      className="text-base font-semibold text-brand-gray-dark"
-                    >
-                      {t(`cookiebanner.panel.${kop}`)}
-                    </label>
-                    <p className="text-base text-brand-gray-medium">
-                      {t(`cookiebanner.panel.${uitleg}`)}
-                    </p>
-                  </div>
-                  <Switch
-                    id={`cookie-${sleutel}`}
-                    checked={keuze[sleutel]}
-                    onCheckedChange={(aan) => setKeuze((k) => ({ ...k, [sleutel]: aan }))}
-                    className="mt-1 shrink-0"
-                  />
-                </div>
-              ))}
-            </div>
-
-            {/* Eén knop, zoals bij het voorbeeld dat Bas aanwees: weigeren doe
-                je door de schakelaars zelf uit te zetten en dan te bevestigen.
-                De schakelaars staan daarom standaard aan, ook als het
-                voorbeeld. */}
-            <div className="mt-6">
-              <Button
-                onClick={() => afronden(keuze)}
-                className="min-h-[44px] bg-brand-orange px-8 text-base font-semibold hover:bg-brand-orange/90"
-              >
-                {t("cookiebanner.panel.save")}
-              </Button>
-            </div>
-          </>
-        )}
+     100dvh en niet 100vh: op iOS telt vh de adresbalk niet mee, en dan
+     steekt de kaart onder de onderrand uit. */
+  const schil = (kop: ReactNode, inhoud: ReactNode, knoppen: ReactNode) => (
+    <div className="fixed inset-0 z-[70] flex items-center justify-center bg-brand-purple/60 p-4 backdrop-blur-[2px]">
+      {/* Geen onClick die sluit: buiten het venster klikken is geen keuze. */}
+      <div
+        role="dialog"
+        aria-modal="true"
+        aria-label={t("cookiebanner.aria")}
+        className="flex max-h-[calc(100dvh-2rem)] w-full max-w-2xl flex-col rounded-xl bg-white shadow-2xl"
+      >
+        <div className="px-6 pt-6 md:px-8 md:pt-8">{kop}</div>
+        <div className="min-h-0 flex-1 overflow-y-auto px-6 py-4 md:px-8">{inhoud}</div>
+        <div className="border-t border-gray-200 px-6 py-4 md:px-8">{knoppen}</div>
       </div>
     </div>
+  );
+
+  if (!venster) {
+    return schil(
+      /* De taalknop hoort in dit venster en niet alleen in de menubalk: die
+         balk zit erachter en is niet aanklikbaar zolang de melding openstaat.
+         Een Engelstalige bezoeker zou anders moeten kiezen zonder te snappen
+         wat er staat. */
+      <div className="flex items-start justify-between gap-4">
+        <h2 className="text-xl font-bold text-brand-purple sm:text-2xl md:text-3xl">
+          <Trans i18nKey="cookiebanner.title" t={t} components={[oranje]} />
+        </h2>
+        <div className="shrink-0 pt-1">
+          <LanguageSwitcher />
+        </div>
+      </div>,
+      <>
+        <p className="text-base leading-relaxed text-brand-gray-medium sm:text-lg">
+          {t("cookiebanner.body")}
+        </p>
+        <p className="mt-4 text-base leading-relaxed text-brand-gray-medium sm:text-lg">
+          <Trans i18nKey="cookiebanner.bodyChoice" t={t} components={[cookieLink, privacyLink]} />
+        </p>
+      </>,
+      <div className="flex flex-col-reverse gap-3 sm:flex-row sm:justify-end">
+        <Button
+          variant="outline"
+          onClick={() => setVenster(true)}
+          className="min-h-[48px] border-2 px-8 text-base font-semibold"
+        >
+          {t("cookiebanner.settings")}
+        </Button>
+        <Button
+          ref={eersteKnop}
+          onClick={() => afrondenMet({ analyse: true, advertenties: true })}
+          className="min-h-[48px] bg-brand-orange px-8 text-base font-semibold hover:bg-brand-orange/90"
+        >
+          {t("cookiebanner.accept")}
+        </Button>
+      </div>,
+    );
+  }
+
+  return schil(
+    <h2 className="text-xl font-bold text-brand-purple sm:text-2xl md:text-3xl">
+      <Trans i18nKey="cookiebanner.panel.title" t={t} components={[oranje]} />
+    </h2>,
+    <>
+      <p className="text-base leading-relaxed text-brand-gray-medium sm:text-lg">
+        {t("cookiebanner.panel.intro")}
+      </p>
+
+      <div className="mt-6 space-y-5">
+        <div className="flex items-start justify-between gap-4">
+          <div>
+            <div className="text-base font-semibold text-brand-gray-dark">
+              {t("cookiebanner.panel.necessaryTitle")}
+            </div>
+            <p className="text-base text-brand-gray-medium">
+              {t("cookiebanner.panel.necessaryBody")}
+            </p>
+          </div>
+          <span className="shrink-0 pt-1 text-base font-medium text-brand-gray-medium">
+            {t("cookiebanner.panel.necessaryAlways")}
+          </span>
+        </div>
+
+        {([
+          ["analyse", "analyticsTitle", "analyticsBody"],
+          ["advertenties", "adsTitle", "adsBody"],
+        ] as const).map(([sleutel, kop, uitleg]) => (
+          <div key={sleutel} className="flex items-start justify-between gap-4">
+            <div>
+              <label
+                htmlFor={`cookie-${sleutel}`}
+                className="text-base font-semibold text-brand-gray-dark"
+              >
+                {t(`cookiebanner.panel.${kop}`)}
+              </label>
+              <p className="text-base text-brand-gray-medium">
+                {t(`cookiebanner.panel.${uitleg}`)}
+              </p>
+            </div>
+            <Switch
+              id={`cookie-${sleutel}`}
+              checked={keuze[sleutel]}
+              onCheckedChange={(aan) => setKeuze((k) => ({ ...k, [sleutel]: aan }))}
+              className="mt-1 shrink-0"
+            />
+          </div>
+        ))}
+      </div>
+    </>,
+    <div className="flex justify-end">
+      <Button
+        ref={eersteKnop}
+        onClick={() => afrondenMet(keuze)}
+        className="min-h-[48px] bg-brand-orange px-8 text-base font-semibold hover:bg-brand-orange/90"
+      >
+        {t("cookiebanner.panel.save")}
+      </Button>
+    </div>,
   );
 };
 
