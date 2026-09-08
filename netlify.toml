@@ -153,6 +153,14 @@
   to = "/index.html"
   status = 200
 [[redirects]]
+  from = "/en/privacy"
+  to = "/index.html"
+  status = 200
+[[redirects]]
+  from = "/en/cookies"
+  to = "/index.html"
+  status = 200
+[[redirects]]
   from = "/masterclass-stress-qr"
   to = "/index.html"
   status = 200

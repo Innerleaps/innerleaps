@@ -216,7 +216,7 @@
   },
   "cookiebanner": {
     "title": "Even over <0>cookies</0>",
-    "body": "We meten wat er op deze site gebeurt: welke pagina's mensen lezen, waar ze afhaken en welke advertentie ze hierheen bracht. Daar hebben we cookies voor nodig. Zonder die cijfers betalen we voor advertenties die niets opleveren.",
+    "body": "Innerleaps gebruikt cookies en vergelijkbare technieken wanneer je de website bezoekt. Geen gevulde koeken, maar kleine (tijdelijke) tekstbestanden en scripts. Zo hoef je niet steeds dezelfde informatie in te vullen of opnieuw te downloaden. Handig! Naast functionele cookies, waardoor de website goed werkt, gebruiken we ook analytische cookies om te begrijpen hoe je onze website gebruikt. Zo maken we 'm beter en duidelijker. We gebruiken ook marketing cookies voor persoonlijke advertenties die passen bij jouw interesses. Daarvoor delen we soms gegevens met onze partners.",
     "accept": "Alles accepteren",
     "settings": "Zelf instellen",
     "panel": {
@@ -233,6 +233,6 @@
     },
     "footerLink": "Cookievoorkeuren",
     "aria": "Cookiemelding",
-    "bodyChoice": "Jij kiest. Accepteer je alles, dan meten we alles hierboven. Wil je het zelf bepalen, klik dan op Zelf instellen. Aan je keuze zit niets vast: de site werkt hetzelfde, en onderaan elke pagina pas je hem later aan. In onze <0>privacyverklaring</0> staat wat we bewaren."
+    "bodyChoice": "Meer weten? Lees er alles over in onze <0>cookieverklaring</0> en <1>privacyverklaring</1>. Hieronder geef je aan of je alles accepteert, of je stelt je cookies zelf in. Verander je later van gedachten? Geen probleem, onderaan elke pagina pas je je voorkeuren eenvoudig aan."
   }
 }

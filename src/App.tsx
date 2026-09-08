@@ -163,7 +163,9 @@ const App = () => {
                 <Route path="/blog/hoe-verlaag-ik-het-ziekteverzuim-in-mijn-organisatie" element={<HoeVerlaagIkZiekteverzuim />} />
                 <Route path="/algemene-voorwaarden" element={<AlgemeneVoorwaarden />} />
                 <Route path="/privacy" element={<PrivacyNotice />} />
+                <Route path="/en/privacy" element={<PrivacyNotice />} />
                 <Route path="/cookies" element={<Cookies />} />
+                <Route path="/en/cookies" element={<Cookies />} />
                 
                 {/* De bedanktpagina's van de twee lead generators.
                     Bewust vier adressen en niet één: dit is waar Google Ads de

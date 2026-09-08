@@ -3,6 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { Trans, useTranslation } from "react-i18next";
 import { Button } from "@/components/ui/button";
 import { Switch } from "@/components/ui/switch";
+import LanguageSwitcher from "@/components/LanguageSwitcher";
 import { detectLanguageFromPath } from "@/i18n/config";
 import { startApolloAlsToegestaan } from "@/lib/apollo";
 import {
@@ -44,7 +45,9 @@ import {
 const Cookiebanner = () => {
   const { t } = useTranslation();
   const { pathname } = useLocation();
-  const privacyPad = detectLanguageFromPath(pathname) === "en" ? "/privacy" : "/privacy";
+  const engels = detectLanguageFromPath(pathname) === "en";
+  const privacyPad = engels ? "/en/privacy" : "/privacy";
+  const cookiePad = engels ? "/en/cookies" : "/cookies";
 
   const [zichtbaar, setZichtbaar] = useState(false);
   const [venster, setVenster] = useState(false);
@@ -98,6 +101,7 @@ const Cookiebanner = () => {
   if (!zichtbaar) return null;
 
   const privacyLink = <Link to={privacyPad} className="underline hover:no-underline" />;
+  const cookieLink = <Link to={cookiePad} className="underline hover:no-underline" />;
   const oranje = <span className="text-brand-orange" />;
 
   return (
@@ -113,14 +117,23 @@ const Cookiebanner = () => {
       >
         {!venster ? (
           <>
-            <h2 className="text-2xl font-bold text-brand-purple md:text-3xl">
-              <Trans i18nKey="cookiebanner.title" t={t} components={[oranje]} />
-            </h2>
+            {/* De taalknop hoort in dit venster en niet alleen in de
+                menubalk: die balk zit erachter en is niet aanklikbaar zolang
+                de melding openstaat. Een Engelstalige bezoeker zou anders
+                moeten kiezen zonder te snappen wat er staat. */}
+            <div className="flex items-start justify-between gap-4">
+              <h2 className="text-2xl font-bold text-brand-purple md:text-3xl">
+                <Trans i18nKey="cookiebanner.title" t={t} components={[oranje]} />
+              </h2>
+              <div className="shrink-0 pt-1">
+                <LanguageSwitcher />
+              </div>
+            </div>
             <p className="mt-4 text-lg leading-relaxed text-brand-gray-medium">
               {t("cookiebanner.body")}
             </p>
             <p className="mt-4 text-lg leading-relaxed text-brand-gray-medium">
-              <Trans i18nKey="cookiebanner.bodyChoice" t={t} components={[privacyLink]} />
+              <Trans i18nKey="cookiebanner.bodyChoice" t={t} components={[cookieLink, privacyLink]} />
             </p>
             <div className="mt-8 flex flex-col-reverse gap-3 sm:flex-row sm:justify-end">
               <Button
