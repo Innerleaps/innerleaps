@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, type ReactNode } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Trans, useTranslation } from "react-i18next";
 import { Button } from "@/components/ui/button";
@@ -104,116 +104,133 @@ const Cookiebanner = () => {
   const cookieLink = <Link to={cookiePad} className="underline hover:no-underline" />;
   const oranje = <span className="text-brand-orange" />;
 
-  return (
-    <div
-      className="fixed inset-0 z-[70] flex items-center justify-center overflow-y-auto bg-brand-purple/60 p-4 backdrop-blur-[2px]"
-      /* Geen onClick die sluit: buiten het venster klikken is geen keuze. */
-    >
+  /* Drie lagen, en die verdeling is het hele punt op een telefoon.
+
+     De kaart is nooit hoger dan het scherm. De kop met de taalknop staat
+     vast bovenaan, de knoppen staan vast onderaan, en alleen de tekst
+     ertussen schuift. Zo zie je altijd waar je bent en wat je kunt kiezen,
+     ook als de tekst lang is of iemand een grote letter heeft ingesteld.
+     Alleen de tekst kleiner maken lost dat niet op: dan valt het bij de
+     volgende tekstwijziging of op een kleiner toestel opnieuw om.
+
+     100dvh en niet 100vh: op iOS telt vh de adresbalk niet mee, en dan
+     steekt de kaart onder de onderrand uit. */
+  const schil = (kop: ReactNode, inhoud: ReactNode, knoppen: ReactNode) => (
+    <div className="fixed inset-0 z-[70] flex items-center justify-center bg-brand-purple/60 p-4 backdrop-blur-[2px]">
+      {/* Geen onClick die sluit: buiten het venster klikken is geen keuze. */}
       <div
         role="dialog"
         aria-modal="true"
         aria-label={t("cookiebanner.aria")}
-        className="my-auto w-full max-w-2xl rounded-xl bg-white p-6 shadow-2xl md:p-8"
+        className="flex max-h-[calc(100dvh-2rem)] w-full max-w-2xl flex-col rounded-xl bg-white shadow-2xl"
       >
-        {!venster ? (
-          <>
-            {/* De taalknop hoort in dit venster en niet alleen in de
-                menubalk: die balk zit erachter en is niet aanklikbaar zolang
-                de melding openstaat. Een Engelstalige bezoeker zou anders
-                moeten kiezen zonder te snappen wat er staat. */}
-            <div className="flex items-start justify-between gap-4">
-              <h2 className="text-2xl font-bold text-brand-purple md:text-3xl">
-                <Trans i18nKey="cookiebanner.title" t={t} components={[oranje]} />
-              </h2>
-              <div className="shrink-0 pt-1">
-                <LanguageSwitcher />
-              </div>
-            </div>
-            <p className="mt-4 text-lg leading-relaxed text-brand-gray-medium">
-              {t("cookiebanner.body")}
-            </p>
-            <p className="mt-4 text-lg leading-relaxed text-brand-gray-medium">
-              <Trans i18nKey="cookiebanner.bodyChoice" t={t} components={[cookieLink, privacyLink]} />
-            </p>
-            <div className="mt-8 flex flex-col-reverse gap-3 sm:flex-row sm:justify-end">
-              <Button
-                variant="outline"
-                onClick={() => setVenster(true)}
-                className="min-h-[48px] border-2 px-8 text-base font-semibold"
-              >
-                {t("cookiebanner.settings")}
-              </Button>
-              <Button
-                ref={eersteKnop}
-                onClick={() => afrondenMet({ analyse: true, advertenties: true })}
-                className="min-h-[48px] bg-brand-orange px-8 text-base font-semibold hover:bg-brand-orange/90"
-              >
-                {t("cookiebanner.accept")}
-              </Button>
-            </div>
-          </>
-        ) : (
-          <>
-            <h2 className="text-2xl font-bold text-brand-purple md:text-3xl">
-              <Trans i18nKey="cookiebanner.panel.title" t={t} components={[oranje]} />
-            </h2>
-            <p className="mt-4 text-lg leading-relaxed text-brand-gray-medium">
-              {t("cookiebanner.panel.intro")}
-            </p>
-
-            <div className="mt-6 space-y-5">
-              <div className="flex items-start justify-between gap-4">
-                <div>
-                  <div className="text-base font-semibold text-brand-gray-dark">
-                    {t("cookiebanner.panel.necessaryTitle")}
-                  </div>
-                  <p className="text-base text-brand-gray-medium">
-                    {t("cookiebanner.panel.necessaryBody")}
-                  </p>
-                </div>
-                <span className="shrink-0 pt-1 text-base font-medium text-brand-gray-medium">
-                  {t("cookiebanner.panel.necessaryAlways")}
-                </span>
-              </div>
-
-              {([
-                ["analyse", "analyticsTitle", "analyticsBody"],
-                ["advertenties", "adsTitle", "adsBody"],
-              ] as const).map(([sleutel, kop, uitleg]) => (
-                <div key={sleutel} className="flex items-start justify-between gap-4">
-                  <div>
-                    <label
-                      htmlFor={`cookie-${sleutel}`}
-                      className="text-base font-semibold text-brand-gray-dark"
-                    >
-                      {t(`cookiebanner.panel.${kop}`)}
-                    </label>
-                    <p className="text-base text-brand-gray-medium">
-                      {t(`cookiebanner.panel.${uitleg}`)}
-                    </p>
-                  </div>
-                  <Switch
-                    id={`cookie-${sleutel}`}
-                    checked={keuze[sleutel]}
-                    onCheckedChange={(aan) => setKeuze((k) => ({ ...k, [sleutel]: aan }))}
-                    className="mt-1 shrink-0"
-                  />
-                </div>
-              ))}
-            </div>
-
-            <div className="mt-8 flex justify-end">
-              <Button
-                onClick={() => afrondenMet(keuze)}
-                className="min-h-[48px] bg-brand-orange px-8 text-base font-semibold hover:bg-brand-orange/90"
-              >
-                {t("cookiebanner.panel.save")}
-              </Button>
-            </div>
-          </>
-        )}
+        <div className="px-6 pt-6 md:px-8 md:pt-8">{kop}</div>
+        <div className="min-h-0 flex-1 overflow-y-auto px-6 py-4 md:px-8">{inhoud}</div>
+        <div className="border-t border-gray-200 px-6 py-4 md:px-8">{knoppen}</div>
       </div>
     </div>
+  );
+
+  if (!venster) {
+    return schil(
+      /* De taalknop hoort in dit venster en niet alleen in de menubalk: die
+         balk zit erachter en is niet aanklikbaar zolang de melding openstaat.
+         Een Engelstalige bezoeker zou anders moeten kiezen zonder te snappen
+         wat er staat. */
+      <div className="flex items-start justify-between gap-4">
+        <h2 className="text-xl font-bold text-brand-purple sm:text-2xl md:text-3xl">
+          <Trans i18nKey="cookiebanner.title" t={t} components={[oranje]} />
+        </h2>
+        <div className="shrink-0 pt-1">
+          <LanguageSwitcher />
+        </div>
+      </div>,
+      <>
+        <p className="text-base leading-relaxed text-brand-gray-medium sm:text-lg">
+          {t("cookiebanner.body")}
+        </p>
+        <p className="mt-4 text-base leading-relaxed text-brand-gray-medium sm:text-lg">
+          <Trans i18nKey="cookiebanner.bodyChoice" t={t} components={[cookieLink, privacyLink]} />
+        </p>
+      </>,
+      <div className="flex flex-col-reverse gap-3 sm:flex-row sm:justify-end">
+        <Button
+          variant="outline"
+          onClick={() => setVenster(true)}
+          className="min-h-[48px] border-2 px-8 text-base font-semibold"
+        >
+          {t("cookiebanner.settings")}
+        </Button>
+        <Button
+          ref={eersteKnop}
+          onClick={() => afrondenMet({ analyse: true, advertenties: true })}
+          className="min-h-[48px] bg-brand-orange px-8 text-base font-semibold hover:bg-brand-orange/90"
+        >
+          {t("cookiebanner.accept")}
+        </Button>
+      </div>,
+    );
+  }
+
+  return schil(
+    <h2 className="text-xl font-bold text-brand-purple sm:text-2xl md:text-3xl">
+      <Trans i18nKey="cookiebanner.panel.title" t={t} components={[oranje]} />
+    </h2>,
+    <>
+      <p className="text-base leading-relaxed text-brand-gray-medium sm:text-lg">
+        {t("cookiebanner.panel.intro")}
+      </p>
+
+      <div className="mt-6 space-y-5">
+        <div className="flex items-start justify-between gap-4">
+          <div>
+            <div className="text-base font-semibold text-brand-gray-dark">
+              {t("cookiebanner.panel.necessaryTitle")}
+            </div>
+            <p className="text-base text-brand-gray-medium">
+              {t("cookiebanner.panel.necessaryBody")}
+            </p>
+          </div>
+          <span className="shrink-0 pt-1 text-base font-medium text-brand-gray-medium">
+            {t("cookiebanner.panel.necessaryAlways")}
+          </span>
+        </div>
+
+        {([
+          ["analyse", "analyticsTitle", "analyticsBody"],
+          ["advertenties", "adsTitle", "adsBody"],
+        ] as const).map(([sleutel, kop, uitleg]) => (
+          <div key={sleutel} className="flex items-start justify-between gap-4">
+            <div>
+              <label
+                htmlFor={`cookie-${sleutel}`}
+                className="text-base font-semibold text-brand-gray-dark"
+              >
+                {t(`cookiebanner.panel.${kop}`)}
+              </label>
+              <p className="text-base text-brand-gray-medium">
+                {t(`cookiebanner.panel.${uitleg}`)}
+              </p>
+            </div>
+            <Switch
+              id={`cookie-${sleutel}`}
+              checked={keuze[sleutel]}
+              onCheckedChange={(aan) => setKeuze((k) => ({ ...k, [sleutel]: aan }))}
+              className="mt-1 shrink-0"
+            />
+          </div>
+        ))}
+      </div>
+    </>,
+    <div className="flex justify-end">
+      <Button
+        ref={eersteKnop}
+        onClick={() => afrondenMet(keuze)}
+        className="min-h-[48px] bg-brand-orange px-8 text-base font-semibold hover:bg-brand-orange/90"
+      >
+        {t("cookiebanner.panel.save")}
+      </Button>
+    </div>,
   );
 };
 
