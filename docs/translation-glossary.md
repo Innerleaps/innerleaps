@@ -16,7 +16,7 @@
 | 5 | "Ziekteverzuim" | Use **both contextually**: "absenteeism" for analytical/HR copy, "sick leave" for everyday phrasing |
 | 6 | Werkgever / werknemer | **employer / employee** |
 | 7 | Currency | **€ EUR only** — prices are not currently shown to public site visitors; if introduced later, keep €. |
-| 8 | Cookies page | **English-only** (no NL version), aligned with Privacy Notice and Terms which are already EN-only |
+| 8 | Legal pages | Cookies, Privacy Notice and Terms and Conditions are all bilingual (NL/EN), content in `src/content/`, layout in `src/content/juridisch.tsx` |
 
 ---
 

@@ -162,6 +162,7 @@ const App = () => {
                 <Route path="/blog/verborgen-kosten-ziekteverzuim-rekenmodel" element={<VerborgenKostenZiekteverzuim />} />
                 <Route path="/blog/hoe-verlaag-ik-het-ziekteverzuim-in-mijn-organisatie" element={<HoeVerlaagIkZiekteverzuim />} />
                 <Route path="/algemene-voorwaarden" element={<AlgemeneVoorwaarden />} />
+                <Route path="/en/terms-and-conditions" element={<AlgemeneVoorwaarden />} />
                 <Route path="/privacy" element={<PrivacyNotice />} />
                 <Route path="/en/privacy" element={<PrivacyNotice />} />
                 <Route path="/cookies" element={<Cookies />} />

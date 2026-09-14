@@ -4,7 +4,7 @@ import type { JuridischePagina } from "./juridisch";
  *  moet bij elke wijziging mee. */
 export const privacyEn: JuridischePagina = {
   titel: "Privacy Notice",
-  ondertitel: "**Innerleaps**, Version 1.7 | September 2026",
+  ondertitel: "**Innerleaps**, Version 2.0 | 11 September 2026",
   metaTitel: "Privacy Notice | Innerleaps",
   metaBeschrijving:
     "Privacy notice of Innerleaps. How we handle the personal data of website visitors and of people taking part in our training programmes.",
@@ -164,106 +164,103 @@ export const privacyEn: JuridischePagina = {
       ],
     },
     {
+      kop: "How do you take part?",
+      blokken: [
+        {
+          soort: "tekst",
+          tekst:
+            "Depending on what your employer has arranged, you either register for the programme via an Innerleaps registration form, or your employer provides Innerleaps with the email addresses of participating employees so that Innerleaps can group participants and send programme materials. In both cases you are made aware of this privacy notice and you accept a short voluntary-participation statement before taking part. That statement confirms only that you take part voluntarily and on your own responsibility; it records no health information.",
+        },
+      ],
+    },
+    {
       kop: "What personal data do we process and why?",
       blokken: [
         { soort: "tekst", tekst: "We process personal data exclusively for the following purposes:" },
       ],
     },
     {
-      kop: "1. Sign-up and recruitment",
+      kop: "1. Enrolment and programme administration",
       niveau: 3,
       blokken: [
-        {
-          soort: "tekst",
-          tekst:
-            "When you express interest in the training programme via the sign-up form, we collect:",
-        },
-        { soort: "lijst", items: ["Name", "Email address"] },
-        { soort: "tekst", tekst: "**Purpose:** Following up on your interest in the programme." },
-        { soort: "tekst", tekst: "**Legal basis:** Consent (GDPR Article 6(1)(a))." },
-      ],
-    },
-    {
-      kop: "2. Participant intake and qualification",
-      niveau: 3,
-      blokken: [
-        { soort: "tekst", tekst: "Via the intake form we collect:" },
+        { soort: "tekst", tekst: "When you take part in the programme, we process:" },
         {
           soort: "lijst",
           items: [
-            "Name, email address, phone number, job title and motivation",
-            "Health data: information about mental health, medication use, trauma history and substance use",
+            "Name",
+            "Work email address",
+            "Your stated training goal (the challenge or goal you hope to address, chosen from a fixed list, with an optional free-text field in which we ask you not to enter sensitive information)",
           ],
         },
         {
           soort: "tekst",
           tekst:
-            "**Purpose:** Assessing whether participation in the programme is suitable and safe for you. Based on your answers, Innerleaps may determine that participation is not advisable for you at this time.",
+            "**Purpose:** enrolling you in the programme, grouping participants, sending you programme materials and communications, and allowing your trainer to tailor the training to the group's needs. Your individual training goal is used only for delivering and tailoring the training. Innerleaps may use aggregated, anonymised insight from these goals (for example the most common reasons for joining) for its own service improvement and marketing; such aggregated insight does not identify you.",
         },
         {
           soort: "tekst",
           tekst:
-            "**Legal basis:** Explicit consent (GDPR Article 6(1)(a) and Article 9(2)(a)).",
-        },
-        {
-          soort: "tekst",
-          tekst:
-            "**Please note:** This concerns special category personal data within the meaning of the GDPR. We process this data with extra care and solely for the purpose stated above. The Innerleaps training programme is a professional development and wellness intervention, not a form of healthcare or psychotherapy. It does not replace professional medical or psychological care.",
+            "**Legal basis:** consent (GDPR Article 6(1)(a)) where you register via an Innerleaps form; where your employer provides your details, the processing is carried out on your employer's instruction and your employer informs you beforehand.",
         },
       ],
     },
     {
-      kop: "3. Impact measurement",
+      kop: "2. Impact measurement",
       niveau: 3,
       blokken: [
-        { soort: "tekst", tekst: "Via the impact measurement survey we collect:" },
+        {
+          soort: "tekst",
+          tekst:
+            "Via the impact measurement surveys (before the programme, T0, and after the programme, T1) we collect:",
+        },
         {
           soort: "lijst",
           items: [
-            "Name and email address",
-            "Productivity",
-            "Resilience",
-            "Vitality",
-            "Stress levels",
-            "Training frequency and training barriers",
-            "Job satisfaction",
-            "Turnover intention",
+            "Name and work email address",
+            "Work performance information, including expected and actual work hours and days absent due to a physical or mental health problem",
+            "Life satisfaction, and (where your employer has selected these optional questions) job satisfaction and turnover intention",
+            "Wellbeing measures: vitality, resilience and stress",
+            "Training practice frequency and barriers to practising",
           ],
         },
         {
           soort: "tekst",
           tekst:
-            "**Purpose:** Measuring the impact of the training programme on wellness, productivity and work performance.",
+            "**Purpose:** measuring the impact of the training programme on your wellbeing, productivity and work performance, and comparing your results before and after the programme.",
         },
         {
           soort: "tekst",
           tekst:
-            "**Legal basis:** Legitimate interest of your employer (GDPR Article 6(1)(f)) and consent (GDPR Article 6(1)(a)).",
+            "**Please note:** some of this information relates to your health and wellbeing (such as stress, vitality, resilience and health-related absence) and is special category health data within the meaning of the GDPR. We process it only for the purpose stated above and with extra care.",
         },
         {
           soort: "tekst",
           tekst:
-            "**Important:** Your individual responses are never shared with your employer. Management receives only anonymised, aggregated results. A management report is issued only when the training group contains a minimum of 8 persons; where a qualifying control group of at least 8 persons is also available, a full comparative report is issued. No salary data is collected from you individually; ROI figures are calculated using an organisational average provided by your employer.",
+            "**Legal basis:** consent (GDPR Article 6(1)(a)) and, for the health-related data, your explicit consent (GDPR Article 9(2)(a)), both given via the consent statement on the survey.",
+        },
+        {
+          soort: "tekst",
+          tekst:
+            "**Important:** your individual responses are never shared with your employer. Management receives only anonymised, aggregated results, and only where the training group contains a minimum of 8 persons. We do not collect any salary data from you; where a return-on-investment figure is reported, it is calculated using an organisational salary average provided by your employer, which is never included in any report shared with management.",
         },
       ],
     },
     {
-      kop: "4. Course evaluation",
+      kop: "3. Course evaluation",
       niveau: 3,
       blokken: [
-        { soort: "tekst", tekst: "Via the evaluation form we collect:" },
-        { soort: "lijst", items: ["Trainer ratings", "Open feedback about the programme"] },
+        { soort: "tekst", tekst: "Via the evaluation form we collect trainer ratings and open feedback about the programme." },
         { soort: "tekst", tekst: "The evaluation form does not collect your name or email address." },
-        { soort: "tekst", tekst: "**Purpose:** Evaluating and improving the training programme." },
+        { soort: "tekst", tekst: "**Purpose:** evaluating and improving the training programme." },
         {
           soort: "tekst",
           tekst:
-            "**Legal basis:** Legitimate interest (GDPR Article 6(1)(f)). Innerleaps has a legitimate interest in evaluating trainer performance and programme quality. Your individual responses are seen only by Innerleaps and are never shared with your employer, trainers or any third party. Management receives only average scores.",
+            "**Legal basis:** legitimate interest (GDPR Article 6(1)(f)). Your individual responses are seen only by Innerleaps and are never shared with trainers or any third party. The Client receives only aggregated average scores.",
         },
         {
           soort: "tekst",
           tekst:
-            "**Please note:** Anonymised and aggregated insights from evaluations may be used for marketing purposes.",
+            "**Please note:** anonymised and aggregated insights from evaluations may be used for marketing purposes.",
         },
       ],
     },
@@ -273,7 +270,17 @@ export const privacyEn: JuridischePagina = {
         {
           soort: "tekst",
           tekst:
-            "Participation in the Innerleaps training programme is entirely voluntary. Your employer offers the programme, but you decide whether to participate. You can withdraw your consent at any time without consequences for your employment relationship.",
+            "Participation in the Innerleaps training programme is entirely voluntary. Your employer offers the programme, but you decide whether to participate. You can withdraw your consent at any time without consequences for your employment relationship. The training programme is a professional development and wellbeing intervention and is not a form of healthcare. If you have health concerns that could make participation unwise, we ask you to consult your general practitioner first.",
+        },
+      ],
+    },
+    {
+      kop: "Optional practice tool (Oefenbuddy)",
+      blokken: [
+        {
+          soort: "tekst",
+          tekst:
+            "During the programme, usually in the first workshop, you may be offered the option to use Oefenbuddy, a voluntary practice-reminder coach over a messaging app (WhatsApp or Signal) that helps you stay motivated to do the exercises. Using it is entirely your own choice. You sign up directly with Oefenbuddy, which operates as an independent provider under its own terms and privacy policy. Innerleaps shares none of your data with Oefenbuddy and receives none of your data back. Oefenbuddy does not ask for identifying information such as your name and cannot link your use of the tool to you as an Innerleaps participant.",
         },
       ],
     },
@@ -281,20 +288,9 @@ export const privacyEn: JuridischePagina = {
       kop: "How long do we retain your data?",
       blokken: [
         {
-          soort: "tabel",
-          koppen: ["Category", "Retention period"],
-          rijen: [
-            ["Sign-up data", "Until the end of the agreement between Innerleaps and your employer"],
-            ["Intake data", "Until the end of the agreement between Innerleaps and your employer"],
-            ["Impact measurement data", "Until the end of the agreement between Innerleaps and your employer"],
-            ["Evaluation data", "Until the end of the agreement between Innerleaps and your employer"],
-            ["Anonymised aggregates", "Indefinitely, provided all identifying information has been irreversibly removed"],
-          ],
-        },
-        {
           soort: "tekst",
           tekst:
-            "After the agreement ends, all personal data is deleted. Your employer never receives personal data, only anonymised results.",
+            "We keep your personal data only as long as we need it. Once we have produced the aggregated impact report for your employer and delivered your personal report to you, we no longer need your underlying personal data and we delete it. In any event, all personal data is deleted no later than the end of the agreement between Innerleaps and your employer (a maximum of 12 months). Only anonymised aggregates, from which you cannot be identified, are kept longer. Your employer never receives personal data, only anonymised results.",
         },
       ],
     },
@@ -309,7 +305,7 @@ export const privacyEn: JuridischePagina = {
         {
           soort: "tekst",
           tekst:
-            "Only Bas ter Haar Romenij (owner) has access to the full dataset. Freelance trainers engaged by Innerleaps receive only the data strictly necessary for the delivery of their sessions, limited to your name, telephone number and email address. This data is shared on the basis of the principle of data minimisation (GDPR Article 5(1)(c)) and is used solely to contact participants in the event of scheduling changes or session-related communications. All trainers are contractually bound to confidentiality and data protection obligations before being permitted to deliver any sessions.",
+            "Only Bas ter Haar Romenij (owner) has access to the full dataset. Freelance trainers engaged by Innerleaps receive only the data strictly necessary to deliver their sessions, limited to your name, work email address and your stated training goal. This data is shared on the basis of data minimisation (GDPR Article 5(1)(c)) and is used solely to contact participants about session-related matters and to tailor the training. Trainers do not receive your survey responses or any health-related data. All trainers are contractually bound to confidentiality and data protection obligations before being permitted to deliver any sessions.",
         },
       ],
     },
@@ -320,7 +316,7 @@ export const privacyEn: JuridischePagina = {
         {
           soort: "tekst",
           tekst:
-            "Your employer receives only anonymised, aggregated results. Individual data is never shared with your employer. No salary data is collected from you individually; ROI figures are calculated using an organisational average provided by your employer, which is never included in any report shared with management.",
+            "Your employer receives only anonymised, aggregated results. Individual data is never shared with your employer. No salary data is collected from you; any ROI figure is calculated using an organisational average provided by your employer, which is never included in any report shared with management.",
         },
       ],
     },
@@ -328,18 +324,15 @@ export const privacyEn: JuridischePagina = {
       kop: "Sub-processors",
       niveau: 3,
       blokken: [
-        { soort: "tekst", tekst: "For the training programme we use the following sub-processors:" },
         {
-          soort: "lijst",
-          items: [
-            "**Google Workspace (Google LLC):** used to collect and store data via Google Forms, Google Sheets and Gmail. Google LLC is based in the United States. Data transfers to the US take place on the basis of the EU-US Data Privacy Framework and Standard Contractual Clauses (SCCs).",
-            "**n8n:** used for automated workflow processing of form data. n8n GmbH is based in Germany (EU) and is bound by a data processing agreement with Innerleaps.",
-          ],
+          soort: "tekst",
+          tekst:
+            "We use Google (Google Workspace and Google Cloud) to collect, store and process data via Google Forms, Google Sheets, Google Slides, Google Drive, Gmail and Google Calendar, and to run our report automation. We have set the Google data region to Europe, so that covered data is stored at rest within the European Union. Google is a global provider, and for support and certain background processing some limited data handling may take place outside the European Economic Area; where that occurs it is governed by Standard Contractual Clauses and Google's certification under the EU-US Data Privacy Framework.",
         },
         {
           soort: "tekst",
           tekst:
-            "The suppliers behind the website are listed higher up, under Visiting innerleaps.nl. All sub-processors are required to process data in accordance with GDPR requirements and are bound by data processing agreements with Innerleaps.",
+            "The suppliers behind the website are listed higher up, under Visiting innerleaps.nl. All sub-processors are bound by data processing agreements with Innerleaps.",
         },
       ],
     },
@@ -349,7 +342,7 @@ export const privacyEn: JuridischePagina = {
         {
           soort: "tekst",
           tekst:
-            "Innerleaps works with clients and participants inside and outside the European Union. Where personal data is transferred outside the EEA, Innerleaps ensures appropriate safeguards are in place, including Standard Contractual Clauses (SCCs) and adequacy decisions, in accordance with GDPR Chapter V.",
+            "Innerleaps stores personal data at rest within the European Union. Where any personal data is transferred outside the European Economic Area, Innerleaps ensures appropriate safeguards are in place, including Standard Contractual Clauses and adequacy decisions, in accordance with GDPR Chapter V.",
         },
       ],
     },
@@ -366,7 +359,7 @@ export const privacyEn: JuridischePagina = {
             "**Right to restriction of processing** (Article 18): you can request that processing be restricted.",
             "**Right to data portability** (Article 20): you can request your data in a structured format.",
             "**Right to object** (Article 21): you can object to processing based on legitimate interest.",
-            "**Right to withdraw consent**: you can withdraw your consent at any time, without giving reasons. Withdrawal does not have retroactive effect but may affect your ability to participate in the programme.",
+            "**Right to withdraw consent**: you can withdraw your consent at any time, without giving reasons, including your explicit consent for the processing of health-related data. Withdrawal does not have retroactive effect but may affect your ability to participate in the programme.",
           ],
         },
         {
@@ -387,7 +380,7 @@ export const privacyEn: JuridischePagina = {
         {
           soort: "tekst",
           tekst:
-            "Innerleaps takes appropriate technical and organisational measures to protect your personal data against unauthorised access, loss or misuse. Data is stored exclusively in secure cloud environments. Access is restricted to persons who require it for the delivery of the programme.",
+            "Innerleaps takes appropriate technical and organisational measures to protect your personal data against unauthorised access, loss or misuse. Data is stored exclusively in secure cloud environments with the data region set to Europe, protected by two-factor authentication and encryption. Access is restricted to persons who require it for the delivery of the programme.",
         },
       ],
     },
@@ -420,8 +413,8 @@ export const privacyEn: JuridischePagina = {
     },
   ],
   voettekst: [
-    "Document Version: 1.7",
-    "Date: September 2026",
+    "Document Version: 2.0",
+    "Date: 11 September 2026",
     "Prepared by: Innerleaps",
     "Status: Published",
   ],

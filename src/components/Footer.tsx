@@ -181,7 +181,10 @@ const Footer = memo(({ showNavigation = true }: FooterProps) => {
               {t('cookiebanner.footerLink')}
             </button>
             <span className="text-gray-600" aria-hidden="true">·</span>
-            <Link to="/algemene-voorwaarden" className="hover:text-white transition-colors">
+            <Link
+              to={lang === "en" ? "/en/terms-and-conditions" : "/algemene-voorwaarden"}
+              className="hover:text-white transition-colors"
+            >
               {t('footer.terms')}
             </Link>
           </div>

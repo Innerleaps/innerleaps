@@ -145,6 +145,10 @@
   to = "/index.html"
   status = 200
 [[redirects]]
+  from = "/en/terms-and-conditions"
+  to = "/index.html"
+  status = 200
+[[redirects]]
   from = "/privacy"
   to = "/index.html"
   status = 200

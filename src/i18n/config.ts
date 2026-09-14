@@ -61,6 +61,7 @@ export const ROUTE_MAP: Array<{ nl: string; en: string }> = [
   // ze moeten wel in de taal van de bezoeker te lezen zijn.
   { nl: "/privacy", en: "/en/privacy" },
   { nl: "/cookies", en: "/en/cookies" },
+  { nl: "/algemene-voorwaarden", en: "/en/terms-and-conditions" },
 ];
 
 /** Returns the equivalent path in the target language, or null if no mapping exists. */
