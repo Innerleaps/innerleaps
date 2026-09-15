@@ -9,6 +9,7 @@ import LanguageSync from "./i18n/LanguageSync";
 import Cookiebanner from "./components/Cookiebanner";
 import { zetKlikluisteraars } from "./lib/conversies";
 import { startApolloAlsToegestaan } from "./lib/apollo";
+import { CopyEditorOverlay } from "./dev/CopyEditorOverlay";
 
 // Lazy load all pages for better performance
 const LandingPage = lazy(() => import("./pages/LandingPage"));
@@ -119,6 +120,7 @@ const App = () => {
           {/* Buiten de Suspense: de keuze moet ook te maken zijn terwijl de
               pagina nog laadt. */}
           <Cookiebanner />
+          {import.meta.env.DEV && <CopyEditorOverlay />}
           {/* Geen laadscherm zolang de voorgebakken pagina er nog staat: die
               is het laadscherm. Staat hij er niet, bijvoorbeeld bij navigeren
               binnen de site, dan komt Laadscherm alsnog in beeld. */}
