@@ -1,0 +1,49 @@
+#!/usr/bin/env bash
+# Blokkeert commits met persoonlijke e-mailadressen of losse geheimen.
+# Installeren (eenmalig, per checkout): git config core.hooksPath .githooks
+
+set -euo pipefail
+
+staged() {
+  git diff --cached --name-only --diff-filter=ACM
+}
+
+found=0
+
+# Persoonlijke e-mailadressen: alles op een consumentendomein, of alles
+# wat niet op innerleaps.nl eindigt en geen voorbeeld/placeholder is.
+personal_email_pattern='[a-zA-Z0-9._%+-]+@(gmail|hotmail|outlook|live|icloud|yahoo|me|protonmail)\.[a-zA-Z]{2,}'
+
+for f in $(staged); do
+  [ -f "$f" ] || continue
+  case "$f" in
+    *.png|*.jpg|*.jpeg|*.webp|*.ico|*.woff*|*.ttf|*.pdf) continue ;;
+  esac
+
+  hits=$(git diff --cached -U0 -- "$f" | grep -E '^\+' | grep -viE 'voorbeeld|example|placeholder' | grep -oiE "$personal_email_pattern" || true)
+  if [ -n "$hits" ]; then
+    echo "GEBLOKKEERD: persoonlijk e-mailadres in $f:"
+    echo "$hits" | sed 's/^/  /'
+    found=1
+  fi
+
+  secret_hits=$(git diff --cached -U0 -- "$f" | grep -E '^\+' | grep -oiE "(AIza[0-9A-Za-z_-]{20,}|sk-[A-Za-z0-9]{20,}|ghp_[A-Za-z0-9]{20,}|SUPABASE_SERVICE_ROLE[A-Za-z_]*\s*=\s*['\"][A-Za-z0-9._-]{10,}|BEGIN (RSA|PRIVATE|OPENSSH) KEY)" || true)
+  if [ -n "$secret_hits" ]; then
+    echo "GEBLOKKEERD: geheim/sleutel in $f:"
+    echo "$secret_hits" | sed 's/^/  /'
+    found=1
+  fi
+
+  if [ "$f" = ".env" ] || [[ "$f" == *.env ]]; then
+    if [ "$f" != ".env.example" ]; then
+      echo "GEBLOKKEERD: .env-bestand wordt gecommit ($f). Zet er .example achter als het een voorbeeld is."
+      found=1
+    fi
+  fi
+done
+
+if [ "$found" -ne 0 ]; then
+  echo ""
+  echo "Commit afgebroken. Haal de gemarkeerde regel(s) eruit, of pas de hook aan als dit een terechte uitzondering is."
+  exit 1
+fi
