@@ -1,12 +1,11 @@
-import { useState, lazy, Suspense } from "react";
+import { Link, useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { Button } from "@/components/ui/button";
 import { ArrowDown, Award, Star } from "lucide-react";
 import heroBackground from "@/assets/Vitaliteitsprogramma_presentatie_Innerleaps.webp";
 import { TEXT_SHADOW_STRONG } from "@/styles/common";
-
-// Lazy load calculator modal for better initial performance
-const CalculatorModal = lazy(() => import("./CalculatorModal"));
+import { bookingPath } from "@/lib/booking";
+import { detectLanguageFromPath } from "@/i18n/config";
 
 // Client logos - Light versions with transparent backgrounds
 import oliverLogo from "@/assets/Vitaliteitsprogramma_Oliver_Wyman_light-2.webp";
@@ -36,7 +35,13 @@ import hollandColoursLogo from "@/assets/Vitaliteitsprogramma_Holland_Colours_li
 
 const HeroSection = () => {
   const { t } = useTranslation();
-  const [isCalculatorOpen, setIsCalculatorOpen] = useState(false);
+  const { pathname } = useLocation();
+  const lang = detectLanguageFromPath(pathname);
+
+  const scrollToId = (id: string) => {
+    document.getElementById(id)?.scrollIntoView({ behavior: "smooth", block: "start" });
+  };
+
   const logos = [
     {
       src: oliverLogo,
@@ -174,19 +179,37 @@ const HeroSection = () => {
                 </p>
               </div>
 
-              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 w-full justify-center lg:justify-start">
+              <div id="hero-cta" className="flex flex-col sm:flex-row gap-3 sm:gap-4 w-full justify-center lg:justify-start">
+                <Link to={bookingPath(lang)} className="w-full sm:w-auto">
+                  <Button
+                    size="lg"
+                    className="w-full sm:w-auto bg-brand-orange hover:bg-brand-orange text-white hover:text-white font-semibold min-h-[44px] py-3 px-4 sm:py-4 sm:px-6 rounded-lg text-base lg:text-lg shadow-xl"
+                  >
+                    {t('hero.ctaPrimary')}
+                  </Button>
+                </Link>
                 <Button
                   size="lg"
-                  className="w-full sm:w-auto bg-brand-orange hover:bg-brand-orange text-white hover:text-white font-semibold min-h-[44px] py-3 px-4 sm:py-4 sm:px-6 rounded-lg text-base lg:text-lg shadow-xl"
-                  onClick={() => setIsCalculatorOpen(true)}
+                  variant="secondary-on-blue"
+                  className="w-full sm:w-auto font-semibold min-h-[44px] py-3 px-4 sm:py-4 sm:px-6 rounded-lg text-base lg:text-lg"
+                  onClick={() => scrollToId('hero-stats')}
                 >
-                  {t('cta.discoverImpact')}
+                  {t('hero.ctaSecondary')}
                 </Button>
               </div>
+
+              <button
+                type="button"
+                onClick={() => scrollToId('masterclass')}
+                className="text-blue-100 text-base md:text-lg underline underline-offset-4 hover:text-white transition-colors text-center lg:text-left"
+                style={TEXT_SHADOW_STRONG}
+              >
+                {t('hero.masterclassLine')}
+              </button>
             </div>
 
             <div className="w-full relative animate-scale-in mt-6 lg:mt-0">
-              <div className="w-full rounded-2xl p-4 sm:p-6 lg:p-8 max-w-full sm:max-w-md mx-auto bg-white/50 backdrop-blur-sm">
+              <div id="hero-stats" className="w-full rounded-2xl p-4 sm:p-6 lg:p-8 max-w-full sm:max-w-md mx-auto bg-white/50 backdrop-blur-sm scroll-mt-24">
                 <div className="space-y-6">
                   <div className="text-center">
                     <h3 className="text-base sm:text-lg md:text-xl lg:text-2xl font-semibold mb-2 text-brand-purple">
@@ -266,11 +289,6 @@ const HeroSection = () => {
           </div>
         </div>
       </section>
-
-      {/* Calculator Modal - lazy loaded */}
-      <Suspense fallback={null}>
-        {isCalculatorOpen && <CalculatorModal isOpen={isCalculatorOpen} onClose={() => setIsCalculatorOpen(false)} />}
-      </Suspense>
     </>
   );
 };
