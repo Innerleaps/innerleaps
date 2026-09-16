@@ -38,10 +38,6 @@ const HeroSection = () => {
   const { pathname } = useLocation();
   const lang = detectLanguageFromPath(pathname);
 
-  const scrollToId = (id: string) => {
-    document.getElementById(id)?.scrollIntoView({ behavior: "smooth", block: "start" });
-  };
-
   const logos = [
     {
       src: oliverLogo,
@@ -189,15 +185,6 @@ const HeroSection = () => {
                   </Button>
                 </Link>
               </div>
-
-              <button
-                type="button"
-                onClick={() => scrollToId('masterclass')}
-                className="text-blue-100 text-base md:text-lg underline underline-offset-4 hover:text-white transition-colors text-center lg:text-left"
-                style={TEXT_SHADOW_STRONG}
-              >
-                {t('hero.masterclassLine')}
-              </button>
             </div>
 
             <div className="w-full relative animate-scale-in mt-6 lg:mt-0">
