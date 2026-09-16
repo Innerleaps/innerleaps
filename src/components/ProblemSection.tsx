@@ -30,9 +30,9 @@ const ProblemSection = memo(() => {
               </figure>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 border-t border-b border-brand-gray-light py-10">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 sm:gap-0 sm:divide-x sm:divide-gray-200 border-t border-b border-gray-200 py-10">
               {CARD_KEYS.map((key) => (
-                <div key={key}>
+                <div key={key} className="sm:px-8 first:sm:pl-0 last:sm:pr-0">
                   <h3 className="text-xl md:text-2xl font-bold text-brand-purple mb-2">
                     {t(`problem.cards.${key}.title`)}
                   </h3>
@@ -48,7 +48,7 @@ const ProblemSection = memo(() => {
               <Trans i18nKey="problem.paragraph1" t={t} components={[<strong className="font-bold text-brand-gray-dark" />]} />
             </p>
 
-            <hr className="border-brand-gray-light" />
+            <hr className="border-gray-200" />
 
             <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
               <Trans i18nKey="problem.paragraph2" t={t} components={[<strong className="font-bold text-brand-gray-dark" />]} />
