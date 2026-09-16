@@ -188,14 +188,6 @@ const HeroSection = () => {
                     {t('hero.ctaPrimary')}
                   </Button>
                 </Link>
-                <Button
-                  size="lg"
-                  variant="secondary-on-blue"
-                  className="w-full sm:w-auto font-semibold min-h-[44px] py-3 px-4 sm:py-4 sm:px-6 rounded-lg text-base lg:text-lg"
-                  onClick={() => scrollToId('hero-stats')}
-                >
-                  {t('hero.ctaSecondary')}
-                </Button>
               </div>
 
               <button
@@ -209,7 +201,7 @@ const HeroSection = () => {
             </div>
 
             <div className="w-full relative animate-scale-in mt-6 lg:mt-0">
-              <div id="hero-stats" className="w-full rounded-2xl p-4 sm:p-6 lg:p-8 max-w-full sm:max-w-md mx-auto bg-white/50 backdrop-blur-sm scroll-mt-24">
+              <div className="w-full rounded-2xl p-4 sm:p-6 lg:p-8 max-w-full sm:max-w-md mx-auto bg-white/50 backdrop-blur-sm">
                 <div className="space-y-6">
                   <div className="text-center">
                     <h3 className="text-base sm:text-lg md:text-xl lg:text-2xl font-semibold mb-2 text-brand-purple">
