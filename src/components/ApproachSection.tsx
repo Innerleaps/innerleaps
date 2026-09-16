@@ -7,7 +7,7 @@ const ApproachSection = memo(() => {
   const { t } = useTranslation();
 
   return (
-    <section className="section-padding bg-brand-off-white">
+    <section className="section-padding bg-brand-blue/10">
       <div className="container-custom">
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 lg:gap-16">
           <p className="font-mono uppercase tracking-widest text-base text-brand-gray-medium lg:col-span-1">
