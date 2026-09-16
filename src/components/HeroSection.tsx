@@ -168,13 +168,13 @@ const HeroSection = () => {
                 </div>
 
                 <h1
-                  className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight font-heading break-words"
+                  className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight font-heading break-normal"
                   style={TEXT_SHADOW_STRONG}
                 >
                   {t('hero.headlinePart1')} <span className="text-brand-orange">{t('hero.headlinePart2')}</span> {t('hero.headlinePart3')}{" "}
                   <span className="text-brand-orange">{t('hero.headlinePart4')}</span>
                 </h1>
-                <p className="text-xl md:text-2xl text-blue-100 leading-relaxed break-words" style={TEXT_SHADOW_STRONG}>
+                <p className="text-xl md:text-2xl text-blue-100 leading-relaxed break-normal" style={TEXT_SHADOW_STRONG}>
                   {t('hero.subtitle')}
                 </p>
               </div>
