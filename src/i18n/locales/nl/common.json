@@ -126,6 +126,18 @@
     },
     "paragraph": "Elke sessie is live, met dezelfde trainer en dezelfde groep. Week één en week zeven zijn dezelfde meting. Zo hoeft niemand op ons woord te vertrouwen of er iets veranderd is."
   },
+  "results": {
+    "title": "Ze gaan hier anders mee om, niet omdat ze meer over stress weten.",
+    "intro": "Gevraagd waar ze het verschil merkten, kozen deelnemers uit onze groepen:",
+    "bars": {
+      "stress": "Stress en spanning",
+      "autopilot": "Op de automatische piloot leven",
+      "fatigue": "Mentale vermoeidheid",
+      "focus": "Concentratie en focus",
+      "rumination": "Piekeren en malen"
+    },
+    "footnote": "Evaluatie na afloop · Meerdere antwoorden mogelijk · Zelf gerapporteerd"
+  },
   "methodology": {
     "headlinePart1": "Verlaag",
     "headlinePart2": "verzuim",

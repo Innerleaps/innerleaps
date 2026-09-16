@@ -126,6 +126,18 @@
     },
     "paragraph": "Every session is live, with the same trainer and the same group. Week one and week seven are the same measurement. So nobody has to take our word for whether anything moved."
   },
+  "results": {
+    "title": "People leave doing things differently, not knowing more about stress",
+    "intro": "Asked where they noticed a difference, participants across our cohorts selected:",
+    "bars": {
+      "stress": "Stress and tension",
+      "autopilot": "Living on autopilot",
+      "fatigue": "Mental fatigue",
+      "focus": "Concentration and focus",
+      "rumination": "Rumination and overthinking"
+    },
+    "footnote": "Post-programme evaluation · Multiple answers allowed · Self-reported"
+  },
   "methodology": {
     "headlinePart1": "Reduce",
     "headlinePart2": "sick leave",
