@@ -115,6 +115,17 @@
     "paragraph1": "The content was rarely the problem. <0>People under pressure do not sign up for an extra hour.</0> They mean to, they say so, and then the hour arrives and there is marking to do, or a meeting ran over, or going home simply wins. The people who would benefit most are reliably the ones who do not come.",
     "paragraph2": "So we did not design a better workshop. <0>We designed a different format.</0> One built around the week people actually have."
   },
+  "approach": {
+    "eyebrow": "The approach",
+    "title": "Six weeks, measured at both ends.",
+    "stats": {
+      "weeks": { "value": "6", "label": "Weeks" },
+      "liveHour": { "value": "1 hr", "label": "Live, per week" },
+      "dailyPractice": { "value": "15 min", "label": "A day, on your own" },
+      "groupSize": { "value": "15", "label": "Per group, max" }
+    },
+    "paragraph": "Every session is live, with the same trainer and the same group. Week one and week seven are the same measurement. So nobody has to take our word for whether anything moved."
+  },
   "methodology": {
     "headlinePart1": "Reduce",
     "headlinePart2": "sick leave",
