@@ -90,6 +90,31 @@
     "googleReviews": "Google Reviews",
     "heroImageAlt": "Innerleaps vitality training session"
   },
+  "problem": {
+    "eyebrow": "The problem underneath",
+    "title": "The training everyone says yes to and nobody attends.",
+    "quote": "We have already done a lot. Mindfulness training, stress training. But what we see is that people want to, and then don't actually come.",
+    "quoteAttribution": "L&D Adviseur · Dutch Onderwijsinstelling, 1,800 staff",
+    "cards": {
+      "mindfulness": {
+        "title": "A mindfulness training",
+        "lead": "Well received by the people who came.",
+        "fade": "Ran once."
+      },
+      "stress": {
+        "title": "A stress workshop",
+        "lead": "A good afternoon.",
+        "fade": "Nothing left of it by week six."
+      },
+      "app": {
+        "title": "An app subscription",
+        "lead": "Licences issued to everyone.",
+        "fade": "Quiet by week three."
+      }
+    },
+    "paragraph1": "The content was rarely the problem. <0>People under pressure do not sign up for an extra hour.</0> They mean to, they say so, and then the hour arrives and there is marking to do, or a meeting ran over, or going home simply wins. The people who would benefit most are reliably the ones who do not come.",
+    "paragraph2": "So we did not design a better workshop. <0>We designed a different format.</0> One built around the week people actually have."
+  },
   "methodology": {
     "headlinePart1": "Reduce",
     "headlinePart2": "sick leave",
