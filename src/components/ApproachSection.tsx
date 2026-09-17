@@ -40,7 +40,7 @@ const ApproachSection = memo(() => {
                 <div className="text-3xl md:text-4xl font-bold text-brand-purple">
                   {t(`approach.stats.${key}.value`)}
                 </div>
-                <p className="font-subtitle tracking-wide text-base text-brand-gray-medium">
+                <p className="tracking-wide text-base text-brand-gray-medium">
                   {t(`approach.stats.${key}.label`)}
                 </p>
               </div>

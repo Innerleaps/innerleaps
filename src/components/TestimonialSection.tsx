@@ -42,7 +42,7 @@ const TestimonialSection = memo(() => {
           />
         </div>
 
-        <p className="mt-8 font-subtitle tracking-wide text-base text-brand-gray-medium">
+        <p className="mt-8 tracking-wide text-base text-brand-gray-medium">
           {t("testimonial.caption")}
         </p>
       </div>

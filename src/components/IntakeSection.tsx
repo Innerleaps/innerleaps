@@ -33,7 +33,7 @@ const IntakeSection = memo(() => {
               <div className="w-14 h-14 bg-brand-orange/10 rounded-lg flex items-center justify-center mb-4">
                 <Icon className="w-7 h-7 text-brand-orange" />
               </div>
-              <p className="font-subtitle tracking-wide text-base text-brand-blue mb-2">
+              <p className="tracking-wide text-base text-brand-blue mb-2">
                 {t(`intake.steps.${key}.eyebrow`)}
               </p>
               <h3 className="text-xl md:text-2xl font-bold text-brand-purple mb-2 break-words">
