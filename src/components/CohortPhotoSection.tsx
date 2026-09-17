@@ -6,7 +6,7 @@ const CohortPhotoSection = memo(() => {
   const { t } = useTranslation();
 
   return (
-    <figure className="border-b border-gray-200">
+    <figure>
       <img
         src={cohortPhoto}
         alt={t("cohortPhoto.alt")}
