@@ -33,7 +33,7 @@ const ApproachSection = memo(() => {
 
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
             {STATS.map(({ key, icon: Icon }) => (
-              <div key={key} className="bg-brand-off-white p-6 rounded-xl text-center space-y-2">
+              <div key={key} className="min-w-0 bg-brand-off-white p-6 rounded-xl text-center space-y-2">
                 <div className="w-14 h-14 bg-brand-orange/10 rounded-lg flex items-center justify-center mx-auto">
                   <Icon className="w-7 h-7 text-brand-orange" />
                 </div>

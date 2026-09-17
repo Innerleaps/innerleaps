@@ -31,14 +31,14 @@ const IntakeSection = memo(() => {
 
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {STEPS.map(({ key, icon: Icon }) => (
-            <div key={key} className="bg-brand-off-white p-8 rounded-xl shadow-lg">
+            <div key={key} className="min-w-0 bg-brand-off-white p-8 rounded-xl shadow-lg">
               <div className="w-14 h-14 bg-brand-orange/10 rounded-lg flex items-center justify-center mb-4">
                 <Icon className="w-7 h-7 text-brand-orange" />
               </div>
               <p className="font-subtitle tracking-wide text-base text-brand-blue mb-2">
                 {t(`intake.steps.${key}.eyebrow`)}
               </p>
-              <h3 className="text-xl md:text-2xl font-bold text-brand-purple mb-2">
+              <h3 className="text-xl md:text-2xl font-bold text-brand-purple mb-2 break-words">
                 {t(`intake.steps.${key}.title`)}
               </h3>
               <p className="text-xl text-brand-gray-medium leading-relaxed">

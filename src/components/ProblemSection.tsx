@@ -34,11 +34,11 @@ const ProblemSection = memo(() => {
 
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {CARDS.map(({ key, icon: Icon }) => (
-              <div key={key} className="bg-white p-8 rounded-xl shadow-lg">
+              <div key={key} className="min-w-0 bg-white p-8 rounded-xl shadow-lg">
                 <div className="w-14 h-14 bg-brand-orange/10 rounded-lg flex items-center justify-center mb-4">
                   <Icon className="w-7 h-7 text-brand-orange" />
                 </div>
-                <h3 className="text-xl md:text-2xl font-bold text-brand-purple mb-2">
+                <h3 className="text-xl md:text-2xl font-bold text-brand-purple mb-2 break-words">
                   {t(`problem.cards.${key}.title`)}
                 </h3>
                 <p className="text-xl leading-relaxed">
