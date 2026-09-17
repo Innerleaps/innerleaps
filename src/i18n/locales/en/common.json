@@ -123,8 +123,7 @@
       "liveHour": { "value": "1 hr", "label": "Live, per week" },
       "dailyPractice": { "value": "15 min", "label": "A day, on your own" },
       "groupSize": { "value": "15", "label": "Per group, max" }
-    },
-    "paragraph": "Every session is live, with the same trainer and the same group. All our trainers are VMBN-accredited at category 1, the highest standard in the Netherlands."
+    }
   },
   "results": {
     "title": "People leave doing things differently, not knowing more about stress",

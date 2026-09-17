@@ -46,10 +46,6 @@ const ApproachSection = memo(() => {
               </div>
             ))}
           </div>
-
-          <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed text-center max-w-3xl mx-auto">
-            {t("approach.paragraph")}
-          </p>
         </div>
       </div>
     </section>
