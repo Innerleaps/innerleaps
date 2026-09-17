@@ -8,6 +8,7 @@ import ProblemSection from "@/components/ProblemSection";
 import CohortPhotoSection from "@/components/CohortPhotoSection";
 import ApproachSection from "@/components/ApproachSection";
 import ResultsSection from "@/components/ResultsSection";
+import TestimonialSection from "@/components/TestimonialSection";
 import MethodologySection from "@/components/MethodologySection";
 import ProgramOverviewSection from "@/components/ProgramOverviewSection";
 import TrustSection from "@/components/TrustSection";
@@ -64,6 +65,7 @@ const LandingPage = () => {
       <CohortPhotoSection />
       <ApproachSection />
       <ResultsSection />
+      <TestimonialSection />
       <MethodologySection />
       <ProgramOverviewSection />
 
