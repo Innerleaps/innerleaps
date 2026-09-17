@@ -5,6 +5,7 @@ import { useSearchParams, useLocation } from "react-router-dom";
 import SimplifiedNavigation from "@/components/SimplifiedNavigation";
 import HeroSection from "@/components/HeroSection";
 import ProblemSection from "@/components/ProblemSection";
+import CohortPhotoSection from "@/components/CohortPhotoSection";
 import ApproachSection from "@/components/ApproachSection";
 import ResultsSection from "@/components/ResultsSection";
 import MethodologySection from "@/components/MethodologySection";
@@ -60,6 +61,7 @@ const LandingPage = () => {
         <HeroSection />
       </div>
       <ProblemSection />
+      <CohortPhotoSection />
       <ApproachSection />
       <ResultsSection />
       <MethodologySection />
