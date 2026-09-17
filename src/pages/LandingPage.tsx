@@ -9,12 +9,9 @@ import CohortPhotoSection from "@/components/CohortPhotoSection";
 import ApproachSection from "@/components/ApproachSection";
 import ResultsSection from "@/components/ResultsSection";
 import TestimonialSection from "@/components/TestimonialSection";
-import MethodologySection from "@/components/MethodologySection";
-import ProgramOverviewSection from "@/components/ProgramOverviewSection";
 import TrustSection from "@/components/TrustSection";
 import StickyCtaButtons from "@/components/StickyCtaButtons";
 import Footer from "@/components/Footer";
-import MasterclassSection from "@/components/MasterclassSection";
 import { Button } from "@/components/ui/button";
 import { Activity, BookOpen, Award, Brain } from "lucide-react";
 
@@ -65,10 +62,6 @@ const LandingPage = () => {
       <ApproachSection />
       <ResultsSection />
       <TestimonialSection />
-      <MethodologySection />
-      <ProgramOverviewSection />
-
-      <MasterclassSection variant="employer" />
 
       <TrustSection variant="off-white" />
       <Footer />
