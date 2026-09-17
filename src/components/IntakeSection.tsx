@@ -40,15 +40,17 @@ const IntakeSection = memo(() => {
           ))}
         </div>
 
-        <Link to={bookingPath(lang)}>
-          <Button
-            size="lg"
-            variant="secondary"
-            className="font-semibold py-3 px-8 rounded-lg text-base md:text-lg"
-          >
-            {t("intake.cta")}
-          </Button>
-        </Link>
+        <div className="border-t border-gray-200 pt-8">
+          <Link to={bookingPath(lang)}>
+            <Button
+              size="lg"
+              variant="secondary"
+              className="font-semibold py-3 px-8 rounded-lg text-base md:text-lg"
+            >
+              {t("intake.cta")}
+            </Button>
+          </Link>
+        </div>
       </div>
     </section>
   );
