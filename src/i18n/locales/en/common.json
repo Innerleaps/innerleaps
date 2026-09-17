@@ -111,9 +111,7 @@
         "lead": "Licences issued to everyone.",
         "fade": "Quiet by week three."
       }
-    },
-    "paragraph1": "The content was rarely the problem. <0>People under pressure do not sign up for an extra hour.</0> They mean to, they say so, and then the hour arrives and there is marking to do, or a meeting ran over, or going home simply wins. The people who would benefit most are reliably the ones who do not come.",
-    "paragraph2": "So we did not design a better workshop. <0>We designed a different format.</0> One built around the week people actually have."
+    }
   },
   "cohortPhoto": {
     "caption": "A cohort mid-session, one hour, same time every week",
@@ -121,13 +119,14 @@
   },
   "approach": {
     "title": "Six weeks, measured at both ends",
+    "intro": "The content was rarely the problem. <0>People under pressure do not sign up for an extra hour.</0> So we did not design a better workshop. <1>We designed a different format.</1> One built around the week people actually have.",
     "stats": {
       "weeks": { "value": "6", "label": "Weeks" },
       "liveHour": { "value": "1 hr", "label": "Live, per week" },
       "dailyPractice": { "value": "15 min", "label": "A day, on your own" },
       "groupSize": { "value": "15", "label": "Per group, max" }
     },
-    "paragraph": "Every session is live, with the same trainer and the same group. All our trainers are VMBN-accredited at category 1, the highest standard in the Netherlands. In week one and again in week seven, participants complete the same impact survey. So nobody has to take our word for whether anything moved."
+    "paragraph": "Every session is live, with the same trainer and the same group. All our trainers are VMBN-accredited at category 1, the highest standard in the Netherlands."
   },
   "results": {
     "title": "People leave doing things differently, not knowing more about stress",

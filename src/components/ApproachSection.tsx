@@ -1,5 +1,5 @@
 import { memo } from "react";
-import { useTranslation } from "react-i18next";
+import { Trans, useTranslation } from "react-i18next";
 import { Calendar, Clock, Repeat, Users } from "lucide-react";
 
 const STATS = [
@@ -20,6 +20,17 @@ const ApproachSection = memo(() => {
             {t("approach.title")}
           </h2>
 
+          <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed text-center max-w-3xl mx-auto">
+            <Trans
+              i18nKey="approach.intro"
+              t={t}
+              components={[
+                <strong className="font-bold text-brand-gray-dark" />,
+                <strong className="font-bold text-brand-gray-dark" />,
+              ]}
+            />
+          </p>
+
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
             {STATS.map(({ key, icon: Icon }) => (
               <div key={key} className="bg-brand-off-white p-6 rounded-xl text-center space-y-2">
@@ -29,7 +40,7 @@ const ApproachSection = memo(() => {
                 <div className="text-3xl md:text-4xl font-bold text-brand-purple">
                   {t(`approach.stats.${key}.value`)}
                 </div>
-                <p className="font-subtitle uppercase tracking-wide text-base text-brand-gray-medium">
+                <p className="font-subtitle tracking-wide text-base text-brand-gray-medium">
                   {t(`approach.stats.${key}.label`)}
                 </p>
               </div>

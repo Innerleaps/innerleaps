@@ -17,7 +17,7 @@ const CohortPhotoSection = memo(() => {
         className="block w-full object-cover object-[center_42%] h-[210px] sm:h-[clamp(230px,32vw,400px)]"
       />
       <figcaption className="container-custom pt-4 pb-10">
-        <span className="font-subtitle uppercase tracking-widest text-base text-brand-gray-medium">
+        <span className="font-subtitle tracking-widest text-base text-brand-gray-medium">
           {t("cohortPhoto.caption")}
         </span>
       </figcaption>

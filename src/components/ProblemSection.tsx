@@ -1,5 +1,5 @@
 import { memo } from "react";
-import { Trans, useTranslation } from "react-i18next";
+import { useTranslation } from "react-i18next";
 import { Brain, Presentation, Smartphone } from "lucide-react";
 
 const CARDS = [
@@ -23,7 +23,7 @@ const ProblemSection = memo(() => {
             <blockquote className="font-body italic text-xl md:text-2xl text-brand-gray-dark leading-relaxed">
               &ldquo;{t("problem.quote")}&rdquo;
             </blockquote>
-            <figcaption className="mt-4 font-subtitle uppercase tracking-wide text-base text-brand-gray-medium">
+            <figcaption className="mt-4 font-subtitle tracking-wide text-base text-brand-gray-medium">
               {t("problem.quoteAttribution")}
             </figcaption>
           </figure>
@@ -47,18 +47,6 @@ const ProblemSection = memo(() => {
                 </p>
               </div>
             ))}
-          </div>
-
-          <div className="max-w-3xl mx-auto space-y-8">
-            <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
-              <Trans i18nKey="problem.paragraph1" t={t} components={[<strong className="font-bold text-brand-gray-dark" />]} />
-            </p>
-
-            <hr className="border-gray-200" />
-
-            <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
-              <Trans i18nKey="problem.paragraph2" t={t} components={[<strong className="font-bold text-brand-gray-dark" />]} />
-            </p>
           </div>
         </div>
       </div>

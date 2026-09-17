@@ -111,9 +111,7 @@
         "lead": "Licenties uitgedeeld aan iedereen.",
         "fade": "Stil in week drie."
       }
-    },
-    "paragraph1": "De inhoud was zelden het probleem. <0>Mensen die het al druk hebben, schrijven zich niet in voor nog een uur.</0> Ze zijn van plan te gaan, ze zeggen het ook. En dan is het zover, en moet er nog nagekeken worden, of een vergadering loopt uit, of naar huis gaan wint gewoon. Precies de mensen die de training het hardst nodig hebben, komen niet.",
-    "paragraph2": "Dus bedachten we geen betere workshop. <0>We bedachten een ander format.</0> Een dat past bij de week die mensen echt hebben."
+    }
   },
   "cohortPhoto": {
     "caption": "Een groep midden in een sessie, elke week op hetzelfde uur",
@@ -121,13 +119,14 @@
   },
   "approach": {
     "title": "Zes weken, met een meting aan beide kanten",
+    "intro": "De inhoud was zelden het probleem. <0>Mensen die het al druk hebben, schrijven zich niet in voor nog een uur.</0> Dus bedachten we geen betere workshop. <1>We bedachten een ander format.</1> Een dat past bij de week die mensen echt hebben.",
     "stats": {
       "weeks": { "value": "6", "label": "Weken" },
       "liveHour": { "value": "1 uur", "label": "Live, per week" },
       "dailyPractice": { "value": "15 min", "label": "Per dag, zelfstandig" },
       "groupSize": { "value": "15", "label": "Per groep, max" }
     },
-    "paragraph": "Elke sessie is live, met dezelfde trainer en dezelfde groep. Al onze trainers zijn VMBN-geaccrediteerd op categorie 1, de hoogste standaard in Nederland. In week één en opnieuw in week zeven vullen deelnemers dezelfde impactvragenlijst in. Zo hoeft niemand op ons woord te vertrouwen of er iets veranderd is."
+    "paragraph": "Elke sessie is live, met dezelfde trainer en dezelfde groep. Al onze trainers zijn VMBN-geaccrediteerd op categorie 1, de hoogste standaard in Nederland."
   },
   "results": {
     "title": "Ze gaan hier anders mee om, niet omdat ze meer over stress weten.",
