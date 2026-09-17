@@ -15,7 +15,7 @@ const ResultsSection = memo(() => {
   const { t } = useTranslation();
 
   return (
-    <section className="section-padding bg-gray-100">
+    <section className="section-padding bg-gray-200">
       <div className="container-custom max-w-4xl space-y-10">
         <div className="space-y-4">
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-purple leading-tight">
@@ -31,7 +31,7 @@ const ResultsSection = memo(() => {
             <div
               key={bar.key}
               className={`grid grid-cols-[4.5rem_1fr] sm:grid-cols-[6rem_1fr] gap-x-6 items-start py-6 ${
-                index !== 0 ? "border-t border-gray-300" : ""
+                index !== 0 ? "border-t border-gray-400" : ""
               }`}
             >
               <div className="text-4xl md:text-5xl font-bold text-brand-purple tabular-nums">
