@@ -10,7 +10,7 @@ const ProblemSection = memo(() => {
     <section className="section-padding bg-brand-off-white">
       <div className="container-custom">
         <div className="space-y-12">
-          <p className="font-mono uppercase tracking-widest text-base text-brand-gray-medium text-center">
+          <p className="font-subtitle uppercase tracking-widest text-base text-brand-gray-medium text-center">
             {t("problem.eyebrow")}
           </p>
 
@@ -21,10 +21,10 @@ const ProblemSection = memo(() => {
               </h2>
 
               <figure className="border-l-4 border-brand-blue pl-6">
-                <blockquote className="font-serif italic text-xl md:text-2xl text-brand-gray-dark leading-relaxed">
+                <blockquote className="font-body italic text-xl md:text-2xl text-brand-gray-dark leading-relaxed">
                   &ldquo;{t("problem.quote")}&rdquo;
                 </blockquote>
-                <figcaption className="mt-4 font-mono uppercase tracking-wide text-base text-brand-gray-medium">
+                <figcaption className="mt-4 font-subtitle uppercase tracking-wide text-base text-brand-gray-medium">
                   {t("problem.quoteAttribution")}
                 </figcaption>
               </figure>

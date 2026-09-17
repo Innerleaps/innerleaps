@@ -50,7 +50,7 @@ const ResultsSection = memo(() => {
           ))}
         </div>
 
-        <p className="font-mono uppercase tracking-wide text-base text-brand-gray-medium">
+        <p className="font-subtitle uppercase tracking-wide text-base text-brand-gray-medium">
           {t("results.footnote")}
         </p>
       </div>

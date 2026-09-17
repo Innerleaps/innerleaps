@@ -10,7 +10,7 @@ const ApproachSection = memo(() => {
     <section className="section-padding bg-white">
       <div className="container-custom">
         <div className="space-y-10">
-          <p className="font-mono uppercase tracking-widest text-base text-brand-gray-medium text-center">
+          <p className="font-subtitle uppercase tracking-widest text-base text-brand-gray-medium text-center">
             {t("approach.eyebrow")}
           </p>
 
@@ -25,7 +25,7 @@ const ApproachSection = memo(() => {
                   <div className="text-4xl md:text-5xl font-bold text-brand-purple">
                     {t(`approach.stats.${key}.value`)}
                   </div>
-                  <p className="mt-3 font-mono uppercase tracking-wide text-base text-brand-gray-medium">
+                  <p className="mt-3 font-subtitle uppercase tracking-wide text-base text-brand-gray-medium">
                     {t(`approach.stats.${key}.label`)}
                   </p>
                 </div>

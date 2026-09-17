@@ -27,7 +27,7 @@ const IntakeSection = memo(() => {
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 sm:gap-0 sm:divide-x sm:divide-gray-200 border-t border-gray-200 pt-10">
           {STEP_KEYS.map((key) => (
             <div key={key} className="sm:px-8 first:sm:pl-0 last:sm:pr-0">
-              <p className="font-mono uppercase tracking-wide text-base text-brand-blue mb-3">
+              <p className="font-subtitle uppercase tracking-wide text-base text-brand-blue mb-3">
                 {t(`intake.steps.${key}.eyebrow`)}
               </p>
               <h3 className="text-xl md:text-2xl font-bold text-brand-purple mb-2">

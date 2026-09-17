@@ -10,7 +10,7 @@ const TestimonialSection = memo(() => {
   return (
     <section className="section-padding bg-white">
       <div className="container-custom max-w-4xl">
-        <blockquote className="font-serif italic text-3xl md:text-4xl lg:text-5xl text-brand-gray-dark leading-snug">
+        <blockquote className="font-body italic text-3xl md:text-4xl lg:text-5xl text-brand-gray-dark leading-snug">
           &ldquo;{t("testimonial.quote")}&rdquo;
         </blockquote>
 
@@ -42,7 +42,7 @@ const TestimonialSection = memo(() => {
           />
         </div>
 
-        <p className="mt-8 font-mono uppercase tracking-wide text-base text-brand-gray-medium">
+        <p className="mt-8 font-subtitle uppercase tracking-wide text-base text-brand-gray-medium">
           {t("testimonial.caption")}
         </p>
       </div>
