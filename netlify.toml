@@ -45,6 +45,23 @@
   to = "/duurzame-inzetbaarheid"
   status = 301
 
+# Oudere Lovable-benaming, ooit een eigen pagina, later al een redirect naar
+# /vitaliteitstraining. Die wijst zelf inmiddels naar /duurzame-inzetbaarheid,
+# dus deze wijst er direct naartoe om geen keten te laten ontstaan. Google gaf
+# hem terug als 404 (Search Console, 17 september 2026).
+[[redirects]]
+  from = "/vitaliteitsprogramma"
+  to = "/duurzame-inzetbaarheid"
+  status = 301
+
+# Zelfde verhaal als hierboven: oudere Lovable-benaming, was al een redirect
+# naar /prestatie-training, en die pagina bestaat nog steeds onder die naam.
+# Google gaf hem terug als 404 (Search Console, 17 september 2026).
+[[redirects]]
+  from = "/prestatie-programma"
+  to = "/prestatie-training"
+  status = 301
+
 # De teampagina is drie keer hernoemd. Alle oude paden wijzen daarom direct naar
 # het huidige pad, nooit naar een tussenstation. Zou
 # `/duurzame-inzetbaarheid-training` naar `/inzetbaarheid-verbeteren` blijven
