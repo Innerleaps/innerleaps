@@ -19,10 +19,6 @@ const ProblemSection = memo(() => {
             {t("problem.title")}
           </h2>
 
-          <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed text-center max-w-3xl mx-auto">
-            {t("problem.triedThreeThings")}
-          </p>
-
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {CARDS.map(({ key, icon: Icon }) => (
               <div key={key} className="min-w-0 bg-white p-8 rounded-xl shadow-lg">
