@@ -19,15 +19,6 @@ const ProblemSection = memo(() => {
             {t("problem.title")}
           </h2>
 
-          <figure className="max-w-3xl mx-auto border-l-4 border-brand-blue pl-6">
-            <blockquote className="font-body italic text-xl md:text-2xl text-brand-gray-dark leading-relaxed">
-              &ldquo;{t("problem.quote")}&rdquo;
-            </blockquote>
-            <figcaption className="mt-4 font-subtitle tracking-wide text-base text-brand-gray-medium">
-              {t("problem.quoteAttribution")}
-            </figcaption>
-          </figure>
-
           <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed text-center max-w-3xl mx-auto">
             {t("problem.triedThreeThings")}
           </p>
