@@ -42,7 +42,7 @@ const ResultsSection = memo(() => {
                   {t(`results.bars.${bar.key}`)}
                 </p>
                 <div
-                  className="h-2 bg-brand-blue rounded-full"
+                  className="h-2 bg-brand-orange rounded-full"
                   style={{ width: `${(bar.value / MAX_VALUE) * 100}%` }}
                 />
               </div>
