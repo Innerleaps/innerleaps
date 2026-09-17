@@ -92,7 +92,7 @@
   },
   "problem": {
     "eyebrow": "The problem underneath",
-    "title": "The training everyone says yes to and nobody attends.",
+    "title": "The training everyone says yes to and nobody attends",
     "quote": "We have already done a lot. Mindfulness training, stress training. But what we see is that people want to, and then don't actually come.",
     "quoteAttribution": "L&D Adviseur · 1,800 staff",
     "triedThreeThings": "You almost certainly tried three other things on the list",
@@ -122,7 +122,7 @@
   },
   "approach": {
     "eyebrow": "The approach",
-    "title": "Six weeks, measured at both ends.",
+    "title": "Six weeks, measured at both ends",
     "stats": {
       "weeks": { "value": "6", "label": "Weeks" },
       "liveHour": { "value": "1 hr", "label": "Live, per week" },
