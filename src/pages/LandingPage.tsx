@@ -18,8 +18,7 @@ import MasterclassSection from "@/components/MasterclassSection";
 import { Button } from "@/components/ui/button";
 import { Activity, BookOpen, Award, Brain } from "lucide-react";
 
-// Lazy load ROI Calculator and Calculator Modal (below the fold)
-const ROICalculator = lazy(() => import("@/components/ROICalculator"));
+// Lazy load Calculator Modal (below the fold)
 const CalculatorModal = lazy(() => import("@/components/CalculatorModal"));
 
 const LandingPage = () => {
@@ -72,15 +71,6 @@ const LandingPage = () => {
       <MasterclassSection variant="employer" />
 
       <TrustSection variant="off-white" />
-      <Suspense
-        fallback={
-          <div className="section-padding">
-            <div className="container-custom text-center">{location.pathname.startsWith('/en') ? 'Loading...' : 'Laden...'}</div>
-          </div>
-        }
-      >
-        <ROICalculator />
-      </Suspense>
       <Footer />
 
       {/* Calculator Modal */}
