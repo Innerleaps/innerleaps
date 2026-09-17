@@ -19,15 +19,13 @@ const IntakeSection = memo(() => {
 
   return (
     <section className="section-padding bg-white">
-      <div className="container-custom space-y-10">
-        <div className="space-y-6 max-w-3xl mx-auto text-center">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-purple leading-tight">
-            {t("intake.title")}
-          </h2>
-          <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
-            {t("intake.intro")}
-          </p>
-        </div>
+      <div className="container-custom space-y-12">
+        <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-purple leading-tight text-center">
+          {t("intake.title")}
+        </h2>
+        <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed text-center max-w-3xl mx-auto">
+          {t("intake.intro")}
+        </p>
 
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {STEPS.map(({ key, icon: Icon }) => (

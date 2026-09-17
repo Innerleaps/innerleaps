@@ -15,7 +15,7 @@ const ApproachSection = memo(() => {
   return (
     <section className="section-padding bg-white">
       <div className="container-custom">
-        <div className="space-y-10">
+        <div className="space-y-12">
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-purple text-center leading-tight">
             {t("approach.title")}
           </h2>
