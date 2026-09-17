@@ -1,11 +1,16 @@
 import { memo } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import { Phone, Presentation, Users } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { bookingPath } from "@/lib/booking";
 import { detectLanguageFromPath } from "@/i18n/config";
 
-const STEP_KEYS = ["intake", "masterclass", "cohort"] as const;
+const STEPS = [
+  { key: "intake", icon: Phone },
+  { key: "masterclass", icon: Presentation },
+  { key: "cohort", icon: Users },
+] as const;
 
 const IntakeSection = memo(() => {
   const { t } = useTranslation();
@@ -14,20 +19,23 @@ const IntakeSection = memo(() => {
 
   return (
     <section className="section-padding bg-white">
-      <div className="container-custom max-w-5xl space-y-10">
-        <div className="space-y-6">
+      <div className="container-custom space-y-10">
+        <div className="space-y-6 max-w-3xl mx-auto text-center">
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-purple leading-tight">
             {t("intake.title")}
           </h2>
-          <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed max-w-3xl">
+          <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
             {t("intake.intro")}
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 sm:gap-0 sm:divide-x sm:divide-gray-200 border-t border-gray-200 pt-10">
-          {STEP_KEYS.map((key) => (
-            <div key={key} className="sm:px-8 first:sm:pl-0 last:sm:pr-0">
-              <p className="font-subtitle uppercase tracking-wide text-base text-brand-blue mb-3">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          {STEPS.map(({ key, icon: Icon }) => (
+            <div key={key} className="bg-brand-off-white p-8 rounded-xl shadow-lg">
+              <div className="w-14 h-14 bg-brand-orange/10 rounded-lg flex items-center justify-center mb-4">
+                <Icon className="w-7 h-7 text-brand-orange" />
+              </div>
+              <p className="font-subtitle uppercase tracking-wide text-base text-brand-blue mb-2">
                 {t(`intake.steps.${key}.eyebrow`)}
               </p>
               <h3 className="text-xl md:text-2xl font-bold text-brand-purple mb-2">
@@ -40,7 +48,7 @@ const IntakeSection = memo(() => {
           ))}
         </div>
 
-        <div className="border-t border-gray-200 pt-8">
+        <div className="text-center">
           <Link to={bookingPath(lang)}>
             <Button
               size="lg"

@@ -91,7 +91,6 @@
     "heroImageAlt": "Vitaliteitstraining presentatie Innerleaps"
   },
   "problem": {
-    "eyebrow": "Het probleem eronder",
     "title": "Iedereen zegt ja tegen deze training. Bijna niemand komt opdagen",
     "quote": "En we hebben al heel veel gedaan. Mindfulness trainingen hebben we al gedaan. Agressie-reductie trainingen, stress trainingen. Maar we merken dat mensen wel graag willen, maar eigenlijk niet komen.",
     "quoteAttribution": "L&D Adviseur · 1.800 medewerkers",
@@ -121,7 +120,6 @@
     "alt": "Een groep collega's die samen in een sessie zitten, luisteren en lachen"
   },
   "approach": {
-    "eyebrow": "De aanpak",
     "title": "Zes weken, met een meting aan beide kanten",
     "stats": {
       "weeks": { "value": "6", "label": "Weken" },

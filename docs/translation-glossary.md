@@ -9,7 +9,7 @@
 
 | # | Topic | Decision |
 |---|---|---|
-| 1 | Spelling | **US English** (organization, color, program, center) |
+| 1 | Spelling | **British English** (organisation, colour, programme, centre, recognise, behaviour, analyse). Never the US variants. Note `practice` (noun) vs `practise` (verb): never replace blindly. |
 | 2 | Tone of voice | **Semi-formal** — slightly more polished than NL "je", but not corporate. Matches Dutch register: warm, direct, professional. Use "you" (always informal in EN), avoid slang, but allow contractions ("you're", "we'll"). |
 | 3 | "Innerlijke sprong" | **Inner leap** (preserves wordplay with brand name) |
 | 4 | "Stressmanagement" | **Stress Management** |
@@ -57,7 +57,7 @@
 
 | Nederlands | English |
 |---|---|
-| Voor Organisaties | For Organizations |
+| Voor Organisaties | For Organisations |
 | Voor Medewerkers | For Employees |
 | Methode | Method |
 | Over Ons | About Us |

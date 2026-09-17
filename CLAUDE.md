@@ -2,9 +2,25 @@
 
 ## Nederlands en Engels lopen altijd samen op
 
-De site is tweetalig. **Elke tekstwijziging in het Nederlands krijgt dezelfde
-wijziging in het Engels, meevertaald, in dezelfde opdracht.** Niet "later", niet
-"als je erom vraagt". Een wijziging is pas af als beide talen kloppen.
+De site is tweetalig. **Het Engels is de brontaal.** Nieuwe teksten schrijf je
+eerst in het Engels. **Elke tekstwijziging in het Engels krijgt dezelfde
+wijziging in het Nederlands, in dezelfde opdracht.** Niet "later", niet "als je
+erom vraagt". Een wijziging is pas af als beide talen kloppen.
+
+**Het Nederlands is een herschrijving, geen vertaling.** Zelfde belofte, eigen
+zinnen. Het Nederlands mag korter zijn, een andere zinsvolgorde hebben en een
+ander beeld gebruiken dan het Engels. Wat je nooit doet: woord voor woord
+omzetten. Herkenbaar vertaald Nederlands, en wat je in plaats daarvan schrijft:
+
+| Klinkt vertaald | Natuurlijk |
+|---|---|
+| "Ontdek de kracht van ..." | zeg gewoon wat het doet |
+| "Wij bieden oplossingen die ..." | "Wij trainen je team om ..." |
+| "in staat stellen om" | "zodat ze kunnen" |
+| lange bijzin met Engelse volgorde | knip hem in twee korte zinnen |
+
+De test: lees het Nederlands hardop. Hoor je er Engels onder, dan is het nog
+niet af.
 
 Dat geldt ook voor URL's: hernoem je een Nederlands pad, dan hernoem je het
 Engelse pad mee, inclusief de 301 en de sitemap.

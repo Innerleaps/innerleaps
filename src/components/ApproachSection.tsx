@@ -1,7 +1,13 @@
 import { memo } from "react";
 import { useTranslation } from "react-i18next";
+import { Calendar, Clock, Repeat, Users } from "lucide-react";
 
-const STAT_KEYS = ["weeks", "liveHour", "dailyPractice", "groupSize"] as const;
+const STATS = [
+  { key: "weeks", icon: Calendar },
+  { key: "liveHour", icon: Clock },
+  { key: "dailyPractice", icon: Repeat },
+  { key: "groupSize", icon: Users },
+] as const;
 
 const ApproachSection = memo(() => {
   const { t } = useTranslation();
@@ -10,32 +16,29 @@ const ApproachSection = memo(() => {
     <section className="section-padding bg-white">
       <div className="container-custom">
         <div className="space-y-10">
-          <p className="font-subtitle uppercase tracking-widest text-base text-brand-gray-medium text-center">
-            {t("approach.eyebrow")}
-          </p>
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-purple text-center leading-tight">
+            {t("approach.title")}
+          </h2>
 
-          <div className="space-y-10">
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-purple leading-tight">
-              {t("approach.title")}
-            </h2>
-
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 sm:gap-0 sm:divide-x sm:divide-gray-200 border-t border-gray-200 pt-10">
-              {STAT_KEYS.map((key) => (
-                <div key={key} className="sm:px-8 first:sm:pl-0 last:sm:pr-0">
-                  <div className="text-4xl md:text-5xl font-bold text-brand-purple">
-                    {t(`approach.stats.${key}.value`)}
-                  </div>
-                  <p className="mt-3 font-subtitle uppercase tracking-wide text-base text-brand-gray-medium">
-                    {t(`approach.stats.${key}.label`)}
-                  </p>
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
+            {STATS.map(({ key, icon: Icon }) => (
+              <div key={key} className="bg-brand-off-white p-6 rounded-xl text-center space-y-2">
+                <div className="w-14 h-14 bg-brand-orange/10 rounded-lg flex items-center justify-center mx-auto">
+                  <Icon className="w-7 h-7 text-brand-orange" />
                 </div>
-              ))}
-            </div>
-
-            <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
-              {t("approach.paragraph")}
-            </p>
+                <div className="text-3xl md:text-4xl font-bold text-brand-purple">
+                  {t(`approach.stats.${key}.value`)}
+                </div>
+                <p className="font-subtitle uppercase tracking-wide text-base text-brand-gray-medium">
+                  {t(`approach.stats.${key}.label`)}
+                </p>
+              </div>
+            ))}
           </div>
+
+          <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed max-w-3xl mx-auto">
+            {t("approach.paragraph")}
+          </p>
         </div>
       </div>
     </section>

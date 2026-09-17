@@ -17,7 +17,7 @@ const ResultsSection = memo(() => {
   return (
     <section className="section-padding bg-brand-off-white">
       <div className="container-custom max-w-4xl space-y-10">
-        <div className="space-y-4">
+        <div className="space-y-4 max-w-3xl mx-auto text-center">
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-purple leading-tight">
             {t("results.title")}
           </h2>
@@ -26,7 +26,7 @@ const ResultsSection = memo(() => {
           </p>
         </div>
 
-        <div>
+        <div className="bg-white p-8 rounded-xl shadow-lg">
           {BARS.map((bar, index) => (
             <div
               key={bar.key}
@@ -50,7 +50,7 @@ const ResultsSection = memo(() => {
           ))}
         </div>
 
-        <p className="font-subtitle uppercase tracking-wide text-base text-brand-gray-medium">
+        <p className="font-subtitle uppercase tracking-wide text-base text-brand-gray-medium text-center">
           {t("results.footnote")}
         </p>
       </div>
