@@ -9,12 +9,12 @@ const ApproachSection = memo(() => {
   return (
     <section className="section-padding bg-white">
       <div className="container-custom">
-        <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 lg:gap-16">
-          <p className="font-mono uppercase tracking-widest text-base text-brand-gray-medium lg:col-span-1">
+        <div className="space-y-10">
+          <p className="font-mono uppercase tracking-widest text-base text-brand-gray-medium text-center">
             {t("approach.eyebrow")}
           </p>
 
-          <div className="lg:col-span-3 space-y-10">
+          <div className="space-y-10">
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-purple leading-tight">
               {t("approach.title")}
             </h2>
