@@ -30,6 +30,10 @@ const ProblemSection = memo(() => {
               </figure>
             </div>
 
+            <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
+              {t("problem.triedThreeThings")}
+            </p>
+
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 sm:gap-0 sm:divide-x sm:divide-gray-200 border-t border-b border-gray-200 py-10">
               {CARD_KEYS.map((key) => (
                 <div key={key} className="sm:px-8 first:sm:pl-0 last:sm:pr-0">
