@@ -147,6 +147,28 @@
     "quote": "Innerleaps produced measurable results, and a 9.4 out of 10 from our team. Exactly what we needed.",
     "caption": "Six-week programme · Scored by participants in the final session"
   },
+  "intake": {
+    "title": "Thirty minutes, and you will know whether this fits",
+    "intro": "We would rather understand why the last thing did not land than send you a deck. If we do not think we are a fit, we will say so in that call. And if we are, nobody commits to a cohort before your people have sat in a free masterclass and you have seen who turned up.",
+    "steps": {
+      "intake": {
+        "eyebrow": "01 · Thirty minutes",
+        "title": "The intake",
+        "description": "What you have tried, what your people are carrying, and whether this fits at all."
+      },
+      "masterclass": {
+        "eyebrow": "02 · Free",
+        "title": "The masterclass",
+        "description": "Sixty minutes, open to anyone in the organisation. You see the turnout before there is a budget line."
+      },
+      "cohort": {
+        "eyebrow": "03 · Six weeks",
+        "title": "The cohort",
+        "description": "One fixed hour a week inside working time, fifteen people per group."
+      }
+    },
+    "cta": "Plan a 30-minute intake"
+  },
   "methodology": {
     "headlinePart1": "Reduce",
     "headlinePart2": "sick leave",

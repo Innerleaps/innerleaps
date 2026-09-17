@@ -147,6 +147,28 @@
     "quote": "Innerleaps leverde meetbare resultaten, en een 9,4 uit 10 van ons team. Precies wat we nodig hadden.",
     "caption": "Zesweeks programma · Beoordeeld door deelnemers in de laatste sessie"
   },
+  "intake": {
+    "title": "In een half uur weet je of dit bij jullie past",
+    "intro": "We willen liever begrijpen waarom het vorige niet aansloeg dan je een deck sturen. Vinden we het geen match, dan zeggen we dat gewoon aan de telefoon. En vinden we van wel, dan committeert niemand zich aan een groep voordat je mensen een gratis masterclass hebben gevolgd en jij hebt gezien wie er kwam opdagen.",
+    "steps": {
+      "intake": {
+        "eyebrow": "01 · Dertig minuten",
+        "title": "De intake",
+        "description": "Wat je al geprobeerd hebt, wat je mensen meedragen, en of dit past."
+      },
+      "masterclass": {
+        "eyebrow": "02 · Gratis",
+        "title": "De masterclass",
+        "description": "Zestig minuten, open voor iedereen in de organisatie. Je ziet de opkomst nog voordat er een budgetregel is."
+      },
+      "cohort": {
+        "eyebrow": "03 · Zes weken",
+        "title": "De groep",
+        "description": "Eén vast uur per week binnen werktijd, vijftien mensen per groep."
+      }
+    },
+    "cta": "Plan een intake van 30 minuten"
+  },
   "methodology": {
     "headlinePart1": "Verlaag",
     "headlinePart2": "verzuim",
