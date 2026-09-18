@@ -128,8 +128,11 @@
   "results": {
     "title": "What participants notice after six weeks",
     "intro": "We asked participants where the programme made a difference.",
+    "highlight": {
+      "label": "noticed a difference in stress and tension",
+      "context": "The most-mentioned change across all our cohorts."
+    },
     "bars": {
-      "stress": "Stress and tension",
       "autopilot": "Living on autopilot",
       "fatigue": "Mental fatigue",
       "focus": "Concentration and focus",

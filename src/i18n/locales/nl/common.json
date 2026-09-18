@@ -127,15 +127,18 @@
   },
   "results": {
     "title": "Wat deelnemers merken na zes weken",
-    "intro": "We vroegen deelnemers waar het programma verschil maakte.",
+    "intro": "We vroegen deelnemers waar de training verschil maakte.",
+    "highlight": {
+      "label": "merkte verschil in stress en spanning",
+      "context": "De meest genoemde verandering in al onze groepen."
+    },
     "bars": {
-      "stress": "Stress en spanning",
-      "autopilot": "Op de automatische piloot leven",
+      "autopilot": "Leven op de automatische piloot",
       "fatigue": "Mentale vermoeidheid",
       "focus": "Concentratie en focus",
-      "rumination": "Piekeren en malen"
+      "rumination": "Piekeren en overdenken"
     },
-    "footnote": "Evaluatie na afloop · Meerdere antwoorden mogelijk · Zelf gerapporteerd"
+    "footnote": "Evaluatie na afloop · Meerdere antwoorden mogelijk · Zelfgerapporteerd"
   },
   "testimonial": {
     "quote": "Innerleaps leverde meetbare resultaten, en een 9,4 uit 10 van ons team. Precies wat we nodig hadden.",
