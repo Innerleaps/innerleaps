@@ -92,7 +92,7 @@
   },
   "problem": {
     "title": "One good afternoon doesn't change how people handle pressure",
-    "triedThreeThings": "You almost certainly tried three other things on the list",
+    "triedThreeThings": "Most organisations have tried at least one of these.",
     "cards": {
       "mindfulness": {
         "title": "An inspiring keynote",
@@ -101,7 +101,7 @@
       },
       "stress": {
         "title": "A stress workshop",
-        "lead": "A good afternoon.",
+        "lead": "Useful tips.",
         "fade": "Nothing left of it by week six."
       },
       "app": {

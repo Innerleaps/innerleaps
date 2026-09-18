@@ -92,7 +92,7 @@
   },
   "problem": {
     "title": "Eén leuke middag verandert niets aan hoe mensen met druk omgaan",
-    "triedThreeThings": "Je hebt vrijwel zeker alle drie al eens geprobeerd",
+    "triedThreeThings": "De meeste organisaties hebben er minstens één van geprobeerd.",
     "cards": {
       "mindfulness": {
         "title": "Een inspirerende keynote",
@@ -101,8 +101,8 @@
       },
       "stress": {
         "title": "Een stressworkshop",
-        "lead": "Een leuke middag.",
-        "fade": "In week zes was er niets meer van over."
+        "lead": "Nuttige tips.",
+        "fade": "In week zes niets meer van over."
       },
       "app": {
         "title": "Een app-abonnement",
