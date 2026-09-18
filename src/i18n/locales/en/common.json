@@ -116,8 +116,8 @@
     "alt": "A group of colleagues seated together in a session, listening and laughing"
   },
   "approach": {
-    "title": "Six weeks, measured at both ends",
-    "intro": "The content was rarely the problem. <0>People under pressure do not sign up for an extra hour.</0> So we did not design a better workshop. <1>We designed a different format.</1> One built around the week people actually have.",
+    "title": "How our method works",
+    "intro": "Built for people who want to, but don't have the time.",
     "stats": {
       "weeks": { "value": "6", "label": "Weeks" },
       "liveHour": { "value": "1 hr", "label": "Live, per week" },

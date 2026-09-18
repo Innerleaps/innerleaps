@@ -116,8 +116,8 @@
     "alt": "Een groep collega's die samen in een sessie zitten, luisteren en lachen"
   },
   "approach": {
-    "title": "Zes weken, met een meting aan beide kanten",
-    "intro": "De inhoud was zelden het probleem. <0>Mensen die het al druk hebben, schrijven zich niet in voor nog een uur.</0> Dus bedachten we geen betere workshop. <1>We bedachten een ander format.</1> Een dat past bij de week die mensen echt hebben.",
+    "title": "Hoe onze methode werkt",
+    "intro": "Gemaakt voor mensen die wel willen, maar geen tijd hebben.",
     "stats": {
       "weeks": { "value": "6", "label": "Weken" },
       "liveHour": { "value": "1 uur", "label": "Live, per week" },
