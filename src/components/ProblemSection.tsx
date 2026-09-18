@@ -1,9 +1,9 @@
 import { memo } from "react";
 import { useTranslation } from "react-i18next";
-import { Brain, Presentation, Smartphone } from "lucide-react";
+import { Mic, Presentation, Smartphone } from "lucide-react";
 
 const CARDS = [
-  { key: "mindfulness", icon: Brain },
+  { key: "mindfulness", icon: Mic },
   { key: "stress", icon: Presentation },
   { key: "app", icon: Smartphone },
 ] as const;
@@ -18,6 +18,10 @@ const ProblemSection = memo(() => {
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-purple text-center leading-tight">
             {t("problem.title")}
           </h2>
+
+          <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed text-center max-w-3xl mx-auto">
+            {t("problem.triedThreeThings")}
+          </p>
 
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {CARDS.map(({ key, icon: Icon }) => (
@@ -35,6 +39,10 @@ const ProblemSection = memo(() => {
               </div>
             ))}
           </div>
+
+          <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed text-center max-w-3xl mx-auto">
+            {t("problem.closingLine")}
+          </p>
         </div>
       </div>
     </section>

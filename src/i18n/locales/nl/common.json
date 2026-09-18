@@ -72,11 +72,11 @@
   },
   "hero": {
     "badge": "Wetenschappelijk bewezen methode",
-    "headlinePart1": "Aandachtstraining die je mensen de",
+    "headlinePart1": "Vitaliteitstraining die je mensen de",
     "headlinePart2": "controle",
     "headlinePart3": "teruggeeft",
     "headlinePart4": "",
-    "subtitle": "Zes weken, wetenschappelijk onderbouwd. Eén uur live per week en vijftien minuten oefenen per dag. Je mensen voelen spanning eerder aankomen, doorbreken automatische reacties en pakken de regie over hun dag terug.",
+    "subtitle": "Je mensen voelen spanning eerder aankomen en doorbreken automatische reacties voordat stress uitmondt in verzuim. Een praktische manier om een duurzame werkgever te worden.",
     "ctaPrimary": "Plan een intake",
     "whyChooseUs": "Waarom organisaties ons kiezen",
     "stats": {
@@ -91,12 +91,13 @@
     "heroImageAlt": "Vitaliteitstraining presentatie Innerleaps"
   },
   "problem": {
-    "title": "Je hebt vrijwel zeker alle drie al eens geprobeerd",
+    "title": "Eén leuke middag verandert niets aan hoe mensen met druk omgaan",
+    "triedThreeThings": "Je hebt vrijwel zeker alle drie al eens geprobeerd",
     "cards": {
       "mindfulness": {
-        "title": "Een mindfulnesstraining",
-        "lead": "Goed ontvangen door wie er was.",
-        "fade": "Eenmalig."
+        "title": "Een inspirerende keynote",
+        "lead": "Veel energie op de dag zelf.",
+        "fade": "Maandag alweer normaal."
       },
       "stress": {
         "title": "Een stressworkshop",
@@ -108,7 +109,8 @@
         "lead": "Licenties uitgedeeld aan iedereen.",
         "fade": "Stil in week drie."
       }
-    }
+    },
+    "closingLine": "Dus begonnen we bij het format, niet bij de inhoud."
   },
   "cohortPhoto": {
     "alt": "Een groep collega's die samen in een sessie zitten, luisteren en lachen"

@@ -72,11 +72,11 @@
   },
   "hero": {
     "badge": "Scientifically proven method",
-    "headlinePart1": "Attention training that puts your people back in",
+    "headlinePart1": "Vitality training that puts your people back in",
     "headlinePart2": "control",
     "headlinePart3": "",
     "headlinePart4": "",
-    "subtitle": "A scientifically proven six-week method: one live hour a week and 15 minutes a day. Your people learn to notice tension earlier, interrupt automatic reactions and take back control of their day.",
+    "subtitle": "Your people learn to notice tension earlier and interrupt automatic reactions before stress turns into sick leave. A practical way to become a sustainable employer.",
     "ctaPrimary": "Plan an intake",
     "whyChooseUs": "Why organisations choose us",
     "stats": {
@@ -91,12 +91,13 @@
     "heroImageAlt": "Innerleaps vitality training session"
   },
   "problem": {
-    "title": "You almost certainly tried three other things on the list",
+    "title": "One good afternoon doesn't change how people handle pressure",
+    "triedThreeThings": "You almost certainly tried three other things on the list",
     "cards": {
       "mindfulness": {
-        "title": "A mindfulness training",
-        "lead": "Well received by the people who came.",
-        "fade": "Ran once."
+        "title": "An inspiring keynote",
+        "lead": "Great energy on the day.",
+        "fade": "Back to normal on Monday."
       },
       "stress": {
         "title": "A stress workshop",
@@ -108,7 +109,8 @@
         "lead": "Licences issued to everyone.",
         "fade": "Quiet by week three."
       }
-    }
+    },
+    "closingLine": "So we started from the format, not the content."
   },
   "cohortPhoto": {
     "alt": "A group of colleagues seated together in a session, listening and laughing"
