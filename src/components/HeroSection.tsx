@@ -1,7 +1,10 @@
+import { lazy, Suspense, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { Button } from "@/components/ui/button";
 import { ArrowDown, Award, Star } from "lucide-react";
+
+const CalculatorModal = lazy(() => import("./CalculatorModal"));
 import heroBackground from "@/assets/Vitaliteitsprogramma_presentatie_Innerleaps.webp";
 import { TEXT_SHADOW_STRONG } from "@/styles/common";
 import { bookingPath } from "@/lib/booking";
@@ -37,6 +40,7 @@ const HeroSection = () => {
   const { t } = useTranslation();
   const { pathname } = useLocation();
   const lang = detectLanguageFromPath(pathname);
+  const [isCalculatorOpen, setIsCalculatorOpen] = useState(false);
 
   const logos = [
     {
@@ -184,6 +188,14 @@ const HeroSection = () => {
                     {t('hero.ctaPrimary')}
                   </Button>
                 </Link>
+                <Button
+                  size="lg"
+                  variant="secondary-on-blue"
+                  onClick={() => setIsCalculatorOpen(true)}
+                  className="w-full sm:w-auto font-semibold min-h-[44px] py-3 px-4 sm:py-4 sm:px-6 rounded-lg text-base lg:text-lg shadow-xl"
+                >
+                  {t('cta.calculateRoi')}
+                </Button>
               </div>
             </div>
 
@@ -268,6 +280,10 @@ const HeroSection = () => {
           </div>
         </div>
       </section>
+
+      <Suspense fallback={null}>
+        <CalculatorModal isOpen={isCalculatorOpen} onClose={() => setIsCalculatorOpen(false)} />
+      </Suspense>
     </>
   );
 };
