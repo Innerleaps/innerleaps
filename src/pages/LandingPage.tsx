@@ -10,7 +10,7 @@ import ApproachSection from "@/components/ApproachSection";
 import ResultsSection from "@/components/ResultsSection";
 import TestimonialSection from "@/components/TestimonialSection";
 import TrustSection from "@/components/TrustSection";
-import IntakeSection from "@/components/IntakeSection";
+import MasterclassStepsSection from "@/components/MasterclassStepsSection";
 import StickyCtaButtons from "@/components/StickyCtaButtons";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -65,7 +65,7 @@ const LandingPage = () => {
       <TestimonialSection />
 
       <TrustSection variant="off-white" />
-      <IntakeSection />
+      <MasterclassStepsSection />
       <Footer />
 
       {/* Calculator Modal */}

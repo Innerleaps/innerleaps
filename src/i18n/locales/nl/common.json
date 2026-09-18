@@ -141,27 +141,30 @@
     "quote": "Innerleaps leverde meetbare resultaten, en een 9,4 uit 10 van ons team. Precies wat we nodig hadden.",
     "caption": "Zesweeks programma · Beoordeeld door deelnemers in de laatste sessie"
   },
-  "intake": {
-    "title": "In een half uur weet je of dit bij jullie past",
-    "intro": "We willen liever begrijpen waarom het vorige niet aansloeg dan je een deck sturen. Vinden we het geen match, dan zeggen we dat gewoon aan de telefoon. En vinden we van wel, dan committeert niemand zich aan een groep voordat je mensen een gratis masterclass hebben gevolgd en jij hebt gezien wie er kwam opdagen.",
+  "masterclassSteps": {
+    "headlinePart1": "Probeer het zelf in onze",
+    "headlinePart2": "gratis masterclass",
+    "intro": "In 60 minuten ervaart je team hoe wij werken, voordat je ergens aan vastzit.",
     "steps": {
-      "intake": {
-        "eyebrow": "01 · Dertig minuten",
-        "title": "De intake",
-        "description": "Wat je al geprobeerd hebt, wat je mensen meedragen, en of dit past."
+      "call": {
+        "eyebrow": "01 · 20 min · gratis",
+        "title": "Een kort gesprek",
+        "description": "Wat je al hebt geprobeerd, wat je mensen meedragen, en of dit past."
       },
       "masterclass": {
-        "eyebrow": "02 · Gratis",
+        "eyebrow": "02 · 60 min · gratis",
         "title": "De masterclass",
-        "description": "Zestig minuten, open voor iedereen."
+        "description": "Je team ervaart de methode zelf. Jij ziet hoe ze reageren."
       },
-      "cohort": {
-        "eyebrow": "03 · Zes weken",
-        "title": "De groep",
-        "description": "Eén vast uur per week binnen werktijd, vijftien mensen per groep."
+      "programme": {
+        "eyebrow": "03 · 6 weken",
+        "title": "Het programma",
+        "description": "Eén vast uur per week binnen werktijd. Max 15 per groep."
       }
     },
-    "cta": "Plan een intake van 30 minuten"
+    "cta": "Plan 20 minuten met ons",
+    "note": "In het gesprek plannen we samen je gratis masterclass.",
+    "imageAlt": "Innerleaps-trainer geeft een interactieve masterclass, deelnemers steken hun hand op"
   },
   "methodology": {
     "headlinePart1": "Verlaag",

@@ -141,27 +141,30 @@
     "quote": "Innerleaps produced measurable results, and a 9.4 out of 10 from our team. Exactly what we needed.",
     "caption": "Six-week programme · Scored by participants in the final session"
   },
-  "intake": {
-    "title": "Thirty minutes, and you will know whether this fits",
-    "intro": "We would rather understand why the last thing did not land than send you a deck. If we do not think we are a fit, we will say so in that call. And if we are, nobody commits to a cohort before your people have sat in a free masterclass and you have seen who turned up.",
+  "masterclassSteps": {
+    "headlinePart1": "Try it yourself in our",
+    "headlinePart2": "free masterclass",
+    "intro": "In 60 minutes, your team experiences how we work, before you commit to anything.",
     "steps": {
-      "intake": {
-        "eyebrow": "01 · Thirty minutes",
-        "title": "The intake",
-        "description": "What you have tried, what your people are carrying, and whether this fits at all."
+      "call": {
+        "eyebrow": "01 · 20 min · free",
+        "title": "A short call",
+        "description": "What you've tried, what your people are carrying, and whether this fits."
       },
       "masterclass": {
-        "eyebrow": "02 · Free",
+        "eyebrow": "02 · 60 min · free",
         "title": "The masterclass",
-        "description": "Sixty minutes, open to everyone."
+        "description": "Your team experiences the method first-hand. You see how they respond."
       },
-      "cohort": {
-        "eyebrow": "03 · Six weeks",
-        "title": "The cohort",
-        "description": "One fixed hour a week inside working time, fifteen people per group."
+      "programme": {
+        "eyebrow": "03 · 6 weeks",
+        "title": "The programme",
+        "description": "One fixed hour a week during working hours. Max 15 per group."
       }
     },
-    "cta": "Plan a 30-minute intake"
+    "cta": "Book 20 minutes with us",
+    "note": "In the call we plan your free masterclass together.",
+    "imageAlt": "Innerleaps trainer leading an interactive masterclass with participants raising their hands"
   },
   "methodology": {
     "headlinePart1": "Reduce",
