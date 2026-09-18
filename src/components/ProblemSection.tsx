@@ -1,6 +1,6 @@
 import { memo } from "react";
-import { useTranslation } from "react-i18next";
-import { Mic, Presentation, Smartphone } from "lucide-react";
+import { Trans, useTranslation } from "react-i18next";
+import { ArrowDown, Mic, Presentation, Smartphone } from "lucide-react";
 
 const CARDS = [
   { key: "mindfulness", icon: Mic },
@@ -40,9 +40,16 @@ const ProblemSection = memo(() => {
             ))}
           </div>
 
-          <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed text-center max-w-3xl mx-auto">
-            {t("problem.closingLine")}
-          </p>
+          <div className="pt-4 text-center space-y-4">
+            <p className="text-xl md:text-2xl font-bold text-brand-purple leading-snug text-balance max-w-3xl mx-auto">
+              <Trans
+                i18nKey="problem.closingLine"
+                t={t}
+                components={[<span className="text-brand-orange" />]}
+              />
+            </p>
+            <ArrowDown className="h-6 w-6 text-brand-orange mx-auto" aria-hidden="true" />
+          </div>
         </div>
       </div>
     </section>
