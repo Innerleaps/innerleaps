@@ -42,7 +42,7 @@ const MasterclassStepsSection = memo(() => {
           </picture>
 
           <div className="space-y-8">
-            <div className="space-y-6">
+            <div className="space-y-6 text-center">
               <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-purple leading-tight">
                 {t("masterclassSteps.headlinePart1")}{" "}
                 <span className="text-brand-orange">{t("masterclassSteps.headlinePart2")}</span>
