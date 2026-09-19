@@ -140,6 +140,35 @@
     },
     "footnote": "Post-programme evaluation · Multiple answers allowed · Self-reported"
   },
+  "whyChooseUs": {
+    "headlinePart1": "Why organisations",
+    "headlinePart2": "choose us",
+    "cards": {
+      "format": {
+        "title": "A format built for work",
+        "stat": "1 hr + 15 min",
+        "body": "We took a proven method and made it fit the working week, so organisations can roll it out and people keep the results.",
+        "proofLabel": "What that means",
+        "pills": {
+          "liveHour": "1 live hour a week",
+          "daily": "15 min a day",
+          "workHours": "Within working hours"
+        }
+      },
+      "research": {
+        "title": "Scientific research",
+        "stat": "40+ years",
+        "body": "Built on MBSR, one of the most thoroughly researched methods in the world.",
+        "proofLabel": "Researched at"
+      },
+      "trainers": {
+        "title": "Accredited trainers",
+        "stat": "Category 1",
+        "body": "All our trainers hold the highest VMBN accreditation.",
+        "proofLabel": "Accredited by"
+      }
+    }
+  },
   "testimonial": {
     "quote": "Innerleaps produced measurable results, and a 9.4 out of 10 from our team. Exactly what we needed.",
     "caption": "Six-week programme · Scored by participants in the final session"

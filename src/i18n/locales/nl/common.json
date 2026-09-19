@@ -140,6 +140,35 @@
     },
     "footnote": "Evaluatie na afloop · Meerdere antwoorden mogelijk · Zelfgerapporteerd"
   },
+  "whyChooseUs": {
+    "headlinePart1": "Waarom organisaties voor",
+    "headlinePart2": "ons kiezen",
+    "cards": {
+      "format": {
+        "title": "Een vorm die past bij werk",
+        "stat": "1 uur + 15 min",
+        "body": "We namen een bewezen methode en lieten die passen in de werkweek. Zo kun je het als organisatie uitrollen en houden mensen het resultaat vast.",
+        "proofLabel": "Wat dat betekent",
+        "pills": {
+          "liveHour": "1 uur live per week",
+          "daily": "15 min per dag",
+          "workHours": "Binnen werktijd"
+        }
+      },
+      "research": {
+        "title": "Wetenschappelijk onderzoek",
+        "stat": "40+ jaar",
+        "body": "Gebouwd op MBSR, een van de best onderzochte methodes ter wereld.",
+        "proofLabel": "Onderzocht aan"
+      },
+      "trainers": {
+        "title": "Geaccrediteerde trainers",
+        "stat": "Categorie 1",
+        "body": "Al onze trainers hebben de hoogste VMBN-accreditatie.",
+        "proofLabel": "Geaccrediteerd door"
+      }
+    }
+  },
   "testimonial": {
     "quote": "Innerleaps leverde meetbare resultaten, en een 9,4 uit 10 van ons team. Precies wat we nodig hadden.",
     "caption": "Zesweeks programma · Beoordeeld door deelnemers in de laatste sessie"

@@ -9,7 +9,7 @@ import CohortPhotoSection from "@/components/CohortPhotoSection";
 import ApproachSection from "@/components/ApproachSection";
 import ResultsSection from "@/components/ResultsSection";
 import TestimonialSection from "@/components/TestimonialSection";
-import TrustSection from "@/components/TrustSection";
+import WhyChooseUsSection from "@/components/WhyChooseUsSection";
 import MasterclassStepsSection from "@/components/MasterclassStepsSection";
 import StickyCtaButtons from "@/components/StickyCtaButtons";
 import Footer from "@/components/Footer";
@@ -64,7 +64,7 @@ const LandingPage = () => {
       <ResultsSection />
       <TestimonialSection />
 
-      <TrustSection variant="off-white" />
+      <WhyChooseUsSection />
       <MasterclassStepsSection />
       <Footer />
 
