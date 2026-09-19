@@ -1,14 +1,14 @@
 import { memo } from "react";
 import { useTranslation } from "react-i18next";
+import oxfordLogo from "@/assets/oxford-logo-transparent.webp";
 import uMassLogo from "@/assets/Vitaliteitsprogramma_ontwikkeld_door_university_of_massachusetts.webp";
 import uvaLogo from "@/assets/Aandachttraining_aan_de_universiteit_van_amsterdam_new.webp";
 import vmbnLogo from "@/assets/vmbn-trainer-categorie-1.webp";
 
 /**
- * Oxford hoort in de onderzoekskaart, maar het enige bestand in de repo is de
- * variant met een donkerblauw vlak eromheen. Grijs gefilterd wordt dat een
- * grauw blok naast twee transparante logo's. Zodra er een transparante versie
- * is: importeren en hieronder toevoegen.
+ * Oxford staat hier als transparante variant. De versie in
+ * Vitaliteitsprogramma_ontwikkeld_door_oxford.webp heeft een donkerblauw vlak
+ * eromheen; grijs gefilterd wordt dat een grauw blok naast twee losse logo's.
  */
 const PILL_KEYS = ["liveHour", "daily", "workHours"] as const;
 
@@ -69,6 +69,14 @@ const WhyChooseUsSection = memo(() => {
                 {t("whyChooseUs.cards.research.proofLabel")}
               </p>
               <div className="mt-4 flex flex-row flex-wrap items-center gap-4">
+                <img
+                  src={oxfordLogo}
+                  alt={t("trust.altPrefix.oxford")}
+                  loading="lazy"
+                  width={1500}
+                  height={443}
+                  className={logoClass}
+                />
                 <img
                   src={uMassLogo}
                   alt={t("trust.altPrefix.umass")}
