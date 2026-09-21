@@ -29,7 +29,7 @@ const ProblemSection = memo(() => {
             {CARDS.map(({ key, icon: Icon }) => (
               <div
                 key={key}
-                className="min-w-0 bg-white/[0.07] border border-white/15 p-8 rounded-xl"
+                className="min-w-0 bg-brand-gray-dark border border-white/10 p-8 rounded-xl"
               >
                 <div className="w-14 h-14 bg-brand-orange/20 rounded-lg flex items-center justify-center mb-4">
                   <Icon className="w-7 h-7 text-brand-orange" />
@@ -39,7 +39,7 @@ const ProblemSection = memo(() => {
                 </h3>
                 <p className="text-xl leading-relaxed">
                   <span className="text-white">{t(`problem.cards.${key}.lead`)}</span>{" "}
-                  <span className="text-gray-400">{t(`problem.cards.${key}.fade`)}</span>
+                  <span className="text-gray-300">{t(`problem.cards.${key}.fade`)}</span>
                 </p>
               </div>
             ))}
