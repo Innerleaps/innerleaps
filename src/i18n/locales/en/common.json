@@ -48,18 +48,33 @@
   },
   "loading": "Loading...",
   "footer": {
-    "tagline": "Brain training that reduces sick leave and strengthens long-term employability",
+    "tagline": "Attention training that helps teams catch tension early, in a format that fits the working week.",
     "trainerCategory": "Trainer Category 1",
     "googleRating": "4.7/5 on Google",
     "linkedinAria": "Innerleaps on LinkedIn",
     "trainingsHeading": "Trainings",
     "trainingsAria": "Trainings",
-    "performanceLink": "Improve performance and focus",
+    "performanceLink": "Focus & performance",
     "contactHeading": "Contact",
     "copyright": "© 2026 Innerleaps",
     "privacy": "Privacy notice",
     "cookies": "Cookie policy",
-    "terms": "Terms and conditions"
+    "terms": "Terms and conditions",
+    "trustVmbn": "VMBN · Trainer cat. 1",
+    "googleRatingValue": "4.7/5",
+    "googleRatingSuffix": "Google",
+    "masterclassLink": "Free masterclass",
+    "methodLink": "Our method",
+    "addressLine1": "Olympisch Stadion 24-28",
+    "addressLine2": "1076 DE Amsterdam",
+    "kvk": "KvK 98136925",
+    "newsletterHeading": "Get inspired",
+    "newsletterBody": "One email a month on stress, focus and making change stick at work. No sales pitch, unsubscribe in one click.",
+    "newsletterLabel": "Your work email",
+    "newsletterPlaceholder": "Your work email",
+    "newsletterButton": "Sign up",
+    "newsletterConsent": "I agree to the",
+    "newsletterConsentLink": "privacy terms"
   },
   "contactSection": {
     "title": "Questions? Plan a call with Bas",
@@ -119,10 +134,22 @@
     "title": "How our method works",
     "intro": "Built for people who want to, but don't have the time.",
     "stats": {
-      "weeks": { "value": "6", "label": "Weeks" },
-      "liveHour": { "value": "1 hr", "label": "Live, per week" },
-      "dailyPractice": { "value": "15 min", "label": "A day, on your own" },
-      "groupSize": { "value": "15", "label": "Per group, max" }
+      "weeks": {
+        "value": "6",
+        "label": "Weeks"
+      },
+      "liveHour": {
+        "value": "1 hr",
+        "label": "Live, per week"
+      },
+      "dailyPractice": {
+        "value": "15 min",
+        "label": "A day, on your own"
+      },
+      "groupSize": {
+        "value": "15",
+        "label": "Per group, max"
+      }
     }
   },
   "results": {

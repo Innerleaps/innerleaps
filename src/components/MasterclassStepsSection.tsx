@@ -21,7 +21,7 @@ const MasterclassStepsSection = memo(() => {
   const lang = detectLanguageFromPath(pathname);
 
   return (
-    <section className="section-padding bg-white">
+    <section id="masterclass" className="scroll-mt-28 section-padding bg-white">
       <div className="container-custom">
         <div className="grid lg:grid-cols-[5fr_6fr] gap-10 lg:gap-16 items-center max-w-6xl mx-auto">
           <picture>

@@ -1,9 +1,10 @@
-import { memo } from "react";
+import { memo, useState, type FormEvent } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { Linkedin, Star } from "lucide-react";
-import vmbnLogo from "@/assets/vmbn-trainer-categorie-1.webp";
-import GoogleG from "@/components/GoogleG";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import LanguageSwitcher from "@/components/LanguageSwitcher";
 import { detectLanguageFromPath } from "@/i18n/config";
 import { OPEN_INSTELLINGEN } from "@/lib/toestemming";
 
@@ -13,25 +14,52 @@ interface FooterProps {
 
 const LINKEDIN_URL = "https://www.linkedin.com/company/innerleaps";
 
-
 const Footer = memo(({ showNavigation = true }: FooterProps) => {
   void showNavigation;
   const { t } = useTranslation();
   const { pathname } = useLocation();
   const lang = detectLanguageFromPath(pathname);
+  const [email, setEmail] = useState("");
 
   const href = {
     vitality: lang === 'en' ? '/en/sustainable-employability' : '/duurzame-inzetbaarheid',
     employability: lang === 'en' ? '/en/improve-team-performance' : '/team-prestaties-verbeteren',
     stress: lang === 'en' ? '/en/stress-management-training' : '/stressmanagement-training',
     performance: lang === 'en' ? '/en/performance-training' : '/prestatie-training',
+    masterclass: lang === 'en' ? '/en#masterclass' : '/#masterclass',
+    method: lang === 'en' ? '/en/method' : '/breintraining-methode',
     blog: lang === 'en' ? '/en/blog' : '/blog',
     contact: lang === 'en' ? '/en/contact' : '/contact',
+    privacy: lang === 'en' ? '/en/privacy' : '/privacy',
+    cookies: lang === 'en' ? '/en/cookies' : '/cookies',
+    terms: lang === 'en' ? '/en/terms-and-conditions' : '/algemene-voorwaarden',
+  };
+
+  const trainingLinks = [
+    { to: href.vitality, label: t('menuItems.vitality.label') },
+    { to: href.employability, label: t('menuItems.employability.label') },
+    { to: href.stress, label: t('menuItems.stress.label') },
+    { to: href.performance, label: t('footer.performanceLink') },
+    { to: href.masterclass, label: t('footer.masterclassLink') },
+    { to: href.method, label: t('footer.methodLink') },
+    { to: href.blog, label: t('nav.blog') },
+    { to: href.contact, label: t('nav.contact') },
+  ];
+
+  /**
+   * TODO: nog niet aangesloten. Er is geen nieuwsbrief-endpoint in dit project:
+   * de acht edge functions gaan over de rekentool, aanmeldingen en het
+   * contactformulier, en er staat geen mailtool in de code. Zolang dat zo is
+   * doet deze knop niets en beloven we de bezoeker ook niets. Koppel hem aan
+   * de mailtool voordat dit naar productie gaat.
+   */
+  const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
   };
 
   return (
     <footer
-      className="bg-gradient-to-br from-brand-blue to-brand-blue-dark text-white py-12"
+      className="bg-gradient-to-br from-brand-blue to-brand-blue-dark text-white pt-12 pb-12 md:pb-28"
       itemScope
       itemType="https://schema.org/Organization"
     >
@@ -41,99 +69,31 @@ const Footer = memo(({ showNavigation = true }: FooterProps) => {
       <meta itemProp="identifier" content="KvK 98136925" />
 
       <div className="container-custom">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {/* Column 1 — Brand + social proof */}
+        <div className="grid grid-cols-1 lg:grid-cols-[1.5fr_1fr_1.6fr] gap-10">
+          {/* Kolom 1 — merk, bewijs en contact */}
           <div>
             <div className="text-2xl font-bold mb-4">Innerleaps</div>
-            <p className="text-gray-300 leading-relaxed mb-6">
+            <p className="text-xl text-gray-300 leading-relaxed mb-6 max-w-sm">
               {t('footer.tagline')}
             </p>
 
-            <div className="flex flex-wrap items-start gap-6 mb-6">
-              <div className="flex flex-col items-center">
-                <img
-                  src={vmbnLogo}
-              width={286}
-              height={208}
-                  alt="VMBN trainer categorie 1"
-                  className="h-16 w-auto bg-white rounded p-1"
-                  loading="lazy"
-                />
-                <span className="text-base text-gray-300 mt-1">{t('footer.trainerCategory')}</span>
-              </div>
-
-              <div className="flex flex-col items-center">
-                <div className="bg-white rounded p-2 flex items-center gap-2">
-                  <GoogleG />
-                  <div className="flex">
-                    {Array.from({ length: 5 }).map((_, i) => (
-                      <Star key={i} className="h-4 w-4 text-brand-orange fill-brand-orange" />
-                    ))}
-                  </div>
-                </div>
-                <span className="text-base text-gray-300 mt-1">{t('footer.googleRating')}</span>
-              </div>
+            <div className="flex flex-wrap items-center gap-4 mb-6">
+              <span className="border border-white/30 rounded-lg px-3 py-1.5 text-base font-semibold">
+                {t('footer.trustVmbn')}
+              </span>
+              <span className="flex items-center gap-2 text-base text-gray-300">
+                <span className="flex" aria-hidden="true">
+                  {Array.from({ length: 5 }).map((_, i) => (
+                    <Star key={i} className="h-4 w-4 text-brand-orange fill-brand-orange" />
+                  ))}
+                </span>
+                <b className="text-white font-semibold">{t('footer.googleRatingValue')}</b>
+                {t('footer.googleRatingSuffix')}
+              </span>
             </div>
 
-            <a
-              href={LINKEDIN_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label={t('footer.linkedinAria')}
-              className="inline-flex items-center justify-center h-10 w-10 rounded-full bg-white/10 hover:bg-white/20 transition-colors"
-            >
-              <Linkedin className="h-5 w-5 text-white" />
-            </a>
-          </div>
-
-          {/* Column 2 — Trainings */}
-          <div>
-            <h3 className="text-white font-semibold text-lg mb-4">{t('footer.trainingsHeading')}</h3>
-            <nav aria-label={t('footer.trainingsAria')}>
-              <ul className="space-y-2">
-                <li>
-                  <Link to={href.vitality} className="block text-gray-300 hover:text-white transition-colors">
-                    {t('menuItems.vitality.label')}
-                  </Link>
-                </li>
-                {/* De teampagina ontbrak hier, waardoor hij als enige propositie
-                    geen enkele link had die een crawler zonder JavaScript ziet:
-                    het hoofdmenu is een dropdown die pas na een klik in de DOM
-                    verschijnt. Label komt uit dezelfde sleutel als het menu. */}
-                <li>
-                  <Link to={href.employability} className="block text-gray-300 hover:text-white transition-colors">
-                    {t('menuItems.employability.label')}
-                  </Link>
-                </li>
-                <li>
-                  <Link to={href.stress} className="block text-gray-300 hover:text-white transition-colors">
-                    {t('menuItems.stress.label')}
-                  </Link>
-                </li>
-                <li>
-                  <Link to={href.performance} className="block text-gray-300 hover:text-white transition-colors">
-                    {t('footer.performanceLink')}
-                  </Link>
-                </li>
-                <li>
-                  <Link to={href.blog} className="block text-gray-300 hover:text-white transition-colors">
-                    {t('nav.blog')}
-                  </Link>
-                </li>
-                <li>
-                  <Link to={href.contact} className="block text-gray-300 hover:text-white transition-colors">
-                    {t('nav.contact')}
-                  </Link>
-                </li>
-              </ul>
-            </nav>
-          </div>
-
-          {/* Column 3 — Contact */}
-          <div>
-            <h3 className="text-white font-semibold text-lg mb-4">{t('footer.contactHeading')}</h3>
             <address
-              className="not-italic space-y-2 text-gray-300"
+              className="not-italic space-y-2 text-base text-gray-300 mb-6"
               itemProp="address"
               itemScope
               itemType="https://schema.org/PostalAddress"
@@ -145,28 +105,102 @@ const Footer = memo(({ showNavigation = true }: FooterProps) => {
               </p>
               <p>
                 <a href="tel:+31623453477" className="hover:text-white transition-colors">
-                  06 23 45 34 77
+                  +31 6 23 45 34 77
                 </a>
               </p>
               <p>
-                <span itemProp="streetAddress">Olympisch Stadion 24-28</span>,{" "}
+                <span itemProp="streetAddress">{t('footer.addressLine1')}</span>
+                <br />
                 <span itemProp="postalCode">1076 DE</span>{" "}
                 <span itemProp="addressLocality">Amsterdam</span>
               </p>
-              <p>KvK: 98136925</p>
+              <p>{t('footer.kvk')}</p>
             </address>
+
+            <a
+              href={LINKEDIN_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={t('footer.linkedinAria')}
+              className="inline-flex items-center justify-center h-11 w-11 rounded-full bg-white/10 hover:bg-white/20 transition-colors"
+            >
+              <Linkedin className="h-5 w-5 text-white" />
+            </a>
+          </div>
+
+          {/* Kolom 2 — trainingen */}
+          <div>
+            <h3 className="text-white font-semibold text-lg mb-4">{t('footer.trainingsHeading')}</h3>
+            <nav aria-label={t('footer.trainingsAria')}>
+              <ul className="space-y-2">
+                {trainingLinks.map((link) => (
+                  <li key={link.to}>
+                    <Link
+                      to={link.to}
+                      className="block text-base text-gray-300 hover:text-white transition-colors"
+                    >
+                      {link.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </nav>
+          </div>
+
+          {/* Kolom 3 — nieuwsbrief */}
+          <div className="bg-white/[0.07] border border-white/15 rounded-xl p-6 md:p-8">
+            <h3 className="text-2xl font-bold text-white">{t('footer.newsletterHeading')}</h3>
+            <p className="mt-2 text-base text-gray-300 leading-relaxed">
+              {t('footer.newsletterBody')}
+            </p>
+
+            <form onSubmit={handleSubmit} className="mt-5">
+              <label htmlFor="footer-newsletter-email" className="sr-only">
+                {t('footer.newsletterLabel')}
+              </label>
+              <Input
+                id="footer-newsletter-email"
+                name="email"
+                type="email"
+                required
+                autoComplete="email"
+                value={email}
+                onChange={(event) => setEmail(event.target.value)}
+                placeholder={t('footer.newsletterPlaceholder')}
+                className="h-auto py-4 rounded-lg border-transparent text-brand-gray-dark focus-visible:ring-brand-orange focus-visible:ring-offset-brand-blue-dark"
+              />
+              <Button type="submit" className="w-full min-h-[44px] mt-3 py-4 rounded-lg text-base font-semibold">
+                {t('footer.newsletterButton')}
+              </Button>
+
+              <label className="mt-4 flex items-start gap-2 text-base text-gray-300">
+                <input
+                  type="checkbox"
+                  name="consent"
+                  required
+                  className="mt-1 h-4 w-4 flex-shrink-0 accent-brand-orange focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-orange focus-visible:ring-offset-2 focus-visible:ring-offset-brand-blue-dark"
+                />
+                <span>
+                  {t('footer.newsletterConsent')}{" "}
+                  <Link to={href.privacy} className="underline underline-offset-2 hover:text-white transition-colors">
+                    {t('footer.newsletterConsentLink')}
+                  </Link>
+                  .
+                </span>
+              </label>
+            </form>
           </div>
         </div>
 
-        {/* Bottom bar */}
-        <div className="border-t border-white/15 mt-8 pt-6 flex flex-col md:flex-row md:items-center md:justify-between gap-3 text-base text-gray-400">
+        {/* Juridische balk */}
+        <div className="border-t border-white/15 mt-10 pt-6 flex flex-col md:flex-row md:items-center md:justify-between gap-4 text-base text-gray-400">
           <p>{t('footer.copyright')}</p>
           <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
-            <Link to={lang === "en" ? "/en/privacy" : "/privacy"} className="hover:text-white transition-colors">
+            <Link to={href.privacy} className="hover:text-white transition-colors">
               {t('footer.privacy')}
             </Link>
             <span className="text-gray-600" aria-hidden="true">·</span>
-            <Link to={lang === "en" ? "/en/cookies" : "/cookies"} className="hover:text-white transition-colors">
+            <Link to={href.cookies} className="hover:text-white transition-colors">
               {t('footer.cookies')}
             </Link>
             <span className="text-gray-600" aria-hidden="true">·</span>
@@ -181,13 +215,11 @@ const Footer = memo(({ showNavigation = true }: FooterProps) => {
               {t('cookiebanner.footerLink')}
             </button>
             <span className="text-gray-600" aria-hidden="true">·</span>
-            <Link
-              to={lang === "en" ? "/en/terms-and-conditions" : "/algemene-voorwaarden"}
-              className="hover:text-white transition-colors"
-            >
+            <Link to={href.terms} className="hover:text-white transition-colors">
               {t('footer.terms')}
             </Link>
           </div>
+          <LanguageSwitcher tone="dark" />
         </div>
       </div>
     </footer>

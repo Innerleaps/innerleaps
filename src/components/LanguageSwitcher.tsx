@@ -11,6 +11,11 @@ interface LanguageSwitcherProps {
   variant?: "inline" | "block";
   /** Called after a successful language switch (e.g. to close mobile menu) */
   onSwitch?: () => void;
+  /**
+   * Op welke ondergrond hij staat. De standaardkleuren zijn voor een lichte
+   * achtergrond; in de footer valt brand-blue op brand-blue-dark weg.
+   */
+  tone?: "light" | "dark";
 }
 
 const LANGS: Array<{ code: SupportedLanguage; label: string; flag: string; aria: string }> = [
@@ -18,7 +23,7 @@ const LANGS: Array<{ code: SupportedLanguage; label: string; flag: string; aria:
   { code: "en", label: "EN", flag: "🇬🇧", aria: "Switch to English" },
 ];
 
-const LanguageSwitcher = ({ variant = "inline", onSwitch }: LanguageSwitcherProps) => {
+const LanguageSwitcher = ({ variant = "inline", onSwitch, tone = "light" }: LanguageSwitcherProps) => {
   const { pathname } = useLocation();
   const navigate = useNavigate();
   const { i18n } = useTranslation();
@@ -45,16 +50,27 @@ const LanguageSwitcher = ({ variant = "inline", onSwitch }: LanguageSwitcherProp
     >
       {LANGS.map((l, i) => (
         <div key={l.code} className="flex items-center">
-          {i > 0 && <span className="text-brand-gray-medium mx-1.5" aria-hidden="true">|</span>}
+          {i > 0 && (
+            <span
+              className={`mx-1.5 ${tone === "dark" ? "text-white/40" : "text-brand-gray-medium"}`}
+              aria-hidden="true"
+            >
+              |
+            </span>
+          )}
           <button
             type="button"
             onClick={() => handleSwitch(l.code)}
             aria-label={l.aria}
             aria-current={current === l.code ? "true" : undefined}
             className={`flex items-center gap-1.5 transition-colors duration-200 ${
-              current === l.code
-                ? "text-brand-blue font-semibold cursor-default"
-                : "text-brand-gray-dark hover:text-brand-blue"
+              tone === "dark"
+                ? current === l.code
+                  ? "text-white font-semibold cursor-default"
+                  : "text-gray-300 hover:text-white"
+                : current === l.code
+                  ? "text-brand-blue font-semibold cursor-default"
+                  : "text-brand-gray-dark hover:text-brand-blue"
             }`}
           >
             <span aria-hidden="true">{l.flag}</span>

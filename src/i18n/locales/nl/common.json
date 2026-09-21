@@ -48,18 +48,33 @@
   },
   "loading": "Laden...",
   "footer": {
-    "tagline": "Breintraining die verzuim verlaagt en duurzame inzetbaarheid versterkt",
+    "tagline": "Aandachtstraining waarmee teams spanning vroeg herkennen, in een vorm die past in de werkweek.",
     "trainerCategory": "Trainer categorie 1",
     "googleRating": "4,7/5 op Google",
     "linkedinAria": "Innerleaps op LinkedIn",
     "trainingsHeading": "Trainingen",
     "trainingsAria": "Trainingen",
-    "performanceLink": "Prestatie en concentratie verbeteren",
+    "performanceLink": "Focus & prestaties",
     "contactHeading": "Contact",
     "copyright": "© 2026 Innerleaps",
     "privacy": "Privacybeleid",
     "cookies": "Cookiebeleid",
-    "terms": "Algemene voorwaarden"
+    "terms": "Algemene voorwaarden",
+    "trustVmbn": "VMBN · Trainer cat. 1",
+    "googleRatingValue": "4,7/5",
+    "googleRatingSuffix": "Google",
+    "masterclassLink": "Gratis masterclass",
+    "methodLink": "Onze methode",
+    "addressLine1": "Olympisch Stadion 24-28",
+    "addressLine2": "1076 DE Amsterdam",
+    "kvk": "KvK 98136925",
+    "newsletterHeading": "Laat je inspireren",
+    "newsletterBody": "Eén mail per maand over stress, focus en hoe verandering blijft hangen op het werk. Geen verkooppraatje, uitschrijven met één klik.",
+    "newsletterLabel": "Je werkmail",
+    "newsletterPlaceholder": "Je werkmail",
+    "newsletterButton": "Aanmelden",
+    "newsletterConsent": "Ik ga akkoord met de",
+    "newsletterConsentLink": "privacyvoorwaarden"
   },
   "contactSection": {
     "title": "Vragen? Plan een gesprek met Bas",
@@ -119,10 +134,22 @@
     "title": "Hoe onze methode werkt",
     "intro": "Gemaakt voor mensen die wel willen, maar geen tijd hebben.",
     "stats": {
-      "weeks": { "value": "6", "label": "Weken" },
-      "liveHour": { "value": "1 uur", "label": "Live, per week" },
-      "dailyPractice": { "value": "15 min", "label": "Per dag, zelfstandig" },
-      "groupSize": { "value": "15", "label": "Per groep, max" }
+      "weeks": {
+        "value": "6",
+        "label": "Weken"
+      },
+      "liveHour": {
+        "value": "1 uur",
+        "label": "Live, per week"
+      },
+      "dailyPractice": {
+        "value": "15 min",
+        "label": "Per dag, zelfstandig"
+      },
+      "groupSize": {
+        "value": "15",
+        "label": "Per groep, max"
+      }
     }
   },
   "results": {
