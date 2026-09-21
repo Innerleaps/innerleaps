@@ -1,40 +1,37 @@
 import { lazy, Suspense, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import { Award, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { ArrowDown, Award, Star } from "lucide-react";
-
-const CalculatorModal = lazy(() => import("./CalculatorModal"));
-import heroBackground from "@/assets/Vitaliteitsprogramma_presentatie_Innerleaps.webp";
-import { TEXT_SHADOW_STRONG } from "@/styles/common";
 import { bookingPath } from "@/lib/booking";
 import { detectLanguageFromPath } from "@/i18n/config";
 
-// Client logos - Light versions with transparent backgrounds
-import oliverLogo from "@/assets/Vitaliteitsprogramma_Oliver_Wyman_light-2.webp";
-import sygnificLogo from "@/assets/Vitaliteitsprogramma_Sygnific_light.webp";
-import cordaanLogo from "@/assets/Vitaliteitsprogramma_Cordaan_light.webp";
-import denHaagLogo from "@/assets/Vitaliteitsprogramma_Gemeente_Den_Haag_light.webp";
-import spiritLogo from "@/assets/Vitaliteitsprogramma_Spirit_light.webp";
-import vuLogo from "@/assets/Vitaliteitsprogramma_VU_amsterdam_light.webp";
-import leaseplanLogo from "@/assets/Vitaliteitsprogramma_Leaseplan_light-2.webp";
-import tele2Logo from "@/assets/Vitaliteitsprogramma_Tele2_light-2.webp";
-import parnassiaLogo from "@/assets/Vitaliteitsprogramma_Parnassia_groep_light.webp";
-import lentizLogo from "@/assets/Vitaliteitsprogramma_Lentiz_light.webp";
-import primoLogo from "@/assets/Vitaliteitsprogramma_primo_light.webp";
-import justitieLogo from "@/assets/Vitaliteitsprogramma_Ministerie_van_justitie_en_veiligheid_light-2.webp";
-import youTalentLogo from "@/assets/Vitaliteitsprogramma_You_Talent_light.webp";
-import rijkswaterstaatLogo from "@/assets/Vitaliteitsprogramma_Rijkswaterstaat_light.webp";
-import politieLogo from "@/assets/Vitaliteitsprogramma_Politite_light.webp";
-import dhlLogo from "@/assets/Vitaliteitsprogramma_DHL_light.webp";
-import affiniusLogo from "@/assets/Vitaliteitsprogramma_Affinius_Capital_light.webp";
-import ggzLogo from "@/assets/Vitaliteitsprogramma_GGZ_centraal_light.webp";
-import humanitasLogo from "@/assets/Vitaliteitsprogramma_Humanitas_light.webp";
-import plevierLogo from "@/assets/Vitaliteitsprogramma_Plevier_light.webp";
-import carelLogo from "@/assets/Vitaliteitsprogramma_Carel_Lurvink_light.webp";
-import paConsultingLogo from "@/assets/Vitaliteitsprogramma_PA_consulting_light.webp";
-import nobelLogo from "@/assets/Vitaliteitsprogramma_nobel_recruitment_light.webp";
-import hollandColoursLogo from "@/assets/Vitaliteitsprogramma_Holland_Colours_light.webp";
+import heroPhoto1200 from "@/assets/hero-1200w.webp";
+import heroPhoto800 from "@/assets/hero-800w.webp";
+import heroPhotoFallback from "@/assets/hero-1200w.jpg";
+
+/* De donkere logovarianten. In src/data/clientLogos.ts staan de lichte, die
+   waren voor de oude hero met foto-achtergrond en zijn op beige onzichtbaar. */
+import spiritLogo from "@/assets/Vitaliteitsprogramma_Spirit.webp";
+import vuLogo from "@/assets/Vitaliteitsprogramma_VU_amsterdam.webp";
+import tele2Logo from "@/assets/Vitaliteitsprogramma_Tele2.webp";
+import parnassiaLogo from "@/assets/Vitaliteitsprogramma_Parnassia_groep.webp";
+import lentizLogo from "@/assets/Vitaliteitsprogramma_Lentiz.webp";
+import denHaagLogo from "@/assets/Vitaliteitsprogramma_Gemeente_Den_Haag.webp";
+
+const CalculatorModal = lazy(() => import("./CalculatorModal"));
+
+const GOOGLE_REVIEWS_URL =
+  "https://www.google.com/maps/place/Innerleaps/@52.1909763,5.2795551,7z/data=!4m8!3m7!1s0x41d7861255c94705:0x571bbf751b212eea!8m2!3d52.1909763!4d5.2795551!9m1!1b1!16s%2Fg%2F11y10xf1qm?entry=ttu&g_ep=EgoyMDI1MTAyOS4yIKXMDSoASAFQAw%3D%3D";
+
+const LOGOS = [
+  { src: spiritLogo, alt: "Vitaliteitstraining Spirit" },
+  { src: vuLogo, alt: "Vitaliteitstraining VU Amsterdam" },
+  { src: tele2Logo, alt: "Vitaliteitstraining Tele2" },
+  { src: parnassiaLogo, alt: "Vitaliteitstraining Parnassia Groep" },
+  { src: lentizLogo, alt: "Vitaliteitstraining Lentiz" },
+  { src: denHaagLogo, alt: "Vitaliteitstraining Gemeente Den Haag" },
+];
 
 const HeroSection = () => {
   const { t } = useTranslation();
@@ -42,241 +39,119 @@ const HeroSection = () => {
   const lang = detectLanguageFromPath(pathname);
   const [isCalculatorOpen, setIsCalculatorOpen] = useState(false);
 
-  const logos = [
-    {
-      src: oliverLogo,
-      alt: "Oliver Wyman",
-    },
-    {
-      src: sygnificLogo,
-      alt: "Sygnific",
-    },
-    {
-      src: cordaanLogo,
-      alt: "Cordaan",
-    },
-    {
-      src: denHaagLogo,
-      alt: "Gemeente Den Haag",
-    },
-    {
-      src: spiritLogo,
-      alt: "Spirit",
-    },
-    {
-      src: vuLogo,
-      alt: "VU Amsterdam",
-    },
-    {
-      src: leaseplanLogo,
-      alt: "Leaseplan",
-    },
-    {
-      src: tele2Logo,
-      alt: "Tele2",
-    },
-    {
-      src: parnassiaLogo,
-      alt: "Parnassia Groep",
-    },
-    {
-      src: lentizLogo,
-      alt: "Lentiz",
-    },
-    {
-      src: primoLogo,
-      alt: "Primo",
-    },
-    {
-      src: justitieLogo,
-      alt: "Ministerie van Justitie en Veiligheid",
-    },
-    {
-      src: youTalentLogo,
-      alt: "You Talent",
-    },
-    {
-      src: rijkswaterstaatLogo,
-      alt: "Rijkswaterstaat",
-    },
-    {
-      src: politieLogo,
-      alt: "Politie",
-    },
-    {
-      src: dhlLogo,
-      alt: "DHL",
-    },
-    {
-      src: affiniusLogo,
-      alt: "Affinius Capital",
-    },
-    {
-      src: ggzLogo,
-      alt: "GGZ Centraal",
-    },
-    {
-      src: humanitasLogo,
-      alt: "Humanitas",
-    },
-    {
-      src: plevierLogo,
-      alt: "Plevier",
-    },
-    {
-      src: carelLogo,
-      alt: "Carel Lurvink",
-    },
-    {
-      src: paConsultingLogo,
-      alt: "PA Consulting",
-    },
-    {
-      src: nobelLogo,
-      alt: "Nobel Recruitment",
-    },
-    {
-      src: hollandColoursLogo,
-      alt: "Holland Colours",
-    },
-  ];
   return (
     <>
-      <section id="home" className="relative min-h-screen flex items-center overflow-hidden text-white">
-        {/* Background Image */}
-        <div className="absolute inset-0 z-0">
-          <img
-            src={heroBackground}
-            alt={t('hero.heroImageAlt')}
-            className="w-full h-full object-cover"
-            fetchPriority="high"
-            loading="eager"
-            decoding="async"
-          />
-          <div className="absolute inset-0 bg-black/50" />
-        </div>
-
-        {/* Content */}
-        <div className="relative z-10 w-full px-4 py-8 sm:px-6 sm:py-12 lg:py-20 max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-12 items-start w-full overflow-hidden">
-            <div className="w-full space-y-6 animate-fade-in text-center lg:text-left">
-              <div className="w-full space-y-4 sm:space-y-6">
-                {/* Research Badge */}
-                <div className="inline-flex items-center gap-2 bg-white/50 text-brand-purple px-3 py-1.5 sm:px-4 sm:py-2 rounded-full text-base md:text-lg font-medium backdrop-blur-sm">
-                  <Award className="h-4 w-4" />
-                  {t('hero.badge')}
-                </div>
-
-                <h1
-                  className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight font-heading break-normal"
-                  style={TEXT_SHADOW_STRONG}
-                >
-                  {t('hero.headlinePart1')} <span className="text-brand-orange">{t('hero.headlinePart2')}</span> {t('hero.headlinePart3')}{" "}
-                  <span className="text-brand-orange">{t('hero.headlinePart4')}</span>
-                </h1>
-                <p className="text-xl md:text-2xl text-blue-100 leading-relaxed break-normal" style={TEXT_SHADOW_STRONG}>
-                  {t('hero.subtitle')}
-                </p>
+      {/* Geen id="home" hier: LandingPage zet die al op de wrapper eromheen. */}
+      <section className="bg-brand-off-white">
+        <div className="container-custom py-12 lg:py-20">
+          <div className="grid lg:grid-cols-[7fr_5fr] gap-10 lg:gap-14 items-center">
+            <div>
+              <div className="inline-flex items-center gap-2 bg-white rounded-full px-4 py-2 text-base font-semibold text-brand-purple shadow-lg">
+                <Award className="h-4 w-4 text-brand-orange" />
+                {t("hero.badge")}
               </div>
 
-              <div id="hero-cta" className="flex flex-col sm:flex-row gap-3 sm:gap-4 w-full justify-center lg:justify-start">
-                <Link to={bookingPath(lang)} className="w-full sm:w-auto">
+              <h1 className="mt-6 text-4xl md:text-5xl lg:text-6xl font-bold text-brand-purple leading-tight text-balance">
+                {t("hero.headlinePart1")}{" "}
+                <span className="text-brand-orange">{t("hero.headlinePart2")}</span>{" "}
+                {t("hero.headlinePart3")}
+              </h1>
+
+              <p className="mt-6 text-xl md:text-2xl text-brand-gray-medium leading-relaxed max-w-2xl">
+                {t("hero.subtitle")}
+              </p>
+
+              {/* StickyCtaButtons gebruikt dit id als peilpunt: zodra deze rij
+                  uit beeld is, verschijnt de zwevende rekentoolknop. */}
+              <div
+                id="hero-cta"
+                className="mt-8 flex flex-col lg:flex-row lg:flex-wrap lg:items-center gap-4 lg:gap-6"
+              >
+                <Link to={bookingPath(lang)} className="block lg:inline-block">
                   <Button
                     size="lg"
-                    className="w-full sm:w-auto bg-brand-orange hover:bg-brand-orange text-white hover:text-white font-semibold min-h-[44px] py-3 px-4 sm:py-4 sm:px-6 rounded-lg text-base lg:text-lg shadow-xl"
+                    className="w-full lg:w-auto min-h-[44px] font-semibold py-4 px-8 rounded-lg text-base lg:text-lg shadow-xl"
                   >
-                    {t('hero.ctaPrimary')}
+                    {t("hero.ctaPrimary")}
                   </Button>
                 </Link>
-                <Button
-                  size="lg"
-                  variant="secondary-on-blue"
+                <button
+                  type="button"
                   onClick={() => setIsCalculatorOpen(true)}
-                  className="w-full sm:w-auto font-semibold min-h-[44px] py-3 px-4 sm:py-4 sm:px-6 rounded-lg text-base lg:text-lg shadow-xl"
+                  className="self-start text-base font-semibold text-brand-purple border-b-2 border-brand-orange/40 pb-0.5 hover:border-brand-orange transition-colors"
                 >
-                  {t('cta.calculateRoi')}
-                </Button>
+                  {t("hero.calculatorLink")} <span aria-hidden="true">→</span>
+                </button>
               </div>
+
+              <a
+                href={GOOGLE_REVIEWS_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-7 inline-flex items-center gap-2 text-base text-brand-gray-medium hover:text-brand-purple transition-colors"
+              >
+                <span className="flex" aria-hidden="true">
+                  {Array.from({ length: 5 }).map((_, i) => (
+                    <Star key={i} className="h-4 w-4 text-brand-orange fill-brand-orange" />
+                  ))}
+                </span>
+                <span>
+                  <b className="font-semibold text-brand-purple">{t("hero.proofRating")}</b>{" "}
+                  {t("hero.proofSuffix")}
+                </span>
+              </a>
             </div>
 
-            <div className="w-full relative animate-scale-in mt-6 lg:mt-0">
-              <div className="w-full rounded-2xl p-4 sm:p-6 lg:p-8 max-w-full sm:max-w-md mx-auto bg-white/50 backdrop-blur-sm">
-                <div className="space-y-6">
-                  <div className="text-center">
-                    <h3 className="text-base sm:text-lg md:text-xl lg:text-2xl font-semibold mb-2 text-brand-purple">
-                      {t('hero.whyChooseUs')}
-                    </h3>
-                  </div>
+            <div className="relative">
+              <picture>
+                <source
+                  type="image/webp"
+                  srcSet={`${heroPhoto800} 800w, ${heroPhoto1200} 1200w`}
+                  sizes="(min-width: 1024px) 40vw, 100vw"
+                />
+                <img
+                  src={heroPhotoFallback}
+                  alt={t("hero.photoAlt")}
+                  width={1200}
+                  height={1500}
+                  loading="eager"
+                  /* Kleine letters met opzet: deze React-versie kent de
+                     camelCase-variant niet en logt dan een waarschuwing. */
+                  {...{ fetchpriority: "high" }}
+                  decoding="async"
+                  className="block w-full aspect-[4/3] lg:aspect-[4/5] object-cover object-[50%_45%] lg:object-[50%_40%] rounded-2xl shadow-xl"
+                />
+              </picture>
 
-                  <div className="w-full space-y-3 sm:space-y-4">
-                    <div className="flex items-center justify-between w-full p-2.5 sm:p-3 lg:p-4 bg-brand-purple/90 rounded-lg">
-                      <span style={TEXT_SHADOW_STRONG} className="text-base md:text-lg lg:text-xl text-white font-normal">
-                        {t('hero.stats.dropoutRisk')}
-                      </span>
-                      <span className="text-brand-orange font-bold text-lg md:text-xl lg:text-2xl shrink-0">-70%</span>
-                    </div>
-                    <div className="flex items-center justify-between w-full p-2.5 sm:p-3 lg:p-4 bg-brand-purple/90 rounded-lg">
-                      <span style={TEXT_SHADOW_STRONG} className="text-base md:text-lg lg:text-xl text-white font-normal">
-                        {t('hero.stats.absenteeism')}
-                      </span>
-                      <span className="text-brand-orange font-bold text-lg md:text-xl lg:text-2xl shrink-0">-21%</span>
-                    </div>
-                    <div className="flex items-center justify-between w-full p-2.5 sm:p-3 lg:p-4 bg-brand-purple/90 rounded-lg">
-                      <span style={TEXT_SHADOW_STRONG} className="text-base md:text-lg lg:text-xl text-white font-normal">
-                        {t('hero.stats.focus')}
-                      </span>
-                      <span className="text-brand-orange font-bold text-lg md:text-xl lg:text-2xl shrink-0">+24%</span>
-                    </div>
-                    <div className="flex items-center justify-between w-full p-2.5 sm:p-3 lg:p-4 bg-brand-purple/90 rounded-lg">
-                      <span style={TEXT_SHADOW_STRONG} className="text-base md:text-lg lg:text-xl text-white font-normal">
-                        {t('hero.stats.science')}
-                      </span>
-                      <span className="text-brand-orange font-bold text-lg md:text-xl lg:text-2xl shrink-0">{t('hero.stats.scienceValue')}</span>
-                    </div>
-                  </div>
-
-                  {/* Google Review Badge */}
-                  <a
-                    href="https://www.google.com/maps/place/Innerleaps/@52.1909763,5.2795551,7z/data=!4m8!3m7!1s0x41d7861255c94705:0x571bbf751b212eea!8m2!3d52.1909763!4d5.2795551!9m1!1b1!16s%2Fg%2F11y10xf1qm?entry=ttu&g_ep=EgoyMDI1MTAyOS4yIKXMDSoASAFQAw%3D%3D"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-full mt-3 sm:mt-4 block bg-brand-purple/90 backdrop-blur-sm rounded-lg p-2.5 sm:p-3 hover:bg-brand-purple transition-all group"
-                  >
-                    <div className="flex items-center justify-center gap-2">
-                      <span className="text-white font-semibold text-lg">4,7 / 5</span>
-                      <div className="flex gap-0.5">
-                        {[...Array(5)].map((_, i) => (
-                          <Star key={i} className="w-4 h-4 fill-amber-400 text-amber-400 group-hover:scale-110 transition-transform" />
-                        ))}
-                      </div>
-                    </div>
-                    <p className="text-amber-100 text-base text-center mt-1">{t('hero.googleReviews')}</p>
-                  </a>
-                </div>
-              </div>
+              <figure className="relative lg:absolute lg:left-0 lg:-translate-x-7 lg:bottom-7 -mt-7 lg:mt-0 mx-3 lg:mx-0 lg:max-w-[270px] bg-white rounded-xl p-4 shadow-xl">
+                <blockquote className="font-body italic text-base text-brand-gray-dark leading-relaxed">
+                  &ldquo;{t("hero.quote")}&rdquo;
+                </blockquote>
+                <figcaption className="mt-2 text-base text-brand-gray-medium">
+                  <cite className="not-italic">{t("hero.quoteAuthor")}</cite>
+                </figcaption>
+              </figure>
             </div>
           </div>
+        </div>
 
-          {/* Scrolling Logos - Lazy loaded below the fold */}
-          <div className="w-full mt-8 sm:mt-12 lg:mt-16">
-            <div className="relative overflow-hidden [mask-image:linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)]">
-              <div className="flex gap-8 animate-marquee-mobile md:animate-marquee-tablet">
-                {logos.map((logo, index) => (
-                  <img
-                    key={index}
-                    src={logo.src}
-                    alt={logo.alt}
-                    loading="lazy"
-                    decoding="async"
-                    className="h-8 sm:h-10 md:h-12 object-contain flex-shrink-0 opacity-100 transition-all"
-                  />
-                ))}
-              </div>
+        <div className="container-custom">
+          <div className="border-t border-gray-200 pt-7 pb-12 text-center">
+            <p className="uppercase tracking-wide text-base text-brand-gray-medium">
+              {t("hero.trustedBy")}
+            </p>
+            <div className="mt-4 flex flex-wrap items-center justify-center gap-x-8 gap-y-4 lg:gap-x-11">
+              {LOGOS.map((logo) => (
+                <img
+                  key={logo.alt}
+                  src={logo.src}
+                  alt={logo.alt}
+                  loading="lazy"
+                  decoding="async"
+                  className="h-6 lg:h-7 w-auto object-contain grayscale opacity-80"
+                />
+              ))}
             </div>
-          </div>
-
-          <div className="flex justify-center mt-8 sm:mt-12 lg:mt-16 w-full">
-            <ArrowDown className="h-8 w-8 text-brand-orange animate-bounce" />
           </div>
         </div>
       </section>
@@ -287,4 +162,5 @@ const HeroSection = () => {
     </>
   );
 };
+
 export default HeroSection;

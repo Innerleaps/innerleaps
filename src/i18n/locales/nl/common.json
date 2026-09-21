@@ -86,12 +86,12 @@
     "addressLabel": "Adres"
   },
   "hero": {
-    "badge": "Wetenschappelijk bewezen methode",
+    "badge": "Wetenschappelijk onderbouwde methode",
     "headlinePart1": "Voorkom",
     "headlinePart2": "verzuim en burn-out",
     "headlinePart3": "in je organisatie",
     "headlinePart4": "",
-    "subtitle": "Aandachtstraining die je mensen helpt spanning vroeg op te merken en de regie te houden, voordat stress uitmondt in verzuim. Een praktische manier om een duurzame werkgever te worden.",
+    "subtitle": "Aandachtstraining waarmee je mensen spanning vroeg herkennen en de regie houden, voordat stress verzuim wordt. Zo geef je duurzame inzetbaarheid echt handen en voeten.",
     "ctaPrimary": "Plan 20 minuten met ons",
     "whyChooseUs": "Waarom organisaties ons kiezen",
     "stats": {
@@ -103,7 +103,14 @@
       "productivity": "Productiviteit"
     },
     "googleReviews": "Google Reviews",
-    "heroImageAlt": "Vitaliteitstraining presentatie Innerleaps"
+    "heroImageAlt": "Vitaliteitstraining presentatie Innerleaps",
+    "calculatorLink": "Wat kost verzuim jou?",
+    "proofRating": "4,7/5",
+    "proofSuffix": "op Google Reviews",
+    "photoAlt": "Deelnemers luisteren tijdens een Innerleaps-sessie",
+    "quote": "Innerleaps leverde meetbare resultaten, en een 9,4 uit 10 van ons team.",
+    "quoteAuthor": "Jochem van der Veen, CEO TheyDo",
+    "trustedBy": "Zij gingen je voor"
   },
   "problem": {
     "title": "Eén leuke middag verandert niets aan hoe mensen met druk omgaan",
