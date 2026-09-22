@@ -89,10 +89,6 @@ const HeroSection = () => {
                 </button>
               </div>
 
-              <p className="mt-4 text-base text-brand-gray-medium leading-relaxed max-w-xl">
-                {t("hero.ctaNote")}
-              </p>
-
               <a
                 href={GOOGLE_REVIEWS_URL}
                 target="_blank"
@@ -128,7 +124,11 @@ const HeroSection = () => {
                      camelCase-variant niet en logt dan een waarschuwing. */
                   {...{ fetchpriority: "high" }}
                   decoding="async"
-                  className="block w-full aspect-[4/3] lg:aspect-[4/5] object-cover object-[50%_45%] lg:object-[50%_40%] rounded-2xl shadow-xl"
+                  /* Gespiegeld: op de foto kijkt iedereen naar rechts, en de
+                     foto staat rechts. Zo keken ze de pagina uit. Nu kijken ze
+                     terug naar de kop en de knop. Er staat geen leesbare tekst
+                     op de foto, dus spiegelen levert niets omgekeerds op. */
+                  className="block w-full aspect-[4/3] lg:aspect-[4/5] object-cover object-[50%_45%] lg:object-[50%_40%] rounded-2xl shadow-xl -scale-x-100"
                 />
               </picture>
 
