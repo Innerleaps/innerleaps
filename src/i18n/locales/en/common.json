@@ -162,16 +162,16 @@
   },
   "results": {
     "title": "What participants notice after six weeks",
-    "intro": "We asked participants where the programme made a difference.",
+    "intro": "We asked participants where they noticed improvement.",
     "highlight": {
-      "label": "noticed a difference in stress and tension",
+      "label": "felt less stress and tension",
       "context": "The most-mentioned change across all our cohorts."
     },
     "bars": {
-      "autopilot": "Living on autopilot",
-      "fatigue": "Mental fatigue",
-      "focus": "Concentration and focus",
-      "rumination": "Rumination and overthinking"
+      "autopilot": "Less time on autopilot",
+      "fatigue": "Less mental fatigue",
+      "focus": "Better concentration and focus",
+      "rumination": "Less rumination and overthinking"
     },
     "footnote": "Post-programme evaluation · Multiple answers allowed · Self-reported"
   },

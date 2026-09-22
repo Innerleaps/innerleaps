@@ -162,16 +162,16 @@
   },
   "results": {
     "title": "Wat deelnemers merken na zes weken",
-    "intro": "We vroegen deelnemers waar de training verschil maakte.",
+    "intro": "We vroegen deelnemers waar ze verbetering merkten.",
     "highlight": {
-      "label": "merkte verschil in stress en spanning",
+      "label": "merkte minder stress en spanning",
       "context": "De meest genoemde verandering in al onze groepen."
     },
     "bars": {
-      "autopilot": "Leven op de automatische piloot",
-      "fatigue": "Mentale vermoeidheid",
-      "focus": "Concentratie en focus",
-      "rumination": "Piekeren en overdenken"
+      "autopilot": "Minder op de automatische piloot",
+      "fatigue": "Minder mentale vermoeidheid",
+      "focus": "Betere concentratie en focus",
+      "rumination": "Minder piekeren"
     },
     "footnote": "Evaluatie na afloop · Meerdere antwoorden mogelijk · Zelfgerapporteerd"
   },
