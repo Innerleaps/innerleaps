@@ -92,10 +92,6 @@ const ResultsSection = memo(() => {
             ))}
           </ul>
         </div>
-
-        <p className="text-base text-brand-gray-medium text-center">
-          {t("results.footnote")}
-        </p>
       </div>
     </section>
   );
