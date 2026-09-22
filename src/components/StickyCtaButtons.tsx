@@ -1,18 +1,16 @@
-import { useState, useEffect, useRef, lazy, Suspense } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Button } from '@/components/ui/button';
-import { useLocation } from 'react-router-dom';
-
-const CalculatorModal = lazy(() => import('./CalculatorModal'));
+import { Link, useLocation } from 'react-router-dom';
+import { bookingPath } from '@/lib/booking';
+import { detectLanguageFromPath } from '@/i18n/config';
+import { meldMasterclassKlik } from '@/lib/conversies';
 
 /**
- * Eén knop, één actie: de rekentool. Verder niets.
+ * Eén knop, één actie: de masterclass aanvragen. Verder niets.
  *
- * Er stonden hier eerst twee even zware gevulde knoppen, en dat leest als een
- * keuzemenu. Daarna een tekstlink naar een gesprek eronder. Ook die is eruit:
- * op de campagnepagina's staat "Plan 20 minuten met Bas" vijf keer in de body,
- * dus die actie is nooit meer dan een halve scroll weg. Een kale onderstreepte
- * link onder een grote knop maakte de balk alleen maar rommelig.
+ * Hij wees eerst naar de rekentool. De site heeft nu één primaire actie, en de
+ * rekentool blijft bereikbaar via de tekstlink in de hero en via de footer.
  *
  * Op mobiel is dit een balk over de volle breedte onderaan het scherm. Die
  * dekte eerder tekst af, dus krijgt de body een padding-bottom ter hoogte van
@@ -20,14 +18,8 @@ const CalculatorModal = lazy(() => import('./CalculatorModal'));
  * wordt gemeten in plaats van geraden: de knoptekst verschilt per pagina en
  * kan over twee regels lopen.
  *
- * De balk komt pas in beeld als de hero voorbij is, en verdwijnt zodra het
- * rekentool-blok in beeld komt. Dat laatste is geen detail: de balk mag niet
- * de actie afdekken waar hij zelf naartoe verwijst.
+ * De balk komt pas in beeld als de hero voorbij is.
  */
-
-/** Het label van de primaire knop verschilt per doelgroep. HR koopt niet
- *  hetzelfde als een directie en gebruikt niet dezelfde woorden. */
-const ROI_LABEL_PATHS = ['/team-prestaties-verbeteren', '/en/improve-team-performance'];
 
 /** Waar de balk niets te zoeken heeft. */
 const HIDDEN_ON_PATHS = ['/landing'];
@@ -43,15 +35,13 @@ const SCROLL_FALLBACK = 400;
 
 const StickyCtaButtons = () => {
   const { t } = useTranslation();
-  const [isCalculatorOpen, setIsCalculatorOpen] = useState(false);
   const [isPastHero, setIsPastHero] = useState(false);
   const [isCalculatorInView, setIsCalculatorInView] = useState(false);
   const barRef = useRef<HTMLDivElement>(null);
   const location = useLocation();
+  const lang = detectLanguageFromPath(location.pathname);
 
-  const label = ROI_LABEL_PATHS.includes(location.pathname)
-    ? t('cta.calculateRoi')
-    : t('cta.calculateSavings');
+  const label = t('cta.requestMasterclassSticky');
 
   // Pas tonen als de hero uit beeld is. Bij het laden van de pagina zou de
   // balk anders meteen over de hero heen liggen.
@@ -71,7 +61,8 @@ const StickyCtaButtons = () => {
     return () => window.removeEventListener('scroll', onScroll);
   }, [location.pathname]);
 
-  // Wegblijven zodra het rekentool-blok in beeld staat.
+  // Wegblijven zodra het rekentool-blok in beeld staat: dat is een formulier,
+  // en de balk mag geen invoervelden afdekken.
   useEffect(() => {
     const calculator = document.getElementById('calculator');
     if (!calculator || !('IntersectionObserver' in window)) {
@@ -115,29 +106,27 @@ const StickyCtaButtons = () => {
   }, [isVisible, label]);
 
   return (
-    <>
-      <div
-        ref={barRef}
-        aria-hidden={!isVisible}
-        className={`sticky-cta fixed bottom-0 left-0 right-0 z-40 bg-white/95 backdrop-blur-sm border-t border-gray-200 px-4 pt-3
-          md:left-auto md:bottom-6 md:right-6 md:w-auto md:bg-transparent md:backdrop-blur-none md:border-0 md:px-0 md:pt-0
-          ${isVisible ? 'sticky-cta--visible' : 'sticky-cta--hidden'}`}
+    <div
+      ref={barRef}
+      aria-hidden={!isVisible}
+      className={`sticky-cta fixed bottom-0 left-0 right-0 z-40 bg-white/95 backdrop-blur-sm border-t border-gray-200 px-4 pt-3
+        md:left-auto md:bottom-6 md:right-6 md:w-auto md:bg-transparent md:backdrop-blur-none md:border-0 md:px-0 md:pt-0
+        ${isVisible ? 'sticky-cta--visible' : 'sticky-cta--hidden'}`}
+    >
+      <Link
+        to={bookingPath(lang)}
+        onClick={() => meldMasterclassKlik('sticky')}
+        tabIndex={isVisible ? undefined : -1}
+        className="block md:inline-block"
       >
         <Button
-          onClick={() => setIsCalculatorOpen(true)}
-          tabIndex={isVisible ? undefined : -1}
+          tabIndex={-1}
           className="w-full md:w-auto min-h-[44px] font-semibold py-3 px-4 md:px-10 rounded-lg text-base md:text-lg shadow-lg whitespace-normal md:whitespace-nowrap"
         >
           {label}
         </Button>
-      </div>
-
-      <Suspense fallback={null}>
-        {isCalculatorOpen && (
-          <CalculatorModal isOpen={isCalculatorOpen} onClose={() => setIsCalculatorOpen(false)} />
-        )}
-      </Suspense>
-    </>
+      </Link>
+    </div>
   );
 };
 

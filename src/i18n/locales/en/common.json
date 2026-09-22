@@ -44,7 +44,8 @@
     "registerTrainingShort": "Register",
     "calculateSavings": "Calculate your impact",
     "calculateRoi": "Calculate your ROI",
-    "bookCallWithBas": "Book 20 minutes with Bas"
+    "bookCallWithBas": "Book 20 minutes with Bas",
+    "requestMasterclassSticky": "Request a masterclass"
   },
   "loading": "Loading...",
   "footer": {
@@ -92,7 +93,7 @@
     "headlinePart3": "in your organisation",
     "headlinePart4": "",
     "subtitle": "Attention training that helps your people catch tension early and stay in control, before stress turns into sick leave. A practical way to become a sustainable employer.",
-    "ctaPrimary": "Book 20 minutes with us",
+    "ctaPrimary": "Request a free masterclass",
     "whyChooseUs": "Why organisations choose us",
     "stats": {
       "dropoutRisk": "Drop-out risk",
@@ -110,7 +111,8 @@
     "photoAlt": "Participants listening during an Innerleaps session",
     "quote": "Measurable results, and a 9.4 out of 10 from our team.",
     "quoteAuthor": "Jochem van der Veen, CEO TheyDo",
-    "trustedBy": "Trusted by"
+    "trustedBy": "Trusted by",
+    "ctaNote": "In 60 minutes your team experiences how we work. We plan it in a 20-minute call."
   },
   "problem": {
     "title": "One good afternoon doesn't change how people handle pressure",
@@ -228,8 +230,8 @@
         "description": "One fixed hour a week during working hours. Max 15 per group."
       }
     },
-    "cta": "Book 20 minutes with us",
-    "note": "In the call we plan your free masterclass together.",
+    "cta": "Request a free masterclass",
+    "note": "No cohort until your team has experienced it.",
     "imageAlt": "Innerleaps trainer leading an interactive masterclass with participants raising their hands"
   },
   "methodology": {

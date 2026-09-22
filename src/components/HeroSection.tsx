@@ -4,6 +4,7 @@ import { useTranslation } from "react-i18next";
 import { Award, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { bookingPath } from "@/lib/booking";
+import { meldMasterclassKlik } from "@/lib/conversies";
 import { detectLanguageFromPath } from "@/i18n/config";
 
 import heroPhoto1200 from "@/assets/hero-1200w.webp";
@@ -67,7 +68,11 @@ const HeroSection = () => {
                 id="hero-cta"
                 className="mt-8 flex flex-col lg:flex-row lg:flex-wrap lg:items-center gap-4 lg:gap-6"
               >
-                <Link to={bookingPath(lang)} className="block lg:inline-block">
+                <Link
+                  to={bookingPath(lang)}
+                  onClick={() => meldMasterclassKlik("hero")}
+                  className="block lg:inline-block"
+                >
                   <Button
                     size="lg"
                     className="w-full lg:w-auto min-h-[44px] font-semibold py-4 px-8 rounded-lg text-base lg:text-lg shadow-xl"
@@ -83,6 +88,10 @@ const HeroSection = () => {
                   {t("hero.calculatorLink")} <span aria-hidden="true">→</span>
                 </button>
               </div>
+
+              <p className="mt-4 text-base text-brand-gray-medium leading-relaxed max-w-xl">
+                {t("hero.ctaNote")}
+              </p>
 
               <a
                 href={GOOGLE_REVIEWS_URL}

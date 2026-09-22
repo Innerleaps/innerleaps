@@ -186,6 +186,21 @@ export const meldContactformulier = (id: string, emailHash: string | null): void
 };
 
 /**
+ * Een klik op een masterclass-knop.
+ *
+ * Dit is geen conversie: er is nog niets ingevuld, de bezoeker gaat alleen op
+ * weg. Daarom geen conversielabel en geen rem op herhaling, net als bij de
+ * telefoon- en e-mailklikken hieronder. Eén gebeurtenisnaam voor alle drie de
+ * plekken, met de positie als parameter, zodat ze binnen één trechter te
+ * vergelijken zijn in plaats van als drie losse gebeurtenissen.
+ */
+export type MasterclassKnop = "hero" | "sticky" | "onderaan";
+
+export const meldMasterclassKlik = (positie: MasterclassKnop): void => {
+  duwen({ event: "masterclass_cta_click", positie });
+};
+
+/**
  * Klikken op het telefoonnummer en het e-mailadres.
  *
  * Eén luisteraar op document, met `closest`, zodat hij ook werkt bij links die

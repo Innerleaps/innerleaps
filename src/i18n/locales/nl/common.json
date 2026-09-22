@@ -44,7 +44,8 @@
     "registerTrainingShort": "Aanmelden",
     "calculateSavings": "Bereken wat het jullie oplevert",
     "calculateRoi": "Bereken jullie ROI",
-    "bookCallWithBas": "Plan 20 minuten met Bas"
+    "bookCallWithBas": "Plan 20 minuten met Bas",
+    "requestMasterclassSticky": "Vraag een masterclass aan"
   },
   "loading": "Laden...",
   "footer": {
@@ -92,7 +93,7 @@
     "headlinePart3": "in je organisatie",
     "headlinePart4": "",
     "subtitle": "Aandachtstraining waarmee je mensen spanning vroeg herkennen en de regie houden, voordat stress verzuim wordt. Zo geef je duurzame inzetbaarheid echt handen en voeten.",
-    "ctaPrimary": "Plan 20 minuten met ons",
+    "ctaPrimary": "Vraag een gratis masterclass aan",
     "whyChooseUs": "Waarom organisaties ons kiezen",
     "stats": {
       "dropoutRisk": "Uitval risico",
@@ -110,7 +111,8 @@
     "photoAlt": "Deelnemers luisteren tijdens een Innerleaps-sessie",
     "quote": "Innerleaps leverde meetbare resultaten, en een 9,4 uit 10 van ons team.",
     "quoteAuthor": "Jochem van der Veen, CEO TheyDo",
-    "trustedBy": "Zij gingen je voor"
+    "trustedBy": "Zij gingen je voor",
+    "ctaNote": "In 60 minuten ervaart je team hoe wij werken. We plannen het in een gesprek van 20 minuten."
   },
   "problem": {
     "title": "Eén leuke middag verandert niets aan hoe mensen met druk omgaan",
@@ -228,8 +230,8 @@
         "description": "Eén vast uur per week binnen werktijd. Max 15 per groep."
       }
     },
-    "cta": "Plan 20 minuten met ons",
-    "note": "In het gesprek plannen we samen je gratis masterclass.",
+    "cta": "Vraag een gratis masterclass aan",
+    "note": "Geen traject voordat je team het zelf heeft ervaren.",
     "imageAlt": "Innerleaps-trainer geeft een interactieve masterclass, deelnemers steken hun hand op"
   },
   "methodology": {

@@ -4,6 +4,7 @@ import { useTranslation } from "react-i18next";
 import { Phone, Presentation, Users } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { bookingPath } from "@/lib/booking";
+import { meldMasterclassKlik } from "@/lib/conversies";
 import { detectLanguageFromPath } from "@/i18n/config";
 import masterclassPhoto1200 from "@/assets/masterclass-1200w.webp";
 import masterclassPhoto800 from "@/assets/masterclass-800w.webp";
@@ -77,11 +78,15 @@ const MasterclassStepsSection = memo(() => {
             </div>
 
             <div className="space-y-4">
-              <Link to={bookingPath(lang)} className="block lg:inline-block">
+              <Link
+                to={bookingPath(lang)}
+                onClick={() => meldMasterclassKlik("onderaan")}
+                className="block lg:inline-block"
+              >
                 <Button
                   size="lg"
                   variant="secondary"
-                  className="w-full lg:w-auto font-semibold py-3 px-8 rounded-lg text-base md:text-lg"
+                  className="w-full lg:w-auto min-h-[44px] font-semibold py-3 px-8 rounded-lg text-base md:text-lg"
                 >
                   {t("masterclassSteps.cta")}
                 </Button>
