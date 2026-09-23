@@ -37,9 +37,8 @@ const ProblemSection = memo(() => {
                 <h3 className="text-xl md:text-2xl font-bold text-brand-purple mb-2 break-words">
                   {t(`problem.cards.${key}.title`)}
                 </h3>
-                <p className="text-xl leading-relaxed">
-                  <span className="text-brand-gray-dark">{t(`problem.cards.${key}.lead`)}</span>{" "}
-                  <span className="text-brand-gray-medium">{t(`problem.cards.${key}.fade`)}</span>
+                <p className="text-xl leading-relaxed text-brand-gray-dark">
+                  {t(`problem.cards.${key}.lead`)} {t(`problem.cards.${key}.fade`)}
                 </p>
               </div>
             ))}

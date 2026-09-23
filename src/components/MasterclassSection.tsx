@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { TEXT_SHADOW_STRONG } from "@/styles/common";
 import masterclassBg from "@/assets/masterclass-audience.webp";
 import { detectLanguageFromPath } from "@/i18n/config";
+import { JEROEN_PORTRET } from "@/lib/klantervaringen";
 
 interface MasterclassSectionProps {
   variant: "employee" | "employer";
@@ -96,9 +97,21 @@ const MasterclassSection = ({ variant }: MasterclassSectionProps) => {
             className="text-lg md:text-xl text-white italic leading-relaxed"
             style={TEXT_SHADOW_STRONG}
           >
-            {t('masterclass.review')}{" "}
-            <span className="not-italic font-semibold">{t('masterclass.reviewer')}</span>
+            {t('masterclass.review')}
           </p>
+          <div className="mt-4 flex items-center justify-center gap-3">
+            <img
+              src={JEROEN_PORTRET}
+              alt=""
+              className="h-12 w-12 flex-shrink-0 rounded-full object-cover"
+              width={160}
+              height={160}
+              loading="lazy"
+            />
+            <span className="text-lg font-semibold text-white" style={TEXT_SHADOW_STRONG}>
+              {t('masterclass.reviewer')}
+            </span>
+          </div>
         </div>
 
         {/* De werkgeversvariant opende https://innerleaps.nl/Calendar in een

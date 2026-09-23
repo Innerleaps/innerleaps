@@ -5,33 +5,14 @@
       "description": "Werk aan duurzame inzetbaarheid en verlaag je verzuim met 21%. Een training van 6 weken waar 42% van je mensen aan meedoet, niet 3 tot 8%."
     },
     "hero": {
-      "badge": "Wetenschappelijk bewezen training",
+      "badge": "Wetenschappelijk onderbouwde methode",
       "title": "<0>Duurzame inzetbaarheid</0> vergroten en verzuim verlagen",
       "subtitle": "Duurzame inzetbaarheid begint bij minder werkstress. Onze training leert je medewerkers spanning vroeg herkennen en op tijd bijsturen.",
-      "cta": "Bereken wat het jullie oplevert",
-      "statsTitle": "Waarom organisaties ons kiezen",
-      "stats": [
-        {
-          "label": "Verzuim",
-          "value": "-21%"
-        },
-        {
-          "label": "Burn-out risico",
-          "value": "-70%"
-        },
-        {
-          "label": "Tevredenheid",
-          "value": "+15%"
-        },
-        {
-          "label": "Wetenschap",
-          "value": "40+ jaar"
-        }
-      ]
+      "cta": "Bereken wat het jullie oplevert"
     },
     "challenges": {
       "title": "Herken je één van deze <0>uitdagingen</0>?",
-      "subtitle": "Deze uitdagingen pakken wij aan met onze breintraining.",
+      "subtitle": "Deze uitdagingen pakken wij aan met onze groepstraining.",
       "items": [
         {
           "icon": "Activity",
@@ -47,16 +28,11 @@
           "icon": "BedDouble",
           "title": "Hoog verzuim",
           "text": "Medewerkers vallen uit omdat stressklachten een terugkerend probleem zijn."
-        },
-        {
-          "icon": "Users",
-          "title": "Verloop van kernspelers",
-          "text": "Je kernspelers zijn gewild, en op deze arbeidsmarkt zijn ze zo weg."
         }
       ]
     },
     "results": {
-      "title": "Het <0>resultaat</0> van onze training",
+      "title": "Het <0>effect</0> van onze training op jouw team",
       "subtitle": "De wetenschappelijk bewezen effecten van onze training.",
       "items": [
         {
@@ -65,6 +41,12 @@
           "bullets": [
             "Medewerkers voelen spanning eerder aankomen en sturen zelf bij.",
             "Medewerkers worden weerbaarder tegen hoge druk en herstellen sneller."
+          ],
+          "stats": [
+            {
+              "value": "-26%",
+              "label": "stress"
+            }
           ]
         },
         {
@@ -73,6 +55,12 @@
           "bullets": [
             "Medewerkers geven hun grens aan voordat ze eroverheen gaan.",
             "Meer eigenaarschap over de eigen werkdruk."
+          ],
+          "stats": [
+            {
+              "value": "+11%",
+              "label": "veerkracht"
+            }
           ]
         },
         {
@@ -81,17 +69,21 @@
           "bullets": [
             "Stressklachten worden vroeg opgemerkt, vóór de uitval.",
             "Minder langdurige uitval, dus minder druk op de rest."
-          ]
-        },
-        {
-          "icon": "Smile",
-          "title": "Talent blijft",
-          "bullets": [
-            "Meer werkplezier en betrokkenheid.",
-            "Lager verloop, je kernspelers blijven."
+          ],
+          "stats": [
+            {
+              "value": "-70%",
+              "label": "risico op langdurige uitval"
+            }
           ]
         }
-      ]
+      ],
+      "science": {
+        "value": "40+ jaar",
+        "label": "wetenschappelijk onderzoek",
+        "text": "Onze methode is gebaseerd op MBSR, in 1979 ontwikkeld aan de University of Massachusetts. Honderden studies bewijzen dat het stress effectief verlaagt. Het werkt zo goed dat universiteiten zoals Oxford en Amsterdam er verder onderzoek naar doen."
+      },
+      "sources": "Bronnen: Aikens et al. (2014), De Bruin et al. (2018)"
     },
     "weeks": {
       "title": "Het <0>6-weekse</0> Vitaliteitsplus-programma",
@@ -627,43 +619,19 @@
       "description": "Minder spanning, betere samenwerking en scherpere resultaten, ook bij hoge werkdruk. Innerleaps traint in 6 weken het brein van je team."
     },
     "hero": {
-      "badge": "Wetenschappelijk bewezen methode",
+      "badge": "Wetenschappelijk onderbouwde methode",
       "title": "<0>Duurzaam presteren</0>, zelfs onder druk",
-      "subtitle": "Minder spanning en betere prestaties met onze evidence based breintraining voor jouw team",
-      "cta": "Bereken jullie ROI",
-      "statsTitle": "Waarom organisaties ons kiezen",
-      "stats": [
-        {
-          "label": "Focus en concentratie",
-          "value": "+24%"
-        },
-        {
-          "label": "Productiviteit",
-          "value": "+8%"
-        },
-        {
-          "label": "Verzuim",
-          "value": "-21%"
-        },
-        {
-          "label": "Wetenschap",
-          "value": "40+ jaar"
-        }
-      ]
+      "subtitle": "Minder spanning en betere prestaties, met een wetenschappelijk onderbouwde groepstraining voor jouw team.",
+      "cta": "Bereken jullie ROI"
     },
     "challenges": {
       "title": "Herken je deze <0>uitdagingen</0> in jouw team?",
-      "subtitle": "Deze uitdagingen pakken wij aan met onze breintraining voor teams.",
+      "subtitle": "Deze uitdagingen pakken wij aan met onze groepstraining voor teams.",
       "items": [
         {
           "icon": "Activity",
           "title": "Hoge werkdruk",
           "text": "De hoeveelheid werk en ambities leiden tot spanning en stress."
-        },
-        {
-          "icon": "Frown",
-          "title": "Samenwerking kan beter",
-          "text": "De samenwerking en het begrip voor elkaar kan beter."
         },
         {
           "icon": "AlertCircle",
@@ -687,15 +655,12 @@
           "bullets": [
             "Jouw team herkent spanning eerder en stuurt zelf bij.",
             "Meer weerbaarheid tegen hoge druk en sneller herstel."
-          ]
-        },
-        {
-          "icon": "Users",
-          "title": "Betere samenwerking",
-          "bullets": [
-            "Er wordt beter geluisterd naar elkaar.",
-            "Teamleden hebben meer begrip voor elkaar.",
-            "Meer werkplezier en tevredenheid."
+          ],
+          "stats": [
+            {
+              "value": "-26%",
+              "label": "stress"
+            }
           ]
         },
         {
@@ -704,6 +669,12 @@
           "bullets": [
             "Betere concentratie en minder fouten, ook onder druk.",
             "De productiviteit stijgt terwijl spanning juist afneemt."
+          ],
+          "stats": [
+            {
+              "value": "+8,6%",
+              "label": "productiviteit"
+            }
           ]
         },
         {
@@ -712,9 +683,21 @@
           "bullets": [
             "Minder verzuim en minder langdurige uitval.",
             "Een kostenpost die structureel omlaag gaat."
+          ],
+          "stats": [
+            {
+              "value": "-70%",
+              "label": "risico op langdurige uitval"
+            }
           ]
         }
-      ]
+      ],
+      "science": {
+        "value": "40+ jaar",
+        "label": "wetenschappelijk onderzoek",
+        "text": "Onze methode is gebaseerd op MBSR, in 1979 ontwikkeld aan de University of Massachusetts. Honderden studies bewijzen dat het stress effectief verlaagt. Het werkt zo goed dat universiteiten zoals Oxford en Amsterdam er verder onderzoek naar doen."
+      },
+      "sources": "Bronnen: Aikens et al. (2014), eigen onderzoek Innerleaps, De Bruin et al. (2018)"
     },
     "weeks": {
       "title": "Het <0>6-weekse</0> kernprogramma",

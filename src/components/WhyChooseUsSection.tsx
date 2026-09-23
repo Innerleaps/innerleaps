@@ -1,5 +1,6 @@
 import { memo } from "react";
 import { useTranslation } from "react-i18next";
+import BookingCtaButton from "@/components/BookingCtaButton";
 import oxfordLogo from "@/assets/oxford-logo-transparent.webp";
 import uMassLogo from "@/assets/Vitaliteitsprogramma_ontwikkeld_door_university_of_massachusetts.webp";
 import uvaLogo from "@/assets/Aandachttraining_aan_de_universiteit_van_amsterdam_new.webp";
@@ -12,14 +13,21 @@ import vmbnLogo from "@/assets/vmbn-trainer-categorie-1.webp";
  */
 const PILL_KEYS = ["liveHour", "daily", "workHours"] as const;
 
-const WhyChooseUsSection = memo(() => {
+interface WhyChooseUsSectionProps {
+  /** Sluit dit blok af met "Plan 20 minuten met Bas". */
+  bookingCta?: boolean;
+  /** Wit als de sectie erboven al off-white is. De kaarten blijven wit met schaduw. */
+  background?: "off-white" | "white";
+}
+
+const WhyChooseUsSection = memo(({ bookingCta = false, background = "off-white" }: WhyChooseUsSectionProps) => {
   const { t } = useTranslation();
 
   const logoClass =
     "h-6 lg:h-[26px] w-auto object-contain grayscale opacity-80 hover:opacity-100 transition-opacity";
 
   return (
-    <section className="section-padding bg-brand-off-white">
+    <section className={`section-padding ${background === "white" ? "bg-white" : "bg-brand-off-white"}`}>
       <div className="container-custom">
         <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-purple text-center leading-tight mb-12">
           {t("whyChooseUs.headlinePart1")}{" "}
@@ -28,7 +36,7 @@ const WhyChooseUsSection = memo(() => {
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
           <div className="min-w-0 flex flex-col bg-white p-8 rounded-xl shadow-lg">
-            <h3 className="text-2xl font-bold text-brand-orange lg:whitespace-nowrap">
+            <h3 className="text-2xl font-bold text-brand-orange xl:whitespace-nowrap">
               {t("whyChooseUs.cards.format.title")}
             </h3>
             <p className="mt-2 text-xl font-bold text-brand-purple">
@@ -38,7 +46,7 @@ const WhyChooseUsSection = memo(() => {
               {t("whyChooseUs.cards.format.body")}
             </p>
             <div className="mt-auto pt-6 lg:min-h-[160px]">
-              <p className="uppercase tracking-wide text-base text-brand-gray-medium border-t border-gray-200 pt-4">
+              <p className="text-lg font-semibold text-brand-gray-dark border-t border-gray-200 pt-4">
                 {t("whyChooseUs.cards.format.proofLabel")}
               </p>
               <div className="mt-4 flex flex-wrap gap-2">
@@ -55,7 +63,7 @@ const WhyChooseUsSection = memo(() => {
           </div>
 
           <div className="min-w-0 flex flex-col bg-white p-8 rounded-xl shadow-lg">
-            <h3 className="text-2xl font-bold text-brand-orange lg:whitespace-nowrap">
+            <h3 className="text-2xl font-bold text-brand-orange xl:whitespace-nowrap">
               {t("whyChooseUs.cards.research.title")}
             </h3>
             <p className="mt-2 text-xl font-bold text-brand-purple">
@@ -65,7 +73,7 @@ const WhyChooseUsSection = memo(() => {
               {t("whyChooseUs.cards.research.body")}
             </p>
             <div className="mt-auto pt-6 lg:min-h-[160px]">
-              <p className="uppercase tracking-wide text-base text-brand-gray-medium border-t border-gray-200 pt-4">
+              <p className="text-lg font-semibold text-brand-gray-dark border-t border-gray-200 pt-4">
                 {t("whyChooseUs.cards.research.proofLabel")}
               </p>
               <div className="mt-4 flex flex-row flex-wrap items-center gap-4">
@@ -98,7 +106,7 @@ const WhyChooseUsSection = memo(() => {
           </div>
 
           <div className="min-w-0 flex flex-col bg-white p-8 rounded-xl shadow-lg">
-            <h3 className="text-2xl font-bold text-brand-orange lg:whitespace-nowrap">
+            <h3 className="text-2xl font-bold text-brand-orange xl:whitespace-nowrap">
               {t("whyChooseUs.cards.trainers.title")}
             </h3>
             <p className="mt-2 text-xl font-bold text-brand-purple">
@@ -108,22 +116,28 @@ const WhyChooseUsSection = memo(() => {
               {t("whyChooseUs.cards.trainers.body")}
             </p>
             <div className="mt-auto pt-6 lg:min-h-[160px]">
-              <p className="uppercase tracking-wide text-base text-brand-gray-medium border-t border-gray-200 pt-4">
+              <p className="text-lg font-semibold text-brand-gray-dark border-t border-gray-200 pt-4">
                 {t("whyChooseUs.cards.trainers.proofLabel")}
               </p>
-              <div className="mt-4 flex flex-row flex-wrap items-center gap-4">
+              {/* Eén logo, dus dat mag de rest van het kaartje vullen in
+                  plaats van op de hoogte van de drie universiteitslogo's.
+                  75px is precies wat er in de 160px overblijft; hoger duwt de
+                  lijn boven het label omhoog, uit de pas met de andere twee. */}
+              <div className="mt-4">
                 <img
                   src={vmbnLogo}
                   alt={t("trust.altPrefix.vmbn")}
                   loading="lazy"
                   width={286}
                   height={208}
-                  className={logoClass}
+                  className="h-24 lg:h-[75px] w-auto object-contain grayscale opacity-80 hover:opacity-100 transition-opacity"
                 />
               </div>
             </div>
           </div>
         </div>
+
+        {bookingCta && <BookingCtaButton className="mt-12" />}
       </div>
     </section>
   );

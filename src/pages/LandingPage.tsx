@@ -8,7 +8,6 @@ import ProblemSection from "@/components/ProblemSection";
 import CohortPhotoSection from "@/components/CohortPhotoSection";
 import ApproachSection from "@/components/ApproachSection";
 import ResultsSection from "@/components/ResultsSection";
-import TestimonialSection from "@/components/TestimonialSection";
 import WhyChooseUsSection from "@/components/WhyChooseUsSection";
 import MasterclassStepsSection from "@/components/MasterclassStepsSection";
 import StickyCtaButtons from "@/components/StickyCtaButtons";
@@ -62,7 +61,6 @@ const LandingPage = () => {
       <CohortPhotoSection />
       <ApproachSection />
       <ResultsSection />
-      <TestimonialSection />
 
       <WhyChooseUsSection />
       <MasterclassStepsSection />

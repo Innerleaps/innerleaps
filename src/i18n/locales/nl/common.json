@@ -88,15 +88,15 @@
   },
   "hero": {
     "badge": "Wetenschappelijk onderbouwde methode",
-    "headlinePart1": "Vitaliteitstraining die je mensen de",
-    "headlinePart2": "controle teruggeeft",
-    "headlinePart3": "",
+    "headlinePart1": "Vitaliteitstraining die je medewerkers weer de",
+    "headlinePart2": "regie",
+    "headlinePart3": "geeft over hun stress",
     "headlinePart4": "",
-    "subtitle": "Gemaakt voor teams die wél willen, maar er de tijd niet voor hebben. Je collega's leren spanning op tijd te herkennen, voordat stress leidt tot uitval. Zo werk je concreet aan duurzame inzetbaarheid.",
+    "subtitle": "Gemaakt voor teams die wél willen, maar geen tijd hebben. Je collega's leren nieuw gedrag aan: ze herkennen spanning op tijd, voordat stress leidt tot uitval. Zo werk je concreet aan duurzame inzetbaarheid.",
     "ctaPrimary": "Vraag een gratis masterclass aan",
     "whyChooseUs": "Waarom organisaties ons kiezen",
     "stats": {
-      "dropoutRisk": "Uitval risico",
+      "dropoutRisk": "Uitvalrisico",
       "absenteeism": "Verzuim",
       "focus": "Focus & concentratie",
       "science": "Wetenschap",
@@ -109,18 +109,17 @@
     "proofRating": "4,7/5",
     "proofSuffix": "op Google Reviews",
     "photoAlt": "Deelnemers luisteren tijdens een Innerleaps-sessie",
-    "quote": "Innerleaps leverde meetbare resultaten, en een 9,4 uit 10 van ons team.",
-    "quoteAuthor": "Jochem van der Veen, CEO TheyDo",
+    "quote": "Innerleaps leverde meetbare resultaten. Ons team gaf de training een 9,4/10.",
     "trustedBy": "Zij gingen je voor"
   },
   "problem": {
     "title": "Eén leuke middag verandert niets aan hoe mensen met druk omgaan",
-    "triedThreeThings": "De meeste organisaties hebben er minstens één van geprobeerd.",
+    "triedThreeThings": "De meeste organisaties hebben ten minste één van deze stressmanagementmethodes al geprobeerd.",
     "cards": {
       "mindfulness": {
         "title": "Een inspirerende keynote",
         "lead": "Veel energie op de dag zelf.",
-        "fade": "Maandag alweer normaal."
+        "fade": "Maandag terug in oude patronen."
       },
       "stress": {
         "title": "Een stressworkshop",
@@ -130,7 +129,7 @@
       "app": {
         "title": "Een app-abonnement",
         "lead": "Licenties uitgedeeld aan iedereen.",
-        "fade": "Stil in week drie."
+        "fade": "Na een maand gebruikt nog geen 4% de app."
       }
     },
     "closingLine": "Daarom begonnen we bij <0>de vorm</0>, niet bij de inhoud."
@@ -138,9 +137,12 @@
   "cohortPhoto": {
     "alt": "Een groep collega's die samen in een sessie zitten, luisteren en lachen"
   },
+  "workshopPhoto": {
+    "alt": "Trainer geeft live groepsworkshop om stress te verlagen en verzuim te voorkomen"
+  },
   "approach": {
     "title": "Een vorm die past in de werkweek",
-    "intro": "Gemaakt voor mensen die wel willen, maar geen tijd hebben.",
+    "intro": "Klein genoeg om vol te houden, lang genoeg om te blijven hangen.",
     "stats": {
       "weeks": {
         "value": "6",
@@ -179,8 +181,8 @@
     "headlinePart2": "ons kiezen",
     "cards": {
       "format": {
-        "title": "Een vorm die past bij werk",
-        "stat": "1 uur + 15 min",
+        "title": "Weinig tijd, blijvend effect",
+        "stat": "1 uur / week + 15 min / dag",
         "body": "We namen een bewezen methode en lieten die passen in de werkweek. Zo kun je het als organisatie uitrollen en houden mensen het resultaat vast.",
         "proofLabel": "Wat dat betekent",
         "pills": {
@@ -192,7 +194,7 @@
       "research": {
         "title": "Wetenschappelijk onderzoek",
         "stat": "40+ jaar",
-        "body": "Gebouwd op MBSR, een van de best onderzochte methodes ter wereld.",
+        "body": "Gebouwd op MBSR, een van de best onderzochte stressmanagementmethodes ter wereld, met aantoonbaar blijvende gedragsverandering.",
         "proofLabel": "Onderzocht aan"
       },
       "trainers": {
@@ -204,11 +206,11 @@
     }
   },
   "testimonial": {
-    "quote": "Innerleaps leverde meetbare resultaten, en een 9,4 uit 10 van ons team. Precies wat we nodig hadden."
+    "quote": "Innerleaps leverde meetbare resultaten. Ons team gaf de training een 9,4/10. Precies wat we nodig hadden."
   },
   "masterclassSteps": {
     "headlinePart1": "Probeer het zelf in onze",
-    "headlinePart2": "gratis masterclass",
+    "headlinePart2": "masterclass",
     "intro": "In 60 minuten ervaart je team hoe wij werken, voordat je ergens aan vastzit.",
     "steps": {
       "call": {
@@ -218,17 +220,16 @@
       },
       "masterclass": {
         "eyebrow": "02 · 60 min · gratis",
-        "title": "De masterclass",
+        "title": "Vrijblijvende masterclass",
         "description": "Je team ervaart de methode zelf. Jij ziet hoe ze reageren."
       },
       "programme": {
         "eyebrow": "03 · 6 weken",
         "title": "Het programma",
-        "description": "Eén vast uur per week binnen werktijd. Max 15 per groep."
+        "description": "Beviel de masterclass? Dan start het programma: één vast uur per week binnen werktijd, max 15 per groep."
       }
     },
     "cta": "Vraag een gratis masterclass aan",
-    "note": "Geen traject voordat je team het zelf heeft ervaren.",
     "imageAlt": "Innerleaps-trainer geeft een interactieve masterclass, deelnemers steken hun hand op"
   },
   "methodology": {
@@ -241,7 +242,7 @@
     "imageAlt": "Training voor betere prestatie, minder stress en lager verzuim"
   },
   "programOverview": {
-    "headlinePart1": "Breintraining",
+    "headlinePart1": "Groepstraining",
     "headlinePart2": "voor échte",
     "headlinePart3": "gedragsverandering",
     "intro": "Ons kernprogramma duurt 6 weken. Vraag naar de mogelijkheden voor maatwerk.",
@@ -249,7 +250,7 @@
     "features": {
       "weeklyWorkshops": {
         "title": "Wekelijkse groepsworkshops",
-        "description": "Elke week een groepsworkshop van 60 minuten door één van onze geaccrediteerde trainers."
+        "description": "Elke week een live groepsworkshop van 60 minuten, geleid door een van onze geaccrediteerde trainers."
       },
       "accreditedTrainers": {
         "title": "Geaccrediteerde trainers",
@@ -278,8 +279,8 @@
     "cards": {
       "stress": {
         "title": "Stress level",
-        "employee": "Inzicht in persoonlijke stress level.",
-        "employer": "Inzicht in persoonlijke stress level."
+        "employee": "Inzicht in je eigen stressniveau.",
+        "employer": "Inzicht in je eigen stressniveau."
       },
       "attention": {
         "title": "Aandachtoefening",
@@ -297,30 +298,11 @@
       }
     },
     "review": "\"Deze workshop laat je duidelijk het belang zien van het trainen van je aandachtsspier. De workshop bestaat uit een mooie mix tussen oefeningen en theorie, waardoor je gelijk al wat ervaring opdoet. Denk dat iedereen hier wat aan heeft, dus kan dit zeker aanbevelen.\"",
-    "reviewer": "- Jeroen",
+    "reviewer": "Jeroen",
     "ctaEmployee": "Masterclass aanvragen bij Bas"
   },
   "trust": {
-    "headlinePart1": "Waarom organisaties voor",
-    "headlinePart2": "ons kiezen",
-    "items": {
-      "healthcareSystem": {
-        "title": "Onderliggende methode erkend door Nederlandse zorgsysteem",
-        "description": "Onze training bouwt voort op MBSR, een methode die Nederlandse zorgverzekeraars vergoeden vanuit de basisverzekering."
-      },
-      "research": {
-        "title": "40 jaar wetenschappelijk onderzoek",
-        "description": "Gebaseerd op de wetenschappelijke MBSR-methode, een van de best onderzochte interventies wereldwijd."
-      },
-      "trainers": {
-        "title": "Geaccrediteerde Trainers",
-        "description": "Al onze trainers zijn VMBN categorie 1 gecertificeerd, de hoogste erkenning binnen de VMBN. Dit betekent dat zij voldoen aan de strengste kwaliteitseisen op het gebied van opleiding, ervaring en professionaliteit."
-      }
-    },
     "altPrefix": {
-      "vgz": "Vitaliteitstraining herkend door VGZ",
-      "cz": "Vitaliteitstraining herkend door CZ",
-      "menzis": "Vitaliteitstraining herkend door Menzis",
       "oxford": "Vitaliteitstraining ontwikkeld door Oxford University",
       "umass": "Vitaliteitstraining ontwikkeld door University of Massachusetts",
       "uva": "Aandachttraining aan de Universiteit van Amsterdam",
@@ -338,8 +320,8 @@
     }
   },
   "booking": {
-    "title": "Even <0>sparren</0>?",
-    "intro": "Kies hieronder een moment. Het gesprek is vrijblijvend en duurt 20 minuten.",
+    "title": "Je <0>gratis masterclass</0> begint met een kort gesprek",
+    "intro": "Kies hieronder een moment. In 20 minuten bespreken we wat je team nodig heeft en plannen we de masterclass.",
     "bas": {
       "role": "Bas Ter Haar Romenij, Oprichter Innerleaps",
       "photoAlt": "Bas Ter Haar Romenij",

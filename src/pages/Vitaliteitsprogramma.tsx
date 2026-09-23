@@ -3,7 +3,9 @@ import { useSearchParams, useLocation } from "react-router-dom";
 import TrainingPageLayout from "@/components/TrainingPageLayout";
 import ROICalculator from "@/components/ROICalculator";
 import heroBackground from "@/assets/Vitaliteitsprogramma_presentatie_Innerleaps.webp";
-import breinTrainingImg from "@/assets/6_weken_brein_trainen.webp";
+import presentatie840 from "@/assets/training-presentatie-840w.webp";
+import presentatie600 from "@/assets/training-presentatie-600w.webp";
+import presentatieFallback from "@/assets/training-presentatie-840w.jpg";
 
 // Client logos
 import oliverLogo from "@/assets/Vitaliteitsprogramma_Oliver_Wyman_light-2.webp";
@@ -81,9 +83,17 @@ const Vitaliteitstraining = () => {
         tKey="vitality"
         heroImage={heroBackground}
         heroImageAlt="Vitaliteitstraining presentatie"
-        heroCtaOnClick={() => setIsCalculatorOpen(true)}
+        heroPhoto={{
+          srcSet: `${presentatie600} 600w, ${presentatie840} 840w`,
+          fallback: presentatieFallback,
+          width: 840,
+          height: 840,
+          alt: "Vitaliteitstraining presentatie",
+          className: "aspect-[4/3] lg:aspect-square object-cover object-[50%_60%]",
+          // Het publiek zit onderin beeld, het plafond erboven is leeg.
+          quotePosition: "top-right",
+        }}
         logos={logos}
-        weeksImage={breinTrainingImg}
         weeksLayout="stacked"
         masterclassVariant="employer"
         showBookingCtas

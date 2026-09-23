@@ -40,7 +40,16 @@ import StickyCtaButtons from "@/components/StickyCtaButtons";
  * met een andere verhouding, pas deze getallen dan mee aan.
  */
 const WEKEN_AFMETING = { width: 608, height: 430 } as const;
-import TrustSection from "@/components/TrustSection";
+import WhyChooseUsSection from "@/components/WhyChooseUsSection";
+import HeroSection, { type HeroPhoto } from "@/components/HeroSection";
+import CohortPhotoSection from "@/components/CohortPhotoSection";
+import ResultsSection from "@/components/ResultsSection";
+import MasterclassStepsSection from "@/components/MasterclassStepsSection";
+import masterclassAudience from "@/assets/masterclass-audience.webp";
+import workshopSpreker from "@/assets/training-spreker-publiek.webp";
+import oxfordLogo from "@/assets/oxford-logo-transparent.webp";
+import uMassLogo from "@/assets/Vitaliteitsprogramma_ontwikkeld_door_university_of_massachusetts.webp";
+import uvaLogo from "@/assets/Aandachttraining_aan_de_universiteit_van_amsterdam_new.webp";
 import ProgramOverviewSection from "@/components/ProgramOverviewSection";
 import MasterclassSection from "@/components/MasterclassSection";
 import BookingCtaButton from "@/components/BookingCtaButton";
@@ -84,6 +93,14 @@ export interface TrainingResult {
   icon: string;
   title: string;
   bullets: string[];
+  /** Gemeten effect, groot boven de kaart in plaats van het icoon. */
+  stats?: TrainingStat[];
+}
+
+export interface TrainingScience {
+  value: string;
+  label: string;
+  text: string;
 }
 
 export interface TrainingWeek {
@@ -138,6 +155,14 @@ export interface TrainingPageLayoutProps {
   extraSection?: ReactNode;
   /** Optional extra section after Footer (e.g. ROICalculator wrapper) */
   belowFaqSection?: ReactNode;
+  /**
+   * De opbouw van home: lichte hero met een duidelijke foto rechts, fotobreaks
+   * over de volle breedte, het blok "Wat deelnemers merken" na het programma,
+   * en de masterclass als stappen met wat je ervaart. Staat aan op de HR- en
+   * directiepagina. Zonder dit blijft de oude opbouw met de donkere
+   * foto-achtergrond, zoals op de deelnemerspagina's.
+   */
+  heroPhoto?: HeroPhoto;
 }
 
 const TrainingPageLayout = ({
@@ -156,6 +181,7 @@ const TrainingPageLayout = ({
   showBookingCtas = false,
   extraSection,
   belowFaqSection,
+  heroPhoto,
 }: TrainingPageLayoutProps) => {
   const { t } = useTranslation("training");
   const { t: tCommon } = useTranslation();
@@ -170,6 +196,13 @@ const TrainingPageLayout = ({
   const weeks = t(`${tKey}.weeks.items`, { returnObjects: true }) as TrainingWeek[];
   const weekIntro = t(`${tKey}.weeks.intro`, { returnObjects: true }) as string[];
   const faqItems = t(`${tKey}.faq.items`, { returnObjects: true }) as TrainingFaq[];
+  /* De lichte hero is off-white. Daaronder wisselen de uitdagingen en de
+     resultaten van kleur, anders lopen hero en uitdagingen in elkaar over. */
+  const challengesBg = heroPhoto ? "bg-white" : "bg-brand-off-white";
+  const challengeCardBg = heroPhoto ? "bg-brand-off-white" : "bg-white";
+  const resultsBg = heroPhoto ? "bg-brand-off-white" : "bg-white";
+  const resultCardBg = heroPhoto ? "bg-white" : "bg-brand-off-white";
+  const science = t(`${tKey}.results.science`, { returnObjects: true, defaultValue: null }) as TrainingScience | null;
   const metaTitle = t(`${tKey}.meta.title`, { defaultValue: "" });
   const metaDescription = t(`${tKey}.meta.description`);
   const canonicalUrl = `${SITE_URL}${pathname}`;
@@ -230,139 +263,153 @@ const TrainingPageLayout = ({
       {!hideStickyCtas && <StickyCtaButtons />}
 
       {/* Hero */}
-      <section id="hero" className="relative min-h-screen flex items-start sm:items-center overflow-hidden text-white">
-        <div className="absolute inset-0 z-0">
-          <img
-            src={heroImage}
-            alt={heroImageAlt}
-            className="w-full h-full object-cover"
-            fetchPriority="high"
-            loading="eager"
-          />
-          <div className="absolute inset-0 bg-black/50" />
-        </div>
+      {heroPhoto ? (
+        <HeroSection
+          title={
+            <Trans
+              i18nKey={`${tKey}.hero.title`}
+              t={t}
+              components={[<span className="text-brand-orange" />]}
+            />
+          }
+          subtitle={t(`${tKey}.hero.subtitle`)}
+          photo={heroPhoto}
+        />
+      ) : (
+        <section id="hero" className="relative min-h-screen flex items-start sm:items-center overflow-hidden text-white">
+          <div className="absolute inset-0 z-0">
+            <img
+              src={heroImage}
+              alt={heroImageAlt}
+              className="w-full h-full object-cover"
+              fetchPriority="high"
+              loading="eager"
+            />
+            <div className="absolute inset-0 bg-black/50" />
+          </div>
 
-        <div className="relative z-10 w-full px-4 pt-20 pb-8 sm:px-6 sm:py-12 lg:py-20 max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-12 items-start w-full overflow-hidden">
-            <div className="w-full space-y-6 animate-fade-in text-center lg:text-left">
-              <div className="w-full space-y-4 sm:space-y-6">
-                <div className="inline-flex items-center gap-2 bg-white/50 text-brand-purple px-3 py-1.5 sm:px-4 sm:py-2 rounded-full text-base md:text-lg font-medium backdrop-blur-sm">
-                  <Award className="h-4 w-4" />
-                  {t(`${tKey}.hero.badge`)}
-                </div>
-
-                <h1
-                  className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight font-heading break-words"
-                  style={{ textShadow: "0 2px 8px rgba(0,0,0,0.5)" }}
-                >
-                  <Trans
-                    i18nKey={`${tKey}.hero.title`}
-                    t={t}
-                    components={[<span className="text-brand-orange" />]}
-                  />
-                </h1>
-                <p
-                  className="text-xl md:text-2xl text-blue-100 leading-relaxed break-words"
-                  style={{ textShadow: "0 2px 8px rgba(0,0,0,0.5)" }}
-                >
-                  {t(`${tKey}.hero.subtitle`)}
-                </p>
-              </div>
-
-              {(heroCtaOnClick || heroSecondaryCta) && (
-                <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 w-full justify-center lg:justify-start">
-                  {heroCtaOnClick && (
-                    <Button
-                      size="lg"
-                      id="hero-cta"
-                      className="w-full sm:w-auto min-h-[44px] bg-brand-orange hover:bg-brand-orange text-white hover:text-white font-semibold py-3 px-4 sm:py-4 sm:px-6 rounded-lg text-base lg:text-lg shadow-xl"
-                      onClick={heroCtaOnClick}
-                    >
-                      {t(`${tKey}.hero.cta`)}
-                    </Button>
-                  )}
-                  {heroSecondaryCta && (
-                    <Button
-                      size="lg"
-                      variant="outline"
-                      className="w-full sm:w-auto min-h-[44px] bg-white/10 backdrop-blur-sm border-white text-white hover:bg-white hover:text-brand-purple font-semibold py-3 px-4 sm:py-4 sm:px-6 rounded-lg text-base lg:text-lg shadow-xl"
-                      onClick={heroSecondaryCta.onClick}
-                    >
-                      {heroSecondaryCta.label}
-                    </Button>
-                  )}
-                </div>
-              )}
-            </div>
-
-            <div className="w-full relative animate-scale-in mt-6 lg:mt-0">
-              <div className="w-full rounded-2xl p-4 sm:p-6 lg:p-8 max-w-full sm:max-w-md mx-auto bg-white/50 backdrop-blur-sm">
-                <div className="space-y-6">
-                  <div className="text-center">
-                    <h3 className="text-base sm:text-lg md:text-xl lg:text-2xl font-semibold mb-2 text-brand-purple">
-                      {t(`${tKey}.hero.statsTitle`)}
-                    </h3>
+          <div className="relative z-10 w-full px-4 pt-20 pb-8 sm:px-6 sm:py-12 lg:py-20 max-w-7xl mx-auto">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-12 items-start w-full overflow-hidden">
+              <div className="w-full space-y-6 animate-fade-in text-center lg:text-left">
+                <div className="w-full space-y-4 sm:space-y-6">
+                  <div className="inline-flex items-center gap-2 bg-white/50 text-brand-purple px-3 py-1.5 sm:px-4 sm:py-2 rounded-full text-base md:text-lg font-medium backdrop-blur-sm">
+                    <Award className="h-4 w-4" />
+                    {t(`${tKey}.hero.badge`)}
                   </div>
 
-                  <div className="w-full space-y-3 sm:space-y-4">
-                    {stats.map((stat, i) => (
-                      <div
-                        key={i}
-                        className="flex items-center justify-between w-full p-2.5 sm:p-3 lg:p-4 bg-brand-purple/90 rounded-lg"
-                      >
-                        <span
-                          style={{ textShadow: "0 2px 8px rgba(0,0,0,0.5)" }}
-                          className="text-base md:text-lg lg:text-xl text-white font-normal"
-                        >
-                          {stat.label}
-                        </span>
-                        <span className="text-brand-orange font-bold text-lg md:text-xl lg:text-2xl shrink-0">
-                          {stat.value}
-                        </span>
-                      </div>
-                    ))}
-                  </div>
-
-                  <a
-                    href="https://www.google.com/maps/place/Innerleaps/@52.1909763,5.2795551,7z/data=!4m8!3m7!1s0x41d7861255c94705:0x571bbf751b212eea!8m2!3d52.1909763!4d5.2795551!9m1!1b1!16s%2Fg%2F11y10xf1qm?entry=ttu&g_ep=EgoyMDI1MTAyOS4yIKXMDSoASAFQAw%3D%3D"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-full mt-3 sm:mt-4 block bg-brand-purple/90 backdrop-blur-sm rounded-lg p-2.5 sm:p-3 hover:bg-brand-purple transition-all group"
+                  <h1
+                    className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight font-heading break-words"
+                    style={{ textShadow: "0 2px 8px rgba(0,0,0,0.5)" }}
                   >
-                    <div className="flex items-center justify-center gap-2">
-                      <span className="text-white font-semibold text-lg">4,7 / 5</span>
-                      <div className="flex gap-0.5">
-                        {[...Array(5)].map((_, i) => (
-                          <Star
-                            key={i}
-                            className="w-4 h-4 fill-brand-orange text-brand-orange group-hover:scale-110 transition-transform"
-                          />
-                        ))}
-                      </div>
+                    <Trans
+                      i18nKey={`${tKey}.hero.title`}
+                      t={t}
+                      components={[<span className="text-brand-orange" />]}
+                    />
+                  </h1>
+                  <p
+                    className="text-xl md:text-2xl text-blue-100 leading-relaxed break-words"
+                    style={{ textShadow: "0 2px 8px rgba(0,0,0,0.5)" }}
+                  >
+                    {t(`${tKey}.hero.subtitle`)}
+                  </p>
+                </div>
+
+                {(heroCtaOnClick || heroSecondaryCta) && (
+                  <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 w-full justify-center lg:justify-start">
+                    {heroCtaOnClick && (
+                      <Button
+                        size="lg"
+                        id="hero-cta"
+                        className="w-full sm:w-auto min-h-[44px] bg-brand-orange hover:bg-brand-orange text-white hover:text-white font-semibold py-3 px-4 sm:py-4 sm:px-6 rounded-lg text-base lg:text-lg shadow-xl"
+                        onClick={heroCtaOnClick}
+                      >
+                        {t(`${tKey}.hero.cta`)}
+                      </Button>
+                    )}
+                    {heroSecondaryCta && (
+                      <Button
+                        size="lg"
+                        variant="outline"
+                        className="w-full sm:w-auto min-h-[44px] bg-white/10 backdrop-blur-sm border-white text-white hover:bg-white hover:text-brand-purple font-semibold py-3 px-4 sm:py-4 sm:px-6 rounded-lg text-base lg:text-lg shadow-xl"
+                        onClick={heroSecondaryCta.onClick}
+                      >
+                        {heroSecondaryCta.label}
+                      </Button>
+                    )}
+                  </div>
+                )}
+              </div>
+
+              <div className="w-full relative animate-scale-in mt-6 lg:mt-0">
+                <div className="w-full rounded-2xl p-4 sm:p-6 lg:p-8 max-w-full sm:max-w-md mx-auto bg-white/50 backdrop-blur-sm">
+                  <div className="space-y-6">
+                    <div className="text-center">
+                      <h3 className="text-base sm:text-lg md:text-xl lg:text-2xl font-semibold mb-2 text-brand-purple">
+                        {t(`${tKey}.hero.statsTitle`)}
+                      </h3>
                     </div>
-                    <p className="text-white text-base text-center mt-1">Google Reviews</p>
-                  </a>
+
+                    <div className="w-full space-y-3 sm:space-y-4">
+                      {stats.map((stat, i) => (
+                        <div
+                          key={i}
+                          className="flex items-center justify-between w-full p-2.5 sm:p-3 lg:p-4 bg-brand-purple/90 rounded-lg"
+                        >
+                          <span
+                            style={{ textShadow: "0 2px 8px rgba(0,0,0,0.5)" }}
+                            className="text-base md:text-lg lg:text-xl text-white font-normal"
+                          >
+                            {stat.label}
+                          </span>
+                          <span className="text-brand-orange font-bold text-lg md:text-xl lg:text-2xl shrink-0">
+                            {stat.value}
+                          </span>
+                        </div>
+                      ))}
+                    </div>
+
+                    <a
+                      href="https://www.google.com/maps/place/Innerleaps/@52.1909763,5.2795551,7z/data=!4m8!3m7!1s0x41d7861255c94705:0x571bbf751b212eea!8m2!3d52.1909763!4d5.2795551!9m1!1b1!16s%2Fg%2F11y10xf1qm?entry=ttu&g_ep=EgoyMDI1MTAyOS4yIKXMDSoASAFQAw%3D%3D"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-full mt-3 sm:mt-4 block bg-brand-purple/90 backdrop-blur-sm rounded-lg p-2.5 sm:p-3 hover:bg-brand-purple transition-all group"
+                    >
+                      <div className="flex items-center justify-center gap-2">
+                        <span className="text-white font-semibold text-lg">4,7 / 5</span>
+                        <div className="flex gap-0.5">
+                          {[...Array(5)].map((_, i) => (
+                            <Star
+                              key={i}
+                              className="w-4 h-4 fill-brand-orange text-brand-orange group-hover:scale-110 transition-transform"
+                            />
+                          ))}
+                        </div>
+                      </div>
+                      <p className="text-white text-base text-center mt-1">Google Reviews</p>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="w-full mt-8 sm:mt-12 lg:mt-16">
+              <div className="relative overflow-hidden [mask-image:linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)]">
+                <div className="flex gap-8 animate-marquee-mobile md:animate-marquee-tablet">
+                  {logos.map((logo, index) => (
+                    <img
+                      key={index}
+                      src={logo.src}
+                      alt={logo.alt}
+                      className="h-8 sm:h-10 md:h-12 object-contain flex-shrink-0 opacity-100 transition-all"
+                    />
+                  ))}
                 </div>
               </div>
             </div>
           </div>
-
-          <div className="w-full mt-8 sm:mt-12 lg:mt-16">
-            <div className="relative overflow-hidden [mask-image:linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)]">
-              <div className="flex gap-8 animate-marquee-mobile md:animate-marquee-tablet">
-                {logos.map((logo, index) => (
-                  <img
-                    key={index}
-                    src={logo.src}
-                    alt={logo.alt}
-                    className="h-8 sm:h-10 md:h-12 object-contain flex-shrink-0 opacity-100 transition-all"
-                  />
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+        </section>
+      )}
 
       {/* Introblok. Alleen tonen als de pagina een `intro` heeft in training.json.
           Staat bewust vlak onder de hero: een crawler en een AI-antwoordmachine
@@ -378,7 +425,7 @@ const TrainingPageLayout = ({
       )}
 
       {/* Challenges */}
-      <section className="py-16 md:py-24 bg-brand-off-white">
+      <section className={`py-16 md:py-24 ${challengesBg}`}>
         <div className="container mx-auto px-4">
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-purple text-center leading-tight mb-6">
             <Trans
@@ -400,7 +447,7 @@ const TrainingPageLayout = ({
                 : total === 4 && i === 3 ? "md:col-start-3"
                 : "";
               return (
-                <div key={i} className={`md:col-span-2 ${offset} bg-white p-6 rounded-lg space-y-4`}>
+                <div key={i} className={`md:col-span-2 ${offset} ${challengeCardBg} p-6 rounded-lg space-y-4`}>
                   <div className="p-3 rounded-lg bg-brand-orange/5 w-fit mx-auto">
                     <Icon name={c.icon} />
                   </div>
@@ -414,7 +461,7 @@ const TrainingPageLayout = ({
       </section>
 
       {/* Results */}
-      <section className="py-16 md:py-24 bg-white">
+      <section className={`py-16 md:py-24 ${resultsBg}`}>
         <div className="container mx-auto px-4">
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-purple text-center leading-tight mb-6">
             <Trans
@@ -435,10 +482,25 @@ const TrainingPageLayout = ({
                 : total === 4 && i === 3 ? "md:col-start-3"
                 : "";
               return (
-                <div key={i} className={`md:col-span-2 ${offset} bg-brand-off-white p-6 rounded-lg space-y-4`}>
-                  <div className="p-3 rounded-lg bg-brand-orange/5 w-fit mx-auto">
-                    <Icon name={r.icon} />
-                  </div>
+                <div key={i} className={`md:col-span-2 ${offset} ${resultCardBg} p-6 rounded-lg space-y-4`}>
+                  {r.stats ? (
+                    /* Zelfde hoogte als het icoonvak op kaarten zonder cijfer,
+                       zodat de koppen op één lijn blijven. */
+                    <div className="md:min-h-[104px] flex flex-wrap items-start justify-center gap-x-5 gap-y-3 text-center">
+                      {r.stats.map((stat) => (
+                        <div key={stat.label}>
+                          <p className="text-5xl md:text-4xl xl:text-6xl font-bold text-brand-orange leading-none">{stat.value}</p>
+                          <p className="mt-2 text-base font-semibold text-brand-purple">{stat.label}</p>
+                        </div>
+                      ))}
+                    </div>
+                  ) : (
+                    <div className={`${science ? "md:min-h-[104px]" : ""} flex items-start justify-center`}>
+                      <div className="p-3 rounded-lg bg-brand-orange/5 w-fit">
+                        <Icon name={r.icon} />
+                      </div>
+                    </div>
+                  )}
                   <h3 className="text-xl md:text-2xl font-bold text-brand-gray-dark text-center">{r.title}</h3>
                   <div className="space-y-2">
                     {r.bullets.map((b, j) => (
@@ -453,9 +515,35 @@ const TrainingPageLayout = ({
             })}
           </div>
 
+          {/* De bronnen van de cijfers in de kaarten. Klein en in één regel,
+              direct onder de kaarten waar ze bij horen: wie twijfelt ziet dat
+              het onderbouwd is, wie het gelooft leest eroverheen. */}
+          {t(`${tKey}.results.sources`, { defaultValue: "" }) && (
+            <p className="max-w-6xl mx-auto mt-4 text-base text-brand-gray-medium text-center">
+              {t(`${tKey}.results.sources`)}
+            </p>
+          )}
+
+          {science && (
+            <div className={`max-w-6xl mx-auto mt-8 ${resultCardBg} rounded-lg p-6 md:p-8 grid md:grid-cols-[auto_1fr] lg:grid-cols-[auto_1fr_auto] gap-6 md:gap-10 items-center text-center md:text-left`}>
+              <div>
+                <p className="text-5xl lg:text-6xl font-bold text-brand-orange leading-none">{science.value}</p>
+                <p className="mt-2 text-base font-semibold text-brand-purple">{science.label}</p>
+              </div>
+              <p className="text-xl text-brand-gray-medium leading-relaxed">{science.text}</p>
+              <div className="md:col-span-2 lg:col-span-1 flex flex-wrap items-center justify-center gap-5">
+                <img src={oxfordLogo} alt={tCommon("trust.altPrefix.oxford")} loading="lazy" width={1500} height={443} className="h-7 w-auto grayscale opacity-80" />
+                <img src={uMassLogo} alt={tCommon("trust.altPrefix.umass")} loading="lazy" width={787} height={314} className="h-7 w-auto grayscale opacity-80" />
+                <img src={uvaLogo} alt={tCommon("trust.altPrefix.uva")} loading="lazy" width={1920} height={572} className="h-7 w-auto grayscale opacity-80" />
+              </div>
+            </div>
+          )}
+
           {showBookingCtas && <BookingCtaButton className="mt-12" />}
         </div>
       </section>
+
+      {heroPhoto && <CohortPhotoSection />}
 
       {/* Program Overview (shared, already i18n) */}
       <ProgramOverviewSection
@@ -463,6 +551,16 @@ const TrainingPageLayout = ({
         bookingCta={showBookingCtas}
         fourthFeature="workbook"
       />
+
+      {heroPhoto && (
+        <CohortPhotoSection
+          src={workshopSpreker}
+          alt={tCommon("workshopPhoto.alt")}
+          width={1333}
+          height={560}
+          objectPosition="object-[center_15%]"
+        />
+      )}
 
       {/* Weeks */}
       {weeks && weeks.length > 0 && (
@@ -480,7 +578,7 @@ const TrainingPageLayout = ({
               />
             </h2>
 
-            {weeksImage && (
+            {(weeksImage || heroPhoto) && (
               weeksLayout === "stacked" ? (
                 /* Alles onder elkaar en even breed als de weekblokken eronder. */
                 <div className="max-w-3xl mx-auto mb-16 space-y-8">
@@ -495,12 +593,16 @@ const TrainingPageLayout = ({
                       </p>
                     ))}
                   </div>
-                  <img
-                    src={weeksImage}
-                    alt={t(`${tKey}.weeks.imageAlt`)}
-                    {...WEKEN_AFMETING}
-                    className="w-full h-auto rounded-2xl shadow-lg"
-                  />
+                  {/* In de fotovariant staan de foto's als breaks over de volle
+                      breedte, dus hier alleen de tekst. */}
+                  {weeksImage && (
+                    <img
+                      src={weeksImage}
+                      alt={t(`${tKey}.weeks.imageAlt`)}
+                      {...WEKEN_AFMETING}
+                      className="w-full h-auto rounded-2xl shadow-lg"
+                    />
+                  )}
                 </div>
               ) : (
                 <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center mb-16">
@@ -567,12 +669,26 @@ const TrainingPageLayout = ({
         </section>
       )}
 
-      {/* Masterclass */}
-      {!hideMasterclass && <MasterclassSection variant={masterclassVariant} />}
+      {heroPhoto ? (
+        <>
+          <ResultsSection />
+          <CohortPhotoSection
+            src={masterclassAudience}
+            alt={tCommon("masterclass.imageAlt")}
+            width={1920}
+            height={1280}
+            objectPosition="object-[center_35%]"
+          />
+          {!hideMasterclass && <MasterclassStepsSection showExperience />}
+        </>
+      ) : (
+        /* Masterclass */
+        !hideMasterclass && <MasterclassSection variant={masterclassVariant} />
+      )}
 
       {extraSection}
 
-      <TrustSection variant="white" bookingCta={showBookingCtas} />
+      <WhyChooseUsSection bookingCta={showBookingCtas} />
 
       {belowFaqSection}
 

@@ -5,33 +5,14 @@
       "description": "Innerleaps offers organisations a 6-week vitality training with 42% participation, versus 3-8% for standard EAPs. Preventive, science-based, pay only for actual participants."
     },
     "hero": {
-      "badge": "Scientifically proven training",
+      "badge": "Scientifically proven method",
       "title": "Improve <0>sustainable employability</0> and reduce absenteeism",
       "subtitle": "Sustainable employability starts with less work stress. Our training teaches your people to spot tension early and adjust in time.",
-      "cta": "Calculate your impact",
-      "statsTitle": "Why organisations choose us",
-      "stats": [
-        {
-          "label": "Sick leave",
-          "value": "-21%"
-        },
-        {
-          "label": "Burn-out risk",
-          "value": "-70%"
-        },
-        {
-          "label": "Satisfaction",
-          "value": "+15%"
-        },
-        {
-          "label": "Science",
-          "value": "40+ years"
-        }
-      ]
+      "cta": "Calculate your impact"
     },
     "challenges": {
       "title": "Do you recognise one of these <0>challenges</0>?",
-      "subtitle": "These are the challenges our brain training tackles.",
+      "subtitle": "These are the challenges our group training tackles.",
       "items": [
         {
           "icon": "Activity",
@@ -47,16 +28,11 @@
           "icon": "BedDouble",
           "title": "High absenteeism",
           "text": "Employees drop out because stress complaints keep coming back."
-        },
-        {
-          "icon": "Users",
-          "title": "Key people leave",
-          "text": "Your key people are in demand, and on this labour market they are gone before you know it."
         }
       ]
     },
     "results": {
-      "title": "The <0>results</0> of our training",
+      "title": "The <0>effect</0> of our training on your team",
       "subtitle": "The scientifically proven effects of our training.",
       "items": [
         {
@@ -65,6 +41,12 @@
           "bullets": [
             "Employees sense tension earlier and adjust course themselves.",
             "Employees become more resilient under high pressure and recover faster."
+          ],
+          "stats": [
+            {
+              "value": "-26%",
+              "label": "stress"
+            }
           ]
         },
         {
@@ -73,6 +55,12 @@
           "bullets": [
             "Employees flag their limit before they cross it.",
             "More ownership of their own workload."
+          ],
+          "stats": [
+            {
+              "value": "+11%",
+              "label": "resilience"
+            }
           ]
         },
         {
@@ -81,17 +69,21 @@
           "bullets": [
             "Stress complaints are spotted early, before someone drops out.",
             "Less long-term absence, so less pressure on the rest."
-          ]
-        },
-        {
-          "icon": "Smile",
-          "title": "Talent stays",
-          "bullets": [
-            "More enjoyment at work and more engagement.",
-            "Lower turnover, your key people stay."
+          ],
+          "stats": [
+            {
+              "value": "-70%",
+              "label": "risk of long-term absence"
+            }
           ]
         }
-      ]
+      ],
+      "science": {
+        "value": "40+ years",
+        "label": "of scientific research",
+        "text": "Our method is based on MBSR, developed in 1979 at the University of Massachusetts. Hundreds of studies prove it effectively reduces stress. It works so well that universities such as Oxford and Amsterdam continue to research it."
+      },
+      "sources": "Sources: Aikens et al. (2014), De Bruin et al. (2018)"
     },
     "weeks": {
       "title": "The <0>6-week</0> Vitality Plus programme",
@@ -629,41 +621,17 @@
     "hero": {
       "badge": "Scientifically proven method",
       "title": "<0>Sustainable performance</0>, even under pressure",
-      "subtitle": "Less tension and better performance with our evidence based brain training for your team",
-      "cta": "Calculate your ROI",
-      "statsTitle": "Why organisations choose us",
-      "stats": [
-        {
-          "label": "Focus and concentration",
-          "value": "+24%"
-        },
-        {
-          "label": "Productivity",
-          "value": "+8%"
-        },
-        {
-          "label": "Absenteeism",
-          "value": "-21%"
-        },
-        {
-          "label": "Science",
-          "value": "40+ years"
-        }
-      ]
+      "subtitle": "Less tension and better performance, with evidence-based group training for your team.",
+      "cta": "Calculate your ROI"
     },
     "challenges": {
       "title": "Do you recognise these <0>challenges</0> in your team?",
-      "subtitle": "These are the challenges we address with our brain training for teams.",
+      "subtitle": "These are the challenges we address with our group training for teams.",
       "items": [
         {
           "icon": "Activity",
           "title": "A high workload",
           "text": "The volume of work and the ambitions lead to tension and stress."
-        },
-        {
-          "icon": "Frown",
-          "title": "Collaboration could be better",
-          "text": "Collaboration and mutual understanding could be better."
         },
         {
           "icon": "AlertCircle",
@@ -687,15 +655,12 @@
           "bullets": [
             "Your team notices tension earlier and adjusts course itself.",
             "More resilience under high pressure and faster recovery."
-          ]
-        },
-        {
-          "icon": "Users",
-          "title": "Better collaboration",
-          "bullets": [
-            "People listen to each other better.",
-            "Team members have more understanding for one another.",
-            "More enjoyment at work and more satisfaction."
+          ],
+          "stats": [
+            {
+              "value": "-26%",
+              "label": "stress"
+            }
           ]
         },
         {
@@ -704,6 +669,12 @@
           "bullets": [
             "Better concentration and fewer mistakes, even under pressure.",
             "Productivity rises while tension actually goes down."
+          ],
+          "stats": [
+            {
+              "value": "+8.6%",
+              "label": "productivity"
+            }
           ]
         },
         {
@@ -712,9 +683,21 @@
           "bullets": [
             "Less absenteeism and less long-term absence.",
             "A cost item that structurally comes down."
+          ],
+          "stats": [
+            {
+              "value": "-70%",
+              "label": "risk of long-term absence"
+            }
           ]
         }
-      ]
+      ],
+      "science": {
+        "value": "40+ years",
+        "label": "of scientific research",
+        "text": "Our method is based on MBSR, developed in 1979 at the University of Massachusetts. Hundreds of studies prove it effectively reduces stress. It works so well that universities such as Oxford and Amsterdam continue to research it."
+      },
+      "sources": "Sources: Aikens et al. (2014), Innerleaps internal research, De Bruin et al. (2018)"
     },
     "weeks": {
       "title": "The <0>6-week</0> core programme",

@@ -90,9 +90,9 @@
     "badge": "Scientifically proven method",
     "headlinePart1": "Vitality training that puts your people",
     "headlinePart2": "back in control",
-    "headlinePart3": "",
+    "headlinePart3": "of their stress",
     "headlinePart4": "",
-    "subtitle": "Built for teams that want to take part but have no time. Your people learn to catch tension early, before stress turns into sick leave. A practical way to become a sustainable employer.",
+    "subtitle": "Built for teams that want to take part but have no time. Your people build new habits: they catch tension early, before stress turns into sick leave. A practical way to become a sustainable employer.",
     "ctaPrimary": "Request a free masterclass",
     "whyChooseUs": "Why organisations choose us",
     "stats": {
@@ -109,18 +109,17 @@
     "proofRating": "4.7/5",
     "proofSuffix": "on Google Reviews",
     "photoAlt": "Participants listening during an Innerleaps session",
-    "quote": "Measurable results, and a 9.4 out of 10 from our team.",
-    "quoteAuthor": "Jochem van der Veen, CEO TheyDo",
+    "quote": "Innerleaps delivered measurable results. Our team rated the training 9.4/10.",
     "trustedBy": "Trusted by"
   },
   "problem": {
     "title": "One good afternoon doesn't change how people handle pressure",
-    "triedThreeThings": "Most organisations have tried at least one of these.",
+    "triedThreeThings": "Most organisations have already tried at least one of these stress management methods.",
     "cards": {
       "mindfulness": {
         "title": "An inspiring keynote",
         "lead": "Great energy on the day.",
-        "fade": "Back to normal on Monday."
+        "fade": "Back to old habits by Monday."
       },
       "stress": {
         "title": "A stress workshop",
@@ -130,7 +129,7 @@
       "app": {
         "title": "An app subscription",
         "lead": "Licences issued to everyone.",
-        "fade": "Quiet by week three."
+        "fade": "After a month, fewer than 4% still use it."
       }
     },
     "closingLine": "So we started from <0>the format</0>, not the content."
@@ -138,9 +137,12 @@
   "cohortPhoto": {
     "alt": "A group of colleagues seated together in a session, listening and laughing"
   },
+  "workshopPhoto": {
+    "alt": "Trainer leading a live group workshop to reduce stress and prevent absenteeism"
+  },
   "approach": {
     "title": "A format that fits the working week",
-    "intro": "Built for people who want to, but don't have the time.",
+    "intro": "Small enough to keep up, long enough to stick.",
     "stats": {
       "weeks": {
         "value": "6",
@@ -179,8 +181,8 @@
     "headlinePart2": "choose us",
     "cards": {
       "format": {
-        "title": "A format built for work",
-        "stat": "1 hr + 15 min",
+        "title": "Little time, lasting effect",
+        "stat": "1 hr / week + 15 min / day",
         "body": "We took a proven method and made it fit the working week, so organisations can roll it out and people keep the results.",
         "proofLabel": "What that means",
         "pills": {
@@ -192,7 +194,7 @@
       "research": {
         "title": "Scientific research",
         "stat": "40+ years",
-        "body": "Built on MBSR, one of the most thoroughly researched methods in the world.",
+        "body": "Built on MBSR, one of the most thoroughly researched stress management methods in the world, with proven lasting behaviour change.",
         "proofLabel": "Researched at"
       },
       "trainers": {
@@ -204,11 +206,11 @@
     }
   },
   "testimonial": {
-    "quote": "Innerleaps produced measurable results, and a 9.4 out of 10 from our team. Exactly what we needed."
+    "quote": "Innerleaps delivered measurable results. Our team rated the training 9.4/10. Exactly what we needed."
   },
   "masterclassSteps": {
     "headlinePart1": "Try it yourself in our",
-    "headlinePart2": "free masterclass",
+    "headlinePart2": "masterclass",
     "intro": "In 60 minutes, your team experiences how we work, before you commit to anything.",
     "steps": {
       "call": {
@@ -218,17 +220,16 @@
       },
       "masterclass": {
         "eyebrow": "02 · 60 min · free",
-        "title": "The masterclass",
+        "title": "No-obligation masterclass",
         "description": "Your team experiences the method first-hand. You see how they respond."
       },
       "programme": {
         "eyebrow": "03 · 6 weeks",
         "title": "The programme",
-        "description": "One fixed hour a week during working hours. Max 15 per group."
+        "description": "Enjoyed the masterclass? Then the programme starts: one fixed hour a week during working hours, max 15 per group."
       }
     },
     "cta": "Request a free masterclass",
-    "note": "No cohort until your team has experienced it.",
     "imageAlt": "Innerleaps trainer leading an interactive masterclass with participants raising their hands"
   },
   "methodology": {
@@ -241,7 +242,7 @@
     "imageAlt": "Training for better performance, less stress and lower sick leave"
   },
   "programOverview": {
-    "headlinePart1": "Brain training",
+    "headlinePart1": "Group training",
     "headlinePart2": "for real",
     "headlinePart3": "behaviour change",
     "intro": "Our core programme runs for 6 weeks. Ask us about tailored options for your team.",
@@ -249,7 +250,7 @@
     "features": {
       "weeklyWorkshops": {
         "title": "Weekly group workshops",
-        "description": "A 60-minute group workshop every week, led by one of our accredited trainers."
+        "description": "Every week, a live 60-minute group workshop led by one of our accredited trainers."
       },
       "accreditedTrainers": {
         "title": "Accredited professional trainers",
@@ -297,30 +298,11 @@
       }
     },
     "review": "\"This workshop really shows you why training your attention muscle matters. It's a great mix of theory and exercises, so you immediately get to experience what it's like. I think anyone can benefit from this, so I can definitely recommend it.\"",
-    "reviewer": "- Jeroen",
+    "reviewer": "Jeroen",
     "ctaEmployee": "Request a masterclass from Bas"
   },
   "trust": {
-    "headlinePart1": "Why organisations",
-    "headlinePart2": "choose us",
-    "items": {
-      "healthcareSystem": {
-        "title": "Method recognised by the Dutch healthcare system",
-        "description": "Our training builds on MBSR, a method Dutch health insurers reimburse under basic health insurance."
-      },
-      "research": {
-        "title": "40 years of scientific research",
-        "description": "Built on the scientific MBSR method, one of the most thoroughly researched interventions in the world."
-      },
-      "trainers": {
-        "title": "Accredited trainers",
-        "description": "All our trainers are VMBN category 1 certified, the highest accreditation within VMBN. This means they meet the strictest quality standards for training, experience and professionalism."
-      }
-    },
     "altPrefix": {
-      "vgz": "Innerleaps recognised by VGZ health insurance",
-      "cz": "Innerleaps recognised by CZ health insurance",
-      "menzis": "Innerleaps recognised by Menzis health insurance",
       "oxford": "Method developed at Oxford University",
       "umass": "Method developed at the University of Massachusetts",
       "uva": "Attention training studied at the University of Amsterdam",
@@ -338,8 +320,8 @@
     }
   },
   "booking": {
-    "title": "Fancy a <0>chat</0>?",
-    "intro": "Pick a moment below. The call is free of obligation and takes 20 minutes.",
+    "title": "Your <0>free masterclass</0> starts with a short call",
+    "intro": "Pick a moment below. In 20 minutes we discuss what your team needs and schedule the masterclass.",
     "bas": {
       "role": "Bas Ter Haar Romenij, Founder of Innerleaps",
       "photoAlt": "Bas Ter Haar Romenij",

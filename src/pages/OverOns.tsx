@@ -3,7 +3,7 @@ import StickyCtaButtons from "@/components/StickyCtaButtons";
 import BookingBlock from "@/components/BookingBlock";
 import BookingIntro from "@/components/BookingIntro";
 import { BAS_PHOTO, scrollToBookingWidget } from "@/lib/booking";
-import TrustSection from "@/components/TrustSection";
+import WhyChooseUsSection from "@/components/WhyChooseUsSection";
 
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -253,8 +253,8 @@ const OverOns = () => {
 
       {/* Boekingswidget direct onder het verhaal van Bas. Dat is het punt waar
           het vertrouwen op deze pagina het hoogst is, en de knop hierboven staat
-          er vlak bij, zodat de sprong naar het anker klein blijft. TrustSection
-          komt eronder als geruststelling voor wie nog niet klikt. */}
+          er vlak bij, zodat de sprong naar het anker klein blijft. "Waarom organisaties
+          voor ons kiezen" komt eronder als geruststelling voor wie nog niet klikt. */}
       <section className="section-padding bg-brand-off-white">
         <div className="container-custom">
           <div className="mx-auto max-w-3xl">
@@ -265,7 +265,7 @@ const OverOns = () => {
         </div>
       </section>
 
-      <TrustSection />
+      <WhyChooseUsSection background="white" />
       <Footer />
     </div>
   );

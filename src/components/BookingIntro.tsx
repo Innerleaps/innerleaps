@@ -19,7 +19,7 @@ interface BookingIntroProps {
   /**
    * Een eigen kop en tekst, voor de bedanktpagina's. Daar is de aanleiding om
    * te boeken een andere: iemand heeft net een berekening of een rapport
-   * aangevraagd, en dan slaat "Even sparren?" de plank mis. Laat je ze weg,
+   * aangevraagd, en dan slaat een kop over de masterclass de plank mis. Laat je ze weg,
    * dan staat de gewone tekst er, zoals op /contact en /over-ons.
    */
   title?: React.ReactNode;
