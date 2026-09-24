@@ -214,12 +214,12 @@
     "intro": "In 60 minutes, your team experiences how we work, before you commit to anything.",
     "steps": {
       "call": {
-        "eyebrow": "01 · 20 min · free",
+        "eyebrow": "01 · 20 min",
         "title": "A short call",
         "description": "What you've tried, what your people are carrying, and whether this fits."
       },
       "masterclass": {
-        "eyebrow": "02 · 60 min · free",
+        "eyebrow": "02 · 60 min",
         "title": "No-obligation masterclass",
         "description": "Your team experiences the method first-hand. You see how they respond."
       },

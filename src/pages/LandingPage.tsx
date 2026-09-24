@@ -62,8 +62,9 @@ const LandingPage = () => {
       <ApproachSection />
       <ResultsSection />
 
-      <WhyChooseUsSection />
-      <MasterclassStepsSection />
+      {/* Wisselend wit en off-white: resultaten off-white, dan wit, dan off-white. */}
+      <WhyChooseUsSection background="white" />
+      <MasterclassStepsSection background="off-white" />
       <Footer />
 
       {/* Calculator Modal */}

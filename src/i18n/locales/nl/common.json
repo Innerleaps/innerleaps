@@ -214,12 +214,12 @@
     "intro": "In 60 minuten ervaart je team hoe wij werken, voordat je ergens aan vastzit.",
     "steps": {
       "call": {
-        "eyebrow": "01 · 20 min · gratis",
+        "eyebrow": "01 · 20 min",
         "title": "Een kort gesprek",
         "description": "Wat je al hebt geprobeerd, wat je mensen meedragen, en of dit past."
       },
       "masterclass": {
-        "eyebrow": "02 · 60 min · gratis",
+        "eyebrow": "02 · 60 min",
         "title": "Vrijblijvende masterclass",
         "description": "Je team ervaart de methode zelf. Jij ziet hoe ze reageren."
       },

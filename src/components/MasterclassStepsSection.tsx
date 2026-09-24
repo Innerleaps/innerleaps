@@ -28,15 +28,21 @@ interface MasterclassStepsSectionProps {
    * waar een bezoeker meer wil weten voordat hij aanvraagt.
    */
   showExperience?: boolean;
+  /** Off-white als de sectie erboven wit is. De stapkaarten worden dan wit. */
+  background?: "white" | "off-white";
 }
 
-const MasterclassStepsSection = memo(({ showExperience = false }: MasterclassStepsSectionProps) => {
+const MasterclassStepsSection = memo(({ showExperience = false, background = "white" }: MasterclassStepsSectionProps) => {
+  const offWhite = background === "off-white";
   const { t } = useTranslation();
   const { pathname } = useLocation();
   const lang = detectLanguageFromPath(pathname);
 
   return (
-    <section id="masterclass" className="scroll-mt-28 section-padding bg-white">
+    <section
+      id="masterclass"
+      className={`scroll-mt-28 section-padding ${offWhite ? "bg-brand-off-white" : "bg-white"}`}
+    >
       <div className="container-custom">
         {/* Kop over de volle breedte, ook over de foto, net als bij
             "Waarom organisaties voor ons kiezen". */}
@@ -101,7 +107,7 @@ const MasterclassStepsSection = memo(({ showExperience = false }: MasterclassSte
               {STEPS.map(({ key, icon: Icon }) => (
                 <div
                   key={key}
-                  className={`flex items-start gap-5 bg-brand-off-white p-6 rounded-xl ${
+                  className={`flex items-start gap-5 ${offWhite ? "bg-white" : "bg-brand-off-white"} p-6 rounded-xl ${
                     showExperience && key === "masterclass" ? "border-2 border-brand-orange" : ""
                   }`}
                 >
