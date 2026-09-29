@@ -95,7 +95,6 @@ const Vitaliteitstraining = () => {
         }}
         logos={logos}
         weeksLayout="stacked"
-        masterclassVariant="employer"
         showBookingCtas
         belowFaqSection={
           <div id="calculator">

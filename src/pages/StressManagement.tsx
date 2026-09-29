@@ -77,7 +77,6 @@ const StressManagement = () => {
       weeksLayout="stacked"
       hideStickyCtas
       showMethodCtaAfterWeeks
-      masterclassVariant="employee"
     />
   );
 };

@@ -76,7 +76,6 @@ const PrestatieProgramma = () => {
       weeksLayout="stacked"
       hideStickyCtas
       showMethodCtaAfterWeeks
-      masterclassVariant="employee"
     />
   );
 };

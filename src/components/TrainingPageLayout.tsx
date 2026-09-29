@@ -51,7 +51,6 @@ import oxfordLogo from "@/assets/oxford-logo-transparent.webp";
 import uMassLogo from "@/assets/Vitaliteitsprogramma_ontwikkeld_door_university_of_massachusetts.webp";
 import uvaLogo from "@/assets/Aandachttraining_aan_de_universiteit_van_amsterdam_new.webp";
 import ProgramOverviewSection from "@/components/ProgramOverviewSection";
-import MasterclassSection from "@/components/MasterclassSection";
 import BookingCtaButton from "@/components/BookingCtaButton";
 import HreflangTags from "@/i18n/HreflangTags";
 
@@ -126,7 +125,7 @@ export interface TrainingPageLayoutProps {
   heroSecondaryCta?: { label: string; onClick: () => void };
   /** Logos for the marquee */
   logos: { src: string; alt: string }[];
-  /** Optional "weeks" / program-detail block (shown above MasterclassSection) */
+  /** Optional "weeks" / program-detail block (shown above the masterclass block) */
   weeksImage?: string;
   /**
    * Opmaak van de introblok boven de weken. "columns" zet de tekst links en de
@@ -135,9 +134,7 @@ export interface TrainingPageLayoutProps {
    * ongemerkt verspringen.
    */
   weeksLayout?: "columns" | "stacked";
-  /** Variant for the MasterclassSection */
-  masterclassVariant?: "employer" | "employee";
-  /** Hide the MasterclassSection entirely */
+  /** Hide the masterclass block entirely */
   hideMasterclass?: boolean;
   /** Hide the floating sticky CTAs (StickyCtaButtons) */
   hideStickyCtas?: boolean;
@@ -174,7 +171,6 @@ const TrainingPageLayout = ({
   logos,
   weeksImage,
   weeksLayout = "columns",
-  masterclassVariant = "employer",
   hideMasterclass = false,
   hideStickyCtas = false,
   showMethodCtaAfterWeeks = false,
@@ -669,7 +665,7 @@ const TrainingPageLayout = ({
         </section>
       )}
 
-      {heroPhoto ? (
+      {heroPhoto && (
         <>
           <ResultsSection />
           <CohortPhotoSection
@@ -679,12 +675,13 @@ const TrainingPageLayout = ({
             height={1280}
             objectPosition="object-[center_35%]"
           />
-          {!hideMasterclass && <MasterclassStepsSection showExperience />}
         </>
-      ) : (
-        /* Masterclass */
-        !hideMasterclass && <MasterclassSection variant={masterclassVariant} />
       )}
+
+      {/* Overal hetzelfde masterclassblok als op home. Het hing eerst aan
+          heroPhoto, waardoor de stress- en prestatiepagina nog het oude blok
+          kregen. */}
+      {!hideMasterclass && <MasterclassStepsSection showExperience />}
 
       {extraSection}
 

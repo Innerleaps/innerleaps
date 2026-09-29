@@ -4,7 +4,7 @@ import { useTranslation } from "react-i18next";
 import SimplifiedNavigation from "@/components/SimplifiedNavigation";
 import StickyCtaButtons from "@/components/StickyCtaButtons";
 import Footer from "@/components/Footer";
-import MasterclassSection from "@/components/MasterclassSection";
+import MasterclassStepsSection from "@/components/MasterclassStepsSection";
 import { useIntersectionObserver } from "@/hooks/useIntersectionObserver";
 import {
   Brain,
@@ -322,7 +322,7 @@ const DeMethode = () => {
       </section>
 
       {/* Masterclass Sectie */}
-      <MasterclassSection variant="employer" />
+      <MasterclassStepsSection showExperience />
 
       <Footer />
 
