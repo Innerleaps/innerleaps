@@ -322,7 +322,7 @@ const DeMethode = () => {
       </section>
 
       {/* Masterclass Sectie */}
-      <MasterclassStepsSection showExperience />
+      <MasterclassStepsSection background="off-white" />
 
       <Footer />
 

@@ -678,14 +678,16 @@ const TrainingPageLayout = ({
         </>
       )}
 
-      {/* Overal hetzelfde masterclassblok als op home. Het hing eerst aan
-          heroPhoto, waardoor de stress- en prestatiepagina nog het oude blok
-          kregen. */}
-      {!hideMasterclass && <MasterclassStepsSection showExperience />}
+      {/* Letterlijk hetzelfde blok als op home, tot en met de achtergrond:
+          off-white sectie met witte kaarten. Het hing eerst aan heroPhoto,
+          waardoor de stress- en prestatiepagina nog het oude blok kregen. */}
+      {!hideMasterclass && <MasterclassStepsSection background="off-white" />}
 
       {extraSection}
 
-      <WhyChooseUsSection bookingCta={showBookingCtas} />
+      {/* Wit, want het masterclassblok erboven is nu off-white en de FAQ
+          eronder ook. */}
+      <WhyChooseUsSection bookingCta={showBookingCtas} background="white" />
 
       {belowFaqSection}
 

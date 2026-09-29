@@ -121,8 +121,7 @@ gebruiker of de wijziging daar ook moet landen.** Nooit stilzwijgend aannemen.
 | Hero, uitdagingen, resultaten, FAQ | `training.json` per propositiesleutel | alleen die ene pagina |
 | Weken van het kernprogramma | `training.json` `<sleutel>.weeks` | per pagina eigen sleutel, maar teksten zijn deels letterlijk gedupliceerd |
 | "Breintraining voor échte gedragsverandering" | `common.json` `programOverview.*` | 4 propositiepagina's **en de homepage** |
-| Masterclass, drie kaarten | `common.json` `masterclass.cards.*` | variant `employer`: vitality + sustainability, variant `employee`: stress + performance |
-| Masterclass, kaart "Vrijblijvend" | `common.json` `masterclass.cards.noCommitment.text` | **geen variant**, dus alle 4 de propositiepagina's |
+| "Probeer het zelf in onze masterclass" | `common.json` `masterclassSteps.*` | homepage, 4 propositiepagina's **en `/breintraining-methode`** |
 
 ## De vier propositiepagina's
 
