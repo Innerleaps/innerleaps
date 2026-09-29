@@ -17,6 +17,7 @@ plek waar ze staan.
 | Sleutel | Engels | Nederlands | Wat er verschilt |
 |---|---|---|---|
 | `hero.subtitle` | "Your people catch tension early, …" | "Je collega's leren nieuw gedrag aan: ze herkennen spanning op tijd, …" | Het Engels laat de zinsnede over nieuw gedrag aanleren weg; het Nederlands houdt die. |
+| `approach.intro` | "Built for people who want to, but don't have the time." | "Klein genoeg om vol te houden, lang genoeg om te blijven hangen." | Twee verschillende invalshoeken. Het Engels gaat over voor wie het gemaakt is, het Nederlands over de omvang van het programma. |
 
 ## Bijgewerkt
 
