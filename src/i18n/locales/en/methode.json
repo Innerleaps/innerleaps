@@ -3,6 +3,66 @@
     "title": "The Innerleaps brain training method | 40 years of research",
     "description": "Innerleaps builds on 40 years of attention research by Dr. Amishi Jha. The method trains the brain's warning system and control centre, proven effective in meta-analyses and military applications."
   },
+  "methodHero": {
+    "eyebrow": "Our method",
+    "title": "We don't take the workload away. We give people <0>grip</0>.",
+    "subtitle": "Built so people actually turn up, which is where most programmes fail.",
+    "cta": "Request a free masterclass",
+    "ctaNote": "60 minutes, at your location. Planned in a 20-minute call.",
+    "proof": {
+      "rating": "4.7/5",
+      "ratingSuffix": "on Google",
+      "vmbn": "<0>VMBN</0> category 1 trainers",
+      "mbsr": "Built on <0>MBSR</0>"
+    },
+    "spec": {
+      "title": "What it takes",
+      "rows": {
+        "weeks": {
+          "value": "6",
+          "label": "weeks in total"
+        },
+        "live": {
+          "value": "1 hr",
+          "label": "live per week, in work time"
+        },
+        "daily": {
+          "value": "15 min",
+          "label": "on the days it works"
+        },
+        "group": {
+          "value": "15",
+          "label": "people per group, max"
+        }
+      }
+    }
+  },
+  "turnout": {
+    "title": "The hard part isn't the content. <0>It's getting people in the room.</0>",
+    "intro": "Every provider has good material. Almost none will tell you what share of invited people actually finish.",
+    "proof": {
+      "label": "What happened at TheyDo",
+      "figure": "{{count}} of 93",
+      "share": "≈ 42%",
+      "text": "93 people came to the free masterclass. 39 of them joined the six-week programme.",
+      "source": "Client figures, used with permission. Ask us for the breakdown."
+    },
+    "guarantee": {
+      "label": "Our guarantee",
+      "title": "The Full Room Guarantee",
+      "intro": "Do the three things that fill a room:",
+      "steps": {
+        "invites": "Send the invites from our kit, on the dates we agree.",
+        "schedule": "Schedule the session inside working hours.",
+        "announce": "Announce it four weeks ahead, with a line from management."
+      },
+      "closing": "If fewer than 15 people turn up, we run a second session for your team, free."
+    },
+    "quote": {
+      "text": "We only see it once they have dropped out.",
+      "author": "L&D adviser"
+    }
+  },
   "hero": {
     "titlePart1": "Juggling",
     "titlePart2": "many balls",

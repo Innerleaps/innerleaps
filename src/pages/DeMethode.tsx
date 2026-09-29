@@ -5,6 +5,8 @@ import SimplifiedNavigation from "@/components/SimplifiedNavigation";
 import StickyCtaButtons from "@/components/StickyCtaButtons";
 import Footer from "@/components/Footer";
 import MasterclassStepsSection from "@/components/MasterclassStepsSection";
+import MethodHero from "@/components/MethodHero";
+import TurnoutProofSection from "@/components/TurnoutProofSection";
 import { useIntersectionObserver } from "@/hooks/useIntersectionObserver";
 import {
   Brain,
@@ -39,7 +41,6 @@ const CARD_ICONS_WARNING = [Heart, AlertCircle, Eye] as const;
 const DeMethode = () => {
   const { t } = useTranslation("methode");
   const [isLeadMagnetOpen, setIsLeadMagnetOpen] = useState(false);
-  const heroRef = useIntersectionObserver({ threshold: 0.1 });
   const pushUpsRef = useIntersectionObserver({ threshold: 0.1 });
   const controleRef = useIntersectionObserver({ threshold: 0.1 });
   const waarschuwingRef = useIntersectionObserver({ threshold: 0.1 });
@@ -60,20 +61,8 @@ const DeMethode = () => {
       <SimplifiedNavigation />
       <StickyCtaButtons />
 
-      {/* Hero */}
-      <section
-        ref={heroRef.ref}
-        className={`section-padding bg-white transition-opacity duration-1000 ${
-          heroRef.isIntersecting ? "opacity-100" : "opacity-0"
-        }`}
-      >
-        <div className="container-custom text-center space-y-6 max-w-4xl mx-auto">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-purple leading-tight">
-            <span className="text-brand-orange">{t("hero.titlePart1")}</span> {t("hero.titlePart2")}
-          </h1>
-          <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">{t("hero.body")}</p>
-        </div>
-      </section>
+      <MethodHero />
+      <TurnoutProofSection />
 
       {/* Push-ups voor je brein */}
       <section

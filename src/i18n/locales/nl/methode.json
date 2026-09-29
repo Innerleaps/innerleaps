@@ -3,6 +3,66 @@
     "title": "De breintraining methode van Innerleaps | 40 jaar onderzoek",
     "description": "Innerleaps bouwt op 40 jaar aandachtsonderzoek van Dr. Amishi Jha. De methode traint het waarschuwingssysteem en controlecentrum van het brein, bewezen effectief in meta-analyses en militaire toepassingen."
   },
+  "methodHero": {
+    "eyebrow": "Onze methode",
+    "title": "We halen de werkdruk niet weg. We geven mensen <0>grip</0>.",
+    "subtitle": "Gemaakt zodat mensen ook echt komen, en daar gaat het bij de meeste programma's mis.",
+    "cta": "Vraag een gratis masterclass aan",
+    "ctaNote": "60 minuten, op jullie locatie. Ingepland in een gesprek van 20 minuten.",
+    "proof": {
+      "rating": "4,7/5",
+      "ratingSuffix": "op Google",
+      "vmbn": "<0>VMBN</0> categorie 1 trainers",
+      "mbsr": "Gebaseerd op <0>MBSR</0>"
+    },
+    "spec": {
+      "title": "Wat het kost",
+      "rows": {
+        "weeks": {
+          "value": "6",
+          "label": "weken in totaal"
+        },
+        "live": {
+          "value": "1 uur",
+          "label": "live per week, in werktijd"
+        },
+        "daily": {
+          "value": "15 min",
+          "label": "op de dagen dat het lukt"
+        },
+        "group": {
+          "value": "15",
+          "label": "deelnemers per groep, max"
+        }
+      }
+    }
+  },
+  "turnout": {
+    "title": "Het moeilijke is niet de inhoud. <0>Het is mensen in de zaal krijgen.</0>",
+    "intro": "Elke aanbieder heeft goed materiaal. Bijna niemand vertelt je welk deel van de uitgenodigde mensen het ook afmaakt.",
+    "proof": {
+      "label": "Wat er bij TheyDo gebeurde",
+      "figure": "{{count}} van 93",
+      "share": "≈ 42%",
+      "text": "93 mensen kwamen naar de gratis masterclass. 39 van hen deden het zesweekse programma.",
+      "source": "Cijfers van de klant, met toestemming gebruikt. Vraag ons om de onderbouwing."
+    },
+    "guarantee": {
+      "label": "Onze garantie",
+      "title": "De Volle Zaal Garantie",
+      "intro": "Doe de drie dingen die een zaal vullen:",
+      "steps": {
+        "invites": "Stuur de uitnodigingen uit onze kit, op de data die we afspreken.",
+        "schedule": "Plan de sessie binnen werktijd.",
+        "announce": "Kondig het vier weken van tevoren aan, met een woord vanuit het management."
+      },
+      "closing": "Komen er minder dan 15 mensen, dan draaien we een tweede sessie voor je team, gratis."
+    },
+    "quote": {
+      "text": "We zien het pas als ze uitgevallen zijn.",
+      "author": "L&D-adviseur"
+    }
+  },
   "hero": {
     "titlePart1": "Veel ballen",
     "titlePart2": "hoog houden",
