@@ -183,15 +183,15 @@ const HeroSection = ({ title, subtitle, photo }: HeroSectionProps = {}) => {
                 </picture>
               )}
 
-              {/* Springt uit de foto: steekt verder over de rand, oranje streep
-                  links en een diepe, paars getinte schaduw. Portret en naam
-                  zoals bij de klantquote onder de resultaten. */}
+              {/* Springt uit de foto: steekt verder over de rand, met een diepe,
+                  paars getinte schaduw. Portret en naam zoals bij de klantquote
+                  onder de resultaten. */}
               <figure
                 className={`relative lg:absolute ${
                   photo?.quotePosition === "top-right"
                     ? "lg:right-0 lg:translate-x-4 xl:translate-x-12 lg:top-10 mt-4"
                     : "lg:left-0 lg:-translate-x-12 lg:bottom-10 -mt-8"
-                } lg:mt-0 mx-3 lg:mx-0 lg:max-w-[320px] bg-white rounded-xl border-l-4 border-brand-orange p-5 shadow-[0_24px_48px_-12px_rgba(35,12,71,0.45)]`}
+                } lg:mt-0 mx-3 lg:mx-0 lg:max-w-[320px] bg-white rounded-xl p-5 shadow-[0_24px_48px_-12px_rgba(35,12,71,0.45)]`}
               >
                 <blockquote className="text-lg font-semibold text-brand-purple leading-snug">
                   &ldquo;{t("hero.quote")}&rdquo;
