@@ -29,10 +29,11 @@ const MethodHero = memo(() => {
             {t("methodHero.eyebrow")}
           </span>
 
-          {/* 17ch laat de Engelse kop op drie regels vallen. Onder md gaat die
-              grens eraf, anders wordt het op een telefoon een kolom van drie
-              woorden breed. */}
-          <h1 className="mt-6 md:max-w-[17ch] mx-auto text-3xl md:text-4xl lg:text-5xl font-bold text-brand-purple leading-tight text-balance">
+          {/* 26ch houdt de Engelse kop op drie regels. Stond op 17ch toen de
+              kop nog bij "grip" ophield; met "before they drop out" erbij viel
+              hij daar op vier. Onder md gaat de grens eraf, anders wordt het op
+              een telefoon een kolom van drie woorden breed. */}
+          <h1 className="mt-6 md:max-w-[26ch] mx-auto text-3xl md:text-4xl lg:text-5xl font-bold text-brand-purple leading-tight text-balance">
             <Trans
               i18nKey="methodHero.title"
               t={t}
@@ -41,11 +42,7 @@ const MethodHero = memo(() => {
           </h1>
 
           <p className="mt-5 md:max-w-[54ch] mx-auto text-xl md:text-2xl text-brand-gray-medium leading-relaxed [text-wrap:pretty]">
-            <Trans
-              i18nKey="methodHero.subtitle"
-              t={t}
-              components={[<strong className="font-semibold text-brand-purple" />]}
-            />
+            {t("methodHero.subtitle")}
           </p>
 
           <div className="mt-8">

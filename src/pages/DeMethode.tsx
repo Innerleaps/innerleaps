@@ -7,6 +7,8 @@ import Footer from "@/components/Footer";
 import MasterclassStepsSection from "@/components/MasterclassStepsSection";
 import MethodHero from "@/components/MethodHero";
 import TurnoutProofSection from "@/components/TurnoutProofSection";
+import MechanismSection from "@/components/MechanismSection";
+import TwoSystemsSection from "@/components/TwoSystemsSection";
 import { useIntersectionObserver } from "@/hooks/useIntersectionObserver";
 import {
   Brain,
@@ -28,7 +30,6 @@ import { Button } from "@/components/ui/button";
 // Images
 import controlecentrumImage from "@/assets/Concentratietraining_voor_sterker_executieve_systeem.webp";
 import waarschuwingssysteemImage from "@/assets/stressmanagementtraining_sterker_waarschuwingssysteem.webp";
-import stressmanagementEnConcentratie from "@/assets/stressmanagement_en_concentratietraining.webp";
 import stressPrestatieImage from "@/assets/stress_prestatie_curve.webp";
 import zesWekenBreintraining from "@/assets/6_weken_breintraining_voor_gedragsverandering.webp";
 
@@ -41,7 +42,6 @@ const CARD_ICONS_WARNING = [Heart, AlertCircle, Eye] as const;
 const DeMethode = () => {
   const { t } = useTranslation("methode");
   const [isLeadMagnetOpen, setIsLeadMagnetOpen] = useState(false);
-  const pushUpsRef = useIntersectionObserver({ threshold: 0.1 });
   const controleRef = useIntersectionObserver({ threshold: 0.1 });
   const waarschuwingRef = useIntersectionObserver({ threshold: 0.1 });
   const rapportRef = useIntersectionObserver({ threshold: 0.1 });
@@ -64,36 +64,8 @@ const DeMethode = () => {
       <MethodHero />
       <TurnoutProofSection />
 
-      {/* Push-ups voor je brein */}
-      <section
-        ref={pushUpsRef.ref}
-        className={`section-padding bg-white transition-all duration-1000 ${
-          pushUpsRef.isIntersecting ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-        }`}
-      >
-        <div className="container-custom space-y-12">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-brand-purple text-center mb-8">
-            <span className="text-brand-orange">{t("pushUps.titlePart1")}</span> {t("pushUps.titlePart2")}
-          </h2>
-          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-            <div className="rounded-xl shadow-lg overflow-hidden order-2 lg:order-1">
-              <img
-                src={stressmanagementEnConcentratie}
-                alt={t("pushUps.imageAlt")}
-                className="w-full h-auto object-cover"
-                loading="lazy"
-                decoding="async"
-                width={800}
-                height={600}
-              />
-            </div>
-            <div className="space-y-6 order-1 lg:order-2">
-              <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">{t("pushUps.body1")}</p>
-              <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">{t("pushUps.body2")}</p>
-            </div>
-          </div>
-        </div>
-      </section>
+      <MechanismSection />
+      <TwoSystemsSection />
 
       {/* Krachtiger controlecentrum */}
       <section

@@ -5,8 +5,8 @@
   },
   "methodHero": {
     "eyebrow": "Our method",
-    "title": "We don’t take the workload away. We give people <0>grip</0>.",
-    "subtitle": "People learn to notice tension earlier, interrupt the automatic reaction, and choose what happens next. <0>Same workload, different response.</0>",
+    "title": "We don’t take the workload away. We give people <0>grip, before they drop out</0>.",
+    "subtitle": "People learn to notice tension earlier, interrupt the automatic reaction, and choose what happens next. Same workload, different response.",
     "cta": "Book a consultation",
     "ctaNote": "Twenty minutes to see whether this fits your team."
   },
@@ -132,5 +132,51 @@
       "audio": "Audio recordings for daily practice"
     },
     "outro": "The result? Behaviour that sticks. The effects on stress, burnout and productivity are still visible 6 to 12 months after the training (Vonderlin et al., 2020; Michaelsen et al., 2023)."
+  },
+  "mechanism": {
+    "title": "Push-ups for <0>your brain</0>",
+    "body1": "With our method, people train their brain. Just like you build muscle at the gym, participants train two crucial systems with our brain push-ups.",
+    "body2": "The <0>control centre</0> gets stronger, which means better focus and a more efficient working memory. And the <1>warning system</1> sharpens, so pressure doesn’t pile up.",
+    "quote": "Everyone already knows what helps. <0>Under pressure, people fall back on habits</0>, and habits only change through repetition. That is why this is training, not advice.",
+    "quoteAuthor": "Bas",
+    "quoteRole": "Co-founder & trainer"
+  },
+  "systems": {
+    "control": {
+      "title": "A stronger <0>control centre</0>",
+      "lead": "The part of you that decides what gets your attention. Six weeks of practice makes it stronger, so pressure takes up less room and focus comes back faster.",
+      "items": {
+        "room": {
+          "label": "More room to hold things",
+          "body": "Information stays put, and comes back when you need it."
+        },
+        "attention": {
+          "label": "Attention that stays",
+          "body": "It lands where you put it, and holds through the interruptions."
+        },
+        "noise": {
+          "label": "Less pull from the noise",
+          "body": "Irrelevant things stop taking the next ten minutes with them."
+        }
+      }
+    },
+    "warning": {
+      "title": "A sharper <0>warning system</0>",
+      "lead": "The part of you that registers pressure before you have thought about it. Six weeks of practice makes it sharper, so signals arrive while they are still small.",
+      "items": {
+        "sooner": {
+          "label": "You feel it sooner",
+          "body": "The shoulders, the jaw, the shallow breath, while they are still small."
+        },
+        "meaning": {
+          "label": "You know what it means",
+          "body": "Which feeling is signalling what, instead of just “off”."
+        },
+        "watch": {
+          "label": "You can watch yourself work",
+          "body": "Notice the pattern while you are in it, not on the drive home."
+        }
+      }
+    }
   }
 }

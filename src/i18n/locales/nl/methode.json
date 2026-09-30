@@ -5,8 +5,8 @@
   },
   "methodHero": {
     "eyebrow": "Onze methode",
-    "title": "We nemen de werkdruk niet weg. We geven mensen <0>grip</0>.",
-    "subtitle": "Collega’s leren spanning eerder op te merken, de automatische reactie te onderbreken en te kiezen wat er daarna gebeurt. <0>Zelfde werkdruk, andere reactie.</0>",
+    "title": "We nemen de werkdruk niet weg. We geven mensen <0>grip, voordat ze uitvallen</0>.",
+    "subtitle": "Collega’s leren spanning eerder op te merken, de automatische reactie te onderbreken en te kiezen wat er daarna gebeurt. Zelfde werkdruk, andere reactie.",
     "cta": "Plan een adviesgesprek",
     "ctaNote": "Twintig minuten om te kijken of dit bij jullie team past."
   },
@@ -132,5 +132,51 @@
       "audio": "Audio-opnames voor dagelijkse oefening"
     },
     "outro": "Het resultaat? Gedrag dat blijft. De effecten op stress, burn-out en productiviteit zijn 6 tot 12 maanden na de training nog steeds zichtbaar (Vonderlin et al., 2020; Michaelsen et al., 2023)."
+  },
+  "mechanism": {
+    "title": "Push-ups voor <0>je brein</0>",
+    "body1": "Met onze methode trainen mensen hun brein. Net zoals je in de sportschool spieren opbouwt, trainen deelnemers twee cruciale systemen met onze brein-push-ups.",
+    "body2": "Het <0>controlecentrum</0> wordt sterker, wat zorgt voor betere focus en een efficiënter werkgeheugen. En het <1>waarschuwingssysteem</1> wordt scherper, zodat druk zich niet opstapelt.",
+    "quote": "Iedereen weet eigenlijk wel wat helpt. <0>Onder druk vallen mensen terug op gewoontes</0>, en gewoontes veranderen alleen door herhaling. Daarom is dit training, geen advies.",
+    "quoteAuthor": "Bas",
+    "quoteRole": "Mede-oprichter & trainer"
+  },
+  "systems": {
+    "control": {
+      "title": "Een sterker <0>controlecentrum</0>",
+      "lead": "Het deel van je brein dat bepaalt waar je aandacht naartoe gaat. Zes weken oefenen maakt het sterker, zo neemt druk minder ruimte in en komt je focus sneller terug.",
+      "items": {
+        "room": {
+          "label": "Meer ruimte om vast te houden",
+          "body": "Informatie blijft hangen, en komt terug wanneer je het nodig hebt."
+        },
+        "attention": {
+          "label": "Aandacht die blijft",
+          "body": "Die landt waar je hem neerzet, en houdt stand door de onderbrekingen heen."
+        },
+        "noise": {
+          "label": "Minder trek van de ruis",
+          "body": "Dingen die er niet toe doen nemen niet meer de volgende tien minuten mee."
+        }
+      }
+    },
+    "warning": {
+      "title": "Een scherper <0>waarschuwingssysteem</0>",
+      "lead": "Het deel van je brein dat druk registreert voordat je erover hebt nagedacht. Zes weken oefenen maakt het scherper, zo komen signalen binnen terwijl ze nog klein zijn.",
+      "items": {
+        "sooner": {
+          "label": "Je voelt het eerder",
+          "body": "De schouders, de kaak, de oppervlakkige ademhaling, terwijl ze nog klein zijn."
+        },
+        "meaning": {
+          "label": "Je weet wat het betekent",
+          "body": "Welk gevoel wat signaleert, in plaats van alleen “niet lekker”."
+        },
+        "watch": {
+          "label": "Je kunt jezelf zien werken",
+          "body": "Je merkt het patroon terwijl je erin zit, niet op de weg naar huis."
+        }
+      }
+    }
   }
 }
