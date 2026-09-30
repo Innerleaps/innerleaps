@@ -1,4 +1,4 @@
-import { useEffect, useState, lazy, Suspense } from "react";
+import { useEffect } from "react";
 import PageSeo from "@/components/PageSeo";
 import { useTranslation } from "react-i18next";
 import SimplifiedNavigation from "@/components/SimplifiedNavigation";
@@ -10,50 +10,20 @@ import TurnoutProofSection from "@/components/TurnoutProofSection";
 import MechanismSection from "@/components/MechanismSection";
 import TwoSystemsSection from "@/components/TwoSystemsSection";
 import { useIntersectionObserver } from "@/hooks/useIntersectionObserver";
-import {
-  Brain,
-  Target,
-  Lightbulb,
-  Shield,
-  Zap,
-  Heart,
-  AlertCircle,
-  Eye,
-  CheckCircle,
-  Users,
-  FileText,
-  Activity,
-  Play,
-} from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { FileText, Play, Users } from "lucide-react";
 
 // Images
-import controlecentrumImage from "@/assets/Concentratietraining_voor_sterker_executieve_systeem.webp";
-import waarschuwingssysteemImage from "@/assets/stressmanagementtraining_sterker_waarschuwingssysteem.webp";
 import stressPrestatieImage from "@/assets/stress_prestatie_curve.webp";
 import zesWekenBreintraining from "@/assets/6_weken_breintraining_voor_gedragsverandering.webp";
 
-// Lazy load modal
-const LeadMagnetModal = lazy(() => import("@/components/LeadMagnetModal"));
-
-const CARD_ICONS_CONTROL = [Brain, Target, Lightbulb, Shield, Zap] as const;
-const CARD_ICONS_WARNING = [Heart, AlertCircle, Eye] as const;
-
 const DeMethode = () => {
   const { t } = useTranslation("methode");
-  const [isLeadMagnetOpen, setIsLeadMagnetOpen] = useState(false);
-  const controleRef = useIntersectionObserver({ threshold: 0.1 });
-  const waarschuwingRef = useIntersectionObserver({ threshold: 0.1 });
-  const rapportRef = useIntersectionObserver({ threshold: 0.1 });
   const prestatieRef = useIntersectionObserver({ threshold: 0.1 });
   const zesWekenRef = useIntersectionObserver({ threshold: 0.1 });
 
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-
-  const controlCardKeys = ["info", "focus", "thinking", "filter", "easier"] as const;
-  const warningCardKeys = ["body", "emotion", "self"] as const;
 
   return (
     <div className="min-h-screen bg-white">
@@ -66,143 +36,6 @@ const DeMethode = () => {
 
       <MechanismSection />
       <TwoSystemsSection />
-
-      {/* Krachtiger controlecentrum */}
-      <section
-        ref={controleRef.ref}
-        className={`pt-8 pb-16 md:pb-20 lg:pb-28 bg-white transition-all duration-1000 ${
-          controleRef.isIntersecting ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-        }`}
-      >
-        <div className="container-custom space-y-12">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-brand-purple text-center mb-8">
-            {t("control.titlePart1")} <span className="text-brand-orange">{t("control.titlePart2")}</span>
-          </h2>
-
-          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-            <div className="space-y-6">
-              <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">{t("control.body1")}</p>
-              <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">{t("control.body2")}</p>
-            </div>
-            <div className="rounded-xl shadow-lg overflow-hidden">
-              <img src={controlecentrumImage} alt={t("control.imageAlt")} className="w-full h-auto object-cover" />
-            </div>
-          </div>
-
-          {/* 5 Feature Cards */}
-          <div className="grid md:grid-cols-6 gap-6 lg:gap-8">
-            {controlCardKeys.map((key, idx) => {
-              const Icon = CARD_ICONS_CONTROL[idx];
-              const items = t(`control.cards.${key}.items`, { returnObjects: true }) as string[];
-              const colSpanClass =
-                key === "filter" ? "md:col-span-2 md:col-start-2" : "md:col-span-2";
-              return (
-                <div key={key} className={`bg-brand-off-white p-6 rounded-lg space-y-4 ${colSpanClass}`}>
-                  <div className="p-3 rounded-lg bg-brand-orange/10 w-fit mx-auto">
-                    <Icon className="h-8 w-8 text-brand-orange stroke-2" />
-                  </div>
-                  <h3 className="text-xl md:text-2xl font-bold text-brand-gray-dark text-center">
-                    {t(`control.cards.${key}.title`)}
-                  </h3>
-                  <div className="space-y-3">
-                    {items.map((item, i) => (
-                      <div key={i} className="flex items-start gap-3">
-                        <CheckCircle className="h-5 w-5 text-brand-orange stroke-2 flex-shrink-0 mt-1" />
-                        <span className="text-base md:text-lg text-brand-gray-medium">{item}</span>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
-      {/* Scherper waarschuwingssysteem */}
-      <section
-        ref={waarschuwingRef.ref}
-        className={`section-padding bg-white transition-all duration-1000 ${
-          waarschuwingRef.isIntersecting ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-        }`}
-      >
-        <div className="container-custom space-y-12">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-brand-purple text-center mb-8">
-            {t("warning.titlePart1")} <span className="text-brand-orange">{t("warning.titlePart2")}</span>
-          </h2>
-
-          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-            <div className="space-y-6">
-              <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">{t("warning.body1")}</p>
-              <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">{t("warning.body2")}</p>
-            </div>
-            <div className="rounded-xl shadow-lg overflow-hidden">
-              <img
-                src={waarschuwingssysteemImage}
-                alt={t("warning.imageAlt")}
-                className="w-full h-auto object-cover"
-                loading="lazy"
-                decoding="async"
-                width={800}
-                height={600}
-              />
-            </div>
-          </div>
-
-          {/* 3 Feature Cards */}
-          <div className="grid md:grid-cols-3 gap-6 lg:gap-8">
-            {warningCardKeys.map((key, idx) => {
-              const Icon = CARD_ICONS_WARNING[idx];
-              const items = t(`warning.cards.${key}.items`, { returnObjects: true }) as string[];
-              return (
-                <div key={key} className="bg-brand-off-white p-6 rounded-lg space-y-4">
-                  <div className="p-3 rounded-lg bg-brand-orange/10 w-fit mx-auto">
-                    <Icon className="h-8 w-8 text-brand-orange stroke-2" />
-                  </div>
-                  <h3 className="text-xl md:text-2xl font-bold text-brand-gray-dark text-center">
-                    {t(`warning.cards.${key}.title`)}
-                  </h3>
-                  <div className="space-y-3">
-                    {items.map((item, i) => (
-                      <div key={i} className="flex items-start gap-3">
-                        <CheckCircle className="h-5 w-5 text-brand-orange stroke-2 flex-shrink-0 mt-1" />
-                        <span className="text-base md:text-lg text-brand-gray-medium">{item}</span>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
-      {/* Wetenschappelijk rapport */}
-      <section
-        ref={rapportRef.ref}
-        className={`section-padding bg-white transition-all duration-1000 ${
-          rapportRef.isIntersecting ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-        }`}
-      >
-        <div className="container-custom">
-          <div className="bg-brand-blue rounded-xl p-8 shadow-lg">
-            <div className="text-center space-y-6">
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-white/10 rounded-full">
-                <FileText className="h-8 w-8 text-brand-orange" />
-              </div>
-              <h2 className="text-3xl font-bold text-white mb-2">{t("report.title")}</h2>
-              <p className="text-xl md:text-2xl text-white/90 leading-relaxed max-w-3xl mx-auto">{t("report.body")}</p>
-              <Button
-                onClick={() => setIsLeadMagnetOpen(true)}
-                className="bg-brand-orange hover:bg-brand-orange/90 text-white font-semibold text-lg px-8 py-6"
-              >
-                <FileText className="mr-2 h-5 w-5" />
-                {t("report.cta")}
-              </Button>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* Verbeteren van prestaties */}
       <section
@@ -286,10 +119,6 @@ const DeMethode = () => {
       <MasterclassStepsSection background="off-white" />
 
       <Footer />
-
-      <Suspense fallback={null}>
-        <LeadMagnetModal isOpen={isLeadMagnetOpen} onClose={() => setIsLeadMagnetOpen(false)} />
-      </Suspense>
     </div>
   );
 };
