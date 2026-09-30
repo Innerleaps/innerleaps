@@ -40,7 +40,7 @@ const DeMethode = () => {
       {/* Verbeteren van prestaties */}
       <section
         ref={prestatieRef.ref}
-        className={`section-padding bg-white transition-all duration-1000 ${
+        className={`section-padding bg-brand-off-white transition-all duration-1000 ${
           prestatieRef.isIntersecting ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
         }`}
       >

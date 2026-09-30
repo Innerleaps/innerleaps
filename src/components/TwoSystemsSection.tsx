@@ -11,9 +11,9 @@ import wsPhotoFallback from "@/assets/systems-warning-system-800w.jpg";
 /**
  * De twee systemen die de training sterker maakt, elk in een eigen rij.
  *
- * Geen sectiekop en geen intro: deze sectie hangt vast aan "Push-ups voor je
- * brein" erboven en heeft dezelfde achtergrond. Samen zijn het één verhaal,
- * dus een kleurwissel zou ze juist uit elkaar trekken.
+ * Geen sectiekop en geen intro: de twee rijen zijn de sectie. Wit, zodat hij
+ * afwisselt met "Push-ups voor je brein" erboven, zoals elke sectie op de site
+ * een andere achtergrond heeft dan de vorige.
  */
 const ROWS = [
   {
@@ -41,7 +41,7 @@ const TwoSystemsSection = memo(() => {
   const { t } = useTranslation("methode");
 
   return (
-    <section className="bg-brand-off-white pb-16 md:pb-20 lg:pb-28">
+    <section className="section-padding bg-white">
       <div className="container-custom max-w-6xl">
         {ROWS.map((row, index) => (
           /* Elke rij is een eigen regio met een eigen naam, zodat een

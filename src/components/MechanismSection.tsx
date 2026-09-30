@@ -25,7 +25,7 @@ const MechanismSection = memo(() => {
   const vet = <span className="font-semibold" />;
 
   return (
-    <section className="bg-brand-off-white pt-16 md:pt-20 lg:pt-28">
+    <section className="section-padding bg-brand-off-white">
       <div className="container-custom max-w-6xl">
         <div className="grid lg:grid-cols-[0.8fr_1.2fr] gap-8 lg:gap-16 items-center">
           {/* Sfeer, geen informatie: de tekst ernaast zegt alles al. */}
