@@ -4,7 +4,7 @@ import type { JuridischePagina } from "./juridisch";
  *  terms-nl.ts en moet bij elke wijziging mee. */
 export const termsEn: JuridischePagina = {
   titel: "General Terms and Conditions",
-  ondertitel: "**Innerleaps**, Version 2.0 | 11 September 2026",
+  ondertitel: "**Innerleaps**, Version 2.1 | 25 September 2026",
   metaTitel: "General Terms and Conditions | Innerleaps",
   metaBeschrijving:
     "General terms and conditions of Innerleaps. Our terms for training programs, service delivery and collaboration.",
@@ -77,7 +77,7 @@ export const termsEn: JuridischePagina = {
           soort: "lijst",
           items: [
             "**4.1** Innerleaps delivers the training program as described in the Agreement. This includes the Masterclass and, where applicable, the full training program delivered as a series of workshops.",
-            "**4.2** The Masterclass is provided free of charge provided the training program subsequently takes place with a sufficient number of registered Participants, subject to Article 6.",
+            "**4.2** The Masterclass is provided free of charge provided the training program subsequently takes place, subject to Article 6.",
             "**4.3** Innerleaps delivers services either in person or online, depending on what has been agreed with the Client. Innerleaps may engage qualified freelance trainers to deliver sessions on its behalf. The specific trainer may vary per assignment. Innerleaps remains fully responsible for the quality and delivery of all services regardless of who delivers them. All freelance trainers engaged by Innerleaps are contractually bound to confidentiality and data protection obligations equivalent to those applicable to Innerleaps under these Terms and the Data Processing Agreement, before being permitted to deliver any sessions. In the event that a scheduled trainer is unexpectedly unavailable, Innerleaps will arrange an alternative trainer or schedule an additional session to ensure the full program is delivered as agreed. No financial compensation will be provided in such cases.",
             "**4.4** Innerleaps will make every effort to deliver the services with due care and in accordance with the standards that may reasonably be expected of a professional in this field.",
             "**4.5** The Client is responsible for creating the conditions necessary for the successful delivery of the training, including communicating the program to employees, facilitating Participant registration, and ensuring employees can attend scheduled workshops. If the Client's failure to meet these obligations results in one or more workshops not being delivered as planned, Innerleaps' delivery obligation is considered fulfilled for those workshops and no refund applies.",
@@ -93,9 +93,9 @@ export const termsEn: JuridischePagina = {
         {
           soort: "lijst",
           items: [
-            "**5.1** The definitive number of Participants, and therefore the final scope and price of the Agreement, is determined at the Registration Deadline. Participants may register during the Masterclass and up to 5 working days thereafter, either via an Innerleaps registration form or, where the Client manages enrolment, via the Client, as further described in the Data Processing Agreement. The number of Participants registered at the Registration Deadline is the number invoiced, up to the maximum capacity agreed in the Agreement. Registrations beyond that capacity are not invoiced and are placed on a waiting list for a future cohort. Regardless of the enrolment route, each Participant accepts the Self-Declaration and is made aware of the privacy notice at registration.",
-            "**5.2** The price stated in the Agreement is based on the expected number of Participants. The final invoice reflects the number of Participants registered at the Registration Deadline, up to the agreed maximum capacity, unless a fixed price has been agreed.",
-            "**5.3** Innerleaps reserves the right to set a minimum number of Participants required for a group to proceed. This minimum will be stated in the Agreement.",
+            "**5.1** The definitive number of Participants, and therefore the final scope and price of the Agreement, is determined at the Registration Deadline. Participants may register during the Masterclass and up to 5 working days thereafter, either via an Innerleaps registration form or, where the Client manages enrolment, via the Client, as further described in the Data Processing Agreement. The number of Participants registered at the Registration Deadline is the number invoiced, subject to the minimum number of chargeable Participants per group set out in Article 5.3 and up to the maximum capacity agreed in the Agreement. Registrations beyond that capacity are not invoiced and are placed on a waiting list for a future cohort. Regardless of the enrolment route, each Participant accepts the Self-Declaration and is made aware of the privacy notice at registration.",
+            "**5.2** The price stated in the Agreement is based on the expected number of Participants. The final invoice reflects the number of Participants registered at the Registration Deadline, subject to the minimum number of chargeable Participants per group set out in Article 5.3 and up to the agreed maximum capacity, unless a fixed price has been agreed.",
+            "**5.3** Because Innerleaps reserves trainers for each group in advance, a minimum number of chargeable Participants per group applies. This minimum, and the maximum capacity per group, are stated in the Agreement. A group may proceed with fewer Participants than this minimum, but in all cases at least the minimum number of Participants per group is invoiced.",
             "**5.4** Participation is based on each Participant's voluntary Self-Declaration that they take part on their own responsibility. The program is designed for healthy, working employees, and the Client is responsible for offering it to employees who are fit for work and for directing it to suitable participants. Innerleaps may, during the program, refer a Participant to professional support and discontinue their participation in accordance with Article 4.6; the payment obligation in such cases is governed by Article 6.4.",
           ],
         },
@@ -108,21 +108,9 @@ export const termsEn: JuridischePagina = {
           soort: "lijst",
           items: [
             "**6.1** The Client may cancel a scheduled Masterclass free of charge provided cancellation is communicated to Innerleaps in writing at least 3 calendar days before the scheduled Masterclass date. If the Client cancels within 3 calendar days of the scheduled date, or if the Masterclass cannot take place as planned due to circumstances attributable to the Client, including but not limited to insufficient time being allocated to Innerleaps to deliver the Masterclass due to overrun in the Client's own program, the Client owes Innerleaps a cancellation fee of €1750. Cancellation of the Agreement itself prior to any Masterclass being scheduled remains free of charge.",
-            "**6.2** If the Masterclass has taken place but the minimum number of Participants required for the training to proceed, as stated in the Agreement in accordance with Article 5.3, has not been reached at the Registration Deadline, the following applies:",
-          ],
-        },
-        {
-          soort: "lijst",
-          items: [
-            "**a)** Innerleaps and the Client will work together in good faith to plan a second Masterclass within 1 month of establishing that registration numbers are insufficient.",
-            "**b)** A maximum of 2 Masterclasses will be delivered under a single Agreement. If after the second Masterclass the minimum number of Participants has still not been reached, the Client owes Innerleaps a Masterclass fee of €1750, unless the Client and Innerleaps mutually agree in writing to extend the Agreement.",
-          ],
-        },
-        {
-          soort: "lijst",
-          items: [
+            "**6.2** A group proceeds regardless of the number of Participants registered at the Registration Deadline. Where fewer Participants register than the minimum number of chargeable Participants per group set out in Article 5.3, the group nonetheless proceeds and at least that minimum number per group is invoiced in accordance with Articles 5.3 and 6.4. Innerleaps may, at its discretion and in consultation with the Client, offer one additional Masterclass before the Registration Deadline to increase registrations; no more than 2 Masterclasses are delivered under a single Agreement. Where a group proceeds, no separate Masterclass fee is due under this Article; the Masterclass fee of €1750 applies only to cancellation of a Masterclass as set out in Article 6.1.",
             "**6.3** If the training proceeds following the Masterclass, no Masterclass fee is charged. The full agreed price for the training program is then due as specified in the Agreement.",
-            "**6.4** The Client's payment obligation is based on the number of Participants registered at the Registration Deadline, up to the agreed maximum capacity, regardless of whether registration took place via Innerleaps or via the Client. From the Registration Deadline, the agreed fee for each registered Participant is due in full, regardless of whether the Participant subsequently completes the training, withdraws, misses workshops, or is discontinued under Article 4.6. No refunds will be provided in any of these circumstances.",
+            "**6.4** The Client's payment obligation is based on the number of Participants registered at the Registration Deadline, subject to the minimum number of chargeable Participants per group set out in Article 5.3 and up to the agreed maximum capacity, regardless of whether registration took place via Innerleaps or via the Client. From the Registration Deadline, the agreed fee is due in full for each chargeable Participant, being at least the minimum number of Participants per group, regardless of whether a Participant subsequently completes the training, withdraws, misses workshops, or is discontinued under Article 4.6. No refunds will be provided in any of these circumstances.",
             "**6.5** If Innerleaps is required to cancel or reschedule a Masterclass, Innerleaps will notify the Client as soon as possible and will offer at least one alternative date within 30 days. No compensation is due in such cases.",
             "**6.6** Cancellation must always be communicated in writing to **info@innerleaps.nl**.",
           ],
@@ -272,8 +260,8 @@ export const termsEn: JuridischePagina = {
     },
   ],
   voettekst: [
-    "Document Version: 2.0",
-    "Date: 11 September 2026",
+    "Document Version: 2.1",
+    "Date: 25 September 2026",
     "Prepared by: Innerleaps",
     "Status: Published",
   ],

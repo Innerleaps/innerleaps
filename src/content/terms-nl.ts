@@ -4,7 +4,7 @@ import type { JuridischePagina } from "./juridisch";
  *  moet bij elke wijziging mee. */
 export const termsNl: JuridischePagina = {
   titel: "Algemene Voorwaarden",
-  ondertitel: "**Innerleaps**, versie 2.0 | 11 september 2026",
+  ondertitel: "**Innerleaps**, versie 2.1 | 25 september 2026",
   metaTitel: "Algemene Voorwaarden | Innerleaps",
   metaBeschrijving:
     "Algemene voorwaarden van Innerleaps. Onze voorwaarden voor trainingsprogramma's, dienstverlening en samenwerking.",
@@ -77,7 +77,7 @@ export const termsNl: JuridischePagina = {
           soort: "lijst",
           items: [
             "**4.1** Innerleaps levert het trainingsprogramma zoals beschreven in de Overeenkomst. Dit omvat de Masterclass en, waar van toepassing, het volledige trainingsprogramma geleverd als een reeks workshops.",
-            "**4.2** De Masterclass wordt kosteloos gegeven, mits het trainingsprogramma vervolgens doorgang vindt met voldoende aangemelde Deelnemers, met inachtneming van Artikel 6.",
+            "**4.2** De Masterclass wordt kosteloos gegeven, mits het trainingsprogramma vervolgens doorgang vindt, met inachtneming van Artikel 6.",
             "**4.3** Innerleaps levert diensten fysiek of online, afhankelijk van wat met de Opdrachtgever is afgesproken. Innerleaps kan gekwalificeerde zelfstandige trainers inschakelen om sessies namens haar te geven. De specifieke trainer kan per opdracht verschillen. Innerleaps blijft volledig verantwoordelijk voor de kwaliteit en levering van alle diensten, ongeacht wie ze uitvoert. Alle door Innerleaps ingeschakelde zelfstandige trainers zijn contractueel gebonden aan geheimhoudings- en gegevensbeschermingsverplichtingen die gelijkwaardig zijn aan die van Innerleaps onder deze Voorwaarden en de Verwerkersovereenkomst, voordat zij een sessie mogen geven. Als een geplande trainer onverwacht niet beschikbaar is, regelt Innerleaps een vervangende trainer of plant een extra sessie in, zodat het volledige programma zoals afgesproken wordt geleverd. Hier staat geen financiële compensatie tegenover.",
             "**4.4** Innerleaps zal zich naar beste vermogen inspannen om de diensten met de nodige zorg te leveren, in overeenstemming met de standaarden die redelijkerwijs van een professional op dit vakgebied mogen worden verwacht.",
             "**4.5** De Opdrachtgever is verantwoordelijk voor het scheppen van de voorwaarden die nodig zijn voor een succesvolle uitvoering van de training, waaronder het communiceren van het programma naar medewerkers, het faciliteren van de aanmelding van Deelnemers, en ervoor zorgen dat medewerkers aanwezig kunnen zijn bij geplande workshops. Als het niet nakomen van deze verplichtingen door de Opdrachtgever ertoe leidt dat een of meer workshops niet worden geleverd zoals gepland, geldt de leveringsverplichting van Innerleaps voor die workshops als vervuld en geldt geen restitutie.",
@@ -93,9 +93,9 @@ export const termsNl: JuridischePagina = {
         {
           soort: "lijst",
           items: [
-            "**5.1** Het definitieve aantal Deelnemers, en daarmee de uiteindelijke omvang en prijs van de Overeenkomst, wordt vastgesteld op de Aanmeldtermijn. Deelnemers kunnen zich aanmelden tijdens de Masterclass en tot 5 werkdagen daarna, via een aanmeldformulier van Innerleaps of, waar de Opdrachtgever de aanmelding zelf regelt, via de Opdrachtgever, zoals verder beschreven in de Verwerkersovereenkomst. Het aantal Deelnemers dat op de Aanmeldtermijn is aangemeld, is het aantal dat wordt gefactureerd, tot de maximale capaciteit die in de Overeenkomst is afgesproken. Aanmeldingen boven die capaciteit worden niet gefactureerd en komen op een wachtlijst voor een volgende groep. Ongeacht de aanmeldroute accepteert elke Deelnemer bij aanmelding de Zelfverklaring en wordt gewezen op de privacyverklaring.",
-            "**5.2** De in de Overeenkomst genoemde prijs is gebaseerd op het verwachte aantal Deelnemers. De einddeclaratie weerspiegelt het aantal Deelnemers dat op de Aanmeldtermijn is aangemeld, tot de afgesproken maximale capaciteit, tenzij een vaste prijs is afgesproken.",
-            "**5.3** Innerleaps behoudt zich het recht voor een minimumaantal Deelnemers vast te stellen dat nodig is om een groep doorgang te laten vinden. Dit minimum wordt in de Overeenkomst vermeld.",
+            "**5.1** Het definitieve aantal Deelnemers, en daarmee de uiteindelijke omvang en prijs van de Overeenkomst, wordt vastgesteld op de Aanmeldtermijn. Deelnemers kunnen zich aanmelden tijdens de Masterclass en tot 5 werkdagen daarna, via een aanmeldformulier van Innerleaps of, waar de Opdrachtgever de aanmelding zelf regelt, via de Opdrachtgever, zoals verder beschreven in de Verwerkersovereenkomst. Het aantal Deelnemers dat op de Aanmeldtermijn is aangemeld, is het aantal dat wordt gefactureerd, met inachtneming van het minimumaantal te factureren Deelnemers per groep uit Artikel 5.3 en tot de maximale capaciteit die in de Overeenkomst is afgesproken. Aanmeldingen boven die capaciteit worden niet gefactureerd en komen op een wachtlijst voor een volgende groep. Ongeacht de aanmeldroute accepteert elke Deelnemer bij aanmelding de Zelfverklaring en wordt gewezen op de privacyverklaring.",
+            "**5.2** De in de Overeenkomst genoemde prijs is gebaseerd op het verwachte aantal Deelnemers. De einddeclaratie weerspiegelt het aantal Deelnemers dat op de Aanmeldtermijn is aangemeld, met inachtneming van het minimumaantal te factureren Deelnemers per groep uit Artikel 5.3 en tot de afgesproken maximale capaciteit, tenzij een vaste prijs is afgesproken.",
+            "**5.3** Omdat Innerleaps voor elke groep vooraf trainers reserveert, geldt een minimumaantal te factureren Deelnemers per groep. Dit minimum en de maximale capaciteit per groep staan in de Overeenkomst. Een groep kan ook met minder Deelnemers doorgaan, maar er wordt altijd ten minste het minimumaantal Deelnemers per groep gefactureerd.",
             "**5.4** Deelname berust op de vrijwillige Zelfverklaring van elke Deelnemer dat hij of zij op eigen verantwoordelijkheid deelneemt. Het programma is ontworpen voor gezonde, werkende medewerkers, en de Opdrachtgever is verantwoordelijk voor het aanbieden ervan aan medewerkers die arbeidsgeschikt zijn en voor het richten ervan op geschikte deelnemers. Innerleaps kan een Deelnemer tijdens het programma doorverwijzen naar professionele hulp en diens deelname beëindigen conform Artikel 4.6; de betalingsverplichting is in dat geval geregeld in Artikel 6.4.",
           ],
         },
@@ -108,21 +108,9 @@ export const termsNl: JuridischePagina = {
           soort: "lijst",
           items: [
             "**6.1** De Opdrachtgever kan een geplande Masterclass kosteloos annuleren, mits de annulering minstens 3 kalenderdagen voor de geplande Masterclass-datum schriftelijk aan Innerleaps is gemeld. Annuleert de Opdrachtgever binnen 3 kalenderdagen voor de geplande datum, of kan de Masterclass door omstandigheden die aan de Opdrachtgever zijn toe te rekenen niet doorgaan zoals gepland, waaronder mede begrepen dat Innerleaps onvoldoende tijd krijgt om de Masterclass te geven doordat het eigen programma van de Opdrachtgever uitloopt, dan is de Opdrachtgever een annuleringsvergoeding van €1.750 aan Innerleaps verschuldigd. Het annuleren van de Overeenkomst zelf, voordat een Masterclass is ingepland, blijft kosteloos.",
-            "**6.2** Heeft de Masterclass plaatsgevonden, maar is het minimumaantal Deelnemers dat volgens Artikel 5.3 in de Overeenkomst staat voor doorgang van de training niet bereikt op de Aanmeldtermijn, dan geldt het volgende:",
-          ],
-        },
-        {
-          soort: "lijst",
-          items: [
-            "**a)** Innerleaps en de Opdrachtgever spannen zich gezamenlijk en te goeder trouw in om binnen 1 maand nadat is vastgesteld dat het aantal aanmeldingen onvoldoende is, een tweede Masterclass in te plannen.",
-            "**b)** Onder een enkele Overeenkomst worden maximaal 2 Masterclasses gegeven. Is het minimumaantal Deelnemers na de tweede Masterclass nog steeds niet bereikt, dan is de Opdrachtgever een Masterclassvergoeding van €1.750 aan Innerleaps verschuldigd, tenzij de Opdrachtgever en Innerleaps schriftelijk overeenkomen de Overeenkomst te verlengen.",
-          ],
-        },
-        {
-          soort: "lijst",
-          items: [
+            "**6.2** Een groep gaat door, ongeacht het aantal Deelnemers dat op de Aanmeldtermijn is aangemeld. Melden zich minder Deelnemers aan dan het minimumaantal te factureren Deelnemers per groep uit Artikel 5.3, dan gaat de groep toch door en wordt ten minste dat minimumaantal gefactureerd, conform de Artikelen 5.3 en 6.4. Innerleaps kan naar eigen inzicht en in overleg met de Opdrachtgever vóór de Aanmeldtermijn één extra Masterclass aanbieden om meer aanmeldingen te krijgen. Onder een enkele Overeenkomst worden maximaal 2 Masterclasses gegeven. Gaat een groep door, dan is op grond van dit artikel geen afzonderlijke Masterclassvergoeding verschuldigd. De Masterclassvergoeding van €1.750 geldt alleen bij annulering van een Masterclass zoals bepaald in Artikel 6.1.",
             "**6.3** Vindt de training na de Masterclass doorgang, dan wordt geen Masterclassvergoeding in rekening gebracht. De volledig afgesproken prijs voor het trainingsprogramma is dan verschuldigd zoals in de Overeenkomst vastgelegd.",
-            "**6.4** De betalingsverplichting van de Opdrachtgever is gebaseerd op het aantal Deelnemers dat op de Aanmeldtermijn is aangemeld, tot de afgesproken maximale capaciteit, ongeacht of de aanmelding via Innerleaps of via de Opdrachtgever is verlopen. Vanaf de Aanmeldtermijn is de afgesproken vergoeding voor elke aangemelde Deelnemer volledig verschuldigd, ongeacht of de Deelnemer de training vervolgens afrondt, zich terugtrekt, workshops mist, of diens deelname wordt beëindigd op grond van Artikel 4.6. In geen van deze gevallen wordt restitutie verleend.",
+            "**6.4** De betalingsverplichting van de Opdrachtgever is gebaseerd op het aantal Deelnemers dat op de Aanmeldtermijn is aangemeld, met inachtneming van het minimumaantal te factureren Deelnemers per groep uit Artikel 5.3 en tot de afgesproken maximale capaciteit, ongeacht of de aanmelding via Innerleaps of via de Opdrachtgever is verlopen. Vanaf de Aanmeldtermijn is de afgesproken vergoeding volledig verschuldigd voor elke te factureren Deelnemer, dus voor ten minste het minimumaantal Deelnemers per groep, ongeacht of een Deelnemer de training vervolgens afrondt, zich terugtrekt, workshops mist, of diens deelname wordt beëindigd op grond van Artikel 4.6. In geen van deze gevallen wordt restitutie verleend.",
             "**6.5** Moet Innerleaps een Masterclass annuleren of verzetten, dan informeert Innerleaps de Opdrachtgever zo snel mogelijk en biedt Innerleaps ten minste één alternatieve datum binnen 30 dagen aan. Hier staat geen compensatie tegenover.",
             "**6.6** Annulering moet altijd schriftelijk worden gemeld aan **info@innerleaps.nl**.",
           ],
@@ -272,8 +260,8 @@ export const termsNl: JuridischePagina = {
     },
   ],
   voettekst: [
-    "Documentversie: 2.0",
-    "Datum: 11 september 2026",
+    "Documentversie: 2.1",
+    "Datum: 25 september 2026",
     "Opgesteld door: Innerleaps",
     "Status: gepubliceerd",
   ],
