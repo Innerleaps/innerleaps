@@ -72,13 +72,14 @@ const TwoSystemsSection = memo(() => {
               <ul className="mt-6 space-y-4">
                 {ITEMS[row.key].map((item) => (
                   <li key={item} className="relative pl-6">
-                    {/* Streepje op de eerste regel van het label. Allebei de
-                        rijen oranje: de twee begrippen in de sectie erboven
-                        hebben geen eigen kleur meer, dus twee kleuren hier
-                        zouden nergens meer naar verwijzen. */}
+                    {/* Bolletje midden op de eerste regel van het label
+                        (text-xl, regelhoogte 28px). Allebei de rijen oranje:
+                        de twee begrippen in de sectie erboven hebben geen
+                        eigen kleur meer, dus twee kleuren hier zouden nergens
+                        meer naar verwijzen. */}
                     <span
                       aria-hidden="true"
-                      className="absolute left-0 top-[0.7em] h-0.5 w-2.5 rounded-full bg-brand-orange"
+                      className="absolute left-0 top-2.5 h-2 w-2 rounded-full bg-brand-orange"
                     />
                     <b className="block text-xl font-bold text-brand-purple">
                       {t(`systems.${row.key}.items.${item}.label`)}
