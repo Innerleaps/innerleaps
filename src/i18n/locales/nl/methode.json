@@ -61,37 +61,37 @@
   "systems": {
     "control": {
       "title": "Een sterker <0>controlecentrum</0>",
-      "lead": "Het deel van je brein dat bepaalt waar je aandacht naartoe gaat. Zes weken oefenen maakt het sterker, zo neemt druk minder ruimte in en komt je focus sneller terug.",
+      "lead": "Het deel van je brein dat bepaalt waar je aandacht naartoe gaat. Zes weken oefenen maakt het sterker, zo neemt spanning minder mentale ruimte in en komt je focus sneller terug.",
       "items": {
         "room": {
-          "label": "Meer ruimte om vast te houden",
+          "label": "Meer ruimte om informatie vast te houden",
           "body": "Informatie blijft hangen, en komt terug wanneer je het nodig hebt."
         },
         "attention": {
           "label": "Aandacht die blijft",
-          "body": "Die landt waar je hem neerzet, en houdt stand door de onderbrekingen heen."
+          "body": "Krachtige concentratie die minder gevoelig is voor afleiding en onderbrekingen."
         },
         "noise": {
-          "label": "Minder trek van de ruis",
-          "body": "Dingen die er niet toe doen nemen niet meer de volgende tien minuten mee."
+          "label": "Minder last van ruis",
+          "body": "Informatie die er niet toe doet filter je makkelijker weg."
         }
       }
     },
     "warning": {
       "title": "Een scherper <0>waarschuwingssysteem</0>",
-      "lead": "Het deel van je brein dat druk registreert voordat je erover hebt nagedacht. Zes weken oefenen maakt het scherper, zo komen signalen binnen terwijl ze nog klein zijn.",
+      "lead": "Het deel van je brein dat spanning in je lichaam opmerkt. Zes weken oefenen maakt het scherper, zo voel je stress aankomen voordat hij je overneemt.",
       "items": {
         "sooner": {
-          "label": "Je voelt het eerder",
-          "body": "De schouders, de kaak, de oppervlakkige ademhaling, terwijl ze nog klein zijn."
+          "label": "Stress eerder opmerken",
+          "body": "Gespannen schouders, een strakke kaak, een korte ademhaling. Je voelt het voordat het escaleert."
         },
-        "meaning": {
-          "label": "Je weet wat het betekent",
-          "body": "Welk gevoel wat signaleert, in plaats van alleen “niet lekker”."
+        "emotions": {
+          "label": "Emoties herkennen",
+          "body": "Je weet of het irritatie, zorgen of vermoeidheid is, in plaats van alleen dat je je niet goed voelt."
         },
-        "watch": {
-          "label": "Je kunt jezelf zien werken",
-          "body": "Je merkt het patroon terwijl je erin zit, niet op de weg naar huis."
+        "adjust": {
+          "label": "Op tijd bijsturen",
+          "body": "Je merkt dat je gehaast of kortaf wordt terwijl het gebeurt, niet pas ’s avonds."
         }
       }
     }

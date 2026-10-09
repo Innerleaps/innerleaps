@@ -34,7 +34,7 @@ const ROWS = [
 
 const ITEMS = {
   control: ["room", "attention", "noise"],
-  warning: ["sooner", "meaning", "watch"],
+  warning: ["sooner", "emotions", "adjust"],
 } as const;
 
 const TwoSystemsSection = memo(() => {

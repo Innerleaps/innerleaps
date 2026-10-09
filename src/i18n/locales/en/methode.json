@@ -61,37 +61,37 @@
   "systems": {
     "control": {
       "title": "A stronger <0>control centre</0>",
-      "lead": "The part of you that decides what gets your attention. Six weeks of practice makes it stronger, so pressure takes up less room and focus comes back faster.",
+      "lead": "The part of your brain that decides what gets your attention. Six weeks of practice makes it stronger, so tension takes up less mental space and focus comes back faster.",
       "items": {
         "room": {
-          "label": "More room to hold things",
+          "label": "More room to hold information",
           "body": "Information stays put, and comes back when you need it."
         },
         "attention": {
           "label": "Attention that stays",
-          "body": "It lands where you put it, and holds through the interruptions."
+          "body": "Strong concentration that is less easily thrown by distractions and interruptions."
         },
         "noise": {
-          "label": "Less pull from the noise",
-          "body": "Irrelevant things stop taking the next ten minutes with them."
+          "label": "Less bothered by noise",
+          "body": "You filter out what doesn’t matter more easily."
         }
       }
     },
     "warning": {
       "title": "A sharper <0>warning system</0>",
-      "lead": "The part of you that registers pressure before you have thought about it. Six weeks of practice makes it sharper, so signals arrive while they are still small.",
+      "lead": "The part of your brain that notices tension in your body. Six weeks of practice makes it sharper, so you feel stress coming before it takes over.",
       "items": {
         "sooner": {
-          "label": "You feel it sooner",
-          "body": "The shoulders, the jaw, the shallow breath, while they are still small."
+          "label": "Notice stress sooner",
+          "body": "Tense shoulders, a tight jaw, shallow breathing. You feel it before it escalates."
         },
-        "meaning": {
-          "label": "You know what it means",
-          "body": "Which feeling is signalling what, instead of just “off”."
+        "emotions": {
+          "label": "Recognise emotions",
+          "body": "You know whether it is irritation, worry or fatigue, instead of just feeling off."
         },
-        "watch": {
-          "label": "You can watch yourself work",
-          "body": "Notice the pattern while you are in it, not on the drive home."
+        "adjust": {
+          "label": "Adjust in time",
+          "body": "You notice you are getting rushed or short with people while it happens, not that evening."
         }
       }
     }
