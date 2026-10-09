@@ -3,6 +3,22 @@
     "title": "De breintraining methode van Innerleaps | 40 jaar onderzoek",
     "description": "Innerleaps bouwt op 40 jaar aandachtsonderzoek van Dr. Amishi Jha. De methode traint het waarschuwingssysteem en controlecentrum van het brein, bewezen effectief in meta-analyses en militaire toepassingen."
   },
+  "methodHero": {
+    "eyebrow": "Onze methode",
+    "title": "We nemen de werkdruk niet weg maar geven mensen <0>grip voordat ze uitvallen</0>.",
+    "subtitle": "Collega’s leren spanning eerder op te merken, de automatische reactie te onderbreken en te kiezen wat er daarna gebeurt. Zelfde werkdruk, andere reactie.",
+    "cta": "Plan een adviesgesprek",
+    "ctaNote": "Twintig minuten om te kijken of dit bij jullie team past."
+  },
+  "turnout": {
+    "title": "Aanmelden gaat makkelijk. Het afmaken is het lastige deel.",
+    "intro": "Elke aanbieder heeft goed materiaal. Waar wij het verschil maken is dat bijna al onze deelnemers het programma afmaken.",
+    "number": {
+      "aria": "9 op de 10",
+      "suffix": "op de 10"
+    },
+    "caption": "van de collega’s die bij ons starten, doet mee aan <0>minimaal 5 van de 6 sessies</0>."
+  },
   "hero": {
     "titlePart1": "Veel ballen",
     "titlePart2": "hoog houden",
@@ -14,89 +30,6 @@
     "imageAlt": "Push-ups voor je brein",
     "body1": "Met onze methode trainen werknemers hun brein. Net zoals je spieren versterkt in de sportschool, trainen deelnemers twee cruciale systemen met onze \"brein push-ups\".",
     "body2": "Zowel het \"controlecentrum\" voor betere concentratie en een efficiënter werkgeheugen, als het \"waarschuwingssysteem\" zodat spanning niet opstapelt."
-  },
-  "control": {
-    "titlePart1": "Een krachtiger",
-    "titlePart2": "controlecentrum",
-    "imageAlt": "Concentratietraining voor sterker executieve systeem",
-    "body1": "Door het oefenen verterkt onder andere de frontale cortex en fronto-pariëtale netwerken, ook wel ons \"controlecentrum\".",
-    "body2": "Werknemers ontwikkelen als het ware een mentaalschild voor druk en afleiding. Prestaties verbeteren omdat spanning minder werkgeheugen inneemt en het concentratievermogen sterker is.",
-    "cards": {
-      "info": {
-        "title": "Informatieverwerking",
-        "items": [
-          "Informatie langer vasthouden en beter onthouden.",
-          "Informatie sneller en beter verwerken."
-        ]
-      },
-      "focus": {
-        "title": "Concentratie",
-        "items": [
-          "Aandacht beter richten op wat belangrijk is.",
-          "Aandacht langer vasthouden.",
-          "Minder afgeleid door onbelangrijke informatie."
-        ]
-      },
-      "thinking": {
-        "title": "Denkprocessen",
-        "items": [
-          "Beter plannen en organiseren.",
-          "Doelen bepalen en volhouden.",
-          "Strategien bedenken en prioriteiten bepalen."
-        ]
-      },
-      "filter": {
-        "title": "Filteren & onderdrukken",
-        "items": [
-          "Irrelevante informatie filteren.",
-          "Ongewenste reacties onderdrukken."
-        ]
-      },
-      "easier": {
-        "title": "Makkelijker denken",
-        "items": [
-          "Dezelfde taken vragen minder hersenenergie.",
-          "Sneller schakelen tussen taken."
-        ]
-      }
-    }
-  },
-  "warning": {
-    "titlePart1": "Een scherper",
-    "titlePart2": "waarschuwingssysteem",
-    "imageAlt": "Stressmanagementtraining sterker waarschuwingssysteem",
-    "body1": "Door de training versterkt ook de anterior insula en anterior cingulate cortex, ons \"waarschuwingssysteem\". Hierdoor merken werknemers stresssignalen eerder op.",
-    "body2": "In de 6 weekse training ontwikkelen deelnemers nieuwe, gezonde patronen om die stresssignalen te reguleren. Echte gedragsverandering die de vitaliteit en inzetbaarheid van je team versterkt.",
-    "cards": {
-      "body": {
-        "title": "Lichaamsbewustzijn & Waarneming",
-        "items": [
-          "Eerder voelen dat je gestrest raakt.",
-          "Lichamelijke signalen opvangen voordat ze escaleren.",
-          "Subtiele waarschuwingen van je lichaam herkennen."
-        ]
-      },
-      "emotion": {
-        "title": "Emotionele Signalering",
-        "items": [
-          "Merken wat belangrijk is en aandacht nodig heeft.",
-          "Sneller voelen dat iets niet goed zit.",
-          "Begrijpen welke emoties je waarschuwen."
-        ]
-      },
-      "self": {
-        "title": "Zelfmonitoring & Bewustzijn",
-        "items": [
-          "Jezelf observeren terwijl je iets doet.",
-          "Opmerken wat je lichaam je waarschuwt."
-        ]
-      }
-    }
-  },
-  "report": {
-    "title": "Ontdek zelf de resultaten van 40 jaar onderzoek",
-    "body": "Zelf de wetenschappelijke details bekijken? Ons academische rapport bundelt de laatste studies, analyses en berekeningen rond de effecten van aandachttraining. Inclusief effectgroottes.",
-    "cta": "Rapport ontvangen"
   },
   "performance": {
     "titlePart1": "Verbeteren van",
@@ -116,5 +49,51 @@
       "audio": "Audio-opnames voor dagelijkse oefening"
     },
     "outro": "Het resultaat? Gedrag dat blijft. De effecten op stress, burn-out en productiviteit zijn 6 tot 12 maanden na de training nog steeds zichtbaar (Vonderlin et al., 2020; Michaelsen et al., 2023)."
+  },
+  "mechanism": {
+    "title": "Push-ups voor <0>je brein</0>",
+    "body1": "Met onze methode trainen mensen hun brein. Net zoals je in de sportschool spieren opbouwt, trainen deelnemers twee cruciale systemen met onze brein-push-ups.",
+    "body2": "Het <0>controlecentrum</0> wordt sterker, wat zorgt voor betere focus en een efficiënter werkgeheugen. En het <1>waarschuwingssysteem</1> wordt scherper, zodat druk zich niet opstapelt.",
+    "quote": "Iedereen weet eigenlijk wel wat helpt. <0>Onder druk vallen mensen terug op gewoontes</0>, en gewoontes veranderen alleen door herhaling. Daarom is dit training, geen advies.",
+    "quoteAuthor": "Bas",
+    "quoteRole": "Mede-oprichter & trainer"
+  },
+  "systems": {
+    "control": {
+      "title": "Een sterker <0>controlecentrum</0>",
+      "lead": "Het deel van je brein dat bepaalt waar je aandacht naartoe gaat. Zes weken oefenen maakt het sterker, zo neemt spanning minder mentale ruimte in en komt je focus sneller terug.",
+      "items": {
+        "room": {
+          "label": "Meer ruimte om informatie vast te houden",
+          "body": "Informatie blijft hangen, en komt terug wanneer je die nodig hebt."
+        },
+        "attention": {
+          "label": "Aandacht die blijft",
+          "body": "Krachtige concentratie die minder gevoelig is voor afleiding en onderbrekingen."
+        },
+        "noise": {
+          "label": "Minder last van ruis",
+          "body": "Informatie die er niet toe doet filter je makkelijker weg."
+        }
+      }
+    },
+    "warning": {
+      "title": "Een scherper <0>waarschuwingssysteem</0>",
+      "lead": "Het deel van je brein dat spanning in je lichaam opmerkt. Zes weken oefenen maakt het scherper, zo voel je stress aankomen voordat hij je overneemt.",
+      "items": {
+        "sooner": {
+          "label": "Stress eerder opmerken",
+          "body": "Gespannen schouders, een strakke kaak, een korte ademhaling. Je voelt het voordat het escaleert."
+        },
+        "emotions": {
+          "label": "Emoties herkennen",
+          "body": "Je weet of het irritatie, zorgen of vermoeidheid is, in plaats van alleen dat je je niet goed voelt."
+        },
+        "adjust": {
+          "label": "Op tijd bijsturen",
+          "body": "Je merkt dat je gehaast of kortaf wordt terwijl het gebeurt, niet pas ’s avonds."
+        }
+      }
+    }
   }
 }

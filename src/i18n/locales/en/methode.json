@@ -3,6 +3,22 @@
     "title": "The Innerleaps brain training method | 40 years of research",
     "description": "Innerleaps builds on 40 years of attention research by Dr. Amishi Jha. The method trains the brain's warning system and control centre, proven effective in meta-analyses and military applications."
   },
+  "methodHero": {
+    "eyebrow": "Our method",
+    "title": "We don’t take the workload away. We give people <0>grip, before they drop out</0>.",
+    "subtitle": "People learn to notice tension earlier, interrupt the automatic reaction, and choose what happens next. Same workload, different response.",
+    "cta": "Book a consultation",
+    "ctaNote": "Twenty minutes to see whether this fits your team."
+  },
+  "turnout": {
+    "title": "Getting people to sign up is easy. Getting them to finish is the hard part.",
+    "intro": "Every provider has good material. Where we make the difference is that almost all of our participants finish the programme.",
+    "number": {
+      "aria": "9 in 10",
+      "suffix": "in 10"
+    },
+    "caption": "of the people who start with us <0>attend at least 5 of the 6 sessions</0>."
+  },
   "hero": {
     "titlePart1": "Juggling",
     "titlePart2": "many balls",
@@ -14,89 +30,6 @@
     "imageAlt": "Push-ups for your brain",
     "body1": "With our method, employees train their brain. Just like you build muscles at the gym, participants train two crucial systems with our \"brain push-ups\".",
     "body2": "The \"control centre\" gets stronger, which means better focus and a more efficient working memory. And the \"warning system\" sharpens, so pressure doesn't pile up."
-  },
-  "control": {
-    "titlePart1": "A stronger",
-    "titlePart2": "control centre",
-    "imageAlt": "Focus training for a stronger executive system",
-    "body1": "Through practice, the frontal cortex and fronto-parietal networks get stronger. This is what we call the \"control centre\".",
-    "body2": "Employees develop a kind of mental shield against pressure and distraction. Performance improves because pressure takes up less working memory and the ability to focus gets sharper.",
-    "cards": {
-      "info": {
-        "title": "Information processing",
-        "items": [
-          "Hold on to information longer and remember it better.",
-          "Process information faster and more accurately."
-        ]
-      },
-      "focus": {
-        "title": "Concentration",
-        "items": [
-          "Better direct attention to what matters.",
-          "Sustain attention for longer.",
-          "Less distracted by unimportant information."
-        ]
-      },
-      "thinking": {
-        "title": "Thinking processes",
-        "items": [
-          "Plan and organise more effectively.",
-          "Set goals and stick with them.",
-          "Develop strategies and set priorities."
-        ]
-      },
-      "filter": {
-        "title": "Filter & inhibit",
-        "items": [
-          "Filter out irrelevant information.",
-          "Suppress unwanted reactions."
-        ]
-      },
-      "easier": {
-        "title": "Easier thinking",
-        "items": [
-          "The same tasks require less mental energy.",
-          "Switch faster between tasks."
-        ]
-      }
-    }
-  },
-  "warning": {
-    "titlePart1": "A sharper",
-    "titlePart2": "warning system",
-    "imageAlt": "Stress management training for a stronger warning system",
-    "body1": "The training also strengthens the anterior insula and anterior cingulate cortex, our \"warning system\". This way, employees notice stress signals earlier.",
-    "body2": "Over 6 weeks, participants build new healthy patterns to regulate those stress signals. Real behaviour change that strengthens the vitality and employability of your team.",
-    "cards": {
-      "body": {
-        "title": "Body awareness & perception",
-        "items": [
-          "Sense earlier when you're getting stressed.",
-          "Catch physical signals before they escalate.",
-          "Recognise subtle warnings from your body."
-        ]
-      },
-      "emotion": {
-        "title": "Emotional signaling",
-        "items": [
-          "Notice what matters and needs attention.",
-          "Sense more quickly when something feels off.",
-          "Understand which emotions are warning you."
-        ]
-      },
-      "self": {
-        "title": "Self-monitoring & awareness",
-        "items": [
-          "Observe yourself while doing something.",
-          "Notice what your body is warning you about."
-        ]
-      }
-    }
-  },
-  "report": {
-    "title": "See for yourself: the results of 40 years of research",
-    "body": "Want to dive into the scientific details yourself? Our academic report brings together the latest studies, analyses and calculations on the effects of attention training, including effect sizes.",
-    "cta": "Get the report"
   },
   "performance": {
     "titlePart1": "Improving",
@@ -116,5 +49,51 @@
       "audio": "Audio recordings for daily practice"
     },
     "outro": "The result? Behaviour that sticks. The effects on stress, burnout and productivity are still visible 6 to 12 months after the training (Vonderlin et al., 2020; Michaelsen et al., 2023)."
+  },
+  "mechanism": {
+    "title": "Push-ups for <0>your brain</0>",
+    "body1": "With our method, people train their brain. Just like you build muscle at the gym, participants train two crucial systems with our brain push-ups.",
+    "body2": "The <0>control centre</0> gets stronger, which means better focus and a more efficient working memory. And the <1>warning system</1> sharpens, so pressure doesn’t pile up.",
+    "quote": "Everyone already knows what helps. <0>Under pressure, people fall back on habits</0>, and habits only change through repetition. That is why this is training, not advice.",
+    "quoteAuthor": "Bas",
+    "quoteRole": "Co-founder & trainer"
+  },
+  "systems": {
+    "control": {
+      "title": "A stronger <0>control centre</0>",
+      "lead": "The part of your brain that decides what gets your attention. Six weeks of practice makes it stronger, so tension takes up less mental space and focus comes back faster.",
+      "items": {
+        "room": {
+          "label": "More room to hold information",
+          "body": "Information stays put, and comes back when you need it."
+        },
+        "attention": {
+          "label": "Attention that stays",
+          "body": "Strong concentration that is less easily thrown by distractions and interruptions."
+        },
+        "noise": {
+          "label": "Less bothered by noise",
+          "body": "You filter out what doesn’t matter more easily."
+        }
+      }
+    },
+    "warning": {
+      "title": "A sharper <0>warning system</0>",
+      "lead": "The part of your brain that notices tension in your body. Six weeks of practice makes it sharper, so you feel stress coming before it takes over.",
+      "items": {
+        "sooner": {
+          "label": "Notice stress sooner",
+          "body": "Tense shoulders, a tight jaw, shallow breathing. You feel it before it escalates."
+        },
+        "emotions": {
+          "label": "Recognise emotions",
+          "body": "You know whether it is irritation, worry or fatigue, instead of just feeling off."
+        },
+        "adjust": {
+          "label": "Adjust in time",
+          "body": "You notice you are getting rushed or short with people while it happens, not that evening."
+        }
+      }
+    }
   }
 }
