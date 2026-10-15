@@ -122,6 +122,7 @@ gebruiker of de wijziging daar ook moet landen.** Nooit stilzwijgend aannemen.
 | Weken van het kernprogramma | `training.json` `<sleutel>.weeks` | per pagina eigen sleutel, maar teksten zijn deels letterlijk gedupliceerd |
 | "Breintraining voor échte gedragsverandering" | `common.json` `programOverview.*` | 4 propositiepagina's **en de homepage** |
 | "Probeer het zelf in onze masterclass" | `common.json` `masterclassSteps.*` | homepage, 4 propositiepagina's **en `/breintraining-methode`** |
+| "Offerte aanvragen" | `common.json` `cta.requestQuote` | header en uitklapmenu op elke pagina, de zwevende balk overal behalve op de stress- en prestatiepagina, **en** de hero van home, `/duurzame-inzetbaarheid`, `/team-prestaties-verbeteren` en `/breintraining-methode` |
 
 ## De vier propositiepagina's
 
@@ -275,6 +276,56 @@ afzender als antwoordadres.
 
 De `calendarUrl`-velden in `MasterclassFormModal.tsx` zijn iets anders: dat zijn
 "zet deze masterclass in je agenda"-links voor een bestaand evenement. Afblijven.
+
+## Offerte aanvragen is de primaire knop
+
+Sinds 15 oktober 2026 (branch `offerte-cta`) is "Offerte aanvragen" de primaire
+actie van de site. Hij staat in de header, het uitklapmenu, de hero van de
+homepage, van de twee propositiepagina's met foto en van
+`/breintraining-methode`, en in de zwevende balk. Daar stond eerst "Vraag een
+masterclass aan" (en op de methodepagina "Plan een adviesgesprek"), en die
+leidden ook gewoon naar `/contact`. De masterclass houdt zijn knop in zijn
+eigen blok.
+
+Waarom: er bestaat geen onderzoek dat de twee knoppen op deals vergelijkt, maar
+enquêtes onder kopers (TrustRadius, 6sense, Gartner) laten zien dat ze vroeg een
+prijs willen weten en pas laat met een verkoper praten. GITP en Schouten &
+Nelissen werken ook met een offerteknop, en een bevriende aanbieder in dezelfde
+markt kreeg er meer deals mee. Ervoor waren er in vijf weken nul leads.
+
+De stroom:
+
+- `/offerte-aanvragen` en `/en/request-a-quote`: het formulier. Staat in
+  `ROUTE_MAP` voor de taalknop en het prerenderen, maar met een noindex en dus
+  **niet** in de sitemap.
+- Het formulier vraagt precies wat Bas nodig heeft om een prijs te noemen:
+  online of op locatie, aantal deelnemers, totaal aantal medewerkers. Plus
+  naam, organisatie, e-mail en telefoon.
+- Het verstuurt via `submit-contact-message`, met de offertegegevens in het
+  bericht en OFFERTEAANVRAAG bovenaan. Met `soort: "offerte"` krijgt de mail
+  de onderwerpregel "Innerleaps - offerte aanvraag (organisatie)", op verzoek
+  van Bas. Daarvoor moet de nieuwe versie van die functie in Supabase staan;
+  de oude negeert de twee extra velden en stuurt een gewone berichtmail.
+- Daarna `/bedankt/offerte` en `/en/thank-you/quote`: de belofte "binnen één
+  werkdag" en de agenda. **Bewust geen doorverwijzing naar `/contact`**: daar
+  staat weer een formulier, en dan vraagt iemand zich af of zijn aanvraag
+  aankwam.
+- Bas belt binnen een werkdag en stelt een gesprek voor. Dat staat met opzet
+  niet op de site.
+
+De knop verschijnt niet op het formulier en de bedanktpagina zelf
+(`isOffertePagina` in `src/lib/offerte.ts`). In de header alleen waar hij past:
+tussen 640 en 1024 pixels en vanaf 1280. Daartussen staat het volledige menu
+en is er geen ruimte.
+
+Meten: `quote_cta_click` met de plek als parameter, en `quote_request_sent`
+vanaf de bedanktpagina. Het label `offerte` in `conversielabels.ts` is leeg tot
+de conversieactie "Offerteaanvraag" in Google Ads bestaat.
+
+**Lokaal testen verstuurt een echte mail.** De Supabase-client pakt `fetch` op
+bij het opstarten, dus een nep-`fetch` in de browser vangt de verzending niet
+af. Test het formulier dus niet met verzinsels, of zeg Bas vooraf dat er een
+testmail aankomt.
 
 ## Meten: er staat geen Google Tag Manager
 
@@ -460,4 +511,5 @@ voorvertoningen ook netjes uit Google.
   `CLAUDE_SEO_PYTHON=/opt/homebrew/bin/python3.12` voor.
 - Search Console staat ingesteld op property `sc-domain:innerleaps.nl`.
 - De lokale site draait met `npm run dev` op poort 8080.
-- `npm run build` prerendert alle 24 pagina's en faalt hard bij een lege pagina.
+- `npm run build` prerendert alle pagina's (42 op 15 oktober 2026) en faalt
+  hard bij een lege pagina.

@@ -45,7 +45,7 @@
     "calculateSavings": "Bereken wat het jullie oplevert",
     "calculateRoi": "Bereken jullie ROI",
     "bookCallWithBas": "Plan 20 minuten met Bas",
-    "requestMasterclassSticky": "Vraag een masterclass aan"
+    "requestQuote": "Offerte aanvragen"
   },
   "loading": "Laden...",
   "footer": {
@@ -93,7 +93,6 @@
     "headlinePart3": "geeft over hun stress",
     "headlinePart4": "",
     "subtitle": "Gemaakt voor teams die wél willen, maar geen tijd hebben. Je collega's leren nieuw gedrag aan: ze herkennen spanning op tijd, voordat stress leidt tot uitval. Zo werk je concreet aan duurzame inzetbaarheid.",
-    "ctaPrimary": "Vraag een gratis masterclass aan",
     "whyChooseUs": "Waarom organisaties ons kiezen",
     "stats": {
       "dropoutRisk": "Uitvalrisico",
@@ -109,7 +108,7 @@
     "proofRating": "4,7/5",
     "proofSuffix": "op Google Reviews",
     "photoAlt": "Deelnemers luisteren tijdens een Innerleaps-sessie",
-    "quote": "Innerleaps leverde meetbare resultaten. Ons team gaf de training een 9,4/10.",
+    "quote": "Innerleaps leverde snel meetbare resultaten: 8,6% hogere productiviteit en 7 op de 10 deelnemers ervaarde minder stress.",
     "trustedBy": "Zij gingen je voor"
   },
   "problem": {
@@ -206,7 +205,7 @@
     }
   },
   "testimonial": {
-    "quote": "Innerleaps leverde meetbare resultaten. Ons team gaf de training een 9,4/10. Precies wat we nodig hadden."
+    "quote": "Met hun 6-weekse breintraining door geaccrediteerde trainers leverde Innerleaps snel meetbare resultaten: maar liefst 8,6% hogere productiviteit en 7 op de 10 deelnemers gaf aan minder stress te ervaren!"
   },
   "masterclassSteps": {
     "headlinePart1": "Probeer het zelf in onze",
@@ -330,11 +329,11 @@
     }
   },
   "bookingTrust": {
-    "quote": "“Met hun 6-weekse breintraining door geaccrediteerde trainers leverde Innerleaps snel meetbare resultaten: 70% minder stress, 40% scherpere focus, beoordeeld met een 9,4/10 door ons team. Precies wat we nodig hadden!”",
-    "author": "Jochem van der Veen",
+    "quote": "“Met hun 6-weekse breintraining door geaccrediteerde trainers leverde Innerleaps snel meetbare resultaten: maar liefst 8,6% hogere productiviteit en 7 op de 10 deelnemers gaf aan minder stress te ervaren!”",
+    "author": "Jochem van der Veer",
     "role": "CEO bij TheyDo",
     "logoAlt": "TheyDo",
-    "photoAlt": "Jochem van der Veen, CEO bij TheyDo",
+    "photoAlt": "Jochem van der Veer, CEO bij TheyDo",
     "vmbnAlt": "VMBN trainer categorie 1"
   },
   "cookiebanner": {

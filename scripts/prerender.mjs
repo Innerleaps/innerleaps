@@ -76,6 +76,8 @@ const EXTRA_ROUTES = [
   "/en/thank-you/roi-management",
   "/en/thank-you/roi",
   "/en/thank-you/scientific-report",
+  "/bedankt/offerte",
+  "/en/thank-you/quote",
 ];
 
 /**

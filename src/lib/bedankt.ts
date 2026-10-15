@@ -148,6 +148,33 @@ export const leesRapportOverdracht = (): RapportOverdracht | null => {
   }
 };
 
+/** Het pad van de bedanktpagina van de offerteaanvraag, per taal. */
+export const offerteBedanktPad = (taal: SupportedLanguage): string =>
+  taal === "en" ? "/en/thank-you/quote" : "/bedankt/offerte";
+
+/**
+ * Ook bij de offerte gaat alleen het gehashte adres mee. De gegevens zelf
+ * staan in de mail aan Bas en hoeven op de bedanktpagina niet terug te komen.
+ */
+const OFFERTE_SLEUTEL = "innerleaps.offerte-aanvraag";
+
+export const bewaarOfferteOverdracht = (overdracht: RapportOverdracht): void => {
+  try {
+    sessionStorage.setItem(OFFERTE_SLEUTEL, JSON.stringify(overdracht));
+  } catch {
+    // Zie hierboven.
+  }
+};
+
+export const leesOfferteOverdracht = (): RapportOverdracht | null => {
+  try {
+    const rauw = sessionStorage.getItem(OFFERTE_SLEUTEL);
+    return rauw ? (JSON.parse(rauw) as RapportOverdracht) : null;
+  } catch {
+    return null;
+  }
+};
+
 /** Een identificatie per invulling, met een uitwijk voor oudere browsers. */
 export const nieuweId = (): string => {
   if (typeof crypto !== "undefined" && typeof crypto.randomUUID === "function") {

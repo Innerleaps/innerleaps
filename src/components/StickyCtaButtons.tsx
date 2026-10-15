@@ -2,15 +2,17 @@ import { useState, useEffect, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Button } from '@/components/ui/button';
 import { Link, useLocation } from 'react-router-dom';
-import { bookingPath } from '@/lib/booking';
 import { detectLanguageFromPath } from '@/i18n/config';
-import { meldMasterclassKlik } from '@/lib/conversies';
+import { meldOfferteKlik } from '@/lib/conversies';
+import { isOffertePagina, offertePad } from '@/lib/offerte';
 
 /**
- * Eén knop, één actie: de masterclass aanvragen. Verder niets.
+ * Eén knop, één actie: een offerte aanvragen. Verder niets.
  *
- * Hij wees eerst naar de rekentool. De site heeft nu één primaire actie, en de
- * rekentool blijft bereikbaar via de tekstlink in de hero en via de footer.
+ * Hij wees eerst naar de rekentool en daarna naar de masterclass. De site
+ * heeft één primaire actie, dezelfde als in de header en de hero. De
+ * masterclass houdt zijn knop in zijn eigen blok, de rekentool blijft
+ * bereikbaar via de tekstlink in de hero en via de footer.
  *
  * Op mobiel is dit een balk over de volle breedte onderaan het scherm. Die
  * dekte eerder tekst af, dus krijgt de body een padding-bottom ter hoogte van
@@ -41,7 +43,7 @@ const StickyCtaButtons = () => {
   const location = useLocation();
   const lang = detectLanguageFromPath(location.pathname);
 
-  const label = t('cta.requestMasterclassSticky');
+  const label = t('cta.requestQuote');
 
   // Pas tonen als de hero uit beeld is. Bij het laden van de pagina zou de
   // balk anders meteen over de hero heen liggen.
@@ -77,7 +79,7 @@ const StickyCtaButtons = () => {
     return () => observer.disconnect();
   }, [location.pathname]);
 
-  const isHidden = HIDDEN_ON_PATHS.includes(location.pathname);
+  const isHidden = HIDDEN_ON_PATHS.includes(location.pathname) || isOffertePagina(location.pathname);
   const isVisible = isPastHero && !isCalculatorInView && !isHidden;
 
   // De gemeten hoogte doorgeven aan de body, zodat er onderaan de pagina geen
@@ -114,8 +116,9 @@ const StickyCtaButtons = () => {
         ${isVisible ? 'sticky-cta--visible' : 'sticky-cta--hidden'}`}
     >
       <Link
-        to={bookingPath(lang)}
-        onClick={() => meldMasterclassKlik('sticky')}
+        to={offertePad(lang)}
+        state={{ van: location.pathname }}
+        onClick={() => meldOfferteKlik('sticky')}
         tabIndex={isVisible ? undefined : -1}
         className="block md:inline-block"
       >

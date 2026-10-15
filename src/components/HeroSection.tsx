@@ -3,8 +3,8 @@ import { Link, useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { Award, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { bookingPath } from "@/lib/booking";
-import { meldMasterclassKlik } from "@/lib/conversies";
+import { offertePad } from "@/lib/offerte";
+import { meldOfferteKlik } from "@/lib/conversies";
 import { detectLanguageFromPath } from "@/i18n/config";
 import { THEYDO_PORTRET } from "@/lib/klantervaringen";
 
@@ -94,21 +94,22 @@ const HeroSection = ({ title, subtitle, photo }: HeroSectionProps = {}) => {
               </p>
 
               {/* StickyCtaButtons gebruikt dit id als peilpunt: zodra deze rij
-                  uit beeld is, verschijnt de zwevende rekentoolknop. */}
+                  uit beeld is, verschijnt de zwevende offerteknop. */}
               <div
                 id="hero-cta"
                 className="mt-8 flex flex-col lg:flex-row lg:flex-wrap lg:items-center gap-4 lg:gap-6"
               >
                 <Link
-                  to={bookingPath(lang)}
-                  onClick={() => meldMasterclassKlik("hero")}
+                  to={offertePad(lang)}
+                  state={{ van: pathname }}
+                  onClick={() => meldOfferteKlik("hero")}
                   className="block lg:inline-block"
                 >
                   <Button
                     size="lg"
                     className="w-full lg:w-auto min-h-[44px] font-semibold py-4 px-8 rounded-lg text-base lg:text-lg shadow-xl"
                   >
-                    {t("hero.ctaPrimary")}
+                    {t("cta.requestQuote")}
                   </Button>
                 </Link>
                 <button

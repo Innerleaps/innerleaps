@@ -244,6 +244,26 @@
   to = "/index.html"
   status = 200
 
+# Het offerteformulier en zijn bedanktpagina. Zelfde vangnet als hierboven: het
+# formulier staat in ROUTE_MAP en de bedanktpagina's in EXTRA_ROUTES, dus ze
+# worden geprerenderd en deze regels doen normaal niets.
+[[redirects]]
+  from = "/offerte-aanvragen"
+  to = "/index.html"
+  status = 200
+[[redirects]]
+  from = "/en/request-a-quote"
+  to = "/index.html"
+  status = 200
+[[redirects]]
+  from = "/bedankt/offerte"
+  to = "/index.html"
+  status = 200
+[[redirects]]
+  from = "/en/thank-you/quote"
+  to = "/index.html"
+  status = 200
+
 # Alles wat hierboven niet is opgevangen bestaat echt niet. Vroeger ging dit naar
 # /index.html met status 200, waardoor elke typefout een "zachte 404" opleverde:
 # de homepage met een 200-status. Google ziet dat als een kwaliteitsprobleem en

@@ -21,5 +21,27 @@
     "error": "Sending failed. Feel free to email us directly at bas@innerleaps.nl.",
     "required": "Please fill in your name, email address and message.",
     "emailInvalid": "Check your email address. Without a valid one we cannot send you anything."
+  },
+  "quote": {
+    "meta": {
+      "title": "Request a quote - Innerleaps"
+    },
+    "title": "Request a <0>quote</0>",
+    "intro": "A few details are all we need to work out what the training costs for your organisation.",
+    "form": {
+      "name": "Name",
+      "organisation": "Organisation",
+      "email": "Work email",
+      "phone": "Phone number",
+      "setting": "Online or on location?",
+      "settingOnline": "Online",
+      "settingLocation": "On location",
+      "settingUnsure": "Not sure yet",
+      "participants": "How many participants, roughly?",
+      "staff": "How many employees in total?",
+      "note": "Anything else we should know? (optional)",
+      "submit": "Request a quote",
+      "required": "A few fields are still empty."
+    }
   }
 }

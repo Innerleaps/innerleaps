@@ -3,8 +3,8 @@ import { Link, useLocation } from "react-router-dom";
 import { Trans, useTranslation } from "react-i18next";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { bookingPath } from "@/lib/booking";
-import { meldMasterclassKlik } from "@/lib/conversies";
+import { offertePad } from "@/lib/offerte";
+import { meldOfferteKlik } from "@/lib/conversies";
 import { detectLanguageFromPath } from "@/i18n/config";
 import cohortPhoto from "@/assets/innerleaps-cohort-room.jpg";
 
@@ -47,8 +47,9 @@ const MethodHero = memo(() => {
 
           <div className="mt-8">
             <Link
-              to={bookingPath(lang)}
-              onClick={() => meldMasterclassKlik("hero")}
+              to={offertePad(lang)}
+              state={{ van: pathname }}
+              onClick={() => meldOfferteKlik("hero")}
               className="block lg:inline-block group"
             >
               {/* De bestaande primaire knop, alleen rond in plaats van
@@ -58,7 +59,7 @@ const MethodHero = memo(() => {
                 size="lg"
                 className="w-full lg:w-auto min-h-[44px] font-semibold py-4 px-8 rounded-lg text-base lg:text-lg shadow-xl motion-reduce:transform-none motion-reduce:transition-none"
               >
-                {t("methodHero.cta")}
+                {t("cta.requestQuote", { ns: "common" })}
                 <ArrowRight
                   className="ml-1 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1 motion-reduce:transition-none motion-reduce:group-hover:translate-x-0"
                   aria-hidden="true"
@@ -66,12 +67,6 @@ const MethodHero = memo(() => {
               </Button>
             </Link>
           </div>
-
-          {/* brand-gray-dark en niet -medium: die haalt op cream 4,33 en blijft
-              daarmee onder AA. Deze haalt 9,37. */}
-          <p className="mt-4 md:max-w-[54ch] mx-auto text-base text-brand-gray-dark leading-relaxed">
-            {t("methodHero.ctaNote")}
-          </p>
         </div>
 
         {/* Versiering, geen informatie: de foto krijgt een lege alt. Op smalle
