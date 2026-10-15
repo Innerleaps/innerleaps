@@ -23,5 +23,14 @@
       "title": "Wil je weten wat dit voor <0>jouw organisatie</0> betekent?",
       "intro": "Kies hieronder een moment. Geen verkooppraatje, wel een eerlijk antwoord."
     }
+  },
+  "offerte": {
+    "metaTitle": "Aanvraag ontvangen - Innerleaps",
+    "title": "We hebben je aanvraag ontvangen. Je hoort <0>snel</0> van ons",
+    "intro": "Binnen één werkdag nemen we contact met je op.",
+    "booking": {
+      "title": "Liever niet <0>wachten</0>?",
+      "intro": "Kies meteen een moment voor 20 minuten met Bas."
+    }
   }
 }

@@ -23,5 +23,14 @@
       "title": "Want to know what this means for <0>your organisation</0>?",
       "intro": "Pick a moment below. No sales pitch, just an honest answer."
     }
+  },
+  "offerte": {
+    "metaTitle": "Request received - Innerleaps",
+    "title": "We have received your request. You will hear from us <0>soon</0>",
+    "intro": "We will get in touch within one working day.",
+    "booking": {
+      "title": "Rather not <0>wait</0>?",
+      "intro": "Pick a time for 20 minutes with Bas right away."
+    }
   }
 }

@@ -33,6 +33,8 @@ const MasterclassQR = lazy(() => import("./pages/MasterclassQR"));
 const Bedankt = lazy(() => import("./pages/Bedankt"));
 const BedanktRoi = lazy(() => import("./pages/BedanktRoi"));
 const BedanktRapport = lazy(() => import("./pages/BedanktRapport"));
+const BedanktOfferte = lazy(() => import("./pages/BedanktOfferte"));
+const OfferteAanvragen = lazy(() => import("./pages/OfferteAanvragen"));
 const NegenStippen = lazy(() => import("./pages/NegenStippen"));
 const AlgemeneVoorwaarden = lazy(() => import("./pages/AlgemeneVoorwaarden"));
 const PrivacyNotice = lazy(() => import("./pages/PrivacyNotice"));
@@ -186,6 +188,12 @@ const App = () => {
                 <Route path="/en/thank-you/roi-management" element={<BedanktRoi doelgroep="management" />} />
                 <Route path="/en/thank-you/roi" element={<BedanktRoi doelgroep="onbekend" />} />
                 <Route path="/en/thank-you/scientific-report" element={<BedanktRapport />} />
+                <Route path="/bedankt/offerte" element={<BedanktOfferte />} />
+                <Route path="/en/thank-you/quote" element={<BedanktOfferte />} />
+
+                {/* Het offerteformulier. Staat in ROUTE_MAP, met noindex. */}
+                <Route path="/offerte-aanvragen" element={<OfferteAanvragen />} />
+                <Route path="/en/request-a-quote" element={<OfferteAanvragen />} />
 
                 {/* Feature-flag routes - visible in Lovable editor, but redirect in production */}
                 <Route path="/masterclass-stress-qr" element={

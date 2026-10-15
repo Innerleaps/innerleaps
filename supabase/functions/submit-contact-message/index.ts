@@ -30,6 +30,11 @@ const ContactMessageSchema = z.object({
   bericht: z.string().trim().min(1).max(2000),
   taal: z.enum(["nl", "en"]).optional(),
   herkomst: z.string().max(500).optional(),
+  // Sinds oktober 2026 komt ook het offerteformulier hierlangs. Die mail moet
+  // in de inbox meteen als offerteaanvraag herkenbaar zijn, niet als "bericht".
+  // Beide velden zijn optioneel, dus het berichtformulier merkt hier niets van.
+  soort: z.enum(["bericht", "offerte"]).optional(),
+  organisatie: z.string().trim().max(150).optional(),
 });
 
 // Hoeveel berichten één adres per uur mag sturen.
@@ -97,18 +102,26 @@ const handler = async (req: Request): Promise<Response> => {
     const bericht = escapeHtml(data.bericht).replace(/\n/g, "<br>");
     const herkomst = data.herkomst ? escapeHtml(data.herkomst) : "onbekend";
 
+    const isOfferte = data.soort === "offerte";
+    // Geen regeleinden in een onderwerpregel, ook niet als iemand ze intypt.
+    const organisatie = (data.organisatie ?? "").replace(/[\r\n]+/g, " ").trim();
+    const onderwerp = isOfferte
+      ? `Innerleaps - offerte aanvraag${organisatie ? ` (${organisatie})` : ""}`
+      : `Bericht via de site van ${data.naam}`;
+    const kop = isOfferte ? "Nieuwe offerteaanvraag via de site" : "Nieuw bericht via de contactpagina";
+
     await resend.emails.send({
       from: "InnerLeaps <info@innerleaps.nl>",
       to: [ONTVANGER],
       // Zo kan Bas gewoon op beantwoorden drukken en komt het bij de afzender uit.
       reply_to: data.email,
-      subject: `Bericht via de site van ${data.naam}`,
+      subject: onderwerp,
       html: `
         <!DOCTYPE html>
         <html>
         <head><meta charset="utf-8"></head>
         <body style="font-family: Arial, sans-serif; line-height: 1.6; color: #333; max-width: 600px; margin: 0 auto; padding: 20px;">
-          <h1 style="color: #230c47; font-size: 20px;">Nieuw bericht via de contactpagina</h1>
+          <h1 style="color: #230c47; font-size: 20px;">${kop}</h1>
           <p><strong>Naam:</strong> ${naam}</p>
           <p><strong>E-mail:</strong> <a href="mailto:${email}">${email}</a></p>
           <p><strong>Taal:</strong> ${data.taal ?? "nl"}</p>

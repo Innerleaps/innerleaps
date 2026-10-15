@@ -23,7 +23,8 @@ export type ConversieNaam =
   | "roiOnbekend"
   | "telefoon"
   | "email"
-  | "bijlage";
+  | "bijlage"
+  | "offerte";
 
 /**
  * Per conversieactie het label. De namen in het commentaar zijn precies de
@@ -39,6 +40,9 @@ const LABELS: Record<ConversieNaam, string> = {
   telefoon: "Y24qCN3VzPAcEOftptRE",  // Klik op telefoonnummer
   email: "uoEmCODVzPAcEOftptRE",  // Klik op e-mailadres
   bijlage: "SHCFCOPVzPAcEOftptRE",  // Wetenschappelijke bijlage
+  // Nog aan te maken in Google Ads als "Offerteaanvraag". Tot dan vuurt alleen
+  // de gebeurtenis voor Analytics.
+  offerte: "",
 };
 
 /** De volledige `send_to`-waarde, of null als het label nog niet bekend is. */

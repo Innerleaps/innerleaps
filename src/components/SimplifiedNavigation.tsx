@@ -5,6 +5,8 @@ import { Link, useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import LanguageSwitcher from '@/components/LanguageSwitcher';
 import { detectLanguageFromPath } from '@/i18n/config';
+import { isOffertePagina, offertePad } from '@/lib/offerte';
+import { meldOfferteKlik } from '@/lib/conversies';
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -33,6 +35,10 @@ const SimplifiedNavigation = () => {
 
   const isActiveRoute = (href: string) => pathname === href;
 
+  // De offerteknop: de primaire actie van de site. Niet op het formulier zelf
+  // en niet op de bedanktpagina erachter, want daar wijst hij naar waar je al bent.
+  const toonOfferteknop = !isOffertePagina(pathname);
+
   const organisationMenuItems = [
     { label: t('menuItems.vitality.label'), href: href.vitality, description: t('menuItems.vitality.description') },
     { label: t('menuItems.employability.label'), href: href.employability, description: t('menuItems.employability.description') },
@@ -50,7 +56,10 @@ const SimplifiedNavigation = () => {
   return (
     <nav className="bg-white shadow-lg sticky top-0 z-50">
       <div className="container-custom">
-        <div className="flex items-center gap-4 sm:gap-8 py-4">
+        {/* Op lg en xl krapper dan op sm. Op 1024 pixels stak de taalknop
+            er eerst 49 pixels uit, en op 1280 kwam de rij met de offerteknop
+            erbij 38 pixels te kort. */}
+        <div className="flex items-center gap-4 sm:gap-8 lg:gap-5 xl:gap-6 py-4">
           {/* Logo */}
           <div className="flex flex-col items-start min-w-0 flex-shrink-0">
             <Link to={href.home} className="hover:opacity-80 transition-opacity">
@@ -65,7 +74,7 @@ const SimplifiedNavigation = () => {
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center space-x-6 xl:space-x-8">
+          <div className="hidden lg:flex items-center space-x-4 xl:space-x-6">
             <NavigationMenu className="flex-none">
               <NavigationMenuList>
                 <NavigationMenuItem>
@@ -193,11 +202,26 @@ const SimplifiedNavigation = () => {
             </Link>
           </div>
 
-          {/* Right side: language switcher (desktop) + mobile menu button */}
-          <div className="ml-auto flex items-center gap-4">
+          {/* Right side: language switcher (desktop), quote button, mobile menu button */}
+          <div className="ml-auto flex items-center gap-4 xl:gap-3">
             <div className="hidden lg:block">
               <LanguageSwitcher />
             </div>
+            {/* Alleen waar hij past. Onder sm niet naast het logo, en tussen lg
+                en xl niet naast het volledige menu. Daar staat hij in het
+                uitklapmenu of de hero, en verschijnt de zwevende balk na de hero. */}
+            {toonOfferteknop && (
+              <Link
+                to={offertePad(lang)}
+                state={{ van: pathname }}
+                onClick={() => meldOfferteKlik('header')}
+                className="hidden sm:block lg:hidden xl:block"
+              >
+                <Button tabIndex={-1} className="min-h-[44px] px-4 text-base font-semibold whitespace-nowrap">
+                  {t('cta.requestQuote')}
+                </Button>
+              </Link>
+            )}
             <div className="lg:hidden">
               <Button
                 variant="ghost"
@@ -326,6 +350,22 @@ const SimplifiedNavigation = () => {
               >
                 {t('nav.blog')}
               </Link>
+
+              {toonOfferteknop && (
+                <Link
+                  to={offertePad(lang)}
+                  state={{ van: pathname }}
+                  onClick={() => {
+                    meldOfferteKlik('menu');
+                    setIsMenuOpen(false);
+                  }}
+                  className="block pt-2"
+                >
+                  <Button tabIndex={-1} className="w-full min-h-[44px] text-base font-semibold">
+                    {t('cta.requestQuote')}
+                  </Button>
+                </Link>
+              )}
             </div>
           </div>
       </div>

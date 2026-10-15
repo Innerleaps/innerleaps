@@ -62,6 +62,10 @@ export const ROUTE_MAP: Array<{ nl: string; en: string }> = [
   { nl: "/privacy", en: "/en/privacy" },
   { nl: "/cookies", en: "/en/cookies" },
   { nl: "/algemene-voorwaarden", en: "/en/terms-and-conditions" },
+
+  // Het offerteformulier. Zelfde reden als hierboven: hier voor de taalknop en
+  // het prerenderen, met een noindex en dus niet in de sitemap.
+  { nl: "/offerte-aanvragen", en: "/en/request-a-quote" },
 ];
 
 /** Returns the equivalent path in the target language, or null if no mapping exists. */

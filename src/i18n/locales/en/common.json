@@ -45,7 +45,7 @@
     "calculateSavings": "Calculate your impact",
     "calculateRoi": "Calculate your ROI",
     "bookCallWithBas": "Book 20 minutes with Bas",
-    "requestMasterclassSticky": "Request a masterclass"
+    "requestQuote": "Request a quote"
   },
   "loading": "Loading...",
   "footer": {
@@ -93,7 +93,6 @@
     "headlinePart3": "of their stress",
     "headlinePart4": "",
     "subtitle": "Built for teams that want to take part but have no time. Your people catch tension early, before stress turns into sick leave. A practical way to become a sustainable employer.",
-    "ctaPrimary": "Request a free masterclass",
     "whyChooseUs": "Why organisations choose us",
     "stats": {
       "dropoutRisk": "Drop-out risk",

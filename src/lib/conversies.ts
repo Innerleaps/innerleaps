@@ -186,15 +186,48 @@ export const meldContactformulier = (id: string, emailHash: string | null): void
 };
 
 /**
+ * Een verzonden offerteaanvraag. Gemeld vanaf de bedanktpagina, net als het
+ * rapport, zodat Google Ads de conversie ook op die URL kan meten.
+ */
+export const meldOfferteaanvraag = ({
+  id,
+  emailHash,
+}: {
+  id: string;
+  emailHash: string | null;
+}): void => {
+  if (alGemeld(id)) return;
+
+  naarGoogle("offerte", id, "generate_lead", { type: "offerte" }, emailHash);
+
+  duwen({
+    event: "quote_request_sent",
+    transaction_id: id,
+    user_data: emailHash ? { sha256_email_address: emailHash } : undefined,
+  });
+  onthoudId(id);
+};
+
+/**
+ * Een klik op een offerteknop. Net als bij de masterclass hieronder geen
+ * conversie, alleen een stap in de trechter, met de plek als parameter.
+ */
+export type OfferteKnop = "header" | "menu" | "hero" | "sticky";
+
+export const meldOfferteKlik = (positie: OfferteKnop): void => {
+  duwen({ event: "quote_cta_click", positie });
+};
+
+/**
  * Een klik op een masterclass-knop.
  *
  * Dit is geen conversie: er is nog niets ingevuld, de bezoeker gaat alleen op
  * weg. Daarom geen conversielabel en geen rem op herhaling, net als bij de
- * telefoon- en e-mailklikken hieronder. Eén gebeurtenisnaam voor alle drie de
- * plekken, met de positie als parameter, zodat ze binnen één trechter te
- * vergelijken zijn in plaats van als drie losse gebeurtenissen.
+ * telefoon- en e-mailklikken hieronder. De positie gaat mee als parameter. Sinds
+ * de offerteknop de hero en de zwevende balk overnam, staat de masterclassknop
+ * alleen nog onderaan zijn eigen blok.
  */
-export type MasterclassKnop = "hero" | "sticky" | "onderaan";
+export type MasterclassKnop = "onderaan";
 
 export const meldMasterclassKlik = (positie: MasterclassKnop): void => {
   duwen({ event: "masterclass_cta_click", positie });
