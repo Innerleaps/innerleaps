@@ -114,7 +114,7 @@ const ResultsSection = memo(() => {
               <div className="flex items-center gap-4">
                 <img
                   src={THEYDO_PORTRET}
-                  alt="Jochem van der Veen"
+                  alt="Jochem van der Veer"
                   className="h-14 w-14 flex-shrink-0 rounded-full object-cover"
                   width={160}
                   height={160}
