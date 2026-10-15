@@ -1,0 +1,135 @@
+{
+  "meta": {
+    "title": "TheyDo case study: 8.6% more productive | Innerleaps",
+    "description": "Would mental training feel like a sign of weakness? TheyDo's CEO feared so. Then 39 people signed up voluntarily, and productivity rose 8.6%."
+  },
+  "eyebrow": "Case study",
+  "people": {
+    "jochem": {
+      "name": "Jochem van der Veer",
+      "role": "CEO and co-founder of TheyDo"
+    },
+    "heidi": {
+      "name": "Heidi Young",
+      "role": "[title to follow] at TheyDo"
+    }
+  },
+  "hero": {
+    "title": "<0>8.6% more productive</0>. And <0>less stress</0> for 7\u00a0in\u00a010.",
+    "subtitle": "A fully remote team across 26 countries, where nobody sees how colleagues are really doing. 39 of them trained their attention for six weeks.",
+    "quote": "You're enabling people to get more out of their workday without working more hours.",
+    "photoAlt": "Jochem van der Veer, CEO of TheyDo, during the interview"
+  },
+  "stats": [
+    {
+      "value": "+8.6%",
+      "label": "productivity, measured a month after the training"
+    },
+    {
+      "value": "68%",
+      "label": "felt less stress and tension"
+    },
+    {
+      "value": "9.3",
+      "label": "for the trainer, 8.1 for the programme"
+    }
+  ],
+  "glance": {
+    "title": "At a glance",
+    "items": [
+      {
+        "label": "Company",
+        "value": "TheyDo, journey management software for large enterprises"
+      },
+      {
+        "label": "Team",
+        "value": "Fully remote, across 26 countries"
+      },
+      {
+        "label": "Participants",
+        "value": "39 employees, about 40% of the company, signed up voluntarily"
+      },
+      {
+        "label": "Programme",
+        "value": "Six weeks of Innerleaps brain training, online, [start date] to April 2026"
+      },
+      {
+        "label": "Measured",
+        "value": "Before the training and four weeks after it, plus an evaluation at the end"
+      }
+    ]
+  },
+  "weakness": {
+    "title": "Won't it feel like a <0>sign of weakness</0>?",
+    "quote1": "It could be seen as a sign of weakness, like: hey, there's something wrong with you, you have to take this. I wasn't sure how our employees would respond. It could be backfiring. But in the end, it didn't.",
+    "fact": "39 people signed up voluntarily. About 40% of the company.",
+    "bridge": "Why did it work? Jochem presented it as maintenance, not repair.",
+    "quote2": "It's totally fine to bring your car in for scheduled maintenance once or twice a year. Yet we don't do it with our own brain. We only go to a specialist when something's wrong. Offering an Innerleaps programme says: it's available, the threshold is very low. And doing it together makes it easier to take that first step."
+  },
+  "changed": {
+    "title": "What <0>changed</0> for participants?",
+    "intro": "At the end, we asked participants what they noticed themselves. 22 of the 39 answered. These four came up most.",
+    "items": [
+      {
+        "value": 68,
+        "label": "Less stress and tension"
+      },
+      {
+        "value": 55,
+        "label": "Less running on autopilot"
+      },
+      {
+        "value": 55,
+        "label": "Less mental fatigue"
+      },
+      {
+        "value": 41,
+        "label": "Better concentration and focus"
+      }
+    ],
+    "quoteJochem": "The best feedback is usually unsolicited. A coworker who took the programme just blurted out: it's so great, I'm actually sleeping again. I wasn't even aware she had sleep issues. That's not something you talk about at work.",
+    "quoteHeidi": "When I was getting super stressed, I'd think: okay, I can't do the twelve or thirteen minutes, but I can breathe for two minutes. Just reset. Two minutes sounds like so little, but before this I wasn't even getting myself that."
+  },
+  "payback": {
+    "title": "Does it <0>pay for itself</0>?",
+    "quoteJochem": "If it's worth the investment? It's a hell yes. An 8.6% increase in productivity is great, but in our sales team that literally turns into more meetings, more qualified prospects and ultimately more revenue. In the product organisation, it's more time on task.",
+    "breakEven": "At TheyDo, the programme paid for itself from a productivity gain of 0.36%. The measured gain was 8.6%. Where your break-even sits depends on your salaries. <0>Calculate it for your team</0>.",
+    "quoteHeidi": "The break-even point was 0.36 of a percent. So I'm absolutely calling that a win."
+  },
+  "hr": {
+    "title": "What does it ask of <0>HR</0>?",
+    "quoteEffort": "I'm going to be honest, it was a [fair] amount of work. But that's because we cared about the programme: following up, making sure people signed up and got the most out of it. That said, you guys were super organised. You had [everything] ready. You told me exactly what to do and when to do it.",
+    "quoteConnection": "A piece that wasn't captured in the numbers was the connection: getting to know colleagues we wouldn't normally work with so closely. Some of the things we talked about were quite vulnerable. I just think that's invaluable for a remote team."
+  },
+  "feedback": {
+    "title": "What TheyDo's <0>feedback</0> changed",
+    "intro": "TheyDo was honest with us about what could be better. We did four things with it.",
+    "items": [
+      "Participants wanted to know beforehand that they'd need a quiet spot for the exercises. We now tell everyone before the first session.",
+      "The workbook used to arrive in one go. Now it comes week by week, so it doubles as a reminder.",
+      "For international teams, we re-recorded the English audio with a native speaker.",
+      "Keeping up the daily exercise was the hardest part. Participants now get a daily nudge in their own chat app, Signal, Telegram or WhatsApp, that helps them stick with it."
+    ]
+  },
+  "last": {
+    "title": "Does it <0>last</0>?",
+    "body": "As far as research has looked, yes. Studies up to a year after the training still found measurably less stress. Longer than that has hardly been studied.",
+    "quoteJochem": "I would definitely do this again. Not only because of the data, but because of the feedback from my employees: this was a great programme, it helped me. And it's something you can do again with new employees, and keep doing as the company grows."
+  },
+  "know": {
+    "title": "How do we <0>know</0> this?",
+    "items": [
+      "We measured productivity with the World Health Organization's Health and Work Performance Questionnaire (HPQ). 20 participants rated their own work performance over the past four weeks: once before the training, and again four weeks after it ended.",
+      "At the end, 22 of the 39 participants filled in an evaluation.",
+      "People who practised more than once a week did even better: their productivity rose by 11.1%.",
+      "Every participant got their own impact report. Individual answers never go to the employer."
+    ],
+    "reportPlaceholder": "[Example impact report to follow]",
+    "sources": "Sources: Kessler et al. (2003, 2004) for the HPQ. Michaelsen et al. (2023) for how long the effect lasts."
+  },
+  "cta": {
+    "title": "Want this for your <0>team</0>?",
+    "body": "Tell us how many people and whether you want it online or on location. You'll get a quote within one working day.",
+    "calculatorLink": "Or first calculate your break-even"
+  }
+}

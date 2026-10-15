@@ -212,7 +212,7 @@ export const meldOfferteaanvraag = ({
  * Een klik op een offerteknop. Net als bij de masterclass hieronder geen
  * conversie, alleen een stap in de trechter, met de plek als parameter.
  */
-export type OfferteKnop = "header" | "menu" | "hero" | "sticky";
+export type OfferteKnop = "header" | "menu" | "hero" | "sticky" | "klantcase";
 
 export const meldOfferteKlik = (positie: OfferteKnop): void => {
   duwen({ event: "quote_cta_click", positie });

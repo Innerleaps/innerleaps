@@ -1,0 +1,135 @@
+{
+  "meta": {
+    "title": "Klantcase TheyDo: 8,6% productiever | Innerleaps",
+    "description": "Voelt mentale training niet als een teken van zwakte? De CEO van TheyDo vreesde van wel. Toch meldden 39 mensen zich vrijwillig aan, en steeg de productiviteit 8,6%."
+  },
+  "eyebrow": "Klantcase",
+  "people": {
+    "jochem": {
+      "name": "Jochem van der Veer",
+      "role": "CEO en medeoprichter van TheyDo"
+    },
+    "heidi": {
+      "name": "Heidi Young",
+      "role": "[titel volgt] bij TheyDo"
+    }
+  },
+  "hero": {
+    "title": "<0>8,6% productiever</0>. En <0>minder stress</0> bij 7\u00a0op\u00a0de\u00a010.",
+    "subtitle": "Een team dat volledig op afstand werkt, in 26 landen. Niemand ziet hoe het écht met een collega gaat. 39 van hen trainden zes weken hun aandacht.",
+    "quote": "Je haalt meer uit je tijd, zonder dat je meer uren hoeft te maken.",
+    "photoAlt": "Jochem van der Veer, CEO van TheyDo, tijdens het interview"
+  },
+  "stats": [
+    {
+      "value": "+8,6%",
+      "label": "productiviteit, gemeten een maand na de training"
+    },
+    {
+      "value": "68%",
+      "label": "had minder stress en spanning"
+    },
+    {
+      "value": "9,3",
+      "label": "voor de trainer, een 8,1 voor het programma"
+    }
+  ],
+  "glance": {
+    "title": "In het kort",
+    "items": [
+      {
+        "label": "Bedrijf",
+        "value": "TheyDo, software voor journey management bij grote internationale bedrijven"
+      },
+      {
+        "label": "Team",
+        "value": "Volledig op afstand, verspreid over 26 landen"
+      },
+      {
+        "label": "Deelnemers",
+        "value": "39 medewerkers, zo'n 40% van het bedrijf, vrijwillig aangemeld"
+      },
+      {
+        "label": "Training",
+        "value": "Zes weken breintraining van Innerleaps, online, [startdatum] tot april 2026"
+      },
+      {
+        "label": "Gemeten",
+        "value": "Vóór de training en vier weken na afloop, plus een evaluatie aan het eind"
+      }
+    ]
+  },
+  "weakness": {
+    "title": "Voelt het niet als een <0>teken van zwakte</0>?",
+    "quote1": "Ik maakte me zorgen hoe dit omarmd zou worden als we het in één keer aan iedereen aanbieden. Maar ze vonden het eigenlijk een heel prettig aanbod. En dat verbaasde me eerlijk gezegd.",
+    "fact": "39 mensen meldden zich vrijwillig aan. Zo'n 40% van het bedrijf.",
+    "bridge": "Waarom werkte het? Jochem bracht het als onderhoud, niet als reparatie.",
+    "quote2": "Het is totaal normaal om je auto één of twee keer per jaar naar de garage te brengen voor onderhoud. Maar als het om ons hoofd gaat, doen we dat niet. We gaan pas naar de specialist als er iets mis is. Door een programma van Innerleaps aan te bieden, zeggen we eigenlijk: er is geen drempel. Iedereen kan meedoen en heel veel collega's doen mee. Doe ook mee."
+  },
+  "changed": {
+    "title": "Wat <0>veranderde</0> er voor deelnemers?",
+    "intro": "Aan het eind vroegen we deelnemers wat ze zelf merkten. 22 van de 39 vulden het in. Dit noemden ze het vaakst.",
+    "items": [
+      {
+        "value": 68,
+        "label": "Minder stress en spanning"
+      },
+      {
+        "value": 55,
+        "label": "Minder op de automatische piloot"
+      },
+      {
+        "value": 55,
+        "label": "Minder mentaal moe"
+      },
+      {
+        "value": 41,
+        "label": "Betere concentratie en focus"
+      }
+    ],
+    "quoteJochem": "De beste feedback is eigenlijk als je er niet naar vraagt. Na de training van Innerleaps zat ik met een collega in een videocall. Ineens zei ze: ik sliep heel slecht, en nu slaap ik als een roosje.",
+    "quoteHeidi": "Als ik heel gestrest raakte, dacht ik: oké, die twaalf minuten lukken nu niet, maar twee minuten ademhalen wel. Even resetten. Twee minuten klinkt als bijna niks, maar die gunde ik mezelf daarvoor niet eens."
+  },
+  "payback": {
+    "title": "Verdient het zich <0>terug</0>?",
+    "quoteJochem": "De benefits die we zien zijn de investering zeker waard. Kijk naar onze salesorganisatie: 8,6% is net een extra meeting op een dag, net een extra gekwalificeerde deal. En uiteindelijk meer omzet. In onze productorganisatie is het meer tijd voor het werk waarvoor je bent opgeleid.",
+    "breakEven": "Bij TheyDo verdiende de training zich terug vanaf 0,36% meer productiviteit. Gemeten werd 8,6%. Waar dat punt bij jullie ligt, hangt af van de salarissen. <0>Reken het uit voor je eigen team</0>.",
+    "quoteHeidi": "Het omslagpunt lag op 0,36 procent. Dus voor mij is dit absoluut geslaagd."
+  },
+  "hr": {
+    "title": "Wat vraagt het van <0>HR</0>?",
+    "quoteEffort": "Eerlijk is eerlijk: het was best wat werk. Maar dat kwam omdat we het belangrijk vonden. We volgden mensen op en zorgden dat ze zich aanmeldden en er het meeste uit haalden. Tegelijk: jullie waren super georganiseerd. Alles lag klaar. Jullie vertelden me precies wat ik wanneer moest doen.",
+    "quoteConnection": "Wat niet in de cijfers zit, is de verbinding. We leerden collega's kennen met wie we normaal niet zo nauw samenwerken. Sommige gesprekken gingen best diep. Voor een team dat op afstand werkt, is dat goud waard."
+  },
+  "feedback": {
+    "title": "Wat de <0>feedback</0> van TheyDo veranderde",
+    "intro": "TheyDo was eerlijk over wat beter kon. Daar hebben we vier dingen mee gedaan.",
+    "items": [
+      "Deelnemers wilden vooraf weten dat ze een rustige plek nodig hebben voor de oefeningen. Dat zeggen we nu vóór de eerste sessie.",
+      "Het werkboek kwam eerst in één keer. Nu krijg je het per week, zodat het meteen een herinnering is.",
+      "Voor internationale teams namen we de Engelse audio opnieuw op met een moedertaalspreker.",
+      "Elke dag blijven oefenen was het lastigst. Deelnemers krijgen nu elke dag een steuntje in de rug via hun eigen chatapp: Signal, Telegram of WhatsApp."
+    ]
+  },
+  "last": {
+    "title": "Blijft het <0>effect</0>?",
+    "body": "Zover het onderzoek kijkt wel. Studies tot een jaar na de training vonden nog steeds aantoonbaar minder stress. Langer is nauwelijks onderzocht.",
+    "quoteJochem": "Of ik het weer zou doen? Zeker. Dit is iets wat je continu wil blijven aanbieden aan je medewerkers. Nieuwe medewerkers, refreshers voor wie het al gedaan heeft, zodat ze het kunnen blijven volhouden."
+  },
+  "know": {
+    "title": "Hoe <0>weten</0> we dit?",
+    "items": [
+      "Productiviteit maten we met de Health and Work Performance Questionnaire (HPQ) van de Wereldgezondheidsorganisatie. 20 deelnemers gaven een cijfer voor hun eigen werkprestatie over de afgelopen vier weken: één keer vóór de training, en nog een keer vier weken na afloop.",
+      "Aan het eind vulden 22 van de 39 deelnemers een evaluatie in.",
+      "Wie vaker dan eens per week oefende, ging er nog meer op vooruit: hun productiviteit steeg met 11,1%.",
+      "Elke deelnemer kreeg een eigen impactrapport. Individuele antwoorden gaan nooit naar de werkgever."
+    ],
+    "reportPlaceholder": "[Voorbeeld impactrapport volgt]",
+    "sources": "Bronnen: Kessler e.a. (2003, 2004) voor de HPQ. Michaelsen e.a. (2023) voor hoe lang het effect aanhoudt."
+  },
+  "cta": {
+    "title": "Dit ook voor jouw <0>team</0>?",
+    "body": "Vertel ons met hoeveel mensen en of je het online of op locatie wilt. Binnen één werkdag heb je een offerte.",
+    "calculatorLink": "Of reken eerst je omslagpunt uit"
+  }
+}
