@@ -28,7 +28,8 @@
   "stats": [
     {
       "value": "+8.6%",
-      "label": "productivity 4 weeks after training"
+      "label": "productivity 4 weeks after training",
+      "note": "Randomised research points the same way (Michaelsen et al., 2023)."
     },
     {
       "value": "68%",
@@ -140,11 +141,12 @@
     "title": "How do we <0>know</0> this?",
     "items": [
       "We measured productivity with the World Health Organization's Health and Work Performance Questionnaire (HPQ). 20 participants rated their own work performance over the past four weeks: once before the training, and again four weeks after it ended.",
+      "Randomised research shows the same: after similar training, participants perform better at work than a comparison group (Michaelsen et al., 2023).",
       "At the end, 22 of the 39 participants filled in an evaluation.",
       "People who practised more than once a week did even better: their productivity rose by 11.1%.",
       "Every participant got their own impact report. Individual answers never go to the employer."
     ],
-    "sources": "Sources: Kessler et al. (2003, 2004) for the HPQ. Michaelsen et al. (2023) for how long the effect lasts.",
+    "sources": "Sources: Kessler et al. (2003, 2004) for the HPQ. Michaelsen et al. (2023) for the effect on productivity and how long the effect lasts.",
     "report": {
       "caption": "Example of a personal impact report",
       "alt": "Personal impact report showing the change in performance, life satisfaction, stress, vitality and resilience since the training"

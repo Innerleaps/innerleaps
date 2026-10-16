@@ -28,7 +28,8 @@
   "stats": [
     {
       "value": "+8,6%",
-      "label": "productiviteit 4 weken na training"
+      "label": "productiviteit 4 weken na training",
+      "note": "Gerandomiseerd onderzoek wijst dezelfde kant op (Michaelsen e.a., 2023)."
     },
     {
       "value": "68%",
@@ -140,11 +141,12 @@
     "title": "Hoe <0>weten</0> we dit?",
     "items": [
       "Productiviteit maten we met de Health and Work Performance Questionnaire (HPQ) van de Wereldgezondheidsorganisatie. 20 deelnemers gaven een cijfer voor hun eigen werkprestatie over de afgelopen vier weken: één keer vóór de training, en nog een keer vier weken na afloop.",
+      "Ook in gerandomiseerd onderzoek presteren deelnemers na een vergelijkbare training beter op hun werk dan een vergelijkingsgroep (Michaelsen e.a., 2023).",
       "Aan het eind vulden 22 van de 39 deelnemers een evaluatie in.",
       "Wie vaker dan eens per week oefende, ging er nog meer op vooruit: hun productiviteit steeg met 11,1%.",
       "Elke deelnemer kreeg een eigen impactrapport. Individuele antwoorden gaan nooit naar de werkgever."
     ],
-    "sources": "Bronnen: Kessler e.a. (2003, 2004) voor de HPQ. Michaelsen e.a. (2023) voor hoe lang het effect aanhoudt.",
+    "sources": "Bronnen: Kessler e.a. (2003, 2004) voor de HPQ. Michaelsen e.a. (2023) voor het effect op productiviteit en hoe lang het effect aanhoudt.",
     "report": {
       "caption": "Voorbeeld van een persoonlijk impactrapport",
       "alt": "Persoonlijk impactrapport met de verandering in prestatie, levenstevredenheid, stress, vitaliteit en veerkracht sinds de training"

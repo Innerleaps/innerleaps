@@ -335,6 +335,23 @@ dat het echt de CEO en HR zijn die dit zeggen. Gekozen 15-10-2026, bestanden in
 Heidi zei in het interview dat ze zelf een foto zou sturen. Ze moet de still dus zien
 en goedkeuren bij haar controle van de pagina. Voor gebruik omzetten naar WebP.
 
+## Onderzoek bij de productiviteit (16-10-2026)
+
+Op verzoek van Bas onderbouwd met gerandomiseerd onderzoek: Michaelsen e.a. (2023),
+productiviteit k = 6, SMD 0,27, BI [0,18; 0,36], predictie-interval [0,11; 0,43], als
+enige uitkomst zonder grote heterogeniteit. Bewust **zonder effectgrootte** op de
+pagina: 0,27 of "58-60%" naast 8,6% is appels met peren. Alleen direct na afloop
+gemeten. Niet gebruikt: Schubin e.a. (2023, geen controlegroep, zelfde opzet als
+TheyDo, en 7,1 naar 7,7 is +8,5% en geen 6%), Dane & Brummel (2014, correlatie zonder
+training), Vonderlin (te weinig studies voor werkprestatie).
+
+- Onder het 8,6%-kaartje: "Gerandomiseerd onderzoek wijst dezelfde kant op
+  (Michaelsen e.a., 2023)." / "Randomised research points the same way (Michaelsen et
+  al., 2023)."
+- In "Hoe weten we dit?", na de HPQ: "Ook in gerandomiseerd onderzoek presteren
+  deelnemers na een vergelijkbare training beter op hun werk dan een vergelijkingsgroep
+  (Michaelsen e.a., 2023)." (W2, gekozen door Bas)
+
 ## Klaar voor livegang (16-10-2026)
 
 - Akkoord van Jochem en Heidi, volgens Bas.

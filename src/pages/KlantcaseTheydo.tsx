@@ -161,7 +161,12 @@ const KlantcaseTheydo = () => {
     window.scrollTo(0, 0);
   }, []);
 
-  const stats = t("stats", { returnObjects: true }) as Array<{ value: string; label: string; suffix?: string }>;
+  const stats = t("stats", { returnObjects: true }) as Array<{
+    value: string;
+    label: string;
+    suffix?: string;
+    note?: string;
+  }>;
   const stemmen = t("colleagues.voices.items", { returnObjects: true }) as string[];
   const feiten = t("glance.items", { returnObjects: true }) as Array<{ label: string; value: string }>;
   const effecten = t("colleagues.items", { returnObjects: true }) as Array<{ value: number; label: string }>;
@@ -260,6 +265,9 @@ const KlantcaseTheydo = () => {
                     {stat.suffix && <span className="text-white/50">{stat.suffix}</span>}
                   </p>
                   <p className="mt-3 text-xl leading-snug text-white/80">{stat.label}</p>
+                  {/* Bij de 8,6%: gerandomiseerd onderzoek wijst dezelfde kant op.
+                      Bewust zonder effectgrootte, die is niet te vergelijken. */}
+                  {stat.note && <p className="mt-2 text-base leading-snug text-white/60">{stat.note}</p>}
                 </div>
               ))}
             </div>
