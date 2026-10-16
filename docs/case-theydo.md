@@ -335,6 +335,30 @@ dat het echt de CEO en HR zijn die dit zeggen. Gekozen 15-10-2026, bestanden in
 Heidi zei in het interview dat ze zelf een foto zou sturen. Ze moet de still dus zien
 en goedkeuren bij haar controle van de pagina. Voor gebruik omzetten naar WebP.
 
+## Versie 2: als interview (16-10-2026)
+
+Feedback van Bas op de preview: te veel tekst, te veel en te lange quotes, te vet,
+en "Voelt het niet als een teken van zwakte?" viel uit de lucht. Daarom:
+
+- **Opbouw als interview, van aanleiding naar resultaat.** Elke kop is de vraag die
+  gesteld is, met "Vraag aan Jochem/Heidi" erboven. Volgorde: wat speelde er, twijfels,
+  wat merkten collega's, was het de investering waard, hoeveel werk voor HR, wat kon
+  beter, zou je het opnieuw doen. Dan "Hoe weten we dit?" en de oproep.
+- **Per vraag één quote en één feit**, afwisselend links en rechts. Quotes niet meer
+  vet. Weg: de autoquote, Heidi's ROI-quote, Heidi's twee-minutenquote, de grote
+  foto's in de secties. Het feitenblok "In het kort" staat nu naast de eerste vraag.
+- Teksten van Bas letterlijk overgenomen: kop, onderregel, de drie cijferlabels,
+  "maart tot april 2026", "Gemeten", label "Klantcase: TheyDo" met groter logo.
+- Jochems "En dat verbaasde me eerlijk gezegd" staat wél in het transcript (rond
+  4:50), maar is geschrapt. De rest van zijn twijfelquote staat nu dichter bij wat hij
+  zei.
+- Tekst 879 naar 655 woorden, quotes 368 naar 169 woorden.
+
+**Door mij geschreven in versie 2, nog door Bas te bekijken:** de interviewvragen als
+koppen, de labels "Vraag aan Jochem/Heidi", de ingekorte quotes, de nieuwe feiten
+("Extra voor een remote team: collega's leerden elkaar echt kennen."), de vier korte
+aanpassingen onder "Wat kon er beter?", en de Engelse versies van Bas' teksten.
+
 ## Bouwstand
 
 Gebouwd op 15-10-2026, branch `case-theydo` (vanaf `main`). Nog niet gepusht.

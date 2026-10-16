@@ -12,8 +12,7 @@ export const JEROEN_PORTRET = "/klantervaringen/masterclass-deelnemer-jeroen.web
 /**
  * Stills uit de interviews voor de klantcase TheyDo (15-10-2026). Bewust stills
  * uit de video en geen losse portretfoto's: de lezer moet zien dat het dezelfde
- * mensen zijn die in de video praten. Jochem twee keer, rustig en lachend.
+ * mensen zijn die in de video praten.
  */
 export const THEYDO_CASE_JOCHEM = "/klantervaringen/theydo-case-jochem.webp";
-export const THEYDO_CASE_JOCHEM_LACHT = "/klantervaringen/theydo-case-jochem-lacht.webp";
 export const THEYDO_CASE_HEIDI = "/klantervaringen/theydo-case-heidi.webp";
