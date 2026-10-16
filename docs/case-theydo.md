@@ -335,6 +335,12 @@ dat het echt de CEO en HR zijn die dit zeggen. Gekozen 15-10-2026, bestanden in
 Heidi zei in het interview dat ze zelf een foto zou sturen. Ze moet de still dus zien
 en goedkeuren bij haar controle van de pagina. Voor gebruik omzetten naar WebP.
 
+## Kleine aanpassingen (16-10-2026)
+
+- "/10" achter de 9,3 weg.
+- Bronnenregel onderaan "Hoe weten we dit?" weg (stond te los). De bron voor "tot een
+  jaar minder stress" staat nu direct achter die zin: (Michaelsen e.a., 2023).
+
 ## Onderzoek bij de productiviteit (16-10-2026)
 
 Op verzoek van Bas onderbouwd met gerandomiseerd onderzoek: Michaelsen e.a. (2023),

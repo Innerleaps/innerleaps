@@ -134,7 +134,7 @@
     "title": "Would you do it <0>again</0>?",
     "quote": "I would definitely do this again. It's something you can do throughout the year, again with your new employees, and keep doing as the company grows.",
     "factTitle": "How long do the effects last?",
-    "fact": "Scientific research shows that participants still feel less stress up to a year after the training. Longer than that has hardly been studied."
+    "fact": "Scientific research shows that participants still feel less stress up to a year after the training (Michaelsen et al., 2023). Longer than that has hardly been studied."
   },
   "know": {
     "title": "How do we <0>know</0> this?",
@@ -145,7 +145,6 @@
       "People who practised more than once a week did even better: their productivity rose by 11.1%.",
       "Every participant got their own impact report. Individual answers never go to the employer."
     ],
-    "sources": "Sources: Kessler et al. (2003, 2004) for the HPQ. Michaelsen et al. (2023) for the effect on productivity and how long the effect lasts.",
     "report": {
       "caption": "Example of a personal impact report",
       "alt": "Personal impact report showing the change in performance, life satisfaction, stress, vitality and resilience since the training"

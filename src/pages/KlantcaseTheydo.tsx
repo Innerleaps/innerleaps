@@ -394,7 +394,6 @@ const KlantcaseTheydo = () => {
             </a>
             <figcaption className="mt-4 text-base text-brand-gray-medium">{t("know.report.caption")}</figcaption>
           </figure>
-          <p className="mt-10 text-base text-brand-gray-medium">{t("know.sources")}</p>
         </Sectie>
 
         {/* Oproep tot actie. Een wit kader op een lichte achtergrond: blauw viel

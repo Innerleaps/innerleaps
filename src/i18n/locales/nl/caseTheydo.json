@@ -134,7 +134,7 @@
     "title": "Zou je het <0>opnieuw</0> doen?",
     "quote": "Zeker. Dit is iets wat je continu wil blijven aanbieden aan je medewerkers. Zowel voor nieuwe medewerkers als voor eerdere deelnemers, als refresher.",
     "factTitle": "Hoelang werkt de training?",
-    "fact": "Wetenschappelijk onderzoek laat zien dat deelnemers tot een jaar na de training nog minder stress ervaren. Langer is nauwelijks onderzocht."
+    "fact": "Wetenschappelijk onderzoek laat zien dat deelnemers tot een jaar na de training nog minder stress ervaren (Michaelsen e.a., 2023). Langer is nauwelijks onderzocht."
   },
   "know": {
     "title": "Hoe <0>weten</0> we dit?",
@@ -145,7 +145,6 @@
       "Wie vaker dan eens per week oefende, ging er nog meer op vooruit: hun productiviteit steeg met 11,1%.",
       "Elke deelnemer kreeg een eigen impactrapport. Individuele antwoorden gaan nooit naar de werkgever."
     ],
-    "sources": "Bronnen: Kessler e.a. (2003, 2004) voor de HPQ. Michaelsen e.a. (2023) voor het effect op productiviteit en hoe lang het effect aanhoudt.",
     "report": {
       "caption": "Voorbeeld van een persoonlijk impactrapport",
       "alt": "Persoonlijk impactrapport met de verandering in prestatie, levenstevredenheid, stress, vitaliteit en veerkracht sinds de training"
