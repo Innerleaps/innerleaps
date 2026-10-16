@@ -339,8 +339,8 @@ en goedkeuren bij haar controle van de pagina. Voor gebruik omzetten naar WebP.
 
 - Akkoord van Jochem en Heidi, volgens Bas.
 - Heidi's functie: **Head of People bij TheyDo**.
-- Het onbekende woord in Heidi's quote ("you had all the ___ ready") is weergegeven
-  als "You had everything ready." / "Alles lag klaar." zonder een woord te raden.
+- Het onbekende woord in Heidi's quote ("you had all the ___ ready"): op verzoek van
+  Bas "materials". "You had all the materials ready." / "Al het materiaal lag klaar."
 - Voorbeeldrapport vervangen door de juiste versie van Bas (naam Arthur Baker).
 - Label boven Heidi's advies: "Heidi's advies" / "Heidi's advice".
 - Geen plaatshouders meer op de pagina.
