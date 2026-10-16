@@ -215,26 +215,30 @@ const SimplifiedNavigation = () => {
             </Link>
           </div>
 
-          {/* Right side: language switcher (desktop), quote button, mobile menu button */}
+          {/* Rechts: de offerteknop, dan de taalkeuze, en op mobiel de menuknop.
+              De taalkeuze staat helemaal rechts, waar mensen hem zoeken, als
+              compacte keuzelijst. Dat scheelt ruimte, en daardoor past de
+              offerteknop nu vanaf 1200 pixels naast het volledige menu. */}
           <div className="ml-auto flex items-center gap-4 xl:gap-3">
-            <div className="hidden lg:block">
-              <LanguageSwitcher />
-            </div>
             {/* Alleen waar hij past. Onder sm niet naast het logo, en tussen lg
-                en xl niet naast het volledige menu. Daar staat hij in het
-                uitklapmenu of de hero, en verschijnt de zwevende balk na de hero. */}
+                en 1200 pixels niet naast het volledige menu. Daar staat hij in
+                het uitklapmenu of de hero, en verschijnt de zwevende balk na de
+                hero. */}
             {toonOfferteknop && (
               <Link
                 to={offertePad(lang)}
                 state={{ van: pathname }}
                 onClick={() => meldOfferteKlik('header')}
-                className="hidden sm:block lg:hidden xl:block"
+                className="hidden sm:block lg:hidden min-[1200px]:block"
               >
                 <Button tabIndex={-1} className="min-h-[44px] px-4 text-base font-semibold whitespace-nowrap">
                   {t('cta.requestQuote')}
                 </Button>
               </Link>
             )}
+            <div className="hidden lg:block">
+              <LanguageSwitcher variant="dropdown" />
+            </div>
             <div className="lg:hidden">
               <Button
                 variant="ghost"

@@ -315,8 +315,12 @@ De stroom:
 
 De knop verschijnt niet op het formulier en de bedanktpagina zelf
 (`isOffertePagina` in `src/lib/offerte.ts`). In de header alleen waar hij past:
-tussen 640 en 1024 pixels en vanaf 1280. Daartussen staat het volledige menu
-en is er geen ruimte.
+tussen 640 en 1024 pixels en vanaf 1200. Daartussen staat het volledige menu
+en is er geen ruimte. Sinds 16 oktober 2026 staat de knop links van de
+taalkeuze, en is de taalkeuze in de header een compacte keuzelijst (wereldbol,
+"NL", taalnamen zonder vlag). Dat scheelde genoeg ruimte om de knop van 1280
+naar 1200 pixels te halen. In de footer, de cookiebanner en het uitklapmenu
+staat nog de oude NL | EN.
 
 Meten: `quote_cta_click` met de plek als parameter, en `quote_request_sent`
 vanaf de bedanktpagina. Het label `offerte` in `conversielabels.ts` is leeg tot
