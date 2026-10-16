@@ -335,6 +335,35 @@ dat het echt de CEO en HR zijn die dit zeggen. Gekozen 15-10-2026, bestanden in
 Heidi zei in het interview dat ze zelf een foto zou sturen. Ze moet de still dus zien
 en goedkeuren bij haar controle van de pagina. Voor gebruik omzetten naar WebP.
 
+## Versie 3 (16-10-2026)
+
+Tweede ronde feedback van Bas verwerkt:
+
+- "Was het de investering waard?": groot getal **23x** (8,6 / 0,36 = 23,9, dus "ruim
+  23 keer"), met de uitleg eronder. Bewust geen "23x ROI": het is 23 keer het
+  omslagpunt, gebaseerd op zelfrapportage van 20 mensen.
+- "...vrijwillig aan **na de masterclass**." (kleine m, zoals elders op de site)
+- HR-quote zonder "het was best wat werk", langer: super georganiseerd, al het
+  materiaal lag klaar, precies verteld wat wanneer, makkelijke samenwerking.
+  "[materials]" blijft plaatshouder tot het woord in de opname is nagekeken.
+- Feit bij HR: klein kopje "Bonusresultaat" met "Collega's die normaal niet
+  samenwerken, leerden elkaar echt kennen." (vrije vertaling van Heidi, ca. 6:47).
+  Alternatief: "Er ontstond een diepere band tussen collega's."
+- "Wat kon er beter?": nieuwe Heidi-quote over vooraf weten dat je een rustige plek
+  nodig hebt (sluit aan op aanpassing 1). De vage "scepsis/framing"-quote is weg.
+- "Zou je het opnieuw doen?": quote met nieuwe medewerkers én refreshers (Bas'
+  formulering, licht aangepast). Feitkop "Hoelang werkt de training?" met "tot een
+  jaar". Niet "een jaar na de training nog altijd": dat is de 12-maandenclaim.
+- Drie deelnemersquotes (van TheyDo, bevestigd door Bas) onder "Wat merkte je bij je
+  collega's?", met "Deelnemer bij TheyDo".
+- Cijferband onder de hero: donkerpaars met oranje lijnen, naar een voorbeeld van
+  Bas. "9,3/10" met lichtere "/10".
+- Voorbeeldrapport: Bas' eigen persoonlijke rapport (`impactrapport-voorbeeld.webp`),
+  data klopt nog niet, Bas stuurt een betere versie.
+- Oproep onderaan: wit kader op licht beige in plaats van blauw (viel weg tegen de
+  paarse footer), met Heidi's advies "Ga ervoor. Je hebt niets te verliezen en veel
+  te winnen." erboven.
+
 ## Versie 2: als interview (16-10-2026)
 
 Feedback van Bas op de preview: te veel tekst, te veel en te lange quotes, te vet,

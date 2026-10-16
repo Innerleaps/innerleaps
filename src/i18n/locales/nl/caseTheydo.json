@@ -19,11 +19,12 @@
     }
   },
   "hero": {
-    "title": "8,6% <0>productiever</0> en 7 op de 10 heeft <0>minder stress</0>",
+    "title": "8,6% <0>productiever</0> en 7\u00a0op\u00a0de\u00a010 heeft <0>minder stress</0>",
     "subtitle": "TheyDo werkt volledig remote met heel veel vrijheid. Hierdoor is er weinig grip op hoe het team werkt. 39 collega's namen deel en trainden hun aandacht voor 6 weken.",
     "quote": "Je haalt meer uit je tijd, zonder dat je meer uren hoeft te maken.",
     "photoAlt": "Jochem van der Veer, CEO van TheyDo, tijdens het interview"
   },
+  "statsLabel": "Resultaten",
   "stats": [
     {
       "value": "+8,6%",
@@ -35,7 +36,8 @@
     },
     {
       "value": "9,3",
-      "label": "voor de trainers, een 8,1 voor het programma"
+      "label": "voor de trainers, een 8,1 voor het programma",
+      "suffix": "/10"
     }
   ],
   "glance": {
@@ -70,7 +72,7 @@
   "doubts": {
     "title": "Wat waren je <0>twijfels</0> voordat je begon?",
     "quote": "Ik maakte me zorgen hoe dit omarmd zou worden door alle medewerkers. Maar ze vonden het eigenlijk een heel prettig aanbod.",
-    "fact": "39 mensen meldden zich vrijwillig aan. Zo'n 40% van het bedrijf.",
+    "fact": "39 mensen meldden zich vrijwillig aan na de masterclass. Zo'n 40% van het bedrijf.",
     "bridge": "Waarom werkte het? Jochem bracht het als onderhoud, niet als reparatie."
   },
   "colleagues": {
@@ -94,22 +96,32 @@
         "value": 41,
         "label": "Betere concentratie en focus"
       }
-    ]
+    ],
+    "voices": {
+      "label": "Wat deelnemers zeggen",
+      "author": "Deelnemer bij TheyDo",
+      "items": [
+        "Dit heeft me echt geholpen, op het werk én daarbuiten.",
+        "Ik merk nu wanneer ik gestrest ben, en weet wat ik eraan kan doen.",
+        "Mijn grootste inzicht: korte oefeningen kunnen mijn focus en welzijn verbeteren."
+      ]
+    }
   },
   "investment": {
     "title": "Was het de <0>investering</0> waard?",
     "quote": "De benefits die we zien zijn de investering zeker waard. In onze salesorganisatie is dat net een extra meeting op een dag, net een extra gekwalificeerde deal.",
-    "number": "0,36%",
-    "fact": "Bij TheyDo verdiende de training zich terug vanaf 0,36% meer productiviteit. Gemeten werd 8,6%. Waar dat punt bij jullie ligt, hangt af van de salarissen. <0>Reken het uit voor je eigen team</0>."
+    "number": "23x",
+    "fact": "Bij TheyDo verdiende de training zich terug vanaf 0,36% meer productiviteit. Gemeten werd 8,6%: ruim 23 keer zoveel. Waar dat punt bij jullie ligt, hangt af van de salarissen. <0>Reken het uit voor je eigen team</0>."
   },
   "hr": {
     "title": "Hoeveel <0>werk</0> was het voor HR?",
-    "quote": "Het was best wat werk, maar dat kwam omdat we het belangrijk vonden. Jullie waren super georganiseerd en vertelden me precies wat ik wanneer moest doen.",
-    "fact": "Extra voor een remote team: collega's leerden elkaar echt kennen."
+    "quote": "Jullie waren super georganiseerd. Al het materiaal lag klaar. Jullie vertelden me precies wat ik wanneer moest doen. Het was echt een makkelijke samenwerking.",
+    "fact": "Collega's die normaal niet samenwerken, leerden elkaar echt kennen.",
+    "factLabel": "Bonusresultaat"
   },
   "better": {
     "title": "Wat kon er <0>beter</0>?",
-    "quote": "Het ging niet om scepsis. Het ging om hoe we het brachten.",
+    "quote": "Mensen vonden het fijn. Maar ze hadden graag vooraf geweten dat ze een rustige plek nodig hadden.",
     "factTitle": "Dit hebben we aangepast",
     "items": [
       "We zeggen nu vooraf dat je een rustige plek nodig hebt",
@@ -120,9 +132,9 @@
   },
   "again": {
     "title": "Zou je het <0>opnieuw</0> doen?",
-    "quote": "Zeker. Dit is iets wat je continu wil blijven aanbieden aan je medewerkers. Nieuwe medewerkers, refreshers voor wie het al gedaan heeft.",
-    "factTitle": "Blijft het effect?",
-    "fact": "Zover het onderzoek kijkt wel. Studies tot een jaar na de training vonden nog steeds aantoonbaar minder stress. Langer is nauwelijks onderzocht."
+    "quote": "Zeker. Dit is iets wat je continu wil blijven aanbieden aan je medewerkers. Zowel voor nieuwe medewerkers als voor eerdere deelnemers, als refresher.",
+    "factTitle": "Hoelang werkt de training?",
+    "fact": "Wetenschappelijk onderzoek laat zien dat deelnemers tot een jaar na de training nog minder stress ervaren. Langer is nauwelijks onderzocht."
   },
   "know": {
     "title": "Hoe <0>weten</0> we dit?",
@@ -132,12 +144,17 @@
       "Wie vaker dan eens per week oefende, ging er nog meer op vooruit: hun productiviteit steeg met 11,1%.",
       "Elke deelnemer kreeg een eigen impactrapport. Individuele antwoorden gaan nooit naar de werkgever."
     ],
-    "reportPlaceholder": "[Voorbeeld impactrapport volgt]",
-    "sources": "Bronnen: Kessler e.a. (2003, 2004) voor de HPQ. Michaelsen e.a. (2023) voor hoe lang het effect aanhoudt."
+    "sources": "Bronnen: Kessler e.a. (2003, 2004) voor de HPQ. Michaelsen e.a. (2023) voor hoe lang het effect aanhoudt.",
+    "report": {
+      "caption": "Voorbeeld van een persoonlijk impactrapport",
+      "alt": "Persoonlijk impactrapport met de verandering in prestatie, levenstevredenheid, stress, vitaliteit en veerkracht sinds de training"
+    }
   },
   "cta": {
     "title": "Dit ook voor jouw <0>team</0>?",
     "body": "Vertel ons met hoeveel mensen en of je het online of op locatie wilt. Binnen één werkdag heb je een offerte.",
-    "calculatorLink": "Of reken eerst je omslagpunt uit"
+    "calculatorLink": "Of reken eerst je omslagpunt uit",
+    "quoteLabel": "Heidi's advies aan andere HR-adviseurs",
+    "quote": "Ga ervoor. Je hebt niets te verliezen en veel te winnen."
   }
 }

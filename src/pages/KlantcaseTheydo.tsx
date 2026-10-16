@@ -10,7 +10,12 @@ import { Button } from "@/components/ui/button";
 import { detectLanguageFromPath } from "@/i18n/config";
 import { offertePad } from "@/lib/offerte";
 import { meldOfferteKlik } from "@/lib/conversies";
-import { THEYDO_LOGO, THEYDO_CASE_JOCHEM, THEYDO_CASE_HEIDI } from "@/lib/klantervaringen";
+import {
+  THEYDO_LOGO,
+  THEYDO_CASE_JOCHEM,
+  THEYDO_CASE_HEIDI,
+  IMPACTRAPPORT_VOORBEELD,
+} from "@/lib/klantervaringen";
 
 const CalculatorModal = lazy(() => import("@/components/CalculatorModal"));
 
@@ -90,6 +95,11 @@ const Citaat = ({ tekst, persoon, op }: { tekst: string; persoon: Persoon; op: K
   );
 };
 
+/** Klein oranje kopje in hoofdletters, zoals boven elke vraag. */
+const Label = ({ children }: { children: ReactNode }) => (
+  <p className="text-lg font-semibold uppercase tracking-wide text-brand-orange">{children}</p>
+);
+
 /** Een groot, vet feit. De tegenhanger van de quote. */
 const Feit = ({ children }: { children: ReactNode }) => (
   <p className="text-3xl md:text-4xl font-bold leading-tight text-brand-purple">{children}</p>
@@ -108,6 +118,7 @@ const Vraag = ({
   kleur,
   omgekeerd = false,
   boven = false,
+  onder,
   children,
 }: {
   persoon: Persoon;
@@ -118,12 +129,14 @@ const Vraag = ({
   /** Bovenaan uitlijnen in plaats van gecentreerd: voor een hoog feit, zodat de
    *  quote er niet halverwege naast zweeft. */
   boven?: boolean;
+  /** Iets over de volle breedte onder de quote en het feit. */
+  onder?: ReactNode;
   children: ReactNode;
 }) => {
   const { t } = useTranslation("caseTheydo");
   return (
     <Sectie kleur={kleur}>
-      <p className="text-lg font-semibold uppercase tracking-wide text-brand-orange">{t(`ask.${persoon}`)}</p>
+      <Label>{t(`ask.${persoon}`)}</Label>
       <div className="mt-3">
         <Kop i18nKey={kop} />
       </div>
@@ -133,6 +146,7 @@ const Vraag = ({
         </div>
         <div className={omgekeerd ? "lg:order-1" : ""}>{children}</div>
       </div>
+      {onder}
     </Sectie>
   );
 };
@@ -147,7 +161,8 @@ const KlantcaseTheydo = () => {
     window.scrollTo(0, 0);
   }, []);
 
-  const stats = t("stats", { returnObjects: true }) as Array<{ value: string; label: string }>;
+  const stats = t("stats", { returnObjects: true }) as Array<{ value: string; label: string; suffix?: string }>;
+  const stemmen = t("colleagues.voices.items", { returnObjects: true }) as string[];
   const feiten = t("glance.items", { returnObjects: true }) as Array<{ label: string; value: string }>;
   const effecten = t("colleagues.items", { returnObjects: true }) as Array<{ value: number; label: string }>;
   const aanpassingen = t("better.items", { returnObjects: true }) as string[];
@@ -232,15 +247,22 @@ const KlantcaseTheydo = () => {
           </div>
         </section>
 
-        {/* De drie cijfers */}
-        <section className="bg-white py-12 md:py-16">
-          <div className="container-custom grid gap-6 md:grid-cols-3">
-            {stats.map((stat) => (
-              <div key={stat.value} className="rounded-xl bg-brand-off-white p-6 md:p-8">
-                <p className="text-5xl md:text-6xl font-bold text-brand-orange">{stat.value}</p>
-                <p className="mt-3 text-xl text-brand-gray-dark leading-snug">{stat.label}</p>
-              </div>
-            ))}
+        {/* De drie cijfers. Donkerpaars met oranje, zodat de resultaten direct
+            onder de hero in het oog springen. Naar een voorbeeld van Bas. */}
+        <section className="bg-brand-purple py-12 md:py-16">
+          <div className="container-custom">
+            <Label>{t("statsLabel")}</Label>
+            <div className="mt-6 grid gap-8 md:grid-cols-3">
+              {stats.map((stat, i) => (
+                <div key={stat.value} className="border-t-2 border-brand-orange pt-5">
+                  <p className={`text-6xl md:text-7xl font-bold ${i === 0 ? "text-brand-orange" : "text-white"}`}>
+                    {stat.value}
+                    {stat.suffix && <span className="text-white/50">{stat.suffix}</span>}
+                  </p>
+                  <p className="mt-3 text-xl leading-snug text-white/80">{stat.label}</p>
+                </div>
+              ))}
+            </div>
           </div>
         </section>
 
@@ -266,7 +288,25 @@ const KlantcaseTheydo = () => {
         </Vraag>
 
         {/* 3. Wat collega's merkten */}
-        <Vraag persoon="jochem" kop="colleagues.title" citaat={t("colleagues.quote")} kleur="beige">
+        <Vraag
+          persoon="jochem"
+          kop="colleagues.title"
+          citaat={t("colleagues.quote")}
+          kleur="beige"
+          onder={
+            <div className="mt-12">
+              <Label>{t("colleagues.voices.label")}</Label>
+              <div className="mt-5 grid gap-6 md:grid-cols-3">
+                {stemmen.map((stem) => (
+                  <figure key={stem} className="rounded-xl bg-white p-6 shadow-sm">
+                    <blockquote className="text-xl leading-relaxed text-brand-purple">&ldquo;{stem}&rdquo;</blockquote>
+                    <figcaption className="mt-4 text-base text-brand-gray-medium">{t("colleagues.voices.author")}</figcaption>
+                  </figure>
+                ))}
+              </div>
+            </div>
+          }
+        >
           <p className="text-xl leading-relaxed text-brand-gray-medium">{t("colleagues.intro")}</p>
           <ul className="mt-6 space-y-5">
             {effecten.map((effect) => (
@@ -293,7 +333,10 @@ const KlantcaseTheydo = () => {
 
         {/* 5. Hoeveel werk was het voor HR? */}
         <Vraag persoon="heidi" kop="hr.title" citaat={t("hr.quote")} kleur="beige">
-          <Feit>{t("hr.fact")}</Feit>
+          <Label>{t("hr.factLabel")}</Label>
+          <div className="mt-3">
+            <Feit>{t("hr.fact")}</Feit>
+          </div>
         </Vraag>
 
         {/* 6. Wat kon er beter? */}
@@ -318,48 +361,90 @@ const KlantcaseTheydo = () => {
         {/* Hoe weten we dit? Geen interviewvraag maar onze verantwoording. */}
         <Sectie kleur="wit">
           <Kop i18nKey="know.title" />
-          <div className="mt-10 grid gap-8 lg:grid-cols-[1.3fr_0.7fr]">
-            <ul className="space-y-5">
-              {meting.map((punt) => (
-                <li key={punt} className="flex gap-4">
-                  <Check className="mt-1 h-6 w-6 flex-shrink-0 stroke-[3] text-brand-orange" aria-hidden="true" />
-                  <span className="text-xl leading-relaxed text-brand-gray-dark">{punt}</span>
-                </li>
-              ))}
-            </ul>
-            {/* Plaatshouder: hier komt een voorbeeld van het persoonlijke
-                impactrapport, met verzonnen of volledig onherkenbare data. */}
-            <div className="flex min-h-[240px] items-center justify-center rounded-xl border-2 border-dashed border-gray-300 bg-brand-off-white p-6 text-center text-xl text-brand-gray-medium">
-              {t("know.reportPlaceholder")}
-            </div>
-          </div>
+          <ul className="mt-10 max-w-4xl space-y-5">
+            {meting.map((punt) => (
+              <li key={punt} className="flex gap-4">
+                <Check className="mt-1 h-6 w-6 flex-shrink-0 stroke-[3] text-brand-orange" aria-hidden="true" />
+                <span className="text-xl leading-relaxed text-brand-gray-dark">{punt}</span>
+              </li>
+            ))}
+          </ul>
+          {/* Een echt rapport overtuigt meer dan een nagemaakt. Over de volle
+              breedte, anders is de tekst erop niet te lezen; aanklikken opent
+              hem groot. */}
+          <figure className="mt-12">
+            <a href={IMPACTRAPPORT_VOORBEELD} target="_blank" rel="noopener noreferrer" className="block">
+              <img
+                src={IMPACTRAPPORT_VOORBEELD}
+                alt={t("know.report.alt")}
+                width={2000}
+                height={1125}
+                loading="lazy"
+                decoding="async"
+                className="w-full rounded-xl shadow-xl"
+              />
+            </a>
+            <figcaption className="mt-4 text-base text-brand-gray-medium">{t("know.report.caption")}</figcaption>
+          </figure>
           <p className="mt-10 text-base text-brand-gray-medium">{t("know.sources")}</p>
         </Sectie>
 
-        {/* Oproep tot actie: dezelfde offerteknop als in de header */}
-        <section className="bg-brand-blue py-14 md:py-20 lg:py-24">
-          <div className="container-custom text-center">
-            <h2 className="mx-auto max-w-3xl text-4xl md:text-5xl font-bold leading-tight text-white">
-              <Trans i18nKey="cta.title" t={t} components={ORANJE} />
-            </h2>
-            <p className="mx-auto mt-6 max-w-2xl text-xl md:text-2xl leading-relaxed text-white/90">{t("cta.body")}</p>
-            <div className="mt-10 flex flex-col items-center gap-5">
-              <Link to={offertePad(lang)} state={{ van: pathname }} onClick={() => meldOfferteKlik("klantcase")}>
-                <Button
-                  tabIndex={-1}
-                  size="lg"
-                  className="min-h-[44px] rounded-lg px-8 py-4 text-lg font-semibold shadow-xl"
+        {/* Oproep tot actie. Een wit kader op een lichte achtergrond: blauw viel
+            weg tegen de paarse footer eronder. Heidi's advies aan andere
+            HR-adviseurs staat erboven, als laatste duwtje. */}
+        <section className="bg-brand-off-white py-14 md:py-20 lg:py-24">
+          <div className="container-custom">
+            <div className="mx-auto max-w-4xl rounded-2xl bg-white px-6 py-10 text-center shadow-xl md:px-12 md:py-14">
+              <figure>
+                <Label>{t("cta.quoteLabel")}</Label>
+                <blockquote className="mt-4 text-2xl md:text-3xl leading-snug text-brand-purple">
+                  &ldquo;{t("cta.quote")}&rdquo;
+                </blockquote>
+                <figcaption className="mt-5 flex items-center justify-center gap-3">
+                  <img
+                    src={THEYDO_CASE_HEIDI}
+                    alt=""
+                    width={820}
+                    height={875}
+                    loading="lazy"
+                    decoding="async"
+                    className="h-12 w-12 rounded-full object-cover object-top"
+                  />
+                  <span className="text-left leading-tight">
+                    <cite className="not-italic block text-base font-bold text-brand-gray-dark">
+                      {t("people.heidi.name")}
+                    </cite>
+                    <span className="block text-base text-brand-gray-medium">{t("people.heidi.role")}</span>
+                  </span>
+                </figcaption>
+              </figure>
+
+              <div className="mx-auto my-10 h-0.5 w-16 bg-brand-orange" aria-hidden="true" />
+
+              <h2 className="text-4xl md:text-5xl font-bold leading-tight text-brand-purple">
+                <Trans i18nKey="cta.title" t={t} components={ORANJE} />
+              </h2>
+              <p className="mx-auto mt-6 max-w-2xl text-xl md:text-2xl leading-relaxed text-brand-gray-medium">
+                {t("cta.body")}
+              </p>
+              <div className="mt-10 flex flex-col items-center gap-5">
+                <Link to={offertePad(lang)} state={{ van: pathname }} onClick={() => meldOfferteKlik("klantcase")}>
+                  <Button
+                    tabIndex={-1}
+                    size="lg"
+                    className="min-h-[44px] rounded-lg px-8 py-4 text-lg font-semibold shadow-xl"
+                  >
+                    {t("cta.requestQuote", { ns: "common" })}
+                  </Button>
+                </Link>
+                <button
+                  type="button"
+                  onClick={() => setIsCalculatorOpen(true)}
+                  className="border-b-2 border-brand-orange/50 pb-0.5 text-lg font-semibold text-brand-purple transition-colors hover:border-brand-orange"
                 >
-                  {t("cta.requestQuote", { ns: "common" })}
-                </Button>
-              </Link>
-              <button
-                type="button"
-                onClick={() => setIsCalculatorOpen(true)}
-                className="border-b-2 border-brand-orange/60 pb-0.5 text-lg font-semibold text-white transition-colors hover:border-brand-orange"
-              >
-                {t("cta.calculatorLink")} <span aria-hidden="true">→</span>
-              </button>
+                  {t("cta.calculatorLink")} <span aria-hidden="true">→</span>
+                </button>
+              </div>
             </div>
           </div>
         </section>

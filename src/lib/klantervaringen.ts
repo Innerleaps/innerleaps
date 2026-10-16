@@ -16,3 +16,6 @@ export const JEROEN_PORTRET = "/klantervaringen/masterclass-deelnemer-jeroen.web
  */
 export const THEYDO_CASE_JOCHEM = "/klantervaringen/theydo-case-jochem.webp";
 export const THEYDO_CASE_HEIDI = "/klantervaringen/theydo-case-heidi.webp";
+
+/** Een echt persoonlijk impactrapport (van Bas zelf) als voorbeeld op de klantcase. */
+export const IMPACTRAPPORT_VOORBEELD = "/klantervaringen/impactrapport-voorbeeld.webp";
