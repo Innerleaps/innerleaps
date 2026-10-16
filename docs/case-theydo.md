@@ -335,6 +335,16 @@ dat het echt de CEO en HR zijn die dit zeggen. Gekozen 15-10-2026, bestanden in
 Heidi zei in het interview dat ze zelf een foto zou sturen. Ze moet de still dus zien
 en goedkeuren bij haar controle van de pagina. Voor gebruik omzetten naar WebP.
 
+## Klaar voor livegang (16-10-2026)
+
+- Akkoord van Jochem en Heidi, volgens Bas.
+- Heidi's functie: **Head of People bij TheyDo**.
+- Het onbekende woord in Heidi's quote ("you had all the ___ ready") is weergegeven
+  als "You had everything ready." / "Alles lag klaar." zonder een woord te raden.
+- Voorbeeldrapport vervangen door de juiste versie van Bas (naam Arthur Baker).
+- Label boven Heidi's advies: "Heidi's advies" / "Heidi's advice".
+- Geen plaatshouders meer op de pagina.
+
 ## Versie 3 (16-10-2026)
 
 Tweede ronde feedback van Bas verwerkt:

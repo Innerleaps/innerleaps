@@ -15,7 +15,7 @@
     },
     "heidi": {
       "name": "Heidi Young",
-      "role": "[title to follow] at TheyDo"
+      "role": "Head of People at TheyDo"
     }
   },
   "hero": {
@@ -115,7 +115,7 @@
   },
   "hr": {
     "title": "How much <0>work</0> was it for HR?",
-    "quote": "You guys were super organised. You had all the [materials] ready. You told me exactly what to do and when to do it. So I think it was a very easy collaboration, for sure.",
+    "quote": "You guys were super organised. You had everything ready. You told me exactly what to do and when to do it. So I think it was a very easy collaboration, for sure.",
     "fact": "Colleagues who don't normally work together got to know each other properly.",
     "factLabel": "Bonus result"
   },
@@ -154,7 +154,7 @@
     "title": "Want this for your <0>team</0>?",
     "body": "Tell us how many people and whether you want it online or on location. You'll get a quote within one working day.",
     "calculatorLink": "Or first calculate your break-even",
-    "quoteLabel": "Heidi's advice to other HR leads",
+    "quoteLabel": "Heidi's advice",
     "quote": "Go for it. You have nothing to lose and a lot to gain."
   }
 }
