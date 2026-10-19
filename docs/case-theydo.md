@@ -335,6 +335,24 @@ dat het echt de CEO en HR zijn die dit zeggen. Gekozen 15-10-2026, bestanden in
 Heidi zei in het interview dat ze zelf een foto zou sturen. Ze moet de still dus zien
 en goedkeuren bij haar controle van de pagina. Voor gebruik omzetten naar WebP.
 
+## Feedbackronde 19-10-2026
+
+- Antwoord (quote) staat nu altijd links, direct onder de vraag. Geen links-rechts
+  wisseling meer; variatie komt van de soorten feiten en de achtergronden.
+- Foto van de online masterclass (`theydo-masterclass.webp`, uitsnede van Bas' foto,
+  deelnemerstegels al onherkenbaar vaag) onder Jochems eerste quote, alleen vanaf lg.
+  Onderschrift: "De online masterclass bij TheyDo, met 93 deelnemers." (93 volgens Bas)
+- Persoonsicoon bij de drie deelnemersquotes.
+- Omslagpunt hangt af van "de salarissen en het aantal deelnemers" (prijs is per groep).
+- Bonusresultaat EN: "Colleagues who normally don't work together..." (Bas' volgorde).
+- Heidi-quote "Wat kon er beter?": met "before the first session" / "vóór de eerste
+  sessie". Dat zei ze niet letterlijk (ze gaf de feedback ná de eerste sessie); Bas laat
+  Heidi deze versie checken.
+- "Hoe weten we dit?" heet nu "Hoe hebben we de impact gemeten?". HPQ-uitleg in Bas'
+  woorden, met n = 20 en "Het resultaat: 8,6% hogere productiviteit". De regel over de
+  evaluatie (22 van 39) is daar weg; die staat nog bij "Wat merkte je bij je collega's?".
+- Kop blijft "7 in 10" (Britse notatie), niet "7 out of 10".
+
 ## Kleine aanpassingen (16-10-2026)
 
 - "/10" achter de 9,3 weg.

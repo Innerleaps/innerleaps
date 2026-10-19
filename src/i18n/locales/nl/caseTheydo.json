@@ -67,7 +67,11 @@
   },
   "context": {
     "title": "Wat speelde er bij <0>TheyDo</0>?",
-    "quote": "We zijn een remote organisatie. Dat betekent dat we in 26 landen mensen hebben. We hebben dus geen zicht op hoe mensen hun werk doen buiten de schermtijd om."
+    "quote": "We zijn een remote organisatie. Dat betekent dat we in 26 landen mensen hebben. We hebben dus geen zicht op hoe mensen hun werk doen buiten de schermtijd om.",
+    "photo": {
+      "caption": "De online masterclass bij TheyDo, met 93 deelnemers.",
+      "alt": "Bas Ter Haar Romenij geeft de online masterclass aan TheyDo, met de deelnemers in beeld"
+    }
   },
   "doubts": {
     "title": "Wat waren je <0>twijfels</0> voordat je begon?",
@@ -111,7 +115,7 @@
     "title": "Was het de <0>investering</0> waard?",
     "quote": "De benefits die we zien zijn de investering zeker waard. In onze salesorganisatie is dat net een extra meeting op een dag, net een extra gekwalificeerde deal.",
     "number": "23x",
-    "fact": "Bij TheyDo verdiende de training zich terug vanaf 0,36% meer productiviteit. Gemeten werd 8,6%: ruim 23 keer zoveel. Waar dat punt bij jullie ligt, hangt af van de salarissen. <0>Reken het uit voor je eigen team</0>."
+    "fact": "Bij TheyDo verdiende de training zich terug vanaf 0,36% meer productiviteit. Gemeten werd 8,6%: ruim 23 keer zoveel. Waar dat punt bij jullie ligt, hangt af van de salarissen en het aantal deelnemers. <0>Reken het uit voor je eigen team</0>."
   },
   "hr": {
     "title": "Hoeveel <0>werk</0> was het voor HR?",
@@ -121,7 +125,7 @@
   },
   "better": {
     "title": "Wat kon er <0>beter</0>?",
-    "quote": "Mensen vonden het fijn. Maar ze hadden graag vooraf geweten dat ze een rustige plek nodig hadden.",
+    "quote": "Mensen vonden het fijn. Maar we hadden vóór de eerste sessie willen weten dat we een rustige plek nodig hadden.",
     "factTitle": "Dit hebben we aangepast",
     "items": [
       "We zeggen nu vooraf dat je een rustige plek nodig hebt",
@@ -137,11 +141,10 @@
     "fact": "Wetenschappelijk onderzoek laat zien dat deelnemers tot een jaar na de training nog minder stress ervaren (Michaelsen e.a., 2023). Langer is nauwelijks onderzocht."
   },
   "know": {
-    "title": "Hoe <0>weten</0> we dit?",
+    "title": "Hoe hebben we de <0>impact</0> gemeten?",
     "items": [
-      "Productiviteit maten we met de Health and Work Performance Questionnaire (HPQ) van de Wereldgezondheidsorganisatie. 20 deelnemers gaven een cijfer voor hun eigen werkprestatie over de afgelopen vier weken: één keer vóór de training, en nog een keer vier weken na afloop.",
+      "Productiviteit maten we met de Health and Work Performance Questionnaire (HPQ) van de Wereldgezondheidsorganisatie. Deelnemers geven daarin een cijfer voor hun eigen werkprestatie over de afgelopen vier weken. We maten het bij 20 deelnemers, één keer vóór de training en nog een keer vier weken na afloop. Het resultaat: 8,6% hogere productiviteit.",
       "Ook in gerandomiseerd onderzoek presteren deelnemers na een vergelijkbare training beter op hun werk dan een vergelijkingsgroep (Michaelsen e.a., 2023).",
-      "Aan het eind vulden 22 van de 39 deelnemers een evaluatie in.",
       "Wie vaker dan eens per week oefende, ging er nog meer op vooruit: hun productiviteit steeg met 11,1%.",
       "Elke deelnemer kreeg een eigen impactrapport. Individuele antwoorden gaan nooit naar de werkgever."
     ],

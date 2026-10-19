@@ -19,3 +19,6 @@ export const THEYDO_CASE_HEIDI = "/klantervaringen/theydo-case-heidi.webp";
 
 /** Een echt persoonlijk impactrapport (van Bas zelf) als voorbeeld op de klantcase. */
 export const IMPACTRAPPORT_VOORBEELD = "/klantervaringen/impactrapport-voorbeeld.webp";
+
+/** Foto van de online masterclass bij TheyDo. De tegels van de deelnemers zijn onherkenbaar vaag. */
+export const THEYDO_MASTERCLASS = "/klantervaringen/theydo-masterclass.webp";

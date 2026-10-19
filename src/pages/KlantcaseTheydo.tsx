@@ -1,7 +1,7 @@
 import { lazy, Suspense, useEffect, useState, type ReactNode } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Trans, useTranslation } from "react-i18next";
-import { Check } from "lucide-react";
+import { Check, UserRound } from "lucide-react";
 import SimplifiedNavigation from "@/components/SimplifiedNavigation";
 import Footer from "@/components/Footer";
 import PageSeo from "@/components/PageSeo";
@@ -15,6 +15,7 @@ import {
   THEYDO_CASE_JOCHEM,
   THEYDO_CASE_HEIDI,
   IMPACTRAPPORT_VOORBEELD,
+  THEYDO_MASTERCLASS,
 } from "@/lib/klantervaringen";
 
 const CalculatorModal = lazy(() => import("@/components/CalculatorModal"));
@@ -107,17 +108,17 @@ const Feit = ({ children }: { children: ReactNode }) => (
 
 /**
  * Eén interviewvraag: wie de vraag kreeg, de vraag als kop, en daaronder de
- * quote en het feit naast elkaar. Met `omgekeerd` staat het feit links. Op
- * mobiel staat de quote altijd eerst, zodat het antwoord direct onder de vraag
- * komt.
+ * quote en het feit naast elkaar. De quote staat altijd links: het antwoord
+ * hoort direct onder de vraag, ook op desktop. Afwisseling komt van de soorten
+ * feiten (getal, lijst, balkjes, kader) en de achtergronden.
  */
 const Vraag = ({
   persoon,
   kop,
   citaat,
   kleur,
-  omgekeerd = false,
   boven = false,
+  naCitaat,
   onder,
   children,
 }: {
@@ -125,7 +126,8 @@ const Vraag = ({
   kop: string;
   citaat: string;
   kleur: Kleur;
-  omgekeerd?: boolean;
+  /** Iets onder de quote, in dezelfde kolom. */
+  naCitaat?: ReactNode;
   /** Bovenaan uitlijnen in plaats van gecentreerd: voor een hoog feit, zodat de
    *  quote er niet halverwege naast zweeft. */
   boven?: boolean;
@@ -141,10 +143,11 @@ const Vraag = ({
         <Kop i18nKey={kop} />
       </div>
       <div className={`mt-10 grid gap-8 lg:grid-cols-2 lg:gap-14 ${boven ? "lg:items-start" : "lg:items-center"}`}>
-        <div className={omgekeerd ? "lg:order-2" : ""}>
+        <div>
           <Citaat tekst={citaat} persoon={persoon} op={kleur} />
+          {naCitaat}
         </div>
-        <div className={omgekeerd ? "lg:order-1" : ""}>{children}</div>
+        <div>{children}</div>
       </div>
       {onder}
     </Sectie>
@@ -275,7 +278,29 @@ const KlantcaseTheydo = () => {
         </section>
 
         {/* 1. De aanleiding, met de feiten ernaast */}
-        <Vraag persoon="jochem" kop="context.title" citaat={t("context.quote")} kleur="beige" boven>
+        <Vraag
+          persoon="jochem"
+          kop="context.title"
+          citaat={t("context.quote")}
+          kleur="beige"
+          boven
+          naCitaat={
+            // Alleen op grotere schermen: op mobiel maakt hij de pagina langer
+            // zonder dat het verhaal erbij wint.
+            <figure className="mt-8 hidden lg:block">
+              <img
+                src={THEYDO_MASTERCLASS}
+                alt={t("context.photo.alt")}
+                width={1024}
+                height={640}
+                loading="lazy"
+                decoding="async"
+                className="w-full rounded-xl shadow-xl"
+              />
+              <figcaption className="mt-3 text-base text-brand-gray-medium">{t("context.photo.caption")}</figcaption>
+            </figure>
+          }
+        >
           <div className="rounded-xl border border-gray-200 bg-white p-6 md:p-8">
             <h3 className="text-2xl font-bold text-brand-purple">{t("glance.title")}</h3>
             <dl className="mt-5 space-y-4">
@@ -290,7 +315,7 @@ const KlantcaseTheydo = () => {
         </Vraag>
 
         {/* 2. De twijfels */}
-        <Vraag persoon="jochem" kop="doubts.title" citaat={t("doubts.quote")} kleur="wit" omgekeerd>
+        <Vraag persoon="jochem" kop="doubts.title" citaat={t("doubts.quote")} kleur="wit">
           <Feit>{t("doubts.fact")}</Feit>
           <p className="mt-5 text-xl md:text-2xl leading-relaxed text-brand-gray-medium">{t("doubts.bridge")}</p>
         </Vraag>
@@ -308,7 +333,12 @@ const KlantcaseTheydo = () => {
                 {stemmen.map((stem) => (
                   <figure key={stem} className="rounded-xl bg-white p-6 shadow-sm">
                     <blockquote className="text-xl leading-relaxed text-brand-purple">&ldquo;{stem}&rdquo;</blockquote>
-                    <figcaption className="mt-4 text-base text-brand-gray-medium">{t("colleagues.voices.author")}</figcaption>
+                    <figcaption className="mt-4 flex items-center gap-3 text-base text-brand-gray-medium">
+                      <span className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-brand-orange/10">
+                        <UserRound className="h-5 w-5 text-brand-orange" aria-hidden="true" />
+                      </span>
+                      {t("colleagues.voices.author")}
+                    </figcaption>
                   </figure>
                 ))}
               </div>
@@ -332,7 +362,7 @@ const KlantcaseTheydo = () => {
         </Vraag>
 
         {/* 4. Was het de investering waard? */}
-        <Vraag persoon="jochem" kop="investment.title" citaat={t("investment.quote")} kleur="wit" omgekeerd>
+        <Vraag persoon="jochem" kop="investment.title" citaat={t("investment.quote")} kleur="wit">
           <p className="text-6xl md:text-7xl font-bold text-brand-orange">{t("investment.number")}</p>
           <p className="mt-4 text-xl md:text-2xl leading-relaxed text-brand-gray-medium">
             <Trans i18nKey="investment.fact" t={t} components={[rekenknop]} />
@@ -348,7 +378,7 @@ const KlantcaseTheydo = () => {
         </Vraag>
 
         {/* 6. Wat kon er beter? */}
-        <Vraag persoon="heidi" kop="better.title" citaat={t("better.quote")} kleur="wit" omgekeerd>
+        <Vraag persoon="heidi" kop="better.title" citaat={t("better.quote")} kleur="wit">
           <h3 className="text-2xl font-bold text-brand-purple">{t("better.factTitle")}</h3>
           <ul className="mt-5 space-y-4">
             {aanpassingen.map((punt) => (
