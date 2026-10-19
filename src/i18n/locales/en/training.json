@@ -621,7 +621,7 @@
     "hero": {
       "badge": "Evidence-based method for scale-ups",
       "title": "Busy isn't the same as <0>productive</0>",
-      "subtitle": "Working longer hours rarely fixes a heavy workload. Our six-week attention training gives your team the calm and focus to work smarter.",
+      "subtitle": "Working longer hours rarely fixes a heavy workload. Our 6-week attention training gives your team the calm and focus to work smarter.",
       "cta": "Calculate your ROI",
       "imageAlt": "An Innerleaps trainer leading a session for a group of employees",
       "caseLink": "Read the TheyDo case study"
@@ -643,12 +643,12 @@
         {
           "icon": "BellRing",
           "title": "Lots of distraction, little oversight",
-          "text": "Chat, email and smartphones interrupt work all day. And with your team working from home some or all of the time, you have little control over how the work gets done."
+          "text": "Chat, phones or quickly putting a wash on: there's always something interrupting the work. And with your team working from home some or all of the time, you have little control over how the work gets done."
         }
       ]
     },
     "results": {
-      "title": "More output through <0>calm</0> and <0>focus</0>",
+      "title": "<0>More output</0> through calm and focus",
       "subtitle": "Measured in independent scientific research.",
       "items": [
         {
@@ -660,11 +660,11 @@
           ]
         },
         {
-          "icon": "TreeDeciduous",
-          "title": "Handling the pace",
+          "icon": "Gauge",
+          "title": "Owning their optimal pace",
           "bullets": [
-            "Your people notice tension before it builds up.",
-            "They recover faster after a busy day and sleep better."
+            "They know the pace at which they get the most done, and they hold it.",
+            "They feel their limit coming and don't go past it."
           ]
         },
         {

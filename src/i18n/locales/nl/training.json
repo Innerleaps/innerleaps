@@ -621,7 +621,7 @@
     "hero": {
       "badge": "Evidence-based methode voor scale-ups",
       "title": "Druk is niet hetzelfde als <0>productief</0>",
-      "subtitle": "Langer doorwerken lost hoge werkdruk zelden op. Onze zesweekse aandachttraining geeft je team de rust en focus om slimmer te werken.",
+      "subtitle": "Langer doorwerken lost een hoge werkdruk zelden op. Onze 6-weekse aandachttraining geeft je team de rust en focus om slimmer te werken.",
       "cta": "Bereken jullie ROI",
       "imageAlt": "Trainer van Innerleaps geeft een sessie aan een groep medewerkers",
       "caseLink": "Lees de klantcase van TheyDo"
@@ -643,12 +643,12 @@
         {
           "icon": "BellRing",
           "title": "Veel afleiding, weinig grip",
-          "text": "Chat, mail en de smartphone onderbreken het werk de hele dag. En nu je team deels of helemaal thuis werkt, heb je weinig controle op hoe er gewerkt wordt."
+          "text": "Chat, de smartphone of even de was ophangen: er is altijd iets dat het werk onderbreekt. En nu je team deels of helemaal thuis werkt, heb je weinig controle op hoe er gewerkt wordt."
         }
       ]
     },
     "results": {
-      "title": "Meer output door <0>rust</0> en <0>focus</0>",
+      "title": "<0>Meer output</0> door rust en focus",
       "subtitle": "Gemeten in onafhankelijk wetenschappelijk onderzoek.",
       "items": [
         {
@@ -660,11 +660,11 @@
           ]
         },
         {
-          "icon": "TreeDeciduous",
-          "title": "Het tempo aankunnen",
+          "icon": "Gauge",
+          "title": "Regie over hun optimale tempo",
           "bullets": [
-            "Je mensen merken spanning op voordat het opstapelt.",
-            "Ze herstellen sneller na een drukke dag en slapen beter."
+            "Ze kennen het tempo waarop ze het meest gedaan krijgen, en houden dat vast.",
+            "Ze voelen hun grens aankomen en gaan er niet overheen."
           ]
         },
         {
