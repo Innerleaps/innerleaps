@@ -36,7 +36,7 @@ Controleer dat na elke wijziging:
 ```bash
 python3.12 -c "
 import json,sys
-for f in ('common','training','methode','overons','contact','calculator','leadMagnet'):
+for f in ('common','training','methode','overons','contact','calculator','leadMagnet','caseTheydo'):
     nl=json.load(open(f'src/i18n/locales/nl/{f}.json'))
     en=json.load(open(f'src/i18n/locales/en/{f}.json'))
     def paths(o,p=''):
@@ -337,8 +337,12 @@ De stroom:
 
 De knop verschijnt niet op het formulier en de bedanktpagina zelf
 (`isOffertePagina` in `src/lib/offerte.ts`). In de header alleen waar hij past:
-tussen 640 en 1024 pixels en vanaf 1280. Daartussen staat het volledige menu
-en is er geen ruimte.
+tussen 640 en 1024 pixels en vanaf 1200. Daartussen staat het volledige menu
+en is er geen ruimte. Sinds 16 oktober 2026 staat de knop links van de
+taalkeuze, en is de taalkeuze in de header een compacte keuzelijst (wereldbol,
+"NL", taalnamen zonder vlag). Dat scheelde genoeg ruimte om de knop van 1280
+naar 1200 pixels te halen. In de footer, de cookiebanner en het uitklapmenu
+staat nog de oude NL | EN.
 
 Meten: `quote_cta_click` met de plek als parameter, en `quote_request_sent`
 vanaf de bedanktpagina. Het label `offerte` in `conversielabels.ts` is leeg tot
@@ -382,6 +386,27 @@ Zet je een route in `App.tsx`, kies dan bewust:
 - **Niet in ROUTE_MAP?** Dan wordt hij niet geprerenderd, en moet hij
   **expliciet** in `netlify.toml` als `status = 200`-regel. Anders valt hij
   onder de 404-catch-all en is hij vanaf de volgende deploy onbereikbaar.
+
+## De klantcase TheyDo
+
+Staat op `/klantcases/theydo` en `/en/case-studies/theydo`, met de teksten in
+`caseTheydo.json`. Elke tekst is in oktober 2026 stap voor stap met de gebruiker
+gekozen. Waarom welke keuze, en welke feiten nog openstaan, staat in
+`docs/case-theydo.md`. Lees dat voordat je hier iets aanpast.
+
+- **De quotes zijn letterlijk.** Jochem en Heidi hebben dit gezegd, alleen
+  ingekort. Niet herschrijven, ook niet "een beetje". Beiden keuren de pagina
+  goed voor hij live gaat.
+- **Tekst tussen [vierkante haken] is een plaatshouder.** Die hoort er voor
+  livegang uit.
+- **Geen prijs en geen salaris van TheyDo noemen.** De 0,36% is bewust als
+  cijfer van TheyDo gebracht, met de rekentool erachter.
+- In het menu staat de case als losse link. Komen er meer, dan wordt het een
+  overzichtspagina op `/klantcases`; het pad is daarom al meervoud. Het menu
+  was daarna te breed op 1024 en 1280 pixels, dus het logo is tussen `lg` en
+  `2xl` een maat kleiner.
+- De video komt later, als YouTube-link per taal. Knipplan:
+  `docs/case-theydo-video.md`.
 
 ## Achtergronddocumenten
 
@@ -474,7 +499,7 @@ heeft Pillow nodig (`python3.12 -m pip install --user pillow`) en draait nooit
 tijdens de Netlify-build, zodat de productie-build geen extra afhankelijkheid
 krijgt en er dus ook niets aan stuk kan.
 
-Drie dingen om te weten:
+Vier dingen om te weten:
 
 - **Foto's gaan op kwaliteit 82, logo's op 94.** Logo's staan op wit met
   scherpe randen, en daar valt compressie op als vuil rond de letters. Op 82
@@ -490,6 +515,13 @@ Drie dingen om te weten:
   bij het omzetten werd een logo overgeslagen terwijl de verwijzing al op
   `.webp` stond, en dan staat er een gat op de pagina dat je pas ziet als
   iemand hem opent.
+- **Het script pakt ook de bewuste JPG's in `src/assets`.** Naast
+  `hero-1200w.webp` staat met opzet een `hero-1200w.jpg` als terugvaller
+  (net als bij `masterclass`, `method-mechanism`, `systems-*` en
+  `training-presentatie`). Het script zet die om, gooit de JPG weg en past de
+  verwijzingen aan. Draai je het, zet dan met `git checkout` alles terug wat
+  niet van jou is, en controleer met `git status` dat alleen je eigen nieuwe
+  afbeeldingen overblijven. Gebeurd op 15 oktober 2026.
 
 ## Er ligt een SEO-basismeting, gebruik die
 

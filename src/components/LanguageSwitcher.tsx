@@ -1,5 +1,12 @@
 import { useLocation, useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import { Check, ChevronDown, Globe } from "lucide-react";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 import {
   detectLanguageFromPath,
   getEquivalentPath,
@@ -7,8 +14,12 @@ import {
 } from "@/i18n/config";
 
 interface LanguageSwitcherProps {
-  /** Compact horizontal layout for desktop nav (default), or stacked for mobile */
-  variant?: "inline" | "block";
+  /**
+   * "inline": NL | EN naast elkaar (footer, cookiebanner). "block": idem voor
+   * het uitklapmenu op mobiel. "dropdown": een compacte keuzelijst voor de
+   * header, met een wereldbol en de taalnamen in hun eigen taal.
+   */
+  variant?: "inline" | "block" | "dropdown";
   /** Called after a successful language switch (e.g. to close mobile menu) */
   onSwitch?: () => void;
   /**
@@ -22,6 +33,12 @@ const LANGS: Array<{ code: SupportedLanguage; label: string; flag: string; aria:
   { code: "nl", label: "NL", flag: "🇳🇱", aria: "Wissel naar Nederlands" },
   { code: "en", label: "EN", flag: "🇬🇧", aria: "Switch to English" },
 ];
+
+/**
+ * Taalnamen in hun eigen taal, zonder vlag. Een vlag staat voor een land, niet
+ * voor een taal, en "Nederlands" herkent een Nederlander sneller dan "NL".
+ */
+const NAMEN: Record<SupportedLanguage, string> = { nl: "Nederlands", en: "English" };
 
 const LanguageSwitcher = ({ variant = "inline", onSwitch, tone = "light" }: LanguageSwitcherProps) => {
   const { pathname } = useLocation();
@@ -37,6 +54,36 @@ const LanguageSwitcher = ({ variant = "inline", onSwitch, tone = "light" }: Lang
     navigate(target ?? (lang === "en" ? "/en" : "/"));
     onSwitch?.();
   };
+
+  if (variant === "dropdown") {
+    return (
+      // Niet modaal: anders zet Radix een scrollslot op de pagina en springt de
+      // header een scrollbalkbreedte opzij zodra je hem opent.
+      <DropdownMenu modal={false}>
+        <DropdownMenuTrigger
+          aria-label={current === "nl" ? "Taal: Nederlands. Kies een taal" : "Language: English. Choose a language"}
+          className="flex items-center gap-1.5 rounded-md px-2 py-2 text-base font-medium text-brand-gray-dark transition-colors hover:text-brand-blue focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-blue data-[state=open]:text-brand-blue"
+        >
+          <Globe className="h-5 w-5 text-brand-orange" aria-hidden="true" />
+          <span>{current.toUpperCase()}</span>
+          <ChevronDown className="h-4 w-4" aria-hidden="true" />
+        </DropdownMenuTrigger>
+        <DropdownMenuContent align="end" className="min-w-[11rem] bg-white">
+          {LANGS.map((l) => (
+            <DropdownMenuItem
+              key={l.code}
+              lang={l.code}
+              onSelect={() => handleSwitch(l.code)}
+              className="cursor-pointer gap-3 px-3 py-2 text-base text-brand-gray-dark focus:bg-brand-off-white focus:text-brand-purple"
+            >
+              <span className="flex-1">{NAMEN[l.code]}</span>
+              {current === l.code && <Check className="h-4 w-4 text-brand-orange" aria-hidden="true" />}
+            </DropdownMenuItem>
+          ))}
+        </DropdownMenuContent>
+      </DropdownMenu>
+    );
+  }
 
   return (
     <div

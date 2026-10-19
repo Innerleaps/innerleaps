@@ -1,0 +1,163 @@
+{
+  "meta": {
+    "title": "TheyDo case study: 8.6% more productive | Innerleaps",
+    "description": "Would mental training feel like a sign of weakness? TheyDo's CEO feared so. Then 39 people signed up voluntarily, and productivity rose 8.6%."
+  },
+  "eyebrow": "Case study: TheyDo",
+  "ask": {
+    "jochem": "Question for Jochem",
+    "heidi": "Question for Heidi"
+  },
+  "people": {
+    "jochem": {
+      "name": "Jochem van der Veer",
+      "role": "CEO and co-founder of TheyDo"
+    },
+    "heidi": {
+      "name": "Heidi Young",
+      "role": "Head of People at TheyDo"
+    }
+  },
+  "hero": {
+    "title": "8.6% <0>more productive</0> and 7\u00a0in\u00a010 feel <0>less stress</0>",
+    "subtitle": "TheyDo works fully remote, with lots of freedom. That leaves little visibility into how the team works. 39 colleagues took part and trained their attention for six weeks.",
+    "quote": "You're enabling people to get more out of their workday without working more hours.",
+    "photoAlt": "Jochem van der Veer, CEO of TheyDo, during the interview"
+  },
+  "statsLabel": "Results",
+  "stats": [
+    {
+      "value": "+8.6%",
+      "label": "productivity 4 weeks after training",
+      "note": "Randomised research points the same way (Michaelsen et al., 2023)."
+    },
+    {
+      "value": "68%",
+      "label": "feel less stress and tension"
+    },
+    {
+      "value": "9.3",
+      "label": "for the trainers, 8.1 for the programme"
+    }
+  ],
+  "glance": {
+    "title": "At a glance",
+    "items": [
+      {
+        "label": "Company",
+        "value": "TheyDo, journey management software for large enterprises"
+      },
+      {
+        "label": "Team",
+        "value": "Fully remote, across 26 countries"
+      },
+      {
+        "label": "Participants",
+        "value": "39 employees, about 40% of the company, signed up voluntarily"
+      },
+      {
+        "label": "Programme",
+        "value": "Six weeks of Innerleaps brain training, online, March to April 2026"
+      },
+      {
+        "label": "Measured",
+        "value": "Before the training and four weeks after it, plus an evaluation at the end of the training"
+      }
+    ]
+  },
+  "context": {
+    "title": "What was going on at <0>TheyDo</0>?",
+    "quote": "We're a remote organisation with employees in 26 countries. We're seeing them on screen time, but outside of it, we don't know.",
+    "photo": {
+      "caption": "The online masterclass at TheyDo, with 93 participants.",
+      "alt": "Bas Ter Haar Romenij gives the online masterclass to TheyDo, with participants on screen"
+    }
+  },
+  "doubts": {
+    "title": "What were your <0>doubts</0> before you started?",
+    "quote": "It could be seen as a sign of weakness. I wasn't sure how our employees would respond. It could be backfiring. But in the end, it didn't.",
+    "fact": "39 people signed up voluntarily after the masterclass. About 40% of the company.",
+    "bridge": "Why did it work? Jochem presented it as maintenance, not repair."
+  },
+  "colleagues": {
+    "title": "What did you notice in your <0>colleagues</0>?",
+    "quote": "A coworker just blurted out: it's so great, I'm actually sleeping again. That's not something you talk about at work.",
+    "intro": "22 of the 39 participants filled in an evaluation at the end. These came up most:",
+    "items": [
+      {
+        "value": 68,
+        "label": "Less stress and tension"
+      },
+      {
+        "value": 55,
+        "label": "Less running on autopilot"
+      },
+      {
+        "value": 55,
+        "label": "Less mental fatigue"
+      },
+      {
+        "value": 41,
+        "label": "Better concentration and focus"
+      }
+    ],
+    "voices": {
+      "label": "What participants say",
+      "author": "Participant at TheyDo",
+      "items": [
+        "This has been very helpful to improve both work and life outside of work.",
+        "I now recognise when I'm stressed, and how to do something about it.",
+        "My biggest insight is that short exercises can increase my focus and wellbeing."
+      ]
+    }
+  },
+  "investment": {
+    "title": "Was it worth the <0>investment</0>?",
+    "quote": "It's a hell yes. In our sales team, 8.6% literally turns into more meetings, more qualified prospects and ultimately more revenue.",
+    "number": "23x",
+    "fact": "At TheyDo, the programme paid for itself from a productivity gain of 0.36%. The measured gain was 8.6%: more than 23 times as much. Where your break-even sits depends on your salaries and number of participants. <0>Calculate it for your team</0>."
+  },
+  "hr": {
+    "title": "How much <0>work</0> was it for HR?",
+    "quote": "You guys were super organised. You had all the materials ready. You told me exactly what to do and when to do it. So I think it was a very easy collaboration, for sure.",
+    "fact": "Colleagues who normally don't work together got to know each other properly.",
+    "factLabel": "Bonus result"
+  },
+  "better": {
+    "title": "What could have been <0>better</0>?",
+    "quote": "People are enjoying this, but it would have been good to have a heads-up before the first session that we needed to be in a quiet space.",
+    "factTitle": "What we changed",
+    "items": [
+      "We now say upfront that you'll need a quiet spot",
+      "The workbook arrives week by week, not in one go",
+      "English audio re-recorded by a native speaker",
+      "A daily nudge in your own chat app"
+    ]
+  },
+  "again": {
+    "title": "Would you do it <0>again</0>?",
+    "quote": "I would definitely do this again. It's something you can do throughout the year, again with your new employees, and keep doing as the company grows.",
+    "factTitle": "How long do the effects last?",
+    "fact": "Scientific research shows that participants still feel less stress up to a year after the training (Michaelsen et al., 2023). Longer than that has hardly been studied."
+  },
+  "know": {
+    "title": "How did we measure the <0>impact</0>?",
+    "items": [
+      "We measured productivity with the World Health Organization's Health and Work Performance Questionnaire (HPQ). Participants are asked to rate their own work performance over the past four weeks. We measured it with 20 participants, once before the training and again four weeks after it ended. The result is an 8.6% increase in productivity.",
+      "Randomised research shows the same: after similar training, participants perform better at work than a comparison group (Michaelsen et al., 2023).",
+      "People who practised more than once a week did even better: their productivity rose by 11.1%.",
+      "Every participant got their own impact report. Individual answers never go to the employer."
+    ],
+    "report": {
+      "caption": "Example of a personal impact report",
+      "alt": "Personal impact report showing the change in performance, life satisfaction, stress, vitality and resilience since the training"
+    }
+  },
+  "cta": {
+    "title": "Want this for your <0>team</0>?",
+    "body": "Tell us how many people and whether you want it online or on location. You'll get a quote within one working day.",
+    "calculatorLink": "Calculate the impact for your team",
+    "quoteLabel": "Heidi's advice",
+    "quote": "Go for it. You have nothing to lose and a lot to gain."
+  }
+}

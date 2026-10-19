@@ -18,6 +18,8 @@ import nlLeadMagnet from "./locales/nl/leadMagnet.json";
 import enLeadMagnet from "./locales/en/leadMagnet.json";
 import nlBedankt from "./locales/nl/bedankt.json";
 import enBedankt from "./locales/en/bedankt.json";
+import nlCaseTheydo from "./locales/nl/caseTheydo.json";
+import enCaseTheydo from "./locales/en/caseTheydo.json";
 
 export const SUPPORTED_LANGUAGES = ["nl", "en"] as const;
 export type SupportedLanguage = (typeof SUPPORTED_LANGUAGES)[number];
@@ -41,6 +43,9 @@ export const ROUTE_MAP: Array<{ nl: string; en: string }> = [
   { nl: "/stressmanagement-training", en: "/en/stress-management-training" },
   { nl: "/prestatie-training", en: "/en/performance-training" },
   { nl: "/blog", en: "/en/blog" },
+  // Klantcases. Meervoud in het pad, zodat er later een overzichtspagina op
+  // /klantcases kan komen zonder dat deze URL hoeft te verhuizen.
+  { nl: "/klantcases/theydo", en: "/en/case-studies/theydo" },
   // Blog articles
   {
     nl: "/blog/ziekteverzuim-verlagen-wetenschappelijk-bewezen-aanpak-2025",
@@ -91,13 +96,13 @@ i18n
   .use(initReactI18next)
   .init({
     resources: {
-      nl: { common: nlCommon, methode: nlMethode, overons: nlOverons, contact: nlContact, training: nlTraining, calculator: nlCalculator, leadMagnet: nlLeadMagnet, bedankt: nlBedankt },
-      en: { common: enCommon, methode: enMethode, overons: enOverons, contact: enContact, training: enTraining, calculator: enCalculator, leadMagnet: enLeadMagnet, bedankt: enBedankt },
+      nl: { common: nlCommon, methode: nlMethode, overons: nlOverons, contact: nlContact, training: nlTraining, calculator: nlCalculator, leadMagnet: nlLeadMagnet, bedankt: nlBedankt, caseTheydo: nlCaseTheydo },
+      en: { common: enCommon, methode: enMethode, overons: enOverons, contact: enContact, training: enTraining, calculator: enCalculator, leadMagnet: enLeadMagnet, bedankt: enBedankt, caseTheydo: enCaseTheydo },
     },
     fallbackLng: "nl",
     supportedLngs: SUPPORTED_LANGUAGES,
     nonExplicitSupportedLngs: true, // treat "en-US", "en-GB" etc. as "en"
-    ns: ["common", "methode", "overons", "contact", "training", "calculator", "leadMagnet", "bedankt"],
+    ns: ["common", "methode", "overons", "contact", "training", "calculator", "leadMagnet", "bedankt", "caseTheydo"],
     defaultNS: "common",
     interpolation: { escapeValue: false },
     detection: {

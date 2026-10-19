@@ -28,6 +28,7 @@ const Footer = memo(({ showNavigation = true }: FooterProps) => {
     performance: lang === 'en' ? '/en/performance-training' : '/prestatie-training',
     masterclass: lang === 'en' ? '/en#masterclass' : '/#masterclass',
     method: lang === 'en' ? '/en/method' : '/breintraining-methode',
+    caseStudy: lang === 'en' ? '/en/case-studies/theydo' : '/klantcases/theydo',
     blog: lang === 'en' ? '/en/blog' : '/blog',
     contact: lang === 'en' ? '/en/contact' : '/contact',
     privacy: lang === 'en' ? '/en/privacy' : '/privacy',
@@ -43,6 +44,7 @@ const Footer = memo(({ showNavigation = true }: FooterProps) => {
     { to: href.performance, label: t('footer.performanceLink') },
     { to: href.masterclass, label: t('footer.masterclassLink') },
     { to: href.method, label: t('footer.methodLink') },
+    { to: href.caseStudy, label: t('nav.caseStudy') },
     { to: href.blog, label: t('nav.blog') },
     { to: href.contact, label: t('nav.contact') },
   ];
