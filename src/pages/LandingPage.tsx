@@ -14,6 +14,7 @@ import StickyCtaButtons from "@/components/StickyCtaButtons";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Activity, BookOpen, Award, Brain } from "lucide-react";
+import { detectLanguageFromPath } from "@/i18n/config";
 
 // Lazy load Calculator Modal (below the fold)
 const CalculatorModal = lazy(() => import("@/components/CalculatorModal"));
@@ -23,6 +24,8 @@ const LandingPage = () => {
   const [searchParams] = useSearchParams();
   const location = useLocation();
   const [isCalculatorOpen, setIsCalculatorOpen] = useState(false);
+  const lang = detectLanguageFromPath(location.pathname);
+  const caseHref = lang === "en" ? "/en/case-studies/theydo" : "/klantcases/theydo";
 
   // Handle URL parameters and anchors
   useEffect(() => {
@@ -51,11 +54,17 @@ const LandingPage = () => {
 
   return (
     <div className="min-h-screen bg-white">
-      <PageSeo title={t("seo.landing.title")} description={t("seo.landing.description")} />
+      {/* Zonder image had home geen og:image, en dus geen plaatje als je de link deelt. */}
+      <PageSeo
+        title={t("seo.landing.title")}
+        description={t("seo.landing.description")}
+        image="/og-image.png"
+      />
       <SimplifiedNavigation />
       <StickyCtaButtons />
       <div id="home">
-        <HeroSection />
+        {/* Scale-ups hebben geen verzuimcijfer, dus geen rekenmachine hier maar de klantcase. */}
+        <HeroSection secondaryLink={{ label: t("hero.caseLink"), to: caseHref }} />
       </div>
       <ProblemSection />
       <CohortPhotoSection />

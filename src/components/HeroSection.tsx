@@ -1,6 +1,6 @@
 import { lazy, Suspense, useState, type ReactNode } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { useTranslation } from "react-i18next";
+import { Trans, useTranslation } from "react-i18next";
 import { Award, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { offertePad } from "@/lib/offerte";
@@ -27,12 +27,12 @@ const GOOGLE_REVIEWS_URL =
   "https://www.google.com/maps/place/Innerleaps/@52.1909763,5.2795551,7z/data=!4m8!3m7!1s0x41d7861255c94705:0x571bbf751b212eea!8m2!3d52.1909763!4d5.2795551!9m1!1b1!16s%2Fg%2F11y10xf1qm?entry=ttu&g_ep=EgoyMDI1MTAyOS4yIKXMDSoASAFQAw%3D%3D";
 
 const LOGOS = [
-  { src: theydoLogo, alt: "Vitaliteitstraining TheyDo" },
-  { src: vuLogo, alt: "Vitaliteitstraining VU Amsterdam" },
-  { src: tele2Logo, alt: "Vitaliteitstraining Tele2" },
-  { src: parnassiaLogo, alt: "Vitaliteitstraining Parnassia Groep" },
-  { src: lentizLogo, alt: "Vitaliteitstraining Lentiz" },
-  { src: denHaagLogo, alt: "Vitaliteitstraining Gemeente Den Haag" },
+  { src: theydoLogo, alt: "TheyDo" },
+  { src: vuLogo, alt: "VU Amsterdam" },
+  { src: tele2Logo, alt: "Tele2" },
+  { src: parnassiaLogo, alt: "Parnassia Groep" },
+  { src: lentizLogo, alt: "Lentiz" },
+  { src: denHaagLogo, alt: "Gemeente Den Haag" },
 ];
 
 export interface HeroPhoto {
@@ -93,11 +93,11 @@ const HeroSection = ({ title, badge, subtitle, photo, logos = LOGOS, secondaryLi
 
               <h1 className="mt-6 text-4xl md:text-5xl lg:text-6xl font-bold text-brand-purple leading-tight text-balance">
                 {title ?? (
-                  <>
-                    {t("hero.headlinePart1")}{" "}
-                    <span className="text-brand-orange">{t("hero.headlinePart2")}</span>{" "}
-                    {t("hero.headlinePart3")}
-                  </>
+                  <Trans
+                    i18nKey="hero.title"
+                    t={t}
+                    components={[<span className="text-brand-orange" />]}
+                  />
                 )}
               </h1>
 

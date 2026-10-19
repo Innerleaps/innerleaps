@@ -12,7 +12,7 @@ const Blog = () => {
     {
       id: 1,
       title: "Hoe verlaag ik het ziekteverzuim in mijn organisatie",
-      excerpt: "Ziekteverzuim verlagen met 15-21% door aandachtstraining. Wetenschappelijk bewezen: 70% lager uitvalrisico. Ontdek de evidence-based aanpak met 89,8% adoptie.",
+      excerpt: "Ziekteverzuim verlagen met 15-21% door aandachttraining. Wetenschappelijk bewezen: 70% lager uitvalrisico. Ontdek de evidence-based aanpak met 89,8% adoptie.",
       date: "16 december 2024",
       slug: "/blog/hoe-verlaag-ik-het-ziekteverzuim-in-mijn-organisatie"
     },
@@ -26,7 +26,7 @@ const Blog = () => {
     {
       id: 3,
       title: "Ziekteverzuim Verlagen: De Wetenschappelijk Bewezen Aanpak voor 2025",
-      excerpt: "Ziekteverzuim verlagen met 15-21% door wetenschappelijk bewezen aandachtstraining. ROI 497-775%. Ontdek hoe 40 jaar onderzoek verzuimkosten structureel verlaagt.",
+      excerpt: "Ziekteverzuim verlagen met 15-21% door wetenschappelijk bewezen aandachttraining. ROI 497-775%. Ontdek hoe 40 jaar onderzoek verzuimkosten structureel verlaagt.",
       date: "28 november 2025",
       slug: "/blog/ziekteverzuim-verlagen-wetenschappelijk-bewezen-aanpak-2025"
     }

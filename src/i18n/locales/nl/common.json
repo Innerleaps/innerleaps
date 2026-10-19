@@ -49,7 +49,7 @@
   },
   "loading": "Laden...",
   "footer": {
-    "tagline": "Vitaliteitstraining waarmee teams spanning vroeg herkennen, in een vorm die past in de werkweek.",
+    "tagline": "Aandachttraining voor scale-ups: meer focus en energie, in een vorm die past in de werkweek.",
     "trainerCategory": "Trainer categorie 1",
     "googleRating": "4,7/5 op Google",
     "linkedinAria": "Innerleaps op LinkedIn",
@@ -87,12 +87,9 @@
     "addressLabel": "Adres"
   },
   "hero": {
-    "badge": "Wetenschappelijk onderbouwde methode",
-    "headlinePart1": "Vitaliteitstraining die je medewerkers weer de",
-    "headlinePart2": "regie",
-    "headlinePart3": "geeft over hun stress",
-    "headlinePart4": "",
-    "subtitle": "Gemaakt voor teams die wél willen, maar geen tijd hebben. Je collega's leren nieuw gedrag aan: ze herkennen spanning op tijd, voordat stress leidt tot uitval. Zo werk je concreet aan duurzame inzetbaarheid.",
+    "badge": "Evidence-based methode",
+    "title": "Een team met <0>focus</0> en <0>energie</0>, in een bedrijf dat nooit stilstaat",
+    "subtitle": "Een aandachttraining van zes weken die in een volle agenda past: één uur live per week en 15 minuten per dag. Je team leert de focus vast te houden en druk kwijt te raken voordat die zich opstapelt.",
     "whyChooseUs": "Waarom organisaties ons kiezen",
     "stats": {
       "dropoutRisk": "Uitvalrisico",
@@ -103,8 +100,8 @@
       "productivity": "Productiviteit"
     },
     "googleReviews": "Google Reviews",
-    "heroImageAlt": "Vitaliteitstraining presentatie Innerleaps",
     "calculatorLink": "Wat kost verzuim jou?",
+    "caseLink": "Zo deed TheyDo het",
     "proofRating": "4,7/5",
     "proofSuffix": "op Google Reviews",
     "photoAlt": "Deelnemers luisteren tijdens een Innerleaps-sessie",
@@ -205,7 +202,7 @@
     }
   },
   "testimonial": {
-    "quote": "Met hun 6-weekse breintraining door geaccrediteerde trainers leverde Innerleaps snel meetbare resultaten: maar liefst 8,6% hogere productiviteit en 7 op de 10 deelnemers gaf aan minder stress te ervaren!"
+    "quote": "Met hun 6-weekse aandachttraining door geaccrediteerde trainers leverde Innerleaps snel meetbare resultaten: maar liefst 8,6% hogere productiviteit en 7 op de 10 deelnemers gaf aan minder stress te ervaren!"
   },
   "masterclassSteps": {
     "headlinePart1": "Probeer het zelf in onze",
@@ -236,7 +233,7 @@
     "headlinePart2": "verzuim",
     "headlinePart3": "én boost",
     "headlinePart4": "prestaties",
-    "body1": "De kern van onze breintraining is het versterken van het \"controlecentrum\" voor rationele keuzes, focus en bewuste acties, en het \"waarschuwingssysteem\" dat stresssignalen eerder opmerkt. Het resultaat? Minder stress én een scherpe focus!",
+    "body1": "De kern van onze aandachttraining is het versterken van het \"controlecentrum\" voor rationele keuzes, focus en bewuste acties, en het \"waarschuwingssysteem\" dat stresssignalen eerder opmerkt. Het resultaat? Minder stress én een scherpe focus!",
     "body2": "Wil je weten hoe de methode precies werkt?",
     "imageAlt": "Training voor betere prestatie, minder stress en lager verzuim"
   },
@@ -253,7 +250,7 @@
       },
       "accreditedTrainers": {
         "title": "Geaccrediteerde trainers",
-        "description": "Al onze trainers zijn geaccrediteerd voor categorie 1 aandachtstraining door VMBN."
+        "description": "Al onze trainers zijn geaccrediteerd voor categorie 1 aandachttraining door VMBN."
       },
       "practice": {
         "title": "15 minuten oefenen",
@@ -302,19 +299,19 @@
   },
   "trust": {
     "altPrefix": {
-      "oxford": "Vitaliteitstraining ontwikkeld door Oxford University",
-      "umass": "Vitaliteitstraining ontwikkeld door University of Massachusetts",
-      "uva": "Aandachttraining aan de Universiteit van Amsterdam",
+      "oxford": "University of Oxford",
+      "umass": "University of Massachusetts",
+      "uva": "Universiteit van Amsterdam",
       "vmbn": "VMBN Trainer categorie 1"
     }
   },
   "seo": {
     "landing": {
-      "title": "Verzuim verminderen en voorkomen | Innerleaps",
-      "description": "Minder verzuim en een team dat duurzaam inzetbaar blijft. Innerleaps traint in 6 weken het brein van je mensen. Gebouwd op 40 jaar onderzoek."
+      "title": "Focus en productiviteit voor scale-ups | Innerleaps",
+      "description": "Aandachttraining voor scale-ups: meer focus en een hogere productiviteit, zonder langere dagen. Zes weken, één uur live per week en 15 minuten per dag."
     },
     "blog": {
-      "title": "Blog over verzuim, stress en breintraining | Innerleaps",
+      "title": "Blog over verzuim, stress en aandachttraining | Innerleaps",
       "description": "Inzichten en wetenschappelijke kennis over ziekteverzuim, stressmanagement, concentratie en mentale vitaliteit op de werkvloer."
     }
   },
@@ -329,7 +326,7 @@
     }
   },
   "bookingTrust": {
-    "quote": "“Met hun 6-weekse breintraining door geaccrediteerde trainers leverde Innerleaps snel meetbare resultaten: maar liefst 8,6% hogere productiviteit en 7 op de 10 deelnemers gaf aan minder stress te ervaren!”",
+    "quote": "“Met hun 6-weekse aandachttraining door geaccrediteerde trainers leverde Innerleaps snel meetbare resultaten: maar liefst 8,6% hogere productiviteit en 7 op de 10 deelnemers gaf aan minder stress te ervaren!”",
     "author": "Jochem van der Veer",
     "role": "CEO bij TheyDo",
     "logoAlt": "TheyDo",

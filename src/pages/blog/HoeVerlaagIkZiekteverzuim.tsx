@@ -12,7 +12,7 @@ const HoeVerlaagIkZiekteverzuim = () => {
         <title>Hoe verlaag ik het ziekteverzuim in mijn organisatie? | Innerleaps</title>
         <meta
           name="description"
-          content="Ziekteverzuim verlagen met 15-21% door aandachtstraining. Wetenschappelijk bewezen: 70% lager uitvalrisico. Ontdek de evidence-based aanpak met 89,8% adoptie."
+          content="Ziekteverzuim verlagen met 15-21% door aandachttraining. Wetenschappelijk bewezen: 70% lager uitvalrisico. Ontdek de evidence-based aanpak met 89,8% adoptie."
         />
         <link rel="canonical" href="https://innerleaps.nl/blog/hoe-verlaag-ik-het-ziekteverzuim-in-mijn-organisatie" />
 
@@ -20,7 +20,7 @@ const HoeVerlaagIkZiekteverzuim = () => {
         <meta property="og:title" content="Hoe verlaag ik het ziekteverzuim in mijn organisatie? | Innerleaps" />
         <meta
           property="og:description"
-          content="Ziekteverzuim verlagen met 15-21% door aandachtstraining. Wetenschappelijk bewezen: 70% lager uitvalrisico. Ontdek de evidence-based aanpak met 89,8% adoptie."
+          content="Ziekteverzuim verlagen met 15-21% door aandachttraining. Wetenschappelijk bewezen: 70% lager uitvalrisico. Ontdek de evidence-based aanpak met 89,8% adoptie."
         />
         <meta
           property="og:url"
@@ -34,7 +34,7 @@ const HoeVerlaagIkZiekteverzuim = () => {
         <meta name="twitter:title" content="Hoe verlaag ik het ziekteverzuim in mijn organisatie? | Innerleaps" />
         <meta
           name="twitter:description"
-          content="Ziekteverzuim verlagen met 15-21% door aandachtstraining. Wetenschappelijk bewezen: 70% lager uitvalrisico. Ontdek de evidence-based aanpak met 89,8% adoptie."
+          content="Ziekteverzuim verlagen met 15-21% door aandachttraining. Wetenschappelijk bewezen: 70% lager uitvalrisico. Ontdek de evidence-based aanpak met 89,8% adoptie."
         />
         <meta name="twitter:image" content="https://innerleaps.nl/social/6-weken-brein-trainen.png" />
 
@@ -50,7 +50,7 @@ const HoeVerlaagIkZiekteverzuim = () => {
             url: "https://innerleaps.nl/blog/hoe-verlaag-ik-het-ziekteverzuim-in-mijn-organisatie",
             headline: "Hoe verlaag ik het ziekteverzuim in mijn organisatie?",
             description:
-              "Ziekteverzuim verlagen met 15-21% door aandachtstraining. Wetenschappelijk bewezen: 70% lager uitvalrisico. Ontdek de evidence-based aanpak met 89,8% adoptie.",
+              "Ziekteverzuim verlagen met 15-21% door aandachttraining. Wetenschappelijk bewezen: 70% lager uitvalrisico. Ontdek de evidence-based aanpak met 89,8% adoptie.",
             image: "https://innerleaps.nl/social/6-weken-brein-trainen.png",
             author: {
               "@type": "Person",
@@ -121,7 +121,7 @@ const HoeVerlaagIkZiekteverzuim = () => {
             Ziekteverzuim verlagen begint bij het aanpakken van de onderliggende oorzaak: stress. Onderzoek over 40 jaar
             toont dat{" "}
             <Link to="/breintraining-methode" className="text-brand-blue hover:underline">
-              aandachtstraining
+              aandachttraining
             </Link>{" "}
             het verzuim met 15-21% verlaagt door werknemers te leren stresssignalen vroeg te herkennen. Innerleaps'
             6-weekse training bereikt 89,8% blijvende deelname door dagelijkse 'push-ups voor je brein' te combineren
@@ -174,7 +174,7 @@ const HoeVerlaagIkZiekteverzuim = () => {
             De wetenschappelijke basis voor verzuimreductie
           </h2>
           <p className="text-brand-gray-dark mb-4">
-            Meta-analyses van 12 studies tonen aan dat aandachtstraining leidt tot substantiële verzuimreductie. De
+            Meta-analyses van 12 studies tonen aan dat aandachttraining leidt tot substantiële verzuimreductie. De
             effecten manifesteren zich via meerdere mechanismen:
           </p>
           <p className="text-brand-gray-dark mb-4">
@@ -200,9 +200,9 @@ const HoeVerlaagIkZiekteverzuim = () => {
             kortstondige verlichting.
           </p>
 
-          <h2 className="text-2xl font-bold text-brand-purple mt-12 mb-4">Hoe aandachtstraining verzuim verlaagt</h2>
+          <h2 className="text-2xl font-bold text-brand-purple mt-12 mb-4">Hoe aandachttraining verzuim verlaagt</h2>
           <p className="text-brand-gray-dark mb-4">
-            Aandachtstraining werkt via twee cruciale hersensystemen die direct impact hebben op stress en verzuim:
+            Aandachttraining werkt via twee cruciale hersensystemen die direct impact hebben op stress en verzuim:
           </p>
 
           <h3 className="text-xl font-semibold text-brand-purple mt-8 mb-3">Het controlecentrum versterken</h3>
@@ -234,10 +234,10 @@ const HoeVerlaagIkZiekteverzuim = () => {
             staat in schril contrast met de 4,7% adoptie van mindfulness apps of 4-5% gebruik van EAP trainingen.
           </p>
 
-          <h2 className="text-2xl font-bold text-brand-purple mt-12 mb-4">De business case voor aandachtstraining</h2>
+          <h2 className="text-2xl font-bold text-brand-purple mt-12 mb-4">De business case voor aandachttraining</h2>
           <p className="text-brand-gray-dark mb-4">
             Voor een organisatie met 100 werknemers, een gemiddeld verzuimpercentage van 5,2% en gemiddelde
-            arbeidskosten van €39.700 per werknemer, levert aandachtstraining meetbare kostenbesparingen op.
+            arbeidskosten van €39.700 per werknemer, levert aandachttraining meetbare kostenbesparingen op.
           </p>
           <p className="text-brand-gray-dark mb-4">
             <strong>Verzuimreductie</strong>: Bij 15% verzuimreductie (conservatieve schatting) daalt het verzuim van
@@ -245,7 +245,7 @@ const HoeVerlaagIkZiekteverzuim = () => {
             tot €80.202 jaarlijks.
           </p>
           <p className="text-brand-gray-dark mb-4">
-            <strong>Retentie verbeteren</strong>: Aandachtstraining vermindert personeelsverloop met 5-8% door verhoogde
+            <strong>Retentie verbeteren</strong>: Aandachttraining vermindert personeelsverloop met 5-8% door verhoogde
             betrokkenheid (effect size d = 0.53, Vonderlin et al., 2020) en werktevredenheid (d = 0.47-0.48, Michaelsen
             et al., 2023). Vervanging van een werknemer kost 1,5 keer het jaarsalaris (O'Connell & Kung, 2007). Bij 10%
             natuurlijk verloop betekent 5% reductie een besparing van €29.775. Bij 8% reductie stijgt dit naar €47.640.
@@ -414,7 +414,7 @@ const HoeVerlaagIkZiekteverzuim = () => {
           </h2>
           <p className="text-brand-gray-dark mb-4">
             Ziekteverzuim effectief verlagen vereist een structurele aanpak die onderliggende stress-kwetsbaarheid
-            adresseert. Aandachtstraining biedt deze oplossing met wetenschappelijk bewezen effecten:
+            adresseert. Aandachttraining biedt deze oplossing met wetenschappelijk bewezen effecten:
           </p>
           <ul className="list-disc pl-6 mb-4 text-brand-gray-dark">
             <li>15-21% verzuimreductie door stressregulatie en vroege signaalherkenning</li>

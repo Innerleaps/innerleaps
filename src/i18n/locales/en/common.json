@@ -49,7 +49,7 @@
   },
   "loading": "Loading...",
   "footer": {
-    "tagline": "Vitality training that helps teams catch tension early, in a format that fits the working week.",
+    "tagline": "Attention training for scale-up teams: more focus and energy, in a format that fits the working week.",
     "trainerCategory": "Trainer Category 1",
     "googleRating": "4.7/5 on Google",
     "linkedinAria": "Innerleaps on LinkedIn",
@@ -87,12 +87,9 @@
     "addressLabel": "Address"
   },
   "hero": {
-    "badge": "Scientifically proven method",
-    "headlinePart1": "Vitality training that puts your people",
-    "headlinePart2": "back in control",
-    "headlinePart3": "of their stress",
-    "headlinePart4": "",
-    "subtitle": "Built for teams that want to take part but have no time. Your people catch tension early, before stress turns into sick leave. A practical way to become a sustainable employer.",
+    "badge": "Evidence-based method",
+    "title": "A team with <0>focus</0> and <0>energy</0> in a company that never slows down",
+    "subtitle": "A six-week attention training that fits a full calendar: one live hour a week and 15 minutes a day. Your team learns to hold its focus and shake off pressure before it piles up.",
     "whyChooseUs": "Why organisations choose us",
     "stats": {
       "dropoutRisk": "Drop-out risk",
@@ -103,8 +100,8 @@
       "productivity": "Productivity"
     },
     "googleReviews": "Google Reviews",
-    "heroImageAlt": "Innerleaps vitality training session",
     "calculatorLink": "What does absenteeism cost you?",
+    "caseLink": "See how TheyDo did it",
     "proofRating": "4.7/5",
     "proofSuffix": "on Google Reviews",
     "photoAlt": "Participants listening during an Innerleaps session",
@@ -205,7 +202,7 @@
     }
   },
   "testimonial": {
-    "quote": "Innerleaps' 6-week brain training, run by accredited trainers, delivered measurable results fast: 8.6% higher productivity, and 7 in 10 participants reported less stress!"
+    "quote": "Innerleaps' 6-week attention training, run by accredited trainers, delivered measurable results fast: 8.6% higher productivity, and 7 in 10 participants reported less stress!"
   },
   "masterclassSteps": {
     "headlinePart1": "Try it yourself in our",
@@ -236,7 +233,7 @@
     "headlinePart2": "sick leave",
     "headlinePart3": "and boost",
     "headlinePart4": "performance",
-    "body1": "The core of our brain training is strengthening the \"control centre\" for rational choices, focus and conscious action, plus the \"warning system\" that catches stress signals earlier. The result? Less stress and a sharper focus!",
+    "body1": "The core of our attention training is strengthening the \"control centre\" for rational choices, focus and conscious action, plus the \"warning system\" that catches stress signals earlier. The result? Less stress and a sharper focus!",
     "body2": "Want to know exactly how the method works?",
     "imageAlt": "Training for better performance, less stress and lower sick leave"
   },
@@ -302,19 +299,19 @@
   },
   "trust": {
     "altPrefix": {
-      "oxford": "Method developed at Oxford University",
-      "umass": "Method developed at the University of Massachusetts",
-      "uva": "Attention training studied at the University of Amsterdam",
+      "oxford": "University of Oxford",
+      "umass": "University of Massachusetts",
+      "uva": "University of Amsterdam",
       "vmbn": "VMBN Trainer category 1"
     }
   },
   "seo": {
     "landing": {
-      "title": "Reduce and prevent absenteeism | Innerleaps",
-      "description": "Innerleaps reduces absenteeism by 15-21% with evidence-based brain training. Six weeks, 12 minutes a day, built on 40 years of research."
+      "title": "Focus and productivity for scale-up teams | Innerleaps",
+      "description": "Attention training for scale-up teams: more focus and higher productivity, without longer days. Six weeks, one live hour a week and 15 minutes a day."
     },
     "blog": {
-      "title": "Blog on absenteeism, stress and brain training | Innerleaps",
+      "title": "Blog on absenteeism, stress and attention training | Innerleaps",
       "description": "Insights and scientific knowledge about absenteeism, stress management, focus and mental vitality at work."
     }
   },
@@ -329,7 +326,7 @@
     }
   },
   "bookingTrust": {
-    "quote": "“Innerleaps' 6-week brain training, run by accredited trainers, delivered measurable results fast: 8.6% higher productivity, and 7 in 10 participants reported less stress!”",
+    "quote": "“Innerleaps' 6-week attention training, run by accredited trainers, delivered measurable results fast: 8.6% higher productivity, and 7 in 10 participants reported less stress!”",
     "author": "Jochem van der Veer",
     "role": "CEO at TheyDo",
     "logoAlt": "TheyDo",

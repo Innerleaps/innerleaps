@@ -25,16 +25,16 @@ import leaseplan from "@/assets/Vitaliteitsprogramma_Leaseplan.webp";
  * te knippen bij de rand.
  */
 const logos = [
-  { src: oliverWyman, alt: "Vitaliteitstraining Oliver Wyman" },
-  { src: paConsulting, alt: "Vitaliteitstraining PA Consulting" },
-  { src: dhl, alt: "Vitaliteitstraining DHL" },
-  { src: rijkswaterstaat, alt: "Vitaliteitstraining Rijkswaterstaat" },
-  { src: justitie, alt: "Vitaliteitstraining Ministerie van Justitie en Veiligheid" },
-  { src: politie, alt: "Vitaliteitstraining Politie" },
-  { src: hollandColours, alt: "Vitaliteitstraining Holland Colours" },
-  { src: leaseplan, alt: "Vitaliteitstraining Leaseplan" },
-  { src: youTalent, alt: "Vitaliteitstraining You Talent" },
-  { src: nobel, alt: "Vitaliteitstraining Nobel Recruitment" },
+  { src: oliverWyman, alt: "Oliver Wyman" },
+  { src: paConsulting, alt: "PA Consulting" },
+  { src: dhl, alt: "DHL" },
+  { src: rijkswaterstaat, alt: "Rijkswaterstaat" },
+  { src: justitie, alt: "Ministerie van Justitie en Veiligheid" },
+  { src: politie, alt: "Politie" },
+  { src: hollandColours, alt: "Holland Colours" },
+  { src: leaseplan, alt: "Leaseplan" },
+  { src: youTalent, alt: "You Talent" },
+  { src: nobel, alt: "Nobel Recruitment" },
 ];
 
 const ClientLogoMarquee = () => (

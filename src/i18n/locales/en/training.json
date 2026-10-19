@@ -154,11 +154,11 @@
         },
         {
           "q": "15 minutes of practice a day, how does that work?",
-          "a": "Participants get a workbook at the start with a piece of theory and short exercises for each week. They also receive audio recordings of the exercises. Some exercises can be done during daily routines like brushing your teeth, showering or doing the dishes. So it doesn't cost any extra time. Other exercises take about 12 minutes to train attention while sitting quietly."
+          "a": "Participants get a workbook at the start with a piece of theory and short exercises for each week. They also receive audio recordings of the exercises. Some exercises can be done during daily routines like brushing your teeth, showering or doing the dishes. So it doesn't cost any extra time. Other exercises take about 12 minutes. For those, you need a quiet spot."
         },
         {
           "q": "What are the exercises?",
-          "a": "All exercises are aimed at training attention. The goal is for participants to work and live with more focus and awareness. That's why the exercises are directly applicable in daily life, for example while brushing teeth, eating or walking. Each week also includes a special 12-minute attention training done while sitting."
+          "a": "All exercises are aimed at training attention. The goal is for participants to work and live with more focus and awareness. That's why the exercises are directly applicable in daily life, for example while brushing teeth, eating or walking. Each week also includes a 12-minute exercise."
         },
         {
           "q": "How do you make sure the learning environment is safe and comfortable?",
@@ -206,7 +206,7 @@
   "stress": {
     "meta": {
       "title": "Stress management training | Innerleaps",
-      "description": "Innerleaps lowers stress through brain training: spot stress signals earlier and recover faster. 6 weeks, based on neuroscience research."
+      "description": "Innerleaps lowers stress through attention training: spot stress signals earlier and recover faster. 6 weeks, based on neuroscience research."
     },
     "hero": {
       "badge": "Scientifically proven training",
@@ -383,7 +383,7 @@
         },
         {
           "q": "15 minutes of practice a day. How does that work?",
-          "a": "When you start you get a workbook from us. It contains a piece of theory and short exercises for each week. You also receive audio recordings of the exercises. Some exercises you do during daily activities like brushing your teeth, showering or doing the dishes. So no extra time. Other exercises ask you to sit quietly in a chair for 12 minutes."
+          "a": "When you start you get a workbook from us. It contains a piece of theory and short exercises for each week. You also receive audio recordings of the exercises. Some exercises you do during daily activities like brushing your teeth, showering or doing the dishes. So no extra time. Other exercises take about 12 minutes. For those, you need a quiet spot."
         },
         {
           "q": "What are the exercises?",
@@ -411,7 +411,7 @@
   "performance": {
     "meta": {
       "title": "Performance training for focus and productivity | Innerleaps",
-      "description": "Innerleaps improves performance under pressure with focused brain training. Employees train focus and attention in 6 weeks. Based on the method used by top athletes and world-class CEOs."
+      "description": "Innerleaps improves performance under pressure with focused attention training. Employees train focus and attention in 6 weeks. Based on the method used by top athletes and world-class CEOs."
     },
     "hero": {
       "badge": "Scientifically proven training",
@@ -588,7 +588,7 @@
         },
         {
           "q": "15 minutes of practice per day, how does that work?",
-          "a": "When you start, you receive a workbook from us. It contains a piece of theory for each week and short exercises. You also receive audio recordings of the exercises. Some exercises you do during daily activities like brushing your teeth, showering or doing the dishes, so no extra time. Other exercises ask 12 minutes of sitting still in a chair."
+          "a": "When you start, you receive a workbook from us. It contains a piece of theory for each week and short exercises. You also receive audio recordings of the exercises. Some exercises you do during daily activities like brushing your teeth, showering or doing the dishes, so no extra time. Other exercises take about 12 minutes. For those, you need a quiet spot."
         },
         {
           "q": "What are the exercises?",

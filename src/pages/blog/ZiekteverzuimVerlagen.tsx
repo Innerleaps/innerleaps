@@ -10,13 +10,13 @@ const ZiekteverzuimVerlagen = () => {
     <>
       <Helmet>
         <title>Ziekteverzuim Verlagen: De Wetenschappelijk Bewezen Aanpak voor 2025 | Innerleaps</title>
-        <meta name="description" content="Ziekteverzuim verlagen met 15-21% door wetenschappelijk bewezen aandachtstraining. ROI 497-775%. Ontdek hoe 40 jaar onderzoek verzuimkosten structureel verlaagt." />
+        <meta name="description" content="Ziekteverzuim verlagen met 15-21% door wetenschappelijk bewezen aandachttraining. ROI 497-775%. Ontdek hoe 40 jaar onderzoek verzuimkosten structureel verlaagt." />
         
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="article" />
         <meta property="og:url" content="https://innerleaps.nl/blog/ziekteverzuim-verlagen-wetenschappelijk-bewezen-aanpak-2025" />
         <meta property="og:title" content="Ziekteverzuim Verlagen: De Wetenschappelijk Bewezen Aanpak voor 2025" />
-        <meta property="og:description" content="Ziekteverzuim verlagen met 15-21% door wetenschappelijk bewezen aandachtstraining. ROI 497-775%. Ontdek hoe 40 jaar onderzoek verzuimkosten structureel verlaagt." />
+        <meta property="og:description" content="Ziekteverzuim verlagen met 15-21% door wetenschappelijk bewezen aandachttraining. ROI 497-775%. Ontdek hoe 40 jaar onderzoek verzuimkosten structureel verlaagt." />
         <meta property="og:image" content={breinTrainenImage} />
         <meta property="article:published_time" content="2025-11-28T00:00:00+00:00" />
         <meta property="article:modified_time" content="2025-11-28T00:00:00+00:00" />
@@ -26,7 +26,7 @@ const ZiekteverzuimVerlagen = () => {
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content="https://innerleaps.nl/blog/ziekteverzuim-verlagen-wetenschappelijk-bewezen-aanpak-2025" />
         <meta property="twitter:title" content="Ziekteverzuim Verlagen: De Wetenschappelijk Bewezen Aanpak voor 2025" />
-        <meta property="twitter:description" content="Ziekteverzuim verlagen met 15-21% door wetenschappelijk bewezen aandachtstraining. ROI 497-775%. Ontdek hoe 40 jaar onderzoek verzuimkosten structureel verlaagt." />
+        <meta property="twitter:description" content="Ziekteverzuim verlagen met 15-21% door wetenschappelijk bewezen aandachttraining. ROI 497-775%. Ontdek hoe 40 jaar onderzoek verzuimkosten structureel verlaagt." />
         <meta property="twitter:image" content={breinTrainenImage} />
         
         {/* Canonical URL */}
@@ -43,7 +43,7 @@ const ZiekteverzuimVerlagen = () => {
             },
             "url": "https://innerleaps.nl/blog/ziekteverzuim-verlagen-wetenschappelijk-bewezen-aanpak-2025",
             "headline": "Ziekteverzuim Verlagen: De Wetenschappelijk Bewezen Aanpak voor 2025",
-            "description": "Ziekteverzuim verlagen met 15-21% door wetenschappelijk bewezen aandachtstraining. ROI 497-775%. Ontdek hoe 40 jaar onderzoek verzuimkosten structureel verlaagt.",
+            "description": "Ziekteverzuim verlagen met 15-21% door wetenschappelijk bewezen aandachttraining. ROI 497-775%. Ontdek hoe 40 jaar onderzoek verzuimkosten structureel verlaagt.",
             "image": breinTrainenImage,
             "author": {
               "@type": "Person",
@@ -60,7 +60,7 @@ const ZiekteverzuimVerlagen = () => {
             },
             "datePublished": "2025-11-28",
             "dateModified": "2025-11-28",
-            "keywords": "ziekteverzuim verlagen, aandachtstraining, stressmanagement, werknemers, ROI, verzuimkosten, preventie, mindfulness, vitaliteitstraining",
+            "keywords": "ziekteverzuim verlagen, aandachttraining, stressmanagement, werknemers, ROI, verzuimkosten, preventie, mindfulness, vitaliteitstraining",
             "articleSection": "Organisatievitaliteit",
             "inLanguage": "nl-NL"
           })}
@@ -100,7 +100,7 @@ const ZiekteverzuimVerlagen = () => {
             <figure className="mb-8">
               <img 
                 src={breinTrainenImage} 
-                alt="Ziekteverzuim verlagen door aandachtstraining - hersenen trainen in 6 weken"
+                alt="Ziekteverzuim verlagen door aandachttraining - hersenen trainen in 6 weken"
                 className="w-full rounded-lg shadow-lg"
                 loading="eager"
               />
@@ -136,10 +136,10 @@ const ZiekteverzuimVerlagen = () => {
                 Het probleem? Deze interventies missen structuur, sociale steun en wetenschappelijke fundering. Ze vragen te veel van individuele motivatie zonder systematische begeleiding.
               </p>
 
-              <h2 className="text-2xl md:text-3xl font-bold text-brand-purple mt-12 mb-6">De Wetenschappelijke Basis: 40 Jaar Onderzoek naar Aandachtstraining</h2>
+              <h2 className="text-2xl md:text-3xl font-bold text-brand-purple mt-12 mb-6">De Wetenschappelijke Basis: 40 Jaar Onderzoek naar Aandachttraining</h2>
               
               <p>
-                Sinds de jaren tachtig onderzoeken wetenschappers de effecten van <Link to="/breintraining-methode" className="text-brand-blue hover:text-brand-orange font-medium transition-colors">aandachtstraining</Link> op werknemers. Meta-analyses van Vonderlin (2020), Bartlett (2018) en Michaelsen (2023) bundelen resultaten van duizenden deelnemers wereldwijd. De conclusies zijn helder: gestructureerde aandachtstraining vermindert stressgerelateerd verzuim met 15-21%.
+                Sinds de jaren tachtig onderzoeken wetenschappers de effecten van <Link to="/breintraining-methode" className="text-brand-blue hover:text-brand-orange font-medium transition-colors">aandachttraining</Link> op werknemers. Meta-analyses van Vonderlin (2020), Bartlett (2018) en Michaelsen (2023) bundelen resultaten van duizenden deelnemers wereldwijd. De conclusies zijn helder: gestructureerde aandachttraining vermindert stressgerelateerd verzuim met 15-21%.
               </p>
 
               <p className="mt-8">
@@ -153,7 +153,7 @@ const ZiekteverzuimVerlagen = () => {
               <h2 className="text-2xl md:text-3xl font-bold text-brand-purple mt-12 mb-6">Concrete Impact: Van Theorie naar Resultaat</h2>
               
               <p>
-                De Unilever-studie uit 2018, uitgevoerd door De Bruin en collega's aan de Universiteit van Amsterdam, toonde indrukwekkende resultaten. Medewerkers met verhoogd uitvalrisico (54,4% kans op langdurig ziekteverzuim) daalde naar 16,4% na een <Link to="/duurzame-inzetbaarheid" className="text-brand-blue hover:text-brand-orange font-medium transition-colors">6-weekse aandachtstraining</Link>. Dit is een risicoreductie van 70%, blijvend na 6 maanden.
+                De Unilever-studie uit 2018, uitgevoerd door De Bruin en collega's aan de Universiteit van Amsterdam, toonde indrukwekkende resultaten. Medewerkers met verhoogd uitvalrisico (54,4% kans op langdurig ziekteverzuim) daalde naar 16,4% na een <Link to="/duurzame-inzetbaarheid" className="text-brand-blue hover:text-brand-orange font-medium transition-colors">6-weekse aandachttraining</Link>. Dit is een risicoreductie van 70%, blijvend na 6 maanden.
               </p>
 
               <p className="mt-8">
@@ -161,13 +161,13 @@ const ZiekteverzuimVerlagen = () => {
               </p>
 
               <p className="mt-8">
-                Vertaling naar een Nederlandse organisatie met 100 medewerkers en €3.970.000 totale loonkosten: een investering van €57.500 in een wetenschappelijk bewezen aandachtstraining levert een besparing van €57.287 tot €80.202 op ziekteverzuim alleen. Tel daar productiviteitswinst (5-8%) en retentieverbetering (5-8% lager verloop) bij op, en de totale besparing loopt op tot €285.562 conservatief, €445.442 in een positief scenario. Dit vertaalt zich naar een ROI van 497-775% binnen het eerste jaar.
+                Vertaling naar een Nederlandse organisatie met 100 medewerkers en €3.970.000 totale loonkosten: een investering van €57.500 in een wetenschappelijk bewezen aandachttraining levert een besparing van €57.287 tot €80.202 op ziekteverzuim alleen. Tel daar productiviteitswinst (5-8%) en retentieverbetering (5-8% lager verloop) bij op, en de totale besparing loopt op tot €285.562 conservatief, €445.442 in een positief scenario. Dit vertaalt zich naar een ROI van 497-775% binnen het eerste jaar.
               </p>
 
               <h2 className="text-2xl md:text-3xl font-bold text-brand-purple mt-12 mb-6">Het Mechanisme Achter Verzuimreductie</h2>
               
               <p>
-                Aandachtstraining werkt via vier complementaire routes die verzuim aanpakken:
+                Aandachttraining werkt via vier complementaire routes die verzuim aanpakken:
               </p>
 
               <h3 className="text-xl md:text-2xl font-bold text-brand-purple mt-8 mb-4">1. Vroege stressdetectie</h3>
@@ -193,7 +193,7 @@ const ZiekteverzuimVerlagen = () => {
               <h2 className="text-2xl md:text-3xl font-bold text-brand-purple mt-12 mb-6">Waarom Het Amerikaanse Leger en Fortune 500 Bedrijven Dit Toepassen</h2>
               
               <p>
-                In 2020 nam het Amerikaanse leger aandachtstraining op in officiële doctrine (Army Field Manual 7-22: Holistic Health and Fitness). De reden: meetbare prestatieverbetering onder extreme stress, sneller herstel na missies, en verminderde PTSS-symptomen.
+                In 2020 nam het Amerikaanse leger aandachttraining op in officiële doctrine (Army Field Manual 7-22: Holistic Health and Fitness). De reden: meetbare prestatieverbetering onder extreme stress, sneller herstel na missies, en verminderde PTSS-symptomen.
               </p>
 
               <p className="mt-8">
@@ -203,7 +203,7 @@ const ZiekteverzuimVerlagen = () => {
               <h2 className="text-2xl md:text-3xl font-bold text-brand-purple mt-12 mb-6">De Kritieke Succesfactoren</h2>
               
               <p>
-                Niet elk aandachtstraining levert deze resultaten. Analyse van effectieve trainingen toont vijf essentiële elementen:
+                Niet elk aandachttraining levert deze resultaten. Analyse van effectieve trainingen toont vijf essentiële elementen:
               </p>
 
               <h3 className="text-xl md:text-2xl font-bold text-brand-purple mt-8 mb-4">Dagelijkse praktijk van minimaal 12 minuten</h3>
@@ -234,7 +234,7 @@ const ZiekteverzuimVerlagen = () => {
               <h2 className="text-2xl md:text-3xl font-bold text-brand-purple mt-12 mb-6">Implementatiestrategie: Van Pilot naar Organisatiebrede Uitrol</h2>
               
               <p>
-                Organisaties die aandachtstraining succesvol implementeren, volgen een gefaseerde aanpak:
+                Organisaties die aandachttraining succesvol implementeren, volgen een gefaseerde aanpak:
               </p>
 
               <h3 className="text-xl md:text-2xl font-bold text-brand-purple mt-8 mb-4">Fase 1: Pilot met risicogroep (8-12 weken)</h3>
@@ -254,13 +254,13 @@ const ZiekteverzuimVerlagen = () => {
 
               <h3 className="text-xl md:text-2xl font-bold text-brand-purple mt-8 mb-4">Fase 4: Strategische integratie (1 jaar)</h3>
               <p>
-                Bouw aandachtstraining in als standaard onderdeel van onboarding voor nieuwe medewerkers en als regulier vitalisatie-aanbod. Train managers in het herkennen van stresssignalen bij teamleden. Creëer een cultuur waarin pauzes, grenzen stellen en stressmanagement genormaliseerd zijn.
+                Bouw aandachttraining in als standaard onderdeel van onboarding voor nieuwe medewerkers en als regulier vitalisatie-aanbod. Train managers in het herkennen van stresssignalen bij teamleden. Creëer een cultuur waarin pauzes, grenzen stellen en stressmanagement genormaliseerd zijn.
               </p>
 
               <h2 className="text-2xl md:text-3xl font-bold text-brand-purple mt-12 mb-6">ROI Berekening voor Jouw Organisatie</h2>
               
               <p>
-                De business case voor aandachtstraining is sterk, maar varieert per organisatie. Drie factoren bepalen je specifieke ROI:
+                De business case voor aandachttraining is sterk, maar varieert per organisatie. Drie factoren bepalen je specifieke ROI:
               </p>
 
               <h3 className="text-xl md:text-2xl font-bold text-brand-purple mt-8 mb-4">Huidig verzuimpercentage</h3>
@@ -283,7 +283,7 @@ const ZiekteverzuimVerlagen = () => {
               </p>
 
               <p className="bg-brand-off-white p-6 rounded-lg border-l-4 border-brand-orange mt-8">
-                💡 <strong>Bereken de ROI voor jouw organisatie:</strong> Gebruik <a href="/?openCalculator=true" className="text-brand-blue hover:text-brand-orange font-medium transition-colors">onze ROI calculator</a> om te zien wat aandachtstraining voor jouw specifieke situatie kan betekenen.
+                💡 <strong>Bereken de ROI voor jouw organisatie:</strong> Gebruik <a href="/?openCalculator=true" className="text-brand-blue hover:text-brand-orange font-medium transition-colors">onze ROI calculator</a> om te zien wat aandachttraining voor jouw specifieke situatie kan betekenen.
               </p>
 
               <h2 className="text-2xl md:text-3xl font-bold text-brand-purple mt-12 mb-6">Veelvoorkomende Bezwaren Weerlegd</h2>
@@ -295,7 +295,7 @@ const ZiekteverzuimVerlagen = () => {
 
               <h3 className="text-xl md:text-2xl font-bold text-brand-purple mt-8 mb-4">"We hebben al een EAP en bedrijfsfitness"</h3>
               <p>
-                Deze interventies zijn complementair, niet vervangend. EAP's zijn reactief en bereiken 4-5% van medewerkers. Aandachtstraining is preventief en 80-90% van de deelnemers blijven zelfstandig trainen. Bedrijfsfitness richt zich op fysieke gezondheid, aandachtstraining op cognitieve en emotionele vaardigheden.
+                Deze interventies zijn complementair, niet vervangend. EAP's zijn reactief en bereiken 4-5% van medewerkers. Aandachttraining is preventief en 80-90% van de deelnemers blijven zelfstandig trainen. Bedrijfsfitness richt zich op fysieke gezondheid, aandachttraining op cognitieve en emotionele vaardigheden.
               </p>
 
               <h3 className="text-xl md:text-2xl font-bold text-brand-purple mt-8 mb-4">"Klinkt als soft skills zonder harde resultaten"</h3>
@@ -311,7 +311,7 @@ const ZiekteverzuimVerlagen = () => {
               <h2 className="text-2xl md:text-3xl font-bold text-brand-purple mt-12 mb-6">De Nederlandse Context: Zorgverzekeraars Vergoeden MBSR</h2>
               
               <p>
-                De uitgebreide variant van aandachtstraining, Mindfulness-Based Stress Reduction (MBSR), wordt vergoed vanuit de basisverzekering door Nederlandse zorgverzekeraars. Dit reflecteert de erkenning binnen het zorgsysteem van de evidence base en kosteneffectiviteit.
+                De uitgebreide variant van aandachttraining, Mindfulness-Based Stress Reduction (MBSR), wordt vergoed vanuit de basisverzekering door Nederlandse zorgverzekeraars. Dit reflecteert de erkenning binnen het zorgsysteem van de evidence base en kosteneffectiviteit.
               </p>
 
               <p className="mt-8">
@@ -321,7 +321,7 @@ const ZiekteverzuimVerlagen = () => {
               <h2 className="text-2xl md:text-3xl font-bold text-brand-purple mt-12 mb-6">Praktische Eerste Stappen</h2>
               
               <p>
-                Het starten van een aandachtstrainingspilot vereist vier concrete acties:
+                Het starten van een aandachttrainingspilot vereist vier concrete acties:
               </p>
 
               <h3 className="text-xl md:text-2xl font-bold text-brand-purple mt-8 mb-4">1. Baseline meting</h3>
@@ -344,14 +344,14 @@ const ZiekteverzuimVerlagen = () => {
                 Deel het onderzoek, de business case en de verwachtingen. Wees helder over tijdsinvestering, vrijwilligheid, en hoe privacy gewaarborgd wordt in metingen.
               </p>
 
-              <h2 className="text-2xl md:text-3xl font-bold text-brand-purple mt-12 mb-6">Aandachtstraining als Integraal Onderdeel van Verzuimpreventie</h2>
+              <h2 className="text-2xl md:text-3xl font-bold text-brand-purple mt-12 mb-6">Aandachttraining als Integraal Onderdeel van Verzuimpreventie</h2>
               
               <p>
-                Ziekteverzuim verlagen vereist een systematische, evidence-based aanpak. Traditionele interventies falen omdat ze reactief zijn, lage participatie hebben, of wetenschappelijke fundering missen. Aandachtstraining adresseert de onderliggende neurobiologische mechanismen van stress en cognitieve overbelasting.
+                Ziekteverzuim verlagen vereist een systematische, evidence-based aanpak. Traditionele interventies falen omdat ze reactief zijn, lage participatie hebben, of wetenschappelijke fundering missen. Aandachttraining adresseert de onderliggende neurobiologische mechanismen van stress en cognitieve overbelasting.
               </p>
 
               <p className="mt-8">
-                Met 40 jaar onderzoek, consistente effecten van 15-21% verzuimreductie, en ROI's tussen 497-775%, is de business case overweldigend. Organisaties die hun verzuimcijfers structureel willen verlagen, vinden in wetenschappelijk bewezen aandachtstraining een interventie die daadwerkelijk werkt.
+                Met 40 jaar onderzoek, consistente effecten van 15-21% verzuimreductie, en ROI's tussen 497-775%, is de business case overweldigend. Organisaties die hun verzuimcijfers structureel willen verlagen, vinden in wetenschappelijk bewezen aandachttraining een interventie die daadwerkelijk werkt.
               </p>
 
               <p className="text-lg font-medium mt-8">

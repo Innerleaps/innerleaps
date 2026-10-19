@@ -304,7 +304,7 @@ const VerborgenKostenZiekteverzuim = () => {
 
               <h2 className="text-2xl md:text-3xl font-bold text-brand-purple mt-12 mb-6">Wetenschappelijk bewezen interventies die verzuim verlagen</h2>
 
-              <h3 className="text-xl md:text-2xl font-bold text-brand-purple mt-8 mb-4">Aandachtstraining toont 15-21% verzuimreductie</h3>
+              <h3 className="text-xl md:text-2xl font-bold text-brand-purple mt-8 mb-4">Aandachttraining toont 15-21% verzuimreductie</h3>
               
               <p>
                 Meta-analyses van 12 wetenschappelijke studies tonen consistente effecten van awareness interventies. Organisaties kunnen 15-21% verzuimreductie verwachten binnen het eerste jaar. Het mechanisme is duidelijk: deelnemers trainen hun controlecentrum en waarschuwingssysteem.
@@ -322,7 +322,7 @@ const VerborgenKostenZiekteverzuim = () => {
               <h3 className="text-xl md:text-2xl font-bold text-brand-purple mt-8 mb-4">ROI van 497% tot 775% binnen eerste jaar</h3>
               
               <p>
-                Wetenschappelijke data uit 40 jaar onderzoek vormt de basis voor ROI-berekeningen. Voor een organisatie met 100 deelnemers aan een aandachtstraining:
+                Wetenschappelijke data uit 40 jaar onderzoek vormt de basis voor ROI-berekeningen. Voor een organisatie met 100 deelnemers aan een aandachttraining:
               </p>
 
               <p className="font-semibold mt-8">Conservatief scenario (497% ROI):</p>
@@ -425,7 +425,7 @@ const VerborgenKostenZiekteverzuim = () => {
                 <li>Presenteïsme kost tot 7,5x meer dan absenteïsme</li>
               </ul>
 
-              <p className="font-semibold mt-8">Aandachtstraining levert meetbare resultaten:</p>
+              <p className="font-semibold mt-8">Aandachttraining levert meetbare resultaten:</p>
               <ul className="mt-2">
                 <li>15-21% verzuimreductie wetenschappelijk aangetoond</li>
                 <li>497-775% ROI binnen eerste jaar op basis van 40 jaar onderzoek</li>
