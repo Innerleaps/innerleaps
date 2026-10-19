@@ -151,10 +151,10 @@ De URL is bewust niet veranderd.
   TheyDo-case, `participantQuote` (Jochems slaapquote, zodat zijn
   productiviteitsquote niet twee keer staat) en `afterResults` met de paarse
   `ResultatenBand` op de plek van de eerste fotobreak.
-- **"25% minder fouten op aandachtstaken (Jha, 2021)"** in de cijferband heeft
-  nog geen bevestigde bron. Bas' kennisbank noemt alleen "Jha research met
-  militairen", en Jha (2021) is haar boek *Peak Mind*. Wel met bron: "+24%
-  volgehouden aandacht op de SART" (Jha et al., 2021; Morrison et al., 2014).
+- **"25% minder fouten op aandachtstaken (Jha, 2021)"** in de cijferband en de
+  FAQ is op 19 oktober 2026 door Bas bevestigd. Niet verwarren met "+24%
+  volgehouden aandacht op de SART" (Jha et al., 2021; Morrison et al., 2014),
+  dat is een ander cijfer.
 
 ## Oranje woorden in koppen
 

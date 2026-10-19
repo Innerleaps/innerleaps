@@ -653,7 +653,7 @@
       "items": [
         {
           "icon": "TrendingUp",
-          "title": "Get more done",
+          "title": "Get more done in the same time",
           "bullets": [
             "Your team stays on a task longer and gets distracted less.",
             "Fewer mistakes, even when it's busy."
@@ -661,7 +661,7 @@
         },
         {
           "icon": "Gauge",
-          "title": "Owning their optimal pace",
+          "title": "Owning their own optimal pace",
           "bullets": [
             "They know the pace at which they get the most done, and they hold it.",
             "They feel their limit coming and don't go past it."
@@ -669,10 +669,10 @@
         },
         {
           "icon": "Users",
-          "title": "A connected team",
+          "title": "A connected and satisfied team",
           "bullets": [
             "Six weeks of practising together, in small groups.",
-            "Colleagues who don't normally work together really get to know each other."
+            "Colleagues really get to know each other and become more satisfied with their work."
           ]
         }
       ]

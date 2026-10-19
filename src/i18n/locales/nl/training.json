@@ -653,7 +653,7 @@
       "items": [
         {
           "icon": "TrendingUp",
-          "title": "Krijg meer gedaan",
+          "title": "Krijg meer gedaan in dezelfde tijd",
           "bullets": [
             "Je team blijft langer bij één taak en raakt minder snel afgeleid.",
             "Minder fouten, ook als het druk is."
@@ -661,7 +661,7 @@
         },
         {
           "icon": "Gauge",
-          "title": "Regie over hun optimale tempo",
+          "title": "Regie over hun eigen optimale tempo",
           "bullets": [
             "Ze kennen het tempo waarop ze het meest gedaan krijgen, en houden dat vast.",
             "Ze voelen hun grens aankomen en gaan er niet overheen."
@@ -669,10 +669,10 @@
         },
         {
           "icon": "Users",
-          "title": "Een verbonden team",
+          "title": "Een verbonden en tevreden team",
           "bullets": [
             "Zes weken samen oefenen, in kleine groepen.",
-            "Collega's die normaal niet samenwerken, leren elkaar echt kennen."
+            "Collega's leren elkaar echt kennen en worden meer tevreden over hun werk."
           ]
         }
       ]
