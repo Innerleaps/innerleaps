@@ -35,6 +35,7 @@ const BedanktRoi = lazy(() => import("./pages/BedanktRoi"));
 const BedanktRapport = lazy(() => import("./pages/BedanktRapport"));
 const BedanktOfferte = lazy(() => import("./pages/BedanktOfferte"));
 const OfferteAanvragen = lazy(() => import("./pages/OfferteAanvragen"));
+const KlantcaseTheydo = lazy(() => import("./pages/KlantcaseTheydo"));
 const NegenStippen = lazy(() => import("./pages/NegenStippen"));
 const AlgemeneVoorwaarden = lazy(() => import("./pages/AlgemeneVoorwaarden"));
 const PrivacyNotice = lazy(() => import("./pages/PrivacyNotice"));
@@ -142,6 +143,7 @@ const App = () => {
                 <Route path="/en/stress-management-training" element={<StressManagement />} />
                 <Route path="/en/performance-training" element={<PrestatieProgramma />} />
                 <Route path="/en/blog" element={<Blog />} />
+                <Route path="/en/case-studies/theydo" element={<KlantcaseTheydo />} />
                 <Route path="/en/blog/reducing-absenteeism-evidence-based-approach-2025" element={<ZiekteverzuimVerlagen />} />
                 <Route path="/en/blog/hidden-costs-of-absenteeism-calculator" element={<VerborgenKostenZiekteverzuim />} />
                 <Route path="/en/blog/how-to-reduce-absenteeism-in-my-organization" element={<HoeVerlaagIkZiekteverzuim />} />
@@ -162,6 +164,7 @@ const App = () => {
                 <Route path="/duurzame-inzetbaarheid" element={<Vitaliteitstraining />} />
                 <Route path="/team-prestaties-verbeteren" element={<DuurzameInzetbaarheidTraining />} />
                 <Route path="/blog" element={<Blog />} />
+                <Route path="/klantcases/theydo" element={<KlantcaseTheydo />} />
                 <Route path="/blog/ziekteverzuim-verlagen-wetenschappelijk-bewezen-aanpak-2025" element={<ZiekteverzuimVerlagen />} />
                 <Route path="/blog/verborgen-kosten-ziekteverzuim-rekenmodel" element={<VerborgenKostenZiekteverzuim />} />
                 <Route path="/blog/hoe-verlaag-ik-het-ziekteverzuim-in-mijn-organisatie" element={<HoeVerlaagIkZiekteverzuim />} />

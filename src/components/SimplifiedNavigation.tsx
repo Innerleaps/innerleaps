@@ -24,6 +24,7 @@ const SimplifiedNavigation = () => {
   const href = {
     home: lang === 'en' ? '/en' : '/',
     method: lang === 'en' ? '/en/method' : '/breintraining-methode',
+    caseStudy: lang === 'en' ? '/en/case-studies/theydo' : '/klantcases/theydo',
     aboutUs: lang === 'en' ? '/en/about-us' : '/over-ons',
     contact: lang === 'en' ? '/en/contact' : '/contact',
     blog: lang === 'en' ? '/en/blog' : '/blog',
@@ -59,7 +60,7 @@ const SimplifiedNavigation = () => {
         {/* Op lg en xl krapper dan op sm. Op 1024 pixels stak de taalknop
             er eerst 49 pixels uit, en op 1280 kwam de rij met de offerteknop
             erbij 38 pixels te kort. */}
-        <div className="flex items-center gap-4 sm:gap-8 lg:gap-5 xl:gap-6 py-4">
+        <div className="flex items-center gap-4 sm:gap-8 lg:gap-4 xl:gap-6 py-4">
           {/* Logo */}
           <div className="flex flex-col items-start min-w-0 flex-shrink-0">
             <Link to={href.home} className="hover:opacity-80 transition-opacity">
@@ -68,13 +69,16 @@ const SimplifiedNavigation = () => {
                 width={414}
                 height={140}
                 alt="Innerleaps Logo"
-                className="h-16 w-auto"
+                // Op laptopbreedte kleiner: daar staat het volledige menu naast
+                // het logo, en sinds de klantcase erbij kwam paste het niet meer
+                // op 1024 en (Nederlands, met de offerteknop) op 1280 pixels.
+                className="h-16 lg:h-12 xl:h-14 2xl:h-16 w-auto"
               />
             </Link>
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center space-x-4 xl:space-x-6">
+          <div className="hidden lg:flex items-center space-x-3 xl:space-x-5 2xl:space-x-6">
             <NavigationMenu className="flex-none">
               <NavigationMenuList>
                 <NavigationMenuItem>
@@ -182,6 +186,15 @@ const SimplifiedNavigation = () => {
               {t('nav.method')}
             </Link>
 
+            {/* Rechtstreeks naar de enige klantcase. Komen er meer, dan wordt dit
+                een uitklapmenu of een overzichtspagina op /klantcases. */}
+            <Link
+              to={href.caseStudy}
+              className="text-brand-gray-dark hover:text-brand-blue transition-colors duration-300 font-medium text-base whitespace-nowrap"
+            >
+              {t('nav.caseStudy')}
+            </Link>
+
             <Link
               to={href.aboutUs}
               className="text-brand-gray-dark hover:text-brand-blue transition-colors duration-300 font-medium text-base whitespace-nowrap"
@@ -202,26 +215,30 @@ const SimplifiedNavigation = () => {
             </Link>
           </div>
 
-          {/* Right side: language switcher (desktop), quote button, mobile menu button */}
+          {/* Rechts: de offerteknop, dan de taalkeuze, en op mobiel de menuknop.
+              De taalkeuze staat helemaal rechts, waar mensen hem zoeken, als
+              compacte keuzelijst. Dat scheelt ruimte, en daardoor past de
+              offerteknop nu vanaf 1200 pixels naast het volledige menu. */}
           <div className="ml-auto flex items-center gap-4 xl:gap-3">
-            <div className="hidden lg:block">
-              <LanguageSwitcher />
-            </div>
             {/* Alleen waar hij past. Onder sm niet naast het logo, en tussen lg
-                en xl niet naast het volledige menu. Daar staat hij in het
-                uitklapmenu of de hero, en verschijnt de zwevende balk na de hero. */}
+                en 1200 pixels niet naast het volledige menu. Daar staat hij in
+                het uitklapmenu of de hero, en verschijnt de zwevende balk na de
+                hero. */}
             {toonOfferteknop && (
               <Link
                 to={offertePad(lang)}
                 state={{ van: pathname }}
                 onClick={() => meldOfferteKlik('header')}
-                className="hidden sm:block lg:hidden xl:block"
+                className="hidden sm:block lg:hidden min-[1200px]:block"
               >
                 <Button tabIndex={-1} className="min-h-[44px] px-4 text-base font-semibold whitespace-nowrap">
                   {t('cta.requestQuote')}
                 </Button>
               </Link>
             )}
+            <div className="hidden lg:block">
+              <LanguageSwitcher variant="dropdown" />
+            </div>
             <div className="lg:hidden">
               <Button
                 variant="ghost"
@@ -327,6 +344,14 @@ const SimplifiedNavigation = () => {
                 className="text-brand-gray-dark hover:text-brand-blue transition-colors duration-300 font-medium py-2 text-left text-base"
               >
                 {t('nav.method')}
+              </Link>
+
+              <Link
+                to={href.caseStudy}
+                onClick={() => setIsMenuOpen(false)}
+                className="text-brand-gray-dark hover:text-brand-blue transition-colors duration-300 font-medium py-2 text-left text-base"
+              >
+                {t('nav.caseStudy')}
               </Link>
 
               <Link

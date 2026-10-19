@@ -1,0 +1,163 @@
+{
+  "meta": {
+    "title": "Klantcase TheyDo: 8,6% productiever | Innerleaps",
+    "description": "Voelt mentale training niet als een teken van zwakte? De CEO van TheyDo vreesde van wel. Toch meldden 39 mensen zich vrijwillig aan, en steeg de productiviteit 8,6%."
+  },
+  "eyebrow": "Klantcase: TheyDo",
+  "ask": {
+    "jochem": "Vraag aan Jochem",
+    "heidi": "Vraag aan Heidi"
+  },
+  "people": {
+    "jochem": {
+      "name": "Jochem van der Veer",
+      "role": "CEO en medeoprichter van TheyDo"
+    },
+    "heidi": {
+      "name": "Heidi Young",
+      "role": "Head of People bij TheyDo"
+    }
+  },
+  "hero": {
+    "title": "8,6% <0>productiever</0> en 7\u00a0op\u00a0de\u00a010 heeft <0>minder stress</0>",
+    "subtitle": "TheyDo werkt volledig remote met heel veel vrijheid. Hierdoor is er weinig grip op hoe het team werkt. 39 collega's namen deel en trainden hun aandacht voor 6 weken.",
+    "quote": "Je haalt meer uit je tijd, zonder dat je meer uren hoeft te maken.",
+    "photoAlt": "Jochem van der Veer, CEO van TheyDo, tijdens het interview"
+  },
+  "statsLabel": "Resultaten",
+  "stats": [
+    {
+      "value": "+8,6%",
+      "label": "productiviteit 4 weken na training",
+      "note": "Gerandomiseerd onderzoek wijst dezelfde kant op (Michaelsen e.a., 2023)."
+    },
+    {
+      "value": "68%",
+      "label": "ervaart minder stress en spanning"
+    },
+    {
+      "value": "9,3",
+      "label": "voor de trainers, een 8,1 voor het programma"
+    }
+  ],
+  "glance": {
+    "title": "In het kort",
+    "items": [
+      {
+        "label": "Bedrijf",
+        "value": "TheyDo, software voor journey management bij grote internationale bedrijven"
+      },
+      {
+        "label": "Team",
+        "value": "Volledig op afstand, verspreid over 26 landen"
+      },
+      {
+        "label": "Deelnemers",
+        "value": "39 medewerkers, zo'n 40% van het bedrijf, vrijwillig aangemeld"
+      },
+      {
+        "label": "Training",
+        "value": "Zes weken breintraining van Innerleaps, online, maart tot april 2026"
+      },
+      {
+        "label": "Gemeten",
+        "value": "Vóór de training en vier weken na afloop, plus een evaluatie aan het eind van de training"
+      }
+    ]
+  },
+  "context": {
+    "title": "Wat speelde er bij <0>TheyDo</0>?",
+    "quote": "We zijn een remote organisatie. Dat betekent dat we in 26 landen mensen hebben. We hebben dus geen zicht op hoe mensen hun werk doen buiten de schermtijd om.",
+    "photo": {
+      "caption": "De online masterclass bij TheyDo, met 93 deelnemers.",
+      "alt": "Bas Ter Haar Romenij geeft de online masterclass aan TheyDo, met de deelnemers in beeld"
+    }
+  },
+  "doubts": {
+    "title": "Wat waren je <0>twijfels</0> voordat je begon?",
+    "quote": "Ik maakte me zorgen hoe dit omarmd zou worden door alle medewerkers. Maar ze vonden het eigenlijk een heel prettig aanbod.",
+    "fact": "39 mensen meldden zich vrijwillig aan na de masterclass. Zo'n 40% van het bedrijf.",
+    "bridge": "Waarom werkte het? Jochem bracht het als onderhoud, niet als reparatie."
+  },
+  "colleagues": {
+    "title": "Wat merkte je bij je <0>collega's</0>?",
+    "quote": "Een collega zei ineens in een videocall: ik sliep heel slecht, en nu slaap ik als een roosje.",
+    "intro": "22 van de 39 deelnemers vulden aan het eind een evaluatie in. Dit noemden ze het vaakst:",
+    "items": [
+      {
+        "value": 68,
+        "label": "Minder stress en spanning"
+      },
+      {
+        "value": 55,
+        "label": "Minder op de automatische piloot"
+      },
+      {
+        "value": 55,
+        "label": "Minder mentaal moe"
+      },
+      {
+        "value": 41,
+        "label": "Betere concentratie en focus"
+      }
+    ],
+    "voices": {
+      "label": "Wat deelnemers zeggen",
+      "author": "Deelnemer bij TheyDo",
+      "items": [
+        "Dit heeft me echt geholpen, op het werk én daarbuiten.",
+        "Ik merk nu wanneer ik gestrest ben, en weet wat ik eraan kan doen.",
+        "Mijn grootste inzicht: korte oefeningen kunnen mijn focus en welzijn verbeteren."
+      ]
+    }
+  },
+  "investment": {
+    "title": "Was het de <0>investering</0> waard?",
+    "quote": "De benefits die we zien zijn de investering zeker waard. In onze salesorganisatie is dat net een extra meeting op een dag, net een extra gekwalificeerde deal.",
+    "number": "23x",
+    "fact": "Bij TheyDo verdiende de training zich terug vanaf 0,36% meer productiviteit. Gemeten werd 8,6%: ruim 23 keer zoveel. Waar dat punt bij jullie ligt, hangt af van de salarissen en het aantal deelnemers. <0>Reken het uit voor je eigen team</0>."
+  },
+  "hr": {
+    "title": "Hoeveel <0>werk</0> was het voor HR?",
+    "quote": "Jullie waren super georganiseerd. Al het materiaal lag klaar. Jullie vertelden me precies wat ik wanneer moest doen. Het was echt een makkelijke samenwerking.",
+    "fact": "Collega's die normaal niet samenwerken, leerden elkaar echt kennen.",
+    "factLabel": "Bonusresultaat"
+  },
+  "better": {
+    "title": "Wat kon er <0>beter</0>?",
+    "quote": "Mensen vonden het fijn. Maar we hadden vóór de eerste sessie willen weten dat we een rustige plek nodig hadden.",
+    "factTitle": "Dit hebben we aangepast",
+    "items": [
+      "We zeggen nu vooraf dat je een rustige plek nodig hebt",
+      "Het werkboek komt per week, niet in één keer",
+      "Engelse audio opnieuw ingesproken door een moedertaalspreker",
+      "Elke dag een steuntje in de rug via je eigen chatapp"
+    ]
+  },
+  "again": {
+    "title": "Zou je het <0>opnieuw</0> doen?",
+    "quote": "Zeker. Dit is iets wat je continu wil blijven aanbieden aan je medewerkers. Zowel voor nieuwe medewerkers als voor eerdere deelnemers, als refresher.",
+    "factTitle": "Hoelang werkt de training?",
+    "fact": "Wetenschappelijk onderzoek laat zien dat deelnemers tot een jaar na de training nog minder stress ervaren (Michaelsen e.a., 2023). Langer is nauwelijks onderzocht."
+  },
+  "know": {
+    "title": "Hoe hebben we de <0>impact</0> gemeten?",
+    "items": [
+      "Productiviteit maten we met de Health and Work Performance Questionnaire (HPQ) van de Wereldgezondheidsorganisatie. Deelnemers geven daarin een cijfer voor hun eigen werkprestatie over de afgelopen vier weken. We maten het bij 20 deelnemers, één keer vóór de training en nog een keer vier weken na afloop. Het resultaat: 8,6% hogere productiviteit.",
+      "Ook in gerandomiseerd onderzoek presteren deelnemers na een vergelijkbare training beter op hun werk dan een vergelijkingsgroep (Michaelsen e.a., 2023).",
+      "Wie vaker dan eens per week oefende, ging er nog meer op vooruit: hun productiviteit steeg met 11,1%.",
+      "Elke deelnemer kreeg een eigen impactrapport. Individuele antwoorden gaan nooit naar de werkgever."
+    ],
+    "report": {
+      "caption": "Voorbeeld van een persoonlijk impactrapport",
+      "alt": "Persoonlijk impactrapport met de verandering in prestatie, levenstevredenheid, stress, vitaliteit en veerkracht sinds de training"
+    }
+  },
+  "cta": {
+    "title": "Dit ook voor jouw <0>team</0>?",
+    "body": "Vertel ons met hoeveel mensen en of je het online of op locatie wilt. Binnen één werkdag heb je een offerte.",
+    "calculatorLink": "Of reken eerst je omslagpunt uit",
+    "quoteLabel": "Heidi's advies",
+    "quote": "Ga ervoor. Je hebt niets te verliezen en veel te winnen."
+  }
+}
