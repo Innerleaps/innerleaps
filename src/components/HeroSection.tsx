@@ -56,12 +56,24 @@ export interface HeroPhoto {
 interface HeroSectionProps {
   /** De h1. Zonder dit staat de kop van home er. */
   title?: ReactNode;
+  /** Het labeltje boven de kop. Zonder dit staat dat van home er. */
+  badge?: string;
   subtitle?: string;
   /** Zonder dit staat de foto van home er. */
   photo?: HeroPhoto;
+  /**
+   * Eigen logorij voor deze pagina. Zonder dit staan de logo's van home er.
+   * Gebruik de donkere varianten: de hero is lichtbeige.
+   */
+  logos?: { src: string; alt: string; className?: string }[];
+  /**
+   * Vervangt de link naar de verzuimrekenmachine naast de offerteknop. Op de
+   * scale-up-pagina, waar verzuim geen ingang is, wijst hij naar de klantcase.
+   */
+  secondaryLink?: { label: string; to: string };
 }
 
-const HeroSection = ({ title, subtitle, photo }: HeroSectionProps = {}) => {
+const HeroSection = ({ title, badge, subtitle, photo, logos = LOGOS, secondaryLink }: HeroSectionProps = {}) => {
   const { t } = useTranslation();
   const { pathname } = useLocation();
   const lang = detectLanguageFromPath(pathname);
@@ -76,7 +88,7 @@ const HeroSection = ({ title, subtitle, photo }: HeroSectionProps = {}) => {
             <div>
               <div className="inline-flex items-center gap-2 bg-white rounded-full px-4 py-2 text-base font-semibold text-brand-purple shadow-lg">
                 <Award className="h-4 w-4 text-brand-orange" />
-                {t("hero.badge")}
+                {badge ?? t("hero.badge")}
               </div>
 
               <h1 className="mt-6 text-4xl md:text-5xl lg:text-6xl font-bold text-brand-purple leading-tight text-balance">
@@ -112,13 +124,22 @@ const HeroSection = ({ title, subtitle, photo }: HeroSectionProps = {}) => {
                     {t("cta.requestQuote")}
                   </Button>
                 </Link>
-                <button
-                  type="button"
-                  onClick={() => setIsCalculatorOpen(true)}
-                  className="self-start text-base font-semibold text-brand-purple border-b-2 border-brand-orange/40 pb-0.5 hover:border-brand-orange transition-colors"
-                >
-                  {t("hero.calculatorLink")} <span aria-hidden="true">→</span>
-                </button>
+                {secondaryLink ? (
+                  <Link
+                    to={secondaryLink.to}
+                    className="self-start text-base font-semibold text-brand-purple border-b-2 border-brand-orange/40 pb-0.5 hover:border-brand-orange transition-colors"
+                  >
+                    {secondaryLink.label} <span aria-hidden="true">→</span>
+                  </Link>
+                ) : (
+                  <button
+                    type="button"
+                    onClick={() => setIsCalculatorOpen(true)}
+                    className="self-start text-base font-semibold text-brand-purple border-b-2 border-brand-orange/40 pb-0.5 hover:border-brand-orange transition-colors"
+                  >
+                    {t("hero.calculatorLink")} <span aria-hidden="true">→</span>
+                  </button>
+                )}
               </div>
 
               <a
@@ -226,14 +247,14 @@ const HeroSection = ({ title, subtitle, photo }: HeroSectionProps = {}) => {
               {t("hero.trustedBy")}
             </p>
             <div className="mt-4 flex flex-wrap items-center justify-center gap-x-8 gap-y-4 lg:gap-x-11">
-              {LOGOS.map((logo) => (
+              {logos.map((logo) => (
                 <img
                   key={logo.alt}
                   src={logo.src}
                   alt={logo.alt}
                   loading="lazy"
                   decoding="async"
-                  className="h-6 lg:h-7 w-auto object-contain grayscale opacity-80"
+                  className={`${logo.className ?? "h-6 lg:h-7"} w-auto object-contain grayscale opacity-80`}
                 />
               ))}
             </div>
@@ -241,9 +262,11 @@ const HeroSection = ({ title, subtitle, photo }: HeroSectionProps = {}) => {
         </div>
       </section>
 
-      <Suspense fallback={null}>
-        <CalculatorModal isOpen={isCalculatorOpen} onClose={() => setIsCalculatorOpen(false)} />
-      </Suspense>
+      {!secondaryLink && (
+        <Suspense fallback={null}>
+          <CalculatorModal isOpen={isCalculatorOpen} onClose={() => setIsCalculatorOpen(false)} />
+        </Suspense>
+      )}
     </>
   );
 };

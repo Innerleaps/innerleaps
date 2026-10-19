@@ -136,6 +136,28 @@ gebruiker of de wijziging daar ook moet landen.** Nooit stilzwijgend aannemen.
 Let op: de sleutelnamen dekken de lading niet meer. `vitality` is de pagina over
 verzuim en duurzame inzetbaarheid, `sustainability` die over productiviteit.
 
+### `sustainability` is de scale-up-pagina
+
+Sinds 19 oktober 2026 spreekt `/team-prestaties-verbeteren` scale-ups aan, op
+basis van de segmentanalyse "(C) Segmentanalyse Scale-ups 2026-10" in de Second
+Brain. In het menu heet hij "Scale-ups" en staat hij bovenaan, ook in de footer.
+De URL is bewust niet veranderd.
+
+- **Geen verzuim.** Het verzuimverhaal, de ROI-rekenmachine en de link "Wat kost
+  verzuim jou?" staan niet op deze pagina. Scale-ups hebben geen verzuimcijfers.
+  De lijn is: meer output door rust en focus.
+- **Eigen invulling via props** op `TrainingPageLayout`: `heroLogos` (TheyDo,
+  Holie Pizza, Tele2, Leaseplan, Sygnific), `heroSecondaryLink` naar de
+  TheyDo-case, `participantQuote` (Jochems slaapquote, zodat zijn
+  productiviteitsquote niet twee keer staat) en `afterResults` met de paarse
+  `ResultatenBand` op de plek van de eerste fotobreak.
+- **De case-link werkt pas als `case-theydo` live staat.** Zet deze pagina niet
+  eerder naar `main` dan de case, anders wijst de link naar een 404.
+- **"25% minder fouten op aandachtstaken (Jha, 2021)"** in de cijferband heeft
+  nog geen bevestigde bron. Bas' kennisbank noemt alleen "Jha research met
+  militairen", en Jha (2021) is haar boek *Peak Mind*. Wel met bron: "+24%
+  volgehouden aandacht op de SART" (Jha et al., 2021; Morrison et al., 2014).
+
 ## Oranje woorden in koppen
 
 Een oranje accent schrijf je in de JSON als `<0>...</0>`, niet als HTML:

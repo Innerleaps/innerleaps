@@ -35,9 +35,10 @@ const Footer = memo(({ showNavigation = true }: FooterProps) => {
     terms: lang === 'en' ? '/en/terms-and-conditions' : '/algemene-voorwaarden',
   };
 
+  // Zelfde volgorde als het hoofdmenu: scale-ups eerst.
   const trainingLinks = [
-    { to: href.vitality, label: t('menuItems.vitality.label') },
     { to: href.employability, label: t('menuItems.employability.label') },
+    { to: href.vitality, label: t('menuItems.vitality.label') },
     { to: href.stress, label: t('menuItems.stress.label') },
     { to: href.performance, label: t('footer.performanceLink') },
     { to: href.masterclass, label: t('footer.masterclassLink') },

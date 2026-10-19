@@ -1,7 +1,9 @@
 import { useEffect, useState, lazy, Suspense } from "react";
 import { useSearchParams, useLocation } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import TrainingPageLayout from "@/components/TrainingPageLayout";
-import ROICalculator from "@/components/ROICalculator";
+import ResultatenBand, { type ResultatenBandStat } from "@/components/ResultatenBand";
+import { detectLanguageFromPath } from "@/i18n/config";
 import heroBackground from "@/assets/Vitaliteitsprogramma_presentatie_Innerleaps.webp";
 import presentatie840 from "@/assets/training-presentatie-840w.webp";
 import presentatie600 from "@/assets/training-presentatie-600w.webp";
@@ -33,6 +35,26 @@ import paConsultingLogo from "@/assets/Vitaliteitsprogramma_PA_consulting_light.
 import nobelLogo from "@/assets/Vitaliteitsprogramma_nobel_recruitment_light.webp";
 import hollandColoursLogo from "@/assets/Vitaliteitsprogramma_Holland_Colours_light.webp";
 import { scrollNaarAnkerUitUrl } from "@/lib/anker";
+
+/* Logo's voor de lichte hero, dus de donkere varianten. Klanten die
+   herkenbaar zijn voor een scale-up, in plaats van onderwijs, zorg en
+   overheid zoals op home. */
+import theydoDark from "@/assets/Vitaliteitsprogramma_TheyDo.webp";
+import holieDark from "@/assets/Vitaliteitsprogramma_Holie_Pizza.webp";
+import tele2Dark from "@/assets/Vitaliteitsprogramma_Tele2.webp";
+import leaseplanDark from "@/assets/Vitaliteitsprogramma_Leaseplan.webp";
+import sygnificDark from "@/assets/Vitaliteitsprogramma_Sygnific.webp";
+
+// Holie, Leaseplan en Sygnific zijn bijna vierkant of hebben hun naam klein
+// onder een beeldmerk. Op de standaardhoogte was die naam niet te lezen, dus
+// die drie staan hoger.
+const SCALEUP_LOGOS = [
+  { src: theydoDark, alt: "TheyDo" },
+  { src: holieDark, alt: "Holie Pizza", className: "h-10 lg:h-12" },
+  { src: tele2Dark, alt: "Tele2" },
+  { src: leaseplanDark, alt: "Leaseplan", className: "h-10 lg:h-12" },
+  { src: sygnificDark, alt: "Sygnific", className: "h-10 lg:h-12" },
+];
 
 const CalculatorModal = lazy(() => import("@/components/CalculatorModal"));
 
@@ -67,6 +89,9 @@ const DuurzameInzetbaarheidTraining = () => {
   const [isCalculatorOpen, setIsCalculatorOpen] = useState(false);
   const [searchParams] = useSearchParams();
   const location = useLocation();
+  const { t } = useTranslation("training");
+  const lang = detectLanguageFromPath(location.pathname);
+  const caseHref = lang === "en" ? "/en/case-studies/theydo" : "/klantcases/theydo";
 
   useEffect(() => {
     const openCalculatorParam = searchParams.get("openCalculator");
@@ -82,25 +107,28 @@ const DuurzameInzetbaarheidTraining = () => {
       <TrainingPageLayout
         tKey="sustainability"
         heroImage={heroBackground}
-        heroImageAlt="Duurzame inzetbaarheid training presentatie"
+        heroImageAlt={t("sustainability.hero.imageAlt")}
         heroPhoto={{
           srcSet: `${presentatie600} 600w, ${presentatie840} 840w`,
           fallback: presentatieFallback,
           width: 840,
           height: 840,
-          alt: "Duurzame inzetbaarheid training presentatie",
+          alt: t("sustainability.hero.imageAlt"),
           className: "aspect-[4/3] lg:aspect-square object-cover object-[50%_60%]",
           // Het publiek zit onderin beeld, het plafond erboven is leeg.
           quotePosition: "top-right",
         }}
         logos={logos}
+        heroLogos={SCALEUP_LOGOS}
+        heroSecondaryLink={{ label: t("sustainability.hero.caseLink"), to: caseHref }}
+        afterResults={
+          <ResultatenBand
+            stats={t("sustainability.resultsBand.items", { returnObjects: true }) as ResultatenBandStat[]}
+          />
+        }
+        participantQuote={t("sustainability.participantQuote")}
         weeksLayout="stacked"
         showBookingCtas
-        belowFaqSection={
-          <div id="calculator">
-            <ROICalculator />
-          </div>
-        }
       />
 
       <Suspense fallback={null}>

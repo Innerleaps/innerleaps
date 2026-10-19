@@ -165,7 +165,7 @@
           "a": "The training has weekly group workshops with up to 15 participants. People practise in a safe and comfortable way by responding to concrete questions, without having to share personal stories. So everyone feels at ease and can fully practise with attention."
         },
         {
-          "q": "What is the foundation of innerleaps?",
+          "q": "What is the foundation of Innerleaps?",
           "a": "Innerleaps' awareness trainings build on evidence-based programmes such as MBSR, MBCT and WorkplaceMT. The foundation rests on 12 scientific studies, including multiple meta-analyses and randomized controlled trials. The evidence is strong enough that the U.S. military has incorporated attention training into its official doctrine (U.S. Army Field Manual 7-22), and organisations like Google, Apple, Microsoft, Nestlé and Unilever have implemented similar programmes."
         },
         {
@@ -394,7 +394,7 @@
           "a": "If you miss a session you can call the trainer to still get all the information. The workbook also contains everything you need. For the best result it's important not to miss more than one session."
         },
         {
-          "q": "What is the foundation of innerleaps?",
+          "q": "What is the foundation of Innerleaps?",
           "a": "Innerleaps' awareness trainings build on evidence-based programmes such as MBSR, MBCT and WorkplaceMT. The foundation rests on 12 scientific studies, including multiple meta-analyses and randomized controlled trials. The evidence is strong enough that the U.S. military has incorporated attention training into its official doctrine (U.S. Army Field Manual 7-22), and organisations like Google, Apple, Microsoft, Nestlé and Unilever have implemented similar programmes."
         },
         {
@@ -402,7 +402,7 @@
           "a": "Innerleaps participants show measurable improvements in exactly the areas where most organisations feel the pain:\n\n65 to 72% experience less stress\n60 to 84% show a reduction in burn-out symptoms\n64 to 77% become more resilient\n58 to 60% are more productive at work\n57 to 78% sleep better\nThe risk of long-term sick leave drops by 70% (from 54.4% to 16.4%)\n\nImportantly, these effects are sustained for at least 12 months after the training. This is not a temporary boost, but lasting behavioural change."
         },
         {
-          "q": "How does innerleaps improve my performance?",
+          "q": "How does Innerleaps improve my performance?",
           "a": "Innerleaps improves your performance by optimising working memory, the mental \"workbench\" where thinking, deciding and acting happen. This works through three mechanisms:\n\nFirst, relevant information is selected faster and irrelevant information is suppressed better. Your concentration increases, distraction decreases. Research shows up to 24% improvement on attention tasks (Jha et al., 2021).\n\nSecond, stress and pressure normally occupy a large share of working memory. When that pressure decreases, capacity is freed up for the task itself.\n\nThird, working memory becomes more efficient: better results with less neural effort (Bailey et al., 2020). You perform sharper and have energy left at the end of the day."
         }
       ]
@@ -599,7 +599,7 @@
           "a": "If you miss a session you can call the trainer to receive all the information anyway. All necessary information is also in the workbook. For the best result it is important not to miss more than one session."
         },
         {
-          "q": "What is the foundation of innerleaps?",
+          "q": "What is the foundation of Innerleaps?",
           "a": "Innerleaps' awareness trainings build on evidence-based programmes such as MBSR, MBCT and WorkplaceMT. The foundation rests on 12 scientific studies, including multiple meta-analyses and randomized controlled trials. The evidence is strong enough that the U.S. military has incorporated attention training into its official doctrine (U.S. Army Field Manual 7-22), and organisations like Google, Apple, Microsoft, Nestlé and Unilever have implemented similar programmes."
         },
         {
@@ -607,7 +607,7 @@
           "a": "Innerleaps participants show measurable improvements in exactly the areas where most organisations feel the pain:\n\n65 to 72% experience less stress\n60 to 84% show a reduction in burn-out symptoms\n64 to 77% become more resilient\n58 to 60% are more productive at work\n57 to 78% sleep better\nThe risk of long-term sick leave drops by 70% (from 54.4% to 16.4%)\n\nImportantly, these effects are sustained for at least 12 months after the training. This is not a temporary boost, but lasting behavioural change."
         },
         {
-          "q": "How does innerleaps improve my performance?",
+          "q": "How does Innerleaps improve my performance?",
           "a": "Innerleaps improves your performance by optimising working memory, the mental \"workbench\" where thinking, deciding and acting happen. This works through three mechanisms:\n\nFirst, relevant information is selected faster and irrelevant information is suppressed better. Your concentration increases, distraction decreases. Research shows up to 24% improvement on attention tasks (Jha et al., 2021).\n\nSecond, stress and pressure normally occupy a large share of working memory. When that pressure decreases, capacity is freed up for the task itself.\n\nThird, working memory becomes more efficient: better results with less neural effort (Bailey et al., 2020). You perform sharper and have energy left at the end of the day."
         }
       ]
@@ -615,89 +615,83 @@
   },
   "sustainability": {
     "meta": {
-      "title": "Sustainable performance, even under pressure | Innerleaps",
-      "description": "Less tension, better collaboration and sharper results, even under a high workload. Innerleaps trains your team's brain in 6 weeks."
+      "title": "Attention training for scale-ups | Innerleaps",
+      "description": "Busy isn't the same as productive. A six-week attention training that helps your team get more done in the same hours. At TheyDo, productivity rose 8.6%."
     },
     "hero": {
-      "badge": "Scientifically proven method",
-      "title": "<0>Sustainable performance</0>, even under pressure",
-      "subtitle": "Less tension and better performance, with evidence-based group training for your team.",
-      "cta": "Calculate your ROI"
+      "badge": "Evidence-based method for scale-ups",
+      "title": "Busy isn't the same as <0>productive</0>",
+      "subtitle": "Working longer hours rarely fixes a heavy workload. Our six-week attention training gives your team the calm and focus to work smarter.",
+      "cta": "Calculate your ROI",
+      "imageAlt": "An Innerleaps trainer leading a session for a group of employees",
+      "caseLink": "Read the TheyDo case study"
     },
     "challenges": {
-      "title": "Do you recognise these <0>challenges</0> in your team?",
-      "subtitle": "These are the challenges we address with our group training for teams.",
+      "title": "Does this sound like your <0>scale-up</0>?",
+      "subtitle": "An environment with ambitious targets and smart, hard-working people.",
       "items": [
         {
-          "icon": "Activity",
-          "title": "A high workload",
-          "text": "The volume of work and the ambitions lead to tension and stress."
+          "icon": "Gauge",
+          "title": "The pace is high",
+          "text": "Big ambitions, tight targets and a culture where performing is the norm. After every goal comes the next one, and there's rarely a moment to catch your breath."
         },
         {
-          "icon": "AlertCircle",
-          "title": "Juggling many balls",
-          "text": "Your team does not only have a demanding job, but also a private life that asks for a lot of attention."
+          "icon": "Layers",
+          "title": "Keeping all the balls in the air",
+          "text": "At work, projects and deadlines run into each other. At home, family and private life need attention too. Your people have little time left to let off steam."
         },
         {
-          "icon": "BedDouble",
-          "title": "High absenteeism costs",
-          "text": "Sick leave is a high, recurring cost."
+          "icon": "BellRing",
+          "title": "Lots of distraction, little oversight",
+          "text": "Chat, email and smartphones interrupt work all day. And with your team working from home some or all of the time, you have little control over how the work gets done."
         }
       ]
     },
     "results": {
-      "title": "The <0>effect</0> of our training on your team",
-      "subtitle": "The scientifically proven effects on your team.",
+      "title": "More output through <0>calm</0> and <0>focus</0>",
+      "subtitle": "Measured in independent scientific research.",
       "items": [
         {
-          "icon": "TreeDeciduous",
-          "title": "Less tension",
-          "bullets": [
-            "Your team notices tension earlier and adjusts course itself.",
-            "More resilience under high pressure and faster recovery."
-          ],
-          "stats": [
-            {
-              "value": "-26%",
-              "label": "stress"
-            }
-          ]
-        },
-        {
           "icon": "TrendingUp",
-          "title": "Better results",
+          "title": "Get more done",
           "bullets": [
-            "Better concentration and fewer mistakes, even under pressure.",
-            "Productivity rises while tension actually goes down."
-          ],
-          "stats": [
-            {
-              "value": "+8.6%",
-              "label": "productivity"
-            }
+            "Your team stays on a task longer and gets distracted less.",
+            "Fewer mistakes, even when it's busy."
           ]
         },
         {
-          "icon": "CheckCircle",
-          "title": "Lower absenteeism costs",
+          "icon": "TreeDeciduous",
+          "title": "Handling the pace",
           "bullets": [
-            "Less absenteeism and less long-term absence.",
-            "A cost item that structurally comes down."
-          ],
-          "stats": [
-            {
-              "value": "-70%",
-              "label": "risk of long-term absence"
-            }
+            "Your people notice tension before it builds up.",
+            "They recover faster after a busy day and sleep better."
+          ]
+        },
+        {
+          "icon": "Users",
+          "title": "A connected team",
+          "bullets": [
+            "Six weeks of practising together, in small groups.",
+            "Colleagues who don't normally work together really get to know each other."
           ]
         }
-      ],
-      "science": {
-        "value": "40+ years",
-        "label": "of scientific research",
-        "text": "Our method is based on MBSR, developed in 1979 at the University of Massachusetts. Hundreds of studies prove it effectively reduces stress. It works so well that universities such as Oxford and Amsterdam continue to research it."
-      },
-      "sources": "Sources: Aikens et al. (2014), Innerleaps internal research, De Bruin et al. (2018)"
+      ]
+    },
+    "resultsBand": {
+      "items": [
+        {
+          "value": "+8.6%",
+          "label": "productivity 4 weeks after training"
+        },
+        {
+          "value": "68%",
+          "label": "feel less stress and tension"
+        },
+        {
+          "value": "25%",
+          "label": "fewer errors on attention tasks (Jha, 2021)"
+        }
+      ]
     },
     "weeks": {
       "title": "The <0>6-week</0> core programme",
@@ -763,23 +757,39 @@
       "title": "Frequently asked questions",
       "items": [
         {
-          "q": "Is the training online?",
-          "a": "The training does not have to be online, but an online format makes participation easier for employees. Research shows that online sessions are just as effective as in-person meetings. Training attention happens mainly through daily practice, while the workshops support that process. To give as many employees as possible the chance to take part, we therefore prefer an online training."
+          "q": "How do we pay for this?",
+          "a": "You can pay for it from your employees' learning budget. Our advice: split it fifty-fifty. The company pays half, and participants pay the other half from their own budget. That keeps the step small for your people, and shows them the company is behind it."
+        },
+        {
+          "q": "Does it work for a remote team?",
+          "a": "Yes. The training is live and online: one group session of an hour a week, which everyone joins from wherever they work, across countries too. Research shows online sessions work just as well as in-person ones. We pick a time that works for the whole group. On-site is possible too.\n\nSomething clients mention themselves: colleagues get to know each other better in the group, even if they rarely meet."
+        },
+        {
+          "q": "Can the training be in English?",
+          "a": "Yes. The whole programme runs in English or Dutch: the live sessions, the workbook and the audio recordings. TheyDo, for example, did it in English, with a team spread across many countries."
+        },
+        {
+          "q": "Does everyone have to take part?",
+          "a": "No, taking part is voluntary. It starts with a free one-hour masterclass, for example on a team day or during an all-hands. Your team experiences how the training works. After that, everyone decides for themselves whether to join the six weeks.\n\nOur advice: have someone from leadership open the masterclass and say why you're doing this. People join when they can tell their leader is behind it."
+        },
+        {
+          "q": "Is this only for people under a lot of pressure?",
+          "a": "No. Think of it as maintenance, like taking your car in for a service before anything breaks. It's meant for the people who work hardest and care most. It isn't help for people who can't cope. It's training for people who want to stay sharp."
         },
         {
           "q": "15 minutes of practice per day, how does that work?",
-          "a": "Participants receive a workbook at the start with a piece of theory and short exercises for each week. They also get audio recordings of the exercises. Some exercises can be done during daily routines like brushing teeth, showering or doing the dishes, so they cost no extra time. Other exercises ask about 12 minutes of sitting calmly to train attention."
+          "a": "Participants receive a workbook at the start with a piece of theory and short exercises for each week. They also get audio recordings of the exercises. Some exercises can be done during daily routines like brushing teeth, showering or doing the dishes, so they cost no extra time. Other exercises take about 12 minutes. For those, you need a quiet spot."
         },
         {
           "q": "What are the exercises?",
-          "a": "All exercises are aimed at training attention. The goal is for participants to work and live with more focus and awareness. That is why the exercises are directly applicable in daily life, for example while brushing teeth, eating or walking. Each week also contains a special attention training of 12 minutes that is done seated."
+          "a": "All exercises are aimed at training attention. The goal is for participants to work and live with more focus and awareness. That is why the exercises are directly applicable in daily life, for example while brushing teeth, eating or walking. Each week also includes a 12-minute exercise."
         },
         {
           "q": "How do you ensure safe and comfortable learning?",
           "a": "The training contains weekly group workshops with a maximum of 15 participants. Participants practise in a safe and comfortable way by responding to concrete questions, without having to share personal stories. This creates an environment in which everyone feels at ease and can practise attention fully."
         },
         {
-          "q": "What is the foundation of innerleaps?",
+          "q": "What is the foundation of Innerleaps?",
           "a": "Innerleaps' awareness trainings build on evidence-based programmes such as MBSR, MBCT and WorkplaceMT. The foundation rests on 12 scientific studies, including multiple meta-analyses and randomized controlled trials. The evidence is strong enough that the U.S. military has incorporated attention training into its official doctrine (U.S. Army Field Manual 7-22), and organisations like Google, Apple, Microsoft, Nestlé and Unilever have implemented similar programmes."
         },
         {
@@ -787,18 +797,11 @@
           "a": "Innerleaps participants show measurable improvements in exactly the areas where most organisations feel the pain:\n\n65 to 72% experience less stress\n60 to 84% show a reduction in burn-out symptoms\n64 to 77% become more resilient\n58 to 60% are more productive at work\n57 to 78% sleep better\nThe risk of long-term sick leave drops by 70% (from 54.4% to 16.4%)\n\nImportantly, these effects are sustained for at least 12 months after the training. This is not a temporary boost, but lasting behavioural change."
         },
         {
-          "q": "What is the ROI of an investment in Innerleaps?",
-          "a": "Based on conservative calculations, ROI ranges between 497% and 775% within the first year. For a group of 15 participants, this yields annual cost savings of €42,834 to €66,816. The returns come from three sources: 15 to 21% reduction in absenteeism, 5 to 8% productivity gains and 5 to 8% lower turnover. Want a calculation for your own organisation? Innerleaps provides an ROI calculator where you can input your specific absenteeism, salary and turnover figures."
-        },
-        {
           "q": "How does Innerleaps improve employee performance?",
-          "a": "Innerleaps improves performance by optimizing working memory, the mental \"workspace\" where thinking, deciding and acting take place. This happens through three mechanisms:\n\nFirst, relevant information is selected faster and irrelevant information is suppressed more effectively. Focus increases, distraction decreases. Research shows up to 24% improvement on attention tasks (Jha et al., 2021).\n\nSecond, stress and pressure normally occupy a large share of working memory. When that pressure decreases, capacity is freed up for the task itself.\n\nThird, working memory becomes more efficient: better results with less neural effort (Bailey et al., 2020). Employees perform sharper and have energy left at the end of the day."
-        },
-        {
-          "q": "What is sustainable employability?",
-          "a": "Sustainable employability means a team can keep performing under pressure without burning out. What usually gets in the way is tension that piles up. Innerleaps trains teams to spot and regulate that tension early, so they stay sharp and stay available."
+          "a": "Innerleaps improves performance by optimizing working memory, the mental \"workspace\" where thinking, deciding and acting take place. This happens through three mechanisms:\n\nFirst, relevant information is selected faster and irrelevant information is suppressed more effectively. Focus increases, distraction decreases. Research shows 25% fewer errors on attention tasks (Jha et al., 2021).\n\nSecond, stress and pressure normally occupy a large share of working memory. When that pressure decreases, capacity is freed up for the task itself.\n\nThird, working memory becomes more efficient: better results with less neural effort (Bailey et al., 2020). Employees perform sharper and have energy left at the end of the day."
         }
       ]
-    }
+    },
+    "participantQuote": "The best feedback is usually unsolicited. A coworker just blurted out: it's so great, I'm actually sleeping again. That's not something you talk about at work."
   }
 }

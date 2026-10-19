@@ -21,6 +21,11 @@ import {
   TreeDeciduous,
   Users,
   TrendingUp,
+  Gauge,
+  BatteryLow,
+  Monitor,
+  Layers,
+  BellRing,
   type LucideIcon,
 } from "lucide-react";
 import SimplifiedNavigation from "@/components/SimplifiedNavigation";
@@ -70,6 +75,11 @@ const ICON_MAP: Record<string, LucideIcon> = {
   TreeDeciduous,
   Users,
   TrendingUp,
+  Gauge,
+  BatteryLow,
+  Monitor,
+  Layers,
+  BellRing,
 };
 
 const Icon = ({ name }: { name: string }) => {
@@ -160,6 +170,17 @@ export interface TrainingPageLayoutProps {
    * foto-achtergrond, zoals op de deelnemerspagina's.
    */
   heroPhoto?: HeroPhoto;
+  /** Eigen logorij in de lichte hero. Zonder dit staan de logo's van home er. */
+  heroLogos?: { src: string; alt: string; className?: string }[];
+  /** Vervangt de link naar de verzuimrekenmachine naast de offerteknop. */
+  heroSecondaryLink?: { label: string; to: string };
+  /** Een andere quote onder "Wat deelnemers merken" dan op home. */
+  participantQuote?: string;
+  /**
+   * Komt na de effectkaarten in plaats van de eerste fotobreak, bijvoorbeeld
+   * de cijfers van een klant. Alleen in de opbouw met heroPhoto.
+   */
+  afterResults?: ReactNode;
 }
 
 const TrainingPageLayout = ({
@@ -178,6 +199,10 @@ const TrainingPageLayout = ({
   extraSection,
   belowFaqSection,
   heroPhoto,
+  heroLogos,
+  heroSecondaryLink,
+  participantQuote,
+  afterResults,
 }: TrainingPageLayoutProps) => {
   const { t } = useTranslation("training");
   const { t: tCommon } = useTranslation();
@@ -198,7 +223,12 @@ const TrainingPageLayout = ({
   const challengeCardBg = heroPhoto ? "bg-brand-off-white" : "bg-white";
   const resultsBg = heroPhoto ? "bg-brand-off-white" : "bg-white";
   const resultCardBg = heroPhoto ? "bg-white" : "bg-brand-off-white";
-  const science = t(`${tKey}.results.science`, { returnObjects: true, defaultValue: null }) as TrainingScience | null;
+  /* Ontbreekt de sleutel, dan geeft i18next de sleutelnaam terug, ook met
+     defaultValue null. Die tekst telde als "er is een blok", waardoor de
+     stress- en prestatiepagina een leeg wit vak met alleen de
+     universiteitslogo's toonden. Daarom alleen een echt object. */
+  const scienceRaw = t(`${tKey}.results.science`, { returnObjects: true, defaultValue: null });
+  const science = scienceRaw && typeof scienceRaw === "object" ? (scienceRaw as TrainingScience) : null;
   const metaTitle = t(`${tKey}.meta.title`, { defaultValue: "" });
   const metaDescription = t(`${tKey}.meta.description`);
   const canonicalUrl = `${SITE_URL}${pathname}`;
@@ -268,8 +298,11 @@ const TrainingPageLayout = ({
               components={[<span className="text-brand-orange" />]}
             />
           }
+          badge={t(`${tKey}.hero.badge`)}
           subtitle={t(`${tKey}.hero.subtitle`)}
           photo={heroPhoto}
+          logos={heroLogos}
+          secondaryLink={heroSecondaryLink}
         />
       ) : (
         <section id="hero" className="relative min-h-screen flex items-start sm:items-center overflow-hidden text-white">
@@ -539,7 +572,7 @@ const TrainingPageLayout = ({
         </div>
       </section>
 
-      {heroPhoto && <CohortPhotoSection />}
+      {heroPhoto && (afterResults ?? <CohortPhotoSection />)}
 
       {/* Program Overview (shared, already i18n) */}
       <ProgramOverviewSection
@@ -667,7 +700,7 @@ const TrainingPageLayout = ({
 
       {heroPhoto && (
         <>
-          <ResultsSection />
+          <ResultsSection quote={participantQuote} />
           <CohortPhotoSection
             src={masterclassAudience}
             alt={tCommon("masterclass.imageAlt")}

@@ -39,9 +39,11 @@ const SimplifiedNavigation = () => {
   // en niet op de bedanktpagina erachter, want daar wijst hij naar waar je al bent.
   const toonOfferteknop = !isOffertePagina(pathname);
 
+  // Scale-ups bovenaan: dat is sinds oktober 2026 het segment waar de site
+  // zich eerst op richt.
   const organisationMenuItems = [
-    { label: t('menuItems.vitality.label'), href: href.vitality, description: t('menuItems.vitality.description') },
     { label: t('menuItems.employability.label'), href: href.employability, description: t('menuItems.employability.description') },
+    { label: t('menuItems.vitality.label'), href: href.vitality, description: t('menuItems.vitality.description') },
   ];
 
   const employeeMenuItems = [

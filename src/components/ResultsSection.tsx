@@ -12,7 +12,15 @@ const BARS = [
   { key: "rumination", value: 36 },
 ] as const;
 
-const ResultsSection = memo(() => {
+interface ResultsSectionProps {
+  /**
+   * Een andere uitspraak van Jochem dan op home. Op pagina's waar zijn
+   * productiviteitsquote al in de hero staat, stond hij anders twee keer.
+   */
+  quote?: string;
+}
+
+const ResultsSection = memo(({ quote }: ResultsSectionProps) => {
   const { t } = useTranslation();
   const cardRef = useRef<HTMLDivElement>(null);
   const [filled, setFilled] = useState(false);
@@ -107,7 +115,7 @@ const ResultsSection = memo(() => {
             </div>
 
             <blockquote className="text-2xl md:text-3xl font-semibold text-brand-purple leading-snug text-balance">
-              &ldquo;{t("testimonial.quote")}&rdquo;
+              &ldquo;{quote ?? t("testimonial.quote")}&rdquo;
             </blockquote>
 
             <figcaption className="mt-7 pt-6 border-t border-gray-200 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-5">
