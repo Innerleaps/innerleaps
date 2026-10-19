@@ -151,8 +151,6 @@ De URL is bewust niet veranderd.
   TheyDo-case, `participantQuote` (Jochems slaapquote, zodat zijn
   productiviteitsquote niet twee keer staat) en `afterResults` met de paarse
   `ResultatenBand` op de plek van de eerste fotobreak.
-- **De case-link werkt pas als `case-theydo` live staat.** Zet deze pagina niet
-  eerder naar `main` dan de case, anders wijst de link naar een 404.
 - **"25% minder fouten op aandachtstaken (Jha, 2021)"** in de cijferband heeft
   nog geen bevestigde bron. Bas' kennisbank noemt alleen "Jha research met
   militairen", en Jha (2021) is haar boek *Peak Mind*. Wel met bron: "+24%
