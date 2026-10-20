@@ -118,8 +118,9 @@ const Vitaliteitstraining = () => {
           height: 840,
           alt: t("vitality.hero.imageAlt"),
           className: "aspect-[4/3] lg:aspect-square object-cover object-[50%_60%]",
-          // Het publiek zit onderin beeld, het plafond erboven is leeg.
-          quotePosition: "top-right",
+          // De slaapquote is langer dan die op de scale-up-pagina en reikte
+          // op "top-right" tot over het gezicht van Bas.
+          quotePosition: "top-right-narrow",
         }}
         logos={logos}
         heroLogos={PUBLIEKE_LOGOS}

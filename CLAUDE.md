@@ -166,11 +166,13 @@ veranderd: duurzame inzetbaarheid is de best gemeten term.
   `masterclassTexts` wijst naar `vitality.introSteps`: een eigen blok over
   kennismaken, live of in eigen tijd, want een vast uur met het hele team was
   bij het ROC bijna een breekpunt. `afterResults` is de paarse `ResultatenBand`.
-- **"tot 12 maanden na de training nog minder stress (Michaelsen, 2023)"** in
-  de cijferband. Schrijf nooit "12 maanden later" of "een jaar later": de
-  studies maten tussen drie maanden en een jaar. Het woordje "tot" staat als
-  `prefix` voor het getal, omdat "tot 12 maanden" als waarde niet in de band
-  past.
+- **"12 maanden na training nog altijd minder stress (Michaelsen, 2023)"** in
+  de cijferband, zonder "tot". Bas koos dat op 20 oktober 2026 bewust, terwijl
+  de studies tussen drie maanden en een jaar maten. Niet terugzetten, en elders
+  op de site niet overnemen zonder hem te vragen. `ResultatenBand` kan nog wel
+  een `prefix` voor het getal tonen.
+- **De quote op de herofoto** staat op `quotePosition: "top-right-narrow"`. Op
+  "top-right" reikte de langere slaapquote tot over het gezicht van Bas.
 - **"20 tot 40% van wie de masterclass volgt, doet mee aan de training"** in de
   FAQ is een eigen cijfer van Bas (20 oktober 2026).
 
