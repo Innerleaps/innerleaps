@@ -28,8 +28,8 @@
         },
         {
           "icon": "Heart",
-          "title": "Others always come first",
-          "text": "People who look after others often put themselves second. They keep going for a long time, until suddenly they can't."
+          "title": "Thinking of others first",
+          "text": "Colleagues are deeply committed, so they often put themselves second. People sometimes overlook their own needs."
         }
       ]
     },
@@ -140,8 +140,8 @@
       ]
     },
     "introSteps": {
-      "headlinePart1": "Getting to know us in a way that",
-      "headlinePart2": "suits you",
+      "headlinePart1": "Getting to know us",
+      "headlinePart2": "your way",
       "intro": "Get to know it first, then decide. Your people can meet the programme live, or in their own time.",
       "steps": {
         "call": {

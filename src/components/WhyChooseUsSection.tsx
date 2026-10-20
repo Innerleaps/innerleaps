@@ -9,9 +9,22 @@ import vmbnLogo from "@/assets/vmbn-trainer-categorie-1.webp";
 /**
  * Oxford staat hier als transparante variant. De versie in
  * Vitaliteitsprogramma_ontwikkeld_door_oxford.webp heeft een donkerblauw vlak
- * eromheen; grijs gefilterd wordt dat een grauw blok naast twee losse logo's.
+ * eromheen, en dat wordt een zwaar blok naast twee losse logo's.
+ *
+ * De logo's staan in hun eigen kleuren, op verzoek van Bas (20-10-2026). Grijs
+ * en half doorzichtig maakte ze klein en vaal.
+ *
+ * Hoogtes op gelijk visueel gewicht, niet op gelijke hoogte: hetzelfde getal
+ * maakte UMass (drie regels tekst) groot en de UvA (klein wapen, dunne
+ * letters) klein. Gemeten aan de hoeveelheid inkt per logo komen Oxford op 26,
+ * UMass en UvA op 28 pixels. VMBN is bijna vierkant en stond op 75 pixels,
+ * drie keer zo hoog als de universiteiten. Op 44 oogt hij even groot en is
+ * "Trainer categorie 1" nog te lezen. Beide logorijen zijn 56 pixels hoog en
+ * verticaal gecentreerd, zodat de logo's in de twee kaarten op één lijn staan.
  */
 const PILL_KEYS = ["liveHour", "daily", "workHours"] as const;
+
+const LOGO_RIJ = "min-h-[56px] flex items-center";
 
 interface WhyChooseUsSectionProps {
   /** Sluit dit blok af met "Plan 20 minuten met Bas". */
@@ -22,9 +35,6 @@ interface WhyChooseUsSectionProps {
 
 const WhyChooseUsSection = memo(({ bookingCta = false, background = "off-white" }: WhyChooseUsSectionProps) => {
   const { t } = useTranslation();
-
-  const logoClass =
-    "h-6 lg:h-[26px] w-auto object-contain grayscale opacity-80 hover:opacity-100 transition-opacity";
 
   return (
     <section className={`section-padding ${background === "white" ? "bg-white" : "bg-brand-off-white"}`}>
@@ -76,14 +86,17 @@ const WhyChooseUsSection = memo(({ bookingCta = false, background = "off-white" 
               <p className="text-lg font-semibold text-brand-gray-dark border-t border-gray-200 pt-4">
                 {t("whyChooseUs.cards.research.proofLabel")}
               </p>
-              <div className="mt-4 flex flex-row flex-wrap items-center gap-4">
+              {/* Op lg is de kaart smal; justify-between verdeelt de drie dan
+                  over de hele breedte. Daaronder staan ze links met vaste
+                  tussenruimte, anders liggen ze in een brede kaart ver uiteen. */}
+              <div className={`mt-4 ${LOGO_RIJ} flex-wrap gap-x-5 gap-y-3 lg:justify-between`}>
                 <img
                   src={oxfordLogo}
                   alt={t("trust.altPrefix.oxford")}
                   loading="lazy"
                   width={1500}
                   height={443}
-                  className={logoClass}
+                  className="h-[26px] w-auto object-contain"
                 />
                 <img
                   src={uMassLogo}
@@ -91,7 +104,7 @@ const WhyChooseUsSection = memo(({ bookingCta = false, background = "off-white" 
                   loading="lazy"
                   width={787}
                   height={314}
-                  className={logoClass}
+                  className="h-[28px] w-auto object-contain"
                 />
                 <img
                   src={uvaLogo}
@@ -99,7 +112,7 @@ const WhyChooseUsSection = memo(({ bookingCta = false, background = "off-white" 
                   loading="lazy"
                   width={1920}
                   height={572}
-                  className={logoClass}
+                  className="h-[28px] w-auto object-contain"
                 />
               </div>
             </div>
@@ -119,18 +132,14 @@ const WhyChooseUsSection = memo(({ bookingCta = false, background = "off-white" 
               <p className="text-lg font-semibold text-brand-gray-dark border-t border-gray-200 pt-4">
                 {t("whyChooseUs.cards.trainers.proofLabel")}
               </p>
-              {/* Eén logo, dus dat mag de rest van het kaartje vullen in
-                  plaats van op de hoogte van de drie universiteitslogo's.
-                  75px is precies wat er in de 160px overblijft; hoger duwt de
-                  lijn boven het label omhoog, uit de pas met de andere twee. */}
-              <div className="mt-4">
+              <div className={`mt-4 ${LOGO_RIJ}`}>
                 <img
                   src={vmbnLogo}
                   alt={t("trust.altPrefix.vmbn")}
                   loading="lazy"
                   width={286}
                   height={208}
-                  className="h-24 lg:h-[75px] w-auto object-contain grayscale opacity-80 hover:opacity-100 transition-opacity"
+                  className="h-11 w-auto object-contain"
                 />
               </div>
             </div>

@@ -28,8 +28,8 @@
         },
         {
           "icon": "Heart",
-          "title": "Altijd eerst de ander",
-          "text": "Wie voor anderen zorgt, zet zichzelf vaak op twee. Mensen gaan lang door, tot het opeens niet meer gaat."
+          "title": "Eerst aan de ander denken",
+          "text": "Collega's zijn ontzettend betrokken en zetten zichzelf daardoor vaak op de tweede plek. Mensen gaan soms aan hun eigen behoeftes voorbij."
         }
       ]
     },
@@ -140,8 +140,8 @@
       ]
     },
     "introSteps": {
-      "headlinePart1": "Kennismaken op een manier die",
-      "headlinePart2": "bij jullie past",
+      "headlinePart1": "Op jullie manier",
+      "headlinePart2": "kennismaken",
       "intro": "Eerst kennismaken, dan pas kiezen. Je mensen leren het programma live kennen, of in hun eigen tijd.",
       "steps": {
         "call": {
