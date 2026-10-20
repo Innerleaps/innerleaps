@@ -52,9 +52,12 @@ export interface HeroPhoto {
    *
    * "top-right-narrow" voor een langere quote op de presentatiefoto: op
    * "top-right" reikte de kaart tot over het gezicht van Bas, dat midden in
-   * beeld net onder de helft staat. Vanaf 1280 pixels is de kaart dan smaller
-   * en hoger, zodat zijn linkerrand rechts van het gezicht blijft. Daaronder is
-   * de foto te klein en staat de kaart onder de foto, zoals op een telefoon.
+   * beeld net onder de helft staat. Vanaf 1280 pixels is de kaart dan 260
+   * breed en steekt hij 12 pixels boven de foto uit, zodat zijn linkerrand
+   * rechts van het gezicht blijft en de onderkant boven de opgestoken hand.
+   * Hij steekt maar 24 pixels rechts uit: met 48 kwam er op precies 1280
+   * pixels een horizontale scrollbalk. Onder 1280 is de foto te klein en staat
+   * de kaart onder de foto, zoals op een telefoon.
    */
   quotePosition?: "top-right" | "top-right-narrow" | "bottom-left";
 }
@@ -230,7 +233,7 @@ const HeroSection = ({ title, badge, subtitle, photo, logos = LOGOS, secondaryLi
               <figure
                 className={`relative lg:absolute ${
                   photo?.quotePosition === "top-right-narrow"
-                    ? "lg:relative xl:absolute mt-4 lg:mt-4 xl:mt-0 xl:right-0 xl:translate-x-12 xl:top-4 xl:max-w-[270px]"
+                    ? "lg:relative xl:absolute mt-4 lg:mt-4 xl:mt-0 xl:right-0 xl:translate-x-6 xl:-top-3 xl:max-w-[260px]"
                     : photo?.quotePosition === "top-right"
                     ? "lg:right-0 lg:translate-x-4 xl:translate-x-12 lg:top-10 mt-4"
                     : "lg:left-0 lg:-translate-x-12 lg:bottom-10 -mt-8"
