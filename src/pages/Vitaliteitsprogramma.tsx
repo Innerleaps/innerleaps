@@ -1,6 +1,8 @@
 import { useEffect, useState, lazy, Suspense } from "react";
 import { useSearchParams, useLocation } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import TrainingPageLayout from "@/components/TrainingPageLayout";
+import ResultatenBand, { type ResultatenBandStat } from "@/components/ResultatenBand";
 import ROICalculator from "@/components/ROICalculator";
 import heroBackground from "@/assets/Vitaliteitsprogramma_presentatie_Innerleaps.webp";
 import presentatie840 from "@/assets/training-presentatie-840w.webp";
@@ -33,6 +35,31 @@ import paConsultingLogo from "@/assets/Vitaliteitsprogramma_PA_consulting_light.
 import nobelLogo from "@/assets/Vitaliteitsprogramma_nobel_recruitment_light.webp";
 import hollandColoursLogo from "@/assets/Vitaliteitsprogramma_Holland_Colours_light.webp";
 import { scrollNaarAnkerUitUrl } from "@/lib/anker";
+
+/* Logo's voor de lichte hero, in kleur en op een transparante achtergrond.
+   Publieke organisaties uit de logo's bij de trainers op /over-ons: overheid,
+   onderwijs en zorg door elkaar. Den Haag en de VU hadden een witte
+   achtergrond; die is in de _transparant-versies weggehaald, met het wit
+   binnen het logo (het lint van het wapen) intact. Spirit is een
+   luchtvaartmaatschappij en hoort hier dus niet bij. */
+import denHaagKleur from "@/assets/Vitaliteitsprogramma_Gemeente_Den_Haag_transparant.webp";
+import politieKleur from "@/assets/Vitaliteitsprogramma_Politite-4.webp";
+import rijkswaterstaatKleur from "@/assets/Vitaliteitsprogramma_Rijkswaterstaat-3.webp";
+import vuKleur from "@/assets/Vitaliteitsprogramma_VU_amsterdam_transparant.webp";
+import lentizKleur from "@/assets/Vitaliteitsprogramma_Lentiz.webp";
+import ggzKleur from "@/assets/Vitaliteitsprogramma_GGZ_centraal.webp";
+
+// Het Haagse wapen is bijna vierkant met de naam klein eronder, en bij
+// Rijkswaterstaat staat de naam klein naast het beeldmerk. Op de
+// standaardhoogte waren die namen niet te lezen.
+const PUBLIEKE_LOGOS = [
+  { src: denHaagKleur, alt: "Gemeente Den Haag", className: "h-12 lg:h-14" },
+  { src: politieKleur, alt: "Politie" },
+  { src: rijkswaterstaatKleur, alt: "Rijkswaterstaat", className: "h-10 lg:h-12" },
+  { src: vuKleur, alt: "VU Amsterdam" },
+  { src: lentizKleur, alt: "Lentiz" },
+  { src: ggzKleur, alt: "GGZ Centraal" },
+];
 
 const CalculatorModal = lazy(() => import("@/components/CalculatorModal"));
 
@@ -67,6 +94,7 @@ const Vitaliteitstraining = () => {
   const [isCalculatorOpen, setIsCalculatorOpen] = useState(false);
   const [searchParams] = useSearchParams();
   const location = useLocation();
+  const { t } = useTranslation("training");
 
   useEffect(() => {
     const openCalculatorParam = searchParams.get("openCalculator");
@@ -82,18 +110,29 @@ const Vitaliteitstraining = () => {
       <TrainingPageLayout
         tKey="vitality"
         heroImage={heroBackground}
-        heroImageAlt="Vitaliteitstraining presentatie"
+        heroImageAlt={t("vitality.hero.imageAlt")}
         heroPhoto={{
           srcSet: `${presentatie600} 600w, ${presentatie840} 840w`,
           fallback: presentatieFallback,
           width: 840,
           height: 840,
-          alt: "Vitaliteitstraining presentatie",
+          alt: t("vitality.hero.imageAlt"),
           className: "aspect-[4/3] lg:aspect-square object-cover object-[50%_60%]",
           // Het publiek zit onderin beeld, het plafond erboven is leeg.
           quotePosition: "top-right",
         }}
         logos={logos}
+        heroLogos={PUBLIEKE_LOGOS}
+        heroColourLogos
+        heroPhotoQuote={t("vitality.hero.photoQuote")}
+        afterResults={
+          <ResultatenBand
+            stats={t("vitality.resultsBand.items", { returnObjects: true }) as ResultatenBandStat[]}
+          />
+        }
+        // De slaapquote staat al op de herofoto, dus hier geen tweede.
+        participantQuote={null}
+        masterclassTexts={{ ns: "training", prefix: "vitality.introSteps" }}
         weeksLayout="stacked"
         showBookingCtas
         belowFaqSection={

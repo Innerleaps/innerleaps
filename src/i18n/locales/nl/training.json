@@ -1,89 +1,84 @@
 {
   "vitality": {
     "meta": {
-      "title": "Duurzame inzetbaarheid: minder verzuim | Innerleaps",
-      "description": "Werk aan duurzame inzetbaarheid en verlaag je verzuim met 21%. Een training van 6 weken waar 42% van je mensen aan meedoet, niet 3 tot 8%."
+      "title": "Duurzame inzetbaarheid in de publieke sector | Innerleaps",
+      "description": "Voor onderwijs, overheid en zorg. Een aandachttraining van 6 weken waarmee je mensen spanning op tijd voelen, voordat stress opstapelt en leidt tot verzuim."
     },
     "hero": {
-      "badge": "Wetenschappelijk onderbouwde methode",
-      "title": "<0>Duurzame inzetbaarheid</0> vergroten en verzuim verlagen",
-      "subtitle": "Duurzame inzetbaarheid begint bij minder werkstress. Onze training leert je medewerkers spanning vroeg herkennen en op tijd bijsturen.",
-      "cta": "Bereken wat het jullie oplevert"
+      "badge": "Duurzame inzetbaarheid in de publieke sector",
+      "title": "Vitaliteitstraining die je mensen <0>grip</0> geeft op werkdruk",
+      "subtitle": "Voor teams die wel willen, maar geen tijd hebben. Met onze aandachttraining van 6 weken voelen je mensen spanning op tijd, voordat stress opstapelt en leidt tot verzuim.",
+      "cta": "Bereken wat het jullie oplevert",
+      "imageAlt": "Trainer van Innerleaps geeft een sessie aan een groep medewerkers",
+      "photoQuote": "De beste feedback is als je er niet om vraagt. Een collega zei ineens in een videocall: ik sliep heel slecht, en nu slaap ik als een roosje."
     },
     "challenges": {
-      "title": "Herken je één van deze <0>uitdagingen</0>?",
-      "subtitle": "Deze uitdagingen pakken wij aan met onze groepstraining.",
+      "title": "Herken je dit in jouw <0>organisatie</0>?",
+      "subtitle": "Een omgeving waar mensen hard werken voor anderen: leerlingen, inwoners, cliënten.",
       "items": [
         {
           "icon": "Activity",
-          "title": "Hoge werkdruk",
-          "text": "De hoeveelheid werk en ambities leiden tot spanning en druk."
+          "title": "De druk hoort bij het werk",
+          "text": "Pieken komen elk jaar terug, en toch overvallen ze mensen. Hoe goed je plan ook is, de werkdruk haal je er nooit helemaal uit."
         },
         {
-          "icon": "AlertCircle",
-          "title": "Moeilijk grenzen aangeven",
-          "text": "Medewerkers zijn enthousiast, maar vinden het moeilijk om hun eigen grenzen te bewaken."
+          "icon": "Users",
+          "title": "Het aanbod is er, de deelname niet",
+          "text": "Workshops, een platform, een vitaliteitsweek. Mensen zeggen dat ze het nodig hebben, maar juist wie het druk heeft, komt niet."
         },
         {
-          "icon": "BedDouble",
-          "title": "Hoog verzuim",
-          "text": "Medewerkers vallen uit omdat stressklachten een terugkerend probleem zijn."
+          "icon": "Heart",
+          "title": "Altijd eerst de ander",
+          "text": "Wie voor anderen zorgt, zet zichzelf vaak op twee. Mensen gaan lang door, tot het opeens niet meer gaat."
         }
       ]
     },
     "results": {
-      "title": "Het <0>effect</0> van onze training op jouw team",
-      "subtitle": "De wetenschappelijk bewezen effecten van onze training.",
+      "title": "Minder <0>verzuim</0> door op tijd bij te sturen",
+      "subtitle": "Gemeten in onafhankelijk wetenschappelijk onderzoek.",
       "items": [
         {
-          "icon": "TreeDeciduous",
-          "title": "Minder spanning",
+          "icon": "BellRing",
+          "title": "Op tijd aan de bel trekken",
           "bullets": [
-            "Medewerkers voelen spanning eerder aankomen en sturen zelf bij.",
-            "Medewerkers worden weerbaarder tegen hoge druk en herstellen sneller."
-          ],
-          "stats": [
-            {
-              "value": "-26%",
-              "label": "stress"
-            }
+            "Ze voelen eerder dat het te veel wordt, ook midden in een drukke periode.",
+            "En ze weten wat ze dan kunnen doen."
+          ]
+        },
+        {
+          "icon": "Gauge",
+          "title": "Handvatten als het piekt",
+          "bullets": [
+            "Ze merken spanning op zodra die opkomt, niet pas aan het eind van de dag.",
+            "Met een korte oefening laten ze die weer zakken, ook tussen twee afspraken door."
           ]
         },
         {
           "icon": "Shield",
-          "title": "Eigen grenzen bewaken",
+          "title": "Minder risico op uitval",
           "bullets": [
-            "Medewerkers geven hun grens aan voordat ze eroverheen gaan.",
-            "Meer eigenaarschap over de eigen werkdruk."
-          ],
-          "stats": [
-            {
-              "value": "+11%",
-              "label": "veerkracht"
-            }
-          ]
-        },
-        {
-          "icon": "CheckCircle",
-          "title": "Minder verzuim",
-          "bullets": [
-            "Stressklachten worden vroeg opgemerkt, vóór de uitval.",
-            "Minder langdurige uitval, dus minder druk op de rest."
-          ],
-          "stats": [
-            {
-              "value": "-70%",
-              "label": "risico op langdurige uitval"
-            }
+            "Stressklachten worden opgemerkt voordat iemand uitvalt.",
+            "Door minder uitval is er ook minder druk op collega's."
           ]
         }
-      ],
-      "science": {
-        "value": "40+ jaar",
-        "label": "wetenschappelijk onderzoek",
-        "text": "Onze methode is gebaseerd op MBSR, in 1979 ontwikkeld aan de University of Massachusetts. Honderden studies bewijzen dat het stress effectief verlaagt. Het werkt zo goed dat universiteiten zoals Oxford en Amsterdam er verder onderzoek naar doen."
-      },
-      "sources": "Bronnen: Aikens et al. (2014), De Bruin et al. (2018)"
+      ]
+    },
+    "resultsBand": {
+      "items": [
+        {
+          "value": "-70%",
+          "label": "risico op langdurige uitval (De Bruin, 2018)"
+        },
+        {
+          "value": "-26%",
+          "label": "stress (Aikens, 2014)"
+        },
+        {
+          "prefix": "tot",
+          "value": "12",
+          "label": "maanden na de training nog minder stress (Michaelsen, 2023)"
+        }
+      ]
     },
     "weeks": {
       "title": "Het <0>6-weekse</0> Vitaliteitsplus-programma",
@@ -141,16 +136,72 @@
             "Waarschuwingssysteem"
           ],
           "title": "Duurzame integratie in je leven",
-          "text": "Deelnemers reflecteren op het programma en ontwikkelen hun eigen dagelijkse routine. Precies daarom is het programma een jaar na training nog effectief."
+          "text": "Deelnemers kijken terug op het programma en maken hun eigen dagelijkse routine. Zo blijven ze oefenen als de training voorbij is."
         }
       ]
+    },
+    "introSteps": {
+      "headlinePart1": "Kennismaken op een manier die",
+      "headlinePart2": "bij jullie past",
+      "intro": "Eerst kennismaken, dan pas kiezen. Je mensen leren het programma live kennen, of in hun eigen tijd.",
+      "steps": {
+        "call": {
+          "eyebrow": "01 · 20 min",
+          "title": "Een kort gesprek",
+          "description": "Wat jullie al doen, wanneer het druk is, en of dit past."
+        },
+        "masterclass": {
+          "eyebrow": "02 · live of in eigen tijd",
+          "title": "Je mensen leren het programma kennen",
+          "description": "Live in een masterclass, of in hun eigen tijd met korte filmpjes en opnames. Samen kiezen we de vorm die bij jullie past."
+        },
+        "programme": {
+          "eyebrow": "03 · 6 weken",
+          "title": "Het programma",
+          "description": "Eén vast uur per week, maximaal 15 per groep. Op tijden die we vooraf samen vastleggen, online of op locatie."
+        }
+      },
+      "cta": "Plan 20 minuten met Bas",
+      "imageAlt": "Innerleaps-trainer geeft een interactieve masterclass, deelnemers steken hun hand op"
     },
     "faq": {
       "title": "Veelgestelde vragen",
       "items": [
         {
-          "q": "Is de training online?",
-          "a": "De training hoeft niet per se online te zijn, maar een online vorm maakt deelname voor medewerkers makkelijker. Onderzoek laat zien dat online sessies net zo effectief zijn als fysieke bijeenkomsten. Het trainen van aandacht gebeurt vooral door dagelijkse oefening, terwijl de workshops dit proces ondersteunen. Om zoveel mogelijk medewerkers de kans te geven om mee te doen, geven we daarom de voorkeur aan een online training."
+          "q": "We hebben al veel geprobeerd. Wat is hier anders?",
+          "a": "Bij ons doet 20 tot 40% van wie de masterclass volgt daarna ook echt mee aan de training. Dat komt door de voorbereiding. Daar steken we veel werk in, want de impact ontstaat pas als mensen meedoen.\n\nWe leggen de tijden vooraf vast met de leidinggevenden, zodat de training in de werkweek past. Je mensen leren het programma eerst kennen, live of in hun eigen tijd. En wij leveren de teksten aan, zodat de uitnodiging uit jullie eigen organisatie komt."
+        },
+        {
+          "q": "Leg je het probleem zo niet bij de medewerker?",
+          "a": "Nee. De werklast zelf pak je aan met beleid: taken, planning, extra handen in drukke weken. Dat blijft nodig. Deze training komt daarnaast. Hij geeft mensen handvatten voor de momenten dat het toch piekt, want die momenten blijven er."
+        },
+        {
+          "q": "Moet iedereen meedoen?",
+          "a": "Nee, meedoen is vrijwillig. Je mensen leren het programma eerst kennen, live in een masterclass of in hun eigen tijd. Daarna kiest iedereen zelf.\n\nOns advies: laat de uitnodiging komen van iemand uit de eigen leiding, met de reden waarom jullie dit doen. Mensen doen mee als ze merken dat hun leidinggevende erachter staat."
+        },
+        {
+          "q": "Is dit alleen voor mensen met stressklachten?",
+          "a": "Nee, het is voor iedereen. Juist mensen die denken dat het wel meevalt, merken in de training vaak hoeveel spanning ze ongemerkt meedragen. Het is geen hulp voor wie al thuis zit, maar training om te voorkomen dat het zover komt."
+        },
+        {
+          "q": "Hoe past dit in een volle werkweek?",
+          "a": "Het programma vraagt één uur per week, zes weken lang, plus een kwartier oefenen per dag. De tijden leggen we vooraf vast met de leidinggevenden. En we beginnen niet in de drukste periode van jullie jaar.\n\nOnline en op locatie kan allebei, per groep te kiezen. Onderzoek laat zien dat online net zo goed werkt als op locatie."
+        },
+        {
+          "q": "Hoe zit het met privacy?",
+          "a": "Elke deelnemer krijgt een eigen impactrapport. Individuele antwoorden gaan nooit naar de werkgever. Jullie zien alleen de resultaten van de groep als geheel.\n\nWe sluiten met jullie een verwerkersovereenkomst, en de gegevens staan op servers in Europa."
+        },
+        {
+          "q": "Hoe bekostigen we dit?",
+          "a": "Je betaalt per deelnemer. Vooraf krijg je een offerte, zodat je het budget kunt reserveren."
+        },
+        {
+          "q": "Kunnen we klein beginnen?",
+          "a": "Ja. Begin bij één school, afdeling of team waar de druk hoog is en de leiding erachter staat. Werkt het, dan rol je het verder uit, met de resultaten van de eerste groep in de hand."
+        },
+        {
+          "q": "Hoe zorgen jullie voor veilig en comfortabel leren?",
+          "a": "De training bevat wekelijkse groepsworkshops met maximaal 15 deelnemers. Deelnemers oefenen op een veilige en comfortabele manier door te reageren op concrete vragen, zonder dat ze persoonlijke verhalen hoeven te delen. Zo ontstaat een omgeving waarin iedereen zich op zijn gemak voelt en volop kan oefenen met aandacht."
         },
         {
           "q": "15 minuten oefenen per dag, hoe werkt dat?",
@@ -161,36 +212,16 @@
           "a": "Alle oefeningen zijn gericht op het trainen van aandacht. Het doel is dat deelnemers met meer focus en bewustzijn werken en leven. Daarom zijn de oefeningen direct toepasbaar in het dagelijks leven, bijvoorbeeld tijdens tandenpoetsen, eten of lopen. Daarnaast bevat elke week een oefening van 12 minuten."
         },
         {
-          "q": "Hoe zorgen jullie voor veilig en comfortabel leren?",
-          "a": "De training bevat wekelijkse groepsworkshops met maximaal 15 deelnemers. Deelnemers oefenen op een veilige en comfortabele manier door te reageren op concrete vragen, zonder dat ze persoonlijke verhalen hoeven te delen. Zo ontstaat een omgeving waarin iedereen zich op zijn gemak voelt en volop kan oefenen met aandacht."
-        },
-        {
           "q": "Waarop is de aanpak van Innerleaps gebaseerd?",
           "a": "De aandachttrainingen van Innerleaps bouwen voort op evidence-based programma's zoals MBSR, MBCT en WorkplaceMT. De onderbouwing komt uit 12 wetenschappelijke studies, waaronder meerdere meta-analyses en gerandomiseerde gecontroleerde onderzoeken. De effecten zijn zo robuust dat het Amerikaanse leger aandachttraining heeft opgenomen in zijn officiële doctrine (U.S. Army Field Manual 7-22), en organisaties als Google, Apple, Microsoft, Nestlé en Unilever soortgelijke programma's hebben geïmplementeerd."
         },
         {
           "q": "Wat levert een Innerleaps-traject concreet op voor onze medewerkers?",
-          "a": "Deelnemers aan Innerleaps laten meetbare verbeteringen zien op precies die gebieden waar de meeste organisaties pijn voelen:\n\n65 tot 72% ervaart minder stress\n60 tot 84% laat een afname van burn-outsymptomen zien\n64 tot 77% wordt veerkrachtiger\n58 tot 60% is productiever op het werk\n57 tot 78% slaapt beter\nHet uitvalrisico voor langdurig ziekteverzuim daalt met 70% (van 54,4% naar 16,4%)\n\nBelangrijk: deze effecten blijven minimaal 12 maanden na de training behouden. Het is geen tijdelijke boost, maar duurzame gedragsverandering."
-        },
-        {
-          "q": "Wat is de ROI van een investering in Innerleaps?",
-          "a": "Op basis van conservatief berekende cijfers ligt de ROI tussen 497% en 775% binnen het eerste jaar. Voor een groep van 15 deelnemers levert jaarlijks €42.834 tot €66.816 aan kostenbesparing op. De winst komt uit drie bronnen: 15 tot 21% minder verzuim, 5 tot 8% productiviteitsstijging en 5 tot 8% lagere uitstroom. Wilt u een berekening voor uw eigen organisatie? Innerleaps biedt een ROI-calculator waarin u uw specifieke verzuim-, salaris- en verlooppercentages kunt invullen."
-        },
-        {
-          "q": "Hoe verbetert Innerleaps de prestaties van medewerkers?",
-          "a": "Innerleaps verbetert prestaties door optimalisatie van het werkgeheugen, het mentale \"werkblad\" waarop denken, beslissen en handelen plaatsvinden. Dit gebeurt via drie mechanismen:\n\nTen eerste wordt relevante informatie sneller geselecteerd en irrelevante informatie beter onderdrukt. Concentratie neemt toe, afleiding neemt af. Onderzoek laat tot 24% verbetering zien op aandachtstaken (Jha et al., 2021).\n\nTen tweede nemen spanning en werkdruk normaal gesproken een groot deel van het werkgeheugen in beslag. Wanneer die spanning afneemt, komt er capaciteit vrij voor de taak zelf.\n\nTen derde wordt het werkgeheugen efficiënter: betere resultaten met minder neurale inspanning (Bailey et al., 2020). Medewerkers presteren scherper en houden energie over aan het einde van de dag."
+          "a": "Onderzoek naar dit soort training vindt minder stress, minder burn-outklachten, meer veerkracht en beter slapen. Neem stress: zet iemand die de training deed naast iemand die hem niet deed, en in 65 tot 72% van de gevallen heeft de getrainde persoon minder stress.\n\nHet risico op langdurige uitval daalt met 70% (van 54,4% naar 16,4%). En de daling in stress houdt stand: studies die drie maanden tot een jaar later opnieuw maten, vonden nog steeds aantoonbaar minder stress."
         },
         {
           "q": "Wat is duurzame inzetbaarheid?",
           "a": "Duurzame inzetbaarheid betekent dat medewerkers hun hele loopbaan gezond, gemotiveerd en productief kunnen blijven werken. In de praktijk struikelt het meestal op hetzelfde punt: langdurige werkstress. Een kwart van het verzuim in Nederland is stressgerelateerd. Innerleaps pakt die oorzaak aan. Medewerkers leren spanning vroeg herkennen en reguleren, zodat uitval wordt voorkomen in plaats van hersteld."
-        },
-        {
-          "q": "Wat is een verzuimreductieprogramma en werkt het?",
-          "a": "Een verzuimreductieprogramma is een gestructureerde aanpak om ziekteverzuim omlaag te brengen. Programma's die alleen op re-integratie sturen komen te laat. Innerleaps zet in op preventie. In zes weken trainen medewerkers hun aandacht en stressregulatie. In een studie onder Unilever-medewerkers daalde het risico op langdurig verzuim van 54,4% naar 16,4% (De Bruin e.a., 2018, Universiteit van Amsterdam)."
-        },
-        {
-          "q": "Verlaagt aandachttraining ook het personeelsverloop?",
-          "a": "Ja. Medewerkers die minder spanning ervaren en meer werkplezier hebben, vertrekken minder snel. Verloop is bovendien duurder dan verzuim. Iemand vervangen kost al snel een half tot anderhalf jaarsalaris."
         },
         {
           "q": "Hoe kun je verzuim verminderen zonder dat het bij symptoombestrijding blijft?",
@@ -198,7 +229,7 @@
         },
         {
           "q": "Hoe snel zien we resultaat?",
-          "a": "Deelnemers merken al na de eerste workshops verschil, en dat effect stapelt op gedurende de zes weken. Direct na afloop van de 6-weekse training geeft 70% aan minder stress te ervaren. Het blijft ook hangen: onderzoek laat zien dat de training een jaar later nog steeds effect heeft."
+          "a": "Deelnemers merken al na de eerste workshops verschil, en dat effect stapelt op gedurende de zes weken. Direct na afloop van de 6-weekse training geeft 70% aan minder stress te ervaren. Het blijft ook hangen: onderzoek laat zien dat de stress nog maanden na de training lager is."
         }
       ]
     }

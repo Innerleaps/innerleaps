@@ -27,11 +27,22 @@ interface MasterclassStepsSectionProps {
    * op home. Zet zoiets er niet opnieuw in.
    */
   background?: "white" | "off-white";
+  /**
+   * Eigen teksten in plaats van die uit common.json, met dezelfde opbouw
+   * (headlinePart1, headlinePart2, intro, steps, cta, imageAlt). Alleen de
+   * woorden veranderen, het blok ziet er hetzelfde uit. Op de pagina voor de
+   * publieke sector gaat het over kennismaken, live of in eigen tijd: een vast
+   * uur met het hele team was bij een ROC bijna een breekpunt. Voorbeeld:
+   * `{ ns: "training", prefix: "vitality.introSteps" }`.
+   */
+  texts?: { ns: string; prefix: string };
 }
 
-const MasterclassStepsSection = memo(({ background = "white" }: MasterclassStepsSectionProps) => {
+const MasterclassStepsSection = memo(({ background = "white", texts }: MasterclassStepsSectionProps) => {
   const offWhite = background === "off-white";
-  const { t } = useTranslation();
+  const { t: tPage } = useTranslation(texts?.ns ?? "common");
+  const prefix = texts?.prefix ?? "masterclassSteps";
+  const t = (key: string) => tPage(key.replace(/^masterclassSteps/, prefix));
   const { pathname } = useLocation();
   const lang = detectLanguageFromPath(pathname);
 

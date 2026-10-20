@@ -174,8 +174,14 @@ export interface TrainingPageLayoutProps {
   heroLogos?: { src: string; alt: string; className?: string }[];
   /** Vervangt de link naar de verzuimrekenmachine naast de offerteknop. */
   heroSecondaryLink?: { label: string; to: string };
-  /** Een andere quote onder "Wat deelnemers merken" dan op home. */
-  participantQuote?: string;
+  /** Een andere quote onder "Wat deelnemers merken" dan op home. `null` laat hem weg. */
+  participantQuote?: string | null;
+  /** Een andere uitspraak op de herofoto dan op home. */
+  heroPhotoQuote?: string;
+  /** De logo's in de lichte hero in kleur in plaats van grijs. */
+  heroColourLogos?: boolean;
+  /** Eigen teksten voor het masterclassblok, zie MasterclassStepsSection. */
+  masterclassTexts?: { ns: string; prefix: string };
   /**
    * Komt na de effectkaarten in plaats van de eerste fotobreak, bijvoorbeeld
    * de cijfers van een klant. Alleen in de opbouw met heroPhoto.
@@ -202,6 +208,9 @@ const TrainingPageLayout = ({
   heroLogos,
   heroSecondaryLink,
   participantQuote,
+  heroPhotoQuote,
+  heroColourLogos,
+  masterclassTexts,
   afterResults,
 }: TrainingPageLayoutProps) => {
   const { t } = useTranslation("training");
@@ -303,6 +312,8 @@ const TrainingPageLayout = ({
           photo={heroPhoto}
           logos={heroLogos}
           secondaryLink={heroSecondaryLink}
+          photoQuote={heroPhotoQuote}
+          colourLogos={heroColourLogos}
         />
       ) : (
         <section id="hero" className="relative min-h-screen flex items-start sm:items-center overflow-hidden text-white">
@@ -714,7 +725,7 @@ const TrainingPageLayout = ({
       {/* Letterlijk hetzelfde blok als op home, tot en met de achtergrond:
           off-white sectie met witte kaarten. Het hing eerst aan heroPhoto,
           waardoor de stress- en prestatiepagina nog het oude blok kregen. */}
-      {!hideMasterclass && <MasterclassStepsSection background="off-white" />}
+      {!hideMasterclass && <MasterclassStepsSection background="off-white" texts={masterclassTexts} />}
 
       {extraSection}
 

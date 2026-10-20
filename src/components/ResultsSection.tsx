@@ -16,8 +16,9 @@ interface ResultsSectionProps {
   /**
    * Een andere uitspraak van Jochem dan op home. Op pagina's waar zijn
    * productiviteitsquote al in de hero staat, stond hij anders twee keer.
+   * `null` laat de quote weg, voor een pagina die hem al op de herofoto heeft.
    */
-  quote?: string;
+  quote?: string | null;
 }
 
 const ResultsSection = memo(({ quote }: ResultsSectionProps) => {
@@ -106,6 +107,7 @@ const ResultsSection = memo(({ quote }: ResultsSectionProps) => {
 
           {/* De quote hoort bij de cijfers: geen eigen sectie of achtergrond,
               maar direct eronder en even breed als het cijferblok. */}
+          {quote !== null && (
           <figure className="bg-white rounded-xl shadow-lg p-8 md:p-10">
             <div
               className="w-14 h-14 bg-brand-orange/10 rounded-lg flex items-center justify-center mb-5"
@@ -148,6 +150,7 @@ const ResultsSection = memo(({ quote }: ResultsSectionProps) => {
               />
             </figcaption>
           </figure>
+          )}
         </div>
       </div>
     </section>

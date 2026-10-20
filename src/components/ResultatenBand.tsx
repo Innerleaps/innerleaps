@@ -3,6 +3,13 @@ import { useEffect, useRef, useState } from "react";
 export interface ResultatenBandStat {
   value: string;
   label: string;
+  /**
+   * Klein woordje voor het getal, zoals "tot" in "tot 12 maanden". Het getal
+   * staat op 72 pixels en een kolom is op tabletbreedte ruim 200 pixels, dus
+   * "tot 12 maanden" past niet als waarde. "12 maanden later" mag niet, want
+   * dat zegt de bron niet. Zo blijft het getal groot en de claim kloppend.
+   */
+  prefix?: string;
 }
 
 interface ResultatenBandProps {
@@ -104,6 +111,9 @@ const ResultatenBand = ({ stats }: ResultatenBandProps) => (
       {stats.map((stat, i) => (
         <div key={stat.value}>
           <p className={`text-6xl md:text-7xl font-bold ${i === 0 ? "text-brand-orange" : "text-white"}`}>
+            {/* Spatie in de tekst, geen marge: anders leest een schermlezer of
+                Google "tot12". */}
+            {stat.prefix && <span className="text-3xl md:text-4xl">{stat.prefix} </span>}
             <OplopendGetal value={stat.value} />
           </p>
           <p className="mt-3 text-xl leading-snug text-white/80 max-w-xs mx-auto">{stat.label}</p>

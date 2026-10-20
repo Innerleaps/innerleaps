@@ -121,7 +121,7 @@ gebruiker of de wijziging daar ook moet landen.** Nooit stilzwijgend aannemen.
 | Hero, uitdagingen, resultaten, FAQ | `training.json` per propositiesleutel | alleen die ene pagina |
 | Weken van het kernprogramma | `training.json` `<sleutel>.weeks` | per pagina eigen sleutel, maar teksten zijn deels letterlijk gedupliceerd |
 | "Breintraining voor échte gedragsverandering" | `common.json` `programOverview.*` | 4 propositiepagina's **en de homepage** |
-| "Probeer het zelf in onze masterclass" | `common.json` `masterclassSteps.*` | homepage, 4 propositiepagina's **en `/breintraining-methode`** |
+| "Probeer het zelf in onze masterclass" | `common.json` `masterclassSteps.*` | homepage, 3 propositiepagina's **en `/breintraining-methode`**. `/duurzame-inzetbaarheid` heeft een eigen variant in `training.json` `vitality.introSteps` |
 | "Offerte aanvragen" | `common.json` `cta.requestQuote` | header en uitklapmenu op elke pagina, de zwevende balk overal behalve op de stress- en prestatiepagina, **en** de hero van home, `/duurzame-inzetbaarheid`, `/team-prestaties-verbeteren` en `/breintraining-methode` |
 
 ## De vier propositiepagina's
@@ -133,8 +133,45 @@ gebruiker of de wijziging daar ook moet landen.** Nooit stilzwijgend aannemen.
 | `stress` | `/stressmanagement-training` | `/en/stress-management-training` |
 | `performance` | `/prestatie-training` | `/en/performance-training` |
 
-Let op: de sleutelnamen dekken de lading niet meer. `vitality` is de pagina over
-verzuim en duurzame inzetbaarheid, `sustainability` die over productiviteit.
+Let op: de sleutelnamen dekken de lading niet meer. `vitality` is de pagina voor
+de publieke sector, `sustainability` die voor scale-ups.
+
+### `vitality` is de publieke-sectorpagina
+
+Sinds 20 oktober 2026 (branch `publieke-sector`) spreekt `/duurzame-inzetbaarheid`
+onderwijs, overheid en zorg aan, op basis van "(C) Segmentanalyse Publieke sector
+2026-10" in de Second Brain. De opbouw is die van de scale-up-pagina. In het menu
+heet hij "Publieke sector" met als ondertitel "Duurzame inzetbaarheid"; in het
+Engels "Public sector" en "Healthy and productive teams", want "sustainable
+employability" is volgens Bas geen gangbaar Engels. De URL is bewust niet
+veranderd: duurzame inzetbaarheid is de best gemeten term.
+
+- **Verzuim wél, productiviteit niet.** Verzuim is hier de taal van de koper,
+  dus de rekentool en de link "Wat kost verzuim jou?" blijven. Productiviteit
+  noemde 0 van de 9 organisaties.
+- **De lezer is de adviseur** vitaliteit, arbo of duurzame inzetbaarheid, die de
+  pagina doorstuurt naar een manager en het MT. De kern: het aanbod is er, de
+  deelname niet, en wij zorgen dat ook de drukste mensen meedoen.
+- **Nooit** "je beleving veranderen", "je eigen effectiviteit" of "verplicht".
+  Dat legt het probleem bij de medewerker, het grootste bezwaar van het MT bij
+  het ROC. De belofte is handvatten, naast het werkdrukplan.
+- **Vitaliteit als categoriewoord** in de kop, maar het product heet ook hier
+  aandachttraining.
+- **Eigen invulling via props** op `TrainingPageLayout`: `heroLogos` met
+  publieke logo's uit de trainersrij op `/over-ons`, in kleur
+  (`heroColourLogos`) en op een transparante achtergrond (Den Haag en de VU
+  hebben daarvoor een `_transparant`-versie). `heroPhotoQuote` is Jochems
+  slaapquote, en daarom staat `participantQuote` op `null`.
+  `masterclassTexts` wijst naar `vitality.introSteps`: een eigen blok over
+  kennismaken, live of in eigen tijd, want een vast uur met het hele team was
+  bij het ROC bijna een breekpunt. `afterResults` is de paarse `ResultatenBand`.
+- **"tot 12 maanden na de training nog minder stress (Michaelsen, 2023)"** in
+  de cijferband. Schrijf nooit "12 maanden later" of "een jaar later": de
+  studies maten tussen drie maanden en een jaar. Het woordje "tot" staat als
+  `prefix` voor het getal, omdat "tot 12 maanden" als waarde niet in de band
+  past.
+- **"20 tot 40% van wie de masterclass volgt, doet mee aan de training"** in de
+  FAQ is een eigen cijfer van Bas (20 oktober 2026).
 
 ### `sustainability` is de scale-up-pagina
 

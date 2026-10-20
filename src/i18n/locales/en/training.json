@@ -1,89 +1,84 @@
 {
   "vitality": {
     "meta": {
-      "title": "Vitality training for organisations | Innerleaps",
-      "description": "Innerleaps offers organisations a 6-week vitality training with 42% participation, versus 3-8% for standard EAPs. Preventive, science-based, pay only for actual participants."
+      "title": "Sustainable employability in the public sector | Innerleaps",
+      "description": "For education, government and care. A 6-week attention training that helps your people notice tension in time, before stress builds up and leads to sick leave."
     },
     "hero": {
-      "badge": "Scientifically proven method",
-      "title": "Improve <0>sustainable employability</0> and reduce absenteeism",
-      "subtitle": "Sustainable employability starts with less work stress. Our training teaches your people to spot tension early and adjust in time.",
-      "cta": "Calculate your impact"
+      "badge": "Sustainable employability in the public sector",
+      "title": "Vitality training that helps your people get a <0>handle</0> on the pressure",
+      "subtitle": "Built for teams that want to take part but have no time. Our 6-week attention training helps your people notice tension early, before stress builds up and leads to sick leave.",
+      "cta": "Calculate your impact",
+      "imageAlt": "An Innerleaps trainer leading a session for a group of employees",
+      "photoQuote": "The best feedback is usually unsolicited. A coworker just blurted out: it's so great, I'm actually sleeping again. That's not something you talk about at work."
     },
     "challenges": {
-      "title": "Do you recognise one of these <0>challenges</0>?",
-      "subtitle": "These are the challenges our group training tackles.",
+      "title": "Does this sound like your <0>organisation</0>?",
+      "subtitle": "A place where people work hard for others: students, residents, clients.",
       "items": [
         {
           "icon": "Activity",
-          "title": "High workload",
-          "text": "The amount of work and the ambitions lead to tension and pressure."
+          "title": "The pressure comes with the job",
+          "text": "The peaks come back every year, and they still catch people out. However good your plan, you'll never take all the pressure away."
         },
         {
-          "icon": "AlertCircle",
-          "title": "Setting boundaries is hard",
-          "text": "Employees are enthusiastic, but find it hard to guard their own limits."
+          "icon": "Users",
+          "title": "Plenty on offer, few taking part",
+          "text": "Workshops, a platform, a wellbeing week. People say they need it, but the ones under most pressure don't turn up."
         },
         {
-          "icon": "BedDouble",
-          "title": "High absenteeism",
-          "text": "Employees drop out because stress complaints keep coming back."
+          "icon": "Heart",
+          "title": "Others always come first",
+          "text": "People who look after others often put themselves second. They keep going for a long time, until suddenly they can't."
         }
       ]
     },
     "results": {
-      "title": "The <0>effect</0> of our training on your team",
-      "subtitle": "The scientifically proven effects of our training.",
+      "title": "Less <0>sick leave</0> by stepping in early",
+      "subtitle": "Measured in independent scientific research.",
       "items": [
         {
-          "icon": "TreeDeciduous",
-          "title": "Less tension",
+          "icon": "BellRing",
+          "title": "Speaking up in time",
           "bullets": [
-            "Employees sense tension earlier and adjust course themselves.",
-            "Employees become more resilient under high pressure and recover faster."
-          ],
-          "stats": [
-            {
-              "value": "-26%",
-              "label": "stress"
-            }
+            "They notice sooner when it's getting too much, even in the middle of a busy period.",
+            "And they know what to do about it."
+          ]
+        },
+        {
+          "icon": "Gauge",
+          "title": "Practical tools for busy moments",
+          "bullets": [
+            "They notice tension as soon as it rises, not just at the end of the day.",
+            "A short exercise brings it back down, even between two appointments."
           ]
         },
         {
           "icon": "Shield",
-          "title": "Guarding their own limits",
+          "title": "Lower risk of sick leave",
           "bullets": [
-            "Employees flag their limit before they cross it.",
-            "More ownership of their own workload."
-          ],
-          "stats": [
-            {
-              "value": "+11%",
-              "label": "resilience"
-            }
-          ]
-        },
-        {
-          "icon": "CheckCircle",
-          "title": "Less absenteeism",
-          "bullets": [
-            "Stress complaints are spotted early, before someone drops out.",
-            "Less long-term absence, so less pressure on the rest."
-          ],
-          "stats": [
-            {
-              "value": "-70%",
-              "label": "risk of long-term absence"
-            }
+            "Stress complaints get noticed before someone drops out.",
+            "Less sick leave also means less pressure on colleagues."
           ]
         }
-      ],
-      "science": {
-        "value": "40+ years",
-        "label": "of scientific research",
-        "text": "Our method is based on MBSR, developed in 1979 at the University of Massachusetts. Hundreds of studies prove it effectively reduces stress. It works so well that universities such as Oxford and Amsterdam continue to research it."
-      },
-      "sources": "Sources: Aikens et al. (2014), De Bruin et al. (2018)"
+      ]
+    },
+    "resultsBand": {
+      "items": [
+        {
+          "value": "-70%",
+          "label": "risk of long-term sick leave (De Bruin, 2018)"
+        },
+        {
+          "value": "-26%",
+          "label": "stress (Aikens, 2014)"
+        },
+        {
+          "prefix": "up to",
+          "value": "12",
+          "label": "months after training, still less stress (Michaelsen, 2023)"
+        }
+      ]
     },
     "weeks": {
       "title": "The <0>6-week</0> Vitality Plus programme",
@@ -141,16 +136,72 @@
             "Warning system"
           ],
           "title": "Lasting integration into your life",
-          "text": "Participants reflect on the programme and develop their own daily routine. That is precisely why the programme is still effective a year after the training."
+          "text": "Participants reflect on the programme and build their own daily routine, so they keep practising once the training is over."
         }
       ]
+    },
+    "introSteps": {
+      "headlinePart1": "Getting to know us in a way that",
+      "headlinePart2": "suits you",
+      "intro": "Get to know it first, then decide. Your people can meet the programme live, or in their own time.",
+      "steps": {
+        "call": {
+          "eyebrow": "01 · 20 min",
+          "title": "A short call",
+          "description": "What you already do, when the busy periods are, and whether this fits."
+        },
+        "masterclass": {
+          "eyebrow": "02 · live or in their own time",
+          "title": "Your people get to know the programme",
+          "description": "Live in a masterclass, or in their own time with short videos and recordings. Together we choose the format that suits you."
+        },
+        "programme": {
+          "eyebrow": "03 · 6 weeks",
+          "title": "The programme",
+          "description": "One fixed hour a week, up to 15 per group. At times we agree together in advance, online or on site."
+        }
+      },
+      "cta": "Book 20 minutes with Bas",
+      "imageAlt": "Innerleaps trainer leading an interactive masterclass with participants raising their hands"
     },
     "faq": {
       "title": "Frequently asked questions",
       "items": [
         {
-          "q": "Is the training online?",
-          "a": "The training doesn't have to be online, but an online format makes it easier for employees to take part. Research shows online sessions are just as effective as in-person ones. Training attention happens mostly through daily practice, while the workshops support that process. To give as many employees as possible the chance to join, we prefer an online training."
+          "q": "We've already tried a lot. What's different here?",
+          "a": "With us, 20 to 40% of the people who attend the masterclass go on to join the training. That comes down to preparation. We put a lot of work into it, because the impact only starts once people take part.\n\nWe agree the times with managers in advance, so the training fits into the working week. Your people get to know the programme first, live or in their own time. And we provide the texts, so the invitation comes from your own organisation."
+        },
+        {
+          "q": "Doesn't this put the problem on the employee?",
+          "a": "No. You tackle the workload itself through policy: tasks, planning, extra hands in busy weeks. That's still needed. This training comes alongside it. It gives people practical tools for the moments when it still peaks, because those moments won't go away."
+        },
+        {
+          "q": "Does everyone have to take part?",
+          "a": "No, taking part is voluntary. Your people get to know the programme first, live in a masterclass or in their own time. Then everyone decides for themselves.\n\nOur advice: have the invitation come from someone in your own management, saying why you're doing this. People join when they can tell their manager is behind it."
+        },
+        {
+          "q": "Is this only for people with stress complaints?",
+          "a": "No, it's for everyone. People who think they're doing fine often notice during the training how much tension they've been carrying without realising. It isn't help for people who are already off sick. It's training to stop it getting that far."
+        },
+        {
+          "q": "How does this fit into a full working week?",
+          "a": "The programme takes one hour a week for six weeks, plus fifteen minutes of practice a day. We fix the times in advance with your managers. And we don't start in the busiest period of your year.\n\nOnline and on site both work, and you can choose per group. Research shows online sessions work just as well as in-person ones."
+        },
+        {
+          "q": "What about privacy?",
+          "a": "Every participant gets their own impact report. Individual answers never go to the employer. You only see the results for the group as a whole.\n\nWe sign a data processing agreement with you, and the data is stored on servers in Europe."
+        },
+        {
+          "q": "How do we pay for this?",
+          "a": "You pay per participant. You get a quote in advance, so you can reserve the budget."
+        },
+        {
+          "q": "Can we start small?",
+          "a": "Yes. Start with one school, department or team where the pressure is high and management is on board. If it works, you roll it out further, with the results of the first group to show."
+        },
+        {
+          "q": "How do you make sure the learning environment is safe and comfortable?",
+          "a": "The training has weekly group workshops with up to 15 participants. People practise in a safe and comfortable way by responding to concrete questions, without having to share personal stories. So everyone feels at ease and can fully practise with attention."
         },
         {
           "q": "15 minutes of practice a day, how does that work?",
@@ -161,36 +212,16 @@
           "a": "All exercises are aimed at training attention. The goal is for participants to work and live with more focus and awareness. That's why the exercises are directly applicable in daily life, for example while brushing teeth, eating or walking. Each week also includes a 12-minute exercise."
         },
         {
-          "q": "How do you make sure the learning environment is safe and comfortable?",
-          "a": "The training has weekly group workshops with up to 15 participants. People practise in a safe and comfortable way by responding to concrete questions, without having to share personal stories. So everyone feels at ease and can fully practise with attention."
-        },
-        {
           "q": "What is the foundation of Innerleaps?",
           "a": "Innerleaps' awareness trainings build on evidence-based programmes such as MBSR, MBCT and WorkplaceMT. The foundation rests on 12 scientific studies, including multiple meta-analyses and randomized controlled trials. The evidence is strong enough that the U.S. military has incorporated attention training into its official doctrine (U.S. Army Field Manual 7-22), and organisations like Google, Apple, Microsoft, Nestlé and Unilever have implemented similar programmes."
         },
         {
           "q": "What does an Innerleaps programme deliver for our employees?",
-          "a": "Innerleaps participants show measurable improvements in exactly the areas where most organisations feel the pain:\n\n65 to 72% experience less stress\n60 to 84% show a reduction in burn-out symptoms\n64 to 77% become more resilient\n58 to 60% are more productive at work\n57 to 78% sleep better\nThe risk of long-term sick leave drops by 70% (from 54.4% to 16.4%)\n\nImportantly, these effects are sustained for at least 12 months after the training. This is not a temporary boost, but lasting behavioural change."
-        },
-        {
-          "q": "What is the ROI of an investment in Innerleaps?",
-          "a": "Based on conservative calculations, ROI ranges between 497% and 775% within the first year. For a group of 15 participants, this yields annual cost savings of €42,834 to €66,816. The returns come from three sources: 15 to 21% reduction in absenteeism, 5 to 8% productivity gains and 5 to 8% lower turnover. Want a calculation for your own organisation? Innerleaps provides an ROI calculator where you can input your specific absenteeism, salary and turnover figures."
-        },
-        {
-          "q": "How does Innerleaps improve employee performance?",
-          "a": "Innerleaps improves performance by optimizing working memory, the mental \"workspace\" where thinking, deciding and acting take place. This happens through three mechanisms:\n\nFirst, relevant information is selected faster and irrelevant information is suppressed more effectively. Focus increases, distraction decreases. Research shows up to 24% improvement on attention tasks (Jha et al., 2021).\n\nSecond, stress and pressure normally occupy a large share of working memory. When that pressure decreases, capacity is freed up for the task itself.\n\nThird, working memory becomes more efficient: better results with less neural effort (Bailey et al., 2020). Employees perform sharper and have energy left at the end of the day."
+          "a": "Research into this kind of training finds less stress, fewer burnout symptoms, more resilience and better sleep. Take stress: compare someone who did the training with someone who didn't, and in 65 to 72% of cases the trained person has less stress.\n\nThe risk of long-term absence drops by 70% (from 54.4% to 16.4%). And the drop in stress lasts: studies that checked back three months to a year later still found measurably less stress."
         },
         {
           "q": "What is sustainable employability?",
           "a": "Sustainable employability means employees can keep working in a healthy, motivated and productive way throughout their career. In practice it usually breaks down at the same point: long-term work stress. A quarter of all absenteeism in the Netherlands is stress related. Innerleaps tackles that cause. Employees learn to spot and regulate tension early, so dropout is prevented rather than repaired."
-        },
-        {
-          "q": "What is an absenteeism reduction programme and does it work?",
-          "a": "An absenteeism reduction programme is a structured approach to bringing sick leave down. Programmes that only steer on reintegration arrive too late. Innerleaps focuses on prevention. Over six weeks employees train their attention and stress regulation. In a study among Unilever employees the risk of long-term absence fell from 54.4% to 16.4% (De Bruin et al., 2018, University of Amsterdam)."
-        },
-        {
-          "q": "Does attention training also reduce staff turnover?",
-          "a": "Yes. Employees who feel less tension and enjoy their work more are less likely to leave. Turnover is also more expensive than absenteeism. Replacing someone quickly costs between half and one and a half annual salaries."
         },
         {
           "q": "How do you reduce absenteeism without it staying at symptom relief?",
@@ -198,7 +229,7 @@
         },
         {
           "q": "How quickly do we see results?",
-          "a": "Participants notice a difference after the first workshops, and that effect builds up over the six weeks. Straight after the 6-week training, 70% report experiencing less stress. It also lasts: research shows the training is still effective a year later."
+          "a": "Participants notice a difference after the first workshops, and that effect builds up over the six weeks. Straight after the 6-week training, 70% report experiencing less stress. It also lasts: research shows stress stays lower for months after the training."
         }
       ]
     }

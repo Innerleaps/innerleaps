@@ -71,9 +71,22 @@ interface HeroSectionProps {
    * scale-up-pagina, waar verzuim geen ingang is, wijst hij naar de klantcase.
    */
   secondaryLink?: { label: string; to: string };
+  /**
+   * Een andere uitspraak van Jochem op de foto dan op home. Op de pagina voor
+   * de publieke sector staat zijn slaapquote, want zijn productiviteitsquote
+   * zegt die lezer niets. Portret en naam blijven dezelfde.
+   */
+  photoQuote?: string;
+  /**
+   * Logo's in hun eigen kleuren in plaats van grijs. Op verzoek van Bas voor
+   * de publieke sector, waar herkenbare namen als de politie en de gemeente
+   * het bewijs zijn. Gebruik dan logo's met een transparante achtergrond,
+   * anders staat er een wit vlak op de beige hero.
+   */
+  colourLogos?: boolean;
 }
 
-const HeroSection = ({ title, badge, subtitle, photo, logos = LOGOS, secondaryLink }: HeroSectionProps = {}) => {
+const HeroSection = ({ title, badge, subtitle, photo, logos = LOGOS, secondaryLink, photoQuote, colourLogos = false }: HeroSectionProps = {}) => {
   const { t } = useTranslation();
   const { pathname } = useLocation();
   const lang = detectLanguageFromPath(pathname);
@@ -216,7 +229,7 @@ const HeroSection = ({ title, badge, subtitle, photo, logos = LOGOS, secondaryLi
                 } lg:mt-0 mx-3 lg:mx-0 lg:max-w-[320px] bg-white rounded-xl p-5 shadow-xl`}
               >
                 <blockquote className="text-lg font-semibold text-brand-purple leading-snug">
-                  &ldquo;{t("hero.quote")}&rdquo;
+                  &ldquo;{photoQuote ?? t("hero.quote")}&rdquo;
                 </blockquote>
                 <figcaption className="mt-4 flex items-center gap-3">
                   <img
@@ -254,7 +267,7 @@ const HeroSection = ({ title, badge, subtitle, photo, logos = LOGOS, secondaryLi
                   alt={logo.alt}
                   loading="lazy"
                   decoding="async"
-                  className={`${logo.className ?? "h-6 lg:h-7"} w-auto object-contain grayscale opacity-80`}
+                  className={`${logo.className ?? "h-6 lg:h-7"} w-auto object-contain ${colourLogos ? "" : "grayscale opacity-80"}`}
                 />
               ))}
             </div>
