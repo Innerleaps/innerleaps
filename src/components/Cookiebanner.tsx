@@ -36,12 +36,19 @@ import {
  * Escape sluit het niet en er is geen kruisje. Wegklikken zonder keuze zou
  * hetzelfde zijn als weigeren, maar dan zonder dat de bezoeker het weet.
  *
- * En er is geen weigerknop. Weigeren gaat via "Zelf instellen", daar de
- * schakelaars uitzetten en bevestigen. Een uitdrukkelijke keuze van Bas, na
- * overleg over wat de Autoriteit Persoonsgegevens hierover zegt. Coolblue doet
- * het net iets anders: bij hen staat het persoonlijke deel standaard uit, dus
- * daar is "Zelf instellen" wél een weigerknop in één klik.
+ * En er is geen weigerknop. Weigeren gaat via "Zelf instellen" en dan
+ * "Bevestigen". Een uitdrukkelijke keuze van Bas, na overleg over wat de
+ * Autoriteit Persoonsgegevens hierover zegt.
+ *
+ * De schakelaars voor analyse en advertenties staan daar standaard uit, net als
+ * bij Coolblue. Ze stonden eerst aan, zoals bij holiepizza.nl, maar een vinkje
+ * dat al aan staat is geen geldige toestemming (Hof van Justitie, Planet49,
+ * 2019). Wie in het venster meteen op "Bevestigen" drukt, weigert dus. Alleen
+ * "Alles accepteren" of zelf een schakelaar aanzetten geeft toestemming. Een
+ * eerder opgeslagen keuze gaat wel voor: die staat er dan in zoals hij was.
  */
+const NIETS_AAN: Toestemming = { analyse: false, advertenties: false };
+
 const Cookiebanner = () => {
   const { t } = useTranslation();
   const { pathname } = useLocation();
@@ -51,7 +58,7 @@ const Cookiebanner = () => {
 
   const [zichtbaar, setZichtbaar] = useState(false);
   const [venster, setVenster] = useState(false);
-  const [keuze, setKeuze] = useState<Toestemming>({ analyse: true, advertenties: true });
+  const [keuze, setKeuze] = useState<Toestemming>(NIETS_AAN);
   const eersteKnop = useRef<HTMLButtonElement>(null);
 
   useEffect(() => {
@@ -65,7 +72,7 @@ const Cookiebanner = () => {
     }
     // Vanuit de footer kan de bezoeker zijn keuze later wijzigen.
     const opnieuw = () => {
-      setKeuze(leesToestemming() ?? { analyse: true, advertenties: true });
+      setKeuze(leesToestemming() ?? NIETS_AAN);
       setVenster(true);
       setZichtbaar(true);
     };
