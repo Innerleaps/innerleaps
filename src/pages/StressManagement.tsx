@@ -169,7 +169,8 @@ const StressManagement = () => {
       hideParticipantResults
       hideWhyChooseUs
       weeksLayout="stacked"
-      hideStickyCtas
+      // De zwevende balk met de mailknop in plaats van de offerteknop.
+      stickyAction={({ tabIndex }) => <WerkgeverMailKnop positie="sticky" tabIndex={tabIndex} />}
       showMethodCtaAfterWeeks
       // Het masterclassblok legt uit hoe het via de werkgever loopt: de
       // medewerker stelt ons voor, wij komen gratis langs, wie wil doet mee.

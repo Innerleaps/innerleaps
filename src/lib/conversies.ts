@@ -238,7 +238,7 @@ export const meldMasterclassKlik = (positie: MasterclassKnop): void => {
  * opent een mail in het mailprogramma van de bezoeker, dus of hij hem ook
  * verstuurt, zien we niet. Daarom een klik en geen conversie.
  */
-export type WerkgeverMailKnop = "hero" | "onderaan";
+export type WerkgeverMailKnop = "hero" | "onderaan" | "sticky";
 
 export const meldWerkgeverMailKlik = (positie: WerkgeverMailKnop): void => {
   duwen({ event: "employer_mail_click", positie });

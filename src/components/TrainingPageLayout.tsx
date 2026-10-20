@@ -200,6 +200,8 @@ export interface TrainingPageLayoutProps {
   masterclassTexts?: { ns: string; prefix: string };
   /** Een eigen knop in het masterclassblok, in plaats van de masterclassknop. */
   masterclassAction?: ReactNode;
+  /** Een eigen knop in de zwevende balk, in plaats van de offerteknop. */
+  stickyAction?: (opts: { tabIndex?: number }) => ReactNode;
   /** Vervangt de offerteknop in de lichte hero door een eigen knop. */
   heroPrimaryAction?: ReactNode;
   /** Laat de klantquote over de herofoto weg. */
@@ -254,6 +256,7 @@ const TrainingPageLayout = ({
   heroColourLogos,
   masterclassTexts,
   masterclassAction,
+  stickyAction,
   afterResults,
 }: TrainingPageLayoutProps) => {
   const { t } = useTranslation("training");
@@ -338,7 +341,7 @@ const TrainingPageLayout = ({
       </Helmet>
       <HreflangTags />
       <SimplifiedNavigation />
-      {!hideStickyCtas && <StickyCtaButtons />}
+      {!hideStickyCtas && <StickyCtaButtons renderAction={stickyAction} />}
 
       {/* Hero */}
       {heroPhoto ? (

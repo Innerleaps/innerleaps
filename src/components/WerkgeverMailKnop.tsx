@@ -16,6 +16,8 @@ const SITE_URL = "https://innerleaps.nl";
 interface WerkgeverMailKnopProps {
   positie: Positie;
   className?: string;
+  /** Uit de tabvolgorde zolang de zwevende balk verborgen is. */
+  tabIndex?: number;
 }
 
 /**
@@ -36,7 +38,7 @@ interface WerkgeverMailKnopProps {
  * klikbaar. Het is het vaste adres, zonder de hostnaam van de omgeving, zodat
  * de mail op een branch-deploy dezelfde is als live.
  */
-const WerkgeverMailKnop = ({ positie, className = "" }: WerkgeverMailKnopProps) => {
+const WerkgeverMailKnop = ({ positie, className = "", tabIndex }: WerkgeverMailKnopProps) => {
   const { t } = useTranslation("training");
   const { pathname } = useLocation();
   const [open, setOpen] = useState(false);
@@ -72,7 +74,13 @@ const WerkgeverMailKnop = ({ positie, className = "" }: WerkgeverMailKnopProps) 
     <>
       <Button
         size="lg"
-        className={`w-full lg:w-auto min-h-[44px] font-semibold py-4 px-8 rounded-lg text-base lg:text-lg shadow-xl ${className}`}
+        tabIndex={tabIndex}
+        className={
+          positie === "sticky"
+            ? // Zelfde maat als de zwevende offerteknop op de andere pagina's.
+              `w-full md:w-auto min-h-[44px] font-semibold py-3 px-4 md:px-10 rounded-lg text-base md:text-lg shadow-lg whitespace-normal md:whitespace-nowrap ${className}`
+            : `w-full lg:w-auto min-h-[44px] font-semibold py-4 px-8 rounded-lg text-base lg:text-lg shadow-xl ${className}`
+        }
         onClick={() => {
           meldWerkgeverMailKlik(positie);
           setGekopieerd(false);

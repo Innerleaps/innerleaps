@@ -122,7 +122,7 @@ gebruiker of de wijziging daar ook moet landen.** Nooit stilzwijgend aannemen.
 | Weken van het kernprogramma | `training.json` `<sleutel>.weeks` | per pagina eigen sleutel, maar teksten zijn deels letterlijk gedupliceerd |
 | "Breintraining voor échte gedragsverandering" | `common.json` `programOverview.*` | `/duurzame-inzetbaarheid`, `/team-prestaties-verbeteren` **en de homepage** (niet op de medewerkerspagina) |
 | "Probeer het zelf in onze masterclass" | `common.json` `masterclassSteps.*` | homepage, `/team-prestaties-verbeteren` **en `/breintraining-methode`**. `/duurzame-inzetbaarheid` en de medewerkerspagina hebben een eigen variant in `training.json` (`vitality.introSteps`, `stress.introSteps`) |
-| "Offerte aanvragen" | `common.json` `cta.requestQuote` | header en uitklapmenu op elke pagina, de zwevende balk overal behalve op de medewerkerspagina, **en** de hero van home, `/duurzame-inzetbaarheid`, `/team-prestaties-verbeteren` en `/breintraining-methode` |
+| "Offerte aanvragen" | `common.json` `cta.requestQuote` | header en uitklapmenu op elke pagina, de zwevende balk overal behalve op de medewerkerspagina (daar staat de mailknop in de balk), **en** de hero van home, `/duurzame-inzetbaarheid`, `/team-prestaties-verbeteren` en `/breintraining-methode` |
 
 ## De drie propositiepagina's
 
@@ -190,7 +190,8 @@ participant insights" in de Second Brain. Alle teksten zijn door Bas gekozen.
   (`WerkgeverMailKnop.tsx`) opent een venster met de mail uit `stress.mail` en
   vier wegen: Gmail, Outlook (web, werkaccounts), het mailprogramma (mailto) en
   kopiëren. De link in de mail wijst naar de homepage, want de ontvanger is de
-  werkgever. **Geen kale mailto-link**: die doet niets bij wie alleen webmail
+  werkgever. Dezelfde knop staat in de zwevende balk (`stickyAction`), die net
+  als de offerteknop elders pas na de hero verschijnt. **Geen kale mailto-link**: die doet niets bij wie alleen webmail
   heeft, en ook niet in het voorbeeldvenster van Claude. Er gaat niets via
   Innerleaps. Meten: `employer_mail_click` (openen) en `employer_mail_option`
   met de gekozen weg.
@@ -604,6 +605,11 @@ Vier dingen om te weten:
   verwijzingen aan. Draai je het, zet dan met `git checkout` alles terug wat
   niet van jou is, en controleer met `git status` dat alleen je eigen nieuwe
   afbeeldingen overblijven. Gebeurd op 15 oktober 2026.
+- **Klantlogo's in de lichte hero staan in kleur en vrijstaand**, op home, de
+  scale-up- en de publieke-sectorpagina. Een logo op wit geeft
+  op de beige hero een wit blok. Maak er eerst een `_transparant`-versie van
+  met `scripts/logo-vrijstaand.py`, en geef elk logo een eigen hoogte zodat ze
+  even zwaar ogen.
 
 ## Er ligt een SEO-basismeting, gebruik die
 
