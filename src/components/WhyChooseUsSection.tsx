@@ -16,13 +16,12 @@ import vmbnLogo from "@/assets/vmbn-trainer-categorie-1.webp";
  *
  * Hoogtes op gelijk visueel gewicht, niet op gelijke hoogte: hetzelfde getal
  * maakte UMass (drie regels tekst) groot en de UvA (klein wapen, dunne
- * letters) klein. Gemeten aan de hoeveelheid inkt per logo komen Oxford op 26
- * en UMass op 28 pixels. De UvA staat op 31: op 28 oogde hij met zijn dunne
- * letters toch nog het kleinst. Samen met 16 pixels tussenruimte past dat net
- * in de 304 pixels van een kaart op lg; op een telefoon is alles iets kleiner,
- * anders valt de UvA naar een tweede regel. VMBN is bijna vierkant en stond op 75 pixels,
- * drie keer zo hoog als de universiteiten. Op 44 oogt hij even groot en is
- * "Trainer categorie 1" nog te lezen. Beide logorijen zijn 56 pixels hoog en
+ * letters) klein. Gemeten aan de hoeveelheid inkt per logo horen Oxford en
+ * UMass ongeveer even hoog; de UvA een slag hoger, want met zijn dunne letters
+ * oogde hij toch het kleinst. Daarom delen ze de rij naar breedte (zie
+ * hieronder). VMBN is bijna vierkant en stond op 75 pixels, drie keer zo hoog
+ * als de universiteiten. Op 44 (34 op lg) oogt hij even groot en is "Trainer
+ * categorie 1" nog te lezen. Beide logorijen zijn minstens 56 pixels hoog en
  * verticaal gecentreerd, zodat de logo's in de twee kaarten op één lijn staan.
  */
 const PILL_KEYS = ["liveHour", "daily", "workHours"] as const;
@@ -89,17 +88,21 @@ const WhyChooseUsSection = memo(({ bookingCta = false, background = "off-white" 
               <p className="text-lg font-semibold text-brand-gray-dark border-t border-gray-200 pt-4">
                 {t("whyChooseUs.cards.research.proofLabel")}
               </p>
-              {/* Op lg is de kaart smal; justify-between verdeelt de drie dan
-                  over de hele breedte. Daaronder staan ze links met vaste
-                  tussenruimte, anders liggen ze in een brede kaart ver uiteen. */}
-              <div className={`mt-4 ${LOGO_RIJ} flex-wrap gap-x-4 gap-y-3 lg:justify-between`}>
+              {/* De drie delen de rij naar breedte, 88 : 70 : 104. Zo staan ze
+                  altijd op één regel en houden ze dezelfde verhouding: op een
+                  kaart van 1280 pixels worden ze 27, 29 en 32 hoog, op 1024
+                  (waar de kaart maar 235 pixels binnenruimte heeft) 20, 22 en
+                  24. Met vaste hoogtes viel de UvA daar naar een tweede regel.
+                  Niet breder dan 304 pixels, anders worden ze op een tablet,
+                  waar de kaarten de volle breedte hebben, veel te groot. */}
+              <div className={`mt-4 ${LOGO_RIJ} gap-4 w-full max-w-[304px]`}>
                 <img
                   src={oxfordLogo}
                   alt={t("trust.altPrefix.oxford")}
                   loading="lazy"
                   width={1500}
                   height={443}
-                  className="h-6 lg:h-[26px] w-auto object-contain"
+                  className="flex-[88_1_0%] min-w-0 h-auto"
                 />
                 <img
                   src={uMassLogo}
@@ -107,7 +110,7 @@ const WhyChooseUsSection = memo(({ bookingCta = false, background = "off-white" 
                   loading="lazy"
                   width={787}
                   height={314}
-                  className="h-[26px] lg:h-[28px] w-auto object-contain"
+                  className="flex-[70_1_0%] min-w-0 h-auto"
                 />
                 <img
                   src={uvaLogo}
@@ -115,7 +118,7 @@ const WhyChooseUsSection = memo(({ bookingCta = false, background = "off-white" 
                   loading="lazy"
                   width={1920}
                   height={572}
-                  className="h-[28px] lg:h-[31px] w-auto object-contain"
+                  className="flex-[104_1_0%] min-w-0 h-auto"
                 />
               </div>
             </div>
@@ -142,7 +145,8 @@ const WhyChooseUsSection = memo(({ bookingCta = false, background = "off-white" 
                   loading="lazy"
                   width={286}
                   height={208}
-                  className="h-11 w-auto object-contain"
+                  // Schaalt mee met de universiteiten, die op lg kleiner zijn.
+                  className="h-11 lg:h-[34px] xl:h-11 w-auto object-contain"
                 />
               </div>
             </div>
