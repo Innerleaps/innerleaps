@@ -234,6 +234,24 @@ export const meldMasterclassKlik = (positie: MasterclassKnop): void => {
 };
 
 /**
+ * Een klik op "Stel het voor aan je werkgever" op de medewerkerspagina. Die
+ * opent een mail in het mailprogramma van de bezoeker, dus of hij hem ook
+ * verstuurt, zien we niet. Daarom een klik en geen conversie.
+ */
+export type WerkgeverMailKnop = "hero" | "onderaan" | "sticky";
+
+export const meldWerkgeverMailKlik = (positie: WerkgeverMailKnop): void => {
+  duwen({ event: "employer_mail_click", positie });
+};
+
+/** Welke weg de bezoeker daarna kiest in het venster met de mail. */
+export type WerkgeverMailWeg = "gmail" | "outlook" | "mailprogramma" | "kopieren";
+
+export const meldWerkgeverMailWeg = (weg: WerkgeverMailWeg): void => {
+  duwen({ event: "employer_mail_option", weg });
+};
+
+/**
  * Klikken op het telefoonnummer en het e-mailadres.
  *
  * Eén luisteraar op document, met `closest`, zodat hij ook werkt bij links die

@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef, type ReactNode } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Button } from '@/components/ui/button';
 import { Link, useLocation } from 'react-router-dom';
@@ -35,7 +35,17 @@ const HERO_SENTINELS = ['hero-cta', 'hero'];
 /** Zonder allebei die elementen valt de balk terug op een scrolldrempel. */
 const SCROLL_FALLBACK = 400;
 
-const StickyCtaButtons = () => {
+interface StickyCtaButtonsProps {
+  /**
+   * Een eigen knop in plaats van de offerteknop, met alles eromheen gelijk:
+   * zelfde plek, zelfde moment van verschijnen. Op de medewerkerspagina is dat
+   * "Stel het voor aan je werkgever". Een functie, zodat de knop uit de
+   * tabvolgorde kan zolang de balk verborgen is.
+   */
+  renderAction?: (opts: { tabIndex?: number }) => ReactNode;
+}
+
+const StickyCtaButtons = ({ renderAction }: StickyCtaButtonsProps = {}) => {
   const { t } = useTranslation();
   const [isPastHero, setIsPastHero] = useState(false);
   const [isCalculatorInView, setIsCalculatorInView] = useState(false);
@@ -115,20 +125,24 @@ const StickyCtaButtons = () => {
         md:left-auto md:bottom-6 md:right-6 md:w-auto md:bg-transparent md:backdrop-blur-none md:border-0 md:px-0 md:pt-0
         ${isVisible ? 'sticky-cta--visible' : 'sticky-cta--hidden'}`}
     >
-      <Link
-        to={offertePad(lang)}
-        state={{ van: location.pathname }}
-        onClick={() => meldOfferteKlik('sticky')}
-        tabIndex={isVisible ? undefined : -1}
-        className="block md:inline-block"
-      >
-        <Button
-          tabIndex={-1}
-          className="w-full md:w-auto min-h-[44px] font-semibold py-3 px-4 md:px-10 rounded-lg text-base md:text-lg shadow-lg whitespace-normal md:whitespace-nowrap"
+      {renderAction ? (
+        renderAction({ tabIndex: isVisible ? undefined : -1 })
+      ) : (
+        <Link
+          to={offertePad(lang)}
+          state={{ van: location.pathname }}
+          onClick={() => meldOfferteKlik('sticky')}
+          tabIndex={isVisible ? undefined : -1}
+          className="block md:inline-block"
         >
-          {label}
-        </Button>
-      </Link>
+          <Button
+            tabIndex={-1}
+            className="w-full md:w-auto min-h-[44px] font-semibold py-3 px-4 md:px-10 rounded-lg text-base md:text-lg shadow-lg whitespace-normal md:whitespace-nowrap"
+          >
+            {label}
+          </Button>
+        </Link>
+      )}
     </div>
   );
 };

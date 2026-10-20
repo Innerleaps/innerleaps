@@ -20,14 +20,6 @@
     "employability": {
       "label": "Scale-ups",
       "description": "More focus, in the same hours"
-    },
-    "stress": {
-      "label": "Stress Management",
-      "description": "Reduce tension and pressure"
-    },
-    "performance": {
-      "label": "Improve Performance",
-      "description": "Sharpen focus and performance"
     }
   },
   "cta": {
@@ -56,7 +48,7 @@
     "linkedinAria": "Innerleaps on LinkedIn",
     "trainingsHeading": "Trainings",
     "trainingsAria": "Trainings",
-    "performanceLink": "Focus & performance",
+    "employeesLink": "For employees",
     "contactHeading": "Contact",
     "copyright": "© 2026 Innerleaps",
     "privacy": "Privacy notice",

@@ -235,322 +235,148 @@
   },
   "stress": {
     "meta": {
-      "title": "Stressmanagement training: verzuim voorkomen | Innerleaps",
-      "description": "Voorkom verzuim door stress. Je mensen herkennen spanning eerder en herstellen sneller. 6 weken aandachttraining op basis van hersenonderzoek."
+      "title": "Aandachttraining voor medewerkers: focus en rust | Innerleaps",
+      "description": "6 weken aandachttraining in een kleine live groep. Zie spanning eerder aankomen en haal je focus sneller terug. Zo'n kwartier per dag."
     },
     "hero": {
-      "badge": "Wetenschappelijk bewezen training",
-      "title": "Minder <0>druk</0> en meer <0>rust in je hoofd</0>",
-      "subtitle": "Wetenschappelijk bewezen stressmanagement training voor rust in je hoofd en meer levensplezier.",
-      "cta": "Aanmelden training",
-      "statsTitle": "Waarom deelnemers ons kiezen",
-      "stats": [
+      "badge": "6 weken · live groep · een kwartier per dag",
+      "title": "Meer <0>focus</0>. Minder <0>ruis</0> in je hoofd.",
+      "subtitle": "6 weken aandachttraining in een kleine live groep. Je leert je focus terug te halen en spanning te zien aankomen voordat die je overneemt.",
+      "cta": "Stel het voor aan je werkgever"
+    },
+    "statsBand": {
+      "items": [
         {
-          "label": "Spanning & stress",
-          "value": "-50%"
+          "value": "68%",
+          "label": "merkte minder stress en spanning"
         },
         {
-          "label": "Focus",
-          "value": "+24%"
+          "value": "55%",
+          "label": "leefde minder op de automatische piloot"
         },
         {
-          "label": "Tevreden over het leven",
-          "value": "+15%"
+          "value": "55%",
+          "label": "voelde zich minder mentaal moe"
         },
         {
-          "label": "Wetenschap",
-          "value": "40+ jaar"
+          "value": "9,3",
+          "label": "voor de trainer"
         }
-      ]
+      ],
+      "source": "Evaluatie door 22 deelnemers bij TheyDo, 2026"
     },
     "challenges": {
-      "title": "<0>Veel druk</0> en <0>weinig rust</0> in je hoofd",
+      "title": "<0>Alle ballen</0> hoog houden",
       "subtitle": "Herken je dit?",
       "items": [
         {
-          "icon": "Brain",
-          "title": "Weinig mentale rust",
-          "text": "Je hoofd zit vaak vol. Zelfs 's avonds speelt zich van alles af in je hoofd."
+          "icon": "Layers",
+          "title": "Steeds schakelen",
+          "text": "Je springt van taak naar taak. Elk berichtje haalt je eruit, en terugkomen in je werk duurt steeds langer."
+        },
+        {
+          "icon": "Activity",
+          "title": "Op de automatische piloot",
+          "text": "Je dagen vliegen voorbij. Je werkt je lijst af, maar je bent er zelden helemaal bij."
+        },
+        {
+          "icon": "BellRing",
+          "title": "Spanning die je te laat ziet",
+          "text": "Pas achteraf merk je hoe gespannen je was. Strakke schouders, een kort lontje, een hoge ademhaling."
         },
         {
           "icon": "Moon",
-          "title": "Moeite met ontspannen",
-          "text": "Tijdens vrije momenten of vakantie lukt het niet om echt los te laten. Je bent aanwezig maar niet écht aanwezig."
+          "title": "Je werk gaat mee naar huis",
+          "text": "De laptop is dicht, maar je hoofd is nog aan het werk. 's Avonds, en soms ook 's nachts."
         },
         {
-          "icon": "AlertCircle",
-          "title": "Snel geïrriteerd",
-          "text": "Kleine dingen kunnen je uit je evenwicht brengen. Drukte in huis, een collega die iets vraagt, file. Het kost je meer energie dan je zou willen."
+          "icon": "BatteryLow",
+          "title": "Leeg om 4 uur",
+          "text": "Halverwege de middag zit je hoofd vol. Beslissen kost meer moeite, en voor de avond blijft weinig over."
+        }
+      ]
+    },
+    "sticks": {
+      "title": "Weten is makkelijk. <0>Volhouden</0> niet.",
+      "intro": "Bijna iedereen heeft wel eens Headspace, Insight Timer of een andere app gedownload die helpt bij stressmanagement. Of misschien heb je wel eens een workshop hierover gevolgd. Het lastige is om nieuw gedrag te ontwikkelen zodat je het geleerde blijft toepassen. Precies dat probleem is de kern van onze training.",
+      "items": [
+        {
+          "title": "Een vast uur per week",
+          "text": "6 live sessies met dezelfde groep en dezelfde trainer, binnen werktijd."
         },
         {
-          "icon": "Frown",
-          "title": "Minder genieten",
-          "text": "Je merkt dat je niet meer volledig geniet van leuke momenten. Je bent er maar je hoofd is vaak ergens anders."
+          "title": "Iemand die het je voordoet",
+          "text": "Je hoeft niet te weten waar je begint. De trainer neemt je stap voor stap mee."
         },
         {
-          "icon": "BedDouble",
-          "title": "'s Avonds moeilijk uitschakelen",
-          "text": "Jij wil slapen maar je hoofd is nog druk. Je verlangt naar een goede nachtrust."
+          "title": "Spanning herkennen",
+          "text": "Je leert meer dan oefeningen. Je leert ook het seintje van spanning herkennen, en wat je dan doet. Zo stapelt het niet op."
         }
       ]
     },
     "results": {
-      "title": "<0>Geniet</0> van je leven met <0>rust</0> in je hoofd",
-      "subtitle": "Wetenschappelijk bewezen effecten:",
+      "title": "Wat deelnemers na 6 weken <0>merken</0>",
       "items": [
         {
+          "icon": "BellRing",
+          "title": "Je ziet spanning aankomen",
+          "text": "Je herkent spanning voordat het je overneemt, en je weet vervolgens wat je eraan kan doen.",
+          "quote": "Herken sneller spanning en doe er sneller wat mee.",
+          "quoteBy": "Deelnemer bij een uitgeverij"
+        },
+        {
+          "icon": "Target",
+          "title": "Sneller terug bij je werk",
+          "text": "Je merkt het sneller op als je gedachten afdwalen. Je concentratie is sterker en je raakt minder snel afgeleid.",
+          "quote": "Meer rust in het hoofd ... hoofd- van bijzaken te scheiden. En dat werkt!",
+          "quoteBy": "Deelnemer bij een uitgeverij"
+        },
+        {
           "icon": "Brain",
-          "title": "Rustige gedachten",
-          "bullets": [
-            "Je gedachten zijn waar jij ze wil hebben. Je ervaart rust in je hoofd.",
-            "Wetenschappelijk bewezen om spanning meetbaar te verminderen."
-          ]
+          "title": "Minder malen",
+          "text": "Je merkt wanneer je blijft piekeren, en je kunt eruit stappen.",
+          "quote": "Voor de training was ik denk ik meer gaan piekeren en overdenken over deze situatie. Nu kon ik het loslaten.",
+          "quoteBy": "Deelnemer bij een uitgeverij"
         },
         {
-          "icon": "Heart",
-          "title": "Bewust genieten",
-          "bullets": [
-            "Je bent écht aanwezig bij wat je doet. Momenten met familie, vrienden of voor jezelf worden weer volwaardig.",
-            "Aandachttraining maakt mensen meer tevreden over hun leven."
-          ]
+          "icon": "BatteryCharging",
+          "title": "Energie over aan het eind van de dag",
+          "text": "Je pauzeert vaker en voelt dat het geen verloren tijd is. Na een korte break ga je met volle focus weer aan het werk.",
+          "quote": "Een pauze is geen tijdverspilling. Dat was voor mij de grootste omslag.",
+          "quoteBy": "Deelnemer bij TheyDo"
         },
         {
-          "icon": "Shield",
-          "title": "Emoties onder controle",
-          "bullets": [
-            "Kleine irritaties pakken je minder snel. Je reageert bewuster in plaats van automatisch.",
-            "Deelnemers ontwikkelen betere controle over hun reacties."
-          ]
+          "icon": "Eye",
+          "title": "Minder op de automatische piloot",
+          "text": "Je bent er mentaal bij. Of je nou in een meeting zit of in een gesprek thuis, jouw gedachten zijn bij dat moment.",
+          "quote": "Meer ingecheckt bij mezelf, bewuster van hoe ik me voel",
+          "quoteBy": "Deelnemer bij een uitgeverij"
+        }
+      ]
+    },
+    "whoJoins": {
+      "title": "Voor wie een hoop <0>ballen in de lucht</0> houdt",
+      "text": "Developers, accountmanagers, HR-adviseurs, marketeers, journalisten, docenten, leerkrachten en directieleden. Verschillende banen, hetzelfde volle hoofd. Ze hebben allemaal al meegedaan aan onze trainingen."
+    },
+    "group": {
+      "title": "Je hoeft niets te <0>delen</0> wat je niet wilt",
+      "text": "1 live uur per week, online, in een groep van hooguit 15 mensen. De trainer stelt vragen. Wat je over jezelf vertelt, bepaal je zelf.",
+      "quotes": [
+        {
+          "text": "Fijn om in een vrij compact groepje te zitten en te horen hoe anderen er in staan.",
+          "by": "Deelnemer bij een uitgeverij"
         },
         {
-          "icon": "Smile",
-          "title": "Meer levensplezier",
-          "bullets": [
-            "Je pikt details weer op die je eerder miste. Eten smaakt beter, gesprekken zijn intenser, wandelingen geven energie.",
-            "Duurzame gedragsverandering, geen tijdelijk effect."
-          ]
-        },
-        {
-          "icon": "Moon",
-          "title": "Betere slaapkwaliteit",
-          "bullets": [
-            "Je hoofd komt tot rust voordat je gaat slapen. Je valt makkelijker in slaap en wordt uitgeruster wakker.",
-            "Deelnemers slapen aantoonbaar beter."
-          ]
+          "text": "Ze heeft het heel goed gedaan. Ik was erg blij met de training en de inhoud.",
+          "by": "Deelnemer bij TheyDo"
         }
       ]
     },
     "weeks": {
-      "title": "Het <0>6-weekse</0> Vitaliteitsplus-programma",
+      "title": "Wat je <0>precies doet</0>",
       "intro": [
-        "In het Vitaliteitsplus-programma wordt elke week een ander thema behandeld. Het programma is zo opgezet om langdurige impact te realiseren."
+        "In de workshops leer je nieuwe oefeningen en tools. Een kwartiertje per dag oefen je ermee: deels in je vrije tijd, en deels terwijl je gewoon andere dingen doet, zoals tandenpoetsen of de was."
       ],
-      "imageAlt": "Mensen tijdens een aandacht- en concentratietraining voor betere prestaties en minder stress",
-      "items": [
-        {
-          "week": "Week 1",
-          "tags": [
-            "Controlecentrum"
-          ],
-          "title": "De automatische piloot doorbreken",
-          "text": "Waar zijn je gedachten terwijl je tanden poetst? Waarschijnlijk bij je eerste meeting of je to-do lijst. Leer herkennen wanneer je gedachten afdwalen en breng je aandacht terug naar wat je nu doet. Je traint je controlecentrum door telkens bewust aandacht te geven aan je huidige activiteit."
-        },
-        {
-          "week": "Week 2",
-          "tags": [
-            "Waarschuwingssysteem"
-          ],
-          "title": "Vroege waarschuwingssignalen herkennen",
-          "text": "Train je waarschuwingssysteem zodat je gespannen schouders, een strakke kaak of oppervlakkige ademhaling opmerkt voordat spanning je overneemt. Jij pakt de controle omdat je gevoelsantennes scherper worden."
-        },
-        {
-          "week": "Week 3",
-          "tags": [
-            "Controlecentrum",
-            "Waarschuwingssysteem"
-          ],
-          "title": "Werken met druk en spanning",
-          "text": "Onder druk slaat je werkgeheugen vaak op tilt. In deze week leer je een korte oefening van 3 minuten waarmee je je hoofd snel weer rustig en helder krijgt. Je ontdekt ook hoe je pauzes slim inplant, zodat je de hele dag scherp blijft."
-        },
-        {
-          "week": "Week 4",
-          "tags": [
-            "Controlecentrum",
-            "Waarschuwingssysteem"
-          ],
-          "title": "Mentale helderheid",
-          "text": "Niet elke gedachte is een feit. Je leert het verschil herkennen tussen productief nadenken en blijven malen. Ook leer jij je gedachten te observeren in plaats van erin mee te gaan. Het resultaat: meer rust in je hoofd en minder gepieker."
-        },
-        {
-          "week": "Week 5",
-          "tags": [
-            "Waarschuwingssysteem"
-          ],
-          "title": "Stressherstel door vriendelijkheid",
-          "text": "De innerlijke criticus werkt harder onder druk. Leer jezelf met vriendelijkheid te behandelen. De schakelaar om je zenuwstelsel tot rust te brengen en ruimte te maken voor helder denken."
-        },
-        {
-          "week": "Week 6",
-          "tags": [
-            "Controlecentrum",
-            "Waarschuwingssysteem"
-          ],
-          "title": "Duurzame integratie in je leven",
-          "text": "Herken je gedachtepatronen en maak de geleerde technieken blijvend onderdeel van je dagelijkse routine. Bouw je eigen toolbox voor alle situaties."
-        }
-      ]
-    },
-    "faq": {
-      "title": "Veelgestelde vragen",
-      "items": [
-        {
-          "q": "Waarom zijn de masterclass en de training online?",
-          "a": "Wetenschappelijk is bewezen dat online even effectief is als fysiek. Omdat het even effectief is, kiezen we voor de optie die de minste tijd kost voor deelnemers. Geen reistijd, gewoon vanuit huis of kantoor."
-        },
-        {
-          "q": "Waarom wil mijn werkgever de training vergoeden?",
-          "a": "Stress kost werkgevers enorm veel geld. Zowel in verzuim als in verminderde prestatie. Werkgevers willen je graag helpen om dit te verbeteren. Wij overhandigen je een brochure waardoor je werkgever dit makkelijk kan begrijpen en goedkeuren."
-        },
-        {
-          "q": "15 minuten oefenen per dag, hoe werkt dat?",
-          "a": "Als je start krijg je van ons een werkboek. Daar staat voor elke week een stukje theorie in en korte oefeningen. Tevens ontvang je audio-opnames van de oefeningen. Sommige oefeningen doe je tijdens dagelijkse activiteiten zoals tandenpoetsen, douchen of afwassen, dus geen extra tijd. Andere oefeningen duren ongeveer 12 minuten. Daarvoor heb je een rustige plek nodig."
-        },
-        {
-          "q": "Wat zijn de oefeningen?",
-          "a": "Deelnemers doen op twee manieren hun \"Brein push-ups\". Bij de geplande training doe je 12 minuten per dag een audio-oefening waarin je je aandacht richt op je ademhaling of lichaam. Klinkt makkelijk? Je geest vindt er niks aan. Binnen seconden denk je aan je to-do's of die meeting. Elk moment dat je je focus terugbrengt is de push-up die je controlecentrum versterkt. Daarnaast train je in je dagelijks leven door bewuste aandacht te brengen naar alledaagse activiteiten. Tijdens je ochtendkoffie, op weg naar je werk of voordat je een belangrijke meeting ingaat. Het kost geen extra tijd en je wordt productiever in wat je doet."
-        },
-        {
-          "q": "Wat als ik een week mis?",
-          "a": "Bij het missen van een sessie kun je de trainer bellen om toch alle informatie te ontvangen. Daarnaast staat alle benodigde informatie in het werkboek. Voor optimaal resultaat is het belangrijk om niet meer dan één sessie te missen."
-        },
-        {
-          "q": "Waarop is de aanpak van Innerleaps gebaseerd?",
-          "a": "De aandachttrainingen van Innerleaps bouwen voort op evidence-based programma's zoals MBSR, MBCT en WorkplaceMT. De onderbouwing komt uit 12 wetenschappelijke studies, waaronder meerdere meta-analyses en gerandomiseerde gecontroleerde onderzoeken. De effecten zijn zo robuust dat het Amerikaanse leger aandachttraining heeft opgenomen in zijn officiële doctrine (U.S. Army Field Manual 7-22), en organisaties als Google, Apple, Microsoft, Nestlé en Unilever soortgelijke programma's hebben geïmplementeerd."
-        },
-        {
-          "q": "Wat levert een Innerleaps-traject concreet op?",
-          "a": "Onderzoek naar dit soort training vindt minder stress, minder burn-outklachten, meer veerkracht en beter slapen. Neem stress: zet iemand die de training deed naast iemand die hem niet deed, en in 65 tot 72% van de gevallen heeft de getrainde persoon minder stress.\n\nOok de productiviteit gaat omhoog. Dat effect is kleiner, maar over dit effect zijn de studies het meest eensgezind.\n\nHet risico op langdurige uitval daalt met 70% (van 54,4% naar 16,4%). En de daling in stress houdt stand: studies die drie maanden tot een jaar later opnieuw maten, vonden nog steeds aantoonbaar minder stress."
-        },
-        {
-          "q": "Hoe verbetert Innerleaps mijn prestaties?",
-          "a": "Innerleaps verbetert je prestaties door optimalisatie van het werkgeheugen, het mentale \"werkblad\" waarop denken, beslissen en handelen plaatsvinden. Dit gebeurt via drie mechanismen:\n\nTen eerste wordt relevante informatie sneller geselecteerd en irrelevante informatie beter onderdrukt. Je concentratie neemt toe, afleiding neemt af. Onderzoek laat tot 24% verbetering zien op aandachtstaken (Jha et al., 2021).\n\nTen tweede nemen spanning en werkdruk normaal gesproken een groot deel van het werkgeheugen in beslag. Wanneer die spanning afneemt, komt er capaciteit vrij voor de taak zelf.\n\nTen derde wordt het werkgeheugen efficiënter: betere resultaten met minder neurale inspanning (Bailey et al., 2020). Je presteert scherper en houdt energie over aan het einde van de dag."
-        }
-      ]
-    }
-  },
-  "performance": {
-    "meta": {
-      "title": "Prestatie training voor focus en productiviteit | Innerleaps",
-      "description": "Innerleaps verbetert prestaties onder druk via gerichte aandachttraining. Medewerkers trainen focus en aandacht in 6 weken. Gebaseerd op de methode gebruikt door top sporters en world class CEO's."
-    },
-    "hero": {
-      "badge": "Wetenschappelijk bewezen training",
-      "title": "<0>Prestaties</0> verbeteren met een krachtiger <0>brein</0>",
-      "subtitle": "Wetenschappelijk bewezen training om prestaties te verbeteren. Mentale scherpte met meer focus voor betere performance.",
-      "cta": "Aanmelden training",
-      "statsTitle": "Waarom deelnemers ons kiezen",
-      "stats": [
-        {
-          "label": "Focus, minder fouten",
-          "value": "+24%"
-        },
-        {
-          "label": "Prestatie",
-          "value": "+10%"
-        },
-        {
-          "label": "Slaap",
-          "value": "+28%"
-        },
-        {
-          "label": "Wetenschap",
-          "value": "40+ jaar"
-        }
-      ]
-    },
-    "challenges": {
-      "title": "Je wil beter kunnen <0>presteren</0>",
-      "subtitle": "Herken je dit?",
-      "items": [
-        {
-          "icon": "Brain",
-          "title": "Afleiding kost je focus",
-          "text": "Je wordt makkelijk uit je concentratie gehaald. Diep werk kost meer moeite dan vroeger, je zweeft sneller af."
-        },
-        {
-          "icon": "AlertCircle",
-          "title": "Mentale vermoeidheid gedurende de dag",
-          "text": "Halverwege de dag voelt je hoofd al vol. Beslissingen kosten meer energie, je scherpte neemt af."
-        },
-        {
-          "icon": "Activity",
-          "title": "Niet optimaal presteren",
-          "text": "Je weet dat er meer in zit. Je haalt je targets, maar het voelt alsof je potentieel niet volledig wordt benut."
-        },
-        {
-          "icon": "AlertCircle",
-          "title": "Veel bezig, niet altijd effectief",
-          "text": "Je werkt hard, maar niet alles wat je doet levert evenveel op. Prioriteren lukt niet altijd even goed."
-        },
-        {
-          "icon": "BedDouble",
-          "title": "Niet optimaal herstellen",
-          "text": "Ook als je ligt te slapen, blijft je hoofd soms aanstaan. Daardoor word je niet echt uitgerust wakker en merk je dat je dingen sneller vergeet of minder goed kunt onthouden."
-        }
-      ]
-    },
-    "results": {
-      "title": "Beter <0>presteren</0> met meer <0>focus</0>",
-      "subtitle": "Wetenschappelijk bewezen effecten:",
-      "items": [
-        {
-          "icon": "Brain",
-          "title": "Scherpere focus",
-          "bullets": [
-            "Je aandacht is waar jij hem wil hebben. Diep werken gaat makkelijker, afleidingen hebben minder grip.",
-            "In aandachttesten maken deelnemers minder fouten door de training."
-          ]
-        },
-        {
-          "icon": "Activity",
-          "title": "Meer mentale energie",
-          "bullets": [
-            "Je hoofd blijft helder gedurende de dag. Beslissingen kosten minder kracht, je eindigt je werkdag met energie over.",
-            "Verminderde mentale vermoeidheid door efficiënter breingebruik."
-          ]
-        },
-        {
-          "icon": "CheckCircle",
-          "title": "Verhoogde productiviteit",
-          "bullets": [
-            "Je haalt meer uit je dag. Betere focus betekent betere output in minder tijd.",
-            "Wetenschappelijk bewezen: deelnemers presteren beter."
-          ]
-        },
-        {
-          "icon": "Brain",
-          "title": "Helder prioriteren",
-          "bullets": [
-            "Je maakt sneller de juiste keuzes. Verhoogde awareness geeft inzicht in wat écht belangrijk is.",
-            "Betere besluitvorming door training van jouw neocortex."
-          ]
-        },
-        {
-          "icon": "BedDouble",
-          "title": "Beter slapen en sterker geheugen",
-          "bullets": [
-            "Je komt écht tot rust in je hoofd voordat je gaat slapen. Je wordt uitgeruster wakker en merkt dat je dingen makkelijker onthoudt.",
-            "Deelnemers slapen beter en onthouden informatie makkelijker."
-          ]
-        }
-      ]
-    },
-    "weeks": {
-      "title": "Het <0>6-weekse</0> kernprogramma",
-      "intro": [
-        "In het kernprogramma wordt elke week een ander thema behandeld. Het programma is zo opgezet om langdurige impact te realiseren."
-      ],
-      "imageAlt": "Mensen tijdens een aandacht- en concentratietraining voor betere prestaties en minder stress",
       "items": [
         {
           "week": "Week 1",
@@ -592,7 +418,8 @@
             "Controlecentrum"
           ],
           "title": "Beter samenwerken door bewust luisteren",
-          "text": "Onder druk formuleer je vaak je antwoord al terwijl de ander nog praat. Leer écht luisteren, perspectief nemen en reageren vanuit begrip in plaats van reflex."
+          "text": "Onder druk formuleer je vaak je antwoord al terwijl de ander nog praat. Leer écht luisteren, perspectief nemen en reageren vanuit begrip in plaats van reflex.",
+          "note": "Werk je in het onderwijs, de zorg of bij de overheid? Dan gaat week 5 over milder zijn voor jezelf als het druk is."
         },
         {
           "week": "Week 6",
@@ -605,40 +432,79 @@
         }
       ]
     },
+    "introSteps": {
+      "headlinePart1": "Gratis masterclass",
+      "headlinePart2": "bij jou op kantoor",
+      "intro": "Wij werken met werkgevers. Jij kunt ons voorstellen, en dan komen we gratis langs.",
+      "steps": {
+        "call": {
+          "eyebrow": "01 · 20 min",
+          "title": "Kennismaken",
+          "description": "Je stelt ons voor aan je leidinggevende of HR. In een kort gesprek kijken we of het past."
+        },
+        "masterclass": {
+          "eyebrow": "02 · 60 min",
+          "title": "Gratis masterclass",
+          "description": "Je team ervaart de methode zelf, op kantoor of online. Niemand zit ergens aan vast."
+        },
+        "programme": {
+          "eyebrow": "03 · 6 weken",
+          "title": "Meedoen",
+          "description": "Wie interesse heeft, doet mee aan de training. Vaak uit het eigen leerbudget."
+        }
+      },
+      "imageAlt": "Innerleaps-trainer geeft een interactieve masterclass, deelnemers steken hun hand op"
+    },
+    "mail": {
+      "subject": "Iets voor ons?",
+      "body": "Hoi,\n\nZoals je weet staat onze organisatie niet stil. Werkdruk kan oplopen en het is niet altijd even makkelijk om je goed te focussen op je werk. Ik kwam Innerleaps ({{link}}) tegen, met hun aandachttraining helpen zij teams met stressmanagement en focus. Het ziet er allemaal goed uit. Ze bieden ook een gratis masterclass aan waarmee ze ons de methode kunnen laten ervaren. Misschien goed voor ons volgende team- of bedrijfsmoment. Wat denk jij?"
+    },
+    "mailDialog": {
+      "title": "Stuur dit naar je werkgever",
+      "gmail": "Open in Gmail",
+      "outlook": "Open in Outlook",
+      "mailApp": "Open in je mailprogramma",
+      "copy": "Kopieer de tekst",
+      "copied": "Gekopieerd"
+    },
     "faq": {
       "title": "Veelgestelde vragen",
       "items": [
         {
-          "q": "Waarom zijn de masterclass en de training online?",
-          "a": "Wetenschappelijk is bewezen dat online even effectief is als fysiek. Omdat het even effectief is, kiezen we voor de optie die de minste tijd kost voor deelnemers. Geen reistijd, gewoon vanuit huis of kantoor."
+          "q": "Is het zweverig?",
+          "a": "Nee, het is juist heel concreet. Je leert korte oefeningen die je meteen op je werk gebruikt, en je hoeft nergens in te geloven."
         },
         {
-          "q": "Waarom wil mijn werkgever de training vergoeden?",
-          "a": "Stress kost werkgevers enorm veel geld. Zowel in verzuim als in verminderde prestatie. Werkgevers willen je graag helpen om dit te verbeteren. Wij overhandigen je een brochure waardoor je werkgever dit makkelijk kan begrijpen en goedkeuren."
+          "q": "Moet ik in de groep over mezelf praten?",
+          "a": "Nee. De trainer stelt vragen en je kunt reageren. Wat je deelt, bepaal je zelf."
         },
         {
-          "q": "15 minuten oefenen per dag, hoe werkt dat?",
-          "a": "Als je start krijg je van ons een werkboek. Daar staat voor elke week een stukje theorie in en korte oefeningen. Tevens ontvang je audio-opnames van de oefeningen. Sommige oefeningen doe je tijdens dagelijkse activiteiten zoals tandenpoetsen, douchen of afwassen, dus geen extra tijd. Andere oefeningen duren ongeveer 12 minuten. Daarvoor heb je een rustige plek nodig."
+          "q": "Ziet mijn werkgever hoe het met mij gaat?",
+          "a": "Nee. Als we het effect meten, ziet je werkgever alleen de cijfers van de hele groep."
         },
         {
-          "q": "Wat zijn de oefeningen?",
-          "a": "Deelnemers doen op twee manieren hun \"brein push-ups\". Geplande training (12 minuten per dag): dagelijkse audio-oefeningen waarin je je aandacht richt op je ademhaling of lichaam. Klinkt makkelijk? Je geest vindt er niks aan. Binnen seconden denk je aan je to-do's of die meeting. Elk moment dat je je focus terugbrengt is de push-up die je controlecentrum versterkt. Training in je dagelijks leven: je brengt bewuste aandacht naar alledaagse activiteiten. Tijdens je ochtendkoffie, op weg naar je werk, of voordat je een belangrijke meeting ingaat. Je traint je brein om scherp te zijn wanneer het ertoe doet. Het kost geen extra tijd en je wordt productiever in wat je doet."
+          "q": "Hoeveel tijd kost het echt?",
+          "a": "1 uur per week voor de live sessie, en zo'n kwartier oefenen, 5 dagen per week. Een deel doe je tijdens dingen die je toch al doet, zoals koffie zetten."
+        },
+        {
+          "q": "Ik heb een app geprobeerd en ben gestopt. Waarom zou dit anders zijn?",
+          "a": "Bijna iedereen stopt met een app. Na een maand gebruiken nog zo'n 4 op de 100 mensen hem. Hier oefen je 6 weken met een vaste groep en een trainer, en leer je oefenen op het moment dat je spanning voelt. Zo wordt het een gewoonte."
         },
         {
           "q": "Wat als ik een week mis?",
-          "a": "Bij het missen van een sessie kan je de trainer bellen om toch alle informatie te ontvangen. Daarnaast staat alle benodigde informatie in het werkboek. Voor optimaal resultaat is het belangrijk om niet meer dan één sessie te missen."
+          "a": "Bel of mail de trainer, dan hoor je wat je gemist hebt. Alles staat ook in het werkboek. Mis liever niet meer dan 1 sessie."
         },
         {
-          "q": "Waarop is de aanpak van Innerleaps gebaseerd?",
+          "q": "Is het online?",
+          "a": "Meestal wel. Geen reistijd, en je doet mee vanuit huis of kantoor. Op locatie kan ook."
+        },
+        {
+          "q": "Hoe krijg ik het vergoed?",
+          "a": "Vraag het aan je leidinggevende of HR. Veel bedrijven betalen het uit het leerbudget. Stuur ze deze pagina, of vraag samen een gratis masterclass aan."
+        },
+        {
+          "q": "Waar is het op gebaseerd?",
           "a": "De aandachttrainingen van Innerleaps bouwen voort op evidence-based programma's zoals MBSR, MBCT en WorkplaceMT. De onderbouwing komt uit 12 wetenschappelijke studies, waaronder meerdere meta-analyses en gerandomiseerde gecontroleerde onderzoeken. De effecten zijn zo robuust dat het Amerikaanse leger aandachttraining heeft opgenomen in zijn officiële doctrine (U.S. Army Field Manual 7-22), en organisaties als Google, Apple, Microsoft, Nestlé en Unilever soortgelijke programma's hebben geïmplementeerd."
-        },
-        {
-          "q": "Wat levert een Innerleaps-traject concreet op?",
-          "a": "Onderzoek naar dit soort training vindt minder stress, minder burn-outklachten, meer veerkracht en beter slapen. Neem stress: zet iemand die de training deed naast iemand die hem niet deed, en in 65 tot 72% van de gevallen heeft de getrainde persoon minder stress.\n\nOok de productiviteit gaat omhoog. Dat effect is kleiner, maar over dit effect zijn de studies het meest eensgezind.\n\nHet risico op langdurige uitval daalt met 70% (van 54,4% naar 16,4%). En de daling in stress houdt stand: studies die drie maanden tot een jaar later opnieuw maten, vonden nog steeds aantoonbaar minder stress."
-        },
-        {
-          "q": "Hoe verbetert Innerleaps mijn prestaties?",
-          "a": "Innerleaps verbetert je prestaties door optimalisatie van het werkgeheugen, het mentale \"werkblad\" waarop denken, beslissen en handelen plaatsvinden. Dit gebeurt via drie mechanismen:\n\nTen eerste wordt relevante informatie sneller geselecteerd en irrelevante informatie beter onderdrukt. Je concentratie neemt toe, afleiding neemt af. Onderzoek laat tot 24% verbetering zien op aandachtstaken (Jha et al., 2021).\n\nTen tweede nemen spanning en werkdruk normaal gesproken een groot deel van het werkgeheugen in beslag. Wanneer die spanning afneemt, komt er capaciteit vrij voor de taak zelf.\n\nTen derde wordt het werkgeheugen efficiënter: betere resultaten met minder neurale inspanning (Bailey et al., 2020). Je presteert scherper en houdt energie over aan het einde van de dag."
         }
       ]
     }

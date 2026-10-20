@@ -1,4 +1,4 @@
-import { memo } from "react";
+import { memo, type ReactNode } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { Phone, Presentation, Users } from "lucide-react";
@@ -36,9 +36,16 @@ interface MasterclassStepsSectionProps {
    * `{ ns: "training", prefix: "vitality.introSteps" }`.
    */
   texts?: { ns: string; prefix: string };
+  /**
+   * Een eigen knop in plaats van de masterclassknop. Op de medewerkerspagina is
+   * dat "Stel het voor aan je werkgever": de lezer kan de masterclass niet zelf
+   * boeken, maar wel zijn werkgever op het idee brengen. Twee knoppen voor
+   * bijna hetzelfde maakte de keuze alleen lastiger.
+   */
+  primaryAction?: ReactNode;
 }
 
-const MasterclassStepsSection = memo(({ background = "white", texts }: MasterclassStepsSectionProps) => {
+const MasterclassStepsSection = memo(({ background = "white", texts, primaryAction }: MasterclassStepsSectionProps) => {
   const offWhite = background === "off-white";
   const { t: tPage } = useTranslation(texts?.ns ?? "common");
   const prefix = texts?.prefix ?? "masterclassSteps";
@@ -107,19 +114,21 @@ const MasterclassStepsSection = memo(({ background = "white", texts }: Mastercla
               ))}
             </div>
 
-            <Link
-              to={bookingPath(lang)}
-              onClick={() => meldMasterclassKlik("onderaan")}
-              className="block lg:inline-block"
-            >
-              <Button
-                size="lg"
-                variant="secondary"
-                className="w-full lg:w-auto min-h-[44px] font-semibold py-3 px-8 rounded-lg text-base md:text-lg"
+            {primaryAction ?? (
+              <Link
+                to={bookingPath(lang)}
+                onClick={() => meldMasterclassKlik("onderaan")}
+                className="block lg:inline-block"
               >
-                {t("masterclassSteps.cta")}
-              </Button>
-            </Link>
+                <Button
+                  size="lg"
+                  variant="secondary"
+                  className="w-full lg:w-auto min-h-[44px] font-semibold py-3 px-8 rounded-lg text-base md:text-lg"
+                >
+                  {t("masterclassSteps.cta")}
+                </Button>
+              </Link>
+            )}
           </div>
         </div>
       </div>

@@ -117,24 +117,24 @@ gebruiker of de wijziging daar ook moet landen.** Nooit stilzwijgend aannemen.
 
 | Blok | Tekst staat in | Verschijnt op |
 |---|---|---|
-| Menu-items | `common.json` `menuItems.*` | elke pagina, in de header |
+| Menu-items | `common.json` `menuItems.*` en `nav.*` | elke pagina, in de header |
 | Hero, uitdagingen, resultaten, FAQ | `training.json` per propositiesleutel | alleen die ene pagina |
 | Weken van het kernprogramma | `training.json` `<sleutel>.weeks` | per pagina eigen sleutel, maar teksten zijn deels letterlijk gedupliceerd |
-| "Breintraining voor échte gedragsverandering" | `common.json` `programOverview.*` | 4 propositiepagina's **en de homepage** |
-| "Probeer het zelf in onze masterclass" | `common.json` `masterclassSteps.*` | homepage, 3 propositiepagina's **en `/breintraining-methode`**. `/duurzame-inzetbaarheid` heeft een eigen variant in `training.json` `vitality.introSteps` |
-| "Offerte aanvragen" | `common.json` `cta.requestQuote` | header en uitklapmenu op elke pagina, de zwevende balk overal behalve op de stress- en prestatiepagina, **en** de hero van home, `/duurzame-inzetbaarheid`, `/team-prestaties-verbeteren` en `/breintraining-methode` |
+| "Breintraining voor échte gedragsverandering" | `common.json` `programOverview.*` | `/duurzame-inzetbaarheid`, `/team-prestaties-verbeteren` **en de homepage** (niet op de medewerkerspagina) |
+| "Probeer het zelf in onze masterclass" | `common.json` `masterclassSteps.*` | homepage, `/team-prestaties-verbeteren` **en `/breintraining-methode`**. `/duurzame-inzetbaarheid` en de medewerkerspagina hebben een eigen variant in `training.json` (`vitality.introSteps`, `stress.introSteps`) |
+| "Offerte aanvragen" | `common.json` `cta.requestQuote` | header en uitklapmenu op elke pagina, de zwevende balk overal behalve op de medewerkerspagina (daar staat de mailknop in de balk), **en** de hero van home, `/duurzame-inzetbaarheid`, `/team-prestaties-verbeteren` en `/breintraining-methode` |
 
-## De vier propositiepagina's
+## De drie propositiepagina's
 
 | Sleutel in `training.json` | NL-pad | EN-pad |
 |---|---|---|
 | `vitality` | `/duurzame-inzetbaarheid` | `/en/sustainable-employability` |
 | `sustainability` | `/team-prestaties-verbeteren` | `/en/improve-team-performance` |
 | `stress` | `/stressmanagement-training` | `/en/stress-management-training` |
-| `performance` | `/prestatie-training` | `/en/performance-training` |
 
 Let op: de sleutelnamen dekken de lading niet meer. `vitality` is de pagina voor
-de publieke sector, `sustainability` die voor scale-ups.
+de publieke sector, `sustainability` die voor scale-ups, en `stress` de pagina
+voor medewerkers.
 
 ### `vitality` is de publieke-sectorpagina
 
@@ -176,6 +176,53 @@ veranderd: duurzame inzetbaarheid is de best gemeten term.
   gaf hij op 1280 pixels een horizontale scrollbalk.
 - **"20 tot 40% van wie de masterclass volgt, doet mee aan de training"** in de
   FAQ is een eigen cijfer van Bas (20 oktober 2026).
+
+### `stress` is de medewerkerspagina
+
+Sinds 20 oktober 2026 is er één pagina onder "Voor Medewerkers", zonder
+uitklapmenu. De prestatiepagina is erin opgegaan; `/prestatie-training`,
+`/en/performance-training`, `/prestatie-programma` en `/stressmanagement-programma`
+sturen met een 301 hierheen. De URL is bewust niet veranderd. Voorstel, keuzes
+en onderbouwing: `docs/voor-medewerkers.md`, op basis van "(C) Employee and
+participant insights" in de Second Brain. Alle teksten zijn door Bas gekozen.
+
+- **De lezer is de medewerker, niet de koper.** Binnenkomen op focus (51% van de
+  aanmeldingen), waarmaken op rust (68% merkte minder stress). Geen
+  "stressmanagement" of "prestaties" als label, geen wetenschap in de kop.
+- **Geen offerteknop.** De knop "Stel het voor aan je werkgever"
+  (`WerkgeverMailKnop.tsx`) opent een venster met de mail uit `stress.mail` en
+  vier wegen: Gmail, Outlook (web, werkaccounts), het mailprogramma (mailto) en
+  kopiëren. De link in de mail wijst naar de homepage, want de ontvanger is de
+  werkgever. Dezelfde knop staat in de zwevende balk (`stickyAction`), die net
+  als de offerteknop elders pas na de hero verschijnt. **Geen kale mailto-link**: die doet niets bij wie alleen webmail
+  heeft, en ook niet in het voorbeeldvenster van Claude. Er gaat niets via
+  Innerleaps. Meten: `employer_mail_click` (openen) en `employer_mail_option`
+  met de gekozen weg.
+- **Eigen opbouw via props** op `TrainingPageLayout`: `afterHero` (cijferband
+  met bron), `afterChallenges` ("Weten is makkelijk. Volhouden niet."),
+  `afterResults` (wie er meedoet, de groep en de trainer met 2 quotes), en
+  `hideProgramOverview`, `hideParticipantResults`, `hideWhyChooseUs`,
+  `heroHideQuote` en `heroSecondaryLink={null}`. Die blokken zijn voor de koper
+  of zouden dubbel staan. De hero heeft eigen logo's in kleur (`heroLogos`,
+  `heroColourLogos`), met Holie Pizza erbij.
+- **Het masterclassblok legt de route via de werkgever uit**: "Gratis
+  masterclass bij jou op kantoor", met kennismaken, masterclass en meedoen uit
+  het eigen leerbudget (`masterclassTexts` naar `stress.introSteps`). De
+  mailknop vervangt daar de masterclassknop (`masterclassAction`): de medewerker
+  kan de masterclass niet zelf boeken. Er is geen apart blok "Wil je dit ook op
+  jouw werk?" meer.
+- **De effectkaarten delen per rij hun regels** (CSS subgrid, alleen bij kaarten
+  met een citaat). Koppen, teksten en citaten staan zo in een rij gelijk, hoe de
+  koppen ook afbreken. De volgorde zet de korte koppen bovenaan.
+- **Getallen als cijfer**: "6 weken", "12 minuten", "15 mensen", ook in het
+  Engels.
+- **Week 5** volgt het kernprogramma (luisteren). Een regel eronder noemt de
+  variant voor onderwijs, zorg en overheid (milder zijn voor jezelf).
+- **Citaten:** op de Nederlandse pagina van "deelnemer bij een uitgeverij"
+  (nooit NRC noemen), op de Engelse van TheyDo. Eén TheyDo-citaat staat vertaald
+  op de Nederlandse pagina, op verzoek van Bas.
+- **"Mindfulness" blijft verboden**, ook hier, ondanks het advies in het
+  insights-document. De FAQ-vraag is "Is het zweverig?".
 
 ### `sustainability` is de scale-up-pagina
 
@@ -604,5 +651,5 @@ voorvertoningen ook netjes uit Google.
   `CLAUDE_SEO_PYTHON=/opt/homebrew/bin/python3.12` voor.
 - Search Console staat ingesteld op property `sc-domain:innerleaps.nl`.
 - De lokale site draait met `npm run dev` op poort 8080.
-- `npm run build` prerendert alle pagina's (42 op 15 oktober 2026) en faalt
+- `npm run build` prerendert alle pagina's (42 op 20 oktober 2026) en faalt
   hard bij een lege pagina.
