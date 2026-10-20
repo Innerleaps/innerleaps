@@ -171,8 +171,9 @@ veranderd: duurzame inzetbaarheid is de best gemeten term.
   de studies tussen drie maanden en een jaar maten. Niet terugzetten, en elders
   op de site niet overnemen zonder hem te vragen. `ResultatenBand` kan nog wel
   een `prefix` voor het getal tonen.
-- **De quote op de herofoto** staat op `quotePosition: "top-right-narrow"`. Op
-  "top-right" reikte de langere slaapquote tot over het gezicht van Bas.
+- **De quote op de herofoto** staat op `quotePosition: "top-right-narrow"`, net
+  als op de scale-up-pagina. Op "top-right" viel hij over het gezicht van Bas en
+  gaf hij op 1280 pixels een horizontale scrollbalk.
 - **"20 tot 40% van wie de masterclass volgt, doet mee aan de training"** in de
   FAQ is een eigen cijfer van Bas (20 oktober 2026).
 

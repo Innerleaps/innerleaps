@@ -115,8 +115,10 @@ const DuurzameInzetbaarheidTraining = () => {
           height: 840,
           alt: t("sustainability.hero.imageAlt"),
           className: "aspect-[4/3] lg:aspect-square object-cover object-[50%_60%]",
-          // Het publiek zit onderin beeld, het plafond erboven is leeg.
-          quotePosition: "top-right",
+          // Op "top-right" viel de quote over het gezicht van Bas en gaf hij op
+          // 1280 pixels een horizontale scrollbalk. Zelfde stand als op de
+          // publieke-sectorpagina, met dezelfde foto.
+          quotePosition: "top-right-narrow",
         }}
         logos={logos}
         heroLogos={SCALEUP_LOGOS}
