@@ -16,8 +16,11 @@ import vmbnLogo from "@/assets/vmbn-trainer-categorie-1.webp";
  *
  * Hoogtes op gelijk visueel gewicht, niet op gelijke hoogte: hetzelfde getal
  * maakte UMass (drie regels tekst) groot en de UvA (klein wapen, dunne
- * letters) klein. Gemeten aan de hoeveelheid inkt per logo komen Oxford op 26,
- * UMass en UvA op 28 pixels. VMBN is bijna vierkant en stond op 75 pixels,
+ * letters) klein. Gemeten aan de hoeveelheid inkt per logo komen Oxford op 26
+ * en UMass op 28 pixels. De UvA staat op 31: op 28 oogde hij met zijn dunne
+ * letters toch nog het kleinst. Samen met 16 pixels tussenruimte past dat net
+ * in de 304 pixels van een kaart op lg; op een telefoon is alles iets kleiner,
+ * anders valt de UvA naar een tweede regel. VMBN is bijna vierkant en stond op 75 pixels,
  * drie keer zo hoog als de universiteiten. Op 44 oogt hij even groot en is
  * "Trainer categorie 1" nog te lezen. Beide logorijen zijn 56 pixels hoog en
  * verticaal gecentreerd, zodat de logo's in de twee kaarten op één lijn staan.
@@ -89,14 +92,14 @@ const WhyChooseUsSection = memo(({ bookingCta = false, background = "off-white" 
               {/* Op lg is de kaart smal; justify-between verdeelt de drie dan
                   over de hele breedte. Daaronder staan ze links met vaste
                   tussenruimte, anders liggen ze in een brede kaart ver uiteen. */}
-              <div className={`mt-4 ${LOGO_RIJ} flex-wrap gap-x-5 gap-y-3 lg:justify-between`}>
+              <div className={`mt-4 ${LOGO_RIJ} flex-wrap gap-x-4 gap-y-3 lg:justify-between`}>
                 <img
                   src={oxfordLogo}
                   alt={t("trust.altPrefix.oxford")}
                   loading="lazy"
                   width={1500}
                   height={443}
-                  className="h-[26px] w-auto object-contain"
+                  className="h-6 lg:h-[26px] w-auto object-contain"
                 />
                 <img
                   src={uMassLogo}
@@ -104,7 +107,7 @@ const WhyChooseUsSection = memo(({ bookingCta = false, background = "off-white" 
                   loading="lazy"
                   width={787}
                   height={314}
-                  className="h-[28px] w-auto object-contain"
+                  className="h-[26px] lg:h-[28px] w-auto object-contain"
                 />
                 <img
                   src={uvaLogo}
@@ -112,7 +115,7 @@ const WhyChooseUsSection = memo(({ bookingCta = false, background = "off-white" 
                   loading="lazy"
                   width={1920}
                   height={572}
-                  className="h-[28px] w-auto object-contain"
+                  className="h-[28px] lg:h-[31px] w-auto object-contain"
                 />
               </div>
             </div>
