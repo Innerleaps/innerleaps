@@ -130,8 +130,9 @@ const Vitaliteitstraining = () => {
             stats={t("vitality.resultsBand.items", { returnObjects: true }) as ResultatenBandStat[]}
           />
         }
-        // De slaapquote staat al op de herofoto, dus hier geen tweede.
-        participantQuote={null}
+        // Bewust dezelfde slaapquote als op de herofoto: Bas koos hem op
+        // 20-10-2026 voor beide plekken.
+        participantQuote={t("vitality.hero.photoQuote")}
         masterclassTexts={{ ns: "training", prefix: "vitality.introSteps" }}
         weeksLayout="stacked"
         showBookingCtas

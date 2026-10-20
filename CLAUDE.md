@@ -160,8 +160,9 @@ veranderd: duurzame inzetbaarheid is de best gemeten term.
 - **Eigen invulling via props** op `TrainingPageLayout`: `heroLogos` met
   publieke logo's uit de trainersrij op `/over-ons`, in kleur
   (`heroColourLogos`) en op een transparante achtergrond (Den Haag en de VU
-  hebben daarvoor een `_transparant`-versie). `heroPhotoQuote` is Jochems
-  slaapquote, en daarom staat `participantQuote` op `null`.
+  hebben daarvoor een `_transparant`-versie). `heroPhotoQuote` en
+  `participantQuote` zijn allebei Jochems slaapquote: Bas koos bewust voor
+  twee keer dezelfde. Wil je er één weghalen, `participantQuote={null}` kan.
   `masterclassTexts` wijst naar `vitality.introSteps`: een eigen blok over
   kennismaken, live of in eigen tijd, want een vast uur met het hele team was
   bij het ROC bijna een breekpunt. `afterResults` is de paarse `ResultatenBand`.
