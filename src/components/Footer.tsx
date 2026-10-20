@@ -24,8 +24,7 @@ const Footer = memo(({ showNavigation = true }: FooterProps) => {
   const href = {
     vitality: lang === 'en' ? '/en/sustainable-employability' : '/duurzame-inzetbaarheid',
     employability: lang === 'en' ? '/en/improve-team-performance' : '/team-prestaties-verbeteren',
-    stress: lang === 'en' ? '/en/stress-management-training' : '/stressmanagement-training',
-    performance: lang === 'en' ? '/en/performance-training' : '/prestatie-training',
+    employees: lang === 'en' ? '/en/stress-management-training' : '/stressmanagement-training',
     masterclass: lang === 'en' ? '/en#masterclass' : '/#masterclass',
     method: lang === 'en' ? '/en/method' : '/breintraining-methode',
     caseStudy: lang === 'en' ? '/en/case-studies/theydo' : '/klantcases/theydo',
@@ -40,8 +39,7 @@ const Footer = memo(({ showNavigation = true }: FooterProps) => {
   const trainingLinks = [
     { to: href.employability, label: t('menuItems.employability.label') },
     { to: href.vitality, label: t('menuItems.vitality.label') },
-    { to: href.stress, label: t('menuItems.stress.label') },
-    { to: href.performance, label: t('footer.performanceLink') },
+    { to: href.employees, label: t('footer.employeesLink') },
     { to: href.masterclass, label: t('footer.masterclassLink') },
     { to: href.method, label: t('footer.methodLink') },
     { to: href.caseStudy, label: t('nav.caseStudy') },

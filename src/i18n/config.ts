@@ -40,8 +40,9 @@ export const ROUTE_MAP: Array<{ nl: string; en: string }> = [
   { nl: "/contact", en: "/en/contact" },
   { nl: "/duurzame-inzetbaarheid", en: "/en/sustainable-employability" },
   { nl: "/team-prestaties-verbeteren", en: "/en/improve-team-performance" },
+  // De pagina voor medewerkers. Tot 20 oktober 2026 waren het er twee; de
+  // prestatiepagina stuurt sindsdien met een 301 hierheen (netlify.toml).
   { nl: "/stressmanagement-training", en: "/en/stress-management-training" },
-  { nl: "/prestatie-training", en: "/en/performance-training" },
   { nl: "/blog", en: "/en/blog" },
   // Klantcases. Meervoud in het pad, zodat er later een overzichtspagina op
   // /klantcases kan komen zonder dat deze URL hoeft te verhuizen.

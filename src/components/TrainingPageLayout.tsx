@@ -26,6 +26,9 @@ import {
   Monitor,
   Layers,
   BellRing,
+  Target,
+  BatteryCharging,
+  Eye,
   type LucideIcon,
 } from "lucide-react";
 import SimplifiedNavigation from "@/components/SimplifiedNavigation";
@@ -80,6 +83,9 @@ const ICON_MAP: Record<string, LucideIcon> = {
   Monitor,
   Layers,
   BellRing,
+  Target,
+  BatteryCharging,
+  Eye,
 };
 
 const Icon = ({ name }: { name: string }) => {
@@ -101,7 +107,12 @@ export interface TrainingChallenge {
 export interface TrainingResult {
   icon: string;
   title: string;
-  bullets: string[];
+  bullets?: string[];
+  /** Eén alinea in plaats van een lijstje met vinkjes. */
+  text?: string;
+  /** Een letterlijk citaat van een deelnemer onder de kaart, met wie het zei. */
+  quote?: string;
+  quoteBy?: string;
   /** Gemeten effect, groot boven de kaart in plaats van het icoon. */
   stats?: TrainingStat[];
 }
@@ -117,6 +128,8 @@ export interface TrainingWeek {
   tags: string[];
   title: string;
   text: string;
+  /** Een losse regel onder de week, bijvoorbeeld een variant voor een sector. */
+  note?: string;
 }
 
 export interface TrainingFaq {
@@ -172,8 +185,11 @@ export interface TrainingPageLayoutProps {
   heroPhoto?: HeroPhoto;
   /** Eigen logorij in de lichte hero. Zonder dit staan de logo's van home er. */
   heroLogos?: { src: string; alt: string; className?: string }[];
-  /** Vervangt de link naar de verzuimrekenmachine naast de offerteknop. */
-  heroSecondaryLink?: { label: string; to: string };
+  /**
+   * Vervangt de link naar de verzuimrekenmachine naast de offerteknop. Met
+   * null staat er geen tweede link.
+   */
+  heroSecondaryLink?: { label: string; to: string } | null;
   /** Een andere quote onder "Wat deelnemers merken" dan op home. `null` laat hem weg. */
   participantQuote?: string | null;
   /** Een andere uitspraak op de herofoto dan op home. */
@@ -182,6 +198,25 @@ export interface TrainingPageLayoutProps {
   heroColourLogos?: boolean;
   /** Eigen teksten voor het masterclassblok, zie MasterclassStepsSection. */
   masterclassTexts?: { ns: string; prefix: string };
+  /** Een eigen knop in het masterclassblok, in plaats van de masterclassknop. */
+  masterclassAction?: ReactNode;
+  /** Vervangt de offerteknop in de lichte hero door een eigen knop. */
+  heroPrimaryAction?: ReactNode;
+  /** Laat de klantquote over de herofoto weg. */
+  heroHideQuote?: boolean;
+  /** Direct onder de hero, bijvoorbeeld een cijferband. */
+  afterHero?: ReactNode;
+  /** Tussen "Herken je dit?" en de effectkaarten. */
+  afterChallenges?: ReactNode;
+  /** Laat het gedeelde blok "Groepstraining voor échte gedragsverandering" weg. */
+  hideProgramOverview?: boolean;
+  /**
+   * Laat het gedeelde blok "Wat deelnemers merken" na het programma weg, voor
+   * een pagina die zelf al effectkaarten met citaten van deelnemers heeft.
+   */
+  hideParticipantResults?: boolean;
+  /** Laat "Waarom organisaties voor ons kiezen" weg. */
+  hideWhyChooseUs?: boolean;
   /**
    * Komt na de effectkaarten in plaats van de eerste fotobreak, bijvoorbeeld
    * de cijfers van een klant. Alleen in de opbouw met heroPhoto.
@@ -207,10 +242,18 @@ const TrainingPageLayout = ({
   heroPhoto,
   heroLogos,
   heroSecondaryLink,
+  heroPrimaryAction,
+  heroHideQuote = false,
+  afterHero,
+  afterChallenges,
+  hideProgramOverview = false,
+  hideParticipantResults = false,
+  hideWhyChooseUs = false,
   participantQuote,
   heroPhotoQuote,
   heroColourLogos,
   masterclassTexts,
+  masterclassAction,
   afterResults,
 }: TrainingPageLayoutProps) => {
   const { t } = useTranslation("training");
@@ -314,6 +357,8 @@ const TrainingPageLayout = ({
           secondaryLink={heroSecondaryLink}
           photoQuote={heroPhotoQuote}
           colourLogos={heroColourLogos}
+          primaryAction={heroPrimaryAction}
+          hideQuote={heroHideQuote}
         />
       ) : (
         <section id="hero" className="relative min-h-screen flex items-start sm:items-center overflow-hidden text-white">
@@ -451,6 +496,8 @@ const TrainingPageLayout = ({
         </section>
       )}
 
+      {afterHero}
+
       {/* Introblok. Alleen tonen als de pagina een `intro` heeft in training.json.
           Staat bewust vlak onder de hero: een crawler en een AI-antwoordmachine
           pakken het eerste tekstblok van een pagina het zwaarst mee. */}
@@ -474,9 +521,11 @@ const TrainingPageLayout = ({
               components={[<span className="text-brand-orange" />]}
             />
           </h2>
-          <p className="text-xl md:text-2xl text-brand-gray-medium text-center leading-relaxed mb-12">
-            {t(`${tKey}.challenges.subtitle`)}
-          </p>
+          {t(`${tKey}.challenges.subtitle`, { defaultValue: "" }) && (
+            <p className="text-xl md:text-2xl text-brand-gray-medium text-center leading-relaxed mb-12">
+              {t(`${tKey}.challenges.subtitle`)}
+            </p>
+          )}
 
           <div className="grid grid-cols-1 md:grid-cols-6 gap-8 max-w-6xl mx-auto">
             {challenges.map((c, i) => {
@@ -500,6 +549,8 @@ const TrainingPageLayout = ({
         </div>
       </section>
 
+      {afterChallenges}
+
       {/* Results */}
       <section className={`py-16 md:py-24 ${resultsBg}`}>
         <div className="container mx-auto px-4">
@@ -510,9 +561,13 @@ const TrainingPageLayout = ({
               components={[<span className="text-brand-orange" />]}
             />
           </h2>
-          <p className="text-xl md:text-2xl text-brand-gray-medium text-center leading-relaxed mb-12">
-            {t(`${tKey}.results.subtitle`)}
-          </p>
+          {t(`${tKey}.results.subtitle`, { defaultValue: "" }) ? (
+            <p className="text-xl md:text-2xl text-brand-gray-medium text-center leading-relaxed mb-12">
+              {t(`${tKey}.results.subtitle`)}
+            </p>
+          ) : (
+            <div className="mb-6" />
+          )}
 
           <div className="grid grid-cols-1 md:grid-cols-6 gap-8 max-w-6xl mx-auto">
             {results.map((r, i) => {
@@ -521,8 +576,16 @@ const TrainingPageLayout = ({
                 total === 5 && i === 3 ? "md:col-start-2"
                 : total === 4 && i === 3 ? "md:col-start-3"
                 : "";
+              /* Kaarten met een citaat (de medewerkerspagina) delen per rij hun
+                 regels: icoon, kop, tekst en citaat. Dan staan koppen, teksten en
+                 citaten in een rij op gelijke hoogte, hoe de koppen ook
+                 afbreken. Omsorteren hielp alleen op brede schermen en in het
+                 Nederlands. De andere pagina's houden hun eigen opbouw. */
+              const rijUitlijning = r.quote && r.text
+                ? "md:grid md:[grid-template-rows:subgrid] md:row-span-4 md:gap-y-4 md:space-y-0"
+                : "";
               return (
-                <div key={i} className={`md:col-span-2 ${offset} ${resultCardBg} p-6 rounded-lg space-y-4`}>
+                <div key={i} className={`md:col-span-2 ${offset} ${resultCardBg} p-6 rounded-lg space-y-4 flex flex-col ${rijUitlijning}`}>
                   {r.stats ? (
                     /* Zelfde hoogte als het icoonvak op kaarten zonder cijfer,
                        zodat de koppen op één lijn blijven. */
@@ -542,14 +605,32 @@ const TrainingPageLayout = ({
                     </div>
                   )}
                   <h3 className="text-xl md:text-2xl font-bold text-brand-gray-dark text-center">{r.title}</h3>
-                  <div className="space-y-2">
-                    {r.bullets.map((b, j) => (
-                      <div key={j} className="flex items-start gap-2">
-                        <CheckCircle className="h-5 w-5 text-brand-orange flex-shrink-0 mt-0.5" />
-                        <p className="text-xl text-brand-gray-medium leading-relaxed">{b}</p>
-                      </div>
-                    ))}
-                  </div>
+                  {r.text && (
+                    <p className="text-xl text-brand-gray-medium leading-relaxed text-center">{r.text}</p>
+                  )}
+                  {r.bullets && (
+                    <div className="space-y-2">
+                      {r.bullets.map((b, j) => (
+                        <div key={j} className="flex items-start gap-2">
+                          <CheckCircle className="h-5 w-5 text-brand-orange flex-shrink-0 mt-0.5" />
+                          <p className="text-xl text-brand-gray-medium leading-relaxed">{b}</p>
+                        </div>
+                      ))}
+                    </div>
+                  )}
+                  {r.quote && (
+                    /* Op mobiel onderaan de kaart. Vanaf md staat het citaat in zijn
+                       eigen gedeelde regel, en dan bovenaan die regel, zodat de lijnen
+                       erboven in een rij gelijk lopen. */
+                    <figure className="mt-auto md:mt-0 border-t border-gray-200 pt-4">
+                      <blockquote className="text-lg italic text-brand-purple leading-relaxed">
+                        &ldquo;{r.quote}&rdquo;
+                      </blockquote>
+                      {r.quoteBy && (
+                        <figcaption className="mt-2 text-base text-brand-gray-medium">{r.quoteBy}</figcaption>
+                      )}
+                    </figure>
+                  )}
                 </div>
               );
             })}
@@ -586,11 +667,13 @@ const TrainingPageLayout = ({
       {heroPhoto && (afterResults ?? <CohortPhotoSection />)}
 
       {/* Program Overview (shared, already i18n) */}
-      <ProgramOverviewSection
-        hideOutroCta={showMethodCtaAfterWeeks || showBookingCtas}
-        bookingCta={showBookingCtas}
-        fourthFeature="workbook"
-      />
+      {!hideProgramOverview && (
+        <ProgramOverviewSection
+          hideOutroCta={showMethodCtaAfterWeeks || showBookingCtas}
+          bookingCta={showBookingCtas}
+          fourthFeature="workbook"
+        />
+      )}
 
       {heroPhoto && (
         <CohortPhotoSection
@@ -687,6 +770,11 @@ const TrainingPageLayout = ({
                   </div>
                   <h3 className="text-xl font-bold text-brand-gray-dark">{w.title}</h3>
                   <p className="text-lg text-brand-gray-medium leading-relaxed">{w.text}</p>
+                  {w.note && (
+                    <p className="text-lg text-brand-purple leading-relaxed border-t border-gray-200 pt-3">
+                      {w.note}
+                    </p>
+                  )}
                 </div>
               ))}
             </div>
@@ -711,7 +799,7 @@ const TrainingPageLayout = ({
 
       {heroPhoto && (
         <>
-          <ResultsSection quote={participantQuote} />
+          {!hideParticipantResults && <ResultsSection quote={participantQuote} />}
           <CohortPhotoSection
             src={masterclassAudience}
             alt={tCommon("masterclass.imageAlt")}
@@ -725,13 +813,13 @@ const TrainingPageLayout = ({
       {/* Letterlijk hetzelfde blok als op home, tot en met de achtergrond:
           off-white sectie met witte kaarten. Het hing eerst aan heroPhoto,
           waardoor de stress- en prestatiepagina nog het oude blok kregen. */}
-      {!hideMasterclass && <MasterclassStepsSection background="off-white" texts={masterclassTexts} />}
+      {!hideMasterclass && <MasterclassStepsSection background="off-white" texts={masterclassTexts} primaryAction={masterclassAction} />}
 
       {extraSection}
 
       {/* Wit, want het masterclassblok erboven is nu off-white en de FAQ
           eronder ook. */}
-      <WhyChooseUsSection bookingCta={showBookingCtas} background="white" />
+      {!hideWhyChooseUs && <WhyChooseUsSection bookingCta={showBookingCtas} background="white" />}
 
       {belowFaqSection}
 

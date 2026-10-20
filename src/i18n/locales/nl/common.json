@@ -20,14 +20,6 @@
     "employability": {
       "label": "Scale-ups",
       "description": "Meer focus, in dezelfde uren"
-    },
-    "stress": {
-      "label": "Stressmanagement",
-      "description": "Verminder spanning en druk"
-    },
-    "performance": {
-      "label": "Prestatie Verbeteren",
-      "description": "Verbeter focus en prestaties"
     }
   },
   "cta": {
@@ -56,7 +48,7 @@
     "linkedinAria": "Innerleaps op LinkedIn",
     "trainingsHeading": "Trainingen",
     "trainingsAria": "Trainingen",
-    "performanceLink": "Focus & prestaties",
+    "employeesLink": "Voor medewerkers",
     "contactHeading": "Contact",
     "copyright": "© 2026 Innerleaps",
     "privacy": "Privacybeleid",

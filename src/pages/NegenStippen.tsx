@@ -163,8 +163,10 @@ const NegenStippen = () => {
                 >
                   Minder spanning & druk in mijn leven
                 </Link>
+                {/* Wees ooit naar /prestatie-training. Die pagina is op 20
+                    oktober 2026 samengevoegd met de stresspagina. */}
                 <Link 
-                  to="/prestatie-training"
+                  to="/stressmanagement-training"
                   className="px-8 py-4 bg-brand-purple text-white text-lg font-semibold rounded-lg hover:bg-brand-purple/90 transition-colors shadow-md text-center"
                 >
                   Met meer focus beter presteren

@@ -236,322 +236,148 @@
   },
   "stress": {
     "meta": {
-      "title": "Stress management training | Innerleaps",
-      "description": "Innerleaps lowers stress through attention training: spot stress signals earlier and recover faster. 6 weeks, based on neuroscience research."
+      "title": "Attention training for employees: focus and calm | Innerleaps",
+      "description": "6 weeks of attention training in a small live group. Notice tension sooner and get your focus back faster. About 15 minutes a day."
     },
     "hero": {
-      "badge": "Scientifically proven training",
-      "title": "Less <0>pressure</0> and more <0>peace of mind</0>",
-      "subtitle": "Scientifically proven stress management training for peace of mind and more joy in your life.",
-      "cta": "Sign up for the training",
-      "statsTitle": "Why participants choose us",
-      "stats": [
+      "badge": "6 weeks · live group · 15 minutes a day",
+      "title": "More <0>focus</0>. Less <0>noise</0> in your head.",
+      "subtitle": "6 weeks of attention training in a small live group. You learn to bring your focus back, and to notice tension before it takes over.",
+      "cta": "Suggest it to your employer"
+    },
+    "statsBand": {
+      "items": [
         {
-          "label": "Pressure & stress",
-          "value": "-50%"
+          "value": "68%",
+          "label": "noticed less stress and tension"
         },
         {
-          "label": "Focus",
-          "value": "+24%"
+          "value": "55%",
+          "label": "spent less time on autopilot"
         },
         {
-          "label": "Life satisfaction",
-          "value": "+15%"
+          "value": "55%",
+          "label": "felt less mentally drained"
         },
         {
-          "label": "Science",
-          "value": "40+ years"
+          "value": "9.3",
+          "label": "for the trainer"
         }
-      ]
+      ],
+      "source": "Evaluation by 22 participants at TheyDo, 2026"
     },
     "challenges": {
-      "title": "<0>A lot of pressure</0> and <0>little peace of mind</0>",
+      "title": "Keeping <0>all the balls</0> in the air",
       "subtitle": "Does this sound familiar?",
       "items": [
         {
-          "icon": "Brain",
-          "title": "Little peace of mind",
-          "text": "Your head is often full. Even in the evening all sorts of things keep playing through your mind."
+          "icon": "Layers",
+          "title": "Always switching",
+          "text": "You jump from task to task. Every message pulls you out, and getting back into your work takes longer each time."
+        },
+        {
+          "icon": "Activity",
+          "title": "On autopilot",
+          "text": "Your days fly by. You get through your list, but you're rarely fully there."
+        },
+        {
+          "icon": "BellRing",
+          "title": "Tension you notice too late",
+          "text": "Only afterwards do you realise how tense you were. Tight shoulders, a short fuse, shallow breathing."
         },
         {
           "icon": "Moon",
-          "title": "Trouble relaxing",
-          "text": "During free moments or holidays you can't really let go. You're there but you're not really there."
+          "title": "Work comes home with you",
+          "text": "The laptop is shut, but your head is still at work. In the evening, and sometimes at night."
         },
         {
-          "icon": "AlertCircle",
-          "title": "Quickly irritated",
-          "text": "Small things can throw you off balance. A busy household, a colleague asking something, traffic. It costs you more energy than you'd like."
+          "icon": "BatteryLow",
+          "title": "Empty by 4pm",
+          "text": "Your head is full by mid-afternoon. Decisions take more effort, and there's little left for the evening."
+        }
+      ]
+    },
+    "sticks": {
+      "title": "Knowing is easy. <0>Keeping it up</0> isn't.",
+      "intro": "Almost everyone has downloaded Headspace, Insight Timer or another app to help with stress. Or maybe you've been to a workshop about it. The hard part is building new habits, so you keep using what you learned. That's exactly the problem our training is built around.",
+      "items": [
+        {
+          "title": "A fixed hour every week",
+          "text": "6 live sessions with the same group and the same trainer, during working hours."
         },
         {
-          "icon": "Frown",
-          "title": "Less enjoyment",
-          "text": "You notice you no longer fully enjoy the nice moments. You're there but your head is often somewhere else."
+          "title": "Someone who shows you how",
+          "text": "You don't need to know where to start. The trainer takes you through it step by step."
         },
         {
-          "icon": "BedDouble",
-          "title": "Hard to switch off at night",
-          "text": "You want to sleep but your head is still busy. You long for a good night's rest."
+          "title": "Recognising tension",
+          "text": "You learn more than exercises. You also learn to recognise the signal of tension, and what to do then. So it doesn't build up."
         }
       ]
     },
     "results": {
-      "title": "<0>Peace of mind</0> and a life full of <0>joy</0>",
-      "subtitle": "Scientifically proven effects:",
+      "title": "What participants <0>notice</0> after 6 weeks",
       "items": [
         {
+          "icon": "BellRing",
+          "title": "You see tension coming",
+          "text": "You recognise tension before it takes over, and you know what you can do about it.",
+          "quote": "Learning to recognize the signs of stress before they become too much",
+          "quoteBy": "Participant at TheyDo"
+        },
+        {
+          "icon": "Target",
+          "title": "Back to your work faster",
+          "text": "You notice sooner when your mind wanders. Your concentration is stronger and you get distracted less easily.",
+          "quote": "Short exercises can increase my focus and wellbeing",
+          "quoteBy": "Participant at TheyDo"
+        },
+        {
           "icon": "Brain",
-          "title": "Quiet thoughts",
-          "bullets": [
-            "Your thoughts are where you want them to be. You feel peace of mind.",
-            "Scientifically proven to measurably reduce pressure."
-          ]
+          "title": "Less going round in circles",
+          "text": "You notice when you're overthinking, and you can step out of it.",
+          "quote": "More control of my thoughts",
+          "quoteBy": "Participant at TheyDo"
         },
         {
-          "icon": "Heart",
-          "title": "Truly enjoying things",
-          "bullets": [
-            "You're really there in what you're doing. Moments with family, friends or for yourself become full again.",
-            "Attention training makes people more satisfied with their life."
-          ]
+          "icon": "BatteryCharging",
+          "title": "Energy left at the end of the day",
+          "text": "You take more breaks and feel they're not lost time. After a short break, you go back to work with full focus.",
+          "quote": "Taking a break is not wasting time. That was the biggest shift for me.",
+          "quoteBy": "Participant at TheyDo"
         },
         {
-          "icon": "Shield",
-          "title": "Emotions under control",
-          "bullets": [
-            "Small irritations get to you less quickly. You respond consciously instead of automatically.",
-            "Participants develop better control over their reactions."
-          ]
+          "icon": "Eye",
+          "title": "Off autopilot",
+          "text": "You're mentally present. Whether you're in a meeting or in a conversation at home, your mind is in that moment.",
+          "quote": "Stop being on autopilot and observe what you're doing",
+          "quoteBy": "Participant at TheyDo"
+        }
+      ]
+    },
+    "whoJoins": {
+      "title": "Not for people who can't cope, but for people who <0>carry a lot</0>.",
+      "text": "Developers, account managers, HR advisers, marketers, journalists, lecturers, teachers and members of the leadership team. Different jobs, the same full head. They've all taken part in our training."
+    },
+    "group": {
+      "title": "You don't have to <0>share</0> anything you don't want to",
+      "text": "1 live hour a week, online, in a group of 15 at most. The trainer asks questions, and what you say about yourself is up to you.",
+      "quotes": [
+        {
+          "text": "I'm not someone who finds it easy to share in a group setting, but Wineke made the space feel safe enough to do that.",
+          "by": "Participant at TheyDo"
         },
         {
-          "icon": "Smile",
-          "title": "More joy in life",
-          "bullets": [
-            "You pick up details again that you used to miss. Food tastes better, conversations feel deeper, walks give you energy.",
-            "Lasting behavioural change. Not a temporary effect."
-          ]
-        },
-        {
-          "icon": "Moon",
-          "title": "Better sleep quality",
-          "bullets": [
-            "Your head settles down before you go to sleep. You fall asleep more easily and wake up more rested.",
-            "Participants sleep noticeably better."
-          ]
+          "text": "She did a great job, I was very happy with the training and content",
+          "by": "Participant at TheyDo"
         }
       ]
     },
     "weeks": {
-      "title": "The <0>6-week</0> Vitality Plus programme",
+      "title": "What you'll <0>actually do</0>",
       "intro": [
-        "In the Vitality Plus programme a different theme is covered each week. The programme is set up this way to create lasting impact."
+        "In the workshops you learn new exercises and tools. You practise with them for about 15 minutes a day: partly in your free time, and partly while you're simply doing other things, like brushing your teeth or the laundry."
       ],
-      "imageAlt": "People during attention and concentration training for better performance and less stress",
-      "items": [
-        {
-          "week": "Week 1",
-          "tags": [
-            "Control centre"
-          ],
-          "title": "Breaking through autopilot",
-          "text": "Where are your thoughts while you're brushing your teeth? Probably already in your first meeting or your to-do list. Learn to notice when your thoughts wander off and bring your attention back to what you're doing right now. You train your control centre by consciously paying attention to your current activity, again and again."
-        },
-        {
-          "week": "Week 2",
-          "tags": [
-            "Warning system"
-          ],
-          "title": "Spotting early warning signals",
-          "text": "Train your warning system so you notice tense shoulders, a tight jaw or shallow breathing before pressure takes over. You take back control because your feeling antennas get sharper."
-        },
-        {
-          "week": "Week 3",
-          "tags": [
-            "Control centre",
-            "Warning system"
-          ],
-          "title": "Working with pressure and stress",
-          "text": "Under pressure your working memory often gets overloaded. This week you learn a short 3-minute exercise that quickly brings your head back to a calm and clear state. You also discover how to plan smart breaks. So you stay sharp throughout the day."
-        },
-        {
-          "week": "Week 4",
-          "tags": [
-            "Control centre",
-            "Warning system"
-          ],
-          "title": "Mental clarity",
-          "text": "Not every thought is a fact. You learn to recognise the difference between productive thinking and getting stuck in rumination. You also learn to observe your thoughts instead of going along with them. The result: more peace of mind and less worrying."
-        },
-        {
-          "week": "Week 5",
-          "tags": [
-            "Warning system"
-          ],
-          "title": "Stress recovery through kindness",
-          "text": "The inner critic works harder under pressure. Learn to treat yourself with kindness. It's the switch that calms your nervous system and creates space for clear thinking."
-        },
-        {
-          "week": "Week 6",
-          "tags": [
-            "Control centre",
-            "Warning system"
-          ],
-          "title": "Lasting integration into your life",
-          "text": "Recognise your thought patterns and make the techniques you've learned a lasting part of your daily routine. Build your own toolbox for any situation."
-        }
-      ]
-    },
-    "faq": {
-      "title": "Frequently asked questions",
-      "items": [
-        {
-          "q": "Why are the masterclass and the training online?",
-          "a": "Research shows that online is just as effective as in person. Because it's just as effective, we choose the option that costs participants the least time. No travel time, just from home or the office."
-        },
-        {
-          "q": "Why would my employer want to cover the training?",
-          "a": "Stress costs employers a huge amount of money. Both in sick leave and in lower performance. Employers are happy to help you improve this. We hand you a brochure that makes it easy for your employer to understand and approve."
-        },
-        {
-          "q": "15 minutes of practice a day. How does that work?",
-          "a": "When you start you get a workbook from us. It contains a piece of theory and short exercises for each week. You also receive audio recordings of the exercises. Some exercises you do during daily activities like brushing your teeth, showering or doing the dishes. So no extra time. Other exercises take about 12 minutes. For those, you need a quiet spot."
-        },
-        {
-          "q": "What are the exercises?",
-          "a": "Participants do their \"brain push-ups\" in two ways. In the planned training you do a 12-minute audio exercise each day where you focus your attention on your breathing or your body. Sounds easy? Your mind doesn't think so. Within seconds you're thinking about your to-do's or that meeting. Every moment you bring your focus back is the push-up that strengthens your control centre. You also train in your daily life by bringing conscious attention to everyday activities. During your morning coffee, on your way to work or before you go into an important meeting. It costs no extra time and you become more productive in what you do."
-        },
-        {
-          "q": "What if I miss a week?",
-          "a": "If you miss a session you can call the trainer to still get all the information. The workbook also contains everything you need. For the best result it's important not to miss more than one session."
-        },
-        {
-          "q": "What is the foundation of Innerleaps?",
-          "a": "Innerleaps' awareness trainings build on evidence-based programmes such as MBSR, MBCT and WorkplaceMT. The foundation rests on 12 scientific studies, including multiple meta-analyses and randomized controlled trials. The evidence is strong enough that the U.S. military has incorporated attention training into its official doctrine (U.S. Army Field Manual 7-22), and organisations like Google, Apple, Microsoft, Nestlé and Unilever have implemented similar programmes."
-        },
-        {
-          "q": "What does an Innerleaps programme deliver?",
-          "a": "Research into this kind of training finds less stress, fewer burnout symptoms, more resilience and better sleep. Take stress: compare someone who did the training with someone who didn't, and in 65 to 72% of cases the trained person has less stress.\n\nProductivity goes up too. The effect is smaller, but it is the result the studies agree on most.\n\nThe risk of long-term absence drops by 70% (from 54.4% to 16.4%). And the drop in stress lasts: studies that checked back three months to a year later still found measurably less stress."
-        },
-        {
-          "q": "How does Innerleaps improve my performance?",
-          "a": "Innerleaps improves your performance by optimising working memory, the mental \"workbench\" where thinking, deciding and acting happen. This works through three mechanisms:\n\nFirst, relevant information is selected faster and irrelevant information is suppressed better. Your concentration increases, distraction decreases. Research shows up to 24% improvement on attention tasks (Jha et al., 2021).\n\nSecond, stress and pressure normally occupy a large share of working memory. When that pressure decreases, capacity is freed up for the task itself.\n\nThird, working memory becomes more efficient: better results with less neural effort (Bailey et al., 2020). You perform sharper and have energy left at the end of the day."
-        }
-      ]
-    }
-  },
-  "performance": {
-    "meta": {
-      "title": "Performance training for focus and productivity | Innerleaps",
-      "description": "Innerleaps improves performance under pressure with focused attention training. Employees train focus and attention in 6 weeks. Based on the method used by top athletes and world-class CEOs."
-    },
-    "hero": {
-      "badge": "Scientifically proven training",
-      "title": "Improve <0>performance</0> with a stronger <0>brain</0>",
-      "subtitle": "Scientifically proven training to improve performance. Mental sharpness with more focus for better performance.",
-      "cta": "Sign up for the training",
-      "statsTitle": "Why participants choose us",
-      "stats": [
-        {
-          "label": "Focus, fewer mistakes",
-          "value": "+24%"
-        },
-        {
-          "label": "Performance",
-          "value": "+10%"
-        },
-        {
-          "label": "Sleep",
-          "value": "+28%"
-        },
-        {
-          "label": "Science",
-          "value": "40+ years"
-        }
-      ]
-    },
-    "challenges": {
-      "title": "You want to <0>perform</0> better",
-      "subtitle": "Sound familiar?",
-      "items": [
-        {
-          "icon": "Brain",
-          "title": "Distraction costs you focus",
-          "text": "You get pulled out of concentration easily. Deep work takes more effort than it used to and you drift off faster."
-        },
-        {
-          "icon": "AlertCircle",
-          "title": "Mental fatigue throughout the day",
-          "text": "By midday your head already feels full. Decisions cost more energy and your sharpness drops."
-        },
-        {
-          "icon": "Activity",
-          "title": "Not performing at your best",
-          "text": "You know there is more in you. You hit your targets, but it feels like your full potential is not being used."
-        },
-        {
-          "icon": "AlertCircle",
-          "title": "Busy but not always effective",
-          "text": "You work hard, but not everything you do delivers the same result. Setting priorities does not always work well."
-        },
-        {
-          "icon": "BedDouble",
-          "title": "Not recovering well",
-          "text": "Even while you sleep, your head sometimes stays on. As a result you do not really wake up rested and you notice that you forget things faster or remember less well."
-        }
-      ]
-    },
-    "results": {
-      "title": "Perform <0>better</0> with more <0>focus</0>",
-      "subtitle": "Scientifically proven effects:",
-      "items": [
-        {
-          "icon": "Brain",
-          "title": "Sharper focus",
-          "bullets": [
-            "Your attention is where you want it. Deep work becomes easier and distractions have less grip on you.",
-            "In attention tests participants make fewer mistakes after the training."
-          ]
-        },
-        {
-          "icon": "Activity",
-          "title": "More mental energy",
-          "bullets": [
-            "Your head stays clear throughout the day. Decisions take less effort and you finish your workday with energy to spare.",
-            "Reduced mental fatigue thanks to more efficient brain use."
-          ]
-        },
-        {
-          "icon": "CheckCircle",
-          "title": "Higher productivity",
-          "bullets": [
-            "You get more out of your day. Better focus means better output in less time.",
-            "Scientifically proven: participants perform better."
-          ]
-        },
-        {
-          "icon": "Brain",
-          "title": "Clear prioritising",
-          "bullets": [
-            "You make the right choices faster. Higher awareness gives insight into what really matters.",
-            "Better decision-making by training your neocortex."
-          ]
-        },
-        {
-          "icon": "BedDouble",
-          "title": "Better sleep and stronger memory",
-          "bullets": [
-            "You really calm your mind before going to sleep. You wake up more rested and notice that you remember things more easily.",
-            "Participants sleep better and remember information more easily."
-          ]
-        }
-      ]
-    },
-    "weeks": {
-      "title": "The <0>6-week</0> core programme",
-      "intro": [
-        "In the core programme a different theme is covered each week. The programme is set up this way to create lasting impact."
-      ],
-      "imageAlt": "People during an attention and concentration training for better performance and less stress",
       "items": [
         {
           "week": "Week 1",
@@ -593,7 +419,8 @@
             "Control centre"
           ],
           "title": "Better collaboration through conscious listening",
-          "text": "Under pressure you often start formulating your reply while the other person is still talking. Learn to truly listen, take perspective and respond from understanding instead of reflex."
+          "text": "Under pressure you often start formulating your reply while the other person is still talking. Learn to truly listen, take perspective and respond from understanding instead of reflex.",
+          "note": "Working in education, healthcare or government? Then week 5 is about going easier on yourself when things get busy."
         },
         {
           "week": "Week 6",
@@ -606,40 +433,79 @@
         }
       ]
     },
+    "introSteps": {
+      "headlinePart1": "Free masterclass",
+      "headlinePart2": "at your office",
+      "intro": "We work with employers. You can introduce us, and we'll come by for free.",
+      "steps": {
+        "call": {
+          "eyebrow": "01 · 20 min",
+          "title": "Getting acquainted",
+          "description": "You introduce us to your manager or HR. In a short call we see whether it fits."
+        },
+        "masterclass": {
+          "eyebrow": "02 · 60 min",
+          "title": "Free masterclass",
+          "description": "Your team tries the method for themselves, at the office or online. Nobody is committed to anything."
+        },
+        "programme": {
+          "eyebrow": "03 · 6 weeks",
+          "title": "Joining",
+          "description": "Anyone who's interested joins the training. Often from their own learning budget."
+        }
+      },
+      "imageAlt": "Innerleaps trainer leading an interactive masterclass with participants raising their hands"
+    },
+    "mail": {
+      "subject": "A training I'd like to do with the team",
+      "body": "Hi,\n\nI've been reading up on a training for focus and workload, and I'd like to do it with the team. What it gets you: you work with more focus and you're less bothered by stress. At TheyDo, participants said after 6 weeks that they were 8.6% more productive.\n\nYou don't have to say yes straight away. There's a free 1-hour masterclass first, to try it out. Could we perhaps plan it for the next time we're all together?\n\n{{link}}"
+    },
+    "mailDialog": {
+      "title": "Send this to your employer",
+      "gmail": "Open in Gmail",
+      "outlook": "Open in Outlook",
+      "mailApp": "Open in your mail app",
+      "copy": "Copy the text",
+      "copied": "Copied"
+    },
     "faq": {
       "title": "Frequently asked questions",
       "items": [
         {
-          "q": "Why are the masterclass and training online?",
-          "a": "Research has shown that online is just as effective as in-person. Because it is just as effective, we choose the option that takes the least time for participants. No travel time, just from home or the office."
+          "q": "Is this woolly?",
+          "a": "No, it's actually very practical. You learn short exercises you can use at work straight away, and you don't have to believe in anything."
         },
         {
-          "q": "Why would my employer want to cover the training?",
-          "a": "Stress costs employers a lot of money. In absenteeism as well as in reduced performance. Employers want to help you improve this. We give you a brochure that makes it easy for your employer to understand and approve."
+          "q": "Do I have to talk about myself in the group?",
+          "a": "No. The trainer asks questions and you can respond. What you share is up to you."
         },
         {
-          "q": "15 minutes of practice per day, how does that work?",
-          "a": "When you start, you receive a workbook from us. It contains a piece of theory for each week and short exercises. You also receive audio recordings of the exercises. Some exercises you do during daily activities like brushing your teeth, showering or doing the dishes, so no extra time. Other exercises take about 12 minutes. For those, you need a quiet spot."
+          "q": "Does my employer see how I'm doing?",
+          "a": "No. If we measure the effect, your employer only sees the results for the whole group."
         },
         {
-          "q": "What are the exercises?",
-          "a": "Participants do their \"brain push-ups\" in two ways. Planned training (12 minutes per day): daily audio exercises in which you focus your attention on your breathing or your body. Sounds easy? Your mind hates it. Within seconds you are thinking about your to-dos or that meeting. Every moment you bring your focus back is the push-up that strengthens your control centre. Training in your daily life: you bring conscious attention to everyday activities. During your morning coffee, on the way to work, or before an important meeting. You train your brain to be sharp when it matters. It costs no extra time and you become more productive in what you do."
+          "q": "How much time does it really take?",
+          "a": "1 hour a week for the live session, and about 15 minutes of practice, 5 days a week. Some of it you do during things you already do, like making coffee."
+        },
+        {
+          "q": "I tried an app and stopped. Why would this be different?",
+          "a": "Almost everyone stops using an app. After a month, about 4 in 100 still use it. Here you practise for 6 weeks with a fixed group and a trainer, and you learn to practise when you feel tension. That's what turns it into a habit."
         },
         {
           "q": "What if I miss a week?",
-          "a": "If you miss a session you can call the trainer to receive all the information anyway. All necessary information is also in the workbook. For the best result it is important not to miss more than one session."
+          "a": "Call or email the trainer and you'll hear what you missed. Everything is in the workbook too. Try not to miss more than 1 session."
         },
         {
-          "q": "What is the foundation of Innerleaps?",
+          "q": "Is it online?",
+          "a": "Usually, yes. No travel time, and you can join from home or the office. On location is possible too."
+        },
+        {
+          "q": "How do I get it paid for?",
+          "a": "Ask your manager or HR. Many companies pay from the learning budget. Send them this page, or request a free masterclass together."
+        },
+        {
+          "q": "What is it based on?",
           "a": "Innerleaps' awareness trainings build on evidence-based programmes such as MBSR, MBCT and WorkplaceMT. The foundation rests on 12 scientific studies, including multiple meta-analyses and randomized controlled trials. The evidence is strong enough that the U.S. military has incorporated attention training into its official doctrine (U.S. Army Field Manual 7-22), and organisations like Google, Apple, Microsoft, Nestlé and Unilever have implemented similar programmes."
-        },
-        {
-          "q": "What does an Innerleaps programme deliver?",
-          "a": "Research into this kind of training finds less stress, fewer burnout symptoms, more resilience and better sleep. Take stress: compare someone who did the training with someone who didn't, and in 65 to 72% of cases the trained person has less stress.\n\nProductivity goes up too. The effect is smaller, but it is the result the studies agree on most.\n\nThe risk of long-term absence drops by 70% (from 54.4% to 16.4%). And the drop in stress lasts: studies that checked back three months to a year later still found measurably less stress."
-        },
-        {
-          "q": "How does Innerleaps improve my performance?",
-          "a": "Innerleaps improves your performance by optimising working memory, the mental \"workbench\" where thinking, deciding and acting happen. This works through three mechanisms:\n\nFirst, relevant information is selected faster and irrelevant information is suppressed better. Your concentration increases, distraction decreases. Research shows up to 24% improvement on attention tasks (Jha et al., 2021).\n\nSecond, stress and pressure normally occupy a large share of working memory. When that pressure decreases, capacity is freed up for the task itself.\n\nThird, working memory becomes more efficient: better results with less neural effort (Bailey et al., 2020). You perform sharper and have energy left at the end of the day."
         }
       ]
     }

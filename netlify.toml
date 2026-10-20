@@ -54,12 +54,34 @@
   to = "/duurzame-inzetbaarheid"
   status = 301
 
-# Zelfde verhaal als hierboven: oudere Lovable-benaming, was al een redirect
-# naar /prestatie-training, en die pagina bestaat nog steeds onder die naam.
-# Google gaf hem terug als 404 (Search Console, 17 september 2026).
+# De pagina voor medewerkers. Op 20 oktober 2026 zijn de stress- en de
+# prestatiepagina samengevoegd tot één pagina op /stressmanagement-training.
+# Alle oude paden wijzen daar rechtstreeks naartoe, zonder tussenstation.
+#
+# /prestatie-programma is een oudere Lovable-benaming die eerst naar
+# /prestatie-training wees. Google gaf hem terug als 404 (Search Console,
+# 17 september 2026).
+#
+# /stressmanagement-programma is er ook zo een. Die gaf live nog een 404,
+# terwijl Search Console er 135 vertoningen op had staan (oktober 2026).
+[[redirects]]
+  from = "/prestatie-training"
+  to = "/stressmanagement-training"
+  status = 301
+
+[[redirects]]
+  from = "/en/performance-training"
+  to = "/en/stress-management-training"
+  status = 301
+
 [[redirects]]
   from = "/prestatie-programma"
-  to = "/prestatie-training"
+  to = "/stressmanagement-training"
+  status = 301
+
+[[redirects]]
+  from = "/stressmanagement-programma"
+  to = "/stressmanagement-training"
   status = 301
 
 # De teampagina is drie keer hernoemd. Alle oude paden wijzen daarom direct naar

@@ -22,7 +22,6 @@ const LevenVragenlijstResultaat = lazy(() => import("./pages/LevenVragenlijstRes
 const LifeQuestionnaire = lazy(() => import("./pages/LifeQuestionnaire"));
 const LifeQuestionnaireResult = lazy(() => import("./pages/LifeQuestionnaireResult"));
 const StressManagement = lazy(() => import("./pages/StressManagement"));
-const PrestatieProgramma = lazy(() => import("./pages/PrestatieProgramma"));
 const Vitaliteitstraining = lazy(() => import("./pages/Vitaliteitsprogramma"));
 const DuurzameInzetbaarheidTraining = lazy(() => import("./pages/DuurzameInzetbaarheidTraining"));
 const Blog = lazy(() => import("./pages/Blog"));
@@ -141,7 +140,6 @@ const App = () => {
                 <Route path="/en/sustainable-employability" element={<Vitaliteitstraining />} />
                 <Route path="/en/improve-team-performance" element={<DuurzameInzetbaarheidTraining />} />
                 <Route path="/en/stress-management-training" element={<StressManagement />} />
-                <Route path="/en/performance-training" element={<PrestatieProgramma />} />
                 <Route path="/en/blog" element={<Blog />} />
                 <Route path="/en/case-studies/theydo" element={<KlantcaseTheydo />} />
                 <Route path="/en/blog/reducing-absenteeism-evidence-based-approach-2025" element={<ZiekteverzuimVerlagen />} />
@@ -160,7 +158,6 @@ const App = () => {
                 <Route path="/signup" element={<Signup />} />
                 <Route path="/9-stippen" element={<NegenStippen />} />
                 <Route path="/stressmanagement-training" element={<StressManagement />} />
-                <Route path="/prestatie-training" element={<PrestatieProgramma />} />
                 <Route path="/duurzame-inzetbaarheid" element={<Vitaliteitstraining />} />
                 <Route path="/team-prestaties-verbeteren" element={<DuurzameInzetbaarheidTraining />} />
                 <Route path="/blog" element={<Blog />} />

@@ -100,36 +100,20 @@
 
   <!-- Afspraak plannen -->
 
-  <!-- Stress Management -->
+  <!-- Voor medewerkers (stress en prestatie samengevoegd, 20-10-2026) -->
   <url>
     <loc>https://innerleaps.nl/stressmanagement-training</loc>
-    <lastmod>2026-08-24</lastmod>
+    <lastmod>2026-10-20</lastmod>
     <xhtml:link rel="alternate" hreflang="nl" href="https://innerleaps.nl/stressmanagement-training" />
     <xhtml:link rel="alternate" hreflang="en" href="https://innerleaps.nl/en/stress-management-training" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://innerleaps.nl/stressmanagement-training" />
   </url>
   <url>
     <loc>https://innerleaps.nl/en/stress-management-training</loc>
-    <lastmod>2026-08-24</lastmod>
+    <lastmod>2026-10-20</lastmod>
     <xhtml:link rel="alternate" hreflang="nl" href="https://innerleaps.nl/stressmanagement-training" />
     <xhtml:link rel="alternate" hreflang="en" href="https://innerleaps.nl/en/stress-management-training" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://innerleaps.nl/stressmanagement-training" />
-  </url>
-
-  <!-- Performance Training -->
-  <url>
-    <loc>https://innerleaps.nl/prestatie-training</loc>
-    <lastmod>2026-08-24</lastmod>
-    <xhtml:link rel="alternate" hreflang="nl" href="https://innerleaps.nl/prestatie-training" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://innerleaps.nl/en/performance-training" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://innerleaps.nl/prestatie-training" />
-  </url>
-  <url>
-    <loc>https://innerleaps.nl/en/performance-training</loc>
-    <lastmod>2026-08-24</lastmod>
-    <xhtml:link rel="alternate" hreflang="nl" href="https://innerleaps.nl/prestatie-training" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://innerleaps.nl/en/performance-training" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://innerleaps.nl/prestatie-training" />
   </url>
 
   <!-- Blog index -->

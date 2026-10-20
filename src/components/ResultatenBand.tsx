@@ -14,6 +14,8 @@ export interface ResultatenBandStat {
 
 interface ResultatenBandProps {
   stats: ResultatenBandStat[];
+  /** Waar de cijfers vandaan komen, klein onder de band. Zonder dit staat er niets. */
+  source?: string;
 }
 
 /** Hoe lang het oplopen duurt. Kort met opzet: het moet levendig voelen, niet
@@ -105,12 +107,22 @@ const OplopendGetal = ({ value }: { value: string }) => {
  * geen label erboven, geen strepen en geen bronregel, alleen het getal met
  * zijn onderschrift.
  */
-const ResultatenBand = ({ stats }: ResultatenBandProps) => (
+const ResultatenBand = ({ stats, source }: ResultatenBandProps) => (
   <section className="bg-brand-purple py-12 md:py-16">
-    <div className="container-custom grid gap-10 md:gap-8 md:grid-cols-3 text-center">
+    {/* Vier cijfers passen op een telefoon twee aan twee. De sleutel is de
+        plek en niet het cijfer: op de medewerkerspagina staat 55% twee keer. */}
+    <div
+      className={`container-custom grid gap-10 md:gap-8 text-center ${
+        stats.length === 4 ? "grid-cols-2 lg:grid-cols-4" : "md:grid-cols-3"
+      }`}
+    >
       {stats.map((stat, i) => (
-        <div key={stat.value}>
-          <p className={`text-6xl md:text-7xl font-bold ${i === 0 ? "text-brand-orange" : "text-white"}`}>
+        <div key={i}>
+          <p
+            className={`${stats.length === 4 ? "text-5xl md:text-6xl xl:text-7xl" : "text-6xl md:text-7xl"} font-bold ${
+              i === 0 ? "text-brand-orange" : "text-white"
+            }`}
+          >
             {/* Spatie in de tekst, geen marge: anders leest een schermlezer of
                 Google "tot12". */}
             {stat.prefix && <span className="text-3xl md:text-4xl">{stat.prefix} </span>}
@@ -120,6 +132,9 @@ const ResultatenBand = ({ stats }: ResultatenBandProps) => (
         </div>
       ))}
     </div>
+    {source && (
+      <p className="container-custom mt-10 text-base text-white/70 text-center">{source}</p>
+    )}
   </section>
 );
 

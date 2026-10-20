@@ -69,8 +69,9 @@ interface HeroSectionProps {
   /**
    * Vervangt de link naar de verzuimrekenmachine naast de offerteknop. Op de
    * scale-up-pagina, waar verzuim geen ingang is, wijst hij naar de klantcase.
+   * Met null staat er geen tweede link.
    */
-  secondaryLink?: { label: string; to: string };
+  secondaryLink?: { label: string; to: string } | null;
   /**
    * Een andere uitspraak van Jochem op de foto dan op home. Op de pagina voor
    * de publieke sector staat zijn slaapquote, want zijn productiviteitsquote
@@ -84,13 +85,33 @@ interface HeroSectionProps {
    * anders staat er een wit vlak op de beige hero.
    */
   colourLogos?: boolean;
+  /**
+   * Vervangt de offerteknop. Op de medewerkerspagina is dat de mailknop naar
+   * de werkgever: een offerte is voor een medewerker een stap te ver.
+   */
+  primaryAction?: ReactNode;
+  /** Laat de klantquote over de foto weg. */
+  hideQuote?: boolean;
 }
 
-const HeroSection = ({ title, badge, subtitle, photo, logos = LOGOS, secondaryLink, photoQuote, colourLogos = false }: HeroSectionProps = {}) => {
+const HeroSection = ({
+  title,
+  badge,
+  subtitle,
+  photo,
+  logos = LOGOS,
+  secondaryLink,
+  photoQuote,
+  colourLogos = false,
+  primaryAction,
+  hideQuote = false,
+}: HeroSectionProps = {}) => {
   const { t } = useTranslation();
   const { pathname } = useLocation();
   const lang = detectLanguageFromPath(pathname);
   const [isCalculatorOpen, setIsCalculatorOpen] = useState(false);
+  // Alleen zonder eigen link staat de link naar de verzuimrekenmachine er.
+  const toonRekenlink = secondaryLink === undefined;
 
   return (
     <>
@@ -124,19 +145,21 @@ const HeroSection = ({ title, badge, subtitle, photo, logos = LOGOS, secondaryLi
                 id="hero-cta"
                 className="mt-8 flex flex-col lg:flex-row lg:flex-wrap lg:items-center gap-4 lg:gap-6"
               >
-                <Link
-                  to={offertePad(lang)}
-                  state={{ van: pathname }}
-                  onClick={() => meldOfferteKlik("hero")}
-                  className="block lg:inline-block"
-                >
-                  <Button
-                    size="lg"
-                    className="w-full lg:w-auto min-h-[44px] font-semibold py-4 px-8 rounded-lg text-base lg:text-lg shadow-xl"
+                {primaryAction ?? (
+                  <Link
+                    to={offertePad(lang)}
+                    state={{ van: pathname }}
+                    onClick={() => meldOfferteKlik("hero")}
+                    className="block lg:inline-block"
                   >
-                    {t("cta.requestQuote")}
-                  </Button>
-                </Link>
+                    <Button
+                      size="lg"
+                      className="w-full lg:w-auto min-h-[44px] font-semibold py-4 px-8 rounded-lg text-base lg:text-lg shadow-xl"
+                    >
+                      {t("cta.requestQuote")}
+                    </Button>
+                  </Link>
+                )}
                 {secondaryLink ? (
                   <Link
                     to={secondaryLink.to}
@@ -144,7 +167,7 @@ const HeroSection = ({ title, badge, subtitle, photo, logos = LOGOS, secondaryLi
                   >
                     {secondaryLink.label} <span aria-hidden="true">→</span>
                   </Link>
-                ) : (
+                ) : toonRekenlink && (
                   <button
                     type="button"
                     onClick={() => setIsCalculatorOpen(true)}
@@ -221,6 +244,7 @@ const HeroSection = ({ title, badge, subtitle, photo, logos = LOGOS, secondaryLi
               {/* Springt uit de foto: steekt verder over de rand. Zelfde
                   schaduw als de foto eronder en de primaire knop. Portret en
                   naam zoals bij de klantquote onder de resultaten. */}
+              {!hideQuote && (
               <figure
                 className={`relative lg:absolute ${
                   photo?.quotePosition === "top-right"
@@ -250,6 +274,7 @@ const HeroSection = ({ title, badge, subtitle, photo, logos = LOGOS, secondaryLi
                   </div>
                 </figcaption>
               </figure>
+              )}
             </div>
           </div>
         </div>
@@ -275,7 +300,7 @@ const HeroSection = ({ title, badge, subtitle, photo, logos = LOGOS, secondaryLi
         </div>
       </section>
 
-      {!secondaryLink && (
+      {toonRekenlink && (
         <Suspense fallback={null}>
           <CalculatorModal isOpen={isCalculatorOpen} onClose={() => setIsCalculatorOpen(false)} />
         </Suspense>
