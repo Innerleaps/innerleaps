@@ -64,7 +64,7 @@ const LandingPage = () => {
       <StickyCtaButtons />
       <div id="home">
         {/* Scale-ups hebben geen verzuimcijfer, dus geen rekenmachine hier maar de klantcase. */}
-        <HeroSection secondaryLink={{ label: t("hero.caseLink"), to: caseHref }} />
+        <HeroSection secondaryLink={{ label: t("hero.caseLink"), to: caseHref }} colourLogos />
       </div>
       <ProblemSection />
       <CohortPhotoSection />
