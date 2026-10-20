@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useLocation } from "react-router-dom";
+import { detectLanguageFromPath } from "@/i18n/config";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import {
@@ -28,9 +29,12 @@ interface WerkgeverMailKnopProps {
  * lukt.
  *
  * Er gaat niets via Innerleaps. De tekst staat in training.json onder
- * `stress.mail`, met de link naar deze pagina op de plek van {{link}}. Die link
- * is het vaste adres, zonder de hostnaam van de omgeving, zodat de mail op een
- * branch-deploy dezelfde is als live.
+ * `stress.mail`, met de link naar de homepage op de plek van {{link}}: de
+ * ontvanger is de werkgever, en de homepage is de pagina voor organisaties.
+ * Een klikbaar woord kan niet in een mail die via een link wordt aangemaakt,
+ * die is altijd platte tekst. Het adres zelf maken mailprogramma's wel
+ * klikbaar. Het is het vaste adres, zonder de hostnaam van de omgeving, zodat
+ * de mail op een branch-deploy dezelfde is als live.
  */
 const WerkgeverMailKnop = ({ positie, className = "" }: WerkgeverMailKnopProps) => {
   const { t } = useTranslation("training");
@@ -39,7 +43,8 @@ const WerkgeverMailKnop = ({ positie, className = "" }: WerkgeverMailKnopProps) 
   const [gekopieerd, setGekopieerd] = useState(false);
 
   const onderwerp = t("stress.mail.subject");
-  const tekst = t("stress.mail.body", { link: `${SITE_URL}${pathname}` });
+  const homepage = detectLanguageFromPath(pathname) === "en" ? `${SITE_URL}/en` : SITE_URL;
+  const tekst = t("stress.mail.body", { link: homepage });
   const o = encodeURIComponent(onderwerp);
   // Regeleinden als CRLF voor mailto, zoals de standaard (RFC 6068) ze wil.
   // Met alleen LF plakken sommige mailprogramma's de alinea's aan elkaar.

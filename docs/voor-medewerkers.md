@@ -502,3 +502,15 @@ de afzender neer.
   korte oefeningen die je meteen op je werk gebruikt, en je hoeft nergens in te
   geloven." Niet "100% wetenschappelijk onderbouwd": dat kan niemand hard maken,
   en de nadruk op wetenschap maakte deelnemers juist sceptisch.
+
+## 8. Feedback van Bas, 20-10-2026 (ronde 5)
+
+- **Kop**: "Voor wie een hoop <0>ballen in de lucht</0> houdt" (EN "For people who
+  <0>carry a lot</0>"). Het stuk "Niet voor mensen die te gespannen zijn" is eruit.
+- **Mail** in de woorden van Bas, onderwerp "Iets voor ons?". Rechtgezet:
+  "aandachttraining" zonder s (de vaste naam), "stressmanagement" aan elkaar,
+  "masterclass" met kleine letter, "team- of bedrijfsmoment".
+- **Link in de mail** wijst naar de homepage, de pagina voor organisaties. Een
+  klikbaar woord kan niet in een mail die via een link wordt aangemaakt; het
+  adres staat daarom tussen haakjes achter "Innerleaps".
+

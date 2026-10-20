@@ -356,7 +356,7 @@
       ]
     },
     "whoJoins": {
-      "title": "Niet voor mensen die te gespannen zijn, maar voor wie een hoop <0>ballen in de lucht</0> houdt.",
+      "title": "Voor wie een hoop <0>ballen in de lucht</0> houdt",
       "text": "Developers, accountmanagers, HR-adviseurs, marketeers, journalisten, docenten, leerkrachten en directieleden. Verschillende banen, hetzelfde volle hoofd. Ze hebben allemaal al meegedaan aan onze trainingen."
     },
     "group": {
@@ -457,8 +457,8 @@
       "imageAlt": "Innerleaps-trainer geeft een interactieve masterclass, deelnemers steken hun hand op"
     },
     "mail": {
-      "subject": "Een training die ik graag met het team zou doen",
-      "body": "Hoi,\n\nIk heb me ingelezen in een training voor focus en werkdruk, en ik zou die graag met het team doen. Wat het oplevert: je werkt geconcentreerder en hebt minder last van stress. Bij TheyDo gaven deelnemers na 6 weken zelf aan dat ze 8,6% productiever waren.\n\nJe hoeft niet meteen ja te zeggen. Er is eerst een gratis masterclass van een uur om het te ervaren. Kunnen we die misschien inplannen bij ons volgende gezamenlijke moment?\n\n{{link}}"
+      "subject": "Iets voor ons?",
+      "body": "Hoi,\n\nZoals je weet staat onze organisatie niet stil. Werkdruk kan oplopen en het is niet altijd even makkelijk om je goed te focussen op je werk. Ik kwam Innerleaps ({{link}}) tegen, met hun aandachttraining helpen zij teams met stressmanagement en focus. Het ziet er allemaal goed uit. Ze bieden ook een gratis masterclass aan waarmee ze ons de methode kunnen laten ervaren. Misschien goed voor ons volgende team- of bedrijfsmoment. Wat denk jij?"
     },
     "mailDialog": {
       "title": "Stuur dit naar je werkgever",

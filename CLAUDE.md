@@ -189,7 +189,8 @@ participant insights" in de Second Brain. Alle teksten zijn door Bas gekozen.
 - **Geen offerteknop.** De knop "Stel het voor aan je werkgever"
   (`WerkgeverMailKnop.tsx`) opent een venster met de mail uit `stress.mail` en
   vier wegen: Gmail, Outlook (web, werkaccounts), het mailprogramma (mailto) en
-  kopiëren. **Geen kale mailto-link**: die doet niets bij wie alleen webmail
+  kopiëren. De link in de mail wijst naar de homepage, want de ontvanger is de
+  werkgever. **Geen kale mailto-link**: die doet niets bij wie alleen webmail
   heeft, en ook niet in het voorbeeldvenster van Claude. Er gaat niets via
   Innerleaps. Meten: `employer_mail_click` (openen) en `employer_mail_option`
   met de gekozen weg.

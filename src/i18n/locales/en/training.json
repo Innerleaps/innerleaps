@@ -356,7 +356,7 @@
       ]
     },
     "whoJoins": {
-      "title": "Not for people who can't cope, but for people who <0>carry a lot</0>.",
+      "title": "For people who <0>carry a lot</0>",
       "text": "Developers, account managers, HR advisers, marketers, journalists, lecturers, teachers and members of the leadership team. Different jobs, the same full head. They've all taken part in our training."
     },
     "group": {
@@ -457,8 +457,8 @@
       "imageAlt": "Innerleaps trainer leading an interactive masterclass with participants raising their hands"
     },
     "mail": {
-      "subject": "A training I'd like to do with the team",
-      "body": "Hi,\n\nI've been reading up on a training for focus and workload, and I'd like to do it with the team. What it gets you: you work with more focus and you're less bothered by stress. At TheyDo, participants said after 6 weeks that they were 8.6% more productive.\n\nYou don't have to say yes straight away. There's a free 1-hour masterclass first, to try it out. Could we perhaps plan it for the next time we're all together?\n\n{{link}}"
+      "subject": "Something for us?",
+      "body": "Hi,\n\nAs you know, our organisation never stands still. Workload can pile up, and it isn't always easy to focus on your work. I came across Innerleaps ({{link}}). With their attention training they help teams with stress management and focus. It all looks good. They also offer a free masterclass so we can experience the method. Might be good for our next team or company get-together. What do you think?"
     },
     "mailDialog": {
       "title": "Send this to your employer",
