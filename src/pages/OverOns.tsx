@@ -10,6 +10,7 @@ import { Button } from "@/components/ui/button";
 import { useEffect } from "react";
 import PageSeo from "@/components/PageSeo";
 import { useTranslation } from "react-i18next";
+import { Languages } from "lucide-react";
 
 // Trainer photos
 import winekePhoto from "@/assets/Vitaliteitstrainer_Wineke_van_Aken.webp";
@@ -17,41 +18,59 @@ import annePhoto from "@/assets/Vitaliteitstrainer_Anne_Linnebank.webp";
 import davePhoto from "@/assets/Vitaliteitstrainer_Dave_Hoppema.webp";
 import jacquelinePhoto from "@/assets/Vitaliteitstrainer_Jacqueline_Henock.webp";
 
-// Badges
-import vmbnBadge from "@/assets/Aaccreditatie_voor_Vitaliteitsprogramma.webp";
+// Badges. Alleen het ovaal: "Trainer categorie 1" eronder is op labelformaat
+// onleesbaar.
+import vmbnOvaal from "@/assets/Aaccreditatie_voor_Vitaliteitsprogramma_ovaal.webp";
 import waaromWijAfbeelding from "@/assets/waarom_wij_dit_werk_doen.webp";
 
-// Wineke's logos
-import winekeOliverLogo from "@/assets/Vitaliteitsprogramma_Oliver_Wyman.webp";
-import winekeSygnificLogo from "@/assets/Vitaliteitsprogramma_Sygnific.webp";
-import winekeCordaanLogo from "@/assets/Vitaliteitsprogramma_Cordaan.webp";
-import winekeGemeenteLogo from "@/assets/Vitaliteitsprogramma_Gemeente_Den_Haag.webp";
-import winekeSpiritLogo from "@/assets/Vitaliteitsprogramma_Spirit.webp";
-import winekeVULogo from "@/assets/Vitaliteitsprogramma_VU_amsterdam.webp";
-import winekeLeaseLogo from "@/assets/Vitaliteitsprogramma_Leaseplan.webp";
-import winekeTele2Logo from "@/assets/Vitaliteitsprogramma_Tele2.webp";
+// Wineke's logos. In trainerlogos/ staan ze in kleur op een doorzichtige
+// achtergrond en strak bijgesneden, gemaakt voor de lichte kaarten hier: wit
+// in een logo neemt de kleur van de kaart aan. DHL is de rode letters zonder
+// het gele vlak, Humanitas de blauwe letters zonder het blauwe vlak. De
+// originelen staan ook op andere pagina's en blijven zoals ze zijn.
+import winekeOliverLogo from "@/assets/trainerlogos/Vitaliteitsprogramma_Oliver_Wyman.webp";
+import winekeSygnificLogo from "@/assets/trainerlogos/Vitaliteitsprogramma_Sygnific.webp";
+import winekeCordaanLogo from "@/assets/trainerlogos/Vitaliteitsprogramma_Cordaan.webp";
+import winekeGemeenteLogo from "@/assets/trainerlogos/Vitaliteitsprogramma_Gemeente_Den_Haag.webp";
+import winekeSpiritLogo from "@/assets/trainerlogos/Vitaliteitsprogramma_Spirit.webp";
+import winekeVULogo from "@/assets/trainerlogos/Vitaliteitsprogramma_VU_amsterdam.webp";
+import winekeLeaseLogo from "@/assets/trainerlogos/Vitaliteitsprogramma_Leaseplan.webp";
+import winekeTele2Logo from "@/assets/trainerlogos/Vitaliteitsprogramma_Tele2.webp";
 
 // Dave's logos
-import daveParnassiaLogo from "@/assets/Vitaliteitsprogramma_Parnassia_groep.webp";
-import daveLentizLogo from "@/assets/Vitaliteitsprogramma_Lentiz.webp";
-import davePrimoLogo from "@/assets/Vitaliteitsprogramma_primo-2.webp";
-import daveMinisterieLogo from "@/assets/Vitaliteitsprogramma_Ministerie_van_justitie_en_veiligheid-2.webp";
-import daveYouTalentLogo from "@/assets/Vitaliteitsprogramma_You_Talent-3.webp";
-import daveRijksLogo from "@/assets/Vitaliteitsprogramma_Rijkswaterstaat-3.webp";
-import davePolitieLogo from "@/assets/Vitaliteitsprogramma_Politite-4.webp";
+import daveParnassiaLogo from "@/assets/trainerlogos/Vitaliteitsprogramma_Parnassia_groep.webp";
+import daveLentizLogo from "@/assets/trainerlogos/Vitaliteitsprogramma_Lentiz.webp";
+import davePrimoLogo from "@/assets/trainerlogos/Vitaliteitsprogramma_Primo.webp";
+import daveMinisterieLogo from "@/assets/trainerlogos/Vitaliteitsprogramma_Ministerie_van_Justitie_en_Veiligheid.webp";
+import daveYouTalentLogo from "@/assets/trainerlogos/Vitaliteitsprogramma_You_Talent.webp";
+import daveRijksLogo from "@/assets/trainerlogos/Vitaliteitsprogramma_Rijkswaterstaat.webp";
+import davePolitieLogo from "@/assets/trainerlogos/Vitaliteitsprogramma_Politie.webp";
 
 // Anne's logos
-import dhlLogo from "@/assets/Vitaliteitsprogramma_DHL-2.webp";
-import affiniusLogo from "@/assets/Vitaliteitsprogramma_Affinius_Capital-2.webp";
+import dhlLogo from "@/assets/trainerlogos/Vitaliteitsprogramma_DHL.webp";
+import affiniusLogo from "@/assets/trainerlogos/Vitaliteitsprogramma_Affinius_Capital.webp";
 
 // Jacqueline's logos
-import jacquelineGGZLogo from "@/assets/Vitaliteitsprogramma_GGZ_centraal.webp";
-import jacquelineHumanitasLogo from "@/assets/Vitaliteitsprogramma_Humanitas.webp";
-import jacquelinePlevierLogo from "@/assets/Vitaliteitsprogramma_Plevier.webp";
-import jacquelineCarelLogo from "@/assets/Vitaliteitsprogramma_Carel_Lurvink.webp";
-import jacquelinePALogo from "@/assets/Vitaliteitsprogramma_PA_consulting-3.webp";
-import jacquelineNobelLogo from "@/assets/Vitaliteitsprogramma_nobel_recruitment-3.webp";
-import jacquelineHollandLogo from "@/assets/Vitaliteitsprogramma_Holland_Colours-3.webp";
+import jacquelineGGZLogo from "@/assets/trainerlogos/Vitaliteitsprogramma_GGZ_centraal.webp";
+import jacquelineHumanitasLogo from "@/assets/trainerlogos/Vitaliteitsprogramma_Humanitas.webp";
+import jacquelinePlevierLogo from "@/assets/trainerlogos/Vitaliteitsprogramma_Plevier.webp";
+import jacquelineCarelLogo from "@/assets/trainerlogos/Vitaliteitsprogramma_Carel_Lurvink.webp";
+import jacquelinePALogo from "@/assets/trainerlogos/Vitaliteitsprogramma_PA_consulting.webp";
+import jacquelineNobelLogo from "@/assets/trainerlogos/Vitaliteitsprogramma_Nobel_recruitment.webp";
+import jacquelineHollandLogo from "@/assets/trainerlogos/Vitaliteitsprogramma_Holland_Colours.webp";
+
+/* Elk logo krijgt ongeveer hetzelfde oppervlak, niet dezelfde hoogte. Bij een
+   vaste hoogte werd Oliver Wyman (7 keer zo breed als hoog) een balk over de
+   halve kaart en het wapen van Den Haag een postzegel. Zo oogt elk logo even
+   zwaar. Breedte en hoogte zijn die van het bestand, voor de verhouding. */
+const LOGO_OPPERVLAK = 2800;
+const LOGO_MAX_HOOGTE = 44;
+
+const logoBreedte = (width: number, height: number) => {
+  const verhouding = width / height;
+  const hoogte = Math.min(LOGO_MAX_HOOGTE, Math.sqrt(LOGO_OPPERVLAK / verhouding));
+  return Math.round(hoogte * verhouding);
+};
 
 const OverOns = () => {
   const { t } = useTranslation("overons");
@@ -65,56 +84,56 @@ const OverOns = () => {
       key: "wineke",
       name: "Wineke van Aken",
       photo: winekePhoto,
-      languages: [t("languages.nl"), t("languages.en")],
+      languages: t("languages.nlEn"),
       logos: [
-        { src: winekeOliverLogo, alt: "Vitaliteitstraining Oliver Wyman" },
-        { src: winekeSygnificLogo, alt: "Vitaliteitstraining Sygnific" },
-        { src: winekeCordaanLogo, alt: "Vitaliteitstraining Cordaan" },
-        { src: winekeGemeenteLogo, alt: "Vitaliteitstraining Gemeente Den Haag" },
-        { src: winekeSpiritLogo, alt: "Vitaliteitstraining Spirit" },
-        { src: winekeVULogo, alt: "Vitaliteitstraining VU Amsterdam" },
-        { src: winekeLeaseLogo, alt: "Vitaliteitstraining Leaseplan" },
-        { src: winekeTele2Logo, alt: "Vitaliteitstraining Tele2" },
+        { src: winekeOliverLogo, alt: "Vitaliteitstraining Oliver Wyman", width: 674, height: 95 },
+        { src: winekeSygnificLogo, alt: "Vitaliteitstraining Sygnific", width: 116, height: 57 },
+        { src: winekeCordaanLogo, alt: "Vitaliteitstraining Cordaan", width: 105, height: 75 },
+        { src: winekeGemeenteLogo, alt: "Vitaliteitstraining Gemeente Den Haag", width: 101, height: 96 },
+        { src: winekeSpiritLogo, alt: "Vitaliteitstraining Spirit", width: 358, height: 100 },
+        { src: winekeVULogo, alt: "Vitaliteitstraining VU Amsterdam", width: 296, height: 72 },
+        { src: winekeLeaseLogo, alt: "Vitaliteitstraining Leaseplan", width: 171, height: 95 },
+        { src: winekeTele2Logo, alt: "Vitaliteitstraining Tele2", width: 248, height: 95 },
       ],
     },
     {
       key: "dave",
       name: "Dave Hoppema",
       photo: davePhoto,
-      languages: [t("languages.nl"), t("languages.en")],
+      languages: t("languages.nlEn"),
       logos: [
-        { src: daveParnassiaLogo, alt: "Vitaliteitstraining Parnassia Groep" },
-        { src: daveLentizLogo, alt: "Vitaliteitstraining Lentiz" },
-        { src: davePrimoLogo, alt: "Vitaliteitstraining Primo" },
-        { src: daveMinisterieLogo, alt: "Vitaliteitstraining Ministerie van Justitie en Veiligheid" },
-        { src: daveYouTalentLogo, alt: "Vitaliteitstraining You Talent" },
-        { src: daveRijksLogo, alt: "Vitaliteitstraining Rijkswaterstaat" },
-        { src: davePolitieLogo, alt: "Vitaliteitstraining Politie" },
+        { src: daveParnassiaLogo, alt: "Vitaliteitstraining Parnassia Groep", width: 226, height: 85 },
+        { src: daveLentizLogo, alt: "Vitaliteitstraining Lentiz", width: 314, height: 100 },
+        { src: davePrimoLogo, alt: "Vitaliteitstraining Primo", width: 208, height: 100 },
+        { src: daveMinisterieLogo, alt: "Vitaliteitstraining Ministerie van Justitie en Veiligheid", width: 195, height: 100 },
+        { src: daveYouTalentLogo, alt: "Vitaliteitstraining You Talent", width: 164, height: 100 },
+        { src: daveRijksLogo, alt: "Vitaliteitstraining Rijkswaterstaat", width: 259, height: 98 },
+        { src: davePolitieLogo, alt: "Vitaliteitstraining Politie", width: 269, height: 98 },
       ],
     },
     {
       key: "anne",
       name: "Anne Linnebank",
       photo: annePhoto,
-      languages: [t("languages.nl"), t("languages.en")],
+      languages: t("languages.nlEn"),
       logos: [
-        { src: dhlLogo, alt: "Vitaliteitstraining DHL" },
-        { src: affiniusLogo, alt: "Vitaliteitstraining Affinius Capital" },
+        { src: dhlLogo, alt: "Vitaliteitstraining DHL", width: 202, height: 28 },
+        { src: affiniusLogo, alt: "Vitaliteitstraining Affinius Capital", width: 100, height: 100 },
       ],
     },
     {
       key: "jacqueline",
       name: "Jacqueline Henock",
       photo: jacquelinePhoto,
-      languages: [t("languages.nl")],
+      languages: t("languages.nl"),
       logos: [
-        { src: jacquelineGGZLogo, alt: "Vitaliteitstraining GGZ Centraal" },
-        { src: jacquelineHumanitasLogo, alt: "Vitaliteitstraining Humanitas" },
-        { src: jacquelinePlevierLogo, alt: "Vitaliteitstraining Plevier Speciaal Onderwijs" },
-        { src: jacquelineCarelLogo, alt: "Vitaliteitstraining Carel Lurvink Industry" },
-        { src: jacquelinePALogo, alt: "Vitaliteitstraining PA Consulting" },
-        { src: jacquelineNobelLogo, alt: "Vitaliteitstraining Nobel Recruitment" },
-        { src: jacquelineHollandLogo, alt: "Vitaliteitstraining Holland Colours" },
+        { src: jacquelineGGZLogo, alt: "Vitaliteitstraining GGZ Centraal", width: 217, height: 90 },
+        { src: jacquelineHumanitasLogo, alt: "Vitaliteitstraining Humanitas", width: 212, height: 35 },
+        { src: jacquelinePlevierLogo, alt: "Vitaliteitstraining Plevier Speciaal Onderwijs", width: 144, height: 100 },
+        { src: jacquelineCarelLogo, alt: "Vitaliteitstraining Carel Lurvink Industry", width: 122, height: 100 },
+        { src: jacquelinePALogo, alt: "Vitaliteitstraining PA Consulting", width: 112, height: 100 },
+        { src: jacquelineNobelLogo, alt: "Vitaliteitstraining Nobel Recruitment", width: 328, height: 100 },
+        { src: jacquelineHollandLogo, alt: "Vitaliteitstraining Holland Colours", width: 162, height: 90 },
       ],
     },
   ];
@@ -159,57 +178,59 @@ const OverOns = () => {
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-purple leading-tight mb-12 text-center">
               {t("trainersSection.titlePrefix")} <span className="text-brand-orange">{t("trainersSection.titleAccent")}</span> {t("trainersSection.titleSuffix")}
             </h2>
-            <div className="grid md:grid-cols-1 lg:grid-cols-2 gap-8">
-              {trainers.map((trainer, index) => (
-                <div key={index} className="bg-white rounded-xl shadow-lg p-8 space-y-6">
-                  <h3 className="text-2xl md:text-3xl font-bold text-brand-purple text-center">{trainer.name}</h3>
-
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                    <div className="space-y-4 flex flex-col items-center">
-                      <img
-                        src={trainer.photo}
-                        alt={`Vitaliteitstrainer ${trainer.name}`}
-                        className="rounded-full w-40 h-40 object-cover shadow-md"
-                      />
-
-                      <div className="flex gap-4 items-center justify-center flex-wrap">
-                        <img
-                          src={vmbnBadge}
-                          alt={t("trainersSection.vmbnAlt")}
-                          className="h-16 object-contain"
-                        />
-                        <div className="flex gap-2 flex-wrap">
-                          {trainer.languages.map((lang, langIndex) => (
-                            <span
-                              key={langIndex}
-                              className="px-3 py-1 rounded-full text-base font-medium bg-brand-orange text-white"
-                            >
-                              {lang}
-                            </span>
-                          ))}
-                        </div>
-                      </div>
-                    </div>
-
-                    <div className="flex items-start">
-                      <div className="bg-brand-off-white p-4 rounded-lg border-l-4 border-brand-orange h-full flex items-center">
-                        <p className="text-base md:text-lg italic text-brand-gray-medium leading-snug">
-                          "{t(`trainers.${trainer.key}.quote`)}"
-                        </p>
-                      </div>
-                    </div>
+            {/* Op brede schermen delen de twee kaarten in een rij hun regels
+                (subgrid): kop, bio en logo's beginnen naast elkaar op dezelfde
+                hoogte, ook als de ene bio langer is dan de andere. */}
+            <div className="grid gap-8 lg:grid-cols-2">
+              {trainers.map((trainer) => (
+                <article
+                  key={trainer.key}
+                  className="flex flex-col gap-6 rounded-2xl bg-brand-off-white p-6 sm:p-8 lg:grid lg:[grid-template-rows:subgrid] lg:row-span-3"
+                >
+                  {/* Op mobiel staan de labels onder foto en naam, anders passen
+                      ze niet naast de foto. */}
+                  <div className="grid grid-cols-[auto_1fr] items-center gap-x-5 gap-y-4">
+                    <img
+                      src={trainer.photo}
+                      alt={`Vitaliteitstrainer ${trainer.name}`}
+                      className="h-24 w-24 rounded-full object-cover shadow-md ring-4 ring-white sm:row-span-2 sm:h-28 sm:w-28"
+                    />
+                    <h3 className="text-2xl md:text-3xl font-bold text-brand-purple sm:self-end">{trainer.name}</h3>
+                    <ul className="col-span-2 flex flex-wrap gap-2 sm:col-span-1 sm:self-start">
+                      <li className="inline-flex items-center gap-2 rounded-full bg-white px-4 py-1.5 text-lg font-semibold text-brand-purple">
+                        <img src={vmbnOvaal} alt="" className="h-6 w-auto" width="283" height="168" />
+                        {t("trainersSection.accredited")}
+                      </li>
+                      <li className="inline-flex items-center gap-2 rounded-full bg-white px-4 py-1.5 text-lg font-semibold text-brand-purple">
+                        <Languages className="h-5 w-5 text-brand-orange" aria-hidden="true" />
+                        {trainer.languages}
+                      </li>
+                    </ul>
                   </div>
 
-                  <div className="pt-4 border-t border-brand-gray-light">
-                    <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">{t(`trainers.${trainer.key}.body`)}</p>
-                  </div>
+                  <p className="text-xl text-brand-gray-medium leading-relaxed">{t(`trainers.${trainer.key}.body`)}</p>
 
-                  <div className="flex gap-5 items-center justify-center pt-4 border-t border-brand-gray-light flex-wrap">
-                    {trainer.logos.map((logo, i) => (
-                      <img key={i} src={logo.src} alt={logo.alt} className="h-[50px] object-contain" />
-                    ))}
+                  <div className="self-start w-full border-t border-brand-purple/10 pt-6">
+                    <p className="text-base font-semibold uppercase tracking-wide text-brand-gray-medium">
+                      {t("trainersSection.logosLabel")}
+                    </p>
+                    <ul className="mt-4 grid grid-cols-3 gap-x-4 gap-y-5 sm:grid-cols-4 sm:gap-x-6">
+                      {trainer.logos.map((logo) => (
+                        <li key={logo.alt} className="flex h-12 items-center justify-center">
+                          <img
+                            src={logo.src}
+                            alt={logo.alt}
+                            width={logo.width}
+                            height={logo.height}
+                            style={{ width: logoBreedte(logo.width, logo.height) }}
+                            className="h-auto max-w-full"
+                            loading="lazy"
+                          />
+                        </li>
+                      ))}
+                    </ul>
                   </div>
-                </div>
+                </article>
               ))}
             </div>
           </div>
