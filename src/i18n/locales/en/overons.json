@@ -14,28 +14,25 @@
     "titlePrefix": "Our",
     "titleAccent": "accredited",
     "titleSuffix": "trainers",
-    "vmbnAlt": "VMBN Accredited Vitality Trainer"
+    "accredited": "VMBN accredited",
+    "logosLabel": "Trained teams at"
   },
   "languages": {
-    "nl": "Dutch",
-    "en": "English"
+    "nlEn": "Dutch and English",
+    "nl": "Dutch"
   },
   "trainers": {
     "wineke": {
-      "body": "Wineke has been working as a trainer for 15 years and has delivered trainings at Tele2, Leaseplan, VU and the Municipality of The Hague among others. Before becoming a trainer she spent 17 years in commercial and corporate roles, including project manager, marketing and communications advisor and consultant.",
-      "quote": "Wineke has a practical, down to earth approach with concrete tools. I can now take a step back, spot stress signals sooner, work more efficiently and I am happier with my results."
+      "body": "Before she became a trainer, Wineke spent 17 years in business as a project manager, consultant and communications adviser. She has now been training teams for 15 years. Participants call her practical and down to earth."
     },
     "dave": {
-      "body": "Dave is a trainer with 8 years of experience and has delivered trainings at Rijkswaterstaat, the National Police, the Ministry of Justice and Security, Parnassia Group and various education and talent organisations. Before that he worked for 15 years as an editor and content manager.",
-      "quote": "engaged, open and friendly, with clear explanations. Because he shares his own experiences, the training feels approachable and I am allowed to 'make mistakes'."
+      "body": "Dave was an editor and content manager for 15 years. He has been a trainer for 8 years now, mostly in government, healthcare and education. He shares his own experiences, which makes it easy for others to join in."
     },
     "anne": {
-      "body": "Anne is an experienced and certified trainer with 8 years of experience and has given trainings at DHL and Affinius Capital among others. Before that she spent 15 years in marketing and communications roles at BAT and Ziggo.",
-      "quote": "Anne really gets me. She explains her knowledge in a fun and easy to follow way. I feel more productive and happier than ever!"
+      "body": "Anne worked in marketing and communications at BAT and Ziggo for 15 years. She has been a trainer for 8 years. She explains things without jargon, and participants feel she really understands them."
     },
     "jacqueline": {
-      "body": "Jacqueline started as a trainer in 2017 and has worked with Holland Colours, Carel Lurvink, PA Consulting, Nobel Recruitment, Humanitas and GGZ Centraal among others. Her earlier career includes roles as owner of an IT company and HR manager, manager of care processes and freelance organisational consultant.",
-      "quote": "Jacqueline knows exactly how to bring theory and experience together. Her guidance is personal, thoughtful and professional."
+      "body": "Jacqueline ran her own IT company and worked as an HR manager and as a manager in healthcare. She has been a trainer since 2017. She always links the theory to what you are going through yourself."
     }
   },
   "story": {

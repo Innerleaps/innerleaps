@@ -14,28 +14,25 @@
     "titlePrefix": "Onze",
     "titleAccent": "geaccrediteerde",
     "titleSuffix": "trainers",
-    "vmbnAlt": "VMBN Geaccrediteerde Vitaliteitstrainer"
+    "accredited": "VMBN-geaccrediteerd",
+    "logosLabel": "Trainde teams bij"
   },
   "languages": {
-    "nl": "Nederlands",
-    "en": "Engels"
+    "nlEn": "Nederlands en Engels",
+    "nl": "Nederlands"
   },
   "trainers": {
     "wineke": {
-      "body": "Wineke is al 15 jaar actief als trainer en heeft in die rol trainingen gegeven bij onder andere Tele2 Leaseplan, VU en Gemeente Den Haag. Voordat Wineke trainer werd, werkte zij 17 jaar in commerciële en zakelijke functies, waaronder als projectmanager, marketing- en communicatieadviseur en consultant.",
-      "quote": "Wineke heeft een praktische, nuchtere aanpak met concrete handvatten. Ik kan nu afstand nemen, stresssignalen sneller herkennen, efficiënter werken en ben meer tevreden over mijn resultaten."
+      "body": "Wineke werkte 17 jaar in het bedrijfsleven, als projectmanager, consultant en communicatieadviseur. Nu traint ze al 15 jaar teams. Deelnemers noemen haar nuchter en praktisch."
     },
     "dave": {
-      "body": "Dave trainer met 8 jaar ervaring en gaf trainingen bij o.a. Rijkswaterstaat, Nationale Politie, het Ministerie van Justitie en Veiligheid, Parnassia Groep en diverse onderwijs- en talentorganisaties. Daarvoor werkte hij 15 jaar als redacteur en contentmanager.",
-      "quote": "betrokken, open en vriendelijk, met duidelijke uitleg. Doordat hij zijn eigen ervaringen deelt, voelt de training toegankelijk en mag ik 'fouten maken'."
+      "body": "Dave was 15 jaar redacteur en contentmanager. Nu is hij al 8 jaar trainer, vooral bij overheid, zorg en onderwijs. Hij vertelt over zijn eigen ervaringen, en dat maakt meedoen makkelijk."
     },
     "anne": {
-      "body": "Anne is een ervaren en gecertificeerde trainer met 8 jaar ervaring en heeft trainingen gegeven bij onder andere DHL en Affinius Capital. Daarvoor werkte ze 15 jaar in marketing- en communicatiefuncties bij BAT en Ziggo.",
-      "quote": "Anne begrijpt mij echt. Haar kennis weet ze op een leuke en makkelijke manier uit te leggen. Ik voel mij productiver en gelukkiger dan ooit!"
+      "body": "Anne werkte 15 jaar in marketing en communicatie, bij BAT en Ziggo. Ze is al 8 jaar trainer. Ze legt alles uit zonder moeilijke woorden, en deelnemers voelen zich door haar echt begrepen."
     },
     "jacqueline": {
-      "body": "Jacqueline is begonnen als trainer in 2017 en werkte onder andere met Holland Colours, Carel Lurvink, PA Consulting, Nobel Recruitment, Humanitas en GGZ Centraal. Haar eerdere carrière omvat o.a. rollen als eigenaar van een automatiseringsbedrijf en HR-manager, manager zorgprocessen én freelance organisatieadviseur.",
-      "quote": "Jacqueline weet precies hoe ze theorie en ervaring laat samenkomen. Haar begeleiding is persoonlijk, doordacht en professioneel."
+      "body": "Jacqueline had een eigen automatiseringsbedrijf en werkte als HR-manager en als manager in de zorg. Ze is trainer sinds 2017. Ze koppelt de theorie steeds aan wat je zelf meemaakt."
     }
   },
   "story": {
