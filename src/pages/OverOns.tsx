@@ -9,7 +9,7 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { useEffect } from "react";
 import PageSeo from "@/components/PageSeo";
-import { useTranslation } from "react-i18next";
+import { Trans, useTranslation } from "react-i18next";
 import { Languages } from "lucide-react";
 
 // Trainer photos
@@ -22,12 +22,14 @@ import jacquelinePhoto from "@/assets/Vitaliteitstrainer_Jacqueline_Henock.webp"
 // onleesbaar.
 import vmbnOvaal from "@/assets/Aaccreditatie_voor_Vitaliteitsprogramma_ovaal.webp";
 import waaromWijAfbeelding from "@/assets/waarom_wij_dit_werk_doen.webp";
+import solarMonkeyTeam from "@/assets/solar-monkey-team.webp";
 
 // Wineke's logos. In trainerlogos/ staan ze in kleur op een doorzichtige
 // achtergrond en strak bijgesneden, gemaakt voor de lichte kaarten hier: wit
 // in een logo neemt de kleur van de kaart aan. DHL is de rode letters zonder
 // het gele vlak, Humanitas de blauwe letters zonder het blauwe vlak. De
 // originelen staan ook op andere pagina's en blijven zoals ze zijn.
+import winekeTheydoLogo from "@/assets/trainerlogos/Vitaliteitsprogramma_TheyDo.webp";
 import winekeOliverLogo from "@/assets/trainerlogos/Vitaliteitsprogramma_Oliver_Wyman.webp";
 import winekeSygnificLogo from "@/assets/trainerlogos/Vitaliteitsprogramma_Sygnific.webp";
 import winekeCordaanLogo from "@/assets/trainerlogos/Vitaliteitsprogramma_Cordaan.webp";
@@ -86,6 +88,8 @@ const OverOns = () => {
       photo: winekePhoto,
       languages: t("languages.nlEn"),
       logos: [
+        // TheyDo voorop: Wineke gaf daar de training, en voor scale-ups is dat het sterkste bewijs.
+        { src: winekeTheydoLogo, alt: "TheyDo", width: 201, height: 100 },
         { src: winekeOliverLogo, alt: "Vitaliteitstraining Oliver Wyman", width: 674, height: 95 },
         { src: winekeSygnificLogo, alt: "Vitaliteitstraining Sygnific", width: 116, height: 57 },
         { src: winekeCordaanLogo, alt: "Vitaliteitstraining Cordaan", width: 105, height: 75 },
@@ -145,34 +149,97 @@ const OverOns = () => {
       <StickyCtaButtons />
 
       <main>
-        {/* Sectie 1: Visie & Missie */}
+        {/* Sectie 1: het verhaal van Bas. Bovenaan, omdat de lezer hier komt om te
+            checken wie we zijn. Zie docs/over-ons.md. */}
         <section className="section-padding bg-brand-off-white">
           <div className="container-custom">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-purple leading-tight mb-8 text-center">
-              <span className="text-brand-orange">{t("vision.title1")}</span> {t("vision.titleAccent")}
-            </h1>
+            <div className="mx-auto max-w-4xl text-center mb-12">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-purple leading-tight mb-6">
+                <Trans i18nKey="hero.title" t={t} components={[<span className="text-brand-orange" />]} />
+              </h1>
+              <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">{t("hero.subtitle")}</p>
+            </div>
 
-            <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+            <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-start">
               <div className="space-y-4 text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
-                <p>{t("vision.body1")}</p>
-                <p>{t("vision.body2")}</p>
+                {(t("story.body", { returnObjects: true }) as string[]).map((paragraph, i) => (
+                  <p key={i}>{paragraph}</p>
+                ))}
               </div>
 
-              <div>
-                <img
-                  src={waaromWijAfbeelding}
-                  alt={t("vision.imageAlt")}
-                  className="w-full h-auto rounded-xl shadow-lg"
-                  loading="lazy"
-                  width="608"
-                  height="405"
-                />
+              {/* De teamfoto laat zien waar het verhaal speelt. Op een foto met 45
+                  mensen herken je Bas niet, dus zijn eigen foto staat klein bij zijn naam. */}
+              <div className="flex flex-col items-center space-y-6">
+                <figure className="w-full">
+                  <img
+                    src={solarMonkeyTeam}
+                    alt={t("story.teamPhotoAlt")}
+                    className="w-full h-auto rounded-xl shadow-lg"
+                    width="1024"
+                    height="576"
+                  />
+                  {/* Klein en schuin, zodat het als onderschrift leest en niet als
+                      doorlopende tekst. */}
+                  <figcaption className="mt-2 text-base italic text-brand-gray-medium/80 text-center">
+                    {t("story.photoCaption")}
+                  </figcaption>
+                </figure>
+                <div className="flex items-center gap-4">
+                  <img
+                    src={BAS_PHOTO}
+                    alt={t("story.photoAlt")}
+                    className="rounded-full w-20 h-20 object-cover shadow-md"
+                  />
+                  <p className="text-xl md:text-2xl font-semibold text-brand-purple">
+                    {t("story.role")}
+                  </p>
+                </div>
+                <Button
+                  variant="secondary"
+                  size="lg"
+                  className="w-full sm:w-auto font-semibold py-4 px-6 lg:px-8 rounded-lg text-lg lg:text-xl"
+                  onClick={() => scrollToBookingWidget()}
+                >
+                  {t("story.cta")}
+                </Button>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Sectie 2: Onze trainers */}
+        {/* Sectie 2: waar we in geloven */}
+        <section className="section-padding bg-white">
+          <div className="container-custom">
+            <div className="mx-auto max-w-4xl text-center">
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-purple leading-tight mb-8">
+                <Trans i18nKey="belief.title" t={t} components={[<span className="text-brand-orange" />]} />
+              </h2>
+              <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">{t("belief.body")}</p>
+            </div>
+          </div>
+        </section>
+
+        {/* Sectie 3: voor wie we het doen */}
+        <section className="section-padding bg-brand-off-white">
+          <div className="container-custom">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-purple leading-tight mb-12 text-center">
+              <Trans i18nKey="mission.title" t={t} components={[<span className="text-brand-orange" />]} />
+            </h2>
+            <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+              <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed">{t("mission.body")}</p>
+              <img
+                src={waaromWijAfbeelding}
+                alt={t("mission.imageAlt")}
+                className="w-full h-auto rounded-xl shadow-lg"
+                loading="lazy"
+                width="608"
+                height="405"
+              />
+            </div>
+          </div>
+        </section>
+
+        {/* Sectie 4: onze trainers */}
         <section className="section-padding bg-white">
           <div className="container-custom">
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-purple leading-tight mb-12 text-center">
@@ -236,46 +303,12 @@ const OverOns = () => {
           </div>
         </section>
 
-        {/* Sectie 3: Bas's verhaal */}
-        <section className="section-padding bg-brand-off-white">
-          <div className="container-custom">
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-purple leading-tight mb-12 text-center">
-              {t("story.titlePrefix")} <span className="text-brand-orange">{t("story.titleAccent")}</span>
-            </h2>
-            <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-start">
-              <div className="space-y-4 text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
-                <p>{t("story.body1")}</p>
-                <p>{t("story.body2")}</p>
-                <p className="italic">{t("story.quote")}</p>
-              </div>
-
-              <div className="flex flex-col items-center space-y-6">
-                <img
-                  src={BAS_PHOTO}
-                  alt={t("story.photoAlt")}
-                  className="rounded-full w-64 h-64 object-cover shadow-xl"
-                />
-                <p className="text-xl md:text-2xl font-semibold text-brand-purple text-center">
-                  {t("story.role")}
-                </p>
-                <Button
-                  variant="secondary"
-                  size="lg"
-                  className="w-full sm:w-auto font-semibold py-4 px-6 lg:px-8 rounded-lg text-lg lg:text-xl"
-                  onClick={() => scrollToBookingWidget()}
-                >
-                  {t("story.cta")}
-                </Button>
-              </div>
-            </div>
-          </div>
-        </section>
       </main>
 
-      {/* Boekingswidget direct onder het verhaal van Bas. Dat is het punt waar
-          het vertrouwen op deze pagina het hoogst is, en de knop hierboven staat
-          er vlak bij, zodat de sprong naar het anker klein blijft. "Waarom organisaties
-          voor ons kiezen" komt eronder als geruststelling voor wie nog niet klikt. */}
+      {/* Boekingswidget onder de trainers: wie tot hier leest, weet wie we zijn en
+          wie er voor het team staat. De knop bij het verhaal bovenaan scrolt
+          hierheen. "Waarom organisaties voor ons kiezen" komt eronder als
+          geruststelling voor wie nog niet klikt. */}
       <section className="section-padding bg-brand-off-white">
         <div className="container-custom">
           <div className="mx-auto max-w-3xl">

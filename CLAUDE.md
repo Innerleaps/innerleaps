@@ -244,6 +244,27 @@ De URL is bewust niet veranderd.
   volgehouden aandacht op de SART" (Jha et al., 2021; Morrison et al., 2014),
   dat is een ander cijfer.
 
+## De over-ons-pagina
+
+Sinds 21 oktober 2026 (branch `over-ons-verhaal`) opent `/over-ons` met het
+verhaal van Bas, in de ik-vorm en in spreektaal. Taak van de pagina: herkenning
+en vertrouwen, niet een missiezin. Scale-up voorop, maar niemand buiten: de
+pagina staat in het menu van elke pagina. Keuzes en feiten:
+`docs/over-ons.md`.
+
+- **Het verhaal is de eigen tekst van Bas.** Niet herschrijven, ook niet "een
+  beetje". Het snowboardongeluk en de hersenschudding zijn er bewust uit.
+- **Opbouw:** "Hoe krijg jij zoveel gedaan?" met het verhaal en de teamfoto van
+  Solar Monkey, dan "Je beste werk komt niet uit je langste dagen", dan "Voor
+  de mensen die hier nooit tijd voor hebben", dan de trainers, de agenda en
+  "Waarom organisaties voor ons kiezen".
+- **"Rustiger", nooit "ontspannen".** "We" in de onderregel, want de trainers
+  geven de training. "Organisaties die nooit stilstaan", niet "teams die hard
+  gaan".
+- **Doel: 10.000 mensen trainen**, zonder jaartal. 15 minuten per dag is 12
+  minuten oefenen plus reflectie; daarom staat er op andere pagina's 12.
+- **Wineke heeft het TheyDo-logo vooraan.** Zij en Bree gaven de training daar.
+
 ## Oranje woorden in koppen
 
 Een oranje accent schrijf je in de JSON als `<0>...</0>`, niet als HTML:

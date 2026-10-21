@@ -3,11 +3,29 @@
     "title": "About Innerleaps: our mission and accredited trainers",
     "description": "Innerleaps was founded by Bas Ter Haar Romenij to prevent burnout before it escalates. Our accredited trainers work with one proven method. No variation just consistent results."
   },
-  "vision": {
-    "title1": "Why",
-    "titleAccent": "we do this work",
-    "body1": "At Innerleaps we believe in the lasting power of mindful attention. With that attention, participants live with more calm, focus and courage. They become better versions of themselves and start to tap into their true potential.",
-    "body2": "As a result, organisations get a team that is not only resilient and available, but also performs at its best with genuine enjoyment. That is the inner leap we believe in.",
+  "hero": {
+    "title": "“How do you get <0>so much</0> done?”",
+    "subtitle": "The answer? We now teach it to organisations that never slow down."
+  },
+  "story": {
+    "body": [
+      "I always worked hard, and I noticed that small things threw me off balance quickly. My reflex was often to work even harder. But my body figured out what that was doing to me before my head did.",
+      "Then I came across MBSR, a stress management course. The result surprised me: I wasn't just calmer, I was much sharper and more effective too. My whole product team noticed. I validated our new product after 3 pivots and onboarded the first 30 customers. My team asked me: “How do you get so much done?”",
+      "I wanted every team to have that. When my role was made redundant, I took the chance and started Innerleaps."
+    ],
+    "photoCaption": "With the Solar Monkey team, where I was a senior product manager for 4 years.",
+    "teamPhotoAlt": "The Solar Monkey team, where Bas ter Haar Romenij was a senior product manager",
+    "role": "Bas ter Haar Romenij | Founder",
+    "cta": "Schedule a call with Bas",
+    "photoAlt": "Vitality trainer Bas ter Haar Romenij | Founder of Innerleaps"
+  },
+  "belief": {
+    "title": "Your best work doesn't come from your <0>longest</0> days",
+    "body": "When work never stops, you get used to a full calendar fast. Meeting after meeting, priorities that change halfway, messages until late. So you think: work even harder. I thought so too. But a tense mind makes more mistakes and gets less done. Focus makes the difference. And focus is something you can simply train."
+  },
+  "mission": {
+    "title": "For the people who <0>never</0> have time for this",
+    "body": "MBSR turned out to be too much for most companies. So together with our accredited trainers, I developed a lighter version: 6 weeks of 1 hour a week in a small group, plus 15 minutes of practice every day. Our goal? Train 10,000 people, and make the world a little better along the way.",
     "imageAlt": "Bas ter Haar Romenij giving a presentation on vitality and stress management at Innerleaps"
   },
   "trainersSection": {
@@ -34,15 +52,5 @@
     "jacqueline": {
       "body": "Jacqueline ran her own IT company and worked as an HR manager and as a manager in healthcare. She has been a trainer since 2017. She always links the theory to what you are going through yourself."
     }
-  },
-  "story": {
-    "titlePrefix": "The story behind",
-    "titleAccent": "Innerleaps",
-    "body1": "Bas founded Innerleaps after recovering from a concussion. As a consultant and lead product manager he was used to performing under pressure. Until a snowboarding accident forced him to a standstill.",
-    "body2": "During his recovery he dived into how the brain works and came across forty years of scientific research: attention can be trained. Back at work he noticed the difference. Less stress, sharper focus, more control over his thoughts and a level of productivity he had never experienced before.",
-    "quote": "\"I want to share that experience. That is why I started Innerleaps.\"",
-    "role": "Bas ter Haar Romenij | Founder",
-    "cta": "Schedule a call with Bas",
-    "photoAlt": "Vitality trainer Bas ter Haar Romenij | Founder of Innerleaps"
   }
 }

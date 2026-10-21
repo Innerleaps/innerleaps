@@ -3,11 +3,29 @@
     "title": "Over Innerleaps: onze missie en geaccrediteerde trainers",
     "description": "Innerleaps is opgericht door Bas Ter Haar Romenij om burn-out te voorkomen voordat het escaleert. Onze geaccrediteerde trainers werken met een vaste methode, geen variatie, wel bewezen resultaat."
   },
-  "vision": {
-    "title1": "Waarom",
-    "titleAccent": "wij dit werk doen",
-    "body1": "Bij Innerleaps geloven we in het duurzame succes van bewuste aandacht. Met die aandacht leven deelnemers met meer rust, focus en lef. Ze worden er niet alleen een mooier mens van, ze zullen ook hun ware potentieel benutten.",
-    "body2": "Hierdoor krijgen organisaties een team dat niet alleen inzetbaar is, maar ook nog eens met plezier maximaal presteert. Dat is de innerlijke sprong waar wij in geloven.",
+  "hero": {
+    "title": "“Hoe krijg jij <0>zoveel</0> gedaan?”",
+    "subtitle": "Het antwoord? Dat leren we nu aan organisaties die nooit stilstaan."
+  },
+  "story": {
+    "body": [
+      "Ik werkte altijd hard en merkte op dat kleine dingen mij snel uit balans brachten. Mijn reflex was vaak om nog harder te werken. Mijn lijf had alleen eerder door wat dit met mij deed dan mijn hoofd.",
+      "Ik liep tegen de stressmanagementcursus MBSR aan. Ik was verbaasd over het resultaat: ik was niet alleen maar rustiger, maar ook veel scherper en effectiever. Mijn hele productteam merkte dat op. Ik valideerde ons nieuwe product na 3 pivots en sloot de eerste 30 klanten aan. Mijn team vroeg mij: “Hoe krijg jij zoveel gedaan?”",
+      "Dat wilde ik elk team geven. Toen mijn functie verviel, greep ik de kans en begon ik Innerleaps."
+    ],
+    "photoCaption": "Met het team van Solar Monkey, waar ik 4 jaar senior productmanager was.",
+    "teamPhotoAlt": "Het team van Solar Monkey, waar Bas ter Haar Romenij senior productmanager was",
+    "role": "Bas ter Haar Romenij | Oprichter",
+    "cta": "Plan gesprek met Bas",
+    "photoAlt": "Vitaliteitstrainer Bas ter Haar Romenij | Oprichter Innerleaps"
+  },
+  "belief": {
+    "title": "Je beste werk komt niet uit je <0>langste</0> dagen",
+    "body": "Als het werk nooit stopt, went een volle agenda snel. Meeting na meeting, prioriteiten die halverwege omgaan, berichtjes tot laat. Dan denk je: nog harder werken. Dat dacht ik ook. Maar met een gespannen hoofd maak je meer fouten en krijg je minder af. Focus maakt het verschil. En focus kun je gewoon trainen."
+  },
+  "mission": {
+    "title": "Voor de mensen die hier <0>nooit</0> tijd voor hebben",
+    "body": "MBSR bleek te zwaar voor de meeste bedrijven. Dus ontwikkelde ik met onze geaccrediteerde trainers een lichtere versie: 6 weken lang 1 uur per week in een kleine groep, en elke dag 15 minuten oefenen. Ons doel? 10.000 mensen trainen, en zo de wereld een stukje beter maken.",
     "imageAlt": "Bas ter Haar Romenij geeft presentatie over vitaliteit en stressmanagement bij Innerleaps"
   },
   "trainersSection": {
@@ -34,15 +52,5 @@
     "jacqueline": {
       "body": "Jacqueline had een eigen automatiseringsbedrijf en werkte als HR-manager en als manager in de zorg. Ze is trainer sinds 2017. Ze koppelt de theorie steeds aan wat je zelf meemaakt."
     }
-  },
-  "story": {
-    "titlePrefix": "Het verhaal achter",
-    "titleAccent": "Innerleaps",
-    "body1": "Bas richtte Innerleaps op na zijn herstel van een hersenschudding. Als consultant en lead productmanager was hij gewend om onder druk te presteren. Tot een snowboardongeval hem tot stilstand dwong.",
-    "body2": "Tijdens zijn herstel verdiepte hij zich in de werking van de hersenen en stuitte op veertig jaar wetenschappelijk onderzoek: aandacht is trainbaar. Terug op werk merkte hij het verschil. Minder stress, scherpere focus, meer controle over zijn gedachten en een productiviteit die hij niet eerder kende.",
-    "quote": "\"Die ervaring wil ik delen. Daarom ben ik Innerleaps begonnen.\"",
-    "role": "Bas ter Haar Romenij | Oprichter",
-    "cta": "Plan gesprek met Bas",
-    "photoAlt": "Vitaliteitstrainer Bas ter Haar Romenij | Oprichter Innerleaps"
   }
 }
