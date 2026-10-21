@@ -633,7 +633,7 @@ Vier dingen om te weten:
   niet van jou is, en controleer met `git status` dat alleen je eigen nieuwe
   afbeeldingen overblijven. Gebeurd op 15 oktober 2026.
 - **Klantlogo's in de lichte hero staan in kleur en vrijstaand**, op home, de
-  scale-up- en de publieke-sectorpagina. Een logo op wit geeft
+  scale-up-, de publieke-sector- en de medewerkerspagina. Een logo op wit geeft
   op de beige hero een wit blok. Maak er eerst een `_transparant`-versie van
   met `scripts/logo-vrijstaand.py`, en geef elk logo een eigen hoogte zodat ze
   even zwaar ogen.
