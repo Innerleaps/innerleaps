@@ -36,24 +36,24 @@ import nobelLogo from "@/assets/Vitaliteitsprogramma_nobel_recruitment_light.web
 import hollandColoursLogo from "@/assets/Vitaliteitsprogramma_Holland_Colours_light.webp";
 import { scrollNaarAnkerUitUrl } from "@/lib/anker";
 
-/* Logo's voor de lichte hero, dus de donkere varianten. Klanten die
-   herkenbaar zijn voor een scale-up, in plaats van onderwijs, zorg en
-   overheid zoals op home. */
-import theydoDark from "@/assets/Vitaliteitsprogramma_TheyDo.webp";
-import holieDark from "@/assets/Vitaliteitsprogramma_Holie_Pizza.webp";
-import tele2Dark from "@/assets/Vitaliteitsprogramma_Tele2.webp";
-import leaseplanDark from "@/assets/Vitaliteitsprogramma_Leaseplan.webp";
-import sygnificDark from "@/assets/Vitaliteitsprogramma_Sygnific.webp";
+/* Logo's voor de lichte hero, in kleur en op een transparante achtergrond:
+   anders staat er een wit vlak op de beige hero. Klanten die herkenbaar zijn
+   voor een scale-up, in plaats van onderwijs, zorg en overheid. */
+import theydoKleur from "@/assets/Vitaliteitsprogramma_TheyDo_transparant.webp";
+import holieKleur from "@/assets/Vitaliteitsprogramma_Holie_Pizza.webp";
+import tele2Kleur from "@/assets/Vitaliteitsprogramma_Tele2_transparant.webp";
+import leaseplanKleur from "@/assets/Vitaliteitsprogramma_Leaseplan_transparant.webp";
+import sygnificKleur from "@/assets/Vitaliteitsprogramma_Sygnific_transparant.webp";
 
 // Holie, Leaseplan en Sygnific zijn bijna vierkant of hebben hun naam klein
 // onder een beeldmerk. Op de standaardhoogte was die naam niet te lezen, dus
 // die drie staan hoger.
 const SCALEUP_LOGOS = [
-  { src: theydoDark, alt: "TheyDo" },
-  { src: holieDark, alt: "Holie Pizza", className: "h-10 lg:h-12" },
-  { src: tele2Dark, alt: "Tele2" },
-  { src: leaseplanDark, alt: "Leaseplan", className: "h-10 lg:h-12" },
-  { src: sygnificDark, alt: "Sygnific", className: "h-10 lg:h-12" },
+  { src: theydoKleur, alt: "TheyDo", className: "h-7 lg:h-8" },
+  { src: holieKleur, alt: "Holie Pizza", className: "h-10 lg:h-12" },
+  { src: tele2Kleur, alt: "Tele2" },
+  { src: leaseplanKleur, alt: "Leaseplan", className: "h-8 lg:h-10" },
+  { src: sygnificKleur, alt: "Sygnific", className: "h-8 lg:h-9" },
 ];
 
 const CalculatorModal = lazy(() => import("@/components/CalculatorModal"));
@@ -122,6 +122,7 @@ const DuurzameInzetbaarheidTraining = () => {
         }}
         logos={logos}
         heroLogos={SCALEUP_LOGOS}
+        heroColourLogos
         heroSecondaryLink={{ label: t("sustainability.hero.caseLink"), to: caseHref }}
         afterResults={
           <ResultatenBand

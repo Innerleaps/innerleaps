@@ -12,27 +12,32 @@ import heroPhoto1200 from "@/assets/hero-1200w.webp";
 import heroPhoto800 from "@/assets/hero-800w.webp";
 import heroPhotoFallback from "@/assets/hero-1200w.jpg";
 
-/* De donkere logovarianten. In src/data/clientLogos.ts staan de lichte, die
-   waren voor de oude hero met foto-achtergrond en zijn op beige onzichtbaar. */
-import theydoLogo from "@/assets/Vitaliteitsprogramma_TheyDo.webp";
-import vuLogo from "@/assets/Vitaliteitsprogramma_VU_amsterdam.webp";
-import tele2Logo from "@/assets/Vitaliteitsprogramma_Tele2.webp";
-import parnassiaLogo from "@/assets/Vitaliteitsprogramma_Parnassia_groep.webp";
+/* De logo's in kleur, op een transparante achtergrond: anders staat er een wit
+   vlak op de beige hero. In src/data/clientLogos.ts staan de lichte, die waren
+   voor de oude hero met foto-achtergrond en zijn op beige onzichtbaar. */
+import theydoLogo from "@/assets/Vitaliteitsprogramma_TheyDo_transparant.webp";
+import holieLogo from "@/assets/Vitaliteitsprogramma_Holie_Pizza.webp";
+import vuLogo from "@/assets/Vitaliteitsprogramma_VU_amsterdam_transparant.webp";
+import tele2Logo from "@/assets/Vitaliteitsprogramma_Tele2_transparant.webp";
+import parnassiaLogo from "@/assets/Vitaliteitsprogramma_Parnassia_groep_transparant.webp";
 import lentizLogo from "@/assets/Vitaliteitsprogramma_Lentiz.webp";
-import denHaagLogo from "@/assets/Vitaliteitsprogramma_Gemeente_Den_Haag.webp";
+import denHaagLogo from "@/assets/Vitaliteitsprogramma_Gemeente_Den_Haag_transparant.webp";
 
 const CalculatorModal = lazy(() => import("./CalculatorModal"));
 
 const GOOGLE_REVIEWS_URL =
   "https://www.google.com/maps/place/Innerleaps/@52.1909763,5.2795551,7z/data=!4m8!3m7!1s0x41d7861255c94705:0x571bbf751b212eea!8m2!3d52.1909763!4d5.2795551!9m1!1b1!16s%2Fg%2F11y10xf1qm?entry=ttu&g_ep=EgoyMDI1MTAyOS4yIKXMDSoASAFQAw%3D%3D";
 
+/* Hoogte per logo, zodat ze even zwaar ogen: een smal, hoog logo als Holie
+   Pizza of Den Haag moet hoger staan dan een breed woordmerk. */
 const LOGOS = [
-  { src: theydoLogo, alt: "TheyDo" },
-  { src: vuLogo, alt: "VU Amsterdam" },
+  { src: theydoLogo, alt: "TheyDo", className: "h-7 lg:h-8" },
+  { src: holieLogo, alt: "Holie Pizza", className: "h-9 lg:h-11" },
+  { src: vuLogo, alt: "VU Amsterdam", className: "h-7 lg:h-8" },
   { src: tele2Logo, alt: "Tele2" },
-  { src: parnassiaLogo, alt: "Parnassia Groep" },
+  { src: parnassiaLogo, alt: "Parnassia Groep", className: "h-7 lg:h-8" },
   { src: lentizLogo, alt: "Lentiz" },
-  { src: denHaagLogo, alt: "Gemeente Den Haag" },
+  { src: denHaagLogo, alt: "Gemeente Den Haag", className: "h-10 lg:h-12" },
 ];
 
 export interface HeroPhoto {
@@ -88,10 +93,10 @@ interface HeroSectionProps {
    */
   photoQuote?: string;
   /**
-   * Logo's in hun eigen kleuren in plaats van grijs. Op verzoek van Bas voor
-   * de publieke sector, waar herkenbare namen als de politie en de gemeente
-   * het bewijs zijn. Gebruik dan logo's met een transparante achtergrond,
-   * anders staat er een wit vlak op de beige hero.
+   * Logo's in hun eigen kleuren in plaats van grijs. Op verzoek van Bas eerst
+   * voor de publieke sector, sinds 20 oktober 2026 ook op home en de
+   * scale-up-pagina. Gebruik dan logo's met een transparante achtergrond
+   * (scripts/logo-vrijstaand.py), anders staat er een wit vlak op de beige hero.
    */
   colourLogos?: boolean;
   /**
