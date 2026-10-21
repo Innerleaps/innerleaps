@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "Over Innerleaps: onze missie en geaccrediteerde trainers",
-    "description": "Innerleaps is opgericht door Bas Ter Haar Romenij om burn-out te voorkomen voordat het escaleert. Onze geaccrediteerde trainers werken met een vaste methode, geen variatie, wel bewezen resultaat."
+    "title": "Het verhaal van oprichter Bas ter Haar Romenij | Innerleaps",
+    "description": "Meer gedaan in dezelfde uren, zonder langere dagen. Lees hoe Innerleaps begon en wie je team traint. Bij TheyDo steeg de productiviteit 8,6%."
   },
   "hero": {
     "title": "“Hoe krijg jij <0>zoveel</0> gedaan?”",
@@ -29,9 +29,7 @@
     "imageAlt": "Bas ter Haar Romenij geeft presentatie over vitaliteit en stressmanagement bij Innerleaps"
   },
   "trainersSection": {
-    "titlePrefix": "Onze",
-    "titleAccent": "geaccrediteerde",
-    "titleSuffix": "trainers",
+    "title": "Onze trainers kennen de druk <0>zelf</0>",
     "accredited": "VMBN-geaccrediteerd",
     "logosLabel": "Trainde teams bij"
   },

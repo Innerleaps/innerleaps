@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "About Innerleaps: our mission and accredited trainers",
-    "description": "Innerleaps was founded by Bas Ter Haar Romenij to prevent burnout before it escalates. Our accredited trainers work with one proven method. No variation just consistent results."
+    "title": "The story of founder Bas ter Haar Romenij | Innerleaps",
+    "description": "More done in the same hours, without longer days. Read how Innerleaps began and who trains your team. At TheyDo, productivity rose 8.6%."
   },
   "hero": {
     "title": "“How do you get <0>so much</0> done?”",
@@ -29,9 +29,7 @@
     "imageAlt": "Bas ter Haar Romenij giving a presentation on vitality and stress management at Innerleaps"
   },
   "trainersSection": {
-    "titlePrefix": "Our",
-    "titleAccent": "accredited",
-    "titleSuffix": "trainers",
+    "title": "Our trainers know the pressure <0>first-hand</0>",
     "accredited": "VMBN accredited",
     "logosLabel": "Trained teams at"
   },

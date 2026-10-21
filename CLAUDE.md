@@ -264,6 +264,9 @@ pagina staat in het menu van elke pagina. Keuzes en feiten:
 - **Doel: 10.000 mensen trainen**, zonder jaartal. 15 minuten per dag is 12
   minuten oefenen plus reflectie; daarom staat er op andere pagina's 12.
 - **Wineke heeft het TheyDo-logo vooraan.** Zij en Bree gaven de training daar.
+- **Geen burn-out in de meta.** Titel "Het verhaal van oprichter Bas ter Haar
+  Romenij | Innerleaps", met de volledige naam voor wie hem googelt. De
+  beschrijving belooft meer gedaan in dezelfde uren, met het TheyDo-cijfer.
 
 ## Oranje woorden in koppen
 

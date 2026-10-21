@@ -243,7 +243,7 @@ const OverOns = () => {
         <section className="section-padding bg-white">
           <div className="container-custom">
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-purple leading-tight mb-12 text-center">
-              {t("trainersSection.titlePrefix")} <span className="text-brand-orange">{t("trainersSection.titleAccent")}</span> {t("trainersSection.titleSuffix")}
+              <Trans i18nKey="trainersSection.title" t={t} components={[<span className="text-brand-orange" />]} />
             </h2>
             {/* Op brede schermen delen de twee kaarten in een rij hun regels
                 (subgrid): kop, bio en logo's beginnen naast elkaar op dezelfde

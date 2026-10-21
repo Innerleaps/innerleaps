@@ -90,6 +90,21 @@ als het verhaal af is:
     stukje beter maken." Dus 15 minuten (12 oefenen plus reflectie), "ons
     doel", en zonder de openingszin en het TheyDo-cijfer.
 16. **Het doel is 10.000 mensen** in plaats van 1.000, zonder jaartal.
+17. **Trainerskop:** "Onze trainers kennen de druk <0>zelf</0>" / "Our trainers
+    know the pressure <0>first-hand</0>". Voorstel van Bas, met "zelf" erbij.
+18. **Meta, zonder burn-out.** Volgens de segmentanalyse noemt 1 van de 10
+    scale-ups verzuim, en 5 van de 10 productiviteit. Wie deze pagina in Google
+    vindt, zocht meestal op Bas of op Innerleaps.
+    - Titel: "Het verhaal van oprichter Bas ter Haar Romenij | Innerleaps" /
+      "The story of founder Bas ter Haar Romenij | Innerleaps". De volledige
+      naam blijft erin, voor wie hem na een outreachbericht googelt.
+    - Beschrijving: "Meer gedaan in dezelfde uren, zonder langere dagen. Lees
+      hoe Innerleaps begon en wie je team traint. Bij TheyDo steeg de
+      productiviteit 8,6%." / "More done in the same hours, without longer
+      days. Read how Innerleaps began and who trains your team. At TheyDo,
+      productivity rose 8.6%."
+19. **Scale-up-pagina, meta:** "zes weken" is "6 weken" geworden ("A 6-week
+    attention training"), volgens de afspraak getallen als cijfer.
 
 ### Gebouwd op de nieuwe trainersblokken
 
@@ -149,6 +164,4 @@ andere pagina's.
   vragen aan Solar Monkey. Onderschrift en alt-tekst: opties nog maken.
 - Hoeveel mensen zijn er nu getraind? Dan kan het doel van 1.000 een teller
   krijgen.
-- Meta title en description: burn-out eruit, opties nog maken.
 - De 25 logo's hebben nog alt-tekst "Vitaliteitstraining X".
-- Kop van het trainersblok: opties nog maken.
