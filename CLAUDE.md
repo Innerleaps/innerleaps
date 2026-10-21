@@ -243,6 +243,16 @@ De URL is bewust niet veranderd.
   FAQ is op 19 oktober 2026 door Bas bevestigd. Niet verwarren met "+24%
   volgehouden aandacht op de SART" (Jha et al., 2021; Morrison et al., 2014),
   dat is een ander cijfer.
+- **De kop is sinds 21 oktober 2026 "Mental fitness for teams that move fast"**
+  ("Mentale fitness voor teams die gas geven"). Mentale fitness is hier het
+  categoriewoord, net als vitaliteit op de publieke-sectorpagina. Het is het
+  woord van de CEO van TheyDo. De productnaam blijft aandachttraining, en die
+  staat in de onderkop. Schrijf dus nooit "mental fitness training". Waarom:
+  als naam plaatst het ons tussen de welzijnsapps, en "a mental course" verloor
+  bij Epi van technische cursussen in het leerbudget.
+- **"6 weken" staat bewust niet in de onderkop**, omdat het voor een founder als
+  een grote investering kan klinken. De opzet komt verderop op de pagina. Noem
+  het nooit "maar 6 uur": er hoort ook 15 minuten oefenen per dag bij.
 
 ## Oranje woorden in koppen
 
