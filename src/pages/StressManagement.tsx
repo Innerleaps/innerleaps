@@ -9,24 +9,23 @@ import heroPhoto1200 from "@/assets/hero-1200w.webp";
 import heroPhoto800 from "@/assets/hero-800w.webp";
 import heroPhotoFallback from "@/assets/hero-1200w.jpg";
 
-/* Logo's in kleur op de lichte hero. Den Haag en de VU in hun transparante
-   versie, anders staat er een wit vlak op het beige. De rest heeft al een
-   transparante achtergrond. Holie Pizza en Den Haag staan hoger: een bijna
-   vierkant beeldmerk met de naam klein eronder. */
-import theydoKleur from "@/assets/Vitaliteitsprogramma_TheyDo.webp";
+/* Logo's in kleur op de lichte hero, allemaal op een transparante
+   achtergrond: anders staat er een wit vlak op het beige. Holie Pizza en Den
+   Haag staan hoger: een bijna vierkant beeldmerk met de naam klein eronder. */
+import theydoKleur from "@/assets/Vitaliteitsprogramma_TheyDo_transparant.webp";
 import holieKleur from "@/assets/Vitaliteitsprogramma_Holie_Pizza.webp";
-import tele2Kleur from "@/assets/Vitaliteitsprogramma_Tele2.webp";
+import tele2Kleur from "@/assets/Vitaliteitsprogramma_Tele2_transparant.webp";
 import vuKleur from "@/assets/Vitaliteitsprogramma_VU_amsterdam_transparant.webp";
-import parnassiaKleur from "@/assets/Vitaliteitsprogramma_Parnassia_groep.webp";
+import parnassiaKleur from "@/assets/Vitaliteitsprogramma_Parnassia_groep_transparant.webp";
 import lentizKleur from "@/assets/Vitaliteitsprogramma_Lentiz.webp";
 import denHaagKleur from "@/assets/Vitaliteitsprogramma_Gemeente_Den_Haag_transparant.webp";
 
 const MEDEWERKER_LOGOS = [
-  { src: theydoKleur, alt: "TheyDo" },
+  { src: theydoKleur, alt: "TheyDo", className: "h-7 lg:h-8" },
   { src: holieKleur, alt: "Holie Pizza", className: "h-10 lg:h-12" },
   { src: tele2Kleur, alt: "Tele2" },
   { src: vuKleur, alt: "VU Amsterdam" },
-  { src: parnassiaKleur, alt: "Parnassia Groep" },
+  { src: parnassiaKleur, alt: "Parnassia Groep", className: "h-7 lg:h-8" },
   { src: lentizKleur, alt: "Lentiz" },
   { src: denHaagKleur, alt: "Gemeente Den Haag", className: "h-12 lg:h-14" },
 ];

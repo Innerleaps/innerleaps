@@ -264,6 +264,40 @@ De URL is bewust niet veranderd.
   FAQ is op 19 oktober 2026 door Bas bevestigd. Niet verwarren met "+24%
   volgehouden aandacht op de SART" (Jha et al., 2021; Morrison et al., 2014),
   dat is een ander cijfer.
+- **De kop is sinds 21 oktober 2026 "Mental fitness for teams that move fast"**
+  ("Mentale fitness voor teams die gas geven"). Mentale fitness is hier het
+  categoriewoord, net als vitaliteit op de publieke-sectorpagina. Het is het
+  woord van de CEO van TheyDo. De productnaam blijft aandachttraining, en die
+  staat in de onderkop. Schrijf dus nooit "mental fitness training". Waarom:
+  als naam plaatst het ons tussen de welzijnsapps, en "a mental course" verloor
+  bij Epi van technische cursussen in het leerbudget.
+- **"6 weken" staat bewust niet in de onderkop**, omdat het voor een founder als
+  een grote investering kan klinken. De opzet komt verderop op de pagina. Noem
+  het nooit "maar 6 uur": er hoort ook 15 minuten oefenen per dag bij.
+
+## De over-ons-pagina
+
+Sinds 21 oktober 2026 (branch `over-ons-verhaal`) opent `/over-ons` met het
+verhaal van Bas, in de ik-vorm en in spreektaal. Taak van de pagina: herkenning
+en vertrouwen, niet een missiezin. Scale-up voorop, maar niemand buiten: de
+pagina staat in het menu van elke pagina. Keuzes en feiten:
+`docs/over-ons.md`.
+
+- **Het verhaal is de eigen tekst van Bas.** Niet herschrijven, ook niet "een
+  beetje". Het snowboardongeluk en de hersenschudding zijn er bewust uit.
+- **Opbouw:** "Hoe krijg jij zoveel gedaan?" met het verhaal en de teamfoto van
+  Solar Monkey, dan "Je beste werk komt niet uit je langste dagen", dan "Voor
+  de mensen die hier nooit tijd voor hebben", dan de trainers, de agenda en
+  "Waarom organisaties voor ons kiezen".
+- **"Rustiger", nooit "ontspannen".** "We" in de onderregel, want de trainers
+  geven de training. "Organisaties die nooit stilstaan", niet "teams die hard
+  gaan".
+- **Doel: 10.000 mensen trainen**, zonder jaartal. 15 minuten per dag is 12
+  minuten oefenen plus reflectie; daarom staat er op andere pagina's 12.
+- **Wineke heeft het TheyDo-logo vooraan.** Zij en Bree gaven de training daar.
+- **Geen burn-out in de meta.** Titel "Het verhaal van oprichter Bas ter Haar
+  Romenij | Innerleaps", met de volledige naam voor wie hem googelt. De
+  beschrijving belooft meer gedaan in dezelfde uren, met het TheyDo-cijfer.
 
 ## Oranje woorden in koppen
 
@@ -629,6 +663,11 @@ Vier dingen om te weten:
   verwijzingen aan. Draai je het, zet dan met `git checkout` alles terug wat
   niet van jou is, en controleer met `git status` dat alleen je eigen nieuwe
   afbeeldingen overblijven. Gebeurd op 15 oktober 2026.
+- **Klantlogo's in de lichte hero staan in kleur en vrijstaand**, op home, de
+  scale-up-, de publieke-sector- en de medewerkerspagina. Een logo op wit geeft
+  op de beige hero een wit blok. Maak er eerst een `_transparant`-versie van
+  met `scripts/logo-vrijstaand.py`, en geef elk logo een eigen hoogte zodat ze
+  even zwaar ogen.
 
 ## Er ligt een SEO-basismeting, gebruik die
 
