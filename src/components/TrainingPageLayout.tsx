@@ -3,6 +3,8 @@ import { Trans, useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet-async";
 import { Link, useLocation } from "react-router-dom";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import { TekstMetSter } from "@/components/Voetnoten";
+import { claimsBijSleutel, zonderSter } from "@/lib/claims";
 import { Button } from "@/components/ui/button";
 import { detectLanguageFromPath } from "@/i18n/config";
 import {
@@ -298,7 +300,7 @@ const TrainingPageLayout = ({
       name: item.q,
       acceptedAnswer: {
         "@type": "Answer",
-        text: item.a,
+        text: zonderSter(item.a),
       },
     })),
   };
@@ -845,7 +847,9 @@ const TrainingPageLayout = ({
                     {item.q}
                   </AccordionTrigger>
                   <AccordionContent alwaysRendered className="text-base md:text-lg text-brand-gray-medium leading-relaxed whitespace-pre-line">
-                    {item.a}
+                    {/* Een sterretje in het antwoord linkt naar de bron
+                        onderaan de pagina. Welke, staat in het claimregister. */}
+                    <TekstMetSter tekst={item.a} ids={claimsBijSleutel(`training:${tKey}.faq.items[${i}].a`)} />
                   </AccordionContent>
                 </AccordionItem>
               ))}

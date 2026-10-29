@@ -19,7 +19,7 @@
     }
   },
   "hero": {
-    "title": "8.6% <0>more productive</0> and 7\u00a0in\u00a010 feel <0>less stress</0>",
+    "title": "8.6% <0>more productive</0> and 7\u00a0in\u00a010 feel <0>less stress</0><1>*</1>",
     "subtitle": "TheyDo works fully remote, with lots of freedom. That leaves little visibility into how the team works. 39 colleagues took part and trained their attention for six weeks.",
     "quote": "You're enabling people to get more out of their workday without working more hours.",
     "photoAlt": "Jochem van der Veer, CEO of TheyDo, during the interview"
@@ -27,16 +27,16 @@
   "statsLabel": "Results",
   "stats": [
     {
-      "value": "+8.6%",
+      "claim": "theydo-productiviteit",
       "label": "productivity 4 weeks after training",
-      "note": "Randomised research points the same way (Michaelsen et al., 2023)."
+      "note": "Randomised research points the same way*."
     },
     {
-      "value": "68%",
+      "claim": "theydo-stress",
       "label": "feel less stress and tension"
     },
     {
-      "value": "9.3",
+      "claim": "theydo-trainer",
       "label": "for the trainers, 8.1 for the programme"
     }
   ],
@@ -53,7 +53,7 @@
       },
       {
         "label": "Participants",
-        "value": "39 employees, about 40% of the company, signed up voluntarily"
+        "value": "39 employees, about 40%* of the company, signed up voluntarily"
       },
       {
         "label": "Programme",
@@ -76,7 +76,7 @@
   "doubts": {
     "title": "What were your <0>doubts</0> before you started?",
     "quote": "It could be seen as a sign of weakness. I wasn't sure how our employees would respond. It could be backfiring. But in the end, it didn't.",
-    "fact": "39 people signed up voluntarily after the masterclass. About 40% of the company.",
+    "fact": "39 people signed up voluntarily after the masterclass. About 40%* of the company.",
     "bridge": "Why did it work? Jochem presented it as maintenance, not repair."
   },
   "colleagues": {
@@ -85,19 +85,19 @@
     "intro": "22 of the 39 participants filled in an evaluation at the end. These came up most:",
     "items": [
       {
-        "value": 68,
+        "claim": "theydo-stress",
         "label": "Less stress and tension"
       },
       {
-        "value": 55,
+        "claim": "theydo-autopiloot",
         "label": "Less running on autopilot"
       },
       {
-        "value": 55,
+        "claim": "theydo-vermoeidheid",
         "label": "Less mental fatigue"
       },
       {
-        "value": 41,
+        "claim": "theydo-focus",
         "label": "Better concentration and focus"
       }
     ],
@@ -115,7 +115,7 @@
     "title": "Was it worth the <0>investment</0>?",
     "quote": "It's a hell yes. In our sales team, 8.6% literally turns into more meetings, more qualified prospects and ultimately more revenue.",
     "number": "23x",
-    "fact": "At TheyDo, the programme paid for itself from a productivity gain of 0.36%. The measured gain was 8.6%: more than 23 times as much. Where your break-even sits depends on your salaries and number of participants. <0>Calculate it for your team</0>."
+    "fact": "At TheyDo, the programme paid for itself from a productivity gain of 0.36%. The measured gain was 8.6%<1>*</1>: more than 23 times as much. Where your break-even sits depends on your salaries and number of participants. <0>Calculate it for your team</0>."
   },
   "hr": {
     "title": "How much <0>work</0> was it for HR?",
@@ -138,14 +138,14 @@
     "title": "Would you do it <0>again</0>?",
     "quote": "I would definitely do this again. It's something you can do throughout the year, again with your new employees, and keep doing as the company grows.",
     "factTitle": "How long do the effects last?",
-    "fact": "Scientific research shows that participants still feel less stress up to a year after the training (Michaelsen et al., 2023). Longer than that has hardly been studied."
+    "fact": "Scientific research shows that participants still feel less stress up to a year after the training*. Longer than that has hardly been studied."
   },
   "know": {
     "title": "How did we measure the <0>impact</0>?",
     "items": [
-      "We measured productivity with the World Health Organization's Health and Work Performance Questionnaire (HPQ). Participants are asked to rate their own work performance over the past four weeks. We measured it with 20 participants, once before the training and again four weeks after it ended. The result is an 8.6% increase in productivity.",
+      "We measured productivity with the World Health Organization's Health and Work Performance Questionnaire (HPQ). Participants are asked to rate their own work performance over the past four weeks. We measured it with 14 participants, once before the training and again four weeks after it ended. The result is an 8.6%* increase in productivity.",
       "Randomised research shows the same: after similar training, participants perform better at work than a comparison group (Michaelsen et al., 2023).",
-      "People who practised more than once a week did even better: their productivity rose by 11.1%.",
+      "People who practised 1 to 3 days a week (11 participants) did even better: their productivity rose by 11.1%*.",
       "Every participant got their own impact report. Individual answers never go to the employer."
     ],
     "report": {

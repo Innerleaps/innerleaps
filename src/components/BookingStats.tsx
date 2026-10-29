@@ -1,4 +1,7 @@
 import { useTranslation } from "react-i18next";
+import { claimWaarde, type ClaimId } from "@/lib/claims";
+import { Ster } from "@/components/Voetnoten";
+import { useTaal } from "@/hooks/useTaal";
 
 /**
  * De vier cijfers waarom organisaties voor ons kiezen, bij de afspraakplanner.
@@ -13,22 +16,25 @@ import { useTranslation } from "react-i18next";
  * `panel` is het paneel met de vier balken, zoals in de hero van de
  * propositiepagina's. Dat past alleen als er een kolom naast de agenda is.
  *
- * De labels komen uit dezelfde sleutels als de hero van de homepage, zodat de
- * percentages niet op twee plekken uit elkaar kunnen gaan lopen.
+ * De cijfers komen uit het claimregister en krijgen elk een sterretje naar
+ * hun bron onderaan de pagina. Zie CLAIMS.md.
  */
 interface BookingStatsProps {
   variant?: "row" | "panel";
   className?: string;
 }
 
+const STATS: { label: string; claim: ClaimId }[] = [
+  { label: "hero.stats.dropoutRisk", claim: "debruin-uitval" },
+  { label: "hero.stats.absenteeism", claim: "verzuim-15-21" },
+  { label: "hero.stats.focus", claim: "jha-aandacht" },
+  { label: "hero.stats.productivity", claim: "theydo-productiviteit" },
+];
+
 const useStats = () => {
   const { t } = useTranslation();
-  return [
-    { label: t("hero.stats.dropoutRisk"), value: "-70%" },
-    { label: t("hero.stats.absenteeism"), value: "-21%" },
-    { label: t("hero.stats.focus"), value: "+24%" },
-    { label: t("hero.stats.productivity"), value: "+8%" },
-  ];
+  const taal = useTaal();
+  return STATS.map((stat) => ({ label: t(stat.label), value: claimWaarde(stat.claim, taal), claim: stat.claim }));
 };
 
 const BookingStats = ({ variant = "row", className = "" }: BookingStatsProps) => {
@@ -40,7 +46,10 @@ const BookingStats = ({ variant = "row", className = "" }: BookingStatsProps) =>
       <div className={`grid grid-cols-2 gap-x-2 gap-y-4 sm:grid-cols-4 ${className}`}>
         {stats.map((stat) => (
           <div key={stat.label} className="text-center">
-            <div className="text-xl font-bold text-brand-orange sm:text-2xl">{stat.value}</div>
+            <div className="text-xl font-bold text-brand-orange sm:text-2xl">
+              {stat.value}
+              <Ster ids={[stat.claim]} />
+            </div>
             <div className="mt-0.5 text-base leading-tight text-brand-gray-medium">{stat.label}</div>
           </div>
         ))}
@@ -62,6 +71,7 @@ const BookingStats = ({ variant = "row", className = "" }: BookingStatsProps) =>
             <span className="text-base text-brand-purple xl:text-lg">{stat.label}</span>
             <span className="shrink-0 text-xl font-bold text-brand-orange xl:text-2xl">
               {stat.value}
+              <Ster ids={[stat.claim]} />
             </span>
           </div>
         ))}

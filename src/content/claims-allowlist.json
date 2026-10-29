@@ -1,0 +1,41 @@
+{
+  "_uitleg": "Uitzonderingen op de claimcontrole (scripts/check-claims.mjs): teksten met een percentage of beloftewoord die geen claim zijn. Alleen Bas keurt een regel goed: zet dan zijn naam en de datum bij goedgekeurdDoor. Zolang dat leeg is, faalt de productiebuild. Met 'bevat' geldt de uitzondering alleen voor dat ene stukje tekst in het bestand, niet voor het hele bestand.",
+  "sleutels": [
+    {
+      "sleutel": "meten:beperkingen.items[5]",
+      "reden": "Disclaimer op de methodepagina: zegt juist dat resultaten geen garantie zijn.",
+      "goedgekeurdDoor": null
+    }
+  ],
+  "bestanden": [
+    {
+      "bestand": "src/content/*",
+      "reden": "Juridische teksten (voorwaarden, privacy, cookies). 'Garantie' en percentages zijn daar contractvoorwaarden, geen claims.",
+      "goedgekeurdDoor": null
+    },
+    {
+      "bestand": "src/App.tsx",
+      "bevat": "wetenschappelijk-bewezen-aanpak-2025",
+      "reden": "URL van een blog. Verdwijnt met het besluit over de blogs (claim verzuim-15-21).",
+      "goedgekeurdDoor": null
+    },
+    {
+      "bestand": "src/i18n/config.ts",
+      "bevat": "wetenschappelijk-bewezen-aanpak-2025",
+      "reden": "URL van een blog. Verdwijnt met het besluit over de blogs (claim verzuim-15-21).",
+      "goedgekeurdDoor": null
+    },
+    {
+      "bestand": "src/pages/Bedankt.tsx",
+      "bevat": "wetenschappelijk bewezen",
+      "reden": "Pagina wordt in productie omgeleid (ProductionRedirect), dus niet zichtbaar. Tekst is wel rood: aanpassen of de pagina weghalen.",
+      "goedgekeurdDoor": null
+    },
+    {
+      "bestand": "src/pages/MasterclassQR.tsx",
+      "bevat": "wetenschappelijk bewezen",
+      "reden": "Pagina wordt in productie omgeleid (ProductionRedirect), dus niet zichtbaar. Tekst is wel rood: aanpassen of de pagina weghalen.",
+      "goedgekeurdDoor": null
+    }
+  ]
+}

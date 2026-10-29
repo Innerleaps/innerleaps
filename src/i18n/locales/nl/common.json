@@ -118,7 +118,7 @@
       "app": {
         "title": "Een app-abonnement",
         "lead": "Licenties uitgedeeld aan iedereen.",
-        "fade": "Na een maand gebruikt nog geen 4% de app."
+        "fade": "Na een maand gebruikt nog geen 4%* de app."
       }
     },
     "closingLine": "Daarom begonnen we bij <0>de vorm</0>, niet bij de inhoud."
@@ -153,10 +153,10 @@
   },
   "results": {
     "title": "Wat deelnemers merken na zes weken",
-    "intro": "We vroegen deelnemers waar ze verbetering merkten.",
+    "intro": "We vroegen 22 deelnemers in 5 groepen waar ze verbetering merkten.",
     "highlight": {
-      "label": "merkte minder stress en spanning",
-      "context": "De meest genoemde verandering in al onze groepen."
+      "label": "van de deelnemers merkte minder stress en spanning",
+      "context": "Meest genoemd in 5 groepen."
     },
     "bars": {
       "autopilot": "Minder op de automatische piloot",
@@ -346,5 +346,15 @@
     "footerLink": "Cookievoorkeuren",
     "aria": "Cookiemelding",
     "bodyChoice": "Meer weten? Lees er alles over in onze <0>cookieverklaring</0> en <1>privacyverklaring</1>. Hieronder geef je aan of je alles accepteert, of je stelt je cookies zelf in. Verander je later van gedachten? Geen probleem, onderaan elke pagina pas je je voorkeuren eenvoudig aan."
+  },
+  "claims": {
+    "eigen": "{{methode}}, n={{n}}, {{naam}}, {{periode}}",
+    "extern": "{{studie}}",
+    "geenBron": "[bron ontbreekt]",
+    "bronnen": "Bronnen",
+    "sterLabel": "Bron",
+    "onderzoeksnoot": "Onderzoekscijfers zijn niet bij deelnemers van Innerleaps gemeten.",
+    "slot": "Resultaten verschillen per organisatie.",
+    "methodeLink": "Methode en beperkingen"
   }
 }

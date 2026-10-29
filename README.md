@@ -1,5 +1,7 @@
 # Welcome to your Lovable project
 
+> **Cijfers en resultaatclaims op de site:** lees eerst [CLAIMS.md](CLAIMS.md). Elk cijfer staat in het claimregister en krijgt een bronregel; de build controleert dat.
+
 ## Project info
 
 **URL**: https://lovable.dev/projects/7f1b052b-e2ee-419a-aec0-e4591c9e4afe

@@ -35,7 +35,7 @@
     },
     "results": {
       "title": "Less <0>sick leave</0> by stepping in early",
-      "subtitle": "Measured in independent scientific research.",
+      "subtitle": "Results from research on attention training.",
       "items": [
         {
           "icon": "BellRing",
@@ -66,16 +66,16 @@
     "resultsBand": {
       "items": [
         {
-          "value": "-70%",
-          "label": "risk of long-term sick leave (De Bruin, 2018)"
+          "claim": "debruin-uitval",
+          "label": "risk of long-term sick leave"
         },
         {
-          "value": "-26%",
-          "label": "stress (Aikens, 2014)"
+          "claim": "aikens-stress",
+          "label": "stress"
         },
         {
-          "value": "12",
-          "label": "months after training, still less stress (Michaelsen, 2023)"
+          "claim": "michaelsen-stress-lange-termijn",
+          "label": "months after training, still less stress"
         }
       ]
     },
@@ -168,7 +168,7 @@
       "items": [
         {
           "q": "We've already tried a lot. What's different here?",
-          "a": "With us, 20 to 40% of the people who attend the masterclass go on to join the training. That comes down to preparation. We put a lot of work into it, because the impact only starts once people take part.\n\nWe agree the times with managers in advance, so the training fits into the working week. Your people get to know the programme first, live or in their own time. And we provide the texts, so the invitation comes from your own organisation."
+          "a": "With us, 20 to 40%* of the people who attend the masterclass go on to join the training. That comes down to preparation. We put a lot of work into it, because the impact only starts once people take part.\n\nWe agree the times with managers in advance, so the training fits into the working week. Your people get to know the programme first, live or in their own time. And we provide the texts, so the invitation comes from your own organisation."
         },
         {
           "q": "Doesn't this put the problem on the employee?",
@@ -184,7 +184,7 @@
         },
         {
           "q": "How does this fit into a full working week?",
-          "a": "The programme takes one hour a week for six weeks, plus fifteen minutes of practice a day. We fix the times in advance with your managers. And we don't start in the busiest period of your year.\n\nOnline and on site both work, and you can choose per group. Research shows online sessions work just as well as in-person ones."
+          "a": "The programme takes one hour a week for six weeks, plus fifteen minutes of practice a day. We fix the times in advance with your managers. And we don't start in the busiest period of your year.\n\nOnline and on site both work, and you can choose per group. Research shows online sessions work just as well as in-person ones*."
         },
         {
           "q": "What about privacy?",
@@ -212,23 +212,23 @@
         },
         {
           "q": "What is the foundation of Innerleaps?",
-          "a": "Innerleaps' awareness trainings build on evidence-based programmes such as MBSR, MBCT and WorkplaceMT. The foundation rests on 12 scientific studies, including multiple meta-analyses and randomized controlled trials. The evidence is strong enough that the U.S. military has incorporated attention training into its official doctrine (U.S. Army Field Manual 7-22), and organisations like Google, Apple, Microsoft, Nestlé and Unilever have implemented similar programmes."
+          "a": "Innerleaps' awareness trainings build on evidence-based programmes such as MBSR, MBCT and WorkplaceMT. The foundation rests on 12 scientific studies*, including multiple meta-analyses and randomized controlled trials. The evidence is strong enough that the U.S. military has incorporated attention training into its official doctrine (U.S. Army Field Manual 7-22), and organisations like Google, Apple, Microsoft, Nestlé and Unilever have implemented similar programmes*."
         },
         {
           "q": "What does an Innerleaps programme deliver for our employees?",
-          "a": "Research into this kind of training finds less stress, fewer burnout symptoms, more resilience and better sleep. Take stress: compare someone who did the training with someone who didn't, and in 65 to 72% of cases the trained person has less stress.\n\nThe risk of long-term absence drops by 70% (from 54.4% to 16.4%). And the drop in stress lasts: studies that checked back three months to a year later still found measurably less stress."
+          "a": "Research into this kind of training finds less stress, fewer burnout symptoms, more resilience and better sleep. Take stress: compare someone who did the training with someone who didn't, and in 65 to 72%* of cases the trained person has less stress.\n\nThe risk of long-term absence drops by 70%* (from 54.4% to 16.4%). And the drop in stress lasts: studies that checked back three months to a year later still found measurably less stress*."
         },
         {
           "q": "What is sustainable employability?",
-          "a": "Sustainable employability means employees can keep working in a healthy, motivated and productive way throughout their career. In practice it usually breaks down at the same point: long-term work stress. A quarter of all absenteeism in the Netherlands is stress related. Innerleaps tackles that cause. Employees learn to spot and regulate tension early, so dropout is prevented rather than repaired."
+          "a": "Sustainable employability means employees can keep working in a healthy, motivated and productive way throughout their career. In practice it usually breaks down at the same point: long-term work stress. A quarter of all absenteeism in the Netherlands is stress related*. Innerleaps tackles that cause. Employees learn to spot and regulate tension early, so dropout is prevented rather than repaired."
         },
         {
           "q": "How do you reduce absenteeism without it staying at symptom relief?",
-          "a": "Reducing absenteeism only works structurally if you step in before people drop out. A quarter of all absenteeism in the Netherlands is stress related. Our training teaches employees to recognise stress signals early, so absenteeism does not just fall but stays low."
+          "a": "Reducing absenteeism only works structurally if you step in before people drop out. A quarter of all absenteeism in the Netherlands is stress related*. Our training teaches employees to recognise stress signals early, so absenteeism does not just fall but stays low."
         },
         {
           "q": "How quickly do we see results?",
-          "a": "Participants notice a difference after the first workshops, and that effect builds up over the six weeks. Straight after the 6-week training, 70% report experiencing less stress. It also lasts: research shows stress stays lower for months after the training."
+          "a": "Participants notice a difference after the first workshops, and that effect builds up over the six weeks. Straight after the 6-week training, 68%* report experiencing less stress. It also lasts: research shows stress stays lower for months after the training*."
         }
       ]
     }
@@ -247,23 +247,22 @@
     "statsBand": {
       "items": [
         {
-          "value": "68%",
+          "claim": "theydo-stress",
           "label": "noticed less stress and tension"
         },
         {
-          "value": "55%",
+          "claim": "theydo-autopiloot",
           "label": "spent less time on autopilot"
         },
         {
-          "value": "55%",
+          "claim": "theydo-vermoeidheid",
           "label": "felt less mentally drained"
         },
         {
-          "value": "9.3",
+          "claim": "theydo-trainer",
           "label": "for the trainer"
         }
-      ],
-      "source": "Evaluation by 22 participants at TheyDo, 2026"
+      ]
     },
     "challenges": {
       "title": "Keeping <0>all the balls</0> in the air",
@@ -488,7 +487,7 @@
         },
         {
           "q": "I tried an app and stopped. Why would this be different?",
-          "a": "Almost everyone stops using an app. After a month, about 4 in 100 still use it. Here you practise for 6 weeks with a fixed group and a trainer, and you learn to practise when you feel tension. That's what turns it into a habit."
+          "a": "Almost everyone stops using an app. After a month, about 4 in 100* still use it. Here you practise for 6 weeks with a fixed group and a trainer, and you learn to practise when you feel tension. That's what turns it into a habit."
         },
         {
           "q": "What if I miss a week?",
@@ -504,7 +503,7 @@
         },
         {
           "q": "What is it based on?",
-          "a": "Innerleaps' awareness trainings build on evidence-based programmes such as MBSR, MBCT and WorkplaceMT. The foundation rests on 12 scientific studies, including multiple meta-analyses and randomized controlled trials. The evidence is strong enough that the U.S. military has incorporated attention training into its official doctrine (U.S. Army Field Manual 7-22), and organisations like Google, Apple, Microsoft, Nestlé and Unilever have implemented similar programmes."
+          "a": "Innerleaps' awareness trainings build on evidence-based programmes such as MBSR, MBCT and WorkplaceMT. The foundation rests on 12 scientific studies*, including multiple meta-analyses and randomized controlled trials. The evidence is strong enough that the U.S. military has incorporated attention training into its official doctrine (U.S. Army Field Manual 7-22), and organisations like Google, Apple, Microsoft, Nestlé and Unilever have implemented similar programmes*."
         }
       ]
     }
@@ -544,14 +543,14 @@
       ]
     },
     "results": {
-      "title": "<0>More output</0> through calm and focus",
-      "subtitle": "Measured in independent scientific research.",
+      "title": "Calm and focus help your team <0>get more done</0>",
+      "subtitle": "Results from our own measurements and from research on attention training.",
       "items": [
         {
           "icon": "TrendingUp",
           "title": "Get more done in the same time",
           "bullets": [
-            "Your team stays on a task longer and gets distracted less.",
+            "Helps your team stay on a task longer and get distracted less.",
             "Fewer mistakes, even when it's busy."
           ]
         },
@@ -576,16 +575,16 @@
     "resultsBand": {
       "items": [
         {
-          "value": "+8.6%",
-          "label": "productivity 4 weeks after training"
+          "claim": "theydo-productiviteit",
+          "label": "average productivity"
         },
         {
-          "value": "68%",
-          "label": "feel less stress and tension"
+          "claim": "theydo-stress",
+          "label": "noticed less stress and tension"
         },
         {
-          "value": "25%",
-          "label": "fewer errors on attention tasks (Jha, 2021)"
+          "claim": "jha-fouten",
+          "label": "fewer errors on attention tasks"
         }
       ]
     },
@@ -658,7 +657,7 @@
         },
         {
           "q": "Does it work for a remote team?",
-          "a": "Yes. The training is live and online: one group session of an hour a week, which everyone joins from wherever they work, across countries too. Research shows online sessions work just as well as in-person ones. We pick a time that works for the whole group. On-site is possible too.\n\nSomething clients mention themselves: colleagues get to know each other better in the group, even if they rarely meet."
+          "a": "Yes. The training is live and online: one group session of an hour a week, which everyone joins from wherever they work, across countries too. Research shows online sessions work just as well as in-person ones*. We pick a time that works for the whole group. On-site is possible too.\n\nSomething clients mention themselves: colleagues get to know each other better in the group, even if they rarely meet."
         },
         {
           "q": "Can the training be in English?",
@@ -686,15 +685,15 @@
         },
         {
           "q": "What is the foundation of Innerleaps?",
-          "a": "Innerleaps' awareness trainings build on evidence-based programmes such as MBSR, MBCT and WorkplaceMT. The foundation rests on 12 scientific studies, including multiple meta-analyses and randomized controlled trials. The evidence is strong enough that the U.S. military has incorporated attention training into its official doctrine (U.S. Army Field Manual 7-22), and organisations like Google, Apple, Microsoft, Nestlé and Unilever have implemented similar programmes."
+          "a": "Innerleaps' awareness trainings build on evidence-based programmes such as MBSR, MBCT and WorkplaceMT. The foundation rests on 12 scientific studies*, including multiple meta-analyses and randomized controlled trials. The evidence is strong enough that the U.S. military has incorporated attention training into its official doctrine (U.S. Army Field Manual 7-22), and organisations like Google, Apple, Microsoft, Nestlé and Unilever have implemented similar programmes*."
         },
         {
           "q": "What does an Innerleaps programme deliver for our employees?",
-          "a": "Research into this kind of training finds less stress, fewer burnout symptoms, more resilience and better sleep. Take stress: compare someone who did the training with someone who didn't, and in 65 to 72% of cases the trained person has less stress.\n\nProductivity goes up too. The effect is smaller, but it is the result the studies agree on most.\n\nThe risk of long-term absence drops by 70% (from 54.4% to 16.4%). And the drop in stress lasts: studies that checked back three months to a year later still found measurably less stress."
+          "a": "Research into this kind of training finds less stress, fewer burnout symptoms, more resilience and better sleep. Take stress: compare someone who did the training with someone who didn't, and in 65 to 72%* of cases the trained person has less stress.\n\nProductivity goes up too. The effect is smaller, but it is the result the studies agree on most*.\n\nThe risk of long-term absence drops by 70%* (from 54.4% to 16.4%). And the drop in stress lasts: studies that checked back three months to a year later still found measurably less stress*."
         },
         {
           "q": "How does Innerleaps improve employee performance?",
-          "a": "Innerleaps improves performance by optimizing working memory, the mental \"workspace\" where thinking, deciding and acting take place. This happens through three mechanisms:\n\nFirst, relevant information is selected faster and irrelevant information is suppressed more effectively. Focus increases, distraction decreases. Research shows 25% fewer errors on attention tasks (Jha et al., 2021).\n\nSecond, stress and pressure normally occupy a large share of working memory. When that pressure decreases, capacity is freed up for the task itself.\n\nThird, working memory becomes more efficient: better results with less neural effort (Bailey et al., 2020). Employees perform sharper and have energy left at the end of the day."
+          "a": "Innerleaps improves performance by optimizing working memory, the mental \"workspace\" where thinking, deciding and acting take place. This happens through three mechanisms:\n\nFirst, relevant information is selected faster and irrelevant information is suppressed more effectively. Focus increases, distraction decreases. Research shows 25% fewer errors on attention tasks*.\n\nSecond, stress and pressure normally occupy a large share of working memory. When that pressure decreases, capacity is freed up for the task itself.\n\nThird, working memory becomes more efficient: better results with less neural effort*. Employees perform sharper and have energy left at the end of the day."
         }
       ]
     },

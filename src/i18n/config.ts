@@ -20,6 +20,8 @@ import nlBedankt from "./locales/nl/bedankt.json";
 import enBedankt from "./locales/en/bedankt.json";
 import nlCaseTheydo from "./locales/nl/caseTheydo.json";
 import enCaseTheydo from "./locales/en/caseTheydo.json";
+import nlMeten from "./locales/nl/meten.json";
+import enMeten from "./locales/en/meten.json";
 
 export const SUPPORTED_LANGUAGES = ["nl", "en"] as const;
 export type SupportedLanguage = (typeof SUPPORTED_LANGUAGES)[number];
@@ -47,6 +49,9 @@ export const ROUTE_MAP: Array<{ nl: string; en: string }> = [
   // Klantcases. Meervoud in het pad, zodat er later een overzichtspagina op
   // /klantcases kan komen zonder dat deze URL hoeft te verhuizen.
   { nl: "/klantcases/theydo", en: "/en/case-studies/theydo" },
+  // Waar de cijfers vandaan komen. Het bronnenblok onderaan elke pagina linkt
+  // hierheen; het pad staat ook in src/content/claims.json. Zie CLAIMS.md.
+  { nl: "/methode-en-beperkingen", en: "/en/method-and-limitations" },
   // Blog articles
   {
     nl: "/blog/ziekteverzuim-verlagen-wetenschappelijk-bewezen-aanpak-2025",
@@ -97,13 +102,13 @@ i18n
   .use(initReactI18next)
   .init({
     resources: {
-      nl: { common: nlCommon, methode: nlMethode, overons: nlOverons, contact: nlContact, training: nlTraining, calculator: nlCalculator, leadMagnet: nlLeadMagnet, bedankt: nlBedankt, caseTheydo: nlCaseTheydo },
-      en: { common: enCommon, methode: enMethode, overons: enOverons, contact: enContact, training: enTraining, calculator: enCalculator, leadMagnet: enLeadMagnet, bedankt: enBedankt, caseTheydo: enCaseTheydo },
+      nl: { common: nlCommon, methode: nlMethode, overons: nlOverons, contact: nlContact, training: nlTraining, calculator: nlCalculator, leadMagnet: nlLeadMagnet, bedankt: nlBedankt, caseTheydo: nlCaseTheydo, meten: nlMeten },
+      en: { common: enCommon, methode: enMethode, overons: enOverons, contact: enContact, training: enTraining, calculator: enCalculator, leadMagnet: enLeadMagnet, bedankt: enBedankt, caseTheydo: enCaseTheydo, meten: enMeten },
     },
     fallbackLng: "nl",
     supportedLngs: SUPPORTED_LANGUAGES,
     nonExplicitSupportedLngs: true, // treat "en-US", "en-GB" etc. as "en"
-    ns: ["common", "methode", "overons", "contact", "training", "calculator", "leadMagnet", "bedankt", "caseTheydo"],
+    ns: ["common", "methode", "overons", "contact", "training", "calculator", "leadMagnet", "bedankt", "caseTheydo", "meten"],
     defaultNS: "common",
     interpolation: { escapeValue: false },
     detection: {

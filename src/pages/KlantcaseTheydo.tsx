@@ -10,6 +10,9 @@ import { Button } from "@/components/ui/button";
 import { detectLanguageFromPath } from "@/i18n/config";
 import { offertePad } from "@/lib/offerte";
 import { meldOfferteKlik } from "@/lib/conversies";
+import { claimGetal, claimWaarde, type ClaimId } from "@/lib/claims";
+import { Ster, TekstMetSter } from "@/components/Voetnoten";
+import StatClaim from "@/components/StatClaim";
 import {
   THEYDO_LOGO,
   THEYDO_CASE_JOCHEM,
@@ -165,14 +168,13 @@ const KlantcaseTheydo = () => {
   }, []);
 
   const stats = t("stats", { returnObjects: true }) as Array<{
-    value: string;
+    claim: ClaimId;
     label: string;
-    suffix?: string;
     note?: string;
   }>;
   const stemmen = t("colleagues.voices.items", { returnObjects: true }) as string[];
   const feiten = t("glance.items", { returnObjects: true }) as Array<{ label: string; value: string }>;
-  const effecten = t("colleagues.items", { returnObjects: true }) as Array<{ value: number; label: string }>;
+  const effecten = t("colleagues.items", { returnObjects: true }) as Array<{ claim: ClaimId; label: string }>;
   const aanpassingen = t("better.items", { returnObjects: true }) as string[];
   const meting = t("know.items", { returnObjects: true }) as string[];
 
@@ -223,7 +225,7 @@ const KlantcaseTheydo = () => {
                 <img src={THEYDO_LOGO} alt="" className="h-10 w-auto md:h-12" />
               </p>
               <h1 className="mt-6 text-4xl md:text-5xl lg:text-6xl font-bold text-brand-purple leading-tight">
-                <Trans i18nKey="hero.title" t={t} components={ORANJE} />
+                <Trans i18nKey="hero.title" t={t} components={[ORANJE[0], <Ster ids={["theydo-productiviteit", "theydo-stress"]} />]} />
               </h1>
               <p className="mt-6 max-w-2xl text-xl md:text-2xl text-brand-gray-medium leading-relaxed">
                 {t("hero.subtitle")}
@@ -262,15 +264,20 @@ const KlantcaseTheydo = () => {
             <Label>{t("statsLabel")}</Label>
             <div className="mt-6 grid gap-8 md:grid-cols-3">
               {stats.map((stat, i) => (
-                <div key={stat.value} className="border-t-2 border-brand-orange pt-5">
-                  <p className={`text-6xl md:text-7xl font-bold ${i === 0 ? "text-brand-orange" : "text-white"}`}>
-                    {stat.value}
-                    {stat.suffix && <span className="text-white/50">{stat.suffix}</span>}
-                  </p>
-                  <p className="mt-3 text-xl leading-snug text-white/80">{stat.label}</p>
+                <div key={stat.claim} className="border-t-2 border-brand-orange pt-5">
+                  <StatClaim
+                    id={stat.claim}
+                    label={stat.label}
+                    waardeClassName={`text-6xl md:text-7xl font-bold ${i === 0 ? "text-brand-orange" : "text-white"}`}
+                    labelClassName="mt-3 text-xl leading-snug text-white/80"
+                  />
                   {/* Bij de 8,6%: gerandomiseerd onderzoek wijst dezelfde kant op.
                       Bewust zonder effectgrootte, die is niet te vergelijken. */}
-                  {stat.note && <p className="mt-2 text-base leading-snug text-white/60">{stat.note}</p>}
+                  {stat.note && (
+                    <p className="mt-2 text-base leading-snug text-white/60">
+                      <TekstMetSter tekst={stat.note} ids={["michaelsen-stress-lange-termijn"]} />
+                    </p>
+                  )}
                 </div>
               ))}
             </div>
@@ -307,7 +314,9 @@ const KlantcaseTheydo = () => {
               {feiten.map((feit) => (
                 <div key={feit.label}>
                   <dt className="text-lg font-semibold text-brand-purple">{feit.label}</dt>
-                  <dd className="text-xl leading-relaxed text-brand-gray-medium">{feit.value}</dd>
+                  <dd className="text-xl leading-relaxed text-brand-gray-medium">
+                    <TekstMetSter tekst={feit.value} ids={["theydo-aanmelding"]} />
+                  </dd>
                 </div>
               ))}
             </dl>
@@ -316,7 +325,9 @@ const KlantcaseTheydo = () => {
 
         {/* 2. De twijfels */}
         <Vraag persoon="jochem" kop="doubts.title" citaat={t("doubts.quote")} kleur="wit">
-          <Feit>{t("doubts.fact")}</Feit>
+          <Feit>
+            <TekstMetSter tekst={t("doubts.fact")} ids={["theydo-aanmelding"]} />
+          </Feit>
           <p className="mt-5 text-xl md:text-2xl leading-relaxed text-brand-gray-medium">{t("doubts.bridge")}</p>
         </Vraag>
 
@@ -351,10 +362,13 @@ const KlantcaseTheydo = () => {
               <li key={effect.label}>
                 <div className="flex items-baseline justify-between gap-4 text-xl">
                   <span className="font-semibold text-brand-purple">{effect.label}</span>
-                  <span className="text-2xl font-bold text-brand-orange">{effect.value}%</span>
+                  <span className="text-2xl font-bold text-brand-orange">
+                    {claimWaarde(effect.claim, lang)}
+                    <Ster ids={[effect.claim]} />
+                  </span>
                 </div>
                 <div className="mt-2 h-3 overflow-hidden rounded-full bg-white" aria-hidden="true">
-                  <div className="h-full rounded-full bg-brand-orange" style={{ width: `${effect.value}%` }} />
+                  <div className="h-full rounded-full bg-brand-orange" style={{ width: `${claimGetal(effect.claim)}%` }} />
                 </div>
               </li>
             ))}
@@ -363,9 +377,16 @@ const KlantcaseTheydo = () => {
 
         {/* 4. Was het de investering waard? */}
         <Vraag persoon="jochem" kop="investment.title" citaat={t("investment.quote")} kleur="wit">
-          <p className="text-6xl md:text-7xl font-bold text-brand-orange">{t("investment.number")}</p>
+          <p className="text-6xl md:text-7xl font-bold text-brand-orange">
+            {t("investment.number")}
+            <Ster ids={["theydo-productiviteit"]} />
+          </p>
           <p className="mt-4 text-xl md:text-2xl leading-relaxed text-brand-gray-medium">
-            <Trans i18nKey="investment.fact" t={t} components={[rekenknop]} />
+            <Trans
+              i18nKey="investment.fact"
+              t={t}
+              components={[rekenknop, <Ster ids={["theydo-productiviteit"]} />]}
+            />
           </p>
         </Vraag>
 
@@ -393,7 +414,9 @@ const KlantcaseTheydo = () => {
         {/* 7. Zou je het opnieuw doen? */}
         <Vraag persoon="jochem" kop="again.title" citaat={t("again.quote")} kleur="beige">
           <h3 className="text-2xl font-bold text-brand-purple">{t("again.factTitle")}</h3>
-          <p className="mt-4 text-xl md:text-2xl leading-relaxed text-brand-gray-medium">{t("again.fact")}</p>
+          <p className="mt-4 text-xl md:text-2xl leading-relaxed text-brand-gray-medium">
+            <TekstMetSter tekst={t("again.fact")} ids={["michaelsen-stress-lange-termijn"]} />
+          </p>
         </Vraag>
 
         {/* Hoe weten we dit? Geen interviewvraag maar onze verantwoording. */}
@@ -403,7 +426,9 @@ const KlantcaseTheydo = () => {
             {meting.map((punt) => (
               <li key={punt} className="flex gap-4">
                 <Check className="mt-1 h-6 w-6 flex-shrink-0 stroke-[3] text-brand-orange" aria-hidden="true" />
-                <span className="text-xl leading-relaxed text-brand-gray-dark">{punt}</span>
+                <span className="text-xl leading-relaxed text-brand-gray-dark">
+                  <TekstMetSter tekst={punt} ids={["theydo-productiviteit", "theydo-productiviteit-oefenaars"]} />
+                </span>
               </li>
             ))}
           </ul>

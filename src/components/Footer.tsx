@@ -5,6 +5,7 @@ import { Linkedin, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
+import { Voetnoten } from "@/components/Voetnoten";
 import { detectLanguageFromPath } from "@/i18n/config";
 import { OPEN_INSTELLINGEN } from "@/lib/toestemming";
 
@@ -59,6 +60,9 @@ const Footer = memo(({ showNavigation = true }: FooterProps) => {
   };
 
   return (
+    <>
+    {/* De bronnen bij de sterretjes op deze pagina. Zie Voetnoten.tsx. */}
+    <Voetnoten />
     <footer
       className="bg-gradient-to-br from-brand-blue to-brand-blue-dark text-white pt-12 pb-12 md:pb-28"
       itemScope
@@ -224,6 +228,7 @@ const Footer = memo(({ showNavigation = true }: FooterProps) => {
         </div>
       </div>
     </footer>
+    </>
   );
 });
 

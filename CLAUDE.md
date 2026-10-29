@@ -36,7 +36,7 @@ Controleer dat na elke wijziging:
 ```bash
 python3.12 -c "
 import json,sys
-for f in ('common','training','methode','overons','contact','calculator','leadMagnet','caseTheydo'):
+for f in ('common','training','methode','overons','contact','calculator','leadMagnet','caseTheydo','bedankt','meten'):
     nl=json.load(open(f'src/i18n/locales/nl/{f}.json'))
     en=json.load(open(f'src/i18n/locales/en/{f}.json'))
     def paths(o,p=''):
@@ -70,6 +70,27 @@ Controleer met:
 ```bash
 grep -roiE "\b(program|programs|organiz\w*|recogniz\w*|center|behavior\w*|analyz\w*|color)\b" src/i18n/locales/en/ | sort | uniq -c
 ```
+
+## Cijfers en claims: lees CLAIMS.md
+
+**Voordat je een statistiek, percentage of resultaatclaim toevoegt of wijzigt:
+lees `CLAIMS.md`, gebruik `StatClaim`, en voeg een regel toe aan het
+claimregister** (`src/content/claims.json`).
+
+- Elk cijfer krijgt een klein sterretje dat linkt naar het blok "Bronnen"
+  boven de footer (`Voetnoten.tsx`). Geen bronregels onder de cijfers en geen
+  toelichting bij citaten: Bas vond dat te veel tekst (22-10-2026). Het cijfer
+  zelf staat in het register, niet in de vertaalbestanden.
+- `scripts/check-claims.mjs` draait voor elke build. Een cijfer of
+  beloftewoord dat niet geregistreerd staat, laat de build falen. Plaatshouders
+  en rode claims laten alleen de productiebuild falen, zodat je ze op een
+  branch-deploy nog kunt bekijken.
+- Het bronnenblok linkt naar `/methode-en-beperkingen`
+  (`/en/method-and-limitations`). Die pagina haalt de metingen en studies uit
+  het register.
+- De TheyDo-cijfers zijn op 22-10-2026 herberekend uit de ruwe data in de
+  Second Brain: productiviteit n=14 (niet 20: 6 van de 20 deden niet mee), de
+  evaluatie n=22 van 39. Wat nog openstaat: `docs/claims-keuzes.md`.
 
 ## Lettergroottes
 

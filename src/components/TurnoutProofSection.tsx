@@ -1,5 +1,6 @@
 import { memo, useEffect, useRef, useState } from "react";
 import { Trans, useTranslation } from "react-i18next";
+import { Ster } from "@/components/Voetnoten";
 
 /** Waar het cijfer naartoe telt. */
 const TARGET = 9;
@@ -107,6 +108,7 @@ const TurnoutProofSection = memo(() => {
               {TARGET}
             </span>
             <span aria-hidden="true"> {t("turnout.number.suffix")}</span>
+            <Ster ids={["sessiedeelname"]} />
           </p>
 
           <div

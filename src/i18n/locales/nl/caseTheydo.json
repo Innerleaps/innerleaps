@@ -19,7 +19,7 @@
     }
   },
   "hero": {
-    "title": "8,6% <0>productiever</0> en 7\u00a0op\u00a0de\u00a010 heeft <0>minder stress</0>",
+    "title": "8,6% <0>productiever</0> en 7\u00a0op\u00a0de\u00a010 heeft <0>minder stress</0><1>*</1>",
     "subtitle": "TheyDo werkt volledig remote met heel veel vrijheid. Hierdoor is er weinig grip op hoe het team werkt. 39 collega's namen deel en trainden hun aandacht voor 6 weken.",
     "quote": "Je haalt meer uit je tijd, zonder dat je meer uren hoeft te maken.",
     "photoAlt": "Jochem van der Veer, CEO van TheyDo, tijdens het interview"
@@ -27,16 +27,16 @@
   "statsLabel": "Resultaten",
   "stats": [
     {
-      "value": "+8,6%",
+      "claim": "theydo-productiviteit",
       "label": "productiviteit 4 weken na training",
-      "note": "Gerandomiseerd onderzoek wijst dezelfde kant op (Michaelsen e.a., 2023)."
+      "note": "Gerandomiseerd onderzoek wijst dezelfde kant op*."
     },
     {
-      "value": "68%",
+      "claim": "theydo-stress",
       "label": "ervaart minder stress en spanning"
     },
     {
-      "value": "9,3",
+      "claim": "theydo-trainer",
       "label": "voor de trainers, een 8,1 voor het programma"
     }
   ],
@@ -53,7 +53,7 @@
       },
       {
         "label": "Deelnemers",
-        "value": "39 medewerkers, zo'n 40% van het bedrijf, vrijwillig aangemeld"
+        "value": "39 medewerkers, zo'n 40%* van het bedrijf, vrijwillig aangemeld"
       },
       {
         "label": "Training",
@@ -76,7 +76,7 @@
   "doubts": {
     "title": "Wat waren je <0>twijfels</0> voordat je begon?",
     "quote": "Ik maakte me zorgen hoe dit omarmd zou worden door alle medewerkers. Maar ze vonden het eigenlijk een heel prettig aanbod.",
-    "fact": "39 mensen meldden zich vrijwillig aan na de masterclass. Zo'n 40% van het bedrijf.",
+    "fact": "39 mensen meldden zich vrijwillig aan na de masterclass. Zo'n 40%* van het bedrijf.",
     "bridge": "Waarom werkte het? Jochem bracht het als onderhoud, niet als reparatie."
   },
   "colleagues": {
@@ -85,19 +85,19 @@
     "intro": "22 van de 39 deelnemers vulden aan het eind een evaluatie in. Dit noemden ze het vaakst:",
     "items": [
       {
-        "value": 68,
+        "claim": "theydo-stress",
         "label": "Minder stress en spanning"
       },
       {
-        "value": 55,
+        "claim": "theydo-autopiloot",
         "label": "Minder op de automatische piloot"
       },
       {
-        "value": 55,
+        "claim": "theydo-vermoeidheid",
         "label": "Minder mentaal moe"
       },
       {
-        "value": 41,
+        "claim": "theydo-focus",
         "label": "Betere concentratie en focus"
       }
     ],
@@ -115,7 +115,7 @@
     "title": "Was het de <0>investering</0> waard?",
     "quote": "De benefits die we zien zijn de investering zeker waard. In onze salesorganisatie is dat net een extra meeting op een dag, net een extra gekwalificeerde deal.",
     "number": "23x",
-    "fact": "Bij TheyDo verdiende de training zich terug vanaf 0,36% meer productiviteit. Gemeten werd 8,6%: ruim 23 keer zoveel. Waar dat punt bij jullie ligt, hangt af van de salarissen en het aantal deelnemers. <0>Reken het uit voor je eigen team</0>."
+    "fact": "Bij TheyDo verdiende de training zich terug vanaf 0,36% meer productiviteit. Gemeten werd 8,6%<1>*</1>: ruim 23 keer zoveel. Waar dat punt bij jullie ligt, hangt af van de salarissen en het aantal deelnemers. <0>Reken het uit voor je eigen team</0>."
   },
   "hr": {
     "title": "Hoeveel <0>werk</0> was het voor HR?",
@@ -138,14 +138,14 @@
     "title": "Zou je het <0>opnieuw</0> doen?",
     "quote": "Zeker. Dit is iets wat je continu wil blijven aanbieden aan je medewerkers. Zowel voor nieuwe medewerkers als voor eerdere deelnemers, als refresher.",
     "factTitle": "Hoelang werkt de training?",
-    "fact": "Wetenschappelijk onderzoek laat zien dat deelnemers tot een jaar na de training nog minder stress ervaren (Michaelsen e.a., 2023). Langer is nauwelijks onderzocht."
+    "fact": "Wetenschappelijk onderzoek laat zien dat deelnemers tot een jaar na de training nog minder stress ervaren*. Langer is nauwelijks onderzocht."
   },
   "know": {
     "title": "Hoe hebben we de <0>impact</0> gemeten?",
     "items": [
-      "Productiviteit maten we met de Health and Work Performance Questionnaire (HPQ) van de Wereldgezondheidsorganisatie. Deelnemers geven daarin een cijfer voor hun eigen werkprestatie over de afgelopen vier weken. We maten het bij 20 deelnemers, één keer vóór de training en nog een keer vier weken na afloop. Het resultaat: 8,6% hogere productiviteit.",
+      "Productiviteit maten we met de Health and Work Performance Questionnaire (HPQ) van de Wereldgezondheidsorganisatie. Deelnemers geven daarin een cijfer voor hun eigen werkprestatie over de afgelopen vier weken. We maten het bij 14 deelnemers, één keer vóór de training en nog een keer vier weken na afloop. Het resultaat: 8,6%* hogere productiviteit.",
       "Ook in gerandomiseerd onderzoek presteren deelnemers na een vergelijkbare training beter op hun werk dan een vergelijkingsgroep (Michaelsen e.a., 2023).",
-      "Wie vaker dan eens per week oefende, ging er nog meer op vooruit: hun productiviteit steeg met 11,1%.",
+      "Wie 1 tot 3 dagen per week oefende (11 deelnemers), ging er nog meer op vooruit: hun productiviteit steeg met 11,1%*.",
       "Elke deelnemer kreeg een eigen impactrapport. Individuele antwoorden gaan nooit naar de werkgever."
     ],
     "report": {

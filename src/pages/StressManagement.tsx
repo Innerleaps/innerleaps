@@ -160,7 +160,6 @@ const StressManagement = () => {
       afterHero={
         <ResultatenBand
           stats={t("stress.statsBand.items", { returnObjects: true }) as ResultatenBandStat[]}
-          source={t("stress.statsBand.source")}
         />
       }
       afterChallenges={<VolhoudenBlok />}

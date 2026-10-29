@@ -1,0 +1,2162 @@
+{
+  "_uitleg": "Momentopname van 22-10-2026, vóór de wijzigingen: elke claim met de exacte teksten van toen. Niet bijwerken; het levende register is src/content/claims.json.",
+  "soorten": {
+    "A": "Eigen meting bij Innerleaps-deelnemers. Altijd zelfgerapporteerd, met n en periode. 'na de training', nooit 'door de training'.",
+    "B": "Externe studie. 'in studie naar [soort training] (auteur, jaar)', plus de regel dat het niet bij Innerleaps-deelnemers is gemeten.",
+    "C": "Belofte in kop, bullet of meta. Geen aantonende wijs: 'helpt', 'kan', 'deelnemers rapporteren'.",
+    "F": "Voorstel, nog niet goedgekeurd: feit zonder effectclaim, zoals een Google-score, met bron en peildatum."
+  },
+  "bronnen": {
+    "theydo-evaluatie-2026": {
+      "soort": "own",
+      "omschrijving": "Eindevaluatie TheyDo, meerkeuzevraag 'In which areas do you notice improvement because of this program?' (meer antwoorden mogelijk)",
+      "n": 22,
+      "nToelichting": "22 van de 39 deelnemers vulden de evaluatie in",
+      "periode": "april 2026, aan het eind van de training (training maart tot april 2026)",
+      "methode": "zelfgerapporteerd, eenmalig na afloop, geen voormeting, geen controlegroep",
+      "populatie": "TheyDo, internationale tech-scale-up, volledig remote, Engelstalig",
+      "uitkomsten": {
+        "minder stress en spanning": "15 van 22 = 68%",
+        "minder op de automatische piloot": "12 van 22 = 55%",
+        "minder mentale vermoeidheid": "12 van 22 = 55%",
+        "betere concentratie en focus": "9 van 22 = 41%",
+        "minder piekeren": "8 van 22 = 36%",
+        "beter slapen": "4 van 22 = 18%",
+        "prestaties en productiviteit": "2 van 22 = 9%",
+        "cijfer trainer": "gemiddeld 9,3 (schaal 1-10)",
+        "cijfer programma": "gemiddeld 8,1 (schaal 1-10)"
+      },
+      "data": "Second Brain: 03 Projects/Innerleaps/03 Sales & Marketing/Customer information/TheyDo/Course evaluation ENG (Antwoorden) - anonymous - Blad1.csv",
+      "gecontroleerdDoor": "Claude, herberekend uit de ruwe antwoorden",
+      "lastVerified": "2026-10-22"
+    },
+    "theydo-hpq-2026": {
+      "soort": "own",
+      "omschrijving": "Voor- en nameting productiviteit en welzijn bij TheyDo",
+      "n": 14,
+      "nToelichting": "20 mensen vulden beide metingen in: 14 deden mee aan de training, 6 niet. De 8,6% is berekend over de 14 deelnemers.",
+      "periode": "T0 vlak voor de training, T1 10 weken na de start, dus 4 weken na afloop (training maart tot april 2026)",
+      "methode": "zelfgerapporteerd, voor/na; productiviteit met de WHO Health and Work Performance Questionnaire (HPQ, absenteïsme- en presenteïsmevragen; Kessler e.a. 2003, 2004); stress met de Perceived Stress Scale",
+      "populatie": "TheyDo, internationale tech-scale-up, volledig remote",
+      "uitkomsten": {
+        "productiviteit deelnemers (n=14)": "+8,6% (groepsgemiddelde 1,08 naar 1,17)",
+        "productiviteit wie 1 tot 3 dagen per week oefende (n=11)": "+11,1%",
+        "stress deelnemers (n=14)": "-5,2% op de Perceived Stress Scale",
+        "productiviteit niet-deelnemers (n=6)": "+13,5%. Deze groep is in de rapportage aan TheyDo weggelaten: te klein en geen wachtlijstopzet."
+      },
+      "data": "Second Brain: 03 Projects/Innerleaps/03 Sales & Marketing/Customer information/TheyDo/Calculations for reports - Anonymous TheyDo - Blad1.csv en 'Training impact group comparison - Blad2.csv'",
+      "gecontroleerdDoor": "Claude, herberekend uit de ruwe antwoorden",
+      "lastVerified": "2026-10-22",
+      "letOp": "Er wás een vergelijkingsgroep van niet-deelnemers, en die ging er in productiviteit meer op vooruit (+13,5%). Te klein om iets te bewijzen, maar wie '8,6%' zonder deze context noemt, laat iets weg dat een lezer relevant kan vinden."
+    },
+    "theydo-aanmelding-2026": {
+      "soort": "own",
+      "omschrijving": "Aanmeldingen voor de training na de masterclass bij TheyDo",
+      "n": 39,
+      "nToelichting": "39 aanmeldingen; de masterclass had 93 deelnemers (39/93 = 42%). Grootte van het bedrijf niet in de data.",
+      "periode": "februari tot maart 2026",
+      "methode": "telling van aanmeldingen",
+      "data": "Second Brain: Customer information/TheyDo/Reason for joining, asked pre-training.md",
+      "gecontroleerdDoor": null,
+      "lastVerified": null
+    },
+    "masterclass-conversie": {
+      "soort": "own",
+      "omschrijving": "Deel van de masterclassdeelnemers dat daarna meedoet aan de training",
+      "n": null,
+      "periode": null,
+      "methode": null,
+      "data": "Opgegeven door Bas op 20-10-2026, onderliggende groepen onbekend",
+      "gecontroleerdDoor": null,
+      "lastVerified": null
+    },
+    "sessiedeelname": {
+      "soort": "own",
+      "omschrijving": "Deel van de deelnemers dat minimaal 5 van de 6 sessies volgt",
+      "n": null,
+      "periode": null,
+      "methode": null,
+      "data": "onbekend",
+      "gecontroleerdDoor": null,
+      "lastVerified": null
+    },
+    "google-reviews": {
+      "soort": "fact",
+      "omschrijving": "Gemiddelde score op Google Reviews",
+      "n": null,
+      "periode": null,
+      "methode": "openbare reviews op het Google-bedrijfsprofiel",
+      "gecontroleerdDoor": null,
+      "lastVerified": null
+    },
+    "de-bruin-2018": {
+      "soort": "external",
+      "auteur": "De Bruin e.a.",
+      "jaar": 2018,
+      "titel": "The Unilever Study: Positive Effects on Stress and Risk for Dropout from Work After the Finding Peace in a Frantic World Training",
+      "tijdschrift": "Mindfulness 11(2), 350-361 (online 2018, in een nummer 2020)",
+      "sourceUrl": "https://doi.org/10.1007/s12671-018-1029-6",
+      "studyType": "naturalistische studie zonder loting: 150 zelf aangemelde medewerkers van Unilever, eigen wachtlijstperiode als vergelijking",
+      "training": "8 weken 'Finding Peace in a Frantic World', 1,5 uur per week",
+      "uitkomst": "aandeel medewerkers met verhoogd risico op uitval van werk: 54,4% bij de wachtlijstmeting, 45,8% bij de voormeting, 16,4% na 6 maanden",
+      "gecontroleerdDoor": "Claude, via samenvatting (UvA-repository); volledige tekst niet gelezen",
+      "lastVerified": "2026-10-22",
+      "letOp": "De studie zegt 'risk for dropout from work'. Of dat 'langdurige uitval' of 'langdurig verzuim' is, staat niet in de samenvatting. Het blogclaimregister zet '70% minder langdurig verzuim' op rood (R5). Het blog noemt Mindfulness 9(6); dat klopt niet."
+    },
+    "aikens-2014": {
+      "soort": "external",
+      "auteur": "Aikens e.a.",
+      "jaar": 2014,
+      "titel": "Mindfulness goes to work: impact of an online workplace intervention",
+      "tijdschrift": "Journal of Occupational and Environmental Medicine 56(7), 721-731",
+      "sourceUrl": "https://doi.org/10.1097/JOM.0000000000000209",
+      "studyType": "gerandomiseerde studie met wachtlijst: 89 medewerkers van Dow Chemical",
+      "training": "online mindfulnesstraining",
+      "uitkomst": "minder ervaren stress (Perceived Stress Scale). De -26% is een eigen berekening: gemiddelde van de getrainde groep van 24,46 naar 18,00 (via een overzichtstabel, niet in het artikel zelf gecontroleerd).",
+      "gecontroleerdDoor": "Claude, via samenvatting en een overzichtstabel; volledige tekst niet gelezen",
+      "lastVerified": "2026-10-22"
+    },
+    "michaelsen-2023": {
+      "soort": "external",
+      "auteur": "Michaelsen e.a.",
+      "jaar": 2023,
+      "titel": "Mindfulness-Based and Mindfulness-Informed Interventions at the Workplace: A Systematic Review and Meta-Regression Analysis of RCTs",
+      "tijdschrift": "Mindfulness 14(6), 1271-1304",
+      "sourceUrl": "https://doi.org/10.1007/s12671-023-02130-7",
+      "studyType": "meta-analyse van 91 gerandomiseerde studies naar mindfulnesstraining op het werk",
+      "uitkomst": "stress bij follow-up tussen 13 en 52 weken nog lager dan de controlegroep (SMD 0,50, 5 studies); productiviteit direct na afloop SMD 0,27 (6 studies)",
+      "gecontroleerdDoor": "Claude, volledige tekst gelezen op 15-10-2026 (zie memory cijfers-en-bronnen)",
+      "lastVerified": "2026-10-15",
+      "letOp": "Nooit '12 maanden later', 'een jaar later' of 'minimaal 12 maanden' (CLAUDE.md). De metingen liggen tussen 3 maanden en een jaar."
+    },
+    "jha-fouten-25": {
+      "soort": "external",
+      "auteur": "Jha",
+      "jaar": 2021,
+      "titel": null,
+      "sourceUrl": null,
+      "studyType": null,
+      "uitkomst": "25% minder fouten op aandachtstaken",
+      "gecontroleerdDoor": null,
+      "lastVerified": null,
+      "letOp": "'Jha (2021)' is haar boek Peak Mind, geen studie. Bas bevestigde de 25% op 19-10-2026, maar de studie erachter is niet bekend. Zonder studie kan dit cijfer volgens de nieuwe regels niet online."
+    },
+    "jha-sart-24": {
+      "soort": "external",
+      "auteur": "Jha e.a.; Morrison e.a.",
+      "jaar": "2021; 2014",
+      "titel": null,
+      "sourceUrl": null,
+      "studyType": "volgens de marketingkennisbank: militaire en studentengroepen",
+      "uitkomst": "tot 24% betere volgehouden aandacht op de SART",
+      "gecontroleerdDoor": null,
+      "lastVerified": null
+    },
+    "bailey-2020": {
+      "soort": "external",
+      "auteur": "Bailey e.a.",
+      "jaar": 2020,
+      "titel": null,
+      "sourceUrl": null,
+      "studyType": null,
+      "uitkomst": "werkgeheugen efficiënter, minder neurale inspanning",
+      "gecontroleerdDoor": null,
+      "lastVerified": null,
+      "letOp": "Niet gecontroleerd. Mogelijk een vergelijking van ervaren mediteerders met niet-mediteerders, en dan geen bewijs dat een training van 6 weken dit doet."
+    },
+    "baumel-2019": {
+      "soort": "external",
+      "auteur": "Baumel e.a.",
+      "jaar": 2019,
+      "titel": "Objective User Engagement With Mental Health Apps: Systematic Search and Panel-Based Usage Analysis",
+      "tijdschrift": "Journal of Medical Internet Research 21(9), e14567",
+      "sourceUrl": "https://doi.org/10.2196/14567",
+      "studyType": "gebruiksdata van 93 apps voor mentale gezondheid",
+      "uitkomst": "na 30 dagen gebruikt mediaan 3,3% de app nog; bij mindfulness- en meditatieapps 4,7%",
+      "gecontroleerdDoor": "Claude, via de samenvatting",
+      "lastVerified": "2026-10-22",
+      "letOp": "'Nog geen 4%' klopt voor apps in het algemeen. Voor meditatieapps, waar de homepage op doelt, is het 4,7%."
+    },
+    "cles-meta-analyses": {
+      "soort": "external",
+      "auteur": "Vonderlin e.a.; De Vibe e.a.; Bartlett e.a.",
+      "jaar": "2020; 2017; 2018",
+      "studyType": "meta-analyses van gerandomiseerde studies",
+      "uitkomst": "effect op stress d = 0,53 tot 0,84. Omgerekend door Innerleaps naar de kans dat een getrainde persoon minder stress heeft dan een niet-getrainde: 65 tot 72%",
+      "sourceUrl": null,
+      "gecontroleerdDoor": null,
+      "lastVerified": null,
+      "letOp": "De 65-72% staat in geen van de studies; het is een eigen omrekening. Dat moet erbij."
+    },
+    "geen-bron": {
+      "soort": "unknown",
+      "omschrijving": "Bron onbekend. Volgens regel 6 mag dit niet online tot de bron er is."
+    },
+    "rood-15-21": {
+      "soort": "rood",
+      "omschrijving": "15-21% verzuimreductie: eigen rekensom in het onderzoeksdocument, geen gemeten resultaat. Op 05-10-2026 door Bas op rood gezet (blogclaimregister R1). Op de site en in de mails staan er drie verschillende bronnen bij: 'meta-analyses van 200+ studies', 'Virgili (2015)' en 'Vanhove 2016; Żołnierczyk-Zreda 2016'."
+    },
+    "grijs-5-8": {
+      "soort": "grijs",
+      "omschrijving": "5-8% productiviteit: eigen afleiding (zelfrapportage met 50% korting). Blogclaimregister X4. Bronvermelding wisselt: 'Oxford University, 2022' op de site, 'Khoury 2015, Good 2016' in de mail."
+    }
+  },
+  "claims": [
+    {
+      "id": "theydo-productiviteit-band",
+      "soort": "A",
+      "prioriteit": "hoog",
+      "bron": "theydo-hpq-2026",
+      "paginas": [
+        "/team-prestaties-verbeteren",
+        "/en/improve-team-performance"
+      ],
+      "huidig": [
+        {
+          "sleutel": "training:sustainability.resultsBand.items[0]",
+          "nl": {
+            "value": "+8,6%",
+            "label": "productiviteit 4 weken na training"
+          },
+          "en": {
+            "value": "+8.6%",
+            "label": "productivity 4 weeks after training"
+          }
+        }
+      ],
+      "voorstel": {
+        "bron": "voorstel uit de opdracht; definitieve tekst kiest Bas",
+        "nl": "+8,6% gem. productiviteit, 4 wkn na training (zelfgerapporteerd, n=14)",
+        "en": "+8.6% average productivity, 4 weeks after training (self-reported, n=14)"
+      },
+      "ontbreekt": [
+        "Bevestiging Bas: n=14 (deelnemers), niet 20"
+      ],
+      "feitelijkToetsen": false,
+      "opmerking": "Staat in één band met de 25% van Jha (extern). Twee soorten cijfers naast elkaar, dus twee bronregels.",
+      "status": "inventaris"
+    },
+    {
+      "id": "theydo-productiviteit-case",
+      "soort": "A",
+      "prioriteit": "hoog",
+      "bron": "theydo-hpq-2026",
+      "paginas": [
+        "/klantcases/theydo",
+        "/en/case-studies/theydo"
+      ],
+      "huidig": [
+        {
+          "sleutel": "caseTheydo:stats[0]",
+          "nl": {
+            "value": "+8,6%",
+            "label": "productiviteit 4 weken na training",
+            "note": "Gerandomiseerd onderzoek wijst dezelfde kant op (Michaelsen e.a., 2023)."
+          },
+          "en": {
+            "value": "+8.6%",
+            "label": "productivity 4 weeks after training",
+            "note": "Randomised research points the same way (Michaelsen et al., 2023)."
+          }
+        },
+        {
+          "sleutel": "caseTheydo:hero.title",
+          "nl": "8,6% <0>productiever</0> en 7 op de 10 heeft <0>minder stress</0>",
+          "en": "8.6% <0>more productive</0> and 7 in 10 feel <0>less stress</0>"
+        },
+        {
+          "sleutel": "caseTheydo:meta.title",
+          "nl": "Klantcase TheyDo: 8,6% productiever | Innerleaps",
+          "en": "TheyDo case study: 8.6% more productive | Innerleaps"
+        },
+        {
+          "sleutel": "caseTheydo:meta.description",
+          "nl": "Voelt mentale training niet als een teken van zwakte? De CEO van TheyDo vreesde van wel. Toch meldden 39 mensen zich vrijwillig aan, en steeg de productiviteit 8,6%.",
+          "en": "Would mental training feel like a sign of weakness? TheyDo's CEO feared so. Then 39 people signed up voluntarily, and productivity rose 8.6%."
+        },
+        {
+          "bestand": "public/social/klantcase-theydo-nl.png en -en.png",
+          "nl": "8,6% productiever. En minder stress bij 7 op de 10.",
+          "en": "(Engelse variant van hetzelfde beeld)"
+        }
+      ],
+      "voorstel": null,
+      "ontbreekt": [
+        "Keuze Bas: cijfer in de kop en de meta houden met bronregel eronder, of de kop zonder cijfer"
+      ],
+      "feitelijkToetsen": false,
+      "opmerking": "Kop, meta en deelafbeelding zijn plekken zonder ruimte voor een bronregel. '7 op de 10' is 68% van de 22 invullers, niet van alle 39 deelnemers.",
+      "status": "inventaris"
+    },
+    {
+      "id": "theydo-productiviteit-meta-scaleup",
+      "soort": "A",
+      "prioriteit": "midden",
+      "bron": "theydo-hpq-2026",
+      "paginas": [
+        "/team-prestaties-verbeteren",
+        "/en/improve-team-performance"
+      ],
+      "huidig": [
+        {
+          "sleutel": "training:sustainability.meta.description",
+          "nl": "Druk is niet hetzelfde als productief. Een aandachttraining van zes weken voor scale-ups: meer gedaan in dezelfde uren. Bij TheyDo steeg de productiviteit 8,6%.",
+          "en": "Busy isn't the same as productive. A six-week attention training that helps your team get more done in the same hours. At TheyDo, productivity rose 8.6%."
+        }
+      ],
+      "voorstel": null,
+      "ontbreekt": [],
+      "feitelijkToetsen": false,
+      "opmerking": "Zoekresultaat: geen ruimte voor bronregel. 'steeg de productiviteit' is een vaststelling; zelfgerapporteerd staat er niet bij.",
+      "status": "inventaris"
+    },
+    {
+      "id": "theydo-meetverantwoording-case",
+      "soort": "A",
+      "prioriteit": "hoog",
+      "bron": "theydo-hpq-2026",
+      "paginas": [
+        "/klantcases/theydo",
+        "/en/case-studies/theydo"
+      ],
+      "huidig": [
+        {
+          "sleutel": "caseTheydo:know.items[0]",
+          "nl": "Productiviteit maten we met de Health and Work Performance Questionnaire (HPQ) van de Wereldgezondheidsorganisatie. Deelnemers geven daarin een cijfer voor hun eigen werkprestatie over de afgelopen vier weken. We maten het bij 20 deelnemers, één keer vóór de training en nog een keer vier weken na afloop. Het resultaat: 8,6% hogere productiviteit.",
+          "en": "We measured productivity with the World Health Organization's Health and Work Performance Questionnaire (HPQ). Participants are asked to rate their own work performance over the past four weeks. We measured it with 20 participants, once before the training and again four weeks after it ended. The result is an 8.6% increase in productivity."
+        },
+        {
+          "sleutel": "caseTheydo:know.items[2]",
+          "nl": "Wie vaker dan eens per week oefende, ging er nog meer op vooruit: hun productiviteit steeg met 11,1%.",
+          "en": "People who practised more than once a week did even better: their productivity rose by 11.1%."
+        },
+        {
+          "sleutel": "caseTheydo:glance.items[4].value",
+          "nl": "Vóór de training en vier weken na afloop, plus een evaluatie aan het eind van de training",
+          "en": "Before the training and four weeks after it, plus an evaluation at the end of the training"
+        }
+      ],
+      "voorstel": null,
+      "ontbreekt": [
+        "Bevestiging Bas: '20 deelnemers' wordt 14",
+        "Bevestiging Bas: 'vaker dan eens per week' wordt '1 tot 3 dagen per week' (11 deelnemers)"
+      ],
+      "feitelijkToetsen": true,
+      "opmerking": "Feitelijk onjuist volgens de ruwe data: van de 20 die beide metingen invulden deden er 6 niet mee aan de training. De 11,1% gaat over de categorie '1-3 days / week', en daar valt 1 keer per week ook onder.",
+      "status": "inventaris"
+    },
+    {
+      "id": "theydo-roi-23x",
+      "soort": "A",
+      "prioriteit": "midden",
+      "bron": "theydo-hpq-2026",
+      "paginas": [
+        "/klantcases/theydo",
+        "/en/case-studies/theydo"
+      ],
+      "huidig": [
+        {
+          "sleutel": "caseTheydo:investment.number",
+          "nl": "23x",
+          "en": "23x"
+        },
+        {
+          "sleutel": "caseTheydo:investment.fact",
+          "nl": "Bij TheyDo verdiende de training zich terug vanaf 0,36% meer productiviteit. Gemeten werd 8,6%: ruim 23 keer zoveel. Waar dat punt bij jullie ligt, hangt af van de salarissen en het aantal deelnemers. <0>Reken het uit voor je eigen team</0>.",
+          "en": "At TheyDo, the programme paid for itself from a productivity gain of 0.36%. The measured gain was 8.6%: more than 23 times as much. Where your break-even sits depends on your salaries and number of participants. <0>Calculate it for your team</0>."
+        }
+      ],
+      "voorstel": null,
+      "ontbreekt": [],
+      "feitelijkToetsen": false,
+      "opmerking": "Rekensom op een zelfgerapporteerd cijfer (8,6 / 0,36 = 23,9). Mag, maar 'gemeten werd 8,6%' heeft 'zelfgerapporteerd, n=14' nodig.",
+      "status": "inventaris"
+    },
+    {
+      "id": "theydo-quote-jochem-cijfers",
+      "soort": "A",
+      "prioriteit": "hoog",
+      "bron": "theydo-hpq-2026",
+      "paginas": [
+        "/",
+        "/en",
+        "/team-prestaties-verbeteren",
+        "/en/improve-team-performance",
+        "/contact",
+        "/en/contact",
+        "/offerte-aanvragen",
+        "/en/request-a-quote",
+        "/over-ons",
+        "/en/about-us",
+        "/bedankt/offerte",
+        "/bedankt/roi",
+        "/bedankt/wetenschappelijk-rapport",
+        "/en/thank-you/*"
+      ],
+      "huidig": [
+        {
+          "sleutel": "common:hero.quote",
+          "nl": "Innerleaps leverde snel meetbare resultaten: 8,6% hogere productiviteit en 7 op de 10 deelnemers ervaarde minder stress.",
+          "en": "Innerleaps delivered measurable results fast: 8.6% higher productivity, and 7 in 10 participants felt less stress."
+        },
+        {
+          "sleutel": "common:testimonial.quote",
+          "nl": "Met hun 6-weekse aandachttraining door geaccrediteerde trainers leverde Innerleaps snel meetbare resultaten: maar liefst 8,6% hogere productiviteit en 7 op de 10 deelnemers gaf aan minder stress te ervaren!",
+          "en": "Innerleaps' 6-week attention training, run by accredited trainers, delivered measurable results fast: 8.6% higher productivity, and 7 in 10 participants reported less stress!"
+        },
+        {
+          "sleutel": "common:bookingTrust.quote",
+          "nl": "“Met hun 6-weekse aandachttraining door geaccrediteerde trainers leverde Innerleaps snel meetbare resultaten: maar liefst 8,6% hogere productiviteit en 7 op de 10 deelnemers gaf aan minder stress te ervaren!”",
+          "en": "“Innerleaps' 6-week attention training, run by accredited trainers, delivered measurable results fast: 8.6% higher productivity, and 7 in 10 participants reported less stress!”"
+        }
+      ],
+      "voorstel": null,
+      "ontbreekt": [
+        "Akkoord van Jochem op deze tekst (open sinds 15-10-2026)"
+      ],
+      "feitelijkToetsen": true,
+      "opmerking": "Een citaat met cijfers is voor de wet nog steeds een claim van Innerleaps. De tekst is door Bas geschreven en nog niet door Jochem goedgekeurd. 'snel meetbare resultaten' en 'maar liefst' versterken de claim.",
+      "status": "inventaris"
+    },
+    {
+      "id": "theydo-stress-68-blok",
+      "soort": "A",
+      "prioriteit": "hoog",
+      "bron": "theydo-evaluatie-2026",
+      "paginas": [
+        "/",
+        "/en",
+        "/duurzame-inzetbaarheid",
+        "/en/sustainable-employability",
+        "/team-prestaties-verbeteren",
+        "/en/improve-team-performance"
+      ],
+      "huidig": [
+        {
+          "sleutel": "common:results.title",
+          "nl": "Wat deelnemers merken na zes weken",
+          "en": "What participants notice after six weeks"
+        },
+        {
+          "sleutel": "common:results.intro",
+          "nl": "We vroegen deelnemers waar ze verbetering merkten.",
+          "en": "We asked participants where they noticed improvement."
+        },
+        {
+          "sleutel": "common:results.highlight.label",
+          "nl": "merkte minder stress en spanning",
+          "en": "felt less stress and tension"
+        },
+        {
+          "sleutel": "common:results.highlight.context",
+          "nl": "De meest genoemde verandering in al onze groepen.",
+          "en": "The most-mentioned change across all our cohorts."
+        },
+        {
+          "bestand": "src/components/ResultsSection.tsx",
+          "nl": "HIGHLIGHT_VALUE = 68",
+          "en": "HIGHLIGHT_VALUE = 68"
+        }
+      ],
+      "voorstel": {
+        "bron": "voorstel uit de opdracht; definitieve tekst kiest Bas",
+        "nl": "68% van de deelnemers merkte minder stress en spanning. Zelfgerapporteerd, n=[n], na zes weken. Meest genoemd in [aantal] groepen. / Intro: We vroegen [n] deelnemers in [aantal] groepen waar ze verbetering merkten",
+        "en": null
+      },
+      "ontbreekt": [
+        "Uit hoeveel groepen komt dit? In de data alleen TheyDo (22 invullers). De uitgeverij had 4 open antwoorden, geen meerkeuzevraag."
+      ],
+      "feitelijkToetsen": true,
+      "opmerking": "'De meest genoemde verandering in al onze groepen' is niet te onderbouwen met de data die er is. '68% van de deelnemers' is 68% van wie de evaluatie invulde (22 van 39).",
+      "status": "inventaris"
+    },
+    {
+      "id": "theydo-balken",
+      "soort": "A",
+      "prioriteit": "midden",
+      "bron": "theydo-evaluatie-2026",
+      "paginas": [
+        "/",
+        "/en",
+        "/duurzame-inzetbaarheid",
+        "/en/sustainable-employability",
+        "/team-prestaties-verbeteren",
+        "/en/improve-team-performance"
+      ],
+      "huidig": [
+        {
+          "sleutel": "common:results.bars",
+          "nl": {
+            "autopilot": "Minder op de automatische piloot",
+            "fatigue": "Minder mentale vermoeidheid",
+            "focus": "Betere concentratie en focus",
+            "rumination": "Minder piekeren"
+          },
+          "en": {
+            "autopilot": "Less time on autopilot",
+            "fatigue": "Less mental fatigue",
+            "focus": "Better concentration and focus",
+            "rumination": "Less rumination and overthinking"
+          }
+        },
+        {
+          "bestand": "src/components/ResultsSection.tsx",
+          "nl": "55 / 55 / 41 / 36",
+          "en": "55 / 55 / 41 / 36"
+        }
+      ],
+      "voorstel": null,
+      "ontbreekt": [],
+      "feitelijkToetsen": false,
+      "opmerking": "Zelfde bron en bronregel als het 68%-blok.",
+      "status": "inventaris"
+    },
+    {
+      "id": "theydo-stress-68-scaleup-band",
+      "soort": "A",
+      "prioriteit": "hoog",
+      "bron": "theydo-evaluatie-2026",
+      "paginas": [
+        "/team-prestaties-verbeteren",
+        "/en/improve-team-performance"
+      ],
+      "huidig": [
+        {
+          "sleutel": "training:sustainability.resultsBand.items[1]",
+          "nl": {
+            "value": "68%",
+            "label": "ervaart minder stress en spanning"
+          },
+          "en": {
+            "value": "68%",
+            "label": "feel less stress and tension"
+          }
+        }
+      ],
+      "voorstel": null,
+      "ontbreekt": [],
+      "feitelijkToetsen": false,
+      "opmerking": null,
+      "status": "inventaris"
+    },
+    {
+      "id": "theydo-stress-68-case",
+      "soort": "A",
+      "prioriteit": "midden",
+      "bron": "theydo-evaluatie-2026",
+      "paginas": [
+        "/klantcases/theydo",
+        "/en/case-studies/theydo"
+      ],
+      "huidig": [
+        {
+          "sleutel": "caseTheydo:stats[1]",
+          "nl": {
+            "value": "68%",
+            "label": "ervaart minder stress en spanning"
+          },
+          "en": {
+            "value": "68%",
+            "label": "feel less stress and tension"
+          }
+        },
+        {
+          "sleutel": "caseTheydo:stats[2]",
+          "nl": {
+            "value": "9,3",
+            "label": "voor de trainers, een 8,1 voor het programma"
+          },
+          "en": {
+            "value": "9.3",
+            "label": "for the trainers, 8.1 for the programme"
+          }
+        },
+        {
+          "sleutel": "caseTheydo:colleagues.intro",
+          "nl": "22 van de 39 deelnemers vulden aan het eind een evaluatie in. Dit noemden ze het vaakst:",
+          "en": "22 of the 39 participants filled in an evaluation at the end. These came up most:"
+        },
+        {
+          "sleutel": "caseTheydo:colleagues.items",
+          "nl": [
+            {
+              "value": 68,
+              "label": "Minder stress en spanning"
+            },
+            {
+              "value": 55,
+              "label": "Minder op de automatische piloot"
+            },
+            {
+              "value": 55,
+              "label": "Minder mentaal moe"
+            },
+            {
+              "value": 41,
+              "label": "Betere concentratie en focus"
+            }
+          ],
+          "en": [
+            {
+              "value": 68,
+              "label": "Less stress and tension"
+            },
+            {
+              "value": 55,
+              "label": "Less running on autopilot"
+            },
+            {
+              "value": 55,
+              "label": "Less mental fatigue"
+            },
+            {
+              "value": 41,
+              "label": "Better concentration and focus"
+            }
+          ]
+        }
+      ],
+      "voorstel": null,
+      "ontbreekt": [],
+      "feitelijkToetsen": false,
+      "opmerking": "De intro noemt al '22 van de 39'. Ontbreekt nog: zelfgerapporteerd en de periode.",
+      "status": "inventaris"
+    },
+    {
+      "id": "theydo-medewerkers-band",
+      "soort": "A",
+      "prioriteit": "laag",
+      "bron": "theydo-evaluatie-2026",
+      "paginas": [
+        "/stressmanagement-training",
+        "/en/stress-management-training"
+      ],
+      "huidig": [
+        {
+          "sleutel": "training:stress.statsBand",
+          "nl": {
+            "items": [
+              {
+                "value": "68%",
+                "label": "merkte minder stress en spanning"
+              },
+              {
+                "value": "55%",
+                "label": "leefde minder op de automatische piloot"
+              },
+              {
+                "value": "55%",
+                "label": "voelde zich minder mentaal moe"
+              },
+              {
+                "value": "9,3",
+                "label": "voor de trainer"
+              }
+            ],
+            "source": "Evaluatie door 22 deelnemers bij TheyDo, 2026"
+          },
+          "en": {
+            "items": [
+              {
+                "value": "68%",
+                "label": "noticed less stress and tension"
+              },
+              {
+                "value": "55%",
+                "label": "spent less time on autopilot"
+              },
+              {
+                "value": "55%",
+                "label": "felt less mentally drained"
+              },
+              {
+                "value": "9.3",
+                "label": "for the trainer"
+              }
+            ],
+            "source": "Evaluation by 22 participants at TheyDo, 2026"
+          }
+        }
+      ],
+      "voorstel": null,
+      "ontbreekt": [],
+      "feitelijkToetsen": false,
+      "opmerking": "Heeft al een bronregel ('Evaluatie door 22 deelnemers bij TheyDo, 2026'). Alleen 'zelfgerapporteerd' en de maand ontbreken.",
+      "status": "inventaris"
+    },
+    {
+      "id": "theydo-70-publiek-faq",
+      "soort": "A",
+      "prioriteit": "hoog",
+      "bron": "theydo-evaluatie-2026",
+      "paginas": [
+        "/duurzame-inzetbaarheid",
+        "/en/sustainable-employability"
+      ],
+      "huidig": [
+        {
+          "sleutel": "training:vitality.faq.items[15].a",
+          "nl": "Deelnemers merken al na de eerste workshops verschil, en dat effect stapelt op gedurende de zes weken. Direct na afloop van de 6-weekse training geeft 70% aan minder stress te ervaren. Het blijft ook hangen: onderzoek laat zien dat de stress nog maanden na de training lager is.",
+          "en": "Participants notice a difference after the first workshops, and that effect builds up over the six weeks. Straight after the 6-week training, 70% report experiencing less stress. It also lasts: research shows stress stays lower for months after the training."
+        }
+      ],
+      "voorstel": null,
+      "ontbreekt": [],
+      "feitelijkToetsen": true,
+      "opmerking": "'70% geeft aan minder stress te ervaren' is de 68% van TheyDo, afgerond en zonder bron. Op de pagina voor de publieke sector komt het cijfer van een tech-scale-up. 'onderzoek laat zien dat de stress nog maanden na de training lager is' is Michaelsen.",
+      "status": "inventaris"
+    },
+    {
+      "id": "theydo-aanmelding",
+      "soort": "A",
+      "prioriteit": "laag",
+      "bron": "theydo-aanmelding-2026",
+      "paginas": [
+        "/klantcases/theydo",
+        "/en/case-studies/theydo"
+      ],
+      "huidig": [
+        {
+          "sleutel": "caseTheydo:glance.items[2].value",
+          "nl": "39 medewerkers, zo'n 40% van het bedrijf, vrijwillig aangemeld",
+          "en": "39 employees, about 40% of the company, signed up voluntarily"
+        },
+        {
+          "sleutel": "caseTheydo:doubts.fact",
+          "nl": "39 mensen meldden zich vrijwillig aan na de masterclass. Zo'n 40% van het bedrijf.",
+          "en": "39 people signed up voluntarily after the masterclass. About 40% of the company."
+        },
+        {
+          "sleutel": "caseTheydo:context.photo.caption",
+          "nl": "De online masterclass bij TheyDo, met 93 deelnemers.",
+          "en": "The online masterclass at TheyDo, with 93 participants."
+        }
+      ],
+      "voorstel": null,
+      "ontbreekt": [
+        "Hoe groot was TheyDo toen (voor 'zo'n 40% van het bedrijf')? 39 van 93 masterclassdeelnemers is 42%."
+      ],
+      "feitelijkToetsen": true,
+      "opmerking": null,
+      "status": "inventaris"
+    },
+    {
+      "id": "masterclass-conversie",
+      "soort": "A",
+      "prioriteit": "hoog",
+      "bron": "masterclass-conversie",
+      "paginas": [
+        "/duurzame-inzetbaarheid",
+        "/en/sustainable-employability"
+      ],
+      "huidig": [
+        {
+          "sleutel": "training:vitality.faq.items[0].a",
+          "nl": "Bij ons doet 20 tot 40% van wie de masterclass volgt daarna ook echt mee aan de training. Dat komt door de voorbereiding. Daar steken we veel werk in, want de impact ontstaat pas als mensen meedoen.\n\nWe leggen de tijden vooraf vast met de leidinggevenden, zodat de training in de werkweek past. Je mensen leren het programma eerst kennen, live of in hun eigen tijd. En wij leveren de teksten aan, zodat de uitnodiging uit jullie eigen organisatie komt.",
+          "en": "With us, 20 to 40% of the people who attend the masterclass go on to join the training. That comes down to preparation. We put a lot of work into it, because the impact only starts once people take part.\n\nWe agree the times with managers in advance, so the training fits into the working week. Your people get to know the programme first, live or in their own time. And we provide the texts, so the invitation comes from your own organisation."
+        }
+      ],
+      "voorstel": null,
+      "ontbreekt": [
+        "Welke groepen, hoeveel masterclassdeelnemers, welke periode"
+      ],
+      "feitelijkToetsen": true,
+      "opmerking": null,
+      "status": "inventaris"
+    },
+    {
+      "id": "sessiedeelname-9-op-10",
+      "soort": "A",
+      "prioriteit": "hoog",
+      "bron": "sessiedeelname",
+      "paginas": [
+        "/breintraining-methode",
+        "/en/method"
+      ],
+      "huidig": [
+        {
+          "sleutel": "methode:turnout.intro",
+          "nl": "Elke aanbieder heeft goed materiaal. Waar wij het verschil maken is dat bijna al onze deelnemers het programma afmaken.",
+          "en": "Every provider has good material. Where we make the difference is that almost all of our participants finish the programme."
+        },
+        {
+          "sleutel": "methode:turnout.number",
+          "nl": {
+            "aria": "9 op de 10",
+            "suffix": "op de 10"
+          },
+          "en": {
+            "aria": "9 in 10",
+            "suffix": "in 10"
+          }
+        },
+        {
+          "sleutel": "methode:turnout.caption",
+          "nl": "van de collega’s die bij ons starten, doet mee aan <0>minimaal 5 van de 6 sessies</0>.",
+          "en": "of the people who start with us <0>attend at least 5 of the 6 sessions</0>."
+        }
+      ],
+      "voorstel": null,
+      "ontbreekt": [
+        "Bron, n en periode van '9 op de 10 doet mee aan minimaal 5 van de 6 sessies'"
+      ],
+      "feitelijkToetsen": true,
+      "opmerking": "'bijna al onze deelnemers' valt onder de te toetsen woorden.",
+      "status": "inventaris"
+    },
+    {
+      "id": "booking-productiviteit-8",
+      "soort": "A",
+      "prioriteit": "hoog",
+      "bron": "theydo-hpq-2026",
+      "paginas": [
+        "/contact",
+        "/en/contact",
+        "/offerte-aanvragen",
+        "/en/request-a-quote",
+        "/over-ons",
+        "/en/about-us",
+        "/bedankt/offerte",
+        "/bedankt/roi",
+        "/bedankt/wetenschappelijk-rapport",
+        "/en/thank-you/*"
+      ],
+      "huidig": [
+        {
+          "bestand": "src/components/BookingStats.tsx",
+          "nl": "+8% Productiviteit",
+          "en": "+8% Productivity"
+        }
+      ],
+      "voorstel": null,
+      "ontbreekt": [],
+      "feitelijkToetsen": false,
+      "opmerking": "Afgerond van 8,6% (TheyDo), zonder bron. Staat in één rij met drie onderzoekscijfers, zodat het als onderzoek leest.",
+      "status": "inventaris"
+    },
+    {
+      "id": "google-score",
+      "soort": "F",
+      "prioriteit": "laag",
+      "bron": "google-reviews",
+      "paginas": [
+        "elke pagina"
+      ],
+      "huidig": [
+        {
+          "sleutel": "common:footer.googleRating",
+          "nl": "4,7/5 op Google",
+          "en": "4.7/5 on Google"
+        },
+        {
+          "sleutel": "common:hero.proofRating",
+          "nl": "4,7/5",
+          "en": "4.7/5"
+        },
+        {
+          "bestand": "src/components/TrainingPageLayout.tsx",
+          "nl": "4,7 / 5",
+          "en": "4,7 / 5"
+        }
+      ],
+      "voorstel": null,
+      "ontbreekt": [
+        "Aantal reviews en peildatum"
+      ],
+      "feitelijkToetsen": false,
+      "opmerking": "Geen effectclaim, wel een cijfer. Voorstel: soort F (feit) met bron en peildatum.",
+      "status": "inventaris"
+    },
+    {
+      "id": "debruin-band",
+      "soort": "B",
+      "prioriteit": "hoog",
+      "bron": "de-bruin-2018",
+      "paginas": [
+        "/duurzame-inzetbaarheid",
+        "/en/sustainable-employability"
+      ],
+      "huidig": [
+        {
+          "sleutel": "training:vitality.resultsBand.items[0]",
+          "nl": {
+            "value": "-70%",
+            "label": "risico op langdurige uitval (De Bruin, 2018)"
+          },
+          "en": {
+            "value": "-70%",
+            "label": "risk of long-term sick leave (De Bruin, 2018)"
+          }
+        }
+      ],
+      "voorstel": {
+        "bron": "voorstel uit de opdracht; definitieve tekst kiest Bas",
+        "nl": "-70% risico op langdurig verzuim in studie naar [soort training] (De Bruin, 2018)",
+        "en": null
+      },
+      "ontbreekt": [
+        "Keuze Bas: 'uitval' of 'langdurig verzuim'. De studie zegt 'risk for dropout from work'; het blogclaimregister zet '70% minder langdurig verzuim' op rood (R5)."
+      ],
+      "feitelijkToetsen": true,
+      "opmerking": "[soort training] is nu bekend: 8 weken mindfulnesstraining bij Unilever, 150 medewerkers, zonder loting.",
+      "status": "inventaris"
+    },
+    {
+      "id": "debruin-faq",
+      "soort": "B",
+      "prioriteit": "hoog",
+      "bron": "de-bruin-2018",
+      "paginas": [
+        "/duurzame-inzetbaarheid",
+        "/en/sustainable-employability",
+        "/team-prestaties-verbeteren",
+        "/en/improve-team-performance"
+      ],
+      "huidig": [
+        {
+          "sleutel": "training:vitality.faq.items[12].a",
+          "nl": "Onderzoek naar dit soort training vindt minder stress, minder burn-outklachten, meer veerkracht en beter slapen. Neem stress: zet iemand die de training deed naast iemand die hem niet deed, en in 65 tot 72% van de gevallen heeft de getrainde persoon minder stress.\n\nHet risico op langdurige uitval daalt met 70% (van 54,4% naar 16,4%). En de daling in stress houdt stand: studies die drie maanden tot een jaar later opnieuw maten, vonden nog steeds aantoonbaar minder stress.",
+          "en": "Research into this kind of training finds less stress, fewer burnout symptoms, more resilience and better sleep. Take stress: compare someone who did the training with someone who didn't, and in 65 to 72% of cases the trained person has less stress.\n\nThe risk of long-term absence drops by 70% (from 54.4% to 16.4%). And the drop in stress lasts: studies that checked back three months to a year later still found measurably less stress."
+        },
+        {
+          "sleutel": "training:sustainability.faq.items[9].a",
+          "nl": "Onderzoek naar dit soort training vindt minder stress, minder burn-outklachten, meer veerkracht en beter slapen. Neem stress: zet iemand die de training deed naast iemand die hem niet deed, en in 65 tot 72% van de gevallen heeft de getrainde persoon minder stress.\n\nOok de productiviteit gaat omhoog. Dat effect is kleiner, maar over dit effect zijn de studies het meest eensgezind.\n\nHet risico op langdurige uitval daalt met 70% (van 54,4% naar 16,4%). En de daling in stress houdt stand: studies die drie maanden tot een jaar later opnieuw maten, vonden nog steeds aantoonbaar minder stress.",
+          "en": "Research into this kind of training finds less stress, fewer burnout symptoms, more resilience and better sleep. Take stress: compare someone who did the training with someone who didn't, and in 65 to 72% of cases the trained person has less stress.\n\nProductivity goes up too. The effect is smaller, but it is the result the studies agree on most.\n\nThe risk of long-term absence drops by 70% (from 54.4% to 16.4%). And the drop in stress lasts: studies that checked back three months to a year later still found measurably less stress."
+        }
+      ],
+      "voorstel": null,
+      "ontbreekt": [],
+      "feitelijkToetsen": true,
+      "opmerking": "Deze FAQ staat ook in de structured data (FAQPage). Op de scale-up-pagina hoort volgens Bas geen verzuim; dit stuk staat er wel.",
+      "status": "inventaris"
+    },
+    {
+      "id": "debruin-booking",
+      "soort": "B",
+      "prioriteit": "hoog",
+      "bron": "de-bruin-2018",
+      "paginas": [
+        "/contact",
+        "/en/contact",
+        "/offerte-aanvragen",
+        "/en/request-a-quote",
+        "/over-ons",
+        "/en/about-us",
+        "/bedankt/offerte",
+        "/bedankt/roi",
+        "/bedankt/wetenschappelijk-rapport",
+        "/en/thank-you/*"
+      ],
+      "huidig": [
+        {
+          "bestand": "src/components/BookingStats.tsx",
+          "nl": "-70% Uitvalrisico",
+          "en": "-70% Dropout risk"
+        }
+      ],
+      "voorstel": null,
+      "ontbreekt": [],
+      "feitelijkToetsen": false,
+      "opmerking": null,
+      "status": "inventaris"
+    },
+    {
+      "id": "aikens-band",
+      "soort": "B",
+      "prioriteit": "midden",
+      "bron": "aikens-2014",
+      "paginas": [
+        "/duurzame-inzetbaarheid",
+        "/en/sustainable-employability"
+      ],
+      "huidig": [
+        {
+          "sleutel": "training:vitality.resultsBand.items[1]",
+          "nl": {
+            "value": "-26%",
+            "label": "stress (Aikens, 2014)"
+          },
+          "en": {
+            "value": "-26%",
+            "label": "stress (Aikens, 2014)"
+          }
+        }
+      ],
+      "voorstel": {
+        "bron": "voorstel uit de opdracht; definitieve tekst kiest Bas",
+        "nl": "-26% stress in studie naar online mindfulnesstraining (Aikens, 2014)",
+        "en": null
+      },
+      "ontbreekt": [],
+      "feitelijkToetsen": false,
+      "opmerking": "[soort training] ingevuld uit de studie. De 26% is een eigen berekening uit de gemiddelden, niet het getal uit het artikel.",
+      "status": "inventaris"
+    },
+    {
+      "id": "michaelsen-12-maanden-band",
+      "soort": "B",
+      "prioriteit": "midden",
+      "bron": "michaelsen-2023",
+      "paginas": [
+        "/duurzame-inzetbaarheid",
+        "/en/sustainable-employability"
+      ],
+      "huidig": [
+        {
+          "sleutel": "training:vitality.resultsBand.items[2]",
+          "nl": {
+            "value": "12",
+            "label": "maanden na training nog altijd minder stress (Michaelsen, 2023)"
+          },
+          "en": {
+            "value": "12",
+            "label": "months after training, still less stress (Michaelsen, 2023)"
+          }
+        }
+      ],
+      "voorstel": {
+        "bron": "voorstel uit de opdracht; definitieve tekst kiest Bas",
+        "nl": "In studie: ook 12 maanden na training minder stress (Michaelsen, 2023)",
+        "en": null
+      },
+      "ontbreekt": [],
+      "feitelijkToetsen": true,
+      "opmerking": "Het voorstel uit de opdracht botst met CLAUDE.md ('nooit 12 maanden later'): de studies maten tussen 3 maanden en een jaar. 'tot' moet blijven.",
+      "status": "inventaris"
+    },
+    {
+      "id": "michaelsen-overig",
+      "soort": "B",
+      "prioriteit": "laag",
+      "bron": "michaelsen-2023",
+      "paginas": [
+        "/breintraining-methode",
+        "/en/method",
+        "/klantcases/theydo",
+        "/en/case-studies/theydo",
+        "/duurzame-inzetbaarheid",
+        "/en/sustainable-employability",
+        "/team-prestaties-verbeteren",
+        "/en/improve-team-performance"
+      ],
+      "huidig": [
+        {
+          "sleutel": "methode:sixWeeks.outro",
+          "nl": "Het resultaat? Gedrag dat blijft. Studies die drie maanden tot een jaar later opnieuw maten, vonden nog steeds aantoonbaar minder stress (Michaelsen et al., 2023).",
+          "en": "The result? Behaviour that sticks. Studies that checked back three months to a year later still found measurably less stress (Michaelsen et al., 2023)."
+        },
+        {
+          "sleutel": "caseTheydo:again.fact",
+          "nl": "Wetenschappelijk onderzoek laat zien dat deelnemers tot een jaar na de training nog minder stress ervaren (Michaelsen e.a., 2023). Langer is nauwelijks onderzocht.",
+          "en": "Scientific research shows that participants still feel less stress up to a year after the training (Michaelsen et al., 2023). Longer than that has hardly been studied."
+        },
+        {
+          "sleutel": "caseTheydo:stats[0].note",
+          "nl": "Gerandomiseerd onderzoek wijst dezelfde kant op (Michaelsen e.a., 2023).",
+          "en": "Randomised research points the same way (Michaelsen et al., 2023)."
+        },
+        {
+          "sleutel": "caseTheydo:know.items[1]",
+          "nl": "Ook in gerandomiseerd onderzoek presteren deelnemers na een vergelijkbare training beter op hun werk dan een vergelijkingsgroep (Michaelsen e.a., 2023).",
+          "en": "Randomised research shows the same: after similar training, participants perform better at work than a comparison group (Michaelsen et al., 2023)."
+        }
+      ],
+      "voorstel": null,
+      "ontbreekt": [],
+      "feitelijkToetsen": false,
+      "opmerking": "Inhoudelijk al gecorrigeerd op 15-10-2026. Alleen de vorm moet naar de standaard: soort onderzoek en 'niet gemeten bij Innerleaps-deelnemers'.",
+      "status": "inventaris"
+    },
+    {
+      "id": "jha-25-fouten",
+      "soort": "B",
+      "prioriteit": "hoog",
+      "bron": "jha-fouten-25",
+      "paginas": [
+        "/team-prestaties-verbeteren",
+        "/en/improve-team-performance"
+      ],
+      "huidig": [
+        {
+          "sleutel": "training:sustainability.resultsBand.items[2]",
+          "nl": {
+            "value": "25%",
+            "label": "minder fouten op aandachtstaken (Jha, 2021)"
+          },
+          "en": {
+            "value": "25%",
+            "label": "fewer errors on attention tasks (Jha, 2021)"
+          }
+        },
+        {
+          "sleutel": "training:sustainability.faq.items[10].a",
+          "nl": "Innerleaps verbetert prestaties door optimalisatie van het werkgeheugen, het mentale \"werkblad\" waarop denken, beslissen en handelen plaatsvinden. Dit gebeurt via drie mechanismen:\n\nTen eerste wordt relevante informatie sneller geselecteerd en irrelevante informatie beter onderdrukt. Concentratie neemt toe, afleiding neemt af. Onderzoek laat 25% minder fouten zien op aandachtstaken (Jha et al., 2021).\n\nTen tweede nemen spanning en werkdruk normaal gesproken een groot deel van het werkgeheugen in beslag. Wanneer die spanning afneemt, komt er capaciteit vrij voor de taak zelf.\n\nTen derde wordt het werkgeheugen efficiënter: betere resultaten met minder neurale inspanning (Bailey et al., 2020). Medewerkers presteren scherper en houden energie over aan het einde van de dag.",
+          "en": "Innerleaps improves performance by optimizing working memory, the mental \"workspace\" where thinking, deciding and acting take place. This happens through three mechanisms:\n\nFirst, relevant information is selected faster and irrelevant information is suppressed more effectively. Focus increases, distraction decreases. Research shows 25% fewer errors on attention tasks (Jha et al., 2021).\n\nSecond, stress and pressure normally occupy a large share of working memory. When that pressure decreases, capacity is freed up for the task itself.\n\nThird, working memory becomes more efficient: better results with less neural effort (Bailey et al., 2020). Employees perform sharper and have energy left at the end of the day."
+        }
+      ],
+      "voorstel": {
+        "bron": "voorstel uit de opdracht; definitieve tekst kiest Bas",
+        "nl": "25% minder fouten in studie naar [soort training] (Jha, 2021)",
+        "en": null
+      },
+      "ontbreekt": [
+        "De studie achter de 25%: titel, jaar, groep, link"
+      ],
+      "feitelijkToetsen": true,
+      "opmerking": null,
+      "status": "inventaris"
+    },
+    {
+      "id": "jha-24-aandacht",
+      "soort": "B",
+      "prioriteit": "midden",
+      "bron": "jha-sart-24",
+      "paginas": [
+        "/breintraining-methode",
+        "/en/method",
+        "/contact",
+        "/en/contact",
+        "/offerte-aanvragen",
+        "/en/request-a-quote",
+        "/over-ons",
+        "/en/about-us",
+        "/bedankt/offerte",
+        "/bedankt/roi",
+        "/bedankt/wetenschappelijk-rapport",
+        "/en/thank-you/*"
+      ],
+      "huidig": [
+        {
+          "sleutel": "methode:performance.body1",
+          "nl": "Prestaties van werknemers verbeteren door optimalisatie van het werkgeheugen. Relevante informatie wordt sneller geselecteerd én irrelevante informatie beter onderdrukt. De concentratie neemt toe, terwijl afleiding afneemt. Onderzoek laat tot 24% verbetering zien op aandachtstaken (Jha et al., 2021).",
+          "en": "Employee performance improves through optimization of working memory. Relevant information is selected faster and irrelevant information is better suppressed. Concentration goes up while distraction goes down. Research shows up to 24% improvement on attention tasks (Jha et al., 2021)."
+        },
+        {
+          "bestand": "src/components/BookingStats.tsx",
+          "nl": "+24% Focus & concentratie",
+          "en": "+24% Focus & concentration"
+        }
+      ],
+      "voorstel": null,
+      "ontbreekt": [
+        "Exacte studie (Jha e.a. 2021 of Morrison e.a. 2014), groep, link"
+      ],
+      "feitelijkToetsen": false,
+      "opmerking": null,
+      "status": "inventaris"
+    },
+    {
+      "id": "bailey-werkgeheugen",
+      "soort": "B",
+      "prioriteit": "laag",
+      "bron": "bailey-2020",
+      "paginas": [
+        "/breintraining-methode",
+        "/en/method",
+        "/team-prestaties-verbeteren",
+        "/en/improve-team-performance"
+      ],
+      "huidig": [
+        {
+          "sleutel": "methode:performance.body2",
+          "nl": "Daarnaast nemen spanning en druk het werkgeheugen in beslag. Wanneer die spanning afneemt, komt er capaciteit vrij voor de taak zelf. Tot slot wordt het werkgeheugen efficiënter: het levert betere resultaten met minder neurale inspanning (Bailey et al., 2020).",
+          "en": "On top of that, tension and pressure take up working memory. When that tension drops, capacity is freed up for the task itself. Working memory also becomes more efficient: it delivers better results with less neural effort (Bailey et al., 2020)."
+        }
+      ],
+      "voorstel": null,
+      "ontbreekt": [
+        "Studie controleren"
+      ],
+      "feitelijkToetsen": false,
+      "opmerking": null,
+      "status": "inventaris"
+    },
+    {
+      "id": "cles-65-72",
+      "soort": "B",
+      "prioriteit": "midden",
+      "bron": "cles-meta-analyses",
+      "paginas": [
+        "/duurzame-inzetbaarheid",
+        "/en/sustainable-employability",
+        "/team-prestaties-verbeteren",
+        "/en/improve-team-performance"
+      ],
+      "huidig": [
+        {
+          "sleutel": "training:vitality.faq.items[12].a",
+          "nl": "Onderzoek naar dit soort training vindt minder stress, minder burn-outklachten, meer veerkracht en beter slapen. Neem stress: zet iemand die de training deed naast iemand die hem niet deed, en in 65 tot 72% van de gevallen heeft de getrainde persoon minder stress.\n\nHet risico op langdurige uitval daalt met 70% (van 54,4% naar 16,4%). En de daling in stress houdt stand: studies die drie maanden tot een jaar later opnieuw maten, vonden nog steeds aantoonbaar minder stress.",
+          "en": "Research into this kind of training finds less stress, fewer burnout symptoms, more resilience and better sleep. Take stress: compare someone who did the training with someone who didn't, and in 65 to 72% of cases the trained person has less stress.\n\nThe risk of long-term absence drops by 70% (from 54.4% to 16.4%). And the drop in stress lasts: studies that checked back three months to a year later still found measurably less stress."
+        }
+      ],
+      "voorstel": null,
+      "ontbreekt": [],
+      "feitelijkToetsen": false,
+      "opmerking": "Eigen omrekening uit effectgroottes; de uitleg op de site klopt, maar de bron en het woord 'omgerekend' ontbreken.",
+      "status": "inventaris"
+    },
+    {
+      "id": "productiviteit-onderzoek",
+      "soort": "B",
+      "prioriteit": "laag",
+      "bron": "michaelsen-2023",
+      "paginas": [
+        "/team-prestaties-verbeteren",
+        "/en/improve-team-performance"
+      ],
+      "huidig": [
+        {
+          "sleutel": "training:sustainability.faq.items[9].a",
+          "nl": "Onderzoek naar dit soort training vindt minder stress, minder burn-outklachten, meer veerkracht en beter slapen. Neem stress: zet iemand die de training deed naast iemand die hem niet deed, en in 65 tot 72% van de gevallen heeft de getrainde persoon minder stress.\n\nOok de productiviteit gaat omhoog. Dat effect is kleiner, maar over dit effect zijn de studies het meest eensgezind.\n\nHet risico op langdurige uitval daalt met 70% (van 54,4% naar 16,4%). En de daling in stress houdt stand: studies die drie maanden tot een jaar later opnieuw maten, vonden nog steeds aantoonbaar minder stress.",
+          "en": "Research into this kind of training finds less stress, fewer burnout symptoms, more resilience and better sleep. Take stress: compare someone who did the training with someone who didn't, and in 65 to 72% of cases the trained person has less stress.\n\nProductivity goes up too. The effect is smaller, but it is the result the studies agree on most.\n\nThe risk of long-term absence drops by 70% (from 54.4% to 16.4%). And the drop in stress lasts: studies that checked back three months to a year later still found measurably less stress."
+        }
+      ],
+      "voorstel": null,
+      "ontbreekt": [],
+      "feitelijkToetsen": false,
+      "opmerking": "'Ook de productiviteit gaat omhoog' is een vaststelling zonder bron. Michaelsen: klein effect, alleen direct na afloop.",
+      "status": "inventaris"
+    },
+    {
+      "id": "app-4-procent",
+      "soort": "B",
+      "prioriteit": "midden",
+      "bron": "baumel-2019",
+      "paginas": [
+        "/",
+        "/en",
+        "/stressmanagement-training",
+        "/en/stress-management-training"
+      ],
+      "huidig": [
+        {
+          "sleutel": "common:problem.cards.app.fade",
+          "nl": "Na een maand gebruikt nog geen 4% de app.",
+          "en": "After a month, fewer than 4% still use it."
+        },
+        {
+          "sleutel": "training:stress.faq.items[4].a",
+          "nl": "Bijna iedereen stopt met een app. Na een maand gebruiken nog zo'n 4 op de 100 mensen hem. Hier oefen je 6 weken met een vaste groep en een trainer, en leer je oefenen op het moment dat je spanning voelt. Zo wordt het een gewoonte.",
+          "en": "Almost everyone stops using an app. After a month, about 4 in 100 still use it. Here you practise for 6 weeks with a fixed group and a trainer, and you learn to practise when you feel tension. That's what turns it into a habit."
+        }
+      ],
+      "voorstel": null,
+      "ontbreekt": [],
+      "feitelijkToetsen": false,
+      "opmerking": null,
+      "status": "inventaris"
+    },
+    {
+      "id": "online-even-goed",
+      "soort": "B",
+      "prioriteit": "midden",
+      "bron": "geen-bron",
+      "paginas": [
+        "/duurzame-inzetbaarheid",
+        "/en/sustainable-employability",
+        "/team-prestaties-verbeteren",
+        "/en/improve-team-performance"
+      ],
+      "huidig": [
+        {
+          "sleutel": "training:vitality.faq.items[4].a",
+          "nl": "Het programma vraagt één uur per week, zes weken lang, plus een kwartier oefenen per dag. De tijden leggen we vooraf vast met de leidinggevenden. En we beginnen niet in de drukste periode van jullie jaar.\n\nOnline en op locatie kan allebei, per groep te kiezen. Onderzoek laat zien dat online net zo goed werkt als op locatie.",
+          "en": "The programme takes one hour a week for six weeks, plus fifteen minutes of practice a day. We fix the times in advance with your managers. And we don't start in the busiest period of your year.\n\nOnline and on site both work, and you can choose per group. Research shows online sessions work just as well as in-person ones."
+        },
+        {
+          "sleutel": "training:sustainability.faq.items[1].a",
+          "nl": "Ja. De training is live en online: één groepssessie van een uur per week, waar iedereen meedoet vanaf de eigen werkplek, ook vanuit verschillende landen. Onderzoek laat zien dat online net zo goed werkt als op locatie. We kiezen samen een tijd die voor de hele groep werkt. Op locatie kan ook.\n\nWat klanten er zelf bij noemen: collega's leren elkaar in de groep beter kennen, ook als ze elkaar bijna nooit zien.",
+          "en": "Yes. The training is live and online: one group session of an hour a week, which everyone joins from wherever they work, across countries too. Research shows online sessions work just as well as in-person ones. We pick a time that works for the whole group. On-site is possible too.\n\nSomething clients mention themselves: colleagues get to know each other better in the group, even if they rarely meet."
+        }
+      ],
+      "voorstel": null,
+      "ontbreekt": [
+        "Bron voor 'online werkt net zo goed als op locatie'"
+      ],
+      "feitelijkToetsen": true,
+      "opmerking": null,
+      "status": "inventaris"
+    },
+    {
+      "id": "kwart-verzuim-stress",
+      "soort": "B",
+      "prioriteit": "midden",
+      "bron": "geen-bron",
+      "paginas": [
+        "/duurzame-inzetbaarheid",
+        "/en/sustainable-employability"
+      ],
+      "huidig": [
+        {
+          "sleutel": "training:vitality.faq.items[13].a",
+          "nl": "Duurzame inzetbaarheid betekent dat medewerkers hun hele loopbaan gezond, gemotiveerd en productief kunnen blijven werken. In de praktijk struikelt het meestal op hetzelfde punt: langdurige werkstress. Een kwart van het verzuim in Nederland is stressgerelateerd. Innerleaps pakt die oorzaak aan. Medewerkers leren spanning vroeg herkennen en reguleren, zodat uitval wordt voorkomen in plaats van hersteld.",
+          "en": "Sustainable employability means employees can keep working in a healthy, motivated and productive way throughout their career. In practice it usually breaks down at the same point: long-term work stress. A quarter of all absenteeism in the Netherlands is stress related. Innerleaps tackles that cause. Employees learn to spot and regulate tension early, so dropout is prevented rather than repaired."
+        },
+        {
+          "sleutel": "training:vitality.faq.items[14].a",
+          "nl": "Verzuim verminderen lukt structureel alleen als je ingrijpt voordat mensen uitvallen. Een kwart van het verzuim in Nederland is stressgerelateerd. Onze training leert medewerkers stresssignalen vroeg te herkennen, zodat verzuim niet alleen daalt maar ook laag blijft.",
+          "en": "Reducing absenteeism only works structurally if you step in before people drop out. A quarter of all absenteeism in the Netherlands is stress related. Our training teaches employees to recognise stress signals early, so absenteeism does not just fall but stays low."
+        }
+      ],
+      "voorstel": null,
+      "ontbreekt": [
+        "Bron voor 'een kwart van het verzuim is stressgerelateerd' (blogclaimregister X1)"
+      ],
+      "feitelijkToetsen": true,
+      "opmerking": "Ook beloftes: 'zodat uitval wordt voorkomen', 'verzuim niet alleen daalt maar ook laag blijft'.",
+      "status": "inventaris"
+    },
+    {
+      "id": "onderbouwing-faq",
+      "soort": "B",
+      "prioriteit": "midden",
+      "bron": "geen-bron",
+      "paginas": [
+        "/duurzame-inzetbaarheid",
+        "/en/sustainable-employability",
+        "/team-prestaties-verbeteren",
+        "/en/improve-team-performance",
+        "/stressmanagement-training",
+        "/en/stress-management-training"
+      ],
+      "huidig": [
+        {
+          "sleutel": "training:vitality.faq.items[11].a",
+          "nl": "De aandachttrainingen van Innerleaps bouwen voort op evidence-based programma's zoals MBSR, MBCT en WorkplaceMT. De onderbouwing komt uit 12 wetenschappelijke studies, waaronder meerdere meta-analyses en gerandomiseerde gecontroleerde onderzoeken. De effecten zijn zo robuust dat het Amerikaanse leger aandachttraining heeft opgenomen in zijn officiële doctrine (U.S. Army Field Manual 7-22), en organisaties als Google, Apple, Microsoft, Nestlé en Unilever soortgelijke programma's hebben geïmplementeerd.",
+          "en": "Innerleaps' awareness trainings build on evidence-based programmes such as MBSR, MBCT and WorkplaceMT. The foundation rests on 12 scientific studies, including multiple meta-analyses and randomized controlled trials. The evidence is strong enough that the U.S. military has incorporated attention training into its official doctrine (U.S. Army Field Manual 7-22), and organisations like Google, Apple, Microsoft, Nestlé and Unilever have implemented similar programmes."
+        }
+      ],
+      "voorstel": null,
+      "ontbreekt": [
+        "Welke 12 studies",
+        "Bron per bedrijf (Google, Apple, Microsoft, Nestlé, Unilever; blogclaimregister X6)"
+      ],
+      "feitelijkToetsen": true,
+      "opmerking": "'De effecten zijn zo robuust dat...' is een conclusie die de bron (leger) niet trekt. Staat op drie pagina's en in de structured data.",
+      "status": "inventaris"
+    },
+    {
+      "id": "veertig-jaar",
+      "soort": "B",
+      "prioriteit": "laag",
+      "bron": "geen-bron",
+      "paginas": [
+        "/",
+        "/en",
+        "/duurzame-inzetbaarheid",
+        "/en/sustainable-employability",
+        "/team-prestaties-verbeteren",
+        "/en/improve-team-performance",
+        "/over-ons",
+        "/en/about-us",
+        "/breintraining-methode",
+        "/en/method",
+        "rekentool (venster), op elke pagina met de knop 'Bereken...'",
+        "/bedankt/offerte",
+        "/bedankt/roi",
+        "/bedankt/wetenschappelijk-rapport",
+        "/en/thank-you/*"
+      ],
+      "huidig": [
+        {
+          "sleutel": "common:whyChooseUs.cards.research",
+          "nl": {
+            "title": "Wetenschappelijk onderzoek",
+            "stat": "40+ jaar",
+            "body": "Gebouwd op MBSR, een van de best onderzochte stressmanagementmethodes ter wereld, met aantoonbaar blijvende gedragsverandering.",
+            "proofLabel": "Onderzocht aan"
+          },
+          "en": {
+            "title": "Scientific research",
+            "stat": "40+ years",
+            "body": "Built on MBSR, one of the most thoroughly researched stress management methods in the world, with proven lasting behaviour change.",
+            "proofLabel": "Researched at"
+          }
+        },
+        {
+          "sleutel": "methode:meta.title",
+          "nl": "Aandachttraining: de methode van Innerleaps | 40 jaar onderzoek",
+          "en": "Attention training: the Innerleaps method | 40 years of research"
+        },
+        {
+          "sleutel": "methode:meta.description",
+          "nl": "Innerleaps bouwt op 40 jaar aandachtsonderzoek van Dr. Amishi Jha. De methode traint het waarschuwingssysteem en controlecentrum van het brein, bewezen effectief in meta-analyses en militaire toepassingen.",
+          "en": "Innerleaps builds on 40 years of attention research by Dr. Amishi Jha. The method trains the brain's warning system and control centre, proven effective in meta-analyses and military applications."
+        },
+        {
+          "sleutel": "calculator:header.subtitle",
+          "nl": "Op basis van 40 jaar wetenschappelijk onderzoek",
+          "en": "Based on 40 years of scientific research"
+        },
+        {
+          "sleutel": "bedankt:rapport.onderzoekTitle",
+          "nl": "Wat <0>40 jaar onderzoek</0> laat zien",
+          "en": "What <0>40 years of research</0> shows"
+        },
+        {
+          "sleutel": "leadMagnet:intro",
+          "nl": "Ontvang ons uitgebreide academische rapport met 40 jaar onderzoeksresultaten, effectgroottes en ROI analyses.",
+          "en": "Receive our comprehensive academic report with 40 years of research findings, effect sizes and ROI analyses."
+        }
+      ],
+      "voorstel": null,
+      "ontbreekt": [],
+      "feitelijkToetsen": false,
+      "opmerking": "'40 jaar onderzoek' klopt als geschiedenis (MBSR, 1979). Problemen: 'van Dr. Amishi Jha' (de kennisbank zegt zelf: niet aan één onderzoeker toeschrijven), 'bewezen effectief' en 'aantoonbaar blijvende gedragsverandering'.",
+      "status": "inventaris"
+    },
+    {
+      "id": "verzuim-15-21",
+      "soort": "B",
+      "prioriteit": "hoog",
+      "bron": "rood-15-21",
+      "paginas": [
+        "/contact",
+        "/en/contact",
+        "/offerte-aanvragen",
+        "/en/request-a-quote",
+        "/over-ons",
+        "/en/about-us",
+        "/bedankt/offerte",
+        "/bedankt/roi",
+        "/bedankt/wetenschappelijk-rapport",
+        "/en/thank-you/*",
+        "rekentool (venster), op elke pagina met de knop 'Bereken...'"
+      ],
+      "huidig": [
+        {
+          "sleutel": "calculator:results.scientific1",
+          "nl": "15-21% verzuimreductie (meta-analyses van 200+ studies)",
+          "en": "15-21% reduction in absenteeism (meta-analyses of 200+ studies)"
+        },
+        {
+          "bestand": "src/components/BookingStats.tsx",
+          "nl": "-21% Verzuim",
+          "en": "-21% Absenteeism"
+        },
+        {
+          "bestand": "src/components/RoiResultaat.tsx + src/utils/calculationEngine.ts",
+          "nl": "scenario's 15% en 21% verzuimreductie",
+          "en": "idem"
+        },
+        {
+          "bestand": "supabase/functions/submit-calculator en send-roi-analysis (mails)",
+          "nl": "Wetenschappelijk bewezen effecten: Verzuimbesparing 15-21%",
+          "en": "Scientifically proven effects: Absenteeism saving 15-21%"
+        }
+      ],
+      "voorstel": null,
+      "ontbreekt": [],
+      "feitelijkToetsen": true,
+      "opmerking": "Rood sinds 05-10-2026, maar nog op de site, in de rekentool, in de mails en in de PDF. De rekentool rekent ermee: dit raakt ook de uitkomst die bezoekers krijgen.",
+      "status": "inventaris"
+    },
+    {
+      "id": "productiviteit-5-8",
+      "soort": "B",
+      "prioriteit": "hoog",
+      "bron": "grijs-5-8",
+      "paginas": [
+        "rekentool (venster), op elke pagina met de knop 'Bereken...'",
+        "/bedankt/offerte",
+        "/bedankt/roi",
+        "/bedankt/wetenschappelijk-rapport",
+        "/en/thank-you/*"
+      ],
+      "huidig": [
+        {
+          "sleutel": "calculator:results.scientific2",
+          "nl": "5-8% productiviteitsverbetering (Oxford University, 2022)",
+          "en": "5-8% productivity improvement (Oxford University, 2022)"
+        },
+        {
+          "bestand": "src/components/RoiResultaat.tsx + src/utils/calculationEngine.ts",
+          "nl": "scenario's 5% en 8% productiviteit",
+          "en": "idem"
+        }
+      ],
+      "voorstel": null,
+      "ontbreekt": [],
+      "feitelijkToetsen": true,
+      "opmerking": null,
+      "status": "inventaris"
+    },
+    {
+      "id": "rekentool-belofte",
+      "soort": "C",
+      "prioriteit": "hoog",
+      "bron": "rood-15-21",
+      "paginas": [
+        "rekentool (venster), op elke pagina met de knop 'Bereken...'",
+        "/bedankt/offerte",
+        "/bedankt/roi",
+        "/bedankt/wetenschappelijk-rapport",
+        "/en/thank-you/*",
+        "/duurzame-inzetbaarheid",
+        "/en/sustainable-employability",
+        "/team-prestaties-verbeteren",
+        "/en/improve-team-performance"
+      ],
+      "huidig": [
+        {
+          "sleutel": "bedankt:roi.title",
+          "nl": "Bespaar ten minste <0>{{bedrag}}</0>",
+          "en": "Save at least <0>{{bedrag}}</0>"
+        },
+        {
+          "sleutel": "calculator:subtitle",
+          "nl": "Vul de gegevens in en ontvang een gepersonaliseerde ROI-analyse. Deze is gebaseerd op het kernprogramma van Innerleaps en wetenschappelijk onderzoek.",
+          "en": "Fill in the details and receive a personalised ROI analysis. It's based on the core Innerleaps programme and scientific research."
+        },
+        {
+          "sleutel": "calculator:results.conservative",
+          "nl": "Voorzichtige berekening",
+          "en": "Cautious calculation"
+        },
+        {
+          "sleutel": "calculator:results.conservativeTag",
+          "nl": "Ondergrens",
+          "en": "Lower bound"
+        },
+        {
+          "sleutel": "calculator:results.positiveTag",
+          "nl": "Volledige impact",
+          "en": "Full impact"
+        },
+        {
+          "sleutel": "training:sustainability.hero.cta",
+          "nl": "Bereken jullie ROI",
+          "en": "Calculate your ROI"
+        }
+      ],
+      "voorstel": null,
+      "ontbreekt": [],
+      "feitelijkToetsen": true,
+      "opmerking": "'Bespaar ten minste [bedrag]' is precies het soort toezegging dat de polis uitsluit. 'Ondergrens' suggereert een minimum dat niemand kan garanderen.",
+      "status": "inventaris"
+    },
+    {
+      "id": "scaleup-resultaten-kop",
+      "soort": "C",
+      "prioriteit": "hoog",
+      "bron": null,
+      "paginas": [
+        "/team-prestaties-verbeteren",
+        "/en/improve-team-performance"
+      ],
+      "huidig": [
+        {
+          "sleutel": "training:sustainability.results.title",
+          "nl": "<0>Meer output</0> door rust en focus",
+          "en": "<0>More output</0> through calm and focus"
+        },
+        {
+          "sleutel": "training:sustainability.results.subtitle",
+          "nl": "Gemeten in onafhankelijk wetenschappelijk onderzoek.",
+          "en": "Measured in independent scientific research."
+        }
+      ],
+      "voorstel": {
+        "bron": "voorstel uit de opdracht; definitieve tekst kiest Bas",
+        "nl": "Kop: Rust en focus helpen je team meer gedaan te krijgen / Onderkop: Resultaten uit onze metingen en uit onderzoek naar aandachtstraining",
+        "en": null
+      },
+      "ontbreekt": [],
+      "feitelijkToetsen": true,
+      "opmerking": "'Gemeten in onafhankelijk wetenschappelijk onderzoek' klopt hier niet: de band eronder bevat eigen TheyDo-cijfers.",
+      "status": "inventaris"
+    },
+    {
+      "id": "scaleup-resultaten-kaarten",
+      "soort": "C",
+      "prioriteit": "hoog",
+      "bron": null,
+      "paginas": [
+        "/team-prestaties-verbeteren",
+        "/en/improve-team-performance"
+      ],
+      "huidig": [
+        {
+          "sleutel": "training:sustainability.results.items",
+          "nl": [
+            {
+              "icon": "TrendingUp",
+              "title": "Krijg meer gedaan in dezelfde tijd",
+              "bullets": [
+                "Je team blijft langer bij één taak en raakt minder snel afgeleid.",
+                "Minder fouten, ook als het druk is."
+              ]
+            },
+            {
+              "icon": "Gauge",
+              "title": "Regie over hun eigen optimale tempo",
+              "bullets": [
+                "Ze kennen het tempo waarop ze het meest gedaan krijgen, en houden dat vast.",
+                "Ze voelen hun grens aankomen en gaan er niet overheen."
+              ]
+            },
+            {
+              "icon": "Users",
+              "title": "Een verbonden en tevreden team",
+              "bullets": [
+                "Zes weken samen oefenen, in kleine groepen.",
+                "Collega's leren elkaar echt kennen en worden meer tevreden over hun werk."
+              ]
+            }
+          ],
+          "en": [
+            {
+              "icon": "TrendingUp",
+              "title": "Get more done in the same time",
+              "bullets": [
+                "Your team stays on a task longer and gets distracted less.",
+                "Fewer mistakes, even when it's busy."
+              ]
+            },
+            {
+              "icon": "Gauge",
+              "title": "Owning their own optimal pace",
+              "bullets": [
+                "They know the pace at which they get the most done, and they hold it.",
+                "They feel their limit coming and don't go past it."
+              ]
+            },
+            {
+              "icon": "Users",
+              "title": "A connected and satisfied team",
+              "bullets": [
+                "Six weeks of practising together, in small groups.",
+                "Colleagues really get to know each other and become more satisfied with their work."
+              ]
+            }
+          ]
+        }
+      ],
+      "voorstel": {
+        "bron": "voorstel uit de opdracht; definitieve tekst kiest Bas",
+        "nl": "Je team blijft langer bij één taak -> Helpt je team langer bij één taak te blijven",
+        "en": null
+      },
+      "ontbreekt": [],
+      "feitelijkToetsen": false,
+      "opmerking": "Ook: 'Krijg meer gedaan in dezelfde tijd', 'Minder fouten, ook als het druk is', 'worden meer tevreden over hun werk' (geen cijfer voor tevredenheid).",
+      "status": "inventaris"
+    },
+    {
+      "id": "publiek-resultaten",
+      "soort": "C",
+      "prioriteit": "hoog",
+      "bron": null,
+      "paginas": [
+        "/duurzame-inzetbaarheid",
+        "/en/sustainable-employability"
+      ],
+      "huidig": [
+        {
+          "sleutel": "training:vitality.results.title",
+          "nl": "Minder <0>verzuim</0> door op tijd bij te sturen",
+          "en": "Less <0>sick leave</0> by stepping in early"
+        },
+        {
+          "sleutel": "training:vitality.results.subtitle",
+          "nl": "Gemeten in onafhankelijk wetenschappelijk onderzoek.",
+          "en": "Measured in independent scientific research."
+        },
+        {
+          "sleutel": "training:vitality.results.items",
+          "nl": [
+            {
+              "icon": "BellRing",
+              "title": "Op tijd aan de bel trekken",
+              "bullets": [
+                "Ze voelen eerder dat het te veel wordt, ook midden in een drukke periode.",
+                "En ze weten wat ze dan kunnen doen."
+              ]
+            },
+            {
+              "icon": "Gauge",
+              "title": "Grip op het moment zelf",
+              "bullets": [
+                "Ze signaleren spanning bij zichzelf, op het moment dat die opkomt.",
+                "En ze weten hoe ze die laten zakken, in een paar minuten tussen twee afspraken door."
+              ]
+            },
+            {
+              "icon": "Shield",
+              "title": "Minder risico op uitval",
+              "bullets": [
+                "Stressklachten worden opgemerkt voordat iemand uitvalt.",
+                "Door minder uitval is er ook minder druk op collega's."
+              ]
+            }
+          ],
+          "en": [
+            {
+              "icon": "BellRing",
+              "title": "Speaking up in time",
+              "bullets": [
+                "They notice sooner when it's getting too much, even in the middle of a busy period.",
+                "And they know what to do about it."
+              ]
+            },
+            {
+              "icon": "Gauge",
+              "title": "A handle in the moment",
+              "bullets": [
+                "They spot tension in themselves the moment it starts to rise.",
+                "And they know how to bring it back down, in a few minutes between two appointments."
+              ]
+            },
+            {
+              "icon": "Shield",
+              "title": "Lower risk of sick leave",
+              "bullets": [
+                "Stress complaints get noticed before someone drops out.",
+                "Less sick leave also means less pressure on colleagues."
+              ]
+            }
+          ]
+        }
+      ],
+      "voorstel": null,
+      "ontbreekt": [],
+      "feitelijkToetsen": true,
+      "opmerking": "'Minder verzuim door op tijd bij te sturen' en 'Door minder uitval is er ook minder druk op collega's' zijn oorzaak-gevolgbeloftes. Onderkop 'onafhankelijk' toetsen.",
+      "status": "inventaris"
+    },
+    {
+      "id": "meta-en-menu",
+      "soort": "C",
+      "prioriteit": "midden",
+      "bron": null,
+      "paginas": [
+        "elke pagina",
+        "/",
+        "/en",
+        "/team-prestaties-verbeteren",
+        "/en/improve-team-performance",
+        "/duurzame-inzetbaarheid",
+        "/en/sustainable-employability",
+        "/stressmanagement-training",
+        "/en/stress-management-training"
+      ],
+      "huidig": [
+        {
+          "sleutel": "common:seo.landing.description",
+          "nl": "Aandachttraining voor scale-ups: meer focus en een hogere productiviteit, zonder langere dagen. Zes weken, één uur live per week en 15 minuten per dag.",
+          "en": "Attention training for scale-up teams: more focus and higher productivity, without longer days. Six weeks, one live hour a week and 15 minutes a day."
+        },
+        {
+          "sleutel": "common:menuItems.employability.description",
+          "nl": "Meer focus, in dezelfde uren",
+          "en": "More focus, in the same hours"
+        },
+        {
+          "sleutel": "common:footer.tagline",
+          "nl": "Aandachttraining voor scale-ups: meer focus en energie, in een vorm die past in de werkweek.",
+          "en": "Attention training for scale-up teams: more focus and energy, in a format that fits the working week."
+        },
+        {
+          "sleutel": "training:sustainability.hero.subtitle",
+          "nl": "Langer doorwerken lost een hoge werkdruk zelden op. Onze 6-weekse aandachttraining geeft je team de rust en focus om slimmer te werken.",
+          "en": "Working longer hours rarely fixes a heavy workload. Our 6-week attention training gives your team the calm and focus to work smarter."
+        },
+        {
+          "sleutel": "training:vitality.meta.description",
+          "nl": "Voor onderwijs, overheid en zorg. Een aandachttraining van 6 weken waarmee je mensen spanning op tijd voelen, voordat stress opstapelt en leidt tot verzuim.",
+          "en": "For education, government and care. A 6-week attention training that helps your people notice tension in time, before stress builds up and leads to sick leave."
+        },
+        {
+          "sleutel": "training:vitality.hero.subtitle",
+          "nl": "Voor teams die wel willen, maar geen tijd hebben. Met onze aandachttraining van 6 weken voelen je mensen spanning op tijd, voordat stress opstapelt en leidt tot verzuim.",
+          "en": "Built for teams that want to take part but have no time. Our 6-week attention training helps your people notice tension early, before stress builds up and leads to sick leave."
+        },
+        {
+          "sleutel": "training:stress.meta.description",
+          "nl": "6 weken aandachttraining in een kleine live groep. Zie spanning eerder aankomen en haal je focus sneller terug. Zo'n kwartier per dag.",
+          "en": "6 weeks of attention training in a small live group. Notice tension sooner and get your focus back faster. About 15 minutes a day."
+        }
+      ],
+      "voorstel": null,
+      "ontbreekt": [],
+      "feitelijkToetsen": false,
+      "opmerking": "Meta-teksten en menu: korte beloftes zonder bronregel. Voorstel: 'helpt', 'leert' of 'oefent' in plaats van een vaststelling.",
+      "status": "inventaris"
+    },
+    {
+      "id": "bewezen",
+      "soort": "C",
+      "prioriteit": "midden",
+      "bron": null,
+      "paginas": [
+        "/",
+        "/en",
+        "/duurzame-inzetbaarheid",
+        "/en/sustainable-employability",
+        "/team-prestaties-verbeteren",
+        "/en/improve-team-performance",
+        "/over-ons",
+        "/en/about-us",
+        "/breintraining-methode",
+        "/en/method"
+      ],
+      "huidig": [
+        {
+          "sleutel": "common:whyChooseUs.cards.format.body",
+          "nl": "We namen een bewezen methode en lieten die passen in de werkweek. Zo kun je het als organisatie uitrollen en houden mensen het resultaat vast.",
+          "en": "We took a proven method and made it fit the working week, so organisations can roll it out and people keep the results."
+        },
+        {
+          "sleutel": "overons:meta.description",
+          "nl": "Innerleaps is opgericht door Bas Ter Haar Romenij om burn-out te voorkomen voordat het escaleert. Onze geaccrediteerde trainers werken met een vaste methode, geen variatie, wel bewezen resultaat.",
+          "en": "Innerleaps was founded by Bas Ter Haar Romenij to prevent burnout before it escalates. Our accredited trainers work with one proven method. No variation just consistent results."
+        },
+        {
+          "sleutel": "methode:meta.description",
+          "nl": "Innerleaps bouwt op 40 jaar aandachtsonderzoek van Dr. Amishi Jha. De methode traint het waarschuwingssysteem en controlecentrum van het brein, bewezen effectief in meta-analyses en militaire toepassingen.",
+          "en": "Innerleaps builds on 40 years of attention research by Dr. Amishi Jha. The method trains the brain's warning system and control centre, proven effective in meta-analyses and military applications."
+        }
+      ],
+      "voorstel": null,
+      "ontbreekt": [],
+      "feitelijkToetsen": false,
+      "opmerking": "Beloftewoord 'bewezen'. Blogclaimregister R9: nooit 'wetenschappelijk bewezen' voor resultaten van Innerleaps zelf.",
+      "status": "inventaris"
+    },
+    {
+      "id": "methode-mechanisme",
+      "soort": "C",
+      "prioriteit": "laag",
+      "bron": null,
+      "paginas": [
+        "/breintraining-methode",
+        "/en/method"
+      ],
+      "huidig": [
+        {
+          "sleutel": "methode:systems.control.lead",
+          "nl": "Het deel van je brein dat bepaalt waar je aandacht naartoe gaat. Zes weken oefenen maakt het sterker, zo neemt spanning minder mentale ruimte in en komt je focus sneller terug.",
+          "en": "The part of your brain that decides what gets your attention. Six weeks of practice makes it stronger, so tension takes up less mental space and focus comes back faster."
+        },
+        {
+          "sleutel": "methode:systems.warning.lead",
+          "nl": "Het deel van je brein dat spanning in je lichaam opmerkt. Zes weken oefenen maakt het scherper, zo voel je stress aankomen voordat hij je overneemt.",
+          "en": "The part of your brain that notices tension in your body. Six weeks of practice makes it sharper, so you feel stress coming before it takes over."
+        },
+        {
+          "sleutel": "methode:mechanism.body2",
+          "nl": "Het <0>controlecentrum</0> wordt sterker, wat zorgt voor betere focus en een efficiënter werkgeheugen. En het <1>waarschuwingssysteem</1> wordt scherper, zodat druk zich niet opstapelt.",
+          "en": "The <0>control centre</0> gets stronger, which means better focus and a more efficient working memory. And the <1>warning system</1> sharpens, so pressure doesn’t pile up."
+        },
+        {
+          "sleutel": "methode:performance.body1",
+          "nl": "Prestaties van werknemers verbeteren door optimalisatie van het werkgeheugen. Relevante informatie wordt sneller geselecteerd én irrelevante informatie beter onderdrukt. De concentratie neemt toe, terwijl afleiding afneemt. Onderzoek laat tot 24% verbetering zien op aandachtstaken (Jha et al., 2021).",
+          "en": "Employee performance improves through optimization of working memory. Relevant information is selected faster and irrelevant information is better suppressed. Concentration goes up while distraction goes down. Research shows up to 24% improvement on attention tasks (Jha et al., 2021)."
+        },
+        {
+          "sleutel": "methode:sixWeeks.outro",
+          "nl": "Het resultaat? Gedrag dat blijft. Studies die drie maanden tot een jaar later opnieuw maten, vonden nog steeds aantoonbaar minder stress (Michaelsen et al., 2023).",
+          "en": "The result? Behaviour that sticks. Studies that checked back three months to a year later still found measurably less stress (Michaelsen et al., 2023)."
+        }
+      ],
+      "voorstel": null,
+      "ontbreekt": [],
+      "feitelijkToetsen": false,
+      "opmerking": "Uitleg van het mechanisme als vaststaand feit ('Zes weken oefenen maakt het sterker'). Lichte aanpassing volstaat.",
+      "status": "inventaris"
+    },
+    {
+      "id": "programma-resultaat",
+      "soort": "C",
+      "prioriteit": "laag",
+      "bron": null,
+      "paginas": [
+        "/duurzame-inzetbaarheid",
+        "/en/sustainable-employability",
+        "/team-prestaties-verbeteren",
+        "/en/improve-team-performance"
+      ],
+      "huidig": [
+        {
+          "sleutel": "training:vitality.weeks.items[3].text",
+          "nl": "Niet elke gedachte is een feit. Deelnemers leren het verschil herkennen tussen productief nadenken en malen. Ook leren ze hun gedachten te observeren in plaats van erin mee te gaan. Het resultaat: meer rust in hun hoofd en minder gepieker.",
+          "en": "Not every thought is a fact. Participants learn to recognise the difference between productive thinking and rumination. They also learn to observe their thoughts instead of getting carried away by them. The result: more peace of mind and less worrying."
+        },
+        {
+          "sleutel": "training:sustainability.weeks.items[3].text",
+          "nl": "Niet elke gedachte is een feit. Deelnemers leren het verschil herkennen tussen productief nadenken en malen. Ook leren ze hun gedachten te observeren in plaats van erin mee te gaan. Het resultaat: meer rust in hun hoofd en minder gepieker.",
+          "en": "Not every thought is a fact. Participants learn to recognise the difference between productive thinking and rumination. They also learn to observe their thoughts instead of getting carried away by them. The result: more peace of mind and less worrying."
+        }
+      ],
+      "voorstel": null,
+      "ontbreekt": [],
+      "feitelijkToetsen": false,
+      "opmerking": "'Het resultaat: meer rust in hun hoofd en minder gepieker.' Ook op de medewerkerspagina in de je-vorm.",
+      "status": "inventaris"
+    },
+    {
+      "id": "prestaties-faq",
+      "soort": "C",
+      "prioriteit": "midden",
+      "bron": null,
+      "paginas": [
+        "/team-prestaties-verbeteren",
+        "/en/improve-team-performance"
+      ],
+      "huidig": [
+        {
+          "sleutel": "training:sustainability.faq.items[10]",
+          "nl": {
+            "q": "Hoe verbetert Innerleaps de prestaties van medewerkers?",
+            "a": "Innerleaps verbetert prestaties door optimalisatie van het werkgeheugen, het mentale \"werkblad\" waarop denken, beslissen en handelen plaatsvinden. Dit gebeurt via drie mechanismen:\n\nTen eerste wordt relevante informatie sneller geselecteerd en irrelevante informatie beter onderdrukt. Concentratie neemt toe, afleiding neemt af. Onderzoek laat 25% minder fouten zien op aandachtstaken (Jha et al., 2021).\n\nTen tweede nemen spanning en werkdruk normaal gesproken een groot deel van het werkgeheugen in beslag. Wanneer die spanning afneemt, komt er capaciteit vrij voor de taak zelf.\n\nTen derde wordt het werkgeheugen efficiënter: betere resultaten met minder neurale inspanning (Bailey et al., 2020). Medewerkers presteren scherper en houden energie over aan het einde van de dag."
+          },
+          "en": {
+            "q": "How does Innerleaps improve employee performance?",
+            "a": "Innerleaps improves performance by optimizing working memory, the mental \"workspace\" where thinking, deciding and acting take place. This happens through three mechanisms:\n\nFirst, relevant information is selected faster and irrelevant information is suppressed more effectively. Focus increases, distraction decreases. Research shows 25% fewer errors on attention tasks (Jha et al., 2021).\n\nSecond, stress and pressure normally occupy a large share of working memory. When that pressure decreases, capacity is freed up for the task itself.\n\nThird, working memory becomes more efficient: better results with less neural effort (Bailey et al., 2020). Employees perform sharper and have energy left at the end of the day."
+          }
+        }
+      ],
+      "voorstel": null,
+      "ontbreekt": [],
+      "feitelijkToetsen": false,
+      "opmerking": "'Innerleaps verbetert prestaties door...' plus 25% (Jha) en Bailey. Staat ook in de structured data.",
+      "status": "inventaris"
+    },
+    {
+      "id": "al-onze-trainers",
+      "soort": "C",
+      "prioriteit": "laag",
+      "bron": null,
+      "paginas": [
+        "/",
+        "/en",
+        "/duurzame-inzetbaarheid",
+        "/en/sustainable-employability",
+        "/team-prestaties-verbeteren",
+        "/en/improve-team-performance",
+        "/over-ons",
+        "/en/about-us"
+      ],
+      "huidig": [
+        {
+          "sleutel": "common:whyChooseUs.cards.trainers.body",
+          "nl": "Al onze trainers hebben de hoogste VMBN-accreditatie.",
+          "en": "All our trainers hold the highest VMBN accreditation."
+        },
+        {
+          "sleutel": "common:programOverview.features.accreditedTrainers.description",
+          "nl": "Al onze trainers zijn geaccrediteerd voor categorie 1 aandachttraining door VMBN.",
+          "en": "All our trainers are VMBN-accredited at category 1 for attention training, the highest standard in the Netherlands."
+        }
+      ],
+      "voorstel": null,
+      "ontbreekt": [],
+      "feitelijkToetsen": true,
+      "opmerking": "'Al onze trainers' is een feit dat Bas kan bevestigen. Staat op de lijst met te toetsen woorden.",
+      "status": "inventaris"
+    },
+    {
+      "id": "medewerker-ervaringen",
+      "soort": "C",
+      "prioriteit": "laag",
+      "bron": null,
+      "paginas": [
+        "/stressmanagement-training",
+        "/en/stress-management-training"
+      ],
+      "huidig": [
+        {
+          "sleutel": "training:stress.results.title",
+          "nl": "Wat deelnemers na 6 weken <0>merken</0>",
+          "en": "What participants <0>notice</0> after 6 weeks"
+        },
+        {
+          "sleutel": "training:stress.results.items",
+          "nl": [
+            {
+              "icon": "BellRing",
+              "title": "Je ziet spanning aankomen",
+              "text": "Je herkent spanning voordat het je overneemt, en je weet vervolgens wat je eraan kan doen.",
+              "quote": "Herken sneller spanning en doe er sneller wat mee.",
+              "quoteBy": "Deelnemer bij een uitgeverij"
+            },
+            {
+              "icon": "Target",
+              "title": "Sneller terug bij je werk",
+              "text": "Je merkt het sneller op als je gedachten afdwalen. Je concentratie is sterker en je raakt minder snel afgeleid.",
+              "quote": "Meer rust in het hoofd ... hoofd- van bijzaken te scheiden. En dat werkt!",
+              "quoteBy": "Deelnemer bij een uitgeverij"
+            },
+            {
+              "icon": "Brain",
+              "title": "Minder malen",
+              "text": "Je merkt wanneer je blijft piekeren, en je kunt eruit stappen.",
+              "quote": "Voor de training was ik denk ik meer gaan piekeren en overdenken over deze situatie. Nu kon ik het loslaten.",
+              "quoteBy": "Deelnemer bij een uitgeverij"
+            },
+            {
+              "icon": "BatteryCharging",
+              "title": "Energie over aan het eind van de dag",
+              "text": "Je pauzeert vaker en voelt dat het geen verloren tijd is. Na een korte break ga je met volle focus weer aan het werk.",
+              "quote": "Een pauze is geen tijdverspilling. Dat was voor mij de grootste omslag.",
+              "quoteBy": "Deelnemer bij TheyDo"
+            },
+            {
+              "icon": "Eye",
+              "title": "Minder op de automatische piloot",
+              "text": "Je bent er mentaal bij. Of je nou in een meeting zit of in een gesprek thuis, jouw gedachten zijn bij dat moment.",
+              "quote": "Meer ingecheckt bij mezelf, bewuster van hoe ik me voel",
+              "quoteBy": "Deelnemer bij een uitgeverij"
+            }
+          ],
+          "en": [
+            {
+              "icon": "BellRing",
+              "title": "You see tension coming",
+              "text": "You recognise tension before it takes over, and you know what you can do about it.",
+              "quote": "Learning to recognize the signs of stress before they become too much",
+              "quoteBy": "Participant at TheyDo"
+            },
+            {
+              "icon": "Target",
+              "title": "Back to your work faster",
+              "text": "You notice sooner when your mind wanders. Your concentration is stronger and you get distracted less easily.",
+              "quote": "Short exercises can increase my focus and wellbeing",
+              "quoteBy": "Participant at TheyDo"
+            },
+            {
+              "icon": "Brain",
+              "title": "Less going round in circles",
+              "text": "You notice when you're overthinking, and you can step out of it.",
+              "quote": "More control of my thoughts",
+              "quoteBy": "Participant at TheyDo"
+            },
+            {
+              "icon": "BatteryCharging",
+              "title": "Energy left at the end of the day",
+              "text": "You take more breaks and feel they're not lost time. After a short break, you go back to work with full focus.",
+              "quote": "Taking a break is not wasting time. That was the biggest shift for me.",
+              "quoteBy": "Participant at TheyDo"
+            },
+            {
+              "icon": "Eye",
+              "title": "Off autopilot",
+              "text": "You're mentally present. Whether you're in a meeting or in a conversation at home, your mind is in that moment.",
+              "quote": "Stop being on autopilot and observe what you're doing",
+              "quoteBy": "Participant at TheyDo"
+            }
+          ]
+        }
+      ],
+      "voorstel": null,
+      "ontbreekt": [],
+      "feitelijkToetsen": false,
+      "opmerking": "Al gebracht als 'wat deelnemers merken', met citaten. Voldoet grotendeels; alleen 'Je concentratie is sterker' leest als vaststelling.",
+      "status": "inventaris"
+    },
+    {
+      "id": "blogs",
+      "soort": "B",
+      "prioriteit": "hoog",
+      "bron": "rood-15-21",
+      "paginas": [
+        "/blog",
+        "/blog/ziekteverzuim-verlagen-wetenschappelijk-bewezen-aanpak-2025",
+        "/blog/verborgen-kosten-ziekteverzuim-rekenmodel",
+        "/blog/hoe-verlaag-ik-het-ziekteverzuim-in-mijn-organisatie"
+      ],
+      "huidig": [
+        {
+          "bestand": "src/pages/Blog.tsx",
+          "nl": "Ziekteverzuim verlagen met 15-21% door aandachttraining. Wetenschappelijk bewezen: 70% lager uitvalrisico. Ontdek de evidence-based aanpak met 89,8% adoptie. / ... €438.330 per jaar bij 100 medewerkers. Wetenschappelijk bewezen oplossing met 497-775% ROI. / Ziekteverzuim verlagen met 15-21% door wetenschappelijk bewezen aandachttraining. ROI 497-775%.",
+          "en": null
+        },
+        {
+          "bestand": "src/pages/blog/*.tsx",
+          "nl": "ruim 140 cijfers, waaronder 15-21% (R1), 89,8% (R2), ROI 497-775% (R3), 'effecten blijven behouden tot minimaal 12 maanden', 'wetenschappelijk bewezen' (R9), 25% stressgerelateerd (X1), 80-90% blijft zelfstandig trainen (bron onbekend)",
+          "en": null
+        }
+      ],
+      "voorstel": null,
+      "ontbreekt": [
+        "Keuze Bas: blogs herschrijven via het blogsysteem, cijfers eruit halen, of offline halen tot ze herschreven zijn"
+      ],
+      "feitelijkToetsen": true,
+      "opmerking": "De drie blogs zijn het grootste risico op de site: alle rode claims uit het blogclaimregister staan er nog in, en een URL bevat 'wetenschappelijk-bewezen'. Alleen Nederlands (besluit 05-10-2026).",
+      "status": "inventaris"
+    },
+    {
+      "id": "pdf-business-case",
+      "soort": "B",
+      "prioriteit": "hoog",
+      "bron": "rood-15-21",
+      "paginas": [
+        "/documents/business-case-awareness-interventions.pdf",
+        "bijlage bij de rekentoolmail (Supabase-opslag)"
+      ],
+      "huidig": [
+        {
+          "bestand": "public/documents/business-case-awareness-interventions.pdf",
+          "nl": "bevat 15-21% verzuim, ROI 497-775%, 65-72% minder stress, 70% en 5-8% productiviteit",
+          "en": null
+        }
+      ],
+      "voorstel": null,
+      "ontbreekt": [
+        "Bas past de PDF aan of haalt hem weg; ook het rapport 'effects-of-awareness...' in Supabase controleren"
+      ],
+      "feitelijkToetsen": true,
+      "opmerking": null,
+      "status": "inventaris"
+    },
+    {
+      "id": "featureflag-paginas",
+      "soort": "C",
+      "prioriteit": "laag",
+      "bron": "geen-bron",
+      "paginas": [
+        "/masterclass-stress-qr",
+        "/bedankt",
+        "/masterclass-bedankt"
+      ],
+      "huidig": [
+        {
+          "bestand": "src/pages/MasterclassQR.tsx en src/pages/Bedankt.tsx",
+          "nl": "Al meer dan 40 jaar wetenschappelijk bewezen en erkend door Nederlandse zorgverzekeraars.",
+          "en": null
+        }
+      ],
+      "voorstel": null,
+      "ontbreekt": [],
+      "feitelijkToetsen": false,
+      "opmerking": "In productie omgeleid, dus niet zichtbaar. 'Erkend door zorgverzekeraars' is ongecontroleerd (X5).",
+      "status": "inventaris"
+    },
+    {
+      "id": "ongebruikte-componenten",
+      "soort": "B",
+      "prioriteit": "laag",
+      "bron": "geen-bron",
+      "paginas": [
+        "nergens zichtbaar"
+      ],
+      "huidig": [
+        {
+          "bestand": "src/components/ImpactSection.tsx",
+          "nl": "64-77% meer veerkracht, 60-84% minder burn-outklachten, 65% meer werkbetrokkenheid, 63-68% betere gezondheid",
+          "en": null
+        },
+        {
+          "bestand": "src/components/MethodologySection.tsx, YoungProfessionalsSection.tsx, ProcessSection.tsx",
+          "nl": "niet gebruikt",
+          "en": null
+        }
+      ],
+      "voorstel": null,
+      "ontbreekt": [],
+      "feitelijkToetsen": false,
+      "opmerking": "Worden nergens getoond. Voorstel: weghalen, zodat ze niet per ongeluk terugkomen.",
+      "status": "inventaris"
+    }
+  ]
+}
