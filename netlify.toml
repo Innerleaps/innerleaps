@@ -128,6 +128,13 @@
   to = "/en/improve-team-performance"
   status = 301
 
+# Blog hernoemd op 29-10-2026: "wetenschappelijk bewezen" mocht niet meer in de
+# URL (claimregister, CLAIMS.md).
+[[redirects]]
+  from = "/blog/ziekteverzuim-verlagen-wetenschappelijk-bewezen-aanpak-2025"
+  to = "/blog/ziekteverzuim-verlagen-met-aandachttraining"
+  status = 301
+
 # De 24 pagina's uit ROUTE_MAP worden geprerenderd naar platte .html-bestanden.
 # Die serveert Netlify vanzelf, daar is geen regel voor nodig.
 #

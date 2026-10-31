@@ -1,9 +1,9 @@
 {
   "meta": {
-    "title": "Methode en beperkingen: zo meten we | Innerleaps",
+    "title": "Methode: zo meten we | Innerleaps",
     "description": "Waar de cijfers op deze site vandaan komen, hoe we ze meten en wat ze niet zeggen."
   },
-  "title": "Methode en <0>beperkingen</0>",
+  "title": "<0>Methode</0>",
   "intro": "Op deze site staan cijfers. Hier lees je waar ze vandaan komen, hoe we ze meten en wat ze niet zeggen.",
   "wat": {
     "title": "Wat we meten",
@@ -24,18 +24,10 @@
     "intro": "Bij elk cijfer op de site staat hoeveel mensen het invulden. Op deze metingen rusten de cijfers nu:",
     "regel": "{{omschrijving}}, {{naam}}: n={{n}}, {{periode}}"
   },
-  "periode": {
-    "title": "Periode",
-    "text": "Bij elk cijfer staat wanneer het gemeten is. We controleren elk cijfer minstens één keer per jaar. Is een controle ouder dan 12 maanden, dan kijken we opnieuw voordat het cijfer blijft staan."
-  },
   "beperkingen": {
     "title": "Beperkingen",
     "items": [
       "Er is geen controlegroep. We vergelijken deelnemers met zichzelf, voor en na. Of een verandering door de training komt, kunnen we dus niet zeggen. Daarom schrijven we 'na de training', nooit 'door de training'.",
-      "Bij TheyDo vulde ook een kleine groep die niet meedeed de vragenlijsten in: 6 mensen. Hun productiviteit ging ook omhoog, met 13,5%. Die groep is te klein om mee te vergelijken. Maar je moet wel weten dat hij er is.",
-      "Alles is zelfgerapporteerd. Wie net een training heeft afgerond, is vaak positiever over het effect.",
-      "Niet iedereen vult de evaluatie in. Bij TheyDo deden 22 van de 39 deelnemers dat. Wie antwoordt, is misschien positiever dan wie dat niet doet.",
-      "De groepen zijn klein. Eén persoon meer of minder verschuift een percentage al snel een paar punten.",
       "Resultaten verschillen per organisatie. Wat bij de een gebeurde, is geen garantie voor de ander."
     ]
   },

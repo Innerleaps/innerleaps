@@ -4,33 +4,34 @@ import Footer from '@/components/Footer';
 import BlogAuthor from '@/components/BlogAuthor';
 import { Link } from 'react-router-dom';
 import breinTrainenImage from '@/assets/6_weken_brein_trainen.webp';
+import { Bron } from '@/components/Bron';
 
 const ZiekteverzuimVerlagen = () => {
   return (
     <>
       <Helmet>
-        <title>Ziekteverzuim Verlagen: De Wetenschappelijk Bewezen Aanpak voor 2025 | Innerleaps</title>
-        <meta name="description" content="Ziekteverzuim verlagen met 15-21% door wetenschappelijk bewezen aandachttraining. ROI 497-775%. Ontdek hoe 40 jaar onderzoek verzuimkosten structureel verlaagt." />
+        <title>Ziekteverzuim verlagen met aandachttraining: wat onderzoek laat zien | Innerleaps</title>
+        <meta name="description" content="Hoe aandachttraining kan helpen om ziekteverzuim te verlagen. Wat studies vinden over stress, uitvalrisico en ziektedagen, en hoe je zelf begint." />
         
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="article" />
-        <meta property="og:url" content="https://innerleaps.nl/blog/ziekteverzuim-verlagen-wetenschappelijk-bewezen-aanpak-2025" />
-        <meta property="og:title" content="Ziekteverzuim Verlagen: De Wetenschappelijk Bewezen Aanpak voor 2025" />
-        <meta property="og:description" content="Ziekteverzuim verlagen met 15-21% door wetenschappelijk bewezen aandachttraining. ROI 497-775%. Ontdek hoe 40 jaar onderzoek verzuimkosten structureel verlaagt." />
+        <meta property="og:url" content="https://innerleaps.nl/blog/ziekteverzuim-verlagen-met-aandachttraining" />
+        <meta property="og:title" content="Ziekteverzuim verlagen met aandachttraining: wat onderzoek laat zien" />
+        <meta property="og:description" content="Hoe aandachttraining kan helpen om ziekteverzuim te verlagen. Wat studies vinden over stress, uitvalrisico en ziektedagen, en hoe je zelf begint." />
         <meta property="og:image" content={breinTrainenImage} />
         <meta property="article:published_time" content="2025-11-28T00:00:00+00:00" />
-        <meta property="article:modified_time" content="2025-11-28T00:00:00+00:00" />
+        <meta property="article:modified_time" content="2026-10-29T00:00:00+00:00" />
         <meta property="article:author" content="Bas Ter Haar Romenij" />
         
         {/* Twitter */}
         <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://innerleaps.nl/blog/ziekteverzuim-verlagen-wetenschappelijk-bewezen-aanpak-2025" />
-        <meta property="twitter:title" content="Ziekteverzuim Verlagen: De Wetenschappelijk Bewezen Aanpak voor 2025" />
-        <meta property="twitter:description" content="Ziekteverzuim verlagen met 15-21% door wetenschappelijk bewezen aandachttraining. ROI 497-775%. Ontdek hoe 40 jaar onderzoek verzuimkosten structureel verlaagt." />
+        <meta property="twitter:url" content="https://innerleaps.nl/blog/ziekteverzuim-verlagen-met-aandachttraining" />
+        <meta property="twitter:title" content="Ziekteverzuim verlagen met aandachttraining: wat onderzoek laat zien" />
+        <meta property="twitter:description" content="Hoe aandachttraining kan helpen om ziekteverzuim te verlagen. Wat studies vinden over stress, uitvalrisico en ziektedagen, en hoe je zelf begint." />
         <meta property="twitter:image" content={breinTrainenImage} />
         
         {/* Canonical URL */}
-        <link rel="canonical" href="https://innerleaps.nl/blog/ziekteverzuim-verlagen-wetenschappelijk-bewezen-aanpak-2025" />
+        <link rel="canonical" href="https://innerleaps.nl/blog/ziekteverzuim-verlagen-met-aandachttraining" />
         
         {/* Schema.org JSON-LD */}
         <script type="application/ld+json">
@@ -39,11 +40,11 @@ const ZiekteverzuimVerlagen = () => {
             "@type": "BlogPosting",
             "mainEntityOfPage": {
               "@type": "WebPage",
-              "@id": "https://innerleaps.nl/blog/ziekteverzuim-verlagen-wetenschappelijk-bewezen-aanpak-2025"
+              "@id": "https://innerleaps.nl/blog/ziekteverzuim-verlagen-met-aandachttraining"
             },
-            "url": "https://innerleaps.nl/blog/ziekteverzuim-verlagen-wetenschappelijk-bewezen-aanpak-2025",
-            "headline": "Ziekteverzuim Verlagen: De Wetenschappelijk Bewezen Aanpak voor 2025",
-            "description": "Ziekteverzuim verlagen met 15-21% door wetenschappelijk bewezen aandachttraining. ROI 497-775%. Ontdek hoe 40 jaar onderzoek verzuimkosten structureel verlaagt.",
+            "url": "https://innerleaps.nl/blog/ziekteverzuim-verlagen-met-aandachttraining",
+            "headline": "Ziekteverzuim verlagen met aandachttraining: wat onderzoek laat zien",
+            "description": "Hoe aandachttraining kan helpen om ziekteverzuim te verlagen. Wat studies vinden over stress, uitvalrisico en ziektedagen, en hoe je zelf begint.",
             "image": breinTrainenImage,
             "author": {
               "@type": "Person",
@@ -59,8 +60,8 @@ const ZiekteverzuimVerlagen = () => {
               }
             },
             "datePublished": "2025-11-28",
-            "dateModified": "2025-11-28",
-            "keywords": "ziekteverzuim verlagen, aandachttraining, stressmanagement, werknemers, ROI, verzuimkosten, preventie, mindfulness, vitaliteitstraining",
+            "dateModified": "2026-10-29",
+            "keywords": "ziekteverzuim verlagen, aandachttraining, stressmanagement, werknemers, verzuimkosten, preventie, vitaliteitstraining",
             "articleSection": "Organisatievitaliteit",
             "inLanguage": "nl-NL"
           })}
@@ -85,14 +86,14 @@ const ZiekteverzuimVerlagen = () => {
             {/* Title and Meta */}
             <header className="mb-8">
               <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-brand-purple mb-6">
-                Ziekteverzuim Verlagen: De Wetenschappelijk Bewezen Aanpak voor 2025
+                Ziekteverzuim verlagen met aandachttraining: wat onderzoek laat zien
               </h1>
               
               <BlogAuthor 
                 authorName="Bas Ter Haar Romenij"
                 authorLinkedIn="https://www.linkedin.com/in/basterhaarromenij/"
                 publishDate="2025-11-28"
-                lastUpdated="2025-11-28"
+                lastUpdated="2026-10-29"
               />
             </header>
 
@@ -109,17 +110,17 @@ const ZiekteverzuimVerlagen = () => {
             {/* Article Content */}
             <div className="prose prose-lg max-w-none">
               <p className="lead">
-                Ziekteverzuim kost Nederlandse organisaties miljarden per jaar. Het CBS rapporteert een gemiddeld verzuimpercentage van 5,2% in 2024, waarbij 25% van alle verzuimdagen stressgerelateerd is. Voor een organisatie met 100 medewerkers en een gemiddeld brutosalaris van €39.700 betekent dit jaarlijkse verzuimkosten van ruim €380.000. De vraag is niet óf je actie moet ondernemen, maar welke aanpak daadwerkelijk werkt.
+                Ziekteverzuim kost Nederlandse organisaties veel geld. Het verzuim lag in het vierde kwartaal van 2025 op 5,6%{" "}<Bron ids={["cbs-verzuim"]} />. En één op de vier verzuimdagen hangt samen met stress{" "}<Bron ids={["kwart-verzuim-stress"]} />. De vraag is niet óf je actie moet ondernemen, maar welke aanpak werkt.
               </p>
 
               <h2 className="text-2xl md:text-3xl font-bold text-brand-purple mt-12 mb-6">De Verborgen Kosten van Ziekteverzuim</h2>
               
               <p>
-                Verzuim raakt verder dan zichtbare loonkosten. Sazas berekende in 2024 dat de totale verzuimkosten 185% van het brutosalaris bedragen wanneer je vervangingskosten, productiviteitsverlies en administratieve lasten meeneemt. Dit betekent dat elke verzuimdag een organisatie €285 kost bij een modaal salaris.
+                Verzuim raakt verder dan de loonkosten. Er komen kosten bij voor vervanging, productiviteitsverlies en administratie.
               </p>
 
               <p className="mt-8">
-                Maar er is meer. Wanneer medewerkers wél aanwezig zijn maar door stress of overbelasting ondermaats presteren, spreek je van presenteïsme. Dit fenomeen is moeilijker meetbaar maar kost organisaties naar schatting nog meer dan het daadwerkelijke verzuim. Dr Amishi Jha, neurowetenschapper en professor aan de universiteit van Miami, toonde aan dat na slechts 10 minuten onder verhoogde druk prestaties al beginnen te dalen.
+                Maar er is meer. Wanneer medewerkers wél aanwezig zijn maar door stress of overbelasting ondermaats presteren, spreek je van presenteïsme. Dit is moeilijker te meten, maar het kost organisaties ook geld.
               </p>
 
               <h2 className="text-2xl md:text-3xl font-bold text-brand-purple mt-12 mb-6">Waarom Traditionele Verzuimaanpakken Falen</h2>
@@ -129,7 +130,7 @@ const ZiekteverzuimVerlagen = () => {
               </p>
 
               <p className="mt-8">
-                Employee Assistance Programs (EAP's) bereiken gemiddeld 4-5% van medewerkers, terwijl 31% van niet-gebruikers aangeeft wél hulp nodig te hebben. Mindfulness-apps hebben een retentie van slechts 4,7% na 30 dagen. Bedrijfsfitnessregelingen worden door 67% van houders nooit of zeer zelden gebruikt.
+                Losse middelen worden weinig gebruikt. Apps voor aandachtsoefeningen worden na 30 dagen nog door 4,7% van de gebruikers geopend{" "}<Bron ids={["app-gebruik"]} />.
               </p>
 
               <p className="mt-8">
@@ -139,7 +140,7 @@ const ZiekteverzuimVerlagen = () => {
               <h2 className="text-2xl md:text-3xl font-bold text-brand-purple mt-12 mb-6">De Wetenschappelijke Basis: 40 Jaar Onderzoek naar Aandachttraining</h2>
               
               <p>
-                Sinds de jaren tachtig onderzoeken wetenschappers de effecten van <Link to="/breintraining-methode" className="text-brand-blue hover:text-brand-orange font-medium transition-colors">aandachttraining</Link> op werknemers. Meta-analyses van Vonderlin (2020), Bartlett (2018) en Michaelsen (2023) bundelen resultaten van duizenden deelnemers wereldwijd. De conclusies zijn helder: gestructureerde aandachttraining vermindert stressgerelateerd verzuim met 15-21%.
+                Sinds de jaren tachtig onderzoeken wetenschappers de effecten van <Link to="/breintraining-methode" className="text-brand-blue hover:text-brand-orange font-medium transition-colors">aandachttraining</Link> op werknemers. Meta-analyses van Vonderlin (2020), Bartlett (2019) en Michaelsen (2023) bundelen de resultaten van duizenden deelnemers wereldwijd. Ze vinden minder stress na aandachttraining, en dat effect is tot een jaar later nog te zien{" "}<Bron ids={["michaelsen-stress-lange-termijn"]} />.
               </p>
 
               <p className="mt-8">
@@ -147,21 +148,17 @@ const ZiekteverzuimVerlagen = () => {
               </p>
 
               <p className="mt-8">
-                Neurowetenschapper Dr. Amishi Jha van de Universiteit van Miami onderzocht dit fenomeen jarenlang bij militairen, chirurgen en andere professionals onder extreme druk. Haar bevindingen tonen aan dat 12 minuten dagelijkse training voldoende is om het werkgeheugen te stabiliseren en de foutenlast met 25% te verminderen.
+                Neurowetenschapper Dr. Amishi Jha van de Universiteit van Miami onderzocht dit fenomeen jarenlang bij militairen, chirurgen en andere professionals onder extreme druk. In haar boek Peak Mind beschrijft ze dat 12 minuten training per dag het werkgeheugen stabiliseert en dat getrainde mensen 25% minder fouten maken{" "}<Bron ids={["jha-fouten"]} />.
               </p>
 
               <h2 className="text-2xl md:text-3xl font-bold text-brand-purple mt-12 mb-6">Concrete Impact: Van Theorie naar Resultaat</h2>
               
               <p>
-                De Unilever-studie uit 2018, uitgevoerd door De Bruin en collega's aan de Universiteit van Amsterdam, toonde indrukwekkende resultaten. Medewerkers met verhoogd uitvalrisico (54,4% kans op langdurig ziekteverzuim) daalde naar 16,4% na een <Link to="/duurzame-inzetbaarheid" className="text-brand-blue hover:text-brand-orange font-medium transition-colors">6-weekse aandachttraining</Link>. Dit is een risicoreductie van 70%, blijvend na 6 maanden.
+                In de Unilever-studie van De Bruin en collega's (Universiteit van Amsterdam) volgden 150 medewerkers een <Link to="/duurzame-inzetbaarheid" className="text-brand-blue hover:text-brand-orange font-medium transition-colors">aandachttraining</Link> van 8 weken. Vooraf had 54,4% van hen een verhoogd risico op langdurige uitval. 6 maanden na de training was dat 16,4%{" "}<Bron ids={["debruin-uitval"]} />.
               </p>
 
               <p className="mt-8">
-                Vergelijkbaar onderzoek van Żołnierczyk-Zreda (2016) bij managers toonde 21% verzuimdaling en verbeterde zelfeffectiviteit die bleef bestaan bij 3-maands follow-up. Lensen's studie (2024) bij basisschoolleraren rapporteerde verbeterde werksfeer, emotieregulatie en zelfvertrouwen, alle factoren die verzuim voorspellen.
-              </p>
-
-              <p className="mt-8">
-                Vertaling naar een Nederlandse organisatie met 100 medewerkers en €3.970.000 totale loonkosten: een investering van €57.500 in een wetenschappelijk bewezen aandachttraining levert een besparing van €57.287 tot €80.202 op ziekteverzuim alleen. Tel daar productiviteitswinst (5-8%) en retentieverbetering (5-8% lager verloop) bij op, en de totale besparing loopt op tot €285.562 conservatief, €445.442 in een positief scenario. Dit vertaalt zich naar een ROI van 497-775% binnen het eerste jaar.
+                <Bron ids={["zreda-ziektedagen"]}>Żołnierczyk-Zreda en collega's (2016)</Bron> vonden bij 144 managers 69% minder ziektedagen in de trainingsgroep, zelf ingevuld, ongeveer 3 maanden na de start. Lensen en collega's (2024) vonden bij leraren in het basisonderwijs minder stress, ook 3 maanden na de training.
               </p>
 
               <h2 className="text-2xl md:text-3xl font-bold text-brand-purple mt-12 mb-6">Het Mechanisme Achter Verzuimreductie</h2>
@@ -172,17 +169,17 @@ const ZiekteverzuimVerlagen = () => {
 
               <h3 className="text-xl md:text-2xl font-bold text-brand-purple mt-8 mb-4">1. Vroege stressdetectie</h3>
               <p>
-                Getrainde medewerkers herkennen fysieke stresssignalen voordat ze escaleren. Spanning in schouders, een strakke kaak, oppervlakkige ademhaling. Zonder training merk je deze signalen pas als je hoofdpijn hebt of uitgeput bent. Met training vang je ze binnen 10 minuten op en kun je bijsturen.
+                Getrainde medewerkers herkennen fysieke stresssignalen voordat ze escaleren. Spanning in schouders, een strakke kaak, oppervlakkige ademhaling. Zonder training merk je deze signalen pas als je hoofdpijn hebt of uitgeput bent. Met training vang je ze eerder op en kun je bijsturen.
               </p>
 
               <h3 className="text-xl md:text-2xl font-bold text-brand-purple mt-8 mb-4">2. Verbeterde stressregulatie</h3>
               <p>
-                Door bewust je ademhaling te reguleren, activeer je het parasympathische zenuwstelsel via de nervus vagus. Dit "rust-en-herstel" systeem dempt je sympathische "vecht-of-vlucht" reactie. Het resultaat: 65-72% van deelnemers ervaart meetbaar minder spanning in gevalideerde stressmetingen.
+                Door bewust je ademhaling te reguleren, activeer je het parasympathische zenuwstelsel via de nervus vagus. Dit "rust-en-herstel" systeem dempt je sympathische "vecht-of-vlucht" reactie. Zet iemand die de training deed naast iemand die hem niet deed, en in 65 tot 72% van de gevallen heeft de getrainde persoon minder stress{" "}<Bron ids={["cles-stress"]} />.
               </p>
 
               <h3 className="text-xl md:text-2xl font-bold text-brand-purple mt-8 mb-4">3. Cognitieve veerkracht</h3>
               <p>
-                Een versterkt controlecentrum betekent beter werkgeheugen, sneller schakelen tussen taken en minder fouten onder druk. Mrazek's onderzoek (2013) toonde aan dat na 4 weken training het werkgeheugen stabiliseert, terwijl het normaal met leeftijd afneemt. Studenten scoorden 16% hoger op GRE-testen na de training.
+                Een versterkt controlecentrum betekent beter werkgeheugen, sneller schakelen tussen taken en minder fouten onder druk. Mrazek en collega's (2013) vonden dat studenten na 2 weken training een beter werkgeheugen hadden en hoger scoorden op een leestoets.
               </p>
 
               <h3 className="text-xl md:text-2xl font-bold text-brand-purple mt-8 mb-4">4. Gedragsverandering via eigenaarschap</h3>
@@ -190,14 +187,14 @@ const ZiekteverzuimVerlagen = () => {
                 Medewerkers die hun eigen stresssignalen herkennen, nemen actief regie. Ze zeggen "nee" wanneer ze tegen grenzen lopen, nemen pauzes voordat uitputting toeslaat, en vragen om hulp voordat problemen escaleren. Dit preventieve gedrag vermindert uitval drastisch.
               </p>
 
-              <h2 className="text-2xl md:text-3xl font-bold text-brand-purple mt-12 mb-6">Waarom Het Amerikaanse Leger en Fortune 500 Bedrijven Dit Toepassen</h2>
+              <h2 className="text-2xl md:text-3xl font-bold text-brand-purple mt-12 mb-6">Waarom het Amerikaanse leger en grote bedrijven dit toepassen</h2>
               
               <p>
-                In 2020 nam het Amerikaanse leger aandachttraining op in officiële doctrine (Army Field Manual 7-22: Holistic Health and Fitness). De reden: meetbare prestatieverbetering onder extreme stress, sneller herstel na missies, en verminderde PTSS-symptomen.
+                In 2020 nam het Amerikaanse leger aandachttraining op in zijn handboek voor gezondheid en fitheid <Bron ids={["leger-fm722"]}>(Army Field Manual 7-22: Holistic Health and Fitness)</Bron>.
               </p>
 
               <p className="mt-8">
-                Google, Apple, Microsoft, Facebook, Nestlé en Unilever implementeerden vergelijkbare trainingen om dezelfde reden. Het gaat niet om welzijn als leuk extraatje. Het gaat om operationele effectiviteit, lagere kosten en competitief voordeel door een scherpere, veerkrachtigere workforce.
+                Ook Google en Unilever bieden hun medewerkers vergelijkbare trainingen aan{" "}<Bron ids={["bedrijven-google"]} />. Het gaat niet om welzijn als leuk extraatje. Het gaat om operationele effectiviteit, lagere kosten en competitief voordeel door een scherpere, veerkrachtigere workforce.
               </p>
 
               <h2 className="text-2xl md:text-3xl font-bold text-brand-purple mt-12 mb-6">De Kritieke Succesfactoren</h2>
@@ -208,7 +205,7 @@ const ZiekteverzuimVerlagen = () => {
 
               <h3 className="text-xl md:text-2xl font-bold text-brand-purple mt-8 mb-4">Dagelijkse praktijk van minimaal 12 minuten</h3>
               <p>
-                Jha's onderzoek is expliciet: minder dan 12 minuten per dag toont geen werkgeheugenbescherming. Meer helpt, maar 12 minuten is het kantelpunt waar effecten meetbaar worden.
+                Jha beschrijft het in Peak Mind zo: minder dan 12 minuten per dag beschermt het werkgeheugen niet. Meer helpt, maar 12 minuten is het kantelpunt{" "}<Bron ids={["jha-fouten"]} />.
               </p>
 
               <h3 className="text-xl md:text-2xl font-bold text-brand-purple mt-8 mb-4">Gestructureerde wekelijkse begeleiding</h3>
@@ -257,10 +254,10 @@ const ZiekteverzuimVerlagen = () => {
                 Bouw aandachttraining in als standaard onderdeel van onboarding voor nieuwe medewerkers en als regulier vitalisatie-aanbod. Train managers in het herkennen van stresssignalen bij teamleden. Creëer een cultuur waarin pauzes, grenzen stellen en stressmanagement genormaliseerd zijn.
               </p>
 
-              <h2 className="text-2xl md:text-3xl font-bold text-brand-purple mt-12 mb-6">ROI Berekening voor Jouw Organisatie</h2>
+              <h2 className="text-2xl md:text-3xl font-bold text-brand-purple mt-12 mb-6">Wat het jouw organisatie kan opleveren</h2>
               
               <p>
-                De business case voor aandachttraining is sterk, maar varieert per organisatie. Drie factoren bepalen je specifieke ROI:
+                Wat aandachttraining oplevert, verschilt per organisatie. Drie factoren tellen mee:
               </p>
 
               <h3 className="text-xl md:text-2xl font-bold text-brand-purple mt-8 mb-4">Huidig verzuimpercentage</h3>
@@ -275,47 +272,33 @@ const ZiekteverzuimVerlagen = () => {
 
               <h3 className="text-xl md:text-2xl font-bold text-brand-purple mt-8 mb-4">Percentage stressgerelateerd verzuim</h3>
               <p>
-                De 25% landelijke benchmark geldt voor gemiddelde organisaties. In hoog-stress sectoren zoals zorg, onderwijs of consultancy ligt dit percentage tussen 35-45%, wat de potentiële impact vergroot.
-              </p>
-
-              <p>
-                Voorbeeld: Een zorgorganisatie met 200 medewerkers, 6,5% verzuim waarvan 40% stressgerelateerd, en gemiddeld salaris €42.000. Investering: €115.000 voor twee groepen van 100 deelnemers. Conservatieve berekening (15% verzuimreductie, 5% productiviteitswinst, 5% retentieverbetering): €571.124 besparing eerste jaar. ROI: 596%.
+                Landelijk hangt één op de vier verzuimdagen samen met stress{" "}<Bron ids={["kwart-verzuim-stress"]} />. Ligt dat aandeel bij jullie hoger, dan is er ook meer te winnen.
               </p>
 
               <p className="bg-brand-off-white p-6 rounded-lg border-l-4 border-brand-orange mt-8">
-                💡 <strong>Bereken de ROI voor jouw organisatie:</strong> Gebruik <a href="/?openCalculator=true" className="text-brand-blue hover:text-brand-orange font-medium transition-colors">onze ROI calculator</a> om te zien wat aandachttraining voor jouw specifieke situatie kan betekenen.
+                💡 <strong>Vanaf wanneer verdient het zich terug?</strong> Reken het uit met <a href="/?openCalculator=true" className="text-brand-blue hover:text-brand-orange font-medium transition-colors">onze rekentool</a>: die laat zien vanaf hoeveel procent meer productiviteit de training zich terugverdient.
               </p>
 
               <h2 className="text-2xl md:text-3xl font-bold text-brand-purple mt-12 mb-6">Veelvoorkomende Bezwaren Weerlegd</h2>
               
               <h3 className="text-xl md:text-2xl font-bold text-brand-purple mt-8 mb-4">"Onze mensen hebben geen tijd voor nog een training"</h3>
               <p>
-                De training kost 15 minuten per dag eigen tijd, waarvan het grootste deel geïntegreerd wordt in bestaande activiteiten. Wekelijkse workshops vinden tijdens werktijd plaats. De tijdsinvestering weegt niet op tegen 4-7 verzuimdagen per FTE per jaar. Bovendien rapporteren deelnemers 10% productiviteitswinst, wat de tijdsinvestering ruimschoots terugverdient.
+                De training kost 15 minuten per dag eigen tijd, waarvan het grootste deel geïntegreerd wordt in bestaande activiteiten. Wekelijkse workshops vinden tijdens werktijd plaats. <Bron ids={["theydo-productiviteit"]}>Bij TheyDo</Bron> rapporteerden deelnemers daarna 8,6% hogere productiviteit.
               </p>
 
               <h3 className="text-xl md:text-2xl font-bold text-brand-purple mt-8 mb-4">"We hebben al een EAP en bedrijfsfitness"</h3>
               <p>
-                Deze interventies zijn complementair, niet vervangend. EAP's zijn reactief en bereiken 4-5% van medewerkers. Aandachttraining is preventief en 80-90% van de deelnemers blijven zelfstandig trainen. Bedrijfsfitness richt zich op fysieke gezondheid, aandachttraining op cognitieve en emotionele vaardigheden.
+                Deze interventies zijn complementair, niet vervangend. EAP's zijn reactief. Aandachttraining is preventief. Bedrijfsfitness richt zich op fysieke gezondheid, aandachttraining op cognitieve en emotionele vaardigheden.
               </p>
 
               <h3 className="text-xl md:text-2xl font-bold text-brand-purple mt-8 mb-4">"Klinkt als soft skills zonder harde resultaten"</h3>
               <p>
-                De data zijn glashelder. Meta-analyses van duizenden deelnemers tonen consistente effecten met effect sizes tussen d=0.49-1.06 voor veerkracht, d=-0.53 tot -0.84 voor stress, en d=-0.37 tot -1.43 voor burnout. Deze cijfers zijn vergelijkbaar met medicamenteuze interventies bij klinische aandoeningen. Het Amerikaanse leger implementeert dit niet op basis van soft skills, maar op operationele noodzaak.
+                Meta-analyses van gerandomiseerde studies vinden minder stress en meer veerkracht na aandachttraining{" "}<Bron ids={["michaelsen-stress-lange-termijn"]} />. Het Amerikaanse leger heeft het opgenomen in zijn handboek voor gezondheid en fitheid{" "}<Bron ids={["leger-fm722"]} />.
               </p>
 
               <h3 className="text-xl md:text-2xl font-bold text-brand-purple mt-8 mb-4">"Wat als mensen stoppen na de training?"</h3>
               <p>
-                Onderzoek toont dat 89,8% van deelnemers aangeeft door te willen gaan met de praktijk na afloop (De Bruin, 2018). Effecten blijven behouden tot minimaal 12 maanden, ook bij deelnemers die minder frequent oefenen. De vaardigheden worden geautomatiseerd zoals fietsen: eenmaal geleerd, niet meer volledig verleerd.
-              </p>
-
-              <h2 className="text-2xl md:text-3xl font-bold text-brand-purple mt-12 mb-6">De Nederlandse Context: Zorgverzekeraars Vergoeden MBSR</h2>
-              
-              <p>
-                De uitgebreide variant van aandachttraining, Mindfulness-Based Stress Reduction (MBSR), wordt vergoed vanuit de basisverzekering door Nederlandse zorgverzekeraars. Dit reflecteert de erkenning binnen het zorgsysteem van de evidence base en kosteneffectiviteit.
-              </p>
-
-              <p className="mt-8">
-                Voor organisaties betekent dit dat de drempel voor individuele deelnemers laag is. Medewerkers die intensievere begeleiding nodig hebben, kunnen doorstromen naar vergoed MBSR via hun huisarts, terwijl de werkgever een preventief training aanbiedt voor de bredere populatie.
+                In de Unilever-studie wilde 89,8% van de deelnemers die de vraag beantwoordden na afloop blijven oefenen{" "}<Bron ids={["debruin-doorgaan"]} />. En studies die tot een jaar na de training opnieuw maten, vonden nog steeds minder stress{" "}<Bron ids={["michaelsen-stress-lange-termijn"]} />.
               </p>
 
               <h2 className="text-2xl md:text-3xl font-bold text-brand-purple mt-12 mb-6">Praktische Eerste Stappen</h2>
@@ -351,7 +334,7 @@ const ZiekteverzuimVerlagen = () => {
               </p>
 
               <p className="mt-8">
-                Met 40 jaar onderzoek, consistente effecten van 15-21% verzuimreductie, en ROI's tussen 497-775%, is de business case overweldigend. Organisaties die hun verzuimcijfers structureel willen verlagen, vinden in wetenschappelijk bewezen aandachttraining een interventie die daadwerkelijk werkt.
+                Met 40 jaar onderzoek en tientallen gerandomiseerde studies is aandachttraining een serieuze optie voor organisaties die hun verzuim structureel willen verlagen.
               </p>
 
               <p className="text-lg font-medium mt-8">
@@ -363,11 +346,15 @@ const ZiekteverzuimVerlagen = () => {
               <section className="bg-muted/30 p-6 rounded-lg">
                 <h2 className="text-2xl font-bold text-brand-purple mb-4">Bronnen</h2>
                 <ul className="space-y-2 text-base">
-                  <li>Bartlett, L., et al. (2018). A systematic review and meta-analysis of workplace mindfulness training randomized controlled trials. <em>Journal of Occupational Health Psychology</em>.</li>
-                  <li>De Bruin, E.I., et al. (2018). The Unilever Study: Positive effects on stress and risk for dropout from work after the Finding Peace in a Frantic World training. <em>Mindfulness</em>, 9(6), 1821-1831.</li>
+                  <li>ArboNed (2025). Verzuim door stress blijft toenemen. 23 september 2025.</li>
+                  <li>Bartlett, L., et al. (2019). A systematic review and meta-analysis of workplace mindfulness training randomized controlled trials. <em>Journal of Occupational Health Psychology</em>, 24(1), 108-126.</li>
+                  <li>Baumel, A., et al. (2019). Objective user engagement with mental health apps: systematic search and panel-based usage analysis. <em>Journal of Medical Internet Research</em>, 21(9), e14567.</li>
+                  <li>CBS (2026). Dashboard arbeidsmarkt: ziekteverzuim.</li>
+                  <li>De Bruin, E.I., et al. (2018). The Unilever Study: Positive effects on stress and risk for dropout from work after the Finding Peace in a Frantic World training. <em>Mindfulness</em>, 11(2), 350-361.</li>
                   <li>De Vibe, M., et al. (2017). Mindfulness-based stress reduction (MBSR) for improving health, quality of life and social functioning in adults: a systematic review and meta-analysis. <em>Campbell Systematic Reviews</em>.</li>
                   <li>Jha, A.P. (2021). <em>Peak Mind: Find Your Focus, Own Your Attention, Invest 12 Minutes a Day</em>. HarperOne.</li>
                   <li>Lensen, J.H., et al. (2024). Mindfulness-based stress reduction for elementary school teachers: a randomized controlled trial. <em>Frontiers in Education</em>.</li>
+                  <li>U.S. Department of the Army (2020). <em>FM 7-22: Holistic Health and Fitness</em>.</li>
                   <li>Michaelsen, M.M., et al. (2023). Mindfulness-based and mindfulness-informed interventions at the workplace: A systematic review and meta-regression analysis of RCTs. <em>Mindfulness</em>.</li>
                   <li>Mrazek, M.D., et al. (2013). Mindfulness training improves working memory capacity and GRE performance while reducing mind wandering. <em>Psychological Science</em>, 24(5), 776-781.</li>
                   <li>Vonderlin, R., et al. (2020). Mindfulness-based programs in the workplace: A meta-analysis of randomized controlled trials. <em>Mindfulness</em>, 11(7), 1579-1598.</li>

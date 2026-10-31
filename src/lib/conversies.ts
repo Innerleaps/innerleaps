@@ -101,11 +101,11 @@ const naarGoogle = (
 interface RoiMelding {
   id: string;
   doelgroep: Doelgroep;
-  /** De netto besparing uit het voorzichtige scenario, afgerond op hele euro's. */
-  besparingVoorzichtig: number;
-  /** De netto besparing uit het positieve scenario, afgerond op hele euro's. */
-  besparingPositief: number;
-  aantalWerknemers: number;
+  /** Het omslagpunt in procenten productiviteit, uit de rekentool. */
+  omslagpuntProcent: number;
+  /** Wat de training voor deze groep kost, in hele euro's. */
+  investering: number;
+  aantalDeelnemers: number;
   emailHash: string | null;
 }
 
@@ -121,9 +121,9 @@ interface RoiMelding {
 export const meldRoiLead = ({
   id,
   doelgroep,
-  besparingVoorzichtig,
-  besparingPositief,
-  aantalWerknemers,
+  omslagpuntProcent,
+  investering,
+  aantalDeelnemers,
   emailHash,
 }: RoiMelding): void => {
   if (alGemeld(id)) return;
@@ -140,9 +140,9 @@ export const meldRoiLead = ({
     event: "roi_calculator_lead",
     transaction_id: id,
     doelgroep,
-    besparing_voorzichtig: Math.round(besparingVoorzichtig),
-    besparing_positief: Math.round(besparingPositief),
-    aantal_werknemers: aantalWerknemers,
+    omslagpunt_procent: Math.round(omslagpuntProcent * 100) / 100,
+    investering: Math.round(investering),
+    aantal_deelnemers: aantalDeelnemers,
     // Google Ads verwacht deze naam letterlijk voor Enhanced Conversions.
     user_data: emailHash ? { sha256_email_address: emailHash } : undefined,
   });

@@ -113,7 +113,7 @@ const Bedankt = () => {
         <div className="mt-12 text-center space-y-6">
           <h3 className="text-2xl font-bold text-brand-purple">Erkende methode</h3>
           <p className="text-base text-brand-gray-medium max-w-2xl mx-auto">
-            Al meer dan 40 jaar wetenschappelijk bewezen en erkend door Nederlandse zorgverzekeraars.
+            Een methode die al meer dan 40 jaar onderzocht wordt.
           </p>
 
           {/* Logo Grid - Universiteiten en Zorgverzekeraars */}

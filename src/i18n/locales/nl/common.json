@@ -35,8 +35,8 @@
     "freeMasterclassShort": "Masterclass",
     "registerTrainingLong": "Aanmelden training",
     "registerTrainingShort": "Aanmelden",
-    "calculateSavings": "Bereken wat het jullie oplevert",
-    "calculateRoi": "Bereken jullie ROI",
+    "calculateSavings": "Reken uit wanneer het zich terugverdient",
+    "calculateRoi": "Wanneer verdient het zich terug?",
     "bookCallWithBas": "Plan 20 minuten met Bas",
     "requestQuote": "Offerte aanvragen"
   },
@@ -86,20 +86,20 @@
     "whyChooseUs": "Waarom organisaties ons kiezen",
     "stats": {
       "dropoutRisk": "Uitvalrisico",
-      "absenteeism": "Verzuim",
-      "focus": "Focus & concentratie",
+      "absenteeism": "Ziektedagen",
+      "focus": "Fouten bij concentratietaken",
       "science": "Wetenschap",
       "scienceValue": "40+ jaar",
       "productivity": "Productiviteit"
     },
     "googleReviews": "Google Reviews",
-    "calculatorLink": "Wat kost verzuim jou?",
+    "calculatorLink": "Wanneer verdient het zich terug?",
     "caseLink": "Zo deed TheyDo het",
     "proofRating": "4,7/5",
     "proofSuffix": "op Google Reviews",
     "photoAlt": "Deelnemers luisteren tijdens een Innerleaps-sessie",
     "quote": "Innerleaps leverde snel meetbare resultaten: 8,6% hogere productiviteit en 7 op de 10 deelnemers ervaarde minder stress.",
-    "trustedBy": "Zij gingen je voor"
+    "trustedBy": "Onze trainers gaven training aan"
   },
   "problem": {
     "title": "Eén leuke middag verandert niets aan hoe mensen met druk omgaan",
@@ -118,7 +118,7 @@
       "app": {
         "title": "Een app-abonnement",
         "lead": "Licenties uitgedeeld aan iedereen.",
-        "fade": "Na een maand gebruikt nog geen 4%* de app."
+        "fade": "Na een maand gebruikt nog geen 4% de app <bron></bron>."
       }
     },
     "closingLine": "Daarom begonnen we bij <0>de vorm</0>, niet bij de inhoud."
@@ -172,7 +172,7 @@
       "format": {
         "title": "Weinig tijd, blijvend effect",
         "stat": "1 uur / week + 15 min / dag",
-        "body": "We namen een bewezen methode en lieten die passen in de werkweek. Zo kun je het als organisatie uitrollen en houden mensen het resultaat vast.",
+        "body": "We namen een methode die al 40 jaar onderzocht wordt en lieten die passen in de werkweek. Zo kun je het als organisatie uitrollen en houden mensen het resultaat vast.",
         "proofLabel": "Wat dat betekent",
         "pills": {
           "liveHour": "1 uur live per week",
@@ -183,7 +183,7 @@
       "research": {
         "title": "Wetenschappelijk onderzoek",
         "stat": "40+ jaar",
-        "body": "Gebouwd op MBSR, een van de best onderzochte stressmanagementmethodes ter wereld, met aantoonbaar blijvende gedragsverandering.",
+        "body": "Gebouwd op MBSR, een van de best onderzochte stressmanagementmethodes ter wereld.",
         "proofLabel": "Onderzocht aan"
       },
       "trainers": {
@@ -301,7 +301,7 @@
   "seo": {
     "landing": {
       "title": "Focus en productiviteit voor scale-ups | Innerleaps",
-      "description": "Aandachttraining voor scale-ups: meer focus en een hogere productiviteit, zonder langere dagen. 6 weken, één uur live per week en 15 minuten per dag."
+      "description": "Aandachttraining voor scale-ups die je team helpt focussen, zonder langere dagen. 6 weken, één uur live per week en 15 minuten per dag."
     },
     "blog": {
       "title": "Blog over verzuim, stress en aandachttraining | Innerleaps",
@@ -351,7 +351,7 @@
     "eigen": "{{methode}}, n={{n}}, {{naam}}, {{periode}}",
     "extern": "{{studie}}",
     "geenBron": "[bron ontbreekt]",
-    "bronnen": "Bronnen",
+    "gemetenBij": "gemeten bij {{naam}}",
     "sterLabel": "Bron",
     "onderzoeksnoot": "Onderzoekscijfers zijn niet bij deelnemers van Innerleaps gemeten.",
     "slot": "Resultaten verschillen per organisatie.",

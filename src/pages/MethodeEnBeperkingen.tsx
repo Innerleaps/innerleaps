@@ -8,7 +8,7 @@ import { detectLanguageFromPath } from "@/i18n/config";
 import { eigenMetingen, studies } from "@/lib/claims";
 
 /**
- * /methode-en-beperkingen en /en/method-and-limitations: waar de cijfers op de
+ * /methode en /en/methodology: waar de cijfers op de
  * site vandaan komen. Het bronnenblok onderaan elke pagina linkt hierheen.
  *
  * De lijsten met metingen en studies komen rechtstreeks uit het claimregister
@@ -73,10 +73,6 @@ const MethodeEnBeperkingen = () => {
             </ul>
           </section>
 
-          <section>
-            <Kop>{t("periode.title")}</Kop>
-            <p>{t("periode.text")}</p>
-          </section>
 
           <section>
             <Kop>{t("beperkingen.title")}</Kop>

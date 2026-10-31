@@ -12,8 +12,8 @@
  *  3. Elk percentage, "x op de 10", "23x" en elk beloftewoord ("bewezen",
  *     "gegarandeerd", "aantoonbaar") in de vertaalbestanden en de code staat
  *     onder een geregistreerde claim of op de allowlist.
- *  4. Een cijfer in lopende tekst heeft een sterretje (*) dat naar de bronnen
- *     onderaan de pagina linkt.
+ *  4. Een cijfer in lopende tekst heeft zijn bron zichtbaar in de zin, gemarkeerd
+ *     als <bron>...</bron> (of <1>...</1> in een tekst met opmaak). Zie Bron.tsx.
  *  5. Een controle ouder dan 12 maanden geeft een waarschuwing.
  *
  * Streng of mild:
@@ -182,16 +182,19 @@ for (const bestand of readdirSync(join(ROOT, "src/i18n/locales/nl"))) {
       const metBron = claims.some((c) => c.soort !== "C");
       const cijfers = gevonden.filter((g) => g !== "beloftewoord");
       if (cijfers.length && !metBron) fout(`${taal}/${ns}.json ${pad}: ${cijfers.join(", ")} zonder claim met bron: "${tekst.slice(0, 90)}"`);
-      // Een cijfer in lopende tekst krijgt een sterretje dat naar de bron
-      // linkt. Niet nodig in meta-teksten (daar kan geen link in), in citaten
-      // (het sterretje staat achter het aanhalingsteken) en bij korte labels
-      // (daar zet de code het sterretje achter het cijfer).
+      // Een cijfer in lopende tekst krijgt zijn bron zichtbaar in de zin:
+      // "<bron>Bij TheyDo</bron> deed 42% mee" of "... stress <bron></bron>."
+      // Niet nodig in meta-teksten (daar kan geen opmaak in), in citaten (naam
+      // en bedrijf staan eronder) en bij korte labels (daar zet de code de bron
+      // eronder, zie StatClaim).
       const lopendeTekst = tekst.split(/\s+/).length >= 6;
-      // De methodepagina is zelf de verantwoording; daar hoeft geen sterretje.
+      // De methodepagina is zelf de verantwoording; daar hoeft geen bron.
       const uitgezonderd = ns === "meten" || /(^|\.)(meta|seo)(\.|$)|quote$/.test(pad);
       const rood = claims.every((c) => c.status === "rood");
-      if (cijfers.length && metBron && lopendeTekst && !uitgezonderd && !rood && !tekst.includes("*"))
-        fout(`${taal}/${ns}.json ${pad}: cijfer zonder sterretje. Zet een * direct achter het cijfer: "${tekst.slice(0, 90)}"`);
+      if (cijfers.length && metBron && /\d%?\*/.test(tekst))
+        fout(`${taal}/${ns}.json ${pad}: sterretje achter een cijfer. Sinds 31-10-2026 staat de bron in de zin: <bron>...</bron>. "${tekst.slice(0, 90)}"`);
+      else if (cijfers.length && metBron && lopendeTekst && !uitgezonderd && !rood && !/<bron|<1>/.test(tekst))
+        fout(`${taal}/${ns}.json ${pad}: cijfer zonder zichtbare bron. Markeer de bron in de zin met <bron>...</bron>, of laat hem leeg voor "(Auteur, jaar)": "${tekst.slice(0, 90)}"`);
       else if (!cijfers.length && !claims.length) fout(`${taal}/${ns}.json ${pad}: beloftewoord zonder claim in het register: "${tekst.slice(0, 90)}"`);
     });
   }

@@ -54,7 +54,7 @@ const MasterclassQR = () => {
             <span className="text-brand-orange">levensplezier</span>
           </h1>
           <p className="text-lg sm:text-xl md:text-2xl text-blue-100 leading-relaxed max-w-2xl mx-auto">
-            Ervaar in 60 minuten hoe je met wetenschappelijk bewezen technieken rust in je hoofd krijgt
+            Ervaar in 60 minuten hoe je met onderzochte technieken rust in je hoofd krijgt
           </p>
 
           {/* Trust Badge */}
@@ -174,7 +174,7 @@ const MasterclassQR = () => {
               Erkende <span className="text-brand-orange">methode</span>
             </h3>
             <p className="text-base sm:text-lg text-brand-gray-medium text-center mb-8 sm:mb-10 max-w-2xl mx-auto">
-              Al meer dan 40 jaar wetenschappelijk bewezen en erkend door Nederlandse zorgverzekeraars.
+              Een methode die al meer dan 40 jaar onderzocht wordt.
             </p>
 
             {/* Logo Grid - Universiteiten en Zorgverzekeraars */}

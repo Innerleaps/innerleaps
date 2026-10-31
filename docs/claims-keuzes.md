@@ -53,7 +53,7 @@ talen.
 - B. Alleen "er is geen controlegroep".
 
 **6. Adres van de methodepagina**
-- **A.** `/methode-en-beperkingen`
+- **A.** `/methode`
 - B. `/hoe-we-meten`
 - C. `/methode`
 
@@ -279,3 +279,50 @@ Letterlijk uit de opdracht, of een feitelijke correctie:
 - In de referenties op de methodepagina staat het woord "Mindfulness": het is
   de naam van het tijdschrift en de titel van de studies. Dat kan niet anders
   bij een echte bronvermelding.
+
+## Doorgevoerd op 29-10-2026
+
+Je keuzes uit het formulier van 29 oktober, in beide talen:
+
+| Vraag | Keuze | Wat er nu staat |
+|---|---|---|
+| 0 | A, bron of weg | Cijfers zonder terug te vinden bron zijn eruit. Elk overgebleven cijfer heeft een sterretje. |
+| 1 | A, omslagpunt | De rekentool rekent alleen vanaf welk punt de training zich terugverdient, in productiviteit en in ziektedagen. Geen besparing, geen ROI. Ook de mail (`submit-calculator`) en de bedanktpagina. Link heet "Wanneer verdient het zich terug?". |
+| 2 | A, studiecijfers blijven | Blogs: de rode 15 tot 21% en andere cijfers zonder bron zijn weg. Cijfers uit CBS, ArboNed, Żołnierczyk-Zreda en De Bruin staan er met sterretje. |
+| 2b | A, hernoemen | `/blog/ziekteverzuim-verlagen-met-aandachttraining`, met een 301 vanaf de oude URL. |
+| 3 | A, nieuwe versie | Nieuwe PDF in NL en EN, alleen met cijfers uit de bron. De Engelse staat op dezelfde URL als de oude. |
+| 4 | A | Bij de agenda: -69% ziektedagen (Żołnierczyk-Zreda, 2016). De oude "-21% verzuim" bestond in die studie niet. |
+| 5 | B | Alleen "geen controlegroep" bij de beperkingen; de zin over niet-deelnemers is weg. |
+| 6 | C | De methodepagina staat op `/methode` en `/en/methodology`. |
+| 7 | B | De productiviteit noemt n=14. |
+| 8 | B | De quote van Jochem blijft, maar pas live na zijn akkoord. |
+| 9 | eigen | Kop klantcase: "Deelnemers rapporteren 8,6% hogere productiviteit en 7 op de 10 gaven aan minder stress te hebben*". Deelplaatje aangepast. |
+| 10 | A | "39 van de 93". |
+| 11 | A | De Bruin blijft, nu met de juiste uitleg: van 54,4% naar 16,4% van de deelnemers met verhoogd risico op uitval. |
+| 12 | A | "-25% fouten" (Jha, Peak Mind). De oude 24% klopte niet. |
+| 13 | eigen | "Ervaren oefenaars werken nauwkeuriger op geheugentaken, met minder hersenactiviteit*." |
+| 14 | A | "vergelijkbare effecten" online en op locatie (Jesus e.a., 2025). |
+| 15 | A | "Eén op de vier verzuimdagen hangt samen met stress*" (ArboNed). |
+| 16 | A | 12 studies, en alleen Google en Unilever als bedrijven. |
+| 17 | A | Het leger: gecontroleerd in FM 7-22, hoofdstuk 13. |
+| 18 | A | De omgerekende kans van 65 tot 72%. |
+| 19 | B, eigen | Bron: deelnemers van TheyDo. "20 tot 40%" werd de gemeten 42% (39 van de 93), "9 op de 10" staat met TheyDo als bron. |
+| 20 | A | 68% op de publieke-sectorpagina blijft. |
+| 21 | A | "Helpt je team meer gedaan te krijgen". |
+| 22 | laten staan | "Minder fouten, ook als het druk is*." |
+| 23 | C | Bullets blijven. |
+| 24 | A | "Op tijd bijsturen helpt <0>verzuim</0> voorkomen". |
+| 25 | B | "Minder risico op uitval*", met De Bruin als bron. |
+| 26 | A | "40 jaar onderzocht". |
+| 27 | B | Kleine beloftes blijven. |
+| 28 | A | Meta-teksten: "rapporteerden deelnemers". |
+| 29 | ja | n=14 bevestigd. |
+| 30 | ja | "Al onze trainers" met VMBN categorie 1 blijft. |
+| 31 | ja | Dou e.a., BMC 2025. |
+
+Wat ik daarbij vond en meteen heb rechtgezet:
+
+- "89,8% blijvende deelname" was geen cijfer van Innerleaps. Het is uit De
+  Bruin: 89,8% van wie de vraag beantwoordde, wilde blijven oefenen.
+- De "13,5%" bij de beperkingen op de methodepagina is weg; daar was geen bron
+  voor.

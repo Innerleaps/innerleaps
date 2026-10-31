@@ -1,7 +1,6 @@
 import { lazy, Suspense, useState, type ReactNode } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Trans, useTranslation } from "react-i18next";
-import { Ster } from "@/components/Voetnoten";
 import { Award, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { offertePad } from "@/lib/offerte";
@@ -271,9 +270,6 @@ const HeroSection = ({
               >
                 <blockquote className="text-lg font-semibold text-brand-purple leading-snug">
                   &ldquo;{photoQuote ?? t("hero.quote")}&rdquo;
-                  {/* De standaardquote noemt 8,6% en 7 op de 10. Een eigen
-                      quote van de pagina heeft geen cijfers. */}
-                  {photoQuote === undefined && <Ster ids={["theydo-productiviteit", "theydo-stress"]} />}
                 </blockquote>
                 <figcaption className="mt-4 flex items-center gap-3">
                   <img

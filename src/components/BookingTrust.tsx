@@ -1,6 +1,5 @@
 import { Star } from "lucide-react";
 import { useTranslation } from "react-i18next";
-import { Ster } from "@/components/Voetnoten";
 import GoogleG from "@/components/GoogleG";
 import vmbnLogo from "@/assets/vmbn-trainer-categorie-1.webp";
 import { THEYDO_LOGO, THEYDO_PORTRET } from "@/lib/klantervaringen";
@@ -86,7 +85,6 @@ const BookingTrust = ({ divider = true, className = "" }: BookingTrustProps) => 
 
           <blockquote className="mt-5 text-lg leading-relaxed text-brand-gray-dark">
             {t("bookingTrust.quote")}
-            <Ster ids={["theydo-productiviteit", "theydo-stress"]} />
           </blockquote>
 
           <figcaption className="mt-4">

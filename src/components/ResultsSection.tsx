@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 import { Quote } from "lucide-react";
 import { THEYDO_LOGO, THEYDO_PORTRET } from "@/lib/klantervaringen";
 import { claimGetal, claimWaarde, type ClaimId } from "@/lib/claims";
-import { Ster } from "@/components/Voetnoten";
+import { Bron } from "@/components/Bron";
 import { useTaal } from "@/hooks/useTaal";
 
 /** De cijfers komen uit het claimregister, met de bron erbij. Zie CLAIMS.md. */
@@ -16,8 +16,6 @@ const BARS: { key: string; claim: ClaimId }[] = [
   { key: "rumination", claim: "theydo-piekeren" },
 ];
 
-/** De quote van Jochem met 8,6% en 7 op de 10 heeft zijn eigen bronnen nodig. */
-const QUOTE_CLAIMS: ClaimId[] = ["theydo-productiviteit", "theydo-stress"];
 
 interface ResultsSectionProps {
   /**
@@ -79,13 +77,17 @@ const ResultsSection = memo(({ quote }: ResultsSectionProps) => {
             <div className="bg-brand-purple text-white p-8 md:p-10 flex flex-col justify-center">
               <p className="text-7xl lg:text-8xl font-bold text-brand-orange leading-none">
                 {claimWaarde(HIGHLIGHT, taal)}
-                <Ster ids={[HIGHLIGHT]} />
               </p>
               <p className="mt-4 text-xl md:text-2xl font-semibold leading-snug">
                 {t("results.highlight.label")}
               </p>
               <p className="mt-3 text-base text-white/70 leading-relaxed">
                 {t("results.highlight.context")}
+              </p>
+              {/* Eén bron voor het hele blok: de balken rechts komen uit
+                  dezelfde evaluatie. */}
+              <p className="mt-2 text-base text-white/70">
+                <Bron ids={[HIGHLIGHT, ...BARS.map((bar) => bar.claim)]} />
               </p>
             </div>
 
@@ -101,7 +103,6 @@ const ResultsSection = memo(({ quote }: ResultsSectionProps) => {
                     </span>
                     <span className="text-2xl font-bold text-brand-purple tabular-nums shrink-0">
                       {claimWaarde(bar.claim, taal)}
-                      <Ster ids={[bar.claim]} />
                     </span>
                   </div>
                   <div className="h-2.5 rounded-full bg-gray-200 overflow-hidden" aria-hidden="true">
@@ -128,9 +129,7 @@ const ResultsSection = memo(({ quote }: ResultsSectionProps) => {
 
             <blockquote className="text-2xl md:text-3xl font-semibold text-brand-purple leading-snug text-balance">
               &ldquo;{quote ?? t("testimonial.quote")}&rdquo;
-              {/* Een citaat heeft geen toelichting nodig: het zijn Jochems
-                  woorden. Alleen voor de zekerheid een sterretje bij de cijfers. */}
-              {quote === undefined && <Ster ids={QUOTE_CLAIMS} />}
+              {/* Een citaat heeft geen bron nodig: naam en bedrijf staan eronder. */}
             </blockquote>
 
             <figcaption className="mt-7 pt-6 border-t border-gray-200 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-5">

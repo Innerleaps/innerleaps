@@ -1,13 +1,14 @@
 import type { ReactNode } from "react";
 import { claimWaarde, type ClaimId } from "@/lib/claims";
-import { Ster } from "@/components/Voetnoten";
+import { Bron } from "@/components/Bron";
 import { useTaal } from "@/hooks/useTaal";
 import OplopendGetal from "@/components/OplopendGetal";
 
 /**
  * Elk cijfer op de site gaat hierdoorheen. Het cijfer zelf komt uit het
  * claimregister (src/content/claims.json), niet uit de vertaalbestanden, en
- * krijgt een sterretje dat naar zijn bron onderaan de pagina linkt. Een cijfer
+ * krijgt zijn bron zichtbaar eronder: "gemeten bij TheyDo" of "(De Bruin,
+ * 2018)", met een kaartje bij aanwijzen (Bron.tsx). Een cijfer
  * zonder registerregel kan dus niet: dan faalt de build. Zie CLAIMS.md.
  *
  * Alleen de opmaak verschilt per plek, dus die geef je mee.
@@ -23,6 +24,7 @@ interface StatClaimProps {
   waardeClassName?: string;
   prefixClassName?: string;
   labelClassName?: string;
+  bronClassName?: string;
 }
 
 const StatClaim = ({
@@ -34,6 +36,7 @@ const StatClaim = ({
   waardeClassName = "",
   prefixClassName = "",
   labelClassName = "",
+  bronClassName = "mt-1 text-base",
 }: StatClaimProps) => {
   const waarde = claimWaarde(id, useTaal());
   return (
@@ -43,9 +46,11 @@ const StatClaim = ({
             Google "tot12". */}
         {prefix && <span className={prefixClassName}>{prefix} </span>}
         {animeren ? <OplopendGetal value={waarde} /> : waarde}
-        <Ster ids={[id]} />
       </p>
       <p className={labelClassName}>{label}</p>
+      <p className={bronClassName}>
+        <Bron ids={[id]} />
+      </p>
     </div>
   );
 };

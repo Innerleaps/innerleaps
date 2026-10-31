@@ -1,11 +1,11 @@
 import { memo, useState, type FormEvent } from "react";
 import { Link, useLocation } from "react-router-dom";
+import { methodePad } from "@/lib/claims";
 import { useTranslation } from "react-i18next";
 import { Linkedin, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
-import { Voetnoten } from "@/components/Voetnoten";
 import { detectLanguageFromPath } from "@/i18n/config";
 import { OPEN_INSTELLINGEN } from "@/lib/toestemming";
 
@@ -34,6 +34,8 @@ const Footer = memo(({ showNavigation = true }: FooterProps) => {
     privacy: lang === 'en' ? '/en/privacy' : '/privacy',
     cookies: lang === 'en' ? '/en/cookies' : '/cookies',
     terms: lang === 'en' ? '/en/terms-and-conditions' : '/algemene-voorwaarden',
+    // Waar de cijfers vandaan komen. Ook gelinkt vanuit elk bronkaartje (Bron.tsx).
+    methodology: methodePad(lang === 'en' ? 'en' : 'nl'),
   };
 
   // Zelfde volgorde als het hoofdmenu: scale-ups eerst.
@@ -61,8 +63,6 @@ const Footer = memo(({ showNavigation = true }: FooterProps) => {
 
   return (
     <>
-    {/* De bronnen bij de sterretjes op deze pagina. Zie Voetnoten.tsx. */}
-    <Voetnoten />
     <footer
       className="bg-gradient-to-br from-brand-blue to-brand-blue-dark text-white pt-12 pb-12 md:pb-28"
       itemScope
@@ -222,6 +222,10 @@ const Footer = memo(({ showNavigation = true }: FooterProps) => {
             <span className="text-gray-600" aria-hidden="true">·</span>
             <Link to={href.terms} className="hover:text-white transition-colors">
               {t('footer.terms')}
+            </Link>
+            <span className="text-gray-600" aria-hidden="true">·</span>
+            <Link to={href.methodology} className="hover:text-white transition-colors">
+              {t('claims.methodeLink')}
             </Link>
           </div>
           <LanguageSwitcher tone="dark" />

@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import PageSeo from "@/components/PageSeo";
 import { useTranslation } from "react-i18next";
-import { TekstMetSter } from "@/components/Voetnoten";
+import { TekstMetBron } from "@/components/Bron";
 import SimplifiedNavigation from "@/components/SimplifiedNavigation";
 import StickyCtaButtons from "@/components/StickyCtaButtons";
 import Footer from "@/components/Footer";
@@ -63,8 +63,8 @@ const DeMethode = () => {
               />
             </div>
             <div className="space-y-6 order-1 lg:order-2">
-              <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed"><TekstMetSter tekst={t("performance.body1")} ids={["jha-aandacht"]} /></p>
-              <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed"><TekstMetSter tekst={t("performance.body2")} ids={["bailey-werkgeheugen"]} /></p>
+              <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed"><TekstMetBron tekst={t("performance.body1")} ids={["jha-aandacht"]} /></p>
+              <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed"><TekstMetBron tekst={t("performance.body2")} ids={["bailey-werkgeheugen"]} /></p>
             </div>
           </div>
         </div>
@@ -99,7 +99,7 @@ const DeMethode = () => {
                   <span className="text-xl md:text-2xl text-brand-gray-medium">{t("sixWeeks.items.audio")}</span>
                 </li>
               </ul>
-              <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed"><TekstMetSter tekst={t("sixWeeks.outro")} ids={["michaelsen-stress-lange-termijn"]} /></p>
+              <p className="text-xl md:text-2xl text-brand-gray-medium leading-relaxed"><TekstMetBron tekst={t("sixWeeks.outro")} ids={["michaelsen-stress-lange-termijn"]} /></p>
             </div>
             <div className="rounded-xl shadow-lg overflow-hidden">
               <img

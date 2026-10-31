@@ -1,8 +1,8 @@
 {
   "_uitleg": "Claimregister van innerleaps.nl. Elk cijfer en elke resultaatclaim op de site staat hier, met de bron erachter. Regels en standaardformuleringen: CLAIMS.md. Wordt bij elke build gecontroleerd door scripts/check-claims.mjs. Inventaris van 22-10-2026, met de huidige teksten van toen: docs/claims-inventaris-2026-10-22.json.",
   "methodePagina": {
-    "nl": "/methode-en-beperkingen",
-    "en": "/en/method-and-limitations"
+    "nl": "/methode",
+    "en": "/en/methodology"
   },
   "bronnen": {
     "theydo-hpq-2026": {
@@ -23,7 +23,7 @@
       },
       "toelichting": "Voor- en nameting met de WHO Health and Work Performance Questionnaire (HPQ; Kessler e.a. 2003, 2004) en de Perceived Stress Scale. 20 mensen vulden beide metingen in: 14 deden mee aan de training, 6 niet. Uitkomsten deelnemers (n=14): productiviteit +8,6%, stress -5,2%. Wie 1 tot 3 dagen per week oefende (n=11): productiviteit +11,1%. Niet-deelnemers (n=6): productiviteit +13,5%. Geen controlegroep met loting.",
       "data": "Second Brain: 03 Projects/Innerleaps/03 Sales & Marketing/Customer information/TheyDo/Calculations for reports - Anonymous TheyDo - Blad1.csv",
-      "gecontroleerdDoor": "Claude, herberekend uit de ruwe antwoorden (22-10-2026). Bas: nog bevestigen dat n=14 klopt.",
+      "gecontroleerdDoor": "Claude, herberekend uit de ruwe antwoorden (22-10-2026). Bas bevestigde n=14 (29-10-2026).",
       "lastVerified": "2026-10-22"
     },
     "theydo-evaluatie-2026": {
@@ -64,31 +64,10 @@
         "nl": "na de masterclass (voorjaar 2026)",
         "en": "after the masterclass (spring 2026)"
       },
-      "toelichting": "39 aanmeldingen na een masterclass met 93 deelnemers (42%). Hoe groot het bedrijf toen was, staat niet in de data.",
+      "toelichting": "39 aanmeldingen na een masterclass met 93 deelnemers: 42%.",
       "data": "Second Brain: Customer information/TheyDo/Reason for joining, asked pre-training.md",
-      "gecontroleerdDoor": null,
-      "lastVerified": null
-    },
-    "masterclass-conversie": {
-      "type": "own",
-      "omschrijving": {
-        "nl": "Deelname na de masterclass",
-        "en": "Uptake after the masterclass"
-      },
-      "naam": "[groepen]",
-      "n": "[n]",
-      "methode": {
-        "nl": "aanmeldingen geteld",
-        "en": "sign-ups counted"
-      },
-      "periode": {
-        "nl": "[periode]",
-        "en": "[period]"
-      },
-      "toelichting": "Opgegeven door Bas op 20-10-2026. Welke groepen erachter zitten is nog niet bekend.",
-      "data": null,
-      "gecontroleerdDoor": null,
-      "lastVerified": null
+      "gecontroleerdDoor": "Claude, uit de casegegevens (93 deelnemers masterclass, 39 aanmeldingen)",
+      "lastVerified": "2026-10-29"
     },
     "sessiedeelname": {
       "type": "own",
@@ -96,20 +75,20 @@
         "nl": "Aanwezigheid bij de sessies",
         "en": "Session attendance"
       },
-      "naam": "[groepen]",
-      "n": "[n]",
+      "naam": "TheyDo",
+      "n": 39,
       "methode": {
         "nl": "aanwezigheid geteld",
         "en": "attendance counted"
       },
       "periode": {
-        "nl": "[periode]",
-        "en": "[period]"
+        "nl": "voorjaar 2026",
+        "en": "spring 2026"
       },
-      "toelichting": "Bron van '9 op de 10 doet mee aan minimaal 5 van de 6 sessies' is onbekend.",
-      "data": null,
-      "gecontroleerdDoor": null,
-      "lastVerified": null
+      "toelichting": "Volgens Bas (29-10-2026) gemeten bij de deelnemers van TheyDo. De aanwezigheidslijst zelf zit niet in de data in de Second Brain; niet door Claude nagerekend.",
+      "data": "Opgave Bas, 29-10-2026",
+      "gecontroleerdDoor": "Bas (29-10-2026)",
+      "lastVerified": "2026-10-29"
     },
     "de-bruin-2018": {
       "type": "external",
@@ -124,7 +103,7 @@
       },
       "sourceUrl": "https://doi.org/10.1007/s12671-018-1029-6",
       "titel": "The Unilever Study: Positive Effects on Stress and Risk for Dropout from Work After the Finding Peace in a Frantic World Training. Mindfulness 11(2), 350-361.",
-      "toelichting": "Volledige tekst gelezen (PDF van Bas). 150 zelf aangemelde medewerkers, 8 weken, geen loting; de eigen wachtlijstperiode dient als vergelijking. Uitvalrisico gemeten met de Checklist Individual Strength, grens 76: 'increased risk for dropout (long-term) from work because of illness'. Aandeel boven die grens: 54,4% bij de wachtlijstmeting, 45,8% bij de voormeting, 22,1% direct na de training, 17,9% na 2 maanden, 16,4% na 6 maanden. De -70% is de relatieve daling van 54,4% naar 16,4%; vanaf de voormeting is het -64%. Stress daalde niet sneller dan in de wachtlijstperiode.",
+      "toelichting": "Volledige tekst gelezen (PDF van Bas). 150 zelf aangemelde medewerkers, 8 weken, geen loting; de eigen wachtlijstperiode dient als vergelijking. Uitvalrisico gemeten met de Checklist Individual Strength, grens 76: 'increased risk for dropout (long-term) from work because of illness'. Aandeel boven die grens: 54,4% bij de wachtlijstmeting, 45,8% bij de voormeting, 22,1% direct na de training, 17,9% na 2 maanden, 16,4% na 6 maanden. De -70% is de relatieve daling van 54,4% naar 16,4%; vanaf de voormeting is het -64%. Stress daalde niet sneller dan in de wachtlijstperiode. Haalbaarheid: 96,4% volgde minstens 5 van de 8 sessies; training gemiddeld 8,3; 89,8% van wie de vraag beantwoordde wilde blijven oefenen.",
       "gecontroleerdDoor": "Claude, volledige tekst (PDF van Bas, 22-10-2026)",
       "lastVerified": "2026-10-22"
     },
@@ -221,8 +200,8 @@
       },
       "jaar": 2020,
       "studyType": {
-        "nl": "In studie bij 29 ervaren mediteerders, vergeleken met 29 mensen zonder meditatie-ervaring",
-        "en": "In a study of 29 experienced meditators, compared with 29 people without meditation experience"
+        "nl": "In studie bij 29 ervaren oefenaars, vergeleken met 29 mensen zonder ervaring",
+        "en": "In a study of 29 experienced practitioners, compared with 29 people without experience"
       },
       "sourceUrl": "https://doi.org/10.1007/s12671-020-01393-8",
       "titel": "Bailey, N. W., Freedman, G., Raj, K., Spierings, K. N., Piccoli, L. R., Sullivan, C. M., Chung, S. W., Hill, A. T., Rogasch, N. C., & Fitzgerald, P. B. (2020). Mindfulness Meditators Show Enhanced Accuracy and Different Neural Activity During Working Memory. Mindfulness, 11(7), 1762-1781.",
@@ -232,6 +211,10 @@
     },
     "cles-meta-analyses": {
       "type": "external",
+      "kortLabel": {
+        "nl": "Vonderlin, 2020; De Vibe, 2017; Bartlett, 2019",
+        "en": "Vonderlin, 2020; De Vibe, 2017; Bartlett, 2019"
+      },
       "auteur": {
         "nl": "Vonderlin e.a.; De Vibe e.a.; Bartlett e.a.",
         "en": "Vonderlin et al.; De Vibe et al.; Bartlett et al."
@@ -241,11 +224,11 @@
         "nl": "Omgerekend uit overzichtsstudies naar aandachttraining",
         "en": "Converted from reviews of attention training"
       },
-      "sourceUrl": null,
-      "titel": null,
-      "toelichting": "De studies geven effectgroottes (d = 0,53 tot 0,84). '65 tot 72%' is daar zelf uit omgerekend: de kans dat iemand die de training deed minder stress heeft dan iemand die hem niet deed. Dat 'omgerekend' moet erbij.",
-      "gecontroleerdDoor": null,
-      "lastVerified": null
+      "sourceUrl": "https://doi.org/10.1007/s12671-020-01328-3",
+      "titel": "Omgerekend uit de effectgroottes in Vonderlin e.a. (2020), De Vibe e.a. (2017) en Bartlett e.a. (2019).",
+      "toelichting": "De studies geven effectgroottes. 65 tot 72% is daar zelf uit omgerekend: de kans dat iemand die de training deed minder stress heeft dan iemand die hem niet deed. Vonderlin: stress g = 0,77 (volledige tekst, 15-10-2026), omgerekend 71%.",
+      "gecontroleerdDoor": "Claude: Vonderlin gecontroleerd (15-10-2026); De Vibe en Bartlett niet zelf nagerekend",
+      "lastVerified": "2026-10-29"
     },
     "onbekend": {
       "type": "unknown",
@@ -253,11 +236,11 @@
     },
     "rood-15-21": {
       "type": "rood",
-      "toelichting": "15-21% verzuimreductie: eigen rekensom in het onderzoeksdocument, geen gemeten resultaat. Op 05-10-2026 door Bas op rood gezet (blogclaimregister R1). Ook rood: ROI 497-775%, 89,8%, 'wetenschappelijk bewezen' voor eigen resultaten."
+      "toelichting": "15-21% verzuimreductie: eigen rekensom in het onderzoeksdocument, geen gemeten resultaat. Op 05-10-2026 door Bas op rood gezet (blogclaimregister R1). Ook rood: ROI 497-775%, 89,8%, 'wetenschappelijk bewezen' voor eigen resultaten. Op 29-10-2026 van de site, uit de rekentool, de mails, de blogs en de PDF gehaald."
     },
     "grijs-5-8": {
       "type": "rood",
-      "toelichting": "5-8% productiviteit: eigen afleiding (zelfrapportage met 50% korting), blogclaimregister X4. Bronvermelding wisselt: 'Oxford University, 2022' op de site, 'Khoury 2015, Good 2016' in de mail."
+      "toelichting": "5-8% productiviteit: eigen afleiding (zelfrapportage met 50% korting), blogclaimregister X4. Bronvermelding wisselt: 'Oxford University, 2022' op de site, 'Khoury 2015, Good 2016' in de mail. Op 29-10-2026 uit de rekentool gehaald."
     },
     "zolnierczyk-zreda-2016": {
       "type": "external",
@@ -267,8 +250,8 @@
       },
       "jaar": 2016,
       "studyType": {
-        "nl": "In studie naar een aandachttraining van 8 weken voor middenmanagers",
-        "en": "In a study of an 8-week attention training for middle managers"
+        "nl": "In studie naar een aandachttraining van 8 weken voor 144 middenmanagers, ziektedagen zelf ingevuld",
+        "en": "In a study of an 8-week attention training for 144 middle managers, sick days self-reported"
       },
       "sourceUrl": "https://doi.org/10.1093/occmed/kqw091",
       "titel": "Żołnierczyk-Zreda, D., Sanderson, M., & Bedyńska, S. (2016). Mindfulness-based stress reduction for managers: a randomized controlled study. Occupational Medicine, 66(8), 630-635.",
@@ -323,7 +306,7 @@
       },
       "sourceUrl": "https://doi.org/10.1186/s12912-025-03101-0",
       "titel": "Dou, J., e.a. (2025). Effectiveness of mindfulness-based interventions on burnout, resilience and sleep quality among nurses: a systematic review and meta-analysis of randomized controlled trials. BMC Nursing.",
-      "toelichting": "Meta-analyse. In de eigen samenvatting staat Journal of Nursing Management 2024; gevonden is BMC Nursing 2025. Nog afstemmen met Bas.",
+      "toelichting": "Meta-analyse. Bas bevestigde op 29-10-2026 dat dit de studie uit zijn samenvatting is (daar stond Journal of Nursing Management 2024).",
       "gecontroleerdDoor": "Claude, vindplaats gecontroleerd (22-10-2026)",
       "lastVerified": "2026-10-22"
     },
@@ -423,7 +406,7 @@
         "nl": "12 studies naar aandachttraining, waaronder 5 meta-analyses",
         "en": "12 studies of attention training, including 5 meta-analyses"
       },
-      "sourceUrl": "https://innerleaps.nl/methode-en-beperkingen",
+      "sourceUrl": "https://innerleaps.nl/methode",
       "titel": "12 studies, zie Methode en beperkingen.",
       "toelichting": "De 12 studies uit Bas' eigen samenvattingen 'Organizational effects' en 'Participant effects of Awareness Interventions' (Second Brain, Research/Scientific studies). De lijst staat in claims.json onder 'onderbouwing'.",
       "gecontroleerdDoor": "Claude, vindplaats gecontroleerd (22-10-2026)",
@@ -479,6 +462,40 @@
       "toelichting": "Niet gerandomiseerd, 114 studenten. Beide vormen werkten; geen betekenisvolle nadelen online. Ook Sard-Peck e.a. (2019, 373 deelnemers, MBSR) vond geen verschil in effect, wel iets betere opkomst op locatie. Een meta-analyse uit 2026 vond grotere effecten op locatie, maar daar zit ook zelfstandige online training in.",
       "gecontroleerdDoor": "Claude, vindplaats gecontroleerd (22-10-2026)",
       "lastVerified": "2026-10-22"
+    },
+    "us-army-2020": {
+      "type": "external",
+      "auteur": {
+        "nl": "U.S. Army",
+        "en": "U.S. Army"
+      },
+      "jaar": 2020,
+      "studyType": {
+        "nl": "Volgens het handboek Holistic Health and Fitness van het Amerikaanse leger",
+        "en": "According to the U.S. Army manual Holistic Health and Fitness"
+      },
+      "sourceUrl": "https://arotc.illinoisstate.edu/downloads/resources/FM_7-22_October%202020.pdf",
+      "titel": "U.S. Department of the Army (2020). FM 7-22: Holistic Health and Fitness. 1 oktober 2020.",
+      "toelichting": "Hoofdstuk 13: 'Mindful awareness or mindfulness is a key component of cultivating presence ... and it is essential for H2F', met een oefening (p. 13-3 en 13-4).",
+      "gecontroleerdDoor": "Claude, volledige tekst (29-10-2026)",
+      "lastVerified": "2026-10-29"
+    },
+    "cbs-verzuim-2025": {
+      "type": "external",
+      "auteur": {
+        "nl": "CBS",
+        "en": "Statistics Netherlands (CBS)"
+      },
+      "jaar": 2026,
+      "studyType": {
+        "nl": "Volgens het CBS, ziekteverzuim in het vierde kwartaal van 2025",
+        "en": "According to Statistics Netherlands (CBS), sickness absence in the fourth quarter of 2025"
+      },
+      "sourceUrl": "https://www.cbs.nl/nl-nl/visualisaties/dashboard-arbeidsmarkt/werkenden/ziekteverzuim",
+      "titel": "CBS, Dashboard arbeidsmarkt: ziekteverzuim (werkgeversgegevens).",
+      "toelichting": "5,6% van de werkdagen in het vierde kwartaal van 2025 (5,4% een jaar eerder). CBS publiceert elk kwartaal; werk het cijfer bij als er een nieuw kwartaal is.",
+      "gecontroleerdDoor": "Claude, CBS-dashboard (22-10-2026)",
+      "lastVerified": "2026-10-22"
     }
   },
   "claims": {
@@ -499,19 +516,18 @@
         "caseTheydo:hero.title",
         "common:hero.quote",
         "common:testimonial.quote",
-        "common:bookingTrust.quote"
+        "common:bookingTrust.quote",
+        "overons:meta.description",
+        "calculator:results.compareTheydo",
+        "calculator:results.theydoBreakEven"
       ],
       "bestanden": [
         "src/components/BookingStats.tsx",
         "public/social/klantcase-theydo-nl.png",
         "public/social/klantcase-theydo-en.png"
       ],
-      "status": "keuze",
-      "ontbreekt": [
-        "Bas: bevestigen dat n=14 klopt",
-        "Bas: kop, meta en deelafbeelding van de case houden met het cijfer, of zonder",
-        "Jochem: akkoord op de quote met '8,6% hogere productiviteit en 7 op de 10'"
-      ]
+      "status": "online",
+      "opmerking": "Jochem akkoord met de quote (8,6% en 7 op de 10), doorgegeven door Bas op 31-10-2026."
     },
     "theydo-productiviteit-oefenaars": {
       "soort": "A",
@@ -606,8 +622,8 @@
         "en": "39"
       },
       "kort": {
-        "nl": "zo'n 40%",
-        "en": "about 40%"
+        "nl": "39 van 93",
+        "en": "39 of 93"
       },
       "sleutels": [
         "caseTheydo:glance.items[2]",
@@ -615,41 +631,19 @@
         "caseTheydo:hero.subtitle",
         "caseTheydo:context.photo.caption"
       ],
-      "status": "keuze",
-      "ontbreekt": [
-        "Bas: hoe groot was TheyDo in maart 2026, voor 'zo'n 40% van het bedrijf'?"
-      ]
-    },
-    "theydo-niet-deelnemers": {
-      "soort": "A",
-      "bron": "theydo-hpq-2026",
-      "waarde": {
-        "nl": "13,5%",
-        "en": "13.5%"
-      },
-      "sleutels": [
-        "meten:beperkingen.items[1]"
-      ],
-      "status": "keuze",
-      "ontbreekt": [
-        "Bas: dit noemen op de methodepagina, of alleen 'geen controlegroep'. Op 15-10-2026 koos je ervoor de controlegroep niet te noemen; de nieuwe opdracht vraagt het wel."
-      ],
-      "opmerking": "n=6, niet-deelnemers die ook de vragenlijsten invulden. Te klein om mee te vergelijken."
+      "status": "online"
     },
     "masterclass-conversie": {
       "soort": "A",
-      "bron": "masterclass-conversie",
+      "bron": "theydo-aanmelding-2026",
       "waarde": {
-        "nl": "20 tot 40%",
-        "en": "20 to 40%"
+        "nl": "42%",
+        "en": "42%"
       },
       "sleutels": [
         "training:vitality.faq.items[0].a"
       ],
-      "status": "placeholder",
-      "ontbreekt": [
-        "Bas: welke groepen, hoeveel masterclassdeelnemers, welke periode"
-      ]
+      "status": "online"
     },
     "sessiedeelname": {
       "soort": "A",
@@ -661,10 +655,7 @@
       "sleutels": [
         "methode:turnout"
       ],
-      "status": "placeholder",
-      "ontbreekt": [
-        "Bas: bron, n en periode van '9 op de 10 doet mee aan minimaal 5 van de 6 sessies'"
-      ]
+      "status": "online"
     },
     "debruin-uitval": {
       "soort": "B",
@@ -676,7 +667,9 @@
       "sleutels": [
         "training:vitality.resultsBand.items[0]",
         "training:vitality.faq.items[12].a",
-        "training:sustainability.faq.items[9].a"
+        "training:sustainability.faq.items[9].a",
+        "training:vitality.results.items[2].title",
+        "bedankt:rapport.onderzoek[1]"
       ],
       "bestanden": [
         "src/components/BookingStats.tsx"
@@ -718,7 +711,8 @@
         "methode:sixWeeks.outro",
         "caseTheydo:again.fact",
         "caseTheydo:stats[0].note",
-        "caseTheydo:know.items[1]"
+        "caseTheydo:know.items[1]",
+        "bedankt:rapport.onderzoek[2]"
       ],
       "status": "online",
       "opmerking": "Altijd met 'tot' ervoor (CLAUDE.md). Het voorstel uit de opdracht ('ook 12 maanden na training') is daarom niet overgenomen."
@@ -732,7 +726,8 @@
       },
       "sleutels": [
         "training:sustainability.resultsBand.items[2]",
-        "training:sustainability.faq.items[10].a"
+        "training:sustainability.faq.items[10].a",
+        "training:sustainability.results.items[0].bullets[1]"
       ],
       "status": "online"
     },
@@ -740,8 +735,8 @@
       "soort": "B",
       "bron": "jha-fouten",
       "waarde": {
-        "nl": "+24%",
-        "en": "+24%"
+        "nl": "-25%",
+        "en": "-25%"
       },
       "sleutels": [
         "methode:performance.body1"
@@ -749,10 +744,7 @@
       "bestanden": [
         "src/components/BookingStats.tsx"
       ],
-      "status": "keuze",
-      "ontbreekt": [
-        "Bas (22-10-2026): '+24% focus' is afgeleid van de 25% minder fouten uit Peak Mind. 'Meer focus' staat niet in het boek: vervangen door '-25% fouten' of weghalen (keuze 12)."
-      ]
+      "status": "online"
     },
     "bailey-werkgeheugen": {
       "soort": "B",
@@ -765,10 +757,7 @@
         "methode:performance.body2",
         "training:sustainability.faq.items[10].a"
       ],
-      "status": "rood",
-      "ontbreekt": [
-        "Bas: tekst herschrijven of weghalen. De studie vergelijkt ervaren mediteerders met niet-mediteerders; de site doet alsof 6 weken training het werkgeheugen efficiënter maakt (regel 3: zelfde groep, zelfde effect)."
-      ]
+      "status": "online"
     },
     "cles-stress": {
       "soort": "B",
@@ -781,10 +770,7 @@
         "training:vitality.faq.items[12].a",
         "training:sustainability.faq.items[9].a"
       ],
-      "status": "placeholder",
-      "ontbreekt": [
-        "Link naar de overzichtsstudies en het woord 'omgerekend' in de tekst"
-      ]
+      "status": "online"
     },
     "app-gebruik": {
       "soort": "B",
@@ -811,10 +797,7 @@
         "training:vitality.faq.items[4].a",
         "training:sustainability.faq.items[1].a"
       ],
-      "status": "keuze",
-      "ontbreekt": [
-        "Bas: tekst aanpassen. 'Net zo goed' is te stellig; de studies vinden vergelijkbare effecten en geen duidelijke nadelen online."
-      ]
+      "status": "online"
     },
     "kwart-verzuim-stress": {
       "soort": "B",
@@ -827,73 +810,21 @@
         "training:vitality.faq.items[13].a",
         "training:vitality.faq.items[14].a"
       ],
-      "status": "keuze",
-      "ontbreekt": [
-        "Bas: tekst aanpassen naar 'verzuimdagen' (bron zegt 1 op de 4 verzuimdagen, bij klanten van ArboNed en HumanCapitalCare)"
-      ]
+      "status": "online"
     },
     "onderbouwing-studies": {
       "soort": "B",
       "bron": "onderbouwing-12",
       "waarde": {
-        "nl": "12 studies, bedrijven",
-        "en": "12 studies, companies"
+        "nl": "12 studies",
+        "en": "12 studies"
       },
       "sleutels": [
         "training:vitality.faq.items[11].a",
         "training:stress.faq.items[8].a",
         "training:sustainability.faq.items[8].a"
       ],
-      "status": "keuze",
-      "ontbreekt": [
-        "Bas: tekst over de bedrijven aanpassen. Google (Search Inside Yourself) en Unilever (De Bruin) zijn te onderbouwen; Microsoft en Apple alleen met zwakke bronnen; bij Nestlé geen aandachttraining gevonden."
-      ]
-    },
-    "verzuim-15-21": {
-      "soort": "B",
-      "bron": "rood-15-21",
-      "waarde": {
-        "nl": "-21%",
-        "en": "-21%"
-      },
-      "sleutels": [
-        "calculator:results.scientific1"
-      ],
-      "bestanden": [
-        "src/components/BookingStats.tsx",
-        "src/components/RoiResultaat.tsx",
-        "src/utils/calculationEngine.ts",
-        "src/pages/blog/ZiekteverzuimVerlagen.tsx",
-        "src/pages/blog/VerborgenKostenZiekteverzuim.tsx",
-        "src/pages/blog/HoeVerlaagIkZiekteverzuim.tsx",
-        "src/pages/Blog.tsx",
-        "supabase/functions/submit-calculator/index.ts",
-        "supabase/functions/send-roi-analysis/index.ts",
-        "public/documents/business-case-awareness-interventions.pdf"
-      ],
-      "status": "rood",
-      "ontbreekt": [
-        "Bas: wat er met de rekentool, de blogs en de PDF gebeurt"
-      ]
-    },
-    "productiviteit-5-8": {
-      "soort": "B",
-      "bron": "grijs-5-8",
-      "waarde": {
-        "nl": "5-8%",
-        "en": "5-8%"
-      },
-      "sleutels": [
-        "calculator:results.scientific2"
-      ],
-      "bestanden": [
-        "src/components/RoiResultaat.tsx",
-        "src/utils/calculationEngine.ts"
-      ],
-      "status": "rood",
-      "ontbreekt": [
-        "Bas: wat er met de rekentool gebeurt"
-      ]
+      "status": "online"
     },
     "rekentool-belofte": {
       "soort": "C",
@@ -903,30 +834,22 @@
         "calculator:header.subtitle",
         "calculator:results"
       ],
-      "status": "keuze",
-      "ontbreekt": [
-        "Bas: 'Bespaar ten minste' en 'Ondergrens' zijn toezeggingen; besluit over de rekentool"
-      ]
+      "status": "online",
+      "opmerking": "Sinds 29-10-2026 een omslagpunt-tool: geen beloofde besparing, geen ROI. De Edge Function submit-calculator moet in Supabase opnieuw uitgerold worden voordat de site live gaat."
     },
     "scaleup-resultaten": {
       "soort": "C",
       "sleutels": [
         "training:sustainability.results"
       ],
-      "status": "keuze",
-      "ontbreekt": [
-        "Bas: kies uit de opties in docs/claims-keuzes.md"
-      ]
+      "status": "online"
     },
     "publiek-resultaten": {
       "soort": "C",
       "sleutels": [
         "training:vitality.results"
       ],
-      "status": "keuze",
-      "ontbreekt": [
-        "Bas: kies uit de opties in docs/claims-keuzes.md"
-      ]
+      "status": "online"
     },
     "beloftes-meta-en-menu": {
       "soort": "C",
@@ -946,10 +869,7 @@
         "training:vitality.weeks.items[3].text",
         "training:sustainability.weeks.items[3].text"
       ],
-      "status": "keuze",
-      "ontbreekt": [
-        "Bas: kies uit de opties in docs/claims-keuzes.md"
-      ]
+      "status": "online"
     },
     "al-onze-trainers": {
       "soort": "C",
@@ -957,21 +877,90 @@
         "common:whyChooseUs.cards.trainers.body",
         "common:programOverview.features.accreditedTrainers.description"
       ],
-      "status": "keuze",
-      "ontbreekt": [
-        "Bas: hebben echt al je trainers VMBN categorie 1?"
-      ]
+      "status": "online"
     },
     "veertig-jaar": {
       "soort": "C",
       "sleutels": [
         "calculator:header",
         "bedankt:rapport.onderzoekTitle",
-        "leadMagnet:intro",
-        "overons:story.body2"
+        "leadMagnet:intro"
       ],
       "status": "online",
       "opmerking": "'40 jaar onderzoek' klopt als geschiedenis: MBSR bestaat sinds 1979. Geen effectclaim."
+    },
+    "leger-fm722": {
+      "soort": "B",
+      "bron": "us-army-2020",
+      "waarde": {
+        "nl": "FM 7-22",
+        "en": "FM 7-22"
+      },
+      "sleutels": [
+        "training:vitality.faq.items[11].a",
+        "training:stress.faq.items[8].a",
+        "training:sustainability.faq.items[8].a"
+      ],
+      "status": "online"
+    },
+    "bedrijven-google": {
+      "soort": "B",
+      "bron": "wef-google-2016",
+      "waarde": {
+        "nl": "Google",
+        "en": "Google"
+      },
+      "sleutels": [
+        "training:vitality.faq.items[11].a",
+        "training:stress.faq.items[8].a",
+        "training:sustainability.faq.items[8].a"
+      ],
+      "status": "online",
+      "opmerking": "Unilever staat via De Bruin e.a. in de bronnen."
+    },
+    "zreda-ziektedagen": {
+      "soort": "B",
+      "bron": "zolnierczyk-zreda-2016",
+      "waarde": {
+        "nl": "-69%",
+        "en": "-69%"
+      },
+      "bestanden": [
+        "src/components/BookingStats.tsx"
+      ],
+      "status": "online",
+      "sleutels": [
+        "bedankt:rapport.onderzoek[0]"
+      ]
+    },
+    "cbs-verzuim": {
+      "soort": "B",
+      "bron": "cbs-verzuim-2025",
+      "waarde": {
+        "nl": "5,6%",
+        "en": "5.6%"
+      },
+      "bestanden": [
+        "src/pages/blog/ZiekteverzuimVerlagen.tsx",
+        "src/pages/blog/VerborgenKostenZiekteverzuim.tsx",
+        "src/pages/blog/HoeVerlaagIkZiekteverzuim.tsx"
+      ],
+      "status": "online",
+      "opmerking": "De drie blogs staan hier als geheel geregistreerd: de controle leest ze niet per zin. Elk cijfer in een blog krijgt daarom met de hand een <Ster>."
+    },
+    "debruin-doorgaan": {
+      "soort": "B",
+      "bron": "de-bruin-2018",
+      "waarde": {
+        "nl": "89,8%",
+        "en": "89.8%"
+      },
+      "kort": {
+        "nl": "89,8% (van wie de vraag beantwoordde)",
+        "en": "89.8% (of those who answered)"
+      },
+      "status": "online",
+      "opmerking": "De Bruin: 88 van de 150 deelnemers (58,7%) wilde blijven oefenen; van wie de vraag beantwoordde 89,8%. Niet: 'blijvende deelname bij Innerleaps'."
     }
   },
   "onderbouwing": [

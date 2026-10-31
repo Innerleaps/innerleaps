@@ -51,10 +51,10 @@ export const ROUTE_MAP: Array<{ nl: string; en: string }> = [
   { nl: "/klantcases/theydo", en: "/en/case-studies/theydo" },
   // Waar de cijfers vandaan komen. Het bronnenblok onderaan elke pagina linkt
   // hierheen; het pad staat ook in src/content/claims.json. Zie CLAIMS.md.
-  { nl: "/methode-en-beperkingen", en: "/en/method-and-limitations" },
+  { nl: "/methode", en: "/en/methodology" },
   // Blog articles
   {
-    nl: "/blog/ziekteverzuim-verlagen-wetenschappelijk-bewezen-aanpak-2025",
+    nl: "/blog/ziekteverzuim-verlagen-met-aandachttraining",
     en: "/en/blog/reducing-absenteeism-evidence-based-approach-2025",
   },
   {

@@ -8,6 +8,8 @@ import { Button } from "@/components/ui/button";
 import { scrollNaarAfspraak } from "@/lib/booking";
 import { leesRapportOverdracht, type RapportOverdracht } from "@/lib/bedankt";
 import { meldRapportLead } from "@/lib/conversies";
+import { TekstMetBron } from "@/components/Bron";
+import type { ClaimId } from "@/lib/claims";
 
 /**
  * De bedanktpagina van het wetenschappelijk rapport.
@@ -20,12 +22,12 @@ import { meldRapportLead } from "@/lib/conversies";
  * De bezoeker wacht hier op een mail en heeft verder niets te doen. Daarom
  * staan de drie onderzoekscijfers erbij: die overbruggen het wachten, geven
  * alvast de kern weg en maken de kans groter dat de mail ook echt geopend
- * wordt. Ze komen uit dezelfde sleutels als de rekentool, zodat de percentages
- * niet op twee plekken uit elkaar kunnen lopen.
+ * wordt. Sinds 29 oktober 2026 zijn het cijfers die letterlijk in een studie
+ * staan, elk met een sterretje naar de bron onderaan. Zie CLAIMS.md.
  */
+const ONDERZOEK_CLAIMS: ClaimId[][] = [["zreda-ziektedagen"], ["debruin-uitval"], ["michaelsen-stress-lange-termijn"]];
 const BedanktRapport = () => {
   const { t } = useTranslation("bedankt");
-  const { t: tCalculator } = useTranslation("calculator");
   // Zie BedanktRoi: meteen lezen, niet in een effect.
   const [overdracht] = useState<RapportOverdracht | null>(() => leesRapportOverdracht());
 
@@ -68,10 +70,12 @@ const BedanktRapport = () => {
                   <Trans i18nKey="rapport.onderzoekTitle" t={t} components={[<span className="text-brand-orange" />]} />
                 </h2>
                 <ul className="space-y-2 text-base text-brand-gray-medium">
-                  {["scientific1", "scientific2"].map((sleutel) => (
-                    <li key={sleutel} className="flex items-start">
+                  {(t("rapport.onderzoek", { returnObjects: true }) as string[]).map((regel, i) => (
+                    <li key={regel} className="flex items-start">
                       <span className="mr-2 text-brand-orange">•</span>
-                      <span>{tCalculator(`results.${sleutel}`)}</span>
+                      <span>
+                        <TekstMetBron tekst={regel} ids={ONDERZOEK_CLAIMS[i] ?? []} />
+                      </span>
                     </li>
                   ))}
                 </ul>

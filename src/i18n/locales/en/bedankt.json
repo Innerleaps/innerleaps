@@ -5,8 +5,8 @@
       "management": "Thank you, ROI management - Innerleaps",
       "onbekend": "Thank you, ROI - Innerleaps"
     },
-    "title": "Save at least <0>{{bedrag}}</0>",
-    "titleZonderBerekening": "What our training <0>delivers</0>",
+    "title": "Pays for itself from <0>{{procent}}</0> more productivity",
+    "titleZonderBerekening": "When does the training <0>pay for itself</0>?",
     "intro": "Your calculation is below and we have also sent it to your email.",
     "booking": {
       "title": "Discuss your <0>result</0> with Bas",
@@ -22,7 +22,12 @@
     "booking": {
       "title": "Want to know what this means for <0>your organisation</0>?",
       "intro": "Pick a moment below. No sales pitch, just an honest answer."
-    }
+    },
+    "onderzoek": [
+      "69% fewer sick days in a randomised study of 144 managers <bron></bron>.",
+      "The share of employees at increased risk of long-term absence fell from 54.4% to 16.4% <bron></bron>.",
+      "Less stress, even up to a year after the training <bron></bron>."
+    ]
   },
   "offerte": {
     "metaTitle": "Request received - Innerleaps",

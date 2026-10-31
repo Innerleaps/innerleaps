@@ -1,4 +1,3 @@
-import { VoetnotenProvider } from "@/components/Voetnoten";
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -132,7 +131,6 @@ const App = () => {
             <Profiler id="App" onRender={onRenderCallback}>
               <VoorvertoningWeg />
               <LanguageSync />
-              <VoetnotenProvider>
               <Routes>
                 <Route path="/" element={<LandingPage />} />
                 {/* English routes (mirror of NL pages) */}
@@ -145,7 +143,7 @@ const App = () => {
                 <Route path="/en/stress-management-training" element={<StressManagement />} />
                 <Route path="/en/blog" element={<Blog />} />
                 <Route path="/en/case-studies/theydo" element={<KlantcaseTheydo />} />
-                <Route path="/en/method-and-limitations" element={<MethodeEnBeperkingen />} />
+                <Route path="/en/methodology" element={<MethodeEnBeperkingen />} />
                 <Route path="/en/blog/reducing-absenteeism-evidence-based-approach-2025" element={<ZiekteverzuimVerlagen />} />
                 <Route path="/en/blog/hidden-costs-of-absenteeism-calculator" element={<VerborgenKostenZiekteverzuim />} />
                 <Route path="/en/blog/how-to-reduce-absenteeism-in-my-organization" element={<HoeVerlaagIkZiekteverzuim />} />
@@ -166,8 +164,8 @@ const App = () => {
                 <Route path="/team-prestaties-verbeteren" element={<DuurzameInzetbaarheidTraining />} />
                 <Route path="/blog" element={<Blog />} />
                 <Route path="/klantcases/theydo" element={<KlantcaseTheydo />} />
-                <Route path="/methode-en-beperkingen" element={<MethodeEnBeperkingen />} />
-                <Route path="/blog/ziekteverzuim-verlagen-wetenschappelijk-bewezen-aanpak-2025" element={<ZiekteverzuimVerlagen />} />
+                <Route path="/methode" element={<MethodeEnBeperkingen />} />
+                <Route path="/blog/ziekteverzuim-verlagen-met-aandachttraining" element={<ZiekteverzuimVerlagen />} />
                 <Route path="/blog/verborgen-kosten-ziekteverzuim-rekenmodel" element={<VerborgenKostenZiekteverzuim />} />
                 <Route path="/blog/hoe-verlaag-ik-het-ziekteverzuim-in-mijn-organisatie" element={<HoeVerlaagIkZiekteverzuim />} />
                 <Route path="/algemene-voorwaarden" element={<AlgemeneVoorwaarden />} />
@@ -219,7 +217,6 @@ const App = () => {
                 
                 <Route path="*" element={!import.meta.env.PROD ? <NotFound /> : <LandingPage />} />
               </Routes>
-              </VoetnotenProvider>
             </Profiler>
           </Suspense>
         </BrowserRouter>

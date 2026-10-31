@@ -77,16 +77,21 @@ grep -roiE "\b(program|programs|organiz\w*|recogniz\w*|center|behavior\w*|analyz
 lees `CLAIMS.md`, gebruik `StatClaim`, en voeg een regel toe aan het
 claimregister** (`src/content/claims.json`).
 
-- Elk cijfer krijgt een klein sterretje dat linkt naar het blok "Bronnen"
-  boven de footer (`Voetnoten.tsx`). Geen bronregels onder de cijfers en geen
-  toelichting bij citaten: Bas vond dat te veel tekst (22-10-2026). Het cijfer
-  zelf staat in het register, niet in de vertaalbestanden.
+- Elk cijfer heeft zijn bron zichtbaar erbij: "gemeten bij TheyDo" of "(De
+  Bruin, 2018)", met een stippellijn. Aanwijzen, tikken of Enter opent een
+  kaartje met de hele bronregel en een link naar Methode en beperkingen
+  (`Bron.tsx`). Geen sterretjes en geen bronnenblok boven de footer: besluit
+  Bas, 31-10-2026, na twee eerdere versies (bronregels onder de cijfers, toen
+  sterretjes met een blok). **Maak de bron nooit alleen zichtbaar bij
+  aanwijzen**: informatie achter een symbool wordt meestal niet gezien (ACM,
+  2021). Bij citaten staat niets. Het cijfer zelf staat in het register, niet
+  in de vertaalbestanden.
 - `scripts/check-claims.mjs` draait voor elke build. Een cijfer of
   beloftewoord dat niet geregistreerd staat, laat de build falen. Plaatshouders
   en rode claims laten alleen de productiebuild falen, zodat je ze op een
   branch-deploy nog kunt bekijken.
-- Het bronnenblok linkt naar `/methode-en-beperkingen`
-  (`/en/method-and-limitations`). Die pagina haalt de metingen en studies uit
+- Elk bronkaartje en de footer linken naar `/methode`
+  (`/en/methodology`). Die pagina haalt de metingen en studies uit
   het register.
 - De TheyDo-cijfers zijn op 22-10-2026 herberekend uit de ruwe data in de
   Second Brain: productiviteit n=14 (niet 20: 6 van de 20 deden niet mee), de
@@ -168,8 +173,10 @@ employability" is volgens Bas geen gangbaar Engels. De URL is bewust niet
 veranderd: duurzame inzetbaarheid is de best gemeten term.
 
 - **Verzuim wél, productiviteit niet.** Verzuim is hier de taal van de koper,
-  dus de rekentool en de link "Wat kost verzuim jou?" blijven. Productiviteit
-  noemde 0 van de 9 organisaties.
+  dus de rekentool en de link ernaartoe blijven. Productiviteit noemde 0 van de
+  9 organisaties. Sinds 29 oktober 2026 rekent die tool alleen het omslagpunt
+  uit, ook in ziektedagen, en heet de link "Wanneer verdient het zich terug?"
+  (zie `CLAIMS.md`).
 - **De lezer is de adviseur** vitaliteit, arbo of duurzame inzetbaarheid, die de
   pagina doorstuurt naar een manager en het MT. De kern: het aanbod is er, de
   deelname niet, en wij zorgen dat ook de drukste mensen meedoen.
@@ -195,8 +202,9 @@ veranderd: duurzame inzetbaarheid is de best gemeten term.
 - **De quote op de herofoto** staat op `quotePosition: "top-right-narrow"`, net
   als op de scale-up-pagina. Op "top-right" viel hij over het gezicht van Bas en
   gaf hij op 1280 pixels een horizontale scrollbalk.
-- **"20 tot 40% van wie de masterclass volgt, doet mee aan de training"** in de
-  FAQ is een eigen cijfer van Bas (20 oktober 2026).
+- **"Bij TheyDo deed 42%* ..."** in de FAQ. Daar stond eerst "20 tot 40%",
+  een schatting zonder meting; op 29 oktober 2026 vervangen door het gemeten
+  cijfer van TheyDo (39 van de 93).
 
 ### `stress` is de medewerkerspagina
 
@@ -252,8 +260,8 @@ basis van de segmentanalyse "(C) Segmentanalyse Scale-ups 2026-10" in de Second
 Brain. In het menu heet hij "Scale-ups" en staat hij bovenaan, ook in de footer.
 De URL is bewust niet veranderd.
 
-- **Geen verzuim.** Het verzuimverhaal, de ROI-rekenmachine en de link "Wat kost
-  verzuim jou?" staan niet op deze pagina. Scale-ups hebben geen verzuimcijfers.
+- **Geen verzuim.** Het verzuimverhaal, de rekentool en de link ernaartoe
+  staan niet op deze pagina. Scale-ups hebben geen verzuimcijfers.
   De lijn is: meer output door rust en focus.
 - **Eigen invulling via props** op `TrainingPageLayout`: `heroLogos` (TheyDo,
   Holie Pizza, Tele2, Leaseplan, Sygnific), `heroSecondaryLink` naar de

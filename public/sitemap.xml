@@ -134,18 +134,18 @@
 
   <!-- Blog articles -->
   <url>
-    <loc>https://innerleaps.nl/blog/ziekteverzuim-verlagen-wetenschappelijk-bewezen-aanpak-2025</loc>
+    <loc>https://innerleaps.nl/blog/ziekteverzuim-verlagen-met-aandachttraining</loc>
     <lastmod>2026-08-24</lastmod>
-    <xhtml:link rel="alternate" hreflang="nl" href="https://innerleaps.nl/blog/ziekteverzuim-verlagen-wetenschappelijk-bewezen-aanpak-2025" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://innerleaps.nl/blog/ziekteverzuim-verlagen-met-aandachttraining" />
     <xhtml:link rel="alternate" hreflang="en" href="https://innerleaps.nl/en/blog/reducing-absenteeism-evidence-based-approach-2025" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://innerleaps.nl/blog/ziekteverzuim-verlagen-wetenschappelijk-bewezen-aanpak-2025" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://innerleaps.nl/blog/ziekteverzuim-verlagen-met-aandachttraining" />
   </url>
   <url>
     <loc>https://innerleaps.nl/en/blog/reducing-absenteeism-evidence-based-approach-2025</loc>
     <lastmod>2026-08-24</lastmod>
-    <xhtml:link rel="alternate" hreflang="nl" href="https://innerleaps.nl/blog/ziekteverzuim-verlagen-wetenschappelijk-bewezen-aanpak-2025" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://innerleaps.nl/blog/ziekteverzuim-verlagen-met-aandachttraining" />
     <xhtml:link rel="alternate" hreflang="en" href="https://innerleaps.nl/en/blog/reducing-absenteeism-evidence-based-approach-2025" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://innerleaps.nl/blog/ziekteverzuim-verlagen-wetenschappelijk-bewezen-aanpak-2025" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://innerleaps.nl/blog/ziekteverzuim-verlagen-met-aandachttraining" />
   </url>
 
   <url>
@@ -196,18 +196,18 @@
 
   <!-- Methode en beperkingen: waar de cijfers vandaan komen -->
   <url>
-    <loc>https://innerleaps.nl/methode-en-beperkingen</loc>
+    <loc>https://innerleaps.nl/methode</loc>
     <lastmod>2026-10-22</lastmod>
-    <xhtml:link rel="alternate" hreflang="nl" href="https://innerleaps.nl/methode-en-beperkingen" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://innerleaps.nl/en/method-and-limitations" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://innerleaps.nl/methode-en-beperkingen" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://innerleaps.nl/methode" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://innerleaps.nl/en/methodology" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://innerleaps.nl/methode" />
   </url>
   <url>
-    <loc>https://innerleaps.nl/en/method-and-limitations</loc>
+    <loc>https://innerleaps.nl/en/methodology</loc>
     <lastmod>2026-10-22</lastmod>
-    <xhtml:link rel="alternate" hreflang="nl" href="https://innerleaps.nl/methode-en-beperkingen" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://innerleaps.nl/en/method-and-limitations" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://innerleaps.nl/methode-en-beperkingen" />
+    <xhtml:link rel="alternate" hreflang="nl" href="https://innerleaps.nl/methode" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://innerleaps.nl/en/methodology" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://innerleaps.nl/methode" />
   </url>
 
 </urlset>

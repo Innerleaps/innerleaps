@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
 import { claimWaarde, type ClaimId } from "@/lib/claims";
-import { Ster } from "@/components/Voetnoten";
+import { Bron } from "@/components/Bron";
 import { useTaal } from "@/hooks/useTaal";
 
 /**
@@ -16,8 +16,8 @@ import { useTaal } from "@/hooks/useTaal";
  * `panel` is het paneel met de vier balken, zoals in de hero van de
  * propositiepagina's. Dat past alleen als er een kolom naast de agenda is.
  *
- * De cijfers komen uit het claimregister en krijgen elk een sterretje naar
- * hun bron onderaan de pagina. Zie CLAIMS.md.
+ * De cijfers komen uit het claimregister en krijgen elk hun bron zichtbaar
+ * erbij, met een kaartje bij aanwijzen. Zie CLAIMS.md.
  */
 interface BookingStatsProps {
   variant?: "row" | "panel";
@@ -26,7 +26,7 @@ interface BookingStatsProps {
 
 const STATS: { label: string; claim: ClaimId }[] = [
   { label: "hero.stats.dropoutRisk", claim: "debruin-uitval" },
-  { label: "hero.stats.absenteeism", claim: "verzuim-15-21" },
+  { label: "hero.stats.absenteeism", claim: "zreda-ziektedagen" },
   { label: "hero.stats.focus", claim: "jha-aandacht" },
   { label: "hero.stats.productivity", claim: "theydo-productiviteit" },
 ];
@@ -48,9 +48,11 @@ const BookingStats = ({ variant = "row", className = "" }: BookingStatsProps) =>
           <div key={stat.label} className="text-center">
             <div className="text-xl font-bold text-brand-orange sm:text-2xl">
               {stat.value}
-              <Ster ids={[stat.claim]} />
             </div>
             <div className="mt-0.5 text-base leading-tight text-brand-gray-medium">{stat.label}</div>
+            <div className="mt-0.5 text-sm leading-tight text-brand-gray-medium">
+              <Bron ids={[stat.claim]} />
+            </div>
           </div>
         ))}
       </div>
@@ -68,11 +70,13 @@ const BookingStats = ({ variant = "row", className = "" }: BookingStatsProps) =>
             key={stat.label}
             className="flex items-center justify-between rounded-lg bg-brand-off-white px-4 py-3"
           >
-            <span className="text-base text-brand-purple xl:text-lg">{stat.label}</span>
-            <span className="shrink-0 text-xl font-bold text-brand-orange xl:text-2xl">
-              {stat.value}
-              <Ster ids={[stat.claim]} />
+            <span className="text-base text-brand-purple xl:text-lg">
+              {stat.label}
+              <span className="block text-sm text-brand-gray-medium">
+                <Bron ids={[stat.claim]} />
+              </span>
             </span>
+            <span className="shrink-0 text-xl font-bold text-brand-orange xl:text-2xl">{stat.value}</span>
           </div>
         ))}
       </div>

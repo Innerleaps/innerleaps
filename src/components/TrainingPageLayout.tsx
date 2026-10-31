@@ -3,8 +3,8 @@ import { Trans, useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet-async";
 import { Link, useLocation } from "react-router-dom";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { TekstMetSter } from "@/components/Voetnoten";
-import { claimsBijSleutel, zonderSter } from "@/lib/claims";
+import { TekstMetBron } from "@/components/Bron";
+import { claimsBijSleutel, zonderBron } from "@/lib/claims";
 import { Button } from "@/components/ui/button";
 import { detectLanguageFromPath } from "@/i18n/config";
 import {
@@ -300,7 +300,7 @@ const TrainingPageLayout = ({
       name: item.q,
       acceptedAnswer: {
         "@type": "Answer",
-        text: zonderSter(item.a),
+        text: zonderBron(item.a),
       },
     })),
   };
@@ -609,7 +609,9 @@ const TrainingPageLayout = ({
                       </div>
                     </div>
                   )}
-                  <h3 className="text-xl md:text-2xl font-bold text-brand-gray-dark text-center">{r.title}</h3>
+                  <h3 className="text-xl md:text-2xl font-bold text-brand-gray-dark text-center">
+                    <TekstMetBron tekst={r.title} ids={claimsBijSleutel(`training:${tKey}.results.items[${i}].title`)} />
+                  </h3>
                   {r.text && (
                     <p className="text-xl text-brand-gray-medium leading-relaxed text-center">{r.text}</p>
                   )}
@@ -618,7 +620,9 @@ const TrainingPageLayout = ({
                       {r.bullets.map((b, j) => (
                         <div key={j} className="flex items-start gap-2">
                           <CheckCircle className="h-5 w-5 text-brand-orange flex-shrink-0 mt-0.5" />
-                          <p className="text-xl text-brand-gray-medium leading-relaxed">{b}</p>
+                          <p className="text-xl text-brand-gray-medium leading-relaxed">
+                            <TekstMetBron tekst={b} ids={claimsBijSleutel(`training:${tKey}.results.items[${i}].bullets[${j}]`)} />
+                          </p>
                         </div>
                       ))}
                     </div>
@@ -849,7 +853,7 @@ const TrainingPageLayout = ({
                   <AccordionContent alwaysRendered className="text-base md:text-lg text-brand-gray-medium leading-relaxed whitespace-pre-line">
                     {/* Een sterretje in het antwoord linkt naar de bron
                         onderaan de pagina. Welke, staat in het claimregister. */}
-                    <TekstMetSter tekst={item.a} ids={claimsBijSleutel(`training:${tKey}.faq.items[${i}].a`)} />
+                    <TekstMetBron tekst={item.a} ids={claimsBijSleutel(`training:${tKey}.faq.items[${i}].a`)} />
                   </AccordionContent>
                 </AccordionItem>
               ))}

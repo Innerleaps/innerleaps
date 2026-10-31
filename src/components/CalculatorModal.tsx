@@ -9,9 +9,9 @@ import { Label } from '@/components/ui/label';
 import { Calculator } from 'lucide-react';
 import { toast } from '@/hooks/use-toast';
 import { supabase } from '@/integrations/supabase/client';
-import { calculateROI } from '@/utils/calculationEngine';
+import { berekenOmslagpunt } from '@/utils/calculationEngine';
 import { isGeldigEmail } from '@/lib/email';
-import { naarDecimaal, naarGeheel } from '@/lib/getallen';
+import { naarGeheel } from '@/lib/getallen';
 import {
   bewaarRoiOverdracht,
   doelgroepVoorPad,
@@ -43,7 +43,6 @@ const CalculatorModal = ({ isOpen, onClose }: CalculatorModalProps) => {
     email: '',
     bedrijfsnaam: '',
     telefoon: '',
-    verzuimPercentage: '',
     aantalWerknemers: '',
     brutoJaarsalaris: '',
   });
@@ -77,7 +76,6 @@ const CalculatorModal = ({ isOpen, onClose }: CalculatorModalProps) => {
       formData.naam.trim() !== '' &&
       formData.email.trim() !== '' &&
       formData.bedrijfsnaam.trim() !== '' &&
-      naarDecimaal(formData.verzuimPercentage) !== null &&
       naarGeheel(formData.aantalWerknemers) !== null &&
       naarGeheel(formData.brutoJaarsalaris) !== null
     );
@@ -107,10 +105,10 @@ const CalculatorModal = ({ isOpen, onClose }: CalculatorModalProps) => {
       return;
     }
 
-    const results = calculateROI({
-      currentAbsenteeism: naarDecimaal(formData.verzuimPercentage)!,
-      numberOfEmployees: naarGeheel(formData.aantalWerknemers)!,
-      avgGrossAnnualSalary: naarGeheel(formData.brutoJaarsalaris)!,
+    // Het omslagpunt, geen beloofde besparing meer. Zie berekenOmslagpunt.
+    const results = berekenOmslagpunt({
+      aantalDeelnemers: naarGeheel(formData.aantalWerknemers)!,
+      brutoJaarsalaris: naarGeheel(formData.brutoJaarsalaris)!,
     });
 
     setIsSubmitting(true);
@@ -139,19 +137,11 @@ const CalculatorModal = ({ isOpen, onClose }: CalculatorModalProps) => {
           email: formData.email,
           company: formData.bedrijfsnaam,
           phone: formData.telefoon || '',
-          currentAbsenteeism: naarDecimaal(formData.verzuimPercentage)!,
-          numberOfEmployees: naarGeheel(formData.aantalWerknemers)!,
+          // Vraagt de nieuwe versie van submit-calculator (omslagpunt). De
+          // oude versie weigert dit, dus eerst die functie uitrollen.
+          numberOfParticipants: results.aantalDeelnemers,
           avgGrossAnnualSalary: naarGeheel(formData.brutoJaarsalaris)!,
-          // Zie ROICalculator: deze twee staan op nul zolang de oude Edge
-          // Function nog draait.
-          employeeTurnover: 0,
-          results: {
-            ...results,
-            scenarios: {
-              conservative: { ...results.scenarios.conservative, retentieBesparing: 0 },
-              positive: { ...results.scenarios.positive, retentieBesparing: 0 },
-            },
-          },
+          results,
           language: isEN ? 'en' : 'nl',
         },
       });
@@ -167,9 +157,8 @@ const CalculatorModal = ({ isOpen, onClose }: CalculatorModalProps) => {
       doelgroep,
       resultaten: results,
       invoer: {
-        aantalWerknemers: formData.aantalWerknemers,
+        aantalDeelnemers: formData.aantalWerknemers,
         brutoJaarsalaris: formData.brutoJaarsalaris,
-        verzuimPercentage: formData.verzuimPercentage,
       },
       emailHash: await hashEmail(formData.email),
       mailVerstuurd,
@@ -300,24 +289,6 @@ const CalculatorModal = ({ isOpen, onClose }: CalculatorModalProps) => {
               {/* Right Column - Calculation inputs */}
               <div className="space-y-4">
                 <h3 className="text-xl font-semibold text-brand-gray-dark mb-4">{t('sections.organisation')}</h3>
-
-                <div className="space-y-2">
-                  <Label htmlFor="modal-verzuim" className="text-brand-gray-dark font-medium">
-                    {t('fields.absenteeism')}*
-                  </Label>
-                  <Input
-                    id="modal-verzuim"
-                    name="verzuimPercentage"
-                    autoComplete="off"
-                    type="text"
-                    inputMode="decimal"
-                    value={formData.verzuimPercentage}
-                    onChange={(e) => handleInputChange('verzuimPercentage', e.target.value)}
-                    className="bg-white border-gray-300 text-brand-gray-dark placeholder:text-gray-400"
-                    placeholder={t('fields.absenteeismPlaceholder')}
-                    required
-                  />
-                </div>
 
                 <div className="space-y-2">
                   <Label htmlFor="modal-werknemers" className="text-brand-gray-dark font-medium">

@@ -4,6 +4,7 @@ import Footer from "@/components/Footer";
 import BlogAuthor from "@/components/BlogAuthor";
 import { Link } from "react-router-dom";
 import breinTrainingImage from "@/assets/6_weken_brein_trainen.webp";
+import { Bron } from "@/components/Bron";
 
 const HoeVerlaagIkZiekteverzuim = () => {
   return (
@@ -12,7 +13,7 @@ const HoeVerlaagIkZiekteverzuim = () => {
         <title>Hoe verlaag ik het ziekteverzuim in mijn organisatie? | Innerleaps</title>
         <meta
           name="description"
-          content="Ziekteverzuim verlagen met 15-21% door aandachttraining. Wetenschappelijk bewezen: 70% lager uitvalrisico. Ontdek de evidence-based aanpak met 89,8% adoptie."
+          content="Ziekteverzuim verlagen begint bij stress. Wat onderzoek naar aandachttraining laat zien, en hoe je in je eigen organisatie begint."
         />
         <link rel="canonical" href="https://innerleaps.nl/blog/hoe-verlaag-ik-het-ziekteverzuim-in-mijn-organisatie" />
 
@@ -20,7 +21,7 @@ const HoeVerlaagIkZiekteverzuim = () => {
         <meta property="og:title" content="Hoe verlaag ik het ziekteverzuim in mijn organisatie? | Innerleaps" />
         <meta
           property="og:description"
-          content="Ziekteverzuim verlagen met 15-21% door aandachttraining. Wetenschappelijk bewezen: 70% lager uitvalrisico. Ontdek de evidence-based aanpak met 89,8% adoptie."
+          content="Ziekteverzuim verlagen begint bij stress. Wat onderzoek naar aandachttraining laat zien, en hoe je in je eigen organisatie begint."
         />
         <meta
           property="og:url"
@@ -34,7 +35,7 @@ const HoeVerlaagIkZiekteverzuim = () => {
         <meta name="twitter:title" content="Hoe verlaag ik het ziekteverzuim in mijn organisatie? | Innerleaps" />
         <meta
           name="twitter:description"
-          content="Ziekteverzuim verlagen met 15-21% door aandachttraining. Wetenschappelijk bewezen: 70% lager uitvalrisico. Ontdek de evidence-based aanpak met 89,8% adoptie."
+          content="Ziekteverzuim verlagen begint bij stress. Wat onderzoek naar aandachttraining laat zien, en hoe je in je eigen organisatie begint."
         />
         <meta name="twitter:image" content="https://innerleaps.nl/social/6-weken-brein-trainen.png" />
 
@@ -50,7 +51,7 @@ const HoeVerlaagIkZiekteverzuim = () => {
             url: "https://innerleaps.nl/blog/hoe-verlaag-ik-het-ziekteverzuim-in-mijn-organisatie",
             headline: "Hoe verlaag ik het ziekteverzuim in mijn organisatie?",
             description:
-              "Ziekteverzuim verlagen met 15-21% door aandachttraining. Wetenschappelijk bewezen: 70% lager uitvalrisico. Ontdek de evidence-based aanpak met 89,8% adoptie.",
+              "Ziekteverzuim verlagen begint bij stress. Wat onderzoek naar aandachttraining laat zien, en hoe je in je eigen organisatie begint.",
             image: "https://innerleaps.nl/social/6-weken-brein-trainen.png",
             author: {
               "@type": "Person",
@@ -66,7 +67,7 @@ const HoeVerlaagIkZiekteverzuim = () => {
               },
             },
             datePublished: "2024-12-16",
-            dateModified: "2024-12-16",
+            dateModified: "2026-10-29",
           })}
         </script>
       </Helmet>
@@ -118,34 +119,28 @@ const HoeVerlaagIkZiekteverzuim = () => {
         <div className="prose prose-lg max-w-3xl">
           {/* Lead paragraph */}
           <p className="text-xl text-brand-gray-dark leading-relaxed mb-8">
-            Ziekteverzuim verlagen begint bij het aanpakken van de onderliggende oorzaak: stress. Onderzoek over 40 jaar
-            toont dat{" "}
+            Ziekteverzuim verlagen begint bij het aanpakken van de onderliggende oorzaak: stress.{" "}
             <Link to="/breintraining-methode" className="text-brand-blue hover:underline">
               aandachttraining
             </Link>{" "}
-            het verzuim met 15-21% verlaagt door werknemers te leren stresssignalen vroeg te herkennen. Innerleaps'
-            6-weekse training bereikt 89,8% blijvende deelname door dagelijkse 'push-ups voor je brein' te combineren
-            met wekelijkse begeleiding door VMBN categorie 1 geaccrediteerde trainers. De methode traint het
-            controlecentrum en waarschuwingssysteem in de hersenen, waardoor werknemers stress reguleren voordat uitval
-            optreedt. Het resultaat: 70% lager uitvalrisico en meetbare reductie in stress-gerelateerd verzuim binnen 6
-            maanden.
+            werknemers leert stresssignalen vroeg te herkennen. Innerleaps' 6-weekse training combineert dagelijkse
+            'push-ups voor je brein' met wekelijkse begeleiding door VMBN categorie 1 geaccrediteerde trainers. De
+            methode traint het controlecentrum en waarschuwingssysteem in de hersenen, zodat werknemers stress kunnen
+            reguleren voordat uitval optreedt.
           </p>
 
           <h2 className="text-2xl font-bold text-brand-purple mt-12 mb-4">De werkelijke kosten van ziekteverzuim</h2>
           <p className="text-brand-gray-dark mb-4">
-            Nederlandse organisaties kampen met een gemiddeld verzuimpercentage van 5,2%. Voor een organisatie met 100
-            werknemers en een gemiddeld bruto jaarsalaris van €39.700 betekent dit jaarlijks €381.590 aan directe
-            verzuimkosten. Maar daar blijft het niet bij.
+            Het verzuim in Nederland lag in het vierde kwartaal van 2025 op 5,6%{" "}<Bron ids={["cbs-verzuim"]} />. Voor een
+            organisatie met 100 werknemers en een voorbeeldsalaris van €40.000 bruto per jaar zijn de directe loonkosten
+            daarvan €224.000 per jaar. Maar daar blijft het niet bij.
           </p>
           <p className="text-brand-gray-dark mb-4">
-            Sazas berekent dat de totale kosten van verzuim 1,85 keer het brutosalaris bedragen. Dit komt door
-            vervangingskosten, productiviteitsverlies, overhead en administratieve lasten. Voor dezelfde organisatie
-            lopen de werkelijke verzuimkosten op tot ruim €706.000 per jaar.
+            Daar komen kosten bij voor vervanging, productiviteitsverlies, overhead en administratie.
           </p>
           <p className="text-brand-gray-dark mb-4">
-            Nog schrijnender: 25% van alle verzuim is stress-gerelateerd. Dit komt neer op 3 volle dagen per FTE per
-            jaar. Bij diezelfde organisatie van 100 werknemers gaat het om €176.500 aan stress-gerelateerd verzuim dat
-            potentieel te voorkomen is.
+            En één op de vier verzuimdagen hangt samen met stress{" "}<Bron ids={["kwart-verzuim-stress"]} />. Juist dat deel
+            kun je met preventie aanpakken.
           </p>
           <p className="text-brand-gray-dark mb-4">
             De impact gaat verder dan geld alleen. Verzuim verstoort projecten, verhoogt werkdruk bij collega's en
@@ -156,13 +151,9 @@ const HoeVerlaagIkZiekteverzuim = () => {
           <h2 className="text-2xl font-bold text-brand-purple mt-12 mb-4">Waarom traditionele aanpakken falen</h2>
           <p className="text-brand-gray-dark mb-4">
             Veel organisaties investeren in welzijn trainingen zoals Employee Assistance Programs (EAP), mindfulness
-            apps of bedrijfsfitness. De adoptiecijfers zijn echter teleurstellend:
+            apps of bedrijfsfitness. Het gebruik valt vaak tegen. Apps voor aandachtsoefeningen worden na 30 dagen
+            nog door 4,7% van de gebruikers geopend{" "}<Bron ids={["app-gebruik"]} />.
           </p>
-          <ul className="list-disc pl-6 mb-4 text-brand-gray-dark">
-            <li>EAP: slechts 4-5% van werknemers maakt gebruik van het aanbod</li>
-            <li>Mindfulness apps: 4,7% blijft gebruiken na 30 dagen</li>
-            <li>Bedrijfsfitness: 8% regelmatig gebruik ondanks 15-25% aanmelding</li>
-          </ul>
           <p className="text-brand-gray-dark mb-4">
             Het kernprobleem? Deze interventies zijn niet gestructureerd genoeg en missen begeleiding. Werknemers
             krijgen toegang tot tools, maar geen systematische training om gedrag daadwerkelijk te veranderen. Apps en
@@ -174,29 +165,25 @@ const HoeVerlaagIkZiekteverzuim = () => {
             De wetenschappelijke basis voor verzuimreductie
           </h2>
           <p className="text-brand-gray-dark mb-4">
-            Meta-analyses van 12 studies tonen aan dat aandachttraining leidt tot substantiële verzuimreductie. De
-            effecten manifesteren zich via meerdere mechanismen:
+            Onderzoek naar aandachttraining laat effecten zien via meerdere routes:
           </p>
           <p className="text-brand-gray-dark mb-4">
-            <strong>Stressreductie</strong>: 65-72% van deelnemers ervaart meetbare vermindering van stress (effect size
-            d = -0.53 tot -0.84) volgens meta-analyses van De Vibe et al. (2017), Bartlett et al. (2018), Vonderlin et
-            al. (2020) en Michaelsen et al. (2023). Stress is verantwoordelijk voor 25% van alle verzuim in Nederland.
-            Door stress effectief te reduceren, daalt het verzuim proportioneel.
+            <strong>Stressreductie</strong>: zet iemand die de training deed naast iemand die hem niet deed, en in 65 tot
+            72% van de gevallen heeft de getrainde persoon minder stress{" "}<Bron ids={["cles-stress"]} />. En stress speelt
+            mee in één op de vier verzuimdagen{" "}<Bron ids={["kwart-verzuim-stress"]} />.
           </p>
           <p className="text-brand-gray-dark mb-4">
-            <strong>Veerkracht opbouwen</strong>: Training versterkt de veerkracht met een medium tot groot effect (d =
-            0.49-1.06), wat betekent dat 64-77% van deelnemers beter omgaat met werkdruk en uitdagende situaties
-            (Michaelsen et al., 2023; Vonderlin et al., 2020; Dou et al., 2024).
+            <strong>Veerkracht opbouwen</strong>: meta-analyses vinden ook meer veerkracht na de training (Michaelsen et
+            al., 2023; Vonderlin et al., 2020; Dou et al., 2025).
           </p>
           <p className="text-brand-gray-dark mb-4">
-            <strong>Burn-out risico verlagen</strong>: De Nederlandse Unilever-studie van De Bruin et al. (2018)
-            documenteerde een daling van het uitvalrisico van 54,4% naar 16,4%. Dit is een reductie van 70% in langdurig
-            ziekteverzuim, met effecten die na 6 maanden nog steeds meetbaar zijn.
+            <strong>Uitvalrisico verlagen</strong>: in de Nederlandse Unilever-studie van De Bruin et al. daalde het
+            aandeel medewerkers met een verhoogd risico op langdurige uitval van 54,4% naar 16,4%, gemeten 6 maanden na
+            de training{" "}<Bron ids={["debruin-uitval"]} />.
           </p>
           <p className="text-brand-gray-dark mb-4">
-            Deze effecten zijn niet tijdelijk. Follow-up metingen tot 12 maanden na interventie tonen dat stressreductie
-            (d = -0.50 tot -0.77) en veerkracht behouden blijven (De Vibe et al., 2017; Bartlett et al., 2018; Vonderlin
-            et al., 2020; Lensen et al., 2024). De training creëert duurzame gedragsverandering in plaats van
+            Deze effecten zijn niet alleen tijdelijk. Studies die tot een jaar na de training opnieuw maten, vonden nog
+            steeds minder stress{" "}<Bron ids={["michaelsen-stress-lange-termijn"]} />. De training creëert duurzame gedragsverandering in plaats van
             kortstondige verlichting.
           </p>
 
@@ -213,8 +200,8 @@ const HoeVerlaagIkZiekteverzuim = () => {
           </p>
           <p className="text-brand-gray-dark mb-4">
             Door dagelijkse 'push-ups voor je brein' versterkt dit netwerk. Werknemers leren hun aandacht bewust te
-            richten en vast te houden, ook onder druk. Het resultaat: 25% minder fouten in aandachtstaken (Jha et al.,
-            2021), betere besluitvorming en effectiever omgaan met werkdruk.
+            richten en vast te houden, ook onder druk. In haar boek Peak Mind beschrijft Amishi Jha 25% minder fouten
+            op aandachtstaken{" "}<Bron ids={["jha-fouten"]} />.
           </p>
 
           <h3 className="text-xl font-semibold text-brand-purple mt-8 mb-3">Het waarschuwingssysteem activeren</h3>
@@ -229,44 +216,19 @@ const HoeVerlaagIkZiekteverzuim = () => {
             werknemers stress in een vroeg stadium. Ze kunnen bijsturen voordat problemen escaleren.
           </p>
           <p className="text-brand-gray-dark mb-4">
-            Deze mechanismen verklaren waarom Innerleaps' training 89,8% blijvende adoptie bereikt. Deelnemers ervaren
-            concrete voordelen in hun dagelijks functioneren, wat motivatie creëert om door te gaan met oefenen. Dit
-            staat in schril contrast met de 4,7% adoptie van mindfulness apps of 4-5% gebruik van EAP trainingen.
+            Deelnemers ervaren concrete voordelen in hun dagelijks functioneren, en dat motiveert om door te gaan met
+            oefenen.
           </p>
 
           <h2 className="text-2xl font-bold text-brand-purple mt-12 mb-4">De business case voor aandachttraining</h2>
           <p className="text-brand-gray-dark mb-4">
-            Voor een organisatie met 100 werknemers, een gemiddeld verzuimpercentage van 5,2% en gemiddelde
-            arbeidskosten van €39.700 per werknemer, levert aandachttraining meetbare kostenbesparingen op.
-          </p>
-          <p className="text-brand-gray-dark mb-4">
-            <strong>Verzuimreductie</strong>: Bij 15% verzuimreductie (conservatieve schatting) daalt het verzuim van
-            5,2% naar 4,4%. Dit bespaart €57.287 per jaar. Bij 21% reductie (positief scenario) loopt de besparing op
-            tot €80.202 jaarlijks.
-          </p>
-          <p className="text-brand-gray-dark mb-4">
-            <strong>Retentie verbeteren</strong>: Aandachttraining vermindert personeelsverloop met 5-8% door verhoogde
-            betrokkenheid (effect size d = 0.53, Vonderlin et al., 2020) en werktevredenheid (d = 0.47-0.48, Michaelsen
-            et al., 2023). Vervanging van een werknemer kost 1,5 keer het jaarsalaris (O'Connell & Kung, 2007). Bij 10%
-            natuurlijk verloop betekent 5% reductie een besparing van €29.775. Bij 8% reductie stijgt dit naar €47.640.
-          </p>
-          <p className="text-brand-gray-dark mb-4">
-            <strong>Productiviteit verhogen</strong>: Deelnemers rapporteren 5-8% productiviteitswinst door betere focus
-            en minder stress (Schubin et al., 2023; Aikens et al., 2014; Vonderlin et al., 2020). Voor een organisatie
-            betekent dit €198.500 tot €317.600 aan verhoogde output zonder extra personeelskosten.
-          </p>
-          <p className="text-brand-gray-dark mb-4">
-            De totale jaarlijkse besparing varieert van €285.562 (conservatief) tot €445.442 (positief scenario). Bij
-            een investering van €575 per deelnemer (€57.500 totaal voor 100 werknemers) betekent dit een ROI van 497%
-            tot 775% in het eerste jaar.{" "}
+            Of de training zich terugverdient, hangt af van jullie salarissen en het aantal deelnemers. Met onze
+            rekentool zie je vanaf hoeveel procent meer productiviteit dat gebeurt. Ter vergelijking: <Bron ids={["theydo-productiviteit"]}>bij TheyDo</Bron>
+            rapporteerden deelnemers 8,6% hogere productiviteit.{" "}
             <Link to="/?openCalculator=true" className="text-brand-blue hover:underline">
-              Bereken de ROI voor jouw organisatie
+              Reken het uit voor jouw organisatie
             </Link>
             .
-          </p>
-          <p className="text-brand-gray-dark mb-4">
-            Deze cijfers zijn gebaseerd op gevalideerde onderzoeksresultaten en conservatieve berekeningsmethodologieën.
-            Ze reflecteren de werkelijke financiële impact van structurele stressreductie en prestatieverbetering.
           </p>
 
           <h2 className="text-2xl font-bold text-brand-purple mt-12 mb-4">
@@ -294,9 +256,8 @@ const HoeVerlaagIkZiekteverzuim = () => {
             blijven gemotiveerd door wekelijkse accountability.
           </p>
           <p className="text-brand-gray-dark mb-4">
-            Deze combinatie verklaart de 89,8% blijvende deelname. De training is gebaseerd op de MBSR-methode
-            (Mindfulness-Based Stress Reduction), een interventie met 40 jaar wetenschappelijk onderzoek die erkend
-            wordt door Nederlandse zorgverzekeraars. De basisverzekering vergoedt zelfs de uitgebreide 8-weekse variant.
+            De training is gebaseerd op MBSR (Mindfulness-Based Stress Reduction), een methode die al 40 jaar onderzocht
+            wordt.
           </p>
 
           <h2 className="text-2xl font-bold text-brand-purple mt-12 mb-4">
@@ -318,9 +279,7 @@ const HoeVerlaagIkZiekteverzuim = () => {
             alleen verzuim, maar verbetert ook prestaties, samenwerking en werktevredenheid.
           </p>
           <p className="text-brand-gray-dark mb-4">
-            De shift naar preventie vraagt een initiële investering. Maar zoals de business case toont, betaalt deze
-            zich binnen maanden terug. Een organisatie die €57.500 investeert in training voor 100 werknemers,
-            realiseert binnen een jaar €228.062 tot €387.942 netto besparing.
+            De shift naar preventie vraagt een investering. Met de rekentool zie je vanaf wanneer die zich terugverdient.
           </p>
 
           <h2 className="text-2xl font-bold text-brand-purple mt-12 mb-4">Implementatie in de praktijk</h2>
@@ -330,9 +289,8 @@ const HoeVerlaagIkZiekteverzuim = () => {
           </p>
           <p className="text-brand-gray-dark mb-4">
             <strong>Managementsupport</strong>: Leidinggevenden moeten de training actief ondersteunen. Dit betekent
-            tijd vrijmaken voor wekelijkse workshops, deelname aanmoedigen en zelf modelgedrag tonen. Onderzoek toont
-            dat deelname significant hoger is wanneer direct leidinggevenden de training bespreken en waarderen
-            (Vonderlin et al., 2020).
+            tijd vrijmaken voor wekelijkse workshops, deelname aanmoedigen en zelf modelgedrag tonen. Mensen doen
+            eerder mee wanneer hun eigen leidinggevende de training bespreekt en waardeert.
           </p>
           <p className="text-brand-gray-dark mb-4">
             <strong>Praktische randvoorwaarden</strong>: Workshops tijdens werktijd plannen verhoogt deelname.
@@ -357,18 +315,18 @@ const HoeVerlaagIkZiekteverzuim = () => {
             <strong>Hoe lang duurt het voordat verzuim daalt?</strong>
           </p>
           <p className="text-brand-gray-dark mb-4">
-            Effecten op stress zijn meetbaar na 4 weken dagelijkse oefening van 12+ minuten. Werkgeheugen stabiliseert
-            of verbetert binnen deze periode (Mrazek et al., 2013). Verzuimreductie wordt zichtbaar na 3-6 maanden,
-            omdat het tijd kost voordat vroege stressherkenning zich vertaalt in daadwerkelijk gewijzigd verzuimgedrag.
-            De 70% reductie in uitvalrisico blijft behouden bij 6-maands follow-up (De Bruin et al., 2018).
+            Deelnemers merken vaak al tijdens de 6 weken verschil. Verzuimcijfers veranderen langzamer, omdat het tijd
+            kost voordat vroege stressherkenning zich vertaalt in minder uitval. In de Unilever-studie was het aandeel
+            medewerkers met een verhoogd risico op langdurige uitval 6 maanden na de training gedaald van 54,4% naar
+            16,4%{" "}<Bron ids={["debruin-uitval"]} />.
           </p>
 
           <p className="text-brand-gray-dark mb-2">
             <strong>Werkt online training even goed als fysieke workshops?</strong>
           </p>
           <p className="text-brand-gray-dark mb-4">
-            Onderzoek toont geen significant verschil in effectiviteit tussen online en fysieke workshops (Lensen et
-            al., 2024). Het cruciale element is dagelijkse oefening, niet de locatie van de workshop. Online workshops
+            Studies die live online en op locatie vergelijken, vinden vergelijkbare
+            effecten{" "}<Bron ids={["online-even-goed"]} />. Het cruciale element is dagelijkse oefening, niet de locatie van de workshop. Online workshops
             verlagen drempels voor deelname omdat werknemers geen reistijd kwijt zijn. Innerleaps kiest daarom voor
             online workshops om maximale deelname te faciliteren.
           </p>
@@ -377,11 +335,10 @@ const HoeVerlaagIkZiekteverzuim = () => {
             <strong>Wat als werknemers stoppen met oefenen na de training?</strong>
           </p>
           <p className="text-brand-gray-dark mb-4">
-            De 89,8% blijvende deelname bij Innerleaps' aanpak toont dat werknemers gemotiveerd blijven oefenen. Dit
-            komt door de combinatie van geplande oefeningen en integratie in dagelijks leven. Deelnemers ervaren
-            concrete voordelen (minder stress, betere focus, meer controle) wat intrinsieke motivatie creëert. Follow-up
-            data tot 12 maanden tonen dat effecten behouden blijven, wat impliceert dat oefenfrequentie voldoende
-            blijft.
+            In de Unilever-studie wilde 89,8% van de deelnemers die de vraag beantwoordden na afloop blijven
+            oefenen{" "}<Bron ids={["debruin-doorgaan"]} />. De combinatie van geplande oefeningen en oefenen tijdens dagelijkse
+            dingen helpt om het vol te houden. En studies die tot een jaar later opnieuw maten, vonden nog steeds minder
+            stress{" "}<Bron ids={["michaelsen-stress-lange-termijn"]} />.
           </p>
 
           <h2 className="text-2xl font-bold text-brand-purple mt-12 mb-4">
@@ -403,9 +360,8 @@ const HoeVerlaagIkZiekteverzuim = () => {
             maakt hen veerkrachtiger onafhankelijk van externe omstandigheden.
           </p>
           <p className="text-brand-gray-dark mb-4">
-            De data ondersteunen dit verschil. Follow-up metingen tot 12 maanden na interventie tonen dat effecten
-            behouden blijven zonder doorlopende begeleiding (De Vibe et al., 2017; Michaelsen et al., 2023; Lensen et
-            al., 2024). Werknemers hebben nieuwe vaardigheden geïnternaliseerd die onderdeel worden van hun dagelijks
+            Studies die tot een jaar na de training opnieuw maten, vonden nog steeds minder stress, zonder
+            doorlopende begeleiding{" "}<Bron ids={["michaelsen-stress-lange-termijn"]} />. Werknemers hebben nieuwe vaardigheden geïnternaliseerd die onderdeel worden van hun dagelijks
             functioneren. Dit is waar duurzame verzuimreductie vandaan komt.
           </p>
 
@@ -414,13 +370,12 @@ const HoeVerlaagIkZiekteverzuim = () => {
           </h2>
           <p className="text-brand-gray-dark mb-4">
             Ziekteverzuim effectief verlagen vereist een structurele aanpak die onderliggende stress-kwetsbaarheid
-            adresseert. Aandachttraining biedt deze oplossing met wetenschappelijk bewezen effecten:
+            adresseert. Onderzoek naar aandachttraining laat dit zien:
           </p>
           <ul className="list-disc pl-6 mb-4 text-brand-gray-dark">
-            <li>15-21% verzuimreductie door stressregulatie en vroege signaalherkenning</li>
-            <li>70% lager burn-outrisico binnen 6 maanden, effect blijft behouden</li>
-            <li>89,8% blijvende deelname door gestructureerd 6-weeks training</li>
-            <li>ROI van 497-775% in eerste jaar door combinatie van verzuimreductie, retentie en productiviteit</li>
+            <li>Minder stress, ook tot een jaar na de training{" "}<Bron ids={["michaelsen-stress-lange-termijn"]} /></li>
+            <li>Bij Unilever daalde het aandeel met een verhoogd uitvalrisico van 54,4% naar 16,4%{" "}<Bron ids={["debruin-uitval"]} /></li>
+            <li>69% minder ziektedagen in een gerandomiseerde studie bij managers{" "}<Bron ids={["zreda-ziektedagen"]} /></li>
           </ul>
           <p className="text-brand-gray-dark mb-4">
             Innerleaps'{" "}
@@ -428,23 +383,21 @@ const HoeVerlaagIkZiekteverzuim = () => {
               training
             </Link>{" "}
             combineert dagelijkse geplande oefeningen met integratie in het dagelijks leven, ondersteund door wekelijkse
-            workshops van VMBN categorie 1 geaccrediteerde trainers. De methode is gebaseerd op 40 jaar MBSR-onderzoek
-            en erkend door Nederlandse zorgverzekeraars.
+            workshops van VMBN categorie 1 geaccrediteerde trainers. De methode is gebaseerd op 40 jaar MBSR-onderzoek.
           </p>
           <p className="text-brand-gray-dark mb-4">
             Organisaties die verzuim structureel willen verlagen, kunnen starten met:
           </p>
           <ol className="list-decimal pl-6 mb-4 text-brand-gray-dark">
             <li>Verzuimdata analyseren om stress-gerelateerd verzuim te identificeren</li>
-            <li>Business case berekenen op basis van huidige verzuimkosten en verwachte reductie</li>
+            <li>Uitrekenen vanaf wanneer de training zich terugverdient</li>
             <li>Pilotgroep van 15-20 werknemers selecteren voor eerste implementatie</li>
             <li>Resultaten monitoren over 6 maanden om impact te valideren</li>
             <li>Bij positieve resultaten uitbreiden naar bredere populatie</li>
           </ol>
           <p className="text-brand-gray-dark mb-4">
-            Het wetenschappelijk bewijs is helder: systematische training van controlecentrum en waarschuwingssysteem
-            verlaagt verzuim substantieel en duurzaam. De vraag is niet óf het werkt, maar wanneer organisaties deze
-            evidence-based interventie gaan implementeren.
+            Onderzoek naar aandachttraining laat minder stress en minder uitvalrisico zien. De vraag is niet of je
+            preventie serieus neemt, maar wanneer je begint.
           </p>
         </div>
       </article>

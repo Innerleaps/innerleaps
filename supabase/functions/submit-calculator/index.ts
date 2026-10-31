@@ -3,62 +3,45 @@ import { createClient } from "https://esm.sh/@supabase/supabase-js@2.50.2";
 import { Resend } from "npm:resend@2.0.0";
 import { z } from "https://deno.land/x/zod@v3.22.4/mod.ts";
 
+/**
+ * De rekentool: bewaart de aanvraag, mailt de bezoeker zijn omslagpunt en
+ * meldt de lead aan Bas.
+ *
+ * Sinds 29 oktober 2026 een omslagpunt-tool (keuze van Bas). De vorige versie
+ * mailde twee scenario's met een besparing en een ROI, gebouwd op 15 tot 21%
+ * minder verzuim, plus de oude business-case-PDF. Dat cijfer was een eigen
+ * rekensom en is op rood gezet. Zie CLAIMS.md in de repo.
+ *
+ * Let op bij uitrollen: de site stuurt sinds die datum het nieuwe formaat
+ * (numberOfParticipants en het omslagpunt). De oude functie weigert dat, en
+ * dan gaat er geen mail uit, ook niet naar Bas. Rol deze functie dus uit
+ * vóórdat de site live gaat.
+ */
+
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type",
 };
 
-// Validation schema for ROI Calculator
 const SubmissionSchema = z.object({
   name: z.string().trim().min(1).max(100),
   email: z.string().trim().email().max(255),
   phone: z.string().trim().max(20).optional().nullable(),
   company: z.string().trim().min(1).max(200),
-  numberOfEmployees: z.number().int().positive().max(1000000),
+  numberOfParticipants: z.number().int().positive().max(1000000),
   avgGrossAnnualSalary: z.number().positive().max(10000000),
-  currentAbsenteeism: z.number().min(0).max(100),
-  // Personeelsverloop is uit de rekentool gehaald: de retentiebesparing rustte
-  // op de zwakste aanname van de drie. Het veld blijft hier optioneel staan
-  // zodat een oudere versie van de site, of een tabblad dat al open stond,
-  // gewoon blijft werken.
-  employeeTurnover: z.number().min(0).max(100).optional().default(0),
   language: z.enum(["nl", "en"]).optional().default("nl"),
   results: z.object({
-    totaleLoonkosten: z.number(),
-    investment: z.number(),
-    scenarios: z.object({
-      conservative: z.object({
-        verzuimBesparing: z.number(),
-        retentieBesparing: z.number().optional(),
-        productiviteitBesparing: z.number(),
-        totaleBesparing: z.number(),
-        netBesparing: z.number(),
-        roi: z.number(),
-      }),
-      positive: z.object({
-        verzuimBesparing: z.number(),
-        retentieBesparing: z.number().optional(),
-        productiviteitBesparing: z.number(),
-        totaleBesparing: z.number(),
-        netBesparing: z.number(),
-        roi: z.number(),
-      }),
-    }),
+    aantalDeelnemers: z.number(),
+    prijsPerDeelnemer: z.number(),
+    investering: z.number(),
+    loonsom: z.number(),
+    omslagpuntProcent: z.number(),
+    omslagpuntDagen: z.number(),
   }),
 });
 
-interface CalculatorSubmission {
-  name: string;
-  email: string;
-  phone?: string;
-  company: string;
-  numberOfEmployees: number;
-  avgGrossAnnualSalary: number;
-  currentAbsenteeism: number;
-  employeeTurnover?: number;
-  language: "nl" | "en";
-  results: any;
-}
+type CalculatorSubmission = z.infer<typeof SubmissionSchema>;
 
 // In-memory rate limiting store (resets on function restart)
 const rateLimitStore = new Map<string, { count: number; resetTime: number }>();
@@ -106,10 +89,8 @@ function escapeHtml(unsafe: string): string {
     .replace(/'/g, "&#039;");
 }
 
-// Format currency helper (locale-aware)
 function formatCurrency(amount: number, language: "nl" | "en" = "nl"): string {
-  const locale = language === "en" ? "en-US" : "nl-NL";
-  return new Intl.NumberFormat(locale, {
+  return new Intl.NumberFormat(language === "en" ? "en-GB" : "nl-NL", {
     style: "currency",
     currency: "EUR",
     minimumFractionDigits: 0,
@@ -117,68 +98,82 @@ function formatCurrency(amount: number, language: "nl" | "en" = "nl"): string {
   }).format(amount);
 }
 
-// Localized copy for the user-facing confirmation email
+function formatNumber(value: number, decimals: number, language: "nl" | "en" = "nl"): string {
+  return new Intl.NumberFormat(language === "en" ? "en-GB" : "nl-NL", {
+    minimumFractionDigits: 1,
+    maximumFractionDigits: decimals,
+  }).format(value);
+}
+
+// Gemeten bij TheyDo: claim "theydo-productiviteit" in src/content/claims.json.
+// Dit bestand kan het register niet inlezen (de functie wordt los uitgerold),
+// dus verandert het cijfer daar, verander het dan ook hier en in de teksten.
+const THEYDO_PRODUCTIVITEIT = 8.6;
+
+// Hoe vaak het gemeten cijfer in het omslagpunt past, naar beneden afgerond
+// zodat "ruim" altijd klopt. Zelfde som als RoiResultaat.tsx op de site.
+const veelvoud = (omslagpuntProcent: number) =>
+  omslagpuntProcent > 0 ? Math.ceil(THEYDO_PRODUCTIVITEIT / omslagpuntProcent) - 1 : 0;
+
+// De teksten van de mail aan de bezoeker, gelijk aan de bedanktpagina
+// (calculator.json, results). Geen beloofde besparing, geen ROI: het omslagpunt,
+// één gemeten cijfer met bron, en het veelvoud als voorwaarde.
 const EMAIL_COPY = {
   nl: {
     htmlLang: "nl",
-    titleTag: "Jouw Business Case Calculator Resultaten - Innerleaps",
-    headerTitle: (company: string) => `Besparing ${company} met Innerleaps`,
-    headerSub: "Bedankt voor het aanvragen van de calculator",
-    yourOrg: "Jouw organisatie",
-    employees: "Aantal werknemers",
+    titleTag: "Jouw omslagpunt - Innerleaps",
+    headerTitle: (company: string) => `Het omslagpunt voor ${company}`,
+    headerSub: "Bedankt voor het gebruiken van de rekentool.",
+    yourInput: "Jullie invoer",
+    participants: "Aantal deelnemers",
     avgSalary: "Gemiddeld salaris",
-    absenteeism: "Verzuim",
-    conservative: "Conservative Scenario",
-    positive: "Positive Scenario",
-    absenteeismSaving: "Verzuimbesparing",
-    productivityGain: "Productiviteitswinst",
-    totalSaving: "Totale besparing",
     investment: "Investering",
-    netProfit: "Netto winst",
-    roi: "ROI",
-    scientificTitle: "Wetenschappelijk bewezen effecten",
-    scientificIntro:
-      "In de bijlage vind je het wetenschappelijke bewijs voor de besparing op verzuim en de productiviteitswinst",
-    bullet1: "Verzuimbesparing 15-21%",
-    bullet2: "Productiviteitswinst 5-8%",
-    ctaQuestion: "Wil je deze winst realiseren?",
-    ctaButton: "Kennismaken met Bas",
-    subject: (company: string) =>
-      `Ontdek de besparing voor ${company} met de Innerleaps training`,
-    pdfFilename: "Business_Case_Awareness_Interventions.pdf",
+    breakEvenTitle: "Vanaf deze productiviteitstoename is de training een slimme investering",
+    breakEvenDays: (dagen: string) => `Of als elke deelnemer ${dagen} ziektedagen per jaar minder heeft (alleen het doorbetaalde salaris gerekend).`,
+    multiple: (keer: number) => `ruim ${keer}x`,
+    compare: (keer: number) =>
+      `Bij TheyDo rapporteerden deelnemers 8,6%. Merkt jullie team hetzelfde, dan is dat ruim ${keer} keer jullie omslagpunt.`,
+    barYours: "Jullie omslagpunt",
+    barTheydo: "Gemeten bij TheyDo",
+    theydoBreakEven: "Bij TheyDo zelf lag het omslagpunt op 0,36%. Gemeten werd 8,6%: ruim 23 keer zoveel.",
+    footnote: "Bron: zelfgerapporteerd, n=14, deelnemers bij TheyDo, 4 weken na de training (voorjaar 2026).",
+    disclaimer: "Dit is een rekenvoorbeeld, geen belofte. Resultaten verschillen per organisatie.",
+    methodLink: "Zo meten we, en dit zijn de beperkingen",
+    methodUrl: "https://innerleaps.nl/methode",
+    ctaQuestion: "Wil je weten wat dit voor jullie betekent?",
+    ctaButton: "Plan 20 minuten met Bas",
+    contactUrl: "https://innerleaps.nl/contact",
+    subject: (company: string) => `Het omslagpunt voor ${company}`,
   },
   en: {
     htmlLang: "en",
-    titleTag: "Your Business Case Calculator Results - Innerleaps",
-    headerTitle: (company: string) => `Savings for ${company} with Innerleaps`,
-    headerSub: "Thanks for requesting the calculator",
-    yourOrg: "Your organisation",
-    employees: "Number of employees",
+    titleTag: "Your break-even point - Innerleaps",
+    headerTitle: (company: string) => `The break-even point for ${company}`,
+    headerSub: "Thanks for using the calculator.",
+    yourInput: "Your input",
+    participants: "Number of participants",
     avgSalary: "Average salary",
-    absenteeism: "Absenteeism",
-    conservative: "Conservative scenario",
-    positive: "Positive scenario",
-    absenteeismSaving: "Absenteeism saving",
-    productivityGain: "Productivity gain",
-    totalSaving: "Total saving",
     investment: "Investment",
-    netProfit: "Net profit",
-    roi: "ROI",
-    scientificTitle: "Scientifically proven effects",
-    scientificIntro:
-      "In the attachment you'll find the scientific evidence for the saving on absenteeism and the productivity gain",
-    bullet1: "Absenteeism saving 15-21%",
-    bullet2: "Productivity gain 5-8%",
-    ctaQuestion: "Want to realise these gains?",
-    ctaButton: "Meet Bas",
-    subject: (company: string) =>
-      `Discover the savings for ${company} with the Innerleaps training`,
-    pdfFilename: "Business_Case_Awareness_Interventions.pdf",
+    breakEvenTitle: "From this productivity gain, the training is a smart investment",
+    breakEvenDays: (dagen: string) => `Or if each participant has ${dagen} fewer sick days a year (counting only the salary paid during absence).`,
+    multiple: (keer: number) => `over ${keer}x`,
+    compare: (keer: number) =>
+      `At TheyDo, participants reported 8.6%. If your team sees the same, that's more than ${keer} times your break-even point.`,
+    barYours: "Your break-even point",
+    barTheydo: "Measured at TheyDo",
+    theydoBreakEven: "At TheyDo itself, the break-even point was 0.36%. The measured gain was 8.6%: more than 23 times as much.",
+    footnote: "Source: self-reported, n=14, participants at TheyDo, 4 weeks after the training (spring 2026).",
+    disclaimer: "This is an example calculation, not a promise. Results differ per organisation.",
+    methodLink: "How we measure, and the limitations",
+    methodUrl: "https://innerleaps.nl/en/methodology",
+    ctaQuestion: "Want to know what this means for you?",
+    ctaButton: "Book 20 minutes with Bas",
+    contactUrl: "https://innerleaps.nl/en/contact",
+    subject: (company: string) => `The break-even point for ${company}`,
   },
 } as const;
 
 const handler = async (req: Request): Promise<Response> => {
-  // Handle CORS preflight requests
   if (req.method === "OPTIONS") {
     return new Response(null, { headers: corsHeaders });
   }
@@ -191,42 +186,37 @@ const handler = async (req: Request): Promise<Response> => {
 
     const resend = new Resend(Deno.env.get("RESEND_API_KEY"));
 
-    // Parse and validate input
     const rawData = await req.json();
-    
+
     let submission: CalculatorSubmission;
     try {
       submission = SubmissionSchema.parse(rawData);
     } catch (validationError) {
       console.error("Validation error:", validationError);
       return new Response(
-        JSON.stringify({ 
-          success: false, 
-          error: "Invalid input data. Please check your submission and try again." 
+        JSON.stringify({
+          success: false,
+          error: "Invalid input data. Please check your submission and try again.",
         }),
-        {
-          status: 400,
-          headers: { "Content-Type": "application/json", ...corsHeaders },
-        }
+        { status: 400, headers: { "Content-Type": "application/json", ...corsHeaders } }
       );
     }
 
-    // Check rate limit
     const rateLimitCheck = checkRateLimit(submission.email);
     if (!rateLimitCheck.allowed) {
       console.warn(`Rate limit exceeded for email: ${submission.email}`);
       return new Response(
-        JSON.stringify({ 
-          success: false, 
+        JSON.stringify({
+          success: false,
           error: `Te veel aanvragen. Probeer het over ${rateLimitCheck.retryAfter} seconden opnieuw.`,
-          retryAfter: rateLimitCheck.retryAfter
+          retryAfter: rateLimitCheck.retryAfter,
         }),
         {
           status: 429,
-          headers: { 
+          headers: {
             "Content-Type": "application/json",
             "Retry-After": rateLimitCheck.retryAfter?.toString() || "3600",
-            ...corsHeaders 
+            ...corsHeaders,
           },
         }
       );
@@ -246,67 +236,69 @@ const handler = async (req: Request): Promise<Response> => {
     } else if (recentSubmissions && recentSubmissions.length > 0) {
       console.warn(`Duplicate submission attempt from: ${submission.email}`);
       return new Response(
-        JSON.stringify({ 
-          success: false, 
-          error: "U heeft recent al een berekening aangevraagd. Controleer uw e-mail of probeer het later opnieuw." 
+        JSON.stringify({
+          success: false,
+          error: "U heeft recent al een berekening aangevraagd. Controleer uw e-mail of probeer het later opnieuw.",
         }),
-        {
-          status: 409,
-          headers: { "Content-Type": "application/json", ...corsHeaders },
-        }
+        { status: 409, headers: { "Content-Type": "application/json", ...corsHeaders } }
       );
     }
 
-    console.log("Validated calculator submission:", {
+    // Zelfde tabel als voorheen. current_absenteeism is verplicht in de tabel,
+    // maar de rekentool vraagt geen verzuim meer: daarom 0.
+    const { error: dbError } = await supabase.from("calculator_submissions").insert({
+      name: submission.name,
       email: submission.email,
-      company: submission.company
+      phone: submission.phone || null,
+      company: submission.company,
+      number_of_employees: submission.numberOfParticipants,
+      avg_gross_annual_salary: submission.avgGrossAnnualSalary,
+      current_absenteeism: 0,
+      employee_turnover: null,
+      calculation_results: { soort: "omslagpunt", ...submission.results },
     });
-
-    // Store in database
-    const { data, error: dbError } = await supabase
-      .from("calculator_submissions")
-      .insert({
-        name: submission.name,
-        email: submission.email,
-        phone: submission.phone || null,
-        company: submission.company,
-        number_of_employees: submission.numberOfEmployees,
-        avg_gross_annual_salary: submission.avgGrossAnnualSalary,
-        current_absenteeism: submission.currentAbsenteeism,
-        employee_turnover: null,
-        calculation_results: submission.results,
-      })
-      .select()
-      .single();
 
     if (dbError) {
       console.error("Database error:", dbError);
       throw new Error("Er is een fout opgetreden bij het opslaan van uw gegevens. Probeer het later opnieuw.");
     }
 
-    console.log("Successfully stored submission in database:", data);
-
-    // Escape all user-controlled data
     const safeName = escapeHtml(submission.name);
     const safeEmail = escapeHtml(submission.email);
-    const safePhone = submission.phone ? escapeHtml(submission.phone) : 'Niet opgegeven';
+    const safePhone = submission.phone ? escapeHtml(submission.phone) : "Niet opgegeven";
     const safeCompany = escapeHtml(submission.company);
 
-    const results = submission.results;
     const lang = submission.language === "en" ? "en" : "nl";
     const copy = EMAIL_COPY[lang];
-    const fmt = (n: number) => formatCurrency(n, lang);
+    const r = submission.results;
+    const procent = `${formatNumber(r.omslagpuntProcent, 2, lang)}%`;
+    const dagen = formatNumber(r.omslagpuntDagen, 1, lang);
+    const keer = veelvoud(r.omslagpuntProcent);
+    const grootste = Math.max(r.omslagpuntProcent, THEYDO_PRODUCTIVITEIT);
 
-    // PDF attachment URL - Supabase Storage
-    const pdfUrl = "https://bvvzmprtuzdvvosaenbs.supabase.co/storage/v1/object/public/documents/business-case-awareness-interventions.pdf";
+    // Een balk als tabel, want dat is wat Outlook en Gmail allebei goed tonen.
+    // Nooit smaller dan een stipje, anders lijkt het omslagpunt nul.
+    const balk = (label: string, waarde: string, aandeel: number, kleur: string) => {
+      const breedte = Math.max(Math.round(aandeel * 100), 2);
+      return `
+                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin: 0 0 14px 0;">
+                      <tr>
+                        <td style="color: #334155; font-size: 15px; padding: 0 0 6px 0;">${label}</td>
+                        <td align="right" style="color: #2a1250; font-size: 15px; font-weight: 700; padding: 0 0 6px 0;">${waarde}</td>
+                      </tr>
+                      <tr>
+                        <td colspan="2" style="padding: 0;">
+                          <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="background-color: #f1f5f9;">
+                            <tr>
+                              <td width="${breedte}%" style="background-color: ${kleur}; height: 14px; font-size: 0; line-height: 0;">&nbsp;</td>
+                              ${breedte < 100 ? '<td style="font-size: 0; line-height: 0;">&nbsp;</td>' : ""}
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                    </table>`;
+    };
 
-    // Bas profile image URL - Supabase Storage
-    const basImageUrl = "https://bvvzmprtuzdvvosaenbs.supabase.co/storage/v1/object/public/images/bas-profile.png";
-
-    // Calendar redirect URL - innerleaps.nl domain
-    const calendarUrl = "https://innerleaps.nl/calendar";
-
-    // Confirmation email to lead (localized)
     const confirmationEmailHtml = `
       <!DOCTYPE html>
       <html lang="${copy.htmlLang}">
@@ -320,198 +312,60 @@ const handler = async (req: Request): Promise<Response> => {
           <tr>
             <td align="center" style="padding: 20px 0;">
               <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="600" style="max-width: 600px; background-color: #ffffff; border: 1px solid #e2e8f0;">
-
-                <!-- Header -->
                 <tr>
-                  <td style="padding: 30px; text-align: left; border-bottom: 1px solid #e2e8f0;">
-                    <h1 style="margin: 0; color: #1e293b; font-size: 24px; font-weight: 600;">
-                      ${copy.headerTitle(safeCompany)}
-                    </h1>
-                    <p style="margin: 10px 0 0 0; color: #64748b; font-size: 14px;">
-                      ${copy.headerSub}
+                  <td style="padding: 30px; border-bottom: 1px solid #e2e8f0;">
+                    <h1 style="margin: 0; color: #1e293b; font-size: 24px; font-weight: 600;">${copy.headerTitle(safeCompany)}</h1>
+                    <p style="margin: 10px 0 0 0; color: #64748b; font-size: 14px;">${copy.headerSub}</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="padding: 24px 30px;">
+                    <p style="margin: 0 0 8px 0; color: #64748b; font-size: 14px; font-weight: 600;">${copy.yourInput}</p>
+                    <p style="margin: 0; color: #1e293b; font-size: 14px;">
+                      ${copy.participants}: <strong>${r.aantalDeelnemers}</strong><br>
+                      ${copy.avgSalary}: <strong>${formatCurrency(submission.avgGrossAnnualSalary, lang)}</strong><br>
+                      ${copy.investment}: <strong>${formatCurrency(r.investering, lang)}</strong>
                     </p>
                   </td>
                 </tr>
-
-                <!-- Organization summary -->
                 <tr>
-                  <td style="padding: 30px; background-color: #f8fafc;">
-                    <h2 style="margin: 0 0 15px 0; color: #1e293b; font-size: 18px; font-weight: 600;">
-                      ${copy.yourOrg}
-                    </h2>
-                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                  <td style="padding: 0 30px 24px 30px;">
+                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="border: 2px solid #f26b3a;">
                       <tr>
-                        <td style="padding: 5px 0; color: #64748b; font-size: 14px;"><strong>${copy.employees}:</strong></td>
-                        <td style="padding: 5px 0; color: #1e293b; font-size: 14px; font-weight: 600;">${submission.numberOfEmployees}</td>
-                      </tr>
-                      <tr>
-                        <td style="padding: 5px 0; color: #64748b; font-size: 14px;"><strong>${copy.avgSalary}:</strong></td>
-                        <td style="padding: 5px 0; color: #1e293b; font-size: 14px; font-weight: 600;">${fmt(submission.avgGrossAnnualSalary)}</td>
-                      </tr>
-                      <tr>
-                        <td style="padding: 5px 0; color: #64748b; font-size: 14px;"><strong>${copy.absenteeism}:</strong></td>
-                        <td style="padding: 5px 0; color: #1e293b; font-size: 14px; font-weight: 600;">${submission.currentAbsenteeism}%</td>
+                        <td style="padding: 24px;">
+                          <p style="margin: 0; color: #1e293b; font-size: 18px; font-weight: 700; line-height: 1.35;">${copy.breakEvenTitle}</p>
+                          <p style="margin: 10px 0 0 0; color: #2a1250; font-size: 48px; font-weight: 700; line-height: 1.1;">${procent}</p>
+                          <p style="margin: 12px 0 0 0; color: #334155; font-size: 15px;">${copy.breakEvenDays(dagen)}</p>
+                          <div style="border-top: 1px solid #e2e8f0; margin: 24px 0;"></div>
+                          ${keer >= 2 ? `
+                          <p style="margin: 0; color: #f26b3a; font-size: 48px; font-weight: 700; line-height: 1.1;">${copy.multiple(keer)}</p>
+                          <p style="margin: 12px 0 24px 0; color: #1e293b; font-size: 17px; line-height: 1.5;">${copy.compare(keer)}</p>` : ""}
+                          ${balk(copy.barYours, procent, r.omslagpuntProcent / grootste, "#94a3b8")}
+                          ${balk(copy.barTheydo, `${formatNumber(THEYDO_PRODUCTIVITEIT, 1, lang)}%`, THEYDO_PRODUCTIVITEIT / grootste, "#f26b3a")}
+                          <p style="margin: 10px 0 0 0; color: #475569; font-size: 15px; line-height: 1.5;">${copy.theydoBreakEven}</p>
+                        </td>
                       </tr>
                     </table>
                   </td>
                 </tr>
-
-                <!-- Conservative Scenario -->
                 <tr>
-                  <td style="padding: 30px;">
-                    <div style="border-left: 4px solid #3b82f6; padding-left: 20px; margin-bottom: 30px;">
-                      <h2 style="margin: 0 0 15px 0; color: #1e293b; font-size: 18px; font-weight: 600;">
-                        ${copy.conservative}
-                      </h2>
-
-                      <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="font-size: 14px;">
-                        <tr>
-                          <td style="padding: 5px 0; color: #64748b;">${copy.absenteeismSaving} (15%):</td>
-                          <td style="padding: 5px 0; color: #059669; font-weight: 600; text-align: right;">${fmt(results.scenarios.conservative.verzuimBesparing)}</td>
-                        </tr>
-                        <tr>
-                        </tr>
-                        <tr>
-                          <td style="padding: 5px 0; color: #64748b;">${copy.productivityGain} (5%):</td>
-                          <td style="padding: 5px 0; color: #059669; font-weight: 600; text-align: right;">${fmt(results.scenarios.conservative.productiviteitBesparing)}</td>
-                        </tr>
-                        <tr>
-                          <td colspan="2" style="padding: 10px 0; border-top: 1px solid #e5e7eb;"></td>
-                        </tr>
-                        <tr>
-                          <td style="padding: 5px 0; color: #1e293b; font-weight: 600;">${copy.totalSaving}:</td>
-                          <td style="padding: 5px 0; color: #059669; font-weight: 700; text-align: right;">${fmt(results.scenarios.conservative.totaleBesparing)}</td>
-                        </tr>
-                        <tr>
-                          <td style="padding: 5px 0; color: #64748b;">${copy.investment}:</td>
-                          <td style="padding: 5px 0; color: #dc2626; font-weight: 600; text-align: right;">-${fmt(results.investment)}</td>
-                        </tr>
-                        <tr>
-                          <td colspan="2" style="padding: 10px 0; border-top: 1px solid #e5e7eb;"></td>
-                        </tr>
-                        <tr>
-                          <td style="padding: 5px 0; color: #1e293b; font-weight: 700; font-size: 16px;">${copy.netProfit}:</td>
-                          <td style="padding: 5px 0; color: #059669; font-weight: 700; font-size: 18px; text-align: right;">${fmt(results.scenarios.conservative.netBesparing)}</td>
-                        </tr>
-                        <tr>
-                          <td style="padding: 5px 0; color: #1e293b; font-weight: 700;">${copy.roi}:</td>
-                          <td style="padding: 5px 0; color: #2563eb; font-weight: 700; font-size: 16px; text-align: right;">${Math.round(results.scenarios.conservative.roi)}%</td>
-                        </tr>
-                      </table>
-                    </div>
+                  <td style="padding: 0 30px 24px 30px;">
+                    <p style="margin: 0; color: #64748b; font-size: 13px;">${copy.footnote}</p>
+                    <p style="margin: 8px 0 0 0; color: #64748b; font-size: 13px;">${copy.disclaimer}
+                      <a href="${copy.methodUrl}" style="color: #2563eb;">${copy.methodLink}</a></p>
                   </td>
                 </tr>
-
-                <!-- Positive Scenario -->
                 <tr>
                   <td style="padding: 0 30px 30px 30px;">
-                    <div style="border-left: 4px solid #10b981; padding-left: 20px;">
-                      <h2 style="margin: 0 0 15px 0; color: #1e293b; font-size: 18px; font-weight: 600;">
-                        ${copy.positive}
-                      </h2>
-
-                      <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="font-size: 14px;">
-                        <tr>
-                          <td style="padding: 5px 0; color: #64748b;">${copy.absenteeismSaving} (21%):</td>
-                          <td style="padding: 5px 0; color: #059669; font-weight: 600; text-align: right;">${fmt(results.scenarios.positive.verzuimBesparing)}</td>
-                        </tr>
-                        <tr>
-                        </tr>
-                        <tr>
-                          <td style="padding: 5px 0; color: #64748b;">${copy.productivityGain} (8%):</td>
-                          <td style="padding: 5px 0; color: #059669; font-weight: 600; text-align: right;">${fmt(results.scenarios.positive.productiviteitBesparing)}</td>
-                        </tr>
-                        <tr>
-                          <td colspan="2" style="padding: 10px 0; border-top: 1px solid #e5e7eb;"></td>
-                        </tr>
-                        <tr>
-                          <td style="padding: 5px 0; color: #1e293b; font-weight: 600;">${copy.totalSaving}:</td>
-                          <td style="padding: 5px 0; color: #059669; font-weight: 700; text-align: right;">${fmt(results.scenarios.positive.totaleBesparing)}</td>
-                        </tr>
-                        <tr>
-                          <td style="padding: 5px 0; color: #64748b;">${copy.investment}:</td>
-                          <td style="padding: 5px 0; color: #dc2626; font-weight: 600; text-align: right;">-${fmt(results.investment)}</td>
-                        </tr>
-                        <tr>
-                          <td colspan="2" style="padding: 10px 0; border-top: 1px solid #e5e7eb;"></td>
-                        </tr>
-                        <tr>
-                          <td style="padding: 5px 0; color: #1e293b; font-weight: 700; font-size: 16px;">${copy.netProfit}:</td>
-                          <td style="padding: 5px 0; color: #059669; font-weight: 700; font-size: 18px; text-align: right;">${fmt(results.scenarios.positive.netBesparing)}</td>
-                        </tr>
-                        <tr>
-                          <td style="padding: 5px 0; color: #1e293b; font-weight: 700;">${copy.roi}:</td>
-                          <td style="padding: 5px 0; color: #2563eb; font-weight: 700; font-size: 16px; text-align: right;">${Math.round(results.scenarios.positive.roi)}%</td>
-                        </tr>
-                      </table>
-                    </div>
+                    <p style="margin: 0 0 12px 0; color: #1e293b; font-size: 16px; font-weight: 600;">${copy.ctaQuestion}</p>
+                    <a href="${copy.contactUrl}" style="display: inline-block; padding: 12px 24px; background-color: #f97316; color: #ffffff; text-decoration: none; border-radius: 6px; font-weight: 600;">${copy.ctaButton}</a>
                   </td>
                 </tr>
-
-                <!-- Scientific basis -->
-                <tr>
-                  <td style="padding: 20px 30px; background-color: #eff6ff; border-top: 1px solid #bfdbfe;">
-                    <h3 style="margin: 0 0 10px 0; color: #1e40af; font-size: 16px; font-weight: 600;">
-                      ${copy.scientificTitle}
-                    </h3>
-                    <p style="margin: 0 0 15px 0; color: #1e40af; font-size: 14px; line-height: 1.5;">
-                      ${copy.scientificIntro}
-                    </p>
-                    <ul style="margin: 0; padding-left: 20px; color: #1e40af; font-size: 14px; list-style: none;">
-                      <li style="margin: 5px 0;">✓ ${copy.bullet1}</li>
-                      <li style="margin: 5px 0;">✓ ${copy.bullet2}</li>
-                    </ul>
-                  </td>
-                </tr>
-
-                <!-- CTA -->
-                <tr>
-                  <td style="padding: 30px; text-align: center; background-color: #f8fafc;">
-                    <p style="margin: 0 0 20px 0; color: #1e293b; font-size: 18px; font-weight: 600;">
-                      ${copy.ctaQuestion}
-                    </p>
-                    <a href="${calendarUrl}"
-                       style="display: inline-block; padding: 16px 32px; background-color: #FF6B35; color: #ffffff; text-decoration: none; border-radius: 8px; font-weight: 600; font-size: 16px;">
-                      ${copy.ctaButton}
-                    </a>
-                  </td>
-                </tr>
-
-                <!-- Contact Section -->
-                <tr>
-                  <td style="padding: 20px 30px; border-top: 1px solid #e2e8f0;">
-                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
-                      <tr>
-                        <td style="padding-right: 15px; vertical-align: top;">
-                          <img src="${basImageUrl}"
-                               alt="Bas Ter Haar Romenij"
-                               style="width: 50px; height: 50px; border-radius: 50%; object-fit: cover; display: block;">
-                        </td>
-                        <td style="vertical-align: top;">
-                          <p style="margin: 0; font-weight: 600; color: #1e293b; font-size: 14px;">
-                            Bas Ter Haar Romenij
-                          </p>
-                          <p style="margin: 2px 0; color: #64748b; font-size: 13px;">
-                            Innerleaps
-                          </p>
-                          <p style="margin: 5px 0 0 0; font-size: 13px;">
-                            <a href="mailto:bas@innerleaps.nl" style="color: #2563eb; text-decoration: none;">bas@innerleaps.nl</a>
-                            <span style="color: #64748b;"> | </span>
-                            <a href="tel:+31623453477" style="color: #2563eb; text-decoration: none;">+31 6 23453477</a>
-                          </p>
-                        </td>
-                      </tr>
-                    </table>
-                  </td>
-                </tr>
-
-                <!-- Footer -->
                 <tr>
                   <td style="padding: 15px 30px; text-align: center; font-size: 12px; color: #64748b; border-top: 1px solid #e2e8f0;">
                     Innerleaps - ${new Date().getFullYear()}
                   </td>
                 </tr>
-
               </table>
             </td>
           </tr>
@@ -520,95 +374,42 @@ const handler = async (req: Request): Promise<Response> => {
       </html>
     `;
 
-    // Admin notification email
     const notificationEmailHtml = `
       <!DOCTYPE html>
       <html lang="nl">
-      <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Nieuwe Calculator Aanvraag</title>
-      </head>
-      <body style="margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333333; background-color: #f8f9fa;">
-        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="background-color: #f8f9fa;">
-          <tr>
-            <td align="center" style="padding: 20px 0;">
-              <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="600" style="max-width: 600px; background-color: #ffffff; border-radius: 8px;">
-                
-                <tr>
-                  <td style="padding: 30px;">
-                    <h2 style="margin: 0 0 20px 0; color: #1e293b; font-size: 22px;">Nieuwe Calculator Aanvraag - ${safeCompany}</h2>
-                    
-                    <h3 style="margin: 20px 0 10px 0; color: #374151; font-size: 16px;">Contactgegevens:</h3>
-                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin-bottom: 20px;">
-                      <tr><td style="padding: 5px 0; border-bottom: 1px solid #f3f4f6;"><strong>Naam:</strong> ${safeName}</td></tr>
-                      <tr><td style="padding: 5px 0; border-bottom: 1px solid #f3f4f6;"><strong>E-mail:</strong> <a href="mailto:${safeEmail}">${safeEmail}</a></td></tr>
-                      <tr><td style="padding: 5px 0; border-bottom: 1px solid #f3f4f6;"><strong>Telefoon:</strong> <a href="tel:${safePhone}">${safePhone}</a></td></tr>
-                      <tr><td style="padding: 5px 0;"><strong>Bedrijf:</strong> ${safeCompany}</td></tr>
-                    </table>
-                    
-                    <h3 style="margin: 20px 0 10px 0; color: #374151; font-size: 16px;">Bedrijfsgegevens:</h3>
-                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin-bottom: 20px;">
-                      <tr><td style="padding: 5px 0; border-bottom: 1px solid #f3f4f6;"><strong>Aantal werknemers:</strong> ${submission.numberOfEmployees}</td></tr>
-                      <tr><td style="padding: 5px 0; border-bottom: 1px solid #f3f4f6;"><strong>Gemiddeld salaris:</strong> ${formatCurrency(submission.avgGrossAnnualSalary)}</td></tr>
-                      <tr><td style="padding: 5px 0; border-bottom: 1px solid #f3f4f6;"><strong>Verzuimpercentage:</strong> ${submission.currentAbsenteeism}%</td></tr>
-                    </table>
-                    
-                    <h3 style="margin: 20px 0 10px 0; color: #374151; font-size: 16px;">Berekende Resultaten:</h3>
-                    
-                    <div style="background-color: #f8fafc; padding: 15px; margin-bottom: 15px; border-left: 4px solid #3b82f6;">
-                      <h4 style="margin: 0 0 10px 0; color: #1e293b;">Conservative Scenario:</h4>
-                      <p style="margin: 5px 0;"><strong>Netto winst:</strong> ${formatCurrency(results.scenarios.conservative.netBesparing)}</p>
-                      <p style="margin: 5px 0;"><strong>ROI:</strong> ${Math.round(results.scenarios.conservative.roi)}%</p>
-                    </div>
-                    
-                    <div style="background-color: #f0fdf4; padding: 15px; margin-bottom: 20px; border-left: 4px solid #10b981;">
-                      <h4 style="margin: 0 0 10px 0; color: #1e293b;">Positive Scenario:</h4>
-                      <p style="margin: 5px 0;"><strong>Netto winst:</strong> ${formatCurrency(results.scenarios.positive.netBesparing)}</p>
-                      <p style="margin: 5px 0;"><strong>ROI:</strong> ${Math.round(results.scenarios.positive.roi)}%</p>
-                    </div>
-                    
-                    <h3 style="margin: 20px 0 10px 0; color: #374151; font-size: 16px;">Acties:</h3>
-                    <p style="margin: 10px 0;">
-                      <a href="mailto:${safeEmail}" style="display: inline-block; padding: 10px 20px; background-color: #2563eb; color: #ffffff; text-decoration: none; border-radius: 6px; margin-right: 10px;">Email versturen</a>
-                      <a href="tel:${safePhone}" style="display: inline-block; padding: 10px 20px; background-color: #10b981; color: #ffffff; text-decoration: none; border-radius: 6px;">Bellen</a>
-                    </p>
-                    
-                    <p style="margin: 20px 0 0 0; font-size: 12px; color: #64748b;">
-                      Ingediend op: ${new Date().toLocaleString('nl-NL')}
-                    </p>
-                  </td>
-                </tr>
-                
-              </table>
-            </td>
-          </tr>
-        </table>
+      <head><meta charset="UTF-8"><title>Nieuwe rekentool-aanvraag</title></head>
+      <body style="margin: 0; padding: 20px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333333;">
+        <h2 style="margin: 0 0 16px 0; color: #1e293b;">Nieuwe rekentool-aanvraag - ${safeCompany}</h2>
+        <p style="margin: 0 0 16px 0;">
+          <strong>Naam:</strong> ${safeName}<br>
+          <strong>E-mail:</strong> <a href="mailto:${safeEmail}">${safeEmail}</a><br>
+          <strong>Telefoon:</strong> ${safePhone}<br>
+          <strong>Organisatie:</strong> ${safeCompany}<br>
+          <strong>Taal:</strong> ${lang}
+        </p>
+        <p style="margin: 0 0 16px 0;">
+          <strong>Deelnemers:</strong> ${r.aantalDeelnemers}<br>
+          <strong>Gemiddeld salaris:</strong> ${formatCurrency(submission.avgGrossAnnualSalary)}<br>
+          <strong>Investering:</strong> ${formatCurrency(r.investering)}<br>
+          <strong>Omslagpunt:</strong> ${formatNumber(r.omslagpuntProcent, 2)}% productiviteit, of ${formatNumber(r.omslagpuntDagen, 1)} ziektedagen per deelnemer per jaar
+        </p>
+        <a href="mailto:${safeEmail}" style="display: inline-block; padding: 10px 20px; background-color: #2563eb; color: #ffffff; text-decoration: none; border-radius: 6px;">Mail terug</a>
       </body>
       </html>
     `;
 
-    // Send emails
     try {
-      // Send confirmation email to lead with PDF attachment
       await resend.emails.send({
         from: "InnerLeaps <info@innerleaps.nl>",
         to: submission.email,
         subject: copy.subject(submission.company),
         html: confirmationEmailHtml,
-        attachments: [
-          {
-            filename: copy.pdfFilename,
-            path: pdfUrl,
-          }
-        ]
       });
 
-      // Send notification email to admin (no PDF attachment)
       await resend.emails.send({
         from: "InnerLeaps <info@innerleaps.nl>",
         to: "bas@innerleaps.nl",
-        subject: `Nieuwe Calculator Aanvraag - ${submission.company}`,
+        subject: `Nieuwe rekentool-aanvraag - ${submission.company}`,
         html: notificationEmailHtml,
       });
 
@@ -618,28 +419,15 @@ const handler = async (req: Request): Promise<Response> => {
       // Don't fail the request if emails fail
     }
 
-    return new Response(
-      JSON.stringify({ 
-        success: true,
-        message: "Berekening succesvol verzonden"
-      }),
-      {
-        status: 200,
-        headers: { "Content-Type": "application/json", ...corsHeaders },
-      }
-    );
-
+    return new Response(JSON.stringify({ success: true, message: "Berekening succesvol verzonden" }), {
+      status: 200,
+      headers: { "Content-Type": "application/json", ...corsHeaders },
+    });
   } catch (error) {
     console.error("Error in calculator submission:", error);
     return new Response(
-      JSON.stringify({ 
-        success: false, 
-        error: "Er is een fout opgetreden. Probeer het later opnieuw." 
-      }),
-      {
-        status: 500,
-        headers: { "Content-Type": "application/json", ...corsHeaders },
-      }
+      JSON.stringify({ success: false, error: "Er is een fout opgetreden. Probeer het later opnieuw." }),
+      { status: 500, headers: { "Content-Type": "application/json", ...corsHeaders } }
     );
   }
 };

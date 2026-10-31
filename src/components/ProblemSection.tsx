@@ -1,6 +1,6 @@
 import { memo } from "react";
 import { Trans, useTranslation } from "react-i18next";
-import { TekstMetSter } from "@/components/Voetnoten";
+import { TekstMetBron } from "@/components/Bron";
 import { ArrowDown, Mic, Presentation, Smartphone } from "lucide-react";
 
 const CARDS = [
@@ -41,7 +41,7 @@ const ProblemSection = memo(() => {
                 <p className="text-xl leading-relaxed text-brand-gray-dark">
                   {t(`problem.cards.${key}.lead`)}{" "}
                   {/* Alleen de app-kaart noemt een cijfer, uit onderzoek. */}
-                  <TekstMetSter tekst={t(`problem.cards.${key}.fade`)} ids={key === "app" ? ["app-gebruik"] : []} />
+                  <TekstMetBron tekst={t(`problem.cards.${key}.fade`)} ids={key === "app" ? ["app-gebruik"] : []} />
                 </p>
               </div>
             ))}

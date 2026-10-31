@@ -13,7 +13,7 @@
  * doelgroep een eigen conversieactie en een eigen remarketinglijst.
  */
 
-import type { ROIResults } from "@/utils/calculationEngine";
+import type { OmslagpuntResultaat } from "@/utils/calculationEngine";
 import type { SupportedLanguage } from "@/i18n/config";
 
 export type Doelgroep = "hr" | "management" | "onbekend";
@@ -76,11 +76,10 @@ export interface RoiOverdracht {
   /** Uniek per invulling. Voorkomt dat een verversing dubbel telt. */
   id: string;
   doelgroep: Doelgroep;
-  resultaten: ROIResults;
+  resultaten: OmslagpuntResultaat;
   invoer: {
-    aantalWerknemers: string;
+    aantalDeelnemers: string;
     brutoJaarsalaris: string;
-    verzuimPercentage: string;
   };
   /** Gehasht, nooit het adres zelf. Voor Enhanced Conversions. */
   emailHash: string | null;
@@ -116,7 +115,8 @@ export const leesRoiOverdracht = (): RoiOverdracht | null => {
     const rauw = sessionStorage.getItem(ROI_SLEUTEL);
     if (!rauw) return null;
     const gelezen = JSON.parse(rauw) as RoiOverdracht;
-    if (!gelezen?.resultaten?.scenarios?.conservative) return null;
+    // Een berekening van de oude rekentool (met scenario's) negeren we.
+    if (typeof gelezen?.resultaten?.omslagpuntProcent !== "number") return null;
     return gelezen;
   } catch {
     return null;

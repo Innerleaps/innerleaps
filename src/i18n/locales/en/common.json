@@ -35,8 +35,8 @@
     "freeMasterclassShort": "Masterclass",
     "registerTrainingLong": "Register for training",
     "registerTrainingShort": "Register",
-    "calculateSavings": "Calculate your impact",
-    "calculateRoi": "Calculate your ROI",
+    "calculateSavings": "See when it pays for itself",
+    "calculateRoi": "When does it pay for itself?",
     "bookCallWithBas": "Book 20 minutes with Bas",
     "requestQuote": "Request a quote"
   },
@@ -86,20 +86,20 @@
     "whyChooseUs": "Why organisations choose us",
     "stats": {
       "dropoutRisk": "Drop-out risk",
-      "absenteeism": "Sick leave",
-      "focus": "Focus & concentration",
+      "absenteeism": "Sick days",
+      "focus": "Errors on concentration tasks",
       "science": "Science",
       "scienceValue": "40+ years",
       "productivity": "Productivity"
     },
     "googleReviews": "Google Reviews",
-    "calculatorLink": "What does absenteeism cost you?",
+    "calculatorLink": "When does it pay for itself?",
     "caseLink": "See how TheyDo did it",
     "proofRating": "4.7/5",
     "proofSuffix": "on Google Reviews",
     "photoAlt": "Participants listening during an Innerleaps session",
     "quote": "Innerleaps delivered measurable results fast: 8.6% higher productivity, and 7 in 10 participants felt less stress.",
-    "trustedBy": "Trusted by"
+    "trustedBy": "Our trainers have trained teams at"
   },
   "problem": {
     "title": "One good afternoon doesn't change how people handle pressure",
@@ -118,7 +118,7 @@
       "app": {
         "title": "An app subscription",
         "lead": "Licences issued to everyone.",
-        "fade": "After a month, fewer than 4%* still use it."
+        "fade": "After a month, fewer than 4% still use it <bron></bron>."
       }
     },
     "closingLine": "So we started from <0>the format</0>, not the content."
@@ -172,7 +172,7 @@
       "format": {
         "title": "Little time, lasting effect",
         "stat": "1 hr / week + 15 min / day",
-        "body": "We took a proven method and made it fit the working week, so organisations can roll it out and people keep the results.",
+        "body": "We took a method that has been researched for 40 years and made it fit the working week, so organisations can roll it out and people keep the results.",
         "proofLabel": "What that means",
         "pills": {
           "liveHour": "1 live hour a week",
@@ -183,7 +183,7 @@
       "research": {
         "title": "Scientific research",
         "stat": "40+ years",
-        "body": "Built on MBSR, one of the most thoroughly researched stress management methods in the world, with proven lasting behaviour change.",
+        "body": "Built on MBSR, one of the most thoroughly researched stress management methods in the world.",
         "proofLabel": "Researched at"
       },
       "trainers": {
@@ -301,7 +301,7 @@
   "seo": {
     "landing": {
       "title": "Focus and productivity for scale-up teams | Innerleaps",
-      "description": "Attention training for scale-up teams: more focus and higher productivity, without longer days. 6 weeks, one live hour a week and 15 minutes a day."
+      "description": "Attention training for scale-ups that helps your team focus, without longer days. 6 weeks, one live hour a week and 15 minutes a day."
     },
     "blog": {
       "title": "Blog on absenteeism, stress and attention training | Innerleaps",
@@ -351,7 +351,7 @@
     "eigen": "{{methode}}, n={{n}}, {{naam}}, {{periode}}",
     "extern": "{{studie}}",
     "geenBron": "[source missing]",
-    "bronnen": "Sources",
+    "gemetenBij": "measured at {{naam}}",
     "sterLabel": "Source",
     "onderzoeksnoot": "Research figures were not measured in Innerleaps participants.",
     "slot": "Results differ per organisation.",

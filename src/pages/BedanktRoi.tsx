@@ -86,35 +86,28 @@ const BedanktRoi = ({ doelgroep }: BedanktRoiProps) => {
     meldRoiLead({
       id: overdracht.id,
       doelgroep: overdracht.doelgroep,
-      besparingVoorzichtig: overdracht.resultaten.scenarios.conservative.netBesparing,
-      besparingPositief: overdracht.resultaten.scenarios.positive.netBesparing,
-      aantalWerknemers: parseInt(overdracht.invoer.aantalWerknemers, 10) || 0,
+      omslagpuntProcent: overdracht.resultaten.omslagpuntProcent,
+      investering: overdracht.resultaten.investering,
+      aantalDeelnemers: overdracht.resultaten.aantalDeelnemers,
       emailHash: overdracht.emailHash,
     });
   }, [overdracht]);
 
-  const besparing = overdracht?.resultaten.scenarios.conservative.netBesparing ?? 0;
-
   /**
-   * Het bedrag komt uit het voorzichtige scenario, niet uit het positieve.
-   * "Bespaar ten minste" is dan een ondergrens die je waarmaakt, en twee regels
-   * lager ziet de bezoeker dat er meer in kan zitten. Andersom zou het eerste
-   * getal onder de kop lager zijn dan de kop zelf, en dat leest als terugkrabbelen.
-   *
-   * Bij nul of minder valt hij terug op de kop zonder bedrag. Dat kan alleen bij
-   * onzinnige invoer, maar "Bespaar ten minste € -2.000" wil je nooit zien.
+   * De kop noemt het omslagpunt: vanaf hoeveel procent meer productiviteit de
+   * training zich terugverdient. Geen beloofde besparing meer, zie CLAIMS.md.
+   * Zonder geldige berekening valt hij terug op de kop zonder getal.
    */
-  const heeftBerekening = Boolean(overdracht) && besparing > 0;
+  const omslagpunt = overdracht?.resultaten.omslagpuntProcent ?? 0;
+  const heeftBerekening = Boolean(overdracht) && Number.isFinite(omslagpunt) && omslagpunt > 0;
 
-  const bedrag = useMemo(
+  const procent = useMemo(
     () =>
-      new Intl.NumberFormat(taal === "en" ? "en-GB" : "nl-NL", {
-        style: "currency",
-        currency: "EUR",
-        minimumFractionDigits: 0,
-        maximumFractionDigits: 0,
-      }).format(besparing),
-    [besparing, taal],
+      `${new Intl.NumberFormat(taal === "en" ? "en-GB" : "nl-NL", {
+        minimumFractionDigits: 1,
+        maximumFractionDigits: 2,
+      }).format(omslagpunt)}%`,
+    [omslagpunt, taal],
   );
 
   return (
@@ -138,7 +131,7 @@ const BedanktRoi = ({ doelgroep }: BedanktRoiProps) => {
                   na te bouwen. */}
               <h1 className="text-3xl font-bold leading-tight text-brand-purple md:text-4xl lg:text-5xl">
                 {heeftBerekening ? (
-                  <Kop sleutel="roi.title" t={t} waarden={{ bedrag }} />
+                  <Kop sleutel="roi.title" t={t} waarden={{ procent }} />
                 ) : (
                   <Kop sleutel="roi.titleZonderBerekening" t={t} />
                 )}

@@ -26,6 +26,11 @@ interface ExterneBron {
   jaar: number | string;
   studyType: Tekst;
   sourceUrl: string | null;
+  /**
+   * Wat er zichtbaar bij het cijfer staat, als auteur en jaar niet passen. Zoals
+   * bij drie overzichtsstudies samen: "Vonderlin, 2020; De Vibe, 2017; ...".
+   */
+  kortLabel?: Tekst;
 }
 
 interface GeenBron {
@@ -40,8 +45,6 @@ interface Claim {
   soort: "A" | "B" | "C" | "F";
   bron?: string;
   waarde?: Tekst;
-  /** Hoe het cijfer in het bronnenblok heet, als dat anders is dan de waarde. */
-  kort?: Tekst;
   status: "online" | "placeholder" | "keuze" | "rood";
 }
 
@@ -69,12 +72,6 @@ export const claimWaarde = (id: ClaimId, taal: Taal): string => {
   const waarde = haalClaim(id).waarde?.[taal];
   if (!waarde) throw new Error(`Claim "${id}" heeft geen waarde voor "${taal}"`);
   return waarde;
-};
-
-/** Hoe het cijfer in het bronnenblok onderaan de pagina heet. */
-export const claimKort = (id: ClaimId, taal: Taal): string => {
-  const claim = haalClaim(id);
-  return claim.kort?.[taal] ?? claim.waarde?.[taal] ?? "";
 };
 
 /** Het cijfer als getal, voor de lengte van een balkje: "68%" wordt 68. */
@@ -132,6 +129,24 @@ export const bronregel = (id: ClaimId, taal: Taal, t: TFunction): Bronregel => {
   }
 
   return { bronId, tekst: t("claims.geenBron") };
+};
+
+/**
+ * De bron zoals hij zichtbaar bij het cijfer staat (keuze van Bas, 31-10-2026).
+ *
+ * Eigen meting:   "gemeten bij TheyDo"
+ * Externe studie: "(De Bruin, 2018)", auteur zonder "e.a." en het jaar.
+ *
+ * Wie hierover beweegt of erop tikt, ziet de hele bronregel (zie Bron.tsx).
+ */
+export const bronLabel = (id: ClaimId, taal: Taal, t: TFunction): string => {
+  const bron = haalBron(id);
+  if (bron?.type === "own") return t("claims.gemetenBij", { naam: bron.naam });
+  if (bron?.type === "external") {
+    const kort = bron.kortLabel?.[taal] ?? `${bron.auteur[taal].replace(/ (e\.a\.|et al\.)$/, "")}, ${bron.jaar}`;
+    return `(${kort})`;
+  }
+  return t("claims.geenBron");
 };
 
 export const methodePad = (taal: Taal): string => register.methodePagina[taal];
@@ -208,5 +223,5 @@ export const studies = (taal: Taal): Studie[] =>
       : [],
   );
 
-/** Haalt de sterretjes uit een tekst, voor plekken zonder opmaak (structured data). */
-export const zonderSter = (tekst: string) => tekst.replace(/\*/g, "");
+/** Haalt de bronmarkering uit een tekst, voor plekken zonder opmaak (structured data). */
+export const zonderBron = (tekst: string) => tekst.replace(/<\/?bron[^>]*>/g, "");

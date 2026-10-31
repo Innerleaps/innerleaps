@@ -8,7 +8,7 @@
       "badge": "Duurzame inzetbaarheid in de publieke sector",
       "title": "Vitaliteitstraining die je mensen <0>grip</0> geeft op werkdruk",
       "subtitle": "Voor teams die wel willen, maar geen tijd hebben. Met onze aandachttraining van 6 weken voelen je mensen spanning op tijd, voordat stress opstapelt en leidt tot verzuim.",
-      "cta": "Bereken wat het jullie oplevert",
+      "cta": "Reken uit wanneer het zich terugverdient",
       "imageAlt": "Trainer van Innerleaps geeft een sessie aan een groep medewerkers",
       "photoQuote": "De beste feedback is als je er niet om vraagt. Een collega zei ineens in een videocall: ik sliep heel slecht, en nu slaap ik als een roosje."
     },
@@ -34,7 +34,7 @@
       ]
     },
     "results": {
-      "title": "Minder <0>verzuim</0> door op tijd bij te sturen",
+      "title": "Op tijd bijsturen helpt <0>verzuim</0> voorkomen",
       "subtitle": "Resultaten uit onderzoek naar aandachttraining.",
       "items": [
         {
@@ -55,7 +55,7 @@
         },
         {
           "icon": "Shield",
-          "title": "Minder risico op uitval",
+          "title": "Minder risico op uitval <bron></bron>",
           "bullets": [
             "Stressklachten worden opgemerkt voordat iemand uitvalt.",
             "Door minder uitval is er ook minder druk op collega's."
@@ -168,7 +168,7 @@
       "items": [
         {
           "q": "We hebben al veel geprobeerd. Wat is hier anders?",
-          "a": "Bij ons doet 20 tot 40%* van wie de masterclass volgt daarna ook echt mee aan de training. Dat komt door de voorbereiding. Daar steken we veel werk in, want de impact ontstaat pas als mensen meedoen.\n\nWe leggen de tijden vooraf vast met de leidinggevenden, zodat de training in de werkweek past. Je mensen leren het programma eerst kennen, live of in hun eigen tijd. En wij leveren de teksten aan, zodat de uitnodiging uit jullie eigen organisatie komt."
+          "a": "<bron>Bij TheyDo</bron> deed 42% van wie de masterclass volgde daarna ook echt mee aan de training. Dat komt door de voorbereiding. Daar steken we veel werk in, want de impact ontstaat pas als mensen meedoen.\n\nWe leggen de tijden vooraf vast met de leidinggevenden, zodat de training in de werkweek past. Je mensen leren het programma eerst kennen, live of in hun eigen tijd. En wij leveren de teksten aan, zodat de uitnodiging uit jullie eigen organisatie komt."
         },
         {
           "q": "Leg je het probleem zo niet bij de medewerker?",
@@ -184,7 +184,7 @@
         },
         {
           "q": "Hoe past dit in een volle werkweek?",
-          "a": "Het programma vraagt één uur per week, zes weken lang, plus een kwartier oefenen per dag. De tijden leggen we vooraf vast met de leidinggevenden. En we beginnen niet in de drukste periode van jullie jaar.\n\nOnline en op locatie kan allebei, per groep te kiezen. Onderzoek laat zien dat online net zo goed werkt als op locatie*."
+          "a": "Het programma vraagt één uur per week, zes weken lang, plus een kwartier oefenen per dag. De tijden leggen we vooraf vast met de leidinggevenden. En we beginnen niet in de drukste periode van jullie jaar.\n\nOnline en op locatie kan allebei, per groep te kiezen. Studies die live online en op locatie vergelijken, vinden vergelijkbare effecten <bron></bron>."
         },
         {
           "q": "Hoe zit het met privacy?",
@@ -212,23 +212,23 @@
         },
         {
           "q": "Waarop is de aanpak van Innerleaps gebaseerd?",
-          "a": "De aandachttrainingen van Innerleaps bouwen voort op evidence-based programma's zoals MBSR, MBCT en WorkplaceMT. De onderbouwing komt uit 12 wetenschappelijke studies*, waaronder meerdere meta-analyses en gerandomiseerde gecontroleerde onderzoeken. De effecten zijn zo robuust dat het Amerikaanse leger aandachttraining heeft opgenomen in zijn officiële doctrine (U.S. Army Field Manual 7-22), en organisaties als Google, Apple, Microsoft, Nestlé en Unilever soortgelijke programma's hebben geïmplementeerd*."
+          "a": "De aandachttrainingen van Innerleaps bouwen voort op evidence-based programma's zoals MBSR, MBCT en WorkplaceMT. De onderbouwing komt uit <bron claim=\"onderbouwing-studies\">12 wetenschappelijke studies</bron>, waaronder meerdere meta-analyses en gerandomiseerde gecontroleerde onderzoeken. Het Amerikaanse leger heeft aandachttraining opgenomen in zijn handboek voor gezondheid en fitheid <bron claim=\"leger-fm722\">(Field Manual 7-22)</bron>. Ook Google en Unilever bieden hun medewerkers soortgelijke trainingen aan <bron claim=\"bedrijven-google\"></bron>."
         },
         {
           "q": "Wat levert een Innerleaps-traject concreet op voor onze medewerkers?",
-          "a": "Onderzoek naar dit soort training vindt minder stress, minder burn-outklachten, meer veerkracht en beter slapen. Neem stress: zet iemand die de training deed naast iemand die hem niet deed, en in 65 tot 72%* van de gevallen heeft de getrainde persoon minder stress.\n\nHet risico op langdurige uitval daalt met 70%* (van 54,4% naar 16,4%). En de daling in stress houdt stand: studies die drie maanden tot een jaar later opnieuw maten, vonden nog steeds aantoonbaar minder stress*."
+          "a": "Onderzoek naar dit soort training vindt minder stress, minder burn-outklachten, meer veerkracht en beter slapen. Neem stress: zet iemand die de training deed naast iemand die hem niet deed, en in 65 tot 72% van de gevallen heeft de getrainde persoon minder stress <bron claim=\"cles-stress\"></bron>.\n\nHet risico op langdurige uitval daalt met 70% (van 54,4% naar 16,4%) <bron claim=\"debruin-uitval\"></bron>. En de daling in stress houdt stand: studies die drie maanden tot een jaar later opnieuw maten, vonden nog steeds aantoonbaar minder stress <bron claim=\"michaelsen-stress-lange-termijn\"></bron>."
         },
         {
           "q": "Wat is duurzame inzetbaarheid?",
-          "a": "Duurzame inzetbaarheid betekent dat medewerkers hun hele loopbaan gezond, gemotiveerd en productief kunnen blijven werken. In de praktijk struikelt het meestal op hetzelfde punt: langdurige werkstress. Een kwart van het verzuim in Nederland is stressgerelateerd*. Innerleaps pakt die oorzaak aan. Medewerkers leren spanning vroeg herkennen en reguleren, zodat uitval wordt voorkomen in plaats van hersteld."
+          "a": "Duurzame inzetbaarheid betekent dat medewerkers hun hele loopbaan gezond, gemotiveerd en productief kunnen blijven werken. In de praktijk struikelt het meestal op hetzelfde punt: langdurige werkstress. Eén op de vier verzuimdagen hangt samen met stress <bron></bron>. Innerleaps pakt die oorzaak aan. Medewerkers leren spanning vroeg herkennen en reguleren, zodat uitval wordt voorkomen in plaats van hersteld."
         },
         {
           "q": "Hoe kun je verzuim verminderen zonder dat het bij symptoombestrijding blijft?",
-          "a": "Verzuim verminderen lukt structureel alleen als je ingrijpt voordat mensen uitvallen. Een kwart van het verzuim in Nederland is stressgerelateerd*. Onze training leert medewerkers stresssignalen vroeg te herkennen, zodat verzuim niet alleen daalt maar ook laag blijft."
+          "a": "Verzuim verminderen lukt structureel alleen als je ingrijpt voordat mensen uitvallen. Eén op de vier verzuimdagen hangt samen met stress <bron></bron>. Onze training leert medewerkers stresssignalen vroeg te herkennen, zodat verzuim niet alleen daalt maar ook laag blijft."
         },
         {
           "q": "Hoe snel zien we resultaat?",
-          "a": "Deelnemers merken al na de eerste workshops verschil, en dat effect stapelt op gedurende de zes weken. Direct na afloop van de 6-weekse training geeft 68%* aan minder stress te ervaren. Het blijft ook hangen: onderzoek laat zien dat de stress nog maanden na de training lager is*."
+          "a": "Deelnemers merken al na de eerste workshops verschil, en dat effect stapelt op gedurende de zes weken. Direct na afloop van de 6-weekse training geeft 68% aan minder stress te ervaren <bron claim=\"theydo-stress\">(gemeten bij TheyDo)</bron>. Het blijft ook hangen: onderzoek laat zien dat de stress nog maanden na de training lager is <bron claim=\"michaelsen-stress-lange-termijn\"></bron>."
         }
       ]
     }
@@ -487,7 +487,7 @@
         },
         {
           "q": "Ik heb een app geprobeerd en ben gestopt. Waarom zou dit anders zijn?",
-          "a": "Bijna iedereen stopt met een app. Na een maand gebruiken nog zo'n 4 op de 100* mensen hem. Hier oefen je 6 weken met een vaste groep en een trainer, en leer je oefenen op het moment dat je spanning voelt. Zo wordt het een gewoonte."
+          "a": "Bijna iedereen stopt met een app. Na een maand gebruiken nog zo'n 4 op de 100 mensen hem <bron></bron>. Hier oefen je 6 weken met een vaste groep en een trainer, en leer je oefenen op het moment dat je spanning voelt. Zo wordt het een gewoonte."
         },
         {
           "q": "Wat als ik een week mis?",
@@ -503,7 +503,7 @@
         },
         {
           "q": "Waar is het op gebaseerd?",
-          "a": "De aandachttrainingen van Innerleaps bouwen voort op evidence-based programma's zoals MBSR, MBCT en WorkplaceMT. De onderbouwing komt uit 12 wetenschappelijke studies*, waaronder meerdere meta-analyses en gerandomiseerde gecontroleerde onderzoeken. De effecten zijn zo robuust dat het Amerikaanse leger aandachttraining heeft opgenomen in zijn officiële doctrine (U.S. Army Field Manual 7-22), en organisaties als Google, Apple, Microsoft, Nestlé en Unilever soortgelijke programma's hebben geïmplementeerd*."
+          "a": "De aandachttrainingen van Innerleaps bouwen voort op evidence-based programma's zoals MBSR, MBCT en WorkplaceMT. De onderbouwing komt uit <bron claim=\"onderbouwing-studies\">12 wetenschappelijke studies</bron>, waaronder meerdere meta-analyses en gerandomiseerde gecontroleerde onderzoeken. Het Amerikaanse leger heeft aandachttraining opgenomen in zijn handboek voor gezondheid en fitheid <bron claim=\"leger-fm722\">(Field Manual 7-22)</bron>. Ook Google en Unilever bieden hun medewerkers soortgelijke trainingen aan <bron claim=\"bedrijven-google\"></bron>."
         }
       ]
     }
@@ -511,13 +511,13 @@
   "sustainability": {
     "meta": {
       "title": "Aandachttraining voor scale-ups | Innerleaps",
-      "description": "Mentale fitness voor teams die gas geven. Aandachttraining voor meer focus en sneller opladen, zonder langer te werken. Bij TheyDo 8,6% productiever."
+      "description": "Mentale fitness voor teams die gas geven. Aandachttraining voor meer focus en sneller opladen, zonder langer te werken. Bij TheyDo rapporteerden deelnemers 8,6% hogere productiviteit."
     },
     "hero": {
       "badge": "Evidence-based methode voor scale-ups",
       "title": "<0>Mentale fitness</0> voor teams die gas geven",
       "subtitle": "Aandachttraining waarmee je mensen beter focussen en sneller opladen. Zo halen ze meer uit hun werkdag, zonder langer te werken.",
-      "cta": "Bereken jullie ROI",
+      "cta": "Wanneer verdient het zich terug?",
       "imageAlt": "Trainer van Innerleaps geeft een sessie aan een groep medewerkers",
       "caseLink": "Lees de klantcase van TheyDo"
     },
@@ -548,10 +548,10 @@
       "items": [
         {
           "icon": "TrendingUp",
-          "title": "Krijg meer gedaan in dezelfde tijd",
+          "title": "Helpt je team meer gedaan te krijgen",
           "bullets": [
             "Helpt je team langer bij één taak te blijven en minder snel afgeleid te raken.",
-            "Minder fouten, ook als het druk is."
+            "Minder fouten, ook als het druk is <bron></bron>."
           ]
         },
         {
@@ -657,7 +657,7 @@
         },
         {
           "q": "Werkt het als je team remote werkt?",
-          "a": "Ja. De training is live en online: één groepssessie van een uur per week, waar iedereen meedoet vanaf de eigen werkplek, ook vanuit verschillende landen. Onderzoek laat zien dat online net zo goed werkt als op locatie*. We kiezen samen een tijd die voor de hele groep werkt. Op locatie kan ook.\n\nWat klanten er zelf bij noemen: collega's leren elkaar in de groep beter kennen, ook als ze elkaar bijna nooit zien."
+          "a": "Ja. De training is live en online: één groepssessie van een uur per week, waar iedereen meedoet vanaf de eigen werkplek, ook vanuit verschillende landen. Studies die live online en op locatie vergelijken, vinden vergelijkbare effecten <bron></bron>. We kiezen samen een tijd die voor de hele groep werkt. Op locatie kan ook.\n\nWat klanten er zelf bij noemen: collega's leren elkaar in de groep beter kennen, ook als ze elkaar bijna nooit zien."
         },
         {
           "q": "Kan de training in het Engels?",
@@ -685,15 +685,15 @@
         },
         {
           "q": "Waarop is de aanpak van Innerleaps gebaseerd?",
-          "a": "De aandachttrainingen van Innerleaps bouwen voort op evidence-based programma's zoals MBSR, MBCT en WorkplaceMT. De onderbouwing komt uit 12 wetenschappelijke studies*, waaronder meerdere meta-analyses en gerandomiseerde gecontroleerde onderzoeken. De effecten zijn zo robuust dat het Amerikaanse leger aandachttraining heeft opgenomen in zijn officiële doctrine (U.S. Army Field Manual 7-22), en organisaties als Google, Apple, Microsoft, Nestlé en Unilever soortgelijke programma's hebben geïmplementeerd*."
+          "a": "De aandachttrainingen van Innerleaps bouwen voort op evidence-based programma's zoals MBSR, MBCT en WorkplaceMT. De onderbouwing komt uit <bron claim=\"onderbouwing-studies\">12 wetenschappelijke studies</bron>, waaronder meerdere meta-analyses en gerandomiseerde gecontroleerde onderzoeken. Het Amerikaanse leger heeft aandachttraining opgenomen in zijn handboek voor gezondheid en fitheid <bron claim=\"leger-fm722\">(Field Manual 7-22)</bron>. Ook Google en Unilever bieden hun medewerkers soortgelijke trainingen aan <bron claim=\"bedrijven-google\"></bron>."
         },
         {
           "q": "Wat levert een Innerleaps-traject concreet op voor onze medewerkers?",
-          "a": "Onderzoek naar dit soort training vindt minder stress, minder burn-outklachten, meer veerkracht en beter slapen. Neem stress: zet iemand die de training deed naast iemand die hem niet deed, en in 65 tot 72%* van de gevallen heeft de getrainde persoon minder stress.\n\nOok de productiviteit gaat omhoog. Dat effect is kleiner, maar over dit effect zijn de studies het meest eensgezind*.\n\nHet risico op langdurige uitval daalt met 70%* (van 54,4% naar 16,4%). En de daling in stress houdt stand: studies die drie maanden tot een jaar later opnieuw maten, vonden nog steeds aantoonbaar minder stress*."
+          "a": "Onderzoek naar dit soort training vindt minder stress, minder burn-outklachten, meer veerkracht en beter slapen. Neem stress: zet iemand die de training deed naast iemand die hem niet deed, en in 65 tot 72% van de gevallen heeft de getrainde persoon minder stress <bron claim=\"cles-stress\"></bron>.\n\nOok de productiviteit gaat omhoog. Dat effect is kleiner, maar over dit effect zijn de studies het meest eensgezind <bron claim=\"michaelsen-stress-lange-termijn\"></bron>.\n\nHet risico op langdurige uitval daalt met 70% (van 54,4% naar 16,4%) <bron claim=\"debruin-uitval\"></bron>. En de daling in stress houdt stand: studies die drie maanden tot een jaar later opnieuw maten, vonden nog steeds aantoonbaar minder stress <bron claim=\"michaelsen-stress-lange-termijn\"></bron>."
         },
         {
           "q": "Hoe verbetert Innerleaps de prestaties van medewerkers?",
-          "a": "Innerleaps verbetert prestaties door optimalisatie van het werkgeheugen, het mentale \"werkblad\" waarop denken, beslissen en handelen plaatsvinden. Dit gebeurt via drie mechanismen:\n\nTen eerste wordt relevante informatie sneller geselecteerd en irrelevante informatie beter onderdrukt. Concentratie neemt toe, afleiding neemt af. Onderzoek laat 25% minder fouten zien op aandachtstaken*.\n\nTen tweede nemen spanning en werkdruk normaal gesproken een groot deel van het werkgeheugen in beslag. Wanneer die spanning afneemt, komt er capaciteit vrij voor de taak zelf.\n\nTen derde wordt het werkgeheugen efficiënter: betere resultaten met minder neurale inspanning*. Medewerkers presteren scherper en houden energie over aan het einde van de dag."
+          "a": "Innerleaps verbetert prestaties door optimalisatie van het werkgeheugen, het mentale \"werkblad\" waarop denken, beslissen en handelen plaatsvinden. Dit gebeurt via drie mechanismen:\n\nTen eerste wordt relevante informatie sneller geselecteerd en irrelevante informatie beter onderdrukt. Concentratie neemt toe, afleiding neemt af. Onderzoek laat 25% minder fouten zien op aandachtstaken <bron claim=\"jha-fouten\"></bron>.\n\nTen tweede nemen spanning en werkdruk normaal gesproken een groot deel van het werkgeheugen in beslag. Wanneer die spanning afneemt, komt er capaciteit vrij voor de taak zelf.\n\nTen derde: ervaren oefenaars werken nauwkeuriger op geheugentaken, met minder hersenactiviteit <bron claim=\"bailey-werkgeheugen\"></bron>. Medewerkers presteren scherper en houden energie over aan het einde van de dag."
         }
       ]
     },

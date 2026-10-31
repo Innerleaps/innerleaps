@@ -1,10 +1,10 @@
 {
-  "badge": "ROI Calculator",
-  "title": "Bereken wat onze training oplevert",
-  "subtitle": "Vul de gegevens in en ontvang een gepersonaliseerde ROI-analyse. Deze is gebaseerd op het kernprogramma van Innerleaps en wetenschappelijk onderzoek.",
+  "badge": "Rekentool",
+  "title": "Wanneer verdient de training zich terug?",
+  "subtitle": "Vul in met hoeveel mensen je wilt beginnen en wat ze gemiddeld verdienen. Je ziet vanaf welk punt de training zich terugverdient.",
   "header": {
-    "title": "Ontdek de impact voor jullie organisatie",
-    "subtitle": "Op basis van 40 jaar wetenschappelijk onderzoek"
+    "title": "Reken het uit voor jullie organisatie",
+    "subtitle": "Een rekenvoorbeeld, geen belofte"
   },
   "sections": {
     "contact": "Contactgegevens",
@@ -19,16 +19,14 @@
     "companyPlaceholder": "Jouw organisatie",
     "phone": "Telefoon",
     "phonePlaceholder": "06 12345678",
-    "absenteeism": "Huidig verzuimpercentage (%)",
-    "absenteeismPlaceholder": "5,2",
-    "employees": "Aantal werknemers",
+    "employees": "Aantal deelnemers",
     "employeesPlaceholder": "15",
-    "salary": "Gemiddeld bruto jaarsalaris per werknemer (€)",
-    "salaryPlaceholder": "39.700"
+    "salary": "Gemiddeld bruto jaarsalaris per deelnemer (€)",
+    "salaryPlaceholder": "40.000"
   },
   "submit": {
-    "idle": "Bereken Besparing",
-    "loading": "Bezig met berekenen..."
+    "idle": "Reken uit",
+    "loading": "Bezig met rekenen..."
   },
   "validation": {
     "title": "Vul alle verplichte velden in",
@@ -42,23 +40,18 @@
   },
   "footnote": "* Alle velden zijn verplicht. Je gegevens worden vertrouwelijk behandeld.",
   "results": {
-    "yourOrg": "Jouw Organisatie",
-    "employees": "Werknemers",
+    "yourOrg": "Jullie invoer",
+    "employees": "Deelnemers",
     "avgSalary": "Gem. salaris",
-    "absenteeism": "Verzuim",
-    "conservative": "Voorzichtige berekening",
-    "conservativeTag": "Ondergrens",
-    "positive": "Positief scenario",
-    "positiveTag": "Volledige impact",
-    "absenteeismSaving": "Verzuimbesparing",
-    "productivityGain": "Productiviteitswinst",
-    "totalSaving": "Totale besparing",
     "investment": "Investering",
-    "netProfit": "Netto winst",
-    "roi": "ROI",
-    "scientificTitle": "Wetenschappelijke Onderbouwing",
-    "scientificIntro": "Deze cijfers zijn gebaseerd op 40 jaar wetenschappelijk onderzoek naar aandachttraining:",
-    "scientific1": "15-21% verzuimreductie (meta-analyses van 200+ studies)",
-    "scientific2": "5-8% productiviteitsverbetering (Oxford University, 2022)"
+    "breakEvenTitle": "Vanaf deze productiviteitstoename is de training een slimme investering",
+    "breakEvenDays": "Of als elke deelnemer {{dagen}} ziektedagen per jaar minder heeft.",
+    "breakEvenDaysNote": "Bij de ziektedagen rekenen we alleen met het doorbetaalde salaris. De echte kosten van verzuim liggen hoger.",
+    "multiple": "ruim {{keer}}x",
+    "compareTheydo": "<bron>Bij TheyDo</bron> rapporteerden deelnemers 8,6%. Merkt jullie team hetzelfde, dan is dat ruim {{keer}} keer jullie omslagpunt.",
+    "barYours": "Jullie omslagpunt",
+    "barTheydo": "Gemeten bij TheyDo",
+    "theydoBreakEven": "<bron>Bij TheyDo zelf</bron> lag het omslagpunt op 0,36%. Gemeten werd 8,6%: ruim 23 keer zoveel.",
+    "disclaimer": "Dit is een rekenvoorbeeld, geen belofte. Resultaten verschillen per organisatie."
   }
 }

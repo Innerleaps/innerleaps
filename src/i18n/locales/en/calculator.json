@@ -1,10 +1,10 @@
 {
-  "badge": "ROI Calculator",
-  "title": "Calculate what our training delivers",
-  "subtitle": "Fill in the details and receive a personalised ROI analysis. It's based on the core Innerleaps programme and scientific research.",
+  "badge": "Calculator",
+  "title": "When does the training pay for itself?",
+  "subtitle": "Enter how many people you want to start with and what they earn on average. You'll see the point from which the training pays for itself.",
   "header": {
-    "title": "Discover the impact for your organisation",
-    "subtitle": "Based on 40 years of scientific research"
+    "title": "Work it out for your organisation",
+    "subtitle": "An example calculation, not a promise"
   },
   "sections": {
     "contact": "Contact details",
@@ -19,15 +19,13 @@
     "companyPlaceholder": "Your organisation",
     "phone": "Phone",
     "phonePlaceholder": "+31 6 12345678",
-    "absenteeism": "Current absenteeism rate (%)",
-    "absenteeismPlaceholder": "5.2",
-    "employees": "Number of employees",
+    "employees": "Number of participants",
     "employeesPlaceholder": "15",
-    "salary": "Average gross annual salary per employee (€)",
-    "salaryPlaceholder": "39,700"
+    "salary": "Average gross annual salary per participant (€)",
+    "salaryPlaceholder": "40,000"
   },
   "submit": {
-    "idle": "Calculate savings",
+    "idle": "Calculate",
     "loading": "Calculating..."
   },
   "validation": {
@@ -42,23 +40,18 @@
   },
   "footnote": "* All fields are required. Your details are treated confidentially.",
   "results": {
-    "yourOrg": "Your organisation",
-    "employees": "Employees",
+    "yourOrg": "Your input",
+    "employees": "Participants",
     "avgSalary": "Avg. salary",
-    "absenteeism": "Absenteeism",
-    "conservative": "Cautious calculation",
-    "conservativeTag": "Lower bound",
-    "positive": "Positive scenario",
-    "positiveTag": "Full impact",
-    "absenteeismSaving": "Absenteeism saving",
-    "productivityGain": "Productivity gain",
-    "totalSaving": "Total saving",
     "investment": "Investment",
-    "netProfit": "Net profit",
-    "roi": "ROI",
-    "scientificTitle": "Scientific basis",
-    "scientificIntro": "These figures are based on 40 years of scientific research into awareness training:",
-    "scientific1": "15-21% reduction in absenteeism (meta-analyses of 200+ studies)",
-    "scientific2": "5-8% productivity improvement (Oxford University, 2022)"
+    "breakEvenTitle": "From this productivity gain, the training is a smart investment",
+    "breakEvenDays": "Or if each participant has {{dagen}} fewer sick days a year.",
+    "breakEvenDaysNote": "For sick days we only count the salary paid during absence. The real cost of absence is higher.",
+    "multiple": "over {{keer}}x",
+    "compareTheydo": "<bron>At TheyDo</bron>, participants reported 8.6%. If your team sees the same, that's more than {{keer}} times your break-even point.",
+    "barYours": "Your break-even point",
+    "barTheydo": "Measured at TheyDo",
+    "theydoBreakEven": "<bron>At TheyDo itself</bron>, the break-even point was 0.36%. The measured gain was 8.6%: more than 23 times as much.",
+    "disclaimer": "This is an example calculation, not a promise. Results differ per organisation."
   }
 }

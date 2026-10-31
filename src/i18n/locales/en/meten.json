@@ -1,9 +1,9 @@
 {
   "meta": {
-    "title": "Method and limitations: how we measure | Innerleaps",
+    "title": "Method: how we measure | Innerleaps",
     "description": "Where the figures on this site come from, how we measure them, and what they don't tell you."
   },
-  "title": "Method and <0>limitations</0>",
+  "title": "<0>Method</0>",
   "intro": "This site shows figures. Here you can read where they come from, how we measure them and what they don't tell you.",
   "wat": {
     "title": "What we measure",
@@ -24,18 +24,10 @@
     "intro": "Every figure on this site says how many people answered. These are the measurements the figures rest on today:",
     "regel": "{{omschrijving}}, {{naam}}: n={{n}}, {{periode}}"
   },
-  "periode": {
-    "title": "Period",
-    "text": "Each figure says when it was measured. We check every figure at least once a year. If a check is more than 12 months old, we look again before the figure stays online."
-  },
   "beperkingen": {
     "title": "Limitations",
     "items": [
       "There is no control group. We compare participants with themselves, before and after. So we can't say whether a change was caused by the training. That's why we write 'after the training', never 'because of the training'.",
-      "At TheyDo, a small group that didn't take part also filled in the questionnaires (6 people). Their productivity went up too, by 13.5%. That group is too small to compare with, but you should know it exists.",
-      "Everything is self-reported. People who have just finished a training often rate its effect more positively.",
-      "Not everyone fills in the evaluation. At TheyDo, 22 of the 39 participants did. The people who answer may be more positive than those who don't.",
-      "The groups are small. One person more or less can move a percentage by several points.",
       "Results differ per organisation. What happened at one organisation is no guarantee for another."
     ]
   },

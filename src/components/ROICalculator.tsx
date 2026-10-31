@@ -8,9 +8,9 @@ import { Button } from '@/components/ui/button';
 import { Calculator } from 'lucide-react';
 import { supabase } from '@/integrations/supabase/client';
 import { useToast } from '@/hooks/use-toast';
-import { calculateROI } from '@/utils/calculationEngine';
+import { berekenOmslagpunt } from '@/utils/calculationEngine';
 import { isGeldigEmail } from '@/lib/email';
-import { naarDecimaal, naarGeheel } from '@/lib/getallen';
+import { naarGeheel } from '@/lib/getallen';
 import {
   bewaarRoiOverdracht,
   doelgroepVoorPad,
@@ -37,7 +37,6 @@ const ROICalculator = () => {
     email: '',
     bedrijfsnaam: '',
     telefoon: '',
-    verzuimPercentage: '',
     aantalWerknemers: '',
     brutoJaarsalaris: '',
   });
@@ -71,7 +70,6 @@ const ROICalculator = () => {
       formData.naam.trim() !== '' &&
       formData.email.trim() !== '' &&
       formData.bedrijfsnaam.trim() !== '' &&
-      naarDecimaal(formData.verzuimPercentage) !== null &&
       naarGeheel(formData.aantalWerknemers) !== null &&
       naarGeheel(formData.brutoJaarsalaris) !== null
     );
@@ -102,10 +100,10 @@ const ROICalculator = () => {
       return;
     }
 
-    const results = calculateROI({
-      currentAbsenteeism: naarDecimaal(formData.verzuimPercentage)!,
-      numberOfEmployees: naarGeheel(formData.aantalWerknemers)!,
-      avgGrossAnnualSalary: naarGeheel(formData.brutoJaarsalaris)!,
+    // Het omslagpunt, geen beloofde besparing meer. Zie berekenOmslagpunt.
+    const results = berekenOmslagpunt({
+      aantalDeelnemers: naarGeheel(formData.aantalWerknemers)!,
+      brutoJaarsalaris: naarGeheel(formData.brutoJaarsalaris)!,
     });
 
     setIsSubmitting(true);
@@ -134,20 +132,11 @@ const ROICalculator = () => {
           email: formData.email,
           company: formData.bedrijfsnaam,
           phone: formData.telefoon || '',
-          currentAbsenteeism: naarDecimaal(formData.verzuimPercentage)!,
-          numberOfEmployees: naarGeheel(formData.aantalWerknemers)!,
+          // Vraagt de nieuwe versie van submit-calculator (omslagpunt). De
+          // oude versie weigert dit, dus eerst die functie uitrollen.
+          numberOfParticipants: results.aantalDeelnemers,
           avgGrossAnnualSalary: naarGeheel(formData.brutoJaarsalaris)!,
-          // De Edge Function die nu draait eist deze twee velden nog. Ze staan
-          // hier op nul zodat de site blijft werken tot die functie opnieuw is
-          // uitgerold. Zie het commentaar in supabase/functions/submit-calculator.
-          employeeTurnover: 0,
-          results: {
-            ...results,
-            scenarios: {
-              conservative: { ...results.scenarios.conservative, retentieBesparing: 0 },
-              positive: { ...results.scenarios.positive, retentieBesparing: 0 },
-            },
-          },
+          results,
           language: isEN ? 'en' : 'nl',
         },
       });
@@ -163,9 +152,8 @@ const ROICalculator = () => {
       doelgroep,
       resultaten: results,
       invoer: {
-        aantalWerknemers: formData.aantalWerknemers,
+        aantalDeelnemers: formData.aantalWerknemers,
         brutoJaarsalaris: formData.brutoJaarsalaris,
-        verzuimPercentage: formData.verzuimPercentage,
       },
       emailHash: await hashEmail(formData.email),
       mailVerstuurd,
@@ -279,23 +267,6 @@ const ROICalculator = () => {
             {/* Right column - Calculation inputs */}
             <div className="space-y-4">
               <h3 className="text-lg font-semibold text-white mb-4">{t('sections.organisation')}</h3>
-
-              <div>
-                <Label htmlFor="verzuimPercentage" className="text-white font-medium">
-                  {t('fields.absenteeism')} *
-                </Label>
-                <Input
-                  id="verzuimPercentage"
-                  name="verzuimPercentage"
-                  autoComplete="off"
-                  type="text"
-                  inputMode="decimal"
-                  value={formData.verzuimPercentage}
-                  onChange={(e) => handleInputChange('verzuimPercentage', e.target.value)}
-                  placeholder={t('fields.absenteeismPlaceholder')}
-                  className="mt-1 placeholder:text-gray-400"
-                />
-              </div>
 
               <div>
                 <Label htmlFor="aantalWerknemers" className="text-white font-medium">

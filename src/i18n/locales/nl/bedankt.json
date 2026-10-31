@@ -5,8 +5,8 @@
       "management": "Bedankt, ROI management - Innerleaps",
       "onbekend": "Bedankt, ROI - Innerleaps"
     },
-    "title": "Bespaar ten minste <0>{{bedrag}}</0>",
-    "titleZonderBerekening": "De <0>opbrengst</0> van onze training",
+    "title": "Terugverdiend vanaf <0>{{procent}}</0> meer productiviteit",
+    "titleZonderBerekening": "Wanneer verdient de training zich <0>terug</0>?",
     "intro": "De berekening staat hieronder en is ook naar je e-mail verstuurd.",
     "booking": {
       "title": "Bespreek je <0>resultaat</0> met Bas",
@@ -22,7 +22,12 @@
     "booking": {
       "title": "Wil je weten wat dit voor <0>jouw organisatie</0> betekent?",
       "intro": "Kies hieronder een moment. Geen verkooppraatje, wel een eerlijk antwoord."
-    }
+    },
+    "onderzoek": [
+      "69% minder ziektedagen in een gerandomiseerde studie bij 144 managers <bron></bron>.",
+      "Het aandeel medewerkers met een verhoogd risico op langdurige uitval daalde van 54,4% naar 16,4% <bron></bron>.",
+      "Minder stress, ook tot een jaar na de training <bron></bron>."
+    ]
   },
   "offerte": {
     "metaTitle": "Aanvraag ontvangen - Innerleaps",

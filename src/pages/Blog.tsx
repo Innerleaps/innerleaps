@@ -12,23 +12,23 @@ const Blog = () => {
     {
       id: 1,
       title: "Hoe verlaag ik het ziekteverzuim in mijn organisatie",
-      excerpt: "Ziekteverzuim verlagen met 15-21% door aandachttraining. Wetenschappelijk bewezen: 70% lager uitvalrisico. Ontdek de evidence-based aanpak met 89,8% adoptie.",
+      excerpt: "Ziekteverzuim verlagen begint bij stress. Wat onderzoek naar aandachttraining laat zien, en hoe je in je eigen organisatie begint.",
       date: "16 december 2024",
       slug: "/blog/hoe-verlaag-ik-het-ziekteverzuim-in-mijn-organisatie"
     },
     {
       id: 2,
       title: "De verborgen kosten van ziekteverzuim met rekenmodel",
-      excerpt: "Ontdek de verborgen kosten van ziekteverzuim. Bereken met ons rekenmodel de échte impact: €438.330 per jaar bij 100 medewerkers. Wetenschappelijk bewezen oplossing met 497-775% ROI.",
+      excerpt: "Ziekteverzuim kost meer dan het doorbetaalde salaris. Welke kosten je over het hoofd ziet, en hoe je ze voor je eigen organisatie uitrekent.",
       date: "3 december 2024",
       slug: "/blog/verborgen-kosten-ziekteverzuim-rekenmodel"
     },
     {
       id: 3,
-      title: "Ziekteverzuim Verlagen: De Wetenschappelijk Bewezen Aanpak voor 2025",
-      excerpt: "Ziekteverzuim verlagen met 15-21% door wetenschappelijk bewezen aandachttraining. ROI 497-775%. Ontdek hoe 40 jaar onderzoek verzuimkosten structureel verlaagt.",
+      title: "Ziekteverzuim verlagen met aandachttraining: wat onderzoek laat zien",
+      excerpt: "Hoe aandachttraining kan helpen om ziekteverzuim te verlagen. Wat studies vinden over stress, uitvalrisico en ziektedagen, en hoe je zelf begint.",
       date: "28 november 2025",
-      slug: "/blog/ziekteverzuim-verlagen-wetenschappelijk-bewezen-aanpak-2025"
+      slug: "/blog/ziekteverzuim-verlagen-met-aandachttraining"
     }
   ];
 

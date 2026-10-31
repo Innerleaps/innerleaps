@@ -4,29 +4,30 @@ import Footer from '@/components/Footer';
 import BlogAuthor from '@/components/BlogAuthor';
 import { Link } from 'react-router-dom';
 import stressmanagementImage from '@/assets/stressmanagementtraining_sterker_waarschuwingssysteem.webp';
+import { Bron } from '@/components/Bron';
 
 const VerborgenKostenZiekteverzuim = () => {
   return (
     <>
       <Helmet>
         <title>De verborgen kosten van ziekteverzuim met rekenmodel | Innerleaps</title>
-        <meta name="description" content="Ontdek de verborgen kosten van ziekteverzuim. Bereken met ons rekenmodel de échte impact: €438.330 per jaar bij 100 medewerkers. Wetenschappelijk bewezen oplossing met 497-775% ROI." />
+        <meta name="description" content="Ziekteverzuim kost meer dan het doorbetaalde salaris. Welke kosten je over het hoofd ziet, en hoe je ze voor je eigen organisatie uitrekent." />
         
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="article" />
         <meta property="og:url" content="https://innerleaps.nl/blog/verborgen-kosten-ziekteverzuim-rekenmodel" />
         <meta property="og:title" content="De verborgen kosten van ziekteverzuim met rekenmodel" />
-        <meta property="og:description" content="Ontdek de verborgen kosten van ziekteverzuim. Bereken met ons rekenmodel de échte impact: €438.330 per jaar bij 100 medewerkers. Wetenschappelijk bewezen oplossing met 497-775% ROI." />
+        <meta property="og:description" content="Ziekteverzuim kost meer dan het doorbetaalde salaris. Welke kosten je over het hoofd ziet, en hoe je ze voor je eigen organisatie uitrekent." />
         <meta property="og:image" content="https://innerleaps.nl/social/stressmanagement-waarschuwingssysteem.png" />
         <meta property="article:published_time" content="2024-12-03T00:00:00+00:00" />
-        <meta property="article:modified_time" content="2024-12-03T00:00:00+00:00" />
+        <meta property="article:modified_time" content="2026-10-29T00:00:00+00:00" />
         <meta property="article:author" content="Bas Ter Haar Romenij" />
         
         {/* Twitter */}
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content="https://innerleaps.nl/blog/verborgen-kosten-ziekteverzuim-rekenmodel" />
         <meta property="twitter:title" content="De verborgen kosten van ziekteverzuim met rekenmodel" />
-        <meta property="twitter:description" content="Ontdek de verborgen kosten van ziekteverzuim. Bereken met ons rekenmodel de échte impact: €438.330 per jaar bij 100 medewerkers. Wetenschappelijk bewezen oplossing met 497-775% ROI." />
+        <meta property="twitter:description" content="Ziekteverzuim kost meer dan het doorbetaalde salaris. Welke kosten je over het hoofd ziet, en hoe je ze voor je eigen organisatie uitrekent." />
         <meta property="twitter:image" content="https://innerleaps.nl/social/stressmanagement-waarschuwingssysteem.png" />
         
         {/* Canonical URL */}
@@ -43,7 +44,7 @@ const VerborgenKostenZiekteverzuim = () => {
             },
             "url": "https://innerleaps.nl/blog/verborgen-kosten-ziekteverzuim-rekenmodel",
             "headline": "De verborgen kosten van ziekteverzuim met rekenmodel",
-            "description": "Ontdek de verborgen kosten van ziekteverzuim. Bereken met ons rekenmodel de échte impact: €438.330 per jaar bij 100 medewerkers. Wetenschappelijk bewezen oplossing met 497-775% ROI.",
+            "description": "Ziekteverzuim kost meer dan het doorbetaalde salaris. Welke kosten je over het hoofd ziet, en hoe je ze voor je eigen organisatie uitrekent.",
             "image": "https://innerleaps.nl/social/stressmanagement-waarschuwingssysteem.png",
             "author": {
               "@type": "Person",
@@ -59,7 +60,7 @@ const VerborgenKostenZiekteverzuim = () => {
               }
             },
             "datePublished": "2024-12-03",
-            "dateModified": "2024-12-03"
+            "dateModified": "2026-10-29"
           })}
         </script>
       </Helmet>
@@ -89,7 +90,7 @@ const VerborgenKostenZiekteverzuim = () => {
                 authorName="Bas Ter Haar Romenij"
                 authorLinkedIn="https://www.linkedin.com/in/basterhaarromenij/"
                 publishDate="2024-12-03"
-                lastUpdated="2024-12-03"
+                lastUpdated="2026-10-29"
               />
             </header>
 
@@ -106,32 +107,25 @@ const VerborgenKostenZiekteverzuim = () => {
             {/* Article Content */}
             <div className="prose prose-lg max-w-none">
               <p className="lead">
-                Ziekteverzuim kost organisaties veel meer dan de zichtbare loonkosten tijdens afwezigheid. Bij een organisatie met 100 medewerkers en een verzuimpercentage van 5,2% (Nederlands gemiddelde) lopen de totale jaarlijkse kosten op tot €393.743. Het rekenmodel onderaan dit artikel laat zien hoe deze kosten precies ontstaan en waar de grootste besparingen te behalen zijn.
+                Ziekteverzuim kost organisaties veel meer dan de zichtbare loonkosten tijdens afwezigheid. Hoeveel precies, verschilt per organisatie. Het rekenmodel onderaan dit artikel laat zien hoe je de directe kosten uitrekent en welke verborgen kosten erbij komen.
               </p>
 
               <p className="mt-8">
-                De meeste organisaties kennen hun directe verzuimkosten. Het doorbetaalde salaris tijdens ziekte staat netjes in de boeken. Maar wat gebeurt er met de productiviteit? Wie vangt het werk op? Hoeveel tijd kost het om vervanging te regelen? Deze verborgen kosten blijven vaak buiten beeld, terwijl ze de directe kosten ruimschoots overtreffen.
+                De meeste organisaties kennen hun directe verzuimkosten. Het doorbetaalde salaris tijdens ziekte staat netjes in de boeken. Maar wat gebeurt er met de productiviteit? Wie vangt het werk op? Hoeveel tijd kost het om vervanging te regelen? Deze verborgen kosten blijven vaak buiten beeld.
               </p>
 
               <h2 className="text-2xl md:text-3xl font-bold text-brand-purple mt-12 mb-6">Waarom organisaties de werkelijke kosten onderschatten</h2>
               
               <p>
-                Het Nederlandse ziekteverzuim bedraagt gemiddeld 5,2% volgens CBS-cijfers uit 2024. Bij een organisatie met 100 medewerkers betekent dit 5,2 fulltime-equivalenten die het hele jaar niet productief zijn. De meeste HR-afdelingen berekenen alleen de loonkosten tijdens afwezigheid. Dit levert een veel te rooskleurig beeld op.
+                Het Nederlandse ziekteverzuim lag in het vierde kwartaal van 2025 op 5,6%{" "}<Bron ids={["cbs-verzuim"]} />. Bij een organisatie met 100 medewerkers betekent dit 5,6 fulltime-equivalenten die er een heel jaar niet zijn. De meeste HR-afdelingen berekenen alleen de loonkosten tijdens afwezigheid. Dit levert een veel te rooskleurig beeld op.
               </p>
 
               <p className="mt-8">
-                De directe loonkosten zijn slechts het topje van de ijsberg. Wat organisaties niet zien zijn de kosten van productiviteitsverlies bij het opvangteam, presenteïsme voordat medewerkers zich ziekmelden, vervangingskosten en kennisverlies. Bij een gemiddeld bruto jaarsalaris van €39.700 (CBS, 2023) bedragen de directe loonkosten €206.440 per jaar voor 5,2 FTE verzuim.
+                De directe loonkosten zijn slechts het topje van de ijsberg. Wat organisaties niet zien zijn de kosten van productiviteitsverlies bij het opvangteam, presenteïsme voordat medewerkers zich ziekmelden, vervangingskosten en kennisverlies. Bij een voorbeeldsalaris van €40.000 bruto per jaar zijn de directe loonkosten van 5,6 FTE verzuim €224.000 per jaar.
               </p>
 
-              <p className="mt-8 font-semibold">Voor een organisatie met 100 medewerkers:</p>
-              <ul className="mt-4">
-                <li>Directe loonkosten verzuim: €206.440</li>
-                <li>Verborgen indirecte kosten: €187.303</li>
-                <li>Totale jaarlijkse verzuimkosten: €393.743</li>
-              </ul>
-
               <p className="mt-8">
-                De verborgen kosten zijn bijna even groot als de directe kosten. Deze berekening laat nog steeds niet alle impact zien, zoals het effect op teammoraal en klantrelaties.
+                Daar komen de verborgen kosten bij. Die zijn lastiger te meten en verschillen sterk per organisatie. Hieronder staan de belangrijkste posten.
               </p>
 
               <h2 className="text-2xl md:text-3xl font-bold text-brand-purple mt-12 mb-6">De grootste verborgen kostenpost: productiviteitsverlies</h2>
@@ -139,11 +133,11 @@ const VerborgenKostenZiekteverzuim = () => {
               <h3 className="text-xl md:text-2xl font-bold text-brand-purple mt-8 mb-4">Presenteïsme kost meer dan absenteïsme</h3>
               
               <p>
-                Medewerkers die ziek doorwerken kosten organisaties meer dan medewerkers die thuisblijven. Dit fenomeen heet presenteïsme. Onderzoek toont aan dat presenteïsme tot 7,5 keer meer productiviteit kost dan absenteïsme.
+                Medewerkers die ziek doorwerken kosten organisaties meer dan medewerkers die thuisblijven. Dit heet presenteïsme.
               </p>
 
               <p className="mt-8">
-                Een medewerker met stress of beginnende burnoutklachten functioneert op 60-70% van de normale capaciteit. Dit gebeurt vaak maanden voordat iemand zich ziekmeldt. De Yerkes-Dodson curve verklaart waarom: te veel druk veroorzaakt een daling in prestatie. Na slechts 10 minuten onder verhoogde druk begint de prestatie al te verslechteren.
+                Een medewerker met stress of beginnende burn-outklachten presteert vaak al maanden minder voordat hij zich ziekmeldt. De Yerkes-Dodson-curve laat zien waarom: te veel druk laat de prestatie dalen.
               </p>
 
               <p className="mt-8 font-semibold">Concrete impact:</p>
@@ -154,22 +148,14 @@ const VerborgenKostenZiekteverzuim = () => {
                 <li>Slechtere besluitvorming</li>
               </ul>
 
-              <p className="mt-8">
-                Voor de organisatie met 100 medewerkers: als 15% van het personeelsbestand enkele maanden op 70% productiviteit werkt voordat ze zich ziekmelden, gaat er jaarlijks tienduizenden euro's verloren aan productiviteit. Dit staat nergens in de boeken.
-              </p>
-
               <h3 className="text-xl md:text-2xl font-bold text-brand-purple mt-8 mb-4">Het opvangteam betaalt de prijs</h3>
               
               <p>
-                Wanneer een collega uitvalt, valt het werk niet stil. Andere teamleden vangen op. Dit creëert een cascade-effect. Het opvangteam werkt onder verhoogde druk. Hun productiviteit daalt met 10-15% door de extra belasting. Concentratie neemt af. Fouten nemen toe. Stressniveaus stijgen.
+                Wanneer een collega uitvalt, valt het werk niet stil. Andere teamleden vangen op. Dit creëert een cascade-effect. Het opvangteam werkt onder verhoogde druk. Concentratie neemt af. Fouten nemen toe. Stressniveaus stijgen.
               </p>
 
               <p className="mt-8">
-                Wetenschappelijk onderzoek naar aandachtsprocessen toont aan: onder druk daalt het werkgeheugen (het mentale kladblok voor taken). Dit verklaart waarom opvangende collega's 25% meer fouten maken in hun normale werk. Ze zijn niet minder competent. Hun brein heeft simpelweg minder capaciteit beschikbaar.
-              </p>
-
-              <p className="mt-8">
-                <strong>Impact op het opvangteam:</strong> Wanneer 5,2 FTE verzuimt, vangen ongeveer 10-15 collega's dit werk op. Hun productiviteit daalt gemiddeld 12% door de extra belasting. Over meerdere maanden opvang per jaar, lopen deze kosten op tot tienduizenden euro's.
+                Wetenschappelijk onderzoek naar aandachtsprocessen toont aan: onder druk daalt het werkgeheugen (het mentale kladblok voor taken). Opvangende collega's zijn niet minder competent. Hun brein heeft simpelweg minder capaciteit beschikbaar.
               </p>
 
               <h2 className="text-2xl md:text-3xl font-bold text-brand-purple mt-12 mb-6">Vervangingskosten die organisaties vergeten</h2>
@@ -177,29 +163,25 @@ const VerborgenKostenZiekteverzuim = () => {
               <h3 className="text-xl md:text-2xl font-bold text-brand-purple mt-8 mb-4">Tijdelijke vervanging organiseren kost tijd</h3>
               
               <p>
-                HR-tijd voor werving, screening en administratie blijft vaak onzichtbaar. Een manager besteedt gemiddeld 8-12 uur aan het regelen van vervanging bij langdurig verzuim. Dit omvat gesprekken met het team, briefing van de vervanger, en monitoring van de voortgang.
-              </p>
-
-              <p className="mt-8">
-                Bij gemiddeld 8-10 langdurige verzuimgevallen per jaar in een organisatie met 100 medewerkers, gaat het om 80-120 uur managementtijd. Met een managementuurloon van €65 lopen deze kosten al snel op tot duizenden euro's per jaar.
+                HR-tijd voor werving, screening en administratie blijft vaak onzichtbaar. Een manager is bij langdurig verzuim al snel uren kwijt aan het regelen van vervanging. Dit omvat gesprekken met het team, briefing van de vervanger, en monitoring van de voortgang.
               </p>
 
               <h3 className="text-xl md:text-2xl font-bold text-brand-purple mt-8 mb-4">Kennisverlies en inwerkkosten</h3>
               
               <p>
-                Een tijdelijke vervanger kent de processen niet. Collega's besteden tijd aan uitleg. De eerste weken presteert een vervanger op 40-60% van het normale niveau. Voor gespecialiseerde functies kan dit maanden duren.
+                Een tijdelijke vervanger kent de processen niet. Collega's besteden tijd aan uitleg. Het duurt even voordat een vervanger op niveau is. Voor gespecialiseerde functies kan dit maanden duren.
               </p>
 
               <p className="mt-8">
-                Reken mee: inwerktijd door collega's, verminderde productiviteit van de vervanger in de eerste maand, en het risico op fouten door onbekendheid. Per vervangingsgeval lopen de kosten in de duizenden euro's. Bij 8-10 langdurige verzuimgevallen betekent dit tienduizenden euro's aan kennisverlieskosten per jaar.
+                Reken mee: inwerktijd door collega's, verminderde productiviteit van de vervanger in de eerste maand, en het risico op fouten door onbekendheid.
               </p>
 
-              <h2 className="text-2xl md:text-3xl font-bold text-brand-purple mt-12 mb-6">Stress als hoofdoorzaak: 25% van verzuim</h2>
+              <h2 className="text-2xl md:text-3xl font-bold text-brand-purple mt-12 mb-6">Stress: één op de vier verzuimdagen</h2>
 
               <h3 className="text-xl md:text-2xl font-bold text-brand-purple mt-8 mb-4">De stress-verzuim cyclus</h3>
               
               <p>
-                Stress veroorzaakt 25% van het Nederlandse ziekteverzuim volgens Arboned (2024). Dit betekent 1,3 procentpunt van de totale 5,2%. Voor een organisatie met 100 medewerkers gaat het om 1,3 FTE die het hele jaar uitvalt door stressgerelateerde klachten.
+                Eén op de vier verzuimdagen hangt samen met stress, <Bron ids={["kwart-verzuim-stress"]}>volgens cijfers van ArboNed</Bron>. Voor een organisatie met 100 medewerkers en 5,6% verzuim gaat het dan om zo'n 1,4 FTE.
               </p>
 
               <p className="mt-8 font-semibold">Waarom stress zo hardnekkig is</p>
@@ -223,7 +205,7 @@ const VerborgenKostenZiekteverzuim = () => {
               </p>
 
               <p className="mt-8">
-                Dr. Amishi Jha, neurowetenschapper aan de Universiteit van Miami, onderzocht dit fenomeen jarenlang. Haar bevindingen tonen aan: na 10 minuten onder druk daalt de prestatie meetbaar. Na enkele weken chronische stress maken mensen 40% meer fouten op aandachtstaken.
+                Dr. Amishi Jha, neurowetenschapper aan de Universiteit van Miami, beschrijft in haar boek Peak Mind hoe druk het werkgeheugen aantast{" "}<Bron ids={["jha-fouten"]} />.
               </p>
 
               <h3 className="text-xl md:text-2xl font-bold text-brand-purple mt-8 mb-4">Vroege signalen blijven onopgemerkt</h3>
@@ -233,81 +215,38 @@ const VerborgenKostenZiekteverzuim = () => {
               </p>
 
               <p className="mt-8">
-                Wetenschappelijk onderzoek toont: mensen die hun <Link to="/breintraining-methode" className="text-brand-blue hover:text-brand-orange font-medium transition-colors">waarschuwingssysteem trainen</Link>, herkennen stresssignalen 70% eerder. Ze grijpen in voordat het escaleert. Dit verklaart waarom preventieve interventies zo effectief zijn.
+                Mensen die hun <Link to="/breintraining-methode" className="text-brand-blue hover:text-brand-orange font-medium transition-colors">waarschuwingssysteem trainen</Link>, herkennen stresssignalen eerder. Ze grijpen in voordat het escaleert. Dit verklaart waarom preventieve interventies zo effectief zijn.
               </p>
 
               <h2 className="text-2xl md:text-3xl font-bold text-brand-purple mt-12 mb-6">Het complete rekenmodel voor ziekteverzuim</h2>
 
               <h3 className="text-xl md:text-2xl font-bold text-brand-purple mt-8 mb-4">Directe kosten (zichtbaar in administratie)</h3>
               
-              <p className="font-semibold">Basis berekening:</p>
+              <p className="font-semibold">Voorbeeld:</p>
               <ul className="mt-4">
                 <li>Aantal medewerkers: 100</li>
-                <li>Gemiddeld verzuim: 5,2%</li>
-                <li>Gemiddeld brutosalaris: €39.700</li>
-                <li>Verzuimdagen per jaar: 260 dagen × 5,2% × 100 = 1.352 dagen</li>
-                <li>Directe loonkosten: €206.440</li>
+                <li>Verzuim: 5,6%</li>
+                <li>Voorbeeldsalaris: €40.000 bruto per jaar</li>
+                <li>Verzuimdagen per jaar: 260 dagen × 5,6% × 100 = 1.456 dagen</li>
+                <li>Directe loonkosten: 5,6 FTE × €40.000 = €224.000</li>
               </ul>
 
               <h3 className="text-xl md:text-2xl font-bold text-brand-purple mt-8 mb-4">Indirecte en verborgen kosten</h3>
               
-              <p className="font-semibold mt-4">1. Productiviteitsverlies opvangteam:</p>
-              <ul className="mt-2">
-                <li>Opvang door 12 collega's gemiddeld</li>
-                <li>Productiviteitsdaling: 12%</li>
-                <li>Duur opvang: gemiddeld 4 maanden per geval</li>
-                <li>Kosten: €47.640</li>
-              </ul>
-
-              <p className="font-semibold mt-8">2. Presenteïsme voor verzuim:</p>
-              <ul className="mt-2">
-                <li>15 medewerkers op 70% capaciteit</li>
-                <li>Duur: 3 maanden gemiddeld</li>
-                <li>Verlies: €44.663</li>
-              </ul>
-
-              <p className="font-semibold mt-8">3. Vervangingskosten:</p>
-              <ul className="mt-2">
-                <li>HR-tijd: €6.500</li>
-                <li>Inwerktijd collega's: €32.000</li>
-                <li>Verminderde productiviteit vervanger: €16.000</li>
-                <li>Totaal: €54.500</li>
-              </ul>
-
-              <p className="font-semibold mt-8">4. Kennisuitval en herstelkosten:</p>
-              <ul className="mt-2">
-                <li>Verloren kennis en ervaring: €28.500</li>
-                <li>Re-integratie begeleiding: €12.000</li>
-                <li>Totaal: €40.500</li>
-              </ul>
-
-              <h3 className="text-xl md:text-2xl font-bold text-brand-purple mt-8 mb-4">Totale jaarlijkse kosten ziekteverzuim</h3>
-              
-              <p className="font-semibold">Voor organisatie met 100 medewerkers bij 5,2% verzuim:</p>
+              <p>Vul deze posten in met je eigen cijfers. Ze verschillen te veel per organisatie om er één bedrag op te plakken.</p>
               <ul className="mt-4">
-                <li>Directe loonkosten: €206.440</li>
-                <li>Productiviteitsverlies opvang: €47.640</li>
-                <li>Presenteïsme: €44.663</li>
-                <li>Vervangingskosten: €54.500</li>
-                <li>Kennisuitval: €40.500</li>
+                <li><strong>Opvang:</strong> collega's die het werk overnemen en zelf minder toekomen aan hun eigen taken</li>
+                <li><strong>Presenteïsme:</strong> minder presteren in de maanden voor een ziekmelding</li>
+                <li><strong>Vervanging:</strong> HR-tijd, inwerken, en een vervanger die nog moet leren</li>
+                <li><strong>Kennisverlies en re-integratie:</strong> wat vertrekt er aan ervaring, en wat kost de begeleiding terug</li>
               </ul>
 
-              <p className="mt-8 text-xl font-bold text-brand-purple">Totaal: €393.743 per jaar</p>
+              <h2 className="text-2xl md:text-3xl font-bold text-brand-purple mt-12 mb-6">Wat onderzoek zegt over aandachttraining en verzuim</h2>
 
-              <p className="mt-8">
-                Dit is €3.937 per medewerker per jaar, of €76 per medewerker per week.
-              </p>
-
-              <p className="mt-8">
-                De verborgen kosten (€187.303) zijn bijna even groot als de directe loonkosten (€206.440). Dit verklaart waarom organisaties die alleen naar ziekteverzuimcijfers kijken de werkelijke impact onderschatten.
-              </p>
-
-              <h2 className="text-2xl md:text-3xl font-bold text-brand-purple mt-12 mb-6">Wetenschappelijk bewezen interventies die verzuim verlagen</h2>
-
-              <h3 className="text-xl md:text-2xl font-bold text-brand-purple mt-8 mb-4">Aandachttraining toont 15-21% verzuimreductie</h3>
+              <h3 className="text-xl md:text-2xl font-bold text-brand-purple mt-8 mb-4">Minder ziektedagen en minder uitvalrisico</h3>
               
               <p>
-                Meta-analyses van 12 wetenschappelijke studies tonen consistente effecten van awareness interventies. Organisaties kunnen 15-21% verzuimreductie verwachten binnen het eerste jaar. Het mechanisme is duidelijk: deelnemers trainen hun controlecentrum en waarschuwingssysteem.
+                In een gerandomiseerde studie bij 144 managers had de trainingsgroep 69% minder ziektedagen, zelf ingevuld, ongeveer 3 maanden na de start{" "}<Bron ids={["zreda-ziektedagen"]} />. In de Unilever-studie daalde het aandeel medewerkers met een verhoogd risico op langdurige uitval van 54,4% naar 16,4%, 6 maanden na de training{" "}<Bron ids={["debruin-uitval"]} />. Deelnemers trainen hun controlecentrum en waarschuwingssysteem.
               </p>
 
               <p className="mt-8 font-semibold">Hoe dit werkt:</p>
@@ -316,47 +255,15 @@ const VerborgenKostenZiekteverzuim = () => {
               </p>
 
               <p className="mt-8">
-                Dr. Jha's onderzoek toonde aan: militairen die 12 minuten per dag oefenden, maakten 25% minder fouten onder druk. Hun werkgeheugen bleef stabiel, zelfs in high-stress situaties. Bij ongetrainde controlegroepen daalde de prestatie significant.
+                In Peak Mind beschrijft Dr. Jha dat militairen die 12 minuten per dag oefenden 25% minder fouten maakten onder druk. Hun werkgeheugen bleef stabiel, en bij ongetrainde groepen daalde de prestatie{" "}<Bron ids={["jha-fouten"]} />.
               </p>
 
-              <h3 className="text-xl md:text-2xl font-bold text-brand-purple mt-8 mb-4">ROI van 497% tot 775% binnen eerste jaar</h3>
-              
-              <p>
-                Wetenschappelijke data uit 40 jaar onderzoek vormt de basis voor ROI-berekeningen. Voor een organisatie met 100 deelnemers aan een aandachttraining:
-              </p>
-
-              <p className="font-semibold mt-8">Conservatief scenario (497% ROI):</p>
-              <ul className="mt-2">
-                <li>Investering: €57.500 (€575 per deelnemer)</li>
-                <li>Verzuimreductie: 15% = €57.287 besparing</li>
-                <li>Retentie verbetering: 5% = €29.775 besparing</li>
-                <li>Productiviteitswinst: 5% = €198.500 besparing</li>
-                <li>Totale besparing: €285.562</li>
-                <li>Netto resultaat: €228.062</li>
-                <li>ROI: 497%</li>
-              </ul>
-
-              <p className="font-semibold mt-8">Positief scenario (775% ROI):</p>
-              <ul className="mt-2">
-                <li>Investering: €57.500</li>
-                <li>Verzuimreductie: 21% = €80.202 besparing</li>
-                <li>Retentie verbetering: 8% = €47.640 besparing</li>
-                <li>Productiviteitswinst: 8% = €317.600 besparing</li>
-                <li>Totale besparing: €445.442</li>
-                <li>Netto resultaat: €387.942</li>
-                <li>ROI: 775%</li>
-              </ul>
-
-              <p className="mt-8">
-                Deze berekeningen gebruiken conservatieve schattingen. Alle cijfers zijn gebaseerd op gepubliceerde meta-analyses en systematische reviews.
-              </p>
-
-              <h2 className="text-2xl md:text-3xl font-bold text-brand-purple mt-12 mb-6">Waarom Innerleaps effectiever is dan traditionele oplossingen</h2>
+              <h2 className="text-2xl md:text-3xl font-bold text-brand-purple mt-12 mb-6">Waarom de vorm ertoe doet</h2>
 
               <h3 className="text-xl md:text-2xl font-bold text-brand-purple mt-8 mb-4">Vergelijking met andere interventies</h3>
               
               <p>
-                EAP-trainingen (Employee Assistance Programs) kennen een gebruiksgraad van slechts 4-5%. Mindfulness apps houden 4,7% van gebruikers na 30 dagen. Bedrijfsfitness trekt 8% regelmatige deelname. Deze interventies falen niet door slechte kwaliteit. Ze falen door gebrek aan structuur en begeleiding.
+                Apps voor aandachtsoefeningen worden na 30 dagen nog door 4,7% van de gebruikers geopend{" "}<Bron ids={["app-gebruik"]} />. Losse middelen falen niet door slechte kwaliteit. Ze falen door gebrek aan structuur en begeleiding.
               </p>
 
               <p className="mt-8">
@@ -370,73 +277,49 @@ const VerborgenKostenZiekteverzuim = () => {
               </ul>
 
               <p className="mt-8">
-                Wetenschappelijke studies naar vergelijkbare awareness interventies tonen: 89,8% van deelnemers geeft aan door te willen gaan met beoefening na de training. De effecten blijven minimaal 12 maanden behouden volgens vervolgmetingen.
+                In de Unilever-studie wilde 89,8% van de deelnemers die de vraag beantwoordden na afloop blijven oefenen{" "}<Bron ids={["debruin-doorgaan"]} />. Studies die tot een jaar na de training opnieuw maten, vonden nog steeds minder stress{" "}<Bron ids={["michaelsen-stress-lange-termijn"]} />.
               </p>
 
               <h3 className="text-xl md:text-2xl font-bold text-brand-purple mt-8 mb-4">De neurologische basis van duurzame verandering</h3>
               
               <p>
-                De training werkt met "push-ups voor je brein". Elke keer dat deelnemers hun afdwalende aandacht terugbrengen naar de oefening, activeren ze hun prefrontale cortex. Net als spiertraining: hoe vaker je oefent, hoe sterker het wordt. Na 6 weken dagelijkse training is het controlecentrum letterlijk dikker en beter verbonden, meetbaar op hersenscans.
+                De training werkt met "push-ups voor je brein". Elke keer dat deelnemers hun afdwalende aandacht terugbrengen naar de oefening, activeren ze hun prefrontale cortex. Net als spiertraining: hoe vaker je oefent, hoe sterker het wordt.
               </p>
 
               <p className="mt-8">
-                Dit verklaart waarom korte trainingen of incidentele oefeningen niet werken. Neuroplasticiteit (het vermogen van de hersenen om te veranderen) vereist consistente herhaling. 12 minuten per dag gedurende 6 weken is het wetenschappelijk vastgestelde minimum voor blijvende verandering.
+                Dit verklaart waarom korte trainingen of incidentele oefeningen niet werken. Neuroplasticiteit (het vermogen van de hersenen om te veranderen) vereist consistente herhaling. Jha noemt 12 minuten per dag als minimum{" "}<Bron ids={["jha-fouten"]} />.
               </p>
 
               <h2 className="text-2xl md:text-3xl font-bold text-brand-purple mt-12 mb-6">Bereken de impact voor jouw organisatie</h2>
               
               <p>
-                <Link to="/?openCalculator=true" className="text-brand-blue hover:text-brand-orange font-medium transition-colors">Gebruik de interactieve ROI calculator</Link> om de specifieke impact voor jouw organisatie te berekenen. De calculator vraagt naar:
+                Reken met <Link to="/?openCalculator=true" className="text-brand-blue hover:text-brand-orange font-medium transition-colors">onze rekentool</Link> uit vanaf hoeveel procent meer productiviteit de training zich terugverdient. De tool vraagt naar het aantal deelnemers en het gemiddelde salaris.
               </p>
-              <ul className="mt-4">
-                <li>Huidig verzuimpercentage</li>
-                <li>Aantal medewerkers</li>
-                <li>Gemiddeld salarisniveau</li>
-                <li>Huidig personeelsverloop</li>
-              </ul>
 
               <p className="mt-8">
-                Op basis van 40 jaar wetenschappelijk onderzoek berekent de tool:
-              </p>
-              <ul className="mt-4">
-                <li>Verwachte verzuimreductie (15-21%)</li>
-                <li>Retentie verbetering (5-8%)</li>
-                <li>Productiviteitswinst (5-8%)</li>
-                <li>Totale ROI binnen eerste jaar</li>
-              </ul>
-
-              <p className="mt-8">
-                Voor organisaties die structurele verandering willen bereiken, biedt <Link to="/duurzame-inzetbaarheid" className="text-brand-blue hover:text-brand-orange font-medium transition-colors">de 6-weekse vitaliteitstraining van Innerleaps</Link> een bewezen aanpak. Deelnemers nemen eigenaarschap over hun stress, worden veerkrachtiger en productiever.
+                Voor organisaties die structurele verandering willen bereiken, biedt <Link to="/duurzame-inzetbaarheid" className="text-brand-blue hover:text-brand-orange font-medium transition-colors">de 6-weekse vitaliteitstraining van Innerleaps</Link> een onderzochte aanpak. Deelnemers nemen eigenaarschap over hun stress.
               </p>
 
               <h2 className="text-2xl md:text-3xl font-bold text-brand-purple mt-12 mb-6">Key Takeaways</h2>
               
-              <p className="font-semibold">Verborgen kosten evenaren directe kosten:</p>
+              <p className="font-semibold">Verborgen kosten komen bovenop de loonkosten:</p>
               <ul className="mt-2">
-                <li>Directe loonkosten vormen 52% van totale verzuimkosten</li>
-                <li>Productiviteitsverlies, opvangkosten en vervangingskosten vormen 48%</li>
-                <li>Voor 100 medewerkers: €393.743 totale jaarlijkse kosten bij 5,2% verzuim</li>
+                <li>Directe loonkosten zijn alleen het zichtbare deel</li>
+                <li>Opvang, presenteïsme, vervanging en kennisverlies komen erbij</li>
               </ul>
 
-              <p className="font-semibold mt-8">Stress veroorzaakt kwart van verzuim:</p>
+              <p className="font-semibold mt-8">Stress speelt mee in één op de vier verzuimdagen{" "}<Bron ids={["kwart-verzuim-stress"]} /></p>
+
+              <p className="font-semibold mt-8">Aandachttraining in onderzoek:</p>
               <ul className="mt-2">
-                <li>25% van Nederlands verzuim is stressgerelateerd</li>
-                <li>Vroege signalen blijven onopgemerkt door ongetraind waarschuwingssysteem</li>
-                <li>Presenteïsme kost tot 7,5x meer dan absenteïsme</li>
+                <li>69% minder ziektedagen in een gerandomiseerde studie bij managers{" "}<Bron ids={["zreda-ziektedagen"]} /></li>
+                <li>Uitvalrisico bij Unilever van 54,4% naar 16,4% van de deelnemers{" "}<Bron ids={["debruin-uitval"]} /></li>
+                <li>Minder stress, ook tot een jaar na de training{" "}<Bron ids={["michaelsen-stress-lange-termijn"]} /></li>
               </ul>
 
-              <p className="font-semibold mt-8">Aandachttraining levert meetbare resultaten:</p>
+              <p className="font-semibold mt-8">Losse middelen worden weinig gebruikt:</p>
               <ul className="mt-2">
-                <li>15-21% verzuimreductie wetenschappelijk aangetoond</li>
-                <li>497-775% ROI binnen eerste jaar op basis van 40 jaar onderzoek</li>
-                <li>Effecten blijven minimaal 12 maanden behouden</li>
-              </ul>
-
-              <p className="font-semibold mt-8">Traditionele interventies falen door gebrek aan structuur:</p>
-              <ul className="mt-2">
-                <li>EAP: 4-5% gebruiksgraad</li>
-                <li>Mindfulness apps: 4,7% blijft oefenen na 30 dagen</li>
-                <li>Gestructureerde trainingen: 89,8% intentie tot doortrainen</li>
+                <li>Apps voor aandachtsoefeningen: 4,7% gebruikt ze na 30 dagen nog{" "}<Bron ids={["app-gebruik"]} /></li>
               </ul>
             </div>
           </div>
