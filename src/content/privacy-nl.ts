@@ -1,10 +1,15 @@
 import type { JuridischePagina } from "./juridisch";
 
 /** Privacyverklaring, Nederlands. De Engelse tekst staat in privacy-en.ts en
- *  moet bij elke wijziging mee. */
+ *  moet bij elke wijziging mee.
+ *
+ *  Het deel over deelnemers is versie 3.2 van Bas (29 oktober 2026). Het deel
+ *  over de website, "Een bezoek aan innerleaps.nl", staat niet in dat document
+ *  en is bewust blijven staan: de cookiemelding en de cookieverklaring
+ *  verwijzen ervoor naar deze pagina. */
 export const privacyNl: JuridischePagina = {
   titel: "Privacyverklaring",
-  ondertitel: "**Innerleaps**, versie 2.0 | 11 september 2026",
+  ondertitel: "**Innerleaps**, versie 3.2 | 29 oktober 2026",
   metaTitel: "Privacyverklaring | Innerleaps",
   metaBeschrijving:
     "Privacyverklaring van Innerleaps. Hoe we omgaan met persoonsgegevens van bezoekers van de website en van deelnemers aan onze trainingen.",
@@ -15,7 +20,17 @@ export const privacyNl: JuridischePagina = {
         {
           soort: "tekst",
           tekst:
-            "Innerleaps is een trainingsbureau gespecialiseerd in breintraining voor professionals. We geven trainingen bij bedrijven, verzorgd door gekwalificeerde trainers.",
+            "Innerleaps is een eenmanszaak van Bas ter Haar Romenij. Wij bieden trainingen aan voor werkende professionals op het gebied van aandacht, focus en vitaliteit. De trainingen worden verzorgd door gekwalificeerde trainers.",
+        },
+        {
+          soort: "lijst",
+          items: [
+            "**Naam:** Innerleaps (Bas ter Haar Romenij)",
+            "**Adres:** Koningin Wilhelminaplein 454, 1062KS Amsterdam",
+            "**KvK:** 98136925",
+            "**Btw:** NL005312293B57",
+            "**E-mail voor privacyvragen:** [privacy@innerleaps.nl](mailto:privacy@innerleaps.nl)",
+          ],
         },
       ],
     },
@@ -25,7 +40,7 @@ export const privacyNl: JuridischePagina = {
         {
           soort: "tekst",
           tekst:
-            "Dit deel gaat over iedereen die onze website bezoekt. De rest van deze verklaring gaat over deelnemers aan een training, en daar bepaalt je werkgever wat er met je gegevens gebeurt. Voor de website ligt dat anders: daar bepaalt Innerleaps het, en is Innerleaps dus de verwerkingsverantwoordelijke.",
+            "Dit deel gaat over iedereen die onze website bezoekt. Ook hier is Innerleaps de verwerkingsverantwoordelijke. De rest van deze verklaring gaat over deelnemers aan een training.",
         },
       ],
     },
@@ -123,125 +138,88 @@ export const privacyNl: JuridischePagina = {
         {
           soort: "tekst",
           tekst:
-            "Een deel daarvan zit in de Verenigde Staten. Waar gegevens daar terechtkomen, steunt die doorgifte op het EU-VS Data Privacy Framework en op standaardcontractbepalingen, dezelfde waarborgen als verderop bij internationale doorgifte.",
+            "Een deel daarvan zit in de Verenigde Staten. Waar gegevens daar terechtkomen, steunt die doorgifte op het EU-VS Data Privacy Framework en op standaardcontractbepalingen, dezelfde waarborgen als verderop bij doorgifte buiten de EER.",
         },
       ],
     },
     {
-      kop: "Wie is verantwoordelijk voor je gegevens?",
+      kop: "Wie is verantwoordelijk voor jouw gegevens?",
       blokken: [
         {
           soort: "tekst",
           tekst:
-            "Je werkgever is de verwerkingsverantwoordelijke voor de persoonsgegevens die in het kader van de Innerleaps-training verzameld worden. Je werkgever heeft besloten dit programma aan medewerkers aan te bieden en Innerleaps ingeschakeld om het te geven.",
+            "Innerleaps is de verwerkingsverantwoordelijke in de zin van de AVG voor de persoonsgegevens die wij verwerken voor het trainingsprogramma. Dat zijn de aanmelding en organisatie, de impactmeting, je persoonlijke rapport en de evaluatie.",
         },
         {
           soort: "tekst",
           tekst:
-            "Innerleaps is de verwerker en verwerkt je persoonsgegevens namens je werkgever, op basis van een verwerkersovereenkomst.",
-        },
-        {
-          soort: "tekst",
-          tekst: "Heb je vragen over je privacy of wil je je rechten uitoefenen, neem dan contact op met:",
-        },
-        {
-          soort: "lijst",
-          items: ["Je werkgever (de HR-afdeling), of", "Innerleaps: **privacy@innerleaps.nl**"],
-        },
-        {
-          soort: "kader",
-          regels: [
-            "Contactgegevens Innerleaps:",
-            "Innerleaps",
-            "Bas ter Haar Romenij",
-            "Koningin Wilhelminaplein 454",
-            "1062KS Amsterdam",
-            "KvK: 98136925",
-            "Btw: NL005312293B57",
-            "E-mail: privacy@innerleaps.nl",
-          ],
+            "Je werkgever kondigt het programma aan (en stuurt je, als je je via ons formulier aanmeldt, de aanmeldlink). Heeft je werkgever je aangemeld en ingedeeld, bijvoorbeeld via het platform of de roosterplanning, dan geeft je werkgever ons je naam, werk-e-mailadres, groep, vorm (online of op locatie) en de dag, het tijdstip en de data van de sessies. Voor die doorgave is je werkgever zelf verantwoordelijk. Meld je je aan via ons aanmeldformulier, dan geef je die gegevens rechtstreeks aan ons en geven wij je naam, werk-e-mailadres en groep als deelnemer door aan je werkgever. Wij sturen je zelf de links naar de vragenlijsten; je werkgever is daar niet bij betrokken. Je werkgever krijgt nooit je individuele antwoorden of je persoonlijke rapport te zien en weet niet of je de vragenlijst invult.",
         },
       ],
     },
     {
-      kop: "Hoe doe je mee?",
+      kop: "Hoe kom je bij ons terecht?",
       blokken: [
         {
           soort: "tekst",
           tekst:
-            "Afhankelijk van wat je werkgever heeft geregeld, meld je je aan voor het programma via een aanmeldformulier van Innerleaps, of geeft je werkgever de e-mailadressen van deelnemende medewerkers door aan Innerleaps, zodat Innerleaps deelnemers kan indelen en programmamateriaal kan versturen. In beide gevallen word je op deze privacyverklaring gewezen en accepteer je, voordat je meedoet, een korte verklaring van vrijwillige deelname. Die verklaring bevestigt alleen dat je vrijwillig en op eigen verantwoordelijkheid deelneemt; er staat geen gezondheidsinformatie in.",
+            "Je werkgever kondigt het programma aan, vraagt wie interesse heeft en nodigt je uit. Je werkgever meldt je aan en deelt je in, of je meldt je aan via het aanmeldformulier van Innerleaps. Wat je werkgever vooraf aan jou vraagt, zoals je interesse of voorkeur, is van je werkgever en krijgen wij niet te zien. Na je aanmelding of indeling sturen wij je een eerste e-mail met je indeling, wat dat betekent en de vervolgstappen. Daarin staat ook deze privacyverklaring. Later sturen wij je zelf per e-mail de link naar de vragenlijst, en zo nodig een herinnering. Je werkgever is daar niet bij betrokken en ziet niet wie hem invult. Meedoen is vrijwillig.",
         },
       ],
     },
     {
-      kop: "Welke persoonsgegevens verwerken we, en waarom?",
-      blokken: [
-        { soort: "tekst", tekst: "We verwerken persoonsgegevens uitsluitend voor de volgende doelen:" },
-      ],
+      kop: "Welke gegevens verwerken wij en waarom?",
+      blokken: [],
     },
     {
-      kop: "1. Aanmelding en programma-administratie",
-      niveau: 3,
-      blokken: [
-        { soort: "tekst", tekst: "Doe je mee aan het programma, dan verwerken we:" },
-        {
-          soort: "lijst",
-          items: [
-            "Naam",
-            "Zakelijk e-mailadres",
-            "Je opgegeven trainingsdoel (de uitdaging of het doel waar je mee aan de slag wilt, gekozen uit een vaste lijst, met een optioneel vrij invulveld waarin we je vragen geen gevoelige informatie in te vullen)",
-          ],
-        },
-        {
-          soort: "tekst",
-          tekst:
-            "**Doel:** je aanmelden voor het programma, deelnemers indelen, je programmamateriaal en communicatie sturen, en je trainer in staat stellen de training af te stemmen op wat de groep nodig heeft. Je individuele trainingsdoel gebruiken we alleen om de training te geven en af te stemmen. Innerleaps kan geanonimiseerde, samengevoegde inzichten uit deze doelen gebruiken (bijvoorbeeld de meest voorkomende redenen om mee te doen) voor het verbeteren van onze eigen dienstverlening en voor marketing; zulke samengevoegde inzichten herleiden niet tot jou.",
-        },
-        {
-          soort: "tekst",
-          tekst:
-            "**Grondslag:** toestemming (artikel 6 lid 1 sub a AVG) als je je via een formulier van Innerleaps aanmeldt; geeft je werkgever je gegevens door, dan gebeurt dat in opdracht van je werkgever en informeert je werkgever je vooraf.",
-        },
-      ],
-    },
-    {
-      kop: "2. Effectmeting",
+      kop: "1. Aanmelding en organisatie van het programma",
       niveau: 3,
       blokken: [
         {
-          soort: "tekst",
-          tekst:
-            "Via de vragenlijsten voor de effectmeting (voor de start van de training, T0, en na afloop, T1) vragen we:",
+          soort: "lijst",
+          items: [
+            "**Gegevens:** je naam, je werk-e-mailadres, de groep waarin je zit en de vorm, de dag, het tijdstip en de data van de sessies.",
+            "**Bron:** je werkgever (als je werkgever je aanmeldt en indeelt) of jijzelf (als je je aanmeldt via ons aanmeldformulier).",
+            "**Ontvangers:** je werkgever weet dat je deelneemt. Bij aanmelding via ons formulier geven wij je naam, werk-e-mailadres en groep als deelnemer aan je werkgever door. Je werkgever heeft het programma ingekocht, geeft je ruimte in werktijd en betaalt per deelnemer.",
+            "**Doel:** je informeren over je indeling (en je indelen als je je via ons formulier aanmeldt), de sessies en de vervolgstappen, en je programmamateriaal sturen.",
+            '**Grondslag:** gerechtvaardigd belang (art. 6 lid 1 sub f AVG). Wij voeren het programma uit waarvoor je je hebt aangemeld en geven je deelname door aan je werkgever, die het programma heeft ingekocht. Je kunt hiertegen bezwaar maken (zie "Jouw rechten").',
+          ],
         },
+      ],
+    },
+    {
+      kop: "2. Impactmeting (vóór en na het programma)",
+      niveau: 3,
+      blokken: [
         {
           soort: "lijst",
           items: [
-            "Naam en zakelijk e-mailadres",
-            "Informatie over je werkprestaties, waaronder verwachte en werkelijke werkuren en dagen afwezig door een fysiek of psychisch gezondheidsprobleem",
-            "Levenstevredenheid, en (als je werkgever deze optionele vragen heeft geselecteerd) werkplezier en vertrekintentie",
-            "Welzijnsmaten: vitaliteit, veerkracht en stress",
-            "Hoe vaak je oefent en wat je daarbij tegenhoudt",
+            "**Gegevens:** je naam en werk-e-mailadres (om je antwoorden van vóór en na aan elkaar te koppelen), je reden om mee te doen, werkprestaties (verwachte en gewerkte uren, dagen afwezig door een lichamelijk of geestelijk gezondheidsprobleem), tevredenheid met je leven en, als je werkgever dat onderdeel heeft gekozen, tevredenheid met je werk en vertrekintentie (die vragen zijn niet verplicht), welzijn (vitaliteit, veerkracht en stress), hoe vaak je oefent en wat je daarbij belemmert.",
+            "**Let op:** gegevens over stress, vitaliteit, veerkracht en gezondheidsgerelateerd verzuim zijn gegevens over je gezondheid (bijzondere persoonsgegevens). Voor die gegevens vragen wij je uitdrukkelijke toestemming.",
+            "**Doel:** meten wat het programma doet voor je welzijn, productiviteit en werkprestaties, je persoonlijke rapport maken en anonieme, samengevoegde resultaten rapporteren aan je werkgever en een anonieme samenvatting maken voor je trainer.",
+            "**Grondslag:** je toestemming (art. 6 lid 1 sub a AVG) en voor de gezondheidsgegevens je uitdrukkelijke toestemming (art. 9 lid 2 sub a AVG).",
+            "**Vrijwillig:** je kunt meedoen aan de training zonder de vragenlijst in te vullen. Geef je geen toestemming, dan vul je de vragenlijst niet in. Dat heeft geen gevolgen voor je deelname aan de training of voor je arbeidsrelatie.",
           ],
         },
         {
           soort: "tekst",
           tekst:
-            "**Doel:** meten wat de training doet met je welzijn, productiviteit en werkprestaties, en je resultaten van voor en na de training vergelijken.",
+            "**Je persoonlijke rapport.** Na het programma krijg je een rapport met je eigen resultaten van vóór en na. Bestaat je groep uit minimaal 8 personen, dan vergelijkt het rapport je stressscore ook met het gemiddelde van je groep. Je ziet daarbij nooit de resultaten van iemand anders.",
         },
         {
           soort: "tekst",
           tekst:
-            "**Let op:** een deel van deze informatie gaat over je gezondheid en welzijn (zoals stress, vitaliteit, veerkracht en gezondheidsgerelateerd verzuim) en zijn bijzondere persoonsgegevens in de zin van de AVG. We gaan er extra zorgvuldig mee om en gebruiken ze alleen voor het doel hierboven.",
+            "**Anonieme resultaten voor je werkgever.** Je werkgever ontvangt alleen percentages van de hele groep, en alleen als minimaal 8 personen de vragenlijst hebben ingevuld. Daarin ben je niet herkenbaar. Wij vragen jou niet naar je salaris. Voor een rendementsberekening gebruiken wij een gemiddeld salaris van je werkgever voor de hele organisatie.",
         },
         {
           soort: "tekst",
           tekst:
-            "**Grondslag:** toestemming (artikel 6 lid 1 sub a AVG) en, voor de gezondheidsgerelateerde gegevens, je uitdrukkelijke toestemming (artikel 9 lid 2 sub a AVG), beide gegeven via de toestemmingsverklaring op de vragenlijst.",
+            "**Anonieme samenvatting voor je trainer.** Je trainer krijgt een samenvatting van de thema's uit de redenen waarom deelnemers meedoen, zodat de trainer daarop kan aanhaken in de eerste sessie. Dat gebeurt alleen als minimaal 8 deelnemers de vragenlijst hebben ingevuld, zonder letterlijke antwoorden en zonder namen. Je trainer kan jou daarin niet herkennen.",
         },
         {
           soort: "tekst",
           tekst:
-            "**Belangrijk:** je eigen antwoorden gaan nooit naar je werkgever. De directie krijgt alleen geanonimiseerde, samengevoegde uitkomsten, en alleen als de trainingsgroep uit minimaal 8 personen bestaat. We vragen je niet naar je salaris; wordt er een ROI-cijfer gerapporteerd, dan wordt dat berekend met een salarisgemiddelde dat je werkgever aanlevert, en dat gemiddelde staat in geen enkel rapport voor de directie.",
+            "**Optioneel gebruik voor onderzoek en marketing.** Vink je daarvoor het aparte toestemmingsvakje aan, dan gebruiken wij je antwoorden, nadat ze zijn geanonimiseerd en samengevoegd met die van andere deelnemers, ook voor ons eigen onderzoek, onze productontwikkeling en onze marketing (bijvoorbeeld resultaten op onze website). Dat vakje is optioneel en heeft geen invloed op je deelname.",
         },
       ],
     },
@@ -249,28 +227,29 @@ export const privacyNl: JuridischePagina = {
       kop: "3. Evaluatie van de training",
       niveau: 3,
       blokken: [
-        { soort: "tekst", tekst: "Via het evaluatieformulier vragen we beoordelingen van de trainer en open feedback over het programma." },
-        { soort: "tekst", tekst: "Het evaluatieformulier vraagt niet om je naam of e-mailadres." },
-        { soort: "tekst", tekst: "**Doel:** de training evalueren en verbeteren." },
         {
-          soort: "tekst",
-          tekst:
-            "**Grondslag:** gerechtvaardigd belang (artikel 6 lid 1 sub f AVG). Je eigen antwoorden ziet alleen Innerleaps; ze gaan nooit naar de trainers of derden. De opdrachtgever krijgt alleen gemiddelde scores.",
-        },
-        {
-          soort: "tekst",
-          tekst:
-            "**Let op:** geanonimiseerde en samengevoegde inzichten uit evaluaties kunnen we gebruiken voor marketing.",
+          soort: "lijst",
+          items: [
+            "**Gegevens:** je beoordeling van de trainer en het programma en open feedback. Het formulier vraagt niet om je naam of e-mailadres. Vul in de open velden geen namen of gezondheidsgegevens in.",
+            "**Doel:** het programma evalueren en verbeteren.",
+            "**Grondslag:** gerechtvaardigd belang (art. 6 lid 1 sub f AVG).",
+            "**Wie ziet het:** alleen Innerleaps. Je werkgever ontvangt alleen gemiddelde scores en trainers zien geen individuele antwoorden. Wij kunnen geanonimiseerde en samengevoegde inzichten uit de evaluaties ook voor marketing gebruiken.",
+          ],
         },
       ],
     },
     {
-      kop: "Deelname is vrijwillig",
+      kop: "Vrijwillig meedoen",
       blokken: [
         {
           soort: "tekst",
           tekst:
-            "Meedoen aan de Innerleaps-training is volledig vrijwillig. Je werkgever biedt het programma aan, maar jij beslist of je meedoet. Je kunt je toestemming altijd intrekken, zonder gevolgen voor je arbeidsrelatie. De training is een programma voor professionele ontwikkeling en welzijn en geen vorm van zorg. Heb je gezondheidsklachten die deelname onverstandig zouden kunnen maken, raadpleeg dan eerst je huisarts.",
+            "Meedoen aan het programma is vrijwillig. Je werkgever biedt het aan, maar jij beslist. De training is een ontwikkel- en welzijnstraining en geen vorm van zorg. Heb je gezondheidsklachten die deelname mogelijk onverstandig maken, overleg dan eerst met je huisarts.",
+        },
+        {
+          soort: "tekst",
+          tekst:
+            "Je kunt je toestemming op elk moment intrekken, zonder gevolgen voor je arbeidsrelatie. Wij verwijderen dan binnen 5 werkdagen je gegevens uit de impactmeting. Anonieme resultaten waarin je gegevens al zijn opgegaan, kunnen niet meer worden herleid en blijven bestaan. Zonder toestemming kunnen wij geen persoonlijk rapport meer maken.",
         },
       ],
     },
@@ -280,97 +259,71 @@ export const privacyNl: JuridischePagina = {
         {
           soort: "tekst",
           tekst:
-            "Tijdens het programma, meestal in de eerste workshop, kun je de optie krijgen om Oefenbuddy te gebruiken: een vrijwillige oefenherinnering via een berichten-app (WhatsApp of Signal), die je helpt gemotiveerd te blijven om de oefeningen te doen. Gebruiken is volledig je eigen keuze. Je meldt je rechtstreeks aan bij Oefenbuddy, dat als zelfstandige aanbieder werkt onder zijn eigen voorwaarden en privacybeleid. Innerleaps deelt geen van je gegevens met Oefenbuddy en krijgt ook niets terug. Oefenbuddy vraagt niet om identificerende informatie zoals je naam en kan je gebruik van de tool niet koppelen aan jou als Innerleaps-deelnemer.",
+            "Tijdens het programma, meestal in de eerste workshop, kun je gebruikmaken van Oefenbuddy. Dat is een vrijwillige oefencoach via een berichtenapp (WhatsApp of Signal) die je helpt om de oefeningen vol te houden. Het gebruik is helemaal jouw keuze. Je meldt je rechtstreeks aan bij Oefenbuddy, dat als zelfstandige aanbieder werkt onder eigen voorwaarden en privacybeleid. Innerleaps deelt geen gegevens met Oefenbuddy en krijgt er geen terug. Oefenbuddy vraagt niet om gegevens zoals je naam en kan je gebruik niet koppelen aan jou als deelnemer van Innerleaps.",
         },
       ],
     },
     {
-      kop: "Hoe lang bewaren we je gegevens?",
+      kop: "Hoe lang bewaren wij je gegevens?",
       blokken: [
         {
           soort: "tekst",
           tekst:
-            "We bewaren je persoonsgegevens niet langer dan nodig. Zodra we het samengevoegde impactrapport voor je werkgever hebben gemaakt en je je eigen rapport hebben gestuurd, hebben we je onderliggende persoonsgegevens niet meer nodig en verwijderen we ze. Sowieso worden alle persoonsgegevens uiterlijk verwijderd bij het einde van de overeenkomst tussen Innerleaps en je werkgever (maximaal 12 maanden). Alleen geanonimiseerde totalen, waaruit jij niet herleidbaar bent, bewaren we langer. Je werkgever krijgt nooit persoonsgegevens, alleen geanonimiseerde uitkomsten.",
+            "Wij bewaren je persoonsgegevens niet langer dan nodig. Zodra wij de rapportage voor je werkgever en je persoonlijke rapport hebben opgeleverd, verwijderen wij de gegevens waarmee je herkenbaar bent. In elk geval verwijderen wij ze uiterlijk 12 maanden na afloop van het programma. Komt jouw groep niet tot stand, dan verwijderen wij je gegevens binnen 30 dagen nadat dat vaststaat. Alleen geanonimiseerde resultaten, waarin je niet herkenbaar bent, bewaren wij langer. Je werkgever ontvangt nooit persoonsgegevens uit de impactmeting, alleen anonieme resultaten.",
         },
       ],
     },
     {
-      kop: "Wie heeft toegang tot je gegevens?",
-      blokken: [],
-    },
-    {
-      kop: "Innerleaps zelf",
-      niveau: 3,
+      kop: "Wie ziet jouw gegevens?",
       blokken: [
-        {
-          soort: "tekst",
-          tekst:
-            "Alleen Bas ter Haar Romenij (eigenaar) heeft toegang tot de volledige gegevens. Zelfstandige trainers die Innerleaps inschakelt krijgen alleen wat strikt nodig is om hun sessies te geven: je naam, zakelijke e-mailadres en je opgegeven trainingsdoel. Dat delen we op basis van dataminimalisatie (artikel 5 lid 1 sub c AVG), en het wordt alleen gebruikt om deelnemers te bereiken over de sessie en om de training af te stemmen. Trainers krijgen je antwoorden op de vragenlijsten of gezondheidsgerelateerde gegevens niet te zien. Alle trainers zijn contractueel gebonden aan geheimhouding en gegevensbescherming voordat ze een sessie mogen geven.",
-        },
-      ],
-    },
-    {
-      kop: "Je werkgever",
-      niveau: 3,
-      blokken: [
-        {
-          soort: "tekst",
-          tekst:
-            "Je werkgever krijgt alleen geanonimiseerde, samengevoegde uitkomsten. Individuele gegevens gaan nooit naar je werkgever. We vragen je niet naar je salaris; de ROI wordt berekend met een gemiddelde dat je werkgever aanlevert, en dat gemiddelde staat in geen enkel rapport voor de directie.",
-        },
-      ],
-    },
-    {
-      kop: "Subverwerkers",
-      niveau: 3,
-      blokken: [
-        {
-          soort: "tekst",
-          tekst:
-            "We gebruiken Google (Google Workspace en Google Cloud) om gegevens te verzamelen, te bewaren en te verwerken via Google Forms, Google Sheets, Google Slides, Google Drive, Gmail en Google Agenda, en om onze rapportautomatisering te draaien. We hebben de Google-dataregio op Europa gezet, zodat gegevens die daaronder vallen binnen de Europese Unie liggen opgeslagen. Google is een wereldwijde leverancier, en voor support en bepaalde achtergrondverwerking kan een beperkt deel van de gegevensverwerking buiten de Europese Economische Ruimte plaatsvinden; gebeurt dat, dan valt het onder standaardcontractbepalingen en de certificering van Google onder het EU-VS Data Privacy Framework.",
-        },
-        {
-          soort: "tekst",
-          tekst:
-            "De leveranciers achter de website staan hierboven, bij Een bezoek aan innerleaps.nl. Alle subverwerkers zijn gebonden aan een verwerkersovereenkomst met Innerleaps.",
-        },
-      ],
-    },
-    {
-      kop: "Internationale doorgifte",
-      blokken: [
-        {
-          soort: "tekst",
-          tekst:
-            "Innerleaps bewaart persoonsgegevens binnen de Europese Unie. Worden persoonsgegevens buiten de Europese Economische Ruimte doorgegeven, dan zorgt Innerleaps voor passende waarborgen, waaronder standaardcontractbepalingen en adequaatheidsbesluiten, volgens hoofdstuk V van de AVG.",
-        },
-      ],
-    },
-    {
-      kop: "Je rechten",
-      blokken: [
-        { soort: "tekst", tekst: "Op grond van de AVG heb je de volgende rechten:" },
         {
           soort: "lijst",
           items: [
-            "**Recht op inzage** (artikel 15): je kunt opvragen welke gegevens we van je verwerken.",
-            "**Recht op rectificatie** (artikel 16): je kunt onjuiste gegevens laten corrigeren.",
-            "**Recht op verwijdering** (artikel 17): je kunt je gegevens laten wissen.",
-            "**Recht op beperking** (artikel 18): je kunt vragen de verwerking te beperken.",
-            "**Recht op overdraagbaarheid** (artikel 20): je kunt je gegevens in een gestructureerd formaat opvragen.",
-            "**Recht van bezwaar** (artikel 21): je kunt bezwaar maken tegen verwerking op grond van gerechtvaardigd belang.",
-            "**Recht om toestemming in te trekken**: je kunt je toestemming altijd intrekken, zonder opgaaf van reden, ook je uitdrukkelijke toestemming voor het verwerken van gezondheidsgerelateerde gegevens. Intrekken werkt niet met terugwerkende kracht, maar kan wel gevolgen hebben voor je deelname aan het programma.",
+            "**Innerleaps:** alleen Bas ter Haar Romenij heeft toegang tot alle gegevens.",
+            "**Trainers:** freelance trainers krijgen geen lijst met deelnemersgegevens van ons. In de sessies zien zij de e-mailadressen van deelnemers die inloggen. Neem je zelf contact op met je trainer, bijvoorbeeld om je af te melden, dan ziet de trainer je telefoonnummer of e-mailadres. Zij zien geen individuele antwoorden en geen gezondheidsgegevens, alleen de anonieme samenvatting hierboven. Zij zijn gebonden aan geheimhouding en gebruiken niets buiten de training.",
+            "**Je werkgever:** weet dat je deelneemt aan de training. Bij aanmelding via ons formulier ontvangt je werkgever van ons je naam, werk-e-mailadres en groep als deelnemer. Daarnaast ziet je werkgever alleen de anonieme, samengevoegde rapportage. Je werkgever krijgt nooit individuele antwoorden en weet niet wie de vragenlijst invult.",
+            '**Google:** wij gebruiken Google Workspace (Forms, Sheets, Slides, Drive, Gmail en Calendar) om gegevens te verzamelen en op te slaan. Google is onze verwerker. Zie hieronder bij "Doorgifte buiten de EER".',
+            "**Rapportageautomatisering:** je rapporten worden gemaakt met software die lokaal draait op de versleutelde computer van Innerleaps. De software staat niet online, er is geen andere partij bij betrokken en na het maken van je rapport blijven er geen kopieën van je gegevens op de computer achter.",
+          ],
+        },
+        { soort: "tekst", tekst: "Wij verstrekken je gegevens aan niemand anders." },
+      ],
+    },
+    {
+      kop: "Doorgifte buiten de EER",
+      blokken: [
+        {
+          soort: "tekst",
+          tekst:
+            "Google kan persoonsgegevens ook buiten de EER verwerken, bijvoorbeeld voor ondersteuning en achtergrondverwerking. Wij zorgen dan voor passende waarborgen conform hoofdstuk V van de AVG: standaardcontractbepalingen en Google's certificering onder het EU-US Data Privacy Framework. Een kopie van deze waarborgen kun je opvragen via [privacy@innerleaps.nl](mailto:privacy@innerleaps.nl).",
+        },
+      ],
+    },
+    {
+      kop: "Jouw rechten",
+      blokken: [
+        { soort: "tekst", tekst: "Je hebt op grond van de AVG de volgende rechten:" },
+        {
+          soort: "lijst",
+          items: [
+            "**Inzage** (art. 15): je kunt vragen welke gegevens wij over je verwerken.",
+            "**Rectificatie** (art. 16): je kunt onjuiste gegevens laten corrigeren.",
+            "**Verwijdering** (art. 17): je kunt vragen je gegevens te verwijderen.",
+            "**Beperking** (art. 18): je kunt vragen de verwerking te beperken.",
+            "**Dataportabiliteit** (art. 20): je kunt je gegevens in een gestructureerde vorm opvragen.",
+            "**Bezwaar** (art. 21): je kunt bezwaar maken tegen verwerking op grond van gerechtvaardigd belang.",
+            "**Toestemming intrekken:** je kunt je toestemming op elk moment intrekken, zonder opgave van redenen, ook je uitdrukkelijke toestemming voor gezondheidsgegevens. De intrekking werkt niet terug, maar je gegevens uit de impactmeting verwijderen wij dan binnen 5 werkdagen.",
           ],
         },
         {
           soort: "tekst",
           tekst:
-            "Een verzoek indienen doe je via de HR-afdeling van je werkgever of rechtstreeks bij Innerleaps, op **privacy@innerleaps.nl**. We reageren binnen 30 dagen.",
+            "Stuur je verzoek naar [privacy@innerleaps.nl](mailto:privacy@innerleaps.nl). Stuur je het naar je werkgever, dan geven zij het aan ons door. Wij reageren binnen een maand.",
         },
         {
           soort: "tekst",
           tekst:
-            "Je hebt ook het recht een klacht in te dienen bij de Autoriteit Persoonsgegevens, via autoriteitpersoonsgegevens.nl, of bij de toezichthouder in het land waar je woont.",
+            "Je hebt ook het recht om een klacht in te dienen bij de Autoriteit Persoonsgegevens ([autoriteitpersoonsgegevens.nl](https://autoriteitpersoonsgegevens.nl)) of bij de toezichthouder in je land van verblijf.",
         },
       ],
     },
@@ -380,17 +333,17 @@ export const privacyNl: JuridischePagina = {
         {
           soort: "tekst",
           tekst:
-            "Innerleaps neemt passende technische en organisatorische maatregelen om je persoonsgegevens te beschermen tegen ongeautoriseerde toegang, verlies of misbruik. Gegevens staan uitsluitend in beveiligde cloudomgevingen met de dataregio op Europa, beschermd met tweefactorauthenticatie en versleuteling. Toegang is beperkt tot mensen die het nodig hebben om het programma te geven.",
+            "Innerleaps neemt passende technische en organisatorische maatregelen om je gegevens te beschermen tegen ongeoorloofde toegang, verlies of misbruik. Gegevens staan in Google Workspace, beveiligd met tweestapsverificatie en versleuteling. Rapporten worden gemaakt op de versleutelde computer van Innerleaps, die daarna geen kopieën van je gegevens bewaart. Alleen wie het nodig heeft voor de uitvoering van het programma, heeft toegang.",
         },
       ],
     },
     {
-      kop: "Wijzigingen in deze verklaring",
+      kop: "Wijzigingen",
       blokken: [
         {
           soort: "tekst",
           tekst:
-            "Innerleaps mag deze privacyverklaring aanpassen. De actuele versie staat altijd op innerleaps.nl, via de footer van de website. We raden je aan hem af en toe door te lezen.",
+            "Innerleaps kan deze privacyverklaring aanpassen. De meest recente versie staat altijd op [innerleaps.nl/privacy](/privacy). Wij raden je aan deze verklaring regelmatig te lezen.",
         },
       ],
     },
@@ -400,17 +353,10 @@ export const privacyNl: JuridischePagina = {
         {
           soort: "tekst",
           tekst:
-            "Heb je vragen over deze privacyverklaring of over de verwerking van je persoonsgegevens, neem dan contact op:",
-        },
-        {
-          soort: "kader",
-          regels: [
-            "privacy@innerleaps.nl",
-            "Innerleaps, Koningin Wilhelminaplein 454, 1062KS Amsterdam",
-          ],
+            "Voor vragen over deze privacyverklaring of over de verwerking van je persoonsgegevens kun je ons bereiken via [privacy@innerleaps.nl](mailto:privacy@innerleaps.nl). Innerleaps, Koningin Wilhelminaplein 454, 1062KS Amsterdam.",
         },
       ],
     },
   ],
-  voettekst: ["Documentversie: 2.0", "Datum: 11 september 2026", "Opgesteld door: Innerleaps", "Status: gepubliceerd"],
+  voettekst: ["Documentversie: 3.2", "Datum: 29 oktober 2026", "Opgesteld door: Innerleaps", "Status: gepubliceerd"],
 };
