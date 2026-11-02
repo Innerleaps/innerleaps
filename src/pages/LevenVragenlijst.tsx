@@ -1,12 +1,10 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { useToast } from "@/hooks/use-toast";
-import { supabase } from "@/integrations/supabase/client";
 import { Check } from "lucide-react";
 
 const questions = [
@@ -33,13 +31,7 @@ const options = [
 const LevenVragenlijst = () => {
   const { toast } = useToast();
   const navigate = useNavigate();
-  const [formData, setFormData] = useState({
-    naam: "",
-    email: "",
-    organisatie: "",
-  });
   const [answers, setAnswers] = useState<Record<string, number>>({});
-  const [isSubmitting, setIsSubmitting] = useState(false);
   const [openAccordion, setOpenAccordion] = useState<string>("question-0");
 
   // Calculate score with reversed scoring for questions 4, 5, 7, 8
@@ -75,62 +67,24 @@ const LevenVragenlijst = () => {
     }
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  // De score wordt hier in de browser uitgerekend en alleen op het scherm
+  // getoond. Er gaat bewust niets naar Supabase: de antwoorden zijn
+  // gezondheidsgegevens, Bas heeft ze niet nodig, en de pagina en de
+  // privacyverklaring beloven dat er niets wordt opgeslagen. Tot november 2026
+  // bewaarde submit-stress-questionnaire elke inzending.
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
     // Validate all questions are answered
     if (Object.keys(answers).length < 10) {
       toast({
         title: "Niet alle vragen beantwoord",
-        description: "Beantwoord alle vragen voordat je het formulier verstuurt.",
+        description: "Beantwoord eerst alle 10 vragen, dan zie jij je score.",
       });
       return;
     }
 
-    setIsSubmitting(true);
-
-    try {
-      const totalScore = calculateTotalScore();
-
-      const submission = {
-        naam: formData.naam,
-        email: formData.email,
-        organisatie: formData.organisatie,
-        q1: answers.q1,
-        q2: answers.q2,
-        q3: answers.q3,
-        q4: answers.q4,
-        q5: answers.q5,
-        q6: answers.q6,
-        q7: answers.q7,
-        q8: answers.q8,
-        q9: answers.q9,
-        q10: answers.q10,
-        total_score: totalScore,
-      };
-
-      const { error } = await supabase.functions.invoke("submit-stress-questionnaire", {
-        body: submission,
-      });
-
-      if (error) throw error;
-
-      // Navigate to results page with score
-      navigate("/leven-vragenlijst/resultaat", {
-        state: {
-          score: totalScore,
-          emailSent: !!(formData.email && formData.email.trim() !== ""),
-        },
-      });
-    } catch (error: any) {
-      console.error("Submission error:", error);
-      toast({
-        title: "Er ging iets mis",
-        description: "Probeer het later opnieuw.",
-      });
-    } finally {
-      setIsSubmitting(false);
-    }
+    navigate("/leven-vragenlijst/resultaat", { state: { score: calculateTotalScore() } });
   };
 
   return (
@@ -140,49 +94,13 @@ const LevenVragenlijst = () => {
           <h1 className="text-3xl font-bold mb-4">Hoe ga jij om met je dagelijks leven?</h1>
           <p className="text-foreground/80 mb-8">
             De volgende vragen gaan over hoe je de afgelopen maand situaties en uitdagingen hebt ervaren. Het geeft je
-            inzicht in hoe je omgaat met wat er op je afkomt. Later in de training bespreken we wat de uitkomsten
-            betekenen.
+            inzicht in hoe je omgaat met wat er op je afkomt. In de masterclass bespreken we wat je score betekent.
           </p>
 
           <form onSubmit={handleSubmit} className="space-y-8">
-            {/* Contact Information */}
-            <div className="space-y-6">
-              <div>
-                <h2 className="text-2xl font-bold mb-2">Persoonlijke gegevens</h2>
-                <p className="text-foreground/80 mb-6">
-                  We bewaren jouw gegevens beveiligd en delen deze nooit met je werkgever. Het invullen van je gegevens
-                  is niet verplicht, maar hierdoor kunnen we wel de score van de vragenlijst met je delen per e-mail.
-                </p>
-              </div>
-
-              <div className="space-y-4 pb-6 border-b">
-                <div>
-                  <Label htmlFor="naam">Naam</Label>
-                  <Input
-                    id="naam"
-                    value={formData.naam}
-                    onChange={(e) => setFormData({ ...formData, naam: e.target.value })}
-                  />
-                </div>
-                <div>
-                  <Label htmlFor="email">E-mailadres</Label>
-                  <Input
-                    id="email"
-                    type="email"
-                    value={formData.email}
-                    onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                  />
-                </div>
-                <div>
-                  <Label htmlFor="organisatie">Organisatie</Label>
-                  <Input
-                    id="organisatie"
-                    value={formData.organisatie}
-                    onChange={(e) => setFormData({ ...formData, organisatie: e.target.value })}
-                  />
-                </div>
-              </div>
-            </div>
+            <p className="text-foreground/80 pb-6 border-b">
+              Je antwoorden blijven op je eigen telefoon of laptop. We slaan niets op en vragen niet wie je bent.
+            </p>
 
             {/* Questions */}
             <div className="space-y-6">
@@ -248,8 +166,8 @@ const LevenVragenlijst = () => {
               </Accordion>
             </div>
 
-            <Button type="submit" size="lg" className="w-full" disabled={isSubmitting}>
-              {isSubmitting ? "Bezig met versturen..." : "Verstuur"}
+            <Button type="submit" size="lg" className="w-full">
+              Bekijk je score
             </Button>
           </form>
         </div>

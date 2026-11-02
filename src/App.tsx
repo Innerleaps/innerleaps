@@ -29,7 +29,6 @@ const Blog = lazy(() => import("./pages/Blog"));
 const ZiekteverzuimVerlagen = lazy(() => import("./pages/blog/ZiekteverzuimVerlagen"));
 const VerborgenKostenZiekteverzuim = lazy(() => import("./pages/blog/VerborgenKostenZiekteverzuim"));
 const HoeVerlaagIkZiekteverzuim = lazy(() => import("./pages/blog/HoeVerlaagIkZiekteverzuim"));
-const MasterclassQR = lazy(() => import("./pages/MasterclassQR"));
 const Bedankt = lazy(() => import("./pages/Bedankt"));
 const BedanktRoi = lazy(() => import("./pages/BedanktRoi"));
 const BedanktRapport = lazy(() => import("./pages/BedanktRapport"));
@@ -195,17 +194,7 @@ const App = () => {
                 <Route path="/en/request-a-quote" element={<OfferteAanvragen />} />
 
                 {/* Feature-flag routes - visible in Lovable editor, but redirect in production */}
-                <Route path="/masterclass-stress-qr" element={
-                  <ProductionRedirect>
-                    <MasterclassQR />
-                  </ProductionRedirect>
-                } />
                 <Route path="/bedankt" element={
-                  <ProductionRedirect>
-                    <Bedankt />
-                  </ProductionRedirect>
-                } />
-                <Route path="/masterclass-bedankt" element={
                   <ProductionRedirect>
                     <Bedankt />
                   </ProductionRedirect>
