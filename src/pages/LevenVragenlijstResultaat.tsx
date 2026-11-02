@@ -34,7 +34,6 @@ const LevenVragenlijstResultaat = () => {
   const location = useLocation();
   const navigate = useNavigate();
   const score = location.state?.score;
-  const emailSent = location.state?.emailSent;
 
   useEffect(() => {
     // Redirect to questionnaire if no score is available
@@ -65,12 +64,6 @@ const LevenVragenlijstResultaat = () => {
               <span className={`font-bold ${scoreLevel.color}`}>{scoreLevel.level}</span>
             </div>
           </div>
-
-          {emailSent && (
-            <p className="text-base text-foreground/60 mb-6">
-              Je ontvangt ook een email met je resultaten.
-            </p>
-          )}
 
           <Button onClick={() => navigate('/')} size="lg">
             Terug naar home

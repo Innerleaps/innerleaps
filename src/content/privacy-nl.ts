@@ -96,14 +96,14 @@ export const privacyNl: JuridischePagina = {
         {
           soort: "tekst",
           tekst:
-            "Op vier plekken kun je je gegevens achterlaten. Elke plek is vrijwillig, en je ziet vooraf wat we vragen.",
+            "Op deze plekken kun je je gegevens achterlaten. Elke plek is vrijwillig, en je ziet vooraf wat we vragen.",
         },
         {
           soort: "lijst",
           items: [
             "**De rekentool:** je naam, zakelijke e-mailadres, bedrijfsnaam en de cijfers die je invult over verzuim, personeelsomvang en gemiddeld salaris. We mailen je de uitkomst en bewaren je invoer, zodat we contact met je kunnen opnemen.",
             "**Het wetenschappelijk rapport:** je naam, zakelijke e-mailadres en bedrijfsnaam. We mailen je het rapport en bewaren je aanvraag.",
-            "**Het contactformulier:** je naam, e-mailadres en bericht. Dat wordt naar ons gemaild en er wordt niets in een database opgeslagen.",
+            "**Het contactformulier en de offerteaanvraag:** je naam, e-mailadres en bericht. Vraag je een offerte aan, dan ook je organisatie, je telefoonnummer, online of op locatie, het aantal deelnemers en het totale aantal medewerkers. Alles wordt naar ons gemaild en er wordt niets in een database opgeslagen.",
             "**Een gesprek inplannen:** dat loopt via Calendly. Je geeft je naam, e-mailadres en een tijdstip door. Op die afspraak is de privacyverklaring van Calendly van toepassing.",
           ],
         },
@@ -117,6 +117,11 @@ export const privacyNl: JuridischePagina = {
           soort: "tekst",
           tekst:
             "**Hoe lang:** zolang we nog contact hebben over je vraag. Vraag je ons om het te verwijderen, dan doen we dat, op elk moment, via **privacy@innerleaps.nl**.",
+        },
+        {
+          soort: "tekst",
+          tekst:
+            "**De stressvragenlijst bij de masterclass** is een uitzondering. Die rekent je score uit op je eigen telefoon of laptop. Je antwoorden gaan niet naar ons, en we vragen niet om je naam of e-mailadres.",
         },
       ],
     },

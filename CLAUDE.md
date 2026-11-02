@@ -445,9 +445,6 @@ niet beconcurreren. Het loopt via de Edge Function `submit-contact-message`, die
 niets opslaat maar een mail stuurt naar `bas@innerleaps.nl` met het adres van de
 afzender als antwoordadres.
 
-De `calendarUrl`-velden in `MasterclassFormModal.tsx` zijn iets anders: dat zijn
-"zet deze masterclass in je agenda"-links voor een bestaand evenement. Afblijven.
-
 ## Offerte aanvragen is de primaire knop
 
 Sinds 15 oktober 2026 (branch `offerte-cta`) is "Offerte aanvragen" de primaire
@@ -506,8 +503,7 @@ testmail aankomt.
 
 Gemeten op 24 augustus 2026: op de live site staat **geen GTM en geen gtag**.
 Het enige externe script is de Apollo-tracker. Toch staan er al aanroepen van
-`window.gtag` in `MasterclassFormModal.tsx`, `Bedankt.tsx` en
-`MasterclassQR.tsx`. Die doen dus niets.
+`window.gtag` in `Bedankt.tsx`. Die doen dus niets.
 
 Zolang die container ontbreekt wordt er geen enkele conversie geregistreerd.
 Meld dat als iemand over conversiemeting begint.

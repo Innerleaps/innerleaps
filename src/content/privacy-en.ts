@@ -95,14 +95,14 @@ export const privacyEn: JuridischePagina = {
         {
           soort: "tekst",
           tekst:
-            "You can leave your details in four places. Each one is voluntary, and you always see beforehand what we ask for.",
+            "These are the places where you can leave your details. Each one is voluntary, and you always see beforehand what we ask for.",
         },
         {
           soort: "lijst",
           items: [
             "**The savings calculator:** your name, work email address, organisation name and the figures you enter about absence, headcount and average salary. We email you the outcome and store your entry so we can follow up.",
             "**The scientific report:** your name, work email address and organisation name. We email you the report and store your request.",
-            "**The contact form:** your name, email address and message. This is emailed to us and nothing is stored in a database.",
+            "**The contact form and the quote request:** your name, email address and message. If you request a quote, also your organisation and phone number, whether you want the training online or on site, the number of participants and the total number of employees. Everything is emailed to us and nothing is stored in a database.",
             "**Booking a call:** handled by Calendly. You give your name, email address and a time. Calendly's own privacy statement applies to that booking.",
           ],
         },
@@ -116,6 +116,11 @@ export const privacyEn: JuridischePagina = {
           soort: "tekst",
           tekst:
             "**How long:** for as long as we are still in touch about your enquiry. Ask us to delete it and we will, at any time, at **privacy@innerleaps.nl**.",
+        },
+        {
+          soort: "tekst",
+          tekst:
+            "**The stress questionnaire at the masterclass** is an exception. It works out your score on your own phone or laptop. Your answers are not sent to us, and we do not ask for your name or email address.",
         },
       ],
     },

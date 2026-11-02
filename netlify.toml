@@ -210,18 +210,21 @@
   from = "/en/cookies"
   to = "/index.html"
   status = 200
+# De oude masterclasspagina met QR-code, en zijn bedanktpagina. Die boden
+# alleen nog tijden van 12 november 2025 en zijn op 2 november 2026 weggehaald.
+# Een oude QR-code komt zo op de homepage uit, waar het masterclassblok staat.
 [[redirects]]
   from = "/masterclass-stress-qr"
-  to = "/index.html"
-  status = 200
+  to = "/"
+  status = 301
 [[redirects]]
   from = "/bedankt"
   to = "/index.html"
   status = 200
 [[redirects]]
   from = "/masterclass-bedankt"
-  to = "/index.html"
-  status = 200
+  to = "/"
+  status = 301
 
 # De bedanktpagina's van de rekentool en het wetenschappelijk rapport.
 #
