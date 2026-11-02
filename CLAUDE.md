@@ -535,6 +535,12 @@ Zet je een route in `App.tsx`, kies dan bewust:
 - **Niet in ROUTE_MAP?** Dan wordt hij niet geprerenderd, en moet hij
   **expliciet** in `netlify.toml` als `status = 200`-regel. Anders valt hij
   onder de 404-catch-all en is hij vanaf de volgende deploy onbereikbaar.
+- **Blogartikel?** Alleen Nederlands, een bewuste uitzondering op "Engels
+  eerst" (besluit van Bas, 5 oktober 2026). In `ROUTE_MAP` zonder `en`, geen
+  Engelse route, en in de sitemap zonder Engelse tegenhanger. De oude Engelse
+  blogadressen, ook het overzicht `/en/blog`, sturen sinds 2 november 2026 met
+  een 301 naar de Nederlandse pagina. In het Engelse menu en de Engelse footer
+  staat geen Blog.
 
 ## De klantcase TheyDo
 

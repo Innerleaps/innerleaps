@@ -19,6 +19,30 @@
       "bevat": "demonstrable shortcoming attributable to Innerleaps",
       "reden": "Terms and conditions, article 11.1: 'demonstrable shortcoming' is a legal term, not a marketing claim.",
       "goedgekeurdDoor": "Bas, 31-10-2026"
+    },
+    {
+      "bestand": "src/content/terms-nl.ts",
+      "bevat": "inspanningsverplichting: Innerleaps garandeert geen resultaten",
+      "reden": "Algemene voorwaarden, artikel 4.4: zegt juist dat Innerleaps geen resultaten garandeert. Tekst gekozen door Bas.",
+      "goedgekeurdDoor": "Bas, 2-11-2026"
+    },
+    {
+      "bestand": "src/content/terms-nl.ts",
+      "bevat": "Innerleaps garandeert daarom geen resultaten",
+      "reden": "Algemene voorwaarden, artikel 4.8: zegt juist dat Innerleaps geen resultaten garandeert en dat cijfers geen toezegging zijn. Tekst gekozen door Bas.",
+      "goedgekeurdDoor": "Bas, 2-11-2026"
+    },
+    {
+      "bestand": "src/content/terms-en.ts",
+      "bevat": "not an obligation of result: Innerleaps does not guarantee results",
+      "reden": "Terms and conditions, article 4.4: states that Innerleaps does not guarantee results. Text chosen by Bas.",
+      "goedgekeurdDoor": "Bas, 2-11-2026"
+    },
+    {
+      "bestand": "src/content/terms-en.ts",
+      "bevat": "Innerleaps therefore does not guarantee results",
+      "reden": "Terms and conditions, article 4.8: states that Innerleaps does not guarantee results and that figures are not a commitment. Text chosen by Bas.",
+      "goedgekeurdDoor": "Bas, 2-11-2026"
     }
   ]
 }

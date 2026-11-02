@@ -29,7 +29,7 @@ const Footer = memo(({ showNavigation = true }: FooterProps) => {
     masterclass: lang === 'en' ? '/en#masterclass' : '/#masterclass',
     method: lang === 'en' ? '/en/method' : '/breintraining-methode',
     caseStudy: lang === 'en' ? '/en/case-studies/theydo' : '/klantcases/theydo',
-    blog: lang === 'en' ? '/en/blog' : '/blog',
+    blog: '/blog',
     contact: lang === 'en' ? '/en/contact' : '/contact',
     privacy: lang === 'en' ? '/en/privacy' : '/privacy',
     cookies: lang === 'en' ? '/en/cookies' : '/cookies',
@@ -46,7 +46,8 @@ const Footer = memo(({ showNavigation = true }: FooterProps) => {
     { to: href.masterclass, label: t('footer.masterclassLink') },
     { to: href.method, label: t('footer.methodLink') },
     { to: href.caseStudy, label: t('nav.caseStudy') },
-    { to: href.blog, label: t('nav.blog') },
+    // Blogs zijn alleen Nederlands, dus alleen in de Nederlandse footer.
+    ...(lang === 'nl' ? [{ to: href.blog, label: t('nav.blog') }] : []),
     { to: href.contact, label: t('nav.contact') },
   ];
 

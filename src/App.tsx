@@ -141,12 +141,8 @@ const App = () => {
                 <Route path="/en/sustainable-employability" element={<Vitaliteitstraining />} />
                 <Route path="/en/improve-team-performance" element={<DuurzameInzetbaarheidTraining />} />
                 <Route path="/en/stress-management-training" element={<StressManagement />} />
-                <Route path="/en/blog" element={<Blog />} />
                 <Route path="/en/case-studies/theydo" element={<KlantcaseTheydo />} />
                 <Route path="/en/methodology" element={<MethodeEnBeperkingen />} />
-                <Route path="/en/blog/reducing-absenteeism-evidence-based-approach-2025" element={<ZiekteverzuimVerlagen />} />
-                <Route path="/en/blog/hidden-costs-of-absenteeism-calculator" element={<VerborgenKostenZiekteverzuim />} />
-                <Route path="/en/blog/how-to-reduce-absenteeism-in-my-organization" element={<HoeVerlaagIkZiekteverzuim />} />
                 <Route path="/leven-vragenlijst" element={<LevenVragenlijst />} />
                 <Route path="/leven-vragenlijst/resultaat" element={<LevenVragenlijstResultaat />} />
                 <Route path="/life-questionnaire" element={<LifeQuestionnaire />} />

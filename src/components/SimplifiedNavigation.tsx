@@ -27,7 +27,9 @@ const SimplifiedNavigation = () => {
     caseStudy: lang === 'en' ? '/en/case-studies/theydo' : '/klantcases/theydo',
     aboutUs: lang === 'en' ? '/en/about-us' : '/over-ons',
     contact: lang === 'en' ? '/en/contact' : '/contact',
-    blog: lang === 'en' ? '/en/blog' : '/blog',
+    // Blogs zijn alleen Nederlands (besluit van Bas, 5 oktober 2026). In het
+    // Engelse menu staat daarom geen Blog; /en/blog stuurt met een 301 naar /blog.
+    blog: '/blog',
     vitality: lang === 'en' ? '/en/sustainable-employability' : '/duurzame-inzetbaarheid',
     employability: lang === 'en' ? '/en/improve-team-performance' : '/team-prestaties-verbeteren',
     // Sinds 20 oktober 2026 één pagina voor medewerkers, zonder uitklapmenu.
@@ -161,12 +163,14 @@ const SimplifiedNavigation = () => {
             >
               {t('nav.contact')}
             </Link>
-            <Link
-              to={href.blog}
-              className="text-brand-gray-dark hover:text-brand-blue transition-colors duration-300 font-medium text-base whitespace-nowrap"
-            >
-              {t('nav.blog')}
-            </Link>
+            {lang === 'nl' && (
+              <Link
+                to={href.blog}
+                className="text-brand-gray-dark hover:text-brand-blue transition-colors duration-300 font-medium text-base whitespace-nowrap"
+              >
+                {t('nav.blog')}
+              </Link>
+            )}
           </div>
 
           {/* Rechts: de offerteknop, dan de taalkeuze, en op mobiel de menuknop.
@@ -294,13 +298,15 @@ const SimplifiedNavigation = () => {
               >
                 {t('nav.contact')}
               </Link>
-              <Link
-                to={href.blog}
-                onClick={() => setIsMenuOpen(false)}
-                className="text-brand-gray-dark hover:text-brand-blue transition-colors duration-300 font-medium py-2 text-left text-base"
-              >
-                {t('nav.blog')}
-              </Link>
+              {lang === 'nl' && (
+                <Link
+                  to={href.blog}
+                  onClick={() => setIsMenuOpen(false)}
+                  className="text-brand-gray-dark hover:text-brand-blue transition-colors duration-300 font-medium py-2 text-left text-base"
+                >
+                  {t('nav.blog')}
+                </Link>
+              )}
 
               {toonOfferteknop && (
                 <Link

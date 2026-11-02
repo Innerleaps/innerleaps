@@ -4,7 +4,7 @@ import type { JuridischePagina } from "./juridisch";
  *  terms-nl.ts en moet bij elke wijziging mee. */
 export const termsEn: JuridischePagina = {
   titel: "General Terms and Conditions",
-  ondertitel: "**Innerleaps**, Version 2.1 | 25 September 2026",
+  ondertitel: "**Innerleaps**, Version 2.2 | 2 November 2026",
   metaTitel: "General Terms and Conditions | Innerleaps",
   metaBeschrijving:
     "General terms and conditions of Innerleaps. Our terms for training programs, service delivery and collaboration.",
@@ -79,10 +79,11 @@ export const termsEn: JuridischePagina = {
             "**4.1** Innerleaps delivers the training program as described in the Agreement. This includes the Masterclass and, where applicable, the full training program delivered as a series of workshops.",
             "**4.2** The Masterclass is provided free of charge provided the training program subsequently takes place, subject to Article 6.",
             "**4.3** Innerleaps delivers services either in person or online, depending on what has been agreed with the Client. Innerleaps may engage qualified freelance trainers to deliver sessions on its behalf. The specific trainer may vary per assignment. Innerleaps remains fully responsible for the quality and delivery of all services regardless of who delivers them. All freelance trainers engaged by Innerleaps are contractually bound to confidentiality and data protection obligations equivalent to those applicable to Innerleaps under these Terms and the Data Processing Agreement, before being permitted to deliver any sessions. In the event that a scheduled trainer is unexpectedly unavailable, Innerleaps will arrange an alternative trainer or schedule an additional session to ensure the full program is delivered as agreed. No financial compensation will be provided in such cases.",
-            "**4.4** Innerleaps will make every effort to deliver the services with due care and in accordance with the standards that may reasonably be expected of a professional in this field.",
+            "**4.4** Innerleaps will make every effort to deliver the services with due care and in accordance with the standards that may reasonably be expected of a professional in this field. This is an obligation of effort (inspanningsverplichting), not an obligation of result: Innerleaps does not guarantee results.",
             "**4.5** The Client is responsible for creating the conditions necessary for the successful delivery of the training, including communicating the program to employees, facilitating Participant registration, and ensuring employees can attend scheduled workshops. If the Client's failure to meet these obligations results in one or more workshops not being delivered as planned, Innerleaps' delivery obligation is considered fulfilled for those workshops and no refund applies.",
             "**4.6** The training program is a professional development and wellbeing intervention. It is not a form of healthcare, medical treatment or psychotherapy, and Innerleaps is not a healthcare provider. The program is designed for healthy, working employees. The Client offers the program to employees who are fit for work and is responsible for directing it to suitable participants, and each Participant accepts the Self-Declaration at registration confirming that they take part voluntarily and on their own responsibility and will consult their general practitioner if they have health concerns that could make participation unwise. If during the training program a Participant discloses or displays signs of acute mental health distress, Innerleaps may refer that Participant to appropriate professional support and, where appropriate, discontinue their participation. Such referral does not constitute a breach of contract. Innerleaps does not assume any duty of care with respect to the physical or mental health of Participants beyond delivering the program with reasonable professional skill, and is not liable for the mental or physical health outcomes of Participants.",
             "**4.7** The Client agrees not to directly engage, hire, or contract any trainer introduced by Innerleaps in the context of an Agreement, whether as an employee, contractor, or in any other capacity, for a period of 12 months following the end of the Agreement in which that trainer was introduced. A breach of this clause entitles Innerleaps to claim a fixed compensation of €30,000 per trainer engaged in breach of this clause, without prejudice to Innerleaps' right to claim additional damages where actual loss exceeds this amount.",
+            "**4.8** The results of the Training depend in part on factors outside Innerleaps' control, such as participation, how much Participants practise and working conditions. Innerleaps therefore does not guarantee results. Figures on the website and in quotations, presentations and other communications, such as results measured at other organisations or in scientific research, are examples and not a commitment to the Client.",
           ],
         },
       ],
@@ -260,8 +261,8 @@ export const termsEn: JuridischePagina = {
     },
   ],
   voettekst: [
-    "Document Version: 2.1",
-    "Date: 25 September 2026",
+    "Document Version: 2.2",
+    "Date: 2 November 2026",
     "Prepared by: Innerleaps",
     "Status: Published",
   ],

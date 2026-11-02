@@ -135,6 +135,36 @@
   to = "/blog/ziekteverzuim-verlagen-met-aandachttraining"
   status = 301
 
+# Blogs zijn alleen Nederlands (besluit van Bas, 5 oktober 2026). De Engelse
+# adressen toonden de Nederlandse tekst en sturen nu naar de Nederlandse
+# pagina. Direct naar het nieuwste pad, zodat er geen keten ontstaat.
+[[redirects]]
+  from = "/en/blog"
+  to = "/blog"
+  status = 301
+
+[[redirects]]
+  from = "/en/blog/reducing-absenteeism-evidence-based-approach-2025"
+  to = "/blog/ziekteverzuim-verlagen-met-aandachttraining"
+  status = 301
+
+[[redirects]]
+  from = "/en/blog/hidden-costs-of-absenteeism-calculator"
+  to = "/blog/verborgen-kosten-ziekteverzuim-rekenmodel"
+  status = 301
+
+[[redirects]]
+  from = "/en/blog/how-to-reduce-absenteeism-in-my-organization"
+  to = "/blog/hoe-verlaag-ik-het-ziekteverzuim-in-mijn-organisatie"
+  status = 301
+
+# Elk ander Engels blogadres naar het overzicht. Na de drie hierboven, want
+# Netlify neemt de eerste regel die past.
+[[redirects]]
+  from = "/en/blog/*"
+  to = "/blog"
+  status = 301
+
 # De 24 pagina's uit ROUTE_MAP worden geprerenderd naar platte .html-bestanden.
 # Die serveert Netlify vanzelf, daar is geen regel voor nodig.
 #

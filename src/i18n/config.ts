@@ -35,7 +35,7 @@ export type SupportedLanguage = (typeof SUPPORTED_LANGUAGES)[number];
  * Keep slugs lowercase, kebab-case, no trailing slash.
  * Add new entries here whenever a new public, menu-reachable page is added.
  */
-export const ROUTE_MAP: Array<{ nl: string; en: string }> = [
+export const ROUTE_MAP: Array<{ nl: string; en?: string }> = [
   { nl: "/", en: "/en" },
   { nl: "/breintraining-methode", en: "/en/method" },
   { nl: "/over-ons", en: "/en/about-us" },
@@ -45,26 +45,20 @@ export const ROUTE_MAP: Array<{ nl: string; en: string }> = [
   // De pagina voor medewerkers. Tot 20 oktober 2026 waren het er twee; de
   // prestatiepagina stuurt sindsdien met een 301 hierheen (netlify.toml).
   { nl: "/stressmanagement-training", en: "/en/stress-management-training" },
-  { nl: "/blog", en: "/en/blog" },
+  { nl: "/blog" },
   // Klantcases. Meervoud in het pad, zodat er later een overzichtspagina op
   // /klantcases kan komen zonder dat deze URL hoeft te verhuizen.
   { nl: "/klantcases/theydo", en: "/en/case-studies/theydo" },
   // Waar de cijfers vandaan komen. Het bronnenblok onderaan elke pagina linkt
   // hierheen; het pad staat ook in src/content/claims.json. Zie CLAIMS.md.
   { nl: "/methode", en: "/en/methodology" },
-  // Blog articles
-  {
-    nl: "/blog/ziekteverzuim-verlagen-met-aandachttraining",
-    en: "/en/blog/reducing-absenteeism-evidence-based-approach-2025",
-  },
-  {
-    nl: "/blog/verborgen-kosten-ziekteverzuim-rekenmodel",
-    en: "/en/blog/hidden-costs-of-absenteeism-calculator",
-  },
-  {
-    nl: "/blog/hoe-verlaag-ik-het-ziekteverzuim-in-mijn-organisatie",
-    en: "/en/blog/how-to-reduce-absenteeism-in-my-organization",
-  },
+  // Blogartikelen. Alleen in het Nederlands (besluit van Bas, 5 oktober 2026),
+  // net als het overzicht /blog hierboven. Dus zonder Engels pad: geen hreflang
+  // naar het Engels, en de taalknop gaat naar /en. De oude Engelse adressen
+  // sturen met een 301 naar de Nederlandse pagina (netlify.toml).
+  { nl: "/blog/ziekteverzuim-verlagen-met-aandachttraining" },
+  { nl: "/blog/verborgen-kosten-ziekteverzuim-rekenmodel" },
+  { nl: "/blog/hoe-verlaag-ik-het-ziekteverzuim-in-mijn-organisatie" },
 
   // De juridische pagina's. Ze staan hier zodat de taalknop werkt en zodat ze
   // geprerenderd worden, maar ze dragen zelf een noindex en horen daarom
@@ -89,7 +83,7 @@ export const getEquivalentPath = (
     (m) => m.nl === normalized || m.en === normalized,
   );
   if (!entry) return null;
-  return targetLang === "nl" ? entry.nl : entry.en;
+  return targetLang === "nl" ? entry.nl : entry.en ?? null;
 };
 
 /** Detects the language a given path belongs to. */

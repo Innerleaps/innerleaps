@@ -4,7 +4,7 @@ import type { JuridischePagina } from "./juridisch";
  *  moet bij elke wijziging mee. */
 export const termsNl: JuridischePagina = {
   titel: "Algemene Voorwaarden",
-  ondertitel: "**Innerleaps**, versie 2.1 | 25 september 2026",
+  ondertitel: "**Innerleaps**, versie 2.2 | 2 november 2026",
   metaTitel: "Algemene Voorwaarden | Innerleaps",
   metaBeschrijving:
     "Algemene voorwaarden van Innerleaps. Onze voorwaarden voor trainingsprogramma's, dienstverlening en samenwerking.",
@@ -79,10 +79,11 @@ export const termsNl: JuridischePagina = {
             "**4.1** Innerleaps levert het trainingsprogramma zoals beschreven in de Overeenkomst. Dit omvat de Masterclass en, waar van toepassing, het volledige trainingsprogramma geleverd als een reeks workshops.",
             "**4.2** De Masterclass wordt kosteloos gegeven, mits het trainingsprogramma vervolgens doorgang vindt, met inachtneming van Artikel 6.",
             "**4.3** Innerleaps levert diensten fysiek of online, afhankelijk van wat met de Opdrachtgever is afgesproken. Innerleaps kan gekwalificeerde zelfstandige trainers inschakelen om sessies namens haar te geven. De specifieke trainer kan per opdracht verschillen. Innerleaps blijft volledig verantwoordelijk voor de kwaliteit en levering van alle diensten, ongeacht wie ze uitvoert. Alle door Innerleaps ingeschakelde zelfstandige trainers zijn contractueel gebonden aan geheimhoudings- en gegevensbeschermingsverplichtingen die gelijkwaardig zijn aan die van Innerleaps onder deze Voorwaarden en de Verwerkersovereenkomst, voordat zij een sessie mogen geven. Als een geplande trainer onverwacht niet beschikbaar is, regelt Innerleaps een vervangende trainer of plant een extra sessie in, zodat het volledige programma zoals afgesproken wordt geleverd. Hier staat geen financiële compensatie tegenover.",
-            "**4.4** Innerleaps zal zich naar beste vermogen inspannen om de diensten met de nodige zorg te leveren, in overeenstemming met de standaarden die redelijkerwijs van een professional op dit vakgebied mogen worden verwacht.",
+            "**4.4** Innerleaps zal zich naar beste vermogen inspannen om de diensten met de nodige zorg te leveren, in overeenstemming met de standaarden die redelijkerwijs van een professional op dit vakgebied mogen worden verwacht. Dit is een inspanningsverplichting: Innerleaps garandeert geen resultaten.",
             "**4.5** De Opdrachtgever is verantwoordelijk voor het scheppen van de voorwaarden die nodig zijn voor een succesvolle uitvoering van de training, waaronder het communiceren van het programma naar medewerkers, het faciliteren van de aanmelding van Deelnemers, en ervoor zorgen dat medewerkers aanwezig kunnen zijn bij geplande workshops. Als het niet nakomen van deze verplichtingen door de Opdrachtgever ertoe leidt dat een of meer workshops niet worden geleverd zoals gepland, geldt de leveringsverplichting van Innerleaps voor die workshops als vervuld en geldt geen restitutie.",
             "**4.6** Het trainingsprogramma is een interventie gericht op professionele ontwikkeling en welzijn. Het is geen vorm van zorg, medische behandeling of psychotherapie, en Innerleaps is geen zorgaanbieder. Het programma is ontworpen voor gezonde, werkende medewerkers. De Opdrachtgever biedt het programma aan medewerkers aan die arbeidsgeschikt zijn en is verantwoordelijk voor het richten ervan op geschikte deelnemers. Elke Deelnemer accepteert bij aanmelding de Zelfverklaring, waarin wordt bevestigd dat deelname vrijwillig en op eigen verantwoordelijkheid is, en dat de huisarts wordt geraadpleegd bij gezondheidsklachten die deelname onverstandig zouden kunnen maken. Als een Deelnemer tijdens het trainingsprogramma acute psychische nood laat blijken of vertoont, kan Innerleaps die Deelnemer doorverwijzen naar passende professionele hulp en, waar nodig, diens deelname beëindigen. Zo'n doorverwijzing vormt geen tekortkoming in de nakoming. Innerleaps neemt geen zorgplicht op zich ten aanzien van de fysieke of psychische gezondheid van Deelnemers, anders dan het leveren van het programma met redelijke professionele vakbekwaamheid, en is niet aansprakelijk voor de mentale of fysieke gezondheidsuitkomsten van Deelnemers.",
             "**4.7** De Opdrachtgever gaat ermee akkoord geen trainer die door Innerleaps in het kader van een Overeenkomst is geïntroduceerd, rechtstreeks in dienst te nemen, in te huren of te contracteren, als werknemer, als zelfstandige of in enige andere hoedanigheid, gedurende 12 maanden na afloop van de Overeenkomst waarin die trainer werd geïntroduceerd. Een schending van deze bepaling geeft Innerleaps recht op een vaste vergoeding van €30.000 per trainer die in strijd met deze bepaling wordt ingeschakeld, onverminderd het recht van Innerleaps om aanvullende schade te vorderen als de werkelijke schade dit bedrag overstijgt.",
+            "**4.8** De resultaten van het trainingsprogramma hangen mede af van factoren waarop Innerleaps geen invloed heeft, zoals de deelname, hoeveel Deelnemers oefenen en de werkomstandigheden. Innerleaps garandeert daarom geen resultaten. Cijfers op de website, in offertes, presentaties en andere uitingen, zoals resultaten gemeten bij andere organisaties of in wetenschappelijk onderzoek, zijn voorbeelden en geen toezegging aan de Opdrachtgever.",
           ],
         },
       ],
@@ -260,8 +261,8 @@ export const termsNl: JuridischePagina = {
     },
   ],
   voettekst: [
-    "Documentversie: 2.1",
-    "Datum: 25 september 2026",
+    "Documentversie: 2.2",
+    "Datum: 2 november 2026",
     "Opgesteld door: Innerleaps",
     "Status: gepubliceerd",
   ],
