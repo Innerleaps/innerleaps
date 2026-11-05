@@ -43,5 +43,17 @@
       "submit": "Offerte aanvragen",
       "required": "Er zijn nog een paar velden leeg."
     }
+  },
+  "source": {
+    "label": "Hoe ken je ons?",
+    "placeholder": "Kies er een",
+    "options": {
+      "linkedin_post": "Een post op LinkedIn",
+      "linkedin_message": "Een bericht van Bas op LinkedIn",
+      "google": "Google",
+      "referral": "Via een collega of kennis",
+      "event": "Een masterclass of evenement",
+      "other": "Anders"
+    }
   }
 }

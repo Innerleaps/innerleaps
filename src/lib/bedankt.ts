@@ -127,6 +127,8 @@ export const leesRoiOverdracht = (): RoiOverdracht | null => {
 export interface RapportOverdracht {
   id: string;
   emailHash: string | null;
+  /** Alleen bij de offerte: het antwoord op "Hoe ken je ons?". */
+  bron?: string;
 }
 
 const RAPPORT_SLEUTEL = "innerleaps.rapport-aanvraag";

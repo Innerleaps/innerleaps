@@ -491,8 +491,15 @@ naar 1200 pixels te halen. In de footer, de cookiebanner en het uitklapmenu
 staat nog de oude NL | EN.
 
 Meten: `quote_cta_click` met de plek als parameter, en `quote_request_sent`
-vanaf de bedanktpagina. Het label `offerte` in `conversielabels.ts` is leeg tot
-de conversieactie "Offerteaanvraag" in Google Ads bestaat.
+vanaf de bedanktpagina. Het label `offerte` in `conversielabels.ts` staat sinds
+5 november 2026 op de conversieactie "Leadformulier indienen (1)" in Google Ads.
+Primair zijn alleen afspraak, offerte en contactformulier; de rest is secundair.
+
+Op het offerte- en het berichtformulier staat "Hoe ken je ons?"
+(`BronVeld.tsx`). Het antwoord gaat als regel in de mail en als `lead_source`
+naar GA4, waar het een aangepaste dimensie is. Het wekelijkse groeidashboard
+(skill `growth-dashboard`) leest het daar uit. Een lead is daar een geboekt
+gesprek; al het andere is pijplijn.
 
 **Lokaal testen verstuurt een echte mail.** De Supabase-client pakt `fetch` op
 bij het opstarten, dus een nep-`fetch` in de browser vangt de verzending niet

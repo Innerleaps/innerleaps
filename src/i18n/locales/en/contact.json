@@ -43,5 +43,17 @@
       "submit": "Request a quote",
       "required": "A few fields are still empty."
     }
+  },
+  "source": {
+    "label": "How did you hear about us?",
+    "placeholder": "Choose one",
+    "options": {
+      "linkedin_post": "A LinkedIn post",
+      "linkedin_message": "A message from Bas on LinkedIn",
+      "google": "Google",
+      "referral": "A colleague or someone I know",
+      "event": "A masterclass or event",
+      "other": "Something else"
+    }
   }
 }

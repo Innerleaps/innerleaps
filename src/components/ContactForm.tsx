@@ -8,6 +8,7 @@ import { supabase } from "@/integrations/supabase/client";
 import { isGeldigEmail } from "@/lib/email";
 import { meldContactformulier } from "@/lib/conversies";
 import { hashEmail, nieuweId } from "@/lib/bedankt";
+import BronVeld, { BRON_IN_MAIL, isBron } from "@/components/BronVeld";
 
 /**
  * Het berichtformulier onderaan de contactpagina.
@@ -70,6 +71,10 @@ const ContactForm = ({ className = "" }: ContactFormProps) => {
     const naam = (data.get("naam") as string)?.trim();
     const ingevuldEmail = (data.get("email") as string)?.trim();
     const bericht = (data.get("bericht") as string)?.trim();
+    // Niet verplicht: dit formulier is bewust klein, en een bericht zonder
+    // bron is nog steeds een bericht.
+    const gekozen = ((data.get("bron") as string) ?? "").trim();
+    const bron = isBron(gekozen) ? gekozen : undefined;
 
     if (!naam || !ingevuldEmail || !bericht) {
       setStatus("error");
@@ -93,7 +98,7 @@ const ContactForm = ({ className = "" }: ContactFormProps) => {
         body: {
           naam,
           email,
-          bericht,
+          bericht: bron ? `${bericht}\n\nHoe kent die ons: ${BRON_IN_MAIL[bron]}` : bericht,
           taal: i18n.language?.startsWith("en") ? "en" : "nl",
           // De herkomst meesturen, zodat een bericht uit een campagne
           // herkenbaar is zonder dat je in de statistieken hoeft te zoeken.
@@ -104,7 +109,7 @@ const ContactForm = ({ className = "" }: ContactFormProps) => {
 
       // Melden vóór form.reset(), want daarna is het adres weg en hebben we
       // niets meer om gehasht mee te sturen voor Enhanced Conversions.
-      meldContactformulier(nieuweId(), await hashEmail(ingevuldEmail));
+      meldContactformulier(nieuweId(), await hashEmail(ingevuldEmail), bron);
 
       setStatus("sent");
       setMessage(t("form.success"));
@@ -166,6 +171,12 @@ const ContactForm = ({ className = "" }: ContactFormProps) => {
             className="mt-1 text-lg placeholder:text-lg"
           />
         </div>
+
+        <BronVeld
+          id="contact-bron"
+          veldKlasse="mt-1 h-12 border border-input text-lg focus-visible:border-input focus-visible:ring-ring md:text-lg"
+          labelKlasse="text-lg font-semibold text-brand-gray-dark"
+        />
 
         {/* Buiten beeld en buiten de tabvolgorde, dus alleen robots vullen dit in. */}
         <div className="absolute left-[-9999px]" aria-hidden="true">
