@@ -34,6 +34,25 @@
 [context.deploy-preview]
   command = "npx --yes puppeteer browsers install chrome && npm run build:noindex"
 
+# Korte links voor LinkedIn (5 november 2026). Bas zet ze in zijn Info-tekst en
+# op de bedrijfspagina, waar een lange link met tags rommelig oogt en in de
+# Info-tekst niet eens klikbaar is. De omleiding plakt de tags eraan, dus ook wie
+# het adres overtypt telt in GA4 als LinkedIn en niet als Direct.
+# Bewust geen onderscheid tussen profiel en bedrijfspagina (makkelijker beheer).
+# Bewust 302 en geen 301: dan kan het doel later veranderen zonder dat browsers
+# de oude bestemming onthouden. Het Engels, want Bas post alleen in het Engels.
+[[redirects]]
+  from = "/intro"
+  to = "/en?utm_source=linkedin&utm_medium=social&utm_content=intro"
+  status = 302
+  force = true
+
+[[redirects]]
+  from = "/scaleups"
+  to = "/en/improve-team-performance?utm_source=linkedin&utm_medium=social&utm_content=scaleups"
+  status = 302
+  force = true
+
 # Hernoemde pagina's, stap 5 uit MIGRATIE-PLAN.md. Echte 301's, zodat Google
 # de opgebouwde waarde meeneemt naar de nieuwe URL. Deze staan bewust boven de
 # catch-all hieronder, want die vangt anders alles af.

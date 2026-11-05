@@ -326,6 +326,11 @@ prerendering, de canonical en de hreflang aan. Verder nodig:
 - interne links in de blogartikelen
 - `public/sitemap.xml`
 
+**Korte links voor LinkedIn** (sinds 5 november 2026): `/intro` gaat naar `/en`
+en `/scaleups` naar `/en/improve-team-performance`, met een 302 en de tags
+`utm_source=linkedin&utm_medium=social`. Bewust geen onderscheid tussen profiel
+en bedrijfspagina. Ze staan in `netlify.toml`, niet in `ROUTE_MAP` of de sitemap.
+
 **Nooit een keten van omleidingen laten ontstaan.** Hernoem je een pad dat zelf
 al het doel van een 301 is, laat de oudste URL dan direct naar het nieuwste pad
 wijzen.
