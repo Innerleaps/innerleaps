@@ -42,7 +42,7 @@ const LABELS: Record<ConversieNaam, string> = {
   bijlage: "SHCFCOPVzPAcEOftptRE",  // Wetenschappelijke bijlage
   // Nog aan te maken in Google Ads als "Offerteaanvraag". Tot dan vuurt alleen
   // de gebeurtenis voor Analytics.
-  offerte: "",
+  offerte: "XNxcCIzH07IdEOftptRE",  // Leadformulier indienen (1), de offerteaanvraag
 };
 
 /** De volledige `send_to`-waarde, of null als het label nog niet bekend is. */
