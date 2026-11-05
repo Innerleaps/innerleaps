@@ -178,9 +178,15 @@ export const meldAfspraak = (id: string, payload?: unknown): void => {
 };
 
 /** Een verzonden bericht via het contactformulier. */
-export const meldContactformulier = (id: string, emailHash: string | null): void => {
+export const meldContactformulier = (id: string, emailHash: string | null, bron?: string): void => {
   if (alGemeld(id)) return;
-  naarGoogle("contactformulier", id, "generate_lead", { type: "contactformulier" }, emailHash);
+  naarGoogle(
+    "contactformulier",
+    id,
+    "generate_lead",
+    { type: "contactformulier", ...(bron ? { lead_source: bron } : {}) },
+    emailHash,
+  );
   duwen({ event: "contact_message_sent", transaction_id: id });
   onthoudId(id);
 };
@@ -192,13 +198,16 @@ export const meldContactformulier = (id: string, emailHash: string | null): void
 export const meldOfferteaanvraag = ({
   id,
   emailHash,
+  bron,
 }: {
   id: string;
   emailHash: string | null;
+  /** Het antwoord op "Hoe ken je ons?", als `lead_source` naar Analytics. */
+  bron?: string;
 }): void => {
   if (alGemeld(id)) return;
 
-  naarGoogle("offerte", id, "generate_lead", { type: "offerte" }, emailHash);
+  naarGoogle("offerte", id, "generate_lead", { type: "offerte", ...(bron ? { lead_source: bron } : {}) }, emailHash);
 
   duwen({
     event: "quote_request_sent",

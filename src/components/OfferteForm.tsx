@@ -11,6 +11,7 @@ import { isGeldigEmail } from "@/lib/email";
 import { bewaarOfferteOverdracht, hashEmail, nieuweId, offerteBedanktPad } from "@/lib/bedankt";
 import { detectLanguageFromPath } from "@/i18n/config";
 import type { OfferteHerkomst } from "@/lib/offerte";
+import BronVeld, { BRON_IN_MAIL, isBron } from "@/components/BronVeld";
 
 /**
  * Het offerteformulier.
@@ -53,7 +54,7 @@ const VORM_SLEUTEL: Record<Vorm, string> = {
 };
 
 /** De verplichte velden, in de volgorde waarin ze op het scherm staan. */
-const VERPLICHT = ["naam", "organisatie", "email", "telefoon", "vorm", "deelnemers", "medewerkers"] as const;
+const VERPLICHT = ["naam", "organisatie", "email", "telefoon", "vorm", "deelnemers", "medewerkers", "bron"] as const;
 
 /** Zelfde maat als de lopende tekst ernaast, zie CLAUDE.md, kopje Lettergroottes. */
 const VELD = "mt-1 h-12 border border-input text-lg placeholder:text-lg focus-visible:border-input focus-visible:ring-ring md:text-lg";
@@ -104,6 +105,7 @@ const OfferteForm = () => {
       vorm,
       deelnemers: lees("deelnemers"),
       medewerkers: lees("medewerkers"),
+      bron: isBron(lees("bron")) ? lees("bron") : "",
       toelichting: lees("toelichting"),
     };
 
@@ -137,6 +139,7 @@ const OfferteForm = () => {
       `Vorm: ${VORM_IN_MAIL[waarden.vorm as Vorm]}`,
       `Deelnemers: ${waarden.deelnemers}`,
       `Medewerkers totaal: ${waarden.medewerkers}`,
+      `Hoe kent die ons: ${isBron(waarden.bron) ? BRON_IN_MAIL[waarden.bron] : "-"}`,
       ...(waarden.toelichting ? ["", "Toelichting:", waarden.toelichting] : []),
     ].join("\n");
 
@@ -161,7 +164,7 @@ const OfferteForm = () => {
 
       // Alleen het gehashte adres gaat mee naar de bedanktpagina. Die meldt de
       // conversie, zodat Google Ads hem ook op die URL kan meten.
-      bewaarOfferteOverdracht({ id: nieuweId(), emailHash: await hashEmail(waarden.email) });
+      bewaarOfferteOverdracht({ id: nieuweId(), emailHash: await hashEmail(waarden.email), bron: waarden.bron });
       navigate(offerteBedanktPad(taal));
     } catch {
       setStatus("error");
@@ -277,6 +280,14 @@ const OfferteForm = () => {
           {...foutProps("medewerkers")}
         />
       </div>
+
+      <BronVeld
+        id="offerte-bron"
+        veldKlasse={`${VELD} ${isLeeg("bron") ? "border-red-600" : ""}`}
+        labelKlasse={LABEL}
+        ongeldig={isLeeg("bron")}
+        onKies={() => vulIn("bron")}
+      />
 
       <div>
         <Label htmlFor="offerte-toelichting" className={LABEL}>{t("quote.form.note")}</Label>

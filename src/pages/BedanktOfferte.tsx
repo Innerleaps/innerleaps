@@ -33,7 +33,7 @@ const BedanktOfferte = () => {
 
   useEffect(() => {
     if (!overdracht) return;
-    meldOfferteaanvraag({ id: overdracht.id, emailHash: overdracht.emailHash });
+    meldOfferteaanvraag({ id: overdracht.id, emailHash: overdracht.emailHash, bron: overdracht.bron });
   }, [overdracht]);
 
   return (
